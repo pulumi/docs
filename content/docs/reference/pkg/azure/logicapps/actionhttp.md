@@ -423,7 +423,7 @@ The ActionHttp resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#runafters_go" style="color: inherit; text-decoration: inherit;">Run<wbr>Afters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actionhttprunafter">[]Action<wbr>Http<wbr>Run<wbr>After</a></span>
+        <span class="property-type"><a href="#actionhttprunafter">[]Action<wbr>Http<wbr>Run<wbr>After<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the place of the HTTP Action in the Logic App Workflow. If not specified, the HTTP Action is right after the Trigger. A `run_after` block is as defined below.
 {{% /md %}}</dd></dl>
@@ -869,7 +869,7 @@ The following state arguments are supported:
 <a href="#state_runafters_go" style="color: inherit; text-decoration: inherit;">Run<wbr>Afters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actionhttprunafter">[]Action<wbr>Http<wbr>Run<wbr>After</a></span>
+        <span class="property-type"><a href="#actionhttprunafter">[]Action<wbr>Http<wbr>Run<wbr>After<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the place of the HTTP Action in the Logic App Workflow. If not specified, the HTTP Action is right after the Trigger. A `run_after` block is as defined below.
 {{% /md %}}</dd><dt class="property-optional"

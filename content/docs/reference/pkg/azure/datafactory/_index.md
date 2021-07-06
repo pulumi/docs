@@ -26,6 +26,7 @@ Explore the resources and functions of the azure.datafactory module.
     <li><a href="integrationruntimerule" title="IntegrationRuntimeRule"><span class="symbol resource"></span>IntegrationRuntimeRule</a></li>
     <li><a href="integrationruntimeselfhosted" title="IntegrationRuntimeSelfHosted"><span class="symbol resource"></span>IntegrationRuntimeSelfHosted</a></li>
     <li><a href="integrationruntimessis" title="IntegrationRuntimeSsis"><span class="symbol resource"></span>IntegrationRuntimeSsis</a></li>
+    <li><a href="linkedcustomservice" title="LinkedCustomService"><span class="symbol resource"></span>LinkedCustomService</a></li>
     <li><a href="linkedserviceazureblobstorage" title="LinkedServiceAzureBlobStorage"><span class="symbol resource"></span>LinkedServiceAzureBlobStorage</a></li>
     <li><a href="linkedserviceazuredatabricks" title="LinkedServiceAzureDatabricks"><span class="symbol resource"></span>LinkedServiceAzureDatabricks</a></li>
     <li><a href="linkedserviceazurefilestorage" title="LinkedServiceAzureFileStorage"><span class="symbol resource"></span>LinkedServiceAzureFileStorage</a></li>
@@ -38,6 +39,7 @@ Explore the resources and functions of the azure.datafactory module.
     <li><a href="linkedservicekeyvault" title="LinkedServiceKeyVault"><span class="symbol resource"></span>LinkedServiceKeyVault</a></li>
     <li><a href="linkedservicekusto" title="LinkedServiceKusto"><span class="symbol resource"></span>LinkedServiceKusto</a></li>
     <li><a href="linkedservicemysql" title="LinkedServiceMysql"><span class="symbol resource"></span>LinkedServiceMysql</a></li>
+    <li><a href="linkedserviceodata" title="LinkedServiceOdata"><span class="symbol resource"></span>LinkedServiceOdata</a></li>
     <li><a href="linkedservicepostgresql" title="LinkedServicePostgresql"><span class="symbol resource"></span>LinkedServicePostgresql</a></li>
     <li><a href="linkedservicesftp" title="LinkedServiceSftp"><span class="symbol resource"></span>LinkedServiceSftp</a></li>
     <li><a href="linkedservicesnowflake" title="LinkedServiceSnowflake"><span class="symbol resource"></span>LinkedServiceSnowflake</a></li>
@@ -45,6 +47,7 @@ Explore the resources and functions of the azure.datafactory module.
     <li><a href="linkedservicesynapse" title="LinkedServiceSynapse"><span class="symbol resource"></span>LinkedServiceSynapse</a></li>
     <li><a href="linkedserviceweb" title="LinkedServiceWeb"><span class="symbol resource"></span>LinkedServiceWeb</a></li>
     <li><a href="pipeline" title="Pipeline"><span class="symbol resource"></span>Pipeline</a></li>
+    <li><a href="triggerblobevent" title="TriggerBlobEvent"><span class="symbol resource"></span>TriggerBlobEvent</a></li>
     <li><a href="triggerschedule" title="TriggerSchedule"><span class="symbol resource"></span>TriggerSchedule</a></li>
 </ul>
 
@@ -62,6 +65,6 @@ Explore the resources and functions of the azure.datafactory module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.7.0</dd>
+	<dd>4.9.0</dd>
 </dl>
 

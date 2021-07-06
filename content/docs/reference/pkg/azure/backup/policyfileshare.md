@@ -558,7 +558,7 @@ The PolicyFileShare resource accepts the following [input]({{< relref "/docs/int
 <a href="#backup_go" style="color: inherit; text-decoration: inherit;">Backup</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policyfilesharebackup">Policy<wbr>File<wbr>Share<wbr>Backup</a></span>
+        <span class="property-type"><a href="#policyfilesharebackup">Policy<wbr>File<wbr>Share<wbr>Backup<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configures the Policy backup frequency and times as documented in the `backup` block below.
 {{% /md %}}</dd><dt class="property-required"
@@ -585,7 +585,7 @@ The PolicyFileShare resource accepts the following [input]({{< relref "/docs/int
 <a href="#retentiondaily_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>Daily</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policyfileshareretentiondaily">Policy<wbr>File<wbr>Share<wbr>Retention<wbr>Daily</a></span>
+        <span class="property-type"><a href="#policyfileshareretentiondaily">Policy<wbr>File<wbr>Share<wbr>Retention<wbr>Daily<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configures the policy daily retention as documented in the `retention_daily` block below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -603,7 +603,7 @@ The PolicyFileShare resource accepts the following [input]({{< relref "/docs/int
 <a href="#retentionmonthly_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>Monthly</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policyfileshareretentionmonthly">Policy<wbr>File<wbr>Share<wbr>Retention<wbr>Monthly</a></span>
+        <span class="property-type"><a href="#policyfileshareretentionmonthly">Policy<wbr>File<wbr>Share<wbr>Retention<wbr>Monthly<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configures the policy monthly retention as documented in the `retention_monthly` block below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -612,7 +612,7 @@ The PolicyFileShare resource accepts the following [input]({{< relref "/docs/int
 <a href="#retentionweekly_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>Weekly</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policyfileshareretentionweekly">Policy<wbr>File<wbr>Share<wbr>Retention<wbr>Weekly</a></span>
+        <span class="property-type"><a href="#policyfileshareretentionweekly">Policy<wbr>File<wbr>Share<wbr>Retention<wbr>Weekly<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configures the policy weekly retention as documented in the `retention_weekly` block below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -621,7 +621,7 @@ The PolicyFileShare resource accepts the following [input]({{< relref "/docs/int
 <a href="#retentionyearly_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>Yearly</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policyfileshareretentionyearly">Policy<wbr>File<wbr>Share<wbr>Retention<wbr>Yearly</a></span>
+        <span class="property-type"><a href="#policyfileshareretentionyearly">Policy<wbr>File<wbr>Share<wbr>Retention<wbr>Yearly<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configures the policy yearly retention as documented in the `retention_yearly` block below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1120,7 +1120,7 @@ The following state arguments are supported:
 <a href="#state_backup_go" style="color: inherit; text-decoration: inherit;">Backup</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policyfilesharebackup">Policy<wbr>File<wbr>Share<wbr>Backup</a></span>
+        <span class="property-type"><a href="#policyfilesharebackup">Policy<wbr>File<wbr>Share<wbr>Backup<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configures the Policy backup frequency and times as documented in the `backup` block below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1156,7 +1156,7 @@ The following state arguments are supported:
 <a href="#state_retentiondaily_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>Daily</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policyfileshareretentiondaily">Policy<wbr>File<wbr>Share<wbr>Retention<wbr>Daily</a></span>
+        <span class="property-type"><a href="#policyfileshareretentiondaily">Policy<wbr>File<wbr>Share<wbr>Retention<wbr>Daily<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configures the policy daily retention as documented in the `retention_daily` block below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1165,7 +1165,7 @@ The following state arguments are supported:
 <a href="#state_retentionmonthly_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>Monthly</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policyfileshareretentionmonthly">Policy<wbr>File<wbr>Share<wbr>Retention<wbr>Monthly</a></span>
+        <span class="property-type"><a href="#policyfileshareretentionmonthly">Policy<wbr>File<wbr>Share<wbr>Retention<wbr>Monthly<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configures the policy monthly retention as documented in the `retention_monthly` block below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1174,7 +1174,7 @@ The following state arguments are supported:
 <a href="#state_retentionweekly_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>Weekly</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policyfileshareretentionweekly">Policy<wbr>File<wbr>Share<wbr>Retention<wbr>Weekly</a></span>
+        <span class="property-type"><a href="#policyfileshareretentionweekly">Policy<wbr>File<wbr>Share<wbr>Retention<wbr>Weekly<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configures the policy weekly retention as documented in the `retention_weekly` block below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1183,7 +1183,7 @@ The following state arguments are supported:
 <a href="#state_retentionyearly_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>Yearly</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policyfileshareretentionyearly">Policy<wbr>File<wbr>Share<wbr>Retention<wbr>Yearly</a></span>
+        <span class="property-type"><a href="#policyfileshareretentionyearly">Policy<wbr>File<wbr>Share<wbr>Retention<wbr>Yearly<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configures the policy yearly retention as documented in the `retention_yearly` block below.
 {{% /md %}}</dd><dt class="property-optional"

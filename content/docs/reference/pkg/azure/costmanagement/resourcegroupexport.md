@@ -430,7 +430,7 @@ The ResourceGroupExport resource accepts the following [input]({{< relref "/docs
 <a href="#deliveryinfo_go" style="color: inherit; text-decoration: inherit;">Delivery<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcegroupexportdeliveryinfo">Resource<wbr>Group<wbr>Export<wbr>Delivery<wbr>Info</a></span>
+        <span class="property-type"><a href="#resourcegroupexportdeliveryinfo">Resource<wbr>Group<wbr>Export<wbr>Delivery<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `delivery_info` block as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -439,7 +439,7 @@ The ResourceGroupExport resource accepts the following [input]({{< relref "/docs
 <a href="#query_go" style="color: inherit; text-decoration: inherit;">Query</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcegroupexportquery">Resource<wbr>Group<wbr>Export<wbr>Query</a></span>
+        <span class="property-type"><a href="#resourcegroupexportquery">Resource<wbr>Group<wbr>Export<wbr>Query<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `query` block as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -931,7 +931,7 @@ The following state arguments are supported:
 <a href="#state_deliveryinfo_go" style="color: inherit; text-decoration: inherit;">Delivery<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcegroupexportdeliveryinfo">Resource<wbr>Group<wbr>Export<wbr>Delivery<wbr>Info</a></span>
+        <span class="property-type"><a href="#resourcegroupexportdeliveryinfo">Resource<wbr>Group<wbr>Export<wbr>Delivery<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `delivery_info` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -949,7 +949,7 @@ The following state arguments are supported:
 <a href="#state_query_go" style="color: inherit; text-decoration: inherit;">Query</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcegroupexportquery">Resource<wbr>Group<wbr>Export<wbr>Query</a></span>
+        <span class="property-type"><a href="#resourcegroupexportquery">Resource<wbr>Group<wbr>Export<wbr>Query<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `query` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"

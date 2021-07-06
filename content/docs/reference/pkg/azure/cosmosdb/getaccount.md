@@ -38,7 +38,7 @@ class MyStack : Stack
             Name = "tfex-cosmosdb-account",
             ResourceGroupName = "tfex-cosmosdb-account-rg",
         }));
-        this.CosmosdbAccountEndpoint = data.Azurerm_cosmosdb_account.Jobs.Endpoint;
+        this.CosmosdbAccountEndpoint = example.Apply(example => example.Endpoint);
     }
 
     [Output("cosmosdbAccountEndpoint")]
@@ -62,14 +62,14 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := cosmosdb.LookupAccount(ctx, &cosmosdb.LookupAccountArgs{
+		example, err := cosmosdb.LookupAccount(ctx, &cosmosdb.LookupAccountArgs{
 			Name:              "tfex-cosmosdb-account",
 			ResourceGroupName: "tfex-cosmosdb-account-rg",
 		}, nil)
 		if err != nil {
 			return err
 		}
-		ctx.Export("cosmosdbAccountEndpoint", data.Azurerm_cosmosdb_account.Jobs.Endpoint)
+		ctx.Export("cosmosdbAccountEndpoint", example.Endpoint)
 		return nil
 	})
 }
@@ -87,7 +87,7 @@ import pulumi_azure as azure
 
 example = azure.cosmosdb.get_account(name="tfex-cosmosdb-account",
     resource_group_name="tfex-cosmosdb-account-rg")
-pulumi.export("cosmosdbAccountEndpoint", data["azurerm_cosmosdb_account"]["jobs"]["endpoint"])
+pulumi.export("cosmosdbAccountEndpoint", example.endpoint)
 ```
 
 
@@ -105,7 +105,7 @@ const example = azure.cosmosdb.getAccount({
     name: "tfex-cosmosdb-account",
     resourceGroupName: "tfex-cosmosdb-account-rg",
 });
-export const cosmosdbAccountEndpoint = data.azurerm_cosmosdb_account.jobs.endpoint;
+export const cosmosdbAccountEndpoint = example.then(example => example.endpoint);
 ```
 
 

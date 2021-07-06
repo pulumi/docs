@@ -433,7 +433,7 @@ The Share resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#snapshotschedule_go" style="color: inherit; text-decoration: inherit;">Snapshot<wbr>Schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sharesnapshotschedule">Share<wbr>Snapshot<wbr>Schedule</a></span>
+        <span class="property-type"><a href="#sharesnapshotschedule">Share<wbr>Snapshot<wbr>Schedule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `snapshot_schedule` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -851,7 +851,7 @@ The following state arguments are supported:
 <a href="#state_snapshotschedule_go" style="color: inherit; text-decoration: inherit;">Snapshot<wbr>Schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sharesnapshotschedule">Share<wbr>Snapshot<wbr>Schedule</a></span>
+        <span class="property-type"><a href="#sharesnapshotschedule">Share<wbr>Snapshot<wbr>Schedule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `snapshot_schedule` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"

@@ -514,7 +514,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#authenticationconfiguration_go" style="color: inherit; text-decoration: inherit;">Authentication<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceauthenticationconfiguration">Service<wbr>Authentication<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#serviceauthenticationconfiguration">Service<wbr>Authentication<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `authentication_configuration` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -523,7 +523,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#corsconfiguration_go" style="color: inherit; text-decoration: inherit;">Cors<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecorsconfiguration">Service<wbr>Cors<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#servicecorsconfiguration">Service<wbr>Cors<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `cors_configuration` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1104,7 +1104,7 @@ The following state arguments are supported:
 <a href="#state_authenticationconfiguration_go" style="color: inherit; text-decoration: inherit;">Authentication<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceauthenticationconfiguration">Service<wbr>Authentication<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#serviceauthenticationconfiguration">Service<wbr>Authentication<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `authentication_configuration` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1113,7 +1113,7 @@ The following state arguments are supported:
 <a href="#state_corsconfiguration_go" style="color: inherit; text-decoration: inherit;">Cors<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecorsconfiguration">Service<wbr>Cors<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#servicecorsconfiguration">Service<wbr>Cors<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `cors_configuration` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"

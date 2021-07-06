@@ -349,7 +349,7 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#storageimagereference_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Image<wbr>Reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#poolstorageimagereference">Pool<wbr>Storage<wbr>Image<wbr>Reference</a></span>
+        <span class="property-type"><a href="#poolstorageimagereference">Pool<wbr>Storage<wbr>Image<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `storage_image_reference` for the virtual machines that will compose the Batch pool.
 {{% /md %}}</dd><dt class="property-required"
@@ -367,7 +367,7 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#autoscale_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Scale</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#poolautoscale">Pool<wbr>Auto<wbr>Scale</a></span>
+        <span class="property-type"><a href="#poolautoscale">Pool<wbr>Auto<wbr>Scale<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `auto_scale` block that describes the scale settings when using auto scale.
 {{% /md %}}</dd><dt class="property-optional"
@@ -376,7 +376,7 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#certificates_go" style="color: inherit; text-decoration: inherit;">Certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#poolcertificate">[]Pool<wbr>Certificate</a></span>
+        <span class="property-type"><a href="#poolcertificate">[]Pool<wbr>Certificate<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `certificate` blocks that describe the certificates to be installed on each compute node in the pool.
 {{% /md %}}</dd><dt class="property-optional"
@@ -385,7 +385,7 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#containerconfiguration_go" style="color: inherit; text-decoration: inherit;">Container<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#poolcontainerconfiguration">Pool<wbr>Container<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#poolcontainerconfiguration">Pool<wbr>Container<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The container configuration used in the pool's VMs.
 {{% /md %}}</dd><dt class="property-optional"
@@ -403,7 +403,7 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#fixedscale_go" style="color: inherit; text-decoration: inherit;">Fixed<wbr>Scale</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#poolfixedscale">Pool<wbr>Fixed<wbr>Scale</a></span>
+        <span class="property-type"><a href="#poolfixedscale">Pool<wbr>Fixed<wbr>Scale<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `fixed_scale` block that describes the scale settings when using fixed scale.
 {{% /md %}}</dd><dt class="property-optional"
@@ -439,7 +439,7 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#networkconfiguration_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#poolnetworkconfiguration">Pool<wbr>Network<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#poolnetworkconfiguration">Pool<wbr>Network<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `network_configuration` block that describes the network configurations for the Batch pool.
 {{% /md %}}</dd><dt class="property-optional"
@@ -448,7 +448,7 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#starttask_go" style="color: inherit; text-decoration: inherit;">Start<wbr>Task</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#poolstarttask">Pool<wbr>Start<wbr>Task</a></span>
+        <span class="property-type"><a href="#poolstarttask">Pool<wbr>Start<wbr>Task<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `start_task` block that describes the start task settings for the Batch pool.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1115,7 +1115,7 @@ The following state arguments are supported:
 <a href="#state_autoscale_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Scale</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#poolautoscale">Pool<wbr>Auto<wbr>Scale</a></span>
+        <span class="property-type"><a href="#poolautoscale">Pool<wbr>Auto<wbr>Scale<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `auto_scale` block that describes the scale settings when using auto scale.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1124,7 +1124,7 @@ The following state arguments are supported:
 <a href="#state_certificates_go" style="color: inherit; text-decoration: inherit;">Certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#poolcertificate">[]Pool<wbr>Certificate</a></span>
+        <span class="property-type"><a href="#poolcertificate">[]Pool<wbr>Certificate<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `certificate` blocks that describe the certificates to be installed on each compute node in the pool.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1133,7 +1133,7 @@ The following state arguments are supported:
 <a href="#state_containerconfiguration_go" style="color: inherit; text-decoration: inherit;">Container<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#poolcontainerconfiguration">Pool<wbr>Container<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#poolcontainerconfiguration">Pool<wbr>Container<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The container configuration used in the pool's VMs.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1151,7 +1151,7 @@ The following state arguments are supported:
 <a href="#state_fixedscale_go" style="color: inherit; text-decoration: inherit;">Fixed<wbr>Scale</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#poolfixedscale">Pool<wbr>Fixed<wbr>Scale</a></span>
+        <span class="property-type"><a href="#poolfixedscale">Pool<wbr>Fixed<wbr>Scale<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `fixed_scale` block that describes the scale settings when using fixed scale.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1187,7 +1187,7 @@ The following state arguments are supported:
 <a href="#state_networkconfiguration_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#poolnetworkconfiguration">Pool<wbr>Network<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#poolnetworkconfiguration">Pool<wbr>Network<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `network_configuration` block that describes the network configurations for the Batch pool.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1214,7 +1214,7 @@ The following state arguments are supported:
 <a href="#state_starttask_go" style="color: inherit; text-decoration: inherit;">Start<wbr>Task</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#poolstarttask">Pool<wbr>Start<wbr>Task</a></span>
+        <span class="property-type"><a href="#poolstarttask">Pool<wbr>Start<wbr>Task<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `start_task` block that describes the start task settings for the Batch pool.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1231,7 +1231,7 @@ The following state arguments are supported:
 <a href="#state_storageimagereference_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Image<wbr>Reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#poolstorageimagereference">Pool<wbr>Storage<wbr>Image<wbr>Reference</a></span>
+        <span class="property-type"><a href="#poolstorageimagereference">Pool<wbr>Storage<wbr>Image<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `storage_image_reference` for the virtual machines that will compose the Batch pool.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1819,7 +1819,7 @@ The following state arguments are supported:
 <a href="#containerregistries_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Registries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#poolcontainerconfigurationcontainerregistry">List&lt;Pool<wbr>Container<wbr>Configuration<wbr>Container<wbr>Registry<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#poolcontainerconfigurationcontainerregistry">List&lt;Pool<wbr>Container<wbr>Configuration<wbr>Container<wbr>Registry&gt;</a></span>
     </dt>
     <dd>{{% md %}}Additional container registries from which container images can be pulled by the pool's VMs.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1881,7 +1881,7 @@ The following state arguments are supported:
 <a href="#containerregistries_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Registries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#poolcontainerconfigurationcontainerregistry">Pool<wbr>Container<wbr>Configuration<wbr>Container<wbr>Registry<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#poolcontainerconfigurationcontainerregistry">Pool<wbr>Container<wbr>Configuration<wbr>Container<wbr>Registry[]</a></span>
     </dt>
     <dd>{{% md %}}Additional container registries from which container images can be pulled by the pool's VMs.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1912,7 +1912,7 @@ The following state arguments are supported:
 <a href="#container_registries_python" style="color: inherit; text-decoration: inherit;">container_<wbr>registries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#poolcontainerconfigurationcontainerregistry">Sequence[Pool<wbr>Container<wbr>Configuration<wbr>Container<wbr>Registry<wbr>Args]</a></span>
+        <span class="property-type"><a href="#poolcontainerconfigurationcontainerregistry">Sequence[Pool<wbr>Container<wbr>Configuration<wbr>Container<wbr>Registry]</a></span>
     </dt>
     <dd>{{% md %}}Additional container registries from which container images can be pulled by the pool's VMs.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2197,7 +2197,7 @@ The following state arguments are supported:
 <a href="#endpointconfigurations_csharp" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#poolnetworkconfigurationendpointconfiguration">List&lt;Pool<wbr>Network<wbr>Configuration<wbr>Endpoint<wbr>Configuration<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#poolnetworkconfigurationendpointconfiguration">List&lt;Pool<wbr>Network<wbr>Configuration<wbr>Endpoint<wbr>Configuration&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of inbound NAT pools that can be used to address specific ports on an individual compute node externally. Set as documented in the inbound_nat_pools block below. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2277,7 +2277,7 @@ The following state arguments are supported:
 <a href="#endpointconfigurations_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#poolnetworkconfigurationendpointconfiguration">Pool<wbr>Network<wbr>Configuration<wbr>Endpoint<wbr>Configuration<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#poolnetworkconfigurationendpointconfiguration">Pool<wbr>Network<wbr>Configuration<wbr>Endpoint<wbr>Configuration[]</a></span>
     </dt>
     <dd>{{% md %}}A list of inbound NAT pools that can be used to address specific ports on an individual compute node externally. Set as documented in the inbound_nat_pools block below. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2317,7 +2317,7 @@ The following state arguments are supported:
 <a href="#endpoint_configurations_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#poolnetworkconfigurationendpointconfiguration">Sequence[Pool<wbr>Network<wbr>Configuration<wbr>Endpoint<wbr>Configuration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#poolnetworkconfigurationendpointconfiguration">Sequence[Pool<wbr>Network<wbr>Configuration<wbr>Endpoint<wbr>Configuration]</a></span>
     </dt>
     <dd>{{% md %}}A list of inbound NAT pools that can be used to address specific ports on an individual compute node externally. Set as documented in the inbound_nat_pools block below. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2386,7 +2386,7 @@ The following state arguments are supported:
 <a href="#networksecuritygrouprules_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Security<wbr>Group<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#poolnetworkconfigurationendpointconfigurationnetworksecuritygrouprule">List&lt;Pool<wbr>Network<wbr>Configuration<wbr>Endpoint<wbr>Configuration<wbr>Network<wbr>Security<wbr>Group<wbr>Rule<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#poolnetworkconfigurationendpointconfigurationnetworksecuritygrouprule">List&lt;Pool<wbr>Network<wbr>Configuration<wbr>Endpoint<wbr>Configuration<wbr>Network<wbr>Security<wbr>Group<wbr>Rule&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of network security group rules that will be applied to the endpoint. The maximum number of rules that can be specified across all the endpoints on a Batch pool is `25`. If no network security group rules are specified, a default rule will be created to allow inbound access to the specified backendPort. Set as documented in the network_security_group_rules block below. Changing this forces a new resource to be created.
 {{% /md %}}</dd></dl>
@@ -2484,7 +2484,7 @@ The following state arguments are supported:
 <a href="#networksecuritygrouprules_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Security<wbr>Group<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#poolnetworkconfigurationendpointconfigurationnetworksecuritygrouprule">Pool<wbr>Network<wbr>Configuration<wbr>Endpoint<wbr>Configuration<wbr>Network<wbr>Security<wbr>Group<wbr>Rule<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#poolnetworkconfigurationendpointconfigurationnetworksecuritygrouprule">Pool<wbr>Network<wbr>Configuration<wbr>Endpoint<wbr>Configuration<wbr>Network<wbr>Security<wbr>Group<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}A list of network security group rules that will be applied to the endpoint. The maximum number of rules that can be specified across all the endpoints on a Batch pool is `25`. If no network security group rules are specified, a default rule will be created to allow inbound access to the specified backendPort. Set as documented in the network_security_group_rules block below. Changing this forces a new resource to be created.
 {{% /md %}}</dd></dl>
@@ -2533,7 +2533,7 @@ The following state arguments are supported:
 <a href="#network_security_group_rules_python" style="color: inherit; text-decoration: inherit;">network_<wbr>security_<wbr>group_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#poolnetworkconfigurationendpointconfigurationnetworksecuritygrouprule">Sequence[Pool<wbr>Network<wbr>Configuration<wbr>Endpoint<wbr>Configuration<wbr>Network<wbr>Security<wbr>Group<wbr>Rule<wbr>Args]</a></span>
+        <span class="property-type"><a href="#poolnetworkconfigurationendpointconfigurationnetworksecuritygrouprule">Sequence[Pool<wbr>Network<wbr>Configuration<wbr>Endpoint<wbr>Configuration<wbr>Network<wbr>Security<wbr>Group<wbr>Rule]</a></span>
     </dt>
     <dd>{{% md %}}A list of network security group rules that will be applied to the endpoint. The maximum number of rules that can be specified across all the endpoints on a Batch pool is `25`. If no network security group rules are specified, a default rule will be created to allow inbound access to the specified backendPort. Set as documented in the network_security_group_rules block below. Changing this forces a new resource to be created.
 {{% /md %}}</dd></dl>
@@ -2683,7 +2683,7 @@ The following state arguments are supported:
 <a href="#useridentity_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#poolstarttaskuseridentity">Pool<wbr>Start<wbr>Task<wbr>User<wbr>Identity<wbr>Args</a></span>
+        <span class="property-type"><a href="#poolstarttaskuseridentity">Pool<wbr>Start<wbr>Task<wbr>User<wbr>Identity</a></span>
     </dt>
     <dd>{{% md %}}A `user_identity` block that describes the user identity under which the start task runs.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2710,7 +2710,7 @@ The following state arguments are supported:
 <a href="#resourcefiles_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Files</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#poolstarttaskresourcefile">List&lt;Pool<wbr>Start<wbr>Task<wbr>Resource<wbr>File<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#poolstarttaskresourcefile">List&lt;Pool<wbr>Start<wbr>Task<wbr>Resource<wbr>File&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `resource_file` blocks that describe the files to be downloaded to a compute node.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2799,7 +2799,7 @@ The following state arguments are supported:
 <a href="#useridentity_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#poolstarttaskuseridentity">Pool<wbr>Start<wbr>Task<wbr>User<wbr>Identity<wbr>Args</a></span>
+        <span class="property-type"><a href="#poolstarttaskuseridentity">Pool<wbr>Start<wbr>Task<wbr>User<wbr>Identity</a></span>
     </dt>
     <dd>{{% md %}}A `user_identity` block that describes the user identity under which the start task runs.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2826,7 +2826,7 @@ The following state arguments are supported:
 <a href="#resourcefiles_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Files</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#poolstarttaskresourcefile">Pool<wbr>Start<wbr>Task<wbr>Resource<wbr>File<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#poolstarttaskresourcefile">Pool<wbr>Start<wbr>Task<wbr>Resource<wbr>File[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `resource_file` blocks that describe the files to be downloaded to a compute node.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2857,7 +2857,7 @@ The following state arguments are supported:
 <a href="#user_identity_python" style="color: inherit; text-decoration: inherit;">user_<wbr>identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#poolstarttaskuseridentity">Pool<wbr>Start<wbr>Task<wbr>User<wbr>Identity<wbr>Args</a></span>
+        <span class="property-type"><a href="#poolstarttaskuseridentity">Pool<wbr>Start<wbr>Task<wbr>User<wbr>Identity</a></span>
     </dt>
     <dd>{{% md %}}A `user_identity` block that describes the user identity under which the start task runs.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2884,7 +2884,7 @@ The following state arguments are supported:
 <a href="#resource_files_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>files</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#poolstarttaskresourcefile">Sequence[Pool<wbr>Start<wbr>Task<wbr>Resource<wbr>File<wbr>Args]</a></span>
+        <span class="property-type"><a href="#poolstarttaskresourcefile">Sequence[Pool<wbr>Start<wbr>Task<wbr>Resource<wbr>File]</a></span>
     </dt>
     <dd>{{% md %}}One or more `resource_file` blocks that describe the files to be downloaded to a compute node.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3142,7 +3142,7 @@ The following state arguments are supported:
 <a href="#autouser_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>User</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#poolstarttaskuseridentityautouser">Pool<wbr>Start<wbr>Task<wbr>User<wbr>Identity<wbr>Auto<wbr>User<wbr>Args</a></span>
+        <span class="property-type"><a href="#poolstarttaskuseridentityautouser">Pool<wbr>Start<wbr>Task<wbr>User<wbr>Identity<wbr>Auto<wbr>User</a></span>
     </dt>
     <dd>{{% md %}}A `auto_user` block that describes the user identity under which the start task runs.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3186,7 +3186,7 @@ The following state arguments are supported:
 <a href="#autouser_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>User</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#poolstarttaskuseridentityautouser">Pool<wbr>Start<wbr>Task<wbr>User<wbr>Identity<wbr>Auto<wbr>User<wbr>Args</a></span>
+        <span class="property-type"><a href="#poolstarttaskuseridentityautouser">Pool<wbr>Start<wbr>Task<wbr>User<wbr>Identity<wbr>Auto<wbr>User</a></span>
     </dt>
     <dd>{{% md %}}A `auto_user` block that describes the user identity under which the start task runs.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3208,7 +3208,7 @@ The following state arguments are supported:
 <a href="#auto_user_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>user</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#poolstarttaskuseridentityautouser">Pool<wbr>Start<wbr>Task<wbr>User<wbr>Identity<wbr>Auto<wbr>User<wbr>Args</a></span>
+        <span class="property-type"><a href="#poolstarttaskuseridentityautouser">Pool<wbr>Start<wbr>Task<wbr>User<wbr>Identity<wbr>Auto<wbr>User</a></span>
     </dt>
     <dd>{{% md %}}A `auto_user` block that describes the user identity under which the start task runs.
 {{% /md %}}</dd><dt class="property-optional"

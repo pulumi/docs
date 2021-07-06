@@ -569,7 +569,7 @@ The PolicyVM resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#backup_go" style="color: inherit; text-decoration: inherit;">Backup</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policyvmbackup">Policy<wbr>VMBackup</a></span>
+        <span class="property-type"><a href="#policyvmbackup">Policy<wbr>VMBackup<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configures the Policy backup frequency, times & days as documented in the `backup` block below.
 {{% /md %}}</dd><dt class="property-required"
@@ -614,7 +614,7 @@ The PolicyVM resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#retentiondaily_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>Daily</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policyvmretentiondaily">Policy<wbr>VMRetention<wbr>Daily</a></span>
+        <span class="property-type"><a href="#policyvmretentiondaily">Policy<wbr>VMRetention<wbr>Daily<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configures the policy daily retention as documented in the `retention_daily` block below. Required when backup frequency is `Daily`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -623,7 +623,7 @@ The PolicyVM resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#retentionmonthly_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>Monthly</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policyvmretentionmonthly">Policy<wbr>VMRetention<wbr>Monthly</a></span>
+        <span class="property-type"><a href="#policyvmretentionmonthly">Policy<wbr>VMRetention<wbr>Monthly<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configures the policy monthly retention as documented in the `retention_monthly` block below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -632,7 +632,7 @@ The PolicyVM resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#retentionweekly_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>Weekly</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policyvmretentionweekly">Policy<wbr>VMRetention<wbr>Weekly</a></span>
+        <span class="property-type"><a href="#policyvmretentionweekly">Policy<wbr>VMRetention<wbr>Weekly<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configures the policy weekly retention as documented in the `retention_weekly` block below. Required when backup frequency is `Weekly`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -641,7 +641,7 @@ The PolicyVM resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#retentionyearly_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>Yearly</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policyvmretentionyearly">Policy<wbr>VMRetention<wbr>Yearly</a></span>
+        <span class="property-type"><a href="#policyvmretentionyearly">Policy<wbr>VMRetention<wbr>Yearly<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configures the policy yearly retention as documented in the `retention_yearly` block below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1172,7 +1172,7 @@ The following state arguments are supported:
 <a href="#state_backup_go" style="color: inherit; text-decoration: inherit;">Backup</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policyvmbackup">Policy<wbr>VMBackup</a></span>
+        <span class="property-type"><a href="#policyvmbackup">Policy<wbr>VMBackup<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configures the Policy backup frequency, times & days as documented in the `backup` block below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1217,7 +1217,7 @@ The following state arguments are supported:
 <a href="#state_retentiondaily_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>Daily</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policyvmretentiondaily">Policy<wbr>VMRetention<wbr>Daily</a></span>
+        <span class="property-type"><a href="#policyvmretentiondaily">Policy<wbr>VMRetention<wbr>Daily<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configures the policy daily retention as documented in the `retention_daily` block below. Required when backup frequency is `Daily`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1226,7 +1226,7 @@ The following state arguments are supported:
 <a href="#state_retentionmonthly_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>Monthly</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policyvmretentionmonthly">Policy<wbr>VMRetention<wbr>Monthly</a></span>
+        <span class="property-type"><a href="#policyvmretentionmonthly">Policy<wbr>VMRetention<wbr>Monthly<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configures the policy monthly retention as documented in the `retention_monthly` block below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1235,7 +1235,7 @@ The following state arguments are supported:
 <a href="#state_retentionweekly_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>Weekly</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policyvmretentionweekly">Policy<wbr>VMRetention<wbr>Weekly</a></span>
+        <span class="property-type"><a href="#policyvmretentionweekly">Policy<wbr>VMRetention<wbr>Weekly<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configures the policy weekly retention as documented in the `retention_weekly` block below. Required when backup frequency is `Weekly`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1244,7 +1244,7 @@ The following state arguments are supported:
 <a href="#state_retentionyearly_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>Yearly</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policyvmretentionyearly">Policy<wbr>VMRetention<wbr>Yearly</a></span>
+        <span class="property-type"><a href="#policyvmretentionyearly">Policy<wbr>VMRetention<wbr>Yearly<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configures the policy yearly retention as documented in the `retention_yearly` block below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1899,7 +1899,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}The months of the year to retain backups of. Must be one of `January`, `February`, `March`, `April`, `May`, `June`, `July`, `Augest`, `September`, `October`, `November` and `December`.
+    <dd>{{% md %}}The months of the year to retain backups of. Must be one of `January`, `February`, `March`, `April`, `May`, `June`, `July`, `August`, `September`, `October`, `November` and `December`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="weekdays_csharp">
@@ -1939,7 +1939,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}The months of the year to retain backups of. Must be one of `January`, `February`, `March`, `April`, `May`, `June`, `July`, `Augest`, `September`, `October`, `November` and `December`.
+    <dd>{{% md %}}The months of the year to retain backups of. Must be one of `January`, `February`, `March`, `April`, `May`, `June`, `July`, `August`, `September`, `October`, `November` and `December`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="weekdays_go">
@@ -1979,7 +1979,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}The months of the year to retain backups of. Must be one of `January`, `February`, `March`, `April`, `May`, `June`, `July`, `Augest`, `September`, `October`, `November` and `December`.
+    <dd>{{% md %}}The months of the year to retain backups of. Must be one of `January`, `February`, `March`, `April`, `May`, `June`, `July`, `August`, `September`, `October`, `November` and `December`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="weekdays_nodejs">
@@ -2019,7 +2019,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}The months of the year to retain backups of. Must be one of `January`, `February`, `March`, `April`, `May`, `June`, `July`, `Augest`, `September`, `October`, `November` and `December`.
+    <dd>{{% md %}}The months of the year to retain backups of. Must be one of `January`, `February`, `March`, `April`, `May`, `June`, `July`, `August`, `September`, `October`, `November` and `December`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="weekdays_python">

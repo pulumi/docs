@@ -778,7 +778,7 @@ The ApiDiagnostic resource accepts the following [input]({{< relref "/docs/intro
 <a href="#backendrequest_go" style="color: inherit; text-decoration: inherit;">Backend<wbr>Request</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apidiagnosticbackendrequest">Api<wbr>Diagnostic<wbr>Backend<wbr>Request</a></span>
+        <span class="property-type"><a href="#apidiagnosticbackendrequest">Api<wbr>Diagnostic<wbr>Backend<wbr>Request<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `backend_request` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -787,7 +787,7 @@ The ApiDiagnostic resource accepts the following [input]({{< relref "/docs/intro
 <a href="#backendresponse_go" style="color: inherit; text-decoration: inherit;">Backend<wbr>Response</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apidiagnosticbackendresponse">Api<wbr>Diagnostic<wbr>Backend<wbr>Response</a></span>
+        <span class="property-type"><a href="#apidiagnosticbackendresponse">Api<wbr>Diagnostic<wbr>Backend<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `backend_response` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -796,7 +796,7 @@ The ApiDiagnostic resource accepts the following [input]({{< relref "/docs/intro
 <a href="#frontendrequest_go" style="color: inherit; text-decoration: inherit;">Frontend<wbr>Request</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apidiagnosticfrontendrequest">Api<wbr>Diagnostic<wbr>Frontend<wbr>Request</a></span>
+        <span class="property-type"><a href="#apidiagnosticfrontendrequest">Api<wbr>Diagnostic<wbr>Frontend<wbr>Request<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `frontend_request` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -805,7 +805,7 @@ The ApiDiagnostic resource accepts the following [input]({{< relref "/docs/intro
 <a href="#frontendresponse_go" style="color: inherit; text-decoration: inherit;">Frontend<wbr>Response</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apidiagnosticfrontendresponse">Api<wbr>Diagnostic<wbr>Frontend<wbr>Response</a></span>
+        <span class="property-type"><a href="#apidiagnosticfrontendresponse">Api<wbr>Diagnostic<wbr>Frontend<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `frontend_response` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1474,7 +1474,7 @@ The following state arguments are supported:
 <a href="#state_backendrequest_go" style="color: inherit; text-decoration: inherit;">Backend<wbr>Request</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apidiagnosticbackendrequest">Api<wbr>Diagnostic<wbr>Backend<wbr>Request</a></span>
+        <span class="property-type"><a href="#apidiagnosticbackendrequest">Api<wbr>Diagnostic<wbr>Backend<wbr>Request<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `backend_request` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1483,7 +1483,7 @@ The following state arguments are supported:
 <a href="#state_backendresponse_go" style="color: inherit; text-decoration: inherit;">Backend<wbr>Response</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apidiagnosticbackendresponse">Api<wbr>Diagnostic<wbr>Backend<wbr>Response</a></span>
+        <span class="property-type"><a href="#apidiagnosticbackendresponse">Api<wbr>Diagnostic<wbr>Backend<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `backend_response` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1492,7 +1492,7 @@ The following state arguments are supported:
 <a href="#state_frontendrequest_go" style="color: inherit; text-decoration: inherit;">Frontend<wbr>Request</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apidiagnosticfrontendrequest">Api<wbr>Diagnostic<wbr>Frontend<wbr>Request</a></span>
+        <span class="property-type"><a href="#apidiagnosticfrontendrequest">Api<wbr>Diagnostic<wbr>Frontend<wbr>Request<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `frontend_request` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1501,7 +1501,7 @@ The following state arguments are supported:
 <a href="#state_frontendresponse_go" style="color: inherit; text-decoration: inherit;">Frontend<wbr>Response</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apidiagnosticfrontendresponse">Api<wbr>Diagnostic<wbr>Frontend<wbr>Response</a></span>
+        <span class="property-type"><a href="#apidiagnosticfrontendresponse">Api<wbr>Diagnostic<wbr>Frontend<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `frontend_response` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"

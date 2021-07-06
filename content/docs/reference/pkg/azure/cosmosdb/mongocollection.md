@@ -450,7 +450,7 @@ The MongoCollection resource accepts the following [input]({{< relref "/docs/int
 <a href="#autoscalesettings_go" style="color: inherit; text-decoration: inherit;">Autoscale<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mongocollectionautoscalesettings">Mongo<wbr>Collection<wbr>Autoscale<wbr>Settings</a></span>
+        <span class="property-type"><a href="#mongocollectionautoscalesettings">Mongo<wbr>Collection<wbr>Autoscale<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `autoscale_settings` block as defined below. This must be set upon database creation otherwise it cannot be updated without a manual manual destroy-apply. Requires `shard_key` to be set.
 {{% /md %}}</dd><dt class="property-optional"
@@ -468,7 +468,7 @@ The MongoCollection resource accepts the following [input]({{< relref "/docs/int
 <a href="#indices_go" style="color: inherit; text-decoration: inherit;">Indices</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mongocollectionindex">[]Mongo<wbr>Collection<wbr>Index</a></span>
+        <span class="property-type"><a href="#mongocollectionindex">[]Mongo<wbr>Collection<wbr>Index<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `index` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1040,7 +1040,7 @@ The following state arguments are supported:
 <a href="#state_autoscalesettings_go" style="color: inherit; text-decoration: inherit;">Autoscale<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mongocollectionautoscalesettings">Mongo<wbr>Collection<wbr>Autoscale<wbr>Settings</a></span>
+        <span class="property-type"><a href="#mongocollectionautoscalesettings">Mongo<wbr>Collection<wbr>Autoscale<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `autoscale_settings` block as defined below. This must be set upon database creation otherwise it cannot be updated without a manual manual destroy-apply. Requires `shard_key` to be set.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1067,7 +1067,7 @@ The following state arguments are supported:
 <a href="#state_indices_go" style="color: inherit; text-decoration: inherit;">Indices</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mongocollectionindex">[]Mongo<wbr>Collection<wbr>Index</a></span>
+        <span class="property-type"><a href="#mongocollectionindex">[]Mongo<wbr>Collection<wbr>Index<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `index` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1103,7 +1103,7 @@ The following state arguments are supported:
 <a href="#state_systemindexes_go" style="color: inherit; text-decoration: inherit;">System<wbr>Indexes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mongocollectionsystemindex">[]Mongo<wbr>Collection<wbr>System<wbr>Index</a></span>
+        <span class="property-type"><a href="#mongocollectionsystemindex">[]Mongo<wbr>Collection<wbr>System<wbr>Index<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `system_indexes` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"

@@ -236,6 +236,7 @@ const exampleWorkspace = new azure.synapse.Workspace("exampleWorkspace", {
               <span class="nx">aad_admin</span><span class="p">:</span> <span class="nx">Optional[WorkspaceAadAdminArgs]</span> = None<span class="p">,</span>
               <span class="nx">azure_devops_repo</span><span class="p">:</span> <span class="nx">Optional[WorkspaceAzureDevopsRepoArgs]</span> = None<span class="p">,</span>
               <span class="nx">customer_managed_key_versionless_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">data_exfiltration_protection_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
               <span class="nx">github_repo</span><span class="p">:</span> <span class="nx">Optional[WorkspaceGithubRepoArgs]</span> = None<span class="p">,</span>
               <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
               <span class="nx">managed_resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -439,6 +440,15 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
     <dd>{{% md %}}The Azure Key Vault Key Versionless ID to be used as the Customer Managed Key (CMK) for double encryption (e.g. `https://example-keyvault.vault.azure.net/type/cmk/`).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="dataexfiltrationprotectionenabled_csharp">
+<a href="#dataexfiltrationprotectionenabled_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Exfiltration<wbr>Protection<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Is data exfiltration protection enabled in this workspace? If set to `true`, `managed_virtual_network_enabled` must also be set to `true`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="githubrepo_csharp">
 <a href="#githubrepo_csharp" style="color: inherit; text-decoration: inherit;">Github<wbr>Repo</a>
 </span>
@@ -546,7 +556,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#aadadmin_go" style="color: inherit; text-decoration: inherit;">Aad<wbr>Admin</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspaceaadadmin">Workspace<wbr>Aad<wbr>Admin</a></span>
+        <span class="property-type"><a href="#workspaceaadadmin">Workspace<wbr>Aad<wbr>Admin<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `aad_admin` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -555,7 +565,7 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#azuredevopsrepo_go" style="color: inherit; text-decoration: inherit;">Azure<wbr>Devops<wbr>Repo</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspaceazuredevopsrepo">Workspace<wbr>Azure<wbr>Devops<wbr>Repo</a></span>
+        <span class="property-type"><a href="#workspaceazuredevopsrepo">Workspace<wbr>Azure<wbr>Devops<wbr>Repo<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `azure_devops_repo` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -569,11 +579,20 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
     <dd>{{% md %}}The Azure Key Vault Key Versionless ID to be used as the Customer Managed Key (CMK) for double encryption (e.g. `https://example-keyvault.vault.azure.net/type/cmk/`).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="dataexfiltrationprotectionenabled_go">
+<a href="#dataexfiltrationprotectionenabled_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Exfiltration<wbr>Protection<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Is data exfiltration protection enabled in this workspace? If set to `true`, `managed_virtual_network_enabled` must also be set to `true`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="githubrepo_go">
 <a href="#githubrepo_go" style="color: inherit; text-decoration: inherit;">Github<wbr>Repo</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspacegithubrepo">Workspace<wbr>Github<wbr>Repo</a></span>
+        <span class="property-type"><a href="#workspacegithubrepo">Workspace<wbr>Github<wbr>Repo<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `github_repo` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -697,6 +716,15 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Azure Key Vault Key Versionless ID to be used as the Customer Managed Key (CMK) for double encryption (e.g. `https://example-keyvault.vault.azure.net/type/cmk/`).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dataexfiltrationprotectionenabled_nodejs">
+<a href="#dataexfiltrationprotectionenabled_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Exfiltration<wbr>Protection<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Is data exfiltration protection enabled in this workspace? If set to `true`, `managed_virtual_network_enabled` must also be set to `true`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="githubrepo_nodejs">
@@ -827,6 +855,15 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Azure Key Vault Key Versionless ID to be used as the Customer Managed Key (CMK) for double encryption (e.g. `https://example-keyvault.vault.azure.net/type/cmk/`).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="data_exfiltration_protection_enabled_python">
+<a href="#data_exfiltration_protection_enabled_python" style="color: inherit; text-decoration: inherit;">data_<wbr>exfiltration_<wbr>protection_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Is data exfiltration protection enabled in this workspace? If set to `true`, `managed_virtual_network_enabled` must also be set to `true`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="github_repo_python">
@@ -1040,6 +1077,7 @@ Get an existing Workspace resource's state with the given name, ID, and optional
         <span class="nx">azure_devops_repo</span><span class="p">:</span> <span class="nx">Optional[WorkspaceAzureDevopsRepoArgs]</span> = None<span class="p">,</span>
         <span class="nx">connectivity_endpoints</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
         <span class="nx">customer_managed_key_versionless_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">data_exfiltration_protection_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">github_repo</span><span class="p">:</span> <span class="nx">Optional[WorkspaceGithubRepoArgs]</span> = None<span class="p">,</span>
         <span class="nx">identities</span><span class="p">:</span> <span class="nx">Optional[Sequence[WorkspaceIdentityArgs]]</span> = None<span class="p">,</span>
         <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -1200,6 +1238,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The Azure Key Vault Key Versionless ID to be used as the Customer Managed Key (CMK) for double encryption (e.g. `https://example-keyvault.vault.azure.net/type/cmk/`).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_dataexfiltrationprotectionenabled_csharp">
+<a href="#state_dataexfiltrationprotectionenabled_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Exfiltration<wbr>Protection<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Is data exfiltration protection enabled in this workspace? If set to `true`, `managed_virtual_network_enabled` must also be set to `true`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_githubrepo_csharp">
 <a href="#state_githubrepo_csharp" style="color: inherit; text-decoration: inherit;">Github<wbr>Repo</a>
 </span>
@@ -1316,7 +1363,7 @@ The following state arguments are supported:
 <a href="#state_aadadmin_go" style="color: inherit; text-decoration: inherit;">Aad<wbr>Admin</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspaceaadadmin">Workspace<wbr>Aad<wbr>Admin</a></span>
+        <span class="property-type"><a href="#workspaceaadadmin">Workspace<wbr>Aad<wbr>Admin<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `aad_admin` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1325,7 +1372,7 @@ The following state arguments are supported:
 <a href="#state_azuredevopsrepo_go" style="color: inherit; text-decoration: inherit;">Azure<wbr>Devops<wbr>Repo</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspaceazuredevopsrepo">Workspace<wbr>Azure<wbr>Devops<wbr>Repo</a></span>
+        <span class="property-type"><a href="#workspaceazuredevopsrepo">Workspace<wbr>Azure<wbr>Devops<wbr>Repo<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `azure_devops_repo` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1348,11 +1395,20 @@ The following state arguments are supported:
     <dd>{{% md %}}The Azure Key Vault Key Versionless ID to be used as the Customer Managed Key (CMK) for double encryption (e.g. `https://example-keyvault.vault.azure.net/type/cmk/`).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_dataexfiltrationprotectionenabled_go">
+<a href="#state_dataexfiltrationprotectionenabled_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Exfiltration<wbr>Protection<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Is data exfiltration protection enabled in this workspace? If set to `true`, `managed_virtual_network_enabled` must also be set to `true`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_githubrepo_go">
 <a href="#state_githubrepo_go" style="color: inherit; text-decoration: inherit;">Github<wbr>Repo</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspacegithubrepo">Workspace<wbr>Github<wbr>Repo</a></span>
+        <span class="property-type"><a href="#workspacegithubrepo">Workspace<wbr>Github<wbr>Repo<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `github_repo` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1361,7 +1417,7 @@ The following state arguments are supported:
 <a href="#state_identities_go" style="color: inherit; text-decoration: inherit;">Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#workspaceidentity">[]Workspace<wbr>Identity</a></span>
+        <span class="property-type"><a href="#workspaceidentity">[]Workspace<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `identity` block as defined below, which contains the Managed Service Identity information for this Synapse Workspace.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1494,6 +1550,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Azure Key Vault Key Versionless ID to be used as the Customer Managed Key (CMK) for double encryption (e.g. `https://example-keyvault.vault.azure.net/type/cmk/`).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_dataexfiltrationprotectionenabled_nodejs">
+<a href="#state_dataexfiltrationprotectionenabled_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Exfiltration<wbr>Protection<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Is data exfiltration protection enabled in this workspace? If set to `true`, `managed_virtual_network_enabled` must also be set to `true`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_githubrepo_nodejs">
@@ -1642,6 +1707,15 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Azure Key Vault Key Versionless ID to be used as the Customer Managed Key (CMK) for double encryption (e.g. `https://example-keyvault.vault.azure.net/type/cmk/`).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_data_exfiltration_protection_enabled_python">
+<a href="#state_data_exfiltration_protection_enabled_python" style="color: inherit; text-decoration: inherit;">data_<wbr>exfiltration_<wbr>protection_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Is data exfiltration protection enabled in this workspace? If set to `true`, `managed_virtual_network_enabled` must also be set to `true`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_github_repo_python">

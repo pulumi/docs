@@ -532,7 +532,7 @@ The Group resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#containers_go" style="color: inherit; text-decoration: inherit;">Containers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupcontainer">[]Group<wbr>Container</a></span>
+        <span class="property-type"><a href="#groupcontainer">[]Group<wbr>Container<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The definition of a container that is part of the group as documented in the `container` block below. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -559,7 +559,7 @@ The Group resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#diagnostics_go" style="color: inherit; text-decoration: inherit;">Diagnostics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupdiagnostics">Group<wbr>Diagnostics</a></span>
+        <span class="property-type"><a href="#groupdiagnostics">Group<wbr>Diagnostics<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `diagnostics` block as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -568,7 +568,7 @@ The Group resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#dnsconfig_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupdnsconfig">Group<wbr>Dns<wbr>Config</a></span>
+        <span class="property-type"><a href="#groupdnsconfig">Group<wbr>Dns<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `dns_config` block as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -586,7 +586,7 @@ The Group resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#exposedports_go" style="color: inherit; text-decoration: inherit;">Exposed<wbr>Ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupexposedport">[]Group<wbr>Exposed<wbr>Port</a></span>
+        <span class="property-type"><a href="#groupexposedport">[]Group<wbr>Exposed<wbr>Port<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Zero or more `exposed_port` blocks as defined below. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -595,7 +595,7 @@ The Group resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupidentity">Group<wbr>Identity</a></span>
+        <span class="property-type"><a href="#groupidentity">Group<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `identity` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -604,7 +604,7 @@ The Group resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#imageregistrycredentials_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Registry<wbr>Credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupimageregistrycredential">[]Group<wbr>Image<wbr>Registry<wbr>Credential</a></span>
+        <span class="property-type"><a href="#groupimageregistrycredential">[]Group<wbr>Image<wbr>Registry<wbr>Credential<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `image_registry_credential` block as documented below. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1375,7 +1375,7 @@ The following state arguments are supported:
 <a href="#state_containers_go" style="color: inherit; text-decoration: inherit;">Containers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupcontainer">[]Group<wbr>Container</a></span>
+        <span class="property-type"><a href="#groupcontainer">[]Group<wbr>Container<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The definition of a container that is part of the group as documented in the `container` block below. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1384,7 +1384,7 @@ The following state arguments are supported:
 <a href="#state_diagnostics_go" style="color: inherit; text-decoration: inherit;">Diagnostics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupdiagnostics">Group<wbr>Diagnostics</a></span>
+        <span class="property-type"><a href="#groupdiagnostics">Group<wbr>Diagnostics<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `diagnostics` block as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1393,7 +1393,7 @@ The following state arguments are supported:
 <a href="#state_dnsconfig_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupdnsconfig">Group<wbr>Dns<wbr>Config</a></span>
+        <span class="property-type"><a href="#groupdnsconfig">Group<wbr>Dns<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `dns_config` block as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1411,7 +1411,7 @@ The following state arguments are supported:
 <a href="#state_exposedports_go" style="color: inherit; text-decoration: inherit;">Exposed<wbr>Ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupexposedport">[]Group<wbr>Exposed<wbr>Port</a></span>
+        <span class="property-type"><a href="#groupexposedport">[]Group<wbr>Exposed<wbr>Port<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Zero or more `exposed_port` blocks as defined below. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1429,7 +1429,7 @@ The following state arguments are supported:
 <a href="#state_identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupidentity">Group<wbr>Identity</a></span>
+        <span class="property-type"><a href="#groupidentity">Group<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `identity` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1438,7 +1438,7 @@ The following state arguments are supported:
 <a href="#state_imageregistrycredentials_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Registry<wbr>Credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupimageregistrycredential">[]Group<wbr>Image<wbr>Registry<wbr>Credential</a></span>
+        <span class="property-type"><a href="#groupimageregistrycredential">[]Group<wbr>Image<wbr>Registry<wbr>Credential<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `image_registry_credential` block as documented below. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1911,7 +1911,7 @@ The following state arguments are supported:
 <a href="#gpu_csharp" style="color: inherit; text-decoration: inherit;">Gpu</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupcontainergpu">Group<wbr>Container<wbr>Gpu<wbr>Args</a></span>
+        <span class="property-type"><a href="#groupcontainergpu">Group<wbr>Container<wbr>Gpu</a></span>
     </dt>
     <dd>{{% md %}}A `gpu` block as defined below. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1920,7 +1920,7 @@ The following state arguments are supported:
 <a href="#livenessprobe_csharp" style="color: inherit; text-decoration: inherit;">Liveness<wbr>Probe</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupcontainerlivenessprobe">Group<wbr>Container<wbr>Liveness<wbr>Probe<wbr>Args</a></span>
+        <span class="property-type"><a href="#groupcontainerlivenessprobe">Group<wbr>Container<wbr>Liveness<wbr>Probe</a></span>
     </dt>
     <dd>{{% md %}}The definition of a readiness probe for this container as documented in the `liveness_probe` block below. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1929,7 +1929,7 @@ The following state arguments are supported:
 <a href="#ports_csharp" style="color: inherit; text-decoration: inherit;">Ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupcontainerport">List&lt;Group<wbr>Container<wbr>Port<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#groupcontainerport">List&lt;Group<wbr>Container<wbr>Port&gt;</a></span>
     </dt>
     <dd>{{% md %}}A set of public ports for the container. Changing this forces a new resource to be created. Set as documented in the `ports` block below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1938,7 +1938,7 @@ The following state arguments are supported:
 <a href="#readinessprobe_csharp" style="color: inherit; text-decoration: inherit;">Readiness<wbr>Probe</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupcontainerreadinessprobe">Group<wbr>Container<wbr>Readiness<wbr>Probe<wbr>Args</a></span>
+        <span class="property-type"><a href="#groupcontainerreadinessprobe">Group<wbr>Container<wbr>Readiness<wbr>Probe</a></span>
     </dt>
     <dd>{{% md %}}The definition of a readiness probe for this container as documented in the `readiness_probe` block below. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1956,7 +1956,7 @@ The following state arguments are supported:
 <a href="#volumes_csharp" style="color: inherit; text-decoration: inherit;">Volumes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupcontainervolume">List&lt;Group<wbr>Container<wbr>Volume<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#groupcontainervolume">List&lt;Group<wbr>Container<wbr>Volume&gt;</a></span>
     </dt>
     <dd>{{% md %}}The definition of a volume mount for this container as documented in the `volume` block below. Changing this forces a new resource to be created.
 {{% /md %}}</dd></dl>
@@ -2135,7 +2135,7 @@ The following state arguments are supported:
 <a href="#gpu_nodejs" style="color: inherit; text-decoration: inherit;">gpu</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupcontainergpu">Group<wbr>Container<wbr>Gpu<wbr>Args</a></span>
+        <span class="property-type"><a href="#groupcontainergpu">Group<wbr>Container<wbr>Gpu</a></span>
     </dt>
     <dd>{{% md %}}A `gpu` block as defined below. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2144,7 +2144,7 @@ The following state arguments are supported:
 <a href="#livenessprobe_nodejs" style="color: inherit; text-decoration: inherit;">liveness<wbr>Probe</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupcontainerlivenessprobe">Group<wbr>Container<wbr>Liveness<wbr>Probe<wbr>Args</a></span>
+        <span class="property-type"><a href="#groupcontainerlivenessprobe">Group<wbr>Container<wbr>Liveness<wbr>Probe</a></span>
     </dt>
     <dd>{{% md %}}The definition of a readiness probe for this container as documented in the `liveness_probe` block below. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2153,7 +2153,7 @@ The following state arguments are supported:
 <a href="#ports_nodejs" style="color: inherit; text-decoration: inherit;">ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupcontainerport">Group<wbr>Container<wbr>Port<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#groupcontainerport">Group<wbr>Container<wbr>Port[]</a></span>
     </dt>
     <dd>{{% md %}}A set of public ports for the container. Changing this forces a new resource to be created. Set as documented in the `ports` block below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2162,7 +2162,7 @@ The following state arguments are supported:
 <a href="#readinessprobe_nodejs" style="color: inherit; text-decoration: inherit;">readiness<wbr>Probe</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupcontainerreadinessprobe">Group<wbr>Container<wbr>Readiness<wbr>Probe<wbr>Args</a></span>
+        <span class="property-type"><a href="#groupcontainerreadinessprobe">Group<wbr>Container<wbr>Readiness<wbr>Probe</a></span>
     </dt>
     <dd>{{% md %}}The definition of a readiness probe for this container as documented in the `readiness_probe` block below. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2180,7 +2180,7 @@ The following state arguments are supported:
 <a href="#volumes_nodejs" style="color: inherit; text-decoration: inherit;">volumes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupcontainervolume">Group<wbr>Container<wbr>Volume<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#groupcontainervolume">Group<wbr>Container<wbr>Volume[]</a></span>
     </dt>
     <dd>{{% md %}}The definition of a volume mount for this container as documented in the `volume` block below. Changing this forces a new resource to be created.
 {{% /md %}}</dd></dl>
@@ -2247,7 +2247,7 @@ The following state arguments are supported:
 <a href="#gpu_python" style="color: inherit; text-decoration: inherit;">gpu</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupcontainergpu">Group<wbr>Container<wbr>Gpu<wbr>Args</a></span>
+        <span class="property-type"><a href="#groupcontainergpu">Group<wbr>Container<wbr>Gpu</a></span>
     </dt>
     <dd>{{% md %}}A `gpu` block as defined below. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2256,7 +2256,7 @@ The following state arguments are supported:
 <a href="#liveness_probe_python" style="color: inherit; text-decoration: inherit;">liveness_<wbr>probe</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupcontainerlivenessprobe">Group<wbr>Container<wbr>Liveness<wbr>Probe<wbr>Args</a></span>
+        <span class="property-type"><a href="#groupcontainerlivenessprobe">Group<wbr>Container<wbr>Liveness<wbr>Probe</a></span>
     </dt>
     <dd>{{% md %}}The definition of a readiness probe for this container as documented in the `liveness_probe` block below. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2265,7 +2265,7 @@ The following state arguments are supported:
 <a href="#ports_python" style="color: inherit; text-decoration: inherit;">ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupcontainerport">Sequence[Group<wbr>Container<wbr>Port<wbr>Args]</a></span>
+        <span class="property-type"><a href="#groupcontainerport">Sequence[Group<wbr>Container<wbr>Port]</a></span>
     </dt>
     <dd>{{% md %}}A set of public ports for the container. Changing this forces a new resource to be created. Set as documented in the `ports` block below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2274,7 +2274,7 @@ The following state arguments are supported:
 <a href="#readiness_probe_python" style="color: inherit; text-decoration: inherit;">readiness_<wbr>probe</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupcontainerreadinessprobe">Group<wbr>Container<wbr>Readiness<wbr>Probe<wbr>Args</a></span>
+        <span class="property-type"><a href="#groupcontainerreadinessprobe">Group<wbr>Container<wbr>Readiness<wbr>Probe</a></span>
     </dt>
     <dd>{{% md %}}The definition of a readiness probe for this container as documented in the `readiness_probe` block below. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2292,7 +2292,7 @@ The following state arguments are supported:
 <a href="#volumes_python" style="color: inherit; text-decoration: inherit;">volumes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupcontainervolume">Sequence[Group<wbr>Container<wbr>Volume<wbr>Args]</a></span>
+        <span class="property-type"><a href="#groupcontainervolume">Sequence[Group<wbr>Container<wbr>Volume]</a></span>
     </dt>
     <dd>{{% md %}}The definition of a volume mount for this container as documented in the `volume` block below. Changing this forces a new resource to be created.
 {{% /md %}}</dd></dl>
@@ -2415,7 +2415,7 @@ The following state arguments are supported:
 <a href="#httpgets_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Gets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupcontainerlivenessprobehttpget">List&lt;Group<wbr>Container<wbr>Liveness<wbr>Probe<wbr>Http<wbr>Get<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#groupcontainerlivenessprobehttpget">List&lt;Group<wbr>Container<wbr>Liveness<wbr>Probe<wbr>Http<wbr>Get&gt;</a></span>
     </dt>
     <dd>{{% md %}}The definition of the http_get for this container as documented in the `http_get` block below. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2549,7 +2549,7 @@ The following state arguments are supported:
 <a href="#httpgets_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Gets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupcontainerlivenessprobehttpget">Group<wbr>Container<wbr>Liveness<wbr>Probe<wbr>Http<wbr>Get<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#groupcontainerlivenessprobehttpget">Group<wbr>Container<wbr>Liveness<wbr>Probe<wbr>Http<wbr>Get[]</a></span>
     </dt>
     <dd>{{% md %}}The definition of the http_get for this container as documented in the `http_get` block below. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2616,7 +2616,7 @@ The following state arguments are supported:
 <a href="#http_gets_python" style="color: inherit; text-decoration: inherit;">http_<wbr>gets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupcontainerlivenessprobehttpget">Sequence[Group<wbr>Container<wbr>Liveness<wbr>Probe<wbr>Http<wbr>Get<wbr>Args]</a></span>
+        <span class="property-type"><a href="#groupcontainerlivenessprobehttpget">Sequence[Group<wbr>Container<wbr>Liveness<wbr>Probe<wbr>Http<wbr>Get]</a></span>
     </dt>
     <dd>{{% md %}}The definition of the http_get for this container as documented in the `http_get` block below. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2901,7 +2901,7 @@ The following state arguments are supported:
 <a href="#httpgets_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Gets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupcontainerreadinessprobehttpget">List&lt;Group<wbr>Container<wbr>Readiness<wbr>Probe<wbr>Http<wbr>Get<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#groupcontainerreadinessprobehttpget">List&lt;Group<wbr>Container<wbr>Readiness<wbr>Probe<wbr>Http<wbr>Get&gt;</a></span>
     </dt>
     <dd>{{% md %}}The definition of the http_get for this container as documented in the `http_get` block below. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3035,7 +3035,7 @@ The following state arguments are supported:
 <a href="#httpgets_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Gets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupcontainerreadinessprobehttpget">Group<wbr>Container<wbr>Readiness<wbr>Probe<wbr>Http<wbr>Get<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#groupcontainerreadinessprobehttpget">Group<wbr>Container<wbr>Readiness<wbr>Probe<wbr>Http<wbr>Get[]</a></span>
     </dt>
     <dd>{{% md %}}The definition of the http_get for this container as documented in the `http_get` block below. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3102,7 +3102,7 @@ The following state arguments are supported:
 <a href="#http_gets_python" style="color: inherit; text-decoration: inherit;">http_<wbr>gets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupcontainerreadinessprobehttpget">Sequence[Group<wbr>Container<wbr>Readiness<wbr>Probe<wbr>Http<wbr>Get<wbr>Args]</a></span>
+        <span class="property-type"><a href="#groupcontainerreadinessprobehttpget">Sequence[Group<wbr>Container<wbr>Readiness<wbr>Probe<wbr>Http<wbr>Get]</a></span>
     </dt>
     <dd>{{% md %}}The definition of the http_get for this container as documented in the `http_get` block below. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3306,7 +3306,7 @@ The following state arguments are supported:
 <a href="#gitrepo_csharp" style="color: inherit; text-decoration: inherit;">Git<wbr>Repo</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupcontainervolumegitrepo">Group<wbr>Container<wbr>Volume<wbr>Git<wbr>Repo<wbr>Args</a></span>
+        <span class="property-type"><a href="#groupcontainervolumegitrepo">Group<wbr>Container<wbr>Volume<wbr>Git<wbr>Repo</a></span>
     </dt>
     <dd>{{% md %}}A `git_repo` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3476,7 +3476,7 @@ The following state arguments are supported:
 <a href="#gitrepo_nodejs" style="color: inherit; text-decoration: inherit;">git<wbr>Repo</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupcontainervolumegitrepo">Group<wbr>Container<wbr>Volume<wbr>Git<wbr>Repo<wbr>Args</a></span>
+        <span class="property-type"><a href="#groupcontainervolumegitrepo">Group<wbr>Container<wbr>Volume<wbr>Git<wbr>Repo</a></span>
     </dt>
     <dd>{{% md %}}A `git_repo` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3561,7 +3561,7 @@ The following state arguments are supported:
 <a href="#git_repo_python" style="color: inherit; text-decoration: inherit;">git_<wbr>repo</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupcontainervolumegitrepo">Group<wbr>Container<wbr>Volume<wbr>Git<wbr>Repo<wbr>Args</a></span>
+        <span class="property-type"><a href="#groupcontainervolumegitrepo">Group<wbr>Container<wbr>Volume<wbr>Git<wbr>Repo</a></span>
     </dt>
     <dd>{{% md %}}A `git_repo` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3747,7 +3747,7 @@ The following state arguments are supported:
 <a href="#loganalytics_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Analytics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupdiagnosticsloganalytics">Group<wbr>Diagnostics<wbr>Log<wbr>Analytics<wbr>Args</a></span>
+        <span class="property-type"><a href="#groupdiagnosticsloganalytics">Group<wbr>Diagnostics<wbr>Log<wbr>Analytics</a></span>
     </dt>
     <dd>{{% md %}}A `log_analytics` block as defined below. Changing this forces a new resource to be created.
 {{% /md %}}</dd></dl>
@@ -3773,7 +3773,7 @@ The following state arguments are supported:
 <a href="#loganalytics_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Analytics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupdiagnosticsloganalytics">Group<wbr>Diagnostics<wbr>Log<wbr>Analytics<wbr>Args</a></span>
+        <span class="property-type"><a href="#groupdiagnosticsloganalytics">Group<wbr>Diagnostics<wbr>Log<wbr>Analytics</a></span>
     </dt>
     <dd>{{% md %}}A `log_analytics` block as defined below. Changing this forces a new resource to be created.
 {{% /md %}}</dd></dl>
@@ -3786,7 +3786,7 @@ The following state arguments are supported:
 <a href="#log_analytics_python" style="color: inherit; text-decoration: inherit;">log_<wbr>analytics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#groupdiagnosticsloganalytics">Group<wbr>Diagnostics<wbr>Log<wbr>Analytics<wbr>Args</a></span>
+        <span class="property-type"><a href="#groupdiagnosticsloganalytics">Group<wbr>Diagnostics<wbr>Log<wbr>Analytics</a></span>
     </dt>
     <dd>{{% md %}}A `log_analytics` block as defined below. Changing this forces a new resource to be created.
 {{% /md %}}</dd></dl>

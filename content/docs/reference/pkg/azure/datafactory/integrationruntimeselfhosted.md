@@ -381,7 +381,7 @@ The IntegrationRuntimeSelfHosted resource accepts the following [input]({{< relr
 <a href="#rbacauthorizations_go" style="color: inherit; text-decoration: inherit;">Rbac<wbr>Authorizations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimeselfhostedrbacauthorization">[]Integration<wbr>Runtime<wbr>Self<wbr>Hosted<wbr>Rbac<wbr>Authorization</a></span>
+        <span class="property-type"><a href="#integrationruntimeselfhostedrbacauthorization">[]Integration<wbr>Runtime<wbr>Self<wbr>Hosted<wbr>Rbac<wbr>Authorization<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `rbac_authorization` block as defined below.
 {{% /md %}}</dd></dl>
@@ -863,7 +863,7 @@ The following state arguments are supported:
 <a href="#state_rbacauthorizations_go" style="color: inherit; text-decoration: inherit;">Rbac<wbr>Authorizations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationruntimeselfhostedrbacauthorization">[]Integration<wbr>Runtime<wbr>Self<wbr>Hosted<wbr>Rbac<wbr>Authorization</a></span>
+        <span class="property-type"><a href="#integrationruntimeselfhostedrbacauthorization">[]Integration<wbr>Runtime<wbr>Self<wbr>Hosted<wbr>Rbac<wbr>Authorization<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `rbac_authorization` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"

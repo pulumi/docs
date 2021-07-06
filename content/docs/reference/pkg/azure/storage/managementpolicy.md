@@ -578,7 +578,7 @@ The ManagementPolicy resource accepts the following [input]({{< relref "/docs/in
 <a href="#rules_go" style="color: inherit; text-decoration: inherit;">Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementpolicyrule">[]Management<wbr>Policy<wbr>Rule</a></span>
+        <span class="property-type"><a href="#managementpolicyrule">[]Management<wbr>Policy<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `rule` block as documented below.
 {{% /md %}}</dd></dl>
@@ -839,7 +839,7 @@ The following state arguments are supported:
 <a href="#state_rules_go" style="color: inherit; text-decoration: inherit;">Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementpolicyrule">[]Management<wbr>Policy<wbr>Rule</a></span>
+        <span class="property-type"><a href="#managementpolicyrule">[]Management<wbr>Policy<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `rule` block as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -916,7 +916,7 @@ The following state arguments are supported:
 <a href="#actions_csharp" style="color: inherit; text-decoration: inherit;">Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementpolicyruleactions">Management<wbr>Policy<wbr>Rule<wbr>Actions<wbr>Args</a></span>
+        <span class="property-type"><a href="#managementpolicyruleactions">Management<wbr>Policy<wbr>Rule<wbr>Actions</a></span>
     </dt>
     <dd>{{% md %}}An `actions` block as documented below.
 {{% /md %}}</dd><dt class="property-required"
@@ -943,7 +943,7 @@ The following state arguments are supported:
 <a href="#filters_csharp" style="color: inherit; text-decoration: inherit;">Filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementpolicyrulefilters">Management<wbr>Policy<wbr>Rule<wbr>Filters<wbr>Args</a></span>
+        <span class="property-type"><a href="#managementpolicyrulefilters">Management<wbr>Policy<wbr>Rule<wbr>Filters</a></span>
     </dt>
     <dd>{{% md %}}A `filter` block as documented below.
 {{% /md %}}</dd></dl>
@@ -996,7 +996,7 @@ The following state arguments are supported:
 <a href="#actions_nodejs" style="color: inherit; text-decoration: inherit;">actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementpolicyruleactions">Management<wbr>Policy<wbr>Rule<wbr>Actions<wbr>Args</a></span>
+        <span class="property-type"><a href="#managementpolicyruleactions">Management<wbr>Policy<wbr>Rule<wbr>Actions</a></span>
     </dt>
     <dd>{{% md %}}An `actions` block as documented below.
 {{% /md %}}</dd><dt class="property-required"
@@ -1023,7 +1023,7 @@ The following state arguments are supported:
 <a href="#filters_nodejs" style="color: inherit; text-decoration: inherit;">filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementpolicyrulefilters">Management<wbr>Policy<wbr>Rule<wbr>Filters<wbr>Args</a></span>
+        <span class="property-type"><a href="#managementpolicyrulefilters">Management<wbr>Policy<wbr>Rule<wbr>Filters</a></span>
     </dt>
     <dd>{{% md %}}A `filter` block as documented below.
 {{% /md %}}</dd></dl>
@@ -1036,7 +1036,7 @@ The following state arguments are supported:
 <a href="#actions_python" style="color: inherit; text-decoration: inherit;">actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementpolicyruleactions">Management<wbr>Policy<wbr>Rule<wbr>Actions<wbr>Args</a></span>
+        <span class="property-type"><a href="#managementpolicyruleactions">Management<wbr>Policy<wbr>Rule<wbr>Actions</a></span>
     </dt>
     <dd>{{% md %}}An `actions` block as documented below.
 {{% /md %}}</dd><dt class="property-required"
@@ -1063,7 +1063,7 @@ The following state arguments are supported:
 <a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementpolicyrulefilters">Management<wbr>Policy<wbr>Rule<wbr>Filters<wbr>Args</a></span>
+        <span class="property-type"><a href="#managementpolicyrulefilters">Management<wbr>Policy<wbr>Rule<wbr>Filters</a></span>
     </dt>
     <dd>{{% md %}}A `filter` block as documented below.
 {{% /md %}}</dd></dl>
@@ -1078,7 +1078,7 @@ The following state arguments are supported:
 <a href="#baseblob_csharp" style="color: inherit; text-decoration: inherit;">Base<wbr>Blob</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementpolicyruleactionsbaseblob">Management<wbr>Policy<wbr>Rule<wbr>Actions<wbr>Base<wbr>Blob<wbr>Args</a></span>
+        <span class="property-type"><a href="#managementpolicyruleactionsbaseblob">Management<wbr>Policy<wbr>Rule<wbr>Actions<wbr>Base<wbr>Blob</a></span>
     </dt>
     <dd>{{% md %}}A `base_blob` block as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1087,7 +1087,7 @@ The following state arguments are supported:
 <a href="#snapshot_csharp" style="color: inherit; text-decoration: inherit;">Snapshot</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementpolicyruleactionssnapshot">Management<wbr>Policy<wbr>Rule<wbr>Actions<wbr>Snapshot<wbr>Args</a></span>
+        <span class="property-type"><a href="#managementpolicyruleactionssnapshot">Management<wbr>Policy<wbr>Rule<wbr>Actions<wbr>Snapshot</a></span>
     </dt>
     <dd>{{% md %}}A `snapshot` block as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1096,7 +1096,7 @@ The following state arguments are supported:
 <a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementpolicyruleactionsversion">Management<wbr>Policy<wbr>Rule<wbr>Actions<wbr>Version<wbr>Args</a></span>
+        <span class="property-type"><a href="#managementpolicyruleactionsversion">Management<wbr>Policy<wbr>Rule<wbr>Actions<wbr>Version</a></span>
     </dt>
     <dd>{{% md %}}A `version` block as documented below.
 {{% /md %}}</dd></dl>
@@ -1140,7 +1140,7 @@ The following state arguments are supported:
 <a href="#baseblob_nodejs" style="color: inherit; text-decoration: inherit;">base<wbr>Blob</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementpolicyruleactionsbaseblob">Management<wbr>Policy<wbr>Rule<wbr>Actions<wbr>Base<wbr>Blob<wbr>Args</a></span>
+        <span class="property-type"><a href="#managementpolicyruleactionsbaseblob">Management<wbr>Policy<wbr>Rule<wbr>Actions<wbr>Base<wbr>Blob</a></span>
     </dt>
     <dd>{{% md %}}A `base_blob` block as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1149,7 +1149,7 @@ The following state arguments are supported:
 <a href="#snapshot_nodejs" style="color: inherit; text-decoration: inherit;">snapshot</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementpolicyruleactionssnapshot">Management<wbr>Policy<wbr>Rule<wbr>Actions<wbr>Snapshot<wbr>Args</a></span>
+        <span class="property-type"><a href="#managementpolicyruleactionssnapshot">Management<wbr>Policy<wbr>Rule<wbr>Actions<wbr>Snapshot</a></span>
     </dt>
     <dd>{{% md %}}A `snapshot` block as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1158,7 +1158,7 @@ The following state arguments are supported:
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementpolicyruleactionsversion">Management<wbr>Policy<wbr>Rule<wbr>Actions<wbr>Version<wbr>Args</a></span>
+        <span class="property-type"><a href="#managementpolicyruleactionsversion">Management<wbr>Policy<wbr>Rule<wbr>Actions<wbr>Version</a></span>
     </dt>
     <dd>{{% md %}}A `version` block as documented below.
 {{% /md %}}</dd></dl>
@@ -1171,7 +1171,7 @@ The following state arguments are supported:
 <a href="#base_blob_python" style="color: inherit; text-decoration: inherit;">base_<wbr>blob</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementpolicyruleactionsbaseblob">Management<wbr>Policy<wbr>Rule<wbr>Actions<wbr>Base<wbr>Blob<wbr>Args</a></span>
+        <span class="property-type"><a href="#managementpolicyruleactionsbaseblob">Management<wbr>Policy<wbr>Rule<wbr>Actions<wbr>Base<wbr>Blob</a></span>
     </dt>
     <dd>{{% md %}}A `base_blob` block as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1180,7 +1180,7 @@ The following state arguments are supported:
 <a href="#snapshot_python" style="color: inherit; text-decoration: inherit;">snapshot</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementpolicyruleactionssnapshot">Management<wbr>Policy<wbr>Rule<wbr>Actions<wbr>Snapshot<wbr>Args</a></span>
+        <span class="property-type"><a href="#managementpolicyruleactionssnapshot">Management<wbr>Policy<wbr>Rule<wbr>Actions<wbr>Snapshot</a></span>
     </dt>
     <dd>{{% md %}}A `snapshot` block as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1189,7 +1189,7 @@ The following state arguments are supported:
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementpolicyruleactionsversion">Management<wbr>Policy<wbr>Rule<wbr>Actions<wbr>Version<wbr>Args</a></span>
+        <span class="property-type"><a href="#managementpolicyruleactionsversion">Management<wbr>Policy<wbr>Rule<wbr>Actions<wbr>Version</a></span>
     </dt>
     <dd>{{% md %}}A `version` block as documented below.
 {{% /md %}}</dd></dl>
@@ -1591,7 +1591,7 @@ The following state arguments are supported:
 <a href="#matchblobindextags_csharp" style="color: inherit; text-decoration: inherit;">Match<wbr>Blob<wbr>Index<wbr>Tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementpolicyrulefiltersmatchblobindextag">List&lt;Management<wbr>Policy<wbr>Rule<wbr>Filters<wbr>Match<wbr>Blob<wbr>Index<wbr>Tag<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#managementpolicyrulefiltersmatchblobindextag">List&lt;Management<wbr>Policy<wbr>Rule<wbr>Filters<wbr>Match<wbr>Blob<wbr>Index<wbr>Tag&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `match_blob_index_tag` block as defined below. The block defines the blob index tag based filtering for blob objects.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1653,7 +1653,7 @@ The following state arguments are supported:
 <a href="#matchblobindextags_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Blob<wbr>Index<wbr>Tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementpolicyrulefiltersmatchblobindextag">Management<wbr>Policy<wbr>Rule<wbr>Filters<wbr>Match<wbr>Blob<wbr>Index<wbr>Tag<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#managementpolicyrulefiltersmatchblobindextag">Management<wbr>Policy<wbr>Rule<wbr>Filters<wbr>Match<wbr>Blob<wbr>Index<wbr>Tag[]</a></span>
     </dt>
     <dd>{{% md %}}A `match_blob_index_tag` block as defined below. The block defines the blob index tag based filtering for blob objects.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1684,7 +1684,7 @@ The following state arguments are supported:
 <a href="#match_blob_index_tags_python" style="color: inherit; text-decoration: inherit;">match_<wbr>blob_<wbr>index_<wbr>tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementpolicyrulefiltersmatchblobindextag">Sequence[Management<wbr>Policy<wbr>Rule<wbr>Filters<wbr>Match<wbr>Blob<wbr>Index<wbr>Tag<wbr>Args]</a></span>
+        <span class="property-type"><a href="#managementpolicyrulefiltersmatchblobindextag">Sequence[Management<wbr>Policy<wbr>Rule<wbr>Filters<wbr>Match<wbr>Blob<wbr>Index<wbr>Tag]</a></span>
     </dt>
     <dd>{{% md %}}A `match_blob_index_tag` block as defined below. The block defines the blob index tag based filtering for blob objects.
 {{% /md %}}</dd><dt class="property-optional"

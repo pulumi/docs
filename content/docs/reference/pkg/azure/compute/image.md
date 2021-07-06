@@ -510,7 +510,7 @@ the image. Changing this forces a new resource to be created.
 <a href="#datadisks_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imagedatadisk">[]Image<wbr>Data<wbr>Disk</a></span>
+        <span class="property-type"><a href="#imagedatadisk">[]Image<wbr>Data<wbr>Disk<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `data_disk` elements as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -548,7 +548,7 @@ new resource to be created.
 <a href="#osdisk_go" style="color: inherit; text-decoration: inherit;">Os<wbr>Disk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imageosdisk">Image<wbr>Os<wbr>Disk</a></span>
+        <span class="property-type"><a href="#imageosdisk">Image<wbr>Os<wbr>Disk<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `os_disk` elements as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1041,7 +1041,7 @@ the image. Changing this forces a new resource to be created.
 <a href="#state_datadisks_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imagedatadisk">[]Image<wbr>Data<wbr>Disk</a></span>
+        <span class="property-type"><a href="#imagedatadisk">[]Image<wbr>Data<wbr>Disk<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `data_disk` elements as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1079,7 +1079,7 @@ new resource to be created.
 <a href="#state_osdisk_go" style="color: inherit; text-decoration: inherit;">Os<wbr>Disk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imageosdisk">Image<wbr>Os<wbr>Disk</a></span>
+        <span class="property-type"><a href="#imageosdisk">Image<wbr>Os<wbr>Disk<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `os_disk` elements as defined below.
 {{% /md %}}</dd><dt class="property-optional"

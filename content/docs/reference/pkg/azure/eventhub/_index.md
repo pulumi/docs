@@ -25,6 +25,7 @@ Explore the resources and functions of the azure.eventhub module.
     <li><a href="eventhubnamespacedisasterrecoveryconfig" title="EventhubNamespaceDisasterRecoveryConfig"><span class="symbol resource"></span>EventhubNamespaceDisasterRecoveryConfig</a></li>
     <li><a href="namespace" title="Namespace"><span class="symbol resource"></span>Namespace</a></li>
     <li><a href="namespaceauthorizationrule" title="NamespaceAuthorizationRule"><span class="symbol resource"></span>NamespaceAuthorizationRule</a></li>
+    <li><a href="namespacecustomermanagedkey" title="NamespaceCustomerManagedKey"><span class="symbol resource"></span>NamespaceCustomerManagedKey</a></li>
     <li><a href="queue" title="Queue"><span class="symbol resource"></span>Queue</a></li>
     <li><a href="queueauthorizationrule" title="QueueAuthorizationRule"><span class="symbol resource"></span>QueueAuthorizationRule</a></li>
     <li><a href="subscription" title="Subscription"><span class="symbol resource"></span>Subscription</a></li>
@@ -54,6 +55,6 @@ Explore the resources and functions of the azure.eventhub module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.7.0</dd>
+	<dd>4.9.0</dd>
 </dl>
 

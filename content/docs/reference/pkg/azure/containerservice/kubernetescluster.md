@@ -599,7 +599,7 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
 <a href="#defaultnodepool_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Node<wbr>Pool</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusterdefaultnodepool">Kubernetes<wbr>Cluster<wbr>Default<wbr>Node<wbr>Pool</a></span>
+        <span class="property-type"><a href="#kubernetesclusterdefaultnodepool">Kubernetes<wbr>Cluster<wbr>Default<wbr>Node<wbr>Pool<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `default_node_pool` block as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -617,7 +617,7 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
 <a href="#addonprofile_go" style="color: inherit; text-decoration: inherit;">Addon<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusteraddonprofile">Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile</a></span>
+        <span class="property-type"><a href="#kubernetesclusteraddonprofile">Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `addon_profile` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -635,7 +635,7 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
 <a href="#autoscalerprofile_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Scaler<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusterautoscalerprofile">Kubernetes<wbr>Cluster<wbr>Auto<wbr>Scaler<wbr>Profile</a></span>
+        <span class="property-type"><a href="#kubernetesclusterautoscalerprofile">Kubernetes<wbr>Cluster<wbr>Auto<wbr>Scaler<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `auto_scaler_profile` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -688,7 +688,7 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
 <a href="#identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusteridentity">Kubernetes<wbr>Cluster<wbr>Identity</a></span>
+        <span class="property-type"><a href="#kubernetesclusteridentity">Kubernetes<wbr>Cluster<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `identity` block as defined below. One of either `identity` or `service_principal` must be specified.
 {{% /md %}}</dd><dt class="property-optional"
@@ -697,7 +697,7 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
 <a href="#kubeletidentities_go" style="color: inherit; text-decoration: inherit;">Kubelet<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusterkubeletidentity">[]Kubernetes<wbr>Cluster<wbr>Kubelet<wbr>Identity</a></span>
+        <span class="property-type"><a href="#kubernetesclusterkubeletidentity">[]Kubernetes<wbr>Cluster<wbr>Kubelet<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `kubelet_identity` block as defined below. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -715,7 +715,7 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
 <a href="#linuxprofile_go" style="color: inherit; text-decoration: inherit;">Linux<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusterlinuxprofile">Kubernetes<wbr>Cluster<wbr>Linux<wbr>Profile</a></span>
+        <span class="property-type"><a href="#kubernetesclusterlinuxprofile">Kubernetes<wbr>Cluster<wbr>Linux<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `linux_profile` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -742,7 +742,7 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
 <a href="#networkprofile_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusternetworkprofile">Kubernetes<wbr>Cluster<wbr>Network<wbr>Profile</a></span>
+        <span class="property-type"><a href="#kubernetesclusternetworkprofile">Kubernetes<wbr>Cluster<wbr>Network<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `network_profile` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -786,7 +786,7 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
 <a href="#rolebasedaccesscontrol_go" style="color: inherit; text-decoration: inherit;">Role<wbr>Based<wbr>Access<wbr>Control</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusterrolebasedaccesscontrol">Kubernetes<wbr>Cluster<wbr>Role<wbr>Based<wbr>Access<wbr>Control</a></span>
+        <span class="property-type"><a href="#kubernetesclusterrolebasedaccesscontrol">Kubernetes<wbr>Cluster<wbr>Role<wbr>Based<wbr>Access<wbr>Control<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `role_based_access_control` block. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -795,7 +795,7 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
 <a href="#serviceprincipal_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Principal</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusterserviceprincipal">Kubernetes<wbr>Cluster<wbr>Service<wbr>Principal</a></span>
+        <span class="property-type"><a href="#kubernetesclusterserviceprincipal">Kubernetes<wbr>Cluster<wbr>Service<wbr>Principal<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `service_principal` block as documented below. One of either `identity` or `service_principal` must be specified.
 {{% /md %}}</dd><dt class="property-optional"
@@ -822,7 +822,7 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
 <a href="#windowsprofile_go" style="color: inherit; text-decoration: inherit;">Windows<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusterwindowsprofile">Kubernetes<wbr>Cluster<wbr>Windows<wbr>Profile</a></span>
+        <span class="property-type"><a href="#kubernetesclusterwindowsprofile">Kubernetes<wbr>Cluster<wbr>Windows<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `windows_profile` block as defined below.
 {{% /md %}}</dd></dl>
@@ -2025,7 +2025,7 @@ The following state arguments are supported:
 <a href="#state_addonprofile_go" style="color: inherit; text-decoration: inherit;">Addon<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusteraddonprofile">Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile</a></span>
+        <span class="property-type"><a href="#kubernetesclusteraddonprofile">Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `addon_profile` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2043,7 +2043,7 @@ The following state arguments are supported:
 <a href="#state_autoscalerprofile_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Scaler<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusterautoscalerprofile">Kubernetes<wbr>Cluster<wbr>Auto<wbr>Scaler<wbr>Profile</a></span>
+        <span class="property-type"><a href="#kubernetesclusterautoscalerprofile">Kubernetes<wbr>Cluster<wbr>Auto<wbr>Scaler<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `auto_scaler_profile` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2061,7 +2061,7 @@ The following state arguments are supported:
 <a href="#state_defaultnodepool_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Node<wbr>Pool</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusterdefaultnodepool">Kubernetes<wbr>Cluster<wbr>Default<wbr>Node<wbr>Pool</a></span>
+        <span class="property-type"><a href="#kubernetesclusterdefaultnodepool">Kubernetes<wbr>Cluster<wbr>Default<wbr>Node<wbr>Pool<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `default_node_pool` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2114,7 +2114,7 @@ The following state arguments are supported:
 <a href="#state_identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusteridentity">Kubernetes<wbr>Cluster<wbr>Identity</a></span>
+        <span class="property-type"><a href="#kubernetesclusteridentity">Kubernetes<wbr>Cluster<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `identity` block as defined below. One of either `identity` or `service_principal` must be specified.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2132,7 +2132,7 @@ The following state arguments are supported:
 <a href="#state_kubeadminconfigs_go" style="color: inherit; text-decoration: inherit;">Kube<wbr>Admin<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusterkubeadminconfig">[]Kubernetes<wbr>Cluster<wbr>Kube<wbr>Admin<wbr>Config</a></span>
+        <span class="property-type"><a href="#kubernetesclusterkubeadminconfig">[]Kubernetes<wbr>Cluster<wbr>Kube<wbr>Admin<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `kube_admin_config` block as defined below. This is only available when Role Based Access Control with Azure Active Directory is enabled.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2150,7 +2150,7 @@ The following state arguments are supported:
 <a href="#state_kubeconfigs_go" style="color: inherit; text-decoration: inherit;">Kube<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusterkubeconfig">[]Kubernetes<wbr>Cluster<wbr>Kube<wbr>Config</a></span>
+        <span class="property-type"><a href="#kubernetesclusterkubeconfig">[]Kubernetes<wbr>Cluster<wbr>Kube<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `kube_config` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2159,7 +2159,7 @@ The following state arguments are supported:
 <a href="#state_kubeletidentities_go" style="color: inherit; text-decoration: inherit;">Kubelet<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusterkubeletidentity">[]Kubernetes<wbr>Cluster<wbr>Kubelet<wbr>Identity</a></span>
+        <span class="property-type"><a href="#kubernetesclusterkubeletidentity">[]Kubernetes<wbr>Cluster<wbr>Kubelet<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `kubelet_identity` block as defined below. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2177,7 +2177,7 @@ The following state arguments are supported:
 <a href="#state_linuxprofile_go" style="color: inherit; text-decoration: inherit;">Linux<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusterlinuxprofile">Kubernetes<wbr>Cluster<wbr>Linux<wbr>Profile</a></span>
+        <span class="property-type"><a href="#kubernetesclusterlinuxprofile">Kubernetes<wbr>Cluster<wbr>Linux<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `linux_profile` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2204,7 +2204,7 @@ The following state arguments are supported:
 <a href="#state_networkprofile_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusternetworkprofile">Kubernetes<wbr>Cluster<wbr>Network<wbr>Profile</a></span>
+        <span class="property-type"><a href="#kubernetesclusternetworkprofile">Kubernetes<wbr>Cluster<wbr>Network<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `network_profile` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2266,7 +2266,7 @@ The following state arguments are supported:
 <a href="#state_rolebasedaccesscontrol_go" style="color: inherit; text-decoration: inherit;">Role<wbr>Based<wbr>Access<wbr>Control</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusterrolebasedaccesscontrol">Kubernetes<wbr>Cluster<wbr>Role<wbr>Based<wbr>Access<wbr>Control</a></span>
+        <span class="property-type"><a href="#kubernetesclusterrolebasedaccesscontrol">Kubernetes<wbr>Cluster<wbr>Role<wbr>Based<wbr>Access<wbr>Control<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `role_based_access_control` block. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2275,7 +2275,7 @@ The following state arguments are supported:
 <a href="#state_serviceprincipal_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Principal</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusterserviceprincipal">Kubernetes<wbr>Cluster<wbr>Service<wbr>Principal</a></span>
+        <span class="property-type"><a href="#kubernetesclusterserviceprincipal">Kubernetes<wbr>Cluster<wbr>Service<wbr>Principal<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `service_principal` block as documented below. One of either `identity` or `service_principal` must be specified.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2302,7 +2302,7 @@ The following state arguments are supported:
 <a href="#state_windowsprofile_go" style="color: inherit; text-decoration: inherit;">Windows<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusterwindowsprofile">Kubernetes<wbr>Cluster<wbr>Windows<wbr>Profile</a></span>
+        <span class="property-type"><a href="#kubernetesclusterwindowsprofile">Kubernetes<wbr>Cluster<wbr>Windows<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `windows_profile` block as defined below.
 {{% /md %}}</dd></dl>
@@ -2906,7 +2906,7 @@ The following state arguments are supported:
 <a href="#aciconnectorlinux_csharp" style="color: inherit; text-decoration: inherit;">Aci<wbr>Connector<wbr>Linux</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusteraddonprofileaciconnectorlinux">Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Aci<wbr>Connector<wbr>Linux<wbr>Args</a></span>
+        <span class="property-type"><a href="#kubernetesclusteraddonprofileaciconnectorlinux">Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Aci<wbr>Connector<wbr>Linux</a></span>
     </dt>
     <dd>{{% md %}}A `aci_connector_linux` block. For more details, please visit [Create and configure an AKS cluster to use virtual nodes](https://docs.microsoft.com/en-us/azure/aks/virtual-nodes-portal).
 {{% /md %}}</dd><dt class="property-optional"
@@ -2915,7 +2915,7 @@ The following state arguments are supported:
 <a href="#azurepolicy_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusteraddonprofileazurepolicy">Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Azure<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#kubernetesclusteraddonprofileazurepolicy">Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Azure<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}A `azure_policy` block as defined below. For more details please visit [Understand Azure Policy for Azure Kubernetes Service](https://docs.microsoft.com/en-ie/azure/governance/policy/concepts/rego-for-aks)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2924,7 +2924,7 @@ The following state arguments are supported:
 <a href="#httpapplicationrouting_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Application<wbr>Routing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusteraddonprofilehttpapplicationrouting">Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Http<wbr>Application<wbr>Routing<wbr>Args</a></span>
+        <span class="property-type"><a href="#kubernetesclusteraddonprofilehttpapplicationrouting">Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Http<wbr>Application<wbr>Routing</a></span>
     </dt>
     <dd>{{% md %}}A `http_application_routing` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2933,7 +2933,7 @@ The following state arguments are supported:
 <a href="#ingressapplicationgateway_csharp" style="color: inherit; text-decoration: inherit;">Ingress<wbr>Application<wbr>Gateway</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusteraddonprofileingressapplicationgateway">Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Ingress<wbr>Application<wbr>Gateway<wbr>Args</a></span>
+        <span class="property-type"><a href="#kubernetesclusteraddonprofileingressapplicationgateway">Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Ingress<wbr>Application<wbr>Gateway</a></span>
     </dt>
     <dd>{{% md %}}An `ingress_application_gateway` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2942,7 +2942,7 @@ The following state arguments are supported:
 <a href="#kubedashboard_csharp" style="color: inherit; text-decoration: inherit;">Kube<wbr>Dashboard</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusteraddonprofilekubedashboard">Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Kube<wbr>Dashboard<wbr>Args</a></span>
+        <span class="property-type"><a href="#kubernetesclusteraddonprofilekubedashboard">Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Kube<wbr>Dashboard</a></span>
     </dt>
     <dd>{{% md %}}A `kube_dashboard` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2951,7 +2951,7 @@ The following state arguments are supported:
 <a href="#omsagent_csharp" style="color: inherit; text-decoration: inherit;">Oms<wbr>Agent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusteraddonprofileomsagent">Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Oms<wbr>Agent<wbr>Args</a></span>
+        <span class="property-type"><a href="#kubernetesclusteraddonprofileomsagent">Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Oms<wbr>Agent</a></span>
     </dt>
     <dd>{{% md %}}A `oms_agent` block as defined below. For more details, please visit [How to onboard Azure Monitor for containers](https://docs.microsoft.com/en-us/azure/monitoring/monitoring-container-insights-onboard).
 {{% /md %}}</dd></dl>
@@ -3022,7 +3022,7 @@ The following state arguments are supported:
 <a href="#aciconnectorlinux_nodejs" style="color: inherit; text-decoration: inherit;">aci<wbr>Connector<wbr>Linux</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusteraddonprofileaciconnectorlinux">Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Aci<wbr>Connector<wbr>Linux<wbr>Args</a></span>
+        <span class="property-type"><a href="#kubernetesclusteraddonprofileaciconnectorlinux">Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Aci<wbr>Connector<wbr>Linux</a></span>
     </dt>
     <dd>{{% md %}}A `aci_connector_linux` block. For more details, please visit [Create and configure an AKS cluster to use virtual nodes](https://docs.microsoft.com/en-us/azure/aks/virtual-nodes-portal).
 {{% /md %}}</dd><dt class="property-optional"
@@ -3031,7 +3031,7 @@ The following state arguments are supported:
 <a href="#azurepolicy_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusteraddonprofileazurepolicy">Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Azure<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#kubernetesclusteraddonprofileazurepolicy">Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Azure<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}A `azure_policy` block as defined below. For more details please visit [Understand Azure Policy for Azure Kubernetes Service](https://docs.microsoft.com/en-ie/azure/governance/policy/concepts/rego-for-aks)
 {{% /md %}}</dd><dt class="property-optional"
@@ -3040,7 +3040,7 @@ The following state arguments are supported:
 <a href="#httpapplicationrouting_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Application<wbr>Routing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusteraddonprofilehttpapplicationrouting">Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Http<wbr>Application<wbr>Routing<wbr>Args</a></span>
+        <span class="property-type"><a href="#kubernetesclusteraddonprofilehttpapplicationrouting">Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Http<wbr>Application<wbr>Routing</a></span>
     </dt>
     <dd>{{% md %}}A `http_application_routing` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3049,7 +3049,7 @@ The following state arguments are supported:
 <a href="#ingressapplicationgateway_nodejs" style="color: inherit; text-decoration: inherit;">ingress<wbr>Application<wbr>Gateway</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusteraddonprofileingressapplicationgateway">Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Ingress<wbr>Application<wbr>Gateway<wbr>Args</a></span>
+        <span class="property-type"><a href="#kubernetesclusteraddonprofileingressapplicationgateway">Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Ingress<wbr>Application<wbr>Gateway</a></span>
     </dt>
     <dd>{{% md %}}An `ingress_application_gateway` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3058,7 +3058,7 @@ The following state arguments are supported:
 <a href="#kubedashboard_nodejs" style="color: inherit; text-decoration: inherit;">kube<wbr>Dashboard</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusteraddonprofilekubedashboard">Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Kube<wbr>Dashboard<wbr>Args</a></span>
+        <span class="property-type"><a href="#kubernetesclusteraddonprofilekubedashboard">Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Kube<wbr>Dashboard</a></span>
     </dt>
     <dd>{{% md %}}A `kube_dashboard` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3067,7 +3067,7 @@ The following state arguments are supported:
 <a href="#omsagent_nodejs" style="color: inherit; text-decoration: inherit;">oms<wbr>Agent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusteraddonprofileomsagent">Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Oms<wbr>Agent<wbr>Args</a></span>
+        <span class="property-type"><a href="#kubernetesclusteraddonprofileomsagent">Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Oms<wbr>Agent</a></span>
     </dt>
     <dd>{{% md %}}A `oms_agent` block as defined below. For more details, please visit [How to onboard Azure Monitor for containers](https://docs.microsoft.com/en-us/azure/monitoring/monitoring-container-insights-onboard).
 {{% /md %}}</dd></dl>
@@ -3080,7 +3080,7 @@ The following state arguments are supported:
 <a href="#aci_connector_linux_python" style="color: inherit; text-decoration: inherit;">aci_<wbr>connector_<wbr>linux</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusteraddonprofileaciconnectorlinux">Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Aci<wbr>Connector<wbr>Linux<wbr>Args</a></span>
+        <span class="property-type"><a href="#kubernetesclusteraddonprofileaciconnectorlinux">Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Aci<wbr>Connector<wbr>Linux</a></span>
     </dt>
     <dd>{{% md %}}A `aci_connector_linux` block. For more details, please visit [Create and configure an AKS cluster to use virtual nodes](https://docs.microsoft.com/en-us/azure/aks/virtual-nodes-portal).
 {{% /md %}}</dd><dt class="property-optional"
@@ -3089,7 +3089,7 @@ The following state arguments are supported:
 <a href="#azure_policy_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusteraddonprofileazurepolicy">Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Azure<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#kubernetesclusteraddonprofileazurepolicy">Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Azure<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}A `azure_policy` block as defined below. For more details please visit [Understand Azure Policy for Azure Kubernetes Service](https://docs.microsoft.com/en-ie/azure/governance/policy/concepts/rego-for-aks)
 {{% /md %}}</dd><dt class="property-optional"
@@ -3098,7 +3098,7 @@ The following state arguments are supported:
 <a href="#http_application_routing_python" style="color: inherit; text-decoration: inherit;">http_<wbr>application_<wbr>routing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusteraddonprofilehttpapplicationrouting">Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Http<wbr>Application<wbr>Routing<wbr>Args</a></span>
+        <span class="property-type"><a href="#kubernetesclusteraddonprofilehttpapplicationrouting">Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Http<wbr>Application<wbr>Routing</a></span>
     </dt>
     <dd>{{% md %}}A `http_application_routing` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3107,7 +3107,7 @@ The following state arguments are supported:
 <a href="#ingress_application_gateway_python" style="color: inherit; text-decoration: inherit;">ingress_<wbr>application_<wbr>gateway</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusteraddonprofileingressapplicationgateway">Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Ingress<wbr>Application<wbr>Gateway<wbr>Args</a></span>
+        <span class="property-type"><a href="#kubernetesclusteraddonprofileingressapplicationgateway">Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Ingress<wbr>Application<wbr>Gateway</a></span>
     </dt>
     <dd>{{% md %}}An `ingress_application_gateway` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3116,7 +3116,7 @@ The following state arguments are supported:
 <a href="#kube_dashboard_python" style="color: inherit; text-decoration: inherit;">kube_<wbr>dashboard</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusteraddonprofilekubedashboard">Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Kube<wbr>Dashboard<wbr>Args</a></span>
+        <span class="property-type"><a href="#kubernetesclusteraddonprofilekubedashboard">Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Kube<wbr>Dashboard</a></span>
     </dt>
     <dd>{{% md %}}A `kube_dashboard` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3125,7 +3125,7 @@ The following state arguments are supported:
 <a href="#oms_agent_python" style="color: inherit; text-decoration: inherit;">oms_<wbr>agent</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusteraddonprofileomsagent">Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Oms<wbr>Agent<wbr>Args</a></span>
+        <span class="property-type"><a href="#kubernetesclusteraddonprofileomsagent">Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Oms<wbr>Agent</a></span>
     </dt>
     <dd>{{% md %}}A `oms_agent` block as defined below. For more details, please visit [How to onboard Azure Monitor for containers](https://docs.microsoft.com/en-us/azure/monitoring/monitoring-container-insights-onboard).
 {{% /md %}}</dd></dl>
@@ -3410,7 +3410,7 @@ The following state arguments are supported:
 <a href="#ingressapplicationgatewayidentities_csharp" style="color: inherit; text-decoration: inherit;">Ingress<wbr>Application<wbr>Gateway<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusteraddonprofileingressapplicationgatewayingressapplicationgatewayidentity">List&lt;Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Ingress<wbr>Application<wbr>Gateway<wbr>Ingress<wbr>Application<wbr>Gateway<wbr>Identity<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#kubernetesclusteraddonprofileingressapplicationgatewayingressapplicationgatewayidentity">List&lt;Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Ingress<wbr>Application<wbr>Gateway<wbr>Ingress<wbr>Application<wbr>Gateway<wbr>Identity&gt;</a></span>
     </dt>
     <dd>{{% md %}}An `ingress_application_gateway_identity` block is exported. The exported attributes are defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3544,7 +3544,7 @@ The following state arguments are supported:
 <a href="#ingressapplicationgatewayidentities_nodejs" style="color: inherit; text-decoration: inherit;">ingress<wbr>Application<wbr>Gateway<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusteraddonprofileingressapplicationgatewayingressapplicationgatewayidentity">Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Ingress<wbr>Application<wbr>Gateway<wbr>Ingress<wbr>Application<wbr>Gateway<wbr>Identity<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#kubernetesclusteraddonprofileingressapplicationgatewayingressapplicationgatewayidentity">Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Ingress<wbr>Application<wbr>Gateway<wbr>Ingress<wbr>Application<wbr>Gateway<wbr>Identity[]</a></span>
     </dt>
     <dd>{{% md %}}An `ingress_application_gateway_identity` block is exported. The exported attributes are defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3611,7 +3611,7 @@ The following state arguments are supported:
 <a href="#ingress_application_gateway_identities_python" style="color: inherit; text-decoration: inherit;">ingress_<wbr>application_<wbr>gateway_<wbr>identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusteraddonprofileingressapplicationgatewayingressapplicationgatewayidentity">Sequence[Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Ingress<wbr>Application<wbr>Gateway<wbr>Ingress<wbr>Application<wbr>Gateway<wbr>Identity<wbr>Args]</a></span>
+        <span class="property-type"><a href="#kubernetesclusteraddonprofileingressapplicationgatewayingressapplicationgatewayidentity">Sequence[Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Ingress<wbr>Application<wbr>Gateway<wbr>Ingress<wbr>Application<wbr>Gateway<wbr>Identity]</a></span>
     </dt>
     <dd>{{% md %}}An `ingress_application_gateway_identity` block is exported. The exported attributes are defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3842,7 +3842,7 @@ The following state arguments are supported:
 <a href="#omsagentidentities_csharp" style="color: inherit; text-decoration: inherit;">Oms<wbr>Agent<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusteraddonprofileomsagentomsagentidentity">List&lt;Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Oms<wbr>Agent<wbr>Oms<wbr>Agent<wbr>Identity<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#kubernetesclusteraddonprofileomsagentomsagentidentity">List&lt;Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Oms<wbr>Agent<wbr>Oms<wbr>Agent<wbr>Identity&gt;</a></span>
     </dt>
     <dd>{{% md %}}An `oms_agent_identity` block is exported. The exported attributes are defined below.
 {{% /md %}}</dd></dl>
@@ -3904,7 +3904,7 @@ The following state arguments are supported:
 <a href="#omsagentidentities_nodejs" style="color: inherit; text-decoration: inherit;">oms<wbr>Agent<wbr>Identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusteraddonprofileomsagentomsagentidentity">Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Oms<wbr>Agent<wbr>Oms<wbr>Agent<wbr>Identity<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#kubernetesclusteraddonprofileomsagentomsagentidentity">Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Oms<wbr>Agent<wbr>Oms<wbr>Agent<wbr>Identity[]</a></span>
     </dt>
     <dd>{{% md %}}An `oms_agent_identity` block is exported. The exported attributes are defined below.
 {{% /md %}}</dd></dl>
@@ -3935,7 +3935,7 @@ The following state arguments are supported:
 <a href="#oms_agent_identities_python" style="color: inherit; text-decoration: inherit;">oms_<wbr>agent_<wbr>identities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusteraddonprofileomsagentomsagentidentity">Sequence[Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Oms<wbr>Agent<wbr>Oms<wbr>Agent<wbr>Identity<wbr>Args]</a></span>
+        <span class="property-type"><a href="#kubernetesclusteraddonprofileomsagentomsagentidentity">Sequence[Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Oms<wbr>Agent<wbr>Oms<wbr>Agent<wbr>Identity]</a></span>
     </dt>
     <dd>{{% md %}}An `oms_agent_identity` block is exported. The exported attributes are defined below.
 {{% /md %}}</dd></dl>
@@ -4756,6 +4756,42 @@ The following state arguments are supported:
     <dd>{{% md %}}Should nodes in this Node Pool have a Public IP Address? Defaults to `false`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="fipsenabled_csharp">
+<a href="#fipsenabled_csharp" style="color: inherit; text-decoration: inherit;">Fips<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Should the nodes in this Node Pool have Federal Information Processing Standard enabled? Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="kubeletconfig_csharp">
+<a href="#kubeletconfig_csharp" style="color: inherit; text-decoration: inherit;">Kubelet<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#kubernetesclusterdefaultnodepoolkubeletconfig">Kubernetes<wbr>Cluster<wbr>Default<wbr>Node<wbr>Pool<wbr>Kubelet<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}A `kubelet_config` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="kubeletdisktype_csharp">
+<a href="#kubeletdisktype_csharp" style="color: inherit; text-decoration: inherit;">Kubelet<wbr>Disk<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of disk used by kubelet. At this time the only possible value is `OS`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="linuxosconfig_csharp">
+<a href="#linuxosconfig_csharp" style="color: inherit; text-decoration: inherit;">Linux<wbr>Os<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#kubernetesclusterdefaultnodepoollinuxosconfig">Kubernetes<wbr>Cluster<wbr>Default<wbr>Node<wbr>Pool<wbr>Linux<wbr>Os<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}A `linux_os_config` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxcount_csharp">
 <a href="#maxcount_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Count</a>
 </span>
@@ -4884,7 +4920,7 @@ The following state arguments are supported:
 <a href="#upgradesettings_csharp" style="color: inherit; text-decoration: inherit;">Upgrade<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusterdefaultnodepoolupgradesettings">Kubernetes<wbr>Cluster<wbr>Default<wbr>Node<wbr>Pool<wbr>Upgrade<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#kubernetesclusterdefaultnodepoolupgradesettings">Kubernetes<wbr>Cluster<wbr>Default<wbr>Node<wbr>Pool<wbr>Upgrade<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}A `upgrade_settings` block as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4954,6 +4990,42 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should nodes in this Node Pool have a Public IP Address? Defaults to `false`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="fipsenabled_go">
+<a href="#fipsenabled_go" style="color: inherit; text-decoration: inherit;">Fips<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Should the nodes in this Node Pool have Federal Information Processing Standard enabled? Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="kubeletconfig_go">
+<a href="#kubeletconfig_go" style="color: inherit; text-decoration: inherit;">Kubelet<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#kubernetesclusterdefaultnodepoolkubeletconfig">Kubernetes<wbr>Cluster<wbr>Default<wbr>Node<wbr>Pool<wbr>Kubelet<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}A `kubelet_config` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="kubeletdisktype_go">
+<a href="#kubeletdisktype_go" style="color: inherit; text-decoration: inherit;">Kubelet<wbr>Disk<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of disk used by kubelet. At this time the only possible value is `OS`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="linuxosconfig_go">
+<a href="#linuxosconfig_go" style="color: inherit; text-decoration: inherit;">Linux<wbr>Os<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#kubernetesclusterdefaultnodepoollinuxosconfig">Kubernetes<wbr>Cluster<wbr>Default<wbr>Node<wbr>Pool<wbr>Linux<wbr>Os<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}A `linux_os_config` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxcount_go">
@@ -5156,6 +5228,42 @@ The following state arguments are supported:
     <dd>{{% md %}}Should nodes in this Node Pool have a Public IP Address? Defaults to `false`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="fipsenabled_nodejs">
+<a href="#fipsenabled_nodejs" style="color: inherit; text-decoration: inherit;">fips<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Should the nodes in this Node Pool have Federal Information Processing Standard enabled? Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="kubeletconfig_nodejs">
+<a href="#kubeletconfig_nodejs" style="color: inherit; text-decoration: inherit;">kubelet<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#kubernetesclusterdefaultnodepoolkubeletconfig">Kubernetes<wbr>Cluster<wbr>Default<wbr>Node<wbr>Pool<wbr>Kubelet<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}A `kubelet_config` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="kubeletdisktype_nodejs">
+<a href="#kubeletdisktype_nodejs" style="color: inherit; text-decoration: inherit;">kubelet<wbr>Disk<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of disk used by kubelet. At this time the only possible value is `OS`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="linuxosconfig_nodejs">
+<a href="#linuxosconfig_nodejs" style="color: inherit; text-decoration: inherit;">linux<wbr>Os<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#kubernetesclusterdefaultnodepoollinuxosconfig">Kubernetes<wbr>Cluster<wbr>Default<wbr>Node<wbr>Pool<wbr>Linux<wbr>Os<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}A `linux_os_config` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="maxcount_nodejs">
 <a href="#maxcount_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Count</a>
 </span>
@@ -5284,7 +5392,7 @@ The following state arguments are supported:
 <a href="#upgradesettings_nodejs" style="color: inherit; text-decoration: inherit;">upgrade<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusterdefaultnodepoolupgradesettings">Kubernetes<wbr>Cluster<wbr>Default<wbr>Node<wbr>Pool<wbr>Upgrade<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#kubernetesclusterdefaultnodepoolupgradesettings">Kubernetes<wbr>Cluster<wbr>Default<wbr>Node<wbr>Pool<wbr>Upgrade<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}A `upgrade_settings` block as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5354,6 +5462,42 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should nodes in this Node Pool have a Public IP Address? Defaults to `false`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="fips_enabled_python">
+<a href="#fips_enabled_python" style="color: inherit; text-decoration: inherit;">fips_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Should the nodes in this Node Pool have Federal Information Processing Standard enabled? Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="kubelet_config_python">
+<a href="#kubelet_config_python" style="color: inherit; text-decoration: inherit;">kubelet_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#kubernetesclusterdefaultnodepoolkubeletconfig">Kubernetes<wbr>Cluster<wbr>Default<wbr>Node<wbr>Pool<wbr>Kubelet<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}A `kubelet_config` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="kubelet_disk_type_python">
+<a href="#kubelet_disk_type_python" style="color: inherit; text-decoration: inherit;">kubelet_<wbr>disk_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The type of disk used by kubelet. At this time the only possible value is `OS`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="linux_os_config_python">
+<a href="#linux_os_config_python" style="color: inherit; text-decoration: inherit;">linux_<wbr>os_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#kubernetesclusterdefaultnodepoollinuxosconfig">Kubernetes<wbr>Cluster<wbr>Default<wbr>Node<wbr>Pool<wbr>Linux<wbr>Os<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}A `linux_os_config` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_count_python">
@@ -5484,7 +5628,7 @@ The following state arguments are supported:
 <a href="#upgrade_settings_python" style="color: inherit; text-decoration: inherit;">upgrade_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusterdefaultnodepoolupgradesettings">Kubernetes<wbr>Cluster<wbr>Default<wbr>Node<wbr>Pool<wbr>Upgrade<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#kubernetesclusterdefaultnodepoolupgradesettings">Kubernetes<wbr>Cluster<wbr>Default<wbr>Node<wbr>Pool<wbr>Upgrade<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}A `upgrade_settings` block as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5496,6 +5640,1608 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of a Subnet where the Kubernetes Node Pool should exist. Changing this forces a new resource to be created.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="kubernetesclusterdefaultnodepoolkubeletconfig">Kubernetes<wbr>Cluster<wbr>Default<wbr>Node<wbr>Pool<wbr>Kubelet<wbr>Config</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="allowedunsafesysctls_csharp">
+<a href="#allowedunsafesysctls_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Unsafe<wbr>Sysctls</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}Specifies the allow list of unsafe sysctls command or patterns (ending in `*`). Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="containerlogmaxline_csharp">
+<a href="#containerlogmaxline_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Log<wbr>Max<wbr>Line</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Specifies the maximum number of container log files that can be present for a container. must be at least 2. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="containerlogmaxsizemb_csharp">
+<a href="#containerlogmaxsizemb_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Log<wbr>Max<wbr>Size<wbr>Mb</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Specifies the maximum size (e.g. 10MB) of container log file before it is rotated. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="cpucfsquotaenabled_csharp">
+<a href="#cpucfsquotaenabled_csharp" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Cfs<wbr>Quota<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Is CPU CFS quota enforcement for containers enabled? Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="cpucfsquotaperiod_csharp">
+<a href="#cpucfsquotaperiod_csharp" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Cfs<wbr>Quota<wbr>Period</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the CPU CFS quota period value. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="cpumanagerpolicy_csharp">
+<a href="#cpumanagerpolicy_csharp" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Manager<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the CPU Manager policy to use. Possible values are `none` and `static`, Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="imagegchighthreshold_csharp">
+<a href="#imagegchighthreshold_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Gc<wbr>High<wbr>Threshold</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Specifies the percent of disk usage above which image garbage collection is always run. Must be between `0` and `100`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="imagegclowthreshold_csharp">
+<a href="#imagegclowthreshold_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Gc<wbr>Low<wbr>Threshold</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Specifies the percent of disk usage lower than which image garbage collection is never run. Must be between `0` and `100`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="podmaxpid_csharp">
+<a href="#podmaxpid_csharp" style="color: inherit; text-decoration: inherit;">Pod<wbr>Max<wbr>Pid</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Specifies the maximum number of processes per pod. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="topologymanagerpolicy_csharp">
+<a href="#topologymanagerpolicy_csharp" style="color: inherit; text-decoration: inherit;">Topology<wbr>Manager<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the Topology Manager policy to use. Possible values are `none`, `best-effort`, `restricted` or `single-numa-node`. Changing this forces a new resource to be created.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="allowedunsafesysctls_go">
+<a href="#allowedunsafesysctls_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Unsafe<wbr>Sysctls</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the allow list of unsafe sysctls command or patterns (ending in `*`). Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="containerlogmaxline_go">
+<a href="#containerlogmaxline_go" style="color: inherit; text-decoration: inherit;">Container<wbr>Log<wbr>Max<wbr>Line</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Specifies the maximum number of container log files that can be present for a container. must be at least 2. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="containerlogmaxsizemb_go">
+<a href="#containerlogmaxsizemb_go" style="color: inherit; text-decoration: inherit;">Container<wbr>Log<wbr>Max<wbr>Size<wbr>Mb</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Specifies the maximum size (e.g. 10MB) of container log file before it is rotated. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="cpucfsquotaenabled_go">
+<a href="#cpucfsquotaenabled_go" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Cfs<wbr>Quota<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Is CPU CFS quota enforcement for containers enabled? Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="cpucfsquotaperiod_go">
+<a href="#cpucfsquotaperiod_go" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Cfs<wbr>Quota<wbr>Period</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the CPU CFS quota period value. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="cpumanagerpolicy_go">
+<a href="#cpumanagerpolicy_go" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Manager<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the CPU Manager policy to use. Possible values are `none` and `static`, Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="imagegchighthreshold_go">
+<a href="#imagegchighthreshold_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Gc<wbr>High<wbr>Threshold</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Specifies the percent of disk usage above which image garbage collection is always run. Must be between `0` and `100`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="imagegclowthreshold_go">
+<a href="#imagegclowthreshold_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Gc<wbr>Low<wbr>Threshold</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Specifies the percent of disk usage lower than which image garbage collection is never run. Must be between `0` and `100`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="podmaxpid_go">
+<a href="#podmaxpid_go" style="color: inherit; text-decoration: inherit;">Pod<wbr>Max<wbr>Pid</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Specifies the maximum number of processes per pod. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="topologymanagerpolicy_go">
+<a href="#topologymanagerpolicy_go" style="color: inherit; text-decoration: inherit;">Topology<wbr>Manager<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the Topology Manager policy to use. Possible values are `none`, `best-effort`, `restricted` or `single-numa-node`. Changing this forces a new resource to be created.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="allowedunsafesysctls_nodejs">
+<a href="#allowedunsafesysctls_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Unsafe<wbr>Sysctls</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}Specifies the allow list of unsafe sysctls command or patterns (ending in `*`). Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="containerlogmaxline_nodejs">
+<a href="#containerlogmaxline_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Log<wbr>Max<wbr>Line</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Specifies the maximum number of container log files that can be present for a container. must be at least 2. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="containerlogmaxsizemb_nodejs">
+<a href="#containerlogmaxsizemb_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Log<wbr>Max<wbr>Size<wbr>Mb</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Specifies the maximum size (e.g. 10MB) of container log file before it is rotated. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="cpucfsquotaenabled_nodejs">
+<a href="#cpucfsquotaenabled_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Cfs<wbr>Quota<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Is CPU CFS quota enforcement for containers enabled? Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="cpucfsquotaperiod_nodejs">
+<a href="#cpucfsquotaperiod_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Cfs<wbr>Quota<wbr>Period</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the CPU CFS quota period value. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="cpumanagerpolicy_nodejs">
+<a href="#cpumanagerpolicy_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Manager<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the CPU Manager policy to use. Possible values are `none` and `static`, Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="imagegchighthreshold_nodejs">
+<a href="#imagegchighthreshold_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Gc<wbr>High<wbr>Threshold</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Specifies the percent of disk usage above which image garbage collection is always run. Must be between `0` and `100`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="imagegclowthreshold_nodejs">
+<a href="#imagegclowthreshold_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Gc<wbr>Low<wbr>Threshold</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Specifies the percent of disk usage lower than which image garbage collection is never run. Must be between `0` and `100`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="podmaxpid_nodejs">
+<a href="#podmaxpid_nodejs" style="color: inherit; text-decoration: inherit;">pod<wbr>Max<wbr>Pid</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Specifies the maximum number of processes per pod. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="topologymanagerpolicy_nodejs">
+<a href="#topologymanagerpolicy_nodejs" style="color: inherit; text-decoration: inherit;">topology<wbr>Manager<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the Topology Manager policy to use. Possible values are `none`, `best-effort`, `restricted` or `single-numa-node`. Changing this forces a new resource to be created.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="allowed_unsafe_sysctls_python">
+<a href="#allowed_unsafe_sysctls_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>unsafe_<wbr>sysctls</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}Specifies the allow list of unsafe sysctls command or patterns (ending in `*`). Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="container_log_max_line_python">
+<a href="#container_log_max_line_python" style="color: inherit; text-decoration: inherit;">container_<wbr>log_<wbr>max_<wbr>line</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Specifies the maximum number of container log files that can be present for a container. must be at least 2. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="container_log_max_size_mb_python">
+<a href="#container_log_max_size_mb_python" style="color: inherit; text-decoration: inherit;">container_<wbr>log_<wbr>max_<wbr>size_<wbr>mb</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Specifies the maximum size (e.g. 10MB) of container log file before it is rotated. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="cpu_cfs_quota_enabled_python">
+<a href="#cpu_cfs_quota_enabled_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>cfs_<wbr>quota_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Is CPU CFS quota enforcement for containers enabled? Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="cpu_cfs_quota_period_python">
+<a href="#cpu_cfs_quota_period_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>cfs_<wbr>quota_<wbr>period</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specifies the CPU CFS quota period value. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="cpu_manager_policy_python">
+<a href="#cpu_manager_policy_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>manager_<wbr>policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specifies the CPU Manager policy to use. Possible values are `none` and `static`, Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="image_gc_high_threshold_python">
+<a href="#image_gc_high_threshold_python" style="color: inherit; text-decoration: inherit;">image_<wbr>gc_<wbr>high_<wbr>threshold</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Specifies the percent of disk usage above which image garbage collection is always run. Must be between `0` and `100`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="image_gc_low_threshold_python">
+<a href="#image_gc_low_threshold_python" style="color: inherit; text-decoration: inherit;">image_<wbr>gc_<wbr>low_<wbr>threshold</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Specifies the percent of disk usage lower than which image garbage collection is never run. Must be between `0` and `100`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="pod_max_pid_python">
+<a href="#pod_max_pid_python" style="color: inherit; text-decoration: inherit;">pod_<wbr>max_<wbr>pid</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Specifies the maximum number of processes per pod. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="topology_manager_policy_python">
+<a href="#topology_manager_policy_python" style="color: inherit; text-decoration: inherit;">topology_<wbr>manager_<wbr>policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specifies the Topology Manager policy to use. Possible values are `none`, `best-effort`, `restricted` or `single-numa-node`. Changing this forces a new resource to be created.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="kubernetesclusterdefaultnodepoollinuxosconfig">Kubernetes<wbr>Cluster<wbr>Default<wbr>Node<wbr>Pool<wbr>Linux<wbr>Os<wbr>Config</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="swapfilesizemb_csharp">
+<a href="#swapfilesizemb_csharp" style="color: inherit; text-decoration: inherit;">Swap<wbr>File<wbr>Size<wbr>Mb</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Specifies the size of swap file on each node in MB. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sysctlconfig_csharp">
+<a href="#sysctlconfig_csharp" style="color: inherit; text-decoration: inherit;">Sysctl<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#kubernetesclusterdefaultnodepoollinuxosconfigsysctlconfig">Kubernetes<wbr>Cluster<wbr>Default<wbr>Node<wbr>Pool<wbr>Linux<wbr>Os<wbr>Config<wbr>Sysctl<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}A `sysctl_config` block as defined below. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="transparenthugepagedefrag_csharp">
+<a href="#transparenthugepagedefrag_csharp" style="color: inherit; text-decoration: inherit;">Transparent<wbr>Huge<wbr>Page<wbr>Defrag</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}specifies the defrag configuration for Transparent Huge Page. Possible values are `always`, `defer`, `defer+madvise`, `madvise` and `never`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="transparenthugepageenabled_csharp">
+<a href="#transparenthugepageenabled_csharp" style="color: inherit; text-decoration: inherit;">Transparent<wbr>Huge<wbr>Page<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the Transparent Huge Page enabled configuration. Possible values are `always`, `madvise` and `never`. Changing this forces a new resource to be created.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="swapfilesizemb_go">
+<a href="#swapfilesizemb_go" style="color: inherit; text-decoration: inherit;">Swap<wbr>File<wbr>Size<wbr>Mb</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Specifies the size of swap file on each node in MB. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sysctlconfig_go">
+<a href="#sysctlconfig_go" style="color: inherit; text-decoration: inherit;">Sysctl<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#kubernetesclusterdefaultnodepoollinuxosconfigsysctlconfig">Kubernetes<wbr>Cluster<wbr>Default<wbr>Node<wbr>Pool<wbr>Linux<wbr>Os<wbr>Config<wbr>Sysctl<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}A `sysctl_config` block as defined below. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="transparenthugepagedefrag_go">
+<a href="#transparenthugepagedefrag_go" style="color: inherit; text-decoration: inherit;">Transparent<wbr>Huge<wbr>Page<wbr>Defrag</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}specifies the defrag configuration for Transparent Huge Page. Possible values are `always`, `defer`, `defer+madvise`, `madvise` and `never`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="transparenthugepageenabled_go">
+<a href="#transparenthugepageenabled_go" style="color: inherit; text-decoration: inherit;">Transparent<wbr>Huge<wbr>Page<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the Transparent Huge Page enabled configuration. Possible values are `always`, `madvise` and `never`. Changing this forces a new resource to be created.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="swapfilesizemb_nodejs">
+<a href="#swapfilesizemb_nodejs" style="color: inherit; text-decoration: inherit;">swap<wbr>File<wbr>Size<wbr>Mb</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Specifies the size of swap file on each node in MB. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sysctlconfig_nodejs">
+<a href="#sysctlconfig_nodejs" style="color: inherit; text-decoration: inherit;">sysctl<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#kubernetesclusterdefaultnodepoollinuxosconfigsysctlconfig">Kubernetes<wbr>Cluster<wbr>Default<wbr>Node<wbr>Pool<wbr>Linux<wbr>Os<wbr>Config<wbr>Sysctl<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}A `sysctl_config` block as defined below. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="transparenthugepagedefrag_nodejs">
+<a href="#transparenthugepagedefrag_nodejs" style="color: inherit; text-decoration: inherit;">transparent<wbr>Huge<wbr>Page<wbr>Defrag</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}specifies the defrag configuration for Transparent Huge Page. Possible values are `always`, `defer`, `defer+madvise`, `madvise` and `never`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="transparenthugepageenabled_nodejs">
+<a href="#transparenthugepageenabled_nodejs" style="color: inherit; text-decoration: inherit;">transparent<wbr>Huge<wbr>Page<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the Transparent Huge Page enabled configuration. Possible values are `always`, `madvise` and `never`. Changing this forces a new resource to be created.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="swap_file_size_mb_python">
+<a href="#swap_file_size_mb_python" style="color: inherit; text-decoration: inherit;">swap_<wbr>file_<wbr>size_<wbr>mb</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Specifies the size of swap file on each node in MB. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sysctl_config_python">
+<a href="#sysctl_config_python" style="color: inherit; text-decoration: inherit;">sysctl_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#kubernetesclusterdefaultnodepoollinuxosconfigsysctlconfig">Kubernetes<wbr>Cluster<wbr>Default<wbr>Node<wbr>Pool<wbr>Linux<wbr>Os<wbr>Config<wbr>Sysctl<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}A `sysctl_config` block as defined below. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="transparent_huge_page_defrag_python">
+<a href="#transparent_huge_page_defrag_python" style="color: inherit; text-decoration: inherit;">transparent_<wbr>huge_<wbr>page_<wbr>defrag</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}specifies the defrag configuration for Transparent Huge Page. Possible values are `always`, `defer`, `defer+madvise`, `madvise` and `never`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="transparent_huge_page_enabled_python">
+<a href="#transparent_huge_page_enabled_python" style="color: inherit; text-decoration: inherit;">transparent_<wbr>huge_<wbr>page_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specifies the Transparent Huge Page enabled configuration. Possible values are `always`, `madvise` and `never`. Changing this forces a new resource to be created.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="kubernetesclusterdefaultnodepoollinuxosconfigsysctlconfig">Kubernetes<wbr>Cluster<wbr>Default<wbr>Node<wbr>Pool<wbr>Linux<wbr>Os<wbr>Config<wbr>Sysctl<wbr>Config</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="fsaiomaxnr_csharp">
+<a href="#fsaiomaxnr_csharp" style="color: inherit; text-decoration: inherit;">Fs<wbr>Aio<wbr>Max<wbr>Nr</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The sysctl setting fs.aio-max-nr. Must be between `65536` and `6553500`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="fsfilemax_csharp">
+<a href="#fsfilemax_csharp" style="color: inherit; text-decoration: inherit;">Fs<wbr>File<wbr>Max</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The sysctl setting fs.file-max. Must be between `8192` and `12000500`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="fsinotifymaxuserwatches_csharp">
+<a href="#fsinotifymaxuserwatches_csharp" style="color: inherit; text-decoration: inherit;">Fs<wbr>Inotify<wbr>Max<wbr>User<wbr>Watches</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The sysctl setting fs.inotify.max_user_watches. Must be between `781250` and `2097152`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="fsnropen_csharp">
+<a href="#fsnropen_csharp" style="color: inherit; text-decoration: inherit;">Fs<wbr>Nr<wbr>Open</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The sysctl setting fs.nr_open. Must be between `8192` and `20000500`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="kernelthreadsmax_csharp">
+<a href="#kernelthreadsmax_csharp" style="color: inherit; text-decoration: inherit;">Kernel<wbr>Threads<wbr>Max</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The sysctl setting kernel.threads-max. Must be between `20` and `513785`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="netcorenetdevmaxbacklog_csharp">
+<a href="#netcorenetdevmaxbacklog_csharp" style="color: inherit; text-decoration: inherit;">Net<wbr>Core<wbr>Netdev<wbr>Max<wbr>Backlog</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The sysctl setting net.core.netdev_max_backlog. Must be between `1000` and `3240000`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="netcoreoptmemmax_csharp">
+<a href="#netcoreoptmemmax_csharp" style="color: inherit; text-decoration: inherit;">Net<wbr>Core<wbr>Optmem<wbr>Max</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The sysctl setting net.core.optmem_max. Must be between `20480` and `4194304`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="netcorermemdefault_csharp">
+<a href="#netcorermemdefault_csharp" style="color: inherit; text-decoration: inherit;">Net<wbr>Core<wbr>Rmem<wbr>Default</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The sysctl setting net.core.rmem_default. Must be between `212992` and `134217728`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="netcorermemmax_csharp">
+<a href="#netcorermemmax_csharp" style="color: inherit; text-decoration: inherit;">Net<wbr>Core<wbr>Rmem<wbr>Max</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The sysctl setting net.core.rmem_max. Must be between `212992` and `134217728`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="netcoresomaxconn_csharp">
+<a href="#netcoresomaxconn_csharp" style="color: inherit; text-decoration: inherit;">Net<wbr>Core<wbr>Somaxconn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The sysctl setting net.core.somaxconn. Must be between `4096` and `3240000`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="netcorewmemdefault_csharp">
+<a href="#netcorewmemdefault_csharp" style="color: inherit; text-decoration: inherit;">Net<wbr>Core<wbr>Wmem<wbr>Default</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The sysctl setting net.core.wmem_default. Must be between `212992` and `134217728`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="netcorewmemmax_csharp">
+<a href="#netcorewmemmax_csharp" style="color: inherit; text-decoration: inherit;">Net<wbr>Core<wbr>Wmem<wbr>Max</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The sysctl setting net.core.wmem_max. Must be between `212992` and `134217728`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="netipv4iplocalportrangemax_csharp">
+<a href="#netipv4iplocalportrangemax_csharp" style="color: inherit; text-decoration: inherit;">Net<wbr>Ipv4Ip<wbr>Local<wbr>Port<wbr>Range<wbr>Max</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The sysctl setting net.ipv4.ip_local_port_range max value. Must be between `1024` and `60999`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="netipv4iplocalportrangemin_csharp">
+<a href="#netipv4iplocalportrangemin_csharp" style="color: inherit; text-decoration: inherit;">Net<wbr>Ipv4Ip<wbr>Local<wbr>Port<wbr>Range<wbr>Min</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The sysctl setting net.ipv4.ip_local_port_range min value. Must be between `1024` and `60999`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="netipv4neighdefaultgcthresh1_csharp">
+<a href="#netipv4neighdefaultgcthresh1_csharp" style="color: inherit; text-decoration: inherit;">Net<wbr>Ipv4Neigh<wbr>Default<wbr>Gc<wbr>Thresh1</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The sysctl setting net.ipv4.neigh.default.gc_thresh1. Must be between `128` and `80000`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="netipv4neighdefaultgcthresh2_csharp">
+<a href="#netipv4neighdefaultgcthresh2_csharp" style="color: inherit; text-decoration: inherit;">Net<wbr>Ipv4Neigh<wbr>Default<wbr>Gc<wbr>Thresh2</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The sysctl setting net.ipv4.neigh.default.gc_thresh2. Must be between `512` and `90000`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="netipv4neighdefaultgcthresh3_csharp">
+<a href="#netipv4neighdefaultgcthresh3_csharp" style="color: inherit; text-decoration: inherit;">Net<wbr>Ipv4Neigh<wbr>Default<wbr>Gc<wbr>Thresh3</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The sysctl setting net.ipv4.neigh.default.gc_thresh3. Must be between `1024` and `100000`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="netipv4tcpfintimeout_csharp">
+<a href="#netipv4tcpfintimeout_csharp" style="color: inherit; text-decoration: inherit;">Net<wbr>Ipv4Tcp<wbr>Fin<wbr>Timeout</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The sysctl setting net.ipv4.tcp_fin_timeout. Must be between `5` and `120`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="netipv4tcpkeepaliveintvl_csharp">
+<a href="#netipv4tcpkeepaliveintvl_csharp" style="color: inherit; text-decoration: inherit;">Net<wbr>Ipv4Tcp<wbr>Keepalive<wbr>Intvl</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The sysctl setting net.ipv4.tcp_keepalive_intvl. Must be between `10` and `75`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="netipv4tcpkeepaliveprobes_csharp">
+<a href="#netipv4tcpkeepaliveprobes_csharp" style="color: inherit; text-decoration: inherit;">Net<wbr>Ipv4Tcp<wbr>Keepalive<wbr>Probes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The sysctl setting net.ipv4.tcp_keepalive_probes. Must be between `1` and `15`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="netipv4tcpkeepalivetime_csharp">
+<a href="#netipv4tcpkeepalivetime_csharp" style="color: inherit; text-decoration: inherit;">Net<wbr>Ipv4Tcp<wbr>Keepalive<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The sysctl setting net.ipv4.tcp_keepalive_time. Must be between `30` and `432000`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="netipv4tcpmaxsynbacklog_csharp">
+<a href="#netipv4tcpmaxsynbacklog_csharp" style="color: inherit; text-decoration: inherit;">Net<wbr>Ipv4Tcp<wbr>Max<wbr>Syn<wbr>Backlog</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The sysctl setting net.ipv4.tcp_max_syn_backlog. Must be between `128` and `3240000`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="netipv4tcpmaxtwbuckets_csharp">
+<a href="#netipv4tcpmaxtwbuckets_csharp" style="color: inherit; text-decoration: inherit;">Net<wbr>Ipv4Tcp<wbr>Max<wbr>Tw<wbr>Buckets</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The sysctl setting net.ipv4.tcp_max_tw_buckets. Must be between `8000` and `1440000`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="netipv4tcptwreuse_csharp">
+<a href="#netipv4tcptwreuse_csharp" style="color: inherit; text-decoration: inherit;">Net<wbr>Ipv4Tcp<wbr>Tw<wbr>Reuse</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}The sysctl setting net.ipv4.tcp_tw_reuse. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="netnetfilternfconntrackbuckets_csharp">
+<a href="#netnetfilternfconntrackbuckets_csharp" style="color: inherit; text-decoration: inherit;">Net<wbr>Netfilter<wbr>Nf<wbr>Conntrack<wbr>Buckets</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The sysctl setting net.netfilter.nf_conntrack_buckets. Must be between `65536` and `147456`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="netnetfilternfconntrackmax_csharp">
+<a href="#netnetfilternfconntrackmax_csharp" style="color: inherit; text-decoration: inherit;">Net<wbr>Netfilter<wbr>Nf<wbr>Conntrack<wbr>Max</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The sysctl setting net.netfilter.nf_conntrack_max. Must be between `131072` and `589824`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="vmmaxmapcount_csharp">
+<a href="#vmmaxmapcount_csharp" style="color: inherit; text-decoration: inherit;">Vm<wbr>Max<wbr>Map<wbr>Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The sysctl setting vm.max_map_count. Must be between `65530` and `262144`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="vmswappiness_csharp">
+<a href="#vmswappiness_csharp" style="color: inherit; text-decoration: inherit;">Vm<wbr>Swappiness</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The sysctl setting vm.swappiness. Must be between `0` and `100`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="vmvfscachepressure_csharp">
+<a href="#vmvfscachepressure_csharp" style="color: inherit; text-decoration: inherit;">Vm<wbr>Vfs<wbr>Cache<wbr>Pressure</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The sysctl setting vm.vfs_cache_pressure. Must be between `0` and `100`. Changing this forces a new resource to be created.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="fsaiomaxnr_go">
+<a href="#fsaiomaxnr_go" style="color: inherit; text-decoration: inherit;">Fs<wbr>Aio<wbr>Max<wbr>Nr</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The sysctl setting fs.aio-max-nr. Must be between `65536` and `6553500`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="fsfilemax_go">
+<a href="#fsfilemax_go" style="color: inherit; text-decoration: inherit;">Fs<wbr>File<wbr>Max</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The sysctl setting fs.file-max. Must be between `8192` and `12000500`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="fsinotifymaxuserwatches_go">
+<a href="#fsinotifymaxuserwatches_go" style="color: inherit; text-decoration: inherit;">Fs<wbr>Inotify<wbr>Max<wbr>User<wbr>Watches</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The sysctl setting fs.inotify.max_user_watches. Must be between `781250` and `2097152`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="fsnropen_go">
+<a href="#fsnropen_go" style="color: inherit; text-decoration: inherit;">Fs<wbr>Nr<wbr>Open</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The sysctl setting fs.nr_open. Must be between `8192` and `20000500`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="kernelthreadsmax_go">
+<a href="#kernelthreadsmax_go" style="color: inherit; text-decoration: inherit;">Kernel<wbr>Threads<wbr>Max</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The sysctl setting kernel.threads-max. Must be between `20` and `513785`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="netcorenetdevmaxbacklog_go">
+<a href="#netcorenetdevmaxbacklog_go" style="color: inherit; text-decoration: inherit;">Net<wbr>Core<wbr>Netdev<wbr>Max<wbr>Backlog</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The sysctl setting net.core.netdev_max_backlog. Must be between `1000` and `3240000`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="netcoreoptmemmax_go">
+<a href="#netcoreoptmemmax_go" style="color: inherit; text-decoration: inherit;">Net<wbr>Core<wbr>Optmem<wbr>Max</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The sysctl setting net.core.optmem_max. Must be between `20480` and `4194304`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="netcorermemdefault_go">
+<a href="#netcorermemdefault_go" style="color: inherit; text-decoration: inherit;">Net<wbr>Core<wbr>Rmem<wbr>Default</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The sysctl setting net.core.rmem_default. Must be between `212992` and `134217728`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="netcorermemmax_go">
+<a href="#netcorermemmax_go" style="color: inherit; text-decoration: inherit;">Net<wbr>Core<wbr>Rmem<wbr>Max</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The sysctl setting net.core.rmem_max. Must be between `212992` and `134217728`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="netcoresomaxconn_go">
+<a href="#netcoresomaxconn_go" style="color: inherit; text-decoration: inherit;">Net<wbr>Core<wbr>Somaxconn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The sysctl setting net.core.somaxconn. Must be between `4096` and `3240000`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="netcorewmemdefault_go">
+<a href="#netcorewmemdefault_go" style="color: inherit; text-decoration: inherit;">Net<wbr>Core<wbr>Wmem<wbr>Default</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The sysctl setting net.core.wmem_default. Must be between `212992` and `134217728`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="netcorewmemmax_go">
+<a href="#netcorewmemmax_go" style="color: inherit; text-decoration: inherit;">Net<wbr>Core<wbr>Wmem<wbr>Max</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The sysctl setting net.core.wmem_max. Must be between `212992` and `134217728`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="netipv4iplocalportrangemax_go">
+<a href="#netipv4iplocalportrangemax_go" style="color: inherit; text-decoration: inherit;">Net<wbr>Ipv4Ip<wbr>Local<wbr>Port<wbr>Range<wbr>Max</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The sysctl setting net.ipv4.ip_local_port_range max value. Must be between `1024` and `60999`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="netipv4iplocalportrangemin_go">
+<a href="#netipv4iplocalportrangemin_go" style="color: inherit; text-decoration: inherit;">Net<wbr>Ipv4Ip<wbr>Local<wbr>Port<wbr>Range<wbr>Min</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The sysctl setting net.ipv4.ip_local_port_range min value. Must be between `1024` and `60999`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="netipv4neighdefaultgcthresh1_go">
+<a href="#netipv4neighdefaultgcthresh1_go" style="color: inherit; text-decoration: inherit;">Net<wbr>Ipv4Neigh<wbr>Default<wbr>Gc<wbr>Thresh1</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The sysctl setting net.ipv4.neigh.default.gc_thresh1. Must be between `128` and `80000`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="netipv4neighdefaultgcthresh2_go">
+<a href="#netipv4neighdefaultgcthresh2_go" style="color: inherit; text-decoration: inherit;">Net<wbr>Ipv4Neigh<wbr>Default<wbr>Gc<wbr>Thresh2</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The sysctl setting net.ipv4.neigh.default.gc_thresh2. Must be between `512` and `90000`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="netipv4neighdefaultgcthresh3_go">
+<a href="#netipv4neighdefaultgcthresh3_go" style="color: inherit; text-decoration: inherit;">Net<wbr>Ipv4Neigh<wbr>Default<wbr>Gc<wbr>Thresh3</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The sysctl setting net.ipv4.neigh.default.gc_thresh3. Must be between `1024` and `100000`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="netipv4tcpfintimeout_go">
+<a href="#netipv4tcpfintimeout_go" style="color: inherit; text-decoration: inherit;">Net<wbr>Ipv4Tcp<wbr>Fin<wbr>Timeout</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The sysctl setting net.ipv4.tcp_fin_timeout. Must be between `5` and `120`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="netipv4tcpkeepaliveintvl_go">
+<a href="#netipv4tcpkeepaliveintvl_go" style="color: inherit; text-decoration: inherit;">Net<wbr>Ipv4Tcp<wbr>Keepalive<wbr>Intvl</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The sysctl setting net.ipv4.tcp_keepalive_intvl. Must be between `10` and `75`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="netipv4tcpkeepaliveprobes_go">
+<a href="#netipv4tcpkeepaliveprobes_go" style="color: inherit; text-decoration: inherit;">Net<wbr>Ipv4Tcp<wbr>Keepalive<wbr>Probes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The sysctl setting net.ipv4.tcp_keepalive_probes. Must be between `1` and `15`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="netipv4tcpkeepalivetime_go">
+<a href="#netipv4tcpkeepalivetime_go" style="color: inherit; text-decoration: inherit;">Net<wbr>Ipv4Tcp<wbr>Keepalive<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The sysctl setting net.ipv4.tcp_keepalive_time. Must be between `30` and `432000`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="netipv4tcpmaxsynbacklog_go">
+<a href="#netipv4tcpmaxsynbacklog_go" style="color: inherit; text-decoration: inherit;">Net<wbr>Ipv4Tcp<wbr>Max<wbr>Syn<wbr>Backlog</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The sysctl setting net.ipv4.tcp_max_syn_backlog. Must be between `128` and `3240000`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="netipv4tcpmaxtwbuckets_go">
+<a href="#netipv4tcpmaxtwbuckets_go" style="color: inherit; text-decoration: inherit;">Net<wbr>Ipv4Tcp<wbr>Max<wbr>Tw<wbr>Buckets</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The sysctl setting net.ipv4.tcp_max_tw_buckets. Must be between `8000` and `1440000`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="netipv4tcptwreuse_go">
+<a href="#netipv4tcptwreuse_go" style="color: inherit; text-decoration: inherit;">Net<wbr>Ipv4Tcp<wbr>Tw<wbr>Reuse</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}The sysctl setting net.ipv4.tcp_tw_reuse. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="netnetfilternfconntrackbuckets_go">
+<a href="#netnetfilternfconntrackbuckets_go" style="color: inherit; text-decoration: inherit;">Net<wbr>Netfilter<wbr>Nf<wbr>Conntrack<wbr>Buckets</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The sysctl setting net.netfilter.nf_conntrack_buckets. Must be between `65536` and `147456`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="netnetfilternfconntrackmax_go">
+<a href="#netnetfilternfconntrackmax_go" style="color: inherit; text-decoration: inherit;">Net<wbr>Netfilter<wbr>Nf<wbr>Conntrack<wbr>Max</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The sysctl setting net.netfilter.nf_conntrack_max. Must be between `131072` and `589824`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="vmmaxmapcount_go">
+<a href="#vmmaxmapcount_go" style="color: inherit; text-decoration: inherit;">Vm<wbr>Max<wbr>Map<wbr>Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The sysctl setting vm.max_map_count. Must be between `65530` and `262144`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="vmswappiness_go">
+<a href="#vmswappiness_go" style="color: inherit; text-decoration: inherit;">Vm<wbr>Swappiness</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The sysctl setting vm.swappiness. Must be between `0` and `100`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="vmvfscachepressure_go">
+<a href="#vmvfscachepressure_go" style="color: inherit; text-decoration: inherit;">Vm<wbr>Vfs<wbr>Cache<wbr>Pressure</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The sysctl setting vm.vfs_cache_pressure. Must be between `0` and `100`. Changing this forces a new resource to be created.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="fsaiomaxnr_nodejs">
+<a href="#fsaiomaxnr_nodejs" style="color: inherit; text-decoration: inherit;">fs<wbr>Aio<wbr>Max<wbr>Nr</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The sysctl setting fs.aio-max-nr. Must be between `65536` and `6553500`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="fsfilemax_nodejs">
+<a href="#fsfilemax_nodejs" style="color: inherit; text-decoration: inherit;">fs<wbr>File<wbr>Max</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The sysctl setting fs.file-max. Must be between `8192` and `12000500`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="fsinotifymaxuserwatches_nodejs">
+<a href="#fsinotifymaxuserwatches_nodejs" style="color: inherit; text-decoration: inherit;">fs<wbr>Inotify<wbr>Max<wbr>User<wbr>Watches</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The sysctl setting fs.inotify.max_user_watches. Must be between `781250` and `2097152`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="fsnropen_nodejs">
+<a href="#fsnropen_nodejs" style="color: inherit; text-decoration: inherit;">fs<wbr>Nr<wbr>Open</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The sysctl setting fs.nr_open. Must be between `8192` and `20000500`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="kernelthreadsmax_nodejs">
+<a href="#kernelthreadsmax_nodejs" style="color: inherit; text-decoration: inherit;">kernel<wbr>Threads<wbr>Max</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The sysctl setting kernel.threads-max. Must be between `20` and `513785`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="netcorenetdevmaxbacklog_nodejs">
+<a href="#netcorenetdevmaxbacklog_nodejs" style="color: inherit; text-decoration: inherit;">net<wbr>Core<wbr>Netdev<wbr>Max<wbr>Backlog</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The sysctl setting net.core.netdev_max_backlog. Must be between `1000` and `3240000`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="netcoreoptmemmax_nodejs">
+<a href="#netcoreoptmemmax_nodejs" style="color: inherit; text-decoration: inherit;">net<wbr>Core<wbr>Optmem<wbr>Max</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The sysctl setting net.core.optmem_max. Must be between `20480` and `4194304`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="netcorermemdefault_nodejs">
+<a href="#netcorermemdefault_nodejs" style="color: inherit; text-decoration: inherit;">net<wbr>Core<wbr>Rmem<wbr>Default</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The sysctl setting net.core.rmem_default. Must be between `212992` and `134217728`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="netcorermemmax_nodejs">
+<a href="#netcorermemmax_nodejs" style="color: inherit; text-decoration: inherit;">net<wbr>Core<wbr>Rmem<wbr>Max</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The sysctl setting net.core.rmem_max. Must be between `212992` and `134217728`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="netcoresomaxconn_nodejs">
+<a href="#netcoresomaxconn_nodejs" style="color: inherit; text-decoration: inherit;">net<wbr>Core<wbr>Somaxconn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The sysctl setting net.core.somaxconn. Must be between `4096` and `3240000`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="netcorewmemdefault_nodejs">
+<a href="#netcorewmemdefault_nodejs" style="color: inherit; text-decoration: inherit;">net<wbr>Core<wbr>Wmem<wbr>Default</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The sysctl setting net.core.wmem_default. Must be between `212992` and `134217728`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="netcorewmemmax_nodejs">
+<a href="#netcorewmemmax_nodejs" style="color: inherit; text-decoration: inherit;">net<wbr>Core<wbr>Wmem<wbr>Max</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The sysctl setting net.core.wmem_max. Must be between `212992` and `134217728`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="netipv4iplocalportrangemax_nodejs">
+<a href="#netipv4iplocalportrangemax_nodejs" style="color: inherit; text-decoration: inherit;">net<wbr>Ipv4Ip<wbr>Local<wbr>Port<wbr>Range<wbr>Max</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The sysctl setting net.ipv4.ip_local_port_range max value. Must be between `1024` and `60999`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="netipv4iplocalportrangemin_nodejs">
+<a href="#netipv4iplocalportrangemin_nodejs" style="color: inherit; text-decoration: inherit;">net<wbr>Ipv4Ip<wbr>Local<wbr>Port<wbr>Range<wbr>Min</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The sysctl setting net.ipv4.ip_local_port_range min value. Must be between `1024` and `60999`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="netipv4neighdefaultgcthresh1_nodejs">
+<a href="#netipv4neighdefaultgcthresh1_nodejs" style="color: inherit; text-decoration: inherit;">net<wbr>Ipv4Neigh<wbr>Default<wbr>Gc<wbr>Thresh1</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The sysctl setting net.ipv4.neigh.default.gc_thresh1. Must be between `128` and `80000`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="netipv4neighdefaultgcthresh2_nodejs">
+<a href="#netipv4neighdefaultgcthresh2_nodejs" style="color: inherit; text-decoration: inherit;">net<wbr>Ipv4Neigh<wbr>Default<wbr>Gc<wbr>Thresh2</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The sysctl setting net.ipv4.neigh.default.gc_thresh2. Must be between `512` and `90000`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="netipv4neighdefaultgcthresh3_nodejs">
+<a href="#netipv4neighdefaultgcthresh3_nodejs" style="color: inherit; text-decoration: inherit;">net<wbr>Ipv4Neigh<wbr>Default<wbr>Gc<wbr>Thresh3</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The sysctl setting net.ipv4.neigh.default.gc_thresh3. Must be between `1024` and `100000`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="netipv4tcpfintimeout_nodejs">
+<a href="#netipv4tcpfintimeout_nodejs" style="color: inherit; text-decoration: inherit;">net<wbr>Ipv4Tcp<wbr>Fin<wbr>Timeout</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The sysctl setting net.ipv4.tcp_fin_timeout. Must be between `5` and `120`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="netipv4tcpkeepaliveintvl_nodejs">
+<a href="#netipv4tcpkeepaliveintvl_nodejs" style="color: inherit; text-decoration: inherit;">net<wbr>Ipv4Tcp<wbr>Keepalive<wbr>Intvl</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The sysctl setting net.ipv4.tcp_keepalive_intvl. Must be between `10` and `75`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="netipv4tcpkeepaliveprobes_nodejs">
+<a href="#netipv4tcpkeepaliveprobes_nodejs" style="color: inherit; text-decoration: inherit;">net<wbr>Ipv4Tcp<wbr>Keepalive<wbr>Probes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The sysctl setting net.ipv4.tcp_keepalive_probes. Must be between `1` and `15`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="netipv4tcpkeepalivetime_nodejs">
+<a href="#netipv4tcpkeepalivetime_nodejs" style="color: inherit; text-decoration: inherit;">net<wbr>Ipv4Tcp<wbr>Keepalive<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The sysctl setting net.ipv4.tcp_keepalive_time. Must be between `30` and `432000`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="netipv4tcpmaxsynbacklog_nodejs">
+<a href="#netipv4tcpmaxsynbacklog_nodejs" style="color: inherit; text-decoration: inherit;">net<wbr>Ipv4Tcp<wbr>Max<wbr>Syn<wbr>Backlog</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The sysctl setting net.ipv4.tcp_max_syn_backlog. Must be between `128` and `3240000`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="netipv4tcpmaxtwbuckets_nodejs">
+<a href="#netipv4tcpmaxtwbuckets_nodejs" style="color: inherit; text-decoration: inherit;">net<wbr>Ipv4Tcp<wbr>Max<wbr>Tw<wbr>Buckets</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The sysctl setting net.ipv4.tcp_max_tw_buckets. Must be between `8000` and `1440000`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="netipv4tcptwreuse_nodejs">
+<a href="#netipv4tcptwreuse_nodejs" style="color: inherit; text-decoration: inherit;">net<wbr>Ipv4Tcp<wbr>Tw<wbr>Reuse</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}The sysctl setting net.ipv4.tcp_tw_reuse. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="netnetfilternfconntrackbuckets_nodejs">
+<a href="#netnetfilternfconntrackbuckets_nodejs" style="color: inherit; text-decoration: inherit;">net<wbr>Netfilter<wbr>Nf<wbr>Conntrack<wbr>Buckets</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The sysctl setting net.netfilter.nf_conntrack_buckets. Must be between `65536` and `147456`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="netnetfilternfconntrackmax_nodejs">
+<a href="#netnetfilternfconntrackmax_nodejs" style="color: inherit; text-decoration: inherit;">net<wbr>Netfilter<wbr>Nf<wbr>Conntrack<wbr>Max</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The sysctl setting net.netfilter.nf_conntrack_max. Must be between `131072` and `589824`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="vmmaxmapcount_nodejs">
+<a href="#vmmaxmapcount_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Max<wbr>Map<wbr>Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The sysctl setting vm.max_map_count. Must be between `65530` and `262144`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="vmswappiness_nodejs">
+<a href="#vmswappiness_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Swappiness</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The sysctl setting vm.swappiness. Must be between `0` and `100`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="vmvfscachepressure_nodejs">
+<a href="#vmvfscachepressure_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Vfs<wbr>Cache<wbr>Pressure</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The sysctl setting vm.vfs_cache_pressure. Must be between `0` and `100`. Changing this forces a new resource to be created.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="fs_aio_max_nr_python">
+<a href="#fs_aio_max_nr_python" style="color: inherit; text-decoration: inherit;">fs_<wbr>aio_<wbr>max_<wbr>nr</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The sysctl setting fs.aio-max-nr. Must be between `65536` and `6553500`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="fs_file_max_python">
+<a href="#fs_file_max_python" style="color: inherit; text-decoration: inherit;">fs_<wbr>file_<wbr>max</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The sysctl setting fs.file-max. Must be between `8192` and `12000500`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="fs_inotify_max_user_watches_python">
+<a href="#fs_inotify_max_user_watches_python" style="color: inherit; text-decoration: inherit;">fs_<wbr>inotify_<wbr>max_<wbr>user_<wbr>watches</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The sysctl setting fs.inotify.max_user_watches. Must be between `781250` and `2097152`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="fs_nr_open_python">
+<a href="#fs_nr_open_python" style="color: inherit; text-decoration: inherit;">fs_<wbr>nr_<wbr>open</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The sysctl setting fs.nr_open. Must be between `8192` and `20000500`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="kernel_threads_max_python">
+<a href="#kernel_threads_max_python" style="color: inherit; text-decoration: inherit;">kernel_<wbr>threads_<wbr>max</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The sysctl setting kernel.threads-max. Must be between `20` and `513785`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="net_core_netdev_max_backlog_python">
+<a href="#net_core_netdev_max_backlog_python" style="color: inherit; text-decoration: inherit;">net_<wbr>core_<wbr>netdev_<wbr>max_<wbr>backlog</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The sysctl setting net.core.netdev_max_backlog. Must be between `1000` and `3240000`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="net_core_optmem_max_python">
+<a href="#net_core_optmem_max_python" style="color: inherit; text-decoration: inherit;">net_<wbr>core_<wbr>optmem_<wbr>max</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The sysctl setting net.core.optmem_max. Must be between `20480` and `4194304`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="net_core_rmem_default_python">
+<a href="#net_core_rmem_default_python" style="color: inherit; text-decoration: inherit;">net_<wbr>core_<wbr>rmem_<wbr>default</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The sysctl setting net.core.rmem_default. Must be between `212992` and `134217728`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="net_core_rmem_max_python">
+<a href="#net_core_rmem_max_python" style="color: inherit; text-decoration: inherit;">net_<wbr>core_<wbr>rmem_<wbr>max</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The sysctl setting net.core.rmem_max. Must be between `212992` and `134217728`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="net_core_somaxconn_python">
+<a href="#net_core_somaxconn_python" style="color: inherit; text-decoration: inherit;">net_<wbr>core_<wbr>somaxconn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The sysctl setting net.core.somaxconn. Must be between `4096` and `3240000`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="net_core_wmem_default_python">
+<a href="#net_core_wmem_default_python" style="color: inherit; text-decoration: inherit;">net_<wbr>core_<wbr>wmem_<wbr>default</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The sysctl setting net.core.wmem_default. Must be between `212992` and `134217728`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="net_core_wmem_max_python">
+<a href="#net_core_wmem_max_python" style="color: inherit; text-decoration: inherit;">net_<wbr>core_<wbr>wmem_<wbr>max</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The sysctl setting net.core.wmem_max. Must be between `212992` and `134217728`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="net_ipv4_ip_local_port_range_max_python">
+<a href="#net_ipv4_ip_local_port_range_max_python" style="color: inherit; text-decoration: inherit;">net_<wbr>ipv4_<wbr>ip_<wbr>local_<wbr>port_<wbr>range_<wbr>max</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The sysctl setting net.ipv4.ip_local_port_range max value. Must be between `1024` and `60999`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="net_ipv4_ip_local_port_range_min_python">
+<a href="#net_ipv4_ip_local_port_range_min_python" style="color: inherit; text-decoration: inherit;">net_<wbr>ipv4_<wbr>ip_<wbr>local_<wbr>port_<wbr>range_<wbr>min</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The sysctl setting net.ipv4.ip_local_port_range min value. Must be between `1024` and `60999`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="net_ipv4_neigh_default_gc_thresh1_python">
+<a href="#net_ipv4_neigh_default_gc_thresh1_python" style="color: inherit; text-decoration: inherit;">net_<wbr>ipv4_<wbr>neigh_<wbr>default_<wbr>gc_<wbr>thresh1</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The sysctl setting net.ipv4.neigh.default.gc_thresh1. Must be between `128` and `80000`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="net_ipv4_neigh_default_gc_thresh2_python">
+<a href="#net_ipv4_neigh_default_gc_thresh2_python" style="color: inherit; text-decoration: inherit;">net_<wbr>ipv4_<wbr>neigh_<wbr>default_<wbr>gc_<wbr>thresh2</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The sysctl setting net.ipv4.neigh.default.gc_thresh2. Must be between `512` and `90000`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="net_ipv4_neigh_default_gc_thresh3_python">
+<a href="#net_ipv4_neigh_default_gc_thresh3_python" style="color: inherit; text-decoration: inherit;">net_<wbr>ipv4_<wbr>neigh_<wbr>default_<wbr>gc_<wbr>thresh3</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The sysctl setting net.ipv4.neigh.default.gc_thresh3. Must be between `1024` and `100000`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="net_ipv4_tcp_fin_timeout_python">
+<a href="#net_ipv4_tcp_fin_timeout_python" style="color: inherit; text-decoration: inherit;">net_<wbr>ipv4_<wbr>tcp_<wbr>fin_<wbr>timeout</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The sysctl setting net.ipv4.tcp_fin_timeout. Must be between `5` and `120`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="net_ipv4_tcp_keepalive_intvl_python">
+<a href="#net_ipv4_tcp_keepalive_intvl_python" style="color: inherit; text-decoration: inherit;">net_<wbr>ipv4_<wbr>tcp_<wbr>keepalive_<wbr>intvl</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The sysctl setting net.ipv4.tcp_keepalive_intvl. Must be between `10` and `75`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="net_ipv4_tcp_keepalive_probes_python">
+<a href="#net_ipv4_tcp_keepalive_probes_python" style="color: inherit; text-decoration: inherit;">net_<wbr>ipv4_<wbr>tcp_<wbr>keepalive_<wbr>probes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The sysctl setting net.ipv4.tcp_keepalive_probes. Must be between `1` and `15`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="net_ipv4_tcp_keepalive_time_python">
+<a href="#net_ipv4_tcp_keepalive_time_python" style="color: inherit; text-decoration: inherit;">net_<wbr>ipv4_<wbr>tcp_<wbr>keepalive_<wbr>time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The sysctl setting net.ipv4.tcp_keepalive_time. Must be between `30` and `432000`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="net_ipv4_tcp_max_syn_backlog_python">
+<a href="#net_ipv4_tcp_max_syn_backlog_python" style="color: inherit; text-decoration: inherit;">net_<wbr>ipv4_<wbr>tcp_<wbr>max_<wbr>syn_<wbr>backlog</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The sysctl setting net.ipv4.tcp_max_syn_backlog. Must be between `128` and `3240000`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="net_ipv4_tcp_max_tw_buckets_python">
+<a href="#net_ipv4_tcp_max_tw_buckets_python" style="color: inherit; text-decoration: inherit;">net_<wbr>ipv4_<wbr>tcp_<wbr>max_<wbr>tw_<wbr>buckets</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The sysctl setting net.ipv4.tcp_max_tw_buckets. Must be between `8000` and `1440000`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="net_ipv4_tcp_tw_reuse_python">
+<a href="#net_ipv4_tcp_tw_reuse_python" style="color: inherit; text-decoration: inherit;">net_<wbr>ipv4_<wbr>tcp_<wbr>tw_<wbr>reuse</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}The sysctl setting net.ipv4.tcp_tw_reuse. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="net_netfilter_nf_conntrack_buckets_python">
+<a href="#net_netfilter_nf_conntrack_buckets_python" style="color: inherit; text-decoration: inherit;">net_<wbr>netfilter_<wbr>nf_<wbr>conntrack_<wbr>buckets</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The sysctl setting net.netfilter.nf_conntrack_buckets. Must be between `65536` and `147456`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="net_netfilter_nf_conntrack_max_python">
+<a href="#net_netfilter_nf_conntrack_max_python" style="color: inherit; text-decoration: inherit;">net_<wbr>netfilter_<wbr>nf_<wbr>conntrack_<wbr>max</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The sysctl setting net.netfilter.nf_conntrack_max. Must be between `131072` and `589824`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="vm_max_map_count_python">
+<a href="#vm_max_map_count_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>max_<wbr>map_<wbr>count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The sysctl setting vm.max_map_count. Must be between `65530` and `262144`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="vm_swappiness_python">
+<a href="#vm_swappiness_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>swappiness</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The sysctl setting vm.swappiness. Must be between `0` and `100`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="vm_vfs_cache_pressure_python">
+<a href="#vm_vfs_cache_pressure_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>vfs_<wbr>cache_<wbr>pressure</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The sysctl setting vm.vfs_cache_pressure. Must be between `0` and `100`. Changing this forces a new resource to be created.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -6327,7 +8073,7 @@ The following state arguments are supported:
 <a href="#sshkey_csharp" style="color: inherit; text-decoration: inherit;">Ssh<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusterlinuxprofilesshkey">Kubernetes<wbr>Cluster<wbr>Linux<wbr>Profile<wbr>Ssh<wbr>Key<wbr>Args</a></span>
+        <span class="property-type"><a href="#kubernetesclusterlinuxprofilesshkey">Kubernetes<wbr>Cluster<wbr>Linux<wbr>Profile<wbr>Ssh<wbr>Key</a></span>
     </dt>
     <dd>{{% md %}}An `ssh_key` block. Only one is currently allowed. Changing this forces a new resource to be created.
 {{% /md %}}</dd></dl>
@@ -6371,7 +8117,7 @@ The following state arguments are supported:
 <a href="#sshkey_nodejs" style="color: inherit; text-decoration: inherit;">ssh<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusterlinuxprofilesshkey">Kubernetes<wbr>Cluster<wbr>Linux<wbr>Profile<wbr>Ssh<wbr>Key<wbr>Args</a></span>
+        <span class="property-type"><a href="#kubernetesclusterlinuxprofilesshkey">Kubernetes<wbr>Cluster<wbr>Linux<wbr>Profile<wbr>Ssh<wbr>Key</a></span>
     </dt>
     <dd>{{% md %}}An `ssh_key` block. Only one is currently allowed. Changing this forces a new resource to be created.
 {{% /md %}}</dd></dl>
@@ -6393,7 +8139,7 @@ The following state arguments are supported:
 <a href="#ssh_key_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusterlinuxprofilesshkey">Kubernetes<wbr>Cluster<wbr>Linux<wbr>Profile<wbr>Ssh<wbr>Key<wbr>Args</a></span>
+        <span class="property-type"><a href="#kubernetesclusterlinuxprofilesshkey">Kubernetes<wbr>Cluster<wbr>Linux<wbr>Profile<wbr>Ssh<wbr>Key</a></span>
     </dt>
     <dd>{{% md %}}An `ssh_key` block. Only one is currently allowed. Changing this forces a new resource to be created.
 {{% /md %}}</dd></dl>
@@ -6489,7 +8235,7 @@ The following state arguments are supported:
 <a href="#loadbalancerprofile_csharp" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusternetworkprofileloadbalancerprofile">Kubernetes<wbr>Cluster<wbr>Network<wbr>Profile<wbr>Load<wbr>Balancer<wbr>Profile<wbr>Args</a></span>
+        <span class="property-type"><a href="#kubernetesclusternetworkprofileloadbalancerprofile">Kubernetes<wbr>Cluster<wbr>Network<wbr>Profile<wbr>Load<wbr>Balancer<wbr>Profile</a></span>
     </dt>
     <dd>{{% md %}}A `load_balancer_profile` block. This can only be specified when `load_balancer_sku` is set to `Standard`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6677,7 +8423,7 @@ The following state arguments are supported:
 <a href="#loadbalancerprofile_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancer<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusternetworkprofileloadbalancerprofile">Kubernetes<wbr>Cluster<wbr>Network<wbr>Profile<wbr>Load<wbr>Balancer<wbr>Profile<wbr>Args</a></span>
+        <span class="property-type"><a href="#kubernetesclusternetworkprofileloadbalancerprofile">Kubernetes<wbr>Cluster<wbr>Network<wbr>Profile<wbr>Load<wbr>Balancer<wbr>Profile</a></span>
     </dt>
     <dd>{{% md %}}A `load_balancer_profile` block. This can only be specified when `load_balancer_sku` is set to `Standard`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6771,7 +8517,7 @@ The following state arguments are supported:
 <a href="#load_balancer_profile_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancer_<wbr>profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusternetworkprofileloadbalancerprofile">Kubernetes<wbr>Cluster<wbr>Network<wbr>Profile<wbr>Load<wbr>Balancer<wbr>Profile<wbr>Args</a></span>
+        <span class="property-type"><a href="#kubernetesclusternetworkprofileloadbalancerprofile">Kubernetes<wbr>Cluster<wbr>Network<wbr>Profile<wbr>Load<wbr>Balancer<wbr>Profile</a></span>
     </dt>
     <dd>{{% md %}}A `load_balancer_profile` block. This can only be specified when `load_balancer_sku` is set to `Standard`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7083,7 +8829,7 @@ The following state arguments are supported:
 <a href="#azureactivedirectory_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Active<wbr>Directory</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusterrolebasedaccesscontrolazureactivedirectory">Kubernetes<wbr>Cluster<wbr>Role<wbr>Based<wbr>Access<wbr>Control<wbr>Azure<wbr>Active<wbr>Directory<wbr>Args</a></span>
+        <span class="property-type"><a href="#kubernetesclusterrolebasedaccesscontrolazureactivedirectory">Kubernetes<wbr>Cluster<wbr>Role<wbr>Based<wbr>Access<wbr>Control<wbr>Azure<wbr>Active<wbr>Directory</a></span>
     </dt>
     <dd>{{% md %}}An `azure_active_directory` block.
 {{% /md %}}</dd></dl>
@@ -7127,7 +8873,7 @@ The following state arguments are supported:
 <a href="#azureactivedirectory_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Active<wbr>Directory</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusterrolebasedaccesscontrolazureactivedirectory">Kubernetes<wbr>Cluster<wbr>Role<wbr>Based<wbr>Access<wbr>Control<wbr>Azure<wbr>Active<wbr>Directory<wbr>Args</a></span>
+        <span class="property-type"><a href="#kubernetesclusterrolebasedaccesscontrolazureactivedirectory">Kubernetes<wbr>Cluster<wbr>Role<wbr>Based<wbr>Access<wbr>Control<wbr>Azure<wbr>Active<wbr>Directory</a></span>
     </dt>
     <dd>{{% md %}}An `azure_active_directory` block.
 {{% /md %}}</dd></dl>
@@ -7149,7 +8895,7 @@ The following state arguments are supported:
 <a href="#azure_active_directory_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>active_<wbr>directory</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusterrolebasedaccesscontrolazureactivedirectory">Kubernetes<wbr>Cluster<wbr>Role<wbr>Based<wbr>Access<wbr>Control<wbr>Azure<wbr>Active<wbr>Directory<wbr>Args</a></span>
+        <span class="property-type"><a href="#kubernetesclusterrolebasedaccesscontrolazureactivedirectory">Kubernetes<wbr>Cluster<wbr>Role<wbr>Based<wbr>Access<wbr>Control<wbr>Azure<wbr>Active<wbr>Directory</a></span>
     </dt>
     <dd>{{% md %}}An `azure_active_directory` block.
 {{% /md %}}</dd></dl>
@@ -7536,6 +9282,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Admin Password for Windows VMs. Length must be between 14 and 123 characters.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="license_csharp">
+<a href="#license_csharp" style="color: inherit; text-decoration: inherit;">License</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the type of on-premise license which should be used for Node Pool Windows Virtual Machine. At this time the only possible value is `Windows_Server`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -7558,6 +9313,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Admin Password for Windows VMs. Length must be between 14 and 123 characters.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="license_go">
+<a href="#license_go" style="color: inherit; text-decoration: inherit;">License</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the type of on-premise license which should be used for Node Pool Windows Virtual Machine. At this time the only possible value is `Windows_Server`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -7580,6 +9344,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Admin Password for Windows VMs. Length must be between 14 and 123 characters.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="license_nodejs">
+<a href="#license_nodejs" style="color: inherit; text-decoration: inherit;">license</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the type of on-premise license which should be used for Node Pool Windows Virtual Machine. At this time the only possible value is `Windows_Server`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -7602,6 +9375,15 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Admin Password for Windows VMs. Length must be between 14 and 123 characters.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="license_python">
+<a href="#license_python" style="color: inherit; text-decoration: inherit;">license</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specifies the type of on-premise license which should be used for Node Pool Windows Virtual Machine. At this time the only possible value is `Windows_Server`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import

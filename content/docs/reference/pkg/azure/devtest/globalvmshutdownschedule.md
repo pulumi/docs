@@ -584,7 +584,7 @@ The GlobalVMShutdownSchedule resource accepts the following [input]({{< relref "
 <a href="#notificationsettings_go" style="color: inherit; text-decoration: inherit;">Notification<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#globalvmshutdownschedulenotificationsettings">Global<wbr>VMShutdown<wbr>Schedule<wbr>Notification<wbr>Settings</a></span>
+        <span class="property-type"><a href="#globalvmshutdownschedulenotificationsettings">Global<wbr>VMShutdown<wbr>Schedule<wbr>Notification<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1053,7 +1053,7 @@ The following state arguments are supported:
 <a href="#state_notificationsettings_go" style="color: inherit; text-decoration: inherit;">Notification<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#globalvmshutdownschedulenotificationsettings">Global<wbr>VMShutdown<wbr>Schedule<wbr>Notification<wbr>Settings</a></span>
+        <span class="property-type"><a href="#globalvmshutdownschedulenotificationsettings">Global<wbr>VMShutdown<wbr>Schedule<wbr>Notification<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

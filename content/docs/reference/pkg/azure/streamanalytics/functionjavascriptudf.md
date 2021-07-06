@@ -402,7 +402,7 @@ The FunctionJavaScriptUDF resource accepts the following [input]({{< relref "/do
 <a href="#inputs_go" style="color: inherit; text-decoration: inherit;">Inputs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionjavascriptudfinput">[]Function<wbr>Java<wbr>Script<wbr>UDFInput<wbr>Type</a></span>
+        <span class="property-type"><a href="#functionjavascriptudfinput">[]Function<wbr>Java<wbr>Script<wbr>UDFInput<wbr>Type<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `input` blocks as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -411,7 +411,7 @@ The FunctionJavaScriptUDF resource accepts the following [input]({{< relref "/do
 <a href="#output_go" style="color: inherit; text-decoration: inherit;">Output</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionjavascriptudfoutput">Function<wbr>Java<wbr>Script<wbr>UDFOutput<wbr>Type</a></span>
+        <span class="property-type"><a href="#functionjavascriptudfoutput">Function<wbr>Java<wbr>Script<wbr>UDFOutput<wbr>Type<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `output` blocks as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -820,7 +820,7 @@ The following state arguments are supported:
 <a href="#state_inputs_go" style="color: inherit; text-decoration: inherit;">Inputs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionjavascriptudfinput">[]Function<wbr>Java<wbr>Script<wbr>UDFInput<wbr>Type</a></span>
+        <span class="property-type"><a href="#functionjavascriptudfinput">[]Function<wbr>Java<wbr>Script<wbr>UDFInput<wbr>Type<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `input` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -838,7 +838,7 @@ The following state arguments are supported:
 <a href="#state_output_go" style="color: inherit; text-decoration: inherit;">Output</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionjavascriptudfoutput">Function<wbr>Java<wbr>Script<wbr>UDFOutput<wbr>Type</a></span>
+        <span class="property-type"><a href="#functionjavascriptudfoutput">Function<wbr>Java<wbr>Script<wbr>UDFOutput<wbr>Type<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `output` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"

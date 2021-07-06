@@ -910,7 +910,7 @@ The Slot resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#authsettings_go" style="color: inherit; text-decoration: inherit;">Auth<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slotauthsettings">Slot<wbr>Auth<wbr>Settings</a></span>
+        <span class="property-type"><a href="#slotauthsettings">Slot<wbr>Auth<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `auth_settings` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -928,7 +928,7 @@ The Slot resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#connectionstrings_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>Strings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slotconnectionstring">[]Slot<wbr>Connection<wbr>String</a></span>
+        <span class="property-type"><a href="#slotconnectionstring">[]Slot<wbr>Connection<wbr>String<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `connection_string` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -955,7 +955,7 @@ The Slot resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slotidentity">Slot<wbr>Identity</a></span>
+        <span class="property-type"><a href="#slotidentity">Slot<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A Managed Service Identity block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -973,7 +973,7 @@ The Slot resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#logs_go" style="color: inherit; text-decoration: inherit;">Logs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slotlogs">Slot<wbr>Logs</a></span>
+        <span class="property-type"><a href="#slotlogs">Slot<wbr>Logs<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `logs` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -991,7 +991,7 @@ The Slot resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#siteconfig_go" style="color: inherit; text-decoration: inherit;">Site<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slotsiteconfig">Slot<wbr>Site<wbr>Config</a></span>
+        <span class="property-type"><a href="#slotsiteconfig">Slot<wbr>Site<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `site_config` object as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1744,7 +1744,7 @@ The following state arguments are supported:
 <a href="#state_authsettings_go" style="color: inherit; text-decoration: inherit;">Auth<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slotauthsettings">Slot<wbr>Auth<wbr>Settings</a></span>
+        <span class="property-type"><a href="#slotauthsettings">Slot<wbr>Auth<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `auth_settings` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1762,7 +1762,7 @@ The following state arguments are supported:
 <a href="#state_connectionstrings_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>Strings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slotconnectionstring">[]Slot<wbr>Connection<wbr>String</a></span>
+        <span class="property-type"><a href="#slotconnectionstring">[]Slot<wbr>Connection<wbr>String<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `connection_string` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1798,7 +1798,7 @@ The following state arguments are supported:
 <a href="#state_identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slotidentity">Slot<wbr>Identity</a></span>
+        <span class="property-type"><a href="#slotidentity">Slot<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A Managed Service Identity block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1816,7 +1816,7 @@ The following state arguments are supported:
 <a href="#state_logs_go" style="color: inherit; text-decoration: inherit;">Logs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slotlogs">Slot<wbr>Logs</a></span>
+        <span class="property-type"><a href="#slotlogs">Slot<wbr>Logs<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `logs` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1843,7 +1843,7 @@ The following state arguments are supported:
 <a href="#state_siteconfig_go" style="color: inherit; text-decoration: inherit;">Site<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slotsiteconfig">Slot<wbr>Site<wbr>Config</a></span>
+        <span class="property-type"><a href="#slotsiteconfig">Slot<wbr>Site<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `site_config` object as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1852,7 +1852,7 @@ The following state arguments are supported:
 <a href="#state_sitecredentials_go" style="color: inherit; text-decoration: inherit;">Site<wbr>Credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slotsitecredential">[]Slot<wbr>Site<wbr>Credential</a></span>
+        <span class="property-type"><a href="#slotsitecredential">[]Slot<wbr>Site<wbr>Credential<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `site_credential` block as defined below, which contains the site-level credentials used to publish to this App Service slot.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2208,7 +2208,7 @@ The following state arguments are supported:
 <a href="#activedirectory_csharp" style="color: inherit; text-decoration: inherit;">Active<wbr>Directory</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slotauthsettingsactivedirectory">Slot<wbr>Auth<wbr>Settings<wbr>Active<wbr>Directory<wbr>Args</a></span>
+        <span class="property-type"><a href="#slotauthsettingsactivedirectory">Slot<wbr>Auth<wbr>Settings<wbr>Active<wbr>Directory</a></span>
     </dt>
     <dd>{{% md %}}A `active_directory` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2244,7 +2244,7 @@ The following state arguments are supported:
 <a href="#facebook_csharp" style="color: inherit; text-decoration: inherit;">Facebook</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slotauthsettingsfacebook">Slot<wbr>Auth<wbr>Settings<wbr>Facebook<wbr>Args</a></span>
+        <span class="property-type"><a href="#slotauthsettingsfacebook">Slot<wbr>Auth<wbr>Settings<wbr>Facebook</a></span>
     </dt>
     <dd>{{% md %}}A `facebook` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2253,7 +2253,7 @@ The following state arguments are supported:
 <a href="#google_csharp" style="color: inherit; text-decoration: inherit;">Google</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slotauthsettingsgoogle">Slot<wbr>Auth<wbr>Settings<wbr>Google<wbr>Args</a></span>
+        <span class="property-type"><a href="#slotauthsettingsgoogle">Slot<wbr>Auth<wbr>Settings<wbr>Google</a></span>
     </dt>
     <dd>{{% md %}}A `google` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2271,7 +2271,7 @@ The following state arguments are supported:
 <a href="#microsoft_csharp" style="color: inherit; text-decoration: inherit;">Microsoft</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slotauthsettingsmicrosoft">Slot<wbr>Auth<wbr>Settings<wbr>Microsoft<wbr>Args</a></span>
+        <span class="property-type"><a href="#slotauthsettingsmicrosoft">Slot<wbr>Auth<wbr>Settings<wbr>Microsoft</a></span>
     </dt>
     <dd>{{% md %}}A `microsoft` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2307,7 +2307,7 @@ The following state arguments are supported:
 <a href="#twitter_csharp" style="color: inherit; text-decoration: inherit;">Twitter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slotauthsettingstwitter">Slot<wbr>Auth<wbr>Settings<wbr>Twitter<wbr>Args</a></span>
+        <span class="property-type"><a href="#slotauthsettingstwitter">Slot<wbr>Auth<wbr>Settings<wbr>Twitter</a></span>
     </dt>
     <dd>{{% md %}}A `twitter` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2468,7 +2468,7 @@ The following state arguments are supported:
 <a href="#activedirectory_nodejs" style="color: inherit; text-decoration: inherit;">active<wbr>Directory</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slotauthsettingsactivedirectory">Slot<wbr>Auth<wbr>Settings<wbr>Active<wbr>Directory<wbr>Args</a></span>
+        <span class="property-type"><a href="#slotauthsettingsactivedirectory">Slot<wbr>Auth<wbr>Settings<wbr>Active<wbr>Directory</a></span>
     </dt>
     <dd>{{% md %}}A `active_directory` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2504,7 +2504,7 @@ The following state arguments are supported:
 <a href="#facebook_nodejs" style="color: inherit; text-decoration: inherit;">facebook</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slotauthsettingsfacebook">Slot<wbr>Auth<wbr>Settings<wbr>Facebook<wbr>Args</a></span>
+        <span class="property-type"><a href="#slotauthsettingsfacebook">Slot<wbr>Auth<wbr>Settings<wbr>Facebook</a></span>
     </dt>
     <dd>{{% md %}}A `facebook` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2513,7 +2513,7 @@ The following state arguments are supported:
 <a href="#google_nodejs" style="color: inherit; text-decoration: inherit;">google</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slotauthsettingsgoogle">Slot<wbr>Auth<wbr>Settings<wbr>Google<wbr>Args</a></span>
+        <span class="property-type"><a href="#slotauthsettingsgoogle">Slot<wbr>Auth<wbr>Settings<wbr>Google</a></span>
     </dt>
     <dd>{{% md %}}A `google` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2531,7 +2531,7 @@ The following state arguments are supported:
 <a href="#microsoft_nodejs" style="color: inherit; text-decoration: inherit;">microsoft</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slotauthsettingsmicrosoft">Slot<wbr>Auth<wbr>Settings<wbr>Microsoft<wbr>Args</a></span>
+        <span class="property-type"><a href="#slotauthsettingsmicrosoft">Slot<wbr>Auth<wbr>Settings<wbr>Microsoft</a></span>
     </dt>
     <dd>{{% md %}}A `microsoft` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2567,7 +2567,7 @@ The following state arguments are supported:
 <a href="#twitter_nodejs" style="color: inherit; text-decoration: inherit;">twitter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slotauthsettingstwitter">Slot<wbr>Auth<wbr>Settings<wbr>Twitter<wbr>Args</a></span>
+        <span class="property-type"><a href="#slotauthsettingstwitter">Slot<wbr>Auth<wbr>Settings<wbr>Twitter</a></span>
     </dt>
     <dd>{{% md %}}A `twitter` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2598,7 +2598,7 @@ The following state arguments are supported:
 <a href="#active_directory_python" style="color: inherit; text-decoration: inherit;">active_<wbr>directory</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slotauthsettingsactivedirectory">Slot<wbr>Auth<wbr>Settings<wbr>Active<wbr>Directory<wbr>Args</a></span>
+        <span class="property-type"><a href="#slotauthsettingsactivedirectory">Slot<wbr>Auth<wbr>Settings<wbr>Active<wbr>Directory</a></span>
     </dt>
     <dd>{{% md %}}A `active_directory` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2634,7 +2634,7 @@ The following state arguments are supported:
 <a href="#facebook_python" style="color: inherit; text-decoration: inherit;">facebook</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slotauthsettingsfacebook">Slot<wbr>Auth<wbr>Settings<wbr>Facebook<wbr>Args</a></span>
+        <span class="property-type"><a href="#slotauthsettingsfacebook">Slot<wbr>Auth<wbr>Settings<wbr>Facebook</a></span>
     </dt>
     <dd>{{% md %}}A `facebook` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2643,7 +2643,7 @@ The following state arguments are supported:
 <a href="#google_python" style="color: inherit; text-decoration: inherit;">google</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slotauthsettingsgoogle">Slot<wbr>Auth<wbr>Settings<wbr>Google<wbr>Args</a></span>
+        <span class="property-type"><a href="#slotauthsettingsgoogle">Slot<wbr>Auth<wbr>Settings<wbr>Google</a></span>
     </dt>
     <dd>{{% md %}}A `google` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2661,7 +2661,7 @@ The following state arguments are supported:
 <a href="#microsoft_python" style="color: inherit; text-decoration: inherit;">microsoft</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slotauthsettingsmicrosoft">Slot<wbr>Auth<wbr>Settings<wbr>Microsoft<wbr>Args</a></span>
+        <span class="property-type"><a href="#slotauthsettingsmicrosoft">Slot<wbr>Auth<wbr>Settings<wbr>Microsoft</a></span>
     </dt>
     <dd>{{% md %}}A `microsoft` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2697,7 +2697,7 @@ The following state arguments are supported:
 <a href="#twitter_python" style="color: inherit; text-decoration: inherit;">twitter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slotauthsettingstwitter">Slot<wbr>Auth<wbr>Settings<wbr>Twitter<wbr>Args</a></span>
+        <span class="property-type"><a href="#slotauthsettingstwitter">Slot<wbr>Auth<wbr>Settings<wbr>Twitter</a></span>
     </dt>
     <dd>{{% md %}}A `twitter` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3595,7 +3595,7 @@ The following state arguments are supported:
 <a href="#applicationlogs_csharp" style="color: inherit; text-decoration: inherit;">Application<wbr>Logs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slotlogsapplicationlogs">Slot<wbr>Logs<wbr>Application<wbr>Logs<wbr>Args</a></span>
+        <span class="property-type"><a href="#slotlogsapplicationlogs">Slot<wbr>Logs<wbr>Application<wbr>Logs</a></span>
     </dt>
     <dd>{{% md %}}An `application_logs` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3622,7 +3622,7 @@ The following state arguments are supported:
 <a href="#httplogs_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Logs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slotlogshttplogs">Slot<wbr>Logs<wbr>Http<wbr>Logs<wbr>Args</a></span>
+        <span class="property-type"><a href="#slotlogshttplogs">Slot<wbr>Logs<wbr>Http<wbr>Logs</a></span>
     </dt>
     <dd>{{% md %}}An `http_logs` block as defined below.
 {{% /md %}}</dd></dl>
@@ -3675,7 +3675,7 @@ The following state arguments are supported:
 <a href="#applicationlogs_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Logs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slotlogsapplicationlogs">Slot<wbr>Logs<wbr>Application<wbr>Logs<wbr>Args</a></span>
+        <span class="property-type"><a href="#slotlogsapplicationlogs">Slot<wbr>Logs<wbr>Application<wbr>Logs</a></span>
     </dt>
     <dd>{{% md %}}An `application_logs` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3702,7 +3702,7 @@ The following state arguments are supported:
 <a href="#httplogs_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Logs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slotlogshttplogs">Slot<wbr>Logs<wbr>Http<wbr>Logs<wbr>Args</a></span>
+        <span class="property-type"><a href="#slotlogshttplogs">Slot<wbr>Logs<wbr>Http<wbr>Logs</a></span>
     </dt>
     <dd>{{% md %}}An `http_logs` block as defined below.
 {{% /md %}}</dd></dl>
@@ -3715,7 +3715,7 @@ The following state arguments are supported:
 <a href="#application_logs_python" style="color: inherit; text-decoration: inherit;">application_<wbr>logs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slotlogsapplicationlogs">Slot<wbr>Logs<wbr>Application<wbr>Logs<wbr>Args</a></span>
+        <span class="property-type"><a href="#slotlogsapplicationlogs">Slot<wbr>Logs<wbr>Application<wbr>Logs</a></span>
     </dt>
     <dd>{{% md %}}An `application_logs` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3742,7 +3742,7 @@ The following state arguments are supported:
 <a href="#http_logs_python" style="color: inherit; text-decoration: inherit;">http_<wbr>logs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slotlogshttplogs">Slot<wbr>Logs<wbr>Http<wbr>Logs<wbr>Args</a></span>
+        <span class="property-type"><a href="#slotlogshttplogs">Slot<wbr>Logs<wbr>Http<wbr>Logs</a></span>
     </dt>
     <dd>{{% md %}}An `http_logs` block as defined below.
 {{% /md %}}</dd></dl>
@@ -3757,7 +3757,7 @@ The following state arguments are supported:
 <a href="#azureblobstorage_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Blob<wbr>Storage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slotlogsapplicationlogsazureblobstorage">Slot<wbr>Logs<wbr>Application<wbr>Logs<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Args</a></span>
+        <span class="property-type"><a href="#slotlogsapplicationlogsazureblobstorage">Slot<wbr>Logs<wbr>Application<wbr>Logs<wbr>Azure<wbr>Blob<wbr>Storage</a></span>
     </dt>
     <dd>{{% md %}}An `azure_blob_storage` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3801,7 +3801,7 @@ The following state arguments are supported:
 <a href="#azureblobstorage_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Blob<wbr>Storage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slotlogsapplicationlogsazureblobstorage">Slot<wbr>Logs<wbr>Application<wbr>Logs<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Args</a></span>
+        <span class="property-type"><a href="#slotlogsapplicationlogsazureblobstorage">Slot<wbr>Logs<wbr>Application<wbr>Logs<wbr>Azure<wbr>Blob<wbr>Storage</a></span>
     </dt>
     <dd>{{% md %}}An `azure_blob_storage` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3823,7 +3823,7 @@ The following state arguments are supported:
 <a href="#azure_blob_storage_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>blob_<wbr>storage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slotlogsapplicationlogsazureblobstorage">Slot<wbr>Logs<wbr>Application<wbr>Logs<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Args</a></span>
+        <span class="property-type"><a href="#slotlogsapplicationlogsazureblobstorage">Slot<wbr>Logs<wbr>Application<wbr>Logs<wbr>Azure<wbr>Blob<wbr>Storage</a></span>
     </dt>
     <dd>{{% md %}}An `azure_blob_storage` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3973,7 +3973,7 @@ The following state arguments are supported:
 <a href="#azureblobstorage_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Blob<wbr>Storage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slotlogshttplogsazureblobstorage">Slot<wbr>Logs<wbr>Http<wbr>Logs<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Args</a></span>
+        <span class="property-type"><a href="#slotlogshttplogsazureblobstorage">Slot<wbr>Logs<wbr>Http<wbr>Logs<wbr>Azure<wbr>Blob<wbr>Storage</a></span>
     </dt>
     <dd>{{% md %}}An `azure_blob_storage` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3982,7 +3982,7 @@ The following state arguments are supported:
 <a href="#filesystem_csharp" style="color: inherit; text-decoration: inherit;">File<wbr>System</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slotlogshttplogsfilesystem">Slot<wbr>Logs<wbr>Http<wbr>Logs<wbr>File<wbr>System<wbr>Args</a></span>
+        <span class="property-type"><a href="#slotlogshttplogsfilesystem">Slot<wbr>Logs<wbr>Http<wbr>Logs<wbr>File<wbr>System</a></span>
     </dt>
     <dd>{{% md %}}A `file_system` block as defined below.
 {{% /md %}}</dd></dl>
@@ -4017,7 +4017,7 @@ The following state arguments are supported:
 <a href="#azureblobstorage_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Blob<wbr>Storage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slotlogshttplogsazureblobstorage">Slot<wbr>Logs<wbr>Http<wbr>Logs<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Args</a></span>
+        <span class="property-type"><a href="#slotlogshttplogsazureblobstorage">Slot<wbr>Logs<wbr>Http<wbr>Logs<wbr>Azure<wbr>Blob<wbr>Storage</a></span>
     </dt>
     <dd>{{% md %}}An `azure_blob_storage` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4026,7 +4026,7 @@ The following state arguments are supported:
 <a href="#filesystem_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>System</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slotlogshttplogsfilesystem">Slot<wbr>Logs<wbr>Http<wbr>Logs<wbr>File<wbr>System<wbr>Args</a></span>
+        <span class="property-type"><a href="#slotlogshttplogsfilesystem">Slot<wbr>Logs<wbr>Http<wbr>Logs<wbr>File<wbr>System</a></span>
     </dt>
     <dd>{{% md %}}A `file_system` block as defined below.
 {{% /md %}}</dd></dl>
@@ -4039,7 +4039,7 @@ The following state arguments are supported:
 <a href="#azure_blob_storage_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>blob_<wbr>storage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slotlogshttplogsazureblobstorage">Slot<wbr>Logs<wbr>Http<wbr>Logs<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Args</a></span>
+        <span class="property-type"><a href="#slotlogshttplogsazureblobstorage">Slot<wbr>Logs<wbr>Http<wbr>Logs<wbr>Azure<wbr>Blob<wbr>Storage</a></span>
     </dt>
     <dd>{{% md %}}An `azure_blob_storage` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4048,7 +4048,7 @@ The following state arguments are supported:
 <a href="#file_system_python" style="color: inherit; text-decoration: inherit;">file_<wbr>system</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slotlogshttplogsfilesystem">Slot<wbr>Logs<wbr>Http<wbr>Logs<wbr>File<wbr>System<wbr>Args</a></span>
+        <span class="property-type"><a href="#slotlogshttplogsfilesystem">Slot<wbr>Logs<wbr>Http<wbr>Logs<wbr>File<wbr>System</a></span>
     </dt>
     <dd>{{% md %}}A `file_system` block as defined below.
 {{% /md %}}</dd></dl>
@@ -4270,7 +4270,7 @@ The following state arguments are supported:
 <a href="#cors_csharp" style="color: inherit; text-decoration: inherit;">Cors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slotsiteconfigcors">Slot<wbr>Site<wbr>Config<wbr>Cors<wbr>Args</a></span>
+        <span class="property-type"><a href="#slotsiteconfigcors">Slot<wbr>Site<wbr>Config<wbr>Cors</a></span>
     </dt>
     <dd>{{% md %}}A `cors` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4322,7 +4322,7 @@ The following state arguments are supported:
 <a href="#iprestrictions_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Restrictions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slotsiteconfigiprestriction">List&lt;Slot<wbr>Site<wbr>Config<wbr>Ip<wbr>Restriction<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#slotsiteconfigiprestriction">List&lt;Slot<wbr>Site<wbr>Config<wbr>Ip<wbr>Restriction&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of objects representing ip restrictions as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4437,7 +4437,7 @@ The following state arguments are supported:
 <a href="#scmiprestrictions_csharp" style="color: inherit; text-decoration: inherit;">Scm<wbr>Ip<wbr>Restrictions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slotsiteconfigscmiprestriction">List&lt;Slot<wbr>Site<wbr>Config<wbr>Scm<wbr>Ip<wbr>Restriction<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#slotsiteconfigscmiprestriction">List&lt;Slot<wbr>Site<wbr>Config<wbr>Scm<wbr>Ip<wbr>Restriction&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4768,7 +4768,7 @@ The following state arguments are supported:
 <a href="#cors_nodejs" style="color: inherit; text-decoration: inherit;">cors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slotsiteconfigcors">Slot<wbr>Site<wbr>Config<wbr>Cors<wbr>Args</a></span>
+        <span class="property-type"><a href="#slotsiteconfigcors">Slot<wbr>Site<wbr>Config<wbr>Cors</a></span>
     </dt>
     <dd>{{% md %}}A `cors` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4820,7 +4820,7 @@ The following state arguments are supported:
 <a href="#iprestrictions_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Restrictions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slotsiteconfigiprestriction">Slot<wbr>Site<wbr>Config<wbr>Ip<wbr>Restriction<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#slotsiteconfigiprestriction">Slot<wbr>Site<wbr>Config<wbr>Ip<wbr>Restriction[]</a></span>
     </dt>
     <dd>{{% md %}}A list of objects representing ip restrictions as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4935,7 +4935,7 @@ The following state arguments are supported:
 <a href="#scmiprestrictions_nodejs" style="color: inherit; text-decoration: inherit;">scm<wbr>Ip<wbr>Restrictions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slotsiteconfigscmiprestriction">Slot<wbr>Site<wbr>Config<wbr>Scm<wbr>Ip<wbr>Restriction<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#slotsiteconfigscmiprestriction">Slot<wbr>Site<wbr>Config<wbr>Scm<wbr>Ip<wbr>Restriction[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5017,7 +5017,7 @@ The following state arguments are supported:
 <a href="#cors_python" style="color: inherit; text-decoration: inherit;">cors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slotsiteconfigcors">Slot<wbr>Site<wbr>Config<wbr>Cors<wbr>Args</a></span>
+        <span class="property-type"><a href="#slotsiteconfigcors">Slot<wbr>Site<wbr>Config<wbr>Cors</a></span>
     </dt>
     <dd>{{% md %}}A `cors` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5069,7 +5069,7 @@ The following state arguments are supported:
 <a href="#ip_restrictions_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>restrictions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slotsiteconfigiprestriction">Sequence[Slot<wbr>Site<wbr>Config<wbr>Ip<wbr>Restriction<wbr>Args]</a></span>
+        <span class="property-type"><a href="#slotsiteconfigiprestriction">Sequence[Slot<wbr>Site<wbr>Config<wbr>Ip<wbr>Restriction]</a></span>
     </dt>
     <dd>{{% md %}}A list of objects representing ip restrictions as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5184,7 +5184,7 @@ The following state arguments are supported:
 <a href="#scm_ip_restrictions_python" style="color: inherit; text-decoration: inherit;">scm_<wbr>ip_<wbr>restrictions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slotsiteconfigscmiprestriction">Sequence[Slot<wbr>Site<wbr>Config<wbr>Scm<wbr>Ip<wbr>Restriction<wbr>Args]</a></span>
+        <span class="property-type"><a href="#slotsiteconfigscmiprestriction">Sequence[Slot<wbr>Site<wbr>Config<wbr>Scm<wbr>Ip<wbr>Restriction]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5340,7 +5340,7 @@ The following state arguments are supported:
 <a href="#headers_csharp" style="color: inherit; text-decoration: inherit;">Headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slotsiteconfigiprestrictionheaders">Slot<wbr>Site<wbr>Config<wbr>Ip<wbr>Restriction<wbr>Headers<wbr>Args</a></span>
+        <span class="property-type"><a href="#slotsiteconfigiprestrictionheaders">Slot<wbr>Site<wbr>Config<wbr>Ip<wbr>Restriction<wbr>Headers</a></span>
     </dt>
     <dd>{{% md %}}The headers for this specific `ip_restriction` as defined below. The http header filters are evaluated after the rule itself and both conditions must be true for the rule to apply.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5474,7 +5474,7 @@ The following state arguments are supported:
 <a href="#headers_nodejs" style="color: inherit; text-decoration: inherit;">headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slotsiteconfigiprestrictionheaders">Slot<wbr>Site<wbr>Config<wbr>Ip<wbr>Restriction<wbr>Headers<wbr>Args</a></span>
+        <span class="property-type"><a href="#slotsiteconfigiprestrictionheaders">Slot<wbr>Site<wbr>Config<wbr>Ip<wbr>Restriction<wbr>Headers</a></span>
     </dt>
     <dd>{{% md %}}The headers for this specific `ip_restriction` as defined below. The http header filters are evaluated after the rule itself and both conditions must be true for the rule to apply.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5541,7 +5541,7 @@ The following state arguments are supported:
 <a href="#headers_python" style="color: inherit; text-decoration: inherit;">headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slotsiteconfigiprestrictionheaders">Slot<wbr>Site<wbr>Config<wbr>Ip<wbr>Restriction<wbr>Headers<wbr>Args</a></span>
+        <span class="property-type"><a href="#slotsiteconfigiprestrictionheaders">Slot<wbr>Site<wbr>Config<wbr>Ip<wbr>Restriction<wbr>Headers</a></span>
     </dt>
     <dd>{{% md %}}The headers for this specific `ip_restriction` as defined below. The http header filters are evaluated after the rule itself and both conditions must be true for the rule to apply.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5772,7 +5772,7 @@ The following state arguments are supported:
 <a href="#headers_csharp" style="color: inherit; text-decoration: inherit;">Headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slotsiteconfigscmiprestrictionheaders">Slot<wbr>Site<wbr>Config<wbr>Scm<wbr>Ip<wbr>Restriction<wbr>Headers<wbr>Args</a></span>
+        <span class="property-type"><a href="#slotsiteconfigscmiprestrictionheaders">Slot<wbr>Site<wbr>Config<wbr>Scm<wbr>Ip<wbr>Restriction<wbr>Headers</a></span>
     </dt>
     <dd>{{% md %}}The headers for this specific `ip_restriction` as defined below. The http header filters are evaluated after the rule itself and both conditions must be true for the rule to apply.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5906,7 +5906,7 @@ The following state arguments are supported:
 <a href="#headers_nodejs" style="color: inherit; text-decoration: inherit;">headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slotsiteconfigscmiprestrictionheaders">Slot<wbr>Site<wbr>Config<wbr>Scm<wbr>Ip<wbr>Restriction<wbr>Headers<wbr>Args</a></span>
+        <span class="property-type"><a href="#slotsiteconfigscmiprestrictionheaders">Slot<wbr>Site<wbr>Config<wbr>Scm<wbr>Ip<wbr>Restriction<wbr>Headers</a></span>
     </dt>
     <dd>{{% md %}}The headers for this specific `ip_restriction` as defined below. The http header filters are evaluated after the rule itself and both conditions must be true for the rule to apply.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5973,7 +5973,7 @@ The following state arguments are supported:
 <a href="#headers_python" style="color: inherit; text-decoration: inherit;">headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#slotsiteconfigscmiprestrictionheaders">Slot<wbr>Site<wbr>Config<wbr>Scm<wbr>Ip<wbr>Restriction<wbr>Headers<wbr>Args</a></span>
+        <span class="property-type"><a href="#slotsiteconfigscmiprestrictionheaders">Slot<wbr>Site<wbr>Config<wbr>Scm<wbr>Ip<wbr>Restriction<wbr>Headers</a></span>
     </dt>
     <dd>{{% md %}}The headers for this specific `ip_restriction` as defined below. The http header filters are evaluated after the rule itself and both conditions must be true for the rule to apply.
 {{% /md %}}</dd><dt class="property-optional"

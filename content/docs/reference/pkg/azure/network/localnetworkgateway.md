@@ -394,7 +394,7 @@ address spaces the gateway exposes.
 <a href="#bgpsettings_go" style="color: inherit; text-decoration: inherit;">Bgp<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#localnetworkgatewaybgpsettings">Local<wbr>Network<wbr>Gateway<wbr>Bgp<wbr>Settings</a></span>
+        <span class="property-type"><a href="#localnetworkgatewaybgpsettings">Local<wbr>Network<wbr>Gateway<wbr>Bgp<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `bgp_settings` block as defined below containing the
 Local Network Gateway's BGP speaker settings.
@@ -896,7 +896,7 @@ address spaces the gateway exposes.
 <a href="#state_bgpsettings_go" style="color: inherit; text-decoration: inherit;">Bgp<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#localnetworkgatewaybgpsettings">Local<wbr>Network<wbr>Gateway<wbr>Bgp<wbr>Settings</a></span>
+        <span class="property-type"><a href="#localnetworkgatewaybgpsettings">Local<wbr>Network<wbr>Gateway<wbr>Bgp<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `bgp_settings` block as defined below containing the
 Local Network Gateway's BGP speaker settings.

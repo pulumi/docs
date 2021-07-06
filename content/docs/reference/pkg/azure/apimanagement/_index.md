@@ -15,6 +15,7 @@ Explore the resources and functions of the azure.apimanagement module.
     <li><a href="apidiagnostic" title="ApiDiagnostic"><span class="symbol resource"></span>ApiDiagnostic</a></li>
     <li><a href="apioperation" title="ApiOperation"><span class="symbol resource"></span>ApiOperation</a></li>
     <li><a href="apioperationpolicy" title="ApiOperationPolicy"><span class="symbol resource"></span>ApiOperationPolicy</a></li>
+    <li><a href="apioperationtag" title="ApiOperationTag"><span class="symbol resource"></span>ApiOperationTag</a></li>
     <li><a href="apipolicy" title="ApiPolicy"><span class="symbol resource"></span>ApiPolicy</a></li>
     <li><a href="apischema" title="ApiSchema"><span class="symbol resource"></span>ApiSchema</a></li>
     <li><a href="apiversionset" title="ApiVersionSet"><span class="symbol resource"></span>ApiVersionSet</a></li>
@@ -41,6 +42,7 @@ Explore the resources and functions of the azure.apimanagement module.
     <li><a href="productgroup" title="ProductGroup"><span class="symbol resource"></span>ProductGroup</a></li>
     <li><a href="productpolicy" title="ProductPolicy"><span class="symbol resource"></span>ProductPolicy</a></li>
     <li><a href="property" title="Property"><span class="symbol resource"></span>Property</a></li>
+    <li><a href="rediscache" title="RedisCache"><span class="symbol resource"></span>RedisCache</a></li>
     <li><a href="service" title="Service"><span class="symbol resource"></span>Service</a></li>
     <li><a href="subscription" title="Subscription"><span class="symbol resource"></span>Subscription</a></li>
     <li><a href="user" title="User"><span class="symbol resource"></span>User</a></li>
@@ -65,6 +67,6 @@ Explore the resources and functions of the azure.apimanagement module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.7.0</dd>
+	<dd>4.9.0</dd>
 </dl>
 

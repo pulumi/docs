@@ -234,7 +234,7 @@ The CacheNfsTarget resource accepts the following [input]({{< relref "/docs/intr
 <a href="#namespacejunctions_go" style="color: inherit; text-decoration: inherit;">Namespace<wbr>Junctions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cachenfstargetnamespacejunction">[]Cache<wbr>Nfs<wbr>Target<wbr>Namespace<wbr>Junction</a></span>
+        <span class="property-type"><a href="#cachenfstargetnamespacejunction">[]Cache<wbr>Nfs<wbr>Target<wbr>Namespace<wbr>Junction<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Can be specified multiple times to define multiple `namespace_junction`. Each `namespace_juntion` block supports fields documented below.
 {{% /md %}}</dd><dt class="property-required"
@@ -661,7 +661,7 @@ The following state arguments are supported:
 <a href="#state_namespacejunctions_go" style="color: inherit; text-decoration: inherit;">Namespace<wbr>Junctions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cachenfstargetnamespacejunction">[]Cache<wbr>Nfs<wbr>Target<wbr>Namespace<wbr>Junction</a></span>
+        <span class="property-type"><a href="#cachenfstargetnamespacejunction">[]Cache<wbr>Nfs<wbr>Target<wbr>Namespace<wbr>Junction<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Can be specified multiple times to define multiple `namespace_junction`. Each `namespace_juntion` block supports fields documented below.
 {{% /md %}}</dd><dt class="property-optional"

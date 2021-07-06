@@ -337,7 +337,7 @@ Changing this forces a new resource to be created.
 <a href="#acls_go" style="color: inherit; text-decoration: inherit;">Acls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tableacl">[]Table<wbr>Acl</a></span>
+        <span class="property-type"><a href="#tableacl">[]Table<wbr>Acl<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `acl` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -638,7 +638,7 @@ Changing this forces a new resource to be created.
 <a href="#state_acls_go" style="color: inherit; text-decoration: inherit;">Acls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tableacl">[]Table<wbr>Acl</a></span>
+        <span class="property-type"><a href="#tableacl">[]Table<wbr>Acl<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `acl` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -754,7 +754,7 @@ Changing this forces a new resource to be created.
 <a href="#accesspolicies_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tableaclaccesspolicy">List&lt;Table<wbr>Acl<wbr>Access<wbr>Policy<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#tableaclaccesspolicy">List&lt;Table<wbr>Acl<wbr>Access<wbr>Policy&gt;</a></span>
     </dt>
     <dd>{{% md %}}An `access_policy` block as defined below.
 {{% /md %}}</dd></dl>
@@ -798,7 +798,7 @@ Changing this forces a new resource to be created.
 <a href="#accesspolicies_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tableaclaccesspolicy">Table<wbr>Acl<wbr>Access<wbr>Policy<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#tableaclaccesspolicy">Table<wbr>Acl<wbr>Access<wbr>Policy[]</a></span>
     </dt>
     <dd>{{% md %}}An `access_policy` block as defined below.
 {{% /md %}}</dd></dl>
@@ -820,7 +820,7 @@ Changing this forces a new resource to be created.
 <a href="#access_policies_python" style="color: inherit; text-decoration: inherit;">access_<wbr>policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tableaclaccesspolicy">Sequence[Table<wbr>Acl<wbr>Access<wbr>Policy<wbr>Args]</a></span>
+        <span class="property-type"><a href="#tableaclaccesspolicy">Sequence[Table<wbr>Acl<wbr>Access<wbr>Policy]</a></span>
     </dt>
     <dd>{{% md %}}An `access_policy` block as defined below.
 {{% /md %}}</dd></dl>

@@ -385,7 +385,7 @@ The TimeSeriesInsightsReferenceDataSet resource accepts the following [input]({{
 <a href="#keyproperties_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timeseriesinsightsreferencedatasetkeyproperty">[]Time<wbr>Series<wbr>Insights<wbr>Reference<wbr>Data<wbr>Set<wbr>Key<wbr>Property</a></span>
+        <span class="property-type"><a href="#timeseriesinsightsreferencedatasetkeyproperty">[]Time<wbr>Series<wbr>Insights<wbr>Reference<wbr>Data<wbr>Set<wbr>Key<wbr>Property<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `key_property` block as defined below. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -812,7 +812,7 @@ The following state arguments are supported:
 <a href="#state_keyproperties_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timeseriesinsightsreferencedatasetkeyproperty">[]Time<wbr>Series<wbr>Insights<wbr>Reference<wbr>Data<wbr>Set<wbr>Key<wbr>Property</a></span>
+        <span class="property-type"><a href="#timeseriesinsightsreferencedatasetkeyproperty">[]Time<wbr>Series<wbr>Insights<wbr>Reference<wbr>Data<wbr>Set<wbr>Key<wbr>Property<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `key_property` block as defined below. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"

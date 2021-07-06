@@ -221,7 +221,7 @@ The ChannelDirectLine resource accepts the following [input]({{< relref "/docs/i
 <a href="#sites_go" style="color: inherit; text-decoration: inherit;">Sites</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#channeldirectlinesite">[]Channel<wbr>Direct<wbr>Line<wbr>Site</a></span>
+        <span class="property-type"><a href="#channeldirectlinesite">[]Channel<wbr>Direct<wbr>Line<wbr>Site<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A site represents a client application that you want to connect to your bot. Multiple `site` blocks may be defined as below
 {{% /md %}}</dd><dt class="property-optional"
@@ -574,7 +574,7 @@ The following state arguments are supported:
 <a href="#state_sites_go" style="color: inherit; text-decoration: inherit;">Sites</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#channeldirectlinesite">[]Channel<wbr>Direct<wbr>Line<wbr>Site</a></span>
+        <span class="property-type"><a href="#channeldirectlinesite">[]Channel<wbr>Direct<wbr>Line<wbr>Site<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A site represents a client application that you want to connect to your bot. Multiple `site` blocks may be defined as below
 {{% /md %}}</dd></dl>

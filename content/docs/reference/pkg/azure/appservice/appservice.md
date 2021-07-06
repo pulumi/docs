@@ -581,7 +581,7 @@ The AppService resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#authsettings_go" style="color: inherit; text-decoration: inherit;">Auth<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appserviceauthsettings">App<wbr>Service<wbr>Auth<wbr>Settings</a></span>
+        <span class="property-type"><a href="#appserviceauthsettings">App<wbr>Service<wbr>Auth<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `auth_settings` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -590,7 +590,7 @@ The AppService resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#backup_go" style="color: inherit; text-decoration: inherit;">Backup</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appservicebackup">App<wbr>Service<wbr>Backup</a></span>
+        <span class="property-type"><a href="#appservicebackup">App<wbr>Service<wbr>Backup<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `backup` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -617,7 +617,7 @@ The AppService resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#connectionstrings_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>Strings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appserviceconnectionstring">[]App<wbr>Service<wbr>Connection<wbr>String</a></span>
+        <span class="property-type"><a href="#appserviceconnectionstring">[]App<wbr>Service<wbr>Connection<wbr>String<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `connection_string` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -644,7 +644,7 @@ The AppService resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appserviceidentity">App<wbr>Service<wbr>Identity</a></span>
+        <span class="property-type"><a href="#appserviceidentity">App<wbr>Service<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A Managed Service Identity block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -662,7 +662,7 @@ The AppService resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#logs_go" style="color: inherit; text-decoration: inherit;">Logs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appservicelogs">App<wbr>Service<wbr>Logs</a></span>
+        <span class="property-type"><a href="#appservicelogs">App<wbr>Service<wbr>Logs<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `logs` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -680,7 +680,7 @@ The AppService resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#siteconfig_go" style="color: inherit; text-decoration: inherit;">Site<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appservicesiteconfig">App<wbr>Service<wbr>Site<wbr>Config</a></span>
+        <span class="property-type"><a href="#appservicesiteconfig">App<wbr>Service<wbr>Site<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `site_config` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -689,7 +689,7 @@ The AppService resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#sourcecontrol_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Control</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appservicesourcecontrol">App<wbr>Service<wbr>Source<wbr>Control</a></span>
+        <span class="property-type"><a href="#appservicesourcecontrol">App<wbr>Service<wbr>Source<wbr>Control<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A Source Control block as defined below
 {{% /md %}}</dd><dt class="property-optional"
@@ -698,7 +698,7 @@ The AppService resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#storageaccounts_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Accounts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appservicestorageaccount">[]App<wbr>Service<wbr>Storage<wbr>Account</a></span>
+        <span class="property-type"><a href="#appservicestorageaccount">[]App<wbr>Service<wbr>Storage<wbr>Account<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `storage_account` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1756,7 +1756,7 @@ The following state arguments are supported:
 <a href="#state_authsettings_go" style="color: inherit; text-decoration: inherit;">Auth<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appserviceauthsettings">App<wbr>Service<wbr>Auth<wbr>Settings</a></span>
+        <span class="property-type"><a href="#appserviceauthsettings">App<wbr>Service<wbr>Auth<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `auth_settings` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1765,7 +1765,7 @@ The following state arguments are supported:
 <a href="#state_backup_go" style="color: inherit; text-decoration: inherit;">Backup</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appservicebackup">App<wbr>Service<wbr>Backup</a></span>
+        <span class="property-type"><a href="#appservicebackup">App<wbr>Service<wbr>Backup<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `backup` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1792,7 +1792,7 @@ The following state arguments are supported:
 <a href="#state_connectionstrings_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>Strings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appserviceconnectionstring">[]App<wbr>Service<wbr>Connection<wbr>String</a></span>
+        <span class="property-type"><a href="#appserviceconnectionstring">[]App<wbr>Service<wbr>Connection<wbr>String<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `connection_string` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1837,7 +1837,7 @@ The following state arguments are supported:
 <a href="#state_identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appserviceidentity">App<wbr>Service<wbr>Identity</a></span>
+        <span class="property-type"><a href="#appserviceidentity">App<wbr>Service<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A Managed Service Identity block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1855,7 +1855,7 @@ The following state arguments are supported:
 <a href="#state_logs_go" style="color: inherit; text-decoration: inherit;">Logs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appservicelogs">App<wbr>Service<wbr>Logs</a></span>
+        <span class="property-type"><a href="#appservicelogs">App<wbr>Service<wbr>Logs<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `logs` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1918,7 +1918,7 @@ The following state arguments are supported:
 <a href="#state_siteconfig_go" style="color: inherit; text-decoration: inherit;">Site<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appservicesiteconfig">App<wbr>Service<wbr>Site<wbr>Config</a></span>
+        <span class="property-type"><a href="#appservicesiteconfig">App<wbr>Service<wbr>Site<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `site_config` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1927,7 +1927,7 @@ The following state arguments are supported:
 <a href="#state_sitecredentials_go" style="color: inherit; text-decoration: inherit;">Site<wbr>Credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appservicesitecredential">[]App<wbr>Service<wbr>Site<wbr>Credential</a></span>
+        <span class="property-type"><a href="#appservicesitecredential">[]App<wbr>Service<wbr>Site<wbr>Credential<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `site_credential` block as defined below, which contains the site-level credentials used to publish to this App Service.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1936,7 +1936,7 @@ The following state arguments are supported:
 <a href="#state_sourcecontrol_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Control</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appservicesourcecontrol">App<wbr>Service<wbr>Source<wbr>Control</a></span>
+        <span class="property-type"><a href="#appservicesourcecontrol">App<wbr>Service<wbr>Source<wbr>Control<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A Source Control block as defined below
 {{% /md %}}</dd><dt class="property-optional"
@@ -1945,7 +1945,7 @@ The following state arguments are supported:
 <a href="#state_storageaccounts_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Accounts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appservicestorageaccount">[]App<wbr>Service<wbr>Storage<wbr>Account</a></span>
+        <span class="property-type"><a href="#appservicestorageaccount">[]App<wbr>Service<wbr>Storage<wbr>Account<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `storage_account` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2445,7 +2445,7 @@ The following state arguments are supported:
 <a href="#activedirectory_csharp" style="color: inherit; text-decoration: inherit;">Active<wbr>Directory</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appserviceauthsettingsactivedirectory">App<wbr>Service<wbr>Auth<wbr>Settings<wbr>Active<wbr>Directory<wbr>Args</a></span>
+        <span class="property-type"><a href="#appserviceauthsettingsactivedirectory">App<wbr>Service<wbr>Auth<wbr>Settings<wbr>Active<wbr>Directory</a></span>
     </dt>
     <dd>{{% md %}}A `active_directory` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2481,7 +2481,7 @@ The following state arguments are supported:
 <a href="#facebook_csharp" style="color: inherit; text-decoration: inherit;">Facebook</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appserviceauthsettingsfacebook">App<wbr>Service<wbr>Auth<wbr>Settings<wbr>Facebook<wbr>Args</a></span>
+        <span class="property-type"><a href="#appserviceauthsettingsfacebook">App<wbr>Service<wbr>Auth<wbr>Settings<wbr>Facebook</a></span>
     </dt>
     <dd>{{% md %}}A `facebook` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2490,7 +2490,7 @@ The following state arguments are supported:
 <a href="#google_csharp" style="color: inherit; text-decoration: inherit;">Google</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appserviceauthsettingsgoogle">App<wbr>Service<wbr>Auth<wbr>Settings<wbr>Google<wbr>Args</a></span>
+        <span class="property-type"><a href="#appserviceauthsettingsgoogle">App<wbr>Service<wbr>Auth<wbr>Settings<wbr>Google</a></span>
     </dt>
     <dd>{{% md %}}A `google` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2508,7 +2508,7 @@ The following state arguments are supported:
 <a href="#microsoft_csharp" style="color: inherit; text-decoration: inherit;">Microsoft</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appserviceauthsettingsmicrosoft">App<wbr>Service<wbr>Auth<wbr>Settings<wbr>Microsoft<wbr>Args</a></span>
+        <span class="property-type"><a href="#appserviceauthsettingsmicrosoft">App<wbr>Service<wbr>Auth<wbr>Settings<wbr>Microsoft</a></span>
     </dt>
     <dd>{{% md %}}A `microsoft` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2544,7 +2544,7 @@ The following state arguments are supported:
 <a href="#twitter_csharp" style="color: inherit; text-decoration: inherit;">Twitter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appserviceauthsettingstwitter">App<wbr>Service<wbr>Auth<wbr>Settings<wbr>Twitter<wbr>Args</a></span>
+        <span class="property-type"><a href="#appserviceauthsettingstwitter">App<wbr>Service<wbr>Auth<wbr>Settings<wbr>Twitter</a></span>
     </dt>
     <dd>{{% md %}}A `twitter` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2705,7 +2705,7 @@ The following state arguments are supported:
 <a href="#activedirectory_nodejs" style="color: inherit; text-decoration: inherit;">active<wbr>Directory</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appserviceauthsettingsactivedirectory">App<wbr>Service<wbr>Auth<wbr>Settings<wbr>Active<wbr>Directory<wbr>Args</a></span>
+        <span class="property-type"><a href="#appserviceauthsettingsactivedirectory">App<wbr>Service<wbr>Auth<wbr>Settings<wbr>Active<wbr>Directory</a></span>
     </dt>
     <dd>{{% md %}}A `active_directory` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2741,7 +2741,7 @@ The following state arguments are supported:
 <a href="#facebook_nodejs" style="color: inherit; text-decoration: inherit;">facebook</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appserviceauthsettingsfacebook">App<wbr>Service<wbr>Auth<wbr>Settings<wbr>Facebook<wbr>Args</a></span>
+        <span class="property-type"><a href="#appserviceauthsettingsfacebook">App<wbr>Service<wbr>Auth<wbr>Settings<wbr>Facebook</a></span>
     </dt>
     <dd>{{% md %}}A `facebook` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2750,7 +2750,7 @@ The following state arguments are supported:
 <a href="#google_nodejs" style="color: inherit; text-decoration: inherit;">google</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appserviceauthsettingsgoogle">App<wbr>Service<wbr>Auth<wbr>Settings<wbr>Google<wbr>Args</a></span>
+        <span class="property-type"><a href="#appserviceauthsettingsgoogle">App<wbr>Service<wbr>Auth<wbr>Settings<wbr>Google</a></span>
     </dt>
     <dd>{{% md %}}A `google` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2768,7 +2768,7 @@ The following state arguments are supported:
 <a href="#microsoft_nodejs" style="color: inherit; text-decoration: inherit;">microsoft</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appserviceauthsettingsmicrosoft">App<wbr>Service<wbr>Auth<wbr>Settings<wbr>Microsoft<wbr>Args</a></span>
+        <span class="property-type"><a href="#appserviceauthsettingsmicrosoft">App<wbr>Service<wbr>Auth<wbr>Settings<wbr>Microsoft</a></span>
     </dt>
     <dd>{{% md %}}A `microsoft` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2804,7 +2804,7 @@ The following state arguments are supported:
 <a href="#twitter_nodejs" style="color: inherit; text-decoration: inherit;">twitter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appserviceauthsettingstwitter">App<wbr>Service<wbr>Auth<wbr>Settings<wbr>Twitter<wbr>Args</a></span>
+        <span class="property-type"><a href="#appserviceauthsettingstwitter">App<wbr>Service<wbr>Auth<wbr>Settings<wbr>Twitter</a></span>
     </dt>
     <dd>{{% md %}}A `twitter` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2835,7 +2835,7 @@ The following state arguments are supported:
 <a href="#active_directory_python" style="color: inherit; text-decoration: inherit;">active_<wbr>directory</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appserviceauthsettingsactivedirectory">App<wbr>Service<wbr>Auth<wbr>Settings<wbr>Active<wbr>Directory<wbr>Args</a></span>
+        <span class="property-type"><a href="#appserviceauthsettingsactivedirectory">App<wbr>Service<wbr>Auth<wbr>Settings<wbr>Active<wbr>Directory</a></span>
     </dt>
     <dd>{{% md %}}A `active_directory` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2871,7 +2871,7 @@ The following state arguments are supported:
 <a href="#facebook_python" style="color: inherit; text-decoration: inherit;">facebook</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appserviceauthsettingsfacebook">App<wbr>Service<wbr>Auth<wbr>Settings<wbr>Facebook<wbr>Args</a></span>
+        <span class="property-type"><a href="#appserviceauthsettingsfacebook">App<wbr>Service<wbr>Auth<wbr>Settings<wbr>Facebook</a></span>
     </dt>
     <dd>{{% md %}}A `facebook` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2880,7 +2880,7 @@ The following state arguments are supported:
 <a href="#google_python" style="color: inherit; text-decoration: inherit;">google</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appserviceauthsettingsgoogle">App<wbr>Service<wbr>Auth<wbr>Settings<wbr>Google<wbr>Args</a></span>
+        <span class="property-type"><a href="#appserviceauthsettingsgoogle">App<wbr>Service<wbr>Auth<wbr>Settings<wbr>Google</a></span>
     </dt>
     <dd>{{% md %}}A `google` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2898,7 +2898,7 @@ The following state arguments are supported:
 <a href="#microsoft_python" style="color: inherit; text-decoration: inherit;">microsoft</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appserviceauthsettingsmicrosoft">App<wbr>Service<wbr>Auth<wbr>Settings<wbr>Microsoft<wbr>Args</a></span>
+        <span class="property-type"><a href="#appserviceauthsettingsmicrosoft">App<wbr>Service<wbr>Auth<wbr>Settings<wbr>Microsoft</a></span>
     </dt>
     <dd>{{% md %}}A `microsoft` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2934,7 +2934,7 @@ The following state arguments are supported:
 <a href="#twitter_python" style="color: inherit; text-decoration: inherit;">twitter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appserviceauthsettingstwitter">App<wbr>Service<wbr>Auth<wbr>Settings<wbr>Twitter<wbr>Args</a></span>
+        <span class="property-type"><a href="#appserviceauthsettingstwitter">App<wbr>Service<wbr>Auth<wbr>Settings<wbr>Twitter</a></span>
     </dt>
     <dd>{{% md %}}A `twitter` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3553,7 +3553,7 @@ The following state arguments are supported:
 <a href="#schedule_csharp" style="color: inherit; text-decoration: inherit;">Schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appservicebackupschedule">App<wbr>Service<wbr>Backup<wbr>Schedule<wbr>Args</a></span>
+        <span class="property-type"><a href="#appservicebackupschedule">App<wbr>Service<wbr>Backup<wbr>Schedule</a></span>
     </dt>
     <dd>{{% md %}}A `schedule` block as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -3633,7 +3633,7 @@ The following state arguments are supported:
 <a href="#schedule_nodejs" style="color: inherit; text-decoration: inherit;">schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appservicebackupschedule">App<wbr>Service<wbr>Backup<wbr>Schedule<wbr>Args</a></span>
+        <span class="property-type"><a href="#appservicebackupschedule">App<wbr>Service<wbr>Backup<wbr>Schedule</a></span>
     </dt>
     <dd>{{% md %}}A `schedule` block as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -3673,7 +3673,7 @@ The following state arguments are supported:
 <a href="#schedule_python" style="color: inherit; text-decoration: inherit;">schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appservicebackupschedule">App<wbr>Service<wbr>Backup<wbr>Schedule<wbr>Args</a></span>
+        <span class="property-type"><a href="#appservicebackupschedule">App<wbr>Service<wbr>Backup<wbr>Schedule</a></span>
     </dt>
     <dd>{{% md %}}A `schedule` block as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -4192,7 +4192,7 @@ The following state arguments are supported:
 <a href="#applicationlogs_csharp" style="color: inherit; text-decoration: inherit;">Application<wbr>Logs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appservicelogsapplicationlogs">App<wbr>Service<wbr>Logs<wbr>Application<wbr>Logs<wbr>Args</a></span>
+        <span class="property-type"><a href="#appservicelogsapplicationlogs">App<wbr>Service<wbr>Logs<wbr>Application<wbr>Logs</a></span>
     </dt>
     <dd>{{% md %}}An `application_logs` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4219,7 +4219,7 @@ The following state arguments are supported:
 <a href="#httplogs_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Logs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appservicelogshttplogs">App<wbr>Service<wbr>Logs<wbr>Http<wbr>Logs<wbr>Args</a></span>
+        <span class="property-type"><a href="#appservicelogshttplogs">App<wbr>Service<wbr>Logs<wbr>Http<wbr>Logs</a></span>
     </dt>
     <dd>{{% md %}}An `http_logs` block as defined below.
 {{% /md %}}</dd></dl>
@@ -4272,7 +4272,7 @@ The following state arguments are supported:
 <a href="#applicationlogs_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Logs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appservicelogsapplicationlogs">App<wbr>Service<wbr>Logs<wbr>Application<wbr>Logs<wbr>Args</a></span>
+        <span class="property-type"><a href="#appservicelogsapplicationlogs">App<wbr>Service<wbr>Logs<wbr>Application<wbr>Logs</a></span>
     </dt>
     <dd>{{% md %}}An `application_logs` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4299,7 +4299,7 @@ The following state arguments are supported:
 <a href="#httplogs_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Logs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appservicelogshttplogs">App<wbr>Service<wbr>Logs<wbr>Http<wbr>Logs<wbr>Args</a></span>
+        <span class="property-type"><a href="#appservicelogshttplogs">App<wbr>Service<wbr>Logs<wbr>Http<wbr>Logs</a></span>
     </dt>
     <dd>{{% md %}}An `http_logs` block as defined below.
 {{% /md %}}</dd></dl>
@@ -4312,7 +4312,7 @@ The following state arguments are supported:
 <a href="#application_logs_python" style="color: inherit; text-decoration: inherit;">application_<wbr>logs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appservicelogsapplicationlogs">App<wbr>Service<wbr>Logs<wbr>Application<wbr>Logs<wbr>Args</a></span>
+        <span class="property-type"><a href="#appservicelogsapplicationlogs">App<wbr>Service<wbr>Logs<wbr>Application<wbr>Logs</a></span>
     </dt>
     <dd>{{% md %}}An `application_logs` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4339,7 +4339,7 @@ The following state arguments are supported:
 <a href="#http_logs_python" style="color: inherit; text-decoration: inherit;">http_<wbr>logs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appservicelogshttplogs">App<wbr>Service<wbr>Logs<wbr>Http<wbr>Logs<wbr>Args</a></span>
+        <span class="property-type"><a href="#appservicelogshttplogs">App<wbr>Service<wbr>Logs<wbr>Http<wbr>Logs</a></span>
     </dt>
     <dd>{{% md %}}An `http_logs` block as defined below.
 {{% /md %}}</dd></dl>
@@ -4354,7 +4354,7 @@ The following state arguments are supported:
 <a href="#azureblobstorage_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Blob<wbr>Storage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appservicelogsapplicationlogsazureblobstorage">App<wbr>Service<wbr>Logs<wbr>Application<wbr>Logs<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Args</a></span>
+        <span class="property-type"><a href="#appservicelogsapplicationlogsazureblobstorage">App<wbr>Service<wbr>Logs<wbr>Application<wbr>Logs<wbr>Azure<wbr>Blob<wbr>Storage</a></span>
     </dt>
     <dd>{{% md %}}An `azure_blob_storage` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4396,7 +4396,7 @@ The following state arguments are supported:
 <a href="#azureblobstorage_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Blob<wbr>Storage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appservicelogsapplicationlogsazureblobstorage">App<wbr>Service<wbr>Logs<wbr>Application<wbr>Logs<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Args</a></span>
+        <span class="property-type"><a href="#appservicelogsapplicationlogsazureblobstorage">App<wbr>Service<wbr>Logs<wbr>Application<wbr>Logs<wbr>Azure<wbr>Blob<wbr>Storage</a></span>
     </dt>
     <dd>{{% md %}}An `azure_blob_storage` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4417,7 +4417,7 @@ The following state arguments are supported:
 <a href="#azure_blob_storage_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>blob_<wbr>storage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appservicelogsapplicationlogsazureblobstorage">App<wbr>Service<wbr>Logs<wbr>Application<wbr>Logs<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Args</a></span>
+        <span class="property-type"><a href="#appservicelogsapplicationlogsazureblobstorage">App<wbr>Service<wbr>Logs<wbr>Application<wbr>Logs<wbr>Azure<wbr>Blob<wbr>Storage</a></span>
     </dt>
     <dd>{{% md %}}An `azure_blob_storage` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4566,7 +4566,7 @@ The following state arguments are supported:
 <a href="#azureblobstorage_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Blob<wbr>Storage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appservicelogshttplogsazureblobstorage">App<wbr>Service<wbr>Logs<wbr>Http<wbr>Logs<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Args</a></span>
+        <span class="property-type"><a href="#appservicelogshttplogsazureblobstorage">App<wbr>Service<wbr>Logs<wbr>Http<wbr>Logs<wbr>Azure<wbr>Blob<wbr>Storage</a></span>
     </dt>
     <dd>{{% md %}}An `azure_blob_storage` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4575,7 +4575,7 @@ The following state arguments are supported:
 <a href="#filesystem_csharp" style="color: inherit; text-decoration: inherit;">File<wbr>System</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appservicelogshttplogsfilesystem">App<wbr>Service<wbr>Logs<wbr>Http<wbr>Logs<wbr>File<wbr>System<wbr>Args</a></span>
+        <span class="property-type"><a href="#appservicelogshttplogsfilesystem">App<wbr>Service<wbr>Logs<wbr>Http<wbr>Logs<wbr>File<wbr>System</a></span>
     </dt>
     <dd>{{% md %}}A `file_system` block as defined below.
 {{% /md %}}</dd></dl>
@@ -4610,7 +4610,7 @@ The following state arguments are supported:
 <a href="#azureblobstorage_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Blob<wbr>Storage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appservicelogshttplogsazureblobstorage">App<wbr>Service<wbr>Logs<wbr>Http<wbr>Logs<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Args</a></span>
+        <span class="property-type"><a href="#appservicelogshttplogsazureblobstorage">App<wbr>Service<wbr>Logs<wbr>Http<wbr>Logs<wbr>Azure<wbr>Blob<wbr>Storage</a></span>
     </dt>
     <dd>{{% md %}}An `azure_blob_storage` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4619,7 +4619,7 @@ The following state arguments are supported:
 <a href="#filesystem_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>System</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appservicelogshttplogsfilesystem">App<wbr>Service<wbr>Logs<wbr>Http<wbr>Logs<wbr>File<wbr>System<wbr>Args</a></span>
+        <span class="property-type"><a href="#appservicelogshttplogsfilesystem">App<wbr>Service<wbr>Logs<wbr>Http<wbr>Logs<wbr>File<wbr>System</a></span>
     </dt>
     <dd>{{% md %}}A `file_system` block as defined below.
 {{% /md %}}</dd></dl>
@@ -4632,7 +4632,7 @@ The following state arguments are supported:
 <a href="#azure_blob_storage_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>blob_<wbr>storage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appservicelogshttplogsazureblobstorage">App<wbr>Service<wbr>Logs<wbr>Http<wbr>Logs<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Args</a></span>
+        <span class="property-type"><a href="#appservicelogshttplogsazureblobstorage">App<wbr>Service<wbr>Logs<wbr>Http<wbr>Logs<wbr>Azure<wbr>Blob<wbr>Storage</a></span>
     </dt>
     <dd>{{% md %}}An `azure_blob_storage` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4641,7 +4641,7 @@ The following state arguments are supported:
 <a href="#file_system_python" style="color: inherit; text-decoration: inherit;">file_<wbr>system</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appservicelogshttplogsfilesystem">App<wbr>Service<wbr>Logs<wbr>Http<wbr>Logs<wbr>File<wbr>System<wbr>Args</a></span>
+        <span class="property-type"><a href="#appservicelogshttplogsfilesystem">App<wbr>Service<wbr>Logs<wbr>Http<wbr>Logs<wbr>File<wbr>System</a></span>
     </dt>
     <dd>{{% md %}}A `file_system` block as defined below.
 {{% /md %}}</dd></dl>
@@ -4862,7 +4862,7 @@ The following state arguments are supported:
 <a href="#cors_csharp" style="color: inherit; text-decoration: inherit;">Cors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appservicesiteconfigcors">App<wbr>Service<wbr>Site<wbr>Config<wbr>Cors<wbr>Args</a></span>
+        <span class="property-type"><a href="#appservicesiteconfigcors">App<wbr>Service<wbr>Site<wbr>Config<wbr>Cors</a></span>
     </dt>
     <dd>{{% md %}}A `cors` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4916,7 +4916,7 @@ The following state arguments are supported:
 <a href="#iprestrictions_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Restrictions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appservicesiteconfigiprestriction">List&lt;App<wbr>Service<wbr>Site<wbr>Config<wbr>Ip<wbr>Restriction<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#appservicesiteconfigiprestriction">List&lt;App<wbr>Service<wbr>Site<wbr>Config<wbr>Ip<wbr>Restriction&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of objects representing ip restrictions as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5033,7 +5033,7 @@ The following state arguments are supported:
 <a href="#scmiprestrictions_csharp" style="color: inherit; text-decoration: inherit;">Scm<wbr>Ip<wbr>Restrictions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appservicesiteconfigscmiprestriction">List&lt;App<wbr>Service<wbr>Site<wbr>Config<wbr>Scm<wbr>Ip<wbr>Restriction<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#appservicesiteconfigscmiprestriction">List&lt;App<wbr>Service<wbr>Site<wbr>Config<wbr>Scm<wbr>Ip<wbr>Restriction&gt;</a></span>
     </dt>
     <dd>{{% md %}}A [List of objects](https://www.terraform.io/docs/configuration/attr-as-blocks.html) representing ip restrictions as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5372,7 +5372,7 @@ The following state arguments are supported:
 <a href="#cors_nodejs" style="color: inherit; text-decoration: inherit;">cors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appservicesiteconfigcors">App<wbr>Service<wbr>Site<wbr>Config<wbr>Cors<wbr>Args</a></span>
+        <span class="property-type"><a href="#appservicesiteconfigcors">App<wbr>Service<wbr>Site<wbr>Config<wbr>Cors</a></span>
     </dt>
     <dd>{{% md %}}A `cors` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5426,7 +5426,7 @@ The following state arguments are supported:
 <a href="#iprestrictions_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Restrictions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appservicesiteconfigiprestriction">App<wbr>Service<wbr>Site<wbr>Config<wbr>Ip<wbr>Restriction<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#appservicesiteconfigiprestriction">App<wbr>Service<wbr>Site<wbr>Config<wbr>Ip<wbr>Restriction[]</a></span>
     </dt>
     <dd>{{% md %}}A list of objects representing ip restrictions as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5543,7 +5543,7 @@ The following state arguments are supported:
 <a href="#scmiprestrictions_nodejs" style="color: inherit; text-decoration: inherit;">scm<wbr>Ip<wbr>Restrictions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appservicesiteconfigscmiprestriction">App<wbr>Service<wbr>Site<wbr>Config<wbr>Scm<wbr>Ip<wbr>Restriction<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#appservicesiteconfigscmiprestriction">App<wbr>Service<wbr>Site<wbr>Config<wbr>Scm<wbr>Ip<wbr>Restriction[]</a></span>
     </dt>
     <dd>{{% md %}}A [List of objects](https://www.terraform.io/docs/configuration/attr-as-blocks.html) representing ip restrictions as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5627,7 +5627,7 @@ The following state arguments are supported:
 <a href="#cors_python" style="color: inherit; text-decoration: inherit;">cors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appservicesiteconfigcors">App<wbr>Service<wbr>Site<wbr>Config<wbr>Cors<wbr>Args</a></span>
+        <span class="property-type"><a href="#appservicesiteconfigcors">App<wbr>Service<wbr>Site<wbr>Config<wbr>Cors</a></span>
     </dt>
     <dd>{{% md %}}A `cors` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5681,7 +5681,7 @@ The following state arguments are supported:
 <a href="#ip_restrictions_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>restrictions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appservicesiteconfigiprestriction">Sequence[App<wbr>Service<wbr>Site<wbr>Config<wbr>Ip<wbr>Restriction<wbr>Args]</a></span>
+        <span class="property-type"><a href="#appservicesiteconfigiprestriction">Sequence[App<wbr>Service<wbr>Site<wbr>Config<wbr>Ip<wbr>Restriction]</a></span>
     </dt>
     <dd>{{% md %}}A list of objects representing ip restrictions as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5798,7 +5798,7 @@ The following state arguments are supported:
 <a href="#scm_ip_restrictions_python" style="color: inherit; text-decoration: inherit;">scm_<wbr>ip_<wbr>restrictions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appservicesiteconfigscmiprestriction">Sequence[App<wbr>Service<wbr>Site<wbr>Config<wbr>Scm<wbr>Ip<wbr>Restriction<wbr>Args]</a></span>
+        <span class="property-type"><a href="#appservicesiteconfigscmiprestriction">Sequence[App<wbr>Service<wbr>Site<wbr>Config<wbr>Scm<wbr>Ip<wbr>Restriction]</a></span>
     </dt>
     <dd>{{% md %}}A [List of objects](https://www.terraform.io/docs/configuration/attr-as-blocks.html) representing ip restrictions as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5957,7 +5957,7 @@ The following state arguments are supported:
 <a href="#headers_csharp" style="color: inherit; text-decoration: inherit;">Headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appservicesiteconfigiprestrictionheaders">App<wbr>Service<wbr>Site<wbr>Config<wbr>Ip<wbr>Restriction<wbr>Headers<wbr>Args</a></span>
+        <span class="property-type"><a href="#appservicesiteconfigiprestrictionheaders">App<wbr>Service<wbr>Site<wbr>Config<wbr>Ip<wbr>Restriction<wbr>Headers</a></span>
     </dt>
     <dd>{{% md %}}The headers for this specific `ip_restriction` as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6091,7 +6091,7 @@ The following state arguments are supported:
 <a href="#headers_nodejs" style="color: inherit; text-decoration: inherit;">headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appservicesiteconfigiprestrictionheaders">App<wbr>Service<wbr>Site<wbr>Config<wbr>Ip<wbr>Restriction<wbr>Headers<wbr>Args</a></span>
+        <span class="property-type"><a href="#appservicesiteconfigiprestrictionheaders">App<wbr>Service<wbr>Site<wbr>Config<wbr>Ip<wbr>Restriction<wbr>Headers</a></span>
     </dt>
     <dd>{{% md %}}The headers for this specific `ip_restriction` as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6158,7 +6158,7 @@ The following state arguments are supported:
 <a href="#headers_python" style="color: inherit; text-decoration: inherit;">headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appservicesiteconfigiprestrictionheaders">App<wbr>Service<wbr>Site<wbr>Config<wbr>Ip<wbr>Restriction<wbr>Headers<wbr>Args</a></span>
+        <span class="property-type"><a href="#appservicesiteconfigiprestrictionheaders">App<wbr>Service<wbr>Site<wbr>Config<wbr>Ip<wbr>Restriction<wbr>Headers</a></span>
     </dt>
     <dd>{{% md %}}The headers for this specific `ip_restriction` as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6389,7 +6389,7 @@ The following state arguments are supported:
 <a href="#headers_csharp" style="color: inherit; text-decoration: inherit;">Headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appservicesiteconfigscmiprestrictionheaders">App<wbr>Service<wbr>Site<wbr>Config<wbr>Scm<wbr>Ip<wbr>Restriction<wbr>Headers<wbr>Args</a></span>
+        <span class="property-type"><a href="#appservicesiteconfigscmiprestrictionheaders">App<wbr>Service<wbr>Site<wbr>Config<wbr>Scm<wbr>Ip<wbr>Restriction<wbr>Headers</a></span>
     </dt>
     <dd>{{% md %}}The headers for this specific `scm_ip_restriction` as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6523,7 +6523,7 @@ The following state arguments are supported:
 <a href="#headers_nodejs" style="color: inherit; text-decoration: inherit;">headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appservicesiteconfigscmiprestrictionheaders">App<wbr>Service<wbr>Site<wbr>Config<wbr>Scm<wbr>Ip<wbr>Restriction<wbr>Headers<wbr>Args</a></span>
+        <span class="property-type"><a href="#appservicesiteconfigscmiprestrictionheaders">App<wbr>Service<wbr>Site<wbr>Config<wbr>Scm<wbr>Ip<wbr>Restriction<wbr>Headers</a></span>
     </dt>
     <dd>{{% md %}}The headers for this specific `scm_ip_restriction` as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6590,7 +6590,7 @@ The following state arguments are supported:
 <a href="#headers_python" style="color: inherit; text-decoration: inherit;">headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appservicesiteconfigscmiprestrictionheaders">App<wbr>Service<wbr>Site<wbr>Config<wbr>Scm<wbr>Ip<wbr>Restriction<wbr>Headers<wbr>Args</a></span>
+        <span class="property-type"><a href="#appservicesiteconfigscmiprestrictionheaders">App<wbr>Service<wbr>Site<wbr>Config<wbr>Scm<wbr>Ip<wbr>Restriction<wbr>Headers</a></span>
     </dt>
     <dd>{{% md %}}The headers for this specific `scm_ip_restriction` as defined below.
 {{% /md %}}</dd><dt class="property-optional"

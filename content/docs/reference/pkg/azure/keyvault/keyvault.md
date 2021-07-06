@@ -544,7 +544,7 @@ The KeyVault resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#accesspolicies_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultaccesspolicy">[]Key<wbr>Vault<wbr>Access<wbr>Policy</a></span>
+        <span class="property-type"><a href="#keyvaultaccesspolicy">[]Key<wbr>Vault<wbr>Access<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A list of up to 16 objects describing access policies, as described below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -553,7 +553,7 @@ The KeyVault resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#contacts_go" style="color: inherit; text-decoration: inherit;">Contacts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultcontact">[]Key<wbr>Vault<wbr>Contact</a></span>
+        <span class="property-type"><a href="#keyvaultcontact">[]Key<wbr>Vault<wbr>Contact<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `contact` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -616,7 +616,7 @@ The KeyVault resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#networkacls_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Acls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultnetworkacls">Key<wbr>Vault<wbr>Network<wbr>Acls</a></span>
+        <span class="property-type"><a href="#keyvaultnetworkacls">Key<wbr>Vault<wbr>Network<wbr>Acls<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `network_acls` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1347,7 +1347,7 @@ The following state arguments are supported:
 <a href="#state_accesspolicies_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultaccesspolicy">[]Key<wbr>Vault<wbr>Access<wbr>Policy</a></span>
+        <span class="property-type"><a href="#keyvaultaccesspolicy">[]Key<wbr>Vault<wbr>Access<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A list of up to 16 objects describing access policies, as described below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1356,7 +1356,7 @@ The following state arguments are supported:
 <a href="#state_contacts_go" style="color: inherit; text-decoration: inherit;">Contacts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultcontact">[]Key<wbr>Vault<wbr>Contact</a></span>
+        <span class="property-type"><a href="#keyvaultcontact">[]Key<wbr>Vault<wbr>Contact<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `contact` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1419,7 +1419,7 @@ The following state arguments are supported:
 <a href="#state_networkacls_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Acls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultnetworkacls">Key<wbr>Vault<wbr>Network<wbr>Acls</a></span>
+        <span class="property-type"><a href="#keyvaultnetworkacls">Key<wbr>Vault<wbr>Network<wbr>Acls<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `network_acls` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"

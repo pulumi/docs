@@ -430,7 +430,7 @@ The AnalyticsSolution resource accepts the following [input]({{< relref "/docs/i
 <a href="#plan_go" style="color: inherit; text-decoration: inherit;">Plan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticssolutionplan">Analytics<wbr>Solution<wbr>Plan</a></span>
+        <span class="property-type"><a href="#analyticssolutionplan">Analytics<wbr>Solution<wbr>Plan<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `plan` block as documented below.
 {{% /md %}}</dd><dt class="property-required"
@@ -894,7 +894,7 @@ The following state arguments are supported:
 <a href="#state_plan_go" style="color: inherit; text-decoration: inherit;">Plan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#analyticssolutionplan">Analytics<wbr>Solution<wbr>Plan</a></span>
+        <span class="property-type"><a href="#analyticssolutionplan">Analytics<wbr>Solution<wbr>Plan<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `plan` block as documented below.
 {{% /md %}}</dd><dt class="property-optional"

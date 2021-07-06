@@ -391,7 +391,7 @@ The LoadBalancer resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#frontendipconfigurations_go" style="color: inherit; text-decoration: inherit;">Frontend<wbr>Ip<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalancerfrontendipconfiguration">[]Load<wbr>Balancer<wbr>Frontend<wbr>Ip<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#loadbalancerfrontendipconfiguration">[]Load<wbr>Balancer<wbr>Frontend<wbr>Ip<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or multiple `frontend_ip_configuration` blocks as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -892,7 +892,7 @@ The following state arguments are supported:
 <a href="#state_frontendipconfigurations_go" style="color: inherit; text-decoration: inherit;">Frontend<wbr>Ip<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalancerfrontendipconfiguration">[]Load<wbr>Balancer<wbr>Frontend<wbr>Ip<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#loadbalancerfrontendipconfiguration">[]Load<wbr>Balancer<wbr>Frontend<wbr>Ip<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or multiple `frontend_ip_configuration` blocks as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1136,6 +1136,16 @@ The following state arguments are supported:
     <dd>{{% md %}}Specifies the name of the frontend ip configuration.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="availabilityzone_csharp">
+<a href="#availabilityzone_csharp" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zone</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A list of Availability Zones which the Load Balancer's IP Addresses should be created in. Possible values are `Zone-Redundant`, `1`, `2`, `3`, and `No-Zone`. Defaults to `Zone-Redundant`.
+`No-Zones` - A `non-zonal` resource will be created and the resource will not be replicated or distributed to any Availability Zones.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
 </span>
@@ -1224,16 +1234,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Subnet which should be associated with the IP Configuration.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="zones_csharp">
 <a href="#zones_csharp" style="color: inherit; text-decoration: inherit;">Zones</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A list of Availability Zones which the Load Balancer's IP Addresses should be created in.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been deprecated in favour of `availability_zone` due to a breaking behavioural change in Azure: https://azure.microsoft.com/en-us/updates/zone-behavior-change/{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1246,6 +1255,16 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the frontend ip configuration.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="availabilityzone_go">
+<a href="#availabilityzone_go" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zone</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A list of Availability Zones which the Load Balancer's IP Addresses should be created in. Possible values are `Zone-Redundant`, `1`, `2`, `3`, and `No-Zone`. Defaults to `Zone-Redundant`.
+`No-Zones` - A `non-zonal` resource will be created and the resource will not be replicated or distributed to any Availability Zones.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_go">
@@ -1336,16 +1355,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Subnet which should be associated with the IP Configuration.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="zones_go">
 <a href="#zones_go" style="color: inherit; text-decoration: inherit;">Zones</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A list of Availability Zones which the Load Balancer's IP Addresses should be created in.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been deprecated in favour of `availability_zone` due to a breaking behavioural change in Azure: https://azure.microsoft.com/en-us/updates/zone-behavior-change/{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1358,6 +1376,16 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the frontend ip configuration.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="availabilityzone_nodejs">
+<a href="#availabilityzone_nodejs" style="color: inherit; text-decoration: inherit;">availability<wbr>Zone</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A list of Availability Zones which the Load Balancer's IP Addresses should be created in. Possible values are `Zone-Redundant`, `1`, `2`, `3`, and `No-Zone`. Defaults to `Zone-Redundant`.
+`No-Zones` - A `non-zonal` resource will be created and the resource will not be replicated or distributed to any Availability Zones.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_nodejs">
@@ -1448,16 +1476,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Subnet which should be associated with the IP Configuration.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="zones_nodejs">
 <a href="#zones_nodejs" style="color: inherit; text-decoration: inherit;">zones</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A list of Availability Zones which the Load Balancer's IP Addresses should be created in.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been deprecated in favour of `availability_zone` due to a breaking behavioural change in Azure: https://azure.microsoft.com/en-us/updates/zone-behavior-change/{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1470,6 +1497,16 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the frontend ip configuration.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="availability_zone_python">
+<a href="#availability_zone_python" style="color: inherit; text-decoration: inherit;">availability_<wbr>zone</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}A list of Availability Zones which the Load Balancer's IP Addresses should be created in. Possible values are `Zone-Redundant`, `1`, `2`, `3`, and `No-Zone`. Defaults to `Zone-Redundant`.
+`No-Zones` - A `non-zonal` resource will be created and the resource will not be replicated or distributed to any Availability Zones.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_python">
@@ -1560,16 +1597,15 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Subnet which should be associated with the IP Configuration.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="zones_python">
 <a href="#zones_python" style="color: inherit; text-decoration: inherit;">zones</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A list of Availability Zones which the Load Balancer's IP Addresses should be created in.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been deprecated in favour of `availability_zone` due to a breaking behavioural change in Azure: https://azure.microsoft.com/en-us/updates/zone-behavior-change/{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 ## Import
 

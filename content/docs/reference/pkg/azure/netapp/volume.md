@@ -677,7 +677,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#dataprotectionreplication_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Protection<wbr>Replication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volumedataprotectionreplication">Volume<wbr>Data<wbr>Protection<wbr>Replication</a></span>
+        <span class="property-type"><a href="#volumedataprotectionreplication">Volume<wbr>Data<wbr>Protection<wbr>Replication<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `data_protection_replication` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -686,7 +686,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#exportpolicyrules_go" style="color: inherit; text-decoration: inherit;">Export<wbr>Policy<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volumeexportpolicyrule">[]Volume<wbr>Export<wbr>Policy<wbr>Rule</a></span>
+        <span class="property-type"><a href="#volumeexportpolicyrule">[]Volume<wbr>Export<wbr>Policy<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `export_policy_rule` block defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1420,7 +1420,7 @@ The following state arguments are supported:
 <a href="#state_dataprotectionreplication_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Protection<wbr>Replication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volumedataprotectionreplication">Volume<wbr>Data<wbr>Protection<wbr>Replication</a></span>
+        <span class="property-type"><a href="#volumedataprotectionreplication">Volume<wbr>Data<wbr>Protection<wbr>Replication<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `data_protection_replication` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1429,7 +1429,7 @@ The following state arguments are supported:
 <a href="#state_exportpolicyrules_go" style="color: inherit; text-decoration: inherit;">Export<wbr>Policy<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volumeexportpolicyrule">[]Volume<wbr>Export<wbr>Policy<wbr>Rule</a></span>
+        <span class="property-type"><a href="#volumeexportpolicyrule">[]Volume<wbr>Export<wbr>Policy<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `export_policy_rule` block defined below.
 {{% /md %}}</dd><dt class="property-optional"

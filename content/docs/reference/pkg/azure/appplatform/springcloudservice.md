@@ -457,7 +457,7 @@ The SpringCloudService resource accepts the following [input]({{< relref "/docs/
 <a href="#configservergitsetting_go" style="color: inherit; text-decoration: inherit;">Config<wbr>Server<wbr>Git<wbr>Setting</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#springcloudserviceconfigservergitsetting">Spring<wbr>Cloud<wbr>Service<wbr>Config<wbr>Server<wbr>Git<wbr>Setting</a></span>
+        <span class="property-type"><a href="#springcloudserviceconfigservergitsetting">Spring<wbr>Cloud<wbr>Service<wbr>Config<wbr>Server<wbr>Git<wbr>Setting<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `config_server_git_setting` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -484,7 +484,7 @@ The SpringCloudService resource accepts the following [input]({{< relref "/docs/
 <a href="#network_go" style="color: inherit; text-decoration: inherit;">Network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#springcloudservicenetwork">Spring<wbr>Cloud<wbr>Service<wbr>Network</a></span>
+        <span class="property-type"><a href="#springcloudservicenetwork">Spring<wbr>Cloud<wbr>Service<wbr>Network<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `network` block as defined below. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -511,7 +511,7 @@ The SpringCloudService resource accepts the following [input]({{< relref "/docs/
 <a href="#trace_go" style="color: inherit; text-decoration: inherit;">Trace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#springcloudservicetrace">Spring<wbr>Cloud<wbr>Service<wbr>Trace</a></span>
+        <span class="property-type"><a href="#springcloudservicetrace">Spring<wbr>Cloud<wbr>Service<wbr>Trace<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `trace` block as defined below.
 {{% /md %}}</dd></dl>
@@ -1032,7 +1032,7 @@ The following state arguments are supported:
 <a href="#state_configservergitsetting_go" style="color: inherit; text-decoration: inherit;">Config<wbr>Server<wbr>Git<wbr>Setting</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#springcloudserviceconfigservergitsetting">Spring<wbr>Cloud<wbr>Service<wbr>Config<wbr>Server<wbr>Git<wbr>Setting</a></span>
+        <span class="property-type"><a href="#springcloudserviceconfigservergitsetting">Spring<wbr>Cloud<wbr>Service<wbr>Config<wbr>Server<wbr>Git<wbr>Setting<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `config_server_git_setting` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1059,7 +1059,7 @@ The following state arguments are supported:
 <a href="#state_network_go" style="color: inherit; text-decoration: inherit;">Network</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#springcloudservicenetwork">Spring<wbr>Cloud<wbr>Service<wbr>Network</a></span>
+        <span class="property-type"><a href="#springcloudservicenetwork">Spring<wbr>Cloud<wbr>Service<wbr>Network<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `network` block as defined below. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1077,7 +1077,7 @@ The following state arguments are supported:
 <a href="#state_requirednetworktrafficrules_go" style="color: inherit; text-decoration: inherit;">Required<wbr>Network<wbr>Traffic<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#springcloudservicerequirednetworktrafficrule">[]Spring<wbr>Cloud<wbr>Service<wbr>Required<wbr>Network<wbr>Traffic<wbr>Rule</a></span>
+        <span class="property-type"><a href="#springcloudservicerequirednetworktrafficrule">[]Spring<wbr>Cloud<wbr>Service<wbr>Required<wbr>Network<wbr>Traffic<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A list of `required_network_traffic_rules` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1113,7 +1113,7 @@ The following state arguments are supported:
 <a href="#state_trace_go" style="color: inherit; text-decoration: inherit;">Trace</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#springcloudservicetrace">Spring<wbr>Cloud<wbr>Service<wbr>Trace</a></span>
+        <span class="property-type"><a href="#springcloudservicetrace">Spring<wbr>Cloud<wbr>Service<wbr>Trace<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `trace` block as defined below.
 {{% /md %}}</dd></dl>
@@ -1334,7 +1334,7 @@ The following state arguments are supported:
 <a href="#httpbasicauth_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Basic<wbr>Auth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#springcloudserviceconfigservergitsettinghttpbasicauth">Spring<wbr>Cloud<wbr>Service<wbr>Config<wbr>Server<wbr>Git<wbr>Setting<wbr>Http<wbr>Basic<wbr>Auth<wbr>Args</a></span>
+        <span class="property-type"><a href="#springcloudserviceconfigservergitsettinghttpbasicauth">Spring<wbr>Cloud<wbr>Service<wbr>Config<wbr>Server<wbr>Git<wbr>Setting<wbr>Http<wbr>Basic<wbr>Auth</a></span>
     </dt>
     <dd>{{% md %}}A `http_basic_auth` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1352,7 +1352,7 @@ The following state arguments are supported:
 <a href="#repositories_csharp" style="color: inherit; text-decoration: inherit;">Repositories</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#springcloudserviceconfigservergitsettingrepository">List&lt;Spring<wbr>Cloud<wbr>Service<wbr>Config<wbr>Server<wbr>Git<wbr>Setting<wbr>Repository<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#springcloudserviceconfigservergitsettingrepository">List&lt;Spring<wbr>Cloud<wbr>Service<wbr>Config<wbr>Server<wbr>Git<wbr>Setting<wbr>Repository&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `repository` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1370,7 +1370,7 @@ The following state arguments are supported:
 <a href="#sshauth_csharp" style="color: inherit; text-decoration: inherit;">Ssh<wbr>Auth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#springcloudserviceconfigservergitsettingsshauth">Spring<wbr>Cloud<wbr>Service<wbr>Config<wbr>Server<wbr>Git<wbr>Setting<wbr>Ssh<wbr>Auth<wbr>Args</a></span>
+        <span class="property-type"><a href="#springcloudserviceconfigservergitsettingsshauth">Spring<wbr>Cloud<wbr>Service<wbr>Config<wbr>Server<wbr>Git<wbr>Setting<wbr>Ssh<wbr>Auth</a></span>
     </dt>
     <dd>{{% md %}}A `ssh_auth` block as defined below.
 {{% /md %}}</dd></dl>
@@ -1450,7 +1450,7 @@ The following state arguments are supported:
 <a href="#httpbasicauth_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Basic<wbr>Auth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#springcloudserviceconfigservergitsettinghttpbasicauth">Spring<wbr>Cloud<wbr>Service<wbr>Config<wbr>Server<wbr>Git<wbr>Setting<wbr>Http<wbr>Basic<wbr>Auth<wbr>Args</a></span>
+        <span class="property-type"><a href="#springcloudserviceconfigservergitsettinghttpbasicauth">Spring<wbr>Cloud<wbr>Service<wbr>Config<wbr>Server<wbr>Git<wbr>Setting<wbr>Http<wbr>Basic<wbr>Auth</a></span>
     </dt>
     <dd>{{% md %}}A `http_basic_auth` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1468,7 +1468,7 @@ The following state arguments are supported:
 <a href="#repositories_nodejs" style="color: inherit; text-decoration: inherit;">repositories</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#springcloudserviceconfigservergitsettingrepository">Spring<wbr>Cloud<wbr>Service<wbr>Config<wbr>Server<wbr>Git<wbr>Setting<wbr>Repository<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#springcloudserviceconfigservergitsettingrepository">Spring<wbr>Cloud<wbr>Service<wbr>Config<wbr>Server<wbr>Git<wbr>Setting<wbr>Repository[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `repository` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1486,7 +1486,7 @@ The following state arguments are supported:
 <a href="#sshauth_nodejs" style="color: inherit; text-decoration: inherit;">ssh<wbr>Auth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#springcloudserviceconfigservergitsettingsshauth">Spring<wbr>Cloud<wbr>Service<wbr>Config<wbr>Server<wbr>Git<wbr>Setting<wbr>Ssh<wbr>Auth<wbr>Args</a></span>
+        <span class="property-type"><a href="#springcloudserviceconfigservergitsettingsshauth">Spring<wbr>Cloud<wbr>Service<wbr>Config<wbr>Server<wbr>Git<wbr>Setting<wbr>Ssh<wbr>Auth</a></span>
     </dt>
     <dd>{{% md %}}A `ssh_auth` block as defined below.
 {{% /md %}}</dd></dl>
@@ -1508,7 +1508,7 @@ The following state arguments are supported:
 <a href="#http_basic_auth_python" style="color: inherit; text-decoration: inherit;">http_<wbr>basic_<wbr>auth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#springcloudserviceconfigservergitsettinghttpbasicauth">Spring<wbr>Cloud<wbr>Service<wbr>Config<wbr>Server<wbr>Git<wbr>Setting<wbr>Http<wbr>Basic<wbr>Auth<wbr>Args</a></span>
+        <span class="property-type"><a href="#springcloudserviceconfigservergitsettinghttpbasicauth">Spring<wbr>Cloud<wbr>Service<wbr>Config<wbr>Server<wbr>Git<wbr>Setting<wbr>Http<wbr>Basic<wbr>Auth</a></span>
     </dt>
     <dd>{{% md %}}A `http_basic_auth` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1526,7 +1526,7 @@ The following state arguments are supported:
 <a href="#repositories_python" style="color: inherit; text-decoration: inherit;">repositories</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#springcloudserviceconfigservergitsettingrepository">Sequence[Spring<wbr>Cloud<wbr>Service<wbr>Config<wbr>Server<wbr>Git<wbr>Setting<wbr>Repository<wbr>Args]</a></span>
+        <span class="property-type"><a href="#springcloudserviceconfigservergitsettingrepository">Sequence[Spring<wbr>Cloud<wbr>Service<wbr>Config<wbr>Server<wbr>Git<wbr>Setting<wbr>Repository]</a></span>
     </dt>
     <dd>{{% md %}}One or more `repository` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1544,7 +1544,7 @@ The following state arguments are supported:
 <a href="#ssh_auth_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>auth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#springcloudserviceconfigservergitsettingsshauth">Spring<wbr>Cloud<wbr>Service<wbr>Config<wbr>Server<wbr>Git<wbr>Setting<wbr>Ssh<wbr>Auth<wbr>Args</a></span>
+        <span class="property-type"><a href="#springcloudserviceconfigservergitsettingsshauth">Spring<wbr>Cloud<wbr>Service<wbr>Config<wbr>Server<wbr>Git<wbr>Setting<wbr>Ssh<wbr>Auth</a></span>
     </dt>
     <dd>{{% md %}}A `ssh_auth` block as defined below.
 {{% /md %}}</dd></dl>
@@ -1667,7 +1667,7 @@ The following state arguments are supported:
 <a href="#httpbasicauth_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Basic<wbr>Auth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#springcloudserviceconfigservergitsettingrepositoryhttpbasicauth">Spring<wbr>Cloud<wbr>Service<wbr>Config<wbr>Server<wbr>Git<wbr>Setting<wbr>Repository<wbr>Http<wbr>Basic<wbr>Auth<wbr>Args</a></span>
+        <span class="property-type"><a href="#springcloudserviceconfigservergitsettingrepositoryhttpbasicauth">Spring<wbr>Cloud<wbr>Service<wbr>Config<wbr>Server<wbr>Git<wbr>Setting<wbr>Repository<wbr>Http<wbr>Basic<wbr>Auth</a></span>
     </dt>
     <dd>{{% md %}}A `http_basic_auth` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1703,7 +1703,7 @@ The following state arguments are supported:
 <a href="#sshauth_csharp" style="color: inherit; text-decoration: inherit;">Ssh<wbr>Auth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#springcloudserviceconfigservergitsettingrepositorysshauth">Spring<wbr>Cloud<wbr>Service<wbr>Config<wbr>Server<wbr>Git<wbr>Setting<wbr>Repository<wbr>Ssh<wbr>Auth<wbr>Args</a></span>
+        <span class="property-type"><a href="#springcloudserviceconfigservergitsettingrepositorysshauth">Spring<wbr>Cloud<wbr>Service<wbr>Config<wbr>Server<wbr>Git<wbr>Setting<wbr>Repository<wbr>Ssh<wbr>Auth</a></span>
     </dt>
     <dd>{{% md %}}A `ssh_auth` block as defined below.
 {{% /md %}}</dd></dl>
@@ -1801,7 +1801,7 @@ The following state arguments are supported:
 <a href="#httpbasicauth_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Basic<wbr>Auth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#springcloudserviceconfigservergitsettingrepositoryhttpbasicauth">Spring<wbr>Cloud<wbr>Service<wbr>Config<wbr>Server<wbr>Git<wbr>Setting<wbr>Repository<wbr>Http<wbr>Basic<wbr>Auth<wbr>Args</a></span>
+        <span class="property-type"><a href="#springcloudserviceconfigservergitsettingrepositoryhttpbasicauth">Spring<wbr>Cloud<wbr>Service<wbr>Config<wbr>Server<wbr>Git<wbr>Setting<wbr>Repository<wbr>Http<wbr>Basic<wbr>Auth</a></span>
     </dt>
     <dd>{{% md %}}A `http_basic_auth` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1837,7 +1837,7 @@ The following state arguments are supported:
 <a href="#sshauth_nodejs" style="color: inherit; text-decoration: inherit;">ssh<wbr>Auth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#springcloudserviceconfigservergitsettingrepositorysshauth">Spring<wbr>Cloud<wbr>Service<wbr>Config<wbr>Server<wbr>Git<wbr>Setting<wbr>Repository<wbr>Ssh<wbr>Auth<wbr>Args</a></span>
+        <span class="property-type"><a href="#springcloudserviceconfigservergitsettingrepositorysshauth">Spring<wbr>Cloud<wbr>Service<wbr>Config<wbr>Server<wbr>Git<wbr>Setting<wbr>Repository<wbr>Ssh<wbr>Auth</a></span>
     </dt>
     <dd>{{% md %}}A `ssh_auth` block as defined below.
 {{% /md %}}</dd></dl>
@@ -1868,7 +1868,7 @@ The following state arguments are supported:
 <a href="#http_basic_auth_python" style="color: inherit; text-decoration: inherit;">http_<wbr>basic_<wbr>auth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#springcloudserviceconfigservergitsettingrepositoryhttpbasicauth">Spring<wbr>Cloud<wbr>Service<wbr>Config<wbr>Server<wbr>Git<wbr>Setting<wbr>Repository<wbr>Http<wbr>Basic<wbr>Auth<wbr>Args</a></span>
+        <span class="property-type"><a href="#springcloudserviceconfigservergitsettingrepositoryhttpbasicauth">Spring<wbr>Cloud<wbr>Service<wbr>Config<wbr>Server<wbr>Git<wbr>Setting<wbr>Repository<wbr>Http<wbr>Basic<wbr>Auth</a></span>
     </dt>
     <dd>{{% md %}}A `http_basic_auth` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1904,7 +1904,7 @@ The following state arguments are supported:
 <a href="#ssh_auth_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>auth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#springcloudserviceconfigservergitsettingrepositorysshauth">Spring<wbr>Cloud<wbr>Service<wbr>Config<wbr>Server<wbr>Git<wbr>Setting<wbr>Repository<wbr>Ssh<wbr>Auth<wbr>Args</a></span>
+        <span class="property-type"><a href="#springcloudserviceconfigservergitsettingrepositorysshauth">Spring<wbr>Cloud<wbr>Service<wbr>Config<wbr>Server<wbr>Git<wbr>Setting<wbr>Repository<wbr>Ssh<wbr>Auth</a></span>
     </dt>
     <dd>{{% md %}}A `ssh_auth` block as defined below.
 {{% /md %}}</dd></dl>

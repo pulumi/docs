@@ -395,7 +395,7 @@ The Hub resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#apnscredential_go" style="color: inherit; text-decoration: inherit;">Apns<wbr>Credential</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hubapnscredential">Hub<wbr>Apns<wbr>Credential</a></span>
+        <span class="property-type"><a href="#hubapnscredential">Hub<wbr>Apns<wbr>Credential<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `apns_credential` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -404,7 +404,7 @@ The Hub resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#gcmcredential_go" style="color: inherit; text-decoration: inherit;">Gcm<wbr>Credential</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hubgcmcredential">Hub<wbr>Gcm<wbr>Credential</a></span>
+        <span class="property-type"><a href="#hubgcmcredential">Hub<wbr>Gcm<wbr>Credential<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `gcm_credential` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -832,7 +832,7 @@ The following state arguments are supported:
 <a href="#state_apnscredential_go" style="color: inherit; text-decoration: inherit;">Apns<wbr>Credential</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hubapnscredential">Hub<wbr>Apns<wbr>Credential</a></span>
+        <span class="property-type"><a href="#hubapnscredential">Hub<wbr>Apns<wbr>Credential<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `apns_credential` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -841,7 +841,7 @@ The following state arguments are supported:
 <a href="#state_gcmcredential_go" style="color: inherit; text-decoration: inherit;">Gcm<wbr>Credential</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hubgcmcredential">Hub<wbr>Gcm<wbr>Credential</a></span>
+        <span class="property-type"><a href="#hubgcmcredential">Hub<wbr>Gcm<wbr>Credential<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `gcm_credential` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"

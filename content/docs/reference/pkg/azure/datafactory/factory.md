@@ -141,6 +141,7 @@ const exampleFactory = new azure.datafactory.Factory("exampleFactory", {
             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
             <span class="nx">customer_managed_key_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">github_configuration</span><span class="p">:</span> <span class="nx">Optional[FactoryGithubConfigurationArgs]</span> = None<span class="p">,</span>
+            <span class="nx">global_parameters</span><span class="p">:</span> <span class="nx">Optional[Sequence[FactoryGlobalParameterArgs]]</span> = None<span class="p">,</span>
             <span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[FactoryIdentityArgs]</span> = None<span class="p">,</span>
             <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -304,6 +305,15 @@ The Factory resource accepts the following [input]({{< relref "/docs/intro/conce
     <dd>{{% md %}}A `github_configuration` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="globalparameters_csharp">
+<a href="#globalparameters_csharp" style="color: inherit; text-decoration: inherit;">Global<wbr>Parameters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#factoryglobalparameter">List&lt;Factory<wbr>Global<wbr>Parameter<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A list of `global_parameter` blocks as defined above.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="identity_csharp">
 <a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
@@ -384,16 +394,25 @@ The Factory resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#githubconfiguration_go" style="color: inherit; text-decoration: inherit;">Github<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#factorygithubconfiguration">Factory<wbr>Github<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#factorygithubconfiguration">Factory<wbr>Github<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `github_configuration` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="globalparameters_go">
+<a href="#globalparameters_go" style="color: inherit; text-decoration: inherit;">Global<wbr>Parameters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#factoryglobalparameter">[]Factory<wbr>Global<wbr>Parameter<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A list of `global_parameter` blocks as defined above.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="identity_go">
 <a href="#identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#factoryidentity">Factory<wbr>Identity</a></span>
+        <span class="property-type"><a href="#factoryidentity">Factory<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `identity` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -438,7 +457,7 @@ The Factory resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#vstsconfiguration_go" style="color: inherit; text-decoration: inherit;">Vsts<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#factoryvstsconfiguration">Factory<wbr>Vsts<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#factoryvstsconfiguration">Factory<wbr>Vsts<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `vsts_configuration` block as defined below.
 {{% /md %}}</dd></dl>
@@ -472,6 +491,15 @@ The Factory resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="#factorygithubconfiguration">Factory<wbr>Github<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `github_configuration` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="globalparameters_nodejs">
+<a href="#globalparameters_nodejs" style="color: inherit; text-decoration: inherit;">global<wbr>Parameters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#factoryglobalparameter">Factory<wbr>Global<wbr>Parameter<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of `global_parameter` blocks as defined above.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="identity_nodejs">
@@ -557,6 +585,15 @@ The Factory resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="#factorygithubconfiguration">Factory<wbr>Github<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `github_configuration` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="global_parameters_python">
+<a href="#global_parameters_python" style="color: inherit; text-decoration: inherit;">global_<wbr>parameters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#factoryglobalparameter">Sequence[Factory<wbr>Global<wbr>Parameter<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of `global_parameter` blocks as defined above.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="identity_python">
@@ -687,6 +724,7 @@ Get an existing Factory resource's state with the given name, ID, and optional e
         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
         <span class="nx">customer_managed_key_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">github_configuration</span><span class="p">:</span> <span class="nx">Optional[FactoryGithubConfigurationArgs]</span> = None<span class="p">,</span>
+        <span class="nx">global_parameters</span><span class="p">:</span> <span class="nx">Optional[Sequence[FactoryGlobalParameterArgs]]</span> = None<span class="p">,</span>
         <span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[FactoryIdentityArgs]</span> = None<span class="p">,</span>
         <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -824,6 +862,15 @@ The following state arguments are supported:
     <dd>{{% md %}}A `github_configuration` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_globalparameters_csharp">
+<a href="#state_globalparameters_csharp" style="color: inherit; text-decoration: inherit;">Global<wbr>Parameters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#factoryglobalparameter">List&lt;Factory<wbr>Global<wbr>Parameter<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A list of `global_parameter` blocks as defined above.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_identity_csharp">
 <a href="#state_identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
@@ -904,16 +951,25 @@ The following state arguments are supported:
 <a href="#state_githubconfiguration_go" style="color: inherit; text-decoration: inherit;">Github<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#factorygithubconfiguration">Factory<wbr>Github<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#factorygithubconfiguration">Factory<wbr>Github<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `github_configuration` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_globalparameters_go">
+<a href="#state_globalparameters_go" style="color: inherit; text-decoration: inherit;">Global<wbr>Parameters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#factoryglobalparameter">[]Factory<wbr>Global<wbr>Parameter<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A list of `global_parameter` blocks as defined above.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_identity_go">
 <a href="#state_identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#factoryidentity">Factory<wbr>Identity</a></span>
+        <span class="property-type"><a href="#factoryidentity">Factory<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `identity` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -967,7 +1023,7 @@ The following state arguments are supported:
 <a href="#state_vstsconfiguration_go" style="color: inherit; text-decoration: inherit;">Vsts<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#factoryvstsconfiguration">Factory<wbr>Vsts<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#factoryvstsconfiguration">Factory<wbr>Vsts<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `vsts_configuration` block as defined below.
 {{% /md %}}</dd></dl>
@@ -992,6 +1048,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="#factorygithubconfiguration">Factory<wbr>Github<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `github_configuration` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_globalparameters_nodejs">
+<a href="#state_globalparameters_nodejs" style="color: inherit; text-decoration: inherit;">global<wbr>Parameters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#factoryglobalparameter">Factory<wbr>Global<wbr>Parameter<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of `global_parameter` blocks as defined above.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_identity_nodejs">
@@ -1077,6 +1142,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="#factorygithubconfiguration">Factory<wbr>Github<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `github_configuration` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_global_parameters_python">
+<a href="#state_global_parameters_python" style="color: inherit; text-decoration: inherit;">global_<wbr>parameters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#factoryglobalparameter">Sequence[Factory<wbr>Global<wbr>Parameter<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of `global_parameter` blocks as defined above.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_identity_python">
@@ -1347,6 +1421,132 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the root folder within the repository. Set to `/` for the top level.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="factoryglobalparameter">Factory<wbr>Global<wbr>Parameter</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the global parameter name.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the global parameter type. Possible Values are `Array`, `Bool`, `Float`, `Int`, `Object` or `String`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_csharp">
+<a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the global parameter value.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the global parameter name.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the global parameter type. Possible Values are `Array`, `Bool`, `Float`, `Int`, `Object` or `String`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_go">
+<a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the global parameter value.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the global parameter name.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the global parameter type. Possible Values are `Array`, `Bool`, `Float`, `Int`, `Object` or `String`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_nodejs">
+<a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the global parameter value.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specifies the global parameter name.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specifies the global parameter type. Possible Values are `Array`, `Bool`, `Float`, `Int`, `Object` or `String`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_python">
+<a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specifies the global parameter value.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

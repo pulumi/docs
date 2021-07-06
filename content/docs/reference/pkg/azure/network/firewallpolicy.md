@@ -371,7 +371,7 @@ The FirewallPolicy resource accepts the following [input]({{< relref "/docs/intr
 <a href="#dns_go" style="color: inherit; text-decoration: inherit;">Dns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicydns">Firewall<wbr>Policy<wbr>Dns</a></span>
+        <span class="property-type"><a href="#firewallpolicydns">Firewall<wbr>Policy<wbr>Dns<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `dns` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -416,7 +416,7 @@ The FirewallPolicy resource accepts the following [input]({{< relref "/docs/intr
 <a href="#threatintelligenceallowlist_go" style="color: inherit; text-decoration: inherit;">Threat<wbr>Intelligence<wbr>Allowlist</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicythreatintelligenceallowlist">Firewall<wbr>Policy<wbr>Threat<wbr>Intelligence<wbr>Allowlist</a></span>
+        <span class="property-type"><a href="#firewallpolicythreatintelligenceallowlist">Firewall<wbr>Policy<wbr>Threat<wbr>Intelligence<wbr>Allowlist<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `threat_intelligence_allowlist` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1038,7 +1038,7 @@ The following state arguments are supported:
 <a href="#state_dns_go" style="color: inherit; text-decoration: inherit;">Dns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicydns">Firewall<wbr>Policy<wbr>Dns</a></span>
+        <span class="property-type"><a href="#firewallpolicydns">Firewall<wbr>Policy<wbr>Dns<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `dns` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1110,7 +1110,7 @@ The following state arguments are supported:
 <a href="#state_threatintelligenceallowlist_go" style="color: inherit; text-decoration: inherit;">Threat<wbr>Intelligence<wbr>Allowlist</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicythreatintelligenceallowlist">Firewall<wbr>Policy<wbr>Threat<wbr>Intelligence<wbr>Allowlist</a></span>
+        <span class="property-type"><a href="#firewallpolicythreatintelligenceallowlist">Firewall<wbr>Policy<wbr>Threat<wbr>Intelligence<wbr>Allowlist<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `threat_intelligence_allowlist` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"

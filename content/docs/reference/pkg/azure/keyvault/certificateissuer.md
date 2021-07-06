@@ -419,7 +419,7 @@ The CertificateIssuer resource accepts the following [input]({{< relref "/docs/i
 <a href="#admins_go" style="color: inherit; text-decoration: inherit;">Admins</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificateissueradmin">[]Certificate<wbr>Issuer<wbr>Admin</a></span>
+        <span class="property-type"><a href="#certificateissueradmin">[]Certificate<wbr>Issuer<wbr>Admin<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `admin` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -856,7 +856,7 @@ The following state arguments are supported:
 <a href="#state_admins_go" style="color: inherit; text-decoration: inherit;">Admins</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificateissueradmin">[]Certificate<wbr>Issuer<wbr>Admin</a></span>
+        <span class="property-type"><a href="#certificateissueradmin">[]Certificate<wbr>Issuer<wbr>Admin<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `admin` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"

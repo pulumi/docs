@@ -663,7 +663,7 @@ factory. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azur
 <a href="#keyvaultpassword_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicesynapsekeyvaultpassword">Linked<wbr>Service<wbr>Synapse<wbr>Key<wbr>Vault<wbr>Password</a></span>
+        <span class="property-type"><a href="#linkedservicesynapsekeyvaultpassword">Linked<wbr>Service<wbr>Synapse<wbr>Key<wbr>Vault<wbr>Password<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `key_vault_password` block as defined below. Use this argument to store Synapse password in an existing Key Vault. It needs an existing Key Vault Data Factory Linked Service.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1224,7 +1224,7 @@ factory. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azur
 <a href="#state_keyvaultpassword_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkedservicesynapsekeyvaultpassword">Linked<wbr>Service<wbr>Synapse<wbr>Key<wbr>Vault<wbr>Password</a></span>
+        <span class="property-type"><a href="#linkedservicesynapsekeyvaultpassword">Linked<wbr>Service<wbr>Synapse<wbr>Key<wbr>Vault<wbr>Password<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `key_vault_password` block as defined below. Use this argument to store Synapse password in an existing Key Vault. It needs an existing Key Vault Data Factory Linked Service.
 {{% /md %}}</dd><dt class="property-optional"

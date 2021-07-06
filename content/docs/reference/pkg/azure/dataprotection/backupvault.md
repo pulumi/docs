@@ -381,7 +381,7 @@ The BackupVault resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backupvaultidentity">Backup<wbr>Vault<wbr>Identity</a></span>
+        <span class="property-type"><a href="#backupvaultidentity">Backup<wbr>Vault<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `identity` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -818,7 +818,7 @@ The following state arguments are supported:
 <a href="#state_identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backupvaultidentity">Backup<wbr>Vault<wbr>Identity</a></span>
+        <span class="property-type"><a href="#backupvaultidentity">Backup<wbr>Vault<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `identity` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"

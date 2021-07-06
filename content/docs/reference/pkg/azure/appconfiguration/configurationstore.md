@@ -345,7 +345,7 @@ The ConfigurationStore resource accepts the following [input]({{< relref "/docs/
 <a href="#identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configurationstoreidentity">Configuration<wbr>Store<wbr>Identity</a></span>
+        <span class="property-type"><a href="#configurationstoreidentity">Configuration<wbr>Store<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `identity` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -993,7 +993,7 @@ The following state arguments are supported:
 <a href="#state_identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configurationstoreidentity">Configuration<wbr>Store<wbr>Identity</a></span>
+        <span class="property-type"><a href="#configurationstoreidentity">Configuration<wbr>Store<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `identity` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1020,7 +1020,7 @@ The following state arguments are supported:
 <a href="#state_primaryreadkeys_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Read<wbr>Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configurationstoreprimaryreadkey">[]Configuration<wbr>Store<wbr>Primary<wbr>Read<wbr>Key</a></span>
+        <span class="property-type"><a href="#configurationstoreprimaryreadkey">[]Configuration<wbr>Store<wbr>Primary<wbr>Read<wbr>Key<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `primary_read_key` block as defined below containing the primary read access key.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1029,7 +1029,7 @@ The following state arguments are supported:
 <a href="#state_primarywritekeys_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Write<wbr>Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configurationstoreprimarywritekey">[]Configuration<wbr>Store<wbr>Primary<wbr>Write<wbr>Key</a></span>
+        <span class="property-type"><a href="#configurationstoreprimarywritekey">[]Configuration<wbr>Store<wbr>Primary<wbr>Write<wbr>Key<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `primary_write_key` block as defined below containing the primary write access key.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1047,7 +1047,7 @@ The following state arguments are supported:
 <a href="#state_secondaryreadkeys_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Read<wbr>Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configurationstoresecondaryreadkey">[]Configuration<wbr>Store<wbr>Secondary<wbr>Read<wbr>Key</a></span>
+        <span class="property-type"><a href="#configurationstoresecondaryreadkey">[]Configuration<wbr>Store<wbr>Secondary<wbr>Read<wbr>Key<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `secondary_read_key` block as defined below containing the secondary read access key.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1056,7 +1056,7 @@ The following state arguments are supported:
 <a href="#state_secondarywritekeys_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Write<wbr>Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configurationstoresecondarywritekey">[]Configuration<wbr>Store<wbr>Secondary<wbr>Write<wbr>Key</a></span>
+        <span class="property-type"><a href="#configurationstoresecondarywritekey">[]Configuration<wbr>Store<wbr>Secondary<wbr>Write<wbr>Key<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `secondary_write_key` block as defined below containing the secondary write access key.
 {{% /md %}}</dd><dt class="property-optional"

@@ -461,7 +461,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 <a href="#autobackup_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Backup</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineautobackup">Virtual<wbr>Machine<wbr>Auto<wbr>Backup</a></span>
+        <span class="property-type"><a href="#virtualmachineautobackup">Virtual<wbr>Machine<wbr>Auto<wbr>Backup<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `auto_backup` block as defined below. This block can be added to an existing resource, but removing this block forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -470,7 +470,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 <a href="#autopatching_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Patching</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineautopatching">Virtual<wbr>Machine<wbr>Auto<wbr>Patching</a></span>
+        <span class="property-type"><a href="#virtualmachineautopatching">Virtual<wbr>Machine<wbr>Auto<wbr>Patching<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `auto_patching` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -479,7 +479,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 <a href="#keyvaultcredential_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Credential</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinekeyvaultcredential">Virtual<wbr>Machine<wbr>Key<wbr>Vault<wbr>Credential</a></span>
+        <span class="property-type"><a href="#virtualmachinekeyvaultcredential">Virtual<wbr>Machine<wbr>Key<wbr>Vault<wbr>Credential<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}(Optional) An `key_vault_credential` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -533,7 +533,7 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 <a href="#storageconfiguration_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinestorageconfiguration">Virtual<wbr>Machine<wbr>Storage<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#virtualmachinestorageconfiguration">Virtual<wbr>Machine<wbr>Storage<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `storage_configuration` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1083,7 +1083,7 @@ The following state arguments are supported:
 <a href="#state_autobackup_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Backup</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineautobackup">Virtual<wbr>Machine<wbr>Auto<wbr>Backup</a></span>
+        <span class="property-type"><a href="#virtualmachineautobackup">Virtual<wbr>Machine<wbr>Auto<wbr>Backup<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `auto_backup` block as defined below. This block can be added to an existing resource, but removing this block forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1092,7 +1092,7 @@ The following state arguments are supported:
 <a href="#state_autopatching_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Patching</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineautopatching">Virtual<wbr>Machine<wbr>Auto<wbr>Patching</a></span>
+        <span class="property-type"><a href="#virtualmachineautopatching">Virtual<wbr>Machine<wbr>Auto<wbr>Patching<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `auto_patching` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1101,7 +1101,7 @@ The following state arguments are supported:
 <a href="#state_keyvaultcredential_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Credential</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinekeyvaultcredential">Virtual<wbr>Machine<wbr>Key<wbr>Vault<wbr>Credential</a></span>
+        <span class="property-type"><a href="#virtualmachinekeyvaultcredential">Virtual<wbr>Machine<wbr>Key<wbr>Vault<wbr>Credential<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}(Optional) An `key_vault_credential` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1164,7 +1164,7 @@ The following state arguments are supported:
 <a href="#state_storageconfiguration_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinestorageconfiguration">Virtual<wbr>Machine<wbr>Storage<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#virtualmachinestorageconfiguration">Virtual<wbr>Machine<wbr>Storage<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `storage_configuration` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1475,7 +1475,7 @@ The following state arguments are supported:
 <a href="#manualschedule_csharp" style="color: inherit; text-decoration: inherit;">Manual<wbr>Schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineautobackupmanualschedule">Virtual<wbr>Machine<wbr>Auto<wbr>Backup<wbr>Manual<wbr>Schedule<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualmachineautobackupmanualschedule">Virtual<wbr>Machine<wbr>Auto<wbr>Backup<wbr>Manual<wbr>Schedule</a></span>
     </dt>
     <dd>{{% md %}}A `manual_schedule` block as documented below. When this block is present, the schedule type is set to `Manual`. Without this block, the schedule type is set to `Automated`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1609,7 +1609,7 @@ The following state arguments are supported:
 <a href="#manualschedule_nodejs" style="color: inherit; text-decoration: inherit;">manual<wbr>Schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineautobackupmanualschedule">Virtual<wbr>Machine<wbr>Auto<wbr>Backup<wbr>Manual<wbr>Schedule<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualmachineautobackupmanualschedule">Virtual<wbr>Machine<wbr>Auto<wbr>Backup<wbr>Manual<wbr>Schedule</a></span>
     </dt>
     <dd>{{% md %}}A `manual_schedule` block as documented below. When this block is present, the schedule type is set to `Manual`. Without this block, the schedule type is set to `Automated`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1676,7 +1676,7 @@ The following state arguments are supported:
 <a href="#manual_schedule_python" style="color: inherit; text-decoration: inherit;">manual_<wbr>schedule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineautobackupmanualschedule">Virtual<wbr>Machine<wbr>Auto<wbr>Backup<wbr>Manual<wbr>Schedule<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualmachineautobackupmanualschedule">Virtual<wbr>Machine<wbr>Auto<wbr>Backup<wbr>Manual<wbr>Schedule</a></span>
     </dt>
     <dd>{{% md %}}A `manual_schedule` block as documented below. When this block is present, the schedule type is set to `Manual`. Without this block, the schedule type is set to `Automated`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2168,7 +2168,7 @@ The following state arguments are supported:
 <a href="#datasettings_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinestorageconfigurationdatasettings">Virtual<wbr>Machine<wbr>Storage<wbr>Configuration<wbr>Data<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualmachinestorageconfigurationdatasettings">Virtual<wbr>Machine<wbr>Storage<wbr>Configuration<wbr>Data<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}An `storage_settings` as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2177,7 +2177,7 @@ The following state arguments are supported:
 <a href="#logsettings_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinestorageconfigurationlogsettings">Virtual<wbr>Machine<wbr>Storage<wbr>Configuration<wbr>Log<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualmachinestorageconfigurationlogsettings">Virtual<wbr>Machine<wbr>Storage<wbr>Configuration<wbr>Log<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}An `storage_settings` as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2186,7 +2186,7 @@ The following state arguments are supported:
 <a href="#tempdbsettings_csharp" style="color: inherit; text-decoration: inherit;">Temp<wbr>Db<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinestorageconfigurationtempdbsettings">Virtual<wbr>Machine<wbr>Storage<wbr>Configuration<wbr>Temp<wbr>Db<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualmachinestorageconfigurationtempdbsettings">Virtual<wbr>Machine<wbr>Storage<wbr>Configuration<wbr>Temp<wbr>Db<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}An `storage_settings` as defined below.
 {{% /md %}}</dd></dl>
@@ -2266,7 +2266,7 @@ The following state arguments are supported:
 <a href="#datasettings_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinestorageconfigurationdatasettings">Virtual<wbr>Machine<wbr>Storage<wbr>Configuration<wbr>Data<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualmachinestorageconfigurationdatasettings">Virtual<wbr>Machine<wbr>Storage<wbr>Configuration<wbr>Data<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}An `storage_settings` as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2275,7 +2275,7 @@ The following state arguments are supported:
 <a href="#logsettings_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinestorageconfigurationlogsettings">Virtual<wbr>Machine<wbr>Storage<wbr>Configuration<wbr>Log<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualmachinestorageconfigurationlogsettings">Virtual<wbr>Machine<wbr>Storage<wbr>Configuration<wbr>Log<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}An `storage_settings` as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2284,7 +2284,7 @@ The following state arguments are supported:
 <a href="#tempdbsettings_nodejs" style="color: inherit; text-decoration: inherit;">temp<wbr>Db<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinestorageconfigurationtempdbsettings">Virtual<wbr>Machine<wbr>Storage<wbr>Configuration<wbr>Temp<wbr>Db<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualmachinestorageconfigurationtempdbsettings">Virtual<wbr>Machine<wbr>Storage<wbr>Configuration<wbr>Temp<wbr>Db<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}An `storage_settings` as defined below.
 {{% /md %}}</dd></dl>
@@ -2315,7 +2315,7 @@ The following state arguments are supported:
 <a href="#data_settings_python" style="color: inherit; text-decoration: inherit;">data_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinestorageconfigurationdatasettings">Virtual<wbr>Machine<wbr>Storage<wbr>Configuration<wbr>Data<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualmachinestorageconfigurationdatasettings">Virtual<wbr>Machine<wbr>Storage<wbr>Configuration<wbr>Data<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}An `storage_settings` as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2324,7 +2324,7 @@ The following state arguments are supported:
 <a href="#log_settings_python" style="color: inherit; text-decoration: inherit;">log_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinestorageconfigurationlogsettings">Virtual<wbr>Machine<wbr>Storage<wbr>Configuration<wbr>Log<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualmachinestorageconfigurationlogsettings">Virtual<wbr>Machine<wbr>Storage<wbr>Configuration<wbr>Log<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}An `storage_settings` as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2333,7 +2333,7 @@ The following state arguments are supported:
 <a href="#temp_db_settings_python" style="color: inherit; text-decoration: inherit;">temp_<wbr>db_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinestorageconfigurationtempdbsettings">Virtual<wbr>Machine<wbr>Storage<wbr>Configuration<wbr>Temp<wbr>Db<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualmachinestorageconfigurationtempdbsettings">Virtual<wbr>Machine<wbr>Storage<wbr>Configuration<wbr>Temp<wbr>Db<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}An `storage_settings` as defined below.
 {{% /md %}}</dd></dl>

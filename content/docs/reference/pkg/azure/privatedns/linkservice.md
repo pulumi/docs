@@ -607,7 +607,7 @@ The LinkService resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#natipconfigurations_go" style="color: inherit; text-decoration: inherit;">Nat<wbr>Ip<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkservicenatipconfiguration">[]Link<wbr>Service<wbr>Nat<wbr>Ip<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#linkservicenatipconfiguration">[]Link<wbr>Service<wbr>Nat<wbr>Ip<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more (up to 8) `nat_ip_configuration` block as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -1227,7 +1227,7 @@ The following state arguments are supported:
 <a href="#state_natipconfigurations_go" style="color: inherit; text-decoration: inherit;">Nat<wbr>Ip<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linkservicenatipconfiguration">[]Link<wbr>Service<wbr>Nat<wbr>Ip<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#linkservicenatipconfiguration">[]Link<wbr>Service<wbr>Nat<wbr>Ip<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more (up to 8) `nat_ip_configuration` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"

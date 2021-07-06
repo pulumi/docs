@@ -546,7 +546,7 @@ The VirtualHubRouteTable resource accepts the following [input]({{< relref "/doc
 <a href="#routes_go" style="color: inherit; text-decoration: inherit;">Routes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualhubroutetableroute">[]Virtual<wbr>Hub<wbr>Route<wbr>Table<wbr>Route</a></span>
+        <span class="property-type"><a href="#virtualhubroutetableroute">[]Virtual<wbr>Hub<wbr>Route<wbr>Table<wbr>Route<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `route` block as defined below.
 {{% /md %}}</dd></dl>
@@ -881,7 +881,7 @@ The following state arguments are supported:
 <a href="#state_routes_go" style="color: inherit; text-decoration: inherit;">Routes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualhubroutetableroute">[]Virtual<wbr>Hub<wbr>Route<wbr>Table<wbr>Route</a></span>
+        <span class="property-type"><a href="#virtualhubroutetableroute">[]Virtual<wbr>Hub<wbr>Route<wbr>Table<wbr>Route<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `route` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"

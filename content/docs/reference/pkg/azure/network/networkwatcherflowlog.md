@@ -568,7 +568,7 @@ The NetworkWatcherFlowLog resource accepts the following [input]({{< relref "/do
 <a href="#retentionpolicy_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkwatcherflowlogretentionpolicy">Network<wbr>Watcher<wbr>Flow<wbr>Log<wbr>Retention<wbr>Policy</a></span>
+        <span class="property-type"><a href="#networkwatcherflowlogretentionpolicy">Network<wbr>Watcher<wbr>Flow<wbr>Log<wbr>Retention<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `retention_policy` block as documented below.
 {{% /md %}}</dd><dt class="property-required"
@@ -604,7 +604,7 @@ The NetworkWatcherFlowLog resource accepts the following [input]({{< relref "/do
 <a href="#trafficanalytics_go" style="color: inherit; text-decoration: inherit;">Traffic<wbr>Analytics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkwatcherflowlogtrafficanalytics">Network<wbr>Watcher<wbr>Flow<wbr>Log<wbr>Traffic<wbr>Analytics</a></span>
+        <span class="property-type"><a href="#networkwatcherflowlogtrafficanalytics">Network<wbr>Watcher<wbr>Flow<wbr>Log<wbr>Traffic<wbr>Analytics<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `traffic_analytics` block as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1143,7 +1143,7 @@ The following state arguments are supported:
 <a href="#state_retentionpolicy_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkwatcherflowlogretentionpolicy">Network<wbr>Watcher<wbr>Flow<wbr>Log<wbr>Retention<wbr>Policy</a></span>
+        <span class="property-type"><a href="#networkwatcherflowlogretentionpolicy">Network<wbr>Watcher<wbr>Flow<wbr>Log<wbr>Retention<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `retention_policy` block as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1170,7 +1170,7 @@ The following state arguments are supported:
 <a href="#state_trafficanalytics_go" style="color: inherit; text-decoration: inherit;">Traffic<wbr>Analytics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkwatcherflowlogtrafficanalytics">Network<wbr>Watcher<wbr>Flow<wbr>Log<wbr>Traffic<wbr>Analytics</a></span>
+        <span class="property-type"><a href="#networkwatcherflowlogtrafficanalytics">Network<wbr>Watcher<wbr>Flow<wbr>Log<wbr>Traffic<wbr>Analytics<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `traffic_analytics` block as documented below.
 {{% /md %}}</dd><dt class="property-optional"

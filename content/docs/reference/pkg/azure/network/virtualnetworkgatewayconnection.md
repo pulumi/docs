@@ -1229,7 +1229,7 @@ The Express Route Circuit can be in the same or in a different subscription.
 <a href="#ipsecpolicy_go" style="color: inherit; text-decoration: inherit;">Ipsec<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkgatewayconnectionipsecpolicy">Virtual<wbr>Network<wbr>Gateway<wbr>Connection<wbr>Ipsec<wbr>Policy</a></span>
+        <span class="property-type"><a href="#virtualnetworkgatewayconnectionipsecpolicy">Virtual<wbr>Network<wbr>Gateway<wbr>Connection<wbr>Ipsec<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `ipsec_policy` block which is documented below.
 Only a single policy can be defined for a connection. For details on
@@ -1319,7 +1319,7 @@ Site-to-Site, VNet-to-VNet or ExpressRoute connection is created.
 <a href="#trafficselectorpolicy_go" style="color: inherit; text-decoration: inherit;">Traffic<wbr>Selector<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkgatewayconnectiontrafficselectorpolicy">Virtual<wbr>Network<wbr>Gateway<wbr>Connection<wbr>Traffic<wbr>Selector<wbr>Policy</a></span>
+        <span class="property-type"><a href="#virtualnetworkgatewayconnectiontrafficselectorpolicy">Virtual<wbr>Network<wbr>Gateway<wbr>Connection<wbr>Traffic<wbr>Selector<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `traffic_selector_policy` which allows to specify traffic selector policy proposal to be used in a virtual network gateway connection.
 Only one block can be defined for a connection.
@@ -2243,7 +2243,7 @@ The Express Route Circuit can be in the same or in a different subscription.
 <a href="#state_ipsecpolicy_go" style="color: inherit; text-decoration: inherit;">Ipsec<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkgatewayconnectionipsecpolicy">Virtual<wbr>Network<wbr>Gateway<wbr>Connection<wbr>Ipsec<wbr>Policy</a></span>
+        <span class="property-type"><a href="#virtualnetworkgatewayconnectionipsecpolicy">Virtual<wbr>Network<wbr>Gateway<wbr>Connection<wbr>Ipsec<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `ipsec_policy` block which is documented below.
 Only a single policy can be defined for a connection. For details on
@@ -2343,7 +2343,7 @@ Site-to-Site, VNet-to-VNet or ExpressRoute connection is created.
 <a href="#state_trafficselectorpolicy_go" style="color: inherit; text-decoration: inherit;">Traffic<wbr>Selector<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkgatewayconnectiontrafficselectorpolicy">Virtual<wbr>Network<wbr>Gateway<wbr>Connection<wbr>Traffic<wbr>Selector<wbr>Policy</a></span>
+        <span class="property-type"><a href="#virtualnetworkgatewayconnectiontrafficselectorpolicy">Virtual<wbr>Network<wbr>Gateway<wbr>Connection<wbr>Traffic<wbr>Selector<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `traffic_selector_policy` which allows to specify traffic selector policy proposal to be used in a virtual network gateway connection.
 Only one block can be defined for a connection.

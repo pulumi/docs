@@ -552,7 +552,7 @@ The Firewall resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#ipconfigurations_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallipconfiguration">[]Firewall<wbr>Ip<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#firewallipconfiguration">[]Firewall<wbr>Ip<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `ip_configuration` block as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -570,7 +570,7 @@ The Firewall resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#managementipconfiguration_go" style="color: inherit; text-decoration: inherit;">Management<wbr>Ip<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallmanagementipconfiguration">Firewall<wbr>Management<wbr>Ip<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#firewallmanagementipconfiguration">Firewall<wbr>Management<wbr>Ip<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `management_ip_configuration` block as documented below, which allows force-tunnelling of traffic to be performed by the firewall. Adding or removing this block or changing the `subnet_id` in an existing block forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -633,7 +633,7 @@ The Firewall resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#virtualhub_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Hub</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallvirtualhub">Firewall<wbr>Virtual<wbr>Hub</a></span>
+        <span class="property-type"><a href="#firewallvirtualhub">Firewall<wbr>Virtual<wbr>Hub<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `virtual_hub` block as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1257,7 +1257,7 @@ The following state arguments are supported:
 <a href="#state_ipconfigurations_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallipconfiguration">[]Firewall<wbr>Ip<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#firewallipconfiguration">[]Firewall<wbr>Ip<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `ip_configuration` block as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1275,7 +1275,7 @@ The following state arguments are supported:
 <a href="#state_managementipconfiguration_go" style="color: inherit; text-decoration: inherit;">Management<wbr>Ip<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallmanagementipconfiguration">Firewall<wbr>Management<wbr>Ip<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#firewallmanagementipconfiguration">Firewall<wbr>Management<wbr>Ip<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `management_ip_configuration` block as documented below, which allows force-tunnelling of traffic to be performed by the firewall. Adding or removing this block or changing the `subnet_id` in an existing block forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1347,7 +1347,7 @@ The following state arguments are supported:
 <a href="#state_virtualhub_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Hub</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallvirtualhub">Firewall<wbr>Virtual<wbr>Hub</a></span>
+        <span class="property-type"><a href="#firewallvirtualhub">Firewall<wbr>Virtual<wbr>Hub<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `virtual_hub` block as documented below.
 {{% /md %}}</dd><dt class="property-optional"

@@ -513,7 +513,7 @@ The ApiOperation resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#request_go" style="color: inherit; text-decoration: inherit;">Request</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apioperationrequest">Api<wbr>Operation<wbr>Request</a></span>
+        <span class="property-type"><a href="#apioperationrequest">Api<wbr>Operation<wbr>Request<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `request` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -522,7 +522,7 @@ The ApiOperation resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#responses_go" style="color: inherit; text-decoration: inherit;">Responses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apioperationresponse">[]Api<wbr>Operation<wbr>Response</a></span>
+        <span class="property-type"><a href="#apioperationresponse">[]Api<wbr>Operation<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `response` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -531,7 +531,7 @@ The ApiOperation resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#templateparameters_go" style="color: inherit; text-decoration: inherit;">Template<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apioperationtemplateparameter">[]Api<wbr>Operation<wbr>Template<wbr>Parameter</a></span>
+        <span class="property-type"><a href="#apioperationtemplateparameter">[]Api<wbr>Operation<wbr>Template<wbr>Parameter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `template_parameter` blocks as defined below.
 {{% /md %}}</dd></dl>
@@ -1098,7 +1098,7 @@ The following state arguments are supported:
 <a href="#state_request_go" style="color: inherit; text-decoration: inherit;">Request</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apioperationrequest">Api<wbr>Operation<wbr>Request</a></span>
+        <span class="property-type"><a href="#apioperationrequest">Api<wbr>Operation<wbr>Request<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `request` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1116,7 +1116,7 @@ The following state arguments are supported:
 <a href="#state_responses_go" style="color: inherit; text-decoration: inherit;">Responses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apioperationresponse">[]Api<wbr>Operation<wbr>Response</a></span>
+        <span class="property-type"><a href="#apioperationresponse">[]Api<wbr>Operation<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `response` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1125,7 +1125,7 @@ The following state arguments are supported:
 <a href="#state_templateparameters_go" style="color: inherit; text-decoration: inherit;">Template<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apioperationtemplateparameter">[]Api<wbr>Operation<wbr>Template<wbr>Parameter</a></span>
+        <span class="property-type"><a href="#apioperationtemplateparameter">[]Api<wbr>Operation<wbr>Template<wbr>Parameter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `template_parameter` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1373,7 +1373,7 @@ The following state arguments are supported:
 <a href="#headers_csharp" style="color: inherit; text-decoration: inherit;">Headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apioperationrequestheader">List&lt;Api<wbr>Operation<wbr>Request<wbr>Header<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#apioperationrequestheader">List&lt;Api<wbr>Operation<wbr>Request<wbr>Header&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `header` blocks as defined above.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1382,7 +1382,7 @@ The following state arguments are supported:
 <a href="#queryparameters_csharp" style="color: inherit; text-decoration: inherit;">Query<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apioperationrequestqueryparameter">List&lt;Api<wbr>Operation<wbr>Request<wbr>Query<wbr>Parameter<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#apioperationrequestqueryparameter">List&lt;Api<wbr>Operation<wbr>Request<wbr>Query<wbr>Parameter&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `query_parameter` blocks as defined above.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1391,7 +1391,7 @@ The following state arguments are supported:
 <a href="#representations_csharp" style="color: inherit; text-decoration: inherit;">Representations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apioperationrequestrepresentation">List&lt;Api<wbr>Operation<wbr>Request<wbr>Representation<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#apioperationrequestrepresentation">List&lt;Api<wbr>Operation<wbr>Request<wbr>Representation&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `representation` blocks as defined below.
 {{% /md %}}</dd></dl>
@@ -1453,7 +1453,7 @@ The following state arguments are supported:
 <a href="#headers_nodejs" style="color: inherit; text-decoration: inherit;">headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apioperationrequestheader">Api<wbr>Operation<wbr>Request<wbr>Header<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#apioperationrequestheader">Api<wbr>Operation<wbr>Request<wbr>Header[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `header` blocks as defined above.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1462,7 +1462,7 @@ The following state arguments are supported:
 <a href="#queryparameters_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apioperationrequestqueryparameter">Api<wbr>Operation<wbr>Request<wbr>Query<wbr>Parameter<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#apioperationrequestqueryparameter">Api<wbr>Operation<wbr>Request<wbr>Query<wbr>Parameter[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `query_parameter` blocks as defined above.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1471,7 +1471,7 @@ The following state arguments are supported:
 <a href="#representations_nodejs" style="color: inherit; text-decoration: inherit;">representations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apioperationrequestrepresentation">Api<wbr>Operation<wbr>Request<wbr>Representation<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#apioperationrequestrepresentation">Api<wbr>Operation<wbr>Request<wbr>Representation[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `representation` blocks as defined below.
 {{% /md %}}</dd></dl>
@@ -1493,7 +1493,7 @@ The following state arguments are supported:
 <a href="#headers_python" style="color: inherit; text-decoration: inherit;">headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apioperationrequestheader">Sequence[Api<wbr>Operation<wbr>Request<wbr>Header<wbr>Args]</a></span>
+        <span class="property-type"><a href="#apioperationrequestheader">Sequence[Api<wbr>Operation<wbr>Request<wbr>Header]</a></span>
     </dt>
     <dd>{{% md %}}One or more `header` blocks as defined above.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1502,7 +1502,7 @@ The following state arguments are supported:
 <a href="#query_parameters_python" style="color: inherit; text-decoration: inherit;">query_<wbr>parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apioperationrequestqueryparameter">Sequence[Api<wbr>Operation<wbr>Request<wbr>Query<wbr>Parameter<wbr>Args]</a></span>
+        <span class="property-type"><a href="#apioperationrequestqueryparameter">Sequence[Api<wbr>Operation<wbr>Request<wbr>Query<wbr>Parameter]</a></span>
     </dt>
     <dd>{{% md %}}One or more `query_parameter` blocks as defined above.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1511,7 +1511,7 @@ The following state arguments are supported:
 <a href="#representations_python" style="color: inherit; text-decoration: inherit;">representations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apioperationrequestrepresentation">Sequence[Api<wbr>Operation<wbr>Request<wbr>Representation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#apioperationrequestrepresentation">Sequence[Api<wbr>Operation<wbr>Request<wbr>Representation]</a></span>
     </dt>
     <dd>{{% md %}}One or more `representation` blocks as defined below.
 {{% /md %}}</dd></dl>
@@ -2003,7 +2003,7 @@ The following state arguments are supported:
 <a href="#formparameters_csharp" style="color: inherit; text-decoration: inherit;">Form<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apioperationrequestrepresentationformparameter">List&lt;Api<wbr>Operation<wbr>Request<wbr>Representation<wbr>Form<wbr>Parameter<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#apioperationrequestrepresentationformparameter">List&lt;Api<wbr>Operation<wbr>Request<wbr>Representation<wbr>Form<wbr>Parameter&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `form_parameter` block as defined above.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2101,7 +2101,7 @@ The following state arguments are supported:
 <a href="#formparameters_nodejs" style="color: inherit; text-decoration: inherit;">form<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apioperationrequestrepresentationformparameter">Api<wbr>Operation<wbr>Request<wbr>Representation<wbr>Form<wbr>Parameter<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#apioperationrequestrepresentationformparameter">Api<wbr>Operation<wbr>Request<wbr>Representation<wbr>Form<wbr>Parameter[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `form_parameter` block as defined above.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2150,7 +2150,7 @@ The following state arguments are supported:
 <a href="#form_parameters_python" style="color: inherit; text-decoration: inherit;">form_<wbr>parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apioperationrequestrepresentationformparameter">Sequence[Api<wbr>Operation<wbr>Request<wbr>Representation<wbr>Form<wbr>Parameter<wbr>Args]</a></span>
+        <span class="property-type"><a href="#apioperationrequestrepresentationformparameter">Sequence[Api<wbr>Operation<wbr>Request<wbr>Representation<wbr>Form<wbr>Parameter]</a></span>
     </dt>
     <dd>{{% md %}}One or more `form_parameter` block as defined above.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2444,7 +2444,7 @@ The following state arguments are supported:
 <a href="#headers_csharp" style="color: inherit; text-decoration: inherit;">Headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apioperationresponseheader">List&lt;Api<wbr>Operation<wbr>Response<wbr>Header<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#apioperationresponseheader">List&lt;Api<wbr>Operation<wbr>Response<wbr>Header&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `header` blocks as defined above.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2453,7 +2453,7 @@ The following state arguments are supported:
 <a href="#representations_csharp" style="color: inherit; text-decoration: inherit;">Representations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apioperationresponserepresentation">List&lt;Api<wbr>Operation<wbr>Response<wbr>Representation<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#apioperationresponserepresentation">List&lt;Api<wbr>Operation<wbr>Response<wbr>Representation&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `representation` blocks as defined below.
 {{% /md %}}</dd></dl>
@@ -2524,7 +2524,7 @@ The following state arguments are supported:
 <a href="#headers_nodejs" style="color: inherit; text-decoration: inherit;">headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apioperationresponseheader">Api<wbr>Operation<wbr>Response<wbr>Header<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#apioperationresponseheader">Api<wbr>Operation<wbr>Response<wbr>Header[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `header` blocks as defined above.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2533,7 +2533,7 @@ The following state arguments are supported:
 <a href="#representations_nodejs" style="color: inherit; text-decoration: inherit;">representations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apioperationresponserepresentation">Api<wbr>Operation<wbr>Response<wbr>Representation<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#apioperationresponserepresentation">Api<wbr>Operation<wbr>Response<wbr>Representation[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `representation` blocks as defined below.
 {{% /md %}}</dd></dl>
@@ -2564,7 +2564,7 @@ The following state arguments are supported:
 <a href="#headers_python" style="color: inherit; text-decoration: inherit;">headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apioperationresponseheader">Sequence[Api<wbr>Operation<wbr>Response<wbr>Header<wbr>Args]</a></span>
+        <span class="property-type"><a href="#apioperationresponseheader">Sequence[Api<wbr>Operation<wbr>Response<wbr>Header]</a></span>
     </dt>
     <dd>{{% md %}}One or more `header` blocks as defined above.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2573,7 +2573,7 @@ The following state arguments are supported:
 <a href="#representations_python" style="color: inherit; text-decoration: inherit;">representations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apioperationresponserepresentation">Sequence[Api<wbr>Operation<wbr>Response<wbr>Representation<wbr>Args]</a></span>
+        <span class="property-type"><a href="#apioperationresponserepresentation">Sequence[Api<wbr>Operation<wbr>Response<wbr>Representation]</a></span>
     </dt>
     <dd>{{% md %}}One or more `representation` blocks as defined below.
 {{% /md %}}</dd></dl>
@@ -2831,7 +2831,7 @@ The following state arguments are supported:
 <a href="#formparameters_csharp" style="color: inherit; text-decoration: inherit;">Form<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apioperationresponserepresentationformparameter">List&lt;Api<wbr>Operation<wbr>Response<wbr>Representation<wbr>Form<wbr>Parameter<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#apioperationresponserepresentationformparameter">List&lt;Api<wbr>Operation<wbr>Response<wbr>Representation<wbr>Form<wbr>Parameter&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `form_parameter` block as defined above.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2929,7 +2929,7 @@ The following state arguments are supported:
 <a href="#formparameters_nodejs" style="color: inherit; text-decoration: inherit;">form<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apioperationresponserepresentationformparameter">Api<wbr>Operation<wbr>Response<wbr>Representation<wbr>Form<wbr>Parameter<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#apioperationresponserepresentationformparameter">Api<wbr>Operation<wbr>Response<wbr>Representation<wbr>Form<wbr>Parameter[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `form_parameter` block as defined above.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2978,7 +2978,7 @@ The following state arguments are supported:
 <a href="#form_parameters_python" style="color: inherit; text-decoration: inherit;">form_<wbr>parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apioperationresponserepresentationformparameter">Sequence[Api<wbr>Operation<wbr>Response<wbr>Representation<wbr>Form<wbr>Parameter<wbr>Args]</a></span>
+        <span class="property-type"><a href="#apioperationresponserepresentationformparameter">Sequence[Api<wbr>Operation<wbr>Response<wbr>Representation<wbr>Form<wbr>Parameter]</a></span>
     </dt>
     <dd>{{% md %}}One or more `form_parameter` block as defined above.
 {{% /md %}}</dd><dt class="property-optional"

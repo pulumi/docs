@@ -418,7 +418,7 @@ The BlobInventoryPolicy resource accepts the following [input]({{< relref "/docs
 <a href="#rules_go" style="color: inherit; text-decoration: inherit;">Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#blobinventorypolicyrule">[]Blob<wbr>Inventory<wbr>Policy<wbr>Rule</a></span>
+        <span class="property-type"><a href="#blobinventorypolicyrule">[]Blob<wbr>Inventory<wbr>Policy<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `rules` blocks as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -725,7 +725,7 @@ The following state arguments are supported:
 <a href="#state_rules_go" style="color: inherit; text-decoration: inherit;">Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#blobinventorypolicyrule">[]Blob<wbr>Inventory<wbr>Policy<wbr>Rule</a></span>
+        <span class="property-type"><a href="#blobinventorypolicyrule">[]Blob<wbr>Inventory<wbr>Policy<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `rules` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -829,7 +829,7 @@ The following state arguments are supported:
 <a href="#filter_csharp" style="color: inherit; text-decoration: inherit;">Filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#blobinventorypolicyrulefilter">Blob<wbr>Inventory<wbr>Policy<wbr>Rule<wbr>Filter<wbr>Args</a></span>
+        <span class="property-type"><a href="#blobinventorypolicyrulefilter">Blob<wbr>Inventory<wbr>Policy<wbr>Rule<wbr>Filter</a></span>
     </dt>
     <dd>{{% md %}}A `filter` block as defined above.
 {{% /md %}}</dd><dt class="property-required"
@@ -873,7 +873,7 @@ The following state arguments are supported:
 <a href="#filter_nodejs" style="color: inherit; text-decoration: inherit;">filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#blobinventorypolicyrulefilter">Blob<wbr>Inventory<wbr>Policy<wbr>Rule<wbr>Filter<wbr>Args</a></span>
+        <span class="property-type"><a href="#blobinventorypolicyrulefilter">Blob<wbr>Inventory<wbr>Policy<wbr>Rule<wbr>Filter</a></span>
     </dt>
     <dd>{{% md %}}A `filter` block as defined above.
 {{% /md %}}</dd><dt class="property-required"
@@ -895,7 +895,7 @@ The following state arguments are supported:
 <a href="#filter_python" style="color: inherit; text-decoration: inherit;">filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#blobinventorypolicyrulefilter">Blob<wbr>Inventory<wbr>Policy<wbr>Rule<wbr>Filter<wbr>Args</a></span>
+        <span class="property-type"><a href="#blobinventorypolicyrulefilter">Blob<wbr>Inventory<wbr>Policy<wbr>Rule<wbr>Filter</a></span>
     </dt>
     <dd>{{% md %}}A `filter` block as defined above.
 {{% /md %}}</dd><dt class="property-required"

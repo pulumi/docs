@@ -659,7 +659,7 @@ The WindowsVirtualMachine resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the type of on-premise license (also known as [Azure Hybrid Use Benefit](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-hybrid-use-benefit-licensing)) which should be used for this Virtual Machine. Possible values are `None`, `Windows_Client` and `Windows_Server`.
+    <dd>{{% md %}}Specifies the type of on-premise license (also known as [Azure Hybrid Use Benefit](https://docs.microsoft.com/en-us/windows-server/get-started/azure-hybrid-benefit)) which should be used for this Virtual Machine. Possible values are `None`, `Windows_Client` and `Windows_Server`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_csharp">
@@ -740,7 +740,7 @@ The WindowsVirtualMachine resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the Proximity Placement Group which the Virtual Machine should be assigned to. Changing this forces a new resource to be created.
+    <dd>{{% md %}}The ID of the Proximity Placement Group which the Virtual Machine should be assigned to.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secrets_csharp">
@@ -850,7 +850,7 @@ The WindowsVirtualMachine resource accepts the following [input]({{< relref "/do
 <a href="#osdisk_go" style="color: inherit; text-decoration: inherit;">Os<wbr>Disk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#windowsvirtualmachineosdisk">Windows<wbr>Virtual<wbr>Machine<wbr>Os<wbr>Disk</a></span>
+        <span class="property-type"><a href="#windowsvirtualmachineosdisk">Windows<wbr>Virtual<wbr>Machine<wbr>Os<wbr>Disk<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `os_disk` block as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -877,7 +877,7 @@ The WindowsVirtualMachine resource accepts the following [input]({{< relref "/do
 <a href="#additionalcapabilities_go" style="color: inherit; text-decoration: inherit;">Additional<wbr>Capabilities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#windowsvirtualmachineadditionalcapabilities">Windows<wbr>Virtual<wbr>Machine<wbr>Additional<wbr>Capabilities</a></span>
+        <span class="property-type"><a href="#windowsvirtualmachineadditionalcapabilities">Windows<wbr>Virtual<wbr>Machine<wbr>Additional<wbr>Capabilities<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `additional_capabilities` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -886,7 +886,7 @@ The WindowsVirtualMachine resource accepts the following [input]({{< relref "/do
 <a href="#additionalunattendcontents_go" style="color: inherit; text-decoration: inherit;">Additional<wbr>Unattend<wbr>Contents</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#windowsvirtualmachineadditionalunattendcontent">[]Windows<wbr>Virtual<wbr>Machine<wbr>Additional<wbr>Unattend<wbr>Content</a></span>
+        <span class="property-type"><a href="#windowsvirtualmachineadditionalunattendcontent">[]Windows<wbr>Virtual<wbr>Machine<wbr>Additional<wbr>Unattend<wbr>Content<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `additional_unattend_content` blocks as defined below. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -913,7 +913,7 @@ The WindowsVirtualMachine resource accepts the following [input]({{< relref "/do
 <a href="#bootdiagnostics_go" style="color: inherit; text-decoration: inherit;">Boot<wbr>Diagnostics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#windowsvirtualmachinebootdiagnostics">Windows<wbr>Virtual<wbr>Machine<wbr>Boot<wbr>Diagnostics</a></span>
+        <span class="property-type"><a href="#windowsvirtualmachinebootdiagnostics">Windows<wbr>Virtual<wbr>Machine<wbr>Boot<wbr>Diagnostics<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `boot_diagnostics` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -985,7 +985,7 @@ The WindowsVirtualMachine resource accepts the following [input]({{< relref "/do
 <a href="#identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#windowsvirtualmachineidentity">Windows<wbr>Virtual<wbr>Machine<wbr>Identity</a></span>
+        <span class="property-type"><a href="#windowsvirtualmachineidentity">Windows<wbr>Virtual<wbr>Machine<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `identity` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -996,7 +996,7 @@ The WindowsVirtualMachine resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the type of on-premise license (also known as [Azure Hybrid Use Benefit](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-hybrid-use-benefit-licensing)) which should be used for this Virtual Machine. Possible values are `None`, `Windows_Client` and `Windows_Server`.
+    <dd>{{% md %}}Specifies the type of on-premise license (also known as [Azure Hybrid Use Benefit](https://docs.microsoft.com/en-us/windows-server/get-started/azure-hybrid-benefit)) which should be used for this Virtual Machine. Possible values are `None`, `Windows_Client` and `Windows_Server`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_go">
@@ -1039,7 +1039,7 @@ The WindowsVirtualMachine resource accepts the following [input]({{< relref "/do
 <a href="#plan_go" style="color: inherit; text-decoration: inherit;">Plan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#windowsvirtualmachineplan">Windows<wbr>Virtual<wbr>Machine<wbr>Plan</a></span>
+        <span class="property-type"><a href="#windowsvirtualmachineplan">Windows<wbr>Virtual<wbr>Machine<wbr>Plan<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `plan` block as defined below. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1077,14 +1077,14 @@ The WindowsVirtualMachine resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the Proximity Placement Group which the Virtual Machine should be assigned to. Changing this forces a new resource to be created.
+    <dd>{{% md %}}The ID of the Proximity Placement Group which the Virtual Machine should be assigned to.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secrets_go">
 <a href="#secrets_go" style="color: inherit; text-decoration: inherit;">Secrets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#windowsvirtualmachinesecret">[]Windows<wbr>Virtual<wbr>Machine<wbr>Secret</a></span>
+        <span class="property-type"><a href="#windowsvirtualmachinesecret">[]Windows<wbr>Virtual<wbr>Machine<wbr>Secret<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `secret` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1102,7 +1102,7 @@ The WindowsVirtualMachine resource accepts the following [input]({{< relref "/do
 <a href="#sourceimagereference_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Image<wbr>Reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#windowsvirtualmachinesourceimagereference">Windows<wbr>Virtual<wbr>Machine<wbr>Source<wbr>Image<wbr>Reference</a></span>
+        <span class="property-type"><a href="#windowsvirtualmachinesourceimagereference">Windows<wbr>Virtual<wbr>Machine<wbr>Source<wbr>Image<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `source_image_reference` block as defined below. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1138,7 +1138,7 @@ The WindowsVirtualMachine resource accepts the following [input]({{< relref "/do
 <a href="#winrmlisteners_go" style="color: inherit; text-decoration: inherit;">Winrm<wbr>Listeners</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#windowsvirtualmachinewinrmlistener">[]Windows<wbr>Virtual<wbr>Machine<wbr>Winrm<wbr>Listener</a></span>
+        <span class="property-type"><a href="#windowsvirtualmachinewinrmlistener">[]Windows<wbr>Virtual<wbr>Machine<wbr>Winrm<wbr>Listener<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `winrm_listener` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1333,7 +1333,7 @@ The WindowsVirtualMachine resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the type of on-premise license (also known as [Azure Hybrid Use Benefit](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-hybrid-use-benefit-licensing)) which should be used for this Virtual Machine. Possible values are `None`, `Windows_Client` and `Windows_Server`.
+    <dd>{{% md %}}Specifies the type of on-premise license (also known as [Azure Hybrid Use Benefit](https://docs.microsoft.com/en-us/windows-server/get-started/azure-hybrid-benefit)) which should be used for this Virtual Machine. Possible values are `None`, `Windows_Client` and `Windows_Server`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_nodejs">
@@ -1414,7 +1414,7 @@ The WindowsVirtualMachine resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the Proximity Placement Group which the Virtual Machine should be assigned to. Changing this forces a new resource to be created.
+    <dd>{{% md %}}The ID of the Proximity Placement Group which the Virtual Machine should be assigned to.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secrets_nodejs">
@@ -1670,7 +1670,7 @@ The WindowsVirtualMachine resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies the type of on-premise license (also known as [Azure Hybrid Use Benefit](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-hybrid-use-benefit-licensing)) which should be used for this Virtual Machine. Possible values are `None`, `Windows_Client` and `Windows_Server`.
+    <dd>{{% md %}}Specifies the type of on-premise license (also known as [Azure Hybrid Use Benefit](https://docs.microsoft.com/en-us/windows-server/get-started/azure-hybrid-benefit)) which should be used for this Virtual Machine. Possible values are `None`, `Windows_Client` and `Windows_Server`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_python">
@@ -1751,7 +1751,7 @@ The WindowsVirtualMachine resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ID of the Proximity Placement Group which the Virtual Machine should be assigned to. Changing this forces a new resource to be created.
+    <dd>{{% md %}}The ID of the Proximity Placement Group which the Virtual Machine should be assigned to.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secrets_python">
@@ -2373,7 +2373,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the type of on-premise license (also known as [Azure Hybrid Use Benefit](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-hybrid-use-benefit-licensing)) which should be used for this Virtual Machine. Possible values are `None`, `Windows_Client` and `Windows_Server`.
+    <dd>{{% md %}}Specifies the type of on-premise license (also known as [Azure Hybrid Use Benefit](https://docs.microsoft.com/en-us/windows-server/get-started/azure-hybrid-benefit)) which should be used for this Virtual Machine. Possible values are `None`, `Windows_Client` and `Windows_Server`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_csharp">
@@ -2490,7 +2490,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the Proximity Placement Group which the Virtual Machine should be assigned to. Changing this forces a new resource to be created.
+    <dd>{{% md %}}The ID of the Proximity Placement Group which the Virtual Machine should be assigned to.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_publicipaddress_csharp">
@@ -2618,7 +2618,7 @@ The following state arguments are supported:
 <a href="#state_additionalcapabilities_go" style="color: inherit; text-decoration: inherit;">Additional<wbr>Capabilities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#windowsvirtualmachineadditionalcapabilities">Windows<wbr>Virtual<wbr>Machine<wbr>Additional<wbr>Capabilities</a></span>
+        <span class="property-type"><a href="#windowsvirtualmachineadditionalcapabilities">Windows<wbr>Virtual<wbr>Machine<wbr>Additional<wbr>Capabilities<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `additional_capabilities` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2627,7 +2627,7 @@ The following state arguments are supported:
 <a href="#state_additionalunattendcontents_go" style="color: inherit; text-decoration: inherit;">Additional<wbr>Unattend<wbr>Contents</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#windowsvirtualmachineadditionalunattendcontent">[]Windows<wbr>Virtual<wbr>Machine<wbr>Additional<wbr>Unattend<wbr>Content</a></span>
+        <span class="property-type"><a href="#windowsvirtualmachineadditionalunattendcontent">[]Windows<wbr>Virtual<wbr>Machine<wbr>Additional<wbr>Unattend<wbr>Content<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `additional_unattend_content` blocks as defined below. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2672,7 +2672,7 @@ The following state arguments are supported:
 <a href="#state_bootdiagnostics_go" style="color: inherit; text-decoration: inherit;">Boot<wbr>Diagnostics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#windowsvirtualmachinebootdiagnostics">Windows<wbr>Virtual<wbr>Machine<wbr>Boot<wbr>Diagnostics</a></span>
+        <span class="property-type"><a href="#windowsvirtualmachinebootdiagnostics">Windows<wbr>Virtual<wbr>Machine<wbr>Boot<wbr>Diagnostics<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `boot_diagnostics` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2744,7 +2744,7 @@ The following state arguments are supported:
 <a href="#state_identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#windowsvirtualmachineidentity">Windows<wbr>Virtual<wbr>Machine<wbr>Identity</a></span>
+        <span class="property-type"><a href="#windowsvirtualmachineidentity">Windows<wbr>Virtual<wbr>Machine<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `identity` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2755,7 +2755,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the type of on-premise license (also known as [Azure Hybrid Use Benefit](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-hybrid-use-benefit-licensing)) which should be used for this Virtual Machine. Possible values are `None`, `Windows_Client` and `Windows_Server`.
+    <dd>{{% md %}}Specifies the type of on-premise license (also known as [Azure Hybrid Use Benefit](https://docs.microsoft.com/en-us/windows-server/get-started/azure-hybrid-benefit)) which should be used for this Virtual Machine. Possible values are `None`, `Windows_Client` and `Windows_Server`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_go">
@@ -2798,7 +2798,7 @@ The following state arguments are supported:
 <a href="#state_osdisk_go" style="color: inherit; text-decoration: inherit;">Os<wbr>Disk</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#windowsvirtualmachineosdisk">Windows<wbr>Virtual<wbr>Machine<wbr>Os<wbr>Disk</a></span>
+        <span class="property-type"><a href="#windowsvirtualmachineosdisk">Windows<wbr>Virtual<wbr>Machine<wbr>Os<wbr>Disk<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `os_disk` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2816,7 +2816,7 @@ The following state arguments are supported:
 <a href="#state_plan_go" style="color: inherit; text-decoration: inherit;">Plan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#windowsvirtualmachineplan">Windows<wbr>Virtual<wbr>Machine<wbr>Plan</a></span>
+        <span class="property-type"><a href="#windowsvirtualmachineplan">Windows<wbr>Virtual<wbr>Machine<wbr>Plan<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `plan` block as defined below. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2872,7 +2872,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the Proximity Placement Group which the Virtual Machine should be assigned to. Changing this forces a new resource to be created.
+    <dd>{{% md %}}The ID of the Proximity Placement Group which the Virtual Machine should be assigned to.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_publicipaddress_go">
@@ -2906,7 +2906,7 @@ The following state arguments are supported:
 <a href="#state_secrets_go" style="color: inherit; text-decoration: inherit;">Secrets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#windowsvirtualmachinesecret">[]Windows<wbr>Virtual<wbr>Machine<wbr>Secret</a></span>
+        <span class="property-type"><a href="#windowsvirtualmachinesecret">[]Windows<wbr>Virtual<wbr>Machine<wbr>Secret<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `secret` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2933,7 +2933,7 @@ The following state arguments are supported:
 <a href="#state_sourceimagereference_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Image<wbr>Reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#windowsvirtualmachinesourceimagereference">Windows<wbr>Virtual<wbr>Machine<wbr>Source<wbr>Image<wbr>Reference</a></span>
+        <span class="property-type"><a href="#windowsvirtualmachinesourceimagereference">Windows<wbr>Virtual<wbr>Machine<wbr>Source<wbr>Image<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `source_image_reference` block as defined below. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2978,7 +2978,7 @@ The following state arguments are supported:
 <a href="#state_winrmlisteners_go" style="color: inherit; text-decoration: inherit;">Winrm<wbr>Listeners</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#windowsvirtualmachinewinrmlistener">[]Windows<wbr>Virtual<wbr>Machine<wbr>Winrm<wbr>Listener</a></span>
+        <span class="property-type"><a href="#windowsvirtualmachinewinrmlistener">[]Windows<wbr>Virtual<wbr>Machine<wbr>Winrm<wbr>Listener<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `winrm_listener` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3137,7 +3137,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the type of on-premise license (also known as [Azure Hybrid Use Benefit](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-hybrid-use-benefit-licensing)) which should be used for this Virtual Machine. Possible values are `None`, `Windows_Client` and `Windows_Server`.
+    <dd>{{% md %}}Specifies the type of on-premise license (also known as [Azure Hybrid Use Benefit](https://docs.microsoft.com/en-us/windows-server/get-started/azure-hybrid-benefit)) which should be used for this Virtual Machine. Possible values are `None`, `Windows_Client` and `Windows_Server`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_nodejs">
@@ -3254,7 +3254,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the Proximity Placement Group which the Virtual Machine should be assigned to. Changing this forces a new resource to be created.
+    <dd>{{% md %}}The ID of the Proximity Placement Group which the Virtual Machine should be assigned to.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_publicipaddress_nodejs">
@@ -3519,7 +3519,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies the type of on-premise license (also known as [Azure Hybrid Use Benefit](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-hybrid-use-benefit-licensing)) which should be used for this Virtual Machine. Possible values are `None`, `Windows_Client` and `Windows_Server`.
+    <dd>{{% md %}}Specifies the type of on-premise license (also known as [Azure Hybrid Use Benefit](https://docs.microsoft.com/en-us/windows-server/get-started/azure-hybrid-benefit)) which should be used for this Virtual Machine. Possible values are `None`, `Windows_Client` and `Windows_Server`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_python">
@@ -3636,7 +3636,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ID of the Proximity Placement Group which the Virtual Machine should be assigned to. Changing this forces a new resource to be created.
+    <dd>{{% md %}}The ID of the Proximity Placement Group which the Virtual Machine should be assigned to.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_public_ip_address_python">
@@ -3921,7 +3921,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Primary/Secondary Endpoint for the Azure Storage Account which should be used to store Boot Diagnostics, including Console Output and Screenshots from the Hypervisor. Passing a null value will utilize a Managed Storage Account to store Boot Diagnostics.
+    <dd>{{% md %}}The Primary/Secondary Endpoint for the Azure Storage Account which should be used to store Boot Diagnostics, including Console Output and Screenshots from the Hypervisor.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3934,7 +3934,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Primary/Secondary Endpoint for the Azure Storage Account which should be used to store Boot Diagnostics, including Console Output and Screenshots from the Hypervisor. Passing a null value will utilize a Managed Storage Account to store Boot Diagnostics.
+    <dd>{{% md %}}The Primary/Secondary Endpoint for the Azure Storage Account which should be used to store Boot Diagnostics, including Console Output and Screenshots from the Hypervisor.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3947,7 +3947,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Primary/Secondary Endpoint for the Azure Storage Account which should be used to store Boot Diagnostics, including Console Output and Screenshots from the Hypervisor. Passing a null value will utilize a Managed Storage Account to store Boot Diagnostics.
+    <dd>{{% md %}}The Primary/Secondary Endpoint for the Azure Storage Account which should be used to store Boot Diagnostics, including Console Output and Screenshots from the Hypervisor.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3960,7 +3960,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Primary/Secondary Endpoint for the Azure Storage Account which should be used to store Boot Diagnostics, including Console Output and Screenshots from the Hypervisor. Passing a null value will utilize a Managed Storage Account to store Boot Diagnostics.
+    <dd>{{% md %}}The Primary/Secondary Endpoint for the Azure Storage Account which should be used to store Boot Diagnostics, including Console Output and Screenshots from the Hypervisor.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -4153,7 +4153,7 @@ The following state arguments are supported:
 <a href="#diffdisksettings_csharp" style="color: inherit; text-decoration: inherit;">Diff<wbr>Disk<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#windowsvirtualmachineosdiskdiffdisksettings">Windows<wbr>Virtual<wbr>Machine<wbr>Os<wbr>Disk<wbr>Diff<wbr>Disk<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#windowsvirtualmachineosdiskdiffdisksettings">Windows<wbr>Virtual<wbr>Machine<wbr>Os<wbr>Disk<wbr>Diff<wbr>Disk<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}A `diff_disk_settings` block as defined above.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4287,7 +4287,7 @@ The following state arguments are supported:
 <a href="#diffdisksettings_nodejs" style="color: inherit; text-decoration: inherit;">diff<wbr>Disk<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#windowsvirtualmachineosdiskdiffdisksettings">Windows<wbr>Virtual<wbr>Machine<wbr>Os<wbr>Disk<wbr>Diff<wbr>Disk<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#windowsvirtualmachineosdiskdiffdisksettings">Windows<wbr>Virtual<wbr>Machine<wbr>Os<wbr>Disk<wbr>Diff<wbr>Disk<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}A `diff_disk_settings` block as defined above.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4354,7 +4354,7 @@ The following state arguments are supported:
 <a href="#diff_disk_settings_python" style="color: inherit; text-decoration: inherit;">diff_<wbr>disk_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#windowsvirtualmachineosdiskdiffdisksettings">Windows<wbr>Virtual<wbr>Machine<wbr>Os<wbr>Disk<wbr>Diff<wbr>Disk<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#windowsvirtualmachineosdiskdiffdisksettings">Windows<wbr>Virtual<wbr>Machine<wbr>Os<wbr>Disk<wbr>Diff<wbr>Disk<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}A `diff_disk_settings` block as defined above.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4585,7 +4585,7 @@ The following state arguments are supported:
 <a href="#certificates_csharp" style="color: inherit; text-decoration: inherit;">Certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#windowsvirtualmachinesecretcertificate">List&lt;Windows<wbr>Virtual<wbr>Machine<wbr>Secret<wbr>Certificate<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#windowsvirtualmachinesecretcertificate">List&lt;Windows<wbr>Virtual<wbr>Machine<wbr>Secret<wbr>Certificate&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `certificate` blocks as defined above.
 {{% /md %}}</dd><dt class="property-required"
@@ -4629,7 +4629,7 @@ The following state arguments are supported:
 <a href="#certificates_nodejs" style="color: inherit; text-decoration: inherit;">certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#windowsvirtualmachinesecretcertificate">Windows<wbr>Virtual<wbr>Machine<wbr>Secret<wbr>Certificate<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#windowsvirtualmachinesecretcertificate">Windows<wbr>Virtual<wbr>Machine<wbr>Secret<wbr>Certificate[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `certificate` blocks as defined above.
 {{% /md %}}</dd><dt class="property-required"
@@ -4651,7 +4651,7 @@ The following state arguments are supported:
 <a href="#certificates_python" style="color: inherit; text-decoration: inherit;">certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#windowsvirtualmachinesecretcertificate">Sequence[Windows<wbr>Virtual<wbr>Machine<wbr>Secret<wbr>Certificate<wbr>Args]</a></span>
+        <span class="property-type"><a href="#windowsvirtualmachinesecretcertificate">Sequence[Windows<wbr>Virtual<wbr>Machine<wbr>Secret<wbr>Certificate]</a></span>
     </dt>
     <dd>{{% md %}}One or more `certificate` blocks as defined above.
 {{% /md %}}</dd><dt class="property-required"

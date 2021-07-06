@@ -640,7 +640,7 @@ The DatasetDelimitedText resource accepts the following [input]({{< relref "/doc
 <a href="#azureblobfslocation_go" style="color: inherit; text-decoration: inherit;">Azure<wbr>Blob<wbr>Fs<wbr>Location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetdelimitedtextazureblobfslocation">Dataset<wbr>Delimited<wbr>Text<wbr>Azure<wbr>Blob<wbr>Fs<wbr>Location</a></span>
+        <span class="property-type"><a href="#datasetdelimitedtextazureblobfslocation">Dataset<wbr>Delimited<wbr>Text<wbr>Azure<wbr>Blob<wbr>Fs<wbr>Location<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `azure_blob_fs_location` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -649,7 +649,7 @@ The DatasetDelimitedText resource accepts the following [input]({{< relref "/doc
 <a href="#azureblobstoragelocation_go" style="color: inherit; text-decoration: inherit;">Azure<wbr>Blob<wbr>Storage<wbr>Location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetdelimitedtextazureblobstoragelocation">Dataset<wbr>Delimited<wbr>Text<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Location</a></span>
+        <span class="property-type"><a href="#datasetdelimitedtextazureblobstoragelocation">Dataset<wbr>Delimited<wbr>Text<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `azure_blob_storage_location` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -730,7 +730,7 @@ The DatasetDelimitedText resource accepts the following [input]({{< relref "/doc
 <a href="#httpserverlocation_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Server<wbr>Location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetdelimitedtexthttpserverlocation">Dataset<wbr>Delimited<wbr>Text<wbr>Http<wbr>Server<wbr>Location</a></span>
+        <span class="property-type"><a href="#datasetdelimitedtexthttpserverlocation">Dataset<wbr>Delimited<wbr>Text<wbr>Http<wbr>Server<wbr>Location<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `http_server_location` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -784,7 +784,7 @@ The DatasetDelimitedText resource accepts the following [input]({{< relref "/doc
 <a href="#schemacolumns_go" style="color: inherit; text-decoration: inherit;">Schema<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetdelimitedtextschemacolumn">[]Dataset<wbr>Delimited<wbr>Text<wbr>Schema<wbr>Column</a></span>
+        <span class="property-type"><a href="#datasetdelimitedtextschemacolumn">[]Dataset<wbr>Delimited<wbr>Text<wbr>Schema<wbr>Column<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `schema_column` block as defined below.
 {{% /md %}}</dd></dl>
@@ -1623,7 +1623,7 @@ The following state arguments are supported:
 <a href="#state_azureblobfslocation_go" style="color: inherit; text-decoration: inherit;">Azure<wbr>Blob<wbr>Fs<wbr>Location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetdelimitedtextazureblobfslocation">Dataset<wbr>Delimited<wbr>Text<wbr>Azure<wbr>Blob<wbr>Fs<wbr>Location</a></span>
+        <span class="property-type"><a href="#datasetdelimitedtextazureblobfslocation">Dataset<wbr>Delimited<wbr>Text<wbr>Azure<wbr>Blob<wbr>Fs<wbr>Location<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `azure_blob_fs_location` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1632,7 +1632,7 @@ The following state arguments are supported:
 <a href="#state_azureblobstoragelocation_go" style="color: inherit; text-decoration: inherit;">Azure<wbr>Blob<wbr>Storage<wbr>Location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetdelimitedtextazureblobstoragelocation">Dataset<wbr>Delimited<wbr>Text<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Location</a></span>
+        <span class="property-type"><a href="#datasetdelimitedtextazureblobstoragelocation">Dataset<wbr>Delimited<wbr>Text<wbr>Azure<wbr>Blob<wbr>Storage<wbr>Location<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `azure_blob_storage_location` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1722,7 +1722,7 @@ The following state arguments are supported:
 <a href="#state_httpserverlocation_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Server<wbr>Location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetdelimitedtexthttpserverlocation">Dataset<wbr>Delimited<wbr>Text<wbr>Http<wbr>Server<wbr>Location</a></span>
+        <span class="property-type"><a href="#datasetdelimitedtexthttpserverlocation">Dataset<wbr>Delimited<wbr>Text<wbr>Http<wbr>Server<wbr>Location<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `http_server_location` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1794,7 +1794,7 @@ The following state arguments are supported:
 <a href="#state_schemacolumns_go" style="color: inherit; text-decoration: inherit;">Schema<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetdelimitedtextschemacolumn">[]Dataset<wbr>Delimited<wbr>Text<wbr>Schema<wbr>Column</a></span>
+        <span class="property-type"><a href="#datasetdelimitedtextschemacolumn">[]Dataset<wbr>Delimited<wbr>Text<wbr>Schema<wbr>Column<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `schema_column` block as defined below.
 {{% /md %}}</dd></dl>

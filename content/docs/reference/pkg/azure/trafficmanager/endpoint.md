@@ -267,6 +267,8 @@ const exampleTrafficManagerEndpoint = new azure.network.TrafficManagerEndpoint("
              <span class="nx">endpoint_status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">geo_mappings</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
              <span class="nx">min_child_endpoints</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+             <span class="nx">minimum_required_child_endpoints_ipv4</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+             <span class="nx">minimum_required_child_endpoints_ipv6</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
              <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
              <span class="nx">profile_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -487,7 +489,25 @@ either `Enabled` or `Disabled`. Defaults to `Enabled`.
 of endpoints that must be ‘online’ in the child profile in order for the
 parent profile to direct traffic to any of the endpoints in that child
 profile. This argument only applies to Endpoints of type `nestedEndpoints`
-and defaults to `1`.
+and has to be larger than `0`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="minimumrequiredchildendpointsipv4_csharp">
+<a href="#minimumrequiredchildendpointsipv4_csharp" style="color: inherit; text-decoration: inherit;">Minimum<wbr>Required<wbr>Child<wbr>Endpoints<wbr>Ipv4</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}This argument specifies the minimum number of IPv4 (DNS record type A) endpoints that must be ‘online’ in the child profile in order for the parent profile to direct traffic to any of the endpoints in that child profile. This argument only applies to Endpoints of type `nestedEndpoints` and defaults to `1`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="minimumrequiredchildendpointsipv6_csharp">
+<a href="#minimumrequiredchildendpointsipv6_csharp" style="color: inherit; text-decoration: inherit;">Minimum<wbr>Required<wbr>Child<wbr>Endpoints<wbr>Ipv6</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}This argument specifies the minimum number of IPv6 (DNS record type AAAA) endpoints that must be ‘online’ in the child profile in order for the parent profile to direct traffic to any of the endpoints in that child profile. This argument only applies to Endpoints of type `nestedEndpoints` and defaults to `1`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
@@ -593,7 +613,7 @@ create the Traffic Manager endpoint.
 <a href="#customheaders_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointcustomheader">[]Endpoint<wbr>Custom<wbr>Header</a></span>
+        <span class="property-type"><a href="#endpointcustomheader">[]Endpoint<wbr>Custom<wbr>Header<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `custom_header` blocks as defined below
 {{% /md %}}</dd><dt class="property-optional"
@@ -640,7 +660,25 @@ either `Enabled` or `Disabled`. Defaults to `Enabled`.
 of endpoints that must be ‘online’ in the child profile in order for the
 parent profile to direct traffic to any of the endpoints in that child
 profile. This argument only applies to Endpoints of type `nestedEndpoints`
-and defaults to `1`.
+and has to be larger than `0`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="minimumrequiredchildendpointsipv4_go">
+<a href="#minimumrequiredchildendpointsipv4_go" style="color: inherit; text-decoration: inherit;">Minimum<wbr>Required<wbr>Child<wbr>Endpoints<wbr>Ipv4</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}This argument specifies the minimum number of IPv4 (DNS record type A) endpoints that must be ‘online’ in the child profile in order for the parent profile to direct traffic to any of the endpoints in that child profile. This argument only applies to Endpoints of type `nestedEndpoints` and defaults to `1`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="minimumrequiredchildendpointsipv6_go">
+<a href="#minimumrequiredchildendpointsipv6_go" style="color: inherit; text-decoration: inherit;">Minimum<wbr>Required<wbr>Child<wbr>Endpoints<wbr>Ipv6</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}This argument specifies the minimum number of IPv6 (DNS record type AAAA) endpoints that must be ‘online’ in the child profile in order for the parent profile to direct traffic to any of the endpoints in that child profile. This argument only applies to Endpoints of type `nestedEndpoints` and defaults to `1`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
@@ -669,7 +707,7 @@ omitted the value will be computed in order of creation.
 <a href="#subnets_go" style="color: inherit; text-decoration: inherit;">Subnets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointsubnet">[]Endpoint<wbr>Subnet</a></span>
+        <span class="property-type"><a href="#endpointsubnet">[]Endpoint<wbr>Subnet<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `subnet` blocks as defined below
 {{% /md %}}</dd><dt class="property-optional"
@@ -793,7 +831,25 @@ either `Enabled` or `Disabled`. Defaults to `Enabled`.
 of endpoints that must be ‘online’ in the child profile in order for the
 parent profile to direct traffic to any of the endpoints in that child
 profile. This argument only applies to Endpoints of type `nestedEndpoints`
-and defaults to `1`.
+and has to be larger than `0`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="minimumrequiredchildendpointsipv4_nodejs">
+<a href="#minimumrequiredchildendpointsipv4_nodejs" style="color: inherit; text-decoration: inherit;">minimum<wbr>Required<wbr>Child<wbr>Endpoints<wbr>Ipv4</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}This argument specifies the minimum number of IPv4 (DNS record type A) endpoints that must be ‘online’ in the child profile in order for the parent profile to direct traffic to any of the endpoints in that child profile. This argument only applies to Endpoints of type `nestedEndpoints` and defaults to `1`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="minimumrequiredchildendpointsipv6_nodejs">
+<a href="#minimumrequiredchildendpointsipv6_nodejs" style="color: inherit; text-decoration: inherit;">minimum<wbr>Required<wbr>Child<wbr>Endpoints<wbr>Ipv6</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}This argument specifies the minimum number of IPv6 (DNS record type AAAA) endpoints that must be ‘online’ in the child profile in order for the parent profile to direct traffic to any of the endpoints in that child profile. This argument only applies to Endpoints of type `nestedEndpoints` and defaults to `1`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
@@ -946,7 +1002,25 @@ either `Enabled` or `Disabled`. Defaults to `Enabled`.
 of endpoints that must be ‘online’ in the child profile in order for the
 parent profile to direct traffic to any of the endpoints in that child
 profile. This argument only applies to Endpoints of type `nestedEndpoints`
-and defaults to `1`.
+and has to be larger than `0`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="minimum_required_child_endpoints_ipv4_python">
+<a href="#minimum_required_child_endpoints_ipv4_python" style="color: inherit; text-decoration: inherit;">minimum_<wbr>required_<wbr>child_<wbr>endpoints_<wbr>ipv4</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}This argument specifies the minimum number of IPv4 (DNS record type A) endpoints that must be ‘online’ in the child profile in order for the parent profile to direct traffic to any of the endpoints in that child profile. This argument only applies to Endpoints of type `nestedEndpoints` and defaults to `1`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="minimum_required_child_endpoints_ipv6_python">
+<a href="#minimum_required_child_endpoints_ipv6_python" style="color: inherit; text-decoration: inherit;">minimum_<wbr>required_<wbr>child_<wbr>endpoints_<wbr>ipv6</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}This argument specifies the minimum number of IPv6 (DNS record type AAAA) endpoints that must be ‘online’ in the child profile in order for the parent profile to direct traffic to any of the endpoints in that child profile. This argument only applies to Endpoints of type `nestedEndpoints` and defaults to `1`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
@@ -1123,6 +1197,8 @@ Get an existing Endpoint resource's state with the given name, ID, and optional 
         <span class="nx">endpoint_status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">geo_mappings</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
         <span class="nx">min_child_endpoints</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+        <span class="nx">minimum_required_child_endpoints_ipv4</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+        <span class="nx">minimum_required_child_endpoints_ipv6</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
         <span class="nx">profile_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -1303,7 +1379,25 @@ either `Enabled` or `Disabled`. Defaults to `Enabled`.
 of endpoints that must be ‘online’ in the child profile in order for the
 parent profile to direct traffic to any of the endpoints in that child
 profile. This argument only applies to Endpoints of type `nestedEndpoints`
-and defaults to `1`.
+and has to be larger than `0`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_minimumrequiredchildendpointsipv4_csharp">
+<a href="#state_minimumrequiredchildendpointsipv4_csharp" style="color: inherit; text-decoration: inherit;">Minimum<wbr>Required<wbr>Child<wbr>Endpoints<wbr>Ipv4</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}This argument specifies the minimum number of IPv4 (DNS record type A) endpoints that must be ‘online’ in the child profile in order for the parent profile to direct traffic to any of the endpoints in that child profile. This argument only applies to Endpoints of type `nestedEndpoints` and defaults to `1`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_minimumrequiredchildendpointsipv6_csharp">
+<a href="#state_minimumrequiredchildendpointsipv6_csharp" style="color: inherit; text-decoration: inherit;">Minimum<wbr>Required<wbr>Child<wbr>Endpoints<wbr>Ipv6</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}This argument specifies the minimum number of IPv6 (DNS record type AAAA) endpoints that must be ‘online’ in the child profile in order for the parent profile to direct traffic to any of the endpoints in that child profile. This argument only applies to Endpoints of type `nestedEndpoints` and defaults to `1`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
@@ -1409,7 +1503,7 @@ routing method. Supports values between 1 and 1000.
 <a href="#state_customheaders_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointcustomheader">[]Endpoint<wbr>Custom<wbr>Header</a></span>
+        <span class="property-type"><a href="#endpointcustomheader">[]Endpoint<wbr>Custom<wbr>Header<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `custom_header` blocks as defined below
 {{% /md %}}</dd><dt class="property-optional"
@@ -1464,7 +1558,25 @@ either `Enabled` or `Disabled`. Defaults to `Enabled`.
 of endpoints that must be ‘online’ in the child profile in order for the
 parent profile to direct traffic to any of the endpoints in that child
 profile. This argument only applies to Endpoints of type `nestedEndpoints`
-and defaults to `1`.
+and has to be larger than `0`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_minimumrequiredchildendpointsipv4_go">
+<a href="#state_minimumrequiredchildendpointsipv4_go" style="color: inherit; text-decoration: inherit;">Minimum<wbr>Required<wbr>Child<wbr>Endpoints<wbr>Ipv4</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}This argument specifies the minimum number of IPv4 (DNS record type A) endpoints that must be ‘online’ in the child profile in order for the parent profile to direct traffic to any of the endpoints in that child profile. This argument only applies to Endpoints of type `nestedEndpoints` and defaults to `1`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_minimumrequiredchildendpointsipv6_go">
+<a href="#state_minimumrequiredchildendpointsipv6_go" style="color: inherit; text-decoration: inherit;">Minimum<wbr>Required<wbr>Child<wbr>Endpoints<wbr>Ipv6</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}This argument specifies the minimum number of IPv6 (DNS record type AAAA) endpoints that must be ‘online’ in the child profile in order for the parent profile to direct traffic to any of the endpoints in that child profile. This argument only applies to Endpoints of type `nestedEndpoints` and defaults to `1`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
@@ -1512,7 +1624,7 @@ create the Traffic Manager endpoint.
 <a href="#state_subnets_go" style="color: inherit; text-decoration: inherit;">Subnets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointsubnet">[]Endpoint<wbr>Subnet</a></span>
+        <span class="property-type"><a href="#endpointsubnet">[]Endpoint<wbr>Subnet<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `subnet` blocks as defined below
 {{% /md %}}</dd><dt class="property-optional"
@@ -1625,7 +1737,25 @@ either `Enabled` or `Disabled`. Defaults to `Enabled`.
 of endpoints that must be ‘online’ in the child profile in order for the
 parent profile to direct traffic to any of the endpoints in that child
 profile. This argument only applies to Endpoints of type `nestedEndpoints`
-and defaults to `1`.
+and has to be larger than `0`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_minimumrequiredchildendpointsipv4_nodejs">
+<a href="#state_minimumrequiredchildendpointsipv4_nodejs" style="color: inherit; text-decoration: inherit;">minimum<wbr>Required<wbr>Child<wbr>Endpoints<wbr>Ipv4</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}This argument specifies the minimum number of IPv4 (DNS record type A) endpoints that must be ‘online’ in the child profile in order for the parent profile to direct traffic to any of the endpoints in that child profile. This argument only applies to Endpoints of type `nestedEndpoints` and defaults to `1`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_minimumrequiredchildendpointsipv6_nodejs">
+<a href="#state_minimumrequiredchildendpointsipv6_nodejs" style="color: inherit; text-decoration: inherit;">minimum<wbr>Required<wbr>Child<wbr>Endpoints<wbr>Ipv6</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}This argument specifies the minimum number of IPv6 (DNS record type AAAA) endpoints that must be ‘online’ in the child profile in order for the parent profile to direct traffic to any of the endpoints in that child profile. This argument only applies to Endpoints of type `nestedEndpoints` and defaults to `1`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
@@ -1786,7 +1916,25 @@ either `Enabled` or `Disabled`. Defaults to `Enabled`.
 of endpoints that must be ‘online’ in the child profile in order for the
 parent profile to direct traffic to any of the endpoints in that child
 profile. This argument only applies to Endpoints of type `nestedEndpoints`
-and defaults to `1`.
+and has to be larger than `0`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_minimum_required_child_endpoints_ipv4_python">
+<a href="#state_minimum_required_child_endpoints_ipv4_python" style="color: inherit; text-decoration: inherit;">minimum_<wbr>required_<wbr>child_<wbr>endpoints_<wbr>ipv4</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}This argument specifies the minimum number of IPv4 (DNS record type A) endpoints that must be ‘online’ in the child profile in order for the parent profile to direct traffic to any of the endpoints in that child profile. This argument only applies to Endpoints of type `nestedEndpoints` and defaults to `1`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_minimum_required_child_endpoints_ipv6_python">
+<a href="#state_minimum_required_child_endpoints_ipv6_python" style="color: inherit; text-decoration: inherit;">minimum_<wbr>required_<wbr>child_<wbr>endpoints_<wbr>ipv6</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}This argument specifies the minimum number of IPv6 (DNS record type AAAA) endpoints that must be ‘online’ in the child profile in order for the parent profile to direct traffic to any of the endpoints in that child profile. This argument only applies to Endpoints of type `nestedEndpoints` and defaults to `1`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">

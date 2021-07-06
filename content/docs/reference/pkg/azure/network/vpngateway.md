@@ -442,7 +442,7 @@ The VpnGateway resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#bgpsettings_go" style="color: inherit; text-decoration: inherit;">Bgp<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpngatewaybgpsettings">Vpn<wbr>Gateway<wbr>Bgp<wbr>Settings</a></span>
+        <span class="property-type"><a href="#vpngatewaybgpsettings">Vpn<wbr>Gateway<wbr>Bgp<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `bgp_settings` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -879,7 +879,7 @@ The following state arguments are supported:
 <a href="#state_bgpsettings_go" style="color: inherit; text-decoration: inherit;">Bgp<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpngatewaybgpsettings">Vpn<wbr>Gateway<wbr>Bgp<wbr>Settings</a></span>
+        <span class="property-type"><a href="#vpngatewaybgpsettings">Vpn<wbr>Gateway<wbr>Bgp<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `bgp_settings` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1118,7 +1118,7 @@ The following state arguments are supported:
 <a href="#instance0bgppeeringaddress_csharp" style="color: inherit; text-decoration: inherit;">Instance0Bgp<wbr>Peering<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpngatewaybgpsettingsinstance0bgppeeringaddress">Vpn<wbr>Gateway<wbr>Bgp<wbr>Settings<wbr>Instance0Bgp<wbr>Peering<wbr>Address<wbr>Args</a></span>
+        <span class="property-type"><a href="#vpngatewaybgpsettingsinstance0bgppeeringaddress">Vpn<wbr>Gateway<wbr>Bgp<wbr>Settings<wbr>Instance0Bgp<wbr>Peering<wbr>Address</a></span>
     </dt>
     <dd>{{% md %}}An `instance_bgp_peering_address` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1127,7 +1127,7 @@ The following state arguments are supported:
 <a href="#instance1bgppeeringaddress_csharp" style="color: inherit; text-decoration: inherit;">Instance1Bgp<wbr>Peering<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpngatewaybgpsettingsinstance1bgppeeringaddress">Vpn<wbr>Gateway<wbr>Bgp<wbr>Settings<wbr>Instance1Bgp<wbr>Peering<wbr>Address<wbr>Args</a></span>
+        <span class="property-type"><a href="#vpngatewaybgpsettingsinstance1bgppeeringaddress">Vpn<wbr>Gateway<wbr>Bgp<wbr>Settings<wbr>Instance1Bgp<wbr>Peering<wbr>Address</a></span>
     </dt>
     <dd>{{% md %}}An `instance_bgp_peering_address` block as defined below.
 {{% /md %}}</dd></dl>
@@ -1216,7 +1216,7 @@ The following state arguments are supported:
 <a href="#instance0bgppeeringaddress_nodejs" style="color: inherit; text-decoration: inherit;">instance0Bgp<wbr>Peering<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpngatewaybgpsettingsinstance0bgppeeringaddress">Vpn<wbr>Gateway<wbr>Bgp<wbr>Settings<wbr>Instance0Bgp<wbr>Peering<wbr>Address<wbr>Args</a></span>
+        <span class="property-type"><a href="#vpngatewaybgpsettingsinstance0bgppeeringaddress">Vpn<wbr>Gateway<wbr>Bgp<wbr>Settings<wbr>Instance0Bgp<wbr>Peering<wbr>Address</a></span>
     </dt>
     <dd>{{% md %}}An `instance_bgp_peering_address` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1225,7 +1225,7 @@ The following state arguments are supported:
 <a href="#instance1bgppeeringaddress_nodejs" style="color: inherit; text-decoration: inherit;">instance1Bgp<wbr>Peering<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpngatewaybgpsettingsinstance1bgppeeringaddress">Vpn<wbr>Gateway<wbr>Bgp<wbr>Settings<wbr>Instance1Bgp<wbr>Peering<wbr>Address<wbr>Args</a></span>
+        <span class="property-type"><a href="#vpngatewaybgpsettingsinstance1bgppeeringaddress">Vpn<wbr>Gateway<wbr>Bgp<wbr>Settings<wbr>Instance1Bgp<wbr>Peering<wbr>Address</a></span>
     </dt>
     <dd>{{% md %}}An `instance_bgp_peering_address` block as defined below.
 {{% /md %}}</dd></dl>
@@ -1265,7 +1265,7 @@ The following state arguments are supported:
 <a href="#instance0_bgp_peering_address_python" style="color: inherit; text-decoration: inherit;">instance0_<wbr>bgp_<wbr>peering_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpngatewaybgpsettingsinstance0bgppeeringaddress">Vpn<wbr>Gateway<wbr>Bgp<wbr>Settings<wbr>Instance0Bgp<wbr>Peering<wbr>Address<wbr>Args</a></span>
+        <span class="property-type"><a href="#vpngatewaybgpsettingsinstance0bgppeeringaddress">Vpn<wbr>Gateway<wbr>Bgp<wbr>Settings<wbr>Instance0Bgp<wbr>Peering<wbr>Address</a></span>
     </dt>
     <dd>{{% md %}}An `instance_bgp_peering_address` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1274,7 +1274,7 @@ The following state arguments are supported:
 <a href="#instance1_bgp_peering_address_python" style="color: inherit; text-decoration: inherit;">instance1_<wbr>bgp_<wbr>peering_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpngatewaybgpsettingsinstance1bgppeeringaddress">Vpn<wbr>Gateway<wbr>Bgp<wbr>Settings<wbr>Instance1Bgp<wbr>Peering<wbr>Address<wbr>Args</a></span>
+        <span class="property-type"><a href="#vpngatewaybgpsettingsinstance1bgppeeringaddress">Vpn<wbr>Gateway<wbr>Bgp<wbr>Settings<wbr>Instance1Bgp<wbr>Peering<wbr>Address</a></span>
     </dt>
     <dd>{{% md %}}An `instance_bgp_peering_address` block as defined below.
 {{% /md %}}</dd></dl>

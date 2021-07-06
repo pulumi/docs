@@ -367,7 +367,8 @@ const acr = new azure.containerservice.Registry("acr", {
              <span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">storage_account_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
-             <span class="nx">trust_policy</span><span class="p">:</span> <span class="nx">Optional[RegistryTrustPolicyArgs]</span> = None<span class="p">)</span>
+             <span class="nx">trust_policy</span><span class="p">:</span> <span class="nx">Optional[RegistryTrustPolicyArgs]</span> = None<span class="p">,</span>
+             <span class="nx">zone_redundancy_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">Registry</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
              <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">RegistryArgs</a></span><span class="p">,</span>
@@ -639,6 +640,15 @@ The Registry resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#registrytrustpolicy">Registry<wbr>Trust<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `trust_policy` block as documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="zoneredundancyenabled_csharp">
+<a href="#zoneredundancyenabled_csharp" style="color: inherit; text-decoration: inherit;">Zone<wbr>Redundancy<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether zone redundancy is enabled for this Container Registry? Changing this forces a new resource to be created. Defaults to `false`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -667,7 +677,7 @@ The Registry resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#encryption_go" style="color: inherit; text-decoration: inherit;">Encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#registryencryption">Registry<wbr>Encryption</a></span>
+        <span class="property-type"><a href="#registryencryption">Registry<wbr>Encryption<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `encryption` block as documented below.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -685,7 +695,7 @@ The Registry resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#georeplications_go" style="color: inherit; text-decoration: inherit;">Georeplications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#registrygeoreplication">[]Registry<wbr>Georeplication</a></span>
+        <span class="property-type"><a href="#registrygeoreplication">[]Registry<wbr>Georeplication<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `georeplications` block as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -694,7 +704,7 @@ The Registry resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#registryidentity">Registry<wbr>Identity</a></span>
+        <span class="property-type"><a href="#registryidentity">Registry<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `identity` block as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -721,7 +731,7 @@ The Registry resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#networkruleset_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Rule<wbr>Set</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#registrynetworkruleset">Registry<wbr>Network<wbr>Rule<wbr>Set</a></span>
+        <span class="property-type"><a href="#registrynetworkruleset">Registry<wbr>Network<wbr>Rule<wbr>Set<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `network_rule_set` block as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -748,7 +758,7 @@ The Registry resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#retentionpolicy_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#registryretentionpolicy">Registry<wbr>Retention<wbr>Policy</a></span>
+        <span class="property-type"><a href="#registryretentionpolicy">Registry<wbr>Retention<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `retention_policy` block as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -784,9 +794,18 @@ The Registry resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#trustpolicy_go" style="color: inherit; text-decoration: inherit;">Trust<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#registrytrustpolicy">Registry<wbr>Trust<wbr>Policy</a></span>
+        <span class="property-type"><a href="#registrytrustpolicy">Registry<wbr>Trust<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `trust_policy` block as documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="zoneredundancyenabled_go">
+<a href="#zoneredundancyenabled_go" style="color: inherit; text-decoration: inherit;">Zone<wbr>Redundancy<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether zone redundancy is enabled for this Container Registry? Changing this forces a new resource to be created. Defaults to `false`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -935,6 +954,15 @@ The Registry resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#registrytrustpolicy">Registry<wbr>Trust<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `trust_policy` block as documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="zoneredundancyenabled_nodejs">
+<a href="#zoneredundancyenabled_nodejs" style="color: inherit; text-decoration: inherit;">zone<wbr>Redundancy<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether zone redundancy is enabled for this Container Registry? Changing this forces a new resource to be created. Defaults to `false`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1083,6 +1111,15 @@ The Registry resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#registrytrustpolicy">Registry<wbr>Trust<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `trust_policy` block as documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="zone_redundancy_enabled_python">
+<a href="#zone_redundancy_enabled_python" style="color: inherit; text-decoration: inherit;">zone_<wbr>redundancy_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether zone redundancy is enabled for this Container Registry? Changing this forces a new resource to be created. Defaults to `false`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1283,7 +1320,8 @@ Get an existing Registry resource's state with the given name, ID, and optional 
         <span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">storage_account_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
-        <span class="nx">trust_policy</span><span class="p">:</span> <span class="nx">Optional[RegistryTrustPolicyArgs]</span> = None<span class="p">) -&gt;</span> Registry</code></pre></div>
+        <span class="nx">trust_policy</span><span class="p">:</span> <span class="nx">Optional[RegistryTrustPolicyArgs]</span> = None<span class="p">,</span>
+        <span class="nx">zone_redundancy_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">) -&gt;</span> Registry</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1565,6 +1603,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="#registrytrustpolicy">Registry<wbr>Trust<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `trust_policy` block as documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_zoneredundancyenabled_csharp">
+<a href="#state_zoneredundancyenabled_csharp" style="color: inherit; text-decoration: inherit;">Zone<wbr>Redundancy<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether zone redundancy is enabled for this Container Registry? Changing this forces a new resource to be created. Defaults to `false`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1602,7 +1649,7 @@ The following state arguments are supported:
 <a href="#state_encryption_go" style="color: inherit; text-decoration: inherit;">Encryption</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#registryencryption">Registry<wbr>Encryption</a></span>
+        <span class="property-type"><a href="#registryencryption">Registry<wbr>Encryption<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `encryption` block as documented below.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -1620,7 +1667,7 @@ The following state arguments are supported:
 <a href="#state_georeplications_go" style="color: inherit; text-decoration: inherit;">Georeplications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#registrygeoreplication">[]Registry<wbr>Georeplication</a></span>
+        <span class="property-type"><a href="#registrygeoreplication">[]Registry<wbr>Georeplication<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `georeplications` block as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1629,7 +1676,7 @@ The following state arguments are supported:
 <a href="#state_identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#registryidentity">Registry<wbr>Identity</a></span>
+        <span class="property-type"><a href="#registryidentity">Registry<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `identity` block as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1665,7 +1712,7 @@ The following state arguments are supported:
 <a href="#state_networkruleset_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Rule<wbr>Set</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#registrynetworkruleset">Registry<wbr>Network<wbr>Rule<wbr>Set</a></span>
+        <span class="property-type"><a href="#registrynetworkruleset">Registry<wbr>Network<wbr>Rule<wbr>Set<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `network_rule_set` block as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1701,7 +1748,7 @@ The following state arguments are supported:
 <a href="#state_retentionpolicy_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#registryretentionpolicy">Registry<wbr>Retention<wbr>Policy</a></span>
+        <span class="property-type"><a href="#registryretentionpolicy">Registry<wbr>Retention<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `retention_policy` block as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1737,9 +1784,18 @@ The following state arguments are supported:
 <a href="#state_trustpolicy_go" style="color: inherit; text-decoration: inherit;">Trust<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#registrytrustpolicy">Registry<wbr>Trust<wbr>Policy</a></span>
+        <span class="property-type"><a href="#registrytrustpolicy">Registry<wbr>Trust<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `trust_policy` block as documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_zoneredundancyenabled_go">
+<a href="#state_zoneredundancyenabled_go" style="color: inherit; text-decoration: inherit;">Zone<wbr>Redundancy<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether zone redundancy is enabled for this Container Registry? Changing this forces a new resource to be created. Defaults to `false`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1915,6 +1971,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="#registrytrustpolicy">Registry<wbr>Trust<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `trust_policy` block as documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_zoneredundancyenabled_nodejs">
+<a href="#state_zoneredundancyenabled_nodejs" style="color: inherit; text-decoration: inherit;">zone<wbr>Redundancy<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether zone redundancy is enabled for this Container Registry? Changing this forces a new resource to be created. Defaults to `false`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2090,6 +2155,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="#registrytrustpolicy">Registry<wbr>Trust<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `trust_policy` block as documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_zone_redundancy_enabled_python">
+<a href="#state_zone_redundancy_enabled_python" style="color: inherit; text-decoration: inherit;">zone_<wbr>redundancy_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether zone redundancy is enabled for this Container Registry? Changing this forces a new resource to be created. Defaults to `false`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2249,6 +2323,15 @@ The following state arguments are supported:
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to this replication location.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="zoneredundancyenabled_csharp">
+<a href="#zoneredundancyenabled_csharp" style="color: inherit; text-decoration: inherit;">Zone<wbr>Redundancy<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether zone redundancy is enabled for this replication location? Defaults to `false`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2271,6 +2354,15 @@ The following state arguments are supported:
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to this replication location.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="zoneredundancyenabled_go">
+<a href="#zoneredundancyenabled_go" style="color: inherit; text-decoration: inherit;">Zone<wbr>Redundancy<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether zone redundancy is enabled for this replication location? Defaults to `false`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2293,6 +2385,15 @@ The following state arguments are supported:
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to this replication location.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="zoneredundancyenabled_nodejs">
+<a href="#zoneredundancyenabled_nodejs" style="color: inherit; text-decoration: inherit;">zone<wbr>Redundancy<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether zone redundancy is enabled for this replication location? Defaults to `false`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2315,6 +2416,15 @@ The following state arguments are supported:
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to this replication location.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="zone_redundancy_enabled_python">
+<a href="#zone_redundancy_enabled_python" style="color: inherit; text-decoration: inherit;">zone_<wbr>redundancy_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether zone redundancy is enabled for this replication location? Defaults to `false`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2458,7 +2568,7 @@ The following state arguments are supported:
 <a href="#iprules_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#registrynetworkrulesetiprule">List&lt;Registry<wbr>Network<wbr>Rule<wbr>Set<wbr>Ip<wbr>Rule<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#registrynetworkrulesetiprule">List&lt;Registry<wbr>Network<wbr>Rule<wbr>Set<wbr>Ip<wbr>Rule&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `ip_rule` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2467,7 +2577,7 @@ The following state arguments are supported:
 <a href="#virtualnetworks_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Networks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#registrynetworkrulesetvirtualnetwork">List&lt;Registry<wbr>Network<wbr>Rule<wbr>Set<wbr>Virtual<wbr>Network<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#registrynetworkrulesetvirtualnetwork">List&lt;Registry<wbr>Network<wbr>Rule<wbr>Set<wbr>Virtual<wbr>Network&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `virtual_network` blocks as defined below.
 {{% /md %}}</dd></dl>
@@ -2520,7 +2630,7 @@ The following state arguments are supported:
 <a href="#iprules_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#registrynetworkrulesetiprule">Registry<wbr>Network<wbr>Rule<wbr>Set<wbr>Ip<wbr>Rule<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#registrynetworkrulesetiprule">Registry<wbr>Network<wbr>Rule<wbr>Set<wbr>Ip<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `ip_rule` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2529,7 +2639,7 @@ The following state arguments are supported:
 <a href="#virtualnetworks_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Networks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#registrynetworkrulesetvirtualnetwork">Registry<wbr>Network<wbr>Rule<wbr>Set<wbr>Virtual<wbr>Network<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#registrynetworkrulesetvirtualnetwork">Registry<wbr>Network<wbr>Rule<wbr>Set<wbr>Virtual<wbr>Network[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `virtual_network` blocks as defined below.
 {{% /md %}}</dd></dl>
@@ -2551,7 +2661,7 @@ The following state arguments are supported:
 <a href="#ip_rules_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#registrynetworkrulesetiprule">Sequence[Registry<wbr>Network<wbr>Rule<wbr>Set<wbr>Ip<wbr>Rule<wbr>Args]</a></span>
+        <span class="property-type"><a href="#registrynetworkrulesetiprule">Sequence[Registry<wbr>Network<wbr>Rule<wbr>Set<wbr>Ip<wbr>Rule]</a></span>
     </dt>
     <dd>{{% md %}}One or more `ip_rule` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2560,7 +2670,7 @@ The following state arguments are supported:
 <a href="#virtual_networks_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>networks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#registrynetworkrulesetvirtualnetwork">Sequence[Registry<wbr>Network<wbr>Rule<wbr>Set<wbr>Virtual<wbr>Network<wbr>Args]</a></span>
+        <span class="property-type"><a href="#registrynetworkrulesetvirtualnetwork">Sequence[Registry<wbr>Network<wbr>Rule<wbr>Set<wbr>Virtual<wbr>Network]</a></span>
     </dt>
     <dd>{{% md %}}One or more `virtual_network` blocks as defined below.
 {{% /md %}}</dd></dl>

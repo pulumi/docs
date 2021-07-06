@@ -565,7 +565,7 @@ The VirtualNetwork resource accepts the following [input]({{< relref "/docs/intr
 <a href="#ddosprotectionplan_go" style="color: inherit; text-decoration: inherit;">Ddos<wbr>Protection<wbr>Plan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkddosprotectionplan">Virtual<wbr>Network<wbr>Ddos<wbr>Protection<wbr>Plan</a></span>
+        <span class="property-type"><a href="#virtualnetworkddosprotectionplan">Virtual<wbr>Network<wbr>Ddos<wbr>Protection<wbr>Plan<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `ddos_protection_plan` block as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -601,7 +601,7 @@ The VirtualNetwork resource accepts the following [input]({{< relref "/docs/intr
 <a href="#subnets_go" style="color: inherit; text-decoration: inherit;">Subnets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworksubnet">[]Virtual<wbr>Network<wbr>Subnet</a></span>
+        <span class="property-type"><a href="#virtualnetworksubnet">[]Virtual<wbr>Network<wbr>Subnet<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Can be specified multiple times to define multiple subnets. Each `subnet` block supports fields documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1164,7 +1164,7 @@ The following state arguments are supported:
 <a href="#state_ddosprotectionplan_go" style="color: inherit; text-decoration: inherit;">Ddos<wbr>Protection<wbr>Plan</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkddosprotectionplan">Virtual<wbr>Network<wbr>Ddos<wbr>Protection<wbr>Plan</a></span>
+        <span class="property-type"><a href="#virtualnetworkddosprotectionplan">Virtual<wbr>Network<wbr>Ddos<wbr>Protection<wbr>Plan<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `ddos_protection_plan` block as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1218,7 +1218,7 @@ The following state arguments are supported:
 <a href="#state_subnets_go" style="color: inherit; text-decoration: inherit;">Subnets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworksubnet">[]Virtual<wbr>Network<wbr>Subnet</a></span>
+        <span class="property-type"><a href="#virtualnetworksubnet">[]Virtual<wbr>Network<wbr>Subnet<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Can be specified multiple times to define multiple subnets. Each `subnet` block supports fields documented below.
 {{% /md %}}</dd><dt class="property-optional"

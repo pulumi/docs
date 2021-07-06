@@ -325,7 +325,7 @@ The EnvironmentV3 resource accepts the following [input]({{< relref "/docs/intro
 <a href="#clustersettings_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentv3clustersetting">[]Environment<wbr>V3Cluster<wbr>Setting</a></span>
+        <span class="property-type"><a href="#environmentv3clustersetting">[]Environment<wbr>V3Cluster<wbr>Setting<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Zero or more `cluster_setting` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -780,7 +780,7 @@ The following state arguments are supported:
 <a href="#state_clustersettings_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentv3clustersetting">[]Environment<wbr>V3Cluster<wbr>Setting</a></span>
+        <span class="property-type"><a href="#environmentv3clustersetting">[]Environment<wbr>V3Cluster<wbr>Setting<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Zero or more `cluster_setting` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"

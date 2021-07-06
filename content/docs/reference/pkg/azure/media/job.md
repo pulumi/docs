@@ -572,7 +572,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#inputasset_go" style="color: inherit; text-decoration: inherit;">Input<wbr>Asset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobinputasset">Job<wbr>Input<wbr>Asset</a></span>
+        <span class="property-type"><a href="#jobinputasset">Job<wbr>Input<wbr>Asset<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `input_asset` block as defined below. Changing this forces a new Media Job to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -590,7 +590,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#outputassets_go" style="color: inherit; text-decoration: inherit;">Output<wbr>Assets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#joboutputasset">[]Job<wbr>Output<wbr>Asset</a></span>
+        <span class="property-type"><a href="#joboutputasset">[]Job<wbr>Output<wbr>Asset<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `output_asset` blocks as defined below. Changing this forces a new Media Job to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -1073,7 +1073,7 @@ The following state arguments are supported:
 <a href="#state_inputasset_go" style="color: inherit; text-decoration: inherit;">Input<wbr>Asset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobinputasset">Job<wbr>Input<wbr>Asset</a></span>
+        <span class="property-type"><a href="#jobinputasset">Job<wbr>Input<wbr>Asset<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `input_asset` block as defined below. Changing this forces a new Media Job to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1100,7 +1100,7 @@ The following state arguments are supported:
 <a href="#state_outputassets_go" style="color: inherit; text-decoration: inherit;">Output<wbr>Assets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#joboutputasset">[]Job<wbr>Output<wbr>Asset</a></span>
+        <span class="property-type"><a href="#joboutputasset">[]Job<wbr>Output<wbr>Asset<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `output_asset` blocks as defined below. Changing this forces a new Media Job to be created.
 {{% /md %}}</dd><dt class="property-optional"

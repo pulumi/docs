@@ -757,7 +757,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#armrolereceivers_go" style="color: inherit; text-decoration: inherit;">Arm<wbr>Role<wbr>Receivers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongrouparmrolereceiver">[]Action<wbr>Group<wbr>Arm<wbr>Role<wbr>Receiver</a></span>
+        <span class="property-type"><a href="#actiongrouparmrolereceiver">[]Action<wbr>Group<wbr>Arm<wbr>Role<wbr>Receiver<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `arm_role_receiver` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -766,7 +766,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#automationrunbookreceivers_go" style="color: inherit; text-decoration: inherit;">Automation<wbr>Runbook<wbr>Receivers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongroupautomationrunbookreceiver">[]Action<wbr>Group<wbr>Automation<wbr>Runbook<wbr>Receiver</a></span>
+        <span class="property-type"><a href="#actiongroupautomationrunbookreceiver">[]Action<wbr>Group<wbr>Automation<wbr>Runbook<wbr>Receiver<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `automation_runbook_receiver` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -775,7 +775,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#azureapppushreceivers_go" style="color: inherit; text-decoration: inherit;">Azure<wbr>App<wbr>Push<wbr>Receivers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongroupazureapppushreceiver">[]Action<wbr>Group<wbr>Azure<wbr>App<wbr>Push<wbr>Receiver</a></span>
+        <span class="property-type"><a href="#actiongroupazureapppushreceiver">[]Action<wbr>Group<wbr>Azure<wbr>App<wbr>Push<wbr>Receiver<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `azure_app_push_receiver` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -784,7 +784,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#azurefunctionreceivers_go" style="color: inherit; text-decoration: inherit;">Azure<wbr>Function<wbr>Receivers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongroupazurefunctionreceiver">[]Action<wbr>Group<wbr>Azure<wbr>Function<wbr>Receiver</a></span>
+        <span class="property-type"><a href="#actiongroupazurefunctionreceiver">[]Action<wbr>Group<wbr>Azure<wbr>Function<wbr>Receiver<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `azure_function_receiver` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -793,7 +793,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#emailreceivers_go" style="color: inherit; text-decoration: inherit;">Email<wbr>Receivers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongroupemailreceiver">[]Action<wbr>Group<wbr>Email<wbr>Receiver</a></span>
+        <span class="property-type"><a href="#actiongroupemailreceiver">[]Action<wbr>Group<wbr>Email<wbr>Receiver<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `email_receiver` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -811,7 +811,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#itsmreceivers_go" style="color: inherit; text-decoration: inherit;">Itsm<wbr>Receivers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongroupitsmreceiver">[]Action<wbr>Group<wbr>Itsm<wbr>Receiver</a></span>
+        <span class="property-type"><a href="#actiongroupitsmreceiver">[]Action<wbr>Group<wbr>Itsm<wbr>Receiver<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `itsm_receiver` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -820,7 +820,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#logicappreceivers_go" style="color: inherit; text-decoration: inherit;">Logic<wbr>App<wbr>Receivers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongrouplogicappreceiver">[]Action<wbr>Group<wbr>Logic<wbr>App<wbr>Receiver</a></span>
+        <span class="property-type"><a href="#actiongrouplogicappreceiver">[]Action<wbr>Group<wbr>Logic<wbr>App<wbr>Receiver<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `logic_app_receiver` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -838,7 +838,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#smsreceivers_go" style="color: inherit; text-decoration: inherit;">Sms<wbr>Receivers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongroupsmsreceiver">[]Action<wbr>Group<wbr>Sms<wbr>Receiver</a></span>
+        <span class="property-type"><a href="#actiongroupsmsreceiver">[]Action<wbr>Group<wbr>Sms<wbr>Receiver<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `sms_receiver` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -856,7 +856,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#voicereceivers_go" style="color: inherit; text-decoration: inherit;">Voice<wbr>Receivers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongroupvoicereceiver">[]Action<wbr>Group<wbr>Voice<wbr>Receiver</a></span>
+        <span class="property-type"><a href="#actiongroupvoicereceiver">[]Action<wbr>Group<wbr>Voice<wbr>Receiver<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `voice_receiver` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -865,7 +865,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#webhookreceivers_go" style="color: inherit; text-decoration: inherit;">Webhook<wbr>Receivers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongroupwebhookreceiver">[]Action<wbr>Group<wbr>Webhook<wbr>Receiver</a></span>
+        <span class="property-type"><a href="#actiongroupwebhookreceiver">[]Action<wbr>Group<wbr>Webhook<wbr>Receiver<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `webhook_receiver` blocks as defined below.
 {{% /md %}}</dd></dl>
@@ -1490,7 +1490,7 @@ The following state arguments are supported:
 <a href="#state_armrolereceivers_go" style="color: inherit; text-decoration: inherit;">Arm<wbr>Role<wbr>Receivers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongrouparmrolereceiver">[]Action<wbr>Group<wbr>Arm<wbr>Role<wbr>Receiver</a></span>
+        <span class="property-type"><a href="#actiongrouparmrolereceiver">[]Action<wbr>Group<wbr>Arm<wbr>Role<wbr>Receiver<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `arm_role_receiver` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1499,7 +1499,7 @@ The following state arguments are supported:
 <a href="#state_automationrunbookreceivers_go" style="color: inherit; text-decoration: inherit;">Automation<wbr>Runbook<wbr>Receivers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongroupautomationrunbookreceiver">[]Action<wbr>Group<wbr>Automation<wbr>Runbook<wbr>Receiver</a></span>
+        <span class="property-type"><a href="#actiongroupautomationrunbookreceiver">[]Action<wbr>Group<wbr>Automation<wbr>Runbook<wbr>Receiver<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `automation_runbook_receiver` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1508,7 +1508,7 @@ The following state arguments are supported:
 <a href="#state_azureapppushreceivers_go" style="color: inherit; text-decoration: inherit;">Azure<wbr>App<wbr>Push<wbr>Receivers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongroupazureapppushreceiver">[]Action<wbr>Group<wbr>Azure<wbr>App<wbr>Push<wbr>Receiver</a></span>
+        <span class="property-type"><a href="#actiongroupazureapppushreceiver">[]Action<wbr>Group<wbr>Azure<wbr>App<wbr>Push<wbr>Receiver<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `azure_app_push_receiver` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1517,7 +1517,7 @@ The following state arguments are supported:
 <a href="#state_azurefunctionreceivers_go" style="color: inherit; text-decoration: inherit;">Azure<wbr>Function<wbr>Receivers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongroupazurefunctionreceiver">[]Action<wbr>Group<wbr>Azure<wbr>Function<wbr>Receiver</a></span>
+        <span class="property-type"><a href="#actiongroupazurefunctionreceiver">[]Action<wbr>Group<wbr>Azure<wbr>Function<wbr>Receiver<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `azure_function_receiver` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1526,7 +1526,7 @@ The following state arguments are supported:
 <a href="#state_emailreceivers_go" style="color: inherit; text-decoration: inherit;">Email<wbr>Receivers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongroupemailreceiver">[]Action<wbr>Group<wbr>Email<wbr>Receiver</a></span>
+        <span class="property-type"><a href="#actiongroupemailreceiver">[]Action<wbr>Group<wbr>Email<wbr>Receiver<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `email_receiver` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1544,7 +1544,7 @@ The following state arguments are supported:
 <a href="#state_itsmreceivers_go" style="color: inherit; text-decoration: inherit;">Itsm<wbr>Receivers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongroupitsmreceiver">[]Action<wbr>Group<wbr>Itsm<wbr>Receiver</a></span>
+        <span class="property-type"><a href="#actiongroupitsmreceiver">[]Action<wbr>Group<wbr>Itsm<wbr>Receiver<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `itsm_receiver` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1553,7 +1553,7 @@ The following state arguments are supported:
 <a href="#state_logicappreceivers_go" style="color: inherit; text-decoration: inherit;">Logic<wbr>App<wbr>Receivers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongrouplogicappreceiver">[]Action<wbr>Group<wbr>Logic<wbr>App<wbr>Receiver</a></span>
+        <span class="property-type"><a href="#actiongrouplogicappreceiver">[]Action<wbr>Group<wbr>Logic<wbr>App<wbr>Receiver<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `logic_app_receiver` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1589,7 +1589,7 @@ The following state arguments are supported:
 <a href="#state_smsreceivers_go" style="color: inherit; text-decoration: inherit;">Sms<wbr>Receivers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongroupsmsreceiver">[]Action<wbr>Group<wbr>Sms<wbr>Receiver</a></span>
+        <span class="property-type"><a href="#actiongroupsmsreceiver">[]Action<wbr>Group<wbr>Sms<wbr>Receiver<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `sms_receiver` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1607,7 +1607,7 @@ The following state arguments are supported:
 <a href="#state_voicereceivers_go" style="color: inherit; text-decoration: inherit;">Voice<wbr>Receivers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongroupvoicereceiver">[]Action<wbr>Group<wbr>Voice<wbr>Receiver</a></span>
+        <span class="property-type"><a href="#actiongroupvoicereceiver">[]Action<wbr>Group<wbr>Voice<wbr>Receiver<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `voice_receiver` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1616,7 +1616,7 @@ The following state arguments are supported:
 <a href="#state_webhookreceivers_go" style="color: inherit; text-decoration: inherit;">Webhook<wbr>Receivers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongroupwebhookreceiver">[]Action<wbr>Group<wbr>Webhook<wbr>Receiver</a></span>
+        <span class="property-type"><a href="#actiongroupwebhookreceiver">[]Action<wbr>Group<wbr>Webhook<wbr>Receiver<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `webhook_receiver` blocks as defined below.
 {{% /md %}}</dd></dl>
@@ -3358,7 +3358,7 @@ The following state arguments are supported:
 <a href="#aadauth_csharp" style="color: inherit; text-decoration: inherit;">Aad<wbr>Auth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongroupwebhookreceiveraadauth">Action<wbr>Group<wbr>Webhook<wbr>Receiver<wbr>Aad<wbr>Auth<wbr>Args</a></span>
+        <span class="property-type"><a href="#actiongroupwebhookreceiveraadauth">Action<wbr>Group<wbr>Webhook<wbr>Receiver<wbr>Aad<wbr>Auth</a></span>
     </dt>
     <dd>{{% md %}}The `aad_auth` block as defined below
 {{% /md %}}</dd><dt class="property-optional"
@@ -3438,7 +3438,7 @@ The following state arguments are supported:
 <a href="#aadauth_nodejs" style="color: inherit; text-decoration: inherit;">aad<wbr>Auth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongroupwebhookreceiveraadauth">Action<wbr>Group<wbr>Webhook<wbr>Receiver<wbr>Aad<wbr>Auth<wbr>Args</a></span>
+        <span class="property-type"><a href="#actiongroupwebhookreceiveraadauth">Action<wbr>Group<wbr>Webhook<wbr>Receiver<wbr>Aad<wbr>Auth</a></span>
     </dt>
     <dd>{{% md %}}The `aad_auth` block as defined below
 {{% /md %}}</dd><dt class="property-optional"
@@ -3478,7 +3478,7 @@ The following state arguments are supported:
 <a href="#aad_auth_python" style="color: inherit; text-decoration: inherit;">aad_<wbr>auth</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongroupwebhookreceiveraadauth">Action<wbr>Group<wbr>Webhook<wbr>Receiver<wbr>Aad<wbr>Auth<wbr>Args</a></span>
+        <span class="property-type"><a href="#actiongroupwebhookreceiveraadauth">Action<wbr>Group<wbr>Webhook<wbr>Receiver<wbr>Aad<wbr>Auth</a></span>
     </dt>
     <dd>{{% md %}}The `aad_auth` block as defined below
 {{% /md %}}</dd><dt class="property-optional"

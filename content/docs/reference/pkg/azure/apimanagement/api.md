@@ -219,11 +219,14 @@ const exampleApi = new azure.apimanagement.Api("exampleApi", {
         <span class="nx">protocols</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
         <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">revision</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">revision_description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">service_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">soap_pass_through</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">source_api_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">subscription_key_parameter_names</span><span class="p">:</span> <span class="nx">Optional[ApiSubscriptionKeyParameterNamesArgs]</span> = None<span class="p">,</span>
         <span class="nx">subscription_required</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">version_description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">version_set_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">Api</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
@@ -363,33 +366,6 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
     <dd>{{% md %}}The Name of the API Management Service where this API should be created. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="displayname_csharp">
-<a href="#displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The display name of the API.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="path_csharp">
-<a href="#path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Path for this API Management API, which is a relative URL which uniquely identifies this API and all of its resource paths within the API Management Service.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="protocols_csharp">
-<a href="#protocols_csharp" style="color: inherit; text-decoration: inherit;">Protocols</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
-    </dt>
-    <dd>{{% md %}}A list of protocols the operations in this API can be invoked. Possible values are `http` and `https`.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
 </span>
@@ -415,6 +391,15 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the API Management API, which may include HTML formatting tags.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="displayname_csharp">
+<a href="#displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The display name of the API.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="import_csharp">
@@ -453,6 +438,33 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
     <dd>{{% md %}}An `openid_authentication` block as documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="path_csharp">
+<a href="#path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Path for this API Management API, which is a relative URL which uniquely identifies this API and all of its resource paths within the API Management Service.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="protocols_csharp">
+<a href="#protocols_csharp" style="color: inherit; text-decoration: inherit;">Protocols</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A list of protocols the operations in this API can be invoked. Possible values are `http` and `https`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="revisiondescription_csharp">
+<a href="#revisiondescription_csharp" style="color: inherit; text-decoration: inherit;">Revision<wbr>Description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The description of the Api Revision of the API Management API.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="serviceurl_csharp">
 <a href="#serviceurl_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Url</a>
 </span>
@@ -469,6 +481,15 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should this API expose a SOAP frontend, rather than a HTTP frontend? Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sourceapiid_csharp">
+<a href="#sourceapiid_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Api<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The API id of the source API, which could be in format `azurerm_api_management_api.example.id` or in format `azurerm_api_management_api.example.id;rev=1`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subscriptionkeyparameternames_csharp">
@@ -498,6 +519,15 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
     <dd>{{% md %}}The Version number of this API, if this API is versioned.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="versiondescription_csharp">
+<a href="#versiondescription_csharp" style="color: inherit; text-decoration: inherit;">Version<wbr>Description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The description of the Api Version of the API Management API.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="versionsetid_csharp">
 <a href="#versionsetid_csharp" style="color: inherit; text-decoration: inherit;">Version<wbr>Set<wbr>Id</a>
 </span>
@@ -518,33 +548,6 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Name of the API Management Service where this API should be created. Changing this forces a new resource to be created.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="displayname_go">
-<a href="#displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The display name of the API.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="path_go">
-<a href="#path_go" style="color: inherit; text-decoration: inherit;">Path</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Path for this API Management API, which is a relative URL which uniquely identifies this API and all of its resource paths within the API Management Service.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="protocols_go">
-<a href="#protocols_go" style="color: inherit; text-decoration: inherit;">Protocols</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}A list of protocols the operations in this API can be invoked. Possible values are `http` and `https`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
@@ -574,11 +577,20 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
     <dd>{{% md %}}A description of the API Management API, which may include HTML formatting tags.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="displayname_go">
+<a href="#displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The display name of the API.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="import_go">
 <a href="#import_go" style="color: inherit; text-decoration: inherit;">Import</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apiimport">Api<wbr>Import</a></span>
+        <span class="property-type"><a href="#apiimport">Api<wbr>Import<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `import` block as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -596,7 +608,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#oauth2authorization_go" style="color: inherit; text-decoration: inherit;">Oauth2Authorization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apioauth2authorization">Api<wbr>Oauth2Authorization</a></span>
+        <span class="property-type"><a href="#apioauth2authorization">Api<wbr>Oauth2Authorization<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `oauth2_authorization` block as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -605,9 +617,36 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
 <a href="#openidauthentication_go" style="color: inherit; text-decoration: inherit;">Openid<wbr>Authentication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apiopenidauthentication">Api<wbr>Openid<wbr>Authentication</a></span>
+        <span class="property-type"><a href="#apiopenidauthentication">Api<wbr>Openid<wbr>Authentication<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `openid_authentication` block as documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="path_go">
+<a href="#path_go" style="color: inherit; text-decoration: inherit;">Path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Path for this API Management API, which is a relative URL which uniquely identifies this API and all of its resource paths within the API Management Service.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="protocols_go">
+<a href="#protocols_go" style="color: inherit; text-decoration: inherit;">Protocols</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}A list of protocols the operations in this API can be invoked. Possible values are `http` and `https`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="revisiondescription_go">
+<a href="#revisiondescription_go" style="color: inherit; text-decoration: inherit;">Revision<wbr>Description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The description of the Api Revision of the API Management API.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serviceurl_go">
@@ -628,11 +667,20 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
     <dd>{{% md %}}Should this API expose a SOAP frontend, rather than a HTTP frontend? Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="sourceapiid_go">
+<a href="#sourceapiid_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Api<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The API id of the source API, which could be in format `azurerm_api_management_api.example.id` or in format `azurerm_api_management_api.example.id;rev=1`
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="subscriptionkeyparameternames_go">
 <a href="#subscriptionkeyparameternames_go" style="color: inherit; text-decoration: inherit;">Subscription<wbr>Key<wbr>Parameter<wbr>Names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apisubscriptionkeyparameternames">Api<wbr>Subscription<wbr>Key<wbr>Parameter<wbr>Names</a></span>
+        <span class="property-type"><a href="#apisubscriptionkeyparameternames">Api<wbr>Subscription<wbr>Key<wbr>Parameter<wbr>Names<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `subscription_key_parameter_names` block as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -655,6 +703,15 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
     <dd>{{% md %}}The Version number of this API, if this API is versioned.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="versiondescription_go">
+<a href="#versiondescription_go" style="color: inherit; text-decoration: inherit;">Version<wbr>Description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The description of the Api Version of the API Management API.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="versionsetid_go">
 <a href="#versionsetid_go" style="color: inherit; text-decoration: inherit;">Version<wbr>Set<wbr>Id</a>
 </span>
@@ -675,33 +732,6 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Name of the API Management Service where this API should be created. Changing this forces a new resource to be created.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="displayname_nodejs">
-<a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The display name of the API.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="path_nodejs">
-<a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Path for this API Management API, which is a relative URL which uniquely identifies this API and all of its resource paths within the API Management Service.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="protocols_nodejs">
-<a href="#protocols_nodejs" style="color: inherit; text-decoration: inherit;">protocols</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
-    </dt>
-    <dd>{{% md %}}A list of protocols the operations in this API can be invoked. Possible values are `http` and `https`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
@@ -729,6 +759,15 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the API Management API, which may include HTML formatting tags.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="displayname_nodejs">
+<a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The display name of the API.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="import_nodejs">
@@ -767,6 +806,33 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
     <dd>{{% md %}}An `openid_authentication` block as documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="path_nodejs">
+<a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Path for this API Management API, which is a relative URL which uniquely identifies this API and all of its resource paths within the API Management Service.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="protocols_nodejs">
+<a href="#protocols_nodejs" style="color: inherit; text-decoration: inherit;">protocols</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}A list of protocols the operations in this API can be invoked. Possible values are `http` and `https`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="revisiondescription_nodejs">
+<a href="#revisiondescription_nodejs" style="color: inherit; text-decoration: inherit;">revision<wbr>Description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The description of the Api Revision of the API Management API.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="serviceurl_nodejs">
 <a href="#serviceurl_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Url</a>
 </span>
@@ -783,6 +849,15 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Should this API expose a SOAP frontend, rather than a HTTP frontend? Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sourceapiid_nodejs">
+<a href="#sourceapiid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Api<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The API id of the source API, which could be in format `azurerm_api_management_api.example.id` or in format `azurerm_api_management_api.example.id;rev=1`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subscriptionkeyparameternames_nodejs">
@@ -812,6 +887,15 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
     <dd>{{% md %}}The Version number of this API, if this API is versioned.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="versiondescription_nodejs">
+<a href="#versiondescription_nodejs" style="color: inherit; text-decoration: inherit;">version<wbr>Description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The description of the Api Version of the API Management API.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="versionsetid_nodejs">
 <a href="#versionsetid_nodejs" style="color: inherit; text-decoration: inherit;">version<wbr>Set<wbr>Id</a>
 </span>
@@ -832,33 +916,6 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Name of the API Management Service where this API should be created. Changing this forces a new resource to be created.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="display_name_python">
-<a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The display name of the API.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="path_python">
-<a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The Path for this API Management API, which is a relative URL which uniquely identifies this API and all of its resource paths within the API Management Service.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="protocols_python">
-<a href="#protocols_python" style="color: inherit; text-decoration: inherit;">protocols</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
-    </dt>
-    <dd>{{% md %}}A list of protocols the operations in this API can be invoked. Possible values are `http` and `https`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
@@ -886,6 +943,15 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A description of the API Management API, which may include HTML formatting tags.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="display_name_python">
+<a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The display name of the API.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="import__python">
@@ -924,6 +990,33 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
     <dd>{{% md %}}An `openid_authentication` block as documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="path_python">
+<a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Path for this API Management API, which is a relative URL which uniquely identifies this API and all of its resource paths within the API Management Service.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="protocols_python">
+<a href="#protocols_python" style="color: inherit; text-decoration: inherit;">protocols</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}A list of protocols the operations in this API can be invoked. Possible values are `http` and `https`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="revision_description_python">
+<a href="#revision_description_python" style="color: inherit; text-decoration: inherit;">revision_<wbr>description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The description of the Api Revision of the API Management API.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="service_url_python">
 <a href="#service_url_python" style="color: inherit; text-decoration: inherit;">service_<wbr>url</a>
 </span>
@@ -940,6 +1033,15 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should this API expose a SOAP frontend, rather than a HTTP frontend? Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="source_api_id_python">
+<a href="#source_api_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>api_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The API id of the source API, which could be in format `azurerm_api_management_api.example.id` or in format `azurerm_api_management_api.example.id;rev=1`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subscription_key_parameter_names_python">
@@ -967,6 +1069,15 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Version number of this API, if this API is versioned.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="version_description_python">
+<a href="#version_description_python" style="color: inherit; text-decoration: inherit;">version_<wbr>description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The description of the Api Version of the API Management API.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="version_set_id_python">
@@ -1135,11 +1246,14 @@ Get an existing Api resource's state with the given name, ID, and optional extra
         <span class="nx">protocols</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
         <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">revision</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">revision_description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">service_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">soap_pass_through</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">source_api_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">subscription_key_parameter_names</span><span class="p">:</span> <span class="nx">Optional[ApiSubscriptionKeyParameterNamesArgs]</span> = None<span class="p">,</span>
         <span class="nx">subscription_required</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">version_description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">version_set_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Api</code></pre></div>
 {{% /choosable %}}
 
@@ -1370,6 +1484,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The Revision which used for this API.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_revisiondescription_csharp">
+<a href="#state_revisiondescription_csharp" style="color: inherit; text-decoration: inherit;">Revision<wbr>Description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The description of the Api Revision of the API Management API.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_serviceurl_csharp">
 <a href="#state_serviceurl_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Url</a>
 </span>
@@ -1386,6 +1509,15 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should this API expose a SOAP frontend, rather than a HTTP frontend? Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_sourceapiid_csharp">
+<a href="#state_sourceapiid_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Api<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The API id of the source API, which could be in format `azurerm_api_management_api.example.id` or in format `azurerm_api_management_api.example.id;rev=1`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subscriptionkeyparameternames_csharp">
@@ -1413,6 +1545,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Version number of this API, if this API is versioned.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_versiondescription_csharp">
+<a href="#state_versiondescription_csharp" style="color: inherit; text-decoration: inherit;">Version<wbr>Description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The description of the Api Version of the API Management API.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_versionsetid_csharp">
@@ -1459,7 +1600,7 @@ The following state arguments are supported:
 <a href="#state_import_go" style="color: inherit; text-decoration: inherit;">Import</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apiimport">Api<wbr>Import</a></span>
+        <span class="property-type"><a href="#apiimport">Api<wbr>Import<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `import` block as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1495,7 +1636,7 @@ The following state arguments are supported:
 <a href="#state_oauth2authorization_go" style="color: inherit; text-decoration: inherit;">Oauth2Authorization</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apioauth2authorization">Api<wbr>Oauth2Authorization</a></span>
+        <span class="property-type"><a href="#apioauth2authorization">Api<wbr>Oauth2Authorization<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `oauth2_authorization` block as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1504,7 +1645,7 @@ The following state arguments are supported:
 <a href="#state_openidauthentication_go" style="color: inherit; text-decoration: inherit;">Openid<wbr>Authentication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apiopenidauthentication">Api<wbr>Openid<wbr>Authentication</a></span>
+        <span class="property-type"><a href="#apiopenidauthentication">Api<wbr>Openid<wbr>Authentication<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `openid_authentication` block as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1545,6 +1686,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The Revision which used for this API.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_revisiondescription_go">
+<a href="#state_revisiondescription_go" style="color: inherit; text-decoration: inherit;">Revision<wbr>Description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The description of the Api Revision of the API Management API.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_serviceurl_go">
 <a href="#state_serviceurl_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Url</a>
 </span>
@@ -1563,11 +1713,20 @@ The following state arguments are supported:
     <dd>{{% md %}}Should this API expose a SOAP frontend, rather than a HTTP frontend? Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_sourceapiid_go">
+<a href="#state_sourceapiid_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Api<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The API id of the source API, which could be in format `azurerm_api_management_api.example.id` or in format `azurerm_api_management_api.example.id;rev=1`
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_subscriptionkeyparameternames_go">
 <a href="#state_subscriptionkeyparameternames_go" style="color: inherit; text-decoration: inherit;">Subscription<wbr>Key<wbr>Parameter<wbr>Names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apisubscriptionkeyparameternames">Api<wbr>Subscription<wbr>Key<wbr>Parameter<wbr>Names</a></span>
+        <span class="property-type"><a href="#apisubscriptionkeyparameternames">Api<wbr>Subscription<wbr>Key<wbr>Parameter<wbr>Names<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `subscription_key_parameter_names` block as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1588,6 +1747,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Version number of this API, if this API is versioned.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_versiondescription_go">
+<a href="#state_versiondescription_go" style="color: inherit; text-decoration: inherit;">Version<wbr>Description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The description of the Api Version of the API Management API.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_versionsetid_go">
@@ -1720,6 +1888,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The Revision which used for this API.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_revisiondescription_nodejs">
+<a href="#state_revisiondescription_nodejs" style="color: inherit; text-decoration: inherit;">revision<wbr>Description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The description of the Api Revision of the API Management API.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_serviceurl_nodejs">
 <a href="#state_serviceurl_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Url</a>
 </span>
@@ -1736,6 +1913,15 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Should this API expose a SOAP frontend, rather than a HTTP frontend? Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_sourceapiid_nodejs">
+<a href="#state_sourceapiid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Api<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The API id of the source API, which could be in format `azurerm_api_management_api.example.id` or in format `azurerm_api_management_api.example.id;rev=1`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subscriptionkeyparameternames_nodejs">
@@ -1763,6 +1949,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Version number of this API, if this API is versioned.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_versiondescription_nodejs">
+<a href="#state_versiondescription_nodejs" style="color: inherit; text-decoration: inherit;">version<wbr>Description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The description of the Api Version of the API Management API.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_versionsetid_nodejs">
@@ -1895,6 +2090,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The Revision which used for this API.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_revision_description_python">
+<a href="#state_revision_description_python" style="color: inherit; text-decoration: inherit;">revision_<wbr>description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The description of the Api Revision of the API Management API.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_service_url_python">
 <a href="#state_service_url_python" style="color: inherit; text-decoration: inherit;">service_<wbr>url</a>
 </span>
@@ -1911,6 +2115,15 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should this API expose a SOAP frontend, rather than a HTTP frontend? Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_source_api_id_python">
+<a href="#state_source_api_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>api_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The API id of the source API, which could be in format `azurerm_api_management_api.example.id` or in format `azurerm_api_management_api.example.id;rev=1`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subscription_key_parameter_names_python">
@@ -1938,6 +2151,15 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Version number of this API, if this API is versioned.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_version_description_python">
+<a href="#state_version_description_python" style="color: inherit; text-decoration: inherit;">version_<wbr>description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The description of the Api Version of the API Management API.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_version_set_id_python">
@@ -1986,7 +2208,7 @@ The following state arguments are supported:
 <a href="#wsdlselector_csharp" style="color: inherit; text-decoration: inherit;">Wsdl<wbr>Selector</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apiimportwsdlselector">Api<wbr>Import<wbr>Wsdl<wbr>Selector<wbr>Args</a></span>
+        <span class="property-type"><a href="#apiimportwsdlselector">Api<wbr>Import<wbr>Wsdl<wbr>Selector</a></span>
     </dt>
     <dd>{{% md %}}A `wsdl_selector` block as defined below, which allows you to limit the import of a WSDL to only a subset of the document. This can only be specified when `content_format` is `wsdl` or `wsdl-link`.
 {{% /md %}}</dd></dl>
@@ -2048,7 +2270,7 @@ The following state arguments are supported:
 <a href="#wsdlselector_nodejs" style="color: inherit; text-decoration: inherit;">wsdl<wbr>Selector</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apiimportwsdlselector">Api<wbr>Import<wbr>Wsdl<wbr>Selector<wbr>Args</a></span>
+        <span class="property-type"><a href="#apiimportwsdlselector">Api<wbr>Import<wbr>Wsdl<wbr>Selector</a></span>
     </dt>
     <dd>{{% md %}}A `wsdl_selector` block as defined below, which allows you to limit the import of a WSDL to only a subset of the document. This can only be specified when `content_format` is `wsdl` or `wsdl-link`.
 {{% /md %}}</dd></dl>
@@ -2079,7 +2301,7 @@ The following state arguments are supported:
 <a href="#wsdl_selector_python" style="color: inherit; text-decoration: inherit;">wsdl_<wbr>selector</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apiimportwsdlselector">Api<wbr>Import<wbr>Wsdl<wbr>Selector<wbr>Args</a></span>
+        <span class="property-type"><a href="#apiimportwsdlselector">Api<wbr>Import<wbr>Wsdl<wbr>Selector</a></span>
     </dt>
     <dd>{{% md %}}A `wsdl_selector` block as defined below, which allows you to limit the import of a WSDL to only a subset of the document. This can only be specified when `content_format` is `wsdl` or `wsdl-link`.
 {{% /md %}}</dd></dl>

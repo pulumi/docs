@@ -486,7 +486,7 @@ The ActivityLogAlert resource accepts the following [input]({{< relref "/docs/in
 <a href="#criteria_go" style="color: inherit; text-decoration: inherit;">Criteria</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitylogalertcriteria">Activity<wbr>Log<wbr>Alert<wbr>Criteria</a></span>
+        <span class="property-type"><a href="#activitylogalertcriteria">Activity<wbr>Log<wbr>Alert<wbr>Criteria<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `criteria` block as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -513,7 +513,7 @@ The ActivityLogAlert resource accepts the following [input]({{< relref "/docs/in
 <a href="#actions_go" style="color: inherit; text-decoration: inherit;">Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitylogalertaction">[]Activity<wbr>Log<wbr>Alert<wbr>Action</a></span>
+        <span class="property-type"><a href="#activitylogalertaction">[]Activity<wbr>Log<wbr>Alert<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `action` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -978,7 +978,7 @@ The following state arguments are supported:
 <a href="#state_actions_go" style="color: inherit; text-decoration: inherit;">Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitylogalertaction">[]Activity<wbr>Log<wbr>Alert<wbr>Action</a></span>
+        <span class="property-type"><a href="#activitylogalertaction">[]Activity<wbr>Log<wbr>Alert<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `action` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -987,7 +987,7 @@ The following state arguments are supported:
 <a href="#state_criteria_go" style="color: inherit; text-decoration: inherit;">Criteria</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitylogalertcriteria">Activity<wbr>Log<wbr>Alert<wbr>Criteria</a></span>
+        <span class="property-type"><a href="#activitylogalertcriteria">Activity<wbr>Log<wbr>Alert<wbr>Criteria<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `criteria` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1406,7 +1406,7 @@ The following state arguments are supported:
 <a href="#servicehealths_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Healths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitylogalertcriteriaservicehealth">List&lt;Activity<wbr>Log<wbr>Alert<wbr>Criteria<wbr>Service<wbr>Health<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#activitylogalertcriteriaservicehealth">List&lt;Activity<wbr>Log<wbr>Alert<wbr>Criteria<wbr>Service<wbr>Health&gt;</a></span>
     </dt>
     <dd>{{% md %}}A block to define fine grain service health settings.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1666,7 +1666,7 @@ The following state arguments are supported:
 <a href="#servicehealths_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Healths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitylogalertcriteriaservicehealth">Activity<wbr>Log<wbr>Alert<wbr>Criteria<wbr>Service<wbr>Health<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#activitylogalertcriteriaservicehealth">Activity<wbr>Log<wbr>Alert<wbr>Criteria<wbr>Service<wbr>Health[]</a></span>
     </dt>
     <dd>{{% md %}}A block to define fine grain service health settings.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1796,7 +1796,7 @@ The following state arguments are supported:
 <a href="#service_healths_python" style="color: inherit; text-decoration: inherit;">service_<wbr>healths</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#activitylogalertcriteriaservicehealth">Sequence[Activity<wbr>Log<wbr>Alert<wbr>Criteria<wbr>Service<wbr>Health<wbr>Args]</a></span>
+        <span class="property-type"><a href="#activitylogalertcriteriaservicehealth">Sequence[Activity<wbr>Log<wbr>Alert<wbr>Criteria<wbr>Service<wbr>Health]</a></span>
     </dt>
     <dd>{{% md %}}A block to define fine grain service health settings.
 {{% /md %}}</dd><dt class="property-optional"

@@ -709,7 +709,7 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#managedrules_go" style="color: inherit; text-decoration: inherit;">Managed<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policymanagedrules">Policy<wbr>Managed<wbr>Rules</a></span>
+        <span class="property-type"><a href="#policymanagedrules">Policy<wbr>Managed<wbr>Rules<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `managed_rules` blocks as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -727,7 +727,7 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#customrules_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policycustomrule">[]Policy<wbr>Custom<wbr>Rule</a></span>
+        <span class="property-type"><a href="#policycustomrule">[]Policy<wbr>Custom<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `custom_rules` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -754,7 +754,7 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#policysettings_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policypolicysettings">Policy<wbr>Policy<wbr>Settings</a></span>
+        <span class="property-type"><a href="#policypolicysettings">Policy<wbr>Policy<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `policy_settings` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1256,7 +1256,7 @@ The following state arguments are supported:
 <a href="#state_customrules_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policycustomrule">[]Policy<wbr>Custom<wbr>Rule</a></span>
+        <span class="property-type"><a href="#policycustomrule">[]Policy<wbr>Custom<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `custom_rules` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1283,7 +1283,7 @@ The following state arguments are supported:
 <a href="#state_managedrules_go" style="color: inherit; text-decoration: inherit;">Managed<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policymanagedrules">Policy<wbr>Managed<wbr>Rules</a></span>
+        <span class="property-type"><a href="#policymanagedrules">Policy<wbr>Managed<wbr>Rules<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `managed_rules` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1310,7 +1310,7 @@ The following state arguments are supported:
 <a href="#state_policysettings_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policypolicysettings">Policy<wbr>Policy<wbr>Settings</a></span>
+        <span class="property-type"><a href="#policypolicysettings">Policy<wbr>Policy<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `policy_settings` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1531,7 +1531,7 @@ The following state arguments are supported:
 <a href="#matchconditions_csharp" style="color: inherit; text-decoration: inherit;">Match<wbr>Conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policycustomrulematchcondition">List&lt;Policy<wbr>Custom<wbr>Rule<wbr>Match<wbr>Condition<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#policycustomrulematchcondition">List&lt;Policy<wbr>Custom<wbr>Rule<wbr>Match<wbr>Condition&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `match_conditions` blocks as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -1629,7 +1629,7 @@ The following state arguments are supported:
 <a href="#matchconditions_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policycustomrulematchcondition">Policy<wbr>Custom<wbr>Rule<wbr>Match<wbr>Condition<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#policycustomrulematchcondition">Policy<wbr>Custom<wbr>Rule<wbr>Match<wbr>Condition[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `match_conditions` blocks as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -1678,7 +1678,7 @@ The following state arguments are supported:
 <a href="#match_conditions_python" style="color: inherit; text-decoration: inherit;">match_<wbr>conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policycustomrulematchcondition">Sequence[Policy<wbr>Custom<wbr>Rule<wbr>Match<wbr>Condition<wbr>Args]</a></span>
+        <span class="property-type"><a href="#policycustomrulematchcondition">Sequence[Policy<wbr>Custom<wbr>Rule<wbr>Match<wbr>Condition]</a></span>
     </dt>
     <dd>{{% md %}}One or more `match_conditions` blocks as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -1729,7 +1729,7 @@ The following state arguments are supported:
 <a href="#matchvariables_csharp" style="color: inherit; text-decoration: inherit;">Match<wbr>Variables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policycustomrulematchconditionmatchvariable">List&lt;Policy<wbr>Custom<wbr>Rule<wbr>Match<wbr>Condition<wbr>Match<wbr>Variable<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#policycustomrulematchconditionmatchvariable">List&lt;Policy<wbr>Custom<wbr>Rule<wbr>Match<wbr>Condition<wbr>Match<wbr>Variable&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `match_variables` blocks as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -1827,7 +1827,7 @@ The following state arguments are supported:
 <a href="#matchvariables_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Variables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policycustomrulematchconditionmatchvariable">Policy<wbr>Custom<wbr>Rule<wbr>Match<wbr>Condition<wbr>Match<wbr>Variable<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#policycustomrulematchconditionmatchvariable">Policy<wbr>Custom<wbr>Rule<wbr>Match<wbr>Condition<wbr>Match<wbr>Variable[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `match_variables` blocks as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -1876,7 +1876,7 @@ The following state arguments are supported:
 <a href="#match_variables_python" style="color: inherit; text-decoration: inherit;">match_<wbr>variables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policycustomrulematchconditionmatchvariable">Sequence[Policy<wbr>Custom<wbr>Rule<wbr>Match<wbr>Condition<wbr>Match<wbr>Variable<wbr>Args]</a></span>
+        <span class="property-type"><a href="#policycustomrulematchconditionmatchvariable">Sequence[Policy<wbr>Custom<wbr>Rule<wbr>Match<wbr>Condition<wbr>Match<wbr>Variable]</a></span>
     </dt>
     <dd>{{% md %}}One or more `match_variables` blocks as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -2008,7 +2008,7 @@ The following state arguments are supported:
 <a href="#managedrulesets_csharp" style="color: inherit; text-decoration: inherit;">Managed<wbr>Rule<wbr>Sets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policymanagedrulesmanagedruleset">List&lt;Policy<wbr>Managed<wbr>Rules<wbr>Managed<wbr>Rule<wbr>Set<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#policymanagedrulesmanagedruleset">List&lt;Policy<wbr>Managed<wbr>Rules<wbr>Managed<wbr>Rule<wbr>Set&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `managed_rule_set` block defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2017,7 +2017,7 @@ The following state arguments are supported:
 <a href="#exclusions_csharp" style="color: inherit; text-decoration: inherit;">Exclusions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policymanagedrulesexclusion">List&lt;Policy<wbr>Managed<wbr>Rules<wbr>Exclusion<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#policymanagedrulesexclusion">List&lt;Policy<wbr>Managed<wbr>Rules<wbr>Exclusion&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `exclusion` block defined below.
 {{% /md %}}</dd></dl>
@@ -2052,7 +2052,7 @@ The following state arguments are supported:
 <a href="#managedrulesets_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Rule<wbr>Sets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policymanagedrulesmanagedruleset">Policy<wbr>Managed<wbr>Rules<wbr>Managed<wbr>Rule<wbr>Set<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#policymanagedrulesmanagedruleset">Policy<wbr>Managed<wbr>Rules<wbr>Managed<wbr>Rule<wbr>Set[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `managed_rule_set` block defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2061,7 +2061,7 @@ The following state arguments are supported:
 <a href="#exclusions_nodejs" style="color: inherit; text-decoration: inherit;">exclusions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policymanagedrulesexclusion">Policy<wbr>Managed<wbr>Rules<wbr>Exclusion<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#policymanagedrulesexclusion">Policy<wbr>Managed<wbr>Rules<wbr>Exclusion[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `exclusion` block defined below.
 {{% /md %}}</dd></dl>
@@ -2074,7 +2074,7 @@ The following state arguments are supported:
 <a href="#managed_rule_sets_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>rule_<wbr>sets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policymanagedrulesmanagedruleset">Sequence[Policy<wbr>Managed<wbr>Rules<wbr>Managed<wbr>Rule<wbr>Set<wbr>Args]</a></span>
+        <span class="property-type"><a href="#policymanagedrulesmanagedruleset">Sequence[Policy<wbr>Managed<wbr>Rules<wbr>Managed<wbr>Rule<wbr>Set]</a></span>
     </dt>
     <dd>{{% md %}}One or more `managed_rule_set` block defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2083,7 +2083,7 @@ The following state arguments are supported:
 <a href="#exclusions_python" style="color: inherit; text-decoration: inherit;">exclusions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policymanagedrulesexclusion">Sequence[Policy<wbr>Managed<wbr>Rules<wbr>Exclusion<wbr>Args]</a></span>
+        <span class="property-type"><a href="#policymanagedrulesexclusion">Sequence[Policy<wbr>Managed<wbr>Rules<wbr>Exclusion]</a></span>
     </dt>
     <dd>{{% md %}}One or more `exclusion` block defined below.
 {{% /md %}}</dd></dl>
@@ -2233,7 +2233,7 @@ The following state arguments are supported:
 <a href="#rulegroupoverrides_csharp" style="color: inherit; text-decoration: inherit;">Rule<wbr>Group<wbr>Overrides</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policymanagedrulesmanagedrulesetrulegroupoverride">List&lt;Policy<wbr>Managed<wbr>Rules<wbr>Managed<wbr>Rule<wbr>Set<wbr>Rule<wbr>Group<wbr>Override<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#policymanagedrulesmanagedrulesetrulegroupoverride">List&lt;Policy<wbr>Managed<wbr>Rules<wbr>Managed<wbr>Rule<wbr>Set<wbr>Rule<wbr>Group<wbr>Override&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `rule_group_override` block defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2295,7 +2295,7 @@ The following state arguments are supported:
 <a href="#rulegroupoverrides_nodejs" style="color: inherit; text-decoration: inherit;">rule<wbr>Group<wbr>Overrides</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policymanagedrulesmanagedrulesetrulegroupoverride">Policy<wbr>Managed<wbr>Rules<wbr>Managed<wbr>Rule<wbr>Set<wbr>Rule<wbr>Group<wbr>Override<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#policymanagedrulesmanagedrulesetrulegroupoverride">Policy<wbr>Managed<wbr>Rules<wbr>Managed<wbr>Rule<wbr>Set<wbr>Rule<wbr>Group<wbr>Override[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `rule_group_override` block defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2326,7 +2326,7 @@ The following state arguments are supported:
 <a href="#rule_group_overrides_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>group_<wbr>overrides</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policymanagedrulesmanagedrulesetrulegroupoverride">Sequence[Policy<wbr>Managed<wbr>Rules<wbr>Managed<wbr>Rule<wbr>Set<wbr>Rule<wbr>Group<wbr>Override<wbr>Args]</a></span>
+        <span class="property-type"><a href="#policymanagedrulesmanagedrulesetrulegroupoverride">Sequence[Policy<wbr>Managed<wbr>Rules<wbr>Managed<wbr>Rule<wbr>Set<wbr>Rule<wbr>Group<wbr>Override]</a></span>
     </dt>
     <dd>{{% md %}}One or more `rule_group_override` block defined below.
 {{% /md %}}</dd><dt class="property-optional"

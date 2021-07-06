@@ -462,7 +462,7 @@ The EventHubNamespace resource accepts the following [input]({{< relref "/docs/i
 <a href="#identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventhubnamespaceidentity">Event<wbr>Hub<wbr>Namespace<wbr>Identity</a></span>
+        <span class="property-type"><a href="#eventhubnamespaceidentity">Event<wbr>Hub<wbr>Namespace<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `identity` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -498,7 +498,7 @@ The EventHubNamespace resource accepts the following [input]({{< relref "/docs/i
 <a href="#networkrulesets_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Rulesets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventhubnamespacenetworkrulesets">Event<wbr>Hub<wbr>Namespace<wbr>Network<wbr>Rulesets</a></span>
+        <span class="property-type"><a href="#eventhubnamespacenetworkrulesets">Event<wbr>Hub<wbr>Namespace<wbr>Network<wbr>Rulesets<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `network_rulesets` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1438,7 +1438,7 @@ authorization rule `RootManageSharedAccessKey`, which is generated when disaster
 <a href="#state_identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventhubnamespaceidentity">Event<wbr>Hub<wbr>Namespace<wbr>Identity</a></span>
+        <span class="property-type"><a href="#eventhubnamespaceidentity">Event<wbr>Hub<wbr>Namespace<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `identity` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1474,7 +1474,7 @@ authorization rule `RootManageSharedAccessKey`, which is generated when disaster
 <a href="#state_networkrulesets_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Rulesets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventhubnamespacenetworkrulesets">Event<wbr>Hub<wbr>Namespace<wbr>Network<wbr>Rulesets</a></span>
+        <span class="property-type"><a href="#eventhubnamespacenetworkrulesets">Event<wbr>Hub<wbr>Namespace<wbr>Network<wbr>Rulesets<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `network_rulesets` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2009,7 +2009,7 @@ authorization rule `RootManageSharedAccessKey`, which is generated when disaster
 <a href="#iprules_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventhubnamespacenetworkrulesetsiprule">List&lt;Event<wbr>Hub<wbr>Namespace<wbr>Network<wbr>Rulesets<wbr>Ip<wbr>Rule<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#eventhubnamespacenetworkrulesetsiprule">List&lt;Event<wbr>Hub<wbr>Namespace<wbr>Network<wbr>Rulesets<wbr>Ip<wbr>Rule&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `ip_rule` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2027,7 +2027,7 @@ authorization rule `RootManageSharedAccessKey`, which is generated when disaster
 <a href="#virtualnetworkrules_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventhubnamespacenetworkrulesetsvirtualnetworkrule">List&lt;Event<wbr>Hub<wbr>Namespace<wbr>Network<wbr>Rulesets<wbr>Virtual<wbr>Network<wbr>Rule<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#eventhubnamespacenetworkrulesetsvirtualnetworkrule">List&lt;Event<wbr>Hub<wbr>Namespace<wbr>Network<wbr>Rulesets<wbr>Virtual<wbr>Network<wbr>Rule&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `virtual_network_rule` blocks as defined below.
 {{% /md %}}</dd></dl>
@@ -2089,7 +2089,7 @@ authorization rule `RootManageSharedAccessKey`, which is generated when disaster
 <a href="#iprules_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventhubnamespacenetworkrulesetsiprule">Event<wbr>Hub<wbr>Namespace<wbr>Network<wbr>Rulesets<wbr>Ip<wbr>Rule<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#eventhubnamespacenetworkrulesetsiprule">Event<wbr>Hub<wbr>Namespace<wbr>Network<wbr>Rulesets<wbr>Ip<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `ip_rule` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2107,7 +2107,7 @@ authorization rule `RootManageSharedAccessKey`, which is generated when disaster
 <a href="#virtualnetworkrules_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Network<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventhubnamespacenetworkrulesetsvirtualnetworkrule">Event<wbr>Hub<wbr>Namespace<wbr>Network<wbr>Rulesets<wbr>Virtual<wbr>Network<wbr>Rule<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#eventhubnamespacenetworkrulesetsvirtualnetworkrule">Event<wbr>Hub<wbr>Namespace<wbr>Network<wbr>Rulesets<wbr>Virtual<wbr>Network<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `virtual_network_rule` blocks as defined below.
 {{% /md %}}</dd></dl>
@@ -2129,7 +2129,7 @@ authorization rule `RootManageSharedAccessKey`, which is generated when disaster
 <a href="#ip_rules_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventhubnamespacenetworkrulesetsiprule">Sequence[Event<wbr>Hub<wbr>Namespace<wbr>Network<wbr>Rulesets<wbr>Ip<wbr>Rule<wbr>Args]</a></span>
+        <span class="property-type"><a href="#eventhubnamespacenetworkrulesetsiprule">Sequence[Event<wbr>Hub<wbr>Namespace<wbr>Network<wbr>Rulesets<wbr>Ip<wbr>Rule]</a></span>
     </dt>
     <dd>{{% md %}}One or more `ip_rule` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2147,7 +2147,7 @@ authorization rule `RootManageSharedAccessKey`, which is generated when disaster
 <a href="#virtual_network_rules_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>network_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#eventhubnamespacenetworkrulesetsvirtualnetworkrule">Sequence[Event<wbr>Hub<wbr>Namespace<wbr>Network<wbr>Rulesets<wbr>Virtual<wbr>Network<wbr>Rule<wbr>Args]</a></span>
+        <span class="property-type"><a href="#eventhubnamespacenetworkrulesetsvirtualnetworkrule">Sequence[Event<wbr>Hub<wbr>Namespace<wbr>Network<wbr>Rulesets<wbr>Virtual<wbr>Network<wbr>Rule]</a></span>
     </dt>
     <dd>{{% md %}}One or more `virtual_network_rule` blocks as defined below.
 {{% /md %}}</dd></dl>

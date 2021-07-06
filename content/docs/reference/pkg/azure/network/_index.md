@@ -17,7 +17,9 @@ Explore the resources and functions of the azure.network module.
     <li><a href="ddosprotectionplan" title="DdosProtectionPlan"><span class="symbol resource"></span>DdosProtectionPlan</a></li>
     <li><a href="expressroutecircuit" title="ExpressRouteCircuit"><span class="symbol resource"></span>ExpressRouteCircuit</a></li>
     <li><a href="expressroutecircuitauthorization" title="ExpressRouteCircuitAuthorization"><span class="symbol resource"></span>ExpressRouteCircuitAuthorization</a></li>
+    <li><a href="expressroutecircuitconnection" title="ExpressRouteCircuitConnection"><span class="symbol resource"></span>ExpressRouteCircuitConnection</a></li>
     <li><a href="expressroutecircuitpeering" title="ExpressRouteCircuitPeering"><span class="symbol resource"></span>ExpressRouteCircuitPeering</a></li>
+    <li><a href="expressrouteconnection" title="ExpressRouteConnection"><span class="symbol resource"></span>ExpressRouteConnection</a></li>
     <li><a href="expressroutegateway" title="ExpressRouteGateway"><span class="symbol resource"></span>ExpressRouteGateway</a></li>
     <li><a href="expressrouteport" title="ExpressRoutePort"><span class="symbol resource"></span>ExpressRoutePort</a></li>
     <li><a href="firewall" title="Firewall"><span class="symbol resource"></span>Firewall</a></li>
@@ -30,6 +32,7 @@ Explore the resources and functions of the azure.network module.
     <li><a href="localnetworkgateway" title="LocalNetworkGateway"><span class="symbol resource"></span>LocalNetworkGateway</a></li>
     <li><a href="natgateway" title="NatGateway"><span class="symbol resource"></span>NatGateway</a></li>
     <li><a href="natgatewaypublicipassociation" title="NatGatewayPublicIpAssociation"><span class="symbol resource"></span>NatGatewayPublicIpAssociation</a></li>
+    <li><a href="natgatewaypublicipprefixassociation" title="NatGatewayPublicIpPrefixAssociation"><span class="symbol resource"></span>NatGatewayPublicIpPrefixAssociation</a></li>
     <li><a href="networkconnectionmonitor" title="NetworkConnectionMonitor"><span class="symbol resource"></span>NetworkConnectionMonitor</a></li>
     <li><a href="networkinterface" title="NetworkInterface"><span class="symbol resource"></span>NetworkInterface</a></li>
     <li><a href="networkinterfaceapplicationgatewaybackendaddresspoolassociation" title="NetworkInterfaceApplicationGatewayBackendAddressPoolAssociation"><span class="symbol resource"></span>NetworkInterfaceApplicationGatewayBackendAddressPoolAssociation</a></li>
@@ -111,6 +114,6 @@ Explore the resources and functions of the azure.network module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.7.0</dd>
+	<dd>4.9.0</dd>
 </dl>
 

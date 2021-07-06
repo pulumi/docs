@@ -225,7 +225,7 @@ The DiskEncryptionSet resource accepts the following [input]({{< relref "/docs/i
 <a href="#identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diskencryptionsetidentity">Disk<wbr>Encryption<wbr>Set<wbr>Identity</a></span>
+        <span class="property-type"><a href="#diskencryptionsetidentity">Disk<wbr>Encryption<wbr>Set<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `identity` block defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -643,7 +643,7 @@ The following state arguments are supported:
 <a href="#state_identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diskencryptionsetidentity">Disk<wbr>Encryption<wbr>Set<wbr>Identity</a></span>
+        <span class="property-type"><a href="#diskencryptionsetidentity">Disk<wbr>Encryption<wbr>Set<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `identity` block defined below.
 {{% /md %}}</dd><dt class="property-optional"

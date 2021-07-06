@@ -757,7 +757,7 @@ The following state arguments are supported:
 <a href="#state_deviceproperties_go" style="color: inherit; text-decoration: inherit;">Device<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#devicedeviceproperty">[]Device<wbr>Device<wbr>Property</a></span>
+        <span class="property-type"><a href="#devicedeviceproperty">[]Device<wbr>Device<wbr>Property<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `device_properties` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"

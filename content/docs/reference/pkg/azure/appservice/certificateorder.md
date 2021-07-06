@@ -1382,7 +1382,7 @@ The following state arguments are supported:
 <a href="#state_certificates_go" style="color: inherit; text-decoration: inherit;">Certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificateordercertificate">[]Certificate<wbr>Order<wbr>Certificate</a></span>
+        <span class="property-type"><a href="#certificateordercertificate">[]Certificate<wbr>Order<wbr>Certificate<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}State of the Key Vault secret. A `certificates` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"

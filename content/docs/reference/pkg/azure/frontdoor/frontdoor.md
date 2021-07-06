@@ -601,7 +601,7 @@ The Frontdoor resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#backendpoolhealthprobes_go" style="color: inherit; text-decoration: inherit;">Backend<wbr>Pool<wbr>Health<wbr>Probes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#frontdoorbackendpoolhealthprobe">[]Frontdoor<wbr>Backend<wbr>Pool<wbr>Health<wbr>Probe</a></span>
+        <span class="property-type"><a href="#frontdoorbackendpoolhealthprobe">[]Frontdoor<wbr>Backend<wbr>Pool<wbr>Health<wbr>Probe<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `backend_pool_health_probe` block as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -610,7 +610,7 @@ The Frontdoor resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#backendpoolloadbalancings_go" style="color: inherit; text-decoration: inherit;">Backend<wbr>Pool<wbr>Load<wbr>Balancings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#frontdoorbackendpoolloadbalancing">[]Frontdoor<wbr>Backend<wbr>Pool<wbr>Load<wbr>Balancing</a></span>
+        <span class="property-type"><a href="#frontdoorbackendpoolloadbalancing">[]Frontdoor<wbr>Backend<wbr>Pool<wbr>Load<wbr>Balancing<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `backend_pool_load_balancing` block as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -619,7 +619,7 @@ The Frontdoor resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#backendpools_go" style="color: inherit; text-decoration: inherit;">Backend<wbr>Pools</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#frontdoorbackendpool">[]Frontdoor<wbr>Backend<wbr>Pool</a></span>
+        <span class="property-type"><a href="#frontdoorbackendpool">[]Frontdoor<wbr>Backend<wbr>Pool<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `backend_pool` block as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -637,7 +637,7 @@ The Frontdoor resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#frontendendpoints_go" style="color: inherit; text-decoration: inherit;">Frontend<wbr>Endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#frontdoorfrontendendpoint">[]Frontdoor<wbr>Frontend<wbr>Endpoint</a></span>
+        <span class="property-type"><a href="#frontdoorfrontendendpoint">[]Frontdoor<wbr>Frontend<wbr>Endpoint<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `frontend_endpoint` block as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -655,7 +655,7 @@ The Frontdoor resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#routingrules_go" style="color: inherit; text-decoration: inherit;">Routing<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#frontdoorroutingrule">[]Frontdoor<wbr>Routing<wbr>Rule</a></span>
+        <span class="property-type"><a href="#frontdoorroutingrule">[]Frontdoor<wbr>Routing<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `routing_rule` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1641,7 +1641,7 @@ The following state arguments are supported:
 <a href="#state_backendpoolhealthprobes_go" style="color: inherit; text-decoration: inherit;">Backend<wbr>Pool<wbr>Health<wbr>Probes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#frontdoorbackendpoolhealthprobe">[]Frontdoor<wbr>Backend<wbr>Pool<wbr>Health<wbr>Probe</a></span>
+        <span class="property-type"><a href="#frontdoorbackendpoolhealthprobe">[]Frontdoor<wbr>Backend<wbr>Pool<wbr>Health<wbr>Probe<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `backend_pool_health_probe` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1668,7 +1668,7 @@ The following state arguments are supported:
 <a href="#state_backendpoolloadbalancings_go" style="color: inherit; text-decoration: inherit;">Backend<wbr>Pool<wbr>Load<wbr>Balancings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#frontdoorbackendpoolloadbalancing">[]Frontdoor<wbr>Backend<wbr>Pool<wbr>Load<wbr>Balancing</a></span>
+        <span class="property-type"><a href="#frontdoorbackendpoolloadbalancing">[]Frontdoor<wbr>Backend<wbr>Pool<wbr>Load<wbr>Balancing<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `backend_pool_load_balancing` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1677,7 +1677,7 @@ The following state arguments are supported:
 <a href="#state_backendpools_go" style="color: inherit; text-decoration: inherit;">Backend<wbr>Pools</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#frontdoorbackendpool">[]Frontdoor<wbr>Backend<wbr>Pool</a></span>
+        <span class="property-type"><a href="#frontdoorbackendpool">[]Frontdoor<wbr>Backend<wbr>Pool<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `backend_pool` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1722,7 +1722,7 @@ The following state arguments are supported:
 <a href="#state_explicitresourceorders_go" style="color: inherit; text-decoration: inherit;">Explicit<wbr>Resource<wbr>Orders</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#frontdoorexplicitresourceorder">[]Frontdoor<wbr>Explicit<wbr>Resource<wbr>Order</a></span>
+        <span class="property-type"><a href="#frontdoorexplicitresourceorder">[]Frontdoor<wbr>Explicit<wbr>Resource<wbr>Order<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1739,7 +1739,7 @@ The following state arguments are supported:
 <a href="#state_frontendendpoints_go" style="color: inherit; text-decoration: inherit;">Frontend<wbr>Endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#frontdoorfrontendendpoint">[]Frontdoor<wbr>Frontend<wbr>Endpoint</a></span>
+        <span class="property-type"><a href="#frontdoorfrontendendpoint">[]Frontdoor<wbr>Frontend<wbr>Endpoint<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `frontend_endpoint` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1802,7 +1802,7 @@ The following state arguments are supported:
 <a href="#state_routingrules_go" style="color: inherit; text-decoration: inherit;">Routing<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#frontdoorroutingrule">[]Frontdoor<wbr>Routing<wbr>Rule</a></span>
+        <span class="property-type"><a href="#frontdoorroutingrule">[]Frontdoor<wbr>Routing<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `routing_rule` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2228,7 +2228,7 @@ The following state arguments are supported:
 <a href="#backends_csharp" style="color: inherit; text-decoration: inherit;">Backends</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#frontdoorbackendpoolbackend">List&lt;Frontdoor<wbr>Backend<wbr>Pool<wbr>Backend<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#frontdoorbackendpoolbackend">List&lt;Frontdoor<wbr>Backend<wbr>Pool<wbr>Backend&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `backend` block as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -2326,7 +2326,7 @@ The following state arguments are supported:
 <a href="#backends_nodejs" style="color: inherit; text-decoration: inherit;">backends</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#frontdoorbackendpoolbackend">Frontdoor<wbr>Backend<wbr>Pool<wbr>Backend<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#frontdoorbackendpoolbackend">Frontdoor<wbr>Backend<wbr>Pool<wbr>Backend[]</a></span>
     </dt>
     <dd>{{% md %}}A `backend` block as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -2375,7 +2375,7 @@ The following state arguments are supported:
 <a href="#backends_python" style="color: inherit; text-decoration: inherit;">backends</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#frontdoorbackendpoolbackend">Sequence[Frontdoor<wbr>Backend<wbr>Pool<wbr>Backend<wbr>Args]</a></span>
+        <span class="property-type"><a href="#frontdoorbackendpoolbackend">Sequence[Frontdoor<wbr>Backend<wbr>Pool<wbr>Backend]</a></span>
     </dt>
     <dd>{{% md %}}A `backend` block as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -3621,7 +3621,7 @@ The following state arguments are supported:
 <a href="#forwardingconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Forwarding<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#frontdoorroutingruleforwardingconfiguration">Frontdoor<wbr>Routing<wbr>Rule<wbr>Forwarding<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#frontdoorroutingruleforwardingconfiguration">Frontdoor<wbr>Routing<wbr>Rule<wbr>Forwarding<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}A `forwarding_configuration` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3639,7 +3639,7 @@ The following state arguments are supported:
 <a href="#redirectconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Redirect<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#frontdoorroutingruleredirectconfiguration">Frontdoor<wbr>Routing<wbr>Rule<wbr>Redirect<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#frontdoorroutingruleredirectconfiguration">Frontdoor<wbr>Routing<wbr>Rule<wbr>Redirect<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}A `redirect_configuration` block as defined below.
 {{% /md %}}</dd></dl>
@@ -3773,7 +3773,7 @@ The following state arguments are supported:
 <a href="#forwardingconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">forwarding<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#frontdoorroutingruleforwardingconfiguration">Frontdoor<wbr>Routing<wbr>Rule<wbr>Forwarding<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#frontdoorroutingruleforwardingconfiguration">Frontdoor<wbr>Routing<wbr>Rule<wbr>Forwarding<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}A `forwarding_configuration` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3791,7 +3791,7 @@ The following state arguments are supported:
 <a href="#redirectconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">redirect<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#frontdoorroutingruleredirectconfiguration">Frontdoor<wbr>Routing<wbr>Rule<wbr>Redirect<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#frontdoorroutingruleredirectconfiguration">Frontdoor<wbr>Routing<wbr>Rule<wbr>Redirect<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}A `redirect_configuration` block as defined below.
 {{% /md %}}</dd></dl>
@@ -3849,7 +3849,7 @@ The following state arguments are supported:
 <a href="#forwarding_configuration_python" style="color: inherit; text-decoration: inherit;">forwarding_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#frontdoorroutingruleforwardingconfiguration">Frontdoor<wbr>Routing<wbr>Rule<wbr>Forwarding<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#frontdoorroutingruleforwardingconfiguration">Frontdoor<wbr>Routing<wbr>Rule<wbr>Forwarding<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}A `forwarding_configuration` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3867,7 +3867,7 @@ The following state arguments are supported:
 <a href="#redirect_configuration_python" style="color: inherit; text-decoration: inherit;">redirect_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#frontdoorroutingruleredirectconfiguration">Frontdoor<wbr>Routing<wbr>Rule<wbr>Redirect<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#frontdoorroutingruleredirectconfiguration">Frontdoor<wbr>Routing<wbr>Rule<wbr>Redirect<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}A `redirect_configuration` block as defined below.
 {{% /md %}}</dd></dl>

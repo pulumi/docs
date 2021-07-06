@@ -599,7 +599,7 @@ The MLServicesCluster resource accepts the following [input]({{< relref "/docs/i
 <a href="#gateway_go" style="color: inherit; text-decoration: inherit;">Gateway</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mlservicesclustergateway">MLServices<wbr>Cluster<wbr>Gateway</a></span>
+        <span class="property-type"><a href="#mlservicesclustergateway">MLServices<wbr>Cluster<wbr>Gateway<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `gateway` block as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -617,7 +617,7 @@ The MLServicesCluster resource accepts the following [input]({{< relref "/docs/i
 <a href="#roles_go" style="color: inherit; text-decoration: inherit;">Roles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mlservicesclusterroles">MLServices<wbr>Cluster<wbr>Roles</a></span>
+        <span class="property-type"><a href="#mlservicesclusterroles">MLServices<wbr>Cluster<wbr>Roles<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `roles` block as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -662,7 +662,7 @@ The MLServicesCluster resource accepts the following [input]({{< relref "/docs/i
 <a href="#storageaccounts_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Accounts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mlservicesclusterstorageaccount">[]MLServices<wbr>Cluster<wbr>Storage<wbr>Account</a></span>
+        <span class="property-type"><a href="#mlservicesclusterstorageaccount">[]MLServices<wbr>Cluster<wbr>Storage<wbr>Account<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `storage_account` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1345,7 +1345,7 @@ The following state arguments are supported:
 <a href="#state_gateway_go" style="color: inherit; text-decoration: inherit;">Gateway</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mlservicesclustergateway">MLServices<wbr>Cluster<wbr>Gateway</a></span>
+        <span class="property-type"><a href="#mlservicesclustergateway">MLServices<wbr>Cluster<wbr>Gateway<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `gateway` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1390,7 +1390,7 @@ The following state arguments are supported:
 <a href="#state_roles_go" style="color: inherit; text-decoration: inherit;">Roles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mlservicesclusterroles">MLServices<wbr>Cluster<wbr>Roles</a></span>
+        <span class="property-type"><a href="#mlservicesclusterroles">MLServices<wbr>Cluster<wbr>Roles<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `roles` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1417,7 +1417,7 @@ The following state arguments are supported:
 <a href="#state_storageaccounts_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Accounts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mlservicesclusterstorageaccount">[]MLServices<wbr>Cluster<wbr>Storage<wbr>Account</a></span>
+        <span class="property-type"><a href="#mlservicesclusterstorageaccount">[]MLServices<wbr>Cluster<wbr>Storage<wbr>Account<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `storage_account` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1851,7 +1851,7 @@ The following state arguments are supported:
 <a href="#edgenode_csharp" style="color: inherit; text-decoration: inherit;">Edge<wbr>Node</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mlservicesclusterrolesedgenode">MLServices<wbr>Cluster<wbr>Roles<wbr>Edge<wbr>Node<wbr>Args</a></span>
+        <span class="property-type"><a href="#mlservicesclusterrolesedgenode">MLServices<wbr>Cluster<wbr>Roles<wbr>Edge<wbr>Node</a></span>
     </dt>
     <dd>{{% md %}}A `edge_node` block as defined above.
 {{% /md %}}</dd><dt class="property-required"
@@ -1860,7 +1860,7 @@ The following state arguments are supported:
 <a href="#headnode_csharp" style="color: inherit; text-decoration: inherit;">Head<wbr>Node</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mlservicesclusterrolesheadnode">MLServices<wbr>Cluster<wbr>Roles<wbr>Head<wbr>Node<wbr>Args</a></span>
+        <span class="property-type"><a href="#mlservicesclusterrolesheadnode">MLServices<wbr>Cluster<wbr>Roles<wbr>Head<wbr>Node</a></span>
     </dt>
     <dd>{{% md %}}A `head_node` block as defined above.
 {{% /md %}}</dd><dt class="property-required"
@@ -1869,7 +1869,7 @@ The following state arguments are supported:
 <a href="#workernode_csharp" style="color: inherit; text-decoration: inherit;">Worker<wbr>Node</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mlservicesclusterrolesworkernode">MLServices<wbr>Cluster<wbr>Roles<wbr>Worker<wbr>Node<wbr>Args</a></span>
+        <span class="property-type"><a href="#mlservicesclusterrolesworkernode">MLServices<wbr>Cluster<wbr>Roles<wbr>Worker<wbr>Node</a></span>
     </dt>
     <dd>{{% md %}}A `worker_node` block as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -1878,7 +1878,7 @@ The following state arguments are supported:
 <a href="#zookeepernode_csharp" style="color: inherit; text-decoration: inherit;">Zookeeper<wbr>Node</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mlservicesclusterroleszookeepernode">MLServices<wbr>Cluster<wbr>Roles<wbr>Zookeeper<wbr>Node<wbr>Args</a></span>
+        <span class="property-type"><a href="#mlservicesclusterroleszookeepernode">MLServices<wbr>Cluster<wbr>Roles<wbr>Zookeeper<wbr>Node</a></span>
     </dt>
     <dd>{{% md %}}A `zookeeper_node` block as defined below.
 {{% /md %}}</dd></dl>
@@ -1931,7 +1931,7 @@ The following state arguments are supported:
 <a href="#edgenode_nodejs" style="color: inherit; text-decoration: inherit;">edge<wbr>Node</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mlservicesclusterrolesedgenode">MLServices<wbr>Cluster<wbr>Roles<wbr>Edge<wbr>Node<wbr>Args</a></span>
+        <span class="property-type"><a href="#mlservicesclusterrolesedgenode">MLServices<wbr>Cluster<wbr>Roles<wbr>Edge<wbr>Node</a></span>
     </dt>
     <dd>{{% md %}}A `edge_node` block as defined above.
 {{% /md %}}</dd><dt class="property-required"
@@ -1940,7 +1940,7 @@ The following state arguments are supported:
 <a href="#headnode_nodejs" style="color: inherit; text-decoration: inherit;">head<wbr>Node</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mlservicesclusterrolesheadnode">MLServices<wbr>Cluster<wbr>Roles<wbr>Head<wbr>Node<wbr>Args</a></span>
+        <span class="property-type"><a href="#mlservicesclusterrolesheadnode">MLServices<wbr>Cluster<wbr>Roles<wbr>Head<wbr>Node</a></span>
     </dt>
     <dd>{{% md %}}A `head_node` block as defined above.
 {{% /md %}}</dd><dt class="property-required"
@@ -1949,7 +1949,7 @@ The following state arguments are supported:
 <a href="#workernode_nodejs" style="color: inherit; text-decoration: inherit;">worker<wbr>Node</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mlservicesclusterrolesworkernode">MLServices<wbr>Cluster<wbr>Roles<wbr>Worker<wbr>Node<wbr>Args</a></span>
+        <span class="property-type"><a href="#mlservicesclusterrolesworkernode">MLServices<wbr>Cluster<wbr>Roles<wbr>Worker<wbr>Node</a></span>
     </dt>
     <dd>{{% md %}}A `worker_node` block as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -1958,7 +1958,7 @@ The following state arguments are supported:
 <a href="#zookeepernode_nodejs" style="color: inherit; text-decoration: inherit;">zookeeper<wbr>Node</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mlservicesclusterroleszookeepernode">MLServices<wbr>Cluster<wbr>Roles<wbr>Zookeeper<wbr>Node<wbr>Args</a></span>
+        <span class="property-type"><a href="#mlservicesclusterroleszookeepernode">MLServices<wbr>Cluster<wbr>Roles<wbr>Zookeeper<wbr>Node</a></span>
     </dt>
     <dd>{{% md %}}A `zookeeper_node` block as defined below.
 {{% /md %}}</dd></dl>
@@ -1971,7 +1971,7 @@ The following state arguments are supported:
 <a href="#edge_node_python" style="color: inherit; text-decoration: inherit;">edge_<wbr>node</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mlservicesclusterrolesedgenode">MLServices<wbr>Cluster<wbr>Roles<wbr>Edge<wbr>Node<wbr>Args</a></span>
+        <span class="property-type"><a href="#mlservicesclusterrolesedgenode">MLServices<wbr>Cluster<wbr>Roles<wbr>Edge<wbr>Node</a></span>
     </dt>
     <dd>{{% md %}}A `edge_node` block as defined above.
 {{% /md %}}</dd><dt class="property-required"
@@ -1980,7 +1980,7 @@ The following state arguments are supported:
 <a href="#head_node_python" style="color: inherit; text-decoration: inherit;">head_<wbr>node</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mlservicesclusterrolesheadnode">MLServices<wbr>Cluster<wbr>Roles<wbr>Head<wbr>Node<wbr>Args</a></span>
+        <span class="property-type"><a href="#mlservicesclusterrolesheadnode">MLServices<wbr>Cluster<wbr>Roles<wbr>Head<wbr>Node</a></span>
     </dt>
     <dd>{{% md %}}A `head_node` block as defined above.
 {{% /md %}}</dd><dt class="property-required"
@@ -1989,7 +1989,7 @@ The following state arguments are supported:
 <a href="#worker_node_python" style="color: inherit; text-decoration: inherit;">worker_<wbr>node</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mlservicesclusterrolesworkernode">MLServices<wbr>Cluster<wbr>Roles<wbr>Worker<wbr>Node<wbr>Args</a></span>
+        <span class="property-type"><a href="#mlservicesclusterrolesworkernode">MLServices<wbr>Cluster<wbr>Roles<wbr>Worker<wbr>Node</a></span>
     </dt>
     <dd>{{% md %}}A `worker_node` block as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -1998,7 +1998,7 @@ The following state arguments are supported:
 <a href="#zookeeper_node_python" style="color: inherit; text-decoration: inherit;">zookeeper_<wbr>node</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mlservicesclusterroleszookeepernode">MLServices<wbr>Cluster<wbr>Roles<wbr>Zookeeper<wbr>Node<wbr>Args</a></span>
+        <span class="property-type"><a href="#mlservicesclusterroleszookeepernode">MLServices<wbr>Cluster<wbr>Roles<wbr>Zookeeper<wbr>Node</a></span>
     </dt>
     <dd>{{% md %}}A `zookeeper_node` block as defined below.
 {{% /md %}}</dd></dl>

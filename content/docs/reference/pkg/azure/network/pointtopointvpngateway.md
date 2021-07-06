@@ -32,13 +32,77 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var example = new Azure.Network.PointToPointVpnGateway("example", new Azure.Network.PointToPointVpnGatewayArgs
+        var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
         {
-            Location = azurerm_resource_group.Example.Location,
-            ResourceGroupName = azurerm_resource_group.Example.Resource_group_name,
-            VirtualHubId = azurerm_virtual_hub.Example.Id,
-            VpnServerConfigurationId = azurerm_vpn_server_configuration.Example.Id,
+            Location = "West Europe",
+        });
+        var exampleVirtualWan = new Azure.Network.VirtualWan("exampleVirtualWan", new Azure.Network.VirtualWanArgs
+        {
+            ResourceGroupName = exampleResourceGroup.Name,
+            Location = exampleResourceGroup.Location,
+        });
+        var exampleVirtualHub = new Azure.Network.VirtualHub("exampleVirtualHub", new Azure.Network.VirtualHubArgs
+        {
+            ResourceGroupName = exampleResourceGroup.Name,
+            Location = exampleResourceGroup.Location,
+            VirtualWanId = exampleVirtualWan.Id,
+            AddressPrefix = "10.0.0.0/23",
+        });
+        var exampleVpnServerConfiguration = new Azure.Network.VpnServerConfiguration("exampleVpnServerConfiguration", new Azure.Network.VpnServerConfigurationArgs
+        {
+            ResourceGroupName = exampleResourceGroup.Name,
+            Location = exampleResourceGroup.Location,
+            VpnAuthenticationTypes = 
+            {
+                "Certificate",
+            },
+            ClientRootCertificates = 
+            {
+                new Azure.Network.Inputs.VpnServerConfigurationClientRootCertificateArgs
+                {
+                    Name = "DigiCert-Federated-ID-Root-CA",
+                    PublicCertData = @"MIIDuzCCAqOgAwIBAgIQCHTZWCM+IlfFIRXIvyKSrjANBgkqhkiG9w0BAQsFADBn
+MQswCQYDVQQGEwJVUzEVMBMGA1UEChMMRGlnaUNlcnQgSW5jMRkwFwYDVQQLExB3
+d3cuZGlnaWNlcnQuY29tMSYwJAYDVQQDEx1EaWdpQ2VydCBGZWRlcmF0ZWQgSUQg
+Um9vdCBDQTAeFw0xMzAxMTUxMjAwMDBaFw0zMzAxMTUxMjAwMDBaMGcxCzAJBgNV
+BAYTAlVTMRUwEwYDVQQKEwxEaWdpQ2VydCBJbmMxGTAXBgNVBAsTEHd3dy5kaWdp
+Y2VydC5jb20xJjAkBgNVBAMTHURpZ2lDZXJ0IEZlZGVyYXRlZCBJRCBSb290IENB
+MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAvAEB4pcCqnNNOWE6Ur5j
+QPUH+1y1F9KdHTRSza6k5iDlXq1kGS1qAkuKtw9JsiNRrjltmFnzMZRBbX8Tlfl8
+zAhBmb6dDduDGED01kBsTkgywYPxXVTKec0WxYEEF0oMn4wSYNl0lt2eJAKHXjNf
+GTwiibdP8CUR2ghSM2sUTI8Nt1Omfc4SMHhGhYD64uJMbX98THQ/4LMGuYegou+d
+GTiahfHtjn7AboSEknwAMJHCh5RlYZZ6B1O4QbKJ+34Q0eKgnI3X6Vc9u0zf6DH8
+Dk+4zQDYRRTqTnVO3VT8jzqDlCRuNtq6YvryOWN74/dq8LQhUnXHvFyrsdMaE1X2
+DwIDAQABo2MwYTAPBgNVHRMBAf8EBTADAQH/MA4GA1UdDwEB/wQEAwIBhjAdBgNV
+HQ4EFgQUGRdkFnbGt1EWjKwbUne+5OaZvRYwHwYDVR0jBBgwFoAUGRdkFnbGt1EW
+jKwbUne+5OaZvRYwDQYJKoZIhvcNAQELBQADggEBAHcqsHkrjpESqfuVTRiptJfP
+9JbdtWqRTmOf6uJi2c8YVqI6XlKXsD8C1dUUaaHKLUJzvKiazibVuBwMIT84AyqR
+QELn3e0BtgEymEygMU569b01ZPxoFSnNXc7qDZBDef8WfqAV/sxkTi8L9BkmFYfL
+uGLOhRJOFprPdoDIUBB+tmCl3oDcBy3vnUeOEioz8zAkprcb3GHwHAK+vHmmfgcn
+WsfMLH4JCLa/tRYL+Rw/N3ybCkDp00s0WUZ+AoDywSl0Q/ZEnNY0MsFiw6LyIdbq
+M/s/1JRtO3bDSzD9TazRVzn2oBqzSa8VgIo5C1nOnoAKJTlsClJKvIhnRlaLQqk=
+",
+                },
+            },
+        });
+        var examplePointToPointVpnGateway = new Azure.Network.PointToPointVpnGateway("examplePointToPointVpnGateway", new Azure.Network.PointToPointVpnGatewayArgs
+        {
+            Location = exampleResourceGroup.Location,
+            ResourceGroupName = exampleResourceGroup.Name,
+            VirtualHubId = exampleVirtualHub.Id,
+            VpnServerConfigurationId = exampleVpnServerConfiguration.Id,
             ScaleUnit = 1,
+            ConnectionConfiguration = new Azure.Network.Inputs.PointToPointVpnGatewayConnectionConfigurationArgs
+            {
+                Name = "example-gateway-config",
+                VpnClientAddressPool = new Azure.Network.Inputs.PointToPointVpnGatewayConnectionConfigurationVpnClientAddressPoolArgs
+                {
+                    AddressPrefixes = 
+                    {
+                        "10.0.2.0/24",
+                    },
+                },
+            },
         });
     }
 
@@ -55,18 +119,67 @@ class MyStack : Stack
 package main
 
 import (
+	"fmt"
+
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/core"
 	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/network"
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := network.NewPointToPointVpnGateway(ctx, "example", &network.PointToPointVpnGatewayArgs{
-			Location:                 pulumi.Any(azurerm_resource_group.Example.Location),
-			ResourceGroupName:        pulumi.Any(azurerm_resource_group.Example.Resource_group_name),
-			VirtualHubId:             pulumi.Any(azurerm_virtual_hub.Example.Id),
-			VpnServerConfigurationId: pulumi.Any(azurerm_vpn_server_configuration.Example.Id),
+		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
+			Location: pulumi.String("West Europe"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleVirtualWan, err := network.NewVirtualWan(ctx, "exampleVirtualWan", &network.VirtualWanArgs{
+			ResourceGroupName: exampleResourceGroup.Name,
+			Location:          exampleResourceGroup.Location,
+		})
+		if err != nil {
+			return err
+		}
+		exampleVirtualHub, err := network.NewVirtualHub(ctx, "exampleVirtualHub", &network.VirtualHubArgs{
+			ResourceGroupName: exampleResourceGroup.Name,
+			Location:          exampleResourceGroup.Location,
+			VirtualWanId:      exampleVirtualWan.ID(),
+			AddressPrefix:     pulumi.String("10.0.0.0/23"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleVpnServerConfiguration, err := network.NewVpnServerConfiguration(ctx, "exampleVpnServerConfiguration", &network.VpnServerConfigurationArgs{
+			ResourceGroupName: exampleResourceGroup.Name,
+			Location:          exampleResourceGroup.Location,
+			VpnAuthenticationTypes: pulumi.String(pulumi.String{
+				pulumi.String("Certificate"),
+			}),
+			ClientRootCertificates: network.VpnServerConfigurationClientRootCertificateArray{
+				&network.VpnServerConfigurationClientRootCertificateArgs{
+					Name:           pulumi.String("DigiCert-Federated-ID-Root-CA"),
+					PublicCertData: pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "MIIDuzCCAqOgAwIBAgIQCHTZWCM+IlfFIRXIvyKSrjANBgkqhkiG9w0BAQsFADBn\n", "MQswCQYDVQQGEwJVUzEVMBMGA1UEChMMRGlnaUNlcnQgSW5jMRkwFwYDVQQLExB3\n", "d3cuZGlnaWNlcnQuY29tMSYwJAYDVQQDEx1EaWdpQ2VydCBGZWRlcmF0ZWQgSUQg\n", "Um9vdCBDQTAeFw0xMzAxMTUxMjAwMDBaFw0zMzAxMTUxMjAwMDBaMGcxCzAJBgNV\n", "BAYTAlVTMRUwEwYDVQQKEwxEaWdpQ2VydCBJbmMxGTAXBgNVBAsTEHd3dy5kaWdp\n", "Y2VydC5jb20xJjAkBgNVBAMTHURpZ2lDZXJ0IEZlZGVyYXRlZCBJRCBSb290IENB\n", "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAvAEB4pcCqnNNOWE6Ur5j\n", "QPUH+1y1F9KdHTRSza6k5iDlXq1kGS1qAkuKtw9JsiNRrjltmFnzMZRBbX8Tlfl8\n", "zAhBmb6dDduDGED01kBsTkgywYPxXVTKec0WxYEEF0oMn4wSYNl0lt2eJAKHXjNf\n", "GTwiibdP8CUR2ghSM2sUTI8Nt1Omfc4SMHhGhYD64uJMbX98THQ/4LMGuYegou+d\n", "GTiahfHtjn7AboSEknwAMJHCh5RlYZZ6B1O4QbKJ+34Q0eKgnI3X6Vc9u0zf6DH8\n", "Dk+4zQDYRRTqTnVO3VT8jzqDlCRuNtq6YvryOWN74/dq8LQhUnXHvFyrsdMaE1X2\n", "DwIDAQABo2MwYTAPBgNVHRMBAf8EBTADAQH/MA4GA1UdDwEB/wQEAwIBhjAdBgNV\n", "HQ4EFgQUGRdkFnbGt1EWjKwbUne+5OaZvRYwHwYDVR0jBBgwFoAUGRdkFnbGt1EW\n", "jKwbUne+5OaZvRYwDQYJKoZIhvcNAQELBQADggEBAHcqsHkrjpESqfuVTRiptJfP\n", "9JbdtWqRTmOf6uJi2c8YVqI6XlKXsD8C1dUUaaHKLUJzvKiazibVuBwMIT84AyqR\n", "QELn3e0BtgEymEygMU569b01ZPxoFSnNXc7qDZBDef8WfqAV/sxkTi8L9BkmFYfL\n", "uGLOhRJOFprPdoDIUBB+tmCl3oDcBy3vnUeOEioz8zAkprcb3GHwHAK+vHmmfgcn\n", "WsfMLH4JCLa/tRYL+Rw/N3ybCkDp00s0WUZ+AoDywSl0Q/ZEnNY0MsFiw6LyIdbq\n", "M/s/1JRtO3bDSzD9TazRVzn2oBqzSa8VgIo5C1nOnoAKJTlsClJKvIhnRlaLQqk=\n")),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		_, err = network.NewPointToPointVpnGateway(ctx, "examplePointToPointVpnGateway", &network.PointToPointVpnGatewayArgs{
+			Location:                 exampleResourceGroup.Location,
+			ResourceGroupName:        exampleResourceGroup.Name,
+			VirtualHubId:             exampleVirtualHub.ID(),
+			VpnServerConfigurationId: exampleVpnServerConfiguration.ID(),
 			ScaleUnit:                pulumi.Int(1),
+			ConnectionConfiguration: &network.PointToPointVpnGatewayConnectionConfigurationArgs{
+				Name: pulumi.String("example-gateway-config"),
+				VpnClientAddressPool: &network.PointToPointVpnGatewayConnectionConfigurationVpnClientAddressPoolArgs{
+					AddressPrefixes: pulumi.StringArray{
+						pulumi.String("10.0.2.0/24"),
+					},
+				},
+			},
 		})
 		if err != nil {
 			return err
@@ -86,12 +199,55 @@ func main() {
 import pulumi
 import pulumi_azure as azure
 
-example = azure.network.PointToPointVpnGateway("example",
-    location=azurerm_resource_group["example"]["location"],
-    resource_group_name=azurerm_resource_group["example"]["resource_group_name"],
-    virtual_hub_id=azurerm_virtual_hub["example"]["id"],
-    vpn_server_configuration_id=azurerm_vpn_server_configuration["example"]["id"],
-    scale_unit=1)
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
+example_virtual_wan = azure.network.VirtualWan("exampleVirtualWan",
+    resource_group_name=example_resource_group.name,
+    location=example_resource_group.location)
+example_virtual_hub = azure.network.VirtualHub("exampleVirtualHub",
+    resource_group_name=example_resource_group.name,
+    location=example_resource_group.location,
+    virtual_wan_id=example_virtual_wan.id,
+    address_prefix="10.0.0.0/23")
+example_vpn_server_configuration = azure.network.VpnServerConfiguration("exampleVpnServerConfiguration",
+    resource_group_name=example_resource_group.name,
+    location=example_resource_group.location,
+    vpn_authentication_types=["Certificate"],
+    client_root_certificates=[azure.network.VpnServerConfigurationClientRootCertificateArgs(
+        name="DigiCert-Federated-ID-Root-CA",
+        public_cert_data="""MIIDuzCCAqOgAwIBAgIQCHTZWCM+IlfFIRXIvyKSrjANBgkqhkiG9w0BAQsFADBn
+MQswCQYDVQQGEwJVUzEVMBMGA1UEChMMRGlnaUNlcnQgSW5jMRkwFwYDVQQLExB3
+d3cuZGlnaWNlcnQuY29tMSYwJAYDVQQDEx1EaWdpQ2VydCBGZWRlcmF0ZWQgSUQg
+Um9vdCBDQTAeFw0xMzAxMTUxMjAwMDBaFw0zMzAxMTUxMjAwMDBaMGcxCzAJBgNV
+BAYTAlVTMRUwEwYDVQQKEwxEaWdpQ2VydCBJbmMxGTAXBgNVBAsTEHd3dy5kaWdp
+Y2VydC5jb20xJjAkBgNVBAMTHURpZ2lDZXJ0IEZlZGVyYXRlZCBJRCBSb290IENB
+MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAvAEB4pcCqnNNOWE6Ur5j
+QPUH+1y1F9KdHTRSza6k5iDlXq1kGS1qAkuKtw9JsiNRrjltmFnzMZRBbX8Tlfl8
+zAhBmb6dDduDGED01kBsTkgywYPxXVTKec0WxYEEF0oMn4wSYNl0lt2eJAKHXjNf
+GTwiibdP8CUR2ghSM2sUTI8Nt1Omfc4SMHhGhYD64uJMbX98THQ/4LMGuYegou+d
+GTiahfHtjn7AboSEknwAMJHCh5RlYZZ6B1O4QbKJ+34Q0eKgnI3X6Vc9u0zf6DH8
+Dk+4zQDYRRTqTnVO3VT8jzqDlCRuNtq6YvryOWN74/dq8LQhUnXHvFyrsdMaE1X2
+DwIDAQABo2MwYTAPBgNVHRMBAf8EBTADAQH/MA4GA1UdDwEB/wQEAwIBhjAdBgNV
+HQ4EFgQUGRdkFnbGt1EWjKwbUne+5OaZvRYwHwYDVR0jBBgwFoAUGRdkFnbGt1EW
+jKwbUne+5OaZvRYwDQYJKoZIhvcNAQELBQADggEBAHcqsHkrjpESqfuVTRiptJfP
+9JbdtWqRTmOf6uJi2c8YVqI6XlKXsD8C1dUUaaHKLUJzvKiazibVuBwMIT84AyqR
+QELn3e0BtgEymEygMU569b01ZPxoFSnNXc7qDZBDef8WfqAV/sxkTi8L9BkmFYfL
+uGLOhRJOFprPdoDIUBB+tmCl3oDcBy3vnUeOEioz8zAkprcb3GHwHAK+vHmmfgcn
+WsfMLH4JCLa/tRYL+Rw/N3ybCkDp00s0WUZ+AoDywSl0Q/ZEnNY0MsFiw6LyIdbq
+M/s/1JRtO3bDSzD9TazRVzn2oBqzSa8VgIo5C1nOnoAKJTlsClJKvIhnRlaLQqk=
+""",
+    )])
+example_point_to_point_vpn_gateway = azure.network.PointToPointVpnGateway("examplePointToPointVpnGateway",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    virtual_hub_id=example_virtual_hub.id,
+    vpn_server_configuration_id=example_vpn_server_configuration.id,
+    scale_unit=1,
+    connection_configuration=azure.network.PointToPointVpnGatewayConnectionConfigurationArgs(
+        name="example-gateway-config",
+        vpn_client_address_pool=azure.network.PointToPointVpnGatewayConnectionConfigurationVpnClientAddressPoolArgs(
+            address_prefixes=["10.0.2.0/24"],
+        ),
+    ))
 ```
 
 
@@ -105,12 +261,58 @@ example = azure.network.PointToPointVpnGateway("example",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const example = new azure.network.PointToPointVpnGateway("example", {
-    location: azurerm_resource_group.example.location,
-    resourceGroupName: azurerm_resource_group.example.resource_group_name,
-    virtualHubId: azurerm_virtual_hub.example.id,
-    vpnServerConfigurationId: azurerm_vpn_server_configuration.example.id,
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
+const exampleVirtualWan = new azure.network.VirtualWan("exampleVirtualWan", {
+    resourceGroupName: exampleResourceGroup.name,
+    location: exampleResourceGroup.location,
+});
+const exampleVirtualHub = new azure.network.VirtualHub("exampleVirtualHub", {
+    resourceGroupName: exampleResourceGroup.name,
+    location: exampleResourceGroup.location,
+    virtualWanId: exampleVirtualWan.id,
+    addressPrefix: "10.0.0.0/23",
+});
+const exampleVpnServerConfiguration = new azure.network.VpnServerConfiguration("exampleVpnServerConfiguration", {
+    resourceGroupName: exampleResourceGroup.name,
+    location: exampleResourceGroup.location,
+    vpnAuthenticationTypes: ["Certificate"],
+    clientRootCertificates: [{
+        name: "DigiCert-Federated-ID-Root-CA",
+        publicCertData: `MIIDuzCCAqOgAwIBAgIQCHTZWCM+IlfFIRXIvyKSrjANBgkqhkiG9w0BAQsFADBn
+MQswCQYDVQQGEwJVUzEVMBMGA1UEChMMRGlnaUNlcnQgSW5jMRkwFwYDVQQLExB3
+d3cuZGlnaWNlcnQuY29tMSYwJAYDVQQDEx1EaWdpQ2VydCBGZWRlcmF0ZWQgSUQg
+Um9vdCBDQTAeFw0xMzAxMTUxMjAwMDBaFw0zMzAxMTUxMjAwMDBaMGcxCzAJBgNV
+BAYTAlVTMRUwEwYDVQQKEwxEaWdpQ2VydCBJbmMxGTAXBgNVBAsTEHd3dy5kaWdp
+Y2VydC5jb20xJjAkBgNVBAMTHURpZ2lDZXJ0IEZlZGVyYXRlZCBJRCBSb290IENB
+MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAvAEB4pcCqnNNOWE6Ur5j
+QPUH+1y1F9KdHTRSza6k5iDlXq1kGS1qAkuKtw9JsiNRrjltmFnzMZRBbX8Tlfl8
+zAhBmb6dDduDGED01kBsTkgywYPxXVTKec0WxYEEF0oMn4wSYNl0lt2eJAKHXjNf
+GTwiibdP8CUR2ghSM2sUTI8Nt1Omfc4SMHhGhYD64uJMbX98THQ/4LMGuYegou+d
+GTiahfHtjn7AboSEknwAMJHCh5RlYZZ6B1O4QbKJ+34Q0eKgnI3X6Vc9u0zf6DH8
+Dk+4zQDYRRTqTnVO3VT8jzqDlCRuNtq6YvryOWN74/dq8LQhUnXHvFyrsdMaE1X2
+DwIDAQABo2MwYTAPBgNVHRMBAf8EBTADAQH/MA4GA1UdDwEB/wQEAwIBhjAdBgNV
+HQ4EFgQUGRdkFnbGt1EWjKwbUne+5OaZvRYwHwYDVR0jBBgwFoAUGRdkFnbGt1EW
+jKwbUne+5OaZvRYwDQYJKoZIhvcNAQELBQADggEBAHcqsHkrjpESqfuVTRiptJfP
+9JbdtWqRTmOf6uJi2c8YVqI6XlKXsD8C1dUUaaHKLUJzvKiazibVuBwMIT84AyqR
+QELn3e0BtgEymEygMU569b01ZPxoFSnNXc7qDZBDef8WfqAV/sxkTi8L9BkmFYfL
+uGLOhRJOFprPdoDIUBB+tmCl3oDcBy3vnUeOEioz8zAkprcb3GHwHAK+vHmmfgcn
+WsfMLH4JCLa/tRYL+Rw/N3ybCkDp00s0WUZ+AoDywSl0Q/ZEnNY0MsFiw6LyIdbq
+M/s/1JRtO3bDSzD9TazRVzn2oBqzSa8VgIo5C1nOnoAKJTlsClJKvIhnRlaLQqk=
+`,
+    }],
+});
+const examplePointToPointVpnGateway = new azure.network.PointToPointVpnGateway("examplePointToPointVpnGateway", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    virtualHubId: exampleVirtualHub.id,
+    vpnServerConfigurationId: exampleVpnServerConfiguration.id,
     scaleUnit: 1,
+    connectionConfiguration: {
+        name: "example-gateway-config",
+        vpnClientAddressPool: {
+            addressPrefixes: ["10.0.2.0/24"],
+        },
+    },
 });
 ```
 
@@ -300,7 +502,7 @@ The PointToPointVpnGateway resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The Scale Unit for this Point-to-Site VPN Gateway.
+    <dd>{{% md %}}The [Scale Unit](https://docs.microsoft.com/en-us/azure/virtual-wan/virtual-wan-faq#what-is-a-virtual-wan-gateway-scale-unit) for this Point-to-Site VPN Gateway.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="virtualhubid_csharp">
@@ -365,7 +567,7 @@ The PointToPointVpnGateway resource accepts the following [input]({{< relref "/d
 <a href="#connectionconfiguration_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pointtopointvpngatewayconnectionconfiguration">Point<wbr>To<wbr>Point<wbr>Vpn<wbr>Gateway<wbr>Connection<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#pointtopointvpngatewayconnectionconfiguration">Point<wbr>To<wbr>Point<wbr>Vpn<wbr>Gateway<wbr>Connection<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `connection_configuration` block as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -385,7 +587,7 @@ The PointToPointVpnGateway resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The Scale Unit for this Point-to-Site VPN Gateway.
+    <dd>{{% md %}}The [Scale Unit](https://docs.microsoft.com/en-us/azure/virtual-wan/virtual-wan-faq#what-is-a-virtual-wan-gateway-scale-unit) for this Point-to-Site VPN Gateway.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="virtualhubid_go">
@@ -470,7 +672,7 @@ The PointToPointVpnGateway resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The Scale Unit for this Point-to-Site VPN Gateway.
+    <dd>{{% md %}}The [Scale Unit](https://docs.microsoft.com/en-us/azure/virtual-wan/virtual-wan-faq#what-is-a-virtual-wan-gateway-scale-unit) for this Point-to-Site VPN Gateway.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="virtualhubid_nodejs">
@@ -555,7 +757,7 @@ The PointToPointVpnGateway resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The Scale Unit for this Point-to-Site VPN Gateway.
+    <dd>{{% md %}}The [Scale Unit](https://docs.microsoft.com/en-us/azure/virtual-wan/virtual-wan-faq#what-is-a-virtual-wan-gateway-scale-unit) for this Point-to-Site VPN Gateway.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="virtual_hub_id_python">
@@ -856,7 +1058,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The Scale Unit for this Point-to-Site VPN Gateway.
+    <dd>{{% md %}}The [Scale Unit](https://docs.microsoft.com/en-us/azure/virtual-wan/virtual-wan-faq#what-is-a-virtual-wan-gateway-scale-unit) for this Point-to-Site VPN Gateway.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_csharp">
@@ -894,7 +1096,7 @@ The following state arguments are supported:
 <a href="#state_connectionconfiguration_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pointtopointvpngatewayconnectionconfiguration">Point<wbr>To<wbr>Point<wbr>Vpn<wbr>Gateway<wbr>Connection<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#pointtopointvpngatewayconnectionconfiguration">Point<wbr>To<wbr>Point<wbr>Vpn<wbr>Gateway<wbr>Connection<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `connection_configuration` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -941,7 +1143,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The Scale Unit for this Point-to-Site VPN Gateway.
+    <dd>{{% md %}}The [Scale Unit](https://docs.microsoft.com/en-us/azure/virtual-wan/virtual-wan-faq#what-is-a-virtual-wan-gateway-scale-unit) for this Point-to-Site VPN Gateway.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
@@ -1026,7 +1228,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The Scale Unit for this Point-to-Site VPN Gateway.
+    <dd>{{% md %}}The [Scale Unit](https://docs.microsoft.com/en-us/azure/virtual-wan/virtual-wan-faq#what-is-a-virtual-wan-gateway-scale-unit) for this Point-to-Site VPN Gateway.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_nodejs">
@@ -1111,7 +1313,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The Scale Unit for this Point-to-Site VPN Gateway.
+    <dd>{{% md %}}The [Scale Unit](https://docs.microsoft.com/en-us/azure/virtual-wan/virtual-wan-faq#what-is-a-virtual-wan-gateway-scale-unit) for this Point-to-Site VPN Gateway.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">
@@ -1169,7 +1371,7 @@ The following state arguments are supported:
 <a href="#vpnclientaddresspool_csharp" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Client<wbr>Address<wbr>Pool</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pointtopointvpngatewayconnectionconfigurationvpnclientaddresspool">Point<wbr>To<wbr>Point<wbr>Vpn<wbr>Gateway<wbr>Connection<wbr>Configuration<wbr>Vpn<wbr>Client<wbr>Address<wbr>Pool<wbr>Args</a></span>
+        <span class="property-type"><a href="#pointtopointvpngatewayconnectionconfigurationvpnclientaddresspool">Point<wbr>To<wbr>Point<wbr>Vpn<wbr>Gateway<wbr>Connection<wbr>Configuration<wbr>Vpn<wbr>Client<wbr>Address<wbr>Pool</a></span>
     </dt>
     <dd>{{% md %}}A `vpn_client_address_pool` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1178,7 +1380,7 @@ The following state arguments are supported:
 <a href="#route_csharp" style="color: inherit; text-decoration: inherit;">Route</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pointtopointvpngatewayconnectionconfigurationroute">Point<wbr>To<wbr>Point<wbr>Vpn<wbr>Gateway<wbr>Connection<wbr>Configuration<wbr>Route<wbr>Args</a></span>
+        <span class="property-type"><a href="#pointtopointvpngatewayconnectionconfigurationroute">Point<wbr>To<wbr>Point<wbr>Vpn<wbr>Gateway<wbr>Connection<wbr>Configuration<wbr>Route</a></span>
     </dt>
     <dd>{{% md %}}A `route` block as defined below.
 {{% /md %}}</dd></dl>
@@ -1231,7 +1433,7 @@ The following state arguments are supported:
 <a href="#vpnclientaddresspool_nodejs" style="color: inherit; text-decoration: inherit;">vpn<wbr>Client<wbr>Address<wbr>Pool</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pointtopointvpngatewayconnectionconfigurationvpnclientaddresspool">Point<wbr>To<wbr>Point<wbr>Vpn<wbr>Gateway<wbr>Connection<wbr>Configuration<wbr>Vpn<wbr>Client<wbr>Address<wbr>Pool<wbr>Args</a></span>
+        <span class="property-type"><a href="#pointtopointvpngatewayconnectionconfigurationvpnclientaddresspool">Point<wbr>To<wbr>Point<wbr>Vpn<wbr>Gateway<wbr>Connection<wbr>Configuration<wbr>Vpn<wbr>Client<wbr>Address<wbr>Pool</a></span>
     </dt>
     <dd>{{% md %}}A `vpn_client_address_pool` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1240,7 +1442,7 @@ The following state arguments are supported:
 <a href="#route_nodejs" style="color: inherit; text-decoration: inherit;">route</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pointtopointvpngatewayconnectionconfigurationroute">Point<wbr>To<wbr>Point<wbr>Vpn<wbr>Gateway<wbr>Connection<wbr>Configuration<wbr>Route<wbr>Args</a></span>
+        <span class="property-type"><a href="#pointtopointvpngatewayconnectionconfigurationroute">Point<wbr>To<wbr>Point<wbr>Vpn<wbr>Gateway<wbr>Connection<wbr>Configuration<wbr>Route</a></span>
     </dt>
     <dd>{{% md %}}A `route` block as defined below.
 {{% /md %}}</dd></dl>
@@ -1262,7 +1464,7 @@ The following state arguments are supported:
 <a href="#vpn_client_address_pool_python" style="color: inherit; text-decoration: inherit;">vpn_<wbr>client_<wbr>address_<wbr>pool</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pointtopointvpngatewayconnectionconfigurationvpnclientaddresspool">Point<wbr>To<wbr>Point<wbr>Vpn<wbr>Gateway<wbr>Connection<wbr>Configuration<wbr>Vpn<wbr>Client<wbr>Address<wbr>Pool<wbr>Args</a></span>
+        <span class="property-type"><a href="#pointtopointvpngatewayconnectionconfigurationvpnclientaddresspool">Point<wbr>To<wbr>Point<wbr>Vpn<wbr>Gateway<wbr>Connection<wbr>Configuration<wbr>Vpn<wbr>Client<wbr>Address<wbr>Pool</a></span>
     </dt>
     <dd>{{% md %}}A `vpn_client_address_pool` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1271,7 +1473,7 @@ The following state arguments are supported:
 <a href="#route_python" style="color: inherit; text-decoration: inherit;">route</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pointtopointvpngatewayconnectionconfigurationroute">Point<wbr>To<wbr>Point<wbr>Vpn<wbr>Gateway<wbr>Connection<wbr>Configuration<wbr>Route<wbr>Args</a></span>
+        <span class="property-type"><a href="#pointtopointvpngatewayconnectionconfigurationroute">Point<wbr>To<wbr>Point<wbr>Vpn<wbr>Gateway<wbr>Connection<wbr>Configuration<wbr>Route</a></span>
     </dt>
     <dd>{{% md %}}A `route` block as defined below.
 {{% /md %}}</dd></dl>
@@ -1295,7 +1497,7 @@ The following state arguments are supported:
 <a href="#propagatedroutetable_csharp" style="color: inherit; text-decoration: inherit;">Propagated<wbr>Route<wbr>Table</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pointtopointvpngatewayconnectionconfigurationroutepropagatedroutetable">Point<wbr>To<wbr>Point<wbr>Vpn<wbr>Gateway<wbr>Connection<wbr>Configuration<wbr>Route<wbr>Propagated<wbr>Route<wbr>Table<wbr>Args</a></span>
+        <span class="property-type"><a href="#pointtopointvpngatewayconnectionconfigurationroutepropagatedroutetable">Point<wbr>To<wbr>Point<wbr>Vpn<wbr>Gateway<wbr>Connection<wbr>Configuration<wbr>Route<wbr>Propagated<wbr>Route<wbr>Table</a></span>
     </dt>
     <dd>{{% md %}}A `propagated_route_table` block as defined below.
 {{% /md %}}</dd></dl>
@@ -1339,7 +1541,7 @@ The following state arguments are supported:
 <a href="#propagatedroutetable_nodejs" style="color: inherit; text-decoration: inherit;">propagated<wbr>Route<wbr>Table</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pointtopointvpngatewayconnectionconfigurationroutepropagatedroutetable">Point<wbr>To<wbr>Point<wbr>Vpn<wbr>Gateway<wbr>Connection<wbr>Configuration<wbr>Route<wbr>Propagated<wbr>Route<wbr>Table<wbr>Args</a></span>
+        <span class="property-type"><a href="#pointtopointvpngatewayconnectionconfigurationroutepropagatedroutetable">Point<wbr>To<wbr>Point<wbr>Vpn<wbr>Gateway<wbr>Connection<wbr>Configuration<wbr>Route<wbr>Propagated<wbr>Route<wbr>Table</a></span>
     </dt>
     <dd>{{% md %}}A `propagated_route_table` block as defined below.
 {{% /md %}}</dd></dl>
@@ -1361,7 +1563,7 @@ The following state arguments are supported:
 <a href="#propagated_route_table_python" style="color: inherit; text-decoration: inherit;">propagated_<wbr>route_<wbr>table</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pointtopointvpngatewayconnectionconfigurationroutepropagatedroutetable">Point<wbr>To<wbr>Point<wbr>Vpn<wbr>Gateway<wbr>Connection<wbr>Configuration<wbr>Route<wbr>Propagated<wbr>Route<wbr>Table<wbr>Args</a></span>
+        <span class="property-type"><a href="#pointtopointvpngatewayconnectionconfigurationroutepropagatedroutetable">Point<wbr>To<wbr>Point<wbr>Vpn<wbr>Gateway<wbr>Connection<wbr>Configuration<wbr>Route<wbr>Propagated<wbr>Route<wbr>Table</a></span>
     </dt>
     <dd>{{% md %}}A `propagated_route_table` block as defined below.
 {{% /md %}}</dd></dl>

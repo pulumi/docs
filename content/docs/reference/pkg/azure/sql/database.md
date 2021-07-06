@@ -434,7 +434,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#extendedauditingpolicy_go" style="color: inherit; text-decoration: inherit;">Extended<wbr>Auditing<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databaseextendedauditingpolicy">Database<wbr>Extended<wbr>Auditing<wbr>Policy</a></span>
+        <span class="property-type"><a href="#databaseextendedauditingpolicy">Database<wbr>Extended<wbr>Auditing<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `extended_auditing_policy` block as defined below.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}the `extended_auditing_policy` block has been moved to `azurerm_mssql_server_extended_auditing_policy` and `azurerm_mssql_database_extended_auditing_policy`. This block will be removed in version 3.0 of the provider.{{% /md %}}</p></dd><dt class="property-optional"
@@ -443,7 +443,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#import_go" style="color: inherit; text-decoration: inherit;">Import</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databaseimport">Database<wbr>Import</a></span>
+        <span class="property-type"><a href="#databaseimport">Database<wbr>Import<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A Database Import block as documented below. `create_mode` must be set to `Default`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -551,7 +551,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#threatdetectionpolicy_go" style="color: inherit; text-decoration: inherit;">Threat<wbr>Detection<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databasethreatdetectionpolicy">Database<wbr>Threat<wbr>Detection<wbr>Policy</a></span>
+        <span class="property-type"><a href="#databasethreatdetectionpolicy">Database<wbr>Threat<wbr>Detection<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Threat detection policy configuration. The `threat_detection_policy` block supports fields documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1548,7 +1548,7 @@ The following state arguments are supported:
 <a href="#state_extendedauditingpolicy_go" style="color: inherit; text-decoration: inherit;">Extended<wbr>Auditing<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databaseextendedauditingpolicy">Database<wbr>Extended<wbr>Auditing<wbr>Policy</a></span>
+        <span class="property-type"><a href="#databaseextendedauditingpolicy">Database<wbr>Extended<wbr>Auditing<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `extended_auditing_policy` block as defined below.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}the `extended_auditing_policy` block has been moved to `azurerm_mssql_server_extended_auditing_policy` and `azurerm_mssql_database_extended_auditing_policy`. This block will be removed in version 3.0 of the provider.{{% /md %}}</p></dd><dt class="property-optional"
@@ -1557,7 +1557,7 @@ The following state arguments are supported:
 <a href="#state_import_go" style="color: inherit; text-decoration: inherit;">Import</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databaseimport">Database<wbr>Import</a></span>
+        <span class="property-type"><a href="#databaseimport">Database<wbr>Import<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A Database Import block as documented below. `create_mode` must be set to `Default`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1683,7 +1683,7 @@ The following state arguments are supported:
 <a href="#state_threatdetectionpolicy_go" style="color: inherit; text-decoration: inherit;">Threat<wbr>Detection<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#databasethreatdetectionpolicy">Database<wbr>Threat<wbr>Detection<wbr>Policy</a></span>
+        <span class="property-type"><a href="#databasethreatdetectionpolicy">Database<wbr>Threat<wbr>Detection<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Threat detection policy configuration. The `threat_detection_policy` block supports fields documented below.
 {{% /md %}}</dd><dt class="property-optional"

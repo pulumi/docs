@@ -532,7 +532,7 @@ The OutboundRule resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#frontendipconfigurations_go" style="color: inherit; text-decoration: inherit;">Frontend<wbr>Ip<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#outboundrulefrontendipconfiguration">[]Outbound<wbr>Rule<wbr>Frontend<wbr>Ip<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#outboundrulefrontendipconfiguration">[]Outbound<wbr>Rule<wbr>Frontend<wbr>Ip<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `frontend_ip_configuration` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1034,7 +1034,7 @@ The following state arguments are supported:
 <a href="#state_frontendipconfigurations_go" style="color: inherit; text-decoration: inherit;">Frontend<wbr>Ip<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#outboundrulefrontendipconfiguration">[]Outbound<wbr>Rule<wbr>Frontend<wbr>Ip<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#outboundrulefrontendipconfiguration">[]Outbound<wbr>Rule<wbr>Frontend<wbr>Ip<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `frontend_ip_configuration` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"

@@ -480,7 +480,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicesku">Service<wbr>Sku</a></span>
+        <span class="property-type"><a href="#servicesku">Service<wbr>Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `sku` block as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -489,7 +489,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#cors_go" style="color: inherit; text-decoration: inherit;">Cors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecor">[]Service<wbr>Cor</a></span>
+        <span class="property-type"><a href="#servicecor">[]Service<wbr>Cor<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `cors` block as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -498,7 +498,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#features_go" style="color: inherit; text-decoration: inherit;">Features</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicefeature">[]Service<wbr>Feature</a></span>
+        <span class="property-type"><a href="#servicefeature">[]Service<wbr>Feature<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `features` block as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -534,7 +534,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#upstreamendpoints_go" style="color: inherit; text-decoration: inherit;">Upstream<wbr>Endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceupstreamendpoint">[]Service<wbr>Upstream<wbr>Endpoint</a></span>
+        <span class="property-type"><a href="#serviceupstreamendpoint">[]Service<wbr>Upstream<wbr>Endpoint<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `upstream_endpoint` block as documented below. Using this block requires the SignalR service to be Serverless. When creating multiple blocks they will be processed in the order they are defined in.
 {{% /md %}}</dd></dl>
@@ -1331,7 +1331,7 @@ The following state arguments are supported:
 <a href="#state_cors_go" style="color: inherit; text-decoration: inherit;">Cors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecor">[]Service<wbr>Cor</a></span>
+        <span class="property-type"><a href="#servicecor">[]Service<wbr>Cor<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `cors` block as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1340,7 +1340,7 @@ The following state arguments are supported:
 <a href="#state_features_go" style="color: inherit; text-decoration: inherit;">Features</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicefeature">[]Service<wbr>Feature</a></span>
+        <span class="property-type"><a href="#servicefeature">[]Service<wbr>Feature<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `features` block as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1448,7 +1448,7 @@ The following state arguments are supported:
 <a href="#state_sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicesku">Service<wbr>Sku</a></span>
+        <span class="property-type"><a href="#servicesku">Service<wbr>Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `sku` block as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1466,7 +1466,7 @@ The following state arguments are supported:
 <a href="#state_upstreamendpoints_go" style="color: inherit; text-decoration: inherit;">Upstream<wbr>Endpoints</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceupstreamendpoint">[]Service<wbr>Upstream<wbr>Endpoint</a></span>
+        <span class="property-type"><a href="#serviceupstreamendpoint">[]Service<wbr>Upstream<wbr>Endpoint<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `upstream_endpoint` block as documented below. Using this block requires the SignalR service to be Serverless. When creating multiple blocks they will be processed in the order they are defined in.
 {{% /md %}}</dd></dl>

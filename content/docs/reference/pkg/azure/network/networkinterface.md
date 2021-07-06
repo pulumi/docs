@@ -448,7 +448,7 @@ The NetworkInterface resource accepts the following [input]({{< relref "/docs/in
 <a href="#ipconfigurations_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkinterfaceipconfiguration">[]Network<wbr>Interface<wbr>Ip<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#networkinterfaceipconfiguration">[]Network<wbr>Interface<wbr>Ip<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `ip_configuration` blocks as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -1307,7 +1307,7 @@ The following state arguments are supported:
 <a href="#state_ipconfigurations_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkinterfaceipconfiguration">[]Network<wbr>Interface<wbr>Ip<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#networkinterfaceipconfiguration">[]Network<wbr>Interface<wbr>Ip<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `ip_configuration` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"

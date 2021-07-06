@@ -352,7 +352,7 @@ The SqlDatabase resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#autoscalesettings_go" style="color: inherit; text-decoration: inherit;">Autoscale<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqldatabaseautoscalesettings">Sql<wbr>Database<wbr>Autoscale<wbr>Settings</a></span>
+        <span class="property-type"><a href="#sqldatabaseautoscalesettings">Sql<wbr>Database<wbr>Autoscale<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `autoscale_settings` block as defined below. This must be set upon database creation otherwise it cannot be updated without a manual destroy-apply.
 {{% /md %}}</dd><dt class="property-optional"
@@ -720,7 +720,7 @@ The following state arguments are supported:
 <a href="#state_autoscalesettings_go" style="color: inherit; text-decoration: inherit;">Autoscale<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sqldatabaseautoscalesettings">Sql<wbr>Database<wbr>Autoscale<wbr>Settings</a></span>
+        <span class="property-type"><a href="#sqldatabaseautoscalesettings">Sql<wbr>Database<wbr>Autoscale<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `autoscale_settings` block as defined below. This must be set upon database creation otherwise it cannot be updated without a manual destroy-apply.
 {{% /md %}}</dd><dt class="property-optional"

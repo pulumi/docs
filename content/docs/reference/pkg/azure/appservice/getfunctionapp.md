@@ -1914,6 +1914,14 @@ The following output properties are available:
     <dd>{{% md %}}Allow or Deny access for this IP range. Defaults to Allow.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="headers_csharp">
+<a href="#headers_csharp" style="color: inherit; text-decoration: inherit;">Headers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getfunctionappsiteconfigiprestrictionheaders">Get<wbr>Function<wbr>App<wbr>Site<wbr>Config<wbr>Ip<wbr>Restriction<wbr>Headers</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="ipaddress_csharp">
 <a href="#ipaddress_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Address</a>
 </span>
@@ -1971,6 +1979,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Allow or Deny access for this IP range. Defaults to Allow.
 {{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="headers_go">
+<a href="#headers_go" style="color: inherit; text-decoration: inherit;">Headers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getfunctionappsiteconfigiprestrictionheaders">Get<wbr>Function<wbr>App<wbr>Site<wbr>Config<wbr>Ip<wbr>Restriction<wbr>Headers</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ipaddress_go">
 <a href="#ipaddress_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Address</a>
@@ -2030,6 +2046,14 @@ The following output properties are available:
     <dd>{{% md %}}Allow or Deny access for this IP range. Defaults to Allow.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="headers_nodejs">
+<a href="#headers_nodejs" style="color: inherit; text-decoration: inherit;">headers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getfunctionappsiteconfigiprestrictionheaders">Get<wbr>Function<wbr>App<wbr>Site<wbr>Config<wbr>Ip<wbr>Restriction<wbr>Headers</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="ipaddress_nodejs">
 <a href="#ipaddress_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Address</a>
 </span>
@@ -2088,6 +2112,14 @@ The following output properties are available:
     <dd>{{% md %}}Allow or Deny access for this IP range. Defaults to Allow.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="headers_python">
+<a href="#headers_python" style="color: inherit; text-decoration: inherit;">headers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getfunctionappsiteconfigiprestrictionheaders">Get<wbr>Function<wbr>App<wbr>Site<wbr>Config<wbr>Ip<wbr>Restriction<wbr>Headers</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="ip_address_python">
 <a href="#ip_address_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>address</a>
 </span>
@@ -2132,6 +2164,154 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The Virtual Network Subnet ID used for this IP Restriction.
 {{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="getfunctionappsiteconfigiprestrictionheaders">Get<wbr>Function<wbr>App<wbr>Site<wbr>Config<wbr>Ip<wbr>Restriction<wbr>Headers</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="xazurefdids_csharp">
+<a href="#xazurefdids_csharp" style="color: inherit; text-decoration: inherit;">XAzure<wbr>Fdids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="xfdhealthprobes_csharp">
+<a href="#xfdhealthprobes_csharp" style="color: inherit; text-decoration: inherit;">XFd<wbr>Health<wbr>Probes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="xforwardedfors_csharp">
+<a href="#xforwardedfors_csharp" style="color: inherit; text-decoration: inherit;">XForwarded<wbr>Fors</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="xforwardedhosts_csharp">
+<a href="#xforwardedhosts_csharp" style="color: inherit; text-decoration: inherit;">XForwarded<wbr>Hosts</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="xazurefdids_go">
+<a href="#xazurefdids_go" style="color: inherit; text-decoration: inherit;">XAzure<wbr>Fdids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="xfdhealthprobes_go">
+<a href="#xfdhealthprobes_go" style="color: inherit; text-decoration: inherit;">XFd<wbr>Health<wbr>Probes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="xforwardedfors_go">
+<a href="#xforwardedfors_go" style="color: inherit; text-decoration: inherit;">XForwarded<wbr>Fors</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="xforwardedhosts_go">
+<a href="#xforwardedhosts_go" style="color: inherit; text-decoration: inherit;">XForwarded<wbr>Hosts</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="xazurefdids_nodejs">
+<a href="#xazurefdids_nodejs" style="color: inherit; text-decoration: inherit;">x<wbr>Azure<wbr>Fdids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="xfdhealthprobes_nodejs">
+<a href="#xfdhealthprobes_nodejs" style="color: inherit; text-decoration: inherit;">x<wbr>Fd<wbr>Health<wbr>Probes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="xforwardedfors_nodejs">
+<a href="#xforwardedfors_nodejs" style="color: inherit; text-decoration: inherit;">x<wbr>Forwarded<wbr>Fors</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="xforwardedhosts_nodejs">
+<a href="#xforwardedhosts_nodejs" style="color: inherit; text-decoration: inherit;">x<wbr>Forwarded<wbr>Hosts</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="x_azure_fdids_python">
+<a href="#x_azure_fdids_python" style="color: inherit; text-decoration: inherit;">x_<wbr>azure_<wbr>fdids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="x_fd_health_probes_python">
+<a href="#x_fd_health_probes_python" style="color: inherit; text-decoration: inherit;">x_<wbr>fd_<wbr>health_<wbr>probes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="x_forwarded_fors_python">
+<a href="#x_forwarded_fors_python" style="color: inherit; text-decoration: inherit;">x_<wbr>forwarded_<wbr>fors</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="x_forwarded_hosts_python">
+<a href="#x_forwarded_hosts_python" style="color: inherit; text-decoration: inherit;">x_<wbr>forwarded_<wbr>hosts</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getfunctionappsiteconfigscmiprestriction">Get<wbr>Function<wbr>App<wbr>Site<wbr>Config<wbr>Scm<wbr>Ip<wbr>Restriction</h4>
@@ -2150,6 +2330,14 @@ The following output properties are available:
     <dd>{{% md %}}Allow or Deny access for this IP range. Defaults to Allow.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="headers_csharp">
+<a href="#headers_csharp" style="color: inherit; text-decoration: inherit;">Headers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getfunctionappsiteconfigscmiprestrictionheaders">Get<wbr>Function<wbr>App<wbr>Site<wbr>Config<wbr>Scm<wbr>Ip<wbr>Restriction<wbr>Headers</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="ipaddress_csharp">
 <a href="#ipaddress_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Address</a>
 </span>
@@ -2207,6 +2395,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Allow or Deny access for this IP range. Defaults to Allow.
 {{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="headers_go">
+<a href="#headers_go" style="color: inherit; text-decoration: inherit;">Headers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getfunctionappsiteconfigscmiprestrictionheaders">Get<wbr>Function<wbr>App<wbr>Site<wbr>Config<wbr>Scm<wbr>Ip<wbr>Restriction<wbr>Headers</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ipaddress_go">
 <a href="#ipaddress_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Address</a>
@@ -2266,6 +2462,14 @@ The following output properties are available:
     <dd>{{% md %}}Allow or Deny access for this IP range. Defaults to Allow.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="headers_nodejs">
+<a href="#headers_nodejs" style="color: inherit; text-decoration: inherit;">headers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getfunctionappsiteconfigscmiprestrictionheaders">Get<wbr>Function<wbr>App<wbr>Site<wbr>Config<wbr>Scm<wbr>Ip<wbr>Restriction<wbr>Headers</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="ipaddress_nodejs">
 <a href="#ipaddress_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Address</a>
 </span>
@@ -2324,6 +2528,14 @@ The following output properties are available:
     <dd>{{% md %}}Allow or Deny access for this IP range. Defaults to Allow.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="headers_python">
+<a href="#headers_python" style="color: inherit; text-decoration: inherit;">headers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getfunctionappsiteconfigscmiprestrictionheaders">Get<wbr>Function<wbr>App<wbr>Site<wbr>Config<wbr>Scm<wbr>Ip<wbr>Restriction<wbr>Headers</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="ip_address_python">
 <a href="#ip_address_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>address</a>
 </span>
@@ -2368,6 +2580,154 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The Virtual Network Subnet ID used for this IP Restriction.
 {{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="getfunctionappsiteconfigscmiprestrictionheaders">Get<wbr>Function<wbr>App<wbr>Site<wbr>Config<wbr>Scm<wbr>Ip<wbr>Restriction<wbr>Headers</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="xazurefdids_csharp">
+<a href="#xazurefdids_csharp" style="color: inherit; text-decoration: inherit;">XAzure<wbr>Fdids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="xfdhealthprobes_csharp">
+<a href="#xfdhealthprobes_csharp" style="color: inherit; text-decoration: inherit;">XFd<wbr>Health<wbr>Probes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="xforwardedfors_csharp">
+<a href="#xforwardedfors_csharp" style="color: inherit; text-decoration: inherit;">XForwarded<wbr>Fors</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="xforwardedhosts_csharp">
+<a href="#xforwardedhosts_csharp" style="color: inherit; text-decoration: inherit;">XForwarded<wbr>Hosts</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="xazurefdids_go">
+<a href="#xazurefdids_go" style="color: inherit; text-decoration: inherit;">XAzure<wbr>Fdids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="xfdhealthprobes_go">
+<a href="#xfdhealthprobes_go" style="color: inherit; text-decoration: inherit;">XFd<wbr>Health<wbr>Probes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="xforwardedfors_go">
+<a href="#xforwardedfors_go" style="color: inherit; text-decoration: inherit;">XForwarded<wbr>Fors</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="xforwardedhosts_go">
+<a href="#xforwardedhosts_go" style="color: inherit; text-decoration: inherit;">XForwarded<wbr>Hosts</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="xazurefdids_nodejs">
+<a href="#xazurefdids_nodejs" style="color: inherit; text-decoration: inherit;">x<wbr>Azure<wbr>Fdids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="xfdhealthprobes_nodejs">
+<a href="#xfdhealthprobes_nodejs" style="color: inherit; text-decoration: inherit;">x<wbr>Fd<wbr>Health<wbr>Probes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="xforwardedfors_nodejs">
+<a href="#xforwardedfors_nodejs" style="color: inherit; text-decoration: inherit;">x<wbr>Forwarded<wbr>Fors</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="xforwardedhosts_nodejs">
+<a href="#xforwardedhosts_nodejs" style="color: inherit; text-decoration: inherit;">x<wbr>Forwarded<wbr>Hosts</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="x_azure_fdids_python">
+<a href="#x_azure_fdids_python" style="color: inherit; text-decoration: inherit;">x_<wbr>azure_<wbr>fdids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="x_fd_health_probes_python">
+<a href="#x_fd_health_probes_python" style="color: inherit; text-decoration: inherit;">x_<wbr>fd_<wbr>health_<wbr>probes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="x_forwarded_fors_python">
+<a href="#x_forwarded_fors_python" style="color: inherit; text-decoration: inherit;">x_<wbr>forwarded_<wbr>fors</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="x_forwarded_hosts_python">
+<a href="#x_forwarded_hosts_python" style="color: inherit; text-decoration: inherit;">x_<wbr>forwarded_<wbr>hosts</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getfunctionappsitecredential">Get<wbr>Function<wbr>App<wbr>Site<wbr>Credential</h4>

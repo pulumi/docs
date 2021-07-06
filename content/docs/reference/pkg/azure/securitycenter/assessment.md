@@ -464,7 +464,7 @@ The Assessment resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#assessmentstatus">Assessment<wbr>Status</a></span>
+        <span class="property-type"><a href="#assessmentstatus">Assessment<wbr>Status<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `status` block as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -817,7 +817,7 @@ The following state arguments are supported:
 <a href="#state_status_go" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#assessmentstatus">Assessment<wbr>Status</a></span>
+        <span class="property-type"><a href="#assessmentstatus">Assessment<wbr>Status<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `status` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"

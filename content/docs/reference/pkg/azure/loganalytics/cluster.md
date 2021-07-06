@@ -353,7 +353,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteridentity">Cluster<wbr>Identity</a></span>
+        <span class="property-type"><a href="#clusteridentity">Cluster<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `identity` block as defined below. Changing this forces a new Log Analytics Cluster to be created.
 {{% /md %}}</dd><dt class="property-required"
@@ -826,7 +826,7 @@ The following state arguments are supported:
 <a href="#state_identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteridentity">Cluster<wbr>Identity</a></span>
+        <span class="property-type"><a href="#clusteridentity">Cluster<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `identity` block as defined below. Changing this forces a new Log Analytics Cluster to be created.
 {{% /md %}}</dd><dt class="property-optional"

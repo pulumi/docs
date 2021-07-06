@@ -333,7 +333,7 @@ The LinuxVirtualMachine resource accepts the following [input]({{< relref "/docs
 <a href="#galleryimagereference_go" style="color: inherit; text-decoration: inherit;">Gallery<wbr>Image<wbr>Reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linuxvirtualmachinegalleryimagereference">Linux<wbr>Virtual<wbr>Machine<wbr>Gallery<wbr>Image<wbr>Reference</a></span>
+        <span class="property-type"><a href="#linuxvirtualmachinegalleryimagereference">Linux<wbr>Virtual<wbr>Machine<wbr>Gallery<wbr>Image<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `gallery_image_reference` block as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -423,7 +423,7 @@ The LinuxVirtualMachine resource accepts the following [input]({{< relref "/docs
 <a href="#inboundnatrules_go" style="color: inherit; text-decoration: inherit;">Inbound<wbr>Nat<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linuxvirtualmachineinboundnatrule">[]Linux<wbr>Virtual<wbr>Machine<wbr>Inbound<wbr>Nat<wbr>Rule</a></span>
+        <span class="property-type"><a href="#linuxvirtualmachineinboundnatrule">[]Linux<wbr>Virtual<wbr>Machine<wbr>Inbound<wbr>Nat<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `inbound_nat_rule` blocks as defined below. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1277,7 +1277,7 @@ The following state arguments are supported:
 <a href="#state_galleryimagereference_go" style="color: inherit; text-decoration: inherit;">Gallery<wbr>Image<wbr>Reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linuxvirtualmachinegalleryimagereference">Linux<wbr>Virtual<wbr>Machine<wbr>Gallery<wbr>Image<wbr>Reference</a></span>
+        <span class="property-type"><a href="#linuxvirtualmachinegalleryimagereference">Linux<wbr>Virtual<wbr>Machine<wbr>Gallery<wbr>Image<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `gallery_image_reference` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1286,7 +1286,7 @@ The following state arguments are supported:
 <a href="#state_inboundnatrules_go" style="color: inherit; text-decoration: inherit;">Inbound<wbr>Nat<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#linuxvirtualmachineinboundnatrule">[]Linux<wbr>Virtual<wbr>Machine<wbr>Inbound<wbr>Nat<wbr>Rule</a></span>
+        <span class="property-type"><a href="#linuxvirtualmachineinboundnatrule">[]Linux<wbr>Virtual<wbr>Machine<wbr>Inbound<wbr>Nat<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `inbound_nat_rule` blocks as defined below. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"

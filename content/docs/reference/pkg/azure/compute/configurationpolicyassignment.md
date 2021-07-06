@@ -657,7 +657,7 @@ The ConfigurationPolicyAssignment resource accepts the following [input]({{< rel
 <a href="#configuration_go" style="color: inherit; text-decoration: inherit;">Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configurationpolicyassignmentconfiguration">Configuration<wbr>Policy<wbr>Assignment<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#configurationpolicyassignmentconfiguration">Configuration<wbr>Policy<wbr>Assignment<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `configuration` block as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -1001,7 +1001,7 @@ The following state arguments are supported:
 <a href="#state_configuration_go" style="color: inherit; text-decoration: inherit;">Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configurationpolicyassignmentconfiguration">Configuration<wbr>Policy<wbr>Assignment<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#configurationpolicyassignmentconfiguration">Configuration<wbr>Policy<wbr>Assignment<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `configuration` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1141,7 +1141,7 @@ The following state arguments are supported:
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configurationpolicyassignmentconfigurationparameter">List&lt;Configuration<wbr>Policy<wbr>Assignment<wbr>Configuration<wbr>Parameter<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#configurationpolicyassignmentconfigurationparameter">List&lt;Configuration<wbr>Policy<wbr>Assignment<wbr>Configuration<wbr>Parameter&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `parameter` blocks which define what configuration parameters and values against.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1203,7 +1203,7 @@ The following state arguments are supported:
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configurationpolicyassignmentconfigurationparameter">Configuration<wbr>Policy<wbr>Assignment<wbr>Configuration<wbr>Parameter<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#configurationpolicyassignmentconfigurationparameter">Configuration<wbr>Policy<wbr>Assignment<wbr>Configuration<wbr>Parameter[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `parameter` blocks which define what configuration parameters and values against.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1234,7 +1234,7 @@ The following state arguments are supported:
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#configurationpolicyassignmentconfigurationparameter">Sequence[Configuration<wbr>Policy<wbr>Assignment<wbr>Configuration<wbr>Parameter<wbr>Args]</a></span>
+        <span class="property-type"><a href="#configurationpolicyassignmentconfigurationparameter">Sequence[Configuration<wbr>Policy<wbr>Assignment<wbr>Configuration<wbr>Parameter]</a></span>
     </dt>
     <dd>{{% md %}}One or more `parameter` blocks which define what configuration parameters and values against.
 {{% /md %}}</dd><dt class="property-optional"

@@ -507,7 +507,7 @@ The VpnServerConfiguration resource accepts the following [input]({{< relref "/d
 <a href="#azureactivedirectoryauthentications_go" style="color: inherit; text-decoration: inherit;">Azure<wbr>Active<wbr>Directory<wbr>Authentications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnserverconfigurationazureactivedirectoryauthentication">[]Vpn<wbr>Server<wbr>Configuration<wbr>Azure<wbr>Active<wbr>Directory<wbr>Authentication</a></span>
+        <span class="property-type"><a href="#vpnserverconfigurationazureactivedirectoryauthentication">[]Vpn<wbr>Server<wbr>Configuration<wbr>Azure<wbr>Active<wbr>Directory<wbr>Authentication<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `azure_active_directory_authentication` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -516,7 +516,7 @@ The VpnServerConfiguration resource accepts the following [input]({{< relref "/d
 <a href="#clientrevokedcertificates_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Revoked<wbr>Certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnserverconfigurationclientrevokedcertificate">[]Vpn<wbr>Server<wbr>Configuration<wbr>Client<wbr>Revoked<wbr>Certificate</a></span>
+        <span class="property-type"><a href="#vpnserverconfigurationclientrevokedcertificate">[]Vpn<wbr>Server<wbr>Configuration<wbr>Client<wbr>Revoked<wbr>Certificate<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `client_revoked_certificate` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -525,7 +525,7 @@ The VpnServerConfiguration resource accepts the following [input]({{< relref "/d
 <a href="#clientrootcertificates_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Root<wbr>Certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnserverconfigurationclientrootcertificate">[]Vpn<wbr>Server<wbr>Configuration<wbr>Client<wbr>Root<wbr>Certificate</a></span>
+        <span class="property-type"><a href="#vpnserverconfigurationclientrootcertificate">[]Vpn<wbr>Server<wbr>Configuration<wbr>Client<wbr>Root<wbr>Certificate<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `client_root_certificate` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -534,7 +534,7 @@ The VpnServerConfiguration resource accepts the following [input]({{< relref "/d
 <a href="#ipsecpolicy_go" style="color: inherit; text-decoration: inherit;">Ipsec<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnserverconfigurationipsecpolicy">Vpn<wbr>Server<wbr>Configuration<wbr>Ipsec<wbr>Policy</a></span>
+        <span class="property-type"><a href="#vpnserverconfigurationipsecpolicy">Vpn<wbr>Server<wbr>Configuration<wbr>Ipsec<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `ipsec_policy` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -561,7 +561,7 @@ The VpnServerConfiguration resource accepts the following [input]({{< relref "/d
 <a href="#radius_go" style="color: inherit; text-decoration: inherit;">Radius</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnserverconfigurationradius">Vpn<wbr>Server<wbr>Configuration<wbr>Radius</a></span>
+        <span class="property-type"><a href="#vpnserverconfigurationradius">Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `radius` block as defined below.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -570,7 +570,7 @@ The VpnServerConfiguration resource accepts the following [input]({{< relref "/d
 <a href="#radiusserver_go" style="color: inherit; text-decoration: inherit;">Radius<wbr>Server</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnserverconfigurationradiusserver">Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Server</a></span>
+        <span class="property-type"><a href="#vpnserverconfigurationradiusserver">Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Server<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `radius_server` block as defined below.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `radius`{{% /md %}}</p></dd><dt class="property-optional"
@@ -1129,7 +1129,7 @@ The following state arguments are supported:
 <a href="#state_azureactivedirectoryauthentications_go" style="color: inherit; text-decoration: inherit;">Azure<wbr>Active<wbr>Directory<wbr>Authentications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnserverconfigurationazureactivedirectoryauthentication">[]Vpn<wbr>Server<wbr>Configuration<wbr>Azure<wbr>Active<wbr>Directory<wbr>Authentication</a></span>
+        <span class="property-type"><a href="#vpnserverconfigurationazureactivedirectoryauthentication">[]Vpn<wbr>Server<wbr>Configuration<wbr>Azure<wbr>Active<wbr>Directory<wbr>Authentication<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `azure_active_directory_authentication` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1138,7 +1138,7 @@ The following state arguments are supported:
 <a href="#state_clientrevokedcertificates_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Revoked<wbr>Certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnserverconfigurationclientrevokedcertificate">[]Vpn<wbr>Server<wbr>Configuration<wbr>Client<wbr>Revoked<wbr>Certificate</a></span>
+        <span class="property-type"><a href="#vpnserverconfigurationclientrevokedcertificate">[]Vpn<wbr>Server<wbr>Configuration<wbr>Client<wbr>Revoked<wbr>Certificate<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `client_revoked_certificate` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1147,7 +1147,7 @@ The following state arguments are supported:
 <a href="#state_clientrootcertificates_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Root<wbr>Certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnserverconfigurationclientrootcertificate">[]Vpn<wbr>Server<wbr>Configuration<wbr>Client<wbr>Root<wbr>Certificate</a></span>
+        <span class="property-type"><a href="#vpnserverconfigurationclientrootcertificate">[]Vpn<wbr>Server<wbr>Configuration<wbr>Client<wbr>Root<wbr>Certificate<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `client_root_certificate` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1156,7 +1156,7 @@ The following state arguments are supported:
 <a href="#state_ipsecpolicy_go" style="color: inherit; text-decoration: inherit;">Ipsec<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnserverconfigurationipsecpolicy">Vpn<wbr>Server<wbr>Configuration<wbr>Ipsec<wbr>Policy</a></span>
+        <span class="property-type"><a href="#vpnserverconfigurationipsecpolicy">Vpn<wbr>Server<wbr>Configuration<wbr>Ipsec<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `ipsec_policy` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1183,7 +1183,7 @@ The following state arguments are supported:
 <a href="#state_radius_go" style="color: inherit; text-decoration: inherit;">Radius</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnserverconfigurationradius">Vpn<wbr>Server<wbr>Configuration<wbr>Radius</a></span>
+        <span class="property-type"><a href="#vpnserverconfigurationradius">Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `radius` block as defined below.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -1192,7 +1192,7 @@ The following state arguments are supported:
 <a href="#state_radiusserver_go" style="color: inherit; text-decoration: inherit;">Radius<wbr>Server</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnserverconfigurationradiusserver">Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Server</a></span>
+        <span class="property-type"><a href="#vpnserverconfigurationradiusserver">Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Server<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `radius_server` block as defined below.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `radius`{{% /md %}}</p></dd><dt class="property-optional"
@@ -2088,7 +2088,7 @@ The following state arguments are supported:
 <a href="#serverrootcertificates_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>Root<wbr>Certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnserverconfigurationradiusserverrootcertificate">List&lt;Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Server<wbr>Root<wbr>Certificate<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#vpnserverconfigurationradiusserverrootcertificate">List&lt;Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Server<wbr>Root<wbr>Certificate&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `server_root_certificate` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2097,7 +2097,7 @@ The following state arguments are supported:
 <a href="#clientrootcertificates_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Root<wbr>Certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnserverconfigurationradiusclientrootcertificate">List&lt;Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Client<wbr>Root<wbr>Certificate<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#vpnserverconfigurationradiusclientrootcertificate">List&lt;Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Client<wbr>Root<wbr>Certificate&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `client_root_certificate` blocks as defined above.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2106,7 +2106,7 @@ The following state arguments are supported:
 <a href="#servers_csharp" style="color: inherit; text-decoration: inherit;">Servers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnserverconfigurationradiusserver">List&lt;Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Server<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#vpnserverconfigurationradiusserver">List&lt;Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Server&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `server` blocks as defined below.
 {{% /md %}}</dd></dl>
@@ -2150,7 +2150,7 @@ The following state arguments are supported:
 <a href="#serverrootcertificates_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Root<wbr>Certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnserverconfigurationradiusserverrootcertificate">Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Server<wbr>Root<wbr>Certificate<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#vpnserverconfigurationradiusserverrootcertificate">Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Server<wbr>Root<wbr>Certificate[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `server_root_certificate` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2159,7 +2159,7 @@ The following state arguments are supported:
 <a href="#clientrootcertificates_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Root<wbr>Certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnserverconfigurationradiusclientrootcertificate">Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Client<wbr>Root<wbr>Certificate<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#vpnserverconfigurationradiusclientrootcertificate">Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Client<wbr>Root<wbr>Certificate[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `client_root_certificate` blocks as defined above.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2168,7 +2168,7 @@ The following state arguments are supported:
 <a href="#servers_nodejs" style="color: inherit; text-decoration: inherit;">servers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnserverconfigurationradiusserver">Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Server<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#vpnserverconfigurationradiusserver">Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Server[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `server` blocks as defined below.
 {{% /md %}}</dd></dl>
@@ -2181,7 +2181,7 @@ The following state arguments are supported:
 <a href="#server_root_certificates_python" style="color: inherit; text-decoration: inherit;">server_<wbr>root_<wbr>certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnserverconfigurationradiusserverrootcertificate">Sequence[Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Server<wbr>Root<wbr>Certificate<wbr>Args]</a></span>
+        <span class="property-type"><a href="#vpnserverconfigurationradiusserverrootcertificate">Sequence[Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Server<wbr>Root<wbr>Certificate]</a></span>
     </dt>
     <dd>{{% md %}}One or more `server_root_certificate` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2190,7 +2190,7 @@ The following state arguments are supported:
 <a href="#client_root_certificates_python" style="color: inherit; text-decoration: inherit;">client_<wbr>root_<wbr>certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnserverconfigurationradiusclientrootcertificate">Sequence[Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Client<wbr>Root<wbr>Certificate<wbr>Args]</a></span>
+        <span class="property-type"><a href="#vpnserverconfigurationradiusclientrootcertificate">Sequence[Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Client<wbr>Root<wbr>Certificate]</a></span>
     </dt>
     <dd>{{% md %}}One or more `client_root_certificate` blocks as defined above.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2199,7 +2199,7 @@ The following state arguments are supported:
 <a href="#servers_python" style="color: inherit; text-decoration: inherit;">servers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnserverconfigurationradiusserver">Sequence[Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Server<wbr>Args]</a></span>
+        <span class="property-type"><a href="#vpnserverconfigurationradiusserver">Sequence[Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Server]</a></span>
     </dt>
     <dd>{{% md %}}One or more `server` blocks as defined below.
 {{% /md %}}</dd></dl>
@@ -2322,7 +2322,7 @@ The following state arguments are supported:
 <a href="#serverrootcertificates_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>Root<wbr>Certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnserverconfigurationradiusserverserverrootcertificate">List&lt;Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Server<wbr>Server<wbr>Root<wbr>Certificate<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#vpnserverconfigurationradiusserverserverrootcertificate">List&lt;Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Server<wbr>Server<wbr>Root<wbr>Certificate&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `server_root_certificate` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2331,7 +2331,7 @@ The following state arguments are supported:
 <a href="#clientrootcertificates_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Root<wbr>Certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnserverconfigurationradiusserverclientrootcertificate">List&lt;Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Server<wbr>Client<wbr>Root<wbr>Certificate<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#vpnserverconfigurationradiusserverclientrootcertificate">List&lt;Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Server<wbr>Client<wbr>Root<wbr>Certificate&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `client_root_certificate` blocks as defined above.
 {{% /md %}}</dd></dl>
@@ -2402,7 +2402,7 @@ The following state arguments are supported:
 <a href="#serverrootcertificates_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Root<wbr>Certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnserverconfigurationradiusserverserverrootcertificate">Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Server<wbr>Server<wbr>Root<wbr>Certificate<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#vpnserverconfigurationradiusserverserverrootcertificate">Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Server<wbr>Server<wbr>Root<wbr>Certificate[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `server_root_certificate` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2411,7 +2411,7 @@ The following state arguments are supported:
 <a href="#clientrootcertificates_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Root<wbr>Certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnserverconfigurationradiusserverclientrootcertificate">Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Server<wbr>Client<wbr>Root<wbr>Certificate<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#vpnserverconfigurationradiusserverclientrootcertificate">Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Server<wbr>Client<wbr>Root<wbr>Certificate[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `client_root_certificate` blocks as defined above.
 {{% /md %}}</dd></dl>
@@ -2442,7 +2442,7 @@ The following state arguments are supported:
 <a href="#server_root_certificates_python" style="color: inherit; text-decoration: inherit;">server_<wbr>root_<wbr>certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnserverconfigurationradiusserverserverrootcertificate">Sequence[Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Server<wbr>Server<wbr>Root<wbr>Certificate<wbr>Args]</a></span>
+        <span class="property-type"><a href="#vpnserverconfigurationradiusserverserverrootcertificate">Sequence[Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Server<wbr>Server<wbr>Root<wbr>Certificate]</a></span>
     </dt>
     <dd>{{% md %}}One or more `server_root_certificate` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2451,7 +2451,7 @@ The following state arguments are supported:
 <a href="#client_root_certificates_python" style="color: inherit; text-decoration: inherit;">client_<wbr>root_<wbr>certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnserverconfigurationradiusserverclientrootcertificate">Sequence[Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Server<wbr>Client<wbr>Root<wbr>Certificate<wbr>Args]</a></span>
+        <span class="property-type"><a href="#vpnserverconfigurationradiusserverclientrootcertificate">Sequence[Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Server<wbr>Client<wbr>Root<wbr>Certificate]</a></span>
     </dt>
     <dd>{{% md %}}One or more `client_root_certificate` blocks as defined above.
 {{% /md %}}</dd></dl>

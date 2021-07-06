@@ -182,7 +182,9 @@ const exampleExpressRouteCircuit = new azure.network.ExpressRouteCircuit("exampl
 <span class="k">def </span><span class="nx">ExpressRouteCircuit</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
                         <span class="nx">allow_classic_operations</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                        <span class="nx">bandwidth_in_gbps</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">,</span>
                         <span class="nx">bandwidth_in_mbps</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+                        <span class="nx">express_route_port_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                         <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                         <span class="nx">peering_location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -319,24 +321,6 @@ The ExpressRouteCircuit resource accepts the following [input]({{< relref "/docs
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="bandwidthinmbps_csharp">
-<a href="#bandwidthinmbps_csharp" style="color: inherit; text-decoration: inherit;">Bandwidth<wbr>In<wbr>Mbps</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The bandwidth in Mbps of the circuit being created.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="peeringlocation_csharp">
-<a href="#peeringlocation_csharp" style="color: inherit; text-decoration: inherit;">Peering<wbr>Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the peering location and **not** the Azure resource location.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
 </span>
@@ -344,15 +328,6 @@ The ExpressRouteCircuit resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the ExpressRoute circuit. Changing this forces a new resource to be created.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="serviceprovidername_csharp">
-<a href="#serviceprovidername_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Provider<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the ExpressRoute Service Provider.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sku_csharp">
@@ -370,7 +345,34 @@ The ExpressRouteCircuit resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Allow the circuit to interact with classic (RDFE) resources. The default value is `false`.
+    <dd>{{% md %}}Allow the circuit to interact with classic (RDFE) resources. Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="bandwidthingbps_csharp">
+<a href="#bandwidthingbps_csharp" style="color: inherit; text-decoration: inherit;">Bandwidth<wbr>In<wbr>Gbps</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">double</span>
+    </dt>
+    <dd>{{% md %}}The bandwidth in Gbps of the circuit being created on the Express Route Port.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="bandwidthinmbps_csharp">
+<a href="#bandwidthinmbps_csharp" style="color: inherit; text-decoration: inherit;">Bandwidth<wbr>In<wbr>Mbps</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The bandwidth in Mbps of the circuit being created on the Service Provider.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="expressrouteportid_csharp">
+<a href="#expressrouteportid_csharp" style="color: inherit; text-decoration: inherit;">Express<wbr>Route<wbr>Port<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the Express Route Port this Express Route Circuit is based on.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_csharp">
@@ -391,6 +393,24 @@ The ExpressRouteCircuit resource accepts the following [input]({{< relref "/docs
     <dd>{{% md %}}The name of the ExpressRoute circuit. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="peeringlocation_csharp">
+<a href="#peeringlocation_csharp" style="color: inherit; text-decoration: inherit;">Peering<wbr>Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the peering location and **not** the Azure resource location. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="serviceprovidername_csharp">
+<a href="#serviceprovidername_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Provider<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the ExpressRoute Service Provider. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span>
@@ -404,24 +424,6 @@ The ExpressRouteCircuit resource accepts the following [input]({{< relref "/docs
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="bandwidthinmbps_go">
-<a href="#bandwidthinmbps_go" style="color: inherit; text-decoration: inherit;">Bandwidth<wbr>In<wbr>Mbps</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The bandwidth in Mbps of the circuit being created.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="peeringlocation_go">
-<a href="#peeringlocation_go" style="color: inherit; text-decoration: inherit;">Peering<wbr>Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the peering location and **not** the Azure resource location.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
 </span>
@@ -431,20 +433,11 @@ The ExpressRouteCircuit resource accepts the following [input]({{< relref "/docs
     <dd>{{% md %}}The name of the resource group in which to create the ExpressRoute circuit. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="serviceprovidername_go">
-<a href="#serviceprovidername_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Provider<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the ExpressRoute Service Provider.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="sku_go">
 <a href="#sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#expressroutecircuitsku">Express<wbr>Route<wbr>Circuit<wbr>Sku</a></span>
+        <span class="property-type"><a href="#expressroutecircuitsku">Express<wbr>Route<wbr>Circuit<wbr>Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `sku` block for the ExpressRoute circuit as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -455,7 +448,34 @@ The ExpressRouteCircuit resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Allow the circuit to interact with classic (RDFE) resources. The default value is `false`.
+    <dd>{{% md %}}Allow the circuit to interact with classic (RDFE) resources. Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="bandwidthingbps_go">
+<a href="#bandwidthingbps_go" style="color: inherit; text-decoration: inherit;">Bandwidth<wbr>In<wbr>Gbps</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float64</span>
+    </dt>
+    <dd>{{% md %}}The bandwidth in Gbps of the circuit being created on the Express Route Port.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="bandwidthinmbps_go">
+<a href="#bandwidthinmbps_go" style="color: inherit; text-decoration: inherit;">Bandwidth<wbr>In<wbr>Mbps</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The bandwidth in Mbps of the circuit being created on the Service Provider.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="expressrouteportid_go">
+<a href="#expressrouteportid_go" style="color: inherit; text-decoration: inherit;">Express<wbr>Route<wbr>Port<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the Express Route Port this Express Route Circuit is based on.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_go">
@@ -476,6 +496,24 @@ The ExpressRouteCircuit resource accepts the following [input]({{< relref "/docs
     <dd>{{% md %}}The name of the ExpressRoute circuit. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="peeringlocation_go">
+<a href="#peeringlocation_go" style="color: inherit; text-decoration: inherit;">Peering<wbr>Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the peering location and **not** the Azure resource location. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="serviceprovidername_go">
+<a href="#serviceprovidername_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Provider<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the ExpressRoute Service Provider. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span>
@@ -489,24 +527,6 @@ The ExpressRouteCircuit resource accepts the following [input]({{< relref "/docs
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="bandwidthinmbps_nodejs">
-<a href="#bandwidthinmbps_nodejs" style="color: inherit; text-decoration: inherit;">bandwidth<wbr>In<wbr>Mbps</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}The bandwidth in Mbps of the circuit being created.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="peeringlocation_nodejs">
-<a href="#peeringlocation_nodejs" style="color: inherit; text-decoration: inherit;">peering<wbr>Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the peering location and **not** the Azure resource location.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
@@ -514,15 +534,6 @@ The ExpressRouteCircuit resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the ExpressRoute circuit. Changing this forces a new resource to be created.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="serviceprovidername_nodejs">
-<a href="#serviceprovidername_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Provider<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the ExpressRoute Service Provider.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sku_nodejs">
@@ -540,7 +551,34 @@ The ExpressRouteCircuit resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Allow the circuit to interact with classic (RDFE) resources. The default value is `false`.
+    <dd>{{% md %}}Allow the circuit to interact with classic (RDFE) resources. Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="bandwidthingbps_nodejs">
+<a href="#bandwidthingbps_nodejs" style="color: inherit; text-decoration: inherit;">bandwidth<wbr>In<wbr>Gbps</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The bandwidth in Gbps of the circuit being created on the Express Route Port.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="bandwidthinmbps_nodejs">
+<a href="#bandwidthinmbps_nodejs" style="color: inherit; text-decoration: inherit;">bandwidth<wbr>In<wbr>Mbps</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The bandwidth in Mbps of the circuit being created on the Service Provider.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="expressrouteportid_nodejs">
+<a href="#expressrouteportid_nodejs" style="color: inherit; text-decoration: inherit;">express<wbr>Route<wbr>Port<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the Express Route Port this Express Route Circuit is based on.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_nodejs">
@@ -561,6 +599,24 @@ The ExpressRouteCircuit resource accepts the following [input]({{< relref "/docs
     <dd>{{% md %}}The name of the ExpressRoute circuit. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="peeringlocation_nodejs">
+<a href="#peeringlocation_nodejs" style="color: inherit; text-decoration: inherit;">peering<wbr>Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the peering location and **not** the Azure resource location. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="serviceprovidername_nodejs">
+<a href="#serviceprovidername_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Provider<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the ExpressRoute Service Provider. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
@@ -574,24 +630,6 @@ The ExpressRouteCircuit resource accepts the following [input]({{< relref "/docs
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="bandwidth_in_mbps_python">
-<a href="#bandwidth_in_mbps_python" style="color: inherit; text-decoration: inherit;">bandwidth_<wbr>in_<wbr>mbps</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The bandwidth in Mbps of the circuit being created.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="peering_location_python">
-<a href="#peering_location_python" style="color: inherit; text-decoration: inherit;">peering_<wbr>location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the peering location and **not** the Azure resource location.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
@@ -599,15 +637,6 @@ The ExpressRouteCircuit resource accepts the following [input]({{< relref "/docs
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the ExpressRoute circuit. Changing this forces a new resource to be created.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="service_provider_name_python">
-<a href="#service_provider_name_python" style="color: inherit; text-decoration: inherit;">service_<wbr>provider_<wbr>name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the ExpressRoute Service Provider.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sku_python">
@@ -625,7 +654,34 @@ The ExpressRouteCircuit resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Allow the circuit to interact with classic (RDFE) resources. The default value is `false`.
+    <dd>{{% md %}}Allow the circuit to interact with classic (RDFE) resources. Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="bandwidth_in_gbps_python">
+<a href="#bandwidth_in_gbps_python" style="color: inherit; text-decoration: inherit;">bandwidth_<wbr>in_<wbr>gbps</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}The bandwidth in Gbps of the circuit being created on the Express Route Port.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="bandwidth_in_mbps_python">
+<a href="#bandwidth_in_mbps_python" style="color: inherit; text-decoration: inherit;">bandwidth_<wbr>in_<wbr>mbps</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The bandwidth in Mbps of the circuit being created on the Service Provider.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="express_route_port_id_python">
+<a href="#express_route_port_id_python" style="color: inherit; text-decoration: inherit;">express_<wbr>route_<wbr>port_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ID of the Express Route Port this Express Route Circuit is based on.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_python">
@@ -644,6 +700,24 @@ The ExpressRouteCircuit resource accepts the following [input]({{< relref "/docs
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the ExpressRoute circuit. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="peering_location_python">
+<a href="#peering_location_python" style="color: inherit; text-decoration: inherit;">peering_<wbr>location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the peering location and **not** the Azure resource location. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="service_provider_name_python">
+<a href="#service_provider_name_python" style="color: inherit; text-decoration: inherit;">service_<wbr>provider_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the ExpressRoute Service Provider. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
@@ -800,7 +874,9 @@ Get an existing ExpressRouteCircuit resource's state with the given name, ID, an
         <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
         <span class="nx">allow_classic_operations</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">bandwidth_in_gbps</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">,</span>
         <span class="nx">bandwidth_in_mbps</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+        <span class="nx">express_route_port_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">peering_location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -928,7 +1004,16 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Allow the circuit to interact with classic (RDFE) resources. The default value is `false`.
+    <dd>{{% md %}}Allow the circuit to interact with classic (RDFE) resources. Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_bandwidthingbps_csharp">
+<a href="#state_bandwidthingbps_csharp" style="color: inherit; text-decoration: inherit;">Bandwidth<wbr>In<wbr>Gbps</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">double</span>
+    </dt>
+    <dd>{{% md %}}The bandwidth in Gbps of the circuit being created on the Express Route Port.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_bandwidthinmbps_csharp">
@@ -937,7 +1022,16 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The bandwidth in Mbps of the circuit being created.
+    <dd>{{% md %}}The bandwidth in Mbps of the circuit being created on the Service Provider.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_expressrouteportid_csharp">
+<a href="#state_expressrouteportid_csharp" style="color: inherit; text-decoration: inherit;">Express<wbr>Route<wbr>Port<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the Express Route Port this Express Route Circuit is based on.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_csharp">
@@ -964,7 +1058,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the peering location and **not** the Azure resource location.
+    <dd>{{% md %}}The name of the peering location and **not** the Azure resource location. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_csharp">
@@ -991,7 +1085,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the ExpressRoute Service Provider.
+    <dd>{{% md %}}The name of the ExpressRoute Service Provider. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serviceproviderprovisioningstate_csharp">
@@ -1031,7 +1125,16 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Allow the circuit to interact with classic (RDFE) resources. The default value is `false`.
+    <dd>{{% md %}}Allow the circuit to interact with classic (RDFE) resources. Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_bandwidthingbps_go">
+<a href="#state_bandwidthingbps_go" style="color: inherit; text-decoration: inherit;">Bandwidth<wbr>In<wbr>Gbps</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float64</span>
+    </dt>
+    <dd>{{% md %}}The bandwidth in Gbps of the circuit being created on the Express Route Port.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_bandwidthinmbps_go">
@@ -1040,7 +1143,16 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The bandwidth in Mbps of the circuit being created.
+    <dd>{{% md %}}The bandwidth in Mbps of the circuit being created on the Service Provider.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_expressrouteportid_go">
+<a href="#state_expressrouteportid_go" style="color: inherit; text-decoration: inherit;">Express<wbr>Route<wbr>Port<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the Express Route Port this Express Route Circuit is based on.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_go">
@@ -1067,7 +1179,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the peering location and **not** the Azure resource location.
+    <dd>{{% md %}}The name of the peering location and **not** the Azure resource location. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_go">
@@ -1094,7 +1206,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the ExpressRoute Service Provider.
+    <dd>{{% md %}}The name of the ExpressRoute Service Provider. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serviceproviderprovisioningstate_go">
@@ -1110,7 +1222,7 @@ The following state arguments are supported:
 <a href="#state_sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#expressroutecircuitsku">Express<wbr>Route<wbr>Circuit<wbr>Sku</a></span>
+        <span class="property-type"><a href="#expressroutecircuitsku">Express<wbr>Route<wbr>Circuit<wbr>Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `sku` block for the ExpressRoute circuit as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1134,7 +1246,16 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Allow the circuit to interact with classic (RDFE) resources. The default value is `false`.
+    <dd>{{% md %}}Allow the circuit to interact with classic (RDFE) resources. Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_bandwidthingbps_nodejs">
+<a href="#state_bandwidthingbps_nodejs" style="color: inherit; text-decoration: inherit;">bandwidth<wbr>In<wbr>Gbps</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The bandwidth in Gbps of the circuit being created on the Express Route Port.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_bandwidthinmbps_nodejs">
@@ -1143,7 +1264,16 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The bandwidth in Mbps of the circuit being created.
+    <dd>{{% md %}}The bandwidth in Mbps of the circuit being created on the Service Provider.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_expressrouteportid_nodejs">
+<a href="#state_expressrouteportid_nodejs" style="color: inherit; text-decoration: inherit;">express<wbr>Route<wbr>Port<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the Express Route Port this Express Route Circuit is based on.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_nodejs">
@@ -1170,7 +1300,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the peering location and **not** the Azure resource location.
+    <dd>{{% md %}}The name of the peering location and **not** the Azure resource location. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_nodejs">
@@ -1197,7 +1327,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the ExpressRoute Service Provider.
+    <dd>{{% md %}}The name of the ExpressRoute Service Provider. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serviceproviderprovisioningstate_nodejs">
@@ -1237,7 +1367,16 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Allow the circuit to interact with classic (RDFE) resources. The default value is `false`.
+    <dd>{{% md %}}Allow the circuit to interact with classic (RDFE) resources. Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_bandwidth_in_gbps_python">
+<a href="#state_bandwidth_in_gbps_python" style="color: inherit; text-decoration: inherit;">bandwidth_<wbr>in_<wbr>gbps</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}The bandwidth in Gbps of the circuit being created on the Express Route Port.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_bandwidth_in_mbps_python">
@@ -1246,7 +1385,16 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The bandwidth in Mbps of the circuit being created.
+    <dd>{{% md %}}The bandwidth in Mbps of the circuit being created on the Service Provider.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_express_route_port_id_python">
+<a href="#state_express_route_port_id_python" style="color: inherit; text-decoration: inherit;">express_<wbr>route_<wbr>port_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ID of the Express Route Port this Express Route Circuit is based on.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_python">
@@ -1273,7 +1421,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the peering location and **not** the Azure resource location.
+    <dd>{{% md %}}The name of the peering location and **not** the Azure resource location. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resource_group_name_python">
@@ -1300,7 +1448,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the ExpressRoute Service Provider.
+    <dd>{{% md %}}The name of the ExpressRoute Service Provider. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_service_provider_provisioning_state_python">

@@ -414,7 +414,7 @@ The Schedule resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#monthlyoccurrences_go" style="color: inherit; text-decoration: inherit;">Monthly<wbr>Occurrences</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#schedulemonthlyoccurrence">[]Schedule<wbr>Monthly<wbr>Occurrence</a></span>
+        <span class="property-type"><a href="#schedulemonthlyoccurrence">[]Schedule<wbr>Monthly<wbr>Occurrence<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List of occurrences of days within a month. Only valid when frequency is `Month`. The `monthly_occurrence` block supports fields documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1045,7 +1045,7 @@ The following state arguments are supported:
 <a href="#state_monthlyoccurrences_go" style="color: inherit; text-decoration: inherit;">Monthly<wbr>Occurrences</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#schedulemonthlyoccurrence">[]Schedule<wbr>Monthly<wbr>Occurrence</a></span>
+        <span class="property-type"><a href="#schedulemonthlyoccurrence">[]Schedule<wbr>Monthly<wbr>Occurrence<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List of occurrences of days within a month. Only valid when frequency is `Month`. The `monthly_occurrence` block supports fields documented below.
 {{% /md %}}</dd><dt class="property-optional"

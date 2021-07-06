@@ -462,7 +462,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#dnsconfig_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#profilednsconfig">Profile<wbr>Dns<wbr>Config</a></span>
+        <span class="property-type"><a href="#profilednsconfig">Profile<wbr>Dns<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This block specifies the DNS configuration of the Profile, it supports the fields documented below.
 {{% /md %}}</dd><dt class="property-required"
@@ -471,7 +471,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#monitorconfig_go" style="color: inherit; text-decoration: inherit;">Monitor<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#profilemonitorconfig">Profile<wbr>Monitor<wbr>Config</a></span>
+        <span class="property-type"><a href="#profilemonitorconfig">Profile<wbr>Monitor<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This block specifies the Endpoint monitoring configuration for the Profile, it supports the fields documented below.
 {{% /md %}}</dd><dt class="property-required"
@@ -1037,7 +1037,7 @@ The following state arguments are supported:
 <a href="#state_dnsconfig_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#profilednsconfig">Profile<wbr>Dns<wbr>Config</a></span>
+        <span class="property-type"><a href="#profilednsconfig">Profile<wbr>Dns<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This block specifies the DNS configuration of the Profile, it supports the fields documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1064,7 +1064,7 @@ The following state arguments are supported:
 <a href="#state_monitorconfig_go" style="color: inherit; text-decoration: inherit;">Monitor<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#profilemonitorconfig">Profile<wbr>Monitor<wbr>Config</a></span>
+        <span class="property-type"><a href="#profilemonitorconfig">Profile<wbr>Monitor<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This block specifies the Endpoint monitoring configuration for the Profile, it supports the fields documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1438,7 +1438,7 @@ The following state arguments are supported:
 <a href="#customheaders_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#profilemonitorconfigcustomheader">List&lt;Profile<wbr>Monitor<wbr>Config<wbr>Custom<wbr>Header<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#profilemonitorconfigcustomheader">List&lt;Profile<wbr>Monitor<wbr>Config<wbr>Custom<wbr>Header&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `custom_header` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1590,7 +1590,7 @@ The following state arguments are supported:
 <a href="#customheaders_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#profilemonitorconfigcustomheader">Profile<wbr>Monitor<wbr>Config<wbr>Custom<wbr>Header<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#profilemonitorconfigcustomheader">Profile<wbr>Monitor<wbr>Config<wbr>Custom<wbr>Header[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `custom_header` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1666,7 +1666,7 @@ The following state arguments are supported:
 <a href="#custom_headers_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#profilemonitorconfigcustomheader">Sequence[Profile<wbr>Monitor<wbr>Config<wbr>Custom<wbr>Header<wbr>Args]</a></span>
+        <span class="property-type"><a href="#profilemonitorconfigcustomheader">Sequence[Profile<wbr>Monitor<wbr>Config<wbr>Custom<wbr>Header]</a></span>
     </dt>
     <dd>{{% md %}}One or more `custom_header` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"

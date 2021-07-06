@@ -596,7 +596,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#privateserviceconnection_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Service<wbr>Connection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointprivateserviceconnection">Endpoint<wbr>Private<wbr>Service<wbr>Connection</a></span>
+        <span class="property-type"><a href="#endpointprivateserviceconnection">Endpoint<wbr>Private<wbr>Service<wbr>Connection<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `private_service_connection` block as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -641,7 +641,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#privatednszonegroup_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Dns<wbr>Zone<wbr>Group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointprivatednszonegroup">Endpoint<wbr>Private<wbr>Dns<wbr>Zone<wbr>Group</a></span>
+        <span class="property-type"><a href="#endpointprivatednszonegroup">Endpoint<wbr>Private<wbr>Dns<wbr>Zone<wbr>Group<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `private_dns_zone_group` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1133,7 +1133,7 @@ The following state arguments are supported:
 <a href="#state_customdnsconfigs_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Dns<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointcustomdnsconfig">[]Endpoint<wbr>Custom<wbr>Dns<wbr>Config</a></span>
+        <span class="property-type"><a href="#endpointcustomdnsconfig">[]Endpoint<wbr>Custom<wbr>Dns<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1159,7 +1159,7 @@ The following state arguments are supported:
 <a href="#state_privatednszoneconfigs_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Dns<wbr>Zone<wbr>Configs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointprivatednszoneconfig">[]Endpoint<wbr>Private<wbr>Dns<wbr>Zone<wbr>Config</a></span>
+        <span class="property-type"><a href="#endpointprivatednszoneconfig">[]Endpoint<wbr>Private<wbr>Dns<wbr>Zone<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1167,7 +1167,7 @@ The following state arguments are supported:
 <a href="#state_privatednszonegroup_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Dns<wbr>Zone<wbr>Group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointprivatednszonegroup">Endpoint<wbr>Private<wbr>Dns<wbr>Zone<wbr>Group</a></span>
+        <span class="property-type"><a href="#endpointprivatednszonegroup">Endpoint<wbr>Private<wbr>Dns<wbr>Zone<wbr>Group<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `private_dns_zone_group` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1176,7 +1176,7 @@ The following state arguments are supported:
 <a href="#state_privateserviceconnection_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Service<wbr>Connection</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointprivateserviceconnection">Endpoint<wbr>Private<wbr>Service<wbr>Connection</a></span>
+        <span class="property-type"><a href="#endpointprivateserviceconnection">Endpoint<wbr>Private<wbr>Service<wbr>Connection<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `private_service_connection` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1510,7 +1510,7 @@ The following state arguments are supported:
 <a href="#recordsets_csharp" style="color: inherit; text-decoration: inherit;">Record<wbr>Sets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointprivatednszoneconfigrecordset">List&lt;Endpoint<wbr>Private<wbr>Dns<wbr>Zone<wbr>Config<wbr>Record<wbr>Set<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#endpointprivatednszoneconfigrecordset">List&lt;Endpoint<wbr>Private<wbr>Dns<wbr>Zone<wbr>Config<wbr>Record<wbr>Set&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `record_sets` block as defined below.
 {{% /md %}}</dd></dl>
@@ -1590,7 +1590,7 @@ The following state arguments are supported:
 <a href="#recordsets_nodejs" style="color: inherit; text-decoration: inherit;">record<wbr>Sets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointprivatednszoneconfigrecordset">Endpoint<wbr>Private<wbr>Dns<wbr>Zone<wbr>Config<wbr>Record<wbr>Set<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#endpointprivatednszoneconfigrecordset">Endpoint<wbr>Private<wbr>Dns<wbr>Zone<wbr>Config<wbr>Record<wbr>Set[]</a></span>
     </dt>
     <dd>{{% md %}}A `record_sets` block as defined below.
 {{% /md %}}</dd></dl>
@@ -1630,7 +1630,7 @@ The following state arguments are supported:
 <a href="#record_sets_python" style="color: inherit; text-decoration: inherit;">record_<wbr>sets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointprivatednszoneconfigrecordset">Sequence[Endpoint<wbr>Private<wbr>Dns<wbr>Zone<wbr>Config<wbr>Record<wbr>Set<wbr>Args]</a></span>
+        <span class="property-type"><a href="#endpointprivatednszoneconfigrecordset">Sequence[Endpoint<wbr>Private<wbr>Dns<wbr>Zone<wbr>Config<wbr>Record<wbr>Set]</a></span>
     </dt>
     <dd>{{% md %}}A `record_sets` block as defined below.
 {{% /md %}}</dd></dl>

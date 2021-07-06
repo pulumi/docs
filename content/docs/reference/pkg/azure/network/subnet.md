@@ -501,7 +501,7 @@ The Subnet resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#delegations_go" style="color: inherit; text-decoration: inherit;">Delegations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subnetdelegation">[]Subnet<wbr>Delegation</a></span>
+        <span class="property-type"><a href="#subnetdelegation">[]Subnet<wbr>Delegation<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `delegation` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1049,7 +1049,7 @@ The following state arguments are supported:
 <a href="#state_delegations_go" style="color: inherit; text-decoration: inherit;">Delegations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subnetdelegation">[]Subnet<wbr>Delegation</a></span>
+        <span class="property-type"><a href="#subnetdelegation">[]Subnet<wbr>Delegation<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `delegation` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1333,7 +1333,7 @@ The following state arguments are supported:
 <a href="#servicedelegation_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Delegation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subnetdelegationservicedelegation">Subnet<wbr>Delegation<wbr>Service<wbr>Delegation<wbr>Args</a></span>
+        <span class="property-type"><a href="#subnetdelegationservicedelegation">Subnet<wbr>Delegation<wbr>Service<wbr>Delegation</a></span>
     </dt>
     <dd>{{% md %}}A `service_delegation` block as defined below.
 {{% /md %}}</dd></dl>
@@ -1377,7 +1377,7 @@ The following state arguments are supported:
 <a href="#servicedelegation_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Delegation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subnetdelegationservicedelegation">Subnet<wbr>Delegation<wbr>Service<wbr>Delegation<wbr>Args</a></span>
+        <span class="property-type"><a href="#subnetdelegationservicedelegation">Subnet<wbr>Delegation<wbr>Service<wbr>Delegation</a></span>
     </dt>
     <dd>{{% md %}}A `service_delegation` block as defined below.
 {{% /md %}}</dd></dl>
@@ -1399,7 +1399,7 @@ The following state arguments are supported:
 <a href="#service_delegation_python" style="color: inherit; text-decoration: inherit;">service_<wbr>delegation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subnetdelegationservicedelegation">Subnet<wbr>Delegation<wbr>Service<wbr>Delegation<wbr>Args</a></span>
+        <span class="property-type"><a href="#subnetdelegationservicedelegation">Subnet<wbr>Delegation<wbr>Service<wbr>Delegation</a></span>
     </dt>
     <dd>{{% md %}}A `service_delegation` block as defined below.
 {{% /md %}}</dd></dl>

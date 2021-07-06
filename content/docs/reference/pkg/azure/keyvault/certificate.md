@@ -742,7 +742,7 @@ The Certificate resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#certificatepolicy_go" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificatepolicy">Certificate<wbr>Certificate<wbr>Policy</a></span>
+        <span class="property-type"><a href="#certificatecertificatepolicy">Certificate<wbr>Certificate<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `certificate_policy` block as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -760,7 +760,7 @@ The Certificate resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#certificate_go" style="color: inherit; text-decoration: inherit;">Certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificate">Certificate<wbr>Certificate</a></span>
+        <span class="property-type"><a href="#certificatecertificate">Certificate<wbr>Certificate<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `certificate` block as defined below, used to Import an existing certificate.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1399,7 +1399,7 @@ The following state arguments are supported:
 <a href="#state_certificate_go" style="color: inherit; text-decoration: inherit;">Certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificate">Certificate<wbr>Certificate</a></span>
+        <span class="property-type"><a href="#certificatecertificate">Certificate<wbr>Certificate<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `certificate` block as defined below, used to Import an existing certificate.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1408,7 +1408,7 @@ The following state arguments are supported:
 <a href="#state_certificateattributes_go" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Attributes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificateattribute">[]Certificate<wbr>Certificate<wbr>Attribute</a></span>
+        <span class="property-type"><a href="#certificatecertificateattribute">[]Certificate<wbr>Certificate<wbr>Attribute<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `certificate_attribute` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1435,7 +1435,7 @@ The following state arguments are supported:
 <a href="#state_certificatepolicy_go" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificatepolicy">Certificate<wbr>Certificate<wbr>Policy</a></span>
+        <span class="property-type"><a href="#certificatecertificatepolicy">Certificate<wbr>Certificate<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `certificate_policy` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2043,7 +2043,7 @@ The following state arguments are supported:
 <a href="#issuerparameters_csharp" style="color: inherit; text-decoration: inherit;">Issuer<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificatepolicyissuerparameters">Certificate<wbr>Certificate<wbr>Policy<wbr>Issuer<wbr>Parameters<wbr>Args</a></span>
+        <span class="property-type"><a href="#certificatecertificatepolicyissuerparameters">Certificate<wbr>Certificate<wbr>Policy<wbr>Issuer<wbr>Parameters</a></span>
     </dt>
     <dd>{{% md %}}A `issuer_parameters` block as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -2052,7 +2052,7 @@ The following state arguments are supported:
 <a href="#keyproperties_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificatepolicykeyproperties">Certificate<wbr>Certificate<wbr>Policy<wbr>Key<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#certificatecertificatepolicykeyproperties">Certificate<wbr>Certificate<wbr>Policy<wbr>Key<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}A `key_properties` block as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -2061,7 +2061,7 @@ The following state arguments are supported:
 <a href="#secretproperties_csharp" style="color: inherit; text-decoration: inherit;">Secret<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificatepolicysecretproperties">Certificate<wbr>Certificate<wbr>Policy<wbr>Secret<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#certificatecertificatepolicysecretproperties">Certificate<wbr>Certificate<wbr>Policy<wbr>Secret<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}A `secret_properties` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2070,7 +2070,7 @@ The following state arguments are supported:
 <a href="#lifetimeactions_csharp" style="color: inherit; text-decoration: inherit;">Lifetime<wbr>Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificatepolicylifetimeaction">List&lt;Certificate<wbr>Certificate<wbr>Policy<wbr>Lifetime<wbr>Action<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#certificatecertificatepolicylifetimeaction">List&lt;Certificate<wbr>Certificate<wbr>Policy<wbr>Lifetime<wbr>Action&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `lifetime_action` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2079,7 +2079,7 @@ The following state arguments are supported:
 <a href="#x509certificateproperties_csharp" style="color: inherit; text-decoration: inherit;">X509Certificate<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificatepolicyx509certificateproperties">Certificate<wbr>Certificate<wbr>Policy<wbr>X509Certificate<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#certificatecertificatepolicyx509certificateproperties">Certificate<wbr>Certificate<wbr>Policy<wbr>X509Certificate<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}A `x509_certificate_properties` block as defined below. Required when `certificate` block is not specified.
 {{% /md %}}</dd></dl>
@@ -2141,7 +2141,7 @@ The following state arguments are supported:
 <a href="#issuerparameters_nodejs" style="color: inherit; text-decoration: inherit;">issuer<wbr>Parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificatepolicyissuerparameters">Certificate<wbr>Certificate<wbr>Policy<wbr>Issuer<wbr>Parameters<wbr>Args</a></span>
+        <span class="property-type"><a href="#certificatecertificatepolicyissuerparameters">Certificate<wbr>Certificate<wbr>Policy<wbr>Issuer<wbr>Parameters</a></span>
     </dt>
     <dd>{{% md %}}A `issuer_parameters` block as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -2150,7 +2150,7 @@ The following state arguments are supported:
 <a href="#keyproperties_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificatepolicykeyproperties">Certificate<wbr>Certificate<wbr>Policy<wbr>Key<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#certificatecertificatepolicykeyproperties">Certificate<wbr>Certificate<wbr>Policy<wbr>Key<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}A `key_properties` block as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -2159,7 +2159,7 @@ The following state arguments are supported:
 <a href="#secretproperties_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificatepolicysecretproperties">Certificate<wbr>Certificate<wbr>Policy<wbr>Secret<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#certificatecertificatepolicysecretproperties">Certificate<wbr>Certificate<wbr>Policy<wbr>Secret<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}A `secret_properties` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2168,7 +2168,7 @@ The following state arguments are supported:
 <a href="#lifetimeactions_nodejs" style="color: inherit; text-decoration: inherit;">lifetime<wbr>Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificatepolicylifetimeaction">Certificate<wbr>Certificate<wbr>Policy<wbr>Lifetime<wbr>Action<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#certificatecertificatepolicylifetimeaction">Certificate<wbr>Certificate<wbr>Policy<wbr>Lifetime<wbr>Action[]</a></span>
     </dt>
     <dd>{{% md %}}A `lifetime_action` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2177,7 +2177,7 @@ The following state arguments are supported:
 <a href="#x509certificateproperties_nodejs" style="color: inherit; text-decoration: inherit;">x509Certificate<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificatepolicyx509certificateproperties">Certificate<wbr>Certificate<wbr>Policy<wbr>X509Certificate<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#certificatecertificatepolicyx509certificateproperties">Certificate<wbr>Certificate<wbr>Policy<wbr>X509Certificate<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}A `x509_certificate_properties` block as defined below. Required when `certificate` block is not specified.
 {{% /md %}}</dd></dl>
@@ -2190,7 +2190,7 @@ The following state arguments are supported:
 <a href="#issuer_parameters_python" style="color: inherit; text-decoration: inherit;">issuer_<wbr>parameters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificatepolicyissuerparameters">Certificate<wbr>Certificate<wbr>Policy<wbr>Issuer<wbr>Parameters<wbr>Args</a></span>
+        <span class="property-type"><a href="#certificatecertificatepolicyissuerparameters">Certificate<wbr>Certificate<wbr>Policy<wbr>Issuer<wbr>Parameters</a></span>
     </dt>
     <dd>{{% md %}}A `issuer_parameters` block as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -2199,7 +2199,7 @@ The following state arguments are supported:
 <a href="#key_properties_python" style="color: inherit; text-decoration: inherit;">key_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificatepolicykeyproperties">Certificate<wbr>Certificate<wbr>Policy<wbr>Key<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#certificatecertificatepolicykeyproperties">Certificate<wbr>Certificate<wbr>Policy<wbr>Key<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}A `key_properties` block as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -2208,7 +2208,7 @@ The following state arguments are supported:
 <a href="#secret_properties_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificatepolicysecretproperties">Certificate<wbr>Certificate<wbr>Policy<wbr>Secret<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#certificatecertificatepolicysecretproperties">Certificate<wbr>Certificate<wbr>Policy<wbr>Secret<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}A `secret_properties` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2217,7 +2217,7 @@ The following state arguments are supported:
 <a href="#lifetime_actions_python" style="color: inherit; text-decoration: inherit;">lifetime_<wbr>actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificatepolicylifetimeaction">Sequence[Certificate<wbr>Certificate<wbr>Policy<wbr>Lifetime<wbr>Action<wbr>Args]</a></span>
+        <span class="property-type"><a href="#certificatecertificatepolicylifetimeaction">Sequence[Certificate<wbr>Certificate<wbr>Policy<wbr>Lifetime<wbr>Action]</a></span>
     </dt>
     <dd>{{% md %}}A `lifetime_action` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2226,7 +2226,7 @@ The following state arguments are supported:
 <a href="#x509_certificate_properties_python" style="color: inherit; text-decoration: inherit;">x509_<wbr>certificate_<wbr>properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificatepolicyx509certificateproperties">Certificate<wbr>Certificate<wbr>Policy<wbr>X509Certificate<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#certificatecertificatepolicyx509certificateproperties">Certificate<wbr>Certificate<wbr>Policy<wbr>X509Certificate<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}A `x509_certificate_properties` block as defined below. Required when `certificate` block is not specified.
 {{% /md %}}</dd></dl>
@@ -2493,7 +2493,7 @@ The following state arguments are supported:
 <a href="#action_csharp" style="color: inherit; text-decoration: inherit;">Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificatepolicylifetimeactionaction">Certificate<wbr>Certificate<wbr>Policy<wbr>Lifetime<wbr>Action<wbr>Action<wbr>Args</a></span>
+        <span class="property-type"><a href="#certificatecertificatepolicylifetimeactionaction">Certificate<wbr>Certificate<wbr>Policy<wbr>Lifetime<wbr>Action<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}A `action` block as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -2502,7 +2502,7 @@ The following state arguments are supported:
 <a href="#trigger_csharp" style="color: inherit; text-decoration: inherit;">Trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificatepolicylifetimeactiontrigger">Certificate<wbr>Certificate<wbr>Policy<wbr>Lifetime<wbr>Action<wbr>Trigger<wbr>Args</a></span>
+        <span class="property-type"><a href="#certificatecertificatepolicylifetimeactiontrigger">Certificate<wbr>Certificate<wbr>Policy<wbr>Lifetime<wbr>Action<wbr>Trigger</a></span>
     </dt>
     <dd>{{% md %}}A `trigger` block as defined below.
 {{% /md %}}</dd></dl>
@@ -2537,7 +2537,7 @@ The following state arguments are supported:
 <a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificatepolicylifetimeactionaction">Certificate<wbr>Certificate<wbr>Policy<wbr>Lifetime<wbr>Action<wbr>Action<wbr>Args</a></span>
+        <span class="property-type"><a href="#certificatecertificatepolicylifetimeactionaction">Certificate<wbr>Certificate<wbr>Policy<wbr>Lifetime<wbr>Action<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}A `action` block as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -2546,7 +2546,7 @@ The following state arguments are supported:
 <a href="#trigger_nodejs" style="color: inherit; text-decoration: inherit;">trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificatepolicylifetimeactiontrigger">Certificate<wbr>Certificate<wbr>Policy<wbr>Lifetime<wbr>Action<wbr>Trigger<wbr>Args</a></span>
+        <span class="property-type"><a href="#certificatecertificatepolicylifetimeactiontrigger">Certificate<wbr>Certificate<wbr>Policy<wbr>Lifetime<wbr>Action<wbr>Trigger</a></span>
     </dt>
     <dd>{{% md %}}A `trigger` block as defined below.
 {{% /md %}}</dd></dl>
@@ -2559,7 +2559,7 @@ The following state arguments are supported:
 <a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificatepolicylifetimeactionaction">Certificate<wbr>Certificate<wbr>Policy<wbr>Lifetime<wbr>Action<wbr>Action<wbr>Args</a></span>
+        <span class="property-type"><a href="#certificatecertificatepolicylifetimeactionaction">Certificate<wbr>Certificate<wbr>Policy<wbr>Lifetime<wbr>Action<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}A `action` block as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -2568,7 +2568,7 @@ The following state arguments are supported:
 <a href="#trigger_python" style="color: inherit; text-decoration: inherit;">trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificatepolicylifetimeactiontrigger">Certificate<wbr>Certificate<wbr>Policy<wbr>Lifetime<wbr>Action<wbr>Trigger<wbr>Args</a></span>
+        <span class="property-type"><a href="#certificatecertificatepolicylifetimeactiontrigger">Certificate<wbr>Certificate<wbr>Policy<wbr>Lifetime<wbr>Action<wbr>Trigger</a></span>
     </dt>
     <dd>{{% md %}}A `trigger` block as defined below.
 {{% /md %}}</dd></dl>
@@ -2817,7 +2817,7 @@ The following state arguments are supported:
 <a href="#subjectalternativenames_csharp" style="color: inherit; text-decoration: inherit;">Subject<wbr>Alternative<wbr>Names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificatepolicyx509certificatepropertiessubjectalternativenames">Certificate<wbr>Certificate<wbr>Policy<wbr>X509Certificate<wbr>Properties<wbr>Subject<wbr>Alternative<wbr>Names<wbr>Args</a></span>
+        <span class="property-type"><a href="#certificatecertificatepolicyx509certificatepropertiessubjectalternativenames">Certificate<wbr>Certificate<wbr>Policy<wbr>X509Certificate<wbr>Properties<wbr>Subject<wbr>Alternative<wbr>Names</a></span>
     </dt>
     <dd>{{% md %}}A `subject_alternative_names` block as defined below.
 {{% /md %}}</dd></dl>
@@ -2915,7 +2915,7 @@ The following state arguments are supported:
 <a href="#subjectalternativenames_nodejs" style="color: inherit; text-decoration: inherit;">subject<wbr>Alternative<wbr>Names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificatepolicyx509certificatepropertiessubjectalternativenames">Certificate<wbr>Certificate<wbr>Policy<wbr>X509Certificate<wbr>Properties<wbr>Subject<wbr>Alternative<wbr>Names<wbr>Args</a></span>
+        <span class="property-type"><a href="#certificatecertificatepolicyx509certificatepropertiessubjectalternativenames">Certificate<wbr>Certificate<wbr>Policy<wbr>X509Certificate<wbr>Properties<wbr>Subject<wbr>Alternative<wbr>Names</a></span>
     </dt>
     <dd>{{% md %}}A `subject_alternative_names` block as defined below.
 {{% /md %}}</dd></dl>
@@ -2964,7 +2964,7 @@ The following state arguments are supported:
 <a href="#subject_alternative_names_python" style="color: inherit; text-decoration: inherit;">subject_<wbr>alternative_<wbr>names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatecertificatepolicyx509certificatepropertiessubjectalternativenames">Certificate<wbr>Certificate<wbr>Policy<wbr>X509Certificate<wbr>Properties<wbr>Subject<wbr>Alternative<wbr>Names<wbr>Args</a></span>
+        <span class="property-type"><a href="#certificatecertificatepolicyx509certificatepropertiessubjectalternativenames">Certificate<wbr>Certificate<wbr>Policy<wbr>X509Certificate<wbr>Properties<wbr>Subject<wbr>Alternative<wbr>Names</a></span>
     </dt>
     <dd>{{% md %}}A `subject_alternative_names` block as defined below.
 {{% /md %}}</dd></dl>

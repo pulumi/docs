@@ -383,7 +383,7 @@ The BackendAddressPool resource accepts the following [input]({{< relref "/docs/
 <a href="#backendaddresses_go" style="color: inherit; text-decoration: inherit;">Backend<wbr>Addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendaddresspoolbackendaddress">[]Backend<wbr>Address<wbr>Pool<wbr>Backend<wbr>Address</a></span>
+        <span class="property-type"><a href="#backendaddresspoolbackendaddress">[]Backend<wbr>Address<wbr>Pool<wbr>Backend<wbr>Address<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field is non-functional and will be removed in version 3.0 of the Azure Provider - use the separate `azurerm_lb_backend_address_pool_address` resource instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
@@ -848,7 +848,7 @@ The following state arguments are supported:
 <a href="#state_backendaddresses_go" style="color: inherit; text-decoration: inherit;">Backend<wbr>Addresses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#backendaddresspoolbackendaddress">[]Backend<wbr>Address<wbr>Pool<wbr>Backend<wbr>Address</a></span>
+        <span class="property-type"><a href="#backendaddresspoolbackendaddress">[]Backend<wbr>Address<wbr>Pool<wbr>Backend<wbr>Address<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field is non-functional and will be removed in version 3.0 of the Azure Provider - use the separate `azurerm_lb_backend_address_pool_address` resource instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">

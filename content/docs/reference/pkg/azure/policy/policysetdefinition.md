@@ -518,7 +518,7 @@ The PolicySetDefinition resource accepts the following [input]({{< relref "/docs
 <a href="#policydefinitiongroups_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Definition<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policysetdefinitionpolicydefinitiongroup">[]Policy<wbr>Set<wbr>Definition<wbr>Policy<wbr>Definition<wbr>Group</a></span>
+        <span class="property-type"><a href="#policysetdefinitionpolicydefinitiongroup">[]Policy<wbr>Set<wbr>Definition<wbr>Policy<wbr>Definition<wbr>Group<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `policy_definition_group` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -527,7 +527,7 @@ The PolicySetDefinition resource accepts the following [input]({{< relref "/docs
 <a href="#policydefinitionreferences_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Definition<wbr>References</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policysetdefinitionpolicydefinitionreference">[]Policy<wbr>Set<wbr>Definition<wbr>Policy<wbr>Definition<wbr>Reference</a></span>
+        <span class="property-type"><a href="#policysetdefinitionpolicydefinitionreference">[]Policy<wbr>Set<wbr>Definition<wbr>Policy<wbr>Definition<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `policy_definition_reference` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -1112,7 +1112,7 @@ The following state arguments are supported:
 <a href="#state_policydefinitiongroups_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Definition<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policysetdefinitionpolicydefinitiongroup">[]Policy<wbr>Set<wbr>Definition<wbr>Policy<wbr>Definition<wbr>Group</a></span>
+        <span class="property-type"><a href="#policysetdefinitionpolicydefinitiongroup">[]Policy<wbr>Set<wbr>Definition<wbr>Policy<wbr>Definition<wbr>Group<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `policy_definition_group` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1121,7 +1121,7 @@ The following state arguments are supported:
 <a href="#state_policydefinitionreferences_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Definition<wbr>References</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policysetdefinitionpolicydefinitionreference">[]Policy<wbr>Set<wbr>Definition<wbr>Policy<wbr>Definition<wbr>Reference</a></span>
+        <span class="property-type"><a href="#policysetdefinitionpolicydefinitionreference">[]Policy<wbr>Set<wbr>Definition<wbr>Policy<wbr>Definition<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `policy_definition_reference` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"

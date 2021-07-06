@@ -250,7 +250,7 @@ The ScheduledQueryRulesLog resource accepts the following [input]({{< relref "/d
 <a href="#criteria_go" style="color: inherit; text-decoration: inherit;">Criteria</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scheduledqueryruleslogcriteria">Scheduled<wbr>Query<wbr>Rules<wbr>Log<wbr>Criteria</a></span>
+        <span class="property-type"><a href="#scheduledqueryruleslogcriteria">Scheduled<wbr>Query<wbr>Rules<wbr>Log<wbr>Criteria<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `criteria` block as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -775,7 +775,7 @@ The following state arguments are supported:
 <a href="#state_criteria_go" style="color: inherit; text-decoration: inherit;">Criteria</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scheduledqueryruleslogcriteria">Scheduled<wbr>Query<wbr>Rules<wbr>Log<wbr>Criteria</a></span>
+        <span class="property-type"><a href="#scheduledqueryruleslogcriteria">Scheduled<wbr>Query<wbr>Rules<wbr>Log<wbr>Criteria<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `criteria` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1024,7 +1024,7 @@ The following state arguments are supported:
 <a href="#dimensions_csharp" style="color: inherit; text-decoration: inherit;">Dimensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scheduledqueryruleslogcriteriadimension">List&lt;Scheduled<wbr>Query<wbr>Rules<wbr>Log<wbr>Criteria<wbr>Dimension<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#scheduledqueryruleslogcriteriadimension">List&lt;Scheduled<wbr>Query<wbr>Rules<wbr>Log<wbr>Criteria<wbr>Dimension&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `dimension` block as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -1068,7 +1068,7 @@ The following state arguments are supported:
 <a href="#dimensions_nodejs" style="color: inherit; text-decoration: inherit;">dimensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scheduledqueryruleslogcriteriadimension">Scheduled<wbr>Query<wbr>Rules<wbr>Log<wbr>Criteria<wbr>Dimension<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#scheduledqueryruleslogcriteriadimension">Scheduled<wbr>Query<wbr>Rules<wbr>Log<wbr>Criteria<wbr>Dimension[]</a></span>
     </dt>
     <dd>{{% md %}}A `dimension` block as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -1090,7 +1090,7 @@ The following state arguments are supported:
 <a href="#dimensions_python" style="color: inherit; text-decoration: inherit;">dimensions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scheduledqueryruleslogcriteriadimension">Sequence[Scheduled<wbr>Query<wbr>Rules<wbr>Log<wbr>Criteria<wbr>Dimension<wbr>Args]</a></span>
+        <span class="property-type"><a href="#scheduledqueryruleslogcriteriadimension">Sequence[Scheduled<wbr>Query<wbr>Rules<wbr>Log<wbr>Criteria<wbr>Dimension]</a></span>
     </dt>
     <dd>{{% md %}}A `dimension` block as defined below.
 {{% /md %}}</dd><dt class="property-required"

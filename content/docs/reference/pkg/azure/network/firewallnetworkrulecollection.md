@@ -578,7 +578,7 @@ The FirewallNetworkRuleCollection resource accepts the following [input]({{< rel
 <a href="#rules_go" style="color: inherit; text-decoration: inherit;">Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallnetworkrulecollectionrule">[]Firewall<wbr>Network<wbr>Rule<wbr>Collection<wbr>Rule</a></span>
+        <span class="property-type"><a href="#firewallnetworkrulecollectionrule">[]Firewall<wbr>Network<wbr>Rule<wbr>Collection<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `rule` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1005,7 +1005,7 @@ The following state arguments are supported:
 <a href="#state_rules_go" style="color: inherit; text-decoration: inherit;">Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallnetworkrulecollectionrule">[]Firewall<wbr>Network<wbr>Rule<wbr>Collection<wbr>Rule</a></span>
+        <span class="property-type"><a href="#firewallnetworkrulecollectionrule">[]Firewall<wbr>Network<wbr>Rule<wbr>Collection<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `rule` blocks as defined below.
 {{% /md %}}</dd></dl>

@@ -568,7 +568,7 @@ The ContentKeyPolicy resource accepts the following [input]({{< relref "/docs/in
 <a href="#policyoptions_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentkeypolicypolicyoption">[]Content<wbr>Key<wbr>Policy<wbr>Policy<wbr>Option</a></span>
+        <span class="property-type"><a href="#contentkeypolicypolicyoption">[]Content<wbr>Key<wbr>Policy<wbr>Policy<wbr>Option<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `policy_option` blocks as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -967,7 +967,7 @@ The following state arguments are supported:
 <a href="#state_policyoptions_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentkeypolicypolicyoption">[]Content<wbr>Key<wbr>Policy<wbr>Policy<wbr>Option</a></span>
+        <span class="property-type"><a href="#contentkeypolicypolicyoption">[]Content<wbr>Key<wbr>Policy<wbr>Policy<wbr>Option<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `policy_option` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1116,7 +1116,7 @@ The following state arguments are supported:
 <a href="#fairplayconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Fairplay<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentkeypolicypolicyoptionfairplayconfiguration">Content<wbr>Key<wbr>Policy<wbr>Policy<wbr>Option<wbr>Fairplay<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#contentkeypolicypolicyoptionfairplayconfiguration">Content<wbr>Key<wbr>Policy<wbr>Policy<wbr>Option<wbr>Fairplay<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}A `fairplay_configuration` block as defined above. Check license requirements here https://docs.microsoft.com/en-us/azure/media-services/latest/fairplay-license-overview.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1134,7 +1134,7 @@ The following state arguments are supported:
 <a href="#playreadyconfigurationlicenses_csharp" style="color: inherit; text-decoration: inherit;">Playready<wbr>Configuration<wbr>Licenses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentkeypolicypolicyoptionplayreadyconfigurationlicense">List&lt;Content<wbr>Key<wbr>Policy<wbr>Policy<wbr>Option<wbr>Playready<wbr>Configuration<wbr>License<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#contentkeypolicypolicyoptionplayreadyconfigurationlicense">List&lt;Content<wbr>Key<wbr>Policy<wbr>Policy<wbr>Option<wbr>Playready<wbr>Configuration<wbr>License&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `playready_configuration_license` blocks as defined above.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1143,7 +1143,7 @@ The following state arguments are supported:
 <a href="#tokenrestriction_csharp" style="color: inherit; text-decoration: inherit;">Token<wbr>Restriction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentkeypolicypolicyoptiontokenrestriction">Content<wbr>Key<wbr>Policy<wbr>Policy<wbr>Option<wbr>Token<wbr>Restriction<wbr>Args</a></span>
+        <span class="property-type"><a href="#contentkeypolicypolicyoptiontokenrestriction">Content<wbr>Key<wbr>Policy<wbr>Policy<wbr>Option<wbr>Token<wbr>Restriction</a></span>
     </dt>
     <dd>{{% md %}}A `token_restriction` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1250,7 +1250,7 @@ The following state arguments are supported:
 <a href="#fairplayconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">fairplay<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentkeypolicypolicyoptionfairplayconfiguration">Content<wbr>Key<wbr>Policy<wbr>Policy<wbr>Option<wbr>Fairplay<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#contentkeypolicypolicyoptionfairplayconfiguration">Content<wbr>Key<wbr>Policy<wbr>Policy<wbr>Option<wbr>Fairplay<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}A `fairplay_configuration` block as defined above. Check license requirements here https://docs.microsoft.com/en-us/azure/media-services/latest/fairplay-license-overview.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1268,7 +1268,7 @@ The following state arguments are supported:
 <a href="#playreadyconfigurationlicenses_nodejs" style="color: inherit; text-decoration: inherit;">playready<wbr>Configuration<wbr>Licenses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentkeypolicypolicyoptionplayreadyconfigurationlicense">Content<wbr>Key<wbr>Policy<wbr>Policy<wbr>Option<wbr>Playready<wbr>Configuration<wbr>License<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#contentkeypolicypolicyoptionplayreadyconfigurationlicense">Content<wbr>Key<wbr>Policy<wbr>Policy<wbr>Option<wbr>Playready<wbr>Configuration<wbr>License[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `playready_configuration_license` blocks as defined above.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1277,7 +1277,7 @@ The following state arguments are supported:
 <a href="#tokenrestriction_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Restriction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentkeypolicypolicyoptiontokenrestriction">Content<wbr>Key<wbr>Policy<wbr>Policy<wbr>Option<wbr>Token<wbr>Restriction<wbr>Args</a></span>
+        <span class="property-type"><a href="#contentkeypolicypolicyoptiontokenrestriction">Content<wbr>Key<wbr>Policy<wbr>Policy<wbr>Option<wbr>Token<wbr>Restriction</a></span>
     </dt>
     <dd>{{% md %}}A `token_restriction` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1317,7 +1317,7 @@ The following state arguments are supported:
 <a href="#fairplay_configuration_python" style="color: inherit; text-decoration: inherit;">fairplay_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentkeypolicypolicyoptionfairplayconfiguration">Content<wbr>Key<wbr>Policy<wbr>Policy<wbr>Option<wbr>Fairplay<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#contentkeypolicypolicyoptionfairplayconfiguration">Content<wbr>Key<wbr>Policy<wbr>Policy<wbr>Option<wbr>Fairplay<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}A `fairplay_configuration` block as defined above. Check license requirements here https://docs.microsoft.com/en-us/azure/media-services/latest/fairplay-license-overview.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1335,7 +1335,7 @@ The following state arguments are supported:
 <a href="#playready_configuration_licenses_python" style="color: inherit; text-decoration: inherit;">playready_<wbr>configuration_<wbr>licenses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentkeypolicypolicyoptionplayreadyconfigurationlicense">Sequence[Content<wbr>Key<wbr>Policy<wbr>Policy<wbr>Option<wbr>Playready<wbr>Configuration<wbr>License<wbr>Args]</a></span>
+        <span class="property-type"><a href="#contentkeypolicypolicyoptionplayreadyconfigurationlicense">Sequence[Content<wbr>Key<wbr>Policy<wbr>Policy<wbr>Option<wbr>Playready<wbr>Configuration<wbr>License]</a></span>
     </dt>
     <dd>{{% md %}}One or more `playready_configuration_license` blocks as defined above.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1344,7 +1344,7 @@ The following state arguments are supported:
 <a href="#token_restriction_python" style="color: inherit; text-decoration: inherit;">token_<wbr>restriction</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentkeypolicypolicyoptiontokenrestriction">Content<wbr>Key<wbr>Policy<wbr>Policy<wbr>Option<wbr>Token<wbr>Restriction<wbr>Args</a></span>
+        <span class="property-type"><a href="#contentkeypolicypolicyoptiontokenrestriction">Content<wbr>Key<wbr>Policy<wbr>Policy<wbr>Option<wbr>Token<wbr>Restriction</a></span>
     </dt>
     <dd>{{% md %}}A `token_restriction` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1377,7 +1377,7 @@ The following state arguments are supported:
 <a href="#offlinerentalconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Offline<wbr>Rental<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentkeypolicypolicyoptionfairplayconfigurationofflinerentalconfiguration">Content<wbr>Key<wbr>Policy<wbr>Policy<wbr>Option<wbr>Fairplay<wbr>Configuration<wbr>Offline<wbr>Rental<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#contentkeypolicypolicyoptionfairplayconfigurationofflinerentalconfiguration">Content<wbr>Key<wbr>Policy<wbr>Policy<wbr>Option<wbr>Fairplay<wbr>Configuration<wbr>Offline<wbr>Rental<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}A `offline_rental_configuration` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1493,7 +1493,7 @@ The following state arguments are supported:
 <a href="#offlinerentalconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">offline<wbr>Rental<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentkeypolicypolicyoptionfairplayconfigurationofflinerentalconfiguration">Content<wbr>Key<wbr>Policy<wbr>Policy<wbr>Option<wbr>Fairplay<wbr>Configuration<wbr>Offline<wbr>Rental<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#contentkeypolicypolicyoptionfairplayconfigurationofflinerentalconfiguration">Content<wbr>Key<wbr>Policy<wbr>Policy<wbr>Option<wbr>Fairplay<wbr>Configuration<wbr>Offline<wbr>Rental<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}A `offline_rental_configuration` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1551,7 +1551,7 @@ The following state arguments are supported:
 <a href="#offline_rental_configuration_python" style="color: inherit; text-decoration: inherit;">offline_<wbr>rental_<wbr>configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentkeypolicypolicyoptionfairplayconfigurationofflinerentalconfiguration">Content<wbr>Key<wbr>Policy<wbr>Policy<wbr>Option<wbr>Fairplay<wbr>Configuration<wbr>Offline<wbr>Rental<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#contentkeypolicypolicyoptionfairplayconfigurationofflinerentalconfiguration">Content<wbr>Key<wbr>Policy<wbr>Policy<wbr>Option<wbr>Fairplay<wbr>Configuration<wbr>Offline<wbr>Rental<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}A `offline_rental_configuration` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1764,7 +1764,7 @@ The following state arguments are supported:
 <a href="#playright_csharp" style="color: inherit; text-decoration: inherit;">Play<wbr>Right</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentkeypolicypolicyoptionplayreadyconfigurationlicenseplayright">Content<wbr>Key<wbr>Policy<wbr>Policy<wbr>Option<wbr>Playready<wbr>Configuration<wbr>License<wbr>Play<wbr>Right<wbr>Args</a></span>
+        <span class="property-type"><a href="#contentkeypolicypolicyoptionplayreadyconfigurationlicenseplayright">Content<wbr>Key<wbr>Policy<wbr>Policy<wbr>Option<wbr>Playready<wbr>Configuration<wbr>License<wbr>Play<wbr>Right</a></span>
     </dt>
     <dd>{{% md %}}A `play_right` block as defined above.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1970,7 +1970,7 @@ The following state arguments are supported:
 <a href="#playright_nodejs" style="color: inherit; text-decoration: inherit;">play<wbr>Right</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentkeypolicypolicyoptionplayreadyconfigurationlicenseplayright">Content<wbr>Key<wbr>Policy<wbr>Policy<wbr>Option<wbr>Playready<wbr>Configuration<wbr>License<wbr>Play<wbr>Right<wbr>Args</a></span>
+        <span class="property-type"><a href="#contentkeypolicypolicyoptionplayreadyconfigurationlicenseplayright">Content<wbr>Key<wbr>Policy<wbr>Policy<wbr>Option<wbr>Playready<wbr>Configuration<wbr>License<wbr>Play<wbr>Right</a></span>
     </dt>
     <dd>{{% md %}}A `play_right` block as defined above.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2073,7 +2073,7 @@ The following state arguments are supported:
 <a href="#play_right_python" style="color: inherit; text-decoration: inherit;">play_<wbr>right</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentkeypolicypolicyoptionplayreadyconfigurationlicenseplayright">Content<wbr>Key<wbr>Policy<wbr>Policy<wbr>Option<wbr>Playready<wbr>Configuration<wbr>License<wbr>Play<wbr>Right<wbr>Args</a></span>
+        <span class="property-type"><a href="#contentkeypolicypolicyoptionplayreadyconfigurationlicenseplayright">Content<wbr>Key<wbr>Policy<wbr>Policy<wbr>Option<wbr>Playready<wbr>Configuration<wbr>License<wbr>Play<wbr>Right</a></span>
     </dt>
     <dd>{{% md %}}A `play_right` block as defined above.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2583,7 +2583,7 @@ The following state arguments are supported:
 <a href="#requiredclaims_csharp" style="color: inherit; text-decoration: inherit;">Required<wbr>Claims</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentkeypolicypolicyoptiontokenrestrictionrequiredclaim">List&lt;Content<wbr>Key<wbr>Policy<wbr>Policy<wbr>Option<wbr>Token<wbr>Restriction<wbr>Required<wbr>Claim<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#contentkeypolicypolicyoptiontokenrestrictionrequiredclaim">List&lt;Content<wbr>Key<wbr>Policy<wbr>Policy<wbr>Option<wbr>Token<wbr>Restriction<wbr>Required<wbr>Claim&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `required_claim` blocks as defined above.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2753,7 +2753,7 @@ The following state arguments are supported:
 <a href="#requiredclaims_nodejs" style="color: inherit; text-decoration: inherit;">required<wbr>Claims</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentkeypolicypolicyoptiontokenrestrictionrequiredclaim">Content<wbr>Key<wbr>Policy<wbr>Policy<wbr>Option<wbr>Token<wbr>Restriction<wbr>Required<wbr>Claim<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#contentkeypolicypolicyoptiontokenrestrictionrequiredclaim">Content<wbr>Key<wbr>Policy<wbr>Policy<wbr>Option<wbr>Token<wbr>Restriction<wbr>Required<wbr>Claim[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `required_claim` blocks as defined above.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2838,7 +2838,7 @@ The following state arguments are supported:
 <a href="#required_claims_python" style="color: inherit; text-decoration: inherit;">required_<wbr>claims</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentkeypolicypolicyoptiontokenrestrictionrequiredclaim">Sequence[Content<wbr>Key<wbr>Policy<wbr>Policy<wbr>Option<wbr>Token<wbr>Restriction<wbr>Required<wbr>Claim<wbr>Args]</a></span>
+        <span class="property-type"><a href="#contentkeypolicypolicyoptiontokenrestrictionrequiredclaim">Sequence[Content<wbr>Key<wbr>Policy<wbr>Policy<wbr>Option<wbr>Token<wbr>Restriction<wbr>Required<wbr>Claim]</a></span>
     </dt>
     <dd>{{% md %}}One or more `required_claim` blocks as defined above.
 {{% /md %}}</dd><dt class="property-optional"

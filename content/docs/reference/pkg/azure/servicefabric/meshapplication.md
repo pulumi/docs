@@ -229,7 +229,7 @@ The MeshApplication resource accepts the following [input]({{< relref "/docs/int
 <a href="#services_go" style="color: inherit; text-decoration: inherit;">Services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#meshapplicationservice">[]Mesh<wbr>Application<wbr>Service</a></span>
+        <span class="property-type"><a href="#meshapplicationservice">[]Mesh<wbr>Application<wbr>Service<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Any number of `service` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -628,7 +628,7 @@ The following state arguments are supported:
 <a href="#state_services_go" style="color: inherit; text-decoration: inherit;">Services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#meshapplicationservice">[]Mesh<wbr>Application<wbr>Service</a></span>
+        <span class="property-type"><a href="#meshapplicationservice">[]Mesh<wbr>Application<wbr>Service<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Any number of `service` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -759,7 +759,7 @@ The following state arguments are supported:
 <a href="#codepackages_csharp" style="color: inherit; text-decoration: inherit;">Code<wbr>Packages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#meshapplicationservicecodepackage">List&lt;Mesh<wbr>Application<wbr>Service<wbr>Code<wbr>Package<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#meshapplicationservicecodepackage">List&lt;Mesh<wbr>Application<wbr>Service<wbr>Code<wbr>Package&gt;</a></span>
     </dt>
     <dd>{{% md %}}Any number `code_package` block as described below.
 {{% /md %}}</dd><dt class="property-required"
@@ -821,7 +821,7 @@ The following state arguments are supported:
 <a href="#codepackages_nodejs" style="color: inherit; text-decoration: inherit;">code<wbr>Packages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#meshapplicationservicecodepackage">Mesh<wbr>Application<wbr>Service<wbr>Code<wbr>Package<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#meshapplicationservicecodepackage">Mesh<wbr>Application<wbr>Service<wbr>Code<wbr>Package[]</a></span>
     </dt>
     <dd>{{% md %}}Any number `code_package` block as described below.
 {{% /md %}}</dd><dt class="property-required"
@@ -852,7 +852,7 @@ The following state arguments are supported:
 <a href="#code_packages_python" style="color: inherit; text-decoration: inherit;">code_<wbr>packages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#meshapplicationservicecodepackage">Sequence[Mesh<wbr>Application<wbr>Service<wbr>Code<wbr>Package<wbr>Args]</a></span>
+        <span class="property-type"><a href="#meshapplicationservicecodepackage">Sequence[Mesh<wbr>Application<wbr>Service<wbr>Code<wbr>Package]</a></span>
     </dt>
     <dd>{{% md %}}Any number `code_package` block as described below.
 {{% /md %}}</dd><dt class="property-required"
@@ -903,7 +903,7 @@ The following state arguments are supported:
 <a href="#resources_csharp" style="color: inherit; text-decoration: inherit;">Resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#meshapplicationservicecodepackageresources">Mesh<wbr>Application<wbr>Service<wbr>Code<wbr>Package<wbr>Resources<wbr>Args</a></span>
+        <span class="property-type"><a href="#meshapplicationservicecodepackageresources">Mesh<wbr>Application<wbr>Service<wbr>Code<wbr>Package<wbr>Resources</a></span>
     </dt>
     <dd>{{% md %}}A `resources` block as defined below.
 {{% /md %}}</dd></dl>
@@ -965,7 +965,7 @@ The following state arguments are supported:
 <a href="#resources_nodejs" style="color: inherit; text-decoration: inherit;">resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#meshapplicationservicecodepackageresources">Mesh<wbr>Application<wbr>Service<wbr>Code<wbr>Package<wbr>Resources<wbr>Args</a></span>
+        <span class="property-type"><a href="#meshapplicationservicecodepackageresources">Mesh<wbr>Application<wbr>Service<wbr>Code<wbr>Package<wbr>Resources</a></span>
     </dt>
     <dd>{{% md %}}A `resources` block as defined below.
 {{% /md %}}</dd></dl>
@@ -996,7 +996,7 @@ The following state arguments are supported:
 <a href="#resources_python" style="color: inherit; text-decoration: inherit;">resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#meshapplicationservicecodepackageresources">Mesh<wbr>Application<wbr>Service<wbr>Code<wbr>Package<wbr>Resources<wbr>Args</a></span>
+        <span class="property-type"><a href="#meshapplicationservicecodepackageresources">Mesh<wbr>Application<wbr>Service<wbr>Code<wbr>Package<wbr>Resources</a></span>
     </dt>
     <dd>{{% md %}}A `resources` block as defined below.
 {{% /md %}}</dd></dl>
@@ -1011,7 +1011,7 @@ The following state arguments are supported:
 <a href="#requests_csharp" style="color: inherit; text-decoration: inherit;">Requests</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#meshapplicationservicecodepackageresourcesrequests">Mesh<wbr>Application<wbr>Service<wbr>Code<wbr>Package<wbr>Resources<wbr>Requests<wbr>Args</a></span>
+        <span class="property-type"><a href="#meshapplicationservicecodepackageresourcesrequests">Mesh<wbr>Application<wbr>Service<wbr>Code<wbr>Package<wbr>Resources<wbr>Requests</a></span>
     </dt>
     <dd>{{% md %}}A `requests` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1020,7 +1020,7 @@ The following state arguments are supported:
 <a href="#limits_csharp" style="color: inherit; text-decoration: inherit;">Limits</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#meshapplicationservicecodepackageresourceslimits">Mesh<wbr>Application<wbr>Service<wbr>Code<wbr>Package<wbr>Resources<wbr>Limits<wbr>Args</a></span>
+        <span class="property-type"><a href="#meshapplicationservicecodepackageresourceslimits">Mesh<wbr>Application<wbr>Service<wbr>Code<wbr>Package<wbr>Resources<wbr>Limits</a></span>
     </dt>
     <dd>{{% md %}}A `limits` block as defined below.
 {{% /md %}}</dd></dl>
@@ -1055,7 +1055,7 @@ The following state arguments are supported:
 <a href="#requests_nodejs" style="color: inherit; text-decoration: inherit;">requests</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#meshapplicationservicecodepackageresourcesrequests">Mesh<wbr>Application<wbr>Service<wbr>Code<wbr>Package<wbr>Resources<wbr>Requests<wbr>Args</a></span>
+        <span class="property-type"><a href="#meshapplicationservicecodepackageresourcesrequests">Mesh<wbr>Application<wbr>Service<wbr>Code<wbr>Package<wbr>Resources<wbr>Requests</a></span>
     </dt>
     <dd>{{% md %}}A `requests` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1064,7 +1064,7 @@ The following state arguments are supported:
 <a href="#limits_nodejs" style="color: inherit; text-decoration: inherit;">limits</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#meshapplicationservicecodepackageresourceslimits">Mesh<wbr>Application<wbr>Service<wbr>Code<wbr>Package<wbr>Resources<wbr>Limits<wbr>Args</a></span>
+        <span class="property-type"><a href="#meshapplicationservicecodepackageresourceslimits">Mesh<wbr>Application<wbr>Service<wbr>Code<wbr>Package<wbr>Resources<wbr>Limits</a></span>
     </dt>
     <dd>{{% md %}}A `limits` block as defined below.
 {{% /md %}}</dd></dl>
@@ -1077,7 +1077,7 @@ The following state arguments are supported:
 <a href="#requests_python" style="color: inherit; text-decoration: inherit;">requests</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#meshapplicationservicecodepackageresourcesrequests">Mesh<wbr>Application<wbr>Service<wbr>Code<wbr>Package<wbr>Resources<wbr>Requests<wbr>Args</a></span>
+        <span class="property-type"><a href="#meshapplicationservicecodepackageresourcesrequests">Mesh<wbr>Application<wbr>Service<wbr>Code<wbr>Package<wbr>Resources<wbr>Requests</a></span>
     </dt>
     <dd>{{% md %}}A `requests` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1086,7 +1086,7 @@ The following state arguments are supported:
 <a href="#limits_python" style="color: inherit; text-decoration: inherit;">limits</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#meshapplicationservicecodepackageresourceslimits">Mesh<wbr>Application<wbr>Service<wbr>Code<wbr>Package<wbr>Resources<wbr>Limits<wbr>Args</a></span>
+        <span class="property-type"><a href="#meshapplicationservicecodepackageresourceslimits">Mesh<wbr>Application<wbr>Service<wbr>Code<wbr>Package<wbr>Resources<wbr>Limits</a></span>
     </dt>
     <dd>{{% md %}}A `limits` block as defined below.
 {{% /md %}}</dd></dl>

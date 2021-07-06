@@ -457,7 +457,7 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#containernetworkinterface_go" style="color: inherit; text-decoration: inherit;">Container<wbr>Network<wbr>Interface</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#profilecontainernetworkinterface">Profile<wbr>Container<wbr>Network<wbr>Interface</a></span>
+        <span class="property-type"><a href="#profilecontainernetworkinterface">Profile<wbr>Container<wbr>Network<wbr>Interface<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `container_network_interface` block as documented below.
 {{% /md %}}</dd><dt class="property-required"
@@ -884,7 +884,7 @@ The following state arguments are supported:
 <a href="#state_containernetworkinterface_go" style="color: inherit; text-decoration: inherit;">Container<wbr>Network<wbr>Interface</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#profilecontainernetworkinterface">Profile<wbr>Container<wbr>Network<wbr>Interface</a></span>
+        <span class="property-type"><a href="#profilecontainernetworkinterface">Profile<wbr>Container<wbr>Network<wbr>Interface<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `container_network_interface` block as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1069,7 +1069,7 @@ The following state arguments are supported:
 <a href="#ipconfigurations_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#profilecontainernetworkinterfaceipconfiguration">List&lt;Profile<wbr>Container<wbr>Network<wbr>Interface<wbr>Ip<wbr>Configuration<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#profilecontainernetworkinterfaceipconfiguration">List&lt;Profile<wbr>Container<wbr>Network<wbr>Interface<wbr>Ip<wbr>Configuration&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `ip_configuration` blocks as documented below.
 {{% /md %}}</dd><dt class="property-required"
@@ -1113,7 +1113,7 @@ The following state arguments are supported:
 <a href="#ipconfigurations_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#profilecontainernetworkinterfaceipconfiguration">Profile<wbr>Container<wbr>Network<wbr>Interface<wbr>Ip<wbr>Configuration<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#profilecontainernetworkinterfaceipconfiguration">Profile<wbr>Container<wbr>Network<wbr>Interface<wbr>Ip<wbr>Configuration[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `ip_configuration` blocks as documented below.
 {{% /md %}}</dd><dt class="property-required"
@@ -1135,7 +1135,7 @@ The following state arguments are supported:
 <a href="#ip_configurations_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#profilecontainernetworkinterfaceipconfiguration">Sequence[Profile<wbr>Container<wbr>Network<wbr>Interface<wbr>Ip<wbr>Configuration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#profilecontainernetworkinterfaceipconfiguration">Sequence[Profile<wbr>Container<wbr>Network<wbr>Interface<wbr>Ip<wbr>Configuration]</a></span>
     </dt>
     <dd>{{% md %}}One or more `ip_configuration` blocks as documented below.
 {{% /md %}}</dd><dt class="property-required"

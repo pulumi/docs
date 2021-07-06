@@ -883,7 +883,7 @@ The ApplicationGateway resource accepts the following [input]({{< relref "/docs/
 <a href="#backendaddresspools_go" style="color: inherit; text-decoration: inherit;">Backend<wbr>Address<wbr>Pools</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewaybackendaddresspool">[]Application<wbr>Gateway<wbr>Backend<wbr>Address<wbr>Pool</a></span>
+        <span class="property-type"><a href="#applicationgatewaybackendaddresspool">[]Application<wbr>Gateway<wbr>Backend<wbr>Address<wbr>Pool<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `backend_address_pool` blocks as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -892,7 +892,7 @@ The ApplicationGateway resource accepts the following [input]({{< relref "/docs/
 <a href="#backendhttpsettings_go" style="color: inherit; text-decoration: inherit;">Backend<wbr>Http<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewaybackendhttpsetting">[]Application<wbr>Gateway<wbr>Backend<wbr>Http<wbr>Setting</a></span>
+        <span class="property-type"><a href="#applicationgatewaybackendhttpsetting">[]Application<wbr>Gateway<wbr>Backend<wbr>Http<wbr>Setting<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `backend_http_settings` blocks as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -901,7 +901,7 @@ The ApplicationGateway resource accepts the following [input]({{< relref "/docs/
 <a href="#frontendipconfigurations_go" style="color: inherit; text-decoration: inherit;">Frontend<wbr>Ip<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayfrontendipconfiguration">[]Application<wbr>Gateway<wbr>Frontend<wbr>Ip<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#applicationgatewayfrontendipconfiguration">[]Application<wbr>Gateway<wbr>Frontend<wbr>Ip<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `frontend_ip_configuration` blocks as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -910,7 +910,7 @@ The ApplicationGateway resource accepts the following [input]({{< relref "/docs/
 <a href="#frontendports_go" style="color: inherit; text-decoration: inherit;">Frontend<wbr>Ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayfrontendport">[]Application<wbr>Gateway<wbr>Frontend<wbr>Port</a></span>
+        <span class="property-type"><a href="#applicationgatewayfrontendport">[]Application<wbr>Gateway<wbr>Frontend<wbr>Port<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `frontend_port` blocks as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -919,7 +919,7 @@ The ApplicationGateway resource accepts the following [input]({{< relref "/docs/
 <a href="#gatewayipconfigurations_go" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Ip<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewaygatewayipconfiguration">[]Application<wbr>Gateway<wbr>Gateway<wbr>Ip<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#applicationgatewaygatewayipconfiguration">[]Application<wbr>Gateway<wbr>Gateway<wbr>Ip<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `gateway_ip_configuration` blocks as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -928,7 +928,7 @@ The ApplicationGateway resource accepts the following [input]({{< relref "/docs/
 <a href="#httplisteners_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Listeners</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayhttplistener">[]Application<wbr>Gateway<wbr>Http<wbr>Listener</a></span>
+        <span class="property-type"><a href="#applicationgatewayhttplistener">[]Application<wbr>Gateway<wbr>Http<wbr>Listener<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `http_listener` blocks as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -937,7 +937,7 @@ The ApplicationGateway resource accepts the following [input]({{< relref "/docs/
 <a href="#requestroutingrules_go" style="color: inherit; text-decoration: inherit;">Request<wbr>Routing<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayrequestroutingrule">[]Application<wbr>Gateway<wbr>Request<wbr>Routing<wbr>Rule</a></span>
+        <span class="property-type"><a href="#applicationgatewayrequestroutingrule">[]Application<wbr>Gateway<wbr>Request<wbr>Routing<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `request_routing_rule` blocks as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -955,7 +955,7 @@ The ApplicationGateway resource accepts the following [input]({{< relref "/docs/
 <a href="#sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewaysku">Application<wbr>Gateway<wbr>Sku</a></span>
+        <span class="property-type"><a href="#applicationgatewaysku">Application<wbr>Gateway<wbr>Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `sku` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -964,7 +964,7 @@ The ApplicationGateway resource accepts the following [input]({{< relref "/docs/
 <a href="#authenticationcertificates_go" style="color: inherit; text-decoration: inherit;">Authentication<wbr>Certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayauthenticationcertificate">[]Application<wbr>Gateway<wbr>Authentication<wbr>Certificate</a></span>
+        <span class="property-type"><a href="#applicationgatewayauthenticationcertificate">[]Application<wbr>Gateway<wbr>Authentication<wbr>Certificate<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `authentication_certificate` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -973,7 +973,7 @@ The ApplicationGateway resource accepts the following [input]({{< relref "/docs/
 <a href="#autoscaleconfiguration_go" style="color: inherit; text-decoration: inherit;">Autoscale<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayautoscaleconfiguration">Application<wbr>Gateway<wbr>Autoscale<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#applicationgatewayautoscaleconfiguration">Application<wbr>Gateway<wbr>Autoscale<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `autoscale_configuration` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -982,7 +982,7 @@ The ApplicationGateway resource accepts the following [input]({{< relref "/docs/
 <a href="#customerrorconfigurations_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Error<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewaycustomerrorconfiguration">[]Application<wbr>Gateway<wbr>Custom<wbr>Error<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#applicationgatewaycustomerrorconfiguration">[]Application<wbr>Gateway<wbr>Custom<wbr>Error<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `custom_error_configuration` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1009,7 +1009,7 @@ The ApplicationGateway resource accepts the following [input]({{< relref "/docs/
 <a href="#identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayidentity">Application<wbr>Gateway<wbr>Identity</a></span>
+        <span class="property-type"><a href="#applicationgatewayidentity">Application<wbr>Gateway<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `identity` block.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1036,7 +1036,7 @@ The ApplicationGateway resource accepts the following [input]({{< relref "/docs/
 <a href="#probes_go" style="color: inherit; text-decoration: inherit;">Probes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayprobe">[]Application<wbr>Gateway<wbr>Probe</a></span>
+        <span class="property-type"><a href="#applicationgatewayprobe">[]Application<wbr>Gateway<wbr>Probe<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `probe` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1045,7 +1045,7 @@ The ApplicationGateway resource accepts the following [input]({{< relref "/docs/
 <a href="#redirectconfigurations_go" style="color: inherit; text-decoration: inherit;">Redirect<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayredirectconfiguration">[]Application<wbr>Gateway<wbr>Redirect<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#applicationgatewayredirectconfiguration">[]Application<wbr>Gateway<wbr>Redirect<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `redirect_configuration` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1054,7 +1054,7 @@ The ApplicationGateway resource accepts the following [input]({{< relref "/docs/
 <a href="#rewriterulesets_go" style="color: inherit; text-decoration: inherit;">Rewrite<wbr>Rule<wbr>Sets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayrewriteruleset">[]Application<wbr>Gateway<wbr>Rewrite<wbr>Rule<wbr>Set</a></span>
+        <span class="property-type"><a href="#applicationgatewayrewriteruleset">[]Application<wbr>Gateway<wbr>Rewrite<wbr>Rule<wbr>Set<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `rewrite_rule_set` blocks as defined below. Only valid for v2 SKUs.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1063,7 +1063,7 @@ The ApplicationGateway resource accepts the following [input]({{< relref "/docs/
 <a href="#sslcertificates_go" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewaysslcertificate">[]Application<wbr>Gateway<wbr>Ssl<wbr>Certificate</a></span>
+        <span class="property-type"><a href="#applicationgatewaysslcertificate">[]Application<wbr>Gateway<wbr>Ssl<wbr>Certificate<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `ssl_certificate` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1072,7 +1072,7 @@ The ApplicationGateway resource accepts the following [input]({{< relref "/docs/
 <a href="#sslpolicies_go" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewaysslpolicy">[]Application<wbr>Gateway<wbr>Ssl<wbr>Policy</a></span>
+        <span class="property-type"><a href="#applicationgatewaysslpolicy">[]Application<wbr>Gateway<wbr>Ssl<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}a `ssl policy` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1090,7 +1090,7 @@ The ApplicationGateway resource accepts the following [input]({{< relref "/docs/
 <a href="#trustedrootcertificates_go" style="color: inherit; text-decoration: inherit;">Trusted<wbr>Root<wbr>Certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewaytrustedrootcertificate">[]Application<wbr>Gateway<wbr>Trusted<wbr>Root<wbr>Certificate</a></span>
+        <span class="property-type"><a href="#applicationgatewaytrustedrootcertificate">[]Application<wbr>Gateway<wbr>Trusted<wbr>Root<wbr>Certificate<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `trusted_root_certificate` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1099,7 +1099,7 @@ The ApplicationGateway resource accepts the following [input]({{< relref "/docs/
 <a href="#urlpathmaps_go" style="color: inherit; text-decoration: inherit;">Url<wbr>Path<wbr>Maps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayurlpathmap">[]Application<wbr>Gateway<wbr>Url<wbr>Path<wbr>Map</a></span>
+        <span class="property-type"><a href="#applicationgatewayurlpathmap">[]Application<wbr>Gateway<wbr>Url<wbr>Path<wbr>Map<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `url_path_map` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1108,7 +1108,7 @@ The ApplicationGateway resource accepts the following [input]({{< relref "/docs/
 <a href="#wafconfiguration_go" style="color: inherit; text-decoration: inherit;">Waf<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewaywafconfiguration">Application<wbr>Gateway<wbr>Waf<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#applicationgatewaywafconfiguration">Application<wbr>Gateway<wbr>Waf<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `waf_configuration` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2078,7 +2078,7 @@ The following state arguments are supported:
 <a href="#state_authenticationcertificates_go" style="color: inherit; text-decoration: inherit;">Authentication<wbr>Certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayauthenticationcertificate">[]Application<wbr>Gateway<wbr>Authentication<wbr>Certificate</a></span>
+        <span class="property-type"><a href="#applicationgatewayauthenticationcertificate">[]Application<wbr>Gateway<wbr>Authentication<wbr>Certificate<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `authentication_certificate` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2087,7 +2087,7 @@ The following state arguments are supported:
 <a href="#state_autoscaleconfiguration_go" style="color: inherit; text-decoration: inherit;">Autoscale<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayautoscaleconfiguration">Application<wbr>Gateway<wbr>Autoscale<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#applicationgatewayautoscaleconfiguration">Application<wbr>Gateway<wbr>Autoscale<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `autoscale_configuration` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2096,7 +2096,7 @@ The following state arguments are supported:
 <a href="#state_backendaddresspools_go" style="color: inherit; text-decoration: inherit;">Backend<wbr>Address<wbr>Pools</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewaybackendaddresspool">[]Application<wbr>Gateway<wbr>Backend<wbr>Address<wbr>Pool</a></span>
+        <span class="property-type"><a href="#applicationgatewaybackendaddresspool">[]Application<wbr>Gateway<wbr>Backend<wbr>Address<wbr>Pool<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `backend_address_pool` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2105,7 +2105,7 @@ The following state arguments are supported:
 <a href="#state_backendhttpsettings_go" style="color: inherit; text-decoration: inherit;">Backend<wbr>Http<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewaybackendhttpsetting">[]Application<wbr>Gateway<wbr>Backend<wbr>Http<wbr>Setting</a></span>
+        <span class="property-type"><a href="#applicationgatewaybackendhttpsetting">[]Application<wbr>Gateway<wbr>Backend<wbr>Http<wbr>Setting<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `backend_http_settings` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2114,7 +2114,7 @@ The following state arguments are supported:
 <a href="#state_customerrorconfigurations_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Error<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewaycustomerrorconfiguration">[]Application<wbr>Gateway<wbr>Custom<wbr>Error<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#applicationgatewaycustomerrorconfiguration">[]Application<wbr>Gateway<wbr>Custom<wbr>Error<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `custom_error_configuration` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2141,7 +2141,7 @@ The following state arguments are supported:
 <a href="#state_frontendipconfigurations_go" style="color: inherit; text-decoration: inherit;">Frontend<wbr>Ip<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayfrontendipconfiguration">[]Application<wbr>Gateway<wbr>Frontend<wbr>Ip<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#applicationgatewayfrontendipconfiguration">[]Application<wbr>Gateway<wbr>Frontend<wbr>Ip<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `frontend_ip_configuration` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2150,7 +2150,7 @@ The following state arguments are supported:
 <a href="#state_frontendports_go" style="color: inherit; text-decoration: inherit;">Frontend<wbr>Ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayfrontendport">[]Application<wbr>Gateway<wbr>Frontend<wbr>Port</a></span>
+        <span class="property-type"><a href="#applicationgatewayfrontendport">[]Application<wbr>Gateway<wbr>Frontend<wbr>Port<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `frontend_port` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2159,7 +2159,7 @@ The following state arguments are supported:
 <a href="#state_gatewayipconfigurations_go" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Ip<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewaygatewayipconfiguration">[]Application<wbr>Gateway<wbr>Gateway<wbr>Ip<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#applicationgatewaygatewayipconfiguration">[]Application<wbr>Gateway<wbr>Gateway<wbr>Ip<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `gateway_ip_configuration` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2168,7 +2168,7 @@ The following state arguments are supported:
 <a href="#state_httplisteners_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Listeners</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayhttplistener">[]Application<wbr>Gateway<wbr>Http<wbr>Listener</a></span>
+        <span class="property-type"><a href="#applicationgatewayhttplistener">[]Application<wbr>Gateway<wbr>Http<wbr>Listener<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `http_listener` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2177,7 +2177,7 @@ The following state arguments are supported:
 <a href="#state_identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayidentity">Application<wbr>Gateway<wbr>Identity</a></span>
+        <span class="property-type"><a href="#applicationgatewayidentity">Application<wbr>Gateway<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `identity` block.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2204,7 +2204,7 @@ The following state arguments are supported:
 <a href="#state_probes_go" style="color: inherit; text-decoration: inherit;">Probes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayprobe">[]Application<wbr>Gateway<wbr>Probe</a></span>
+        <span class="property-type"><a href="#applicationgatewayprobe">[]Application<wbr>Gateway<wbr>Probe<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `probe` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2213,7 +2213,7 @@ The following state arguments are supported:
 <a href="#state_redirectconfigurations_go" style="color: inherit; text-decoration: inherit;">Redirect<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayredirectconfiguration">[]Application<wbr>Gateway<wbr>Redirect<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#applicationgatewayredirectconfiguration">[]Application<wbr>Gateway<wbr>Redirect<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `redirect_configuration` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2222,7 +2222,7 @@ The following state arguments are supported:
 <a href="#state_requestroutingrules_go" style="color: inherit; text-decoration: inherit;">Request<wbr>Routing<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayrequestroutingrule">[]Application<wbr>Gateway<wbr>Request<wbr>Routing<wbr>Rule</a></span>
+        <span class="property-type"><a href="#applicationgatewayrequestroutingrule">[]Application<wbr>Gateway<wbr>Request<wbr>Routing<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `request_routing_rule` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2240,7 +2240,7 @@ The following state arguments are supported:
 <a href="#state_rewriterulesets_go" style="color: inherit; text-decoration: inherit;">Rewrite<wbr>Rule<wbr>Sets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayrewriteruleset">[]Application<wbr>Gateway<wbr>Rewrite<wbr>Rule<wbr>Set</a></span>
+        <span class="property-type"><a href="#applicationgatewayrewriteruleset">[]Application<wbr>Gateway<wbr>Rewrite<wbr>Rule<wbr>Set<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `rewrite_rule_set` blocks as defined below. Only valid for v2 SKUs.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2249,7 +2249,7 @@ The following state arguments are supported:
 <a href="#state_sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewaysku">Application<wbr>Gateway<wbr>Sku</a></span>
+        <span class="property-type"><a href="#applicationgatewaysku">Application<wbr>Gateway<wbr>Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `sku` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2258,7 +2258,7 @@ The following state arguments are supported:
 <a href="#state_sslcertificates_go" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewaysslcertificate">[]Application<wbr>Gateway<wbr>Ssl<wbr>Certificate</a></span>
+        <span class="property-type"><a href="#applicationgatewaysslcertificate">[]Application<wbr>Gateway<wbr>Ssl<wbr>Certificate<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `ssl_certificate` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2267,7 +2267,7 @@ The following state arguments are supported:
 <a href="#state_sslpolicies_go" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewaysslpolicy">[]Application<wbr>Gateway<wbr>Ssl<wbr>Policy</a></span>
+        <span class="property-type"><a href="#applicationgatewaysslpolicy">[]Application<wbr>Gateway<wbr>Ssl<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}a `ssl policy` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2285,7 +2285,7 @@ The following state arguments are supported:
 <a href="#state_trustedrootcertificates_go" style="color: inherit; text-decoration: inherit;">Trusted<wbr>Root<wbr>Certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewaytrustedrootcertificate">[]Application<wbr>Gateway<wbr>Trusted<wbr>Root<wbr>Certificate</a></span>
+        <span class="property-type"><a href="#applicationgatewaytrustedrootcertificate">[]Application<wbr>Gateway<wbr>Trusted<wbr>Root<wbr>Certificate<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `trusted_root_certificate` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2294,7 +2294,7 @@ The following state arguments are supported:
 <a href="#state_urlpathmaps_go" style="color: inherit; text-decoration: inherit;">Url<wbr>Path<wbr>Maps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayurlpathmap">[]Application<wbr>Gateway<wbr>Url<wbr>Path<wbr>Map</a></span>
+        <span class="property-type"><a href="#applicationgatewayurlpathmap">[]Application<wbr>Gateway<wbr>Url<wbr>Path<wbr>Map<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `url_path_map` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2303,7 +2303,7 @@ The following state arguments are supported:
 <a href="#state_wafconfiguration_go" style="color: inherit; text-decoration: inherit;">Waf<wbr>Configuration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewaywafconfiguration">Application<wbr>Gateway<wbr>Waf<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#applicationgatewaywafconfiguration">Application<wbr>Gateway<wbr>Waf<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `waf_configuration` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3253,7 +3253,7 @@ The following state arguments are supported:
 <a href="#authenticationcertificates_csharp" style="color: inherit; text-decoration: inherit;">Authentication<wbr>Certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewaybackendhttpsettingauthenticationcertificate">List&lt;Application<wbr>Gateway<wbr>Backend<wbr>Http<wbr>Setting<wbr>Authentication<wbr>Certificate<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#applicationgatewaybackendhttpsettingauthenticationcertificate">List&lt;Application<wbr>Gateway<wbr>Backend<wbr>Http<wbr>Setting<wbr>Authentication<wbr>Certificate&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `authentication_certificate` blocks.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3262,7 +3262,7 @@ The following state arguments are supported:
 <a href="#connectiondraining_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>Draining</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewaybackendhttpsettingconnectiondraining">Application<wbr>Gateway<wbr>Backend<wbr>Http<wbr>Setting<wbr>Connection<wbr>Draining<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationgatewaybackendhttpsettingconnectiondraining">Application<wbr>Gateway<wbr>Backend<wbr>Http<wbr>Setting<wbr>Connection<wbr>Draining</a></span>
     </dt>
     <dd>{{% md %}}A `connection_draining` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3531,7 +3531,7 @@ The following state arguments are supported:
 <a href="#authenticationcertificates_nodejs" style="color: inherit; text-decoration: inherit;">authentication<wbr>Certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewaybackendhttpsettingauthenticationcertificate">Application<wbr>Gateway<wbr>Backend<wbr>Http<wbr>Setting<wbr>Authentication<wbr>Certificate<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#applicationgatewaybackendhttpsettingauthenticationcertificate">Application<wbr>Gateway<wbr>Backend<wbr>Http<wbr>Setting<wbr>Authentication<wbr>Certificate[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `authentication_certificate` blocks.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3540,7 +3540,7 @@ The following state arguments are supported:
 <a href="#connectiondraining_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Draining</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewaybackendhttpsettingconnectiondraining">Application<wbr>Gateway<wbr>Backend<wbr>Http<wbr>Setting<wbr>Connection<wbr>Draining<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationgatewaybackendhttpsettingconnectiondraining">Application<wbr>Gateway<wbr>Backend<wbr>Http<wbr>Setting<wbr>Connection<wbr>Draining</a></span>
     </dt>
     <dd>{{% md %}}A `connection_draining` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3670,7 +3670,7 @@ The following state arguments are supported:
 <a href="#authentication_certificates_python" style="color: inherit; text-decoration: inherit;">authentication_<wbr>certificates</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewaybackendhttpsettingauthenticationcertificate">Sequence[Application<wbr>Gateway<wbr>Backend<wbr>Http<wbr>Setting<wbr>Authentication<wbr>Certificate<wbr>Args]</a></span>
+        <span class="property-type"><a href="#applicationgatewaybackendhttpsettingauthenticationcertificate">Sequence[Application<wbr>Gateway<wbr>Backend<wbr>Http<wbr>Setting<wbr>Authentication<wbr>Certificate]</a></span>
     </dt>
     <dd>{{% md %}}One or more `authentication_certificate` blocks.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3679,7 +3679,7 @@ The following state arguments are supported:
 <a href="#connection_draining_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>draining</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewaybackendhttpsettingconnectiondraining">Application<wbr>Gateway<wbr>Backend<wbr>Http<wbr>Setting<wbr>Connection<wbr>Draining<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationgatewaybackendhttpsettingconnectiondraining">Application<wbr>Gateway<wbr>Backend<wbr>Http<wbr>Setting<wbr>Connection<wbr>Draining</a></span>
     </dt>
     <dd>{{% md %}}A `connection_draining` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4594,7 +4594,7 @@ The following state arguments are supported:
 <a href="#customerrorconfigurations_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Error<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayhttplistenercustomerrorconfiguration">List&lt;Application<wbr>Gateway<wbr>Http<wbr>Listener<wbr>Custom<wbr>Error<wbr>Configuration<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#applicationgatewayhttplistenercustomerrorconfiguration">List&lt;Application<wbr>Gateway<wbr>Http<wbr>Listener<wbr>Custom<wbr>Error<wbr>Configuration&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `custom_error_configuration` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4854,7 +4854,7 @@ The following state arguments are supported:
 <a href="#customerrorconfigurations_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Error<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayhttplistenercustomerrorconfiguration">Application<wbr>Gateway<wbr>Http<wbr>Listener<wbr>Custom<wbr>Error<wbr>Configuration<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#applicationgatewayhttplistenercustomerrorconfiguration">Application<wbr>Gateway<wbr>Http<wbr>Listener<wbr>Custom<wbr>Error<wbr>Configuration[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `custom_error_configuration` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4984,7 +4984,7 @@ The following state arguments are supported:
 <a href="#custom_error_configurations_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>error_<wbr>configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayhttplistenercustomerrorconfiguration">Sequence[Application<wbr>Gateway<wbr>Http<wbr>Listener<wbr>Custom<wbr>Error<wbr>Configuration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#applicationgatewayhttplistenercustomerrorconfiguration">Sequence[Application<wbr>Gateway<wbr>Http<wbr>Listener<wbr>Custom<wbr>Error<wbr>Configuration]</a></span>
     </dt>
     <dd>{{% md %}}One or more `custom_error_configuration` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5368,7 +5368,7 @@ The following state arguments are supported:
 <a href="#match_csharp" style="color: inherit; text-decoration: inherit;">Match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayprobematch">Application<wbr>Gateway<wbr>Probe<wbr>Match<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationgatewayprobematch">Application<wbr>Gateway<wbr>Probe<wbr>Match</a></span>
     </dt>
     <dd>{{% md %}}A `match` block as defined above.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5592,7 +5592,7 @@ The following state arguments are supported:
 <a href="#match_nodejs" style="color: inherit; text-decoration: inherit;">match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayprobematch">Application<wbr>Gateway<wbr>Probe<wbr>Match<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationgatewayprobematch">Application<wbr>Gateway<wbr>Probe<wbr>Match</a></span>
     </dt>
     <dd>{{% md %}}A `match` block as defined above.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5704,7 +5704,7 @@ The following state arguments are supported:
 <a href="#match_python" style="color: inherit; text-decoration: inherit;">match</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayprobematch">Application<wbr>Gateway<wbr>Probe<wbr>Match<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationgatewayprobematch">Application<wbr>Gateway<wbr>Probe<wbr>Match</a></span>
     </dt>
     <dd>{{% md %}}A `match` block as defined above.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6714,7 +6714,7 @@ The following state arguments are supported:
 <a href="#rewriterules_csharp" style="color: inherit; text-decoration: inherit;">Rewrite<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayrewriterulesetrewriterule">List&lt;Application<wbr>Gateway<wbr>Rewrite<wbr>Rule<wbr>Set<wbr>Rewrite<wbr>Rule<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#applicationgatewayrewriterulesetrewriterule">List&lt;Application<wbr>Gateway<wbr>Rewrite<wbr>Rule<wbr>Set<wbr>Rewrite<wbr>Rule&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `rewrite_rule` blocks as defined above.
 {{% /md %}}</dd></dl>
@@ -6776,7 +6776,7 @@ The following state arguments are supported:
 <a href="#rewriterules_nodejs" style="color: inherit; text-decoration: inherit;">rewrite<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayrewriterulesetrewriterule">Application<wbr>Gateway<wbr>Rewrite<wbr>Rule<wbr>Set<wbr>Rewrite<wbr>Rule<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#applicationgatewayrewriterulesetrewriterule">Application<wbr>Gateway<wbr>Rewrite<wbr>Rule<wbr>Set<wbr>Rewrite<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `rewrite_rule` blocks as defined above.
 {{% /md %}}</dd></dl>
@@ -6807,7 +6807,7 @@ The following state arguments are supported:
 <a href="#rewrite_rules_python" style="color: inherit; text-decoration: inherit;">rewrite_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayrewriterulesetrewriterule">Sequence[Application<wbr>Gateway<wbr>Rewrite<wbr>Rule<wbr>Set<wbr>Rewrite<wbr>Rule<wbr>Args]</a></span>
+        <span class="property-type"><a href="#applicationgatewayrewriterulesetrewriterule">Sequence[Application<wbr>Gateway<wbr>Rewrite<wbr>Rule<wbr>Set<wbr>Rewrite<wbr>Rule]</a></span>
     </dt>
     <dd>{{% md %}}One or more `rewrite_rule` blocks as defined above.
 {{% /md %}}</dd></dl>
@@ -6840,7 +6840,7 @@ The following state arguments are supported:
 <a href="#conditions_csharp" style="color: inherit; text-decoration: inherit;">Conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayrewriterulesetrewriterulecondition">List&lt;Application<wbr>Gateway<wbr>Rewrite<wbr>Rule<wbr>Set<wbr>Rewrite<wbr>Rule<wbr>Condition<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#applicationgatewayrewriterulesetrewriterulecondition">List&lt;Application<wbr>Gateway<wbr>Rewrite<wbr>Rule<wbr>Set<wbr>Rewrite<wbr>Rule<wbr>Condition&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `condition` blocks as defined above.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6849,7 +6849,7 @@ The following state arguments are supported:
 <a href="#requestheaderconfigurations_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Header<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayrewriterulesetrewriterulerequestheaderconfiguration">List&lt;Application<wbr>Gateway<wbr>Rewrite<wbr>Rule<wbr>Set<wbr>Rewrite<wbr>Rule<wbr>Request<wbr>Header<wbr>Configuration<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#applicationgatewayrewriterulesetrewriterulerequestheaderconfiguration">List&lt;Application<wbr>Gateway<wbr>Rewrite<wbr>Rule<wbr>Set<wbr>Rewrite<wbr>Rule<wbr>Request<wbr>Header<wbr>Configuration&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `request_header_configuration` blocks as defined above.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6858,7 +6858,7 @@ The following state arguments are supported:
 <a href="#responseheaderconfigurations_csharp" style="color: inherit; text-decoration: inherit;">Response<wbr>Header<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayrewriterulesetrewriteruleresponseheaderconfiguration">List&lt;Application<wbr>Gateway<wbr>Rewrite<wbr>Rule<wbr>Set<wbr>Rewrite<wbr>Rule<wbr>Response<wbr>Header<wbr>Configuration<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#applicationgatewayrewriterulesetrewriteruleresponseheaderconfiguration">List&lt;Application<wbr>Gateway<wbr>Rewrite<wbr>Rule<wbr>Set<wbr>Rewrite<wbr>Rule<wbr>Response<wbr>Header<wbr>Configuration&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `response_header_configuration` blocks as defined above.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6867,7 +6867,7 @@ The following state arguments are supported:
 <a href="#url_csharp" style="color: inherit; text-decoration: inherit;">Url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayrewriterulesetrewriteruleurl">Application<wbr>Gateway<wbr>Rewrite<wbr>Rule<wbr>Set<wbr>Rewrite<wbr>Rule<wbr>Url<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationgatewayrewriterulesetrewriteruleurl">Application<wbr>Gateway<wbr>Rewrite<wbr>Rule<wbr>Set<wbr>Rewrite<wbr>Rule<wbr>Url</a></span>
     </dt>
     <dd>{{% md %}}One `url` block as defined above
 {{% /md %}}</dd></dl>
@@ -6956,7 +6956,7 @@ The following state arguments are supported:
 <a href="#conditions_nodejs" style="color: inherit; text-decoration: inherit;">conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayrewriterulesetrewriterulecondition">Application<wbr>Gateway<wbr>Rewrite<wbr>Rule<wbr>Set<wbr>Rewrite<wbr>Rule<wbr>Condition<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#applicationgatewayrewriterulesetrewriterulecondition">Application<wbr>Gateway<wbr>Rewrite<wbr>Rule<wbr>Set<wbr>Rewrite<wbr>Rule<wbr>Condition[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `condition` blocks as defined above.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6965,7 +6965,7 @@ The following state arguments are supported:
 <a href="#requestheaderconfigurations_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Header<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayrewriterulesetrewriterulerequestheaderconfiguration">Application<wbr>Gateway<wbr>Rewrite<wbr>Rule<wbr>Set<wbr>Rewrite<wbr>Rule<wbr>Request<wbr>Header<wbr>Configuration<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#applicationgatewayrewriterulesetrewriterulerequestheaderconfiguration">Application<wbr>Gateway<wbr>Rewrite<wbr>Rule<wbr>Set<wbr>Rewrite<wbr>Rule<wbr>Request<wbr>Header<wbr>Configuration[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `request_header_configuration` blocks as defined above.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6974,7 +6974,7 @@ The following state arguments are supported:
 <a href="#responseheaderconfigurations_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Header<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayrewriterulesetrewriteruleresponseheaderconfiguration">Application<wbr>Gateway<wbr>Rewrite<wbr>Rule<wbr>Set<wbr>Rewrite<wbr>Rule<wbr>Response<wbr>Header<wbr>Configuration<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#applicationgatewayrewriterulesetrewriteruleresponseheaderconfiguration">Application<wbr>Gateway<wbr>Rewrite<wbr>Rule<wbr>Set<wbr>Rewrite<wbr>Rule<wbr>Response<wbr>Header<wbr>Configuration[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `response_header_configuration` blocks as defined above.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6983,7 +6983,7 @@ The following state arguments are supported:
 <a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayrewriterulesetrewriteruleurl">Application<wbr>Gateway<wbr>Rewrite<wbr>Rule<wbr>Set<wbr>Rewrite<wbr>Rule<wbr>Url<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationgatewayrewriterulesetrewriteruleurl">Application<wbr>Gateway<wbr>Rewrite<wbr>Rule<wbr>Set<wbr>Rewrite<wbr>Rule<wbr>Url</a></span>
     </dt>
     <dd>{{% md %}}One `url` block as defined above
 {{% /md %}}</dd></dl>
@@ -7014,7 +7014,7 @@ The following state arguments are supported:
 <a href="#conditions_python" style="color: inherit; text-decoration: inherit;">conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayrewriterulesetrewriterulecondition">Sequence[Application<wbr>Gateway<wbr>Rewrite<wbr>Rule<wbr>Set<wbr>Rewrite<wbr>Rule<wbr>Condition<wbr>Args]</a></span>
+        <span class="property-type"><a href="#applicationgatewayrewriterulesetrewriterulecondition">Sequence[Application<wbr>Gateway<wbr>Rewrite<wbr>Rule<wbr>Set<wbr>Rewrite<wbr>Rule<wbr>Condition]</a></span>
     </dt>
     <dd>{{% md %}}One or more `condition` blocks as defined above.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7023,7 +7023,7 @@ The following state arguments are supported:
 <a href="#request_header_configurations_python" style="color: inherit; text-decoration: inherit;">request_<wbr>header_<wbr>configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayrewriterulesetrewriterulerequestheaderconfiguration">Sequence[Application<wbr>Gateway<wbr>Rewrite<wbr>Rule<wbr>Set<wbr>Rewrite<wbr>Rule<wbr>Request<wbr>Header<wbr>Configuration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#applicationgatewayrewriterulesetrewriterulerequestheaderconfiguration">Sequence[Application<wbr>Gateway<wbr>Rewrite<wbr>Rule<wbr>Set<wbr>Rewrite<wbr>Rule<wbr>Request<wbr>Header<wbr>Configuration]</a></span>
     </dt>
     <dd>{{% md %}}One or more `request_header_configuration` blocks as defined above.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7032,7 +7032,7 @@ The following state arguments are supported:
 <a href="#response_header_configurations_python" style="color: inherit; text-decoration: inherit;">response_<wbr>header_<wbr>configurations</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayrewriterulesetrewriteruleresponseheaderconfiguration">Sequence[Application<wbr>Gateway<wbr>Rewrite<wbr>Rule<wbr>Set<wbr>Rewrite<wbr>Rule<wbr>Response<wbr>Header<wbr>Configuration<wbr>Args]</a></span>
+        <span class="property-type"><a href="#applicationgatewayrewriterulesetrewriteruleresponseheaderconfiguration">Sequence[Application<wbr>Gateway<wbr>Rewrite<wbr>Rule<wbr>Set<wbr>Rewrite<wbr>Rule<wbr>Response<wbr>Header<wbr>Configuration]</a></span>
     </dt>
     <dd>{{% md %}}One or more `response_header_configuration` blocks as defined above.
 {{% /md %}}</dd><dt class="property-optional"
@@ -7041,7 +7041,7 @@ The following state arguments are supported:
 <a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayrewriterulesetrewriteruleurl">Application<wbr>Gateway<wbr>Rewrite<wbr>Rule<wbr>Set<wbr>Rewrite<wbr>Rule<wbr>Url<wbr>Args</a></span>
+        <span class="property-type"><a href="#applicationgatewayrewriterulesetrewriteruleurl">Application<wbr>Gateway<wbr>Rewrite<wbr>Rule<wbr>Set<wbr>Rewrite<wbr>Rule<wbr>Url</a></span>
     </dt>
     <dd>{{% md %}}One `url` block as defined above
 {{% /md %}}</dd></dl>
@@ -8221,7 +8221,7 @@ are published here https://docs.microsoft.com/en-us/azure/application-gateway/ap
 <a href="#pathrules_csharp" style="color: inherit; text-decoration: inherit;">Path<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayurlpathmappathrule">List&lt;Application<wbr>Gateway<wbr>Url<wbr>Path<wbr>Map<wbr>Path<wbr>Rule<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#applicationgatewayurlpathmappathrule">List&lt;Application<wbr>Gateway<wbr>Url<wbr>Path<wbr>Map<wbr>Path<wbr>Rule&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `path_rule` blocks as defined above.
 {{% /md %}}</dd><dt class="property-optional"
@@ -8425,7 +8425,7 @@ are published here https://docs.microsoft.com/en-us/azure/application-gateway/ap
 <a href="#pathrules_nodejs" style="color: inherit; text-decoration: inherit;">path<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayurlpathmappathrule">Application<wbr>Gateway<wbr>Url<wbr>Path<wbr>Map<wbr>Path<wbr>Rule<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#applicationgatewayurlpathmappathrule">Application<wbr>Gateway<wbr>Url<wbr>Path<wbr>Map<wbr>Path<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `path_rule` blocks as defined above.
 {{% /md %}}</dd><dt class="property-optional"
@@ -8527,7 +8527,7 @@ are published here https://docs.microsoft.com/en-us/azure/application-gateway/ap
 <a href="#path_rules_python" style="color: inherit; text-decoration: inherit;">path_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewayurlpathmappathrule">Sequence[Application<wbr>Gateway<wbr>Url<wbr>Path<wbr>Map<wbr>Path<wbr>Rule<wbr>Args]</a></span>
+        <span class="property-type"><a href="#applicationgatewayurlpathmappathrule">Sequence[Application<wbr>Gateway<wbr>Url<wbr>Path<wbr>Map<wbr>Path<wbr>Rule]</a></span>
     </dt>
     <dd>{{% md %}}One or more `path_rule` blocks as defined above.
 {{% /md %}}</dd><dt class="property-optional"
@@ -9099,7 +9099,7 @@ are published here https://docs.microsoft.com/en-us/azure/application-gateway/ap
 <a href="#disabledrulegroups_csharp" style="color: inherit; text-decoration: inherit;">Disabled<wbr>Rule<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewaywafconfigurationdisabledrulegroup">List&lt;Application<wbr>Gateway<wbr>Waf<wbr>Configuration<wbr>Disabled<wbr>Rule<wbr>Group<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#applicationgatewaywafconfigurationdisabledrulegroup">List&lt;Application<wbr>Gateway<wbr>Waf<wbr>Configuration<wbr>Disabled<wbr>Rule<wbr>Group&gt;</a></span>
     </dt>
     <dd>{{% md %}}one or more `disabled_rule_group` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -9108,7 +9108,7 @@ are published here https://docs.microsoft.com/en-us/azure/application-gateway/ap
 <a href="#exclusions_csharp" style="color: inherit; text-decoration: inherit;">Exclusions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewaywafconfigurationexclusion">List&lt;Application<wbr>Gateway<wbr>Waf<wbr>Configuration<wbr>Exclusion<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#applicationgatewaywafconfigurationexclusion">List&lt;Application<wbr>Gateway<wbr>Waf<wbr>Configuration<wbr>Exclusion&gt;</a></span>
     </dt>
     <dd>{{% md %}}one or more `exclusion` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -9269,7 +9269,7 @@ are published here https://docs.microsoft.com/en-us/azure/application-gateway/ap
 <a href="#disabledrulegroups_nodejs" style="color: inherit; text-decoration: inherit;">disabled<wbr>Rule<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewaywafconfigurationdisabledrulegroup">Application<wbr>Gateway<wbr>Waf<wbr>Configuration<wbr>Disabled<wbr>Rule<wbr>Group<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#applicationgatewaywafconfigurationdisabledrulegroup">Application<wbr>Gateway<wbr>Waf<wbr>Configuration<wbr>Disabled<wbr>Rule<wbr>Group[]</a></span>
     </dt>
     <dd>{{% md %}}one or more `disabled_rule_group` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -9278,7 +9278,7 @@ are published here https://docs.microsoft.com/en-us/azure/application-gateway/ap
 <a href="#exclusions_nodejs" style="color: inherit; text-decoration: inherit;">exclusions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewaywafconfigurationexclusion">Application<wbr>Gateway<wbr>Waf<wbr>Configuration<wbr>Exclusion<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#applicationgatewaywafconfigurationexclusion">Application<wbr>Gateway<wbr>Waf<wbr>Configuration<wbr>Exclusion[]</a></span>
     </dt>
     <dd>{{% md %}}one or more `exclusion` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -9354,7 +9354,7 @@ are published here https://docs.microsoft.com/en-us/azure/application-gateway/ap
 <a href="#disabled_rule_groups_python" style="color: inherit; text-decoration: inherit;">disabled_<wbr>rule_<wbr>groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewaywafconfigurationdisabledrulegroup">Sequence[Application<wbr>Gateway<wbr>Waf<wbr>Configuration<wbr>Disabled<wbr>Rule<wbr>Group<wbr>Args]</a></span>
+        <span class="property-type"><a href="#applicationgatewaywafconfigurationdisabledrulegroup">Sequence[Application<wbr>Gateway<wbr>Waf<wbr>Configuration<wbr>Disabled<wbr>Rule<wbr>Group]</a></span>
     </dt>
     <dd>{{% md %}}one or more `disabled_rule_group` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -9363,7 +9363,7 @@ are published here https://docs.microsoft.com/en-us/azure/application-gateway/ap
 <a href="#exclusions_python" style="color: inherit; text-decoration: inherit;">exclusions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationgatewaywafconfigurationexclusion">Sequence[Application<wbr>Gateway<wbr>Waf<wbr>Configuration<wbr>Exclusion<wbr>Args]</a></span>
+        <span class="property-type"><a href="#applicationgatewaywafconfigurationexclusion">Sequence[Application<wbr>Gateway<wbr>Waf<wbr>Configuration<wbr>Exclusion]</a></span>
     </dt>
     <dd>{{% md %}}one or more `exclusion` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"

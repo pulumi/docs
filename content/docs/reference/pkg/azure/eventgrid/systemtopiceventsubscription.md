@@ -571,7 +571,7 @@ The SystemTopicEventSubscription resource accepts the following [input]({{< relr
 <a href="#advancedfilter_go" style="color: inherit; text-decoration: inherit;">Advanced<wbr>Filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemtopiceventsubscriptionadvancedfilter">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter</a></span>
+        <span class="property-type"><a href="#systemtopiceventsubscriptionadvancedfilter">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `advanced_filter` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -580,7 +580,7 @@ The SystemTopicEventSubscription resource accepts the following [input]({{< relr
 <a href="#azurefunctionendpoint_go" style="color: inherit; text-decoration: inherit;">Azure<wbr>Function<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemtopiceventsubscriptionazurefunctionendpoint">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Azure<wbr>Function<wbr>Endpoint</a></span>
+        <span class="property-type"><a href="#systemtopiceventsubscriptionazurefunctionendpoint">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Azure<wbr>Function<wbr>Endpoint<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `azure_function_endpoint` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -652,7 +652,7 @@ The SystemTopicEventSubscription resource accepts the following [input]({{< relr
 <a href="#retrypolicy_go" style="color: inherit; text-decoration: inherit;">Retry<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemtopiceventsubscriptionretrypolicy">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Retry<wbr>Policy</a></span>
+        <span class="property-type"><a href="#systemtopiceventsubscriptionretrypolicy">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Retry<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `retry_policy` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -679,7 +679,7 @@ The SystemTopicEventSubscription resource accepts the following [input]({{< relr
 <a href="#storageblobdeadletterdestination_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Blob<wbr>Dead<wbr>Letter<wbr>Destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemtopiceventsubscriptionstorageblobdeadletterdestination">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Storage<wbr>Blob<wbr>Dead<wbr>Letter<wbr>Destination</a></span>
+        <span class="property-type"><a href="#systemtopiceventsubscriptionstorageblobdeadletterdestination">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Storage<wbr>Blob<wbr>Dead<wbr>Letter<wbr>Destination<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `storage_blob_dead_letter_destination` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -688,7 +688,7 @@ The SystemTopicEventSubscription resource accepts the following [input]({{< relr
 <a href="#storagequeueendpoint_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Queue<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemtopiceventsubscriptionstoragequeueendpoint">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Storage<wbr>Queue<wbr>Endpoint</a></span>
+        <span class="property-type"><a href="#systemtopiceventsubscriptionstoragequeueendpoint">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Storage<wbr>Queue<wbr>Endpoint<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `storage_queue_endpoint` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -697,7 +697,7 @@ The SystemTopicEventSubscription resource accepts the following [input]({{< relr
 <a href="#subjectfilter_go" style="color: inherit; text-decoration: inherit;">Subject<wbr>Filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemtopiceventsubscriptionsubjectfilter">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Subject<wbr>Filter</a></span>
+        <span class="property-type"><a href="#systemtopiceventsubscriptionsubjectfilter">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Subject<wbr>Filter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `subject_filter` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -706,7 +706,7 @@ The SystemTopicEventSubscription resource accepts the following [input]({{< relr
 <a href="#webhookendpoint_go" style="color: inherit; text-decoration: inherit;">Webhook<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemtopiceventsubscriptionwebhookendpoint">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Webhook<wbr>Endpoint</a></span>
+        <span class="property-type"><a href="#systemtopiceventsubscriptionwebhookendpoint">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Webhook<wbr>Endpoint<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `webhook_endpoint` block as defined below.
 {{% /md %}}</dd></dl>
@@ -1415,7 +1415,7 @@ The following state arguments are supported:
 <a href="#state_advancedfilter_go" style="color: inherit; text-decoration: inherit;">Advanced<wbr>Filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemtopiceventsubscriptionadvancedfilter">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter</a></span>
+        <span class="property-type"><a href="#systemtopiceventsubscriptionadvancedfilter">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `advanced_filter` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1424,7 +1424,7 @@ The following state arguments are supported:
 <a href="#state_azurefunctionendpoint_go" style="color: inherit; text-decoration: inherit;">Azure<wbr>Function<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemtopiceventsubscriptionazurefunctionendpoint">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Azure<wbr>Function<wbr>Endpoint</a></span>
+        <span class="property-type"><a href="#systemtopiceventsubscriptionazurefunctionendpoint">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Azure<wbr>Function<wbr>Endpoint<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `azure_function_endpoint` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1505,7 +1505,7 @@ The following state arguments are supported:
 <a href="#state_retrypolicy_go" style="color: inherit; text-decoration: inherit;">Retry<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemtopiceventsubscriptionretrypolicy">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Retry<wbr>Policy</a></span>
+        <span class="property-type"><a href="#systemtopiceventsubscriptionretrypolicy">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Retry<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `retry_policy` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1532,7 +1532,7 @@ The following state arguments are supported:
 <a href="#state_storageblobdeadletterdestination_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Blob<wbr>Dead<wbr>Letter<wbr>Destination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemtopiceventsubscriptionstorageblobdeadletterdestination">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Storage<wbr>Blob<wbr>Dead<wbr>Letter<wbr>Destination</a></span>
+        <span class="property-type"><a href="#systemtopiceventsubscriptionstorageblobdeadletterdestination">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Storage<wbr>Blob<wbr>Dead<wbr>Letter<wbr>Destination<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `storage_blob_dead_letter_destination` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1541,7 +1541,7 @@ The following state arguments are supported:
 <a href="#state_storagequeueendpoint_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Queue<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemtopiceventsubscriptionstoragequeueendpoint">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Storage<wbr>Queue<wbr>Endpoint</a></span>
+        <span class="property-type"><a href="#systemtopiceventsubscriptionstoragequeueendpoint">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Storage<wbr>Queue<wbr>Endpoint<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `storage_queue_endpoint` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1550,7 +1550,7 @@ The following state arguments are supported:
 <a href="#state_subjectfilter_go" style="color: inherit; text-decoration: inherit;">Subject<wbr>Filter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemtopiceventsubscriptionsubjectfilter">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Subject<wbr>Filter</a></span>
+        <span class="property-type"><a href="#systemtopiceventsubscriptionsubjectfilter">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Subject<wbr>Filter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `subject_filter` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1568,7 +1568,7 @@ The following state arguments are supported:
 <a href="#state_webhookendpoint_go" style="color: inherit; text-decoration: inherit;">Webhook<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemtopiceventsubscriptionwebhookendpoint">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Webhook<wbr>Endpoint</a></span>
+        <span class="property-type"><a href="#systemtopiceventsubscriptionwebhookendpoint">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Webhook<wbr>Endpoint<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `webhook_endpoint` block as defined below.
 {{% /md %}}</dd></dl>
@@ -1924,16 +1924,34 @@ The following state arguments are supported:
 <a href="#boolequals_csharp" style="color: inherit; text-decoration: inherit;">Bool<wbr>Equals</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemtopiceventsubscriptionadvancedfilterboolequal">List&lt;System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Bool<wbr>Equal<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#systemtopiceventsubscriptionadvancedfilterboolequal">List&lt;System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Bool<wbr>Equal&gt;</a></span>
     </dt>
     <dd>{{% md %}}Compares a value of an event using a single boolean value.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="isnotnulls_csharp">
+<a href="#isnotnulls_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Not<wbr>Nulls</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#systemtopiceventsubscriptionadvancedfilterisnotnull">List&lt;System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Is<wbr>Not<wbr>Null&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Evaluates if a value of an event isn't NULL or undefined.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="isnullorundefineds_csharp">
+<a href="#isnullorundefineds_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Null<wbr>Or<wbr>Undefineds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#systemtopiceventsubscriptionadvancedfilterisnullorundefined">List&lt;System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Is<wbr>Null<wbr>Or<wbr>Undefined&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Evaluates if a value of an event is NULL or undefined.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="numbergreaterthanorequals_csharp">
 <a href="#numbergreaterthanorequals_csharp" style="color: inherit; text-decoration: inherit;">Number<wbr>Greater<wbr>Than<wbr>Or<wbr>Equals</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemtopiceventsubscriptionadvancedfilternumbergreaterthanorequal">List&lt;System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Number<wbr>Greater<wbr>Than<wbr>Or<wbr>Equal<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#systemtopiceventsubscriptionadvancedfilternumbergreaterthanorequal">List&lt;System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Number<wbr>Greater<wbr>Than<wbr>Or<wbr>Equal&gt;</a></span>
     </dt>
     <dd>{{% md %}}Compares a value of an event using a single floating point number.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1942,16 +1960,25 @@ The following state arguments are supported:
 <a href="#numbergreaterthans_csharp" style="color: inherit; text-decoration: inherit;">Number<wbr>Greater<wbr>Thans</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemtopiceventsubscriptionadvancedfilternumbergreaterthan">List&lt;System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Number<wbr>Greater<wbr>Than<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#systemtopiceventsubscriptionadvancedfilternumbergreaterthan">List&lt;System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Number<wbr>Greater<wbr>Than&gt;</a></span>
     </dt>
     <dd>{{% md %}}Compares a value of an event using a single floating point number.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="numberinranges_csharp">
+<a href="#numberinranges_csharp" style="color: inherit; text-decoration: inherit;">Number<wbr>In<wbr>Ranges</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#systemtopiceventsubscriptionadvancedfilternumberinrange">List&lt;System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Number<wbr>In<wbr>Range&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Compares a value of an event using multiple floating point number ranges.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="numberins_csharp">
 <a href="#numberins_csharp" style="color: inherit; text-decoration: inherit;">Number<wbr>Ins</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemtopiceventsubscriptionadvancedfilternumberin">List&lt;System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Number<wbr>In<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#systemtopiceventsubscriptionadvancedfilternumberin">List&lt;System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Number<wbr>In&gt;</a></span>
     </dt>
     <dd>{{% md %}}Compares a value of an event using multiple floating point numbers.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1960,7 +1987,7 @@ The following state arguments are supported:
 <a href="#numberlessthanorequals_csharp" style="color: inherit; text-decoration: inherit;">Number<wbr>Less<wbr>Than<wbr>Or<wbr>Equals</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemtopiceventsubscriptionadvancedfilternumberlessthanorequal">List&lt;System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Number<wbr>Less<wbr>Than<wbr>Or<wbr>Equal<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#systemtopiceventsubscriptionadvancedfilternumberlessthanorequal">List&lt;System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Number<wbr>Less<wbr>Than<wbr>Or<wbr>Equal&gt;</a></span>
     </dt>
     <dd>{{% md %}}Compares a value of an event using a single floating point number.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1969,16 +1996,25 @@ The following state arguments are supported:
 <a href="#numberlessthans_csharp" style="color: inherit; text-decoration: inherit;">Number<wbr>Less<wbr>Thans</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemtopiceventsubscriptionadvancedfilternumberlessthan">List&lt;System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Number<wbr>Less<wbr>Than<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#systemtopiceventsubscriptionadvancedfilternumberlessthan">List&lt;System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Number<wbr>Less<wbr>Than&gt;</a></span>
     </dt>
     <dd>{{% md %}}Compares a value of an event using a single floating point number.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="numbernotinranges_csharp">
+<a href="#numbernotinranges_csharp" style="color: inherit; text-decoration: inherit;">Number<wbr>Not<wbr>In<wbr>Ranges</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#systemtopiceventsubscriptionadvancedfilternumbernotinrange">List&lt;System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Number<wbr>Not<wbr>In<wbr>Range&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Compares a value of an event using multiple floating point number ranges.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="numbernotins_csharp">
 <a href="#numbernotins_csharp" style="color: inherit; text-decoration: inherit;">Number<wbr>Not<wbr>Ins</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemtopiceventsubscriptionadvancedfilternumbernotin">List&lt;System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Number<wbr>Not<wbr>In<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#systemtopiceventsubscriptionadvancedfilternumbernotin">List&lt;System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Number<wbr>Not<wbr>In&gt;</a></span>
     </dt>
     <dd>{{% md %}}Compares a value of an event using multiple floating point numbers.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1987,7 +2023,7 @@ The following state arguments are supported:
 <a href="#stringbeginswiths_csharp" style="color: inherit; text-decoration: inherit;">String<wbr>Begins<wbr>Withs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemtopiceventsubscriptionadvancedfilterstringbeginswith">List&lt;System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>String<wbr>Begins<wbr>With<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#systemtopiceventsubscriptionadvancedfilterstringbeginswith">List&lt;System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>String<wbr>Begins<wbr>With&gt;</a></span>
     </dt>
     <dd>{{% md %}}Compares a value of an event using multiple string values.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1996,7 +2032,7 @@ The following state arguments are supported:
 <a href="#stringcontains_csharp" style="color: inherit; text-decoration: inherit;">String<wbr>Contains</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemtopiceventsubscriptionadvancedfilterstringcontain">List&lt;System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>String<wbr>Contain<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#systemtopiceventsubscriptionadvancedfilterstringcontain">List&lt;System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>String<wbr>Contain&gt;</a></span>
     </dt>
     <dd>{{% md %}}Compares a value of an event using multiple string values.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2005,7 +2041,7 @@ The following state arguments are supported:
 <a href="#stringendswiths_csharp" style="color: inherit; text-decoration: inherit;">String<wbr>Ends<wbr>Withs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemtopiceventsubscriptionadvancedfilterstringendswith">List&lt;System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>String<wbr>Ends<wbr>With<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#systemtopiceventsubscriptionadvancedfilterstringendswith">List&lt;System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>String<wbr>Ends<wbr>With&gt;</a></span>
     </dt>
     <dd>{{% md %}}Compares a value of an event using multiple string values.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2014,7 +2050,34 @@ The following state arguments are supported:
 <a href="#stringins_csharp" style="color: inherit; text-decoration: inherit;">String<wbr>Ins</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemtopiceventsubscriptionadvancedfilterstringin">List&lt;System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>String<wbr>In<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#systemtopiceventsubscriptionadvancedfilterstringin">List&lt;System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>String<wbr>In&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Compares a value of an event using multiple string values.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="stringnotbeginswiths_csharp">
+<a href="#stringnotbeginswiths_csharp" style="color: inherit; text-decoration: inherit;">String<wbr>Not<wbr>Begins<wbr>Withs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#systemtopiceventsubscriptionadvancedfilterstringnotbeginswith">List&lt;System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>String<wbr>Not<wbr>Begins<wbr>With&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Compares a value of an event using multiple string values.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="stringnotcontains_csharp">
+<a href="#stringnotcontains_csharp" style="color: inherit; text-decoration: inherit;">String<wbr>Not<wbr>Contains</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#systemtopiceventsubscriptionadvancedfilterstringnotcontain">List&lt;System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>String<wbr>Not<wbr>Contain&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Compares a value of an event using multiple string values.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="stringnotendswiths_csharp">
+<a href="#stringnotendswiths_csharp" style="color: inherit; text-decoration: inherit;">String<wbr>Not<wbr>Ends<wbr>Withs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#systemtopiceventsubscriptionadvancedfilterstringnotendswith">List&lt;System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>String<wbr>Not<wbr>Ends<wbr>With&gt;</a></span>
     </dt>
     <dd>{{% md %}}Compares a value of an event using multiple string values.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2023,7 +2086,7 @@ The following state arguments are supported:
 <a href="#stringnotins_csharp" style="color: inherit; text-decoration: inherit;">String<wbr>Not<wbr>Ins</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemtopiceventsubscriptionadvancedfilterstringnotin">List&lt;System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>String<wbr>Not<wbr>In<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#systemtopiceventsubscriptionadvancedfilterstringnotin">List&lt;System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>String<wbr>Not<wbr>In&gt;</a></span>
     </dt>
     <dd>{{% md %}}Compares a value of an event using multiple string values.
 {{% /md %}}</dd></dl>
@@ -2039,6 +2102,24 @@ The following state arguments are supported:
         <span class="property-type"><a href="#systemtopiceventsubscriptionadvancedfilterboolequal">[]System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Bool<wbr>Equal</a></span>
     </dt>
     <dd>{{% md %}}Compares a value of an event using a single boolean value.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="isnotnulls_go">
+<a href="#isnotnulls_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Not<wbr>Nulls</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#systemtopiceventsubscriptionadvancedfilterisnotnull">[]System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Is<wbr>Not<wbr>Null</a></span>
+    </dt>
+    <dd>{{% md %}}Evaluates if a value of an event isn't NULL or undefined.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="isnullorundefineds_go">
+<a href="#isnullorundefineds_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Null<wbr>Or<wbr>Undefineds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#systemtopiceventsubscriptionadvancedfilterisnullorundefined">[]System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Is<wbr>Null<wbr>Or<wbr>Undefined</a></span>
+    </dt>
+    <dd>{{% md %}}Evaluates if a value of an event is NULL or undefined.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="numbergreaterthanorequals_go">
@@ -2057,6 +2138,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="#systemtopiceventsubscriptionadvancedfilternumbergreaterthan">[]System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Number<wbr>Greater<wbr>Than</a></span>
     </dt>
     <dd>{{% md %}}Compares a value of an event using a single floating point number.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="numberinranges_go">
+<a href="#numberinranges_go" style="color: inherit; text-decoration: inherit;">Number<wbr>In<wbr>Ranges</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#systemtopiceventsubscriptionadvancedfilternumberinrange">[]System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Number<wbr>In<wbr>Range</a></span>
+    </dt>
+    <dd>{{% md %}}Compares a value of an event using multiple floating point number ranges.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="numberins_go">
@@ -2084,6 +2174,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="#systemtopiceventsubscriptionadvancedfilternumberlessthan">[]System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Number<wbr>Less<wbr>Than</a></span>
     </dt>
     <dd>{{% md %}}Compares a value of an event using a single floating point number.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="numbernotinranges_go">
+<a href="#numbernotinranges_go" style="color: inherit; text-decoration: inherit;">Number<wbr>Not<wbr>In<wbr>Ranges</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#systemtopiceventsubscriptionadvancedfilternumbernotinrange">[]System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Number<wbr>Not<wbr>In<wbr>Range</a></span>
+    </dt>
+    <dd>{{% md %}}Compares a value of an event using multiple floating point number ranges.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="numbernotins_go">
@@ -2131,6 +2230,33 @@ The following state arguments are supported:
     <dd>{{% md %}}Compares a value of an event using multiple string values.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="stringnotbeginswiths_go">
+<a href="#stringnotbeginswiths_go" style="color: inherit; text-decoration: inherit;">String<wbr>Not<wbr>Begins<wbr>Withs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#systemtopiceventsubscriptionadvancedfilterstringnotbeginswith">[]System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>String<wbr>Not<wbr>Begins<wbr>With</a></span>
+    </dt>
+    <dd>{{% md %}}Compares a value of an event using multiple string values.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="stringnotcontains_go">
+<a href="#stringnotcontains_go" style="color: inherit; text-decoration: inherit;">String<wbr>Not<wbr>Contains</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#systemtopiceventsubscriptionadvancedfilterstringnotcontain">[]System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>String<wbr>Not<wbr>Contain</a></span>
+    </dt>
+    <dd>{{% md %}}Compares a value of an event using multiple string values.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="stringnotendswiths_go">
+<a href="#stringnotendswiths_go" style="color: inherit; text-decoration: inherit;">String<wbr>Not<wbr>Ends<wbr>Withs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#systemtopiceventsubscriptionadvancedfilterstringnotendswith">[]System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>String<wbr>Not<wbr>Ends<wbr>With</a></span>
+    </dt>
+    <dd>{{% md %}}Compares a value of an event using multiple string values.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="stringnotins_go">
 <a href="#stringnotins_go" style="color: inherit; text-decoration: inherit;">String<wbr>Not<wbr>Ins</a>
 </span>
@@ -2148,16 +2274,34 @@ The following state arguments are supported:
 <a href="#boolequals_nodejs" style="color: inherit; text-decoration: inherit;">bool<wbr>Equals</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemtopiceventsubscriptionadvancedfilterboolequal">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Bool<wbr>Equal<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#systemtopiceventsubscriptionadvancedfilterboolequal">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Bool<wbr>Equal[]</a></span>
     </dt>
     <dd>{{% md %}}Compares a value of an event using a single boolean value.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="isnotnulls_nodejs">
+<a href="#isnotnulls_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Not<wbr>Nulls</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#systemtopiceventsubscriptionadvancedfilterisnotnull">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Is<wbr>Not<wbr>Null[]</a></span>
+    </dt>
+    <dd>{{% md %}}Evaluates if a value of an event isn't NULL or undefined.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="isnullorundefineds_nodejs">
+<a href="#isnullorundefineds_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Null<wbr>Or<wbr>Undefineds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#systemtopiceventsubscriptionadvancedfilterisnullorundefined">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Is<wbr>Null<wbr>Or<wbr>Undefined[]</a></span>
+    </dt>
+    <dd>{{% md %}}Evaluates if a value of an event is NULL or undefined.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="numbergreaterthanorequals_nodejs">
 <a href="#numbergreaterthanorequals_nodejs" style="color: inherit; text-decoration: inherit;">number<wbr>Greater<wbr>Than<wbr>Or<wbr>Equals</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemtopiceventsubscriptionadvancedfilternumbergreaterthanorequal">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Number<wbr>Greater<wbr>Than<wbr>Or<wbr>Equal<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#systemtopiceventsubscriptionadvancedfilternumbergreaterthanorequal">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Number<wbr>Greater<wbr>Than<wbr>Or<wbr>Equal[]</a></span>
     </dt>
     <dd>{{% md %}}Compares a value of an event using a single floating point number.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2166,16 +2310,25 @@ The following state arguments are supported:
 <a href="#numbergreaterthans_nodejs" style="color: inherit; text-decoration: inherit;">number<wbr>Greater<wbr>Thans</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemtopiceventsubscriptionadvancedfilternumbergreaterthan">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Number<wbr>Greater<wbr>Than<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#systemtopiceventsubscriptionadvancedfilternumbergreaterthan">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Number<wbr>Greater<wbr>Than[]</a></span>
     </dt>
     <dd>{{% md %}}Compares a value of an event using a single floating point number.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="numberinranges_nodejs">
+<a href="#numberinranges_nodejs" style="color: inherit; text-decoration: inherit;">number<wbr>In<wbr>Ranges</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#systemtopiceventsubscriptionadvancedfilternumberinrange">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Number<wbr>In<wbr>Range[]</a></span>
+    </dt>
+    <dd>{{% md %}}Compares a value of an event using multiple floating point number ranges.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="numberins_nodejs">
 <a href="#numberins_nodejs" style="color: inherit; text-decoration: inherit;">number<wbr>Ins</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemtopiceventsubscriptionadvancedfilternumberin">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Number<wbr>In<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#systemtopiceventsubscriptionadvancedfilternumberin">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Number<wbr>In[]</a></span>
     </dt>
     <dd>{{% md %}}Compares a value of an event using multiple floating point numbers.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2184,7 +2337,7 @@ The following state arguments are supported:
 <a href="#numberlessthanorequals_nodejs" style="color: inherit; text-decoration: inherit;">number<wbr>Less<wbr>Than<wbr>Or<wbr>Equals</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemtopiceventsubscriptionadvancedfilternumberlessthanorequal">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Number<wbr>Less<wbr>Than<wbr>Or<wbr>Equal<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#systemtopiceventsubscriptionadvancedfilternumberlessthanorequal">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Number<wbr>Less<wbr>Than<wbr>Or<wbr>Equal[]</a></span>
     </dt>
     <dd>{{% md %}}Compares a value of an event using a single floating point number.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2193,16 +2346,25 @@ The following state arguments are supported:
 <a href="#numberlessthans_nodejs" style="color: inherit; text-decoration: inherit;">number<wbr>Less<wbr>Thans</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemtopiceventsubscriptionadvancedfilternumberlessthan">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Number<wbr>Less<wbr>Than<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#systemtopiceventsubscriptionadvancedfilternumberlessthan">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Number<wbr>Less<wbr>Than[]</a></span>
     </dt>
     <dd>{{% md %}}Compares a value of an event using a single floating point number.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="numbernotinranges_nodejs">
+<a href="#numbernotinranges_nodejs" style="color: inherit; text-decoration: inherit;">number<wbr>Not<wbr>In<wbr>Ranges</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#systemtopiceventsubscriptionadvancedfilternumbernotinrange">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Number<wbr>Not<wbr>In<wbr>Range[]</a></span>
+    </dt>
+    <dd>{{% md %}}Compares a value of an event using multiple floating point number ranges.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="numbernotins_nodejs">
 <a href="#numbernotins_nodejs" style="color: inherit; text-decoration: inherit;">number<wbr>Not<wbr>Ins</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemtopiceventsubscriptionadvancedfilternumbernotin">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Number<wbr>Not<wbr>In<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#systemtopiceventsubscriptionadvancedfilternumbernotin">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Number<wbr>Not<wbr>In[]</a></span>
     </dt>
     <dd>{{% md %}}Compares a value of an event using multiple floating point numbers.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2211,7 +2373,7 @@ The following state arguments are supported:
 <a href="#stringbeginswiths_nodejs" style="color: inherit; text-decoration: inherit;">string<wbr>Begins<wbr>Withs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemtopiceventsubscriptionadvancedfilterstringbeginswith">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>String<wbr>Begins<wbr>With<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#systemtopiceventsubscriptionadvancedfilterstringbeginswith">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>String<wbr>Begins<wbr>With[]</a></span>
     </dt>
     <dd>{{% md %}}Compares a value of an event using multiple string values.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2220,7 +2382,7 @@ The following state arguments are supported:
 <a href="#stringcontains_nodejs" style="color: inherit; text-decoration: inherit;">string<wbr>Contains</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemtopiceventsubscriptionadvancedfilterstringcontain">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>String<wbr>Contain<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#systemtopiceventsubscriptionadvancedfilterstringcontain">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>String<wbr>Contain[]</a></span>
     </dt>
     <dd>{{% md %}}Compares a value of an event using multiple string values.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2229,7 +2391,7 @@ The following state arguments are supported:
 <a href="#stringendswiths_nodejs" style="color: inherit; text-decoration: inherit;">string<wbr>Ends<wbr>Withs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemtopiceventsubscriptionadvancedfilterstringendswith">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>String<wbr>Ends<wbr>With<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#systemtopiceventsubscriptionadvancedfilterstringendswith">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>String<wbr>Ends<wbr>With[]</a></span>
     </dt>
     <dd>{{% md %}}Compares a value of an event using multiple string values.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2238,7 +2400,34 @@ The following state arguments are supported:
 <a href="#stringins_nodejs" style="color: inherit; text-decoration: inherit;">string<wbr>Ins</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemtopiceventsubscriptionadvancedfilterstringin">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>String<wbr>In<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#systemtopiceventsubscriptionadvancedfilterstringin">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>String<wbr>In[]</a></span>
+    </dt>
+    <dd>{{% md %}}Compares a value of an event using multiple string values.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="stringnotbeginswiths_nodejs">
+<a href="#stringnotbeginswiths_nodejs" style="color: inherit; text-decoration: inherit;">string<wbr>Not<wbr>Begins<wbr>Withs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#systemtopiceventsubscriptionadvancedfilterstringnotbeginswith">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>String<wbr>Not<wbr>Begins<wbr>With[]</a></span>
+    </dt>
+    <dd>{{% md %}}Compares a value of an event using multiple string values.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="stringnotcontains_nodejs">
+<a href="#stringnotcontains_nodejs" style="color: inherit; text-decoration: inherit;">string<wbr>Not<wbr>Contains</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#systemtopiceventsubscriptionadvancedfilterstringnotcontain">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>String<wbr>Not<wbr>Contain[]</a></span>
+    </dt>
+    <dd>{{% md %}}Compares a value of an event using multiple string values.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="stringnotendswiths_nodejs">
+<a href="#stringnotendswiths_nodejs" style="color: inherit; text-decoration: inherit;">string<wbr>Not<wbr>Ends<wbr>Withs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#systemtopiceventsubscriptionadvancedfilterstringnotendswith">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>String<wbr>Not<wbr>Ends<wbr>With[]</a></span>
     </dt>
     <dd>{{% md %}}Compares a value of an event using multiple string values.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2247,7 +2436,7 @@ The following state arguments are supported:
 <a href="#stringnotins_nodejs" style="color: inherit; text-decoration: inherit;">string<wbr>Not<wbr>Ins</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemtopiceventsubscriptionadvancedfilterstringnotin">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>String<wbr>Not<wbr>In<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#systemtopiceventsubscriptionadvancedfilterstringnotin">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>String<wbr>Not<wbr>In[]</a></span>
     </dt>
     <dd>{{% md %}}Compares a value of an event using multiple string values.
 {{% /md %}}</dd></dl>
@@ -2260,16 +2449,34 @@ The following state arguments are supported:
 <a href="#bool_equals_python" style="color: inherit; text-decoration: inherit;">bool_<wbr>equals</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemtopiceventsubscriptionadvancedfilterboolequal">Sequence[System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Bool<wbr>Equal<wbr>Args]</a></span>
+        <span class="property-type"><a href="#systemtopiceventsubscriptionadvancedfilterboolequal">Sequence[System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Bool<wbr>Equal]</a></span>
     </dt>
     <dd>{{% md %}}Compares a value of an event using a single boolean value.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="is_not_nulls_python">
+<a href="#is_not_nulls_python" style="color: inherit; text-decoration: inherit;">is_<wbr>not_<wbr>nulls</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#systemtopiceventsubscriptionadvancedfilterisnotnull">Sequence[System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Is<wbr>Not<wbr>Null]</a></span>
+    </dt>
+    <dd>{{% md %}}Evaluates if a value of an event isn't NULL or undefined.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="is_null_or_undefineds_python">
+<a href="#is_null_or_undefineds_python" style="color: inherit; text-decoration: inherit;">is_<wbr>null_<wbr>or_<wbr>undefineds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#systemtopiceventsubscriptionadvancedfilterisnullorundefined">Sequence[System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Is<wbr>Null<wbr>Or<wbr>Undefined]</a></span>
+    </dt>
+    <dd>{{% md %}}Evaluates if a value of an event is NULL or undefined.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="number_greater_than_or_equals_python">
 <a href="#number_greater_than_or_equals_python" style="color: inherit; text-decoration: inherit;">number_<wbr>greater_<wbr>than_<wbr>or_<wbr>equals</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemtopiceventsubscriptionadvancedfilternumbergreaterthanorequal">Sequence[System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Number<wbr>Greater<wbr>Than<wbr>Or<wbr>Equal<wbr>Args]</a></span>
+        <span class="property-type"><a href="#systemtopiceventsubscriptionadvancedfilternumbergreaterthanorequal">Sequence[System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Number<wbr>Greater<wbr>Than<wbr>Or<wbr>Equal]</a></span>
     </dt>
     <dd>{{% md %}}Compares a value of an event using a single floating point number.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2278,16 +2485,25 @@ The following state arguments are supported:
 <a href="#number_greater_thans_python" style="color: inherit; text-decoration: inherit;">number_<wbr>greater_<wbr>thans</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemtopiceventsubscriptionadvancedfilternumbergreaterthan">Sequence[System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Number<wbr>Greater<wbr>Than<wbr>Args]</a></span>
+        <span class="property-type"><a href="#systemtopiceventsubscriptionadvancedfilternumbergreaterthan">Sequence[System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Number<wbr>Greater<wbr>Than]</a></span>
     </dt>
     <dd>{{% md %}}Compares a value of an event using a single floating point number.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="number_in_ranges_python">
+<a href="#number_in_ranges_python" style="color: inherit; text-decoration: inherit;">number_<wbr>in_<wbr>ranges</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#systemtopiceventsubscriptionadvancedfilternumberinrange">Sequence[System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Number<wbr>In<wbr>Range]</a></span>
+    </dt>
+    <dd>{{% md %}}Compares a value of an event using multiple floating point number ranges.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="number_ins_python">
 <a href="#number_ins_python" style="color: inherit; text-decoration: inherit;">number_<wbr>ins</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemtopiceventsubscriptionadvancedfilternumberin">Sequence[System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Number<wbr>In<wbr>Args]</a></span>
+        <span class="property-type"><a href="#systemtopiceventsubscriptionadvancedfilternumberin">Sequence[System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Number<wbr>In]</a></span>
     </dt>
     <dd>{{% md %}}Compares a value of an event using multiple floating point numbers.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2296,7 +2512,7 @@ The following state arguments are supported:
 <a href="#number_less_than_or_equals_python" style="color: inherit; text-decoration: inherit;">number_<wbr>less_<wbr>than_<wbr>or_<wbr>equals</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemtopiceventsubscriptionadvancedfilternumberlessthanorequal">Sequence[System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Number<wbr>Less<wbr>Than<wbr>Or<wbr>Equal<wbr>Args]</a></span>
+        <span class="property-type"><a href="#systemtopiceventsubscriptionadvancedfilternumberlessthanorequal">Sequence[System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Number<wbr>Less<wbr>Than<wbr>Or<wbr>Equal]</a></span>
     </dt>
     <dd>{{% md %}}Compares a value of an event using a single floating point number.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2305,16 +2521,25 @@ The following state arguments are supported:
 <a href="#number_less_thans_python" style="color: inherit; text-decoration: inherit;">number_<wbr>less_<wbr>thans</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemtopiceventsubscriptionadvancedfilternumberlessthan">Sequence[System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Number<wbr>Less<wbr>Than<wbr>Args]</a></span>
+        <span class="property-type"><a href="#systemtopiceventsubscriptionadvancedfilternumberlessthan">Sequence[System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Number<wbr>Less<wbr>Than]</a></span>
     </dt>
     <dd>{{% md %}}Compares a value of an event using a single floating point number.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="number_not_in_ranges_python">
+<a href="#number_not_in_ranges_python" style="color: inherit; text-decoration: inherit;">number_<wbr>not_<wbr>in_<wbr>ranges</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#systemtopiceventsubscriptionadvancedfilternumbernotinrange">Sequence[System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Number<wbr>Not<wbr>In<wbr>Range]</a></span>
+    </dt>
+    <dd>{{% md %}}Compares a value of an event using multiple floating point number ranges.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="number_not_ins_python">
 <a href="#number_not_ins_python" style="color: inherit; text-decoration: inherit;">number_<wbr>not_<wbr>ins</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemtopiceventsubscriptionadvancedfilternumbernotin">Sequence[System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Number<wbr>Not<wbr>In<wbr>Args]</a></span>
+        <span class="property-type"><a href="#systemtopiceventsubscriptionadvancedfilternumbernotin">Sequence[System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Number<wbr>Not<wbr>In]</a></span>
     </dt>
     <dd>{{% md %}}Compares a value of an event using multiple floating point numbers.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2323,7 +2548,7 @@ The following state arguments are supported:
 <a href="#string_begins_withs_python" style="color: inherit; text-decoration: inherit;">string_<wbr>begins_<wbr>withs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemtopiceventsubscriptionadvancedfilterstringbeginswith">Sequence[System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>String<wbr>Begins<wbr>With<wbr>Args]</a></span>
+        <span class="property-type"><a href="#systemtopiceventsubscriptionadvancedfilterstringbeginswith">Sequence[System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>String<wbr>Begins<wbr>With]</a></span>
     </dt>
     <dd>{{% md %}}Compares a value of an event using multiple string values.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2332,7 +2557,7 @@ The following state arguments are supported:
 <a href="#string_contains_python" style="color: inherit; text-decoration: inherit;">string_<wbr>contains</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemtopiceventsubscriptionadvancedfilterstringcontain">Sequence[System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>String<wbr>Contain<wbr>Args]</a></span>
+        <span class="property-type"><a href="#systemtopiceventsubscriptionadvancedfilterstringcontain">Sequence[System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>String<wbr>Contain]</a></span>
     </dt>
     <dd>{{% md %}}Compares a value of an event using multiple string values.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2341,7 +2566,7 @@ The following state arguments are supported:
 <a href="#string_ends_withs_python" style="color: inherit; text-decoration: inherit;">string_<wbr>ends_<wbr>withs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemtopiceventsubscriptionadvancedfilterstringendswith">Sequence[System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>String<wbr>Ends<wbr>With<wbr>Args]</a></span>
+        <span class="property-type"><a href="#systemtopiceventsubscriptionadvancedfilterstringendswith">Sequence[System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>String<wbr>Ends<wbr>With]</a></span>
     </dt>
     <dd>{{% md %}}Compares a value of an event using multiple string values.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2350,7 +2575,34 @@ The following state arguments are supported:
 <a href="#string_ins_python" style="color: inherit; text-decoration: inherit;">string_<wbr>ins</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemtopiceventsubscriptionadvancedfilterstringin">Sequence[System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>String<wbr>In<wbr>Args]</a></span>
+        <span class="property-type"><a href="#systemtopiceventsubscriptionadvancedfilterstringin">Sequence[System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>String<wbr>In]</a></span>
+    </dt>
+    <dd>{{% md %}}Compares a value of an event using multiple string values.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="string_not_begins_withs_python">
+<a href="#string_not_begins_withs_python" style="color: inherit; text-decoration: inherit;">string_<wbr>not_<wbr>begins_<wbr>withs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#systemtopiceventsubscriptionadvancedfilterstringnotbeginswith">Sequence[System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>String<wbr>Not<wbr>Begins<wbr>With]</a></span>
+    </dt>
+    <dd>{{% md %}}Compares a value of an event using multiple string values.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="string_not_contains_python">
+<a href="#string_not_contains_python" style="color: inherit; text-decoration: inherit;">string_<wbr>not_<wbr>contains</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#systemtopiceventsubscriptionadvancedfilterstringnotcontain">Sequence[System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>String<wbr>Not<wbr>Contain]</a></span>
+    </dt>
+    <dd>{{% md %}}Compares a value of an event using multiple string values.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="string_not_ends_withs_python">
+<a href="#string_not_ends_withs_python" style="color: inherit; text-decoration: inherit;">string_<wbr>not_<wbr>ends_<wbr>withs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#systemtopiceventsubscriptionadvancedfilterstringnotendswith">Sequence[System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>String<wbr>Not<wbr>Ends<wbr>With]</a></span>
     </dt>
     <dd>{{% md %}}Compares a value of an event using multiple string values.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2359,7 +2611,7 @@ The following state arguments are supported:
 <a href="#string_not_ins_python" style="color: inherit; text-decoration: inherit;">string_<wbr>not_<wbr>ins</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systemtopiceventsubscriptionadvancedfilterstringnotin">Sequence[System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>String<wbr>Not<wbr>In<wbr>Args]</a></span>
+        <span class="property-type"><a href="#systemtopiceventsubscriptionadvancedfilterstringnotin">Sequence[System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>String<wbr>Not<wbr>In]</a></span>
     </dt>
     <dd>{{% md %}}Compares a value of an event using multiple string values.
 {{% /md %}}</dd></dl>
@@ -2452,6 +2704,114 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies a single value to compare to when using a single value operator.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="systemtopiceventsubscriptionadvancedfilterisnotnull">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Is<wbr>Not<wbr>Null</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="key_csharp">
+<a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="key_go">
+<a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="key_nodejs">
+<a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="key_python">
+<a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="systemtopiceventsubscriptionadvancedfilterisnullorundefined">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Is<wbr>Null<wbr>Or<wbr>Undefined</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="key_csharp">
+<a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="key_go">
+<a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="key_nodejs">
+<a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="key_python">
+<a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2725,6 +3085,96 @@ The following state arguments are supported:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="systemtopiceventsubscriptionadvancedfilternumberinrange">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Number<wbr>In<wbr>Range</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="key_csharp">
+<a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="values_csharp">
+<a href="#values_csharp" style="color: inherit; text-decoration: inherit;">Values</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;Immutable<wbr>Array&lt;double&gt;&gt;</span>
+    </dt>
+    <dd>{{% md %}}Specifies an array of values to compare to when using a multiple values operator.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="key_go">
+<a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="values_go">
+<a href="#values_go" style="color: inherit; text-decoration: inherit;">Values</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[][]float64</span>
+    </dt>
+    <dd>{{% md %}}Specifies an array of values to compare to when using a multiple values operator.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="key_nodejs">
+<a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="values_nodejs">
+<a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number[][]</span>
+    </dt>
+    <dd>{{% md %}}Specifies an array of values to compare to when using a multiple values operator.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="key_python">
+<a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="values_python">
+<a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[Sequence[float]]</span>
+    </dt>
+    <dd>{{% md %}}Specifies an array of values to compare to when using a multiple values operator.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
 <h4 id="systemtopiceventsubscriptionadvancedfilternumberlessthan">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Number<wbr>Less<wbr>Than</h4>
 
 {{% choosable language csharp %}}
@@ -2990,6 +3440,96 @@ The following state arguments are supported:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[float]</span>
+    </dt>
+    <dd>{{% md %}}Specifies an array of values to compare to when using a multiple values operator.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="systemtopiceventsubscriptionadvancedfilternumbernotinrange">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Number<wbr>Not<wbr>In<wbr>Range</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="key_csharp">
+<a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="values_csharp">
+<a href="#values_csharp" style="color: inherit; text-decoration: inherit;">Values</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;Immutable<wbr>Array&lt;double&gt;&gt;</span>
+    </dt>
+    <dd>{{% md %}}Specifies an array of values to compare to when using a multiple values operator.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="key_go">
+<a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="values_go">
+<a href="#values_go" style="color: inherit; text-decoration: inherit;">Values</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[][]float64</span>
+    </dt>
+    <dd>{{% md %}}Specifies an array of values to compare to when using a multiple values operator.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="key_nodejs">
+<a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="values_nodejs">
+<a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number[][]</span>
+    </dt>
+    <dd>{{% md %}}Specifies an array of values to compare to when using a multiple values operator.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="key_python">
+<a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="values_python">
+<a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[Sequence[float]]</span>
     </dt>
     <dd>{{% md %}}Specifies an array of values to compare to when using a multiple values operator.
 {{% /md %}}</dd></dl>
@@ -3266,6 +3806,276 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="systemtopiceventsubscriptionadvancedfilterstringin">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>String<wbr>In</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="key_csharp">
+<a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="values_csharp">
+<a href="#values_csharp" style="color: inherit; text-decoration: inherit;">Values</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}Specifies an array of values to compare to when using a multiple values operator.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="key_go">
+<a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="values_go">
+<a href="#values_go" style="color: inherit; text-decoration: inherit;">Values</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}Specifies an array of values to compare to when using a multiple values operator.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="key_nodejs">
+<a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="values_nodejs">
+<a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}Specifies an array of values to compare to when using a multiple values operator.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="key_python">
+<a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="values_python">
+<a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}Specifies an array of values to compare to when using a multiple values operator.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="systemtopiceventsubscriptionadvancedfilterstringnotbeginswith">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>String<wbr>Not<wbr>Begins<wbr>With</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="key_csharp">
+<a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="values_csharp">
+<a href="#values_csharp" style="color: inherit; text-decoration: inherit;">Values</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}Specifies an array of values to compare to when using a multiple values operator.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="key_go">
+<a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="values_go">
+<a href="#values_go" style="color: inherit; text-decoration: inherit;">Values</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}Specifies an array of values to compare to when using a multiple values operator.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="key_nodejs">
+<a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="values_nodejs">
+<a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}Specifies an array of values to compare to when using a multiple values operator.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="key_python">
+<a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="values_python">
+<a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}Specifies an array of values to compare to when using a multiple values operator.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="systemtopiceventsubscriptionadvancedfilterstringnotcontain">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>String<wbr>Not<wbr>Contain</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="key_csharp">
+<a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="values_csharp">
+<a href="#values_csharp" style="color: inherit; text-decoration: inherit;">Values</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}Specifies an array of values to compare to when using a multiple values operator.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="key_go">
+<a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="values_go">
+<a href="#values_go" style="color: inherit; text-decoration: inherit;">Values</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}Specifies an array of values to compare to when using a multiple values operator.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="key_nodejs">
+<a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="values_nodejs">
+<a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}Specifies an array of values to compare to when using a multiple values operator.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="key_python">
+<a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specifies the field within the event data that you want to use for filtering. Type of the field can be a number, boolean, or string.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="values_python">
+<a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}Specifies an array of values to compare to when using a multiple values operator.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="systemtopiceventsubscriptionadvancedfilterstringnotendswith">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>String<wbr>Not<wbr>Ends<wbr>With</h4>
 
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"

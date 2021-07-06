@@ -476,7 +476,7 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#ipv4firewallrules_go" style="color: inherit; text-decoration: inherit;">Ipv4Firewall<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serveripv4firewallrule">[]Server<wbr>Ipv4Firewall<wbr>Rule</a></span>
+        <span class="property-type"><a href="#serveripv4firewallrule">[]Server<wbr>Ipv4Firewall<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `ipv4_firewall_rule` block(s) as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1066,7 +1066,7 @@ The following state arguments are supported:
 <a href="#state_ipv4firewallrules_go" style="color: inherit; text-decoration: inherit;">Ipv4Firewall<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serveripv4firewallrule">[]Server<wbr>Ipv4Firewall<wbr>Rule</a></span>
+        <span class="property-type"><a href="#serveripv4firewallrule">[]Server<wbr>Ipv4Firewall<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `ipv4_firewall_rule` block(s) as defined below.
 {{% /md %}}</dd><dt class="property-optional"

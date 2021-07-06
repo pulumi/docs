@@ -445,7 +445,7 @@ The TimeSeriesInsightsGen2Environment resource accepts the following [input]({{<
 <a href="#storage_go" style="color: inherit; text-decoration: inherit;">Storage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timeseriesinsightsgen2environmentstorage">Time<wbr>Series<wbr>Insights<wbr>Gen2Environment<wbr>Storage</a></span>
+        <span class="property-type"><a href="#timeseriesinsightsgen2environmentstorage">Time<wbr>Series<wbr>Insights<wbr>Gen2Environment<wbr>Storage<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `storage` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1010,7 +1010,7 @@ The following state arguments are supported:
 <a href="#state_storage_go" style="color: inherit; text-decoration: inherit;">Storage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timeseriesinsightsgen2environmentstorage">Time<wbr>Series<wbr>Insights<wbr>Gen2Environment<wbr>Storage</a></span>
+        <span class="property-type"><a href="#timeseriesinsightsgen2environmentstorage">Time<wbr>Series<wbr>Insights<wbr>Gen2Environment<wbr>Storage<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `storage` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"

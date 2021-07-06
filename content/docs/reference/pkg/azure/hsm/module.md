@@ -655,7 +655,7 @@ The Module resource accepts the following [input]({{< relref "/docs/intro/concep
 <a href="#networkprofile_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#modulenetworkprofile">Module<wbr>Network<wbr>Profile</a></span>
+        <span class="property-type"><a href="#modulenetworkprofile">Module<wbr>Network<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `network_profile` block as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -1165,7 +1165,7 @@ The following state arguments are supported:
 <a href="#state_networkprofile_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#modulenetworkprofile">Module<wbr>Network<wbr>Profile</a></span>
+        <span class="property-type"><a href="#modulenetworkprofile">Module<wbr>Network<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `network_profile` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"

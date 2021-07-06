@@ -641,7 +641,7 @@ The FunctionAppSlot resource accepts the following [input]({{< relref "/docs/int
 <a href="#authsettings_go" style="color: inherit; text-decoration: inherit;">Auth<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionappslotauthsettings">Function<wbr>App<wbr>Slot<wbr>Auth<wbr>Settings</a></span>
+        <span class="property-type"><a href="#functionappslotauthsettings">Function<wbr>App<wbr>Slot<wbr>Auth<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `auth_settings` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -659,7 +659,7 @@ The FunctionAppSlot resource accepts the following [input]({{< relref "/docs/int
 <a href="#connectionstrings_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>Strings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionappslotconnectionstring">[]Function<wbr>App<wbr>Slot<wbr>Connection<wbr>String</a></span>
+        <span class="property-type"><a href="#functionappslotconnectionstring">[]Function<wbr>App<wbr>Slot<wbr>Connection<wbr>String<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `connection_string` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -704,7 +704,7 @@ The FunctionAppSlot resource accepts the following [input]({{< relref "/docs/int
 <a href="#identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionappslotidentity">Function<wbr>App<wbr>Slot<wbr>Identity</a></span>
+        <span class="property-type"><a href="#functionappslotidentity">Function<wbr>App<wbr>Slot<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `identity` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -740,7 +740,7 @@ The FunctionAppSlot resource accepts the following [input]({{< relref "/docs/int
 <a href="#siteconfig_go" style="color: inherit; text-decoration: inherit;">Site<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionappslotsiteconfig">Function<wbr>App<wbr>Slot<wbr>Site<wbr>Config</a></span>
+        <span class="property-type"><a href="#functionappslotsiteconfig">Function<wbr>App<wbr>Slot<wbr>Site<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `site_config` object as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1771,7 +1771,7 @@ The following state arguments are supported:
 <a href="#state_authsettings_go" style="color: inherit; text-decoration: inherit;">Auth<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionappslotauthsettings">Function<wbr>App<wbr>Slot<wbr>Auth<wbr>Settings</a></span>
+        <span class="property-type"><a href="#functionappslotauthsettings">Function<wbr>App<wbr>Slot<wbr>Auth<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `auth_settings` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1789,7 +1789,7 @@ The following state arguments are supported:
 <a href="#state_connectionstrings_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>Strings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionappslotconnectionstring">[]Function<wbr>App<wbr>Slot<wbr>Connection<wbr>String</a></span>
+        <span class="property-type"><a href="#functionappslotconnectionstring">[]Function<wbr>App<wbr>Slot<wbr>Connection<wbr>String<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `connection_string` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1852,7 +1852,7 @@ The following state arguments are supported:
 <a href="#state_identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionappslotidentity">Function<wbr>App<wbr>Slot<wbr>Identity</a></span>
+        <span class="property-type"><a href="#functionappslotidentity">Function<wbr>App<wbr>Slot<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `identity` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1924,7 +1924,7 @@ The following state arguments are supported:
 <a href="#state_siteconfig_go" style="color: inherit; text-decoration: inherit;">Site<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionappslotsiteconfig">Function<wbr>App<wbr>Slot<wbr>Site<wbr>Config</a></span>
+        <span class="property-type"><a href="#functionappslotsiteconfig">Function<wbr>App<wbr>Slot<wbr>Site<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `site_config` object as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1933,7 +1933,7 @@ The following state arguments are supported:
 <a href="#state_sitecredentials_go" style="color: inherit; text-decoration: inherit;">Site<wbr>Credentials</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionappslotsitecredential">[]Function<wbr>App<wbr>Slot<wbr>Site<wbr>Credential</a></span>
+        <span class="property-type"><a href="#functionappslotsitecredential">[]Function<wbr>App<wbr>Slot<wbr>Site<wbr>Credential<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `site_credential` block as defined below, which contains the site-level credentials used to publish to this Function App Slot.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2460,7 +2460,7 @@ The following state arguments are supported:
 <a href="#activedirectory_csharp" style="color: inherit; text-decoration: inherit;">Active<wbr>Directory</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionappslotauthsettingsactivedirectory">Function<wbr>App<wbr>Slot<wbr>Auth<wbr>Settings<wbr>Active<wbr>Directory<wbr>Args</a></span>
+        <span class="property-type"><a href="#functionappslotauthsettingsactivedirectory">Function<wbr>App<wbr>Slot<wbr>Auth<wbr>Settings<wbr>Active<wbr>Directory</a></span>
     </dt>
     <dd>{{% md %}}An `active_directory` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2496,7 +2496,7 @@ The following state arguments are supported:
 <a href="#facebook_csharp" style="color: inherit; text-decoration: inherit;">Facebook</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionappslotauthsettingsfacebook">Function<wbr>App<wbr>Slot<wbr>Auth<wbr>Settings<wbr>Facebook<wbr>Args</a></span>
+        <span class="property-type"><a href="#functionappslotauthsettingsfacebook">Function<wbr>App<wbr>Slot<wbr>Auth<wbr>Settings<wbr>Facebook</a></span>
     </dt>
     <dd>{{% md %}}A `facebook` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2505,7 +2505,7 @@ The following state arguments are supported:
 <a href="#google_csharp" style="color: inherit; text-decoration: inherit;">Google</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionappslotauthsettingsgoogle">Function<wbr>App<wbr>Slot<wbr>Auth<wbr>Settings<wbr>Google<wbr>Args</a></span>
+        <span class="property-type"><a href="#functionappslotauthsettingsgoogle">Function<wbr>App<wbr>Slot<wbr>Auth<wbr>Settings<wbr>Google</a></span>
     </dt>
     <dd>{{% md %}}A `google` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2523,7 +2523,7 @@ The following state arguments are supported:
 <a href="#microsoft_csharp" style="color: inherit; text-decoration: inherit;">Microsoft</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionappslotauthsettingsmicrosoft">Function<wbr>App<wbr>Slot<wbr>Auth<wbr>Settings<wbr>Microsoft<wbr>Args</a></span>
+        <span class="property-type"><a href="#functionappslotauthsettingsmicrosoft">Function<wbr>App<wbr>Slot<wbr>Auth<wbr>Settings<wbr>Microsoft</a></span>
     </dt>
     <dd>{{% md %}}A `microsoft` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2559,7 +2559,7 @@ The following state arguments are supported:
 <a href="#twitter_csharp" style="color: inherit; text-decoration: inherit;">Twitter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionappslotauthsettingstwitter">Function<wbr>App<wbr>Slot<wbr>Auth<wbr>Settings<wbr>Twitter<wbr>Args</a></span>
+        <span class="property-type"><a href="#functionappslotauthsettingstwitter">Function<wbr>App<wbr>Slot<wbr>Auth<wbr>Settings<wbr>Twitter</a></span>
     </dt>
     <dd>{{% md %}}A `twitter` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2720,7 +2720,7 @@ The following state arguments are supported:
 <a href="#activedirectory_nodejs" style="color: inherit; text-decoration: inherit;">active<wbr>Directory</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionappslotauthsettingsactivedirectory">Function<wbr>App<wbr>Slot<wbr>Auth<wbr>Settings<wbr>Active<wbr>Directory<wbr>Args</a></span>
+        <span class="property-type"><a href="#functionappslotauthsettingsactivedirectory">Function<wbr>App<wbr>Slot<wbr>Auth<wbr>Settings<wbr>Active<wbr>Directory</a></span>
     </dt>
     <dd>{{% md %}}An `active_directory` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2756,7 +2756,7 @@ The following state arguments are supported:
 <a href="#facebook_nodejs" style="color: inherit; text-decoration: inherit;">facebook</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionappslotauthsettingsfacebook">Function<wbr>App<wbr>Slot<wbr>Auth<wbr>Settings<wbr>Facebook<wbr>Args</a></span>
+        <span class="property-type"><a href="#functionappslotauthsettingsfacebook">Function<wbr>App<wbr>Slot<wbr>Auth<wbr>Settings<wbr>Facebook</a></span>
     </dt>
     <dd>{{% md %}}A `facebook` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2765,7 +2765,7 @@ The following state arguments are supported:
 <a href="#google_nodejs" style="color: inherit; text-decoration: inherit;">google</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionappslotauthsettingsgoogle">Function<wbr>App<wbr>Slot<wbr>Auth<wbr>Settings<wbr>Google<wbr>Args</a></span>
+        <span class="property-type"><a href="#functionappslotauthsettingsgoogle">Function<wbr>App<wbr>Slot<wbr>Auth<wbr>Settings<wbr>Google</a></span>
     </dt>
     <dd>{{% md %}}A `google` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2783,7 +2783,7 @@ The following state arguments are supported:
 <a href="#microsoft_nodejs" style="color: inherit; text-decoration: inherit;">microsoft</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionappslotauthsettingsmicrosoft">Function<wbr>App<wbr>Slot<wbr>Auth<wbr>Settings<wbr>Microsoft<wbr>Args</a></span>
+        <span class="property-type"><a href="#functionappslotauthsettingsmicrosoft">Function<wbr>App<wbr>Slot<wbr>Auth<wbr>Settings<wbr>Microsoft</a></span>
     </dt>
     <dd>{{% md %}}A `microsoft` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2819,7 +2819,7 @@ The following state arguments are supported:
 <a href="#twitter_nodejs" style="color: inherit; text-decoration: inherit;">twitter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionappslotauthsettingstwitter">Function<wbr>App<wbr>Slot<wbr>Auth<wbr>Settings<wbr>Twitter<wbr>Args</a></span>
+        <span class="property-type"><a href="#functionappslotauthsettingstwitter">Function<wbr>App<wbr>Slot<wbr>Auth<wbr>Settings<wbr>Twitter</a></span>
     </dt>
     <dd>{{% md %}}A `twitter` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2850,7 +2850,7 @@ The following state arguments are supported:
 <a href="#active_directory_python" style="color: inherit; text-decoration: inherit;">active_<wbr>directory</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionappslotauthsettingsactivedirectory">Function<wbr>App<wbr>Slot<wbr>Auth<wbr>Settings<wbr>Active<wbr>Directory<wbr>Args</a></span>
+        <span class="property-type"><a href="#functionappslotauthsettingsactivedirectory">Function<wbr>App<wbr>Slot<wbr>Auth<wbr>Settings<wbr>Active<wbr>Directory</a></span>
     </dt>
     <dd>{{% md %}}An `active_directory` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2886,7 +2886,7 @@ The following state arguments are supported:
 <a href="#facebook_python" style="color: inherit; text-decoration: inherit;">facebook</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionappslotauthsettingsfacebook">Function<wbr>App<wbr>Slot<wbr>Auth<wbr>Settings<wbr>Facebook<wbr>Args</a></span>
+        <span class="property-type"><a href="#functionappslotauthsettingsfacebook">Function<wbr>App<wbr>Slot<wbr>Auth<wbr>Settings<wbr>Facebook</a></span>
     </dt>
     <dd>{{% md %}}A `facebook` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2895,7 +2895,7 @@ The following state arguments are supported:
 <a href="#google_python" style="color: inherit; text-decoration: inherit;">google</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionappslotauthsettingsgoogle">Function<wbr>App<wbr>Slot<wbr>Auth<wbr>Settings<wbr>Google<wbr>Args</a></span>
+        <span class="property-type"><a href="#functionappslotauthsettingsgoogle">Function<wbr>App<wbr>Slot<wbr>Auth<wbr>Settings<wbr>Google</a></span>
     </dt>
     <dd>{{% md %}}A `google` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2913,7 +2913,7 @@ The following state arguments are supported:
 <a href="#microsoft_python" style="color: inherit; text-decoration: inherit;">microsoft</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionappslotauthsettingsmicrosoft">Function<wbr>App<wbr>Slot<wbr>Auth<wbr>Settings<wbr>Microsoft<wbr>Args</a></span>
+        <span class="property-type"><a href="#functionappslotauthsettingsmicrosoft">Function<wbr>App<wbr>Slot<wbr>Auth<wbr>Settings<wbr>Microsoft</a></span>
     </dt>
     <dd>{{% md %}}A `microsoft` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2949,7 +2949,7 @@ The following state arguments are supported:
 <a href="#twitter_python" style="color: inherit; text-decoration: inherit;">twitter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionappslotauthsettingstwitter">Function<wbr>App<wbr>Slot<wbr>Auth<wbr>Settings<wbr>Twitter<wbr>Args</a></span>
+        <span class="property-type"><a href="#functionappslotauthsettingstwitter">Function<wbr>App<wbr>Slot<wbr>Auth<wbr>Settings<wbr>Twitter</a></span>
     </dt>
     <dd>{{% md %}}A `twitter` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3865,7 +3865,7 @@ The following state arguments are supported:
 <a href="#cors_csharp" style="color: inherit; text-decoration: inherit;">Cors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionappslotsiteconfigcors">Function<wbr>App<wbr>Slot<wbr>Site<wbr>Config<wbr>Cors<wbr>Args</a></span>
+        <span class="property-type"><a href="#functionappslotsiteconfigcors">Function<wbr>App<wbr>Slot<wbr>Site<wbr>Config<wbr>Cors</a></span>
     </dt>
     <dd>{{% md %}}A `cors` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3900,7 +3900,7 @@ The following state arguments are supported:
 <a href="#iprestrictions_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Restrictions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionappslotsiteconfigiprestriction">List&lt;Function<wbr>App<wbr>Slot<wbr>Site<wbr>Config<wbr>Ip<wbr>Restriction<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#functionappslotsiteconfigiprestriction">List&lt;Function<wbr>App<wbr>Slot<wbr>Site<wbr>Config<wbr>Ip<wbr>Restriction&gt;</a></span>
     </dt>
     <dd>{{% md %}}A [List of objects](https://www.terraform.io/docs/configuration/attr-as-blocks.html) representing ip restrictions as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3944,7 +3944,7 @@ The following state arguments are supported:
 <a href="#scmiprestrictions_csharp" style="color: inherit; text-decoration: inherit;">Scm<wbr>Ip<wbr>Restrictions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionappslotsiteconfigscmiprestriction">List&lt;Function<wbr>App<wbr>Slot<wbr>Site<wbr>Config<wbr>Scm<wbr>Ip<wbr>Restriction<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#functionappslotsiteconfigscmiprestriction">List&lt;Function<wbr>App<wbr>Slot<wbr>Site<wbr>Config<wbr>Scm<wbr>Ip<wbr>Restriction&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4151,7 +4151,7 @@ The following state arguments are supported:
 <a href="#cors_nodejs" style="color: inherit; text-decoration: inherit;">cors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionappslotsiteconfigcors">Function<wbr>App<wbr>Slot<wbr>Site<wbr>Config<wbr>Cors<wbr>Args</a></span>
+        <span class="property-type"><a href="#functionappslotsiteconfigcors">Function<wbr>App<wbr>Slot<wbr>Site<wbr>Config<wbr>Cors</a></span>
     </dt>
     <dd>{{% md %}}A `cors` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4186,7 +4186,7 @@ The following state arguments are supported:
 <a href="#iprestrictions_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Restrictions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionappslotsiteconfigiprestriction">Function<wbr>App<wbr>Slot<wbr>Site<wbr>Config<wbr>Ip<wbr>Restriction<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#functionappslotsiteconfigiprestriction">Function<wbr>App<wbr>Slot<wbr>Site<wbr>Config<wbr>Ip<wbr>Restriction[]</a></span>
     </dt>
     <dd>{{% md %}}A [List of objects](https://www.terraform.io/docs/configuration/attr-as-blocks.html) representing ip restrictions as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4230,7 +4230,7 @@ The following state arguments are supported:
 <a href="#scmiprestrictions_nodejs" style="color: inherit; text-decoration: inherit;">scm<wbr>Ip<wbr>Restrictions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionappslotsiteconfigscmiprestriction">Function<wbr>App<wbr>Slot<wbr>Site<wbr>Config<wbr>Scm<wbr>Ip<wbr>Restriction<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#functionappslotsiteconfigscmiprestriction">Function<wbr>App<wbr>Slot<wbr>Site<wbr>Config<wbr>Scm<wbr>Ip<wbr>Restriction[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4294,7 +4294,7 @@ The following state arguments are supported:
 <a href="#cors_python" style="color: inherit; text-decoration: inherit;">cors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionappslotsiteconfigcors">Function<wbr>App<wbr>Slot<wbr>Site<wbr>Config<wbr>Cors<wbr>Args</a></span>
+        <span class="property-type"><a href="#functionappslotsiteconfigcors">Function<wbr>App<wbr>Slot<wbr>Site<wbr>Config<wbr>Cors</a></span>
     </dt>
     <dd>{{% md %}}A `cors` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4329,7 +4329,7 @@ The following state arguments are supported:
 <a href="#ip_restrictions_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>restrictions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionappslotsiteconfigiprestriction">Sequence[Function<wbr>App<wbr>Slot<wbr>Site<wbr>Config<wbr>Ip<wbr>Restriction<wbr>Args]</a></span>
+        <span class="property-type"><a href="#functionappslotsiteconfigiprestriction">Sequence[Function<wbr>App<wbr>Slot<wbr>Site<wbr>Config<wbr>Ip<wbr>Restriction]</a></span>
     </dt>
     <dd>{{% md %}}A [List of objects](https://www.terraform.io/docs/configuration/attr-as-blocks.html) representing ip restrictions as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4373,7 +4373,7 @@ The following state arguments are supported:
 <a href="#scm_ip_restrictions_python" style="color: inherit; text-decoration: inherit;">scm_<wbr>ip_<wbr>restrictions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionappslotsiteconfigscmiprestriction">Sequence[Function<wbr>App<wbr>Slot<wbr>Site<wbr>Config<wbr>Scm<wbr>Ip<wbr>Restriction<wbr>Args]</a></span>
+        <span class="property-type"><a href="#functionappslotsiteconfigscmiprestriction">Sequence[Function<wbr>App<wbr>Slot<wbr>Site<wbr>Config<wbr>Scm<wbr>Ip<wbr>Restriction]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4520,7 +4520,7 @@ The following state arguments are supported:
 <a href="#headers_csharp" style="color: inherit; text-decoration: inherit;">Headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionappslotsiteconfigiprestrictionheaders">Function<wbr>App<wbr>Slot<wbr>Site<wbr>Config<wbr>Ip<wbr>Restriction<wbr>Headers<wbr>Args</a></span>
+        <span class="property-type"><a href="#functionappslotsiteconfigiprestrictionheaders">Function<wbr>App<wbr>Slot<wbr>Site<wbr>Config<wbr>Ip<wbr>Restriction<wbr>Headers</a></span>
     </dt>
     <dd>{{% md %}}The headers for this specific `ip_restriction` as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4654,7 +4654,7 @@ The following state arguments are supported:
 <a href="#headers_nodejs" style="color: inherit; text-decoration: inherit;">headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionappslotsiteconfigiprestrictionheaders">Function<wbr>App<wbr>Slot<wbr>Site<wbr>Config<wbr>Ip<wbr>Restriction<wbr>Headers<wbr>Args</a></span>
+        <span class="property-type"><a href="#functionappslotsiteconfigiprestrictionheaders">Function<wbr>App<wbr>Slot<wbr>Site<wbr>Config<wbr>Ip<wbr>Restriction<wbr>Headers</a></span>
     </dt>
     <dd>{{% md %}}The headers for this specific `ip_restriction` as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4721,7 +4721,7 @@ The following state arguments are supported:
 <a href="#headers_python" style="color: inherit; text-decoration: inherit;">headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionappslotsiteconfigiprestrictionheaders">Function<wbr>App<wbr>Slot<wbr>Site<wbr>Config<wbr>Ip<wbr>Restriction<wbr>Headers<wbr>Args</a></span>
+        <span class="property-type"><a href="#functionappslotsiteconfigiprestrictionheaders">Function<wbr>App<wbr>Slot<wbr>Site<wbr>Config<wbr>Ip<wbr>Restriction<wbr>Headers</a></span>
     </dt>
     <dd>{{% md %}}The headers for this specific `ip_restriction` as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4952,7 +4952,7 @@ The following state arguments are supported:
 <a href="#headers_csharp" style="color: inherit; text-decoration: inherit;">Headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionappslotsiteconfigscmiprestrictionheaders">Function<wbr>App<wbr>Slot<wbr>Site<wbr>Config<wbr>Scm<wbr>Ip<wbr>Restriction<wbr>Headers<wbr>Args</a></span>
+        <span class="property-type"><a href="#functionappslotsiteconfigscmiprestrictionheaders">Function<wbr>App<wbr>Slot<wbr>Site<wbr>Config<wbr>Scm<wbr>Ip<wbr>Restriction<wbr>Headers</a></span>
     </dt>
     <dd>{{% md %}}The headers for this specific `ip_restriction` as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5086,7 +5086,7 @@ The following state arguments are supported:
 <a href="#headers_nodejs" style="color: inherit; text-decoration: inherit;">headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionappslotsiteconfigscmiprestrictionheaders">Function<wbr>App<wbr>Slot<wbr>Site<wbr>Config<wbr>Scm<wbr>Ip<wbr>Restriction<wbr>Headers<wbr>Args</a></span>
+        <span class="property-type"><a href="#functionappslotsiteconfigscmiprestrictionheaders">Function<wbr>App<wbr>Slot<wbr>Site<wbr>Config<wbr>Scm<wbr>Ip<wbr>Restriction<wbr>Headers</a></span>
     </dt>
     <dd>{{% md %}}The headers for this specific `ip_restriction` as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5153,7 +5153,7 @@ The following state arguments are supported:
 <a href="#headers_python" style="color: inherit; text-decoration: inherit;">headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionappslotsiteconfigscmiprestrictionheaders">Function<wbr>App<wbr>Slot<wbr>Site<wbr>Config<wbr>Scm<wbr>Ip<wbr>Restriction<wbr>Headers<wbr>Args</a></span>
+        <span class="property-type"><a href="#functionappslotsiteconfigscmiprestrictionheaders">Function<wbr>App<wbr>Slot<wbr>Site<wbr>Config<wbr>Scm<wbr>Ip<wbr>Restriction<wbr>Headers</a></span>
     </dt>
     <dd>{{% md %}}The headers for this specific `ip_restriction` as defined below.
 {{% /md %}}</dd><dt class="property-optional"

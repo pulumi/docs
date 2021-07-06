@@ -526,7 +526,7 @@ The DatasetBlobStorage resource accepts the following [input]({{< relref "/docs/
 <a href="#storageaccount_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetblobstoragestorageaccount">Dataset<wbr>Blob<wbr>Storage<wbr>Storage<wbr>Account</a></span>
+        <span class="property-type"><a href="#datasetblobstoragestorageaccount">Dataset<wbr>Blob<wbr>Storage<wbr>Storage<wbr>Account<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `storage_account` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1026,7 +1026,7 @@ The following state arguments are supported:
 <a href="#state_storageaccount_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetblobstoragestorageaccount">Dataset<wbr>Blob<wbr>Storage<wbr>Storage<wbr>Account</a></span>
+        <span class="property-type"><a href="#datasetblobstoragestorageaccount">Dataset<wbr>Blob<wbr>Storage<wbr>Storage<wbr>Account<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `storage_account` block as defined below.
 {{% /md %}}</dd></dl>

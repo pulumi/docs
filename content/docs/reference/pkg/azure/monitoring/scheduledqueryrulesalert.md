@@ -320,7 +320,7 @@ The ScheduledQueryRulesAlert resource accepts the following [input]({{< relref "
 <a href="#action_go" style="color: inherit; text-decoration: inherit;">Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scheduledqueryrulesalertaction">Scheduled<wbr>Query<wbr>Rules<wbr>Alert<wbr>Action</a></span>
+        <span class="property-type"><a href="#scheduledqueryrulesalertaction">Scheduled<wbr>Query<wbr>Rules<wbr>Alert<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `action` block as defined below.
 {{% /md %}}</dd><dt class="property-required"
@@ -374,7 +374,7 @@ The ScheduledQueryRulesAlert resource accepts the following [input]({{< relref "
 <a href="#trigger_go" style="color: inherit; text-decoration: inherit;">Trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scheduledqueryrulesalerttrigger">Scheduled<wbr>Query<wbr>Rules<wbr>Alert<wbr>Trigger</a></span>
+        <span class="property-type"><a href="#scheduledqueryrulesalerttrigger">Scheduled<wbr>Query<wbr>Rules<wbr>Alert<wbr>Trigger<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The condition that results in the alert rule being run.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1096,7 +1096,7 @@ The following state arguments are supported:
 <a href="#state_action_go" style="color: inherit; text-decoration: inherit;">Action</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scheduledqueryrulesalertaction">Scheduled<wbr>Query<wbr>Rules<wbr>Alert<wbr>Action</a></span>
+        <span class="property-type"><a href="#scheduledqueryrulesalertaction">Scheduled<wbr>Query<wbr>Rules<wbr>Alert<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `action` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1228,7 +1228,7 @@ The following state arguments are supported:
 <a href="#state_trigger_go" style="color: inherit; text-decoration: inherit;">Trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scheduledqueryrulesalerttrigger">Scheduled<wbr>Query<wbr>Rules<wbr>Alert<wbr>Trigger</a></span>
+        <span class="property-type"><a href="#scheduledqueryrulesalerttrigger">Scheduled<wbr>Query<wbr>Rules<wbr>Alert<wbr>Trigger<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The condition that results in the alert rule being run.
 {{% /md %}}</dd></dl>
@@ -1686,7 +1686,7 @@ The following state arguments are supported:
 <a href="#metrictrigger_csharp" style="color: inherit; text-decoration: inherit;">Metric<wbr>Trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scheduledqueryrulesalerttriggermetrictrigger">Scheduled<wbr>Query<wbr>Rules<wbr>Alert<wbr>Trigger<wbr>Metric<wbr>Trigger<wbr>Args</a></span>
+        <span class="property-type"><a href="#scheduledqueryrulesalerttriggermetrictrigger">Scheduled<wbr>Query<wbr>Rules<wbr>Alert<wbr>Trigger<wbr>Metric<wbr>Trigger</a></span>
     </dt>
     <dd>{{% md %}}A `metric_trigger` block as defined above. Trigger condition for metric query rule.
 {{% /md %}}</dd></dl>
@@ -1748,7 +1748,7 @@ The following state arguments are supported:
 <a href="#metrictrigger_nodejs" style="color: inherit; text-decoration: inherit;">metric<wbr>Trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scheduledqueryrulesalerttriggermetrictrigger">Scheduled<wbr>Query<wbr>Rules<wbr>Alert<wbr>Trigger<wbr>Metric<wbr>Trigger<wbr>Args</a></span>
+        <span class="property-type"><a href="#scheduledqueryrulesalerttriggermetrictrigger">Scheduled<wbr>Query<wbr>Rules<wbr>Alert<wbr>Trigger<wbr>Metric<wbr>Trigger</a></span>
     </dt>
     <dd>{{% md %}}A `metric_trigger` block as defined above. Trigger condition for metric query rule.
 {{% /md %}}</dd></dl>
@@ -1779,7 +1779,7 @@ The following state arguments are supported:
 <a href="#metric_trigger_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>trigger</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scheduledqueryrulesalerttriggermetrictrigger">Scheduled<wbr>Query<wbr>Rules<wbr>Alert<wbr>Trigger<wbr>Metric<wbr>Trigger<wbr>Args</a></span>
+        <span class="property-type"><a href="#scheduledqueryrulesalerttriggermetrictrigger">Scheduled<wbr>Query<wbr>Rules<wbr>Alert<wbr>Trigger<wbr>Metric<wbr>Trigger</a></span>
     </dt>
     <dd>{{% md %}}A `metric_trigger` block as defined above. Trigger condition for metric query rule.
 {{% /md %}}</dd></dl>

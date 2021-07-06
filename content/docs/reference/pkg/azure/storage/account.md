@@ -408,6 +408,7 @@ const exampleAccount = new azure.storage.Account("exampleAccount", {
             <span class="nx">queue_properties</span><span class="p">:</span> <span class="nx">Optional[AccountQueuePropertiesArgs]</span> = None<span class="p">,</span>
             <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">routing</span><span class="p">:</span> <span class="nx">Optional[AccountRoutingArgs]</span> = None<span class="p">,</span>
+            <span class="nx">share_properties</span><span class="p">:</span> <span class="nx">Optional[AccountSharePropertiesArgs]</span> = None<span class="p">,</span>
             <span class="nx">static_website</span><span class="p">:</span> <span class="nx">Optional[AccountStaticWebsiteArgs]</span> = None<span class="p">,</span>
             <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
@@ -720,6 +721,14 @@ for more information. Defaults to `true`.
     <dd>{{% md %}}A `routing` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="shareproperties_csharp">
+<a href="#shareproperties_csharp" style="color: inherit; text-decoration: inherit;">Share<wbr>Properties</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accountshareproperties">Account<wbr>Share<wbr>Properties<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="staticwebsite_csharp">
 <a href="#staticwebsite_csharp" style="color: inherit; text-decoration: inherit;">Static<wbr>Website</a>
 </span>
@@ -800,7 +809,7 @@ for more information. Defaults to `true`.
 <a href="#azurefilesauthentication_go" style="color: inherit; text-decoration: inherit;">Azure<wbr>Files<wbr>Authentication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accountazurefilesauthentication">Account<wbr>Azure<wbr>Files<wbr>Authentication</a></span>
+        <span class="property-type"><a href="#accountazurefilesauthentication">Account<wbr>Azure<wbr>Files<wbr>Authentication<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `azure_files_authentication` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -809,7 +818,7 @@ for more information. Defaults to `true`.
 <a href="#blobproperties_go" style="color: inherit; text-decoration: inherit;">Blob<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accountblobproperties">Account<wbr>Blob<wbr>Properties</a></span>
+        <span class="property-type"><a href="#accountblobproperties">Account<wbr>Blob<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `blob_properties` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -818,7 +827,7 @@ for more information. Defaults to `true`.
 <a href="#customdomain_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Domain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accountcustomdomain">Account<wbr>Custom<wbr>Domain</a></span>
+        <span class="property-type"><a href="#accountcustomdomain">Account<wbr>Custom<wbr>Domain<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `custom_domain` block as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -837,7 +846,7 @@ for more information. Defaults to `true`.
 <a href="#identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accountidentity">Account<wbr>Identity</a></span>
+        <span class="property-type"><a href="#accountidentity">Account<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `identity` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -891,7 +900,7 @@ for more information. Defaults to `true`.
 <a href="#networkrules_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accountnetworkrules">Account<wbr>Network<wbr>Rules<wbr>Type</a></span>
+        <span class="property-type"><a href="#accountnetworkrules">Account<wbr>Network<wbr>Rules<wbr>Type<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `network_rules` block as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -909,7 +918,7 @@ for more information. Defaults to `true`.
 <a href="#queueproperties_go" style="color: inherit; text-decoration: inherit;">Queue<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accountqueueproperties">Account<wbr>Queue<wbr>Properties</a></span>
+        <span class="property-type"><a href="#accountqueueproperties">Account<wbr>Queue<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `queue_properties` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -918,16 +927,24 @@ for more information. Defaults to `true`.
 <a href="#routing_go" style="color: inherit; text-decoration: inherit;">Routing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accountrouting">Account<wbr>Routing</a></span>
+        <span class="property-type"><a href="#accountrouting">Account<wbr>Routing<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `routing` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="shareproperties_go">
+<a href="#shareproperties_go" style="color: inherit; text-decoration: inherit;">Share<wbr>Properties</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accountshareproperties">Account<wbr>Share<wbr>Properties<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="staticwebsite_go">
 <a href="#staticwebsite_go" style="color: inherit; text-decoration: inherit;">Static<wbr>Website</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accountstaticwebsite">Account<wbr>Static<wbr>Website</a></span>
+        <span class="property-type"><a href="#accountstaticwebsite">Account<wbr>Static<wbr>Website<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `static_website` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1125,6 +1142,14 @@ for more information. Defaults to `true`.
     </dt>
     <dd>{{% md %}}A `routing` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="shareproperties_nodejs">
+<a href="#shareproperties_nodejs" style="color: inherit; text-decoration: inherit;">share<wbr>Properties</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accountshareproperties">Account<wbr>Share<wbr>Properties<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="staticwebsite_nodejs">
 <a href="#staticwebsite_nodejs" style="color: inherit; text-decoration: inherit;">static<wbr>Website</a>
@@ -1328,6 +1353,14 @@ for more information. Defaults to `true`.
     </dt>
     <dd>{{% md %}}A `routing` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="share_properties_python">
+<a href="#share_properties_python" style="color: inherit; text-decoration: inherit;">share_<wbr>properties</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accountshareproperties">Account<wbr>Share<wbr>Properties<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="static_website_python">
 <a href="#static_website_python" style="color: inherit; text-decoration: inherit;">static_<wbr>website</a>
@@ -2623,6 +2656,7 @@ Get an existing Account resource's state with the given name, ID, and optional e
         <span class="nx">secondary_table_host</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">secondary_web_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">secondary_web_host</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">share_properties</span><span class="p">:</span> <span class="nx">Optional[AccountSharePropertiesArgs]</span> = None<span class="p">,</span>
         <span class="nx">static_website</span><span class="p">:</span> <span class="nx">Optional[AccountStaticWebsiteArgs]</span> = None<span class="p">,</span>
         <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">) -&gt;</span> Account</code></pre></div>
 {{% /choosable %}}
@@ -3206,6 +3240,14 @@ for more information. Defaults to `true`.
     <dd>{{% md %}}The hostname with port if applicable for web storage in the secondary location.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_shareproperties_csharp">
+<a href="#state_shareproperties_csharp" style="color: inherit; text-decoration: inherit;">Share<wbr>Properties</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accountshareproperties">Account<wbr>Share<wbr>Properties<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_staticwebsite_csharp">
 <a href="#state_staticwebsite_csharp" style="color: inherit; text-decoration: inherit;">Static<wbr>Website</a>
 </span>
@@ -3277,7 +3319,7 @@ for more information. Defaults to `true`.
 <a href="#state_azurefilesauthentication_go" style="color: inherit; text-decoration: inherit;">Azure<wbr>Files<wbr>Authentication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accountazurefilesauthentication">Account<wbr>Azure<wbr>Files<wbr>Authentication</a></span>
+        <span class="property-type"><a href="#accountazurefilesauthentication">Account<wbr>Azure<wbr>Files<wbr>Authentication<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `azure_files_authentication` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3286,7 +3328,7 @@ for more information. Defaults to `true`.
 <a href="#state_blobproperties_go" style="color: inherit; text-decoration: inherit;">Blob<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accountblobproperties">Account<wbr>Blob<wbr>Properties</a></span>
+        <span class="property-type"><a href="#accountblobproperties">Account<wbr>Blob<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `blob_properties` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3295,7 +3337,7 @@ for more information. Defaults to `true`.
 <a href="#state_customdomain_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Domain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accountcustomdomain">Account<wbr>Custom<wbr>Domain</a></span>
+        <span class="property-type"><a href="#accountcustomdomain">Account<wbr>Custom<wbr>Domain<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `custom_domain` block as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3314,7 +3356,7 @@ for more information. Defaults to `true`.
 <a href="#state_identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accountidentity">Account<wbr>Identity</a></span>
+        <span class="property-type"><a href="#accountidentity">Account<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `identity` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3368,7 +3410,7 @@ for more information. Defaults to `true`.
 <a href="#state_networkrules_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accountnetworkrules">Account<wbr>Network<wbr>Rules<wbr>Type</a></span>
+        <span class="property-type"><a href="#accountnetworkrules">Account<wbr>Network<wbr>Rules<wbr>Type<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `network_rules` block as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3530,7 +3572,7 @@ for more information. Defaults to `true`.
 <a href="#state_queueproperties_go" style="color: inherit; text-decoration: inherit;">Queue<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accountqueueproperties">Account<wbr>Queue<wbr>Properties</a></span>
+        <span class="property-type"><a href="#accountqueueproperties">Account<wbr>Queue<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `queue_properties` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3548,7 +3590,7 @@ for more information. Defaults to `true`.
 <a href="#state_routing_go" style="color: inherit; text-decoration: inherit;">Routing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accountrouting">Account<wbr>Routing</a></span>
+        <span class="property-type"><a href="#accountrouting">Account<wbr>Routing<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `routing` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -3697,11 +3739,19 @@ for more information. Defaults to `true`.
     <dd>{{% md %}}The hostname with port if applicable for web storage in the secondary location.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_shareproperties_go">
+<a href="#state_shareproperties_go" style="color: inherit; text-decoration: inherit;">Share<wbr>Properties</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accountshareproperties">Account<wbr>Share<wbr>Properties<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_staticwebsite_go">
 <a href="#state_staticwebsite_go" style="color: inherit; text-decoration: inherit;">Static<wbr>Website</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accountstaticwebsite">Account<wbr>Static<wbr>Website</a></span>
+        <span class="property-type"><a href="#accountstaticwebsite">Account<wbr>Static<wbr>Website<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `static_website` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4187,6 +4237,14 @@ for more information. Defaults to `true`.
     </dt>
     <dd>{{% md %}}The hostname with port if applicable for web storage in the secondary location.
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_shareproperties_nodejs">
+<a href="#state_shareproperties_nodejs" style="color: inherit; text-decoration: inherit;">share<wbr>Properties</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accountshareproperties">Account<wbr>Share<wbr>Properties<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_staticwebsite_nodejs">
 <a href="#state_staticwebsite_nodejs" style="color: inherit; text-decoration: inherit;">static<wbr>Website</a>
@@ -4679,6 +4737,14 @@ for more information. Defaults to `true`.
     <dd>{{% md %}}The hostname with port if applicable for web storage in the secondary location.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_share_properties_python">
+<a href="#state_share_properties_python" style="color: inherit; text-decoration: inherit;">share_<wbr>properties</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accountshareproperties">Account<wbr>Share<wbr>Properties<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_static_website_python">
 <a href="#state_static_website_python" style="color: inherit; text-decoration: inherit;">static_<wbr>website</a>
 </span>
@@ -4725,7 +4791,7 @@ for more information. Defaults to `true`.
 <a href="#activedirectory_csharp" style="color: inherit; text-decoration: inherit;">Active<wbr>Directory</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accountazurefilesauthenticationactivedirectory">Account<wbr>Azure<wbr>Files<wbr>Authentication<wbr>Active<wbr>Directory<wbr>Args</a></span>
+        <span class="property-type"><a href="#accountazurefilesauthenticationactivedirectory">Account<wbr>Azure<wbr>Files<wbr>Authentication<wbr>Active<wbr>Directory</a></span>
     </dt>
     <dd>{{% md %}}A `active_directory` block as defined below. Required when `directory_type` is `AD`.
 {{% /md %}}</dd></dl>
@@ -4769,7 +4835,7 @@ for more information. Defaults to `true`.
 <a href="#activedirectory_nodejs" style="color: inherit; text-decoration: inherit;">active<wbr>Directory</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accountazurefilesauthenticationactivedirectory">Account<wbr>Azure<wbr>Files<wbr>Authentication<wbr>Active<wbr>Directory<wbr>Args</a></span>
+        <span class="property-type"><a href="#accountazurefilesauthenticationactivedirectory">Account<wbr>Azure<wbr>Files<wbr>Authentication<wbr>Active<wbr>Directory</a></span>
     </dt>
     <dd>{{% md %}}A `active_directory` block as defined below. Required when `directory_type` is `AD`.
 {{% /md %}}</dd></dl>
@@ -4791,7 +4857,7 @@ for more information. Defaults to `true`.
 <a href="#active_directory_python" style="color: inherit; text-decoration: inherit;">active_<wbr>directory</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accountazurefilesauthenticationactivedirectory">Account<wbr>Azure<wbr>Files<wbr>Authentication<wbr>Active<wbr>Directory<wbr>Args</a></span>
+        <span class="property-type"><a href="#accountazurefilesauthenticationactivedirectory">Account<wbr>Azure<wbr>Files<wbr>Authentication<wbr>Active<wbr>Directory</a></span>
     </dt>
     <dd>{{% md %}}A `active_directory` block as defined below. Required when `directory_type` is `AD`.
 {{% /md %}}</dd></dl>
@@ -5049,7 +5115,7 @@ for more information. Defaults to `true`.
 <a href="#containerdeleteretentionpolicy_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Delete<wbr>Retention<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accountblobpropertiescontainerdeleteretentionpolicy">Account<wbr>Blob<wbr>Properties<wbr>Container<wbr>Delete<wbr>Retention<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#accountblobpropertiescontainerdeleteretentionpolicy">Account<wbr>Blob<wbr>Properties<wbr>Container<wbr>Delete<wbr>Retention<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}A `container_delete_retention_policy` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5058,7 +5124,7 @@ for more information. Defaults to `true`.
 <a href="#corsrules_csharp" style="color: inherit; text-decoration: inherit;">Cors<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accountblobpropertiescorsrule">List&lt;Account<wbr>Blob<wbr>Properties<wbr>Cors<wbr>Rule<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#accountblobpropertiescorsrule">List&lt;Account<wbr>Blob<wbr>Properties<wbr>Cors<wbr>Rule&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `cors_rule` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5076,7 +5142,7 @@ for more information. Defaults to `true`.
 <a href="#deleteretentionpolicy_csharp" style="color: inherit; text-decoration: inherit;">Delete<wbr>Retention<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accountblobpropertiesdeleteretentionpolicy">Account<wbr>Blob<wbr>Properties<wbr>Delete<wbr>Retention<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#accountblobpropertiesdeleteretentionpolicy">Account<wbr>Blob<wbr>Properties<wbr>Delete<wbr>Retention<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}A `delete_retention_policy` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5183,7 +5249,7 @@ for more information. Defaults to `true`.
 <a href="#containerdeleteretentionpolicy_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Delete<wbr>Retention<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accountblobpropertiescontainerdeleteretentionpolicy">Account<wbr>Blob<wbr>Properties<wbr>Container<wbr>Delete<wbr>Retention<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#accountblobpropertiescontainerdeleteretentionpolicy">Account<wbr>Blob<wbr>Properties<wbr>Container<wbr>Delete<wbr>Retention<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}A `container_delete_retention_policy` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5192,7 +5258,7 @@ for more information. Defaults to `true`.
 <a href="#corsrules_nodejs" style="color: inherit; text-decoration: inherit;">cors<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accountblobpropertiescorsrule">Account<wbr>Blob<wbr>Properties<wbr>Cors<wbr>Rule<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#accountblobpropertiescorsrule">Account<wbr>Blob<wbr>Properties<wbr>Cors<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}A `cors_rule` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5210,7 +5276,7 @@ for more information. Defaults to `true`.
 <a href="#deleteretentionpolicy_nodejs" style="color: inherit; text-decoration: inherit;">delete<wbr>Retention<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accountblobpropertiesdeleteretentionpolicy">Account<wbr>Blob<wbr>Properties<wbr>Delete<wbr>Retention<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#accountblobpropertiesdeleteretentionpolicy">Account<wbr>Blob<wbr>Properties<wbr>Delete<wbr>Retention<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}A `delete_retention_policy` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5250,7 +5316,7 @@ for more information. Defaults to `true`.
 <a href="#container_delete_retention_policy_python" style="color: inherit; text-decoration: inherit;">container_<wbr>delete_<wbr>retention_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accountblobpropertiescontainerdeleteretentionpolicy">Account<wbr>Blob<wbr>Properties<wbr>Container<wbr>Delete<wbr>Retention<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#accountblobpropertiescontainerdeleteretentionpolicy">Account<wbr>Blob<wbr>Properties<wbr>Container<wbr>Delete<wbr>Retention<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}A `container_delete_retention_policy` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5259,7 +5325,7 @@ for more information. Defaults to `true`.
 <a href="#cors_rules_python" style="color: inherit; text-decoration: inherit;">cors_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accountblobpropertiescorsrule">Sequence[Account<wbr>Blob<wbr>Properties<wbr>Cors<wbr>Rule<wbr>Args]</a></span>
+        <span class="property-type"><a href="#accountblobpropertiescorsrule">Sequence[Account<wbr>Blob<wbr>Properties<wbr>Cors<wbr>Rule]</a></span>
     </dt>
     <dd>{{% md %}}A `cors_rule` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5277,7 +5343,7 @@ for more information. Defaults to `true`.
 <a href="#delete_retention_policy_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>retention_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accountblobpropertiesdeleteretentionpolicy">Account<wbr>Blob<wbr>Properties<wbr>Delete<wbr>Retention<wbr>Policy<wbr>Args</a></span>
+        <span class="property-type"><a href="#accountblobpropertiesdeleteretentionpolicy">Account<wbr>Blob<wbr>Properties<wbr>Delete<wbr>Retention<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}A `delete_retention_policy` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -5900,7 +5966,7 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 <a href="#privatelinkaccesses_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Accesses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accountnetworkrulesprivatelinkaccess">List&lt;Account<wbr>Network<wbr>Rules<wbr>Private<wbr>Link<wbr>Access<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#accountnetworkrulesprivatelinkaccess">List&lt;Account<wbr>Network<wbr>Rules<wbr>Private<wbr>Link<wbr>Access&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or More `private_link_access` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6000,7 +6066,7 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 <a href="#privatelinkaccesses_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Link<wbr>Accesses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accountnetworkrulesprivatelinkaccess">Account<wbr>Network<wbr>Rules<wbr>Private<wbr>Link<wbr>Access<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#accountnetworkrulesprivatelinkaccess">Account<wbr>Network<wbr>Rules<wbr>Private<wbr>Link<wbr>Access[]</a></span>
     </dt>
     <dd>{{% md %}}One or More `private_link_access` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6050,7 +6116,7 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 <a href="#private_link_accesses_python" style="color: inherit; text-decoration: inherit;">private_<wbr>link_<wbr>accesses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accountnetworkrulesprivatelinkaccess">Sequence[Account<wbr>Network<wbr>Rules<wbr>Private<wbr>Link<wbr>Access<wbr>Args]</a></span>
+        <span class="property-type"><a href="#accountnetworkrulesprivatelinkaccess">Sequence[Account<wbr>Network<wbr>Rules<wbr>Private<wbr>Link<wbr>Access]</a></span>
     </dt>
     <dd>{{% md %}}One or More `private_link_access` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6164,7 +6230,7 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 <a href="#corsrules_csharp" style="color: inherit; text-decoration: inherit;">Cors<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accountqueuepropertiescorsrule">List&lt;Account<wbr>Queue<wbr>Properties<wbr>Cors<wbr>Rule<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#accountqueuepropertiescorsrule">List&lt;Account<wbr>Queue<wbr>Properties<wbr>Cors<wbr>Rule&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `cors_rule` block as defined above.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6173,7 +6239,7 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 <a href="#hourmetrics_csharp" style="color: inherit; text-decoration: inherit;">Hour<wbr>Metrics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accountqueuepropertieshourmetrics">Account<wbr>Queue<wbr>Properties<wbr>Hour<wbr>Metrics<wbr>Args</a></span>
+        <span class="property-type"><a href="#accountqueuepropertieshourmetrics">Account<wbr>Queue<wbr>Properties<wbr>Hour<wbr>Metrics</a></span>
     </dt>
     <dd>{{% md %}}A `hour_metrics` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6182,7 +6248,7 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 <a href="#logging_csharp" style="color: inherit; text-decoration: inherit;">Logging</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accountqueuepropertieslogging">Account<wbr>Queue<wbr>Properties<wbr>Logging<wbr>Args</a></span>
+        <span class="property-type"><a href="#accountqueuepropertieslogging">Account<wbr>Queue<wbr>Properties<wbr>Logging</a></span>
     </dt>
     <dd>{{% md %}}A `logging` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6191,7 +6257,7 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 <a href="#minutemetrics_csharp" style="color: inherit; text-decoration: inherit;">Minute<wbr>Metrics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accountqueuepropertiesminutemetrics">Account<wbr>Queue<wbr>Properties<wbr>Minute<wbr>Metrics<wbr>Args</a></span>
+        <span class="property-type"><a href="#accountqueuepropertiesminutemetrics">Account<wbr>Queue<wbr>Properties<wbr>Minute<wbr>Metrics</a></span>
     </dt>
     <dd>{{% md %}}A `minute_metrics` block as defined below.
 {{% /md %}}</dd></dl>
@@ -6244,7 +6310,7 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 <a href="#corsrules_nodejs" style="color: inherit; text-decoration: inherit;">cors<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accountqueuepropertiescorsrule">Account<wbr>Queue<wbr>Properties<wbr>Cors<wbr>Rule<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#accountqueuepropertiescorsrule">Account<wbr>Queue<wbr>Properties<wbr>Cors<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}A `cors_rule` block as defined above.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6253,7 +6319,7 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 <a href="#hourmetrics_nodejs" style="color: inherit; text-decoration: inherit;">hour<wbr>Metrics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accountqueuepropertieshourmetrics">Account<wbr>Queue<wbr>Properties<wbr>Hour<wbr>Metrics<wbr>Args</a></span>
+        <span class="property-type"><a href="#accountqueuepropertieshourmetrics">Account<wbr>Queue<wbr>Properties<wbr>Hour<wbr>Metrics</a></span>
     </dt>
     <dd>{{% md %}}A `hour_metrics` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6262,7 +6328,7 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 <a href="#logging_nodejs" style="color: inherit; text-decoration: inherit;">logging</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accountqueuepropertieslogging">Account<wbr>Queue<wbr>Properties<wbr>Logging<wbr>Args</a></span>
+        <span class="property-type"><a href="#accountqueuepropertieslogging">Account<wbr>Queue<wbr>Properties<wbr>Logging</a></span>
     </dt>
     <dd>{{% md %}}A `logging` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6271,7 +6337,7 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 <a href="#minutemetrics_nodejs" style="color: inherit; text-decoration: inherit;">minute<wbr>Metrics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accountqueuepropertiesminutemetrics">Account<wbr>Queue<wbr>Properties<wbr>Minute<wbr>Metrics<wbr>Args</a></span>
+        <span class="property-type"><a href="#accountqueuepropertiesminutemetrics">Account<wbr>Queue<wbr>Properties<wbr>Minute<wbr>Metrics</a></span>
     </dt>
     <dd>{{% md %}}A `minute_metrics` block as defined below.
 {{% /md %}}</dd></dl>
@@ -6284,7 +6350,7 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 <a href="#cors_rules_python" style="color: inherit; text-decoration: inherit;">cors_<wbr>rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accountqueuepropertiescorsrule">Sequence[Account<wbr>Queue<wbr>Properties<wbr>Cors<wbr>Rule<wbr>Args]</a></span>
+        <span class="property-type"><a href="#accountqueuepropertiescorsrule">Sequence[Account<wbr>Queue<wbr>Properties<wbr>Cors<wbr>Rule]</a></span>
     </dt>
     <dd>{{% md %}}A `cors_rule` block as defined above.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6293,7 +6359,7 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 <a href="#hour_metrics_python" style="color: inherit; text-decoration: inherit;">hour_<wbr>metrics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accountqueuepropertieshourmetrics">Account<wbr>Queue<wbr>Properties<wbr>Hour<wbr>Metrics<wbr>Args</a></span>
+        <span class="property-type"><a href="#accountqueuepropertieshourmetrics">Account<wbr>Queue<wbr>Properties<wbr>Hour<wbr>Metrics</a></span>
     </dt>
     <dd>{{% md %}}A `hour_metrics` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6302,7 +6368,7 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 <a href="#logging_python" style="color: inherit; text-decoration: inherit;">logging</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accountqueuepropertieslogging">Account<wbr>Queue<wbr>Properties<wbr>Logging<wbr>Args</a></span>
+        <span class="property-type"><a href="#accountqueuepropertieslogging">Account<wbr>Queue<wbr>Properties<wbr>Logging</a></span>
     </dt>
     <dd>{{% md %}}A `logging` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -6311,7 +6377,7 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 <a href="#minute_metrics_python" style="color: inherit; text-decoration: inherit;">minute_<wbr>metrics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accountqueuepropertiesminutemetrics">Account<wbr>Queue<wbr>Properties<wbr>Minute<wbr>Metrics<wbr>Args</a></span>
+        <span class="property-type"><a href="#accountqueuepropertiesminutemetrics">Account<wbr>Queue<wbr>Properties<wbr>Minute<wbr>Metrics</a></span>
     </dt>
     <dd>{{% md %}}A `minute_metrics` block as defined below.
 {{% /md %}}</dd></dl>
@@ -7164,6 +7230,550 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should microsoft routing storage endpoints be published? Defaults to `false`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="accountshareproperties">Account<wbr>Share<wbr>Properties</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="corsrules_csharp">
+<a href="#corsrules_csharp" style="color: inherit; text-decoration: inherit;">Cors<wbr>Rules</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accountsharepropertiescorsrule">List&lt;Account<wbr>Share<wbr>Properties<wbr>Cors<wbr>Rule&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A `cors_rule` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="retentionpolicy_csharp">
+<a href="#retentionpolicy_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accountsharepropertiesretentionpolicy">Account<wbr>Share<wbr>Properties<wbr>Retention<wbr>Policy</a></span>
+    </dt>
+    <dd>{{% md %}}A `retention_policy` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="smb_csharp">
+<a href="#smb_csharp" style="color: inherit; text-decoration: inherit;">Smb</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accountsharepropertiessmb">Account<wbr>Share<wbr>Properties<wbr>Smb</a></span>
+    </dt>
+    <dd>{{% md %}}A `smb` block as defined below.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="corsrules_go">
+<a href="#corsrules_go" style="color: inherit; text-decoration: inherit;">Cors<wbr>Rules</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accountsharepropertiescorsrule">[]Account<wbr>Share<wbr>Properties<wbr>Cors<wbr>Rule</a></span>
+    </dt>
+    <dd>{{% md %}}A `cors_rule` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="retentionpolicy_go">
+<a href="#retentionpolicy_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accountsharepropertiesretentionpolicy">Account<wbr>Share<wbr>Properties<wbr>Retention<wbr>Policy</a></span>
+    </dt>
+    <dd>{{% md %}}A `retention_policy` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="smb_go">
+<a href="#smb_go" style="color: inherit; text-decoration: inherit;">Smb</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accountsharepropertiessmb">Account<wbr>Share<wbr>Properties<wbr>Smb</a></span>
+    </dt>
+    <dd>{{% md %}}A `smb` block as defined below.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="corsrules_nodejs">
+<a href="#corsrules_nodejs" style="color: inherit; text-decoration: inherit;">cors<wbr>Rules</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accountsharepropertiescorsrule">Account<wbr>Share<wbr>Properties<wbr>Cors<wbr>Rule[]</a></span>
+    </dt>
+    <dd>{{% md %}}A `cors_rule` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="retentionpolicy_nodejs">
+<a href="#retentionpolicy_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accountsharepropertiesretentionpolicy">Account<wbr>Share<wbr>Properties<wbr>Retention<wbr>Policy</a></span>
+    </dt>
+    <dd>{{% md %}}A `retention_policy` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="smb_nodejs">
+<a href="#smb_nodejs" style="color: inherit; text-decoration: inherit;">smb</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accountsharepropertiessmb">Account<wbr>Share<wbr>Properties<wbr>Smb</a></span>
+    </dt>
+    <dd>{{% md %}}A `smb` block as defined below.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="cors_rules_python">
+<a href="#cors_rules_python" style="color: inherit; text-decoration: inherit;">cors_<wbr>rules</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accountsharepropertiescorsrule">Sequence[Account<wbr>Share<wbr>Properties<wbr>Cors<wbr>Rule]</a></span>
+    </dt>
+    <dd>{{% md %}}A `cors_rule` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="retention_policy_python">
+<a href="#retention_policy_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accountsharepropertiesretentionpolicy">Account<wbr>Share<wbr>Properties<wbr>Retention<wbr>Policy</a></span>
+    </dt>
+    <dd>{{% md %}}A `retention_policy` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="smb_python">
+<a href="#smb_python" style="color: inherit; text-decoration: inherit;">smb</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accountsharepropertiessmb">Account<wbr>Share<wbr>Properties<wbr>Smb</a></span>
+    </dt>
+    <dd>{{% md %}}A `smb` block as defined below.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="accountsharepropertiescorsrule">Account<wbr>Share<wbr>Properties<wbr>Cors<wbr>Rule</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="allowedheaders_csharp">
+<a href="#allowedheaders_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Headers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A list of headers that are allowed to be a part of the cross-origin request.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="allowedmethods_csharp">
+<a href="#allowedmethods_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Methods</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A list of http headers that are allowed to be executed by the origin. Valid options are
+`DELETE`, `GET`, `HEAD`, `MERGE`, `POST`, `OPTIONS`, `PUT` or `PATCH`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="allowedorigins_csharp">
+<a href="#allowedorigins_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Origins</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A list of origin domains that will be allowed by CORS.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="exposedheaders_csharp">
+<a href="#exposedheaders_csharp" style="color: inherit; text-decoration: inherit;">Exposed<wbr>Headers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A list of response headers that are exposed to CORS clients.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="maxageinseconds_csharp">
+<a href="#maxageinseconds_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Age<wbr>In<wbr>Seconds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of seconds the client should cache a preflight response.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="allowedheaders_go">
+<a href="#allowedheaders_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Headers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}A list of headers that are allowed to be a part of the cross-origin request.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="allowedmethods_go">
+<a href="#allowedmethods_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Methods</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}A list of http headers that are allowed to be executed by the origin. Valid options are
+`DELETE`, `GET`, `HEAD`, `MERGE`, `POST`, `OPTIONS`, `PUT` or `PATCH`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="allowedorigins_go">
+<a href="#allowedorigins_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Origins</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}A list of origin domains that will be allowed by CORS.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="exposedheaders_go">
+<a href="#exposedheaders_go" style="color: inherit; text-decoration: inherit;">Exposed<wbr>Headers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}A list of response headers that are exposed to CORS clients.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="maxageinseconds_go">
+<a href="#maxageinseconds_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Age<wbr>In<wbr>Seconds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of seconds the client should cache a preflight response.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="allowedheaders_nodejs">
+<a href="#allowedheaders_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Headers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}A list of headers that are allowed to be a part of the cross-origin request.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="allowedmethods_nodejs">
+<a href="#allowedmethods_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Methods</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}A list of http headers that are allowed to be executed by the origin. Valid options are
+`DELETE`, `GET`, `HEAD`, `MERGE`, `POST`, `OPTIONS`, `PUT` or `PATCH`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="allowedorigins_nodejs">
+<a href="#allowedorigins_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Origins</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}A list of origin domains that will be allowed by CORS.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="exposedheaders_nodejs">
+<a href="#exposedheaders_nodejs" style="color: inherit; text-decoration: inherit;">exposed<wbr>Headers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}A list of response headers that are exposed to CORS clients.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="maxageinseconds_nodejs">
+<a href="#maxageinseconds_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Age<wbr>In<wbr>Seconds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The number of seconds the client should cache a preflight response.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="allowed_headers_python">
+<a href="#allowed_headers_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>headers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}A list of headers that are allowed to be a part of the cross-origin request.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="allowed_methods_python">
+<a href="#allowed_methods_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>methods</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}A list of http headers that are allowed to be executed by the origin. Valid options are
+`DELETE`, `GET`, `HEAD`, `MERGE`, `POST`, `OPTIONS`, `PUT` or `PATCH`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="allowed_origins_python">
+<a href="#allowed_origins_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>origins</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}A list of origin domains that will be allowed by CORS.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="exposed_headers_python">
+<a href="#exposed_headers_python" style="color: inherit; text-decoration: inherit;">exposed_<wbr>headers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}A list of response headers that are exposed to CORS clients.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="max_age_in_seconds_python">
+<a href="#max_age_in_seconds_python" style="color: inherit; text-decoration: inherit;">max_<wbr>age_<wbr>in_<wbr>seconds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of seconds the client should cache a preflight response.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="accountsharepropertiesretentionpolicy">Account<wbr>Share<wbr>Properties<wbr>Retention<wbr>Policy</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="days_csharp">
+<a href="#days_csharp" style="color: inherit; text-decoration: inherit;">Days</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Specifies the number of days that the `azure.storage.Share` should be retained, between `1` and `365` days. Defaults to `7`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="days_go">
+<a href="#days_go" style="color: inherit; text-decoration: inherit;">Days</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Specifies the number of days that the `azure.storage.Share` should be retained, between `1` and `365` days. Defaults to `7`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="days_nodejs">
+<a href="#days_nodejs" style="color: inherit; text-decoration: inherit;">days</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Specifies the number of days that the `azure.storage.Share` should be retained, between `1` and `365` days. Defaults to `7`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="days_python">
+<a href="#days_python" style="color: inherit; text-decoration: inherit;">days</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Specifies the number of days that the `azure.storage.Share` should be retained, between `1` and `365` days. Defaults to `7`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="accountsharepropertiessmb">Account<wbr>Share<wbr>Properties<wbr>Smb</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="authenticationtypes_csharp">
+<a href="#authenticationtypes_csharp" style="color: inherit; text-decoration: inherit;">Authentication<wbr>Types</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A set of SMB authentication methods. Possible values are `NTLMv2`, and `Kerberos`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="channelencryptiontypes_csharp">
+<a href="#channelencryptiontypes_csharp" style="color: inherit; text-decoration: inherit;">Channel<wbr>Encryption<wbr>Types</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A set of SMB channel encryption. Possible values are `AES-128-CCM`, `AES-128-GCM`, and `AES-256-GCM`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="kerberosticketencryptiontypes_csharp">
+<a href="#kerberosticketencryptiontypes_csharp" style="color: inherit; text-decoration: inherit;">Kerberos<wbr>Ticket<wbr>Encryption<wbr>Types</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A set of Kerberos ticket encryption. Possible values are `RC4-HMAC`, and `AES-256`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="versions_csharp">
+<a href="#versions_csharp" style="color: inherit; text-decoration: inherit;">Versions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A set of SMB protocol versions. Possible values are `SMB2.1`, `SMB3.0`, and `SMB3.1.1`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="authenticationtypes_go">
+<a href="#authenticationtypes_go" style="color: inherit; text-decoration: inherit;">Authentication<wbr>Types</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}A set of SMB authentication methods. Possible values are `NTLMv2`, and `Kerberos`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="channelencryptiontypes_go">
+<a href="#channelencryptiontypes_go" style="color: inherit; text-decoration: inherit;">Channel<wbr>Encryption<wbr>Types</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}A set of SMB channel encryption. Possible values are `AES-128-CCM`, `AES-128-GCM`, and `AES-256-GCM`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="kerberosticketencryptiontypes_go">
+<a href="#kerberosticketencryptiontypes_go" style="color: inherit; text-decoration: inherit;">Kerberos<wbr>Ticket<wbr>Encryption<wbr>Types</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}A set of Kerberos ticket encryption. Possible values are `RC4-HMAC`, and `AES-256`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="versions_go">
+<a href="#versions_go" style="color: inherit; text-decoration: inherit;">Versions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}A set of SMB protocol versions. Possible values are `SMB2.1`, `SMB3.0`, and `SMB3.1.1`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="authenticationtypes_nodejs">
+<a href="#authenticationtypes_nodejs" style="color: inherit; text-decoration: inherit;">authentication<wbr>Types</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}A set of SMB authentication methods. Possible values are `NTLMv2`, and `Kerberos`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="channelencryptiontypes_nodejs">
+<a href="#channelencryptiontypes_nodejs" style="color: inherit; text-decoration: inherit;">channel<wbr>Encryption<wbr>Types</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}A set of SMB channel encryption. Possible values are `AES-128-CCM`, `AES-128-GCM`, and `AES-256-GCM`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="kerberosticketencryptiontypes_nodejs">
+<a href="#kerberosticketencryptiontypes_nodejs" style="color: inherit; text-decoration: inherit;">kerberos<wbr>Ticket<wbr>Encryption<wbr>Types</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}A set of Kerberos ticket encryption. Possible values are `RC4-HMAC`, and `AES-256`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="versions_nodejs">
+<a href="#versions_nodejs" style="color: inherit; text-decoration: inherit;">versions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}A set of SMB protocol versions. Possible values are `SMB2.1`, `SMB3.0`, and `SMB3.1.1`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="authentication_types_python">
+<a href="#authentication_types_python" style="color: inherit; text-decoration: inherit;">authentication_<wbr>types</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}A set of SMB authentication methods. Possible values are `NTLMv2`, and `Kerberos`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="channel_encryption_types_python">
+<a href="#channel_encryption_types_python" style="color: inherit; text-decoration: inherit;">channel_<wbr>encryption_<wbr>types</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}A set of SMB channel encryption. Possible values are `AES-128-CCM`, `AES-128-GCM`, and `AES-256-GCM`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="kerberos_ticket_encryption_types_python">
+<a href="#kerberos_ticket_encryption_types_python" style="color: inherit; text-decoration: inherit;">kerberos_<wbr>ticket_<wbr>encryption_<wbr>types</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}A set of Kerberos ticket encryption. Possible values are `RC4-HMAC`, and `AES-256`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="versions_python">
+<a href="#versions_python" style="color: inherit; text-decoration: inherit;">versions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}A set of SMB protocol versions. Possible values are `SMB2.1`, `SMB3.0`, and `SMB3.1.1`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

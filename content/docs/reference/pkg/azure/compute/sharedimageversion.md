@@ -469,7 +469,7 @@ The SharedImageVersion resource accepts the following [input]({{< relref "/docs/
 <a href="#targetregions_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Regions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sharedimageversiontargetregion">[]Shared<wbr>Image<wbr>Version<wbr>Target<wbr>Region</a></span>
+        <span class="property-type"><a href="#sharedimageversiontargetregion">[]Shared<wbr>Image<wbr>Version<wbr>Target<wbr>Region<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `target_region` blocks as documented below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1089,7 +1089,7 @@ The following state arguments are supported:
 <a href="#state_targetregions_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Regions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sharedimageversiontargetregion">[]Shared<wbr>Image<wbr>Version<wbr>Target<wbr>Region</a></span>
+        <span class="property-type"><a href="#sharedimageversiontargetregion">[]Shared<wbr>Image<wbr>Version<wbr>Target<wbr>Region<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `target_region` blocks as documented below.
 {{% /md %}}</dd></dl>

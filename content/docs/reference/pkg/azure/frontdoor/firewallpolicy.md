@@ -297,7 +297,7 @@ The FirewallPolicy resource accepts the following [input]({{< relref "/docs/intr
 <a href="#customrules_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicycustomrule">[]Firewall<wbr>Policy<wbr>Custom<wbr>Rule</a></span>
+        <span class="property-type"><a href="#firewallpolicycustomrule">[]Firewall<wbr>Policy<wbr>Custom<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `custom_rule` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -315,7 +315,7 @@ The FirewallPolicy resource accepts the following [input]({{< relref "/docs/intr
 <a href="#managedrules_go" style="color: inherit; text-decoration: inherit;">Managed<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicymanagedrule">[]Firewall<wbr>Policy<wbr>Managed<wbr>Rule</a></span>
+        <span class="property-type"><a href="#firewallpolicymanagedrule">[]Firewall<wbr>Policy<wbr>Managed<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `managed_rule` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -946,7 +946,7 @@ The following state arguments are supported:
 <a href="#state_customrules_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicycustomrule">[]Firewall<wbr>Policy<wbr>Custom<wbr>Rule</a></span>
+        <span class="property-type"><a href="#firewallpolicycustomrule">[]Firewall<wbr>Policy<wbr>Custom<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `custom_rule` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -982,7 +982,7 @@ The following state arguments are supported:
 <a href="#state_managedrules_go" style="color: inherit; text-decoration: inherit;">Managed<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicymanagedrule">[]Firewall<wbr>Policy<wbr>Managed<wbr>Rule</a></span>
+        <span class="property-type"><a href="#firewallpolicymanagedrule">[]Firewall<wbr>Policy<wbr>Managed<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `managed_rule` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1311,7 +1311,7 @@ The following state arguments are supported:
 <a href="#matchconditions_csharp" style="color: inherit; text-decoration: inherit;">Match<wbr>Conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicycustomrulematchcondition">List&lt;Firewall<wbr>Policy<wbr>Custom<wbr>Rule<wbr>Match<wbr>Condition<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#firewallpolicycustomrulematchcondition">List&lt;Firewall<wbr>Policy<wbr>Custom<wbr>Rule<wbr>Match<wbr>Condition&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `match_condition` block defined below. Can support up to `10` `match_condition` blocks.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1463,7 +1463,7 @@ The following state arguments are supported:
 <a href="#matchconditions_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicycustomrulematchcondition">Firewall<wbr>Policy<wbr>Custom<wbr>Rule<wbr>Match<wbr>Condition<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#firewallpolicycustomrulematchcondition">Firewall<wbr>Policy<wbr>Custom<wbr>Rule<wbr>Match<wbr>Condition[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `match_condition` block defined below. Can support up to `10` `match_condition` blocks.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1539,7 +1539,7 @@ The following state arguments are supported:
 <a href="#match_conditions_python" style="color: inherit; text-decoration: inherit;">match_<wbr>conditions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicycustomrulematchcondition">Sequence[Firewall<wbr>Policy<wbr>Custom<wbr>Rule<wbr>Match<wbr>Condition<wbr>Args]</a></span>
+        <span class="property-type"><a href="#firewallpolicycustomrulematchcondition">Sequence[Firewall<wbr>Policy<wbr>Custom<wbr>Rule<wbr>Match<wbr>Condition]</a></span>
     </dt>
     <dd>{{% md %}}One or more `match_condition` block defined below. Can support up to `10` `match_condition` blocks.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1833,7 +1833,7 @@ The following state arguments are supported:
 <a href="#exclusions_csharp" style="color: inherit; text-decoration: inherit;">Exclusions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicymanagedruleexclusion">List&lt;Firewall<wbr>Policy<wbr>Managed<wbr>Rule<wbr>Exclusion<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#firewallpolicymanagedruleexclusion">List&lt;Firewall<wbr>Policy<wbr>Managed<wbr>Rule<wbr>Exclusion&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `exclusion` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1842,7 +1842,7 @@ The following state arguments are supported:
 <a href="#overrides_csharp" style="color: inherit; text-decoration: inherit;">Overrides</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicymanagedruleoverride">List&lt;Firewall<wbr>Policy<wbr>Managed<wbr>Rule<wbr>Override<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#firewallpolicymanagedruleoverride">List&lt;Firewall<wbr>Policy<wbr>Managed<wbr>Rule<wbr>Override&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `override` blocks as defined below.
 {{% /md %}}</dd></dl>
@@ -1913,7 +1913,7 @@ The following state arguments are supported:
 <a href="#exclusions_nodejs" style="color: inherit; text-decoration: inherit;">exclusions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicymanagedruleexclusion">Firewall<wbr>Policy<wbr>Managed<wbr>Rule<wbr>Exclusion<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#firewallpolicymanagedruleexclusion">Firewall<wbr>Policy<wbr>Managed<wbr>Rule<wbr>Exclusion[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `exclusion` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1922,7 +1922,7 @@ The following state arguments are supported:
 <a href="#overrides_nodejs" style="color: inherit; text-decoration: inherit;">overrides</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicymanagedruleoverride">Firewall<wbr>Policy<wbr>Managed<wbr>Rule<wbr>Override<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#firewallpolicymanagedruleoverride">Firewall<wbr>Policy<wbr>Managed<wbr>Rule<wbr>Override[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `override` blocks as defined below.
 {{% /md %}}</dd></dl>
@@ -1953,7 +1953,7 @@ The following state arguments are supported:
 <a href="#exclusions_python" style="color: inherit; text-decoration: inherit;">exclusions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicymanagedruleexclusion">Sequence[Firewall<wbr>Policy<wbr>Managed<wbr>Rule<wbr>Exclusion<wbr>Args]</a></span>
+        <span class="property-type"><a href="#firewallpolicymanagedruleexclusion">Sequence[Firewall<wbr>Policy<wbr>Managed<wbr>Rule<wbr>Exclusion]</a></span>
     </dt>
     <dd>{{% md %}}One or more `exclusion` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1962,7 +1962,7 @@ The following state arguments are supported:
 <a href="#overrides_python" style="color: inherit; text-decoration: inherit;">overrides</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicymanagedruleoverride">Sequence[Firewall<wbr>Policy<wbr>Managed<wbr>Rule<wbr>Override<wbr>Args]</a></span>
+        <span class="property-type"><a href="#firewallpolicymanagedruleoverride">Sequence[Firewall<wbr>Policy<wbr>Managed<wbr>Rule<wbr>Override]</a></span>
     </dt>
     <dd>{{% md %}}One or more `override` blocks as defined below.
 {{% /md %}}</dd></dl>
@@ -2112,7 +2112,7 @@ The following state arguments are supported:
 <a href="#exclusions_csharp" style="color: inherit; text-decoration: inherit;">Exclusions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicymanagedruleoverrideexclusion">List&lt;Firewall<wbr>Policy<wbr>Managed<wbr>Rule<wbr>Override<wbr>Exclusion<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#firewallpolicymanagedruleoverrideexclusion">List&lt;Firewall<wbr>Policy<wbr>Managed<wbr>Rule<wbr>Override<wbr>Exclusion&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `exclusion` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2121,7 +2121,7 @@ The following state arguments are supported:
 <a href="#rules_csharp" style="color: inherit; text-decoration: inherit;">Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicymanagedruleoverriderule">List&lt;Firewall<wbr>Policy<wbr>Managed<wbr>Rule<wbr>Override<wbr>Rule<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#firewallpolicymanagedruleoverriderule">List&lt;Firewall<wbr>Policy<wbr>Managed<wbr>Rule<wbr>Override<wbr>Rule&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `rule` blocks as defined below. If none are specified, all of the rules in the group will be disabled.
 {{% /md %}}</dd></dl>
@@ -2174,7 +2174,7 @@ The following state arguments are supported:
 <a href="#exclusions_nodejs" style="color: inherit; text-decoration: inherit;">exclusions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicymanagedruleoverrideexclusion">Firewall<wbr>Policy<wbr>Managed<wbr>Rule<wbr>Override<wbr>Exclusion<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#firewallpolicymanagedruleoverrideexclusion">Firewall<wbr>Policy<wbr>Managed<wbr>Rule<wbr>Override<wbr>Exclusion[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `exclusion` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2183,7 +2183,7 @@ The following state arguments are supported:
 <a href="#rules_nodejs" style="color: inherit; text-decoration: inherit;">rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicymanagedruleoverriderule">Firewall<wbr>Policy<wbr>Managed<wbr>Rule<wbr>Override<wbr>Rule<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#firewallpolicymanagedruleoverriderule">Firewall<wbr>Policy<wbr>Managed<wbr>Rule<wbr>Override<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `rule` blocks as defined below. If none are specified, all of the rules in the group will be disabled.
 {{% /md %}}</dd></dl>
@@ -2205,7 +2205,7 @@ The following state arguments are supported:
 <a href="#exclusions_python" style="color: inherit; text-decoration: inherit;">exclusions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicymanagedruleoverrideexclusion">Sequence[Firewall<wbr>Policy<wbr>Managed<wbr>Rule<wbr>Override<wbr>Exclusion<wbr>Args]</a></span>
+        <span class="property-type"><a href="#firewallpolicymanagedruleoverrideexclusion">Sequence[Firewall<wbr>Policy<wbr>Managed<wbr>Rule<wbr>Override<wbr>Exclusion]</a></span>
     </dt>
     <dd>{{% md %}}One or more `exclusion` blocks as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2214,7 +2214,7 @@ The following state arguments are supported:
 <a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicymanagedruleoverriderule">Sequence[Firewall<wbr>Policy<wbr>Managed<wbr>Rule<wbr>Override<wbr>Rule<wbr>Args]</a></span>
+        <span class="property-type"><a href="#firewallpolicymanagedruleoverriderule">Sequence[Firewall<wbr>Policy<wbr>Managed<wbr>Rule<wbr>Override<wbr>Rule]</a></span>
     </dt>
     <dd>{{% md %}}One or more `rule` blocks as defined below. If none are specified, all of the rules in the group will be disabled.
 {{% /md %}}</dd></dl>
@@ -2382,7 +2382,7 @@ The following state arguments are supported:
 <a href="#exclusions_csharp" style="color: inherit; text-decoration: inherit;">Exclusions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicymanagedruleoverrideruleexclusion">List&lt;Firewall<wbr>Policy<wbr>Managed<wbr>Rule<wbr>Override<wbr>Rule<wbr>Exclusion<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#firewallpolicymanagedruleoverrideruleexclusion">List&lt;Firewall<wbr>Policy<wbr>Managed<wbr>Rule<wbr>Override<wbr>Rule<wbr>Exclusion&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `exclusion` blocks as defined below.
 {{% /md %}}</dd></dl>
@@ -2462,7 +2462,7 @@ The following state arguments are supported:
 <a href="#exclusions_nodejs" style="color: inherit; text-decoration: inherit;">exclusions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicymanagedruleoverrideruleexclusion">Firewall<wbr>Policy<wbr>Managed<wbr>Rule<wbr>Override<wbr>Rule<wbr>Exclusion<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#firewallpolicymanagedruleoverrideruleexclusion">Firewall<wbr>Policy<wbr>Managed<wbr>Rule<wbr>Override<wbr>Rule<wbr>Exclusion[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `exclusion` blocks as defined below.
 {{% /md %}}</dd></dl>
@@ -2502,7 +2502,7 @@ The following state arguments are supported:
 <a href="#exclusions_python" style="color: inherit; text-decoration: inherit;">exclusions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallpolicymanagedruleoverrideruleexclusion">Sequence[Firewall<wbr>Policy<wbr>Managed<wbr>Rule<wbr>Override<wbr>Rule<wbr>Exclusion<wbr>Args]</a></span>
+        <span class="property-type"><a href="#firewallpolicymanagedruleoverrideruleexclusion">Sequence[Firewall<wbr>Policy<wbr>Managed<wbr>Rule<wbr>Override<wbr>Rule<wbr>Exclusion]</a></span>
     </dt>
     <dd>{{% md %}}One or more `exclusion` blocks as defined below.
 {{% /md %}}</dd></dl>

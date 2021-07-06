@@ -272,7 +272,7 @@ The PrivateCloud resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#managementcluster_go" style="color: inherit; text-decoration: inherit;">Management<wbr>Cluster</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatecloudmanagementcluster">Private<wbr>Cloud<wbr>Management<wbr>Cluster</a></span>
+        <span class="property-type"><a href="#privatecloudmanagementcluster">Private<wbr>Cloud<wbr>Management<wbr>Cluster<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `management_cluster` block as defined below.
 > **NOTE :** `internet_connection_enabled` and `management_cluster.0.size` cannot be updated at the same time.
@@ -1260,7 +1260,7 @@ The following state arguments are supported:
 <a href="#state_circuits_go" style="color: inherit; text-decoration: inherit;">Circuits</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatecloudcircuit">[]Private<wbr>Cloud<wbr>Circuit</a></span>
+        <span class="property-type"><a href="#privatecloudcircuit">[]Private<wbr>Cloud<wbr>Circuit<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `circuit` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1297,7 +1297,7 @@ The following state arguments are supported:
 <a href="#state_managementcluster_go" style="color: inherit; text-decoration: inherit;">Management<wbr>Cluster</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#privatecloudmanagementcluster">Private<wbr>Cloud<wbr>Management<wbr>Cluster</a></span>
+        <span class="property-type"><a href="#privatecloudmanagementcluster">Private<wbr>Cloud<wbr>Management<wbr>Cluster<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `management_cluster` block as defined below.
 > **NOTE :** `internet_connection_enabled` and `management_cluster.0.size` cannot be updated at the same time.
