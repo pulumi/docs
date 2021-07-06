@@ -290,7 +290,7 @@ The App resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#appcampaignhook">App<wbr>Campaign<wbr>Hook<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The default campaign limits for the app. These limits apply to each campaign for the app, unless the campaign overrides the default with limits of its own
+    <dd>{{% md %}}Specifies settings for invoking an AWS Lambda function that customizes a segment for a campaign
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="limits_csharp">
@@ -357,7 +357,7 @@ The App resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#appcampaignhook">App<wbr>Campaign<wbr>Hook<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The default campaign limits for the app. These limits apply to each campaign for the app, unless the campaign overrides the default with limits of its own
+    <dd>{{% md %}}Specifies settings for invoking an AWS Lambda function that customizes a segment for a campaign
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="limits_go">
@@ -424,7 +424,7 @@ The App resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#appcampaignhook">App<wbr>Campaign<wbr>Hook<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The default campaign limits for the app. These limits apply to each campaign for the app, unless the campaign overrides the default with limits of its own
+    <dd>{{% md %}}Specifies settings for invoking an AWS Lambda function that customizes a segment for a campaign
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="limits_nodejs">
@@ -491,7 +491,7 @@ The App resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#appcampaignhook">App<wbr>Campaign<wbr>Hook<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The default campaign limits for the app. These limits apply to each campaign for the app, unless the campaign overrides the default with limits of its own
+    <dd>{{% md %}}Specifies settings for invoking an AWS Lambda function that customizes a segment for a campaign
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="limits_python">
@@ -837,7 +837,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#appcampaignhook">App<wbr>Campaign<wbr>Hook<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The default campaign limits for the app. These limits apply to each campaign for the app, unless the campaign overrides the default with limits of its own
+    <dd>{{% md %}}Specifies settings for invoking an AWS Lambda function that customizes a segment for a campaign
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_limits_csharp">
@@ -922,7 +922,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#appcampaignhook">App<wbr>Campaign<wbr>Hook<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The default campaign limits for the app. These limits apply to each campaign for the app, unless the campaign overrides the default with limits of its own
+    <dd>{{% md %}}Specifies settings for invoking an AWS Lambda function that customizes a segment for a campaign
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_limits_go">
@@ -1007,7 +1007,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#appcampaignhook">App<wbr>Campaign<wbr>Hook<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The default campaign limits for the app. These limits apply to each campaign for the app, unless the campaign overrides the default with limits of its own
+    <dd>{{% md %}}Specifies settings for invoking an AWS Lambda function that customizes a segment for a campaign
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_limits_nodejs">
@@ -1092,7 +1092,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#appcampaignhook">App<wbr>Campaign<wbr>Hook<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The default campaign limits for the app. These limits apply to each campaign for the app, unless the campaign overrides the default with limits of its own
+    <dd>{{% md %}}Specifies settings for invoking an AWS Lambda function that customizes a segment for a campaign
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_limits_python">

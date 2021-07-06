@@ -13,7 +13,7 @@ meta_desc: "Documentation for the aws.codebuild.SourceCredential resource with e
 Provides a CodeBuild Source Credentials Resource.
 
 > **NOTE:**
-[Codebuild only allows a single credential per given server type in a given region](https://docs.aws.amazon.com/cdk/api/v2/docs/aws-cdk-lib.aws_codebuild.GitHubSourceCredentials.html). Therefore, when you define `aws.codebuild.SourceCredential`, [`aws.codebuild.Project` resource](https://www.terraform.io/docs/providers/aws/r/codebuild_project.html) defined in the same module will use it.
+[Codebuild only allows a single credential per given server type in a given region](https://docs.aws.amazon.com/cdk/api/v2/docs/aws-cdk-lib.aws_codebuild.GitHubSourceCredentials.html). Therefore, when you define `aws.codebuild.SourceCredential`, `aws.codebuild.Project` resource defined in the same module will use it.
 
 {{% examples %}}
 

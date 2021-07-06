@@ -19,6 +19,7 @@ Explore the resources and functions of the aws.servicecatalog module.
     <li><a href="principalportfolioassociation" title="PrincipalPortfolioAssociation"><span class="symbol resource"></span>PrincipalPortfolioAssociation</a></li>
     <li><a href="product" title="Product"><span class="symbol resource"></span>Product</a></li>
     <li><a href="productportfolioassociation" title="ProductPortfolioAssociation"><span class="symbol resource"></span>ProductPortfolioAssociation</a></li>
+    <li><a href="provisionedproduct" title="ProvisionedProduct"><span class="symbol resource"></span>ProvisionedProduct</a></li>
     <li><a href="provisioningartifact" title="ProvisioningArtifact"><span class="symbol resource"></span>ProvisioningArtifact</a></li>
     <li><a href="serviceaction" title="ServiceAction"><span class="symbol resource"></span>ServiceAction</a></li>
     <li><a href="tagoption" title="TagOption"><span class="symbol resource"></span>TagOption</a></li>
@@ -28,7 +29,9 @@ Explore the resources and functions of the aws.servicecatalog module.
 <h2 id="functions">Functions</h2>
 <ul class="api">
     <li><a href="getconstraint" title="GetConstraint"><span class="symbol function"></span>GetConstraint</a></li>
+    <li><a href="getlaunchpaths" title="GetLaunchPaths"><span class="symbol function"></span>GetLaunchPaths</a></li>
     <li><a href="getportfolio" title="GetPortfolio"><span class="symbol function"></span>GetPortfolio</a></li>
+    <li><a href="getportfolioconstraints" title="GetPortfolioConstraints"><span class="symbol function"></span>GetPortfolioConstraints</a></li>
     <li><a href="getproduct" title="GetProduct"><span class="symbol function"></span>GetProduct</a></li>
 </ul>
 
@@ -41,6 +44,6 @@ Explore the resources and functions of the aws.servicecatalog module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.10.0</dd>
+	<dd>4.11.0</dd>
 </dl>
 
