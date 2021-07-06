@@ -1127,12 +1127,200 @@ The following output properties are available:
     <dd>{{% md %}}Specifies version of operating system.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="sapsystemidresponse">SAPSystem<wbr>IDResponse</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="gid_csharp">
+<a href="#gid_csharp" style="color: inherit; text-decoration: inherit;">Gid</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Group ID of the HANA database user.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="memoryallocation_csharp">
+<a href="#memoryallocation_csharp" style="color: inherit; text-decoration: inherit;">Memory<wbr>Allocation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Percent of memory to allocate to this SID.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sid_csharp">
+<a href="#sid_csharp" style="color: inherit; text-decoration: inherit;">Sid</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}SAP system ID as database identifier.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="uid_csharp">
+<a href="#uid_csharp" style="color: inherit; text-decoration: inherit;">Uid</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}User ID of the HANA database user.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="username_csharp">
+<a href="#username_csharp" style="color: inherit; text-decoration: inherit;">Username</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the HANA database user.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="gid_go">
+<a href="#gid_go" style="color: inherit; text-decoration: inherit;">Gid</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Group ID of the HANA database user.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="memoryallocation_go">
+<a href="#memoryallocation_go" style="color: inherit; text-decoration: inherit;">Memory<wbr>Allocation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Percent of memory to allocate to this SID.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sid_go">
+<a href="#sid_go" style="color: inherit; text-decoration: inherit;">Sid</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}SAP system ID as database identifier.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="uid_go">
+<a href="#uid_go" style="color: inherit; text-decoration: inherit;">Uid</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}User ID of the HANA database user.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="username_go">
+<a href="#username_go" style="color: inherit; text-decoration: inherit;">Username</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the HANA database user.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="gid_nodejs">
+<a href="#gid_nodejs" style="color: inherit; text-decoration: inherit;">gid</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Group ID of the HANA database user.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="memoryallocation_nodejs">
+<a href="#memoryallocation_nodejs" style="color: inherit; text-decoration: inherit;">memory<wbr>Allocation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Percent of memory to allocate to this SID.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sid_nodejs">
+<a href="#sid_nodejs" style="color: inherit; text-decoration: inherit;">sid</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}SAP system ID as database identifier.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="uid_nodejs">
+<a href="#uid_nodejs" style="color: inherit; text-decoration: inherit;">uid</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}User ID of the HANA database user.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="username_nodejs">
+<a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the HANA database user.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="gid_python">
+<a href="#gid_python" style="color: inherit; text-decoration: inherit;">gid</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Group ID of the HANA database user.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="memory_allocation_python">
+<a href="#memory_allocation_python" style="color: inherit; text-decoration: inherit;">memory_<wbr>allocation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Percent of memory to allocate to this SID.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sid_python">
+<a href="#sid_python" style="color: inherit; text-decoration: inherit;">sid</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}SAP system ID as database identifier.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="uid_python">
+<a href="#uid_python" style="color: inherit; text-decoration: inherit;">uid</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}User ID of the HANA database user.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="username_python">
+<a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Name of the HANA database user.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
 <h4 id="storageprofileresponse">Storage<wbr>Profile<wbr>Response</h4>
 
 
 
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="hanasids_csharp">
+<a href="#hanasids_csharp" style="color: inherit; text-decoration: inherit;">Hana<wbr>Sids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sapsystemidresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Hana<wbr>On<wbr>Azure.<wbr>Inputs.<wbr>SAPSystem<wbr>IDResponse&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies information related to SAP system IDs for the hana instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nfsipaddress_csharp">
 <a href="#nfsipaddress_csharp" style="color: inherit; text-decoration: inherit;">Nfs<wbr>Ip<wbr>Address</a>
@@ -1154,6 +1342,14 @@ The following output properties are available:
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="hanasids_go">
+<a href="#hanasids_go" style="color: inherit; text-decoration: inherit;">Hana<wbr>Sids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sapsystemidresponse">[]SAPSystem<wbr>IDResponse</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies information related to SAP system IDs for the hana instance.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="nfsipaddress_go">
 <a href="#nfsipaddress_go" style="color: inherit; text-decoration: inherit;">Nfs<wbr>Ip<wbr>Address</a>
 </span>
@@ -1174,6 +1370,14 @@ The following output properties are available:
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="hanasids_nodejs">
+<a href="#hanasids_nodejs" style="color: inherit; text-decoration: inherit;">hana<wbr>Sids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sapsystemidresponse">SAPSystem<wbr>IDResponse[]</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies information related to SAP system IDs for the hana instance.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="nfsipaddress_nodejs">
 <a href="#nfsipaddress_nodejs" style="color: inherit; text-decoration: inherit;">nfs<wbr>Ip<wbr>Address</a>
 </span>
@@ -1193,6 +1397,14 @@ The following output properties are available:
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="hana_sids_python">
+<a href="#hana_sids_python" style="color: inherit; text-decoration: inherit;">hana_<wbr>sids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sapsystemidresponse">Sequence[SAPSystem<wbr>IDResponse]</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies information related to SAP system IDs for the hana instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nfs_ip_address_python">
 <a href="#nfs_ip_address_python" style="color: inherit; text-decoration: inherit;">nfs_<wbr>ip_<wbr>address</a>

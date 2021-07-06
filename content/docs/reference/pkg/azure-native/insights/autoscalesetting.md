@@ -552,6 +552,7 @@ const autoscaleSetting = new azure_native.insights.AutoscaleSetting("autoscaleSe
                      <span class="nx">profiles</span><span class="p">:</span> <span class="nx">Optional[Sequence[AutoscaleProfileArgs]]</span> = None<span class="p">,</span>
                      <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                      <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+                     <span class="nx">target_resource_location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                      <span class="nx">target_resource_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">AutoscaleSetting</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
@@ -746,6 +747,14 @@ The AutoscaleSetting resource accepts the following [input]({{< relref "/docs/in
     </dt>
     <dd>{{% md %}}Resource tags{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="targetresourcelocation_csharp">
+<a href="#targetresourcelocation_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Resource<wbr>Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}the location of the resource that the autoscale setting should be added to.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="targetresourceuri_csharp">
 <a href="#targetresourceuri_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Resource<wbr>Uri</a>
 </span>
@@ -821,6 +830,14 @@ The AutoscaleSetting resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Resource tags{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="targetresourcelocation_go">
+<a href="#targetresourcelocation_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Resource<wbr>Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}the location of the resource that the autoscale setting should be added to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetresourceuri_go">
 <a href="#targetresourceuri_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Resource<wbr>Uri</a>
@@ -898,6 +915,14 @@ The AutoscaleSetting resource accepts the following [input]({{< relref "/docs/in
     </dt>
     <dd>{{% md %}}Resource tags{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="targetresourcelocation_nodejs">
+<a href="#targetresourcelocation_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Resource<wbr>Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}the location of the resource that the autoscale setting should be added to.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="targetresourceuri_nodejs">
 <a href="#targetresourceuri_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Resource<wbr>Uri</a>
 </span>
@@ -973,6 +998,14 @@ The AutoscaleSetting resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="target_resource_location_python">
+<a href="#target_resource_location_python" style="color: inherit; text-decoration: inherit;">target_<wbr>resource_<wbr>location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}the location of the resource that the autoscale setting should be added to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="target_resource_uri_python">
 <a href="#target_resource_uri_python" style="color: inherit; text-decoration: inherit;">target_<wbr>resource_<wbr>uri</a>
@@ -1941,7 +1974,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>Average</dd><dt>Min</dt>
     <dd>Min</dd><dt>Max</dt>
     <dd>Max</dd><dt>Sum</dt>
-    <dd>Sum</dd></dl>
+    <dd>Sum</dd><dt>Count</dt>
+    <dd>Count</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1949,7 +1983,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>Average</dd><dt>Metric<wbr>Statistic<wbr>Type<wbr>Min</dt>
     <dd>Min</dd><dt>Metric<wbr>Statistic<wbr>Type<wbr>Max</dt>
     <dd>Max</dd><dt>Metric<wbr>Statistic<wbr>Type<wbr>Sum</dt>
-    <dd>Sum</dd></dl>
+    <dd>Sum</dd><dt>Metric<wbr>Statistic<wbr>Type<wbr>Count</dt>
+    <dd>Count</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1957,7 +1992,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>Average</dd><dt>Min</dt>
     <dd>Min</dd><dt>Max</dt>
     <dd>Max</dd><dt>Sum</dt>
-    <dd>Sum</dd></dl>
+    <dd>Sum</dd><dt>Count</dt>
+    <dd>Count</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1965,7 +2001,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>Average</dd><dt>MIN</dt>
     <dd>Min</dd><dt>MAX</dt>
     <dd>Max</dd><dt>SUM</dt>
-    <dd>Sum</dd></dl>
+    <dd>Sum</dd><dt>COUNT</dt>
+    <dd>Count</dd></dl>
 {{% /choosable %}}
 
 <h4 id="metrictrigger">Metric<wbr>Trigger</h4>
@@ -2059,7 +2096,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the namespace of the metric that defines what the rule monitors.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}the namespace of the metric that defines what the rule monitors.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="metricresourcelocation_csharp">
+<a href="#metricresourcelocation_csharp" style="color: inherit; text-decoration: inherit;">Metric<wbr>Resource<wbr>Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}the location of the resource the rule monitors.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -2151,7 +2196,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the namespace of the metric that defines what the rule monitors.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}the namespace of the metric that defines what the rule monitors.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="metricresourcelocation_go">
+<a href="#metricresourcelocation_go" style="color: inherit; text-decoration: inherit;">Metric<wbr>Resource<wbr>Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}the location of the resource the rule monitors.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2243,7 +2296,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the namespace of the metric that defines what the rule monitors.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}the namespace of the metric that defines what the rule monitors.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="metricresourcelocation_nodejs">
+<a href="#metricresourcelocation_nodejs" style="color: inherit; text-decoration: inherit;">metric<wbr>Resource<wbr>Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}the location of the resource the rule monitors.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -2335,7 +2396,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}the namespace of the metric that defines what the rule monitors.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}the namespace of the metric that defines what the rule monitors.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="metric_resource_location_python">
+<a href="#metric_resource_location_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>resource_<wbr>location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}the location of the resource the rule monitors.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="metrictriggerresponse">Metric<wbr>Trigger<wbr>Response</h4>
@@ -2429,7 +2498,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the namespace of the metric that defines what the rule monitors.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}the namespace of the metric that defines what the rule monitors.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="metricresourcelocation_csharp">
+<a href="#metricresourcelocation_csharp" style="color: inherit; text-decoration: inherit;">Metric<wbr>Resource<wbr>Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}the location of the resource the rule monitors.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -2521,7 +2598,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the namespace of the metric that defines what the rule monitors.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}the namespace of the metric that defines what the rule monitors.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="metricresourcelocation_go">
+<a href="#metricresourcelocation_go" style="color: inherit; text-decoration: inherit;">Metric<wbr>Resource<wbr>Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}the location of the resource the rule monitors.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2613,7 +2698,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the namespace of the metric that defines what the rule monitors.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}the namespace of the metric that defines what the rule monitors.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="metricresourcelocation_nodejs">
+<a href="#metricresourcelocation_nodejs" style="color: inherit; text-decoration: inherit;">metric<wbr>Resource<wbr>Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}the location of the resource the rule monitors.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -2705,7 +2798,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}the namespace of the metric that defines what the rule monitors.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}the namespace of the metric that defines what the rule monitors.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="metric_resource_location_python">
+<a href="#metric_resource_location_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>resource_<wbr>location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}the location of the resource the rule monitors.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="operationtype">Operation<wbr>Type</h4>
@@ -4210,28 +4311,32 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <dl class="tabular"><dt>Change<wbr>Count</dt>
     <dd>ChangeCount</dd><dt>Percent<wbr>Change<wbr>Count</dt>
     <dd>PercentChangeCount</dd><dt>Exact<wbr>Count</dt>
-    <dd>ExactCount</dd></dl>
+    <dd>ExactCount</dd><dt>Service<wbr>Allowed<wbr>Next<wbr>Value</dt>
+    <dd>ServiceAllowedNextValue</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
 <dl class="tabular"><dt>Scale<wbr>Type<wbr>Change<wbr>Count</dt>
     <dd>ChangeCount</dd><dt>Scale<wbr>Type<wbr>Percent<wbr>Change<wbr>Count</dt>
     <dd>PercentChangeCount</dd><dt>Scale<wbr>Type<wbr>Exact<wbr>Count</dt>
-    <dd>ExactCount</dd></dl>
+    <dd>ExactCount</dd><dt>Scale<wbr>Type<wbr>Service<wbr>Allowed<wbr>Next<wbr>Value</dt>
+    <dd>ServiceAllowedNextValue</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
 <dl class="tabular"><dt>Change<wbr>Count</dt>
     <dd>ChangeCount</dd><dt>Percent<wbr>Change<wbr>Count</dt>
     <dd>PercentChangeCount</dd><dt>Exact<wbr>Count</dt>
-    <dd>ExactCount</dd></dl>
+    <dd>ExactCount</dd><dt>Service<wbr>Allowed<wbr>Next<wbr>Value</dt>
+    <dd>ServiceAllowedNextValue</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <dl class="tabular"><dt>CHANGE_COUNT</dt>
     <dd>ChangeCount</dd><dt>PERCENT_CHANGE_COUNT</dt>
     <dd>PercentChangeCount</dd><dt>EXACT_COUNT</dt>
-    <dd>ExactCount</dd></dl>
+    <dd>ExactCount</dd><dt>SERVICE_ALLOWED_NEXT_VALUE</dt>
+    <dd>ServiceAllowedNextValue</dd></dl>
 {{% /choosable %}}
 
 <h4 id="timeaggregationtype">Time<wbr>Aggregation<wbr>Type</h4>

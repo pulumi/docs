@@ -27,7 +27,8 @@ API Version: 2020-12-01-preview.
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_order_item_by_name(</span><span class="nx">order_item_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_order_item_by_name(</span><span class="nx">expand</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                           <span class="nx">order_item_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                            <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetOrderItemByNameResult</code></pre></div>
 {{% /choosable %}}
@@ -69,7 +70,15 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="expand_csharp">
+<a href="#expand_csharp" style="color: inherit; text-decoration: inherit;">Expand</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}$expand is supported on device details parameter for order item, which provides details on the devices of the product.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -89,7 +98,15 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="expand_go">
+<a href="#expand_go" style="color: inherit; text-decoration: inherit;">Expand</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}$expand is supported on device details parameter for order item, which provides details on the devices of the product.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -109,7 +126,15 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="expand_nodejs">
+<a href="#expand_nodejs" style="color: inherit; text-decoration: inherit;">expand</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}$expand is supported on device details parameter for order item, which provides details on the devices of the product.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -129,7 +154,15 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="expand_python">
+<a href="#expand_python" style="color: inherit; text-decoration: inherit;">expand</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}$expand is supported on device details parameter for order item, which provides details on the devices of the product.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -150,7 +183,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#addressdetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Edge<wbr>Order.<wbr>Outputs.<wbr>Address<wbr>Details<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Represents shipping and return address for order{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Represents shipping and return address for order item{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -182,7 +215,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Id of the order to which order items belongs to{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Id of the order to which order item belongs to{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="orderitemdetails_csharp">
 <a href="#orderitemdetails_csharp" style="color: inherit; text-decoration: inherit;">Order<wbr>Item<wbr>Details</a>
@@ -234,7 +267,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#addressdetailsresponse">Address<wbr>Details<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Represents shipping and return address for order{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Represents shipping and return address for order item{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -266,7 +299,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Id of the order to which order items belongs to{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Id of the order to which order item belongs to{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="orderitemdetails_go">
 <a href="#orderitemdetails_go" style="color: inherit; text-decoration: inherit;">Order<wbr>Item<wbr>Details</a>
@@ -318,7 +351,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#addressdetailsresponse">Address<wbr>Details<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Represents shipping and return address for order{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Represents shipping and return address for order item{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -350,7 +383,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Id of the order to which order items belongs to{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Id of the order to which order item belongs to{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="orderitemdetails_nodejs">
 <a href="#orderitemdetails_nodejs" style="color: inherit; text-decoration: inherit;">order<wbr>Item<wbr>Details</a>
@@ -402,7 +435,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#addressdetailsresponse">Address<wbr>Details<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Represents shipping and return address for order{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Represents shipping and return address for order item{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -434,7 +467,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Id of the order to which order items belongs to{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Id of the order to which order item belongs to{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="order_item_details_python">
 <a href="#order_item_details_python" style="color: inherit; text-decoration: inherit;">order_<wbr>item_<wbr>details</a>
@@ -838,13 +871,13 @@ The following output properties are available:
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="devicehistory_csharp">
-<a href="#devicehistory_csharp" style="color: inherit; text-decoration: inherit;">Device<wbr>History</a>
+        <span id="managementresourceid_csharp">
+<a href="#managementresourceid_csharp" style="color: inherit; text-decoration: inherit;">Management<wbr>Resource<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Device history{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Management Resource Id{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="serialnumber_csharp">
 <a href="#serialnumber_csharp" style="color: inherit; text-decoration: inherit;">Serial<wbr>Number</a>
@@ -858,13 +891,13 @@ The following output properties are available:
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="devicehistory_go">
-<a href="#devicehistory_go" style="color: inherit; text-decoration: inherit;">Device<wbr>History</a>
+        <span id="managementresourceid_go">
+<a href="#managementresourceid_go" style="color: inherit; text-decoration: inherit;">Management<wbr>Resource<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Device history{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Management Resource Id{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="serialnumber_go">
 <a href="#serialnumber_go" style="color: inherit; text-decoration: inherit;">Serial<wbr>Number</a>
@@ -878,13 +911,13 @@ The following output properties are available:
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="devicehistory_nodejs">
-<a href="#devicehistory_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>History</a>
+        <span id="managementresourceid_nodejs">
+<a href="#managementresourceid_nodejs" style="color: inherit; text-decoration: inherit;">management<wbr>Resource<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Device history{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Management Resource Id{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="serialnumber_nodejs">
 <a href="#serialnumber_nodejs" style="color: inherit; text-decoration: inherit;">serial<wbr>Number</a>
@@ -898,13 +931,13 @@ The following output properties are available:
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="device_history_python">
-<a href="#device_history_python" style="color: inherit; text-decoration: inherit;">device_<wbr>history</a>
+        <span id="management_resource_id_python">
+<a href="#management_resource_id_python" style="color: inherit; text-decoration: inherit;">management_<wbr>resource_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Device history{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Management Resource Id{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="serial_number_python">
 <a href="#serial_number_python" style="color: inherit; text-decoration: inherit;">serial_<wbr>number</a>
@@ -913,6 +946,90 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}device serial number{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="displayinforesponse">Display<wbr>Info<wbr>Response</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="configurationdisplayname_csharp">
+<a href="#configurationdisplayname_csharp" style="color: inherit; text-decoration: inherit;">Configuration<wbr>Display<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Configuration display name{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="productfamilydisplayname_csharp">
+<a href="#productfamilydisplayname_csharp" style="color: inherit; text-decoration: inherit;">Product<wbr>Family<wbr>Display<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Product family display name{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="configurationdisplayname_go">
+<a href="#configurationdisplayname_go" style="color: inherit; text-decoration: inherit;">Configuration<wbr>Display<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Configuration display name{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="productfamilydisplayname_go">
+<a href="#productfamilydisplayname_go" style="color: inherit; text-decoration: inherit;">Product<wbr>Family<wbr>Display<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Product family display name{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="configurationdisplayname_nodejs">
+<a href="#configurationdisplayname_nodejs" style="color: inherit; text-decoration: inherit;">configuration<wbr>Display<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Configuration display name{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="productfamilydisplayname_nodejs">
+<a href="#productfamilydisplayname_nodejs" style="color: inherit; text-decoration: inherit;">product<wbr>Family<wbr>Display<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Product family display name{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="configuration_display_name_python">
+<a href="#configuration_display_name_python" style="color: inherit; text-decoration: inherit;">configuration_<wbr>display_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Configuration display name{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="product_family_display_name_python">
+<a href="#product_family_display_name_python" style="color: inherit; text-decoration: inherit;">product_<wbr>family_<wbr>display_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Product family display name{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="encryptionpreferencesresponse">Encryption<wbr>Preferences<wbr>Response</h4>
@@ -1379,56 +1496,56 @@ The following output properties are available:
     <dd>{{% md %}}Represents product name that uniquely identifies product{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
-<h4 id="managementresourcedetailsresponse">Management<wbr>Resource<wbr>Details<wbr>Response</h4>
+<h4 id="managementresourcepreferencesresponse">Management<wbr>Resource<wbr>Preferences<wbr>Response</h4>
 
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="managementresourcearmid_csharp">
-<a href="#managementresourcearmid_csharp" style="color: inherit; text-decoration: inherit;">Management<wbr>Resource<wbr>Arm<wbr>Id</a>
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="preferredmanagementresourceid_csharp">
+<a href="#preferredmanagementresourceid_csharp" style="color: inherit; text-decoration: inherit;">Preferred<wbr>Management<wbr>Resource<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Management resource ARM ID{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Customer preferred Management resource ARM ID{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="managementresourcearmid_go">
-<a href="#managementresourcearmid_go" style="color: inherit; text-decoration: inherit;">Management<wbr>Resource<wbr>Arm<wbr>Id</a>
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="preferredmanagementresourceid_go">
+<a href="#preferredmanagementresourceid_go" style="color: inherit; text-decoration: inherit;">Preferred<wbr>Management<wbr>Resource<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Management resource ARM ID{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Customer preferred Management resource ARM ID{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="managementresourcearmid_nodejs">
-<a href="#managementresourcearmid_nodejs" style="color: inherit; text-decoration: inherit;">management<wbr>Resource<wbr>Arm<wbr>Id</a>
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="preferredmanagementresourceid_nodejs">
+<a href="#preferredmanagementresourceid_nodejs" style="color: inherit; text-decoration: inherit;">preferred<wbr>Management<wbr>Resource<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Management resource ARM ID{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Customer preferred Management resource ARM ID{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="management_resource_arm_id_python">
-<a href="#management_resource_arm_id_python" style="color: inherit; text-decoration: inherit;">management_<wbr>resource_<wbr>arm_<wbr>id</a>
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="preferred_management_resource_id_python">
+<a href="#preferred_management_resource_id_python" style="color: inherit; text-decoration: inherit;">preferred_<wbr>management_<wbr>resource_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Management resource ARM ID{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Customer preferred Management resource ARM ID{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="notificationpreferenceresponse">Notification<wbr>Preference<wbr>Response</h4>
@@ -1536,7 +1653,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Describes whether the order is cancellable or not.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Describes whether the orderItem is cancellable or not.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="currentstage_csharp">
 <a href="#currentstage_csharp" style="color: inherit; text-decoration: inherit;">Current<wbr>Stage</a>
@@ -1616,7 +1733,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Describes whether the order item is returnable or not.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Describes whether the orderItem is returnable or not.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="reverseshippingdetails_csharp">
 <a href="#reverseshippingdetails_csharp" style="color: inherit; text-decoration: inherit;">Reverse<wbr>Shipping<wbr>Details</a>
@@ -1625,14 +1742,6 @@ The following output properties are available:
         <span class="property-type"><a href="#shippingdetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Edge<wbr>Order.<wbr>Inputs.<wbr>Shipping<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Reverse Package Shipping details{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="managementresourcedetails_csharp">
-<a href="#managementresourcedetails_csharp" style="color: inherit; text-decoration: inherit;">Management<wbr>Resource<wbr>Details</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementresourcedetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Edge<wbr>Order.<wbr>Inputs.<wbr>Management<wbr>Resource<wbr>Details<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}Management resource details{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notificationemaillist_csharp">
 <a href="#notificationemaillist_csharp" style="color: inherit; text-decoration: inherit;">Notification<wbr>Email<wbr>List</a>
@@ -1668,7 +1777,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Describes whether the order is cancellable or not.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Describes whether the orderItem is cancellable or not.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="currentstage_go">
 <a href="#currentstage_go" style="color: inherit; text-decoration: inherit;">Current<wbr>Stage</a>
@@ -1748,7 +1857,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Describes whether the order item is returnable or not.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Describes whether the orderItem is returnable or not.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="reverseshippingdetails_go">
 <a href="#reverseshippingdetails_go" style="color: inherit; text-decoration: inherit;">Reverse<wbr>Shipping<wbr>Details</a>
@@ -1757,14 +1866,6 @@ The following output properties are available:
         <span class="property-type"><a href="#shippingdetailsresponse">Shipping<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Reverse Package Shipping details{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="managementresourcedetails_go">
-<a href="#managementresourcedetails_go" style="color: inherit; text-decoration: inherit;">Management<wbr>Resource<wbr>Details</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementresourcedetailsresponse">Management<wbr>Resource<wbr>Details<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}Management resource details{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notificationemaillist_go">
 <a href="#notificationemaillist_go" style="color: inherit; text-decoration: inherit;">Notification<wbr>Email<wbr>List</a>
@@ -1800,7 +1901,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Describes whether the order is cancellable or not.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Describes whether the orderItem is cancellable or not.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="currentstage_nodejs">
 <a href="#currentstage_nodejs" style="color: inherit; text-decoration: inherit;">current<wbr>Stage</a>
@@ -1880,7 +1981,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Describes whether the order item is returnable or not.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Describes whether the orderItem is returnable or not.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="reverseshippingdetails_nodejs">
 <a href="#reverseshippingdetails_nodejs" style="color: inherit; text-decoration: inherit;">reverse<wbr>Shipping<wbr>Details</a>
@@ -1889,14 +1990,6 @@ The following output properties are available:
         <span class="property-type"><a href="#shippingdetailsresponse">Shipping<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Reverse Package Shipping details{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="managementresourcedetails_nodejs">
-<a href="#managementresourcedetails_nodejs" style="color: inherit; text-decoration: inherit;">management<wbr>Resource<wbr>Details</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementresourcedetailsresponse">Management<wbr>Resource<wbr>Details<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}Management resource details{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notificationemaillist_nodejs">
 <a href="#notificationemaillist_nodejs" style="color: inherit; text-decoration: inherit;">notification<wbr>Email<wbr>List</a>
@@ -1932,7 +2025,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Describes whether the order is cancellable or not.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Describes whether the orderItem is cancellable or not.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="current_stage_python">
 <a href="#current_stage_python" style="color: inherit; text-decoration: inherit;">current_<wbr>stage</a>
@@ -2012,7 +2105,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Describes whether the order item is returnable or not.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Describes whether the orderItem is returnable or not.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="reverse_shipping_details_python">
 <a href="#reverse_shipping_details_python" style="color: inherit; text-decoration: inherit;">reverse_<wbr>shipping_<wbr>details</a>
@@ -2021,14 +2114,6 @@ The following output properties are available:
         <span class="property-type"><a href="#shippingdetailsresponse">Shipping<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Reverse Package Shipping details{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="management_resource_details_python">
-<a href="#management_resource_details_python" style="color: inherit; text-decoration: inherit;">management_<wbr>resource_<wbr>details</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementresourcedetailsresponse">Management<wbr>Resource<wbr>Details<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}Management resource details{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notification_email_list_python">
 <a href="#notification_email_list_python" style="color: inherit; text-decoration: inherit;">notification_<wbr>email_<wbr>list</a>
@@ -2062,6 +2147,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Preferences related to the Encryption.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="managementresourcepreferences_csharp">
+<a href="#managementresourcepreferences_csharp" style="color: inherit; text-decoration: inherit;">Management<wbr>Resource<wbr>Preferences</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managementresourcepreferencesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Edge<wbr>Order.<wbr>Inputs.<wbr>Management<wbr>Resource<wbr>Preferences<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Preferences related to the Management resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="notificationpreferences_csharp">
 <a href="#notificationpreferences_csharp" style="color: inherit; text-decoration: inherit;">Notification<wbr>Preferences</a>
 </span>
@@ -2089,6 +2182,14 @@ The following output properties are available:
         <span class="property-type"><a href="#encryptionpreferencesresponse">Encryption<wbr>Preferences<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Preferences related to the Encryption.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="managementresourcepreferences_go">
+<a href="#managementresourcepreferences_go" style="color: inherit; text-decoration: inherit;">Management<wbr>Resource<wbr>Preferences</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managementresourcepreferencesresponse">Management<wbr>Resource<wbr>Preferences<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Preferences related to the Management resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notificationpreferences_go">
 <a href="#notificationpreferences_go" style="color: inherit; text-decoration: inherit;">Notification<wbr>Preferences</a>
@@ -2118,6 +2219,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Preferences related to the Encryption.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="managementresourcepreferences_nodejs">
+<a href="#managementresourcepreferences_nodejs" style="color: inherit; text-decoration: inherit;">management<wbr>Resource<wbr>Preferences</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managementresourcepreferencesresponse">Management<wbr>Resource<wbr>Preferences<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Preferences related to the Management resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="notificationpreferences_nodejs">
 <a href="#notificationpreferences_nodejs" style="color: inherit; text-decoration: inherit;">notification<wbr>Preferences</a>
 </span>
@@ -2145,6 +2254,14 @@ The following output properties are available:
         <span class="property-type"><a href="#encryptionpreferencesresponse">Encryption<wbr>Preferences<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Preferences related to the Encryption.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="management_resource_preferences_python">
+<a href="#management_resource_preferences_python" style="color: inherit; text-decoration: inherit;">management_<wbr>resource_<wbr>preferences</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managementresourcepreferencesresponse">Management<wbr>Resource<wbr>Preferences<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Preferences related to the Management resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notification_preferences_python">
 <a href="#notification_preferences_python" style="color: inherit; text-decoration: inherit;">notification_<wbr>preferences</a>
@@ -2184,7 +2301,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#hierarchyinformationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Edge<wbr>Order.<wbr>Inputs.<wbr>Hierarchy<wbr>Information<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}} Hierarchy of the product which uniquely identifies the product{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Hierarchy of the product which uniquely identifies the product{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="count_csharp">
 <a href="#count_csharp" style="color: inherit; text-decoration: inherit;">Count</a>
@@ -2192,7 +2309,15 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Quantity of the product{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Quantity of the product{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="displayinfo_csharp">
+<a href="#displayinfo_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Info</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#displayinforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Edge<wbr>Order.<wbr>Inputs.<wbr>Display<wbr>Info<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Display details of the product{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -2212,7 +2337,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#hierarchyinformationresponse">Hierarchy<wbr>Information<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}} Hierarchy of the product which uniquely identifies the product{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Hierarchy of the product which uniquely identifies the product{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="count_go">
 <a href="#count_go" style="color: inherit; text-decoration: inherit;">Count</a>
@@ -2220,7 +2345,15 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Quantity of the product{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Quantity of the product{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="displayinfo_go">
+<a href="#displayinfo_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Info</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#displayinforesponse">Display<wbr>Info<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Display details of the product{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2240,7 +2373,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#hierarchyinformationresponse">Hierarchy<wbr>Information<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}} Hierarchy of the product which uniquely identifies the product{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Hierarchy of the product which uniquely identifies the product{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="count_nodejs">
 <a href="#count_nodejs" style="color: inherit; text-decoration: inherit;">count</a>
@@ -2248,7 +2381,15 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Quantity of the product{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Quantity of the product{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="displayinfo_nodejs">
+<a href="#displayinfo_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Info</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#displayinforesponse">Display<wbr>Info<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Display details of the product{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -2268,7 +2409,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#hierarchyinformationresponse">Hierarchy<wbr>Information<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}} Hierarchy of the product which uniquely identifies the product{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Hierarchy of the product which uniquely identifies the product{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="count_python">
 <a href="#count_python" style="color: inherit; text-decoration: inherit;">count</a>
@@ -2276,7 +2417,15 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Quantity of the product{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Quantity of the product{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="display_info_python">
+<a href="#display_info_python" style="color: inherit; text-decoration: inherit;">display_<wbr>info</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#displayinforesponse">Display<wbr>Info<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Display details of the product{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="shippingaddressresponse">Shipping<wbr>Address<wbr>Response</h4>
@@ -2796,7 +2945,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Stage status{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Stage status.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="starttime_csharp">
 <a href="#starttime_csharp" style="color: inherit; text-decoration: inherit;">Start<wbr>Time</a>
@@ -2832,7 +2981,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Stage status{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Stage status.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="starttime_go">
 <a href="#starttime_go" style="color: inherit; text-decoration: inherit;">Start<wbr>Time</a>
@@ -2868,7 +3017,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Stage status{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Stage status.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="starttime_nodejs">
 <a href="#starttime_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Time</a>
@@ -2904,7 +3053,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Stage status{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Stage status.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="start_time_python">
 <a href="#start_time_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time</a>

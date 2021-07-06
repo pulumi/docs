@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-native.elastic.listDeploymentInfo functi
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The properties of deployment in Elastic cloud corresponding to the Elastic monitor resource.
-API Version: 2020-07-01-preview.
+API Version: 2020-07-01.
 
 
 

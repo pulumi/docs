@@ -39,7 +39,7 @@ class MyStack : Stack
             {
                 new AzureNative.Compute.Inputs.ApiEntityReferenceArgs
                 {
-                    Id = "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/disks/vm8768_disk2_fe6ffde4f69b491ca33fb984d5bcd89f",
+                    Id = "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/disks/disk123",
                 },
             },
             ResourceGroupName = "myResourceGroup",
@@ -72,7 +72,7 @@ func main() {
 		_, err := compute.NewRestorePoint(ctx, "restorePoint", &compute.RestorePointArgs{
 			ExcludeDisks: compute.ApiEntityReferenceArray{
 				&compute.ApiEntityReferenceArgs{
-					Id: pulumi.String("/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/disks/vm8768_disk2_fe6ffde4f69b491ca33fb984d5bcd89f"),
+					Id: pulumi.String("/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/disks/disk123"),
 				},
 			},
 			ResourceGroupName:          pulumi.String("myResourceGroup"),
@@ -101,7 +101,7 @@ import pulumi_azure_native as azure_native
 
 restore_point = azure_native.compute.RestorePoint("restorePoint",
     exclude_disks=[azure_native.compute.ApiEntityReferenceArgs(
-        id="/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/disks/vm8768_disk2_fe6ffde4f69b491ca33fb984d5bcd89f",
+        id="/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/disks/disk123",
     )],
     resource_group_name="myResourceGroup",
     restore_point_collection_name="rpcName",
@@ -122,7 +122,7 @@ import * as azure_native from "@pulumi/azure-native";
 
 const restorePoint = new azure_native.compute.RestorePoint("restorePoint", {
     excludeDisks: [{
-        id: "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/disks/vm8768_disk2_fe6ffde4f69b491ca33fb984d5bcd89f",
+        id: "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/disks/disk123",
     }],
     resourceGroupName: "myResourceGroup",
     restorePointCollectionName: "rpcName",
@@ -2379,6 +2379,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Gets the license type, which is for bring your own license scenario.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="location_csharp">
+<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Location of the VM from which the restore point was created.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="osprofile_csharp">
 <a href="#osprofile_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Profile</a>
 </span>
@@ -2438,6 +2446,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets the license type, which is for bring your own license scenario.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="location_go">
+<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Location of the VM from which the restore point was created.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="osprofile_go">
 <a href="#osprofile_go" style="color: inherit; text-decoration: inherit;">Os<wbr>Profile</a>
@@ -2499,6 +2515,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Gets the license type, which is for bring your own license scenario.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="location_nodejs">
+<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Location of the VM from which the restore point was created.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="osprofile_nodejs">
 <a href="#osprofile_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Profile</a>
 </span>
@@ -2558,6 +2582,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets the license type, which is for bring your own license scenario.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="location_python">
+<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Location of the VM from which the restore point was created.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="os_profile_python">
 <a href="#os_profile_python" style="color: inherit; text-decoration: inherit;">os_<wbr>profile</a>

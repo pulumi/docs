@@ -394,84 +394,7 @@ class MyStack : Stack
 
 {{< example go >}}
 
-
-```go
-package main
-
-import (
-	compute "github.com/pulumi/pulumi-azure-native/sdk/go/azure/compute"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := compute.NewVirtualMachineScaleSet(ctx, "virtualMachineScaleSet", &compute.VirtualMachineScaleSetArgs{
-			Location:          pulumi.String("westus"),
-			Overprovision:     pulumi.Bool(true),
-			ResourceGroupName: pulumi.String("myResourceGroup"),
-			Sku: &compute.SkuArgs{
-				Capacity: pulumi.Float64(3),
-				Name:     pulumi.String("Standard_D1_v2"),
-				Tier:     pulumi.String("Standard"),
-			},
-			UpgradePolicy: &compute.UpgradePolicyArgs{
-				Mode: "Manual",
-			},
-			VirtualMachineProfile: &compute.VirtualMachineScaleSetVMProfileArgs{
-				NetworkProfile: &compute.VirtualMachineScaleSetNetworkProfileArgs{
-					NetworkInterfaceConfigurations: compute.VirtualMachineScaleSetNetworkConfigurationArray{
-						&compute.VirtualMachineScaleSetNetworkConfigurationArgs{
-							EnableIPForwarding: pulumi.Bool(true),
-							IpConfigurations: compute.VirtualMachineScaleSetIPConfigurationArray{
-								&compute.VirtualMachineScaleSetIPConfigurationArgs{
-									Name: pulumi.String("{vmss-name}"),
-									Subnet: &compute.ApiEntityReferenceArgs{
-										Id: pulumi.String("/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}"),
-									},
-								},
-							},
-							Name:    pulumi.String("{vmss-name}"),
-							Primary: pulumi.Bool(true),
-						},
-					},
-				},
-				OsProfile: &compute.VirtualMachineScaleSetOSProfileArgs{
-					AdminPassword:      pulumi.String("{your-password}"),
-					AdminUsername:      pulumi.String("{your-username}"),
-					ComputerNamePrefix: pulumi.String("{vmss-name}"),
-				},
-				StorageProfile: &compute.VirtualMachineScaleSetStorageProfileArgs{
-					ImageReference: &compute.ImageReferenceArgs{
-						Offer:     pulumi.String("WindowsServer"),
-						Publisher: pulumi.String("MicrosoftWindowsServer"),
-						Sku:       pulumi.String("2016-Datacenter"),
-						Version:   pulumi.String("latest"),
-					},
-					OsDisk: &compute.VirtualMachineScaleSetOSDiskArgs{
-						Caching:      "ReadWrite",
-						CreateOption: pulumi.String("FromImage"),
-						Name:         pulumi.String("osDisk"),
-						VhdContainers: pulumi.StringArray{
-							pulumi.String("http://{existing-storage-account-name-0}.blob.core.windows.net/vhdContainer"),
-							pulumi.String("http://{existing-storage-account-name-1}.blob.core.windows.net/vhdContainer"),
-							pulumi.String("http://{existing-storage-account-name-2}.blob.core.windows.net/vhdContainer"),
-							pulumi.String("http://{existing-storage-account-name-3}.blob.core.windows.net/vhdContainer"),
-							pulumi.String("http://{existing-storage-account-name-4}.blob.core.windows.net/vhdContainer"),
-						},
-					},
-				},
-			},
-			VmScaleSetName: pulumi.String("{vmss-name}"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
+Coming soon!
 
 {{< /example >}}
 
@@ -2591,7 +2514,86 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	compute "github.com/pulumi/pulumi-azure-native/sdk/go/azure/compute"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := compute.NewVirtualMachineScaleSet(ctx, "virtualMachineScaleSet", &compute.VirtualMachineScaleSetArgs{
+			Location:          pulumi.String("westus"),
+			Overprovision:     pulumi.Bool(true),
+			ResourceGroupName: pulumi.String("myResourceGroup"),
+			Sku: &compute.SkuArgs{
+				Capacity: pulumi.Float64(3),
+				Name:     pulumi.String("Standard_D2s_v3"),
+				Tier:     pulumi.String("Standard"),
+			},
+			UpgradePolicy: &compute.UpgradePolicyArgs{
+				Mode: "Manual",
+			},
+			VirtualMachineProfile: &compute.VirtualMachineScaleSetVMProfileArgs{
+				NetworkProfile: &compute.VirtualMachineScaleSetNetworkProfileArgs{
+					NetworkInterfaceConfigurations: compute.VirtualMachineScaleSetNetworkConfigurationArray{
+						&compute.VirtualMachineScaleSetNetworkConfigurationArgs{
+							EnableIPForwarding: pulumi.Bool(true),
+							IpConfigurations: compute.VirtualMachineScaleSetIPConfigurationArray{
+								&compute.VirtualMachineScaleSetIPConfigurationArgs{
+									Name: pulumi.String("{vmss-name}"),
+									Subnet: &compute.ApiEntityReferenceArgs{
+										Id: pulumi.String("/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}"),
+									},
+								},
+							},
+							Name:    pulumi.String("{vmss-name}"),
+							Primary: pulumi.Bool(true),
+						},
+					},
+				},
+				OsProfile: &compute.VirtualMachineScaleSetOSProfileArgs{
+					AdminPassword:      pulumi.String("{your-password}"),
+					AdminUsername:      pulumi.String("{your-username}"),
+					ComputerNamePrefix: pulumi.String("{vmss-name}"),
+				},
+				SecurityProfile: &compute.SecurityProfileArgs{
+					SecurityType: pulumi.String("TrustedLaunch"),
+					UefiSettings: &compute.UefiSettingsArgs{
+						SecureBootEnabled: pulumi.Bool(true),
+						VTpmEnabled:       pulumi.Bool(true),
+					},
+				},
+				StorageProfile: &compute.VirtualMachineScaleSetStorageProfileArgs{
+					ImageReference: &compute.ImageReferenceArgs{
+						Offer:     pulumi.String("windowsserver-gen2preview-preview"),
+						Publisher: pulumi.String("MicrosoftWindowsServer"),
+						Sku:       pulumi.String("windows10-tvm"),
+						Version:   pulumi.String("18363.592.2001092016"),
+					},
+					OsDisk: &compute.VirtualMachineScaleSetOSDiskArgs{
+						Caching:      "ReadOnly",
+						CreateOption: pulumi.String("FromImage"),
+						ManagedDisk: &compute.VirtualMachineScaleSetManagedDiskParametersArgs{
+							StorageAccountType: pulumi.String("StandardSSD_LRS"),
+						},
+					},
+				},
+			},
+			VmScaleSetName: pulumi.String("{vmss-name}"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
@@ -4813,88 +4815,7 @@ class MyStack : Stack
 
 {{< example go >}}
 
-
-```go
-package main
-
-import (
-	compute "github.com/pulumi/pulumi-azure-native/sdk/go/azure/compute"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := compute.NewVirtualMachineScaleSet(ctx, "virtualMachineScaleSet", &compute.VirtualMachineScaleSetArgs{
-			Location:      pulumi.String("westus"),
-			Overprovision: pulumi.Bool(true),
-			Plan: &compute.PlanArgs{
-				Name:      pulumi.String("windows2016"),
-				Product:   pulumi.String("windows-data-science-vm"),
-				Publisher: pulumi.String("microsoft-ads"),
-			},
-			ResourceGroupName: pulumi.String("myResourceGroup"),
-			Sku: &compute.SkuArgs{
-				Capacity: pulumi.Float64(3),
-				Name:     pulumi.String("Standard_DS1_v2"),
-				Tier:     pulumi.String("Standard"),
-			},
-			UpgradePolicy: &compute.UpgradePolicyArgs{
-				Mode: "Manual",
-			},
-			VirtualMachineProfile: &compute.VirtualMachineScaleSetVMProfileArgs{
-				NetworkProfile: &compute.VirtualMachineScaleSetNetworkProfileArgs{
-					NetworkInterfaceConfigurations: compute.VirtualMachineScaleSetNetworkConfigurationArray{
-						&compute.VirtualMachineScaleSetNetworkConfigurationArgs{
-							EnableIPForwarding: pulumi.Bool(true),
-							IpConfigurations: compute.VirtualMachineScaleSetIPConfigurationArray{
-								&compute.VirtualMachineScaleSetIPConfigurationArgs{
-									Name: pulumi.String("{vmss-name}"),
-									Subnet: &compute.ApiEntityReferenceArgs{
-										Id: pulumi.String("/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}"),
-									},
-								},
-							},
-							Name:    pulumi.String("{vmss-name}"),
-							Primary: pulumi.Bool(true),
-						},
-					},
-				},
-				OsProfile: &compute.VirtualMachineScaleSetOSProfileArgs{
-					AdminPassword:      pulumi.String("{your-password}"),
-					AdminUsername:      pulumi.String("{your-username}"),
-					ComputerNamePrefix: pulumi.String("{vmss-name}"),
-				},
-				StorageProfile: &compute.VirtualMachineScaleSetStorageProfileArgs{
-					ImageReference: &compute.ImageReferenceArgs{
-						Offer:     pulumi.String("windows-data-science-vm"),
-						Publisher: pulumi.String("microsoft-ads"),
-						Sku:       pulumi.String("windows2016"),
-						Version:   pulumi.String("latest"),
-					},
-					OsDisk: &compute.VirtualMachineScaleSetOSDiskArgs{
-						Caching:      "ReadOnly",
-						CreateOption: pulumi.String("FromImage"),
-						DiffDiskSettings: &compute.DiffDiskSettingsArgs{
-							Option:    pulumi.String("Local"),
-							Placement: pulumi.String("ResourceDisk"),
-						},
-						ManagedDisk: &compute.VirtualMachineScaleSetManagedDiskParametersArgs{
-							StorageAccountType: pulumi.String("Standard_LRS"),
-						},
-					},
-				},
-			},
-			VmScaleSetName: pulumi.String("{vmss-name}"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
+Coming soon!
 
 {{< /example >}}
 
@@ -5147,7 +5068,87 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	compute "github.com/pulumi/pulumi-azure-native/sdk/go/azure/compute"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := compute.NewVirtualMachineScaleSet(ctx, "virtualMachineScaleSet", &compute.VirtualMachineScaleSetArgs{
+			Location:      pulumi.String("westus"),
+			Overprovision: pulumi.Bool(true),
+			Plan: &compute.PlanArgs{
+				Name:      pulumi.String("windows2016"),
+				Product:   pulumi.String("windows-data-science-vm"),
+				Publisher: pulumi.String("microsoft-ads"),
+			},
+			ResourceGroupName: pulumi.String("myResourceGroup"),
+			Sku: &compute.SkuArgs{
+				Capacity: pulumi.Float64(3),
+				Name:     pulumi.String("Standard_DS1_v2"),
+				Tier:     pulumi.String("Standard"),
+			},
+			UpgradePolicy: &compute.UpgradePolicyArgs{
+				Mode: "Manual",
+			},
+			VirtualMachineProfile: &compute.VirtualMachineScaleSetVMProfileArgs{
+				NetworkProfile: &compute.VirtualMachineScaleSetNetworkProfileArgs{
+					NetworkInterfaceConfigurations: compute.VirtualMachineScaleSetNetworkConfigurationArray{
+						&compute.VirtualMachineScaleSetNetworkConfigurationArgs{
+							EnableIPForwarding: pulumi.Bool(true),
+							IpConfigurations: compute.VirtualMachineScaleSetIPConfigurationArray{
+								&compute.VirtualMachineScaleSetIPConfigurationArgs{
+									Name: pulumi.String("{vmss-name}"),
+									Subnet: &compute.ApiEntityReferenceArgs{
+										Id: pulumi.String("/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}"),
+									},
+								},
+							},
+							Name:    pulumi.String("{vmss-name}"),
+							Primary: pulumi.Bool(true),
+						},
+					},
+				},
+				OsProfile: &compute.VirtualMachineScaleSetOSProfileArgs{
+					AdminPassword:      pulumi.String("{your-password}"),
+					AdminUsername:      pulumi.String("{your-username}"),
+					ComputerNamePrefix: pulumi.String("{vmss-name}"),
+				},
+				StorageProfile: &compute.VirtualMachineScaleSetStorageProfileArgs{
+					ImageReference: &compute.ImageReferenceArgs{
+						Offer:     pulumi.String("windows-data-science-vm"),
+						Publisher: pulumi.String("microsoft-ads"),
+						Sku:       pulumi.String("windows2016"),
+						Version:   pulumi.String("latest"),
+					},
+					OsDisk: &compute.VirtualMachineScaleSetOSDiskArgs{
+						Caching:      "ReadOnly",
+						CreateOption: pulumi.String("FromImage"),
+						DiffDiskSettings: &compute.DiffDiskSettingsArgs{
+							Option: pulumi.String("Local"),
+						},
+						ManagedDisk: &compute.VirtualMachineScaleSetManagedDiskParametersArgs{
+							StorageAccountType: pulumi.String("Standard_LRS"),
+						},
+					},
+				},
+			},
+			VmScaleSetName: pulumi.String("{vmss-name}"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
