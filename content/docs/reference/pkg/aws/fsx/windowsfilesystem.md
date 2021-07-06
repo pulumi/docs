@@ -29,6 +29,7 @@ Manages a FSx Windows File System. See the [FSx Windows Guide](https://docs.aws.
 <span class="k">def </span><span class="nx">WindowsFileSystem</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                       <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
                       <span class="nx">active_directory_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                      <span class="nx">audit_log_configuration</span><span class="p">:</span> <span class="nx">Optional[WindowsFileSystemAuditLogConfigurationArgs]</span> = None<span class="p">,</span>
                       <span class="nx">automatic_backup_retention_days</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
                       <span class="nx">copy_tags_to_backups</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
                       <span class="nx">daily_automatic_backup_start_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -210,6 +211,15 @@ The WindowsFileSystem resource accepts the following [input]({{< relref "/docs/i
     <dd>{{% md %}}The ID for an existing Microsoft Active Directory instance that the file system should join when it's created. Cannot be specified with `self_managed_active_directory`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="auditlogconfiguration_csharp">
+<a href="#auditlogconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Audit<wbr>Log<wbr>Configuration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#windowsfilesystemauditlogconfiguration">Windows<wbr>File<wbr>System<wbr>Audit<wbr>Log<wbr>Configuration<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The configuration that Amazon FSx for Windows File Server uses to audit and log user accesses of files, folders, and file shares on the Amazon FSx for Windows File Server file system. See below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="automaticbackupretentiondays_csharp">
 <a href="#automaticbackupretentiondays_csharp" style="color: inherit; text-decoration: inherit;">Automatic<wbr>Backup<wbr>Retention<wbr>Days</a>
 </span>
@@ -365,6 +375,15 @@ The WindowsFileSystem resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID for an existing Microsoft Active Directory instance that the file system should join when it's created. Cannot be specified with `self_managed_active_directory`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="auditlogconfiguration_go">
+<a href="#auditlogconfiguration_go" style="color: inherit; text-decoration: inherit;">Audit<wbr>Log<wbr>Configuration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#windowsfilesystemauditlogconfiguration">Windows<wbr>File<wbr>System<wbr>Audit<wbr>Log<wbr>Configuration<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The configuration that Amazon FSx for Windows File Server uses to audit and log user accesses of files, folders, and file shares on the Amazon FSx for Windows File Server file system. See below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="automaticbackupretentiondays_go">
@@ -524,6 +543,15 @@ The WindowsFileSystem resource accepts the following [input]({{< relref "/docs/i
     <dd>{{% md %}}The ID for an existing Microsoft Active Directory instance that the file system should join when it's created. Cannot be specified with `self_managed_active_directory`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="auditlogconfiguration_nodejs">
+<a href="#auditlogconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">audit<wbr>Log<wbr>Configuration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#windowsfilesystemauditlogconfiguration">Windows<wbr>File<wbr>System<wbr>Audit<wbr>Log<wbr>Configuration<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The configuration that Amazon FSx for Windows File Server uses to audit and log user accesses of files, folders, and file shares on the Amazon FSx for Windows File Server file system. See below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="automaticbackupretentiondays_nodejs">
 <a href="#automaticbackupretentiondays_nodejs" style="color: inherit; text-decoration: inherit;">automatic<wbr>Backup<wbr>Retention<wbr>Days</a>
 </span>
@@ -679,6 +707,15 @@ The WindowsFileSystem resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID for an existing Microsoft Active Directory instance that the file system should join when it's created. Cannot be specified with `self_managed_active_directory`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="audit_log_configuration_python">
+<a href="#audit_log_configuration_python" style="color: inherit; text-decoration: inherit;">audit_<wbr>log_<wbr>configuration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#windowsfilesystemauditlogconfiguration">Windows<wbr>File<wbr>System<wbr>Audit<wbr>Log<wbr>Configuration<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The configuration that Amazon FSx for Windows File Server uses to audit and log user accesses of files, folders, and file shares on the Amazon FSx for Windows File Server file system. See below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="automatic_backup_retention_days_python">
@@ -1124,6 +1161,7 @@ Get an existing WindowsFileSystem resource's state with the given name, ID, and 
         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
         <span class="nx">active_directory_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">audit_log_configuration</span><span class="p">:</span> <span class="nx">Optional[WindowsFileSystemAuditLogConfigurationArgs]</span> = None<span class="p">,</span>
         <span class="nx">automatic_backup_retention_days</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
         <span class="nx">copy_tags_to_backups</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">daily_automatic_backup_start_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -1274,6 +1312,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name of the file system.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_auditlogconfiguration_csharp">
+<a href="#state_auditlogconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Audit<wbr>Log<wbr>Configuration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#windowsfilesystemauditlogconfiguration">Windows<wbr>File<wbr>System<wbr>Audit<wbr>Log<wbr>Configuration<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The configuration that Amazon FSx for Windows File Server uses to audit and log user accesses of files, folders, and file shares on the Amazon FSx for Windows File Server file system. See below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_automaticbackupretentiondays_csharp">
@@ -1496,6 +1543,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Amazon Resource Name of the file system.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_auditlogconfiguration_go">
+<a href="#state_auditlogconfiguration_go" style="color: inherit; text-decoration: inherit;">Audit<wbr>Log<wbr>Configuration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#windowsfilesystemauditlogconfiguration">Windows<wbr>File<wbr>System<wbr>Audit<wbr>Log<wbr>Configuration<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The configuration that Amazon FSx for Windows File Server uses to audit and log user accesses of files, folders, and file shares on the Amazon FSx for Windows File Server file system. See below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_automaticbackupretentiondays_go">
 <a href="#state_automaticbackupretentiondays_go" style="color: inherit; text-decoration: inherit;">Automatic<wbr>Backup<wbr>Retention<wbr>Days</a>
 </span>
@@ -1714,6 +1770,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name of the file system.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_auditlogconfiguration_nodejs">
+<a href="#state_auditlogconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">audit<wbr>Log<wbr>Configuration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#windowsfilesystemauditlogconfiguration">Windows<wbr>File<wbr>System<wbr>Audit<wbr>Log<wbr>Configuration<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The configuration that Amazon FSx for Windows File Server uses to audit and log user accesses of files, folders, and file shares on the Amazon FSx for Windows File Server file system. See below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_automaticbackupretentiondays_nodejs">
@@ -1936,6 +2001,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Amazon Resource Name of the file system.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_audit_log_configuration_python">
+<a href="#state_audit_log_configuration_python" style="color: inherit; text-decoration: inherit;">audit_<wbr>log_<wbr>configuration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#windowsfilesystemauditlogconfiguration">Windows<wbr>File<wbr>System<wbr>Audit<wbr>Log<wbr>Configuration<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The configuration that Amazon FSx for Windows File Server uses to audit and log user accesses of files, folders, and file shares on the Amazon FSx for Windows File Server file system. See below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_automatic_backup_retention_days_python">
 <a href="#state_automatic_backup_retention_days_python" style="color: inherit; text-decoration: inherit;">automatic_<wbr>backup_<wbr>retention_<wbr>days</a>
 </span>
@@ -2143,6 +2217,132 @@ The following state arguments are supported:
 ## Supporting Types
 
 
+
+<h4 id="windowsfilesystemauditlogconfiguration">Windows<wbr>File<wbr>System<wbr>Audit<wbr>Log<wbr>Configuration</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="auditlogdestination_csharp">
+<a href="#auditlogdestination_csharp" style="color: inherit; text-decoration: inherit;">Audit<wbr>Log<wbr>Destination</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Amazon Resource Name (ARN) for the destination of the audit logs. The destination can be any Amazon CloudWatch Logs log group ARN or Amazon Kinesis Data Firehose delivery stream ARN. Can be specified when `file_access_audit_log_level` and `file_share_access_audit_log_level` are not set to `DISABLED`. The name of the Amazon CloudWatch Logs log group must begin with the `/aws/fsx` prefix. The name of the Amazon Kinesis Data Firehouse delivery stream must begin with the `aws-fsx` prefix. If you do not provide a destination in `audit_log_destionation`, Amazon FSx will create and use a log stream in the CloudWatch Logs /aws/fsx/windows log group.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="fileaccessauditloglevel_csharp">
+<a href="#fileaccessauditloglevel_csharp" style="color: inherit; text-decoration: inherit;">File<wbr>Access<wbr>Audit<wbr>Log<wbr>Level</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Sets which attempt type is logged by Amazon FSx for file and folder accesses. Valid values are `SUCCESS_ONLY`, `FAILURE_ONLY`, `SUCCESS_AND_FAILURE`, and `DISABLED`. Default value is `DISABLED`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="fileshareaccessauditloglevel_csharp">
+<a href="#fileshareaccessauditloglevel_csharp" style="color: inherit; text-decoration: inherit;">File<wbr>Share<wbr>Access<wbr>Audit<wbr>Log<wbr>Level</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Sets which attempt type is logged by Amazon FSx for file share accesses. Valid values are `SUCCESS_ONLY`, `FAILURE_ONLY`, `SUCCESS_AND_FAILURE`, and `DISABLED`. Default value is `DISABLED`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="auditlogdestination_go">
+<a href="#auditlogdestination_go" style="color: inherit; text-decoration: inherit;">Audit<wbr>Log<wbr>Destination</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Amazon Resource Name (ARN) for the destination of the audit logs. The destination can be any Amazon CloudWatch Logs log group ARN or Amazon Kinesis Data Firehose delivery stream ARN. Can be specified when `file_access_audit_log_level` and `file_share_access_audit_log_level` are not set to `DISABLED`. The name of the Amazon CloudWatch Logs log group must begin with the `/aws/fsx` prefix. The name of the Amazon Kinesis Data Firehouse delivery stream must begin with the `aws-fsx` prefix. If you do not provide a destination in `audit_log_destionation`, Amazon FSx will create and use a log stream in the CloudWatch Logs /aws/fsx/windows log group.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="fileaccessauditloglevel_go">
+<a href="#fileaccessauditloglevel_go" style="color: inherit; text-decoration: inherit;">File<wbr>Access<wbr>Audit<wbr>Log<wbr>Level</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Sets which attempt type is logged by Amazon FSx for file and folder accesses. Valid values are `SUCCESS_ONLY`, `FAILURE_ONLY`, `SUCCESS_AND_FAILURE`, and `DISABLED`. Default value is `DISABLED`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="fileshareaccessauditloglevel_go">
+<a href="#fileshareaccessauditloglevel_go" style="color: inherit; text-decoration: inherit;">File<wbr>Share<wbr>Access<wbr>Audit<wbr>Log<wbr>Level</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Sets which attempt type is logged by Amazon FSx for file share accesses. Valid values are `SUCCESS_ONLY`, `FAILURE_ONLY`, `SUCCESS_AND_FAILURE`, and `DISABLED`. Default value is `DISABLED`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="auditlogdestination_nodejs">
+<a href="#auditlogdestination_nodejs" style="color: inherit; text-decoration: inherit;">audit<wbr>Log<wbr>Destination</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Amazon Resource Name (ARN) for the destination of the audit logs. The destination can be any Amazon CloudWatch Logs log group ARN or Amazon Kinesis Data Firehose delivery stream ARN. Can be specified when `file_access_audit_log_level` and `file_share_access_audit_log_level` are not set to `DISABLED`. The name of the Amazon CloudWatch Logs log group must begin with the `/aws/fsx` prefix. The name of the Amazon Kinesis Data Firehouse delivery stream must begin with the `aws-fsx` prefix. If you do not provide a destination in `audit_log_destionation`, Amazon FSx will create and use a log stream in the CloudWatch Logs /aws/fsx/windows log group.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="fileaccessauditloglevel_nodejs">
+<a href="#fileaccessauditloglevel_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Access<wbr>Audit<wbr>Log<wbr>Level</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Sets which attempt type is logged by Amazon FSx for file and folder accesses. Valid values are `SUCCESS_ONLY`, `FAILURE_ONLY`, `SUCCESS_AND_FAILURE`, and `DISABLED`. Default value is `DISABLED`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="fileshareaccessauditloglevel_nodejs">
+<a href="#fileshareaccessauditloglevel_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Share<wbr>Access<wbr>Audit<wbr>Log<wbr>Level</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Sets which attempt type is logged by Amazon FSx for file share accesses. Valid values are `SUCCESS_ONLY`, `FAILURE_ONLY`, `SUCCESS_AND_FAILURE`, and `DISABLED`. Default value is `DISABLED`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="audit_log_destination_python">
+<a href="#audit_log_destination_python" style="color: inherit; text-decoration: inherit;">audit_<wbr>log_<wbr>destination</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Amazon Resource Name (ARN) for the destination of the audit logs. The destination can be any Amazon CloudWatch Logs log group ARN or Amazon Kinesis Data Firehose delivery stream ARN. Can be specified when `file_access_audit_log_level` and `file_share_access_audit_log_level` are not set to `DISABLED`. The name of the Amazon CloudWatch Logs log group must begin with the `/aws/fsx` prefix. The name of the Amazon Kinesis Data Firehouse delivery stream must begin with the `aws-fsx` prefix. If you do not provide a destination in `audit_log_destionation`, Amazon FSx will create and use a log stream in the CloudWatch Logs /aws/fsx/windows log group.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="file_access_audit_log_level_python">
+<a href="#file_access_audit_log_level_python" style="color: inherit; text-decoration: inherit;">file_<wbr>access_<wbr>audit_<wbr>log_<wbr>level</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Sets which attempt type is logged by Amazon FSx for file and folder accesses. Valid values are `SUCCESS_ONLY`, `FAILURE_ONLY`, `SUCCESS_AND_FAILURE`, and `DISABLED`. Default value is `DISABLED`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="file_share_access_audit_log_level_python">
+<a href="#file_share_access_audit_log_level_python" style="color: inherit; text-decoration: inherit;">file_<wbr>share_<wbr>access_<wbr>audit_<wbr>log_<wbr>level</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Sets which attempt type is logged by Amazon FSx for file share accesses. Valid values are `SUCCESS_ONLY`, `FAILURE_ONLY`, `SUCCESS_AND_FAILURE`, and `DISABLED`. Default value is `DISABLED`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
 
 <h4 id="windowsfilesystemselfmanagedactivedirectory">Windows<wbr>File<wbr>System<wbr>Self<wbr>Managed<wbr>Active<wbr>Directory</h4>
 
