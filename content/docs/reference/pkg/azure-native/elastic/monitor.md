@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-native.elastic.Monitor resource with exa
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Monitor resource.
-API Version: 2020-07-01-preview.
+API Version: 2020-07-01.
 
 {{% examples %}}
 

@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-native.elastic.TagRule resource with exa
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Capture logs and metrics of Azure resources based on ARM tags.
-API Version: 2020-07-01-preview.
+API Version: 2020-07-01.
 
 {{% examples %}}
 

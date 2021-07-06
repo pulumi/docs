@@ -265,6 +265,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Resource type{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="localtimestamp_csharp">
+<a href="#localtimestamp_csharp" style="color: inherit; text-decoration: inherit;">Local<wbr>Timestamp</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#localtimestampresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Time<wbr>Series<wbr>Insights.<wbr>Outputs.<wbr>Local<wbr>Timestamp<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}An object that represents the local timestamp property. It contains the format of local timestamp that needs to be used and the corresponding timezone offset information. If a value isn't specified for localTimestamp, or if null, then the local timestamp will not be ingressed with the events.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span>
@@ -380,6 +388,14 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource type{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="localtimestamp_go">
+<a href="#localtimestamp_go" style="color: inherit; text-decoration: inherit;">Local<wbr>Timestamp</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#localtimestampresponse">Local<wbr>Timestamp<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}An object that represents the local timestamp property. It contains the format of local timestamp that needs to be used and the corresponding timezone offset information. If a value isn't specified for localTimestamp, or if null, then the local timestamp will not be ingressed with the events.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -497,6 +513,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Resource type{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="localtimestamp_nodejs">
+<a href="#localtimestamp_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>Timestamp</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#localtimestampresponse">Local<wbr>Timestamp<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}An object that represents the local timestamp property. It contains the format of local timestamp that needs to be used and the corresponding timezone offset information. If a value isn't specified for localTimestamp, or if null, then the local timestamp will not be ingressed with the events.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
@@ -613,6 +637,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Resource type{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="local_timestamp_python">
+<a href="#local_timestamp_python" style="color: inherit; text-decoration: inherit;">local_<wbr>timestamp</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#localtimestampresponse">Local<wbr>Timestamp<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}An object that represents the local timestamp property. It contains the format of local timestamp that needs to be used and the corresponding timezone offset information. If a value isn't specified for localTimestamp, or if null, then the local timestamp will not be ingressed with the events.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
@@ -636,6 +668,148 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The event property that will be used as the event source's timestamp. If a value isn't specified for timestampPropertyName, or if null or empty-string is specified, the event creation time will be used.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+
+
+
+## Supporting Types
+
+
+<h4 id="localtimestampresponse">Local<wbr>Timestamp<wbr>Response</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="format_csharp">
+<a href="#format_csharp" style="color: inherit; text-decoration: inherit;">Format</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}An enum that represents the format of the local timestamp property that needs to be set.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="timezoneoffset_csharp">
+<a href="#timezoneoffset_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Zone<wbr>Offset</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#localtimestampresponsetimezoneoffset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Time<wbr>Series<wbr>Insights.<wbr>Inputs.<wbr>Local<wbr>Timestamp<wbr>Response<wbr>Time<wbr>Zone<wbr>Offset</a></span>
+    </dt>
+    <dd>{{% md %}}An object that represents the offset information for the local timestamp format specified. Should not be specified for LocalTimestampFormat - Embedded.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="format_go">
+<a href="#format_go" style="color: inherit; text-decoration: inherit;">Format</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}An enum that represents the format of the local timestamp property that needs to be set.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="timezoneoffset_go">
+<a href="#timezoneoffset_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Zone<wbr>Offset</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#localtimestampresponsetimezoneoffset">Local<wbr>Timestamp<wbr>Response<wbr>Time<wbr>Zone<wbr>Offset</a></span>
+    </dt>
+    <dd>{{% md %}}An object that represents the offset information for the local timestamp format specified. Should not be specified for LocalTimestampFormat - Embedded.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="format_nodejs">
+<a href="#format_nodejs" style="color: inherit; text-decoration: inherit;">format</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}An enum that represents the format of the local timestamp property that needs to be set.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="timezoneoffset_nodejs">
+<a href="#timezoneoffset_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Zone<wbr>Offset</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#localtimestampresponsetimezoneoffset">Local<wbr>Timestamp<wbr>Response<wbr>Time<wbr>Zone<wbr>Offset</a></span>
+    </dt>
+    <dd>{{% md %}}An object that represents the offset information for the local timestamp format specified. Should not be specified for LocalTimestampFormat - Embedded.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="format_python">
+<a href="#format_python" style="color: inherit; text-decoration: inherit;">format</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}An enum that represents the format of the local timestamp property that needs to be set.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="time_zone_offset_python">
+<a href="#time_zone_offset_python" style="color: inherit; text-decoration: inherit;">time_<wbr>zone_<wbr>offset</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#localtimestampresponsetimezoneoffset">Local<wbr>Timestamp<wbr>Response<wbr>Time<wbr>Zone<wbr>Offset</a></span>
+    </dt>
+    <dd>{{% md %}}An object that represents the offset information for the local timestamp format specified. Should not be specified for LocalTimestampFormat - Embedded.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="localtimestampresponsetimezoneoffset">Local<wbr>Timestamp<wbr>Response<wbr>Time<wbr>Zone<wbr>Offset</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="propertyname_csharp">
+<a href="#propertyname_csharp" style="color: inherit; text-decoration: inherit;">Property<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The event property that will be contain the offset information to calculate the local timestamp. When the LocalTimestampFormat is Iana, the property name will contain the name of the column which contains IANA Timezone Name (eg: Americas/Los Angeles). When LocalTimestampFormat is Timespan, it contains the name of property which contains values representing the offset (eg: P1D or 1.00:00:00){{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="propertyname_go">
+<a href="#propertyname_go" style="color: inherit; text-decoration: inherit;">Property<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The event property that will be contain the offset information to calculate the local timestamp. When the LocalTimestampFormat is Iana, the property name will contain the name of the column which contains IANA Timezone Name (eg: Americas/Los Angeles). When LocalTimestampFormat is Timespan, it contains the name of property which contains values representing the offset (eg: P1D or 1.00:00:00){{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="propertyname_nodejs">
+<a href="#propertyname_nodejs" style="color: inherit; text-decoration: inherit;">property<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The event property that will be contain the offset information to calculate the local timestamp. When the LocalTimestampFormat is Iana, the property name will contain the name of the column which contains IANA Timezone Name (eg: Americas/Los Angeles). When LocalTimestampFormat is Timespan, it contains the name of property which contains values representing the offset (eg: P1D or 1.00:00:00){{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="property_name_python">
+<a href="#property_name_python" style="color: inherit; text-decoration: inherit;">property_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The event property that will be contain the offset information to calculate the local timestamp. When the LocalTimestampFormat is Iana, the property name will contain the name of the column which contains IANA Timezone Name (eg: Americas/Los Angeles). When LocalTimestampFormat is Timespan, it contains the name of property which contains values representing the offset (eg: P1D or 1.00:00:00){{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

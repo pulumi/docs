@@ -11,6 +11,7 @@ Explore the resources and functions of the azure-native.synapse module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
+    <li><a href="attacheddatabaseconfiguration" title="AttachedDatabaseConfiguration"><span class="symbol resource"></span>AttachedDatabaseConfiguration</a></li>
     <li><a href="bigdatapool" title="BigDataPool"><span class="symbol resource"></span>BigDataPool</a></li>
     <li><a href="dataconnection" title="DataConnection"><span class="symbol resource"></span>DataConnection</a></li>
     <li><a href="database" title="Database"><span class="symbol resource"></span>Database</a></li>
@@ -41,6 +42,7 @@ Explore the resources and functions of the azure-native.synapse module.
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
+    <li><a href="getattacheddatabaseconfiguration" title="GetAttachedDatabaseConfiguration"><span class="symbol function"></span>GetAttachedDatabaseConfiguration</a></li>
     <li><a href="getbigdatapool" title="GetBigDataPool"><span class="symbol function"></span>GetBigDataPool</a></li>
     <li><a href="getdataconnection" title="GetDataConnection"><span class="symbol function"></span>GetDataConnection</a></li>
     <li><a href="getdatabase" title="GetDatabase"><span class="symbol function"></span>GetDatabase</a></li>
@@ -71,6 +73,8 @@ Explore the resources and functions of the azure-native.synapse module.
     <li><a href="getworkspacesqlaadadmin" title="GetWorkspaceSqlAadAdmin"><span class="symbol function"></span>GetWorkspaceSqlAadAdmin</a></li>
     <li><a href="getkustopool" title="GetkustoPool"><span class="symbol function"></span>GetkustoPool</a></li>
     <li><a href="listintegrationruntimeauthkey" title="ListIntegrationRuntimeAuthKey"><span class="symbol function"></span>ListIntegrationRuntimeAuthKey</a></li>
+    <li><a href="listkustopoolfollowerdatabases" title="ListKustoPoolFollowerDatabases"><span class="symbol function"></span>ListKustoPoolFollowerDatabases</a></li>
+    <li><a href="listkustopoollanguageextensions" title="ListKustoPoolLanguageExtensions"><span class="symbol function"></span>ListKustoPoolLanguageExtensions</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -80,6 +84,6 @@ Explore the resources and functions of the azure-native.synapse module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>1.15.0</dd>
+	<dd>1.16.0</dd>
 </dl>
 

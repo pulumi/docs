@@ -173,8 +173,8 @@ import pulumi
 import pulumi_azure_native as azure_native
 
 report = azure_native.costmanagement.Report("report",
-    definition=azure_native.costmanagement.ReportDefinitionArgs(
-        dataset=azure_native.costmanagement.ReportDatasetArgs(
+    definition={
+        "dataset": azure_native.costmanagement.ReportDatasetArgs(
             aggregation={
                 "costSum": azure_native.costmanagement.ReportAggregationArgs(
                     function="Sum",
@@ -190,8 +190,8 @@ report = azure_native.costmanagement.Report("report",
                     "PreTaxCost",
                 ],
             ),
-            filter={
-                "and": [
+            filter=azure_native.costmanagement.ReportFilterArgs(
+                and_=[
                     {
                         "or": [
                             azure_native.costmanagement.ReportFilterArgs(
@@ -224,7 +224,7 @@ report = azure_native.costmanagement.Report("report",
                         ),
                     ),
                 ],
-            },
+            ),
             granularity="Daily",
             grouping=[
                 azure_native.costmanagement.ReportGroupingArgs(
@@ -237,9 +237,9 @@ report = azure_native.costmanagement.Report("report",
                 ),
             ],
         ),
-        timeframe="MonthToDate",
-        type="Usage",
-    ),
+        "timeframe": "MonthToDate",
+        "type": "Usage",
+    },
     delivery_info=azure_native.costmanagement.ReportDeliveryInfoArgs(
         destination=azure_native.costmanagement.ReportDeliveryDestinationArgs(
             container="reports",
