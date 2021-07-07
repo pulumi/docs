@@ -206,6 +206,7 @@ branch:
 
 ```yaml
 name: Pulumi
+on:
   push:
     branches:
       - master
@@ -238,6 +239,7 @@ jobs:
 
 ```yaml
 name: Pulumi
+on:
   push:
     branches:
       - master
@@ -270,6 +272,7 @@ jobs:
 
 ```yaml
 name: Pulumi
+on:
   push:
     branches:
       - master
@@ -302,6 +305,7 @@ jobs:
 
 ```yaml
 name: Pulumi
+on:
   push:
     branches:
       - master
