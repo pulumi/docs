@@ -18,11 +18,12 @@ import (
 	"encoding/json"
 	"flag"
 	"fmt"
-	"github.com/golang/glog"
-	"github.com/pkg/errors"
 	"io/ioutil"
 	"os"
 	"path"
+
+	"github.com/golang/glog"
+	"github.com/pkg/errors"
 
 	docsgen "github.com/pulumi/pulumi/pkg/v3/codegen/docs"
 	"github.com/pulumi/pulumi/pkg/v3/codegen/dotnet"
@@ -73,6 +74,10 @@ func main() {
 
 		mergeOverlaySchemaSpec(mainSpec, overlaySpec)
 	}
+
+	// Delete existing docs before generating new ones.
+	fmt.Printf("Deleting %s", outDir)
+	os.RemoveAll(outDir)
 
 	if err := generateDocsFromSchema(outDir, mainSpec); err != nil {
 		glog.Infof("error generating docs from schema: %v", err)
