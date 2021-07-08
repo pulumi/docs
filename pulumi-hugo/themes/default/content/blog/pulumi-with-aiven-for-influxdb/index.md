@@ -260,7 +260,7 @@ These methods initiate the following logic:
 
 In this article, I’ve demonstrated one way to deploy infrastructure as code in a manner that allows services to be migrated between clouds without any downtime. We also showed how InfluxDB could be used as an open source time-series backend for collecting temperature metrics.
 
-This same approach can be utilized for any [Aiven’s](https://aiven.io/) services, including managed [Kafka](https://aiven.io/kafka) and [PostgreSQL](https://aiven.io/postgresql). Sign up for a [free 30-day trial](https://console.aiven.io/signup) and modify the lambda function to begin storing your own metrics data today.
+This same approach can be utilized for any [Aiven’s](https://aiven.io/) services, including managed [Kafka](https://aiven.io/kafka) and [PostgreSQL](https://aiven.io/postgresql). Sign up for a [free 14-day trial](https://console.aiven.io/signup) and modify the lambda function to begin storing your own metrics data today.
 
 > **About the Author**
 

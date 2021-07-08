@@ -55,7 +55,7 @@ td {
 | For teams just getting started with cloud applications and infrastructure. | For medium to large teams using Pulumi for multiple projects or clouds. | For large organizations operating at scale or with advanced custom needs.
 | Includes<ul><li>Any Cloud<li>Includes 3 users<li>Up to 20 stacks<li>Basic secrets management<li>CI/CD Integrations</ul> | Everything in Team Starter plus...<ul><li>Up to 25 users<li>Unlimited projects and stacks<li>Webhooks<li>Advanced secrets management<li>12x5 support available</ul> | Everything in Team Pro plus...<ul><li>Teams, roles, and policies<li>SAML/SSO<li>On-premeses/self-host available<li>24x7 support available</ul> |
 
-All editions offer a 30-day free trial, no credit card
+All editions offer a 14-day free trial, no credit card
 required. If you need a longer trial period, want to discuss potential proof of
 concept projects, or are interested in advanced capabilities, such as
 large numbers of seats, Training, or Support, please [contact
