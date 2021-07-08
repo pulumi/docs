@@ -76,8 +76,10 @@ func main() {
 	}
 
 	// Delete existing docs before generating new ones.
-	fmt.Printf("Deleting %s", outDir)
-	os.RemoveAll(outDir)
+	if err := os.RemoveAll(outDir); err != nil {
+		glog.Infof("error deleting provider directory %v: %v", outDir, err)
+		os.Exit(1)
+	}
 
 	if err := generateDocsFromSchema(outDir, mainSpec); err != nil {
 		glog.Infof("error generating docs from schema: %v", err)
