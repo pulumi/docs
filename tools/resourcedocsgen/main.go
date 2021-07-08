@@ -18,11 +18,12 @@ import (
 	"encoding/json"
 	"flag"
 	"fmt"
-	"github.com/golang/glog"
-	"github.com/pkg/errors"
 	"io/ioutil"
 	"os"
 	"path"
+
+	"github.com/golang/glog"
+	"github.com/pkg/errors"
 
 	docsgen "github.com/pulumi/pulumi/pkg/v3/codegen/docs"
 	"github.com/pulumi/pulumi/pkg/v3/codegen/dotnet"
@@ -72,6 +73,12 @@ func main() {
 		}
 
 		mergeOverlaySchemaSpec(mainSpec, overlaySpec)
+	}
+
+	// Delete existing docs before generating new ones.
+	if err := os.RemoveAll(outDir); err != nil {
+		glog.Infof("error deleting provider directory %v: %v", outDir, err)
+		os.Exit(1)
 	}
 
 	if err := generateDocsFromSchema(outDir, mainSpec); err != nil {
