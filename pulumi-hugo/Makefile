@@ -42,3 +42,11 @@ ci-scheduled:
 new-blog-post:
 	hugo new --kind blog-post \
 		"themes/default/content/blog/$(shell bash -c 'read -p "Slug (e.g., 'my-new-post'): " slug; echo $$slug')"
+
+.PHONY: new-learn-module
+new-learn-module:
+	./scripts/content/new-learn-module.sh
+
+.PHONY: new-learn-topic
+new-learn-topic:
+	./scripts/content/new-learn-topic.sh
