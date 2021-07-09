@@ -131,6 +131,7 @@ Top-level resources are useful when you don't have a preference over which API v
 Each top-level resource maps internally to a specific API version. The native Azure provider maintains this mapping with the following guidelines:
 
 - When a new major version of the provider is released, the API versions are set to the latest stable API version available at that moment. If no stable version is published yet, the newest preview version is used.
+- Azure API reports a list of supported API versions per resource and resource provider. We promote resources to new API versions once they show up as supported with the `az provider list` command.
 - The selected API version is pinned across all minor versions of the same major version. Even if a newer API version is released, we do not promote the top-level resources to it.
 - We may introduce some manual overrides to the rules above. For example, we may use a new preview version when the latest stable version is obviously out of date. We may manually promote top-level resources to a new API version to get access to new necessary functionality. In any case, we adhere to the breaking changes policy.
 
