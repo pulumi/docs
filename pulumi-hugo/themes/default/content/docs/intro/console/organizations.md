@@ -10,6 +10,7 @@ aliases:
 - /docs/console/accounts/organizations/
 - /docs/intro/console/accounts/organizations/
 - /docs/console/collaboration/organization-roles
+- /docs/intro/console/organization-roles
 - /docs/console/organization-roles
 ---
 
@@ -20,7 +21,7 @@ Organizations are a space for you to collaborate on shared projects and stacks.
 | Console Page | Description |
 |--------|--------|
 | Dashboard | An overview of the organization including recently updated stacks, recent activity, and a resource count graph. |
-| Projects | A searchable list of organization stacks that you can group by project and tag. For more information, see [Project and Stack Management]({{< relref "/docs/intro/console/project-and-stack-management" >}}). |
+| Projects | A searchable list of organization stacks that you can group by project and tag. For more information, see [Project and Stack Management]({{< relref "/docs/intro/console/projects-and-stacks" >}}). |
 | Members | A list of active members of your Pulumi organization. |
 | Teams | An [Enterprise]({{< relref "/pricing" >}}) feature that provides a way to assign stack permissions to groups of organization members. |
 | Policies | Lists of organization policies and policy groups. Policies allow you to set guardrails to enforce best practices and compliance. |
@@ -58,7 +59,7 @@ To switch to a different organization:
 
 | Role | Description |
 |--------|--------|
-| Admin | Administrators have full access to the organization including: [inviting members]({{< relref "/docs/intro/console/organization-roles#organization-membership" >}}), [creating teams]({{< relref "/docs/intro/console/teams#creating-a-team" >}}) and policies, managing [stack permissions]({{< relref "/docs/intro/console/stack-permissions" >}}) and [role-based access control]({{< relref "/docs/intro/console/organization-roles" >}}), adjusting billing information, and controlling the organization settings. |
+| Admin | Administrators have full access to the organization including: inviting members, creating teams and policies, managing stack permissions and [role-based access control, adjusting billing information, and controlling the organization settings. |
 | Member | Members are able to view and edit stacks they have access to and view members and teams. |
 
 ## Organization Identity Providers

@@ -27,7 +27,7 @@ following:
 * Manage your profile settings, including your account password, access tokens, and subscriptions
 * [Add an organization]({{< relref "/docs/intro/console/organizations" >}}) backed by Atlassian, GitHub, GitLab, or a SAML
   2.0-compatible identity provider, such as Active Directory, Okta, or G Suite
-* [Manage your projects and stacks]({{< relref "/docs/intro/console/project-and-stack-management" >}})
+* [Manage your projects and stacks]({{< relref "/docs/intro/console/projects-and-stacks" >}})
 
 ## Profile
 

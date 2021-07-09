@@ -45,7 +45,7 @@ To configure user and group synchronization via SCIM, use the guide that matches
 
 ## Distributed, least privilege access permissions model
 
-In addition to support for standards like SAML and SCIM, the Pulumi Console's Role-Based Access Control (RBAC) permissions model enables you to set up a least privilege access model for your infrastructure resources. In such a model, all access to infrastructure is specifically granted to individual users by creating [Teams]({{< ref "/docs/intro/console/teams" >}}) that have the appropriate level of access (Read, Write, or Admin) to a set of [Stacks]({{< ref "/docs/intro/console/project-and-stack-management" >}}), then adding users to those teams. Team membership can be managed manually by Team Admins or automatically using SCIM group synchronization.
+In addition to support for standards like SAML and SCIM, the Pulumi Console's Role-Based Access Control (RBAC) permissions model enables you to set up a least privilege access model for your infrastructure resources. In such a model, all access to infrastructure is specifically granted to individual users by creating [Teams]({{< ref "/docs/intro/console/teams" >}}) that have the appropriate level of access (Read, Write, or Admin) to a set of [Stacks]({{< ref "/docs/intro/console/projects-and-stacks" >}}), then adding users to those teams. Team membership can be managed manually by Team Admins or automatically using SCIM group synchronization.
 
 Learn how to create Teams in the [Teams docs]({{< ref "/docs/intro/console/teams" >}}).
 
