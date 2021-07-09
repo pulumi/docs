@@ -7,6 +7,7 @@ menu:
     weight: 8
 aliases:
 - /docs/intro/console/collaboration/auditing/
+- /docs/intro/console/auditing/
 ---
 {{% notes "info" %}}
 Audit Logs are only available to organizations using Pulumi Enterprise.

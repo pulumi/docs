@@ -20,13 +20,7 @@ To learn more about our editions visit our [pricing page]({{< relref "/pricing" 
 The Pulumi Console offers role-based access control (RBAC) using teams. Teams allow organization admins to assign a set of stack permissions
 to a group of users.
 
-## Team Roles
-
-Members of a team can be granted `Team admin` or `Team member` permissions. Team admins can add members to a
-team. Both team admins and team members can grant stack access to a team. By default, any new team members will be
-assigned the team member role. To change a team member's role, use the ellipsis menu item at the end of the table row.
-
-### Creating a Team{#creating-a-team}
+## Creating a Team{#creating-a-team}
 
 By default, all organization admins can create new teams.
 
@@ -41,7 +35,7 @@ To give members permission to create teams:
 1. Navigate to **Access Management**.
 1. Use the toggle to turn on the **Allow organization members to create teams** setting.
 
-#### GitHub-based Teams
+## GitHub-based Teams
 
 If your Pulumi organization is backed by GitHub, you can import your existing
 GitHub teams into Pulumi.
@@ -51,10 +45,28 @@ permissions granted to team members is managed on the Pulumi Console.
 
 ![Importing a GitHub-based team](/images/docs/reference/service/add-github-team-card.png)
 
-## Team / Stack Permissions
+## Team Permissions
 
-Membership within a team will grant a Pulumi user a specific permission level for each
-stack in the team. For example, members of `network-team` may have `Stack write` access to the
-`backend/production` stack, but only `Stack read` access to `datastore/production`.
+By default only organization admins can create teams.
+
+To allow all members to create teams:
+
+1. Navigate to the organization’s Settings.
+1. Navigate to Access Management.
+1. Use the toggle to turn on the Allow organization members to create teams setting.
+
+### Granting Access to Stacks within Teams
+
+Teams can be granted access to stacks, which grants all team members access to those stack based on the selected permission level.
 
 ![Editing team stacks and permissions](/images/docs/reference/service/editing-stack-permissions.png)
+
+### Team Roles
+
+Members of a team can be granted `Team admin` or `Team member` permissions. Team admins can add members to a
+team. By default, any new team members will be assigned the team member role.
+
+To change a team member's role:
+
+1. Navigate to **Teams** and then the specific team.
+1. In the **Members** section use the ellipsis menu item at the end of the table row and select **Change role to**.

@@ -9,22 +9,22 @@ aliases:
 - /docs/reference/service/orgs/
 - /docs/console/accounts/organizations/
 - /docs/intro/console/accounts/organizations/
+- /docs/console/collaboration/organization-roles
+- /docs/console/organization-roles
 ---
 
-An organization is the primary grouping unit for stacks within the Pulumi Console.
-When you sign into the Pulumi Console, a personal account is automatically
-created for you and subscribed to the Pulumi Individual Edition.
+Organizations are a space for you to collaborate on shared projects and stacks.
 
-You can be a member of multiple Pulumi organizations.
+## Organization Pages
 
-If you're a Pulumi organization admin, you have the
-ability to:
-
-* [Invite users]({{< relref "/docs/intro/console/organization-roles#organization-membership" >}})
-* Manage default stack permissions for the organization
-* [Create teams]({{< relref "/docs/intro/console/teams#creating-a-team" >}}) and manage their permissions
-* Assign [organization roles]({{< relref "/docs/intro/console/organization-roles" >}}) for role-based access control (RBAC)
-to your organization's stacks
+| Console Page | Description |
+|--------|--------|
+| Dashboard | An overview of the organization including recently updated stacks, recent activity, and a resource count graph. |
+| Projects | A searchable list of organization stacks that you can group by project and tag. For more information, see [Project and Stack Management]({{< relref "/docs/intro/console/project-and-stack-management" >}}). |
+| Members | A list of active members of your Pulumi organization. |
+| Teams | An [Enterprise]({{< relref "/pricing" >}}) feature that provides a way to assign stack permissions to groups of organization members. |
+| Policies | Lists of organization policies and policy groups. Policies allow you to set guardrails to enforce best practices and compliance. |
+| Settings | Organization settings including subscription and payment information and history, stack permissions, and links to Pulumi's [continuous delivery guides]({{< relref "/docs/guides/continuous-delivery" >}}). |
 
 ## Creating an Organization
 
@@ -35,65 +35,83 @@ To create an organization:
 1. Provide an organization name, and agree to the terms of service and privacy policy.
 1. Select **Start free trial**.
 
-You can create a new Pulumi organization directly from the Pulumi Console.
+## Joining an Organization
 
-## Organization Types
+To become a member of a Pulumi organization, you must be invited by an existing Pulumi
+organization administrator or submit a request to the administrator for approval.
+In addition, you may also need to be a member of the third-party organization or group backing the Pulumi organization.
 
-A Pulumi organization needs to be linked to a third-party identity provider, offering an
-additional layer
-of security for you and your team. While membership within the Pulumi organization is
-managed by
-an organization admin, you must be a member of the backing third-party identity
-provider in order
-to join a Pulumi organization.
+For example, to become a member of a Pulumi organization backed by a GitLab Group,
+you must associate a GitLab identity with your Pulumi account, and also
+be a member of that GitLab group.
+
+## Switching Between Organizations
+
+The organization menu displays your individual account and all of the organizations you belong.
+
+To switch to a different organization:
+
+1. Select the organization  menu at the top of the page.
+1. Select your organization name.
+
+## Organization Roles
+
+| Role | Description |
+|--------|--------|
+| Admin | Administrators have full access to the organization including: [inviting members]({{< relref "/docs/intro/console/organization-roles#organization-membership" >}}), [creating teams]({{< relref "/docs/intro/console/teams#creating-a-team" >}}) and policies, managing [stack permissions]({{< relref "/docs/intro/console/stack-permissions" >}}) and [role-based access control]({{< relref "/docs/intro/console/organization-roles" >}}), adjusting billing information, and controlling the organization settings. |
+| Member | Members are able to view and edit stacks they have access to and view members and teams. |
+
+## Organization Identity Providers
+
+A Pulumi organization can use the Pulumi identity provider or a third-party identity provider.
+If using a third-party identity provider all members need to belong to the third-party
+identity provider in order to join a Pulumi organization.
 
 For example, if a Pulumi organization, is backed by a GitHub organization, then only members
 of that GitHub organization may be added to the Pulumi organization. Similarly, as soon as
 someone loses access to the GitHub organization, they will no longer have access to the
 Pulumi organization.
 
-{{% notes %}}
-See [Organization Roles]({{< relref "/docs/intro/console/organization-roles" >}}) or
-[Adding New Identities]({{< relref "/docs/intro/console/accounts#adding-new-identities" >}})
-for more information.
-{{% /notes %}}
-
-The following table shows the relationship between a Pulumi organization and third-party
-groupings.
-
-| Pulumi | GitHub | GitLab | Bitbucket |
-|--------|--------|--------|--------|
-| Organization | [Organization](https://github.com/collab-uniba/socialcde4eclipse/wiki/How-to-setup-a-GitHub-organization,-project-and-team) | [Group](https://docs.gitlab.com/ce/user/group/)| [Workspace](https://bitbucket.org/blog/introducing-workspaces) |
-
-In addition, a Pulumi organization may be backed by a [SAML 2.0 identity provider]({{<
+In addition, a Pulumi organization can be backed by a [SAML 2.0 identity provider]({{<
 relref "/docs/guides/saml" >}}).
 
-### GitHub-backed
+### Changing Identity Providers
 
-To add a GitHub-backed organization to Pulumi, an admin of the GitHub organization
-must
-first grant the Pulumi OAuth app the `read:org` scope. This can be done on GitHub's
-[Applications
-page](https://github.com/settings/connections/applications/7cf9078f3c92b17a5f0f).
+Every organization is backed by an identity that governs the membership to your organization.
+By default, when you create a new Pulumi organization, it uses the Pulumi identity provider.
 
-Pulumi requires the [`read:org`
-scope](https://developer.github.com/apps/building-oauth-apps/understanding-scopes-for-oauth-apps/#available-scopes)
-in order to verify memberships within the GitHub organization. The Pulumi Console
-will not have access to any of the organization's source code, issues, or other data.
+Only organization admins can change the organization identity provider.
 
-### GitLab-backed
+To change an organization's identity provider:
+
+1. Navigate to the organization's **Settings**.
+1. Navigate to **Access Management**.
+1. Select **Change requirements**.
+
+### GitHub Identity Provider
+
+[Setting up a GitHub Organization](https://docs.github.com/en/organizations/collaborating-with-groups-in-organizations/creating-a-new-organization-from-scratch)
+
+To add a GitHub organization to Pulumi, an admin of the GitHub organization
+must first grant the Pulumi OAuth app the [`read:org` scope](https://github.com/settings/connections/applications/7cf9078f3c92b17a5f0f).
+This is required to verify memberships within the GitHub organization.
+Pulumi will not have access to any of the organization's source code, issues, or other data.
+
+### GitLab Identity Provider
+
+[GitLab Groups](https://docs.gitlab.com/ce/user/group/)
 
 To add a GitLab-backed organization to Pulumi, an admin of the GitLab group
-may add the group to Pulumi, and invite its members to join Pulumi.
+must add the group to Pulumi, and invite its members to join Pulumi.
 
 GitLab allows group admins to add members with a temporary membership, i.e., with an
-expiration value. In order to invite
-those members to Pulumi, their membership in the GitLab group must still be active. As
-soon as their
-GitLab group membership expires, those users will lose access to the GitLab-backed
-organization on Pulumi.
+expiration value. In order to invite those members to Pulumi, their membership in the
+GitLab group must still be active. As soon as their GitLab group membership expires,
+those users will lose access to Pulumi organization.
 
-### Bitbucket-backed
+### Bitbucket Identity Provider
+
+[BitBucket Workspaces](https://bitbucket.org/blog/introducing-workspaces)
 
 To add a Bitbucket-backed organization to Pulumi, an admin of the Atlassian
 Bitbucket workspace
@@ -102,75 +120,13 @@ access](https://confluence.atlassian.com/bitbucket/oauth-on-bitbucket-cloud-2380
 to their Bitbucket account and workspace membership information.
 
 Once the Pulumi organization has been created, the admin can see a list of Bitbucket workspace
-members
-that they can add or invite to the Pulumi organization. See [Switching
-Organizations](#switching-organizations)
-to learn more.
+members that they can add or invite to the Pulumi organization.
 
-## SAML Single Sign-on (SSO)
+### SAML Single Sign-on (SSO)
 
-Pulumi Enterprise provides more options for identity and access, including
-support for any SAML 2.0-based identity provider.
+Pulumi Enterprise provides support for any SAML 2.0-based identity provider.
 
 * [SAML-based configuration guide]({{< relref "/docs/guides/saml" >}})
 * [Azure Active Directory]({{< relref "/docs/guides/saml/aad" >}})
 * [G Suite]({{< relref "/docs/guides/saml/gsuite" >}})
 * [Okta]({{< relref "/docs/guides/saml/okta" >}})
-
-If you need help configuring or would like us to officially support another SAML identity
-provider,
-please [contact us]({{< relref "/about#contact-us" >}}).
-
-## Changing Membership Requirements
-
-Every organization is backed by an identity. The identity governs the membership to your org.
-By default, when you add a new org to Pulumi, it uses the Pulumi identity. This means the membership is
-_only_ governed by a user having a Pulumi account and no additional identity requirements are placed on members.
-
-{{% notes %}}
-Regardless of the identity your org uses, org membership is always invite-only. Only the creator of the org gets automatic access. Everyone else must be invited by an admin to be admitted into the org.
-{{% /notes %}}
-
-However, if you want your org to mirror an org on a third party identity service such as GitHub, GitLab, or Bitbucket, you can
-change the backing identity. Enterprises can also choose SAML as the backing identity provider for an org as discussed in [SAML Single Sign-on](#saml-single-sign-on-sso). Changing your org's backing identity essentially changes the membership requirements you place
-on your members.
-
-Before you change your org's backing identity, ensure that all of its current members can satisfy the membership
-requirement of the org in the new identity service. That is, if you are switching from a GitHub-backed to a GitLab-backed
-org, ensure that all of your members are actually a member of the corresponding GitLab Group which your org would be
-changed to inherit from.
-
-To switch an organization's backing identity you must be an organization admin.
-
-To change an organization's membership requirements:
-
-1. Navigate to the organization's **Settings**.
-1. Navigate to **Access Management**.
-1. Select **Change requirements**.
-
-## Switching Organizations
-
-The Organization drop-down list displays all of the organizations your account is
-associated with, and lets you add a new organization backed by a third
-party identity provider.
-
-To switch to your personal account or a different organization:
-
-1. Select the organization menu at the top of the page.
-1. Select your organization name.
-
-<img class="lg:max-w-xl" src="/images/docs/reference/service/organization-view.png" alt="Stack Outputs and Configuration">
-
-  _Members_. Pulumi organization members only see the Stacks and People tabs.
-
-  _Admins_. Pulumi organization admins see the Stacks, People, Teams, Webhooks,
-and Settings tabs.
-
-| Console Tab | Description |
-|--------|--------|
-| Dashboard | An overview of the organization including recently updated stacks, recent activity, and a resource count graph. |
-| Projects | A searchable list of organization stacks that you can group by project and tag. For more information, see [Project and Stack Management]({{< relref "/docs/intro/console/project-and-stack-management" >}}). |
-| Members | A list of active members of the Pulumi organization. |
-| Teams | An [Enterprise]({{< relref "/pricing" >}}) feature that provides a way to assign stack permissions to groups of organization members. |
-| Policies | Lists of organization policies and policy groups. Policies allow you to set guardrails to enforce best practices and compliance. |
-| Settings | Organization settings including subscription and payment information and history, stack permissions, and links to Pulumi's [continuous delivery guides]({{< relref "/docs/guides/continuous-delivery" >}}). |
