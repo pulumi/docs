@@ -47,9 +47,9 @@ Explore the following sections to learn more about the features and benefits of 
 
 Collaborate with other developers and coordinate on updates. Provide fine-grained access to stacks and use RBAC (Role-based Access Control) for your organization.
 
-* [Organization Roles]({{< relref "/docs/intro/console/organizations/#organization-roles" >}})
+* [Organization Roles]({{< relref "/docs/intro/console/organizations#organization-roles" >}})
 * [Teams]({{< relref "/docs/intro/console/teams" >}})
-* [Stack Permissions]({{< relref "/docs/intro/console/projects-and-stacks/#stack-permissions" >}})
+* [Stack Permissions]({{< relref "/docs/intro/console/projects-and-stacks#stack-permissions" >}})
 * [Project and Stack Management]({{< relref "/docs/intro/console/projects-and-stacks" >}})
 * [Audit Logs]({{< relref "/docs/intro/console/audit-logs" >}})
 
