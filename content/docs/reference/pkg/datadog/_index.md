@@ -40,7 +40,6 @@ A Pulumi package for creating and managing Datadog resources.
     <li><a href="monitor" title="Monitor"><span class="symbol resource"></span>Monitor</a></li>
     <li><a href="provider" title="Provider"><span class="symbol resource"></span>Provider</a></li>
     <li><a href="role" title="Role"><span class="symbol resource"></span>Role</a></li>
-    <li><a href="screenboard" title="ScreenBoard"><span class="symbol resource"></span>ScreenBoard</a></li>
     <li><a href="securitymonitoringdefaultrule" title="SecurityMonitoringDefaultRule"><span class="symbol resource"></span>SecurityMonitoringDefaultRule</a></li>
     <li><a href="securitymonitoringrule" title="SecurityMonitoringRule"><span class="symbol resource"></span>SecurityMonitoringRule</a></li>
     <li><a href="servicelevelobjective" title="ServiceLevelObjective"><span class="symbol resource"></span>ServiceLevelObjective</a></li>
@@ -48,7 +47,6 @@ A Pulumi package for creating and managing Datadog resources.
     <li><a href="syntheticsglobalvariable" title="SyntheticsGlobalVariable"><span class="symbol resource"></span>SyntheticsGlobalVariable</a></li>
     <li><a href="syntheticsprivatelocation" title="SyntheticsPrivateLocation"><span class="symbol resource"></span>SyntheticsPrivateLocation</a></li>
     <li><a href="syntheticstest" title="SyntheticsTest"><span class="symbol resource"></span>SyntheticsTest</a></li>
-    <li><a href="timeboard" title="TimeBoard"><span class="symbol resource"></span>TimeBoard</a></li>
     <li><a href="user" title="User"><span class="symbol resource"></span>User</a></li>
 </ul>
 
@@ -76,6 +74,6 @@ A Pulumi package for creating and managing Datadog resources.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`datadog` Terraform Provider](https://github.com/terraform-providers/terraform-provider-datadog).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>3.3.0</dd>
+	<dd>4.0.0</dd>
 </dl>
 
