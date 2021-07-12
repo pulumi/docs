@@ -417,7 +417,7 @@ The ServiceACLEntriesv1 resource accepts the following [input]({{< relref "/docs
 <a href="#entries_go" style="color: inherit; text-decoration: inherit;">Entries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceaclentriesv1entry">[]Service<wbr>ACLEntriesv1Entry</a></span>
+        <span class="property-type"><a href="#serviceaclentriesv1entry">[]Service<wbr>ACLEntriesv1Entry<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}ACL Entries
 {{% /md %}}</dd></dl>
@@ -715,7 +715,7 @@ The following state arguments are supported:
 <a href="#state_entries_go" style="color: inherit; text-decoration: inherit;">Entries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceaclentriesv1entry">[]Service<wbr>ACLEntriesv1Entry</a></span>
+        <span class="property-type"><a href="#serviceaclentriesv1entry">[]Service<wbr>ACLEntriesv1Entry<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}ACL Entries
 {{% /md %}}</dd><dt class="property-optional"

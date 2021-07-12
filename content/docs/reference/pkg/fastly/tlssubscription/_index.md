@@ -1032,7 +1032,7 @@ The following state arguments are supported:
 <a href="#state_managedhttpchallenges_go" style="color: inherit; text-decoration: inherit;">Managed<wbr>Http<wbr>Challenges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tlssubscriptionmanagedhttpchallenge">[]Tls<wbr>Subscription<wbr>Managed<wbr>Http<wbr>Challenge</a></span>
+        <span class="property-type"><a href="#tlssubscriptionmanagedhttpchallenge">[]Tls<wbr>Subscription<wbr>Managed<wbr>Http<wbr>Challenge<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A list of options for configuring DNS to respond to ACME HTTP challenge in order to verify domain ownership. Best accessed through a `for` expression to filter the relevant record.
 {{% /md %}}</dd><dt class="property-optional"

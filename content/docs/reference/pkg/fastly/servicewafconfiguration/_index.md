@@ -703,7 +703,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
 <a href="#ruleexclusions_go" style="color: inherit; text-decoration: inherit;">Rule<wbr>Exclusions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicewafconfigurationruleexclusion">[]Service<wbr>Waf<wbr>Configuration<wbr>Rule<wbr>Exclusion</a></span>
+        <span class="property-type"><a href="#servicewafconfigurationruleexclusion">[]Service<wbr>Waf<wbr>Configuration<wbr>Rule<wbr>Exclusion<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -711,7 +711,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
 <a href="#rules_go" style="color: inherit; text-decoration: inherit;">Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicewafconfigurationrule">[]Service<wbr>Waf<wbr>Configuration<wbr>Rule</a></span>
+        <span class="property-type"><a href="#servicewafconfigurationrule">[]Service<wbr>Waf<wbr>Configuration<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2029,7 +2029,7 @@ The following state arguments are supported:
 <a href="#state_ruleexclusions_go" style="color: inherit; text-decoration: inherit;">Rule<wbr>Exclusions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicewafconfigurationruleexclusion">[]Service<wbr>Waf<wbr>Configuration<wbr>Rule<wbr>Exclusion</a></span>
+        <span class="property-type"><a href="#servicewafconfigurationruleexclusion">[]Service<wbr>Waf<wbr>Configuration<wbr>Rule<wbr>Exclusion<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2037,7 +2037,7 @@ The following state arguments are supported:
 <a href="#state_rules_go" style="color: inherit; text-decoration: inherit;">Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicewafconfigurationrule">[]Service<wbr>Waf<wbr>Configuration<wbr>Rule</a></span>
+        <span class="property-type"><a href="#servicewafconfigurationrule">[]Service<wbr>Waf<wbr>Configuration<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
