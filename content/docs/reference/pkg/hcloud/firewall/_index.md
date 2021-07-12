@@ -750,7 +750,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Port of the Firewall Rule. Required when `protocol` is `tcp` or `udp`
+    <dd>{{% md %}}Port of the Firewall Rule. Required when `protocol` is `tcp` or `udp`. You can use `any` to allow all ports for the specific protocol. Port ranges are also possible: `80:85` allows all ports between 80 and 85.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourceips_csharp">
@@ -799,7 +799,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Port of the Firewall Rule. Required when `protocol` is `tcp` or `udp`
+    <dd>{{% md %}}Port of the Firewall Rule. Required when `protocol` is `tcp` or `udp`. You can use `any` to allow all ports for the specific protocol. Port ranges are also possible: `80:85` allows all ports between 80 and 85.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourceips_go">
@@ -848,7 +848,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Port of the Firewall Rule. Required when `protocol` is `tcp` or `udp`
+    <dd>{{% md %}}Port of the Firewall Rule. Required when `protocol` is `tcp` or `udp`. You can use `any` to allow all ports for the specific protocol. Port ranges are also possible: `80:85` allows all ports between 80 and 85.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourceips_nodejs">
@@ -897,7 +897,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Port of the Firewall Rule. Required when `protocol` is `tcp` or `udp`
+    <dd>{{% md %}}Port of the Firewall Rule. Required when `protocol` is `tcp` or `udp`. You can use `any` to allow all ports for the specific protocol. Port ranges are also possible: `80:85` allows all ports between 80 and 85.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_ips_python">
