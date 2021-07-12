@@ -507,7 +507,7 @@ The ServiceCompute resource accepts the following [input]({{< relref "/docs/intr
 <a href="#backends_go" style="color: inherit; text-decoration: inherit;">Backends</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputebackend">[]Service<wbr>Compute<wbr>Backend</a></span>
+        <span class="property-type"><a href="#servicecomputebackend">[]Service<wbr>Compute<wbr>Backend<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -515,7 +515,7 @@ The ServiceCompute resource accepts the following [input]({{< relref "/docs/intr
 <a href="#domains_go" style="color: inherit; text-decoration: inherit;">Domains</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputedomain">[]Service<wbr>Compute<wbr>Domain</a></span>
+        <span class="property-type"><a href="#servicecomputedomain">[]Service<wbr>Compute<wbr>Domain<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A set of Domain names to serve as entry points for your Service
 {{% /md %}}</dd><dt class="property-required"
@@ -524,7 +524,7 @@ The ServiceCompute resource accepts the following [input]({{< relref "/docs/intr
 <a href="#package_go" style="color: inherit; text-decoration: inherit;">Package</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputepackage">Service<wbr>Compute<wbr>Package</a></span>
+        <span class="property-type"><a href="#servicecomputepackage">Service<wbr>Compute<wbr>Package<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The `package` block supports uploading or modifying Wasm packages for use in a Fastly Compute@Edge service. See Fastly's documentation on [Compute@Edge](https://developer.fastly.com/learning/compute/)
 {{% /md %}}</dd><dt class="property-optional"
@@ -542,7 +542,7 @@ The ServiceCompute resource accepts the following [input]({{< relref "/docs/intr
 <a href="#bigqueryloggings_go" style="color: inherit; text-decoration: inherit;">Bigqueryloggings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputebigquerylogging">[]Service<wbr>Compute<wbr>Bigquerylogging</a></span>
+        <span class="property-type"><a href="#servicecomputebigquerylogging">[]Service<wbr>Compute<wbr>Bigquerylogging<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -550,7 +550,7 @@ The ServiceCompute resource accepts the following [input]({{< relref "/docs/intr
 <a href="#blobstorageloggings_go" style="color: inherit; text-decoration: inherit;">Blobstorageloggings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputeblobstoragelogging">[]Service<wbr>Compute<wbr>Blobstoragelogging</a></span>
+        <span class="property-type"><a href="#servicecomputeblobstoragelogging">[]Service<wbr>Compute<wbr>Blobstoragelogging<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -567,7 +567,7 @@ The ServiceCompute resource accepts the following [input]({{< relref "/docs/intr
 <a href="#dictionaries_go" style="color: inherit; text-decoration: inherit;">Dictionaries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputedictionary">[]Service<wbr>Compute<wbr>Dictionary</a></span>
+        <span class="property-type"><a href="#servicecomputedictionary">[]Service<wbr>Compute<wbr>Dictionary<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -575,7 +575,7 @@ The ServiceCompute resource accepts the following [input]({{< relref "/docs/intr
 <a href="#directors_go" style="color: inherit; text-decoration: inherit;">Directors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputedirector">[]Service<wbr>Compute<wbr>Director</a></span>
+        <span class="property-type"><a href="#servicecomputedirector">[]Service<wbr>Compute<wbr>Director<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -592,7 +592,7 @@ The ServiceCompute resource accepts the following [input]({{< relref "/docs/intr
 <a href="#gcsloggings_go" style="color: inherit; text-decoration: inherit;">Gcsloggings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputegcslogging">[]Service<wbr>Compute<wbr>Gcslogging</a></span>
+        <span class="property-type"><a href="#servicecomputegcslogging">[]Service<wbr>Compute<wbr>Gcslogging<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -600,7 +600,7 @@ The ServiceCompute resource accepts the following [input]({{< relref "/docs/intr
 <a href="#healthchecks_go" style="color: inherit; text-decoration: inherit;">Healthchecks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputehealthcheck">[]Service<wbr>Compute<wbr>Healthcheck</a></span>
+        <span class="property-type"><a href="#servicecomputehealthcheck">[]Service<wbr>Compute<wbr>Healthcheck<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -608,7 +608,7 @@ The ServiceCompute resource accepts the following [input]({{< relref "/docs/intr
 <a href="#httpsloggings_go" style="color: inherit; text-decoration: inherit;">Httpsloggings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputehttpslogging">[]Service<wbr>Compute<wbr>Httpslogging</a></span>
+        <span class="property-type"><a href="#servicecomputehttpslogging">[]Service<wbr>Compute<wbr>Httpslogging<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -616,7 +616,7 @@ The ServiceCompute resource accepts the following [input]({{< relref "/docs/intr
 <a href="#logentries_go" style="color: inherit; text-decoration: inherit;">Logentries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputelogentry">[]Service<wbr>Compute<wbr>Logentry</a></span>
+        <span class="property-type"><a href="#servicecomputelogentry">[]Service<wbr>Compute<wbr>Logentry<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -624,7 +624,7 @@ The ServiceCompute resource accepts the following [input]({{< relref "/docs/intr
 <a href="#loggingcloudfiles_go" style="color: inherit; text-decoration: inherit;">Logging<wbr>Cloudfiles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputeloggingcloudfile">[]Service<wbr>Compute<wbr>Logging<wbr>Cloudfile</a></span>
+        <span class="property-type"><a href="#servicecomputeloggingcloudfile">[]Service<wbr>Compute<wbr>Logging<wbr>Cloudfile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -632,7 +632,7 @@ The ServiceCompute resource accepts the following [input]({{< relref "/docs/intr
 <a href="#loggingdatadogs_go" style="color: inherit; text-decoration: inherit;">Logging<wbr>Datadogs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputeloggingdatadog">[]Service<wbr>Compute<wbr>Logging<wbr>Datadog</a></span>
+        <span class="property-type"><a href="#servicecomputeloggingdatadog">[]Service<wbr>Compute<wbr>Logging<wbr>Datadog<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -640,7 +640,7 @@ The ServiceCompute resource accepts the following [input]({{< relref "/docs/intr
 <a href="#loggingdigitaloceans_go" style="color: inherit; text-decoration: inherit;">Logging<wbr>Digitaloceans</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputeloggingdigitalocean">[]Service<wbr>Compute<wbr>Logging<wbr>Digitalocean</a></span>
+        <span class="property-type"><a href="#servicecomputeloggingdigitalocean">[]Service<wbr>Compute<wbr>Logging<wbr>Digitalocean<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -648,7 +648,7 @@ The ServiceCompute resource accepts the following [input]({{< relref "/docs/intr
 <a href="#loggingelasticsearches_go" style="color: inherit; text-decoration: inherit;">Logging<wbr>Elasticsearches</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputeloggingelasticsearch">[]Service<wbr>Compute<wbr>Logging<wbr>Elasticsearch</a></span>
+        <span class="property-type"><a href="#servicecomputeloggingelasticsearch">[]Service<wbr>Compute<wbr>Logging<wbr>Elasticsearch<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -656,7 +656,7 @@ The ServiceCompute resource accepts the following [input]({{< relref "/docs/intr
 <a href="#loggingftps_go" style="color: inherit; text-decoration: inherit;">Logging<wbr>Ftps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputeloggingftp">[]Service<wbr>Compute<wbr>Logging<wbr>Ftp</a></span>
+        <span class="property-type"><a href="#servicecomputeloggingftp">[]Service<wbr>Compute<wbr>Logging<wbr>Ftp<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -664,7 +664,7 @@ The ServiceCompute resource accepts the following [input]({{< relref "/docs/intr
 <a href="#logginggooglepubsubs_go" style="color: inherit; text-decoration: inherit;">Logging<wbr>Googlepubsubs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputelogginggooglepubsub">[]Service<wbr>Compute<wbr>Logging<wbr>Googlepubsub</a></span>
+        <span class="property-type"><a href="#servicecomputelogginggooglepubsub">[]Service<wbr>Compute<wbr>Logging<wbr>Googlepubsub<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -672,7 +672,7 @@ The ServiceCompute resource accepts the following [input]({{< relref "/docs/intr
 <a href="#loggingheroku_go" style="color: inherit; text-decoration: inherit;">Logging<wbr>Heroku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputeloggingheroku">[]Service<wbr>Compute<wbr>Logging<wbr>Heroku</a></span>
+        <span class="property-type"><a href="#servicecomputeloggingheroku">[]Service<wbr>Compute<wbr>Logging<wbr>Heroku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -680,7 +680,7 @@ The ServiceCompute resource accepts the following [input]({{< relref "/docs/intr
 <a href="#logginghoneycombs_go" style="color: inherit; text-decoration: inherit;">Logging<wbr>Honeycombs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputelogginghoneycomb">[]Service<wbr>Compute<wbr>Logging<wbr>Honeycomb</a></span>
+        <span class="property-type"><a href="#servicecomputelogginghoneycomb">[]Service<wbr>Compute<wbr>Logging<wbr>Honeycomb<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -688,7 +688,7 @@ The ServiceCompute resource accepts the following [input]({{< relref "/docs/intr
 <a href="#loggingkafkas_go" style="color: inherit; text-decoration: inherit;">Logging<wbr>Kafkas</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputeloggingkafka">[]Service<wbr>Compute<wbr>Logging<wbr>Kafka</a></span>
+        <span class="property-type"><a href="#servicecomputeloggingkafka">[]Service<wbr>Compute<wbr>Logging<wbr>Kafka<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -696,7 +696,7 @@ The ServiceCompute resource accepts the following [input]({{< relref "/docs/intr
 <a href="#loggingkineses_go" style="color: inherit; text-decoration: inherit;">Logging<wbr>Kineses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputeloggingkinese">[]Service<wbr>Compute<wbr>Logging<wbr>Kinese</a></span>
+        <span class="property-type"><a href="#servicecomputeloggingkinese">[]Service<wbr>Compute<wbr>Logging<wbr>Kinese<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -704,7 +704,7 @@ The ServiceCompute resource accepts the following [input]({{< relref "/docs/intr
 <a href="#logginglogglies_go" style="color: inherit; text-decoration: inherit;">Logging<wbr>Logglies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputeloggingloggly">[]Service<wbr>Compute<wbr>Logging<wbr>Loggly</a></span>
+        <span class="property-type"><a href="#servicecomputeloggingloggly">[]Service<wbr>Compute<wbr>Logging<wbr>Loggly<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -712,7 +712,7 @@ The ServiceCompute resource accepts the following [input]({{< relref "/docs/intr
 <a href="#logginglogshuttles_go" style="color: inherit; text-decoration: inherit;">Logging<wbr>Logshuttles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputelogginglogshuttle">[]Service<wbr>Compute<wbr>Logging<wbr>Logshuttle</a></span>
+        <span class="property-type"><a href="#servicecomputelogginglogshuttle">[]Service<wbr>Compute<wbr>Logging<wbr>Logshuttle<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -720,7 +720,7 @@ The ServiceCompute resource accepts the following [input]({{< relref "/docs/intr
 <a href="#loggingnewrelics_go" style="color: inherit; text-decoration: inherit;">Logging<wbr>Newrelics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputeloggingnewrelic">[]Service<wbr>Compute<wbr>Logging<wbr>Newrelic</a></span>
+        <span class="property-type"><a href="#servicecomputeloggingnewrelic">[]Service<wbr>Compute<wbr>Logging<wbr>Newrelic<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -728,7 +728,7 @@ The ServiceCompute resource accepts the following [input]({{< relref "/docs/intr
 <a href="#loggingopenstacks_go" style="color: inherit; text-decoration: inherit;">Logging<wbr>Openstacks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputeloggingopenstack">[]Service<wbr>Compute<wbr>Logging<wbr>Openstack</a></span>
+        <span class="property-type"><a href="#servicecomputeloggingopenstack">[]Service<wbr>Compute<wbr>Logging<wbr>Openstack<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -736,7 +736,7 @@ The ServiceCompute resource accepts the following [input]({{< relref "/docs/intr
 <a href="#loggingscalyrs_go" style="color: inherit; text-decoration: inherit;">Logging<wbr>Scalyrs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputeloggingscalyr">[]Service<wbr>Compute<wbr>Logging<wbr>Scalyr</a></span>
+        <span class="property-type"><a href="#servicecomputeloggingscalyr">[]Service<wbr>Compute<wbr>Logging<wbr>Scalyr<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -744,7 +744,7 @@ The ServiceCompute resource accepts the following [input]({{< relref "/docs/intr
 <a href="#loggingsftps_go" style="color: inherit; text-decoration: inherit;">Logging<wbr>Sftps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputeloggingsftp">[]Service<wbr>Compute<wbr>Logging<wbr>Sftp</a></span>
+        <span class="property-type"><a href="#servicecomputeloggingsftp">[]Service<wbr>Compute<wbr>Logging<wbr>Sftp<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -761,7 +761,7 @@ The ServiceCompute resource accepts the following [input]({{< relref "/docs/intr
 <a href="#papertrails_go" style="color: inherit; text-decoration: inherit;">Papertrails</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputepapertrail">[]Service<wbr>Compute<wbr>Papertrail</a></span>
+        <span class="property-type"><a href="#servicecomputepapertrail">[]Service<wbr>Compute<wbr>Papertrail<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -769,7 +769,7 @@ The ServiceCompute resource accepts the following [input]({{< relref "/docs/intr
 <a href="#s3loggings_go" style="color: inherit; text-decoration: inherit;">S3loggings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputes3logging">[]Service<wbr>Compute<wbr>S3logging</a></span>
+        <span class="property-type"><a href="#servicecomputes3logging">[]Service<wbr>Compute<wbr>S3logging<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -777,7 +777,7 @@ The ServiceCompute resource accepts the following [input]({{< relref "/docs/intr
 <a href="#splunks_go" style="color: inherit; text-decoration: inherit;">Splunks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputesplunk">[]Service<wbr>Compute<wbr>Splunk</a></span>
+        <span class="property-type"><a href="#servicecomputesplunk">[]Service<wbr>Compute<wbr>Splunk<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -785,7 +785,7 @@ The ServiceCompute resource accepts the following [input]({{< relref "/docs/intr
 <a href="#sumologics_go" style="color: inherit; text-decoration: inherit;">Sumologics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputesumologic">[]Service<wbr>Compute<wbr>Sumologic</a></span>
+        <span class="property-type"><a href="#servicecomputesumologic">[]Service<wbr>Compute<wbr>Sumologic<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -793,7 +793,7 @@ The ServiceCompute resource accepts the following [input]({{< relref "/docs/intr
 <a href="#syslogs_go" style="color: inherit; text-decoration: inherit;">Syslogs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputesyslog">[]Service<wbr>Compute<wbr>Syslog</a></span>
+        <span class="property-type"><a href="#servicecomputesyslog">[]Service<wbr>Compute<wbr>Syslog<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2062,7 +2062,7 @@ The following state arguments are supported:
 <a href="#state_backends_go" style="color: inherit; text-decoration: inherit;">Backends</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputebackend">[]Service<wbr>Compute<wbr>Backend</a></span>
+        <span class="property-type"><a href="#servicecomputebackend">[]Service<wbr>Compute<wbr>Backend<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2070,7 +2070,7 @@ The following state arguments are supported:
 <a href="#state_bigqueryloggings_go" style="color: inherit; text-decoration: inherit;">Bigqueryloggings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputebigquerylogging">[]Service<wbr>Compute<wbr>Bigquerylogging</a></span>
+        <span class="property-type"><a href="#servicecomputebigquerylogging">[]Service<wbr>Compute<wbr>Bigquerylogging<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2078,7 +2078,7 @@ The following state arguments are supported:
 <a href="#state_blobstorageloggings_go" style="color: inherit; text-decoration: inherit;">Blobstorageloggings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputeblobstoragelogging">[]Service<wbr>Compute<wbr>Blobstoragelogging</a></span>
+        <span class="property-type"><a href="#servicecomputeblobstoragelogging">[]Service<wbr>Compute<wbr>Blobstoragelogging<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2104,7 +2104,7 @@ The following state arguments are supported:
 <a href="#state_dictionaries_go" style="color: inherit; text-decoration: inherit;">Dictionaries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputedictionary">[]Service<wbr>Compute<wbr>Dictionary</a></span>
+        <span class="property-type"><a href="#servicecomputedictionary">[]Service<wbr>Compute<wbr>Dictionary<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2112,7 +2112,7 @@ The following state arguments are supported:
 <a href="#state_directors_go" style="color: inherit; text-decoration: inherit;">Directors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputedirector">[]Service<wbr>Compute<wbr>Director</a></span>
+        <span class="property-type"><a href="#servicecomputedirector">[]Service<wbr>Compute<wbr>Director<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2120,7 +2120,7 @@ The following state arguments are supported:
 <a href="#state_domains_go" style="color: inherit; text-decoration: inherit;">Domains</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputedomain">[]Service<wbr>Compute<wbr>Domain</a></span>
+        <span class="property-type"><a href="#servicecomputedomain">[]Service<wbr>Compute<wbr>Domain<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A set of Domain names to serve as entry points for your Service
 {{% /md %}}</dd><dt class="property-optional"
@@ -2138,7 +2138,7 @@ The following state arguments are supported:
 <a href="#state_gcsloggings_go" style="color: inherit; text-decoration: inherit;">Gcsloggings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputegcslogging">[]Service<wbr>Compute<wbr>Gcslogging</a></span>
+        <span class="property-type"><a href="#servicecomputegcslogging">[]Service<wbr>Compute<wbr>Gcslogging<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2146,7 +2146,7 @@ The following state arguments are supported:
 <a href="#state_healthchecks_go" style="color: inherit; text-decoration: inherit;">Healthchecks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputehealthcheck">[]Service<wbr>Compute<wbr>Healthcheck</a></span>
+        <span class="property-type"><a href="#servicecomputehealthcheck">[]Service<wbr>Compute<wbr>Healthcheck<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2154,7 +2154,7 @@ The following state arguments are supported:
 <a href="#state_httpsloggings_go" style="color: inherit; text-decoration: inherit;">Httpsloggings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputehttpslogging">[]Service<wbr>Compute<wbr>Httpslogging</a></span>
+        <span class="property-type"><a href="#servicecomputehttpslogging">[]Service<wbr>Compute<wbr>Httpslogging<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2162,7 +2162,7 @@ The following state arguments are supported:
 <a href="#state_logentries_go" style="color: inherit; text-decoration: inherit;">Logentries</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputelogentry">[]Service<wbr>Compute<wbr>Logentry</a></span>
+        <span class="property-type"><a href="#servicecomputelogentry">[]Service<wbr>Compute<wbr>Logentry<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2170,7 +2170,7 @@ The following state arguments are supported:
 <a href="#state_loggingcloudfiles_go" style="color: inherit; text-decoration: inherit;">Logging<wbr>Cloudfiles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputeloggingcloudfile">[]Service<wbr>Compute<wbr>Logging<wbr>Cloudfile</a></span>
+        <span class="property-type"><a href="#servicecomputeloggingcloudfile">[]Service<wbr>Compute<wbr>Logging<wbr>Cloudfile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2178,7 +2178,7 @@ The following state arguments are supported:
 <a href="#state_loggingdatadogs_go" style="color: inherit; text-decoration: inherit;">Logging<wbr>Datadogs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputeloggingdatadog">[]Service<wbr>Compute<wbr>Logging<wbr>Datadog</a></span>
+        <span class="property-type"><a href="#servicecomputeloggingdatadog">[]Service<wbr>Compute<wbr>Logging<wbr>Datadog<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2186,7 +2186,7 @@ The following state arguments are supported:
 <a href="#state_loggingdigitaloceans_go" style="color: inherit; text-decoration: inherit;">Logging<wbr>Digitaloceans</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputeloggingdigitalocean">[]Service<wbr>Compute<wbr>Logging<wbr>Digitalocean</a></span>
+        <span class="property-type"><a href="#servicecomputeloggingdigitalocean">[]Service<wbr>Compute<wbr>Logging<wbr>Digitalocean<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2194,7 +2194,7 @@ The following state arguments are supported:
 <a href="#state_loggingelasticsearches_go" style="color: inherit; text-decoration: inherit;">Logging<wbr>Elasticsearches</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputeloggingelasticsearch">[]Service<wbr>Compute<wbr>Logging<wbr>Elasticsearch</a></span>
+        <span class="property-type"><a href="#servicecomputeloggingelasticsearch">[]Service<wbr>Compute<wbr>Logging<wbr>Elasticsearch<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2202,7 +2202,7 @@ The following state arguments are supported:
 <a href="#state_loggingftps_go" style="color: inherit; text-decoration: inherit;">Logging<wbr>Ftps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputeloggingftp">[]Service<wbr>Compute<wbr>Logging<wbr>Ftp</a></span>
+        <span class="property-type"><a href="#servicecomputeloggingftp">[]Service<wbr>Compute<wbr>Logging<wbr>Ftp<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2210,7 +2210,7 @@ The following state arguments are supported:
 <a href="#state_logginggooglepubsubs_go" style="color: inherit; text-decoration: inherit;">Logging<wbr>Googlepubsubs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputelogginggooglepubsub">[]Service<wbr>Compute<wbr>Logging<wbr>Googlepubsub</a></span>
+        <span class="property-type"><a href="#servicecomputelogginggooglepubsub">[]Service<wbr>Compute<wbr>Logging<wbr>Googlepubsub<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2218,7 +2218,7 @@ The following state arguments are supported:
 <a href="#state_loggingheroku_go" style="color: inherit; text-decoration: inherit;">Logging<wbr>Heroku</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputeloggingheroku">[]Service<wbr>Compute<wbr>Logging<wbr>Heroku</a></span>
+        <span class="property-type"><a href="#servicecomputeloggingheroku">[]Service<wbr>Compute<wbr>Logging<wbr>Heroku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2226,7 +2226,7 @@ The following state arguments are supported:
 <a href="#state_logginghoneycombs_go" style="color: inherit; text-decoration: inherit;">Logging<wbr>Honeycombs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputelogginghoneycomb">[]Service<wbr>Compute<wbr>Logging<wbr>Honeycomb</a></span>
+        <span class="property-type"><a href="#servicecomputelogginghoneycomb">[]Service<wbr>Compute<wbr>Logging<wbr>Honeycomb<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2234,7 +2234,7 @@ The following state arguments are supported:
 <a href="#state_loggingkafkas_go" style="color: inherit; text-decoration: inherit;">Logging<wbr>Kafkas</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputeloggingkafka">[]Service<wbr>Compute<wbr>Logging<wbr>Kafka</a></span>
+        <span class="property-type"><a href="#servicecomputeloggingkafka">[]Service<wbr>Compute<wbr>Logging<wbr>Kafka<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2242,7 +2242,7 @@ The following state arguments are supported:
 <a href="#state_loggingkineses_go" style="color: inherit; text-decoration: inherit;">Logging<wbr>Kineses</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputeloggingkinese">[]Service<wbr>Compute<wbr>Logging<wbr>Kinese</a></span>
+        <span class="property-type"><a href="#servicecomputeloggingkinese">[]Service<wbr>Compute<wbr>Logging<wbr>Kinese<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2250,7 +2250,7 @@ The following state arguments are supported:
 <a href="#state_logginglogglies_go" style="color: inherit; text-decoration: inherit;">Logging<wbr>Logglies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputeloggingloggly">[]Service<wbr>Compute<wbr>Logging<wbr>Loggly</a></span>
+        <span class="property-type"><a href="#servicecomputeloggingloggly">[]Service<wbr>Compute<wbr>Logging<wbr>Loggly<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2258,7 +2258,7 @@ The following state arguments are supported:
 <a href="#state_logginglogshuttles_go" style="color: inherit; text-decoration: inherit;">Logging<wbr>Logshuttles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputelogginglogshuttle">[]Service<wbr>Compute<wbr>Logging<wbr>Logshuttle</a></span>
+        <span class="property-type"><a href="#servicecomputelogginglogshuttle">[]Service<wbr>Compute<wbr>Logging<wbr>Logshuttle<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2266,7 +2266,7 @@ The following state arguments are supported:
 <a href="#state_loggingnewrelics_go" style="color: inherit; text-decoration: inherit;">Logging<wbr>Newrelics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputeloggingnewrelic">[]Service<wbr>Compute<wbr>Logging<wbr>Newrelic</a></span>
+        <span class="property-type"><a href="#servicecomputeloggingnewrelic">[]Service<wbr>Compute<wbr>Logging<wbr>Newrelic<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2274,7 +2274,7 @@ The following state arguments are supported:
 <a href="#state_loggingopenstacks_go" style="color: inherit; text-decoration: inherit;">Logging<wbr>Openstacks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputeloggingopenstack">[]Service<wbr>Compute<wbr>Logging<wbr>Openstack</a></span>
+        <span class="property-type"><a href="#servicecomputeloggingopenstack">[]Service<wbr>Compute<wbr>Logging<wbr>Openstack<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2282,7 +2282,7 @@ The following state arguments are supported:
 <a href="#state_loggingscalyrs_go" style="color: inherit; text-decoration: inherit;">Logging<wbr>Scalyrs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputeloggingscalyr">[]Service<wbr>Compute<wbr>Logging<wbr>Scalyr</a></span>
+        <span class="property-type"><a href="#servicecomputeloggingscalyr">[]Service<wbr>Compute<wbr>Logging<wbr>Scalyr<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2290,7 +2290,7 @@ The following state arguments are supported:
 <a href="#state_loggingsftps_go" style="color: inherit; text-decoration: inherit;">Logging<wbr>Sftps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputeloggingsftp">[]Service<wbr>Compute<wbr>Logging<wbr>Sftp</a></span>
+        <span class="property-type"><a href="#servicecomputeloggingsftp">[]Service<wbr>Compute<wbr>Logging<wbr>Sftp<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2307,7 +2307,7 @@ The following state arguments are supported:
 <a href="#state_package_go" style="color: inherit; text-decoration: inherit;">Package</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputepackage">Service<wbr>Compute<wbr>Package</a></span>
+        <span class="property-type"><a href="#servicecomputepackage">Service<wbr>Compute<wbr>Package<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The `package` block supports uploading or modifying Wasm packages for use in a Fastly Compute@Edge service. See Fastly's documentation on [Compute@Edge](https://developer.fastly.com/learning/compute/)
 {{% /md %}}</dd><dt class="property-optional"
@@ -2316,7 +2316,7 @@ The following state arguments are supported:
 <a href="#state_papertrails_go" style="color: inherit; text-decoration: inherit;">Papertrails</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputepapertrail">[]Service<wbr>Compute<wbr>Papertrail</a></span>
+        <span class="property-type"><a href="#servicecomputepapertrail">[]Service<wbr>Compute<wbr>Papertrail<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2324,7 +2324,7 @@ The following state arguments are supported:
 <a href="#state_s3loggings_go" style="color: inherit; text-decoration: inherit;">S3loggings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputes3logging">[]Service<wbr>Compute<wbr>S3logging</a></span>
+        <span class="property-type"><a href="#servicecomputes3logging">[]Service<wbr>Compute<wbr>S3logging<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2332,7 +2332,7 @@ The following state arguments are supported:
 <a href="#state_splunks_go" style="color: inherit; text-decoration: inherit;">Splunks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputesplunk">[]Service<wbr>Compute<wbr>Splunk</a></span>
+        <span class="property-type"><a href="#servicecomputesplunk">[]Service<wbr>Compute<wbr>Splunk<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2340,7 +2340,7 @@ The following state arguments are supported:
 <a href="#state_sumologics_go" style="color: inherit; text-decoration: inherit;">Sumologics</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputesumologic">[]Service<wbr>Compute<wbr>Sumologic</a></span>
+        <span class="property-type"><a href="#servicecomputesumologic">[]Service<wbr>Compute<wbr>Sumologic<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2348,7 +2348,7 @@ The following state arguments are supported:
 <a href="#state_syslogs_go" style="color: inherit; text-decoration: inherit;">Syslogs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecomputesyslog">[]Service<wbr>Compute<wbr>Syslog</a></span>
+        <span class="property-type"><a href="#servicecomputesyslog">[]Service<wbr>Compute<wbr>Syslog<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5624,7 +5624,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}When loading a config, the initial number of probes to be seen as OK. Default `2`
+    <dd>{{% md %}}When loading a config, the initial number of probes to be seen as OK. Default `3`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="method_csharp">
@@ -5727,7 +5727,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}When loading a config, the initial number of probes to be seen as OK. Default `2`
+    <dd>{{% md %}}When loading a config, the initial number of probes to be seen as OK. Default `3`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="method_go">
@@ -5830,7 +5830,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}When loading a config, the initial number of probes to be seen as OK. Default `2`
+    <dd>{{% md %}}When loading a config, the initial number of probes to be seen as OK. Default `3`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="method_nodejs">
@@ -5933,7 +5933,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}When loading a config, the initial number of probes to be seen as OK. Default `2`
+    <dd>{{% md %}}When loading a config, the initial number of probes to be seen as OK. Default `3`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="method_python">
@@ -11468,6 +11468,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The unique name of the S3 logging endpoint. It is important to note that changing this attribute will delete and recreate the resource
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="acl_csharp">
+<a href="#acl_csharp" style="color: inherit; text-decoration: inherit;">Acl</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The AWS [Canned ACL](https://docs.aws.amazon.com/AmazonS3/latest/userguide/acl-overview.html#canned-acl) to use for objects uploaded to the S3 bucket. Options are: `private`, `public-read`, `public-read-write`, `aws-exec-read`, `authenticated-read`, `bucket-owner-read`, `bucket-owner-full-control`
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="compressioncodec_csharp">
 <a href="#compressioncodec_csharp" style="color: inherit; text-decoration: inherit;">Compression<wbr>Codec</a>
 </span>
@@ -11537,7 +11546,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The S3 redundancy level. Should be formatted; one of: `standard`, `reduced_redundancy` or null. Default `null`
+    <dd>{{% md %}}The S3 storage class (redundancy level). Should be one of: `standard`, `reduced_redundancy`, `standard_ia`, or `onezone_ia`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="s3accesskey_csharp">
@@ -11616,6 +11625,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The unique name of the S3 logging endpoint. It is important to note that changing this attribute will delete and recreate the resource
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="acl_go">
+<a href="#acl_go" style="color: inherit; text-decoration: inherit;">Acl</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The AWS [Canned ACL](https://docs.aws.amazon.com/AmazonS3/latest/userguide/acl-overview.html#canned-acl) to use for objects uploaded to the S3 bucket. Options are: `private`, `public-read`, `public-read-write`, `aws-exec-read`, `authenticated-read`, `bucket-owner-read`, `bucket-owner-full-control`
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="compressioncodec_go">
 <a href="#compressioncodec_go" style="color: inherit; text-decoration: inherit;">Compression<wbr>Codec</a>
 </span>
@@ -11685,7 +11703,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The S3 redundancy level. Should be formatted; one of: `standard`, `reduced_redundancy` or null. Default `null`
+    <dd>{{% md %}}The S3 storage class (redundancy level). Should be one of: `standard`, `reduced_redundancy`, `standard_ia`, or `onezone_ia`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="s3accesskey_go">
@@ -11764,6 +11782,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The unique name of the S3 logging endpoint. It is important to note that changing this attribute will delete and recreate the resource
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="acl_nodejs">
+<a href="#acl_nodejs" style="color: inherit; text-decoration: inherit;">acl</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The AWS [Canned ACL](https://docs.aws.amazon.com/AmazonS3/latest/userguide/acl-overview.html#canned-acl) to use for objects uploaded to the S3 bucket. Options are: `private`, `public-read`, `public-read-write`, `aws-exec-read`, `authenticated-read`, `bucket-owner-read`, `bucket-owner-full-control`
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="compressioncodec_nodejs">
 <a href="#compressioncodec_nodejs" style="color: inherit; text-decoration: inherit;">compression<wbr>Codec</a>
 </span>
@@ -11833,7 +11860,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The S3 redundancy level. Should be formatted; one of: `standard`, `reduced_redundancy` or null. Default `null`
+    <dd>{{% md %}}The S3 storage class (redundancy level). Should be one of: `standard`, `reduced_redundancy`, `standard_ia`, or `onezone_ia`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="s3accesskey_nodejs">
@@ -11912,6 +11939,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The unique name of the S3 logging endpoint. It is important to note that changing this attribute will delete and recreate the resource
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="acl_python">
+<a href="#acl_python" style="color: inherit; text-decoration: inherit;">acl</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The AWS [Canned ACL](https://docs.aws.amazon.com/AmazonS3/latest/userguide/acl-overview.html#canned-acl) to use for objects uploaded to the S3 bucket. Options are: `private`, `public-read`, `public-read-write`, `aws-exec-read`, `authenticated-read`, `bucket-owner-read`, `bucket-owner-full-control`
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="compression_codec_python">
 <a href="#compression_codec_python" style="color: inherit; text-decoration: inherit;">compression_<wbr>codec</a>
 </span>
@@ -11981,7 +12017,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The S3 redundancy level. Should be formatted; one of: `standard`, `reduced_redundancy` or null. Default `null`
+    <dd>{{% md %}}The S3 storage class (redundancy level). Should be one of: `standard`, `reduced_redundancy`, `standard_ia`, or `onezone_ia`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="s3_access_key_python">
