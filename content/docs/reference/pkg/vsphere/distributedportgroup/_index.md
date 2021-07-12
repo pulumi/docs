@@ -1079,7 +1079,7 @@ on this port group to be overridden on an individual port.
 <a href="#vlanranges_go" style="color: inherit; text-decoration: inherit;">Vlan<wbr>Ranges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributedportgroupvlanrange">[]Distributed<wbr>Port<wbr>Group<wbr>Vlan<wbr>Range</a></span>
+        <span class="property-type"><a href="#distributedportgroupvlanrange">[]Distributed<wbr>Port<wbr>Group<wbr>Vlan<wbr>Range<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The VLAN ID for single VLAN mode. 0 denotes no VLAN.
 {{% /md %}}</dd></dl>
@@ -3191,7 +3191,7 @@ on this port group to be overridden on an individual port.
 <a href="#state_vlanranges_go" style="color: inherit; text-decoration: inherit;">Vlan<wbr>Ranges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributedportgroupvlanrange">[]Distributed<wbr>Port<wbr>Group<wbr>Vlan<wbr>Range</a></span>
+        <span class="property-type"><a href="#distributedportgroupvlanrange">[]Distributed<wbr>Port<wbr>Group<wbr>Vlan<wbr>Range<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The VLAN ID for single VLAN mode. 0 denotes no VLAN.
 {{% /md %}}</dd></dl>

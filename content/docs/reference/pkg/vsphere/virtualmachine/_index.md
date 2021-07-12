@@ -89,6 +89,7 @@ meta_desc: "Documentation for the vsphere.VirtualMachine resource with examples,
                    <span class="nx">storage_policy_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                    <span class="nx">swap_placement_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                    <span class="nx">sync_time_with_host</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                   <span class="nx">sync_time_with_host_periodically</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
                    <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
                    <span class="nx">vapp</span><span class="p">:</span> <span class="nx">Optional[VirtualMachineVappArgs]</span> = None<span class="p">,</span>
                    <span class="nx">vbs_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
@@ -902,8 +903,22 @@ Default: `inherit`.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Enable guest clock synchronization with
-the host. Requires VMware tools to be installed. Default: `false`.
+    <dd>{{% md %}}Enable guest clock synchronization with the host.
+On vSphere 7 U1 and above, with only this setting the clock is synchronized on
+startup and resume so consider also setting `sync_time_with_host_periodically`.
+Requires VMware tools to be installed. Default: `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="synctimewithhostperiodically_csharp">
+<a href="#synctimewithhostperiodically_csharp" style="color: inherit; text-decoration: inherit;">Sync<wbr>Time<wbr>With<wbr>Host<wbr>Periodically</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable periodic clock
+synchronization with the host. Supported only on vSphere 7 U1 and above.
+On older versions setting `sync_time_with_host` is enough for periodic
+synchronization. Requires VMware tools to be installed. Default: `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
@@ -1064,7 +1079,7 @@ Default: `false`.
 <a href="#cdrom_go" style="color: inherit; text-decoration: inherit;">Cdrom</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinecdrom">Virtual<wbr>Machine<wbr>Cdrom</a></span>
+        <span class="property-type"><a href="#virtualmachinecdrom">Virtual<wbr>Machine<wbr>Cdrom<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A specification for a CDROM device on this virtual
 machine. See CDROM options below.
@@ -1074,7 +1089,7 @@ machine. See CDROM options below.
 <a href="#clone_go" style="color: inherit; text-decoration: inherit;">Clone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineclone">Virtual<wbr>Machine<wbr>Clone</a></span>
+        <span class="property-type"><a href="#virtualmachineclone">Virtual<wbr>Machine<wbr>Clone<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}When specified, the VM will be created as a clone of a
 specified template. Optional customization options can be submitted as well.
@@ -1200,7 +1215,7 @@ Requried for using a datastore ISO. Conflicts with `client_device`.
 <a href="#disks_go" style="color: inherit; text-decoration: inherit;">Disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinedisk">[]Virtual<wbr>Machine<wbr>Disk</a></span>
+        <span class="property-type"><a href="#virtualmachinedisk">[]Virtual<wbr>Machine<wbr>Disk<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A specification for a virtual disk device on this virtual
 machine. See disk options below.
@@ -1470,7 +1485,7 @@ Default: `false`.
 <a href="#networkinterfaces_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Interfaces</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinenetworkinterface">[]Virtual<wbr>Machine<wbr>Network<wbr>Interface</a></span>
+        <span class="property-type"><a href="#virtualmachinenetworkinterface">[]Virtual<wbr>Machine<wbr>Network<wbr>Interface<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A specification for a virtual NIC on this
 virtual machine. See network interface options
@@ -1503,7 +1518,7 @@ to this virtual machine. Default: `1`.
 <a href="#ovfdeploy_go" style="color: inherit; text-decoration: inherit;">Ovf<wbr>Deploy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineovfdeploy">Virtual<wbr>Machine<wbr>Ovf<wbr>Deploy</a></span>
+        <span class="property-type"><a href="#virtualmachineovfdeploy">Virtual<wbr>Machine<wbr>Ovf<wbr>Deploy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}When specified, the VM will be deployed from the
 provided ovf/ova template. See creating a virtual machine from a
@@ -1673,8 +1688,22 @@ Default: `inherit`.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Enable guest clock synchronization with
-the host. Requires VMware tools to be installed. Default: `false`.
+    <dd>{{% md %}}Enable guest clock synchronization with the host.
+On vSphere 7 U1 and above, with only this setting the clock is synchronized on
+startup and resume so consider also setting `sync_time_with_host_periodically`.
+Requires VMware tools to be installed. Default: `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="synctimewithhostperiodically_go">
+<a href="#synctimewithhostperiodically_go" style="color: inherit; text-decoration: inherit;">Sync<wbr>Time<wbr>With<wbr>Host<wbr>Periodically</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable periodic clock
+synchronization with the host. Supported only on vSphere 7 U1 and above.
+On older versions setting `sync_time_with_host` is enough for periodic
+synchronization. Requires VMware tools to be installed. Default: `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
@@ -1690,7 +1719,7 @@ the host. Requires VMware tools to be installed. Default: `false`.
 <a href="#vapp_go" style="color: inherit; text-decoration: inherit;">Vapp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinevapp">Virtual<wbr>Machine<wbr>Vapp</a></span>
+        <span class="property-type"><a href="#virtualmachinevapp">Virtual<wbr>Machine<wbr>Vapp<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional vApp configuration. The only sub-key available
 is `properties`, which is a key/value map of properties for virtual machines
@@ -2444,8 +2473,22 @@ Default: `inherit`.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Enable guest clock synchronization with
-the host. Requires VMware tools to be installed. Default: `false`.
+    <dd>{{% md %}}Enable guest clock synchronization with the host.
+On vSphere 7 U1 and above, with only this setting the clock is synchronized on
+startup and resume so consider also setting `sync_time_with_host_periodically`.
+Requires VMware tools to be installed. Default: `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="synctimewithhostperiodically_nodejs">
+<a href="#synctimewithhostperiodically_nodejs" style="color: inherit; text-decoration: inherit;">sync<wbr>Time<wbr>With<wbr>Host<wbr>Periodically</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Enable periodic clock
+synchronization with the host. Supported only on vSphere 7 U1 and above.
+On older versions setting `sync_time_with_host` is enough for periodic
+synchronization. Requires VMware tools to be installed. Default: `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
@@ -3215,8 +3258,22 @@ Default: `inherit`.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Enable guest clock synchronization with
-the host. Requires VMware tools to be installed. Default: `false`.
+    <dd>{{% md %}}Enable guest clock synchronization with the host.
+On vSphere 7 U1 and above, with only this setting the clock is synchronized on
+startup and resume so consider also setting `sync_time_with_host_periodically`.
+Requires VMware tools to be installed. Default: `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sync_time_with_host_periodically_python">
+<a href="#sync_time_with_host_periodically_python" style="color: inherit; text-decoration: inherit;">sync_<wbr>time_<wbr>with_<wbr>host_<wbr>periodically</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable periodic clock
+synchronization with the host. Supported only on vSphere 7 U1 and above.
+On older versions setting `sync_time_with_host` is enough for periodic
+synchronization. Requires VMware tools to be installed. Default: `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
@@ -3895,6 +3952,7 @@ Get an existing VirtualMachine resource's state with the given name, ID, and opt
         <span class="nx">storage_policy_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">swap_placement_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">sync_time_with_host</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">sync_time_with_host_periodically</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
         <span class="nx">uuid</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">vapp</span><span class="p">:</span> <span class="nx">Optional[VirtualMachineVappArgs]</span> = None<span class="p">,</span>
@@ -4766,8 +4824,22 @@ Default: `inherit`.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Enable guest clock synchronization with
-the host. Requires VMware tools to be installed. Default: `false`.
+    <dd>{{% md %}}Enable guest clock synchronization with the host.
+On vSphere 7 U1 and above, with only this setting the clock is synchronized on
+startup and resume so consider also setting `sync_time_with_host_periodically`.
+Requires VMware tools to be installed. Default: `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_synctimewithhostperiodically_csharp">
+<a href="#state_synctimewithhostperiodically_csharp" style="color: inherit; text-decoration: inherit;">Sync<wbr>Time<wbr>With<wbr>Host<wbr>Periodically</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable periodic clock
+synchronization with the host. Supported only on vSphere 7 U1 and above.
+On older versions setting `sync_time_with_host` is enough for periodic
+synchronization. Requires VMware tools to be installed. Default: `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_csharp">
@@ -4957,7 +5029,7 @@ Default: `false`.
 <a href="#state_cdrom_go" style="color: inherit; text-decoration: inherit;">Cdrom</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinecdrom">Virtual<wbr>Machine<wbr>Cdrom</a></span>
+        <span class="property-type"><a href="#virtualmachinecdrom">Virtual<wbr>Machine<wbr>Cdrom<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A specification for a CDROM device on this virtual
 machine. See CDROM options below.
@@ -4978,7 +5050,7 @@ configuration.
 <a href="#state_clone_go" style="color: inherit; text-decoration: inherit;">Clone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineclone">Virtual<wbr>Machine<wbr>Clone</a></span>
+        <span class="property-type"><a href="#virtualmachineclone">Virtual<wbr>Machine<wbr>Clone<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}When specified, the VM will be created as a clone of a
 specified template. Optional customization options can be submitted as well.
@@ -5119,7 +5191,7 @@ off, this value will be blank.
 <a href="#state_disks_go" style="color: inherit; text-decoration: inherit;">Disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinedisk">[]Virtual<wbr>Machine<wbr>Disk</a></span>
+        <span class="property-type"><a href="#virtualmachinedisk">[]Virtual<wbr>Machine<wbr>Disk<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A specification for a virtual disk device on this virtual
 machine. See disk options below.
@@ -5423,7 +5495,7 @@ Default: `false`.
 <a href="#state_networkinterfaces_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Interfaces</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinenetworkinterface">[]Virtual<wbr>Machine<wbr>Network<wbr>Interface</a></span>
+        <span class="property-type"><a href="#virtualmachinenetworkinterface">[]Virtual<wbr>Machine<wbr>Network<wbr>Interface<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A specification for a virtual NIC on this
 virtual machine. See network interface options
@@ -5456,7 +5528,7 @@ to this virtual machine. Default: `1`.
 <a href="#state_ovfdeploy_go" style="color: inherit; text-decoration: inherit;">Ovf<wbr>Deploy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineovfdeploy">Virtual<wbr>Machine<wbr>Ovf<wbr>Deploy</a></span>
+        <span class="property-type"><a href="#virtualmachineovfdeploy">Virtual<wbr>Machine<wbr>Ovf<wbr>Deploy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}When specified, the VM will be deployed from the
 provided ovf/ova template. See creating a virtual machine from a
@@ -5649,8 +5721,22 @@ Default: `inherit`.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Enable guest clock synchronization with
-the host. Requires VMware tools to be installed. Default: `false`.
+    <dd>{{% md %}}Enable guest clock synchronization with the host.
+On vSphere 7 U1 and above, with only this setting the clock is synchronized on
+startup and resume so consider also setting `sync_time_with_host_periodically`.
+Requires VMware tools to be installed. Default: `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_synctimewithhostperiodically_go">
+<a href="#state_synctimewithhostperiodically_go" style="color: inherit; text-decoration: inherit;">Sync<wbr>Time<wbr>With<wbr>Host<wbr>Periodically</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable periodic clock
+synchronization with the host. Supported only on vSphere 7 U1 and above.
+On older versions setting `sync_time_with_host` is enough for periodic
+synchronization. Requires VMware tools to be installed. Default: `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
@@ -5676,7 +5762,7 @@ virtual disk on the virtual machine.
 <a href="#state_vapp_go" style="color: inherit; text-decoration: inherit;">Vapp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinevapp">Virtual<wbr>Machine<wbr>Vapp</a></span>
+        <span class="property-type"><a href="#virtualmachinevapp">Virtual<wbr>Machine<wbr>Vapp<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional vApp configuration. The only sub-key available
 is `properties`, which is a key/value map of properties for virtual machines
@@ -6532,8 +6618,22 @@ Default: `inherit`.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Enable guest clock synchronization with
-the host. Requires VMware tools to be installed. Default: `false`.
+    <dd>{{% md %}}Enable guest clock synchronization with the host.
+On vSphere 7 U1 and above, with only this setting the clock is synchronized on
+startup and resume so consider also setting `sync_time_with_host_periodically`.
+Requires VMware tools to be installed. Default: `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_synctimewithhostperiodically_nodejs">
+<a href="#state_synctimewithhostperiodically_nodejs" style="color: inherit; text-decoration: inherit;">sync<wbr>Time<wbr>With<wbr>Host<wbr>Periodically</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Enable periodic clock
+synchronization with the host. Supported only on vSphere 7 U1 and above.
+On older versions setting `sync_time_with_host` is enough for periodic
+synchronization. Requires VMware tools to be installed. Default: `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_nodejs">
@@ -7415,8 +7515,22 @@ Default: `inherit`.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Enable guest clock synchronization with
-the host. Requires VMware tools to be installed. Default: `false`.
+    <dd>{{% md %}}Enable guest clock synchronization with the host.
+On vSphere 7 U1 and above, with only this setting the clock is synchronized on
+startup and resume so consider also setting `sync_time_with_host_periodically`.
+Requires VMware tools to be installed. Default: `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_sync_time_with_host_periodically_python">
+<a href="#state_sync_time_with_host_periodically_python" style="color: inherit; text-decoration: inherit;">sync_<wbr>time_<wbr>with_<wbr>host_<wbr>periodically</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable periodic clock
+synchronization with the host. Supported only on vSphere 7 U1 and above.
+On older versions setting `sync_time_with_host` is enough for periodic
+synchronization. Requires VMware tools to be installed. Default: `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">
@@ -7795,7 +7909,7 @@ ISO. Conflicts with `client_device`.
 <a href="#customize_csharp" style="color: inherit; text-decoration: inherit;">Customize</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineclonecustomize">Pulumi.<wbr>VSphere.<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Clone<wbr>Customize<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualmachineclonecustomize">Pulumi.<wbr>VSphere.<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Clone<wbr>Customize</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7899,7 +8013,7 @@ ISO. Conflicts with `client_device`.
 <a href="#customize_nodejs" style="color: inherit; text-decoration: inherit;">customize</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineclonecustomize">Virtual<wbr>Machine<wbr>Clone<wbr>Customize<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualmachineclonecustomize">Virtual<wbr>Machine<wbr>Clone<wbr>Customize</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -7951,7 +8065,7 @@ ISO. Conflicts with `client_device`.
 <a href="#customize_python" style="color: inherit; text-decoration: inherit;">customize</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineclonecustomize">Virtual<wbr>Machine<wbr>Clone<wbr>Customize<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualmachineclonecustomize">Virtual<wbr>Machine<wbr>Clone<wbr>Customize</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8029,7 +8143,7 @@ ISO. Conflicts with `client_device`.
 <a href="#linuxoptions_csharp" style="color: inherit; text-decoration: inherit;">Linux<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineclonecustomizelinuxoptions">Pulumi.<wbr>VSphere.<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Clone<wbr>Customize<wbr>Linux<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualmachineclonecustomizelinuxoptions">Pulumi.<wbr>VSphere.<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Clone<wbr>Customize<wbr>Linux<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8037,7 +8151,7 @@ ISO. Conflicts with `client_device`.
 <a href="#networkinterfaces_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Interfaces</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineclonecustomizenetworkinterface">List&lt;Pulumi.<wbr>VSphere.<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Clone<wbr>Customize<wbr>Network<wbr>Interface<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#virtualmachineclonecustomizenetworkinterface">List&lt;Pulumi.<wbr>VSphere.<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Clone<wbr>Customize<wbr>Network<wbr>Interface&gt;</a></span>
     </dt>
     <dd>{{% md %}}A specification for a virtual NIC on this
 virtual machine. See network interface options
@@ -8056,7 +8170,7 @@ below.
 <a href="#windowsoptions_csharp" style="color: inherit; text-decoration: inherit;">Windows<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineclonecustomizewindowsoptions">Pulumi.<wbr>VSphere.<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Clone<wbr>Customize<wbr>Windows<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualmachineclonecustomizewindowsoptions">Pulumi.<wbr>VSphere.<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Clone<wbr>Customize<wbr>Windows<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8187,7 +8301,7 @@ below.
 <a href="#linuxoptions_nodejs" style="color: inherit; text-decoration: inherit;">linux<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineclonecustomizelinuxoptions">Virtual<wbr>Machine<wbr>Clone<wbr>Customize<wbr>Linux<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualmachineclonecustomizelinuxoptions">Virtual<wbr>Machine<wbr>Clone<wbr>Customize<wbr>Linux<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8195,7 +8309,7 @@ below.
 <a href="#networkinterfaces_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Interfaces</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineclonecustomizenetworkinterface">Virtual<wbr>Machine<wbr>Clone<wbr>Customize<wbr>Network<wbr>Interface<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#virtualmachineclonecustomizenetworkinterface">Virtual<wbr>Machine<wbr>Clone<wbr>Customize<wbr>Network<wbr>Interface[]</a></span>
     </dt>
     <dd>{{% md %}}A specification for a virtual NIC on this
 virtual machine. See network interface options
@@ -8214,7 +8328,7 @@ below.
 <a href="#windowsoptions_nodejs" style="color: inherit; text-decoration: inherit;">windows<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineclonecustomizewindowsoptions">Virtual<wbr>Machine<wbr>Clone<wbr>Customize<wbr>Windows<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualmachineclonecustomizewindowsoptions">Virtual<wbr>Machine<wbr>Clone<wbr>Customize<wbr>Windows<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8266,7 +8380,7 @@ below.
 <a href="#linux_options_python" style="color: inherit; text-decoration: inherit;">linux_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineclonecustomizelinuxoptions">Virtual<wbr>Machine<wbr>Clone<wbr>Customize<wbr>Linux<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualmachineclonecustomizelinuxoptions">Virtual<wbr>Machine<wbr>Clone<wbr>Customize<wbr>Linux<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -8274,7 +8388,7 @@ below.
 <a href="#network_interfaces_python" style="color: inherit; text-decoration: inherit;">network_<wbr>interfaces</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineclonecustomizenetworkinterface">Sequence[Virtual<wbr>Machine<wbr>Clone<wbr>Customize<wbr>Network<wbr>Interface<wbr>Args]</a></span>
+        <span class="property-type"><a href="#virtualmachineclonecustomizenetworkinterface">Sequence[Virtual<wbr>Machine<wbr>Clone<wbr>Customize<wbr>Network<wbr>Interface]</a></span>
     </dt>
     <dd>{{% md %}}A specification for a virtual NIC on this
 virtual machine. See network interface options
@@ -8293,7 +8407,7 @@ below.
 <a href="#windows_options_python" style="color: inherit; text-decoration: inherit;">windows_<wbr>options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineclonecustomizewindowsoptions">Virtual<wbr>Machine<wbr>Clone<wbr>Customize<wbr>Windows<wbr>Options<wbr>Args</a></span>
+        <span class="property-type"><a href="#virtualmachineclonecustomizewindowsoptions">Virtual<wbr>Machine<wbr>Clone<wbr>Customize<wbr>Windows<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

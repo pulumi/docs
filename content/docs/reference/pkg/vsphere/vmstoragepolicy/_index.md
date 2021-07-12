@@ -396,7 +396,7 @@ The VmStoragePolicy resource accepts the following [input]({{< relref "/docs/int
 <a href="#tagrules_go" style="color: inherit; text-decoration: inherit;">Tag<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vmstoragepolicytagrule">[]Vm<wbr>Storage<wbr>Policy<wbr>Tag<wbr>Rule</a></span>
+        <span class="property-type"><a href="#vmstoragepolicytagrule">[]Vm<wbr>Storage<wbr>Policy<wbr>Tag<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List of tag rules. The tag category and tags to be associated to this storage policy.
 {{% /md %}}</dd><dt class="property-optional"
@@ -721,7 +721,7 @@ The following state arguments are supported:
 <a href="#state_tagrules_go" style="color: inherit; text-decoration: inherit;">Tag<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vmstoragepolicytagrule">[]Vm<wbr>Storage<wbr>Policy<wbr>Tag<wbr>Rule</a></span>
+        <span class="property-type"><a href="#vmstoragepolicytagrule">[]Vm<wbr>Storage<wbr>Policy<wbr>Tag<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List of tag rules. The tag category and tags to be associated to this storage policy.
 {{% /md %}}</dd></dl>

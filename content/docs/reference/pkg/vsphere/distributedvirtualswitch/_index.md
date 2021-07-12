@@ -1464,7 +1464,7 @@ if changed.
 <a href="#hosts_go" style="color: inherit; text-decoration: inherit;">Hosts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributedvirtualswitchhost">[]Distributed<wbr>Virtual<wbr>Switch<wbr>Host</a></span>
+        <span class="property-type"><a href="#distributedvirtualswitchhost">[]Distributed<wbr>Virtual<wbr>Switch<wbr>Host<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Use the `host` block to declare a host specification. The
 options are:
@@ -1848,7 +1848,7 @@ ID when using private VLANs.
 <a href="#pvlanmappings_go" style="color: inherit; text-decoration: inherit;">Pvlan<wbr>Mappings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributedvirtualswitchpvlanmapping">[]Distributed<wbr>Virtual<wbr>Switch<wbr>Pvlan<wbr>Mapping</a></span>
+        <span class="property-type"><a href="#distributedvirtualswitchpvlanmapping">[]Distributed<wbr>Virtual<wbr>Switch<wbr>Pvlan<wbr>Mapping<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Use the `pvlan_mapping` block to declare a
 private VLAN mapping. The options are:
@@ -2006,7 +2006,7 @@ downgraded.
 <a href="#vlanranges_go" style="color: inherit; text-decoration: inherit;">Vlan<wbr>Ranges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributedvirtualswitchvlanrange">[]Distributed<wbr>Virtual<wbr>Switch<wbr>Vlan<wbr>Range</a></span>
+        <span class="property-type"><a href="#distributedvirtualswitchvlanrange">[]Distributed<wbr>Virtual<wbr>Switch<wbr>Vlan<wbr>Range<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Used to denote VLAN trunking. Use the `min_vlan`
 and `max_vlan` sub-arguments to define the tagged VLAN range. Multiple
@@ -5477,7 +5477,7 @@ if changed.
 <a href="#state_hosts_go" style="color: inherit; text-decoration: inherit;">Hosts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributedvirtualswitchhost">[]Distributed<wbr>Virtual<wbr>Switch<wbr>Host</a></span>
+        <span class="property-type"><a href="#distributedvirtualswitchhost">[]Distributed<wbr>Virtual<wbr>Switch<wbr>Host<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Use the `host` block to declare a host specification. The
 options are:
@@ -5861,7 +5861,7 @@ ID when using private VLANs.
 <a href="#state_pvlanmappings_go" style="color: inherit; text-decoration: inherit;">Pvlan<wbr>Mappings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributedvirtualswitchpvlanmapping">[]Distributed<wbr>Virtual<wbr>Switch<wbr>Pvlan<wbr>Mapping</a></span>
+        <span class="property-type"><a href="#distributedvirtualswitchpvlanmapping">[]Distributed<wbr>Virtual<wbr>Switch<wbr>Pvlan<wbr>Mapping<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Use the `pvlan_mapping` block to declare a
 private VLAN mapping. The options are:
@@ -6019,7 +6019,7 @@ downgraded.
 <a href="#state_vlanranges_go" style="color: inherit; text-decoration: inherit;">Vlan<wbr>Ranges</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#distributedvirtualswitchvlanrange">[]Distributed<wbr>Virtual<wbr>Switch<wbr>Vlan<wbr>Range</a></span>
+        <span class="property-type"><a href="#distributedvirtualswitchvlanrange">[]Distributed<wbr>Virtual<wbr>Switch<wbr>Vlan<wbr>Range<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Used to denote VLAN trunking. Use the `min_vlan`
 and `max_vlan` sub-arguments to define the tagged VLAN range. Multiple

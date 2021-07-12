@@ -1868,7 +1868,7 @@ changed.
 <a href="#state_ports_go" style="color: inherit; text-decoration: inherit;">Ports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hostportgroupport">[]Host<wbr>Port<wbr>Group<wbr>Port</a></span>
+        <span class="property-type"><a href="#hostportgroupport">[]Host<wbr>Port<wbr>Group<wbr>Port<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A list of ports that currently exist and are used on this port group.
 {{% /md %}}</dd><dt class="property-optional"
