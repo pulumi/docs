@@ -559,9 +559,8 @@ function split(input: pulumi.Input<string>): pulumi.Output<string[]> {
 
 ```python
 def split(input):
-    output = Output.from_input(input);
-    return output.apply(lambda v: v.split());
-}
+    output = Output.from_input(input)
+    return output.apply(lambda v: v.split())
 ```
 
 {{% /choosable %}}
