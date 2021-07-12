@@ -71,6 +71,8 @@ Explore the resources and functions of the google-native.compute/v1 module.
     <li><a href="route" title="Route"><span class="symbol resource"></span>Route</a></li>
     <li><a href="router" title="Router"><span class="symbol resource"></span>Router</a></li>
     <li><a href="securitypolicy" title="SecurityPolicy"><span class="symbol resource"></span>SecurityPolicy</a></li>
+    <li><a href="serviceattachment" title="ServiceAttachment"><span class="symbol resource"></span>ServiceAttachment</a></li>
+    <li><a href="serviceattachmentiampolicy" title="ServiceAttachmentIamPolicy"><span class="symbol resource"></span>ServiceAttachmentIamPolicy</a></li>
     <li><a href="snapshotiampolicy" title="SnapshotIamPolicy"><span class="symbol resource"></span>SnapshotIamPolicy</a></li>
     <li><a href="sslcertificate" title="SslCertificate"><span class="symbol resource"></span>SslCertificate</a></li>
     <li><a href="sslpolicy" title="SslPolicy"><span class="symbol resource"></span>SslPolicy</a></li>
@@ -151,6 +153,8 @@ Explore the resources and functions of the google-native.compute/v1 module.
     <li><a href="getroute" title="GetRoute"><span class="symbol function"></span>GetRoute</a></li>
     <li><a href="getrouter" title="GetRouter"><span class="symbol function"></span>GetRouter</a></li>
     <li><a href="getsecuritypolicy" title="GetSecurityPolicy"><span class="symbol function"></span>GetSecurityPolicy</a></li>
+    <li><a href="getserviceattachment" title="GetServiceAttachment"><span class="symbol function"></span>GetServiceAttachment</a></li>
+    <li><a href="getserviceattachmentiampolicy" title="GetServiceAttachmentIamPolicy"><span class="symbol function"></span>GetServiceAttachmentIamPolicy</a></li>
     <li><a href="getsnapshotiampolicy" title="GetSnapshotIamPolicy"><span class="symbol function"></span>GetSnapshotIamPolicy</a></li>
     <li><a href="getsslcertificate" title="GetSslCertificate"><span class="symbol function"></span>GetSslCertificate</a></li>
     <li><a href="getsslpolicy" title="GetSslPolicy"><span class="symbol function"></span>GetSslPolicy</a></li>
@@ -176,6 +180,6 @@ Explore the resources and functions of the google-native.compute/v1 module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.4.0</dd>
+	<dd>0.5.0</dd>
 </dl>
 
