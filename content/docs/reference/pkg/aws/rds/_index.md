@@ -15,6 +15,7 @@ Explore the resources and functions of the aws.rds module.
     <li><a href="clusterendpoint" title="ClusterEndpoint"><span class="symbol resource"></span>ClusterEndpoint</a></li>
     <li><a href="clusterinstance" title="ClusterInstance"><span class="symbol resource"></span>ClusterInstance</a></li>
     <li><a href="clusterparametergroup" title="ClusterParameterGroup"><span class="symbol resource"></span>ClusterParameterGroup</a></li>
+    <li><a href="clusterroleassociation" title="ClusterRoleAssociation"><span class="symbol resource"></span>ClusterRoleAssociation</a></li>
     <li><a href="clustersnapshot" title="ClusterSnapshot"><span class="symbol resource"></span>ClusterSnapshot</a></li>
     <li><a href="eventsubscription" title="EventSubscription"><span class="symbol resource"></span>EventSubscription</a></li>
     <li><a href="globalcluster" title="GlobalCluster"><span class="symbol resource"></span>GlobalCluster</a></li>
@@ -53,6 +54,6 @@ Explore the resources and functions of the aws.rds module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.11.0</dd>
+	<dd>4.12.0</dd>
 </dl>
 

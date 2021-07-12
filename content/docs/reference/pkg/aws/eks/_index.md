@@ -14,6 +14,7 @@ Explore the resources and functions of the aws.eks module.
     <li><a href="addon" title="Addon"><span class="symbol resource"></span>Addon</a></li>
     <li><a href="cluster" title="Cluster"><span class="symbol resource"></span>Cluster</a></li>
     <li><a href="fargateprofile" title="FargateProfile"><span class="symbol resource"></span>FargateProfile</a></li>
+    <li><a href="identityproviderconfig" title="IdentityProviderConfig"><span class="symbol resource"></span>IdentityProviderConfig</a></li>
     <li><a href="nodegroup" title="NodeGroup"><span class="symbol resource"></span>NodeGroup</a></li>
 </ul>
 
@@ -33,6 +34,6 @@ Explore the resources and functions of the aws.eks module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.11.0</dd>
+	<dd>4.12.0</dd>
 </dl>
 
