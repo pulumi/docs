@@ -61,6 +61,7 @@ A native Pulumi package for creating and managing Google Cloud resources.
     <li><a href="eventarc/" title="eventarc"><span class="symbol module"></span>eventarc</a></li>
     <li><a href="file/" title="file"><span class="symbol module"></span>file</a></li>
     <li><a href="firebase/" title="firebase"><span class="symbol module"></span>firebase</a></li>
+    <li><a href="firebaseappcheck/" title="firebaseappcheck"><span class="symbol module"></span>firebaseappcheck</a></li>
     <li><a href="firebasedatabase/" title="firebasedatabase"><span class="symbol module"></span>firebasedatabase</a></li>
     <li><a href="firebasehosting/" title="firebasehosting"><span class="symbol module"></span>firebasehosting</a></li>
     <li><a href="firebaseml/" title="firebaseml"><span class="symbol module"></span>firebaseml</a></li>
@@ -81,6 +82,7 @@ A native Pulumi package for creating and managing Google Cloud resources.
     <li><a href="monitoring/" title="monitoring"><span class="symbol module"></span>monitoring</a></li>
     <li><a href="networkconnectivity/" title="networkconnectivity"><span class="symbol module"></span>networkconnectivity</a></li>
     <li><a href="networkmanagement/" title="networkmanagement"><span class="symbol module"></span>networkmanagement</a></li>
+    <li><a href="networksecurity/" title="networksecurity"><span class="symbol module"></span>networksecurity</a></li>
     <li><a href="notebooks/" title="notebooks"><span class="symbol module"></span>notebooks</a></li>
     <li><a href="orgpolicy/" title="orgpolicy"><span class="symbol module"></span>orgpolicy</a></li>
     <li><a href="osconfig/" title="osconfig"><span class="symbol module"></span>osconfig</a></li>
@@ -88,6 +90,7 @@ A native Pulumi package for creating and managing Google Cloud resources.
     <li><a href="privateca/" title="privateca"><span class="symbol module"></span>privateca</a></li>
     <li><a href="pubsub/" title="pubsub"><span class="symbol module"></span>pubsub</a></li>
     <li><a href="pubsublite/" title="pubsublite"><span class="symbol module"></span>pubsublite</a></li>
+    <li><a href="recaptchaenterprise/" title="recaptchaenterprise"><span class="symbol module"></span>recaptchaenterprise</a></li>
     <li><a href="recommendationengine/" title="recommendationengine"><span class="symbol module"></span>recommendationengine</a></li>
     <li><a href="redis/" title="redis"><span class="symbol module"></span>redis</a></li>
     <li><a href="remotebuildexecution/" title="remotebuildexecution"><span class="symbol module"></span>remotebuildexecution</a></li>
@@ -127,6 +130,6 @@ A native Pulumi package for creating and managing Google Cloud resources.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.4.0</dd>
+	<dd>0.5.0</dd>
 </dl>
 

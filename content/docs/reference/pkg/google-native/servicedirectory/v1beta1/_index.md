@@ -34,6 +34,6 @@ Explore the resources and functions of the google-native.servicedirectory/v1beta
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.4.0</dd>
+	<dd>0.5.0</dd>
 </dl>
 

@@ -14,6 +14,7 @@ Explore the resources and functions of the google-native.metastore/v1beta module
     <li><a href="backup" title="Backup"><span class="symbol resource"></span>Backup</a></li>
     <li><a href="metadataimport" title="MetadataImport"><span class="symbol resource"></span>MetadataImport</a></li>
     <li><a href="service" title="Service"><span class="symbol resource"></span>Service</a></li>
+    <li><a href="servicebackupiampolicy" title="ServiceBackupIamPolicy"><span class="symbol resource"></span>ServiceBackupIamPolicy</a></li>
     <li><a href="serviceiampolicy" title="ServiceIamPolicy"><span class="symbol resource"></span>ServiceIamPolicy</a></li>
 </ul>
 
@@ -22,6 +23,7 @@ Explore the resources and functions of the google-native.metastore/v1beta module
     <li><a href="getbackup" title="GetBackup"><span class="symbol function"></span>GetBackup</a></li>
     <li><a href="getmetadataimport" title="GetMetadataImport"><span class="symbol function"></span>GetMetadataImport</a></li>
     <li><a href="getservice" title="GetService"><span class="symbol function"></span>GetService</a></li>
+    <li><a href="getservicebackupiampolicy" title="GetServiceBackupIamPolicy"><span class="symbol function"></span>GetServiceBackupIamPolicy</a></li>
     <li><a href="getserviceiampolicy" title="GetServiceIamPolicy"><span class="symbol function"></span>GetServiceIamPolicy</a></li>
 </ul>
 
@@ -32,6 +34,6 @@ Explore the resources and functions of the google-native.metastore/v1beta module
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.4.0</dd>
+	<dd>0.5.0</dd>
 </dl>
 

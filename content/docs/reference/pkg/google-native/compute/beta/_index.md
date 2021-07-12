@@ -16,6 +16,7 @@ Explore the resources and functions of the google-native.compute/beta module.
     <li><a href="backendbucket" title="BackendBucket"><span class="symbol resource"></span>BackendBucket</a></li>
     <li><a href="backendbucketiampolicy" title="BackendBucketIamPolicy"><span class="symbol resource"></span>BackendBucketIamPolicy</a></li>
     <li><a href="backendservice" title="BackendService"><span class="symbol resource"></span>BackendService</a></li>
+    <li><a href="backendserviceiampolicy" title="BackendServiceIamPolicy"><span class="symbol resource"></span>BackendServiceIamPolicy</a></li>
     <li><a href="disk" title="Disk"><span class="symbol resource"></span>Disk</a></li>
     <li><a href="diskiampolicy" title="DiskIamPolicy"><span class="symbol resource"></span>DiskIamPolicy</a></li>
     <li><a href="externalvpngateway" title="ExternalVpnGateway"><span class="symbol resource"></span>ExternalVpnGateway</a></li>
@@ -56,6 +57,7 @@ Explore the resources and functions of the google-native.compute/beta module.
     <li><a href="publicdelegatedprefix" title="PublicDelegatedPrefix"><span class="symbol resource"></span>PublicDelegatedPrefix</a></li>
     <li><a href="regionautoscaler" title="RegionAutoscaler"><span class="symbol resource"></span>RegionAutoscaler</a></li>
     <li><a href="regionbackendservice" title="RegionBackendService"><span class="symbol resource"></span>RegionBackendService</a></li>
+    <li><a href="regionbackendserviceiampolicy" title="RegionBackendServiceIamPolicy"><span class="symbol resource"></span>RegionBackendServiceIamPolicy</a></li>
     <li><a href="regioncommitment" title="RegionCommitment"><span class="symbol resource"></span>RegionCommitment</a></li>
     <li><a href="regiondisk" title="RegionDisk"><span class="symbol resource"></span>RegionDisk</a></li>
     <li><a href="regiondiskiampolicy" title="RegionDiskIamPolicy"><span class="symbol resource"></span>RegionDiskIamPolicy</a></li>
@@ -103,6 +105,7 @@ Explore the resources and functions of the google-native.compute/beta module.
     <li><a href="getbackendbucket" title="GetBackendBucket"><span class="symbol function"></span>GetBackendBucket</a></li>
     <li><a href="getbackendbucketiampolicy" title="GetBackendBucketIamPolicy"><span class="symbol function"></span>GetBackendBucketIamPolicy</a></li>
     <li><a href="getbackendservice" title="GetBackendService"><span class="symbol function"></span>GetBackendService</a></li>
+    <li><a href="getbackendserviceiampolicy" title="GetBackendServiceIamPolicy"><span class="symbol function"></span>GetBackendServiceIamPolicy</a></li>
     <li><a href="getdisk" title="GetDisk"><span class="symbol function"></span>GetDisk</a></li>
     <li><a href="getdiskiampolicy" title="GetDiskIamPolicy"><span class="symbol function"></span>GetDiskIamPolicy</a></li>
     <li><a href="getexternalvpngateway" title="GetExternalVpnGateway"><span class="symbol function"></span>GetExternalVpnGateway</a></li>
@@ -143,6 +146,7 @@ Explore the resources and functions of the google-native.compute/beta module.
     <li><a href="getpublicdelegatedprefix" title="GetPublicDelegatedPrefix"><span class="symbol function"></span>GetPublicDelegatedPrefix</a></li>
     <li><a href="getregionautoscaler" title="GetRegionAutoscaler"><span class="symbol function"></span>GetRegionAutoscaler</a></li>
     <li><a href="getregionbackendservice" title="GetRegionBackendService"><span class="symbol function"></span>GetRegionBackendService</a></li>
+    <li><a href="getregionbackendserviceiampolicy" title="GetRegionBackendServiceIamPolicy"><span class="symbol function"></span>GetRegionBackendServiceIamPolicy</a></li>
     <li><a href="getregioncommitment" title="GetRegionCommitment"><span class="symbol function"></span>GetRegionCommitment</a></li>
     <li><a href="getregiondisk" title="GetRegionDisk"><span class="symbol function"></span>GetRegionDisk</a></li>
     <li><a href="getregiondiskiampolicy" title="GetRegionDiskIamPolicy"><span class="symbol function"></span>GetRegionDiskIamPolicy</a></li>
@@ -190,6 +194,6 @@ Explore the resources and functions of the google-native.compute/beta module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.4.0</dd>
+	<dd>0.5.0</dd>
 </dl>
 

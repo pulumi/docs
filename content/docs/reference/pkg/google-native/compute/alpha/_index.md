@@ -16,6 +16,7 @@ Explore the resources and functions of the google-native.compute/alpha module.
     <li><a href="backendbucket" title="BackendBucket"><span class="symbol resource"></span>BackendBucket</a></li>
     <li><a href="backendbucketiampolicy" title="BackendBucketIamPolicy"><span class="symbol resource"></span>BackendBucketIamPolicy</a></li>
     <li><a href="backendservice" title="BackendService"><span class="symbol resource"></span>BackendService</a></li>
+    <li><a href="backendserviceiampolicy" title="BackendServiceIamPolicy"><span class="symbol resource"></span>BackendServiceIamPolicy</a></li>
     <li><a href="disk" title="Disk"><span class="symbol resource"></span>Disk</a></li>
     <li><a href="diskiampolicy" title="DiskIamPolicy"><span class="symbol resource"></span>DiskIamPolicy</a></li>
     <li><a href="externalvpngateway" title="ExternalVpnGateway"><span class="symbol resource"></span>ExternalVpnGateway</a></li>
@@ -23,6 +24,7 @@ Explore the resources and functions of the google-native.compute/alpha module.
     <li><a href="firewallpolicy" title="FirewallPolicy"><span class="symbol resource"></span>FirewallPolicy</a></li>
     <li><a href="firewallpolicyiampolicy" title="FirewallPolicyIamPolicy"><span class="symbol resource"></span>FirewallPolicyIamPolicy</a></li>
     <li><a href="forwardingrule" title="ForwardingRule"><span class="symbol resource"></span>ForwardingRule</a></li>
+    <li><a href="futurereservation" title="FutureReservation"><span class="symbol resource"></span>FutureReservation</a></li>
     <li><a href="globaladdress" title="GlobalAddress"><span class="symbol resource"></span>GlobalAddress</a></li>
     <li><a href="globalforwardingrule" title="GlobalForwardingRule"><span class="symbol resource"></span>GlobalForwardingRule</a></li>
     <li><a href="globalnetworkendpointgroup" title="GlobalNetworkEndpointGroup"><span class="symbol resource"></span>GlobalNetworkEndpointGroup</a></li>
@@ -48,6 +50,7 @@ Explore the resources and functions of the google-native.compute/alpha module.
     <li><a href="machineimage" title="MachineImage"><span class="symbol resource"></span>MachineImage</a></li>
     <li><a href="machineimageiampolicy" title="MachineImageIamPolicy"><span class="symbol resource"></span>MachineImageIamPolicy</a></li>
     <li><a href="network" title="Network"><span class="symbol resource"></span>Network</a></li>
+    <li><a href="networkedgesecurityservice" title="NetworkEdgeSecurityService"><span class="symbol resource"></span>NetworkEdgeSecurityService</a></li>
     <li><a href="networkendpointgroup" title="NetworkEndpointGroup"><span class="symbol resource"></span>NetworkEndpointGroup</a></li>
     <li><a href="networkfirewallpolicy" title="NetworkFirewallPolicy"><span class="symbol resource"></span>NetworkFirewallPolicy</a></li>
     <li><a href="networkfirewallpolicyiampolicy" title="NetworkFirewallPolicyIamPolicy"><span class="symbol resource"></span>NetworkFirewallPolicyIamPolicy</a></li>
@@ -61,6 +64,7 @@ Explore the resources and functions of the google-native.compute/alpha module.
     <li><a href="publicdelegatedprefix" title="PublicDelegatedPrefix"><span class="symbol resource"></span>PublicDelegatedPrefix</a></li>
     <li><a href="regionautoscaler" title="RegionAutoscaler"><span class="symbol resource"></span>RegionAutoscaler</a></li>
     <li><a href="regionbackendservice" title="RegionBackendService"><span class="symbol resource"></span>RegionBackendService</a></li>
+    <li><a href="regionbackendserviceiampolicy" title="RegionBackendServiceIamPolicy"><span class="symbol resource"></span>RegionBackendServiceIamPolicy</a></li>
     <li><a href="regioncommitment" title="RegionCommitment"><span class="symbol resource"></span>RegionCommitment</a></li>
     <li><a href="regiondisk" title="RegionDisk"><span class="symbol resource"></span>RegionDisk</a></li>
     <li><a href="regiondiskiampolicy" title="RegionDiskIamPolicy"><span class="symbol resource"></span>RegionDiskIamPolicy</a></li>
@@ -75,6 +79,7 @@ Explore the resources and functions of the google-native.compute/alpha module.
     <li><a href="regionnetworkfirewallpolicy" title="RegionNetworkFirewallPolicy"><span class="symbol resource"></span>RegionNetworkFirewallPolicy</a></li>
     <li><a href="regionnetworkfirewallpolicyiampolicy" title="RegionNetworkFirewallPolicyIamPolicy"><span class="symbol resource"></span>RegionNetworkFirewallPolicyIamPolicy</a></li>
     <li><a href="regionnotificationendpoint" title="RegionNotificationEndpoint"><span class="symbol resource"></span>RegionNotificationEndpoint</a></li>
+    <li><a href="regionsecuritypolicy" title="RegionSecurityPolicy"><span class="symbol resource"></span>RegionSecurityPolicy</a></li>
     <li><a href="regionsslcertificate" title="RegionSslCertificate"><span class="symbol resource"></span>RegionSslCertificate</a></li>
     <li><a href="regiontargethttpproxy" title="RegionTargetHttpProxy"><span class="symbol resource"></span>RegionTargetHttpProxy</a></li>
     <li><a href="regiontargethttpsproxy" title="RegionTargetHttpsProxy"><span class="symbol resource"></span>RegionTargetHttpsProxy</a></li>
@@ -118,6 +123,7 @@ Explore the resources and functions of the google-native.compute/alpha module.
     <li><a href="getbackendbucket" title="GetBackendBucket"><span class="symbol function"></span>GetBackendBucket</a></li>
     <li><a href="getbackendbucketiampolicy" title="GetBackendBucketIamPolicy"><span class="symbol function"></span>GetBackendBucketIamPolicy</a></li>
     <li><a href="getbackendservice" title="GetBackendService"><span class="symbol function"></span>GetBackendService</a></li>
+    <li><a href="getbackendserviceiampolicy" title="GetBackendServiceIamPolicy"><span class="symbol function"></span>GetBackendServiceIamPolicy</a></li>
     <li><a href="getdisk" title="GetDisk"><span class="symbol function"></span>GetDisk</a></li>
     <li><a href="getdiskiampolicy" title="GetDiskIamPolicy"><span class="symbol function"></span>GetDiskIamPolicy</a></li>
     <li><a href="getexternalvpngateway" title="GetExternalVpnGateway"><span class="symbol function"></span>GetExternalVpnGateway</a></li>
@@ -125,6 +131,7 @@ Explore the resources and functions of the google-native.compute/alpha module.
     <li><a href="getfirewallpolicy" title="GetFirewallPolicy"><span class="symbol function"></span>GetFirewallPolicy</a></li>
     <li><a href="getfirewallpolicyiampolicy" title="GetFirewallPolicyIamPolicy"><span class="symbol function"></span>GetFirewallPolicyIamPolicy</a></li>
     <li><a href="getforwardingrule" title="GetForwardingRule"><span class="symbol function"></span>GetForwardingRule</a></li>
+    <li><a href="getfuturereservation" title="GetFutureReservation"><span class="symbol function"></span>GetFutureReservation</a></li>
     <li><a href="getglobaladdress" title="GetGlobalAddress"><span class="symbol function"></span>GetGlobalAddress</a></li>
     <li><a href="getglobalforwardingrule" title="GetGlobalForwardingRule"><span class="symbol function"></span>GetGlobalForwardingRule</a></li>
     <li><a href="getglobalnetworkendpointgroup" title="GetGlobalNetworkEndpointGroup"><span class="symbol function"></span>GetGlobalNetworkEndpointGroup</a></li>
@@ -150,6 +157,7 @@ Explore the resources and functions of the google-native.compute/alpha module.
     <li><a href="getmachineimage" title="GetMachineImage"><span class="symbol function"></span>GetMachineImage</a></li>
     <li><a href="getmachineimageiampolicy" title="GetMachineImageIamPolicy"><span class="symbol function"></span>GetMachineImageIamPolicy</a></li>
     <li><a href="getnetwork" title="GetNetwork"><span class="symbol function"></span>GetNetwork</a></li>
+    <li><a href="getnetworkedgesecurityservice" title="GetNetworkEdgeSecurityService"><span class="symbol function"></span>GetNetworkEdgeSecurityService</a></li>
     <li><a href="getnetworkendpointgroup" title="GetNetworkEndpointGroup"><span class="symbol function"></span>GetNetworkEndpointGroup</a></li>
     <li><a href="getnetworkfirewallpolicy" title="GetNetworkFirewallPolicy"><span class="symbol function"></span>GetNetworkFirewallPolicy</a></li>
     <li><a href="getnetworkfirewallpolicyiampolicy" title="GetNetworkFirewallPolicyIamPolicy"><span class="symbol function"></span>GetNetworkFirewallPolicyIamPolicy</a></li>
@@ -163,6 +171,7 @@ Explore the resources and functions of the google-native.compute/alpha module.
     <li><a href="getpublicdelegatedprefix" title="GetPublicDelegatedPrefix"><span class="symbol function"></span>GetPublicDelegatedPrefix</a></li>
     <li><a href="getregionautoscaler" title="GetRegionAutoscaler"><span class="symbol function"></span>GetRegionAutoscaler</a></li>
     <li><a href="getregionbackendservice" title="GetRegionBackendService"><span class="symbol function"></span>GetRegionBackendService</a></li>
+    <li><a href="getregionbackendserviceiampolicy" title="GetRegionBackendServiceIamPolicy"><span class="symbol function"></span>GetRegionBackendServiceIamPolicy</a></li>
     <li><a href="getregioncommitment" title="GetRegionCommitment"><span class="symbol function"></span>GetRegionCommitment</a></li>
     <li><a href="getregiondisk" title="GetRegionDisk"><span class="symbol function"></span>GetRegionDisk</a></li>
     <li><a href="getregiondiskiampolicy" title="GetRegionDiskIamPolicy"><span class="symbol function"></span>GetRegionDiskIamPolicy</a></li>
@@ -177,6 +186,7 @@ Explore the resources and functions of the google-native.compute/alpha module.
     <li><a href="getregionnetworkfirewallpolicy" title="GetRegionNetworkFirewallPolicy"><span class="symbol function"></span>GetRegionNetworkFirewallPolicy</a></li>
     <li><a href="getregionnetworkfirewallpolicyiampolicy" title="GetRegionNetworkFirewallPolicyIamPolicy"><span class="symbol function"></span>GetRegionNetworkFirewallPolicyIamPolicy</a></li>
     <li><a href="getregionnotificationendpoint" title="GetRegionNotificationEndpoint"><span class="symbol function"></span>GetRegionNotificationEndpoint</a></li>
+    <li><a href="getregionsecuritypolicy" title="GetRegionSecurityPolicy"><span class="symbol function"></span>GetRegionSecurityPolicy</a></li>
     <li><a href="getregionsslcertificate" title="GetRegionSslCertificate"><span class="symbol function"></span>GetRegionSslCertificate</a></li>
     <li><a href="getregiontargethttpproxy" title="GetRegionTargetHttpProxy"><span class="symbol function"></span>GetRegionTargetHttpProxy</a></li>
     <li><a href="getregiontargethttpsproxy" title="GetRegionTargetHttpsProxy"><span class="symbol function"></span>GetRegionTargetHttpsProxy</a></li>
@@ -220,6 +230,6 @@ Explore the resources and functions of the google-native.compute/alpha module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.4.0</dd>
+	<dd>0.5.0</dd>
 </dl>
 
