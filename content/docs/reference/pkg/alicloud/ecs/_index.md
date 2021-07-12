@@ -24,6 +24,8 @@ Explore the resources and functions of the alicloud.ecs module.
     <li><a href="ecskeypair" title="EcsKeyPair"><span class="symbol resource"></span>EcsKeyPair</a></li>
     <li><a href="ecskeypairattachment" title="EcsKeyPairAttachment"><span class="symbol resource"></span>EcsKeyPairAttachment</a></li>
     <li><a href="ecslaunchtemplate" title="EcsLaunchTemplate"><span class="symbol resource"></span>EcsLaunchTemplate</a></li>
+    <li><a href="ecsnetworkinterface" title="EcsNetworkInterface"><span class="symbol resource"></span>EcsNetworkInterface</a></li>
+    <li><a href="ecsnetworkinterfaceattachment" title="EcsNetworkInterfaceAttachment"><span class="symbol resource"></span>EcsNetworkInterfaceAttachment</a></li>
     <li><a href="ecssnapshot" title="EcsSnapshot"><span class="symbol resource"></span>EcsSnapshot</a></li>
     <li><a href="eip" title="Eip"><span class="symbol resource"></span>Eip</a></li>
     <li><a href="eipassociation" title="EipAssociation"><span class="symbol resource"></span>EipAssociation</a></li>
@@ -53,6 +55,7 @@ Explore the resources and functions of the alicloud.ecs module.
     <li><a href="getecsdisks" title="GetEcsDisks"><span class="symbol function"></span>GetEcsDisks</a></li>
     <li><a href="getecskeypairs" title="GetEcsKeyPairs"><span class="symbol function"></span>GetEcsKeyPairs</a></li>
     <li><a href="getecslaunchtemplates" title="GetEcsLaunchTemplates"><span class="symbol function"></span>GetEcsLaunchTemplates</a></li>
+    <li><a href="getecsnetworkinterfaces" title="GetEcsNetworkInterfaces"><span class="symbol function"></span>GetEcsNetworkInterfaces</a></li>
     <li><a href="getecssnapshots" title="GetEcsSnapshots"><span class="symbol function"></span>GetEcsSnapshots</a></li>
     <li><a href="geteips" title="GetEips"><span class="symbol function"></span>GetEips</a></li>
     <li><a href="gethpcclusters" title="GetHpcClusters"><span class="symbol function"></span>GetHpcClusters</a></li>
@@ -76,6 +79,6 @@ Explore the resources and functions of the alicloud.ecs module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>3.2.0</dd>
+	<dd>3.3.0</dd>
 </dl>
 

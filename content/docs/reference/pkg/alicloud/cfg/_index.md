@@ -11,6 +11,10 @@ Explore the resources and functions of the alicloud.cfg module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
+    <li><a href="aggregatecompliancepack" title="AggregateCompliancePack"><span class="symbol resource"></span>AggregateCompliancePack</a></li>
+    <li><a href="aggregateconfigrule" title="AggregateConfigRule"><span class="symbol resource"></span>AggregateConfigRule</a></li>
+    <li><a href="aggregator" title="Aggregator"><span class="symbol resource"></span>Aggregator</a></li>
+    <li><a href="compliancepack" title="CompliancePack"><span class="symbol resource"></span>CompliancePack</a></li>
     <li><a href="configurationrecorder" title="ConfigurationRecorder"><span class="symbol resource"></span>ConfigurationRecorder</a></li>
     <li><a href="deliverychannel" title="DeliveryChannel"><span class="symbol resource"></span>DeliveryChannel</a></li>
     <li><a href="rule" title="Rule"><span class="symbol resource"></span>Rule</a></li>
@@ -18,6 +22,10 @@ Explore the resources and functions of the alicloud.cfg module.
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
+    <li><a href="getaggregatecompliancepacks" title="GetAggregateCompliancePacks"><span class="symbol function"></span>GetAggregateCompliancePacks</a></li>
+    <li><a href="getaggregateconfigrules" title="GetAggregateConfigRules"><span class="symbol function"></span>GetAggregateConfigRules</a></li>
+    <li><a href="getaggregators" title="GetAggregators"><span class="symbol function"></span>GetAggregators</a></li>
+    <li><a href="getcompliancepacks" title="GetCompliancePacks"><span class="symbol function"></span>GetCompliancePacks</a></li>
     <li><a href="getconfigurationrecorders" title="GetConfigurationRecorders"><span class="symbol function"></span>GetConfigurationRecorders</a></li>
     <li><a href="getdeliverychannels" title="GetDeliveryChannels"><span class="symbol function"></span>GetDeliveryChannels</a></li>
     <li><a href="getrules" title="GetRules"><span class="symbol function"></span>GetRules</a></li>
@@ -32,6 +40,6 @@ Explore the resources and functions of the alicloud.cfg module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>3.2.0</dd>
+	<dd>3.3.0</dd>
 </dl>
 
