@@ -140,6 +140,7 @@ const myproject = pulumi.output(aiven.getProject({
                 <span class="nx">payment_method</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                 <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                 <span class="nx">technical_emails</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+                <span class="nx">use_source_project_billing_group</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
                 <span class="nx">vat_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                 <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetProjectResult</code></pre></div>
 {{% /choosable %}}
@@ -332,6 +333,14 @@ upcoming maintenance updates or warnings about service instability. It is a good
 this up-to-date to be aware of any potential issues with your project.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="usesourceprojectbillinggroup_csharp">
+<a href="#usesourceprojectbillinggroup_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Source<wbr>Project<wbr>Billing<wbr>Group</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="vatid_csharp">
 <a href="#vatid_csharp" style="color: inherit; text-decoration: inherit;">Vat<wbr>Id</a>
 </span>
@@ -508,6 +517,14 @@ this project, e.g. "card".
 upcoming maintenance updates or warnings about service instability. It is a good practice to keep
 this up-to-date to be aware of any potential issues with your project.
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="usesourceprojectbillinggroup_go">
+<a href="#usesourceprojectbillinggroup_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Source<wbr>Project<wbr>Billing<wbr>Group</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vatid_go">
 <a href="#vatid_go" style="color: inherit; text-decoration: inherit;">Vat<wbr>Id</a>
@@ -686,6 +703,14 @@ upcoming maintenance updates or warnings about service instability. It is a good
 this up-to-date to be aware of any potential issues with your project.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="usesourceprojectbillinggroup_nodejs">
+<a href="#usesourceprojectbillinggroup_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Source<wbr>Project<wbr>Billing<wbr>Group</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="vatid_nodejs">
 <a href="#vatid_nodejs" style="color: inherit; text-decoration: inherit;">vat<wbr>Id</a>
 </span>
@@ -862,6 +887,14 @@ this project, e.g. "card".
 upcoming maintenance updates or warnings about service instability. It is a good practice to keep
 this up-to-date to be aware of any potential issues with your project.
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="use_source_project_billing_group_python">
+<a href="#use_source_project_billing_group_python" style="color: inherit; text-decoration: inherit;">use_<wbr>source_<wbr>project_<wbr>billing_<wbr>group</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vat_id_python">
 <a href="#vat_id_python" style="color: inherit; text-decoration: inherit;">vat_<wbr>id</a>
@@ -1055,6 +1088,14 @@ upcoming maintenance updates or warnings about service instability. It is a good
 this up-to-date to be aware of any potential issues with your project.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="usesourceprojectbillinggroup_csharp">
+<a href="#usesourceprojectbillinggroup_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Source<wbr>Project<wbr>Billing<wbr>Group</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="vatid_csharp">
 <a href="#vatid_csharp" style="color: inherit; text-decoration: inherit;">Vat<wbr>Id</a>
 </span>
@@ -1237,6 +1278,14 @@ services.
 upcoming maintenance updates or warnings about service instability. It is a good practice to keep
 this up-to-date to be aware of any potential issues with your project.
 {{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="usesourceprojectbillinggroup_go">
+<a href="#usesourceprojectbillinggroup_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Source<wbr>Project<wbr>Billing<wbr>Group</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vatid_go">
 <a href="#vatid_go" style="color: inherit; text-decoration: inherit;">Vat<wbr>Id</a>
@@ -1421,6 +1470,14 @@ upcoming maintenance updates or warnings about service instability. It is a good
 this up-to-date to be aware of any potential issues with your project.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="usesourceprojectbillinggroup_nodejs">
+<a href="#usesourceprojectbillinggroup_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Source<wbr>Project<wbr>Billing<wbr>Group</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="vatid_nodejs">
 <a href="#vatid_nodejs" style="color: inherit; text-decoration: inherit;">vat<wbr>Id</a>
 </span>
@@ -1603,6 +1660,14 @@ services.
 upcoming maintenance updates or warnings about service instability. It is a good practice to keep
 this up-to-date to be aware of any potential issues with your project.
 {{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="use_source_project_billing_group_python">
+<a href="#use_source_project_billing_group_python" style="color: inherit; text-decoration: inherit;">use_<wbr>source_<wbr>project_<wbr>billing_<wbr>group</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vat_id_python">
 <a href="#vat_id_python" style="color: inherit; text-decoration: inherit;">vat_<wbr>id</a>

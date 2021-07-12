@@ -137,6 +137,7 @@ const myserviceuser = aiven.getServiceUser({
                      <span class="nx">password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                      <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                      <span class="nx">redis_acl_categories</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+                     <span class="nx">redis_acl_channels</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
                      <span class="nx">redis_acl_commands</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
                      <span class="nx">redis_acl_keys</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
                      <span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -238,6 +239,14 @@ using reference as shown above to set up dependencies correctly.
     </dt>
     <dd>{{% md %}}Redis specific field, defines command category rules.
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="redisaclchannels_csharp">
+<a href="#redisaclchannels_csharp" style="color: inherit; text-decoration: inherit;">Redis<wbr>Acl<wbr>Channels</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="redisaclcommands_csharp">
 <a href="#redisaclcommands_csharp" style="color: inherit; text-decoration: inherit;">Redis<wbr>Acl<wbr>Commands</a>
@@ -341,6 +350,14 @@ using reference as shown above to set up dependencies correctly.
     <dd>{{% md %}}Redis specific field, defines command category rules.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="redisaclchannels_go">
+<a href="#redisaclchannels_go" style="color: inherit; text-decoration: inherit;">Redis<wbr>Acl<wbr>Channels</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="redisaclcommands_go">
 <a href="#redisaclcommands_go" style="color: inherit; text-decoration: inherit;">Redis<wbr>Acl<wbr>Commands</a>
 </span>
@@ -443,6 +460,14 @@ using reference as shown above to set up dependencies correctly.
     <dd>{{% md %}}Redis specific field, defines command category rules.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="redisaclchannels_nodejs">
+<a href="#redisaclchannels_nodejs" style="color: inherit; text-decoration: inherit;">redis<wbr>Acl<wbr>Channels</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="redisaclcommands_nodejs">
 <a href="#redisaclcommands_nodejs" style="color: inherit; text-decoration: inherit;">redis<wbr>Acl<wbr>Commands</a>
 </span>
@@ -544,6 +569,14 @@ using reference as shown above to set up dependencies correctly.
     </dt>
     <dd>{{% md %}}Redis specific field, defines command category rules.
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="redis_acl_channels_python">
+<a href="#redis_acl_channels_python" style="color: inherit; text-decoration: inherit;">redis_<wbr>acl_<wbr>channels</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="redis_acl_commands_python">
 <a href="#redis_acl_commands_python" style="color: inherit; text-decoration: inherit;">redis_<wbr>acl_<wbr>commands</a>
@@ -671,6 +704,14 @@ The following output properties are available:
     <dd>{{% md %}}Redis specific field, defines command category rules.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="redisaclchannels_csharp">
+<a href="#redisaclchannels_csharp" style="color: inherit; text-decoration: inherit;">Redis<wbr>Acl<wbr>Channels</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="redisaclcommands_csharp">
 <a href="#redisaclcommands_csharp" style="color: inherit; text-decoration: inherit;">Redis<wbr>Acl<wbr>Commands</a>
 </span>
@@ -778,6 +819,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Redis specific field, defines command category rules.
 {{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="redisaclchannels_go">
+<a href="#redisaclchannels_go" style="color: inherit; text-decoration: inherit;">Redis<wbr>Acl<wbr>Channels</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="redisaclcommands_go">
 <a href="#redisaclcommands_go" style="color: inherit; text-decoration: inherit;">Redis<wbr>Acl<wbr>Commands</a>
@@ -887,6 +936,14 @@ The following output properties are available:
     <dd>{{% md %}}Redis specific field, defines command category rules.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="redisaclchannels_nodejs">
+<a href="#redisaclchannels_nodejs" style="color: inherit; text-decoration: inherit;">redis<wbr>Acl<wbr>Channels</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="redisaclcommands_nodejs">
 <a href="#redisaclcommands_nodejs" style="color: inherit; text-decoration: inherit;">redis<wbr>Acl<wbr>Commands</a>
 </span>
@@ -994,6 +1051,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Redis specific field, defines command category rules.
 {{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="redis_acl_channels_python">
+<a href="#redis_acl_channels_python" style="color: inherit; text-decoration: inherit;">redis_<wbr>acl_<wbr>channels</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="redis_acl_commands_python">
 <a href="#redis_acl_commands_python" style="color: inherit; text-decoration: inherit;">redis_<wbr>acl_<wbr>commands</a>
