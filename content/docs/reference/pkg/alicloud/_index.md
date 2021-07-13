@@ -34,6 +34,7 @@ A Pulumi package for creating and managing AliCloud resources.
     <li><a href="dcdn/" title="dcdn"><span class="symbol module"></span>dcdn</a></li>
     <li><a href="ddos/" title="ddos"><span class="symbol module"></span>ddos</a></li>
     <li><a href="dds/" title="dds"><span class="symbol module"></span>dds</a></li>
+    <li><a href="directmail/" title="directmail"><span class="symbol module"></span>directmail</a></li>
     <li><a href="dms/" title="dms"><span class="symbol module"></span>dms</a></li>
     <li><a href="dns/" title="dns"><span class="symbol module"></span>dns</a></li>
     <li><a href="drds/" title="drds"><span class="symbol module"></span>drds</a></li>
@@ -105,6 +106,6 @@ A Pulumi package for creating and managing AliCloud resources.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>3.2.0</dd>
+	<dd>3.3.0</dd>
 </dl>
 

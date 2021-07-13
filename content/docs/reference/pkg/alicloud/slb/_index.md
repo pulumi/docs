@@ -12,6 +12,7 @@ Explore the resources and functions of the alicloud.slb module.
 <h2 id="resources">Resources</h2>
 <ul class="api">
     <li><a href="acl" title="Acl"><span class="symbol resource"></span>Acl</a></li>
+    <li><a href="applicationloadbalancer" title="ApplicationLoadBalancer"><span class="symbol resource"></span>ApplicationLoadBalancer</a></li>
     <li><a href="attachment" title="Attachment"><span class="symbol resource"></span>Attachment</a></li>
     <li><a href="backendserver" title="BackendServer"><span class="symbol resource"></span>BackendServer</a></li>
     <li><a href="cacertificate" title="CaCertificate"><span class="symbol resource"></span>CaCertificate</a></li>
@@ -27,6 +28,7 @@ Explore the resources and functions of the alicloud.slb module.
 <h2 id="functions">Functions</h2>
 <ul class="api">
     <li><a href="getacls" title="GetAcls"><span class="symbol function"></span>GetAcls</a></li>
+    <li><a href="getapplicationloadbalancers" title="GetApplicationLoadBalancers"><span class="symbol function"></span>GetApplicationLoadBalancers</a></li>
     <li><a href="getattachments" title="GetAttachments"><span class="symbol function"></span>GetAttachments</a></li>
     <li><a href="getbackendservers" title="GetBackendServers"><span class="symbol function"></span>GetBackendServers</a></li>
     <li><a href="getcacertificates" title="GetCaCertificates"><span class="symbol function"></span>GetCaCertificates</a></li>
@@ -49,6 +51,6 @@ Explore the resources and functions of the alicloud.slb module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>3.2.0</dd>
+	<dd>3.3.0</dd>
 </dl>
 
