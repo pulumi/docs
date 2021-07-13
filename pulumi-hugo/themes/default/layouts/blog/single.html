@@ -14,6 +14,8 @@
                         <h1 class="no-anchor"><a data-track="blog-title" href="{{ .Permalink }}">{{ .Title }}</a></h1>
                     {{ end }}
 
+                    <p>Posted on <time>{{ .Date.Format "Monday, Jan 2, 2006" }}</time>
+
                     <div class="flex items-center">
                         <span class="text-sm text-gray-700">
                             {{ partial "blog/authors.html" (dict "context" . "authors" .Params.authors) }}
@@ -23,7 +25,6 @@
                         {{ .Content }}
                     </section>
                     <div>
-                        <p class="text-gray-500">Posted on <time>{{ .Date.Format "Monday, Jan 2, 2006" }}</time>
                         {{ if .Params.tags }}
                         <ul class="m-0 p-0">
                             {{ range $tag := .Params.tags }}
