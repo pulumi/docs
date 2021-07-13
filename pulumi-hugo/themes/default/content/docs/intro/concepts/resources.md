@@ -1556,7 +1556,7 @@ this.registerOutputs({
 
 ```python
 self.register_outputs({
-    bucketDnsName: bucket.bucketDomainName
+    "bucketDnsName": bucket.bucketDomainName
 })
 ```
 
