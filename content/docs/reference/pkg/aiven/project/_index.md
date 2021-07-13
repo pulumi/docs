@@ -43,6 +43,7 @@ The Project resource allows the creation and management of Aiven Projects.
             <span class="nx">default_cloud</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">technical_emails</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+            <span class="nx">use_source_project_billing_group</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
             <span class="nx">vat_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">Project</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
@@ -314,6 +315,15 @@ services.
     <dd>{{% md %}}defines the email addresses that will receive alerts about 
 upcoming maintenance updates or warnings about service instability. It is a good practice to keep
 this up-to-date to be aware of any potential issues with your project.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="usesourceprojectbillinggroup_csharp">
+<a href="#usesourceprojectbillinggroup_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Source<wbr>Project<wbr>Billing<wbr>Group</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Use the same billing group that is used in source project.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="vatid_csharp">
@@ -470,6 +480,15 @@ services.
     <dd>{{% md %}}defines the email addresses that will receive alerts about 
 upcoming maintenance updates or warnings about service instability. It is a good practice to keep
 this up-to-date to be aware of any potential issues with your project.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="usesourceprojectbillinggroup_go">
+<a href="#usesourceprojectbillinggroup_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Source<wbr>Project<wbr>Billing<wbr>Group</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Use the same billing group that is used in source project.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="vatid_go">
@@ -626,6 +645,15 @@ services.
     <dd>{{% md %}}defines the email addresses that will receive alerts about 
 upcoming maintenance updates or warnings about service instability. It is a good practice to keep
 this up-to-date to be aware of any potential issues with your project.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="usesourceprojectbillinggroup_nodejs">
+<a href="#usesourceprojectbillinggroup_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Source<wbr>Project<wbr>Billing<wbr>Group</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Use the same billing group that is used in source project.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="vatid_nodejs">
@@ -782,6 +810,15 @@ services.
     <dd>{{% md %}}defines the email addresses that will receive alerts about 
 upcoming maintenance updates or warnings about service instability. It is a good practice to keep
 this up-to-date to be aware of any potential issues with your project.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="use_source_project_billing_group_python">
+<a href="#use_source_project_billing_group_python" style="color: inherit; text-decoration: inherit;">use_<wbr>source_<wbr>project_<wbr>billing_<wbr>group</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Use the same billing group that is used in source project.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="vat_id_python">
@@ -998,6 +1035,7 @@ Get an existing Project resource's state with the given name, ID, and optional e
         <span class="nx">payment_method</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">technical_emails</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+        <span class="nx">use_source_project_billing_group</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">vat_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Project</code></pre></div>
 {{% /choosable %}}
 
@@ -1281,6 +1319,15 @@ project, including all sub-resources.
     <dd>{{% md %}}defines the email addresses that will receive alerts about 
 upcoming maintenance updates or warnings about service instability. It is a good practice to keep
 this up-to-date to be aware of any potential issues with your project.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_usesourceprojectbillinggroup_csharp">
+<a href="#state_usesourceprojectbillinggroup_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Source<wbr>Project<wbr>Billing<wbr>Group</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Use the same billing group that is used in source project.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_vatid_csharp">
@@ -1466,6 +1513,15 @@ project, including all sub-resources.
     <dd>{{% md %}}defines the email addresses that will receive alerts about 
 upcoming maintenance updates or warnings about service instability. It is a good practice to keep
 this up-to-date to be aware of any potential issues with your project.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_usesourceprojectbillinggroup_go">
+<a href="#state_usesourceprojectbillinggroup_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Source<wbr>Project<wbr>Billing<wbr>Group</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Use the same billing group that is used in source project.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_vatid_go">
@@ -1651,6 +1707,15 @@ project, including all sub-resources.
     <dd>{{% md %}}defines the email addresses that will receive alerts about 
 upcoming maintenance updates or warnings about service instability. It is a good practice to keep
 this up-to-date to be aware of any potential issues with your project.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_usesourceprojectbillinggroup_nodejs">
+<a href="#state_usesourceprojectbillinggroup_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Source<wbr>Project<wbr>Billing<wbr>Group</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Use the same billing group that is used in source project.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_vatid_nodejs">
@@ -1836,6 +1901,15 @@ project, including all sub-resources.
     <dd>{{% md %}}defines the email addresses that will receive alerts about 
 upcoming maintenance updates or warnings about service instability. It is a good practice to keep
 this up-to-date to be aware of any potential issues with your project.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_use_source_project_billing_group_python">
+<a href="#state_use_source_project_billing_group_python" style="color: inherit; text-decoration: inherit;">use_<wbr>source_<wbr>project_<wbr>billing_<wbr>group</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Use the same billing group that is used in source project.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_vat_id_python">
