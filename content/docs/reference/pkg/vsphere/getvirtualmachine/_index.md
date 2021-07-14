@@ -190,6 +190,7 @@ const template = datacenter.apply(datacenter => vsphere.getVirtualMachine({
                         <span class="nx">storage_policy_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                         <span class="nx">swap_placement_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                         <span class="nx">sync_time_with_host</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                        <span class="nx">sync_time_with_host_periodically</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
                         <span class="nx">vapp</span><span class="p">:</span> <span class="nx">Optional[GetVirtualMachineVapp]</span> = None<span class="p">,</span>
                         <span class="nx">vbs_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
                         <span class="nx">vvtd_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
@@ -592,6 +593,14 @@ scan for disk attributes and controller types on. Default: `1`.
             title="Optional">
         <span id="synctimewithhost_csharp">
 <a href="#synctimewithhost_csharp" style="color: inherit; text-decoration: inherit;">Sync<wbr>Time<wbr>With<wbr>Host</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="synctimewithhostperiodically_csharp">
+<a href="#synctimewithhostperiodically_csharp" style="color: inherit; text-decoration: inherit;">Sync<wbr>Time<wbr>With<wbr>Host<wbr>Periodically</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
@@ -1005,6 +1014,14 @@ scan for disk attributes and controller types on. Default: `1`.
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="synctimewithhostperiodically_go">
+<a href="#synctimewithhostperiodically_go" style="color: inherit; text-decoration: inherit;">Sync<wbr>Time<wbr>With<wbr>Host<wbr>Periodically</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="vapp_go">
 <a href="#vapp_go" style="color: inherit; text-decoration: inherit;">Vapp</a>
 </span>
@@ -1412,6 +1429,14 @@ scan for disk attributes and controller types on. Default: `1`.
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="synctimewithhostperiodically_nodejs">
+<a href="#synctimewithhostperiodically_nodejs" style="color: inherit; text-decoration: inherit;">sync<wbr>Time<wbr>With<wbr>Host<wbr>Periodically</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="vapp_nodejs">
 <a href="#vapp_nodejs" style="color: inherit; text-decoration: inherit;">vapp</a>
 </span>
@@ -1813,6 +1838,14 @@ scan for disk attributes and controller types on. Default: `1`.
             title="Optional">
         <span id="sync_time_with_host_python">
 <a href="#sync_time_with_host_python" style="color: inherit; text-decoration: inherit;">sync_<wbr>time_<wbr>with_<wbr>host</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sync_time_with_host_periodically_python">
+<a href="#sync_time_with_host_periodically_python" style="color: inherit; text-decoration: inherit;">sync_<wbr>time_<wbr>with_<wbr>host_<wbr>periodically</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
@@ -2334,6 +2367,14 @@ virtual machine.
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="synctimewithhostperiodically_csharp">
+<a href="#synctimewithhostperiodically_csharp" style="color: inherit; text-decoration: inherit;">Sync<wbr>Time<wbr>With<wbr>Host<wbr>Periodically</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="vapp_csharp">
 <a href="#vapp_csharp" style="color: inherit; text-decoration: inherit;">Vapp</a>
 </span>
@@ -2834,6 +2875,14 @@ virtual machine.
             title="">
         <span id="synctimewithhost_go">
 <a href="#synctimewithhost_go" style="color: inherit; text-decoration: inherit;">Sync<wbr>Time<wbr>With<wbr>Host</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="synctimewithhostperiodically_go">
+<a href="#synctimewithhostperiodically_go" style="color: inherit; text-decoration: inherit;">Sync<wbr>Time<wbr>With<wbr>Host<wbr>Periodically</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
@@ -3346,6 +3395,14 @@ virtual machine.
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="synctimewithhostperiodically_nodejs">
+<a href="#synctimewithhostperiodically_nodejs" style="color: inherit; text-decoration: inherit;">sync<wbr>Time<wbr>With<wbr>Host<wbr>Periodically</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="vapp_nodejs">
 <a href="#vapp_nodejs" style="color: inherit; text-decoration: inherit;">vapp</a>
 </span>
@@ -3846,6 +3903,14 @@ virtual machine.
             title="">
         <span id="sync_time_with_host_python">
 <a href="#sync_time_with_host_python" style="color: inherit; text-decoration: inherit;">sync_<wbr>time_<wbr>with_<wbr>host</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="sync_time_with_host_periodically_python">
+<a href="#sync_time_with_host_periodically_python" style="color: inherit; text-decoration: inherit;">sync_<wbr>time_<wbr>with_<wbr>host_<wbr>periodically</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>

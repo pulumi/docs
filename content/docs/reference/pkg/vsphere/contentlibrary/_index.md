@@ -241,7 +241,7 @@ items.
 <a href="#publication_go" style="color: inherit; text-decoration: inherit;">Publication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentlibrarypublication">Content<wbr>Library<wbr>Publication</a></span>
+        <span class="property-type"><a href="#contentlibrarypublication">Content<wbr>Library<wbr>Publication<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Options to publish a local Content Library.
 {{% /md %}}</dd><dt class="property-optional"
@@ -250,7 +250,7 @@ items.
 <a href="#subscription_go" style="color: inherit; text-decoration: inherit;">Subscription</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentlibrarysubscription">Content<wbr>Library<wbr>Subscription</a></span>
+        <span class="property-type"><a href="#contentlibrarysubscription">Content<wbr>Library<wbr>Subscription<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Options to publish a local Content Library.
 {{% /md %}}</dd></dl>
@@ -616,7 +616,7 @@ items.
 <a href="#state_publication_go" style="color: inherit; text-decoration: inherit;">Publication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentlibrarypublication">Content<wbr>Library<wbr>Publication</a></span>
+        <span class="property-type"><a href="#contentlibrarypublication">Content<wbr>Library<wbr>Publication<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Options to publish a local Content Library.
 {{% /md %}}</dd><dt class="property-optional"
@@ -635,7 +635,7 @@ items.
 <a href="#state_subscription_go" style="color: inherit; text-decoration: inherit;">Subscription</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#contentlibrarysubscription">Content<wbr>Library<wbr>Subscription</a></span>
+        <span class="property-type"><a href="#contentlibrarysubscription">Content<wbr>Library<wbr>Subscription<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Options to publish a local Content Library.
 {{% /md %}}</dd></dl>

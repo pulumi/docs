@@ -741,7 +741,7 @@ The Vnic resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#ipv4_go" style="color: inherit; text-decoration: inherit;">Ipv4</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vnicipv4">Vnic<wbr>Ipv4</a></span>
+        <span class="property-type"><a href="#vnicipv4">Vnic<wbr>Ipv4Args</a></span>
     </dt>
     <dd>{{% md %}}IPv4 settings. Either this or `ipv6` needs to be set. See  ipv4 options below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -750,7 +750,7 @@ The Vnic resource accepts the following [input]({{< relref "/docs/intro/concepts
 <a href="#ipv6_go" style="color: inherit; text-decoration: inherit;">Ipv6</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vnicipv6">Vnic<wbr>Ipv6</a></span>
+        <span class="property-type"><a href="#vnicipv6">Vnic<wbr>Ipv6Args</a></span>
     </dt>
     <dd>{{% md %}}IPv6 settings. Either this or `ipv6` needs to be set. See  ipv6 options below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1270,7 +1270,7 @@ The following state arguments are supported:
 <a href="#state_ipv4_go" style="color: inherit; text-decoration: inherit;">Ipv4</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vnicipv4">Vnic<wbr>Ipv4</a></span>
+        <span class="property-type"><a href="#vnicipv4">Vnic<wbr>Ipv4Args</a></span>
     </dt>
     <dd>{{% md %}}IPv4 settings. Either this or `ipv6` needs to be set. See  ipv4 options below.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1279,7 +1279,7 @@ The following state arguments are supported:
 <a href="#state_ipv6_go" style="color: inherit; text-decoration: inherit;">Ipv6</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vnicipv6">Vnic<wbr>Ipv6</a></span>
+        <span class="property-type"><a href="#vnicipv6">Vnic<wbr>Ipv6Args</a></span>
     </dt>
     <dd>{{% md %}}IPv6 settings. Either this or `ipv6` needs to be set. See  ipv6 options below.
 {{% /md %}}</dd><dt class="property-optional"

@@ -1451,7 +1451,7 @@ set to `MaintenanceMode`. Default: `QuarantineMode`.
 <a href="#vsandiskgroups_go" style="color: inherit; text-decoration: inherit;">Vsan<wbr>Disk<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#computeclustervsandiskgroup">[]Compute<wbr>Cluster<wbr>Vsan<wbr>Disk<wbr>Group</a></span>
+        <span class="property-type"><a href="#computeclustervsandiskgroup">[]Compute<wbr>Cluster<wbr>Vsan<wbr>Disk<wbr>Group<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A list of disk UUIDs to add to the vSAN cluster.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4261,7 +4261,7 @@ set to `MaintenanceMode`. Default: `QuarantineMode`.
 <a href="#state_vsandiskgroups_go" style="color: inherit; text-decoration: inherit;">Vsan<wbr>Disk<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#computeclustervsandiskgroup">[]Compute<wbr>Cluster<wbr>Vsan<wbr>Disk<wbr>Group</a></span>
+        <span class="property-type"><a href="#computeclustervsandiskgroup">[]Compute<wbr>Cluster<wbr>Vsan<wbr>Disk<wbr>Group<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A list of disk UUIDs to add to the vSAN cluster.
 {{% /md %}}</dd><dt class="property-optional"

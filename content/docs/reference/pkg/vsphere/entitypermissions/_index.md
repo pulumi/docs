@@ -213,7 +213,7 @@ alphabetically on `user_or_group` for a better user experience.
 <a href="#permissions_go" style="color: inherit; text-decoration: inherit;">Permissions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#entitypermissionspermission">[]Entity<wbr>Permissions<wbr>Permission</a></span>
+        <span class="property-type"><a href="#entitypermissionspermission">[]Entity<wbr>Permissions<wbr>Permission<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The permissions to be given on this entity. Keep the permissions sorted
 alphabetically on `user_or_group` for a better user experience.
@@ -528,7 +528,7 @@ alphabetically on `user_or_group` for a better user experience.
 <a href="#state_permissions_go" style="color: inherit; text-decoration: inherit;">Permissions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#entitypermissionspermission">[]Entity<wbr>Permissions<wbr>Permission</a></span>
+        <span class="property-type"><a href="#entitypermissionspermission">[]Entity<wbr>Permissions<wbr>Permission<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The permissions to be given on this entity. Keep the permissions sorted
 alphabetically on `user_or_group` for a better user experience.
