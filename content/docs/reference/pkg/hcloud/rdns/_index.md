@@ -306,7 +306,7 @@ The Rdns resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The Floating IP the `ip_address` belongs to.
+    <dd>{{% md %}}The Floating IP the `ip_address` belongs to. Specify only one of `server_id`and `floating_ip_id`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serverid_csharp">
@@ -315,7 +315,7 @@ The Rdns resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The server the `ip_address` belongs to.
+    <dd>{{% md %}}The server the `ip_address` belongs to. Specify only one of `server_id`and `floating_ip_id`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -346,7 +346,7 @@ The Rdns resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The Floating IP the `ip_address` belongs to.
+    <dd>{{% md %}}The Floating IP the `ip_address` belongs to. Specify only one of `server_id`and `floating_ip_id`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serverid_go">
@@ -355,7 +355,7 @@ The Rdns resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The server the `ip_address` belongs to.
+    <dd>{{% md %}}The server the `ip_address` belongs to. Specify only one of `server_id`and `floating_ip_id`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -386,7 +386,7 @@ The Rdns resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The Floating IP the `ip_address` belongs to.
+    <dd>{{% md %}}The Floating IP the `ip_address` belongs to. Specify only one of `server_id`and `floating_ip_id`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serverid_nodejs">
@@ -395,7 +395,7 @@ The Rdns resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The server the `ip_address` belongs to.
+    <dd>{{% md %}}The server the `ip_address` belongs to. Specify only one of `server_id`and `floating_ip_id`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -426,7 +426,7 @@ The Rdns resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The Floating IP the `ip_address` belongs to.
+    <dd>{{% md %}}The Floating IP the `ip_address` belongs to. Specify only one of `server_id`and `floating_ip_id`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="server_id_python">
@@ -435,7 +435,7 @@ The Rdns resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The server the `ip_address` belongs to.
+    <dd>{{% md %}}The server the `ip_address` belongs to. Specify only one of `server_id`and `floating_ip_id`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -641,7 +641,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The Floating IP the `ip_address` belongs to.
+    <dd>{{% md %}}The Floating IP the `ip_address` belongs to. Specify only one of `server_id`and `floating_ip_id`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipaddress_csharp">
@@ -659,7 +659,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The server the `ip_address` belongs to.
+    <dd>{{% md %}}The server the `ip_address` belongs to. Specify only one of `server_id`and `floating_ip_id`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -681,7 +681,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The Floating IP the `ip_address` belongs to.
+    <dd>{{% md %}}The Floating IP the `ip_address` belongs to. Specify only one of `server_id`and `floating_ip_id`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipaddress_go">
@@ -699,7 +699,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The server the `ip_address` belongs to.
+    <dd>{{% md %}}The server the `ip_address` belongs to. Specify only one of `server_id`and `floating_ip_id`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -721,7 +721,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The Floating IP the `ip_address` belongs to.
+    <dd>{{% md %}}The Floating IP the `ip_address` belongs to. Specify only one of `server_id`and `floating_ip_id`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipaddress_nodejs">
@@ -739,7 +739,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The server the `ip_address` belongs to.
+    <dd>{{% md %}}The server the `ip_address` belongs to. Specify only one of `server_id`and `floating_ip_id`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -761,7 +761,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The Floating IP the `ip_address` belongs to.
+    <dd>{{% md %}}The Floating IP the `ip_address` belongs to. Specify only one of `server_id`and `floating_ip_id`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ip_address_python">
@@ -779,7 +779,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The server the `ip_address` belongs to.
+    <dd>{{% md %}}The server the `ip_address` belongs to. Specify only one of `server_id`and `floating_ip_id`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

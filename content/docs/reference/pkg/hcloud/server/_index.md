@@ -218,7 +218,8 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;int&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Firewall IDs the server should be attached to on creation.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iso_csharp">
 <a href="#iso_csharp" style="color: inherit; text-decoration: inherit;">Iso</a>
@@ -271,7 +272,8 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servernetwork">List&lt;Pulumi.<wbr>HCloud.<wbr>Inputs.<wbr>Server<wbr>Network<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Network the server should be attached to on creation. (Can be specified multiple times)
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rescue_csharp">
 <a href="#rescue_csharp" style="color: inherit; text-decoration: inherit;">Rescue</a>
@@ -346,7 +348,8 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">[]int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Firewall IDs the server should be attached to on creation.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iso_go">
 <a href="#iso_go" style="color: inherit; text-decoration: inherit;">Iso</a>
@@ -399,7 +402,8 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servernetwork">[]Server<wbr>Network<wbr>Type<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Network the server should be attached to on creation. (Can be specified multiple times)
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rescue_go">
 <a href="#rescue_go" style="color: inherit; text-decoration: inherit;">Rescue</a>
@@ -474,7 +478,8 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">number[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Firewall IDs the server should be attached to on creation.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iso_nodejs">
 <a href="#iso_nodejs" style="color: inherit; text-decoration: inherit;">iso</a>
@@ -527,7 +532,8 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servernetwork">Server<wbr>Network<wbr>Args[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Network the server should be attached to on creation. (Can be specified multiple times)
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rescue_nodejs">
 <a href="#rescue_nodejs" style="color: inherit; text-decoration: inherit;">rescue</a>
@@ -602,7 +608,8 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[int]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Firewall IDs the server should be attached to on creation.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iso_python">
 <a href="#iso_python" style="color: inherit; text-decoration: inherit;">iso</a>
@@ -655,7 +662,8 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servernetwork">Sequence[Server<wbr>Network<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Network the server should be attached to on creation. (Can be specified multiple times)
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rescue_python">
 <a href="#rescue_python" style="color: inherit; text-decoration: inherit;">rescue</a>
@@ -1100,7 +1108,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;int&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Firewall IDs the server should be attached to on creation.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_image_csharp">
 <a href="#state_image_csharp" style="color: inherit; text-decoration: inherit;">Image</a>
@@ -1189,7 +1198,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servernetwork">List&lt;Pulumi.<wbr>HCloud.<wbr>Inputs.<wbr>Server<wbr>Network<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Network the server should be attached to on creation. (Can be specified multiple times)
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rescue_csharp">
 <a href="#state_rescue_csharp" style="color: inherit; text-decoration: inherit;">Rescue</a>
@@ -1273,7 +1283,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">[]int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Firewall IDs the server should be attached to on creation.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_image_go">
 <a href="#state_image_go" style="color: inherit; text-decoration: inherit;">Image</a>
@@ -1362,7 +1373,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servernetwork">[]Server<wbr>Network<wbr>Type<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Network the server should be attached to on creation. (Can be specified multiple times)
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rescue_go">
 <a href="#state_rescue_go" style="color: inherit; text-decoration: inherit;">Rescue</a>
@@ -1446,7 +1458,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Firewall IDs the server should be attached to on creation.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_image_nodejs">
 <a href="#state_image_nodejs" style="color: inherit; text-decoration: inherit;">image</a>
@@ -1535,7 +1548,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servernetwork">Server<wbr>Network<wbr>Args[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Network the server should be attached to on creation. (Can be specified multiple times)
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rescue_nodejs">
 <a href="#state_rescue_nodejs" style="color: inherit; text-decoration: inherit;">rescue</a>
@@ -1619,7 +1633,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[int]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Firewall IDs the server should be attached to on creation.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_image_python">
 <a href="#state_image_python" style="color: inherit; text-decoration: inherit;">image</a>
@@ -1708,7 +1723,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servernetwork">Sequence[Server<wbr>Network<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Network the server should be attached to on creation. (Can be specified multiple times)
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rescue_python">
 <a href="#state_rescue_python" style="color: inherit; text-decoration: inherit;">rescue</a>
@@ -1776,7 +1792,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}ID of the network
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="aliasips_csharp">
 <a href="#aliasips_csharp" style="color: inherit; text-decoration: inherit;">Alias<wbr>Ips</a>
@@ -1784,7 +1801,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Alias IPs the server should have in the Network.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ip_csharp">
 <a href="#ip_csharp" style="color: inherit; text-decoration: inherit;">Ip</a>
@@ -1792,7 +1810,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specify the IP the server should get in the network
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="macaddress_csharp">
 <a href="#macaddress_csharp" style="color: inherit; text-decoration: inherit;">Mac<wbr>Address</a>
@@ -1800,7 +1819,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}(Optional, string) The MAC address the private interface of the server has
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1812,7 +1832,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}ID of the network
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="aliasips_go">
 <a href="#aliasips_go" style="color: inherit; text-decoration: inherit;">Alias<wbr>Ips</a>
@@ -1820,7 +1841,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Alias IPs the server should have in the Network.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ip_go">
 <a href="#ip_go" style="color: inherit; text-decoration: inherit;">Ip</a>
@@ -1828,7 +1850,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specify the IP the server should get in the network
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="macaddress_go">
 <a href="#macaddress_go" style="color: inherit; text-decoration: inherit;">Mac<wbr>Address</a>
@@ -1836,7 +1859,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}(Optional, string) The MAC address the private interface of the server has
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1848,7 +1872,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}ID of the network
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="aliasips_nodejs">
 <a href="#aliasips_nodejs" style="color: inherit; text-decoration: inherit;">alias<wbr>Ips</a>
@@ -1856,7 +1881,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Alias IPs the server should have in the Network.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ip_nodejs">
 <a href="#ip_nodejs" style="color: inherit; text-decoration: inherit;">ip</a>
@@ -1864,7 +1890,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specify the IP the server should get in the network
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="macaddress_nodejs">
 <a href="#macaddress_nodejs" style="color: inherit; text-decoration: inherit;">mac<wbr>Address</a>
@@ -1872,7 +1899,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}(Optional, string) The MAC address the private interface of the server has
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1884,7 +1912,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}ID of the network
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alias_ips_python">
 <a href="#alias_ips_python" style="color: inherit; text-decoration: inherit;">alias_<wbr>ips</a>
@@ -1892,7 +1921,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Alias IPs the server should have in the Network.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ip_python">
 <a href="#ip_python" style="color: inherit; text-decoration: inherit;">ip</a>
@@ -1900,7 +1930,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specify the IP the server should get in the network
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mac_address_python">
 <a href="#mac_address_python" style="color: inherit; text-decoration: inherit;">mac_<wbr>address</a>
@@ -1908,7 +1939,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}(Optional, string) The MAC address the private interface of the server has
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
