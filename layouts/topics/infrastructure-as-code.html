@@ -1,0 +1,174 @@
+{{ define "hero" }}
+    <header class="header-hero header-hero-glow">
+        <h1 class="text-center mb-10 text-5xl">{{ .Params.hero.title }}</h1>
+        <div class="header-hero-items container mx-auto">
+            <div class="text-lg pr-5">
+                {{ .Params.hero.body | markdownify }}
+                <div class="mt-10">
+                    <a href="#" class="btn">GET STARTED</a>
+                    <a href="#" class="btn">LEARN MORE</a>
+                </div>
+            </div>
+            <div>
+                {{ partial "code" (dict "code" .Params.hero.code "lang" "js" "mode" "dark" "chrome" true) }}
+            </div>
+        </div>
+    </header>
+{{ end }}
+
+{{ define "main" }}
+
+    <section class="mb-16 px-4">
+        <div class="container mx-auto">
+            <div class="lg:flex items-center justify-center my-4">
+                <a data-track="customer-logo" href="https://www.tableau.com/" target="_blank">
+                    <img class="mx-auto lg:mx-8 h-12 mx-8" src="/logos/customers/tableau_logo.png" alt="Tableau Software" title="Tableau Software">
+                </a>
+                <a data-track="customer-logo" href="https://mbrdna.com/" target="_blank">
+                    <img class="mx-auto lg:mx-8 mt-8 mb-4 lg:my-0 h-12 mx-8" src="/logos/customers/mercedes-benz-RDNA_logo.png" title="Mercedes-Benz Research and Development" alt="Mercedes-Benz Research and Development">
+                </a>
+                <a data-track="customer-logo" href="https://www.mindbodyonline.com/" target="_blank">
+                    <img class="mx-auto lg:mx-8 h-16 mx-8" src="/logos/customers/mindbody_logo.svg" alt="MindBody" title="MindBody">
+                </a>
+                <a data-track="customer-logo" href="https://www.nih.gov/" target="_blank">
+                    <img class="mx-auto mt-6 md:mt-0 lg:mx-8 h-10 mx-8" src="/logos/customers/nih.png" alt="National Institutes of Health" title="National Institutes of Health">
+                </a>
+            </div>
+            <div class="lg:flex items-center justify-center my-4">
+                <a data-track="customer-logo" href="https://www.linio.com/" target="_blank">
+                    <img class="mx-auto my-8 md:my-0 lg:mx-8 h-8 mx-8" src="/logos/customers/linio_logo.png" alt="Linio" title="Linio">
+                </a>
+                <a data-track="customer-logo" href="https://www.cockroachlabs.com/" target="_blank">
+                    <img class="mx-auto my-8 md:my-0 lg:mx-8 h-8 mx-8" src="/logos/customers/cockroach-labs_logo.png" alt="Cockroach Labs" title="Cockroach Labs">
+                </a>
+                <a data-track="customer-logo" href="https://www.sourcegraph.com/" target="_blank">
+                    <img class="mx-auto my-8 md:my-0 lg:mx-8 h-6 mx-8" src="/logos/customers/sourcegraph_logo.png" alt="Sourcegraph" title="Sourcegraph">
+                </a>
+                <a data-track="customer-logo" href="https://www.snopes.com/" target="_blank">
+                    <img class="mx-auto my-8 md:my-0 lg:mx-8 h-10 mx-8" src="/logos/customers/snopes_logo.png" alt="Snopes" title="Snopes">
+                </a>
+                <a data-track="customer-logo" href="https://www.lemonade.com/" target="_blank">
+                    <img class="mx-auto mt-6 md:mt-0 lg:mx-8 h-8 mx-8" src="/logos/customers/lemonade.svg" alt="Lemonade" title="Lemonade">
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="favorite-language" class="py-16 bg-gray-200 px-4">
+        <div class="container md:mx-auto md:flex">
+            <div class="w-6/12 pr-10">
+                <h2>
+                    <i class="fas fa-rocket"></i>
+                    Provisioning as Code
+                </h2>
+                <p class="mb-5">
+                    Provision and update infrastructure on any cloud using your favorite languages. Be
+                    productive with documentation integrated into your favorite editor, and leverage all
+                    capabilities of modern languages. Plan updates, preview changes before deployment,
+                    and track change history. New self-hosting capabilities bring Pulumi SaaS capabilities
+                    to your cloud account or on-premises.
+                </p>
+                <a href="#" class="btn">GET STARTED</a>
+                <a href="#" class="btn">LEARN MORE</a>
+            </div>
+            <div class="w-6/12">
+                <img src="/images/pulumi_code_scrn.jpg" />
+            </div>
+        </div>
+    </section>
+
+    <section id="favorite-language" class="py-16 bg-gray-200 px-4">
+        <div class="container md:mx-auto md:flex">
+            <div class="w-6/12 pr-10">
+                <img src="/images/pulumi_code_scrn.jpg" />
+            </div>
+            <div class="w-6/12">
+                <h2>
+                    <i class="fas fa-truck"></i>
+                    Delivery as Code
+                </h2>
+                <p class="mb-5">
+                    Achieve GitOps-style productivity to help you continuously deliver application and
+                    infrastructure changes across all your environments from DEV to PROD. New integrations
+                    let you work with your preferred CI/CD toolchain and source control management system.
+                    Improve velocity with familiar tools, and better visibility into infrastructure
+                    dependencies and provisioning status.
+                </p>
+                <a href="#" class="btn">GET STARTED</a>
+                <a href="#" class="btn">LEARN MORE</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="favorite-language" class="py-16 bg-gray-200 px-4">
+        <div class="container md:mx-auto md:flex">
+            <div class="w-6/12 pr-10">
+                <h2>
+                    <i class="fas fa-drafting-compass"></i>
+                    Architecture as Code
+                </h2>
+                <p class="mb-5">
+                    Stop reinventing the wheel with each new microservice component. Codify
+                    internal architectures and create self-service infrastructure for your
+                    teams. Benefit from an ecosystem of reusable libraries that implement best
+                    practices, or create your own building blocks. New multi-language library
+                    capabilities make it even easier to share infrastructure and accelerate development.
+                </p>
+                <a href="#" class="btn">GET STARTED</a>
+                <a href="#" class="btn">LEARN MORE</a>
+            </div>
+            <div class="w-6/12">
+                <img src="/images/pulumi_code_scrn.jpg" />
+            </div>
+        </div>
+    </section>
+
+    <section id="favorite-language" class="py-16 bg-gray-200 px-4">
+        <div class="container md:mx-auto md:flex">
+            <div class="w-6/12 pr-10">
+                <img src="/images/pulumi_code_scrn.jpg" />
+            </div>
+            <div class="w-6/12">
+                <h2>
+                    <i class="fas fa-shield-alt"></i>
+                    Policy as Code
+                </h2>
+                <p class="mb-5">
+                    Enforce policies for your deployments with complete auditing capabilities using Pulumi
+                    CrossGuard. Define security, compliance, cost controls, and best practices in your
+                    favorite languages to prevent mistakes from reaching production. Policy packs for
+                    all major clouds make getting started easy and policies can be organization-wide,
+                    or project, environment, and role-specific.
+                </p>
+                <a href="#" class="btn">GET STARTED</a>
+                <a href="#" class="btn">LEARN MORE</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="favorite-language" class="py-16 bg-gray-200 px-4">
+        <div class="container md:mx-auto md:flex">
+            <div class="w-6/12 pr-10">
+                <h2>
+                    <i class="fas fa-tasks"></i>
+                    Testing as Code
+                </h2>
+                <p class="mb-5">
+                    Apply your favorite testing techniques to ensure that infrastructure is correct before and
+                    after deployment. Pulumi now supports resource mocking and works with familiar test frameworks.
+                    Ephemeral environment support helps you spin-up copies of infrastructure, apply smoke tests,
+                    then tear-down resources - all in your CI/CD workflow.
+                </p>
+                <a href="#" class="btn">GET STARTED</a>
+                <a href="#" class="btn">LEARN MORE</a>
+            </div>
+            <div class="w-6/12">
+                <img src="/images/pulumi_code_scrn.jpg" />
+            </div>
+        </div>
+    </section>
+
+    {{ partial "get-started.html" . }}
+
+    {{ partial "form-section" (dict "form" .Params.contact_us_form) }}
+{{ end }}
