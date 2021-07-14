@@ -16,6 +16,7 @@ A Pulumi package for creating and managing confluent cloud resources.
 <ul class="api">
     <li><a href="apikey" title="ApiKey"><span class="symbol resource"></span>ApiKey</a></li>
     <li><a href="confluentenvironment" title="ConfluentEnvironment"><span class="symbol resource"></span>ConfluentEnvironment</a></li>
+    <li><a href="connector" title="Connector"><span class="symbol resource"></span>Connector</a></li>
     <li><a href="kafkacluster" title="KafkaCluster"><span class="symbol resource"></span>KafkaCluster</a></li>
     <li><a href="provider" title="Provider"><span class="symbol resource"></span>Provider</a></li>
     <li><a href="schemaregistry" title="SchemaRegistry"><span class="symbol resource"></span>SchemaRegistry</a></li>
@@ -31,6 +32,6 @@ A Pulumi package for creating and managing confluent cloud resources.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`confluent` Terraform Provider](https://github.com/Mongey/terraform-provider-confluent).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>0.1.0</dd>
+	<dd>0.1.1</dd>
 </dl>
 
