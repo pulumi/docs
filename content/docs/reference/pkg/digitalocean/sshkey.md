@@ -63,7 +63,35 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-digitalocean/sdk/v4/go/digitalocean"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+    "io/ioutil"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+        _default, err := digitalocean.NewSshKey(ctx, "sshkey", &digitalocean.SshKeyArgs{
+            PublicKey: pulumi.String(ioutil.ReadFile("/Users/myuser/.ssh/id_rsa.pub")),
+        })
+		_, err := digitalocean.NewDroplet(ctx, "web", &digitalocean.DropletArgs{
+			Image:  pulumi.String("ubuntu-18-04-x64"),
+			Region: pulumi.String("nyc2"),
+			Size:   pulumi.String("s-1vcpu-1gb"),
+            SshKeys: pulumi.StringArray{
+                _default.Fingerprint,
+            },
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 
 {{< /example >}}
 
