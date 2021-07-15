@@ -20,7 +20,7 @@ Running Kubernetes in production can be challenging. This past year, Pulumi has 
 ![Kubernetes has multiple audiences](cindy1.png)
 ![Kubernetes is complex](cindy2.png)
 
-Kubernetes is the standard multi-cloud platform for modern containerized applications. Usage has grown by 50% in just six months according to a [DZone article](https://dzone.com/articles/survey-reveals-rapid-growth-in-kubernetes-usage-se). There is also a strong trend for public cloud container adoption shifting to [Kubernetes](https://www.tigera.io/blog/top-6-kubernetes-trends-for-2019/).
+Kubernetes is the standard multi-cloud platform for modern containerized applications. Usage has grown by 50% in just six months according to a [DZone article](https://dzone.com/articles/survey-reveals-rapid-growth-in-kubernetes-usage-se). There is also a strong trend for public cloud container adoption shifting to [Kubernetes](https://www.tigera.io/blog/top-5-kubernetes-trends-for-2019/).
 
 Rapid adoption of a complex platform such as Kubernetes presents challenges. For example, enterprise teams can take six to twelve months to on-ramp to Kubernetes, containers, and the cloud before their application goes into production. Once deployed, misconfigured infrastructure accounts for 40 to 50% of [production outages](https://danluu.com/postmortem-lessons/).
 
