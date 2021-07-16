@@ -420,6 +420,7 @@ WebserverStackTests.cs:
 
 ```csharp
 using NUnit.Framework;
+using Pulumi.Utilities;
 
 namespace UnitTesting
 {
@@ -495,7 +496,7 @@ public async Task InstanceHasNameTag()
     var instance = resources.OfType<Instance>().FirstOrDefault();
     instance.Should().NotBeNull("EC2 Instance not found");
 
-    var tags = await instance.Tags.GetValueAsync();
+    var tags = await OutputUtilities.GetValueAsync(instance.Tags);
     tags.Should().NotBeNull("Tags are not defined");
     tags.Should().ContainKey("Name");
 }
@@ -570,7 +571,7 @@ public async Task InstanceMustNotUseInlineUserData()
     var instance = resources.OfType<Instance>().FirstOrDefault();
     instance.Should().NotBeNull("EC2 Instance not found");
 
-    var tags = await instance.UserData.GetValueAsync();
+    var tags = await OutputUtilities.GetValueAsync(instance.Tags);
     tags.Should().BeNull();
 }
 ```
@@ -648,8 +649,8 @@ public async Task SecurityGroupMustNotHaveSshPortsOpenToInternet()
 
     foreach (var securityGroup in resources.OfType<SecurityGroup>())
     {
-        var urn = await securityGroup.Urn.GetValueAsync();
-        var ingress = await securityGroup.Ingress.GetValueAsync();
+        var urn = await OutputUtilities.GetValueAsync(securityGroup.Urn);
+        var ingress = await OutputUtilities.GetValueAsync(securityGroup.Ingress);
         foreach (var rule in ingress)
         {
             (rule.FromPort == 22 && rule.CidrBlocks.Any(b => b == "0.0.0.0/0"))
