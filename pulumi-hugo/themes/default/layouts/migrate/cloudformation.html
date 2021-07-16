@@ -102,6 +102,6 @@ exports.publicHostName = server.publicDns;` }}
     {{ partial "get-started.html" . }}
 
     <div id="contact">
-        {{ partial "form-section" (dict "form" .Params.contact_us_form) }}
+        {{ partial "hand-raise-section" . }}
     </div>
 {{ end }}

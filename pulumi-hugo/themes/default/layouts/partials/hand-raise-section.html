@@ -1,0 +1,81 @@
+<div class="my-16">
+    <h2 class="text-center">Need Help?</h2>
+
+    <div class="container mx-auto lg:flex lg:flex-wrap">
+         <div class="lg:w-1/2 px-3 py-6">
+            <div class="card text-center p-6 relative">
+                <div class="icon-section">
+                    {{ partial "color-icon.html" (dict "icon" "code" "icon_color" "salmon") }}
+                </div>
+                <div>
+                    <h5>Need technical help?</h5>
+                </div>
+                <div class="description">
+                    <p>
+                        Use our Support Portal to get in touch.
+                    </p>
+                </div>
+                <div class="card-cta-btn">
+                    <a href="https://support.pulumi.com/" class="btn-primary">Submit support ticket</a>
+                </div>
+            </div>
+        </div>
+
+         <div class="lg:w-1/2 px-3 py-6">
+            <div class="card text-center p-6 relative">
+                <div class="icon-section">
+                    {{ partial "color-icon.html" (dict "icon" "rocketship" "icon_color" "violet") }}
+                </div>
+                <div>
+                    <h5>Need help getting started?</h5>
+                </div>
+                <div class="description">
+                    <p>
+                        Send us a note, and someone will reach out to help you.
+                    </p>
+                </div>
+                <div class="card-cta-btn">
+                    <a href="{{ relref . "/contact.md" }}?form=onboarding" class="btn-primary">Get help</a>
+                </div>
+            </div>
+        </div>
+
+         <div class="lg:w-1/2 px-3 py-6">
+            <div class="card text-center p-6 relative">
+                <div class="icon-section">
+                    {{ partial "color-icon.html" (dict "icon" "team" "icon_color" "blue") }}
+                </div>
+                <div>
+                    <h5>Want to speak with sales?</h5>
+                </div>
+                <div class="description">
+                    <p>
+                        Contact us -- we're happy to help.
+                    </p>
+                </div>
+                <div class="card-cta-btn">
+                    <a href="{{ relref . "/contact.md" }}?form=sales" class="btn-primary">Talk to sales</a>
+                </div>
+            </div>
+        </div>
+
+         <div class="lg:w-1/2 px-3 py-6">
+            <div class="card text-center p-6 relative">
+                <div class="icon-section">
+                    {{ partial "color-icon.html" (dict "icon" "pen" "icon_color" "yellow") }}
+                </div>
+                <div>
+                    <h5>Something else on your mind?</h5>
+                </div>
+                <div class="description">
+                    <p>
+                        Send us a note.
+                    </p>
+                </div>
+                <div class="card-cta-btn">
+                    <a href="{{ relref . "/contact.md" }}?form=general" class="btn-primary">Ask a question</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

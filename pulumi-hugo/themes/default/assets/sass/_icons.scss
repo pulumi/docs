@@ -5,7 +5,7 @@ $fa-font-path: "/fonts/fontawesome";
 @import "fontawesome/fa-regular.scss";
 @import "fontawesome/fa-brands.scss";
 
-@each $icon in "abstract-shapes" "accordion-closed" "accordion-open" "alert" "buildings" "clipboard" "clode-with-nodes" "cloud-with-nodes" "cloud" "clouds" "code-window" "code" "collab" "cycle" "download-from-cloud" "exchange" "eye" "gavel" "gear" "global" "guage" "hamburger-closed" "hamburger-open" "lightning" "lock" "monitor" "nodes-and-rays" "nodes" "pen" "program" "puzzle" "security" "shield" "type-cursor" {
+@each $icon in "team" "abstract-shapes" "accordion-closed" "accordion-open" "alert" "buildings" "clipboard" "clode-with-nodes" "cloud-with-nodes" "cloud" "clouds" "code-window" "code" "collab" "cycle" "download-from-cloud" "exchange" "eye" "gavel" "gear" "global" "guage" "hamburger-closed" "hamburger-open" "lightning" "lock" "monitor" "nodes-and-rays" "nodes" "pen" "program" "puzzle" "security" "shield" "type-cursor" {
     .icon-#{ $icon } {
         @apply rounded-full inline-block p-4 w-20 h-20;
 

@@ -1,15 +1,15 @@
-import { Component, Prop, State, h } from '@stencil/core';
-import { getQueryVariable } from '../../util/util';
+import { Component, Prop, State, h } from "@stencil/core";
+import { MultiSelectFormItem } from "../pulumi-multi-select-form/pulumi-multi-select-form";
+import { getQueryVariable } from "../../util/util";
 
 interface WebinarSessionItem {
     datetime: string;
     hubspot_form_id: string;
-    gotowebinar_key: string;
 }
 
 @Component({
-    tag: 'pulumi-webinar-form-select',
-    styleUrl: 'webinar-form-select.scss',
+    tag: "pulumi-webinar-form-select",
+    styleUrl: "webinar-form-select.scss",
     shadow: false
 })
 export class WebinarFormSelect {
@@ -25,25 +25,41 @@ export class WebinarFormSelect {
     @Prop()
     labelClass?: string;
 
-    // The parsed sessions string.
+    // The parsed and transformed session string.
     @State()
-    webinarSessions: WebinarSessionItem[];
+    parsedSessions: MultiSelectFormItem[];
 
-    // The currently selected session.
     @State()
-    selectedSession: WebinarSessionItem;
-
-    // When the form has been submitted we need to hide the form selector.
-    @State()
-    formSubmitted: boolean = false;
-
-    // The window event listener used to handle submitting form data to Segment.
-    private windowEventHandler: (this: Window, ev: MessageEvent) => any;
+    defaultFormId: string = "";
 
     // When the component loads we need to parse the session strings and turn the datetime
     // into a human friendly format.
     componentWillLoad() {
-        const parsedSessions: WebinarSessionItem[] = JSON.parse(this.sessions).map((session: WebinarSessionItem) => {
+        this.parsedSessions = this.transformSessionData(JSON.parse(this.sessions));
+
+        // Set the selector value if the `date` query parameter is set.
+        const dateQueryParam = getQueryVariable("date");
+        if (dateQueryParam) {
+            const queryParamDate = new Date(dateQueryParam);
+            if (isNaN(queryParamDate.getTime())) {
+                return;
+            }
+
+            const selectedSession = this.parsedSessions.find((session) => {
+                const sessionDate = new Date(session.key);
+                return sessionDate.getFullYear() === queryParamDate.getFullYear() &&
+                       sessionDate.getMonth() === queryParamDate.getMonth() &&
+                       sessionDate.getDate() === queryParamDate.getDate();
+            });
+
+            if (selectedSession) {
+                this.defaultFormId = selectedSession.hubspotFormId;
+            }
+        }
+    }
+
+    public transformSessionData(sessions: WebinarSessionItem[]): MultiSelectFormItem[] {
+        return sessions.map((session: WebinarSessionItem) => {
             const sessionDate = new Date(session.datetime);
 
             const options: Intl.DateTimeFormatOptions = {
@@ -55,82 +71,19 @@ export class WebinarFormSelect {
                 hour: "numeric",
                 minute: "2-digit"
             };
-            return { ...session, datetime: sessionDate.toLocaleString(undefined, options)};
+            return { hubspotFormId: session.hubspot_form_id, key: sessionDate.toLocaleString(undefined, options)};
         });
-
-        // Set the initial state.
-        this.webinarSessions = parsedSessions;
-
-        // Set the selector value if the `date` query parameter is set.
-        const dateQueryParam = getQueryVariable("date");
-        if (dateQueryParam) {
-            const queryParamDate = new Date(dateQueryParam);
-            if (isNaN(queryParamDate.getTime())) {
-                this.selectedSession = parsedSessions[0];
-            }
-
-            const selectedSession = parsedSessions.find((session) => {
-                const sessionDate = new Date(session.datetime);
-                return sessionDate.getFullYear() === queryParamDate.getFullYear() &&
-                       sessionDate.getMonth() === queryParamDate.getMonth() &&
-                       sessionDate.getDate() === queryParamDate.getDate();
-            });
-
-            this.selectedSession = selectedSession ? selectedSession : parsedSessions[0];
-        } else {
-            this.selectedSession = parsedSessions[0];
-        }
-    }
-
-    // After the form submits we should hide the session selector.
-    componentDidLoad() {
-        this.windowEventHandler = this.handleWindowMessage.bind(this);
-        window.addEventListener("message", this.windowEventHandler);
-    }
-
-    disconnectedCallback() {
-        window.removeEventListener("message", this.windowEventHandler);
-    }
-
-    // Handle an incoming window message.
-    private handleWindowMessage(event: MessageEvent) {
-        if (event.data.type === "hsFormCallback" && event.data.eventName === "onFormReady") {
-            const form = document.querySelector("form.hs-form") as HTMLFormElement;
-            form.addEventListener("submit", this.handleFormSubmit.bind(this));
-        }
-    }
-
-    // Set the formSubmitted to true when the form has been submitted.
-    private handleFormSubmit() {
-        this.formSubmitted = true;
-    }
-
-    // When the select input changes we need to update the state accordingly.
-    private handleSelectChange(hubspotFormID: string) {
-        this.selectedSession = this.webinarSessions.find((session) => session.hubspot_form_id === hubspotFormID);
     }
 
     render() {
-        const selectedFormId = this.selectedSession.hubspot_form_id;
         return (
-            <div>
-                { this.formSubmitted ? null :
-                    <span>
-                        <span class={this.labelClass || ""}>Pick a Session</span>
-                        <select class={this.selectClass || ""} onInput={(event: any) => this.handleSelectChange(event.target.value)}>
-                            {this.webinarSessions.map((session) => {
-                                const isSelected = session.hubspot_form_id === selectedFormId;
-                                return <option value={session.hubspot_form_id} selected={isSelected}>{session.datetime}</option>;
-                            })}
-                        </select>
-                    </span>
-                }
-                <pulumi-hubspot-form
-                    key={this.selectedSession.hubspot_form_id}
-                    form-id={this.selectedSession.hubspot_form_id}
-                    go-to-webinar-key={this.selectedSession.gotowebinar_key}
-                ></pulumi-hubspot-form>
-            </div>
+            <pulumi-multi-select-form
+                items={this.parsedSessions}
+                selectClass={this.selectClass}
+                labelClass={this.labelClass}
+                labelText="Pick A Session"
+                defaultFormId={this.defaultFormId}
+            />
         );
     }
 
