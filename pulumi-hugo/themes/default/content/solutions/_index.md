@@ -14,6 +14,8 @@ use_cases:
     items:
         - name: Shared services platforms
           case_studies:
+            - name: Atlassian
+              link: /case-studies/atlassian          
             - name: Mercedes-Benz
               link: /case-studies/mercedes-benz
             - name: Lemonade
