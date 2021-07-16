@@ -56,11 +56,11 @@ main:
     # URL for embedding a URL for ungated webinars.
     youtube_url: ""
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
-    sortable_date: 2021-07-29T08:00:00-07:00
+    sortable_date: 2021-07-28T08:00:00-07:00
     # Duration of the webinar.
     duration: "2 hours"
     # Datetime of the webinar.
-    datetime: "THU JUL 29th, 2021"
+    datetime: "THU JUL 28th, 2021"
     # Description of the webinar.
     description: |
         For app developers, setting up infrastructure can be the hardest part of getting their app into production. What if you could just configure infrastructure using the same language you’re using to build your app? Pulumi's Matty Stratton will show you how easy it is to use Pulumi and VS Code to set up Azure (or any cloud) using JavaScript/TypeScript.
