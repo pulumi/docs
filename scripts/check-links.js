@@ -284,6 +284,8 @@ function getDefaultExcludedKeywords() {
         "https://t.co",
         "https://www.akamai.com",
         "http://localhost:16686/search", // Local Jaeger endpoint presented in troubleshooting guide.
+        "https://ceph.io",
+        "https://www.pagerduty.com",
     ];
 }
 
