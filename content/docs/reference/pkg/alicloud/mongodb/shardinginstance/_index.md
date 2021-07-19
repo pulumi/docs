@@ -1982,6 +1982,15 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the shard-node.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="readonlyreplicas_csharp">
+<a href="#readonlyreplicas_csharp" style="color: inherit; text-decoration: inherit;">Readonly<wbr>Replicas</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of read-only nodes in shard node. Valid values: 0 to 5. Default value: 0.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2014,6 +2023,15 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the shard-node.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="readonlyreplicas_go">
+<a href="#readonlyreplicas_go" style="color: inherit; text-decoration: inherit;">Readonly<wbr>Replicas</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of read-only nodes in shard node. Valid values: 0 to 5. Default value: 0.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2046,6 +2064,15 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the shard-node.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="readonlyreplicas_nodejs">
+<a href="#readonlyreplicas_nodejs" style="color: inherit; text-decoration: inherit;">readonly<wbr>Replicas</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The number of read-only nodes in shard node. Valid values: 0 to 5. Default value: 0.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2078,6 +2105,15 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the shard-node.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="readonly_replicas_python">
+<a href="#readonly_replicas_python" style="color: inherit; text-decoration: inherit;">readonly_<wbr>replicas</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of read-only nodes in shard node. Valid values: 0 to 5. Default value: 0.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

@@ -309,7 +309,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of replica set nodes. Valid values: [3, 5, 7]
+    <dd>{{% md %}}Number of replica set nodes. Valid values: [1, 3, 5, 7]
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="securitygroupid_csharp">
@@ -515,7 +515,7 @@ The multiple zone ID can be retrieved by setting `multi` to "true" in the data s
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of replica set nodes. Valid values: [3, 5, 7]
+    <dd>{{% md %}}Number of replica set nodes. Valid values: [1, 3, 5, 7]
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="securitygroupid_go">
@@ -721,7 +721,7 @@ The multiple zone ID can be retrieved by setting `multi` to "true" in the data s
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Number of replica set nodes. Valid values: [3, 5, 7]
+    <dd>{{% md %}}Number of replica set nodes. Valid values: [1, 3, 5, 7]
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="securitygroupid_nodejs">
@@ -927,7 +927,7 @@ The multiple zone ID can be retrieved by setting `multi` to "true" in the data s
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of replica set nodes. Valid values: [3, 5, 7]
+    <dd>{{% md %}}Number of replica set nodes. Valid values: [1, 3, 5, 7]
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="security_group_id_python">
@@ -1455,7 +1455,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of replica set nodes. Valid values: [3, 5, 7]
+    <dd>{{% md %}}Number of replica set nodes. Valid values: [1, 3, 5, 7]
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_retentionperiod_csharp">
@@ -1688,7 +1688,7 @@ The multiple zone ID can be retrieved by setting `multi` to "true" in the data s
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of replica set nodes. Valid values: [3, 5, 7]
+    <dd>{{% md %}}Number of replica set nodes. Valid values: [1, 3, 5, 7]
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_retentionperiod_go">
@@ -1921,7 +1921,7 @@ The multiple zone ID can be retrieved by setting `multi` to "true" in the data s
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Number of replica set nodes. Valid values: [3, 5, 7]
+    <dd>{{% md %}}Number of replica set nodes. Valid values: [1, 3, 5, 7]
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_retentionperiod_nodejs">
@@ -2154,7 +2154,7 @@ The multiple zone ID can be retrieved by setting `multi` to "true" in the data s
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of replica set nodes. Valid values: [3, 5, 7]
+    <dd>{{% md %}}Number of replica set nodes. Valid values: [1, 3, 5, 7]
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_retention_period_python">

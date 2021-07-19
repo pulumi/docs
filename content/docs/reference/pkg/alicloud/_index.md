@@ -17,6 +17,7 @@ A Pulumi package for creating and managing AliCloud resources.
     <li><a href="actiontrail/" title="actiontrail"><span class="symbol module"></span>actiontrail</a></li>
     <li><a href="adb/" title="adb"><span class="symbol module"></span>adb</a></li>
     <li><a href="alikafka/" title="alikafka"><span class="symbol module"></span>alikafka</a></li>
+    <li><a href="amqp/" title="amqp"><span class="symbol module"></span>amqp</a></li>
     <li><a href="apigateway/" title="apigateway"><span class="symbol module"></span>apigateway</a></li>
     <li><a href="brain/" title="brain"><span class="symbol module"></span>brain</a></li>
     <li><a href="cas/" title="cas"><span class="symbol module"></span>cas</a></li>
@@ -45,6 +46,7 @@ A Pulumi package for creating and managing AliCloud resources.
     <li><a href="elasticsearch/" title="elasticsearch"><span class="symbol module"></span>elasticsearch</a></li>
     <li><a href="emr/" title="emr"><span class="symbol module"></span>emr</a></li>
     <li><a href="ess/" title="ess"><span class="symbol module"></span>ess</a></li>
+    <li><a href="eventbridge/" title="eventbridge"><span class="symbol module"></span>eventbridge</a></li>
     <li><a href="fc/" title="fc"><span class="symbol module"></span>fc</a></li>
     <li><a href="fnf/" title="fnf"><span class="symbol module"></span>fnf</a></li>
     <li><a href="ga/" title="ga"><span class="symbol module"></span>ga</a></li>
@@ -106,6 +108,6 @@ A Pulumi package for creating and managing AliCloud resources.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>3.3.0</dd>
+	<dd>3.4.0</dd>
 </dl>
 
