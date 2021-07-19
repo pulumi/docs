@@ -25,21 +25,66 @@ Use this data source to access information about an existing EventGrid Domain To
 
 {{< example csharp >}}
 
-Coming soon!
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = Output.Create(Azure.EventGrid.GetDomainTopic.InvokeAsync(new Azure.EventGrid.GetDomainTopicArgs
+        {
+            Name = "my-eventgrid-domain-topic",
+            ResourceGroupName = "example-resources",
+        }));
+    }
+
+}
+```
+
 
 {{< /example >}}
 
 
 {{< example go >}}
 
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/eventgrid"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := eventgrid.LookupDomainTopic(ctx, &eventgrid.LookupDomainTopicArgs{
+			Name:              "my-eventgrid-domain-topic",
+			ResourceGroupName: "example-resources",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 
 {{< /example >}}
 
 
 {{< example python >}}
 
-Coming soon!
+```python
+import pulumi
+import pulumi_azure as azure
+
+example = azure.eventgrid.get_domain_topic(name="my-eventgrid-domain-topic",
+    resource_group_name="example-resources")
+```
+
 
 {{< /example >}}
 

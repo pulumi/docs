@@ -73,16 +73,33 @@ class MyStack : Stack
                 },
             },
         });
+        var exampleZone = new Azure.PrivateDns.Zone("exampleZone", new Azure.PrivateDns.ZoneArgs
+        {
+            ResourceGroupName = exampleResourceGroup.Name,
+        });
+        var exampleZoneVirtualNetworkLink = new Azure.PrivateDns.ZoneVirtualNetworkLink("exampleZoneVirtualNetworkLink", new Azure.PrivateDns.ZoneVirtualNetworkLinkArgs
+        {
+            PrivateDnsZoneName = exampleZone.Name,
+            VirtualNetworkId = exampleVirtualNetwork.Id,
+            ResourceGroupName = exampleResourceGroup.Name,
+        });
         var exampleFlexibleServer = new Azure.PostgreSql.FlexibleServer("exampleFlexibleServer", new Azure.PostgreSql.FlexibleServerArgs
         {
             ResourceGroupName = exampleResourceGroup.Name,
             Location = exampleResourceGroup.Location,
             Version = "12",
             DelegatedSubnetId = exampleSubnet.Id,
+            PrivateDnsZoneId = exampleZone.Id,
             AdministratorLogin = "psqladminun",
             AdministratorPassword = "H@Sh1CoR3!",
             StorageMb = 32768,
             SkuName = "GP_Standard_D4s_v3",
+        }, new CustomResourceOptions
+        {
+            DependsOn = 
+            {
+                exampleZoneVirtualNetworkLink,
+            },
         });
     }
 
@@ -102,6 +119,7 @@ import (
 	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/core"
 	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/network"
 	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/postgresql"
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/privatedns"
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
@@ -147,16 +165,33 @@ func main() {
 		if err != nil {
 			return err
 		}
+		exampleZone, err := privatedns.NewZone(ctx, "exampleZone", &privatedns.ZoneArgs{
+			ResourceGroupName: exampleResourceGroup.Name,
+		})
+		if err != nil {
+			return err
+		}
+		exampleZoneVirtualNetworkLink, err := privatedns.NewZoneVirtualNetworkLink(ctx, "exampleZoneVirtualNetworkLink", &privatedns.ZoneVirtualNetworkLinkArgs{
+			PrivateDnsZoneName: exampleZone.Name,
+			VirtualNetworkId:   exampleVirtualNetwork.ID(),
+			ResourceGroupName:  exampleResourceGroup.Name,
+		})
+		if err != nil {
+			return err
+		}
 		_, err = postgresql.NewFlexibleServer(ctx, "exampleFlexibleServer", &postgresql.FlexibleServerArgs{
 			ResourceGroupName:     exampleResourceGroup.Name,
 			Location:              exampleResourceGroup.Location,
 			Version:               pulumi.String("12"),
 			DelegatedSubnetId:     exampleSubnet.ID(),
+			PrivateDnsZoneId:      exampleZone.ID(),
 			AdministratorLogin:    pulumi.String("psqladminun"),
 			AdministratorPassword: pulumi.String("H@Sh1CoR3!"),
 			StorageMb:             pulumi.Int(32768),
 			SkuName:               pulumi.String("GP_Standard_D4s_v3"),
-		})
+		}, pulumi.DependsOn([]pulumi.Resource{
+			exampleZoneVirtualNetworkLink,
+		}))
 		if err != nil {
 			return err
 		}
@@ -192,15 +227,22 @@ example_subnet = azure.network.Subnet("exampleSubnet",
             actions=["Microsoft.Network/virtualNetworks/subnets/join/action"],
         ),
     )])
+example_zone = azure.privatedns.Zone("exampleZone", resource_group_name=example_resource_group.name)
+example_zone_virtual_network_link = azure.privatedns.ZoneVirtualNetworkLink("exampleZoneVirtualNetworkLink",
+    private_dns_zone_name=example_zone.name,
+    virtual_network_id=example_virtual_network.id,
+    resource_group_name=example_resource_group.name)
 example_flexible_server = azure.postgresql.FlexibleServer("exampleFlexibleServer",
     resource_group_name=example_resource_group.name,
     location=example_resource_group.location,
     version="12",
     delegated_subnet_id=example_subnet.id,
+    private_dns_zone_id=example_zone.id,
     administrator_login="psqladminun",
     administrator_password="H@Sh1CoR3!",
     storage_mb=32768,
-    sku_name="GP_Standard_D4s_v3")
+    sku_name="GP_Standard_D4s_v3",
+    opts=pulumi.ResourceOptions(depends_on=[example_zone_virtual_network_link]))
 ```
 
 
@@ -233,15 +275,24 @@ const exampleSubnet = new azure.network.Subnet("exampleSubnet", {
         },
     }],
 });
+const exampleZone = new azure.privatedns.Zone("exampleZone", {resourceGroupName: exampleResourceGroup.name});
+const exampleZoneVirtualNetworkLink = new azure.privatedns.ZoneVirtualNetworkLink("exampleZoneVirtualNetworkLink", {
+    privateDnsZoneName: exampleZone.name,
+    virtualNetworkId: exampleVirtualNetwork.id,
+    resourceGroupName: exampleResourceGroup.name,
+});
 const exampleFlexibleServer = new azure.postgresql.FlexibleServer("exampleFlexibleServer", {
     resourceGroupName: exampleResourceGroup.name,
     location: exampleResourceGroup.location,
     version: "12",
     delegatedSubnetId: exampleSubnet.id,
+    privateDnsZoneId: exampleZone.id,
     administratorLogin: "psqladminun",
     administratorPassword: "H@Sh1CoR3!",
     storageMb: 32768,
     skuName: "GP_Standard_D4s_v3",
+}, {
+    dependsOn: [exampleZoneVirtualNetworkLink],
 });
 ```
 
@@ -278,6 +329,7 @@ const exampleFlexibleServer = new azure.postgresql.FlexibleServer("exampleFlexib
                    <span class="nx">maintenance_window</span><span class="p">:</span> <span class="nx">Optional[FlexibleServerMaintenanceWindowArgs]</span> = None<span class="p">,</span>
                    <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                    <span class="nx">point_in_time_restore_time_in_utc</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                   <span class="nx">private_dns_zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                    <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                    <span class="nx">sku_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                    <span class="nx">source_server_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -504,6 +556,15 @@ The FlexibleServer resource accepts the following [input]({{< relref "/docs/intr
     <dd>{{% md %}}The point in time to restore from `creation_source_server_id` when `create_mode` is `PointInTimeRestore`. Changing this forces a new PostgreSQL Flexible Server to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="privatednszoneid_csharp">
+<a href="#privatednszoneid_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Dns<wbr>Zone<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the private dns zone to create the PostgreSQL Flexible Server. Changing this forces a new PostgreSQL Flexible Server to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="skuname_csharp">
 <a href="#skuname_csharp" style="color: inherit; text-decoration: inherit;">Sku<wbr>Name</a>
 </span>
@@ -650,6 +711,15 @@ The FlexibleServer resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The point in time to restore from `creation_source_server_id` when `create_mode` is `PointInTimeRestore`. Changing this forces a new PostgreSQL Flexible Server to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="privatednszoneid_go">
+<a href="#privatednszoneid_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Dns<wbr>Zone<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the private dns zone to create the PostgreSQL Flexible Server. Changing this forces a new PostgreSQL Flexible Server to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="skuname_go">
@@ -800,6 +870,15 @@ The FlexibleServer resource accepts the following [input]({{< relref "/docs/intr
     <dd>{{% md %}}The point in time to restore from `creation_source_server_id` when `create_mode` is `PointInTimeRestore`. Changing this forces a new PostgreSQL Flexible Server to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="privatednszoneid_nodejs">
+<a href="#privatednszoneid_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Dns<wbr>Zone<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the private dns zone to create the PostgreSQL Flexible Server. Changing this forces a new PostgreSQL Flexible Server to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="skuname_nodejs">
 <a href="#skuname_nodejs" style="color: inherit; text-decoration: inherit;">sku<wbr>Name</a>
 </span>
@@ -946,6 +1025,15 @@ The FlexibleServer resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The point in time to restore from `creation_source_server_id` when `create_mode` is `PointInTimeRestore`. Changing this forces a new PostgreSQL Flexible Server to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="private_dns_zone_id_python">
+<a href="#private_dns_zone_id_python" style="color: inherit; text-decoration: inherit;">private_<wbr>dns_<wbr>zone_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ID of the private dns zone to create the PostgreSQL Flexible Server. Changing this forces a new PostgreSQL Flexible Server to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sku_name_python">
@@ -1193,6 +1281,7 @@ Get an existing FlexibleServer resource's state with the given name, ID, and opt
         <span class="nx">maintenance_window</span><span class="p">:</span> <span class="nx">Optional[FlexibleServerMaintenanceWindowArgs]</span> = None<span class="p">,</span>
         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">point_in_time_restore_time_in_utc</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">private_dns_zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">public_network_access_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">sku_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -1412,6 +1501,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The point in time to restore from `creation_source_server_id` when `create_mode` is `PointInTimeRestore`. Changing this forces a new PostgreSQL Flexible Server to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_privatednszoneid_csharp">
+<a href="#state_privatednszoneid_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Dns<wbr>Zone<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the private dns zone to create the PostgreSQL Flexible Server. Changing this forces a new PostgreSQL Flexible Server to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_publicnetworkaccessenabled_csharp">
 <a href="#state_publicnetworkaccessenabled_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Network<wbr>Access<wbr>Enabled</a>
 </span>
@@ -1585,6 +1683,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The point in time to restore from `creation_source_server_id` when `create_mode` is `PointInTimeRestore`. Changing this forces a new PostgreSQL Flexible Server to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_privatednszoneid_go">
+<a href="#state_privatednszoneid_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Dns<wbr>Zone<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the private dns zone to create the PostgreSQL Flexible Server. Changing this forces a new PostgreSQL Flexible Server to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_publicnetworkaccessenabled_go">
@@ -1762,6 +1869,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The point in time to restore from `creation_source_server_id` when `create_mode` is `PointInTimeRestore`. Changing this forces a new PostgreSQL Flexible Server to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_privatednszoneid_nodejs">
+<a href="#state_privatednszoneid_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Dns<wbr>Zone<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the private dns zone to create the PostgreSQL Flexible Server. Changing this forces a new PostgreSQL Flexible Server to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_publicnetworkaccessenabled_nodejs">
 <a href="#state_publicnetworkaccessenabled_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Network<wbr>Access<wbr>Enabled</a>
 </span>
@@ -1935,6 +2051,15 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The point in time to restore from `creation_source_server_id` when `create_mode` is `PointInTimeRestore`. Changing this forces a new PostgreSQL Flexible Server to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_private_dns_zone_id_python">
+<a href="#state_private_dns_zone_id_python" style="color: inherit; text-decoration: inherit;">private_<wbr>dns_<wbr>zone_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ID of the private dns zone to create the PostgreSQL Flexible Server. Changing this forces a new PostgreSQL Flexible Server to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_public_network_access_enabled_python">

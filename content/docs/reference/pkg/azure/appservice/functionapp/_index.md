@@ -284,7 +284,7 @@ func main() {
 		examplePlan, err := appservice.NewPlan(ctx, "examplePlan", &appservice.PlanArgs{
 			Location:          exampleResourceGroup.Location,
 			ResourceGroupName: exampleResourceGroup.Name,
-			Kind:              pulumi.String("FunctionApp"),
+			Kind:              pulumi.Any("FunctionApp"),
 			Sku: &appservice.PlanSkuArgs{
 				Tier: pulumi.String("Dynamic"),
 				Size: pulumi.String("Y1"),
@@ -468,7 +468,7 @@ func main() {
 		examplePlan, err := appservice.NewPlan(ctx, "examplePlan", &appservice.PlanArgs{
 			Location:          exampleResourceGroup.Location,
 			ResourceGroupName: exampleResourceGroup.Name,
-			Kind:              pulumi.String("Linux"),
+			Kind:              pulumi.Any("Linux"),
 			Reserved:          pulumi.Bool(true),
 			Sku: &appservice.PlanSkuArgs{
 				Tier: pulumi.String("Dynamic"),

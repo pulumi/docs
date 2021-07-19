@@ -179,7 +179,7 @@ func main() {
 			return err
 		}
 		opt0 := "Azure Spring Cloud Domain-Management"
-		exampleServicePrincipal, err := azuread.LookupServicePrincipal(ctx, &azuread.LookupServicePrincipalArgs{
+		exampleServicePrincipal, err := azuread.LookupServicePrincipal(ctx, &GetServicePrincipalArgs{
 			DisplayName: &opt0,
 		}, nil)
 		if err != nil {

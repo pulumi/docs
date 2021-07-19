@@ -153,9 +153,9 @@ func main() {
 		exampleVpnServerConfiguration, err := network.NewVpnServerConfiguration(ctx, "exampleVpnServerConfiguration", &network.VpnServerConfigurationArgs{
 			ResourceGroupName: exampleResourceGroup.Name,
 			Location:          exampleResourceGroup.Location,
-			VpnAuthenticationTypes: pulumi.String(pulumi.String{
-				pulumi.String("Certificate"),
-			}),
+			VpnAuthenticationTypes: pulumi.String{
+				"Certificate",
+			},
 			ClientRootCertificates: network.VpnServerConfigurationClientRootCertificateArray{
 				&network.VpnServerConfigurationClientRootCertificateArgs{
 					Name:           pulumi.String("DigiCert-Federated-ID-Root-CA"),

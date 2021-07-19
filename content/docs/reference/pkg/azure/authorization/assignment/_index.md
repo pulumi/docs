@@ -207,7 +207,7 @@ func main() {
 					Actions: pulumi.StringArray{
 						pulumi.String("Microsoft.Resources/subscriptions/resourceGroups/read"),
 					},
-					NotActions: []interface{}{},
+					NotActions: pulumi.StringArray{},
 				},
 			},
 			AssignableScopes: pulumi.StringArray{
@@ -374,7 +374,7 @@ func main() {
 					Actions: pulumi.StringArray{
 						pulumi.String("Microsoft.Resources/subscriptions/resourceGroups/read"),
 					},
-					NotActions: []interface{}{},
+					NotActions: pulumi.StringArray{},
 				},
 			},
 			AssignableScopes: pulumi.StringArray{
@@ -547,7 +547,7 @@ func main() {
 					Actions: pulumi.StringArray{
 						pulumi.String("Microsoft.Resources/subscriptions/resourceGroups/read"),
 					},
-					NotActions: []interface{}{},
+					NotActions: pulumi.StringArray{},
 				},
 			},
 			AssignableScopes: pulumi.StringArray{

@@ -1844,6 +1844,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Number of payload bytes to log (up to 8192).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="datamasking_csharp">
+<a href="#datamasking_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Masking</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#apidiagnosticbackendrequestdatamasking">Api<wbr>Diagnostic<wbr>Backend<wbr>Request<wbr>Data<wbr>Masking</a></span>
+    </dt>
+    <dd>{{% md %}}A `data_masking` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="headerstologs_csharp">
 <a href="#headerstologs_csharp" style="color: inherit; text-decoration: inherit;">Headers<wbr>To<wbr>Logs</a>
 </span>
@@ -1864,6 +1873,15 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of payload bytes to log (up to 8192).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="datamasking_go">
+<a href="#datamasking_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Masking</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#apidiagnosticbackendrequestdatamasking">Api<wbr>Diagnostic<wbr>Backend<wbr>Request<wbr>Data<wbr>Masking</a></span>
+    </dt>
+    <dd>{{% md %}}A `data_masking` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="headerstologs_go">
@@ -1888,6 +1906,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Number of payload bytes to log (up to 8192).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="datamasking_nodejs">
+<a href="#datamasking_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Masking</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#apidiagnosticbackendrequestdatamasking">Api<wbr>Diagnostic<wbr>Backend<wbr>Request<wbr>Data<wbr>Masking</a></span>
+    </dt>
+    <dd>{{% md %}}A `data_masking` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="headerstologs_nodejs">
 <a href="#headerstologs_nodejs" style="color: inherit; text-decoration: inherit;">headers<wbr>To<wbr>Logs</a>
 </span>
@@ -1910,6 +1937,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Number of payload bytes to log (up to 8192).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="data_masking_python">
+<a href="#data_masking_python" style="color: inherit; text-decoration: inherit;">data_<wbr>masking</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#apidiagnosticbackendrequestdatamasking">Api<wbr>Diagnostic<wbr>Backend<wbr>Request<wbr>Data<wbr>Masking</a></span>
+    </dt>
+    <dd>{{% md %}}A `data_masking` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="headers_to_logs_python">
 <a href="#headers_to_logs_python" style="color: inherit; text-decoration: inherit;">headers_<wbr>to_<wbr>logs</a>
 </span>
@@ -1917,6 +1953,276 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specifies a list of headers to log.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="apidiagnosticbackendrequestdatamasking">Api<wbr>Diagnostic<wbr>Backend<wbr>Request<wbr>Data<wbr>Masking</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="headers_csharp">
+<a href="#headers_csharp" style="color: inherit; text-decoration: inherit;">Headers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#apidiagnosticbackendrequestdatamaskingheader">List&lt;Api<wbr>Diagnostic<wbr>Backend<wbr>Request<wbr>Data<wbr>Masking<wbr>Header&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A `headers` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="queryparams_csharp">
+<a href="#queryparams_csharp" style="color: inherit; text-decoration: inherit;">Query<wbr>Params</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#apidiagnosticbackendrequestdatamaskingqueryparam">List&lt;Api<wbr>Diagnostic<wbr>Backend<wbr>Request<wbr>Data<wbr>Masking<wbr>Query<wbr>Param&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A `query_params` block as defined below.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="headers_go">
+<a href="#headers_go" style="color: inherit; text-decoration: inherit;">Headers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#apidiagnosticbackendrequestdatamaskingheader">[]Api<wbr>Diagnostic<wbr>Backend<wbr>Request<wbr>Data<wbr>Masking<wbr>Header</a></span>
+    </dt>
+    <dd>{{% md %}}A `headers` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="queryparams_go">
+<a href="#queryparams_go" style="color: inherit; text-decoration: inherit;">Query<wbr>Params</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#apidiagnosticbackendrequestdatamaskingqueryparam">[]Api<wbr>Diagnostic<wbr>Backend<wbr>Request<wbr>Data<wbr>Masking<wbr>Query<wbr>Param</a></span>
+    </dt>
+    <dd>{{% md %}}A `query_params` block as defined below.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="headers_nodejs">
+<a href="#headers_nodejs" style="color: inherit; text-decoration: inherit;">headers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#apidiagnosticbackendrequestdatamaskingheader">Api<wbr>Diagnostic<wbr>Backend<wbr>Request<wbr>Data<wbr>Masking<wbr>Header[]</a></span>
+    </dt>
+    <dd>{{% md %}}A `headers` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="queryparams_nodejs">
+<a href="#queryparams_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>Params</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#apidiagnosticbackendrequestdatamaskingqueryparam">Api<wbr>Diagnostic<wbr>Backend<wbr>Request<wbr>Data<wbr>Masking<wbr>Query<wbr>Param[]</a></span>
+    </dt>
+    <dd>{{% md %}}A `query_params` block as defined below.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="headers_python">
+<a href="#headers_python" style="color: inherit; text-decoration: inherit;">headers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#apidiagnosticbackendrequestdatamaskingheader">Sequence[Api<wbr>Diagnostic<wbr>Backend<wbr>Request<wbr>Data<wbr>Masking<wbr>Header]</a></span>
+    </dt>
+    <dd>{{% md %}}A `headers` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="query_params_python">
+<a href="#query_params_python" style="color: inherit; text-decoration: inherit;">query_<wbr>params</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#apidiagnosticbackendrequestdatamaskingqueryparam">Sequence[Api<wbr>Diagnostic<wbr>Backend<wbr>Request<wbr>Data<wbr>Masking<wbr>Query<wbr>Param]</a></span>
+    </dt>
+    <dd>{{% md %}}A `query_params` block as defined below.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="apidiagnosticbackendrequestdatamaskingheader">Api<wbr>Diagnostic<wbr>Backend<wbr>Request<wbr>Data<wbr>Masking<wbr>Header</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="mode_csharp">
+<a href="#mode_csharp" style="color: inherit; text-decoration: inherit;">Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The data masking mode. Possible values are `Mask` and `Hide` for `query_params`. The only possible value is `Mask` for `headers`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_csharp">
+<a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the header or the uery parameter to mask.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="mode_go">
+<a href="#mode_go" style="color: inherit; text-decoration: inherit;">Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The data masking mode. Possible values are `Mask` and `Hide` for `query_params`. The only possible value is `Mask` for `headers`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_go">
+<a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the header or the uery parameter to mask.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="mode_nodejs">
+<a href="#mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The data masking mode. Possible values are `Mask` and `Hide` for `query_params`. The only possible value is `Mask` for `headers`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_nodejs">
+<a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the header or the uery parameter to mask.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="mode_python">
+<a href="#mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The data masking mode. Possible values are `Mask` and `Hide` for `query_params`. The only possible value is `Mask` for `headers`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_python">
+<a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the header or the uery parameter to mask.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="apidiagnosticbackendrequestdatamaskingqueryparam">Api<wbr>Diagnostic<wbr>Backend<wbr>Request<wbr>Data<wbr>Masking<wbr>Query<wbr>Param</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="mode_csharp">
+<a href="#mode_csharp" style="color: inherit; text-decoration: inherit;">Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The data masking mode. Possible values are `Mask` and `Hide` for `query_params`. The only possible value is `Mask` for `headers`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_csharp">
+<a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the header or the uery parameter to mask.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="mode_go">
+<a href="#mode_go" style="color: inherit; text-decoration: inherit;">Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The data masking mode. Possible values are `Mask` and `Hide` for `query_params`. The only possible value is `Mask` for `headers`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_go">
+<a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the header or the uery parameter to mask.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="mode_nodejs">
+<a href="#mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The data masking mode. Possible values are `Mask` and `Hide` for `query_params`. The only possible value is `Mask` for `headers`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_nodejs">
+<a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the header or the uery parameter to mask.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="mode_python">
+<a href="#mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The data masking mode. Possible values are `Mask` and `Hide` for `query_params`. The only possible value is `Mask` for `headers`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_python">
+<a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the header or the uery parameter to mask.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1934,6 +2240,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Number of payload bytes to log (up to 8192).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="datamasking_csharp">
+<a href="#datamasking_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Masking</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#apidiagnosticbackendresponsedatamasking">Api<wbr>Diagnostic<wbr>Backend<wbr>Response<wbr>Data<wbr>Masking</a></span>
+    </dt>
+    <dd>{{% md %}}A `data_masking` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="headerstologs_csharp">
 <a href="#headerstologs_csharp" style="color: inherit; text-decoration: inherit;">Headers<wbr>To<wbr>Logs</a>
 </span>
@@ -1954,6 +2269,15 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of payload bytes to log (up to 8192).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="datamasking_go">
+<a href="#datamasking_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Masking</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#apidiagnosticbackendresponsedatamasking">Api<wbr>Diagnostic<wbr>Backend<wbr>Response<wbr>Data<wbr>Masking</a></span>
+    </dt>
+    <dd>{{% md %}}A `data_masking` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="headerstologs_go">
@@ -1978,6 +2302,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Number of payload bytes to log (up to 8192).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="datamasking_nodejs">
+<a href="#datamasking_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Masking</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#apidiagnosticbackendresponsedatamasking">Api<wbr>Diagnostic<wbr>Backend<wbr>Response<wbr>Data<wbr>Masking</a></span>
+    </dt>
+    <dd>{{% md %}}A `data_masking` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="headerstologs_nodejs">
 <a href="#headerstologs_nodejs" style="color: inherit; text-decoration: inherit;">headers<wbr>To<wbr>Logs</a>
 </span>
@@ -2000,6 +2333,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Number of payload bytes to log (up to 8192).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="data_masking_python">
+<a href="#data_masking_python" style="color: inherit; text-decoration: inherit;">data_<wbr>masking</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#apidiagnosticbackendresponsedatamasking">Api<wbr>Diagnostic<wbr>Backend<wbr>Response<wbr>Data<wbr>Masking</a></span>
+    </dt>
+    <dd>{{% md %}}A `data_masking` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="headers_to_logs_python">
 <a href="#headers_to_logs_python" style="color: inherit; text-decoration: inherit;">headers_<wbr>to_<wbr>logs</a>
 </span>
@@ -2007,6 +2349,276 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specifies a list of headers to log.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="apidiagnosticbackendresponsedatamasking">Api<wbr>Diagnostic<wbr>Backend<wbr>Response<wbr>Data<wbr>Masking</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="headers_csharp">
+<a href="#headers_csharp" style="color: inherit; text-decoration: inherit;">Headers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#apidiagnosticbackendresponsedatamaskingheader">List&lt;Api<wbr>Diagnostic<wbr>Backend<wbr>Response<wbr>Data<wbr>Masking<wbr>Header&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A `headers` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="queryparams_csharp">
+<a href="#queryparams_csharp" style="color: inherit; text-decoration: inherit;">Query<wbr>Params</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#apidiagnosticbackendresponsedatamaskingqueryparam">List&lt;Api<wbr>Diagnostic<wbr>Backend<wbr>Response<wbr>Data<wbr>Masking<wbr>Query<wbr>Param&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A `query_params` block as defined below.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="headers_go">
+<a href="#headers_go" style="color: inherit; text-decoration: inherit;">Headers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#apidiagnosticbackendresponsedatamaskingheader">[]Api<wbr>Diagnostic<wbr>Backend<wbr>Response<wbr>Data<wbr>Masking<wbr>Header</a></span>
+    </dt>
+    <dd>{{% md %}}A `headers` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="queryparams_go">
+<a href="#queryparams_go" style="color: inherit; text-decoration: inherit;">Query<wbr>Params</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#apidiagnosticbackendresponsedatamaskingqueryparam">[]Api<wbr>Diagnostic<wbr>Backend<wbr>Response<wbr>Data<wbr>Masking<wbr>Query<wbr>Param</a></span>
+    </dt>
+    <dd>{{% md %}}A `query_params` block as defined below.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="headers_nodejs">
+<a href="#headers_nodejs" style="color: inherit; text-decoration: inherit;">headers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#apidiagnosticbackendresponsedatamaskingheader">Api<wbr>Diagnostic<wbr>Backend<wbr>Response<wbr>Data<wbr>Masking<wbr>Header[]</a></span>
+    </dt>
+    <dd>{{% md %}}A `headers` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="queryparams_nodejs">
+<a href="#queryparams_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>Params</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#apidiagnosticbackendresponsedatamaskingqueryparam">Api<wbr>Diagnostic<wbr>Backend<wbr>Response<wbr>Data<wbr>Masking<wbr>Query<wbr>Param[]</a></span>
+    </dt>
+    <dd>{{% md %}}A `query_params` block as defined below.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="headers_python">
+<a href="#headers_python" style="color: inherit; text-decoration: inherit;">headers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#apidiagnosticbackendresponsedatamaskingheader">Sequence[Api<wbr>Diagnostic<wbr>Backend<wbr>Response<wbr>Data<wbr>Masking<wbr>Header]</a></span>
+    </dt>
+    <dd>{{% md %}}A `headers` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="query_params_python">
+<a href="#query_params_python" style="color: inherit; text-decoration: inherit;">query_<wbr>params</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#apidiagnosticbackendresponsedatamaskingqueryparam">Sequence[Api<wbr>Diagnostic<wbr>Backend<wbr>Response<wbr>Data<wbr>Masking<wbr>Query<wbr>Param]</a></span>
+    </dt>
+    <dd>{{% md %}}A `query_params` block as defined below.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="apidiagnosticbackendresponsedatamaskingheader">Api<wbr>Diagnostic<wbr>Backend<wbr>Response<wbr>Data<wbr>Masking<wbr>Header</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="mode_csharp">
+<a href="#mode_csharp" style="color: inherit; text-decoration: inherit;">Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The data masking mode. Possible values are `Mask` and `Hide` for `query_params`. The only possible value is `Mask` for `headers`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_csharp">
+<a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the header or the uery parameter to mask.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="mode_go">
+<a href="#mode_go" style="color: inherit; text-decoration: inherit;">Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The data masking mode. Possible values are `Mask` and `Hide` for `query_params`. The only possible value is `Mask` for `headers`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_go">
+<a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the header or the uery parameter to mask.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="mode_nodejs">
+<a href="#mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The data masking mode. Possible values are `Mask` and `Hide` for `query_params`. The only possible value is `Mask` for `headers`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_nodejs">
+<a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the header or the uery parameter to mask.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="mode_python">
+<a href="#mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The data masking mode. Possible values are `Mask` and `Hide` for `query_params`. The only possible value is `Mask` for `headers`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_python">
+<a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the header or the uery parameter to mask.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="apidiagnosticbackendresponsedatamaskingqueryparam">Api<wbr>Diagnostic<wbr>Backend<wbr>Response<wbr>Data<wbr>Masking<wbr>Query<wbr>Param</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="mode_csharp">
+<a href="#mode_csharp" style="color: inherit; text-decoration: inherit;">Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The data masking mode. Possible values are `Mask` and `Hide` for `query_params`. The only possible value is `Mask` for `headers`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_csharp">
+<a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the header or the uery parameter to mask.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="mode_go">
+<a href="#mode_go" style="color: inherit; text-decoration: inherit;">Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The data masking mode. Possible values are `Mask` and `Hide` for `query_params`. The only possible value is `Mask` for `headers`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_go">
+<a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the header or the uery parameter to mask.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="mode_nodejs">
+<a href="#mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The data masking mode. Possible values are `Mask` and `Hide` for `query_params`. The only possible value is `Mask` for `headers`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_nodejs">
+<a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the header or the uery parameter to mask.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="mode_python">
+<a href="#mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The data masking mode. Possible values are `Mask` and `Hide` for `query_params`. The only possible value is `Mask` for `headers`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_python">
+<a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the header or the uery parameter to mask.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2024,6 +2636,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Number of payload bytes to log (up to 8192).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="datamasking_csharp">
+<a href="#datamasking_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Masking</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#apidiagnosticfrontendrequestdatamasking">Api<wbr>Diagnostic<wbr>Frontend<wbr>Request<wbr>Data<wbr>Masking</a></span>
+    </dt>
+    <dd>{{% md %}}A `data_masking` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="headerstologs_csharp">
 <a href="#headerstologs_csharp" style="color: inherit; text-decoration: inherit;">Headers<wbr>To<wbr>Logs</a>
 </span>
@@ -2044,6 +2665,15 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of payload bytes to log (up to 8192).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="datamasking_go">
+<a href="#datamasking_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Masking</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#apidiagnosticfrontendrequestdatamasking">Api<wbr>Diagnostic<wbr>Frontend<wbr>Request<wbr>Data<wbr>Masking</a></span>
+    </dt>
+    <dd>{{% md %}}A `data_masking` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="headerstologs_go">
@@ -2068,6 +2698,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Number of payload bytes to log (up to 8192).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="datamasking_nodejs">
+<a href="#datamasking_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Masking</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#apidiagnosticfrontendrequestdatamasking">Api<wbr>Diagnostic<wbr>Frontend<wbr>Request<wbr>Data<wbr>Masking</a></span>
+    </dt>
+    <dd>{{% md %}}A `data_masking` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="headerstologs_nodejs">
 <a href="#headerstologs_nodejs" style="color: inherit; text-decoration: inherit;">headers<wbr>To<wbr>Logs</a>
 </span>
@@ -2090,6 +2729,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Number of payload bytes to log (up to 8192).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="data_masking_python">
+<a href="#data_masking_python" style="color: inherit; text-decoration: inherit;">data_<wbr>masking</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#apidiagnosticfrontendrequestdatamasking">Api<wbr>Diagnostic<wbr>Frontend<wbr>Request<wbr>Data<wbr>Masking</a></span>
+    </dt>
+    <dd>{{% md %}}A `data_masking` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="headers_to_logs_python">
 <a href="#headers_to_logs_python" style="color: inherit; text-decoration: inherit;">headers_<wbr>to_<wbr>logs</a>
 </span>
@@ -2097,6 +2745,276 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specifies a list of headers to log.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="apidiagnosticfrontendrequestdatamasking">Api<wbr>Diagnostic<wbr>Frontend<wbr>Request<wbr>Data<wbr>Masking</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="headers_csharp">
+<a href="#headers_csharp" style="color: inherit; text-decoration: inherit;">Headers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#apidiagnosticfrontendrequestdatamaskingheader">List&lt;Api<wbr>Diagnostic<wbr>Frontend<wbr>Request<wbr>Data<wbr>Masking<wbr>Header&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A `headers` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="queryparams_csharp">
+<a href="#queryparams_csharp" style="color: inherit; text-decoration: inherit;">Query<wbr>Params</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#apidiagnosticfrontendrequestdatamaskingqueryparam">List&lt;Api<wbr>Diagnostic<wbr>Frontend<wbr>Request<wbr>Data<wbr>Masking<wbr>Query<wbr>Param&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A `query_params` block as defined below.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="headers_go">
+<a href="#headers_go" style="color: inherit; text-decoration: inherit;">Headers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#apidiagnosticfrontendrequestdatamaskingheader">[]Api<wbr>Diagnostic<wbr>Frontend<wbr>Request<wbr>Data<wbr>Masking<wbr>Header</a></span>
+    </dt>
+    <dd>{{% md %}}A `headers` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="queryparams_go">
+<a href="#queryparams_go" style="color: inherit; text-decoration: inherit;">Query<wbr>Params</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#apidiagnosticfrontendrequestdatamaskingqueryparam">[]Api<wbr>Diagnostic<wbr>Frontend<wbr>Request<wbr>Data<wbr>Masking<wbr>Query<wbr>Param</a></span>
+    </dt>
+    <dd>{{% md %}}A `query_params` block as defined below.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="headers_nodejs">
+<a href="#headers_nodejs" style="color: inherit; text-decoration: inherit;">headers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#apidiagnosticfrontendrequestdatamaskingheader">Api<wbr>Diagnostic<wbr>Frontend<wbr>Request<wbr>Data<wbr>Masking<wbr>Header[]</a></span>
+    </dt>
+    <dd>{{% md %}}A `headers` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="queryparams_nodejs">
+<a href="#queryparams_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>Params</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#apidiagnosticfrontendrequestdatamaskingqueryparam">Api<wbr>Diagnostic<wbr>Frontend<wbr>Request<wbr>Data<wbr>Masking<wbr>Query<wbr>Param[]</a></span>
+    </dt>
+    <dd>{{% md %}}A `query_params` block as defined below.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="headers_python">
+<a href="#headers_python" style="color: inherit; text-decoration: inherit;">headers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#apidiagnosticfrontendrequestdatamaskingheader">Sequence[Api<wbr>Diagnostic<wbr>Frontend<wbr>Request<wbr>Data<wbr>Masking<wbr>Header]</a></span>
+    </dt>
+    <dd>{{% md %}}A `headers` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="query_params_python">
+<a href="#query_params_python" style="color: inherit; text-decoration: inherit;">query_<wbr>params</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#apidiagnosticfrontendrequestdatamaskingqueryparam">Sequence[Api<wbr>Diagnostic<wbr>Frontend<wbr>Request<wbr>Data<wbr>Masking<wbr>Query<wbr>Param]</a></span>
+    </dt>
+    <dd>{{% md %}}A `query_params` block as defined below.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="apidiagnosticfrontendrequestdatamaskingheader">Api<wbr>Diagnostic<wbr>Frontend<wbr>Request<wbr>Data<wbr>Masking<wbr>Header</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="mode_csharp">
+<a href="#mode_csharp" style="color: inherit; text-decoration: inherit;">Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The data masking mode. Possible values are `Mask` and `Hide` for `query_params`. The only possible value is `Mask` for `headers`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_csharp">
+<a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the header or the uery parameter to mask.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="mode_go">
+<a href="#mode_go" style="color: inherit; text-decoration: inherit;">Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The data masking mode. Possible values are `Mask` and `Hide` for `query_params`. The only possible value is `Mask` for `headers`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_go">
+<a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the header or the uery parameter to mask.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="mode_nodejs">
+<a href="#mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The data masking mode. Possible values are `Mask` and `Hide` for `query_params`. The only possible value is `Mask` for `headers`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_nodejs">
+<a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the header or the uery parameter to mask.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="mode_python">
+<a href="#mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The data masking mode. Possible values are `Mask` and `Hide` for `query_params`. The only possible value is `Mask` for `headers`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_python">
+<a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the header or the uery parameter to mask.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="apidiagnosticfrontendrequestdatamaskingqueryparam">Api<wbr>Diagnostic<wbr>Frontend<wbr>Request<wbr>Data<wbr>Masking<wbr>Query<wbr>Param</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="mode_csharp">
+<a href="#mode_csharp" style="color: inherit; text-decoration: inherit;">Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The data masking mode. Possible values are `Mask` and `Hide` for `query_params`. The only possible value is `Mask` for `headers`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_csharp">
+<a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the header or the uery parameter to mask.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="mode_go">
+<a href="#mode_go" style="color: inherit; text-decoration: inherit;">Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The data masking mode. Possible values are `Mask` and `Hide` for `query_params`. The only possible value is `Mask` for `headers`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_go">
+<a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the header or the uery parameter to mask.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="mode_nodejs">
+<a href="#mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The data masking mode. Possible values are `Mask` and `Hide` for `query_params`. The only possible value is `Mask` for `headers`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_nodejs">
+<a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the header or the uery parameter to mask.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="mode_python">
+<a href="#mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The data masking mode. Possible values are `Mask` and `Hide` for `query_params`. The only possible value is `Mask` for `headers`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_python">
+<a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the header or the uery parameter to mask.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2114,6 +3032,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Number of payload bytes to log (up to 8192).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="datamasking_csharp">
+<a href="#datamasking_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Masking</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#apidiagnosticfrontendresponsedatamasking">Api<wbr>Diagnostic<wbr>Frontend<wbr>Response<wbr>Data<wbr>Masking</a></span>
+    </dt>
+    <dd>{{% md %}}A `data_masking` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="headerstologs_csharp">
 <a href="#headerstologs_csharp" style="color: inherit; text-decoration: inherit;">Headers<wbr>To<wbr>Logs</a>
 </span>
@@ -2134,6 +3061,15 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of payload bytes to log (up to 8192).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="datamasking_go">
+<a href="#datamasking_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Masking</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#apidiagnosticfrontendresponsedatamasking">Api<wbr>Diagnostic<wbr>Frontend<wbr>Response<wbr>Data<wbr>Masking</a></span>
+    </dt>
+    <dd>{{% md %}}A `data_masking` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="headerstologs_go">
@@ -2158,6 +3094,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Number of payload bytes to log (up to 8192).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="datamasking_nodejs">
+<a href="#datamasking_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Masking</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#apidiagnosticfrontendresponsedatamasking">Api<wbr>Diagnostic<wbr>Frontend<wbr>Response<wbr>Data<wbr>Masking</a></span>
+    </dt>
+    <dd>{{% md %}}A `data_masking` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="headerstologs_nodejs">
 <a href="#headerstologs_nodejs" style="color: inherit; text-decoration: inherit;">headers<wbr>To<wbr>Logs</a>
 </span>
@@ -2180,6 +3125,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Number of payload bytes to log (up to 8192).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="data_masking_python">
+<a href="#data_masking_python" style="color: inherit; text-decoration: inherit;">data_<wbr>masking</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#apidiagnosticfrontendresponsedatamasking">Api<wbr>Diagnostic<wbr>Frontend<wbr>Response<wbr>Data<wbr>Masking</a></span>
+    </dt>
+    <dd>{{% md %}}A `data_masking` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="headers_to_logs_python">
 <a href="#headers_to_logs_python" style="color: inherit; text-decoration: inherit;">headers_<wbr>to_<wbr>logs</a>
 </span>
@@ -2187,6 +3141,276 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specifies a list of headers to log.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="apidiagnosticfrontendresponsedatamasking">Api<wbr>Diagnostic<wbr>Frontend<wbr>Response<wbr>Data<wbr>Masking</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="headers_csharp">
+<a href="#headers_csharp" style="color: inherit; text-decoration: inherit;">Headers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#apidiagnosticfrontendresponsedatamaskingheader">List&lt;Api<wbr>Diagnostic<wbr>Frontend<wbr>Response<wbr>Data<wbr>Masking<wbr>Header&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A `headers` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="queryparams_csharp">
+<a href="#queryparams_csharp" style="color: inherit; text-decoration: inherit;">Query<wbr>Params</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#apidiagnosticfrontendresponsedatamaskingqueryparam">List&lt;Api<wbr>Diagnostic<wbr>Frontend<wbr>Response<wbr>Data<wbr>Masking<wbr>Query<wbr>Param&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A `query_params` block as defined below.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="headers_go">
+<a href="#headers_go" style="color: inherit; text-decoration: inherit;">Headers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#apidiagnosticfrontendresponsedatamaskingheader">[]Api<wbr>Diagnostic<wbr>Frontend<wbr>Response<wbr>Data<wbr>Masking<wbr>Header</a></span>
+    </dt>
+    <dd>{{% md %}}A `headers` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="queryparams_go">
+<a href="#queryparams_go" style="color: inherit; text-decoration: inherit;">Query<wbr>Params</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#apidiagnosticfrontendresponsedatamaskingqueryparam">[]Api<wbr>Diagnostic<wbr>Frontend<wbr>Response<wbr>Data<wbr>Masking<wbr>Query<wbr>Param</a></span>
+    </dt>
+    <dd>{{% md %}}A `query_params` block as defined below.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="headers_nodejs">
+<a href="#headers_nodejs" style="color: inherit; text-decoration: inherit;">headers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#apidiagnosticfrontendresponsedatamaskingheader">Api<wbr>Diagnostic<wbr>Frontend<wbr>Response<wbr>Data<wbr>Masking<wbr>Header[]</a></span>
+    </dt>
+    <dd>{{% md %}}A `headers` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="queryparams_nodejs">
+<a href="#queryparams_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>Params</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#apidiagnosticfrontendresponsedatamaskingqueryparam">Api<wbr>Diagnostic<wbr>Frontend<wbr>Response<wbr>Data<wbr>Masking<wbr>Query<wbr>Param[]</a></span>
+    </dt>
+    <dd>{{% md %}}A `query_params` block as defined below.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="headers_python">
+<a href="#headers_python" style="color: inherit; text-decoration: inherit;">headers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#apidiagnosticfrontendresponsedatamaskingheader">Sequence[Api<wbr>Diagnostic<wbr>Frontend<wbr>Response<wbr>Data<wbr>Masking<wbr>Header]</a></span>
+    </dt>
+    <dd>{{% md %}}A `headers` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="query_params_python">
+<a href="#query_params_python" style="color: inherit; text-decoration: inherit;">query_<wbr>params</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#apidiagnosticfrontendresponsedatamaskingqueryparam">Sequence[Api<wbr>Diagnostic<wbr>Frontend<wbr>Response<wbr>Data<wbr>Masking<wbr>Query<wbr>Param]</a></span>
+    </dt>
+    <dd>{{% md %}}A `query_params` block as defined below.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="apidiagnosticfrontendresponsedatamaskingheader">Api<wbr>Diagnostic<wbr>Frontend<wbr>Response<wbr>Data<wbr>Masking<wbr>Header</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="mode_csharp">
+<a href="#mode_csharp" style="color: inherit; text-decoration: inherit;">Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The data masking mode. Possible values are `Mask` and `Hide` for `query_params`. The only possible value is `Mask` for `headers`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_csharp">
+<a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the header or the uery parameter to mask.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="mode_go">
+<a href="#mode_go" style="color: inherit; text-decoration: inherit;">Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The data masking mode. Possible values are `Mask` and `Hide` for `query_params`. The only possible value is `Mask` for `headers`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_go">
+<a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the header or the uery parameter to mask.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="mode_nodejs">
+<a href="#mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The data masking mode. Possible values are `Mask` and `Hide` for `query_params`. The only possible value is `Mask` for `headers`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_nodejs">
+<a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the header or the uery parameter to mask.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="mode_python">
+<a href="#mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The data masking mode. Possible values are `Mask` and `Hide` for `query_params`. The only possible value is `Mask` for `headers`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_python">
+<a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the header or the uery parameter to mask.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="apidiagnosticfrontendresponsedatamaskingqueryparam">Api<wbr>Diagnostic<wbr>Frontend<wbr>Response<wbr>Data<wbr>Masking<wbr>Query<wbr>Param</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="mode_csharp">
+<a href="#mode_csharp" style="color: inherit; text-decoration: inherit;">Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The data masking mode. Possible values are `Mask` and `Hide` for `query_params`. The only possible value is `Mask` for `headers`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_csharp">
+<a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the header or the uery parameter to mask.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="mode_go">
+<a href="#mode_go" style="color: inherit; text-decoration: inherit;">Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The data masking mode. Possible values are `Mask` and `Hide` for `query_params`. The only possible value is `Mask` for `headers`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_go">
+<a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the header or the uery parameter to mask.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="mode_nodejs">
+<a href="#mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The data masking mode. Possible values are `Mask` and `Hide` for `query_params`. The only possible value is `Mask` for `headers`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_nodejs">
+<a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the header or the uery parameter to mask.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="mode_python">
+<a href="#mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The data masking mode. Possible values are `Mask` and `Hide` for `query_params`. The only possible value is `Mask` for `headers`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_python">
+<a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the header or the uery parameter to mask.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import

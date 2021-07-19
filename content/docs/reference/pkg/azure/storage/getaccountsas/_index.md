@@ -233,7 +233,7 @@ const exampleAccountSAS = exampleAccount.primaryConnectionString.apply(primaryCo
         process: false,
     },
 }));
-export const sasUrlQueryString = exampleAccountSAS.sas;
+export const sasUrlQueryString = exampleAccountSAS.apply(exampleAccountSAS => exampleAccountSAS.sas);
 ```
 
 

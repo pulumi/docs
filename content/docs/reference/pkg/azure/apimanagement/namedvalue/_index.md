@@ -184,7 +184,8 @@ const exampleNamedValue = new azure.apimanagement.NamedValue("exampleNamedValue"
                <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                <span class="nx">secret</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
                <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
-               <span class="nx">value</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+               <span class="nx">value</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+               <span class="nx">value_from_key_vault</span><span class="p">:</span> <span class="nx">Optional[NamedValueValueFromKeyVaultArgs]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">NamedValue</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">NamedValueArgs</a></span><span class="p">,</span>
@@ -339,15 +340,6 @@ The NamedValue resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group in which the API Management Named Value should exist. Changing this forces a new resource to be created.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="value_csharp">
-<a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The value of this API Management Named Value.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
@@ -375,6 +367,24 @@ The NamedValue resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of tags to be applied to the API Management Named Value.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="value_csharp">
+<a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The value of this API Management Named Value.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="valuefromkeyvault_csharp">
+<a href="#valuefromkeyvault_csharp" style="color: inherit; text-decoration: inherit;">Value<wbr>From<wbr>Key<wbr>Vault</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#namedvaluevaluefromkeyvault">Named<wbr>Value<wbr>Value<wbr>From<wbr>Key<wbr>Vault<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `value_from_key_vault` block as defined below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -406,15 +416,6 @@ The NamedValue resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group in which the API Management Named Value should exist. Changing this forces a new resource to be created.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="value_go">
-<a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The value of this API Management Named Value.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
@@ -442,6 +443,24 @@ The NamedValue resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of tags to be applied to the API Management Named Value.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="value_go">
+<a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The value of this API Management Named Value.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="valuefromkeyvault_go">
+<a href="#valuefromkeyvault_go" style="color: inherit; text-decoration: inherit;">Value<wbr>From<wbr>Key<wbr>Vault</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#namedvaluevaluefromkeyvault">Named<wbr>Value<wbr>Value<wbr>From<wbr>Key<wbr>Vault<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `value_from_key_vault` block as defined below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -473,15 +492,6 @@ The NamedValue resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group in which the API Management Named Value should exist. Changing this forces a new resource to be created.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="value_nodejs">
-<a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The value of this API Management Named Value.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
@@ -509,6 +519,24 @@ The NamedValue resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of tags to be applied to the API Management Named Value.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="value_nodejs">
+<a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The value of this API Management Named Value.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="valuefromkeyvault_nodejs">
+<a href="#valuefromkeyvault_nodejs" style="color: inherit; text-decoration: inherit;">value<wbr>From<wbr>Key<wbr>Vault</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#namedvaluevaluefromkeyvault">Named<wbr>Value<wbr>Value<wbr>From<wbr>Key<wbr>Vault<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `value_from_key_vault` block as defined below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -540,15 +568,6 @@ The NamedValue resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group in which the API Management Named Value should exist. Changing this forces a new resource to be created.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="value_python">
-<a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The value of this API Management Named Value.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
@@ -576,6 +595,24 @@ The NamedValue resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of tags to be applied to the API Management Named Value.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="value_python">
+<a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The value of this API Management Named Value.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="value_from_key_vault_python">
+<a href="#value_from_key_vault_python" style="color: inherit; text-decoration: inherit;">value_<wbr>from_<wbr>key_<wbr>vault</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#namedvaluevaluefromkeyvault">Named<wbr>Value<wbr>Value<wbr>From<wbr>Key<wbr>Vault<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `value_from_key_vault` block as defined below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -656,7 +693,8 @@ Get an existing NamedValue resource's state with the given name, ID, and optiona
         <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">secret</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
-        <span class="nx">value</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> NamedValue</code></pre></div>
+        <span class="nx">value</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">value_from_key_vault</span><span class="p">:</span> <span class="nx">Optional[NamedValueValueFromKeyVaultArgs]</span> = None<span class="p">) -&gt;</span> NamedValue</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -830,6 +868,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of this API Management Named Value.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_valuefromkeyvault_csharp">
+<a href="#state_valuefromkeyvault_csharp" style="color: inherit; text-decoration: inherit;">Value<wbr>From<wbr>Key<wbr>Vault</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#namedvaluevaluefromkeyvault">Named<wbr>Value<wbr>Value<wbr>From<wbr>Key<wbr>Vault<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `value_from_key_vault` block as defined below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -897,6 +944,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of this API Management Named Value.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_valuefromkeyvault_go">
+<a href="#state_valuefromkeyvault_go" style="color: inherit; text-decoration: inherit;">Value<wbr>From<wbr>Key<wbr>Vault</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#namedvaluevaluefromkeyvault">Named<wbr>Value<wbr>Value<wbr>From<wbr>Key<wbr>Vault<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `value_from_key_vault` block as defined below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -964,6 +1020,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of this API Management Named Value.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_valuefromkeyvault_nodejs">
+<a href="#state_valuefromkeyvault_nodejs" style="color: inherit; text-decoration: inherit;">value<wbr>From<wbr>Key<wbr>Vault</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#namedvaluevaluefromkeyvault">Named<wbr>Value<wbr>Value<wbr>From<wbr>Key<wbr>Vault<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `value_from_key_vault` block as defined below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1031,6 +1096,15 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The value of this API Management Named Value.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_value_from_key_vault_python">
+<a href="#state_value_from_key_vault_python" style="color: inherit; text-decoration: inherit;">value_<wbr>from_<wbr>key_<wbr>vault</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#namedvaluevaluefromkeyvault">Named<wbr>Value<wbr>Value<wbr>From<wbr>Key<wbr>Vault<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `value_from_key_vault` block as defined below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1038,6 +1112,100 @@ The following state arguments are supported:
 
 
 
+
+## Supporting Types
+
+
+
+<h4 id="namedvaluevaluefromkeyvault">Named<wbr>Value<wbr>Value<wbr>From<wbr>Key<wbr>Vault</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="identityclientid_csharp">
+<a href="#identityclientid_csharp" style="color: inherit; text-decoration: inherit;">Identity<wbr>Client<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The client ID of the System Assigned Identity, or User Assigned Identity, for the API Management Service, which will be used to access the key vault secret.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="secretid_csharp">
+<a href="#secretid_csharp" style="color: inherit; text-decoration: inherit;">Secret<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The resource ID of the Key Vault Secret.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="identityclientid_go">
+<a href="#identityclientid_go" style="color: inherit; text-decoration: inherit;">Identity<wbr>Client<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The client ID of the System Assigned Identity, or User Assigned Identity, for the API Management Service, which will be used to access the key vault secret.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="secretid_go">
+<a href="#secretid_go" style="color: inherit; text-decoration: inherit;">Secret<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The resource ID of the Key Vault Secret.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="identityclientid_nodejs">
+<a href="#identityclientid_nodejs" style="color: inherit; text-decoration: inherit;">identity<wbr>Client<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The client ID of the System Assigned Identity, or User Assigned Identity, for the API Management Service, which will be used to access the key vault secret.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="secretid_nodejs">
+<a href="#secretid_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The resource ID of the Key Vault Secret.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="identity_client_id_python">
+<a href="#identity_client_id_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>client_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The client ID of the System Assigned Identity, or User Assigned Identity, for the API Management Service, which will be used to access the key vault secret.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="secret_id_python">
+<a href="#secret_id_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The resource ID of the Key Vault Secret.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
 ## Import
 
 

@@ -1779,6 +1779,14 @@ The following state arguments are supported:
     <dd>{{% md %}}Number of payload bytes to log (up to 8192).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="datamasking_csharp">
+<a href="#datamasking_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Masking</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#diagnosticbackendrequestdatamasking">Diagnostic<wbr>Backend<wbr>Request<wbr>Data<wbr>Masking</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="headerstologs_csharp">
 <a href="#headerstologs_csharp" style="color: inherit; text-decoration: inherit;">Headers<wbr>To<wbr>Logs</a>
 </span>
@@ -1800,6 +1808,14 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Number of payload bytes to log (up to 8192).
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="datamasking_go">
+<a href="#datamasking_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Masking</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#diagnosticbackendrequestdatamasking">Diagnostic<wbr>Backend<wbr>Request<wbr>Data<wbr>Masking</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="headerstologs_go">
 <a href="#headerstologs_go" style="color: inherit; text-decoration: inherit;">Headers<wbr>To<wbr>Logs</a>
@@ -1823,6 +1839,14 @@ The following state arguments are supported:
     <dd>{{% md %}}Number of payload bytes to log (up to 8192).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="datamasking_nodejs">
+<a href="#datamasking_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Masking</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#diagnosticbackendrequestdatamasking">Diagnostic<wbr>Backend<wbr>Request<wbr>Data<wbr>Masking</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="headerstologs_nodejs">
 <a href="#headerstologs_nodejs" style="color: inherit; text-decoration: inherit;">headers<wbr>To<wbr>Logs</a>
 </span>
@@ -1845,6 +1869,14 @@ The following state arguments are supported:
     <dd>{{% md %}}Number of payload bytes to log (up to 8192).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="data_masking_python">
+<a href="#data_masking_python" style="color: inherit; text-decoration: inherit;">data_<wbr>masking</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#diagnosticbackendrequestdatamasking">Diagnostic<wbr>Backend<wbr>Request<wbr>Data<wbr>Masking</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="headers_to_logs_python">
 <a href="#headers_to_logs_python" style="color: inherit; text-decoration: inherit;">headers_<wbr>to_<wbr>logs</a>
 </span>
@@ -1853,6 +1885,252 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Specifies a list of headers to log.
 {{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="diagnosticbackendrequestdatamasking">Diagnostic<wbr>Backend<wbr>Request<wbr>Data<wbr>Masking</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="headers_csharp">
+<a href="#headers_csharp" style="color: inherit; text-decoration: inherit;">Headers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#diagnosticbackendrequestdatamaskingheader">List&lt;Diagnostic<wbr>Backend<wbr>Request<wbr>Data<wbr>Masking<wbr>Header&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="queryparams_csharp">
+<a href="#queryparams_csharp" style="color: inherit; text-decoration: inherit;">Query<wbr>Params</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#diagnosticbackendrequestdatamaskingqueryparam">List&lt;Diagnostic<wbr>Backend<wbr>Request<wbr>Data<wbr>Masking<wbr>Query<wbr>Param&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="headers_go">
+<a href="#headers_go" style="color: inherit; text-decoration: inherit;">Headers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#diagnosticbackendrequestdatamaskingheader">[]Diagnostic<wbr>Backend<wbr>Request<wbr>Data<wbr>Masking<wbr>Header</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="queryparams_go">
+<a href="#queryparams_go" style="color: inherit; text-decoration: inherit;">Query<wbr>Params</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#diagnosticbackendrequestdatamaskingqueryparam">[]Diagnostic<wbr>Backend<wbr>Request<wbr>Data<wbr>Masking<wbr>Query<wbr>Param</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="headers_nodejs">
+<a href="#headers_nodejs" style="color: inherit; text-decoration: inherit;">headers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#diagnosticbackendrequestdatamaskingheader">Diagnostic<wbr>Backend<wbr>Request<wbr>Data<wbr>Masking<wbr>Header[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="queryparams_nodejs">
+<a href="#queryparams_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>Params</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#diagnosticbackendrequestdatamaskingqueryparam">Diagnostic<wbr>Backend<wbr>Request<wbr>Data<wbr>Masking<wbr>Query<wbr>Param[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="headers_python">
+<a href="#headers_python" style="color: inherit; text-decoration: inherit;">headers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#diagnosticbackendrequestdatamaskingheader">Sequence[Diagnostic<wbr>Backend<wbr>Request<wbr>Data<wbr>Masking<wbr>Header]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="query_params_python">
+<a href="#query_params_python" style="color: inherit; text-decoration: inherit;">query_<wbr>params</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#diagnosticbackendrequestdatamaskingqueryparam">Sequence[Diagnostic<wbr>Backend<wbr>Request<wbr>Data<wbr>Masking<wbr>Query<wbr>Param]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="diagnosticbackendrequestdatamaskingheader">Diagnostic<wbr>Backend<wbr>Request<wbr>Data<wbr>Masking<wbr>Header</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="mode_csharp">
+<a href="#mode_csharp" style="color: inherit; text-decoration: inherit;">Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_csharp">
+<a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="mode_go">
+<a href="#mode_go" style="color: inherit; text-decoration: inherit;">Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_go">
+<a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="mode_nodejs">
+<a href="#mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_nodejs">
+<a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="mode_python">
+<a href="#mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_python">
+<a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="diagnosticbackendrequestdatamaskingqueryparam">Diagnostic<wbr>Backend<wbr>Request<wbr>Data<wbr>Masking<wbr>Query<wbr>Param</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="mode_csharp">
+<a href="#mode_csharp" style="color: inherit; text-decoration: inherit;">Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_csharp">
+<a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="mode_go">
+<a href="#mode_go" style="color: inherit; text-decoration: inherit;">Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_go">
+<a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="mode_nodejs">
+<a href="#mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_nodejs">
+<a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="mode_python">
+<a href="#mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_python">
+<a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="diagnosticbackendresponse">Diagnostic<wbr>Backend<wbr>Response</h4>
@@ -1869,6 +2147,14 @@ The following state arguments are supported:
     <dd>{{% md %}}Number of payload bytes to log (up to 8192).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="datamasking_csharp">
+<a href="#datamasking_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Masking</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#diagnosticbackendresponsedatamasking">Diagnostic<wbr>Backend<wbr>Response<wbr>Data<wbr>Masking</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="headerstologs_csharp">
 <a href="#headerstologs_csharp" style="color: inherit; text-decoration: inherit;">Headers<wbr>To<wbr>Logs</a>
 </span>
@@ -1890,6 +2176,14 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Number of payload bytes to log (up to 8192).
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="datamasking_go">
+<a href="#datamasking_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Masking</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#diagnosticbackendresponsedatamasking">Diagnostic<wbr>Backend<wbr>Response<wbr>Data<wbr>Masking</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="headerstologs_go">
 <a href="#headerstologs_go" style="color: inherit; text-decoration: inherit;">Headers<wbr>To<wbr>Logs</a>
@@ -1913,6 +2207,14 @@ The following state arguments are supported:
     <dd>{{% md %}}Number of payload bytes to log (up to 8192).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="datamasking_nodejs">
+<a href="#datamasking_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Masking</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#diagnosticbackendresponsedatamasking">Diagnostic<wbr>Backend<wbr>Response<wbr>Data<wbr>Masking</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="headerstologs_nodejs">
 <a href="#headerstologs_nodejs" style="color: inherit; text-decoration: inherit;">headers<wbr>To<wbr>Logs</a>
 </span>
@@ -1935,6 +2237,14 @@ The following state arguments are supported:
     <dd>{{% md %}}Number of payload bytes to log (up to 8192).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="data_masking_python">
+<a href="#data_masking_python" style="color: inherit; text-decoration: inherit;">data_<wbr>masking</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#diagnosticbackendresponsedatamasking">Diagnostic<wbr>Backend<wbr>Response<wbr>Data<wbr>Masking</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="headers_to_logs_python">
 <a href="#headers_to_logs_python" style="color: inherit; text-decoration: inherit;">headers_<wbr>to_<wbr>logs</a>
 </span>
@@ -1943,6 +2253,252 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Specifies a list of headers to log.
 {{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="diagnosticbackendresponsedatamasking">Diagnostic<wbr>Backend<wbr>Response<wbr>Data<wbr>Masking</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="headers_csharp">
+<a href="#headers_csharp" style="color: inherit; text-decoration: inherit;">Headers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#diagnosticbackendresponsedatamaskingheader">List&lt;Diagnostic<wbr>Backend<wbr>Response<wbr>Data<wbr>Masking<wbr>Header&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="queryparams_csharp">
+<a href="#queryparams_csharp" style="color: inherit; text-decoration: inherit;">Query<wbr>Params</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#diagnosticbackendresponsedatamaskingqueryparam">List&lt;Diagnostic<wbr>Backend<wbr>Response<wbr>Data<wbr>Masking<wbr>Query<wbr>Param&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="headers_go">
+<a href="#headers_go" style="color: inherit; text-decoration: inherit;">Headers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#diagnosticbackendresponsedatamaskingheader">[]Diagnostic<wbr>Backend<wbr>Response<wbr>Data<wbr>Masking<wbr>Header</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="queryparams_go">
+<a href="#queryparams_go" style="color: inherit; text-decoration: inherit;">Query<wbr>Params</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#diagnosticbackendresponsedatamaskingqueryparam">[]Diagnostic<wbr>Backend<wbr>Response<wbr>Data<wbr>Masking<wbr>Query<wbr>Param</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="headers_nodejs">
+<a href="#headers_nodejs" style="color: inherit; text-decoration: inherit;">headers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#diagnosticbackendresponsedatamaskingheader">Diagnostic<wbr>Backend<wbr>Response<wbr>Data<wbr>Masking<wbr>Header[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="queryparams_nodejs">
+<a href="#queryparams_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>Params</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#diagnosticbackendresponsedatamaskingqueryparam">Diagnostic<wbr>Backend<wbr>Response<wbr>Data<wbr>Masking<wbr>Query<wbr>Param[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="headers_python">
+<a href="#headers_python" style="color: inherit; text-decoration: inherit;">headers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#diagnosticbackendresponsedatamaskingheader">Sequence[Diagnostic<wbr>Backend<wbr>Response<wbr>Data<wbr>Masking<wbr>Header]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="query_params_python">
+<a href="#query_params_python" style="color: inherit; text-decoration: inherit;">query_<wbr>params</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#diagnosticbackendresponsedatamaskingqueryparam">Sequence[Diagnostic<wbr>Backend<wbr>Response<wbr>Data<wbr>Masking<wbr>Query<wbr>Param]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="diagnosticbackendresponsedatamaskingheader">Diagnostic<wbr>Backend<wbr>Response<wbr>Data<wbr>Masking<wbr>Header</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="mode_csharp">
+<a href="#mode_csharp" style="color: inherit; text-decoration: inherit;">Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_csharp">
+<a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="mode_go">
+<a href="#mode_go" style="color: inherit; text-decoration: inherit;">Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_go">
+<a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="mode_nodejs">
+<a href="#mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_nodejs">
+<a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="mode_python">
+<a href="#mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_python">
+<a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="diagnosticbackendresponsedatamaskingqueryparam">Diagnostic<wbr>Backend<wbr>Response<wbr>Data<wbr>Masking<wbr>Query<wbr>Param</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="mode_csharp">
+<a href="#mode_csharp" style="color: inherit; text-decoration: inherit;">Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_csharp">
+<a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="mode_go">
+<a href="#mode_go" style="color: inherit; text-decoration: inherit;">Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_go">
+<a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="mode_nodejs">
+<a href="#mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_nodejs">
+<a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="mode_python">
+<a href="#mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_python">
+<a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="diagnosticfrontendrequest">Diagnostic<wbr>Frontend<wbr>Request</h4>
@@ -1959,6 +2515,14 @@ The following state arguments are supported:
     <dd>{{% md %}}Number of payload bytes to log (up to 8192).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="datamasking_csharp">
+<a href="#datamasking_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Masking</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#diagnosticfrontendrequestdatamasking">Diagnostic<wbr>Frontend<wbr>Request<wbr>Data<wbr>Masking</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="headerstologs_csharp">
 <a href="#headerstologs_csharp" style="color: inherit; text-decoration: inherit;">Headers<wbr>To<wbr>Logs</a>
 </span>
@@ -1980,6 +2544,14 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Number of payload bytes to log (up to 8192).
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="datamasking_go">
+<a href="#datamasking_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Masking</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#diagnosticfrontendrequestdatamasking">Diagnostic<wbr>Frontend<wbr>Request<wbr>Data<wbr>Masking</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="headerstologs_go">
 <a href="#headerstologs_go" style="color: inherit; text-decoration: inherit;">Headers<wbr>To<wbr>Logs</a>
@@ -2003,6 +2575,14 @@ The following state arguments are supported:
     <dd>{{% md %}}Number of payload bytes to log (up to 8192).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="datamasking_nodejs">
+<a href="#datamasking_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Masking</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#diagnosticfrontendrequestdatamasking">Diagnostic<wbr>Frontend<wbr>Request<wbr>Data<wbr>Masking</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="headerstologs_nodejs">
 <a href="#headerstologs_nodejs" style="color: inherit; text-decoration: inherit;">headers<wbr>To<wbr>Logs</a>
 </span>
@@ -2025,6 +2605,14 @@ The following state arguments are supported:
     <dd>{{% md %}}Number of payload bytes to log (up to 8192).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="data_masking_python">
+<a href="#data_masking_python" style="color: inherit; text-decoration: inherit;">data_<wbr>masking</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#diagnosticfrontendrequestdatamasking">Diagnostic<wbr>Frontend<wbr>Request<wbr>Data<wbr>Masking</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="headers_to_logs_python">
 <a href="#headers_to_logs_python" style="color: inherit; text-decoration: inherit;">headers_<wbr>to_<wbr>logs</a>
 </span>
@@ -2033,6 +2621,252 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Specifies a list of headers to log.
 {{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="diagnosticfrontendrequestdatamasking">Diagnostic<wbr>Frontend<wbr>Request<wbr>Data<wbr>Masking</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="headers_csharp">
+<a href="#headers_csharp" style="color: inherit; text-decoration: inherit;">Headers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#diagnosticfrontendrequestdatamaskingheader">List&lt;Diagnostic<wbr>Frontend<wbr>Request<wbr>Data<wbr>Masking<wbr>Header&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="queryparams_csharp">
+<a href="#queryparams_csharp" style="color: inherit; text-decoration: inherit;">Query<wbr>Params</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#diagnosticfrontendrequestdatamaskingqueryparam">List&lt;Diagnostic<wbr>Frontend<wbr>Request<wbr>Data<wbr>Masking<wbr>Query<wbr>Param&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="headers_go">
+<a href="#headers_go" style="color: inherit; text-decoration: inherit;">Headers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#diagnosticfrontendrequestdatamaskingheader">[]Diagnostic<wbr>Frontend<wbr>Request<wbr>Data<wbr>Masking<wbr>Header</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="queryparams_go">
+<a href="#queryparams_go" style="color: inherit; text-decoration: inherit;">Query<wbr>Params</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#diagnosticfrontendrequestdatamaskingqueryparam">[]Diagnostic<wbr>Frontend<wbr>Request<wbr>Data<wbr>Masking<wbr>Query<wbr>Param</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="headers_nodejs">
+<a href="#headers_nodejs" style="color: inherit; text-decoration: inherit;">headers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#diagnosticfrontendrequestdatamaskingheader">Diagnostic<wbr>Frontend<wbr>Request<wbr>Data<wbr>Masking<wbr>Header[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="queryparams_nodejs">
+<a href="#queryparams_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>Params</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#diagnosticfrontendrequestdatamaskingqueryparam">Diagnostic<wbr>Frontend<wbr>Request<wbr>Data<wbr>Masking<wbr>Query<wbr>Param[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="headers_python">
+<a href="#headers_python" style="color: inherit; text-decoration: inherit;">headers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#diagnosticfrontendrequestdatamaskingheader">Sequence[Diagnostic<wbr>Frontend<wbr>Request<wbr>Data<wbr>Masking<wbr>Header]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="query_params_python">
+<a href="#query_params_python" style="color: inherit; text-decoration: inherit;">query_<wbr>params</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#diagnosticfrontendrequestdatamaskingqueryparam">Sequence[Diagnostic<wbr>Frontend<wbr>Request<wbr>Data<wbr>Masking<wbr>Query<wbr>Param]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="diagnosticfrontendrequestdatamaskingheader">Diagnostic<wbr>Frontend<wbr>Request<wbr>Data<wbr>Masking<wbr>Header</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="mode_csharp">
+<a href="#mode_csharp" style="color: inherit; text-decoration: inherit;">Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_csharp">
+<a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="mode_go">
+<a href="#mode_go" style="color: inherit; text-decoration: inherit;">Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_go">
+<a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="mode_nodejs">
+<a href="#mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_nodejs">
+<a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="mode_python">
+<a href="#mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_python">
+<a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="diagnosticfrontendrequestdatamaskingqueryparam">Diagnostic<wbr>Frontend<wbr>Request<wbr>Data<wbr>Masking<wbr>Query<wbr>Param</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="mode_csharp">
+<a href="#mode_csharp" style="color: inherit; text-decoration: inherit;">Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_csharp">
+<a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="mode_go">
+<a href="#mode_go" style="color: inherit; text-decoration: inherit;">Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_go">
+<a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="mode_nodejs">
+<a href="#mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_nodejs">
+<a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="mode_python">
+<a href="#mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_python">
+<a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="diagnosticfrontendresponse">Diagnostic<wbr>Frontend<wbr>Response</h4>
@@ -2049,6 +2883,14 @@ The following state arguments are supported:
     <dd>{{% md %}}Number of payload bytes to log (up to 8192).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="datamasking_csharp">
+<a href="#datamasking_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Masking</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#diagnosticfrontendresponsedatamasking">Diagnostic<wbr>Frontend<wbr>Response<wbr>Data<wbr>Masking</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="headerstologs_csharp">
 <a href="#headerstologs_csharp" style="color: inherit; text-decoration: inherit;">Headers<wbr>To<wbr>Logs</a>
 </span>
@@ -2070,6 +2912,14 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Number of payload bytes to log (up to 8192).
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="datamasking_go">
+<a href="#datamasking_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Masking</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#diagnosticfrontendresponsedatamasking">Diagnostic<wbr>Frontend<wbr>Response<wbr>Data<wbr>Masking</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="headerstologs_go">
 <a href="#headerstologs_go" style="color: inherit; text-decoration: inherit;">Headers<wbr>To<wbr>Logs</a>
@@ -2093,6 +2943,14 @@ The following state arguments are supported:
     <dd>{{% md %}}Number of payload bytes to log (up to 8192).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="datamasking_nodejs">
+<a href="#datamasking_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Masking</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#diagnosticfrontendresponsedatamasking">Diagnostic<wbr>Frontend<wbr>Response<wbr>Data<wbr>Masking</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="headerstologs_nodejs">
 <a href="#headerstologs_nodejs" style="color: inherit; text-decoration: inherit;">headers<wbr>To<wbr>Logs</a>
 </span>
@@ -2115,6 +2973,14 @@ The following state arguments are supported:
     <dd>{{% md %}}Number of payload bytes to log (up to 8192).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="data_masking_python">
+<a href="#data_masking_python" style="color: inherit; text-decoration: inherit;">data_<wbr>masking</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#diagnosticfrontendresponsedatamasking">Diagnostic<wbr>Frontend<wbr>Response<wbr>Data<wbr>Masking</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="headers_to_logs_python">
 <a href="#headers_to_logs_python" style="color: inherit; text-decoration: inherit;">headers_<wbr>to_<wbr>logs</a>
 </span>
@@ -2123,6 +2989,252 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Specifies a list of headers to log.
 {{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="diagnosticfrontendresponsedatamasking">Diagnostic<wbr>Frontend<wbr>Response<wbr>Data<wbr>Masking</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="headers_csharp">
+<a href="#headers_csharp" style="color: inherit; text-decoration: inherit;">Headers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#diagnosticfrontendresponsedatamaskingheader">List&lt;Diagnostic<wbr>Frontend<wbr>Response<wbr>Data<wbr>Masking<wbr>Header&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="queryparams_csharp">
+<a href="#queryparams_csharp" style="color: inherit; text-decoration: inherit;">Query<wbr>Params</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#diagnosticfrontendresponsedatamaskingqueryparam">List&lt;Diagnostic<wbr>Frontend<wbr>Response<wbr>Data<wbr>Masking<wbr>Query<wbr>Param&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="headers_go">
+<a href="#headers_go" style="color: inherit; text-decoration: inherit;">Headers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#diagnosticfrontendresponsedatamaskingheader">[]Diagnostic<wbr>Frontend<wbr>Response<wbr>Data<wbr>Masking<wbr>Header</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="queryparams_go">
+<a href="#queryparams_go" style="color: inherit; text-decoration: inherit;">Query<wbr>Params</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#diagnosticfrontendresponsedatamaskingqueryparam">[]Diagnostic<wbr>Frontend<wbr>Response<wbr>Data<wbr>Masking<wbr>Query<wbr>Param</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="headers_nodejs">
+<a href="#headers_nodejs" style="color: inherit; text-decoration: inherit;">headers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#diagnosticfrontendresponsedatamaskingheader">Diagnostic<wbr>Frontend<wbr>Response<wbr>Data<wbr>Masking<wbr>Header[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="queryparams_nodejs">
+<a href="#queryparams_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>Params</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#diagnosticfrontendresponsedatamaskingqueryparam">Diagnostic<wbr>Frontend<wbr>Response<wbr>Data<wbr>Masking<wbr>Query<wbr>Param[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="headers_python">
+<a href="#headers_python" style="color: inherit; text-decoration: inherit;">headers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#diagnosticfrontendresponsedatamaskingheader">Sequence[Diagnostic<wbr>Frontend<wbr>Response<wbr>Data<wbr>Masking<wbr>Header]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="query_params_python">
+<a href="#query_params_python" style="color: inherit; text-decoration: inherit;">query_<wbr>params</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#diagnosticfrontendresponsedatamaskingqueryparam">Sequence[Diagnostic<wbr>Frontend<wbr>Response<wbr>Data<wbr>Masking<wbr>Query<wbr>Param]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="diagnosticfrontendresponsedatamaskingheader">Diagnostic<wbr>Frontend<wbr>Response<wbr>Data<wbr>Masking<wbr>Header</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="mode_csharp">
+<a href="#mode_csharp" style="color: inherit; text-decoration: inherit;">Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_csharp">
+<a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="mode_go">
+<a href="#mode_go" style="color: inherit; text-decoration: inherit;">Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_go">
+<a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="mode_nodejs">
+<a href="#mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_nodejs">
+<a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="mode_python">
+<a href="#mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_python">
+<a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="diagnosticfrontendresponsedatamaskingqueryparam">Diagnostic<wbr>Frontend<wbr>Response<wbr>Data<wbr>Masking<wbr>Query<wbr>Param</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="mode_csharp">
+<a href="#mode_csharp" style="color: inherit; text-decoration: inherit;">Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_csharp">
+<a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="mode_go">
+<a href="#mode_go" style="color: inherit; text-decoration: inherit;">Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_go">
+<a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="mode_nodejs">
+<a href="#mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_nodejs">
+<a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="mode_python">
+<a href="#mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_python">
+<a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

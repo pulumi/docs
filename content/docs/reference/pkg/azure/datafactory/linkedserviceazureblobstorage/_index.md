@@ -91,7 +91,7 @@ func main() {
 		_, err = datafactory.NewLinkedServiceAzureBlobStorage(ctx, "exampleLinkedServiceAzureBlobStorage", &datafactory.LinkedServiceAzureBlobStorageArgs{
 			ResourceGroupName: exampleResourceGroup.Name,
 			DataFactoryName:   exampleFactory.Name,
-			ConnectionString: exampleAccount.ApplyT(func(exampleAccount storage.LookupAccountResult) (string, error) {
+			ConnectionString: exampleAccount.ApplyT(func(exampleAccount storage.GetAccountResult) (string, error) {
 				return exampleAccount.PrimaryConnectionString, nil
 			}).(pulumi.StringOutput),
 		})
@@ -148,7 +148,7 @@ const exampleFactory = new azure.datafactory.Factory("exampleFactory", {
 const exampleLinkedServiceAzureBlobStorage = new azure.datafactory.LinkedServiceAzureBlobStorage("exampleLinkedServiceAzureBlobStorage", {
     resourceGroupName: exampleResourceGroup.name,
     dataFactoryName: exampleFactory.name,
-    connectionString: exampleAccount.primaryConnectionString,
+    connectionString: exampleAccount.apply(exampleAccount => exampleAccount.primaryConnectionString),
 });
 ```
 

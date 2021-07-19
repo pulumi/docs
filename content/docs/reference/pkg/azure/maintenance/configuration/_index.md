@@ -158,9 +158,12 @@ const exampleConfiguration = new azure.maintenance.Configuration("exampleConfigu
                   <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
                   <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                   <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                  <span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
                   <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                   <span class="nx">scope</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                  <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span>
+                  <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+                  <span class="nx">visibility</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                  <span class="nx">window</span><span class="p">:</span> <span class="nx">Optional[ConfigurationWindowArgs]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">Configuration</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                   <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ConfigurationArgs</a></span><span class="p">,</span>
@@ -317,13 +320,22 @@ The Configuration resource accepts the following [input]({{< relref "/docs/intro
     <dd>{{% md %}}Specifies the name of the Maintenance Configuration. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="properties_csharp">
+<a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A mapping of properties to assign to the resource.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="scope_csharp">
 <a href="#scope_csharp" style="color: inherit; text-decoration: inherit;">Scope</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The scope of the Maintenance Configuration. Possible values are `All`, `Host`, `Resource` or `InResource`. Default to `All`.
+    <dd>{{% md %}}The scope of the Maintenance Configuration. Possible values are `All`, `Extension`, `Host`, `InGuestPatch`, `OSImage`, `SQLDB` or `SQLManagedInstance`. Defaults to `All`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
@@ -333,6 +345,24 @@ The Configuration resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource. The key could not contain upper case letter.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="visibility_csharp">
+<a href="#visibility_csharp" style="color: inherit; text-decoration: inherit;">Visibility</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The visibility of the Maintenance Configuration. The only allowable value is `Custom`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="window_csharp">
+<a href="#window_csharp" style="color: inherit; text-decoration: inherit;">Window</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#configurationwindow">Configuration<wbr>Window<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `window` block as defined below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -366,13 +396,22 @@ The Configuration resource accepts the following [input]({{< relref "/docs/intro
     <dd>{{% md %}}Specifies the name of the Maintenance Configuration. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="properties_go">
+<a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}A mapping of properties to assign to the resource.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="scope_go">
 <a href="#scope_go" style="color: inherit; text-decoration: inherit;">Scope</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The scope of the Maintenance Configuration. Possible values are `All`, `Host`, `Resource` or `InResource`. Default to `All`.
+    <dd>{{% md %}}The scope of the Maintenance Configuration. Possible values are `All`, `Extension`, `Host`, `InGuestPatch`, `OSImage`, `SQLDB` or `SQLManagedInstance`. Defaults to `All`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
@@ -382,6 +421,24 @@ The Configuration resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource. The key could not contain upper case letter.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="visibility_go">
+<a href="#visibility_go" style="color: inherit; text-decoration: inherit;">Visibility</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The visibility of the Maintenance Configuration. The only allowable value is `Custom`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="window_go">
+<a href="#window_go" style="color: inherit; text-decoration: inherit;">Window</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#configurationwindow">Configuration<wbr>Window<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `window` block as defined below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -415,13 +472,22 @@ The Configuration resource accepts the following [input]({{< relref "/docs/intro
     <dd>{{% md %}}Specifies the name of the Maintenance Configuration. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="properties_nodejs">
+<a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}A mapping of properties to assign to the resource.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="scope_nodejs">
 <a href="#scope_nodejs" style="color: inherit; text-decoration: inherit;">scope</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The scope of the Maintenance Configuration. Possible values are `All`, `Host`, `Resource` or `InResource`. Default to `All`.
+    <dd>{{% md %}}The scope of the Maintenance Configuration. Possible values are `All`, `Extension`, `Host`, `InGuestPatch`, `OSImage`, `SQLDB` or `SQLManagedInstance`. Defaults to `All`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
@@ -431,6 +497,24 @@ The Configuration resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource. The key could not contain upper case letter.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="visibility_nodejs">
+<a href="#visibility_nodejs" style="color: inherit; text-decoration: inherit;">visibility</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The visibility of the Maintenance Configuration. The only allowable value is `Custom`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="window_nodejs">
+<a href="#window_nodejs" style="color: inherit; text-decoration: inherit;">window</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#configurationwindow">Configuration<wbr>Window<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `window` block as defined below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -464,13 +548,22 @@ The Configuration resource accepts the following [input]({{< relref "/docs/intro
     <dd>{{% md %}}Specifies the name of the Maintenance Configuration. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="properties_python">
+<a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, str]</span>
+    </dt>
+    <dd>{{% md %}}A mapping of properties to assign to the resource.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="scope_python">
 <a href="#scope_python" style="color: inherit; text-decoration: inherit;">scope</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The scope of the Maintenance Configuration. Possible values are `All`, `Host`, `Resource` or `InResource`. Default to `All`.
+    <dd>{{% md %}}The scope of the Maintenance Configuration. Possible values are `All`, `Extension`, `Host`, `InGuestPatch`, `OSImage`, `SQLDB` or `SQLManagedInstance`. Defaults to `All`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
@@ -480,6 +573,24 @@ The Configuration resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource. The key could not contain upper case letter.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="visibility_python">
+<a href="#visibility_python" style="color: inherit; text-decoration: inherit;">visibility</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The visibility of the Maintenance Configuration. The only allowable value is `Custom`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="window_python">
+<a href="#window_python" style="color: inherit; text-decoration: inherit;">window</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#configurationwindow">Configuration<wbr>Window<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `window` block as defined below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -556,9 +667,12 @@ Get an existing Configuration resource's state with the given name, ID, and opti
         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
         <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
         <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">scope</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">) -&gt;</span> Configuration</code></pre></div>
+        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+        <span class="nx">visibility</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">window</span><span class="p">:</span> <span class="nx">Optional[ConfigurationWindowArgs]</span> = None<span class="p">) -&gt;</span> Configuration</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -689,6 +803,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Specifies the name of the Maintenance Configuration. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_properties_csharp">
+<a href="#state_properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A mapping of properties to assign to the resource.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_resourcegroupname_csharp">
 <a href="#state_resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
 </span>
@@ -704,7 +827,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The scope of the Maintenance Configuration. Possible values are `All`, `Host`, `Resource` or `InResource`. Default to `All`.
+    <dd>{{% md %}}The scope of the Maintenance Configuration. Possible values are `All`, `Extension`, `Host`, `InGuestPatch`, `OSImage`, `SQLDB` or `SQLManagedInstance`. Defaults to `All`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_csharp">
@@ -714,6 +837,24 @@ The following state arguments are supported:
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource. The key could not contain upper case letter.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_visibility_csharp">
+<a href="#state_visibility_csharp" style="color: inherit; text-decoration: inherit;">Visibility</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The visibility of the Maintenance Configuration. The only allowable value is `Custom`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_window_csharp">
+<a href="#state_window_csharp" style="color: inherit; text-decoration: inherit;">Window</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#configurationwindow">Configuration<wbr>Window<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `window` block as defined below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -738,6 +879,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Specifies the name of the Maintenance Configuration. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_properties_go">
+<a href="#state_properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}A mapping of properties to assign to the resource.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_resourcegroupname_go">
 <a href="#state_resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
 </span>
@@ -753,7 +903,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The scope of the Maintenance Configuration. Possible values are `All`, `Host`, `Resource` or `InResource`. Default to `All`.
+    <dd>{{% md %}}The scope of the Maintenance Configuration. Possible values are `All`, `Extension`, `Host`, `InGuestPatch`, `OSImage`, `SQLDB` or `SQLManagedInstance`. Defaults to `All`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
@@ -763,6 +913,24 @@ The following state arguments are supported:
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource. The key could not contain upper case letter.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_visibility_go">
+<a href="#state_visibility_go" style="color: inherit; text-decoration: inherit;">Visibility</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The visibility of the Maintenance Configuration. The only allowable value is `Custom`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_window_go">
+<a href="#state_window_go" style="color: inherit; text-decoration: inherit;">Window</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#configurationwindow">Configuration<wbr>Window<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `window` block as defined below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -787,6 +955,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Specifies the name of the Maintenance Configuration. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_properties_nodejs">
+<a href="#state_properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}A mapping of properties to assign to the resource.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_resourcegroupname_nodejs">
 <a href="#state_resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
@@ -802,7 +979,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The scope of the Maintenance Configuration. Possible values are `All`, `Host`, `Resource` or `InResource`. Default to `All`.
+    <dd>{{% md %}}The scope of the Maintenance Configuration. Possible values are `All`, `Extension`, `Host`, `InGuestPatch`, `OSImage`, `SQLDB` or `SQLManagedInstance`. Defaults to `All`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_nodejs">
@@ -812,6 +989,24 @@ The following state arguments are supported:
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource. The key could not contain upper case letter.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_visibility_nodejs">
+<a href="#state_visibility_nodejs" style="color: inherit; text-decoration: inherit;">visibility</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The visibility of the Maintenance Configuration. The only allowable value is `Custom`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_window_nodejs">
+<a href="#state_window_nodejs" style="color: inherit; text-decoration: inherit;">window</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#configurationwindow">Configuration<wbr>Window<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `window` block as defined below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -836,6 +1031,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Specifies the name of the Maintenance Configuration. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_properties_python">
+<a href="#state_properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, str]</span>
+    </dt>
+    <dd>{{% md %}}A mapping of properties to assign to the resource.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_resource_group_name_python">
 <a href="#state_resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
@@ -851,7 +1055,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The scope of the Maintenance Configuration. Possible values are `All`, `Host`, `Resource` or `InResource`. Default to `All`.
+    <dd>{{% md %}}The scope of the Maintenance Configuration. Possible values are `All`, `Extension`, `Host`, `InGuestPatch`, `OSImage`, `SQLDB` or `SQLManagedInstance`. Defaults to `All`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">
@@ -861,6 +1065,24 @@ The following state arguments are supported:
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource. The key could not contain upper case letter.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_visibility_python">
+<a href="#state_visibility_python" style="color: inherit; text-decoration: inherit;">visibility</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The visibility of the Maintenance Configuration. The only allowable value is `Custom`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_window_python">
+<a href="#state_window_python" style="color: inherit; text-decoration: inherit;">window</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#configurationwindow">Configuration<wbr>Window<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `window` block as defined below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -868,6 +1090,208 @@ The following state arguments are supported:
 
 
 
+
+## Supporting Types
+
+
+
+<h4 id="configurationwindow">Configuration<wbr>Window</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="startdatetime_csharp">
+<a href="#startdatetime_csharp" style="color: inherit; text-decoration: inherit;">Start<wbr>Date<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Effective start date of the maintenance window in YYYY-MM-DD hh:mm format.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="timezone_csharp">
+<a href="#timezone_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Zone</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The time zone for the maintenance window. A list of timezones can be obtained by executing [System.TimeZoneInfo]::GetSystemTimeZones() in PowerShell.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="duration_csharp">
+<a href="#duration_csharp" style="color: inherit; text-decoration: inherit;">Duration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The duration of the maintenance window in HH:mm format.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="expirationdatetime_csharp">
+<a href="#expirationdatetime_csharp" style="color: inherit; text-decoration: inherit;">Expiration<wbr>Date<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Effective expiration date of the maintenance window in YYYY-MM-DD hh:mm format.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="recurevery_csharp">
+<a href="#recurevery_csharp" style="color: inherit; text-decoration: inherit;">Recur<wbr>Every</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The rate at which a maintenance window is expected to recur. The rate can be expressed as daily, weekly, or monthly schedules.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="startdatetime_go">
+<a href="#startdatetime_go" style="color: inherit; text-decoration: inherit;">Start<wbr>Date<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Effective start date of the maintenance window in YYYY-MM-DD hh:mm format.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="timezone_go">
+<a href="#timezone_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Zone</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The time zone for the maintenance window. A list of timezones can be obtained by executing [System.TimeZoneInfo]::GetSystemTimeZones() in PowerShell.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="duration_go">
+<a href="#duration_go" style="color: inherit; text-decoration: inherit;">Duration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The duration of the maintenance window in HH:mm format.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="expirationdatetime_go">
+<a href="#expirationdatetime_go" style="color: inherit; text-decoration: inherit;">Expiration<wbr>Date<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Effective expiration date of the maintenance window in YYYY-MM-DD hh:mm format.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="recurevery_go">
+<a href="#recurevery_go" style="color: inherit; text-decoration: inherit;">Recur<wbr>Every</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The rate at which a maintenance window is expected to recur. The rate can be expressed as daily, weekly, or monthly schedules.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="startdatetime_nodejs">
+<a href="#startdatetime_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Date<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Effective start date of the maintenance window in YYYY-MM-DD hh:mm format.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="timezone_nodejs">
+<a href="#timezone_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Zone</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The time zone for the maintenance window. A list of timezones can be obtained by executing [System.TimeZoneInfo]::GetSystemTimeZones() in PowerShell.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="duration_nodejs">
+<a href="#duration_nodejs" style="color: inherit; text-decoration: inherit;">duration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The duration of the maintenance window in HH:mm format.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="expirationdatetime_nodejs">
+<a href="#expirationdatetime_nodejs" style="color: inherit; text-decoration: inherit;">expiration<wbr>Date<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Effective expiration date of the maintenance window in YYYY-MM-DD hh:mm format.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="recurevery_nodejs">
+<a href="#recurevery_nodejs" style="color: inherit; text-decoration: inherit;">recur<wbr>Every</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The rate at which a maintenance window is expected to recur. The rate can be expressed as daily, weekly, or monthly schedules.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="start_date_time_python">
+<a href="#start_date_time_python" style="color: inherit; text-decoration: inherit;">start_<wbr>date_<wbr>time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Effective start date of the maintenance window in YYYY-MM-DD hh:mm format.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="time_zone_python">
+<a href="#time_zone_python" style="color: inherit; text-decoration: inherit;">time_<wbr>zone</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The time zone for the maintenance window. A list of timezones can be obtained by executing [System.TimeZoneInfo]::GetSystemTimeZones() in PowerShell.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="duration_python">
+<a href="#duration_python" style="color: inherit; text-decoration: inherit;">duration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The duration of the maintenance window in HH:mm format.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="expiration_date_time_python">
+<a href="#expiration_date_time_python" style="color: inherit; text-decoration: inherit;">expiration_<wbr>date_<wbr>time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Effective expiration date of the maintenance window in YYYY-MM-DD hh:mm format.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="recur_every_python">
+<a href="#recur_every_python" style="color: inherit; text-decoration: inherit;">recur_<wbr>every</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The rate at which a maintenance window is expected to recur. The rate can be expressed as daily, weekly, or monthly schedules.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
 ## Import
 
 

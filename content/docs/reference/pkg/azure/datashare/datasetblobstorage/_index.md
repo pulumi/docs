@@ -149,16 +149,16 @@ func main() {
 			return err
 		}
 		exampleContainer, err := storage.NewContainer(ctx, "exampleContainer", &storage.ContainerArgs{
-			StorageAccountName:  pulumi.String(exampleStorage / accountAccount.Name),
+			StorageAccountName:  exampleStorage / accountAccount.Name,
 			ContainerAccessType: pulumi.String("container"),
 		})
 		if err != nil {
 			return err
 		}
 		exampleAssignment, err := authorization.NewAssignment(ctx, "exampleAssignment", &authorization.AssignmentArgs{
-			Scope:              pulumi.String(exampleStorage / accountAccount.Id),
+			Scope:              exampleStorage / accountAccount.Id,
 			RoleDefinitionName: pulumi.String("Storage Blob Data Reader"),
-			PrincipalId: exampleServicePrincipal.ApplyT(func(exampleServicePrincipal azuread.LookupServicePrincipalResult) (string, error) {
+			PrincipalId: exampleServicePrincipal.ApplyT(func(exampleServicePrincipal GetServicePrincipalResult) (string, error) {
 				return exampleServicePrincipal.ObjectId, nil
 			}).(pulumi.StringOutput),
 		})
@@ -169,8 +169,8 @@ func main() {
 			DataShareId:   exampleShare.ID(),
 			ContainerName: exampleContainer.Name,
 			StorageAccount: &datashare.DatasetBlobStorageStorageAccountArgs{
-				Name:              pulumi.String(exampleStorage / accountAccount.Name),
-				ResourceGroupName: pulumi.String(exampleStorage / accountAccount.ResourceGroupName),
+				Name:              exampleStorage / accountAccount.Name,
+				ResourceGroupName: exampleStorage / accountAccount.ResourceGroupName,
 				SubscriptionId:    pulumi.String("00000000-0000-0000-0000-000000000000"),
 			},
 			FilePath: pulumi.String("myfile.txt"),
@@ -271,7 +271,7 @@ const exampleServicePrincipal = exampleAccount.name.apply(name => azuread.getSer
 const exampleAssignment = new azure.authorization.Assignment("exampleAssignment", {
     scope: exampleStorage / accountAccount.id,
     roleDefinitionName: "Storage Blob Data Reader",
-    principalId: exampleServicePrincipal.objectId,
+    principalId: exampleServicePrincipal.apply(exampleServicePrincipal => exampleServicePrincipal.objectId),
 });
 const exampleDatasetBlobStorage = new azure.datashare.DatasetBlobStorage("exampleDatasetBlobStorage", {
     dataShareId: exampleShare.id,

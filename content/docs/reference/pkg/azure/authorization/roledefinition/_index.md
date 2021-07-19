@@ -87,7 +87,7 @@ func main() {
 					Actions: pulumi.StringArray{
 						pulumi.String("*"),
 					},
-					NotActions: []interface{}{},
+					NotActions: pulumi.StringArray{},
 				},
 			},
 			AssignableScopes: pulumi.StringArray{

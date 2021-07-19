@@ -160,12 +160,12 @@ func main() {
 			Location:      exampleResourceGroup.Location,
 			EnvironmentId: exampleTimeSeriesInsightsGen2Environment.ID(),
 			IothubName:    exampleIoTHub.Name,
-			SharedAccessKey: pulumi.String(exampleIoTHub.SharedAccessPolicies.ApplyT(func(sharedAccessPolicies []iot.IoTHubSharedAccessPolicy) (string, error) {
+			SharedAccessKey: exampleIoTHub.SharedAccessPolicies.ApplyT(func(sharedAccessPolicies []iot.IoTHubSharedAccessPolicy) (string, error) {
 				return sharedAccessPolicies[0].PrimaryKey, nil
-			}).(pulumi.StringOutput)),
-			SharedAccessKeyName: pulumi.String(exampleIoTHub.SharedAccessPolicies.ApplyT(func(sharedAccessPolicies []iot.IoTHubSharedAccessPolicy) (string, error) {
+			}).(pulumi.StringOutput),
+			SharedAccessKeyName: exampleIoTHub.SharedAccessPolicies.ApplyT(func(sharedAccessPolicies []iot.IoTHubSharedAccessPolicy) (string, error) {
 				return sharedAccessPolicies[0].KeyName, nil
-			}).(pulumi.StringOutput)),
+			}).(pulumi.StringOutput),
 			ConsumerGroupName:     exampleConsumerGroup.Name,
 			EventSourceResourceId: exampleIoTHub.ID(),
 		})

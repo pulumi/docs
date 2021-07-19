@@ -34,13 +34,23 @@ Cognitive Service Accounts can be imported using the `resource id`, e.g.
 <span class="k">def </span><span class="nx">Account</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
             <span class="nx">custom_subdomain_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">fqdns</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+            <span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[AccountIdentityArgs]</span> = None<span class="p">,</span>
             <span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">local_auth_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
             <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">metrics_advisor_aad_client_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">metrics_advisor_aad_tenant_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">metrics_advisor_super_user_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">metrics_advisor_website_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">network_acls</span><span class="p">:</span> <span class="nx">Optional[AccountNetworkAclsArgs]</span> = None<span class="p">,</span>
+            <span class="nx">outbound_network_access_restrited</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+            <span class="nx">public_network_access_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
             <span class="nx">qna_runtime_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">sku_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">storages</span><span class="p">:</span> <span class="nx">Optional[Sequence[AccountStorageArgs]]</span> = None<span class="p">,</span>
             <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">Account</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
@@ -177,7 +187,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the type of Cognitive Service Account that should be created. Possible values are `Academic`, `AnomalyDetector`, `Bing.Autosuggest`, `Bing.Autosuggest.v7`, `Bing.CustomSearch`, `Bing.Search`, `Bing.Search.v7`, `Bing.Speech`, `Bing.SpellCheck`, `Bing.SpellCheck.v7`, `CognitiveServices`, `ComputerVision`, `ContentModerator`, `CustomSpeech`, `CustomVision.Prediction`, `CustomVision.Training`, `Emotion`, `Face`,`FormRecognizer`, `ImmersiveReader`, `LUIS`, `LUIS.Authoring`, `Personalizer`, `QnAMaker`, `Recommendations`, `SpeakerRecognition`, `Speech`, `SpeechServices`, `SpeechTranslation`, `TextAnalytics`, `TextTranslation` and `WebLM`. Changing this forces a new resource to be created.
+    <dd>{{% md %}}Specifies the type of Cognitive Service Account that should be created. Possible values are `Academic`, `AnomalyDetector`, `Bing.Autosuggest`, `Bing.Autosuggest.v7`, `Bing.CustomSearch`, `Bing.Search`, `Bing.Search.v7`, `Bing.Speech`, `Bing.SpellCheck`, `Bing.SpellCheck.v7`, `CognitiveServices`, `ComputerVision`, `ContentModerator`, `CustomSpeech`, `CustomVision.Prediction`, `CustomVision.Training`, `Emotion`, `Face`,`FormRecognizer`, `ImmersiveReader`, `LUIS`, `LUIS.Authoring`, `MetricsAdvisor`, `Personalizer`, `QnAMaker`, `Recommendations`, `SpeakerRecognition`, `Speech`, `SpeechServices`, `SpeechTranslation`, `TextAnalytics`, `TextTranslation` and `WebLM`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
@@ -207,6 +217,33 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
     <dd>{{% md %}}The subdomain name used for token-based authentication. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="fqdns_csharp">
+<a href="#fqdns_csharp" style="color: inherit; text-decoration: inherit;">Fqdns</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}List of FQDNs allowed for the Cognitive Account.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="identity_csharp">
+<a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accountidentity">Account<wbr>Identity<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}An `identity` block is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="localauthenabled_csharp">
+<a href="#localauthenabled_csharp" style="color: inherit; text-decoration: inherit;">Local<wbr>Auth<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether local authentication methods is enabled for the Cognitive Account. Defaults to `true`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
 </span>
@@ -214,6 +251,42 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="metricsadvisoraadclientid_csharp">
+<a href="#metricsadvisoraadclientid_csharp" style="color: inherit; text-decoration: inherit;">Metrics<wbr>Advisor<wbr>Aad<wbr>Client<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Azure AD Client ID (Application ID). This attribute is only set when kind is `MetricsAdvisor`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="metricsadvisoraadtenantid_csharp">
+<a href="#metricsadvisoraadtenantid_csharp" style="color: inherit; text-decoration: inherit;">Metrics<wbr>Advisor<wbr>Aad<wbr>Tenant<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Azure AD Tenant ID. This attribute is only set when kind is `MetricsAdvisor`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="metricsadvisorsuperusername_csharp">
+<a href="#metricsadvisorsuperusername_csharp" style="color: inherit; text-decoration: inherit;">Metrics<wbr>Advisor<wbr>Super<wbr>User<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The super user of Metrics Advisor. This attribute is only set when kind is `MetricsAdvisor`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="metricsadvisorwebsitename_csharp">
+<a href="#metricsadvisorwebsitename_csharp" style="color: inherit; text-decoration: inherit;">Metrics<wbr>Advisor<wbr>Website<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The website name of Metrics Advisor. This attribute is only set when kind is `MetricsAdvisor`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
@@ -234,6 +307,24 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
     <dd>{{% md %}}A `network_acls` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="outboundnetworkaccessrestrited_csharp">
+<a href="#outboundnetworkaccessrestrited_csharp" style="color: inherit; text-decoration: inherit;">Outbound<wbr>Network<wbr>Access<wbr>Restrited</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether outbound network access is restricted for the Cognitive Account. Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="publicnetworkaccessenabled_csharp">
+<a href="#publicnetworkaccessenabled_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Network<wbr>Access<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether public network access is allowed for the Cognitive Account. Defaults to `true`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="qnaruntimeendpoint_csharp">
 <a href="#qnaruntimeendpoint_csharp" style="color: inherit; text-decoration: inherit;">Qna<wbr>Runtime<wbr>Endpoint</a>
 </span>
@@ -241,6 +332,15 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A URL to link a QnAMaker cognitive account to a QnA runtime.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="storages_csharp">
+<a href="#storages_csharp" style="color: inherit; text-decoration: inherit;">Storages</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accountstorage">List&lt;Account<wbr>Storage<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}An `identity` block is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
@@ -262,7 +362,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the type of Cognitive Service Account that should be created. Possible values are `Academic`, `AnomalyDetector`, `Bing.Autosuggest`, `Bing.Autosuggest.v7`, `Bing.CustomSearch`, `Bing.Search`, `Bing.Search.v7`, `Bing.Speech`, `Bing.SpellCheck`, `Bing.SpellCheck.v7`, `CognitiveServices`, `ComputerVision`, `ContentModerator`, `CustomSpeech`, `CustomVision.Prediction`, `CustomVision.Training`, `Emotion`, `Face`,`FormRecognizer`, `ImmersiveReader`, `LUIS`, `LUIS.Authoring`, `Personalizer`, `QnAMaker`, `Recommendations`, `SpeakerRecognition`, `Speech`, `SpeechServices`, `SpeechTranslation`, `TextAnalytics`, `TextTranslation` and `WebLM`. Changing this forces a new resource to be created.
+    <dd>{{% md %}}Specifies the type of Cognitive Service Account that should be created. Possible values are `Academic`, `AnomalyDetector`, `Bing.Autosuggest`, `Bing.Autosuggest.v7`, `Bing.CustomSearch`, `Bing.Search`, `Bing.Search.v7`, `Bing.Speech`, `Bing.SpellCheck`, `Bing.SpellCheck.v7`, `CognitiveServices`, `ComputerVision`, `ContentModerator`, `CustomSpeech`, `CustomVision.Prediction`, `CustomVision.Training`, `Emotion`, `Face`,`FormRecognizer`, `ImmersiveReader`, `LUIS`, `LUIS.Authoring`, `MetricsAdvisor`, `Personalizer`, `QnAMaker`, `Recommendations`, `SpeakerRecognition`, `Speech`, `SpeechServices`, `SpeechTranslation`, `TextAnalytics`, `TextTranslation` and `WebLM`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
@@ -292,6 +392,33 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
     <dd>{{% md %}}The subdomain name used for token-based authentication. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="fqdns_go">
+<a href="#fqdns_go" style="color: inherit; text-decoration: inherit;">Fqdns</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}List of FQDNs allowed for the Cognitive Account.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="identity_go">
+<a href="#identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accountidentity">Account<wbr>Identity<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}An `identity` block is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="localauthenabled_go">
+<a href="#localauthenabled_go" style="color: inherit; text-decoration: inherit;">Local<wbr>Auth<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether local authentication methods is enabled for the Cognitive Account. Defaults to `true`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
 </span>
@@ -299,6 +426,42 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="metricsadvisoraadclientid_go">
+<a href="#metricsadvisoraadclientid_go" style="color: inherit; text-decoration: inherit;">Metrics<wbr>Advisor<wbr>Aad<wbr>Client<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Azure AD Client ID (Application ID). This attribute is only set when kind is `MetricsAdvisor`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="metricsadvisoraadtenantid_go">
+<a href="#metricsadvisoraadtenantid_go" style="color: inherit; text-decoration: inherit;">Metrics<wbr>Advisor<wbr>Aad<wbr>Tenant<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Azure AD Tenant ID. This attribute is only set when kind is `MetricsAdvisor`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="metricsadvisorsuperusername_go">
+<a href="#metricsadvisorsuperusername_go" style="color: inherit; text-decoration: inherit;">Metrics<wbr>Advisor<wbr>Super<wbr>User<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The super user of Metrics Advisor. This attribute is only set when kind is `MetricsAdvisor`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="metricsadvisorwebsitename_go">
+<a href="#metricsadvisorwebsitename_go" style="color: inherit; text-decoration: inherit;">Metrics<wbr>Advisor<wbr>Website<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The website name of Metrics Advisor. This attribute is only set when kind is `MetricsAdvisor`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
@@ -319,6 +482,24 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
     <dd>{{% md %}}A `network_acls` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="outboundnetworkaccessrestrited_go">
+<a href="#outboundnetworkaccessrestrited_go" style="color: inherit; text-decoration: inherit;">Outbound<wbr>Network<wbr>Access<wbr>Restrited</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether outbound network access is restricted for the Cognitive Account. Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="publicnetworkaccessenabled_go">
+<a href="#publicnetworkaccessenabled_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Network<wbr>Access<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether public network access is allowed for the Cognitive Account. Defaults to `true`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="qnaruntimeendpoint_go">
 <a href="#qnaruntimeendpoint_go" style="color: inherit; text-decoration: inherit;">Qna<wbr>Runtime<wbr>Endpoint</a>
 </span>
@@ -326,6 +507,15 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A URL to link a QnAMaker cognitive account to a QnA runtime.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="storages_go">
+<a href="#storages_go" style="color: inherit; text-decoration: inherit;">Storages</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accountstorage">[]Account<wbr>Storage<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}An `identity` block is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
@@ -347,7 +537,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the type of Cognitive Service Account that should be created. Possible values are `Academic`, `AnomalyDetector`, `Bing.Autosuggest`, `Bing.Autosuggest.v7`, `Bing.CustomSearch`, `Bing.Search`, `Bing.Search.v7`, `Bing.Speech`, `Bing.SpellCheck`, `Bing.SpellCheck.v7`, `CognitiveServices`, `ComputerVision`, `ContentModerator`, `CustomSpeech`, `CustomVision.Prediction`, `CustomVision.Training`, `Emotion`, `Face`,`FormRecognizer`, `ImmersiveReader`, `LUIS`, `LUIS.Authoring`, `Personalizer`, `QnAMaker`, `Recommendations`, `SpeakerRecognition`, `Speech`, `SpeechServices`, `SpeechTranslation`, `TextAnalytics`, `TextTranslation` and `WebLM`. Changing this forces a new resource to be created.
+    <dd>{{% md %}}Specifies the type of Cognitive Service Account that should be created. Possible values are `Academic`, `AnomalyDetector`, `Bing.Autosuggest`, `Bing.Autosuggest.v7`, `Bing.CustomSearch`, `Bing.Search`, `Bing.Search.v7`, `Bing.Speech`, `Bing.SpellCheck`, `Bing.SpellCheck.v7`, `CognitiveServices`, `ComputerVision`, `ContentModerator`, `CustomSpeech`, `CustomVision.Prediction`, `CustomVision.Training`, `Emotion`, `Face`,`FormRecognizer`, `ImmersiveReader`, `LUIS`, `LUIS.Authoring`, `MetricsAdvisor`, `Personalizer`, `QnAMaker`, `Recommendations`, `SpeakerRecognition`, `Speech`, `SpeechServices`, `SpeechTranslation`, `TextAnalytics`, `TextTranslation` and `WebLM`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
@@ -377,6 +567,33 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
     <dd>{{% md %}}The subdomain name used for token-based authentication. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="fqdns_nodejs">
+<a href="#fqdns_nodejs" style="color: inherit; text-decoration: inherit;">fqdns</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}List of FQDNs allowed for the Cognitive Account.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="identity_nodejs">
+<a href="#identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accountidentity">Account<wbr>Identity<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}An `identity` block is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="localauthenabled_nodejs">
+<a href="#localauthenabled_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>Auth<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether local authentication methods is enabled for the Cognitive Account. Defaults to `true`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
@@ -384,6 +601,42 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="metricsadvisoraadclientid_nodejs">
+<a href="#metricsadvisoraadclientid_nodejs" style="color: inherit; text-decoration: inherit;">metrics<wbr>Advisor<wbr>Aad<wbr>Client<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Azure AD Client ID (Application ID). This attribute is only set when kind is `MetricsAdvisor`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="metricsadvisoraadtenantid_nodejs">
+<a href="#metricsadvisoraadtenantid_nodejs" style="color: inherit; text-decoration: inherit;">metrics<wbr>Advisor<wbr>Aad<wbr>Tenant<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Azure AD Tenant ID. This attribute is only set when kind is `MetricsAdvisor`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="metricsadvisorsuperusername_nodejs">
+<a href="#metricsadvisorsuperusername_nodejs" style="color: inherit; text-decoration: inherit;">metrics<wbr>Advisor<wbr>Super<wbr>User<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The super user of Metrics Advisor. This attribute is only set when kind is `MetricsAdvisor`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="metricsadvisorwebsitename_nodejs">
+<a href="#metricsadvisorwebsitename_nodejs" style="color: inherit; text-decoration: inherit;">metrics<wbr>Advisor<wbr>Website<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The website name of Metrics Advisor. This attribute is only set when kind is `MetricsAdvisor`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
@@ -404,6 +657,24 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
     <dd>{{% md %}}A `network_acls` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="outboundnetworkaccessrestrited_nodejs">
+<a href="#outboundnetworkaccessrestrited_nodejs" style="color: inherit; text-decoration: inherit;">outbound<wbr>Network<wbr>Access<wbr>Restrited</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether outbound network access is restricted for the Cognitive Account. Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="publicnetworkaccessenabled_nodejs">
+<a href="#publicnetworkaccessenabled_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Network<wbr>Access<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether public network access is allowed for the Cognitive Account. Defaults to `true`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="qnaruntimeendpoint_nodejs">
 <a href="#qnaruntimeendpoint_nodejs" style="color: inherit; text-decoration: inherit;">qna<wbr>Runtime<wbr>Endpoint</a>
 </span>
@@ -411,6 +682,15 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A URL to link a QnAMaker cognitive account to a QnA runtime.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="storages_nodejs">
+<a href="#storages_nodejs" style="color: inherit; text-decoration: inherit;">storages</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accountstorage">Account<wbr>Storage<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}An `identity` block is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
@@ -432,7 +712,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies the type of Cognitive Service Account that should be created. Possible values are `Academic`, `AnomalyDetector`, `Bing.Autosuggest`, `Bing.Autosuggest.v7`, `Bing.CustomSearch`, `Bing.Search`, `Bing.Search.v7`, `Bing.Speech`, `Bing.SpellCheck`, `Bing.SpellCheck.v7`, `CognitiveServices`, `ComputerVision`, `ContentModerator`, `CustomSpeech`, `CustomVision.Prediction`, `CustomVision.Training`, `Emotion`, `Face`,`FormRecognizer`, `ImmersiveReader`, `LUIS`, `LUIS.Authoring`, `Personalizer`, `QnAMaker`, `Recommendations`, `SpeakerRecognition`, `Speech`, `SpeechServices`, `SpeechTranslation`, `TextAnalytics`, `TextTranslation` and `WebLM`. Changing this forces a new resource to be created.
+    <dd>{{% md %}}Specifies the type of Cognitive Service Account that should be created. Possible values are `Academic`, `AnomalyDetector`, `Bing.Autosuggest`, `Bing.Autosuggest.v7`, `Bing.CustomSearch`, `Bing.Search`, `Bing.Search.v7`, `Bing.Speech`, `Bing.SpellCheck`, `Bing.SpellCheck.v7`, `CognitiveServices`, `ComputerVision`, `ContentModerator`, `CustomSpeech`, `CustomVision.Prediction`, `CustomVision.Training`, `Emotion`, `Face`,`FormRecognizer`, `ImmersiveReader`, `LUIS`, `LUIS.Authoring`, `MetricsAdvisor`, `Personalizer`, `QnAMaker`, `Recommendations`, `SpeakerRecognition`, `Speech`, `SpeechServices`, `SpeechTranslation`, `TextAnalytics`, `TextTranslation` and `WebLM`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
@@ -462,6 +742,33 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
     <dd>{{% md %}}The subdomain name used for token-based authentication. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="fqdns_python">
+<a href="#fqdns_python" style="color: inherit; text-decoration: inherit;">fqdns</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}List of FQDNs allowed for the Cognitive Account.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="identity_python">
+<a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accountidentity">Account<wbr>Identity<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}An `identity` block is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="local_auth_enabled_python">
+<a href="#local_auth_enabled_python" style="color: inherit; text-decoration: inherit;">local_<wbr>auth_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether local authentication methods is enabled for the Cognitive Account. Defaults to `true`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
@@ -469,6 +776,42 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="metrics_advisor_aad_client_id_python">
+<a href="#metrics_advisor_aad_client_id_python" style="color: inherit; text-decoration: inherit;">metrics_<wbr>advisor_<wbr>aad_<wbr>client_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Azure AD Client ID (Application ID). This attribute is only set when kind is `MetricsAdvisor`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="metrics_advisor_aad_tenant_id_python">
+<a href="#metrics_advisor_aad_tenant_id_python" style="color: inherit; text-decoration: inherit;">metrics_<wbr>advisor_<wbr>aad_<wbr>tenant_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Azure AD Tenant ID. This attribute is only set when kind is `MetricsAdvisor`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="metrics_advisor_super_user_name_python">
+<a href="#metrics_advisor_super_user_name_python" style="color: inherit; text-decoration: inherit;">metrics_<wbr>advisor_<wbr>super_<wbr>user_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The super user of Metrics Advisor. This attribute is only set when kind is `MetricsAdvisor`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="metrics_advisor_website_name_python">
+<a href="#metrics_advisor_website_name_python" style="color: inherit; text-decoration: inherit;">metrics_<wbr>advisor_<wbr>website_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The website name of Metrics Advisor. This attribute is only set when kind is `MetricsAdvisor`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
@@ -489,6 +832,24 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
     <dd>{{% md %}}A `network_acls` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="outbound_network_access_restrited_python">
+<a href="#outbound_network_access_restrited_python" style="color: inherit; text-decoration: inherit;">outbound_<wbr>network_<wbr>access_<wbr>restrited</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether outbound network access is restricted for the Cognitive Account. Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="public_network_access_enabled_python">
+<a href="#public_network_access_enabled_python" style="color: inherit; text-decoration: inherit;">public_<wbr>network_<wbr>access_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether public network access is allowed for the Cognitive Account. Defaults to `true`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="qna_runtime_endpoint_python">
 <a href="#qna_runtime_endpoint_python" style="color: inherit; text-decoration: inherit;">qna_<wbr>runtime_<wbr>endpoint</a>
 </span>
@@ -496,6 +857,15 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A URL to link a QnAMaker cognitive account to a QnA runtime.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="storages_python">
+<a href="#storages_python" style="color: inherit; text-decoration: inherit;">storages</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accountstorage">Sequence[Account<wbr>Storage<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}An `identity` block is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
@@ -689,15 +1059,25 @@ Get an existing Account resource's state with the given name, ID, and optional e
         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
         <span class="nx">custom_subdomain_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">fqdns</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+        <span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[AccountIdentityArgs]</span> = None<span class="p">,</span>
         <span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">local_auth_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">metrics_advisor_aad_client_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">metrics_advisor_aad_tenant_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">metrics_advisor_super_user_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">metrics_advisor_website_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">network_acls</span><span class="p">:</span> <span class="nx">Optional[AccountNetworkAclsArgs]</span> = None<span class="p">,</span>
+        <span class="nx">outbound_network_access_restrited</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">primary_access_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">public_network_access_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">qna_runtime_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">secondary_access_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">sku_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">storages</span><span class="p">:</span> <span class="nx">Optional[Sequence[AccountStorageArgs]]</span> = None<span class="p">,</span>
         <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">) -&gt;</span> Account</code></pre></div>
 {{% /choosable %}}
 
@@ -829,13 +1209,40 @@ The following state arguments are supported:
     <dd>{{% md %}}The endpoint used to connect to the Cognitive Service Account.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_fqdns_csharp">
+<a href="#state_fqdns_csharp" style="color: inherit; text-decoration: inherit;">Fqdns</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}List of FQDNs allowed for the Cognitive Account.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_identity_csharp">
+<a href="#state_identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accountidentity">Account<wbr>Identity<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}An `identity` block is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_kind_csharp">
 <a href="#state_kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the type of Cognitive Service Account that should be created. Possible values are `Academic`, `AnomalyDetector`, `Bing.Autosuggest`, `Bing.Autosuggest.v7`, `Bing.CustomSearch`, `Bing.Search`, `Bing.Search.v7`, `Bing.Speech`, `Bing.SpellCheck`, `Bing.SpellCheck.v7`, `CognitiveServices`, `ComputerVision`, `ContentModerator`, `CustomSpeech`, `CustomVision.Prediction`, `CustomVision.Training`, `Emotion`, `Face`,`FormRecognizer`, `ImmersiveReader`, `LUIS`, `LUIS.Authoring`, `Personalizer`, `QnAMaker`, `Recommendations`, `SpeakerRecognition`, `Speech`, `SpeechServices`, `SpeechTranslation`, `TextAnalytics`, `TextTranslation` and `WebLM`. Changing this forces a new resource to be created.
+    <dd>{{% md %}}Specifies the type of Cognitive Service Account that should be created. Possible values are `Academic`, `AnomalyDetector`, `Bing.Autosuggest`, `Bing.Autosuggest.v7`, `Bing.CustomSearch`, `Bing.Search`, `Bing.Search.v7`, `Bing.Speech`, `Bing.SpellCheck`, `Bing.SpellCheck.v7`, `CognitiveServices`, `ComputerVision`, `ContentModerator`, `CustomSpeech`, `CustomVision.Prediction`, `CustomVision.Training`, `Emotion`, `Face`,`FormRecognizer`, `ImmersiveReader`, `LUIS`, `LUIS.Authoring`, `MetricsAdvisor`, `Personalizer`, `QnAMaker`, `Recommendations`, `SpeakerRecognition`, `Speech`, `SpeechServices`, `SpeechTranslation`, `TextAnalytics`, `TextTranslation` and `WebLM`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_localauthenabled_csharp">
+<a href="#state_localauthenabled_csharp" style="color: inherit; text-decoration: inherit;">Local<wbr>Auth<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether local authentication methods is enabled for the Cognitive Account. Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_csharp">
@@ -845,6 +1252,42 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_metricsadvisoraadclientid_csharp">
+<a href="#state_metricsadvisoraadclientid_csharp" style="color: inherit; text-decoration: inherit;">Metrics<wbr>Advisor<wbr>Aad<wbr>Client<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Azure AD Client ID (Application ID). This attribute is only set when kind is `MetricsAdvisor`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_metricsadvisoraadtenantid_csharp">
+<a href="#state_metricsadvisoraadtenantid_csharp" style="color: inherit; text-decoration: inherit;">Metrics<wbr>Advisor<wbr>Aad<wbr>Tenant<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Azure AD Tenant ID. This attribute is only set when kind is `MetricsAdvisor`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_metricsadvisorsuperusername_csharp">
+<a href="#state_metricsadvisorsuperusername_csharp" style="color: inherit; text-decoration: inherit;">Metrics<wbr>Advisor<wbr>Super<wbr>User<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The super user of Metrics Advisor. This attribute is only set when kind is `MetricsAdvisor`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_metricsadvisorwebsitename_csharp">
+<a href="#state_metricsadvisorwebsitename_csharp" style="color: inherit; text-decoration: inherit;">Metrics<wbr>Advisor<wbr>Website<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The website name of Metrics Advisor. This attribute is only set when kind is `MetricsAdvisor`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
@@ -865,6 +1308,15 @@ The following state arguments are supported:
     <dd>{{% md %}}A `network_acls` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_outboundnetworkaccessrestrited_csharp">
+<a href="#state_outboundnetworkaccessrestrited_csharp" style="color: inherit; text-decoration: inherit;">Outbound<wbr>Network<wbr>Access<wbr>Restrited</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether outbound network access is restricted for the Cognitive Account. Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_primaryaccesskey_csharp">
 <a href="#state_primaryaccesskey_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Access<wbr>Key</a>
 </span>
@@ -872,6 +1324,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A primary access key which can be used to connect to the Cognitive Service Account.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_publicnetworkaccessenabled_csharp">
+<a href="#state_publicnetworkaccessenabled_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Network<wbr>Access<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether public network access is allowed for the Cognitive Account. Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_qnaruntimeendpoint_csharp">
@@ -910,6 +1371,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Specifies the SKU Name for this Cognitive Service Account. Possible values are `F0`, `F1`, `S`, `S0`, `S1`, `S2`, `S3`, `S4`, `S5`, `S6`, `P0`, `P1`, and `P2`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_storages_csharp">
+<a href="#state_storages_csharp" style="color: inherit; text-decoration: inherit;">Storages</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accountstorage">List&lt;Account<wbr>Storage<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}An `identity` block is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_tags_csharp">
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span>
@@ -941,13 +1411,40 @@ The following state arguments are supported:
     <dd>{{% md %}}The endpoint used to connect to the Cognitive Service Account.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_fqdns_go">
+<a href="#state_fqdns_go" style="color: inherit; text-decoration: inherit;">Fqdns</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}List of FQDNs allowed for the Cognitive Account.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_identity_go">
+<a href="#state_identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accountidentity">Account<wbr>Identity<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}An `identity` block is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_kind_go">
 <a href="#state_kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the type of Cognitive Service Account that should be created. Possible values are `Academic`, `AnomalyDetector`, `Bing.Autosuggest`, `Bing.Autosuggest.v7`, `Bing.CustomSearch`, `Bing.Search`, `Bing.Search.v7`, `Bing.Speech`, `Bing.SpellCheck`, `Bing.SpellCheck.v7`, `CognitiveServices`, `ComputerVision`, `ContentModerator`, `CustomSpeech`, `CustomVision.Prediction`, `CustomVision.Training`, `Emotion`, `Face`,`FormRecognizer`, `ImmersiveReader`, `LUIS`, `LUIS.Authoring`, `Personalizer`, `QnAMaker`, `Recommendations`, `SpeakerRecognition`, `Speech`, `SpeechServices`, `SpeechTranslation`, `TextAnalytics`, `TextTranslation` and `WebLM`. Changing this forces a new resource to be created.
+    <dd>{{% md %}}Specifies the type of Cognitive Service Account that should be created. Possible values are `Academic`, `AnomalyDetector`, `Bing.Autosuggest`, `Bing.Autosuggest.v7`, `Bing.CustomSearch`, `Bing.Search`, `Bing.Search.v7`, `Bing.Speech`, `Bing.SpellCheck`, `Bing.SpellCheck.v7`, `CognitiveServices`, `ComputerVision`, `ContentModerator`, `CustomSpeech`, `CustomVision.Prediction`, `CustomVision.Training`, `Emotion`, `Face`,`FormRecognizer`, `ImmersiveReader`, `LUIS`, `LUIS.Authoring`, `MetricsAdvisor`, `Personalizer`, `QnAMaker`, `Recommendations`, `SpeakerRecognition`, `Speech`, `SpeechServices`, `SpeechTranslation`, `TextAnalytics`, `TextTranslation` and `WebLM`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_localauthenabled_go">
+<a href="#state_localauthenabled_go" style="color: inherit; text-decoration: inherit;">Local<wbr>Auth<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether local authentication methods is enabled for the Cognitive Account. Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_go">
@@ -957,6 +1454,42 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_metricsadvisoraadclientid_go">
+<a href="#state_metricsadvisoraadclientid_go" style="color: inherit; text-decoration: inherit;">Metrics<wbr>Advisor<wbr>Aad<wbr>Client<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Azure AD Client ID (Application ID). This attribute is only set when kind is `MetricsAdvisor`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_metricsadvisoraadtenantid_go">
+<a href="#state_metricsadvisoraadtenantid_go" style="color: inherit; text-decoration: inherit;">Metrics<wbr>Advisor<wbr>Aad<wbr>Tenant<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Azure AD Tenant ID. This attribute is only set when kind is `MetricsAdvisor`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_metricsadvisorsuperusername_go">
+<a href="#state_metricsadvisorsuperusername_go" style="color: inherit; text-decoration: inherit;">Metrics<wbr>Advisor<wbr>Super<wbr>User<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The super user of Metrics Advisor. This attribute is only set when kind is `MetricsAdvisor`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_metricsadvisorwebsitename_go">
+<a href="#state_metricsadvisorwebsitename_go" style="color: inherit; text-decoration: inherit;">Metrics<wbr>Advisor<wbr>Website<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The website name of Metrics Advisor. This attribute is only set when kind is `MetricsAdvisor`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
@@ -977,6 +1510,15 @@ The following state arguments are supported:
     <dd>{{% md %}}A `network_acls` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_outboundnetworkaccessrestrited_go">
+<a href="#state_outboundnetworkaccessrestrited_go" style="color: inherit; text-decoration: inherit;">Outbound<wbr>Network<wbr>Access<wbr>Restrited</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether outbound network access is restricted for the Cognitive Account. Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_primaryaccesskey_go">
 <a href="#state_primaryaccesskey_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Access<wbr>Key</a>
 </span>
@@ -984,6 +1526,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A primary access key which can be used to connect to the Cognitive Service Account.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_publicnetworkaccessenabled_go">
+<a href="#state_publicnetworkaccessenabled_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Network<wbr>Access<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether public network access is allowed for the Cognitive Account. Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_qnaruntimeendpoint_go">
@@ -1022,6 +1573,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Specifies the SKU Name for this Cognitive Service Account. Possible values are `F0`, `F1`, `S`, `S0`, `S1`, `S2`, `S3`, `S4`, `S5`, `S6`, `P0`, `P1`, and `P2`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_storages_go">
+<a href="#state_storages_go" style="color: inherit; text-decoration: inherit;">Storages</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accountstorage">[]Account<wbr>Storage<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}An `identity` block is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_tags_go">
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span>
@@ -1053,13 +1613,40 @@ The following state arguments are supported:
     <dd>{{% md %}}The endpoint used to connect to the Cognitive Service Account.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_fqdns_nodejs">
+<a href="#state_fqdns_nodejs" style="color: inherit; text-decoration: inherit;">fqdns</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}List of FQDNs allowed for the Cognitive Account.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_identity_nodejs">
+<a href="#state_identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accountidentity">Account<wbr>Identity<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}An `identity` block is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_kind_nodejs">
 <a href="#state_kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the type of Cognitive Service Account that should be created. Possible values are `Academic`, `AnomalyDetector`, `Bing.Autosuggest`, `Bing.Autosuggest.v7`, `Bing.CustomSearch`, `Bing.Search`, `Bing.Search.v7`, `Bing.Speech`, `Bing.SpellCheck`, `Bing.SpellCheck.v7`, `CognitiveServices`, `ComputerVision`, `ContentModerator`, `CustomSpeech`, `CustomVision.Prediction`, `CustomVision.Training`, `Emotion`, `Face`,`FormRecognizer`, `ImmersiveReader`, `LUIS`, `LUIS.Authoring`, `Personalizer`, `QnAMaker`, `Recommendations`, `SpeakerRecognition`, `Speech`, `SpeechServices`, `SpeechTranslation`, `TextAnalytics`, `TextTranslation` and `WebLM`. Changing this forces a new resource to be created.
+    <dd>{{% md %}}Specifies the type of Cognitive Service Account that should be created. Possible values are `Academic`, `AnomalyDetector`, `Bing.Autosuggest`, `Bing.Autosuggest.v7`, `Bing.CustomSearch`, `Bing.Search`, `Bing.Search.v7`, `Bing.Speech`, `Bing.SpellCheck`, `Bing.SpellCheck.v7`, `CognitiveServices`, `ComputerVision`, `ContentModerator`, `CustomSpeech`, `CustomVision.Prediction`, `CustomVision.Training`, `Emotion`, `Face`,`FormRecognizer`, `ImmersiveReader`, `LUIS`, `LUIS.Authoring`, `MetricsAdvisor`, `Personalizer`, `QnAMaker`, `Recommendations`, `SpeakerRecognition`, `Speech`, `SpeechServices`, `SpeechTranslation`, `TextAnalytics`, `TextTranslation` and `WebLM`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_localauthenabled_nodejs">
+<a href="#state_localauthenabled_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>Auth<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether local authentication methods is enabled for the Cognitive Account. Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_nodejs">
@@ -1069,6 +1656,42 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_metricsadvisoraadclientid_nodejs">
+<a href="#state_metricsadvisoraadclientid_nodejs" style="color: inherit; text-decoration: inherit;">metrics<wbr>Advisor<wbr>Aad<wbr>Client<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Azure AD Client ID (Application ID). This attribute is only set when kind is `MetricsAdvisor`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_metricsadvisoraadtenantid_nodejs">
+<a href="#state_metricsadvisoraadtenantid_nodejs" style="color: inherit; text-decoration: inherit;">metrics<wbr>Advisor<wbr>Aad<wbr>Tenant<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Azure AD Tenant ID. This attribute is only set when kind is `MetricsAdvisor`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_metricsadvisorsuperusername_nodejs">
+<a href="#state_metricsadvisorsuperusername_nodejs" style="color: inherit; text-decoration: inherit;">metrics<wbr>Advisor<wbr>Super<wbr>User<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The super user of Metrics Advisor. This attribute is only set when kind is `MetricsAdvisor`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_metricsadvisorwebsitename_nodejs">
+<a href="#state_metricsadvisorwebsitename_nodejs" style="color: inherit; text-decoration: inherit;">metrics<wbr>Advisor<wbr>Website<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The website name of Metrics Advisor. This attribute is only set when kind is `MetricsAdvisor`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
@@ -1089,6 +1712,15 @@ The following state arguments are supported:
     <dd>{{% md %}}A `network_acls` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_outboundnetworkaccessrestrited_nodejs">
+<a href="#state_outboundnetworkaccessrestrited_nodejs" style="color: inherit; text-decoration: inherit;">outbound<wbr>Network<wbr>Access<wbr>Restrited</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether outbound network access is restricted for the Cognitive Account. Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_primaryaccesskey_nodejs">
 <a href="#state_primaryaccesskey_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Access<wbr>Key</a>
 </span>
@@ -1096,6 +1728,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A primary access key which can be used to connect to the Cognitive Service Account.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_publicnetworkaccessenabled_nodejs">
+<a href="#state_publicnetworkaccessenabled_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Network<wbr>Access<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether public network access is allowed for the Cognitive Account. Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_qnaruntimeendpoint_nodejs">
@@ -1134,6 +1775,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Specifies the SKU Name for this Cognitive Service Account. Possible values are `F0`, `F1`, `S`, `S0`, `S1`, `S2`, `S3`, `S4`, `S5`, `S6`, `P0`, `P1`, and `P2`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_storages_nodejs">
+<a href="#state_storages_nodejs" style="color: inherit; text-decoration: inherit;">storages</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accountstorage">Account<wbr>Storage<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}An `identity` block is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_tags_nodejs">
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
@@ -1165,13 +1815,40 @@ The following state arguments are supported:
     <dd>{{% md %}}The endpoint used to connect to the Cognitive Service Account.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_fqdns_python">
+<a href="#state_fqdns_python" style="color: inherit; text-decoration: inherit;">fqdns</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}List of FQDNs allowed for the Cognitive Account.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_identity_python">
+<a href="#state_identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accountidentity">Account<wbr>Identity<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}An `identity` block is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_kind_python">
 <a href="#state_kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies the type of Cognitive Service Account that should be created. Possible values are `Academic`, `AnomalyDetector`, `Bing.Autosuggest`, `Bing.Autosuggest.v7`, `Bing.CustomSearch`, `Bing.Search`, `Bing.Search.v7`, `Bing.Speech`, `Bing.SpellCheck`, `Bing.SpellCheck.v7`, `CognitiveServices`, `ComputerVision`, `ContentModerator`, `CustomSpeech`, `CustomVision.Prediction`, `CustomVision.Training`, `Emotion`, `Face`,`FormRecognizer`, `ImmersiveReader`, `LUIS`, `LUIS.Authoring`, `Personalizer`, `QnAMaker`, `Recommendations`, `SpeakerRecognition`, `Speech`, `SpeechServices`, `SpeechTranslation`, `TextAnalytics`, `TextTranslation` and `WebLM`. Changing this forces a new resource to be created.
+    <dd>{{% md %}}Specifies the type of Cognitive Service Account that should be created. Possible values are `Academic`, `AnomalyDetector`, `Bing.Autosuggest`, `Bing.Autosuggest.v7`, `Bing.CustomSearch`, `Bing.Search`, `Bing.Search.v7`, `Bing.Speech`, `Bing.SpellCheck`, `Bing.SpellCheck.v7`, `CognitiveServices`, `ComputerVision`, `ContentModerator`, `CustomSpeech`, `CustomVision.Prediction`, `CustomVision.Training`, `Emotion`, `Face`,`FormRecognizer`, `ImmersiveReader`, `LUIS`, `LUIS.Authoring`, `MetricsAdvisor`, `Personalizer`, `QnAMaker`, `Recommendations`, `SpeakerRecognition`, `Speech`, `SpeechServices`, `SpeechTranslation`, `TextAnalytics`, `TextTranslation` and `WebLM`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_local_auth_enabled_python">
+<a href="#state_local_auth_enabled_python" style="color: inherit; text-decoration: inherit;">local_<wbr>auth_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether local authentication methods is enabled for the Cognitive Account. Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_python">
@@ -1181,6 +1858,42 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_metrics_advisor_aad_client_id_python">
+<a href="#state_metrics_advisor_aad_client_id_python" style="color: inherit; text-decoration: inherit;">metrics_<wbr>advisor_<wbr>aad_<wbr>client_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Azure AD Client ID (Application ID). This attribute is only set when kind is `MetricsAdvisor`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_metrics_advisor_aad_tenant_id_python">
+<a href="#state_metrics_advisor_aad_tenant_id_python" style="color: inherit; text-decoration: inherit;">metrics_<wbr>advisor_<wbr>aad_<wbr>tenant_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Azure AD Tenant ID. This attribute is only set when kind is `MetricsAdvisor`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_metrics_advisor_super_user_name_python">
+<a href="#state_metrics_advisor_super_user_name_python" style="color: inherit; text-decoration: inherit;">metrics_<wbr>advisor_<wbr>super_<wbr>user_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The super user of Metrics Advisor. This attribute is only set when kind is `MetricsAdvisor`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_metrics_advisor_website_name_python">
+<a href="#state_metrics_advisor_website_name_python" style="color: inherit; text-decoration: inherit;">metrics_<wbr>advisor_<wbr>website_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The website name of Metrics Advisor. This attribute is only set when kind is `MetricsAdvisor`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
@@ -1201,6 +1914,15 @@ The following state arguments are supported:
     <dd>{{% md %}}A `network_acls` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_outbound_network_access_restrited_python">
+<a href="#state_outbound_network_access_restrited_python" style="color: inherit; text-decoration: inherit;">outbound_<wbr>network_<wbr>access_<wbr>restrited</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether outbound network access is restricted for the Cognitive Account. Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_primary_access_key_python">
 <a href="#state_primary_access_key_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>access_<wbr>key</a>
 </span>
@@ -1208,6 +1930,15 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A primary access key which can be used to connect to the Cognitive Service Account.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_public_network_access_enabled_python">
+<a href="#state_public_network_access_enabled_python" style="color: inherit; text-decoration: inherit;">public_<wbr>network_<wbr>access_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether public network access is allowed for the Cognitive Account. Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_qna_runtime_endpoint_python">
@@ -1246,6 +1977,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Specifies the SKU Name for this Cognitive Service Account. Possible values are `F0`, `F1`, `S`, `S0`, `S1`, `S2`, `S3`, `S4`, `S5`, `S6`, `P0`, `P1`, and `P2`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_storages_python">
+<a href="#state_storages_python" style="color: inherit; text-decoration: inherit;">storages</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accountstorage">Sequence[Account<wbr>Storage<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}An `identity` block is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_tags_python">
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
@@ -1264,6 +2004,160 @@ The following state arguments are supported:
 ## Supporting Types
 
 
+
+<h4 id="accountidentity">Account<wbr>Identity</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="identityids_csharp">
+<a href="#identityids_csharp" style="color: inherit; text-decoration: inherit;">Identity<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A list of IDs for User Assigned Managed Identity resources to be assigned.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="principalid_csharp">
+<a href="#principalid_csharp" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tenantid_csharp">
+<a href="#tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the type of Managed Service Identity that should be configured on the Cognitive Account. Possible values are `SystemAssigned`, `UserAssigned`, `SystemAssigned, UserAssigned` (to enable both).
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="identityids_go">
+<a href="#identityids_go" style="color: inherit; text-decoration: inherit;">Identity<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}A list of IDs for User Assigned Managed Identity resources to be assigned.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="principalid_go">
+<a href="#principalid_go" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tenantid_go">
+<a href="#tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the type of Managed Service Identity that should be configured on the Cognitive Account. Possible values are `SystemAssigned`, `UserAssigned`, `SystemAssigned, UserAssigned` (to enable both).
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="identityids_nodejs">
+<a href="#identityids_nodejs" style="color: inherit; text-decoration: inherit;">identity<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}A list of IDs for User Assigned Managed Identity resources to be assigned.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="principalid_nodejs">
+<a href="#principalid_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tenantid_nodejs">
+<a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the type of Managed Service Identity that should be configured on the Cognitive Account. Possible values are `SystemAssigned`, `UserAssigned`, `SystemAssigned, UserAssigned` (to enable both).
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="identity_ids_python">
+<a href="#identity_ids_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}A list of IDs for User Assigned Managed Identity resources to be assigned.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="principal_id_python">
+<a href="#principal_id_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tenant_id_python">
+<a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specifies the type of Managed Service Identity that should be configured on the Cognitive Account. Possible values are `SystemAssigned`, `UserAssigned`, `SystemAssigned, UserAssigned` (to enable both).
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
 
 <h4 id="accountnetworkacls">Account<wbr>Network<wbr>Acls</h4>
 
@@ -1288,14 +2182,22 @@ The following state arguments are supported:
     <dd>{{% md %}}One or more IP Addresses, or CIDR Blocks which should be able to access the Cognitive Account.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="virtualnetworkrules_csharp">
+<a href="#virtualnetworkrules_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Rules</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accountnetworkaclsvirtualnetworkrule">List&lt;Account<wbr>Network<wbr>Acls<wbr>Virtual<wbr>Network<wbr>Rule&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A `virtual_network_rules` block as defined below.
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="virtualnetworksubnetids_csharp">
 <a href="#virtualnetworksubnetids_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Subnet<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}One or more Subnet ID's which should be able to access this Cognitive Account.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `virtual_network_rules`{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1319,14 +2221,22 @@ The following state arguments are supported:
     <dd>{{% md %}}One or more IP Addresses, or CIDR Blocks which should be able to access the Cognitive Account.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="virtualnetworkrules_go">
+<a href="#virtualnetworkrules_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Rules</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accountnetworkaclsvirtualnetworkrule">[]Account<wbr>Network<wbr>Acls<wbr>Virtual<wbr>Network<wbr>Rule</a></span>
+    </dt>
+    <dd>{{% md %}}A `virtual_network_rules` block as defined below.
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="virtualnetworksubnetids_go">
 <a href="#virtualnetworksubnetids_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Subnet<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}One or more Subnet ID's which should be able to access this Cognitive Account.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `virtual_network_rules`{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1350,14 +2260,22 @@ The following state arguments are supported:
     <dd>{{% md %}}One or more IP Addresses, or CIDR Blocks which should be able to access the Cognitive Account.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="virtualnetworkrules_nodejs">
+<a href="#virtualnetworkrules_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Network<wbr>Rules</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accountnetworkaclsvirtualnetworkrule">Account<wbr>Network<wbr>Acls<wbr>Virtual<wbr>Network<wbr>Rule[]</a></span>
+    </dt>
+    <dd>{{% md %}}A `virtual_network_rules` block as defined below.
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="virtualnetworksubnetids_nodejs">
 <a href="#virtualnetworksubnetids_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Network<wbr>Subnet<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}One or more Subnet ID's which should be able to access this Cognitive Account.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `virtual_network_rules`{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1381,13 +2299,201 @@ The following state arguments are supported:
     <dd>{{% md %}}One or more IP Addresses, or CIDR Blocks which should be able to access the Cognitive Account.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="virtual_network_rules_python">
+<a href="#virtual_network_rules_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>network_<wbr>rules</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accountnetworkaclsvirtualnetworkrule">Sequence[Account<wbr>Network<wbr>Acls<wbr>Virtual<wbr>Network<wbr>Rule]</a></span>
+    </dt>
+    <dd>{{% md %}}A `virtual_network_rules` block as defined below.
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="virtual_network_subnet_ids_python">
 <a href="#virtual_network_subnet_ids_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>network_<wbr>subnet_<wbr>ids</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}One or more Subnet ID's which should be able to access this Cognitive Account.
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `virtual_network_rules`{{% /md %}}</p></dd></dl>
+{{% /choosable %}}
+
+<h4 id="accountnetworkaclsvirtualnetworkrule">Account<wbr>Network<wbr>Acls<wbr>Virtual<wbr>Network<wbr>Rule</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="subnetid_csharp">
+<a href="#subnetid_csharp" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the subnet which should be able to access this Cognitive Account.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ignoremissingvnetserviceendpoint_csharp">
+<a href="#ignoremissingvnetserviceendpoint_csharp" style="color: inherit; text-decoration: inherit;">Ignore<wbr>Missing<wbr>Vnet<wbr>Service<wbr>Endpoint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether ignore missing vnet service endpoint or not. Default to `false`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="subnetid_go">
+<a href="#subnetid_go" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the subnet which should be able to access this Cognitive Account.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ignoremissingvnetserviceendpoint_go">
+<a href="#ignoremissingvnetserviceendpoint_go" style="color: inherit; text-decoration: inherit;">Ignore<wbr>Missing<wbr>Vnet<wbr>Service<wbr>Endpoint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether ignore missing vnet service endpoint or not. Default to `false`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="subnetid_nodejs">
+<a href="#subnetid_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the subnet which should be able to access this Cognitive Account.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ignoremissingvnetserviceendpoint_nodejs">
+<a href="#ignoremissingvnetserviceendpoint_nodejs" style="color: inherit; text-decoration: inherit;">ignore<wbr>Missing<wbr>Vnet<wbr>Service<wbr>Endpoint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether ignore missing vnet service endpoint or not. Default to `false`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="subnet_id_python">
+<a href="#subnet_id_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ID of the subnet which should be able to access this Cognitive Account.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ignore_missing_vnet_service_endpoint_python">
+<a href="#ignore_missing_vnet_service_endpoint_python" style="color: inherit; text-decoration: inherit;">ignore_<wbr>missing_<wbr>vnet_<wbr>service_<wbr>endpoint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether ignore missing vnet service endpoint or not. Default to `false`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="accountstorage">Account<wbr>Storage</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="storageaccountid_csharp">
+<a href="#storageaccountid_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Full resource id of a Microsoft.Storage resource.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="identityclientid_csharp">
+<a href="#identityclientid_csharp" style="color: inherit; text-decoration: inherit;">Identity<wbr>Client<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The client ID of the managed identity associated with the storage resource.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="storageaccountid_go">
+<a href="#storageaccountid_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Full resource id of a Microsoft.Storage resource.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="identityclientid_go">
+<a href="#identityclientid_go" style="color: inherit; text-decoration: inherit;">Identity<wbr>Client<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The client ID of the managed identity associated with the storage resource.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="storageaccountid_nodejs">
+<a href="#storageaccountid_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Full resource id of a Microsoft.Storage resource.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="identityclientid_nodejs">
+<a href="#identityclientid_nodejs" style="color: inherit; text-decoration: inherit;">identity<wbr>Client<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The client ID of the managed identity associated with the storage resource.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="storage_account_id_python">
+<a href="#storage_account_id_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Full resource id of a Microsoft.Storage resource.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="identity_client_id_python">
+<a href="#identity_client_id_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>client_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The client ID of the managed identity associated with the storage resource.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

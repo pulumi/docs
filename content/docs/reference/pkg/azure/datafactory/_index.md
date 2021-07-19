@@ -11,7 +11,9 @@ Explore the resources and functions of the azure.datafactory module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
+    <li><a href="customdataset" title="CustomDataset"><span class="symbol resource"></span>CustomDataset</a></li>
     <li><a href="datasetazureblob" title="DatasetAzureBlob"><span class="symbol resource"></span>DatasetAzureBlob</a></li>
+    <li><a href="datasetbinary" title="DatasetBinary"><span class="symbol resource"></span>DatasetBinary</a></li>
     <li><a href="datasetcosmosdbapi" title="DatasetCosmosDBApi"><span class="symbol resource"></span>DatasetCosmosDBApi</a></li>
     <li><a href="datasetdelimitedtext" title="DatasetDelimitedText"><span class="symbol resource"></span>DatasetDelimitedText</a></li>
     <li><a href="datasethttp" title="DatasetHttp"><span class="symbol resource"></span>DatasetHttp</a></li>
@@ -65,6 +67,6 @@ Explore the resources and functions of the azure.datafactory module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.10.0</dd>
+	<dd>4.11.0</dd>
 </dl>
 

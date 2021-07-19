@@ -85,6 +85,7 @@ Explore the resources and functions of the azure.network module.
     <li><a href="getfirewallpolicy" title="GetFirewallPolicy"><span class="symbol function"></span>GetFirewallPolicy</a></li>
     <li><a href="getgatewayconnection" title="GetGatewayConnection"><span class="symbol function"></span>GetGatewayConnection</a></li>
     <li><a href="getipgroup" title="GetIpGroup"><span class="symbol function"></span>GetIpGroup</a></li>
+    <li><a href="getlocalnetworkgateway" title="GetLocalNetworkGateway"><span class="symbol function"></span>GetLocalNetworkGateway</a></li>
     <li><a href="getnatgateway" title="GetNatGateway"><span class="symbol function"></span>GetNatGateway</a></li>
     <li><a href="getnetworkddosprotectionplan" title="GetNetworkDdosProtectionPlan"><span class="symbol function"></span>GetNetworkDdosProtectionPlan</a></li>
     <li><a href="getnetworkinterface" title="GetNetworkInterface"><span class="symbol function"></span>GetNetworkInterface</a></li>
@@ -114,6 +115,6 @@ Explore the resources and functions of the azure.network module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.10.0</dd>
+	<dd>4.11.0</dd>
 </dl>
 
