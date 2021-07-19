@@ -2744,6 +2744,15 @@ encrypt this table.  Note that the default bigquery service account will need to
 encrypt/decrypt permissions on this key - you may want to see the
 `gcp.bigquery.getDefaultServiceAccount` datasource and the
 `gcp.kms.CryptoKeyIAMBinding` resource.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="kmskeyversion_csharp">
+<a href="#kmskeyversion_csharp" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The self link or full name of the kms key version used to encrypt this table.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2761,6 +2770,15 @@ encrypt this table.  Note that the default bigquery service account will need to
 encrypt/decrypt permissions on this key - you may want to see the
 `gcp.bigquery.getDefaultServiceAccount` datasource and the
 `gcp.kms.CryptoKeyIAMBinding` resource.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="kmskeyversion_go">
+<a href="#kmskeyversion_go" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The self link or full name of the kms key version used to encrypt this table.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2778,6 +2796,15 @@ encrypt this table.  Note that the default bigquery service account will need to
 encrypt/decrypt permissions on this key - you may want to see the
 `gcp.bigquery.getDefaultServiceAccount` datasource and the
 `gcp.kms.CryptoKeyIAMBinding` resource.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="kmskeyversion_nodejs">
+<a href="#kmskeyversion_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The self link or full name of the kms key version used to encrypt this table.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2795,6 +2822,15 @@ encrypt this table.  Note that the default bigquery service account will need to
 encrypt/decrypt permissions on this key - you may want to see the
 `gcp.bigquery.getDefaultServiceAccount` datasource and the
 `gcp.kms.CryptoKeyIAMBinding` resource.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="kms_key_version_python">
+<a href="#kms_key_version_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The self link or full name of the kms key version used to encrypt this table.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

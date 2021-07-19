@@ -36,7 +36,7 @@ import * as gcp from "@pulumi/gcp";
 
 const owner = gcp.organizations.getIAMPolicy({
     bindings: [{
-        role: "roles/dataOwner",
+        role: "roles/bigquery.dataOwner",
         members: ["user:jane@example.com"],
     }],
 });
@@ -50,7 +50,7 @@ import pulumi
 import pulumi_gcp as gcp
 
 owner = gcp.organizations.get_iam_policy(bindings=[gcp.organizations.GetIAMPolicyBindingArgs(
-    role="roles/dataOwner",
+    role="roles/bigquery.dataOwner",
     members=["user:jane@example.com"],
 )])
 dataset = gcp.bigquery.DatasetIamPolicy("dataset",
@@ -71,7 +71,7 @@ class MyStack : Stack
             {
                 new Gcp.Organizations.Inputs.GetIAMPolicyBindingArgs
                 {
-                    Role = "roles/dataOwner",
+                    Role = "roles/bigquery.dataOwner",
                     Members = 
                     {
                         "user:jane@example.com",
@@ -102,7 +102,7 @@ func main() {
 		owner, err := organizations.LookupIAMPolicy(ctx, &organizations.LookupIAMPolicyArgs{
 			Bindings: []organizations.GetIAMPolicyBinding{
 				organizations.GetIAMPolicyBinding{
-					Role: "roles/dataOwner",
+					Role: "roles/bigquery.dataOwner",
 					Members: []string{
 						"user:jane@example.com",
 					},

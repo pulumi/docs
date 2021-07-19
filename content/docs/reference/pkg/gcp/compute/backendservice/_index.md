@@ -768,12 +768,18 @@ class MyStack : Stack
         {
             NetworkEndpointType = "INTERNET_FQDN_PORT",
             DefaultPort = 443,
+        }, new CustomResourceOptions
+        {
+            Provider = google_beta,
         });
         var proxy = new Gcp.Compute.GlobalNetworkEndpoint("proxy", new Gcp.Compute.GlobalNetworkEndpointArgs
         {
             GlobalNetworkEndpointGroup = externalProxy.Id,
             Fqdn = "test.example.com",
             Port = externalProxy.DefaultPort,
+        }, new CustomResourceOptions
+        {
+            Provider = google_beta,
         });
         var @default = new Gcp.Compute.BackendService("default", new Gcp.Compute.BackendServiceArgs
         {
@@ -795,6 +801,9 @@ class MyStack : Stack
                     Group = externalProxy.Id,
                 },
             },
+        }, new CustomResourceOptions
+        {
+            Provider = google_beta,
         });
     }
 
@@ -822,7 +831,7 @@ func main() {
 		externalProxy, err := compute.NewGlobalNetworkEndpointGroup(ctx, "externalProxy", &compute.GlobalNetworkEndpointGroupArgs{
 			NetworkEndpointType: pulumi.String("INTERNET_FQDN_PORT"),
 			DefaultPort:         pulumi.Int(443),
-		})
+		}, pulumi.Provider(google_beta))
 		if err != nil {
 			return err
 		}
@@ -830,7 +839,7 @@ func main() {
 			GlobalNetworkEndpointGroup: externalProxy.ID(),
 			Fqdn:                       pulumi.String("test.example.com"),
 			Port:                       externalProxy.DefaultPort,
-		})
+		}, pulumi.Provider(google_beta))
 		if err != nil {
 			return err
 		}
@@ -851,7 +860,7 @@ func main() {
 					Group: externalProxy.ID(),
 				},
 			},
-		})
+		}, pulumi.Provider(google_beta))
 		if err != nil {
 			return err
 		}
@@ -872,11 +881,13 @@ import pulumi_gcp as gcp
 
 external_proxy = gcp.compute.GlobalNetworkEndpointGroup("externalProxy",
     network_endpoint_type="INTERNET_FQDN_PORT",
-    default_port=443)
+    default_port=443,
+    opts=pulumi.ResourceOptions(provider=google_beta))
 proxy = gcp.compute.GlobalNetworkEndpoint("proxy",
     global_network_endpoint_group=external_proxy.id,
     fqdn="test.example.com",
-    port=external_proxy.default_port)
+    port=external_proxy.default_port,
+    opts=pulumi.ResourceOptions(provider=google_beta))
 default = gcp.compute.BackendService("default",
     enable_cdn=True,
     timeout_sec=10,
@@ -885,7 +896,8 @@ default = gcp.compute.BackendService("default",
     custom_response_headers=["X-Cache-Hit: {cdn_cache_status}"],
     backends=[gcp.compute.BackendServiceBackendArgs(
         group=external_proxy.id,
-    )])
+    )],
+    opts=pulumi.ResourceOptions(provider=google_beta))
 ```
 
 
@@ -902,11 +914,15 @@ import * as gcp from "@pulumi/gcp";
 const externalProxy = new gcp.compute.GlobalNetworkEndpointGroup("externalProxy", {
     networkEndpointType: "INTERNET_FQDN_PORT",
     defaultPort: "443",
+}, {
+    provider: google_beta,
 });
 const proxy = new gcp.compute.GlobalNetworkEndpoint("proxy", {
     globalNetworkEndpointGroup: externalProxy.id,
     fqdn: "test.example.com",
     port: externalProxy.defaultPort,
+}, {
+    provider: google_beta,
 });
 const _default = new gcp.compute.BackendService("default", {
     enableCdn: true,
@@ -917,6 +933,8 @@ const _default = new gcp.compute.BackendService("default", {
     backends: [{
         group: externalProxy.id,
     }],
+}, {
+    provider: google_beta,
 });
 ```
 

@@ -75,6 +75,7 @@ construction to achieve fine-grained programmatic control over provider settings
              <span class="nx">deployment_manager_custom_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">dialogflow_custom_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">dialogflow_cx_custom_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">disable_google_partner_name</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
              <span class="nx">dns_custom_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">essential_contacts_custom_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">eventarc_custom_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -84,6 +85,7 @@ construction to achieve fine-grained programmatic control over provider settings
              <span class="nx">game_services_custom_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">gke_hub_custom_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">gkehub_feature_custom_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">google_partner_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">healthcare_custom_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">iam_beta_custom_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">iam_credentials_custom_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -621,6 +623,14 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablegooglepartnername_csharp">
+<a href="#disablegooglepartnername_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Google<wbr>Partner<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="dnscustomendpoint_csharp">
 <a href="#dnscustomendpoint_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Custom<wbr>Endpoint</a>
 </span>
@@ -687,6 +697,14 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
             title="Optional">
         <span id="gkehubfeaturecustomendpoint_csharp">
 <a href="#gkehubfeaturecustomendpoint_csharp" style="color: inherit; text-decoration: inherit;">Gkehub<wbr>Feature<wbr>Custom<wbr>Endpoint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="googlepartnername_csharp">
+<a href="#googlepartnername_csharp" style="color: inherit; text-decoration: inherit;">Google<wbr>Partner<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -1441,6 +1459,14 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablegooglepartnername_go">
+<a href="#disablegooglepartnername_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Google<wbr>Partner<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="dnscustomendpoint_go">
 <a href="#dnscustomendpoint_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Custom<wbr>Endpoint</a>
 </span>
@@ -1507,6 +1533,14 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
             title="Optional">
         <span id="gkehubfeaturecustomendpoint_go">
 <a href="#gkehubfeaturecustomendpoint_go" style="color: inherit; text-decoration: inherit;">Gkehub<wbr>Feature<wbr>Custom<wbr>Endpoint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="googlepartnername_go">
+<a href="#googlepartnername_go" style="color: inherit; text-decoration: inherit;">Google<wbr>Partner<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -2261,6 +2295,14 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disablegooglepartnername_nodejs">
+<a href="#disablegooglepartnername_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Google<wbr>Partner<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="dnscustomendpoint_nodejs">
 <a href="#dnscustomendpoint_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Custom<wbr>Endpoint</a>
 </span>
@@ -2327,6 +2369,14 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
             title="Optional">
         <span id="gkehubfeaturecustomendpoint_nodejs">
 <a href="#gkehubfeaturecustomendpoint_nodejs" style="color: inherit; text-decoration: inherit;">gkehub<wbr>Feature<wbr>Custom<wbr>Endpoint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="googlepartnername_nodejs">
+<a href="#googlepartnername_nodejs" style="color: inherit; text-decoration: inherit;">google<wbr>Partner<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -3081,6 +3131,14 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="disable_google_partner_name_python">
+<a href="#disable_google_partner_name_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>google_<wbr>partner_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="dns_custom_endpoint_python">
 <a href="#dns_custom_endpoint_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>custom_<wbr>endpoint</a>
 </span>
@@ -3147,6 +3205,14 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
             title="Optional">
         <span id="gkehub_feature_custom_endpoint_python">
 <a href="#gkehub_feature_custom_endpoint_python" style="color: inherit; text-decoration: inherit;">gkehub_<wbr>feature_<wbr>custom_<wbr>endpoint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="google_partner_name_python">
+<a href="#google_partner_name_python" style="color: inherit; text-decoration: inherit;">google_<wbr>partner_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
