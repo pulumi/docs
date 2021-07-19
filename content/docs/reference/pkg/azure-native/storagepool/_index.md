@@ -28,6 +28,6 @@ Explore the resources and functions of the azure-native.storagepool module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>1.16.0</dd>
+	<dd>1.17.0</dd>
 </dl>
 

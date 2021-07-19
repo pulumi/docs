@@ -26,6 +26,7 @@ Explore the resources and functions of the azure-native.dbformysql module.
     <li><a href="getconfiguration" title="GetConfiguration"><span class="symbol function"></span>GetConfiguration</a></li>
     <li><a href="getdatabase" title="GetDatabase"><span class="symbol function"></span>GetDatabase</a></li>
     <li><a href="getfirewallrule" title="GetFirewallRule"><span class="symbol function"></span>GetFirewallRule</a></li>
+    <li><a href="getgetprivatednszonesuffixexecute" title="GetGetPrivateDnsZoneSuffixExecute"><span class="symbol function"></span>GetGetPrivateDnsZoneSuffixExecute</a></li>
     <li><a href="getprivateendpointconnection" title="GetPrivateEndpointConnection"><span class="symbol function"></span>GetPrivateEndpointConnection</a></li>
     <li><a href="getserver" title="GetServer"><span class="symbol function"></span>GetServer</a></li>
     <li><a href="getserveradministrator" title="GetServerAdministrator"><span class="symbol function"></span>GetServerAdministrator</a></li>
@@ -40,6 +41,6 @@ Explore the resources and functions of the azure-native.dbformysql module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>1.16.0</dd>
+	<dd>1.17.0</dd>
 </dl>
 
