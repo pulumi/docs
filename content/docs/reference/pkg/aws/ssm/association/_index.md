@@ -12,6 +12,122 @@ meta_desc: "Documentation for the aws.ssm.Association resource with examples, in
 
 Associates an SSM Document to an instance or EC2 tag.
 
+{{% examples %}}
+
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+
+
+
+
+{{< example csharp >}}
+
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Aws.Ssm.Association("example", new Aws.Ssm.AssociationArgs
+        {
+            Targets = 
+            {
+                new Aws.Ssm.Inputs.AssociationTargetArgs
+                {
+                    Key = "InstanceIds",
+                    Values = 
+                    {
+                        aws_instance.Example.Id,
+                    },
+                },
+            },
+        });
+    }
+
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ssm"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := ssm.NewAssociation(ctx, "example", &ssm.AssociationArgs{
+			Targets: ssm.AssociationTargetArray{
+				&ssm.AssociationTargetArgs{
+					Key: pulumi.String("InstanceIds"),
+					Values: pulumi.StringArray{
+						pulumi.Any(aws_instance.Example.Id),
+					},
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+```python
+import pulumi
+import pulumi_aws as aws
+
+example = aws.ssm.Association("example", targets=[aws.ssm.AssociationTargetArgs(
+    key="InstanceIds",
+    values=[aws_instance["example"]["id"]],
+)])
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const example = new aws.ssm.Association("example", {targets: [{
+    key: "InstanceIds",
+    values: [aws_instance.example.id],
+}]});
+```
+
+
+{{< /example >}}
+
+
+
+
+
+{{% /examples %}}
+
+
 
 
 ## Create a Association Resource {#create}

@@ -16,6 +16,368 @@ Creates a WAFv2 Web ACL Logging Configuration resource.
 If you are capturing logs for Amazon CloudFront, always create the firehose in US East (N. Virginia).
 Be sure to give the data firehose a name that starts with the prefix `aws-waf-logs-`.
 
+{{% examples %}}
+
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+
+### With Redacted Fields
+
+
+{{< example csharp >}}
+
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Aws.WafV2.WebAclLoggingConfiguration("example", new Aws.WafV2.WebAclLoggingConfigurationArgs
+        {
+            LogDestinationConfigs = 
+            {
+                aws_kinesis_firehose_delivery_stream.Example.Arn,
+            },
+            ResourceArn = aws_wafv2_web_acl.Example.Arn,
+            RedactedFields = 
+            {
+                new Aws.WafV2.Inputs.WebAclLoggingConfigurationRedactedFieldArgs
+                {
+                    SingleHeader = new Aws.WafV2.Inputs.WebAclLoggingConfigurationRedactedFieldSingleHeaderArgs
+                    {
+                        Name = "user-agent",
+                    },
+                },
+            },
+        });
+    }
+
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/wafv2"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := wafv2.NewWebAclLoggingConfiguration(ctx, "example", &wafv2.WebAclLoggingConfigurationArgs{
+			LogDestinationConfigs: pulumi.StringArray{
+				pulumi.Any(aws_kinesis_firehose_delivery_stream.Example.Arn),
+			},
+			ResourceArn: pulumi.Any(aws_wafv2_web_acl.Example.Arn),
+			RedactedFields: wafv2.WebAclLoggingConfigurationRedactedFieldArray{
+				&wafv2.WebAclLoggingConfigurationRedactedFieldArgs{
+					SingleHeader: &wafv2.WebAclLoggingConfigurationRedactedFieldSingleHeaderArgs{
+						Name: pulumi.String("user-agent"),
+					},
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+```python
+import pulumi
+import pulumi_aws as aws
+
+example = aws.wafv2.WebAclLoggingConfiguration("example",
+    log_destination_configs=[aws_kinesis_firehose_delivery_stream["example"]["arn"]],
+    resource_arn=aws_wafv2_web_acl["example"]["arn"],
+    redacted_fields=[aws.wafv2.WebAclLoggingConfigurationRedactedFieldArgs(
+        single_header=aws.wafv2.WebAclLoggingConfigurationRedactedFieldSingleHeaderArgs(
+            name="user-agent",
+        ),
+    )])
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const example = new aws.wafv2.WebAclLoggingConfiguration("example", {
+    logDestinationConfigs: [aws_kinesis_firehose_delivery_stream.example.arn],
+    resourceArn: aws_wafv2_web_acl.example.arn,
+    redactedFields: [{
+        singleHeader: {
+            name: "user-agent",
+        },
+    }],
+});
+```
+
+
+{{< /example >}}
+
+
+
+
+### With Logging Filter
+
+
+{{< example csharp >}}
+
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Aws.WafV2.WebAclLoggingConfiguration("example", new Aws.WafV2.WebAclLoggingConfigurationArgs
+        {
+            LogDestinationConfigs = 
+            {
+                aws_kinesis_firehose_delivery_stream.Example.Arn,
+            },
+            ResourceArn = aws_wafv2_web_acl.Example.Arn,
+            LoggingFilter = new Aws.WafV2.Inputs.WebAclLoggingConfigurationLoggingFilterArgs
+            {
+                DefaultBehavior = "KEEP",
+                Filters = 
+                {
+                    new Aws.WafV2.Inputs.WebAclLoggingConfigurationLoggingFilterFilterArgs
+                    {
+                        Behavior = "DROP",
+                        Conditions = 
+                        {
+                            new Aws.WafV2.Inputs.WebAclLoggingConfigurationLoggingFilterFilterConditionArgs
+                            {
+                                ActionCondition = new Aws.WafV2.Inputs.WebAclLoggingConfigurationLoggingFilterFilterConditionActionConditionArgs
+                                {
+                                    Action = "COUNT",
+                                },
+                            },
+                            new Aws.WafV2.Inputs.WebAclLoggingConfigurationLoggingFilterFilterConditionArgs
+                            {
+                                LabelNameCondition = new Aws.WafV2.Inputs.WebAclLoggingConfigurationLoggingFilterFilterConditionLabelNameConditionArgs
+                                {
+                                    LabelName = "awswaf:111122223333:rulegroup:testRules:LabelNameZ",
+                                },
+                            },
+                        },
+                        Requirement = "MEETS_ALL",
+                    },
+                    new Aws.WafV2.Inputs.WebAclLoggingConfigurationLoggingFilterFilterArgs
+                    {
+                        Behavior = "KEEP",
+                        Conditions = 
+                        {
+                            new Aws.WafV2.Inputs.WebAclLoggingConfigurationLoggingFilterFilterConditionArgs
+                            {
+                                ActionCondition = new Aws.WafV2.Inputs.WebAclLoggingConfigurationLoggingFilterFilterConditionActionConditionArgs
+                                {
+                                    Action = "ALLOW",
+                                },
+                            },
+                        },
+                        Requirement = "MEETS_ANY",
+                    },
+                },
+            },
+        });
+    }
+
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/wafv2"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := wafv2.NewWebAclLoggingConfiguration(ctx, "example", &wafv2.WebAclLoggingConfigurationArgs{
+			LogDestinationConfigs: pulumi.StringArray{
+				pulumi.Any(aws_kinesis_firehose_delivery_stream.Example.Arn),
+			},
+			ResourceArn: pulumi.Any(aws_wafv2_web_acl.Example.Arn),
+			LoggingFilter: &wafv2.WebAclLoggingConfigurationLoggingFilterArgs{
+				DefaultBehavior: pulumi.String("KEEP"),
+				Filters: wafv2.WebAclLoggingConfigurationLoggingFilterFilterArray{
+					&wafv2.WebAclLoggingConfigurationLoggingFilterFilterArgs{
+						Behavior: pulumi.String("DROP"),
+						Conditions: wafv2.WebAclLoggingConfigurationLoggingFilterFilterConditionArray{
+							&wafv2.WebAclLoggingConfigurationLoggingFilterFilterConditionArgs{
+								ActionCondition: &wafv2.WebAclLoggingConfigurationLoggingFilterFilterConditionActionConditionArgs{
+									Action: pulumi.String("COUNT"),
+								},
+							},
+							&wafv2.WebAclLoggingConfigurationLoggingFilterFilterConditionArgs{
+								LabelNameCondition: &wafv2.WebAclLoggingConfigurationLoggingFilterFilterConditionLabelNameConditionArgs{
+									LabelName: pulumi.String("awswaf:111122223333:rulegroup:testRules:LabelNameZ"),
+								},
+							},
+						},
+						Requirement: pulumi.String("MEETS_ALL"),
+					},
+					&wafv2.WebAclLoggingConfigurationLoggingFilterFilterArgs{
+						Behavior: pulumi.String("KEEP"),
+						Conditions: wafv2.WebAclLoggingConfigurationLoggingFilterFilterConditionArray{
+							&wafv2.WebAclLoggingConfigurationLoggingFilterFilterConditionArgs{
+								ActionCondition: &wafv2.WebAclLoggingConfigurationLoggingFilterFilterConditionActionConditionArgs{
+									Action: pulumi.String("ALLOW"),
+								},
+							},
+						},
+						Requirement: pulumi.String("MEETS_ANY"),
+					},
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+```python
+import pulumi
+import pulumi_aws as aws
+
+example = aws.wafv2.WebAclLoggingConfiguration("example",
+    log_destination_configs=[aws_kinesis_firehose_delivery_stream["example"]["arn"]],
+    resource_arn=aws_wafv2_web_acl["example"]["arn"],
+    logging_filter=aws.wafv2.WebAclLoggingConfigurationLoggingFilterArgs(
+        default_behavior="KEEP",
+        filters=[
+            aws.wafv2.WebAclLoggingConfigurationLoggingFilterFilterArgs(
+                behavior="DROP",
+                conditions=[
+                    aws.wafv2.WebAclLoggingConfigurationLoggingFilterFilterConditionArgs(
+                        action_condition=aws.wafv2.WebAclLoggingConfigurationLoggingFilterFilterConditionActionConditionArgs(
+                            action="COUNT",
+                        ),
+                    ),
+                    aws.wafv2.WebAclLoggingConfigurationLoggingFilterFilterConditionArgs(
+                        label_name_condition=aws.wafv2.WebAclLoggingConfigurationLoggingFilterFilterConditionLabelNameConditionArgs(
+                            label_name="awswaf:111122223333:rulegroup:testRules:LabelNameZ",
+                        ),
+                    ),
+                ],
+                requirement="MEETS_ALL",
+            ),
+            aws.wafv2.WebAclLoggingConfigurationLoggingFilterFilterArgs(
+                behavior="KEEP",
+                conditions=[aws.wafv2.WebAclLoggingConfigurationLoggingFilterFilterConditionArgs(
+                    action_condition=aws.wafv2.WebAclLoggingConfigurationLoggingFilterFilterConditionActionConditionArgs(
+                        action="ALLOW",
+                    ),
+                )],
+                requirement="MEETS_ANY",
+            ),
+        ],
+    ))
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const example = new aws.wafv2.WebAclLoggingConfiguration("example", {
+    logDestinationConfigs: [aws_kinesis_firehose_delivery_stream.example.arn],
+    resourceArn: aws_wafv2_web_acl.example.arn,
+    loggingFilter: {
+        defaultBehavior: "KEEP",
+        filters: [
+            {
+                behavior: "DROP",
+                conditions: [
+                    {
+                        actionCondition: {
+                            action: "COUNT",
+                        },
+                    },
+                    {
+                        labelNameCondition: {
+                            labelName: "awswaf:111122223333:rulegroup:testRules:LabelNameZ",
+                        },
+                    },
+                ],
+                requirement: "MEETS_ALL",
+            },
+            {
+                behavior: "KEEP",
+                conditions: [{
+                    actionCondition: {
+                        action: "ALLOW",
+                    },
+                }],
+                requirement: "MEETS_ANY",
+            },
+        ],
+    },
+});
+```
+
+
+{{< /example >}}
+
+
+
+
+
+{{% /examples %}}
+
+
 
 
 ## Create a WebAclLoggingConfiguration Resource {#create}

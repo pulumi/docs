@@ -66,7 +66,7 @@ func main() {
 			ClientIdLists: pulumi.StringArray{
 				pulumi.String("266362248691-342342xasdasdasda-apps.googleusercontent.com"),
 			},
-			ThumbprintLists: []interface{}{},
+			ThumbprintLists: pulumi.StringArray{},
 			Url:             pulumi.String("https://accounts.google.com"),
 		})
 		if err != nil {

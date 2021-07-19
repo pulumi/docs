@@ -11,6 +11,139 @@ meta_desc: "Documentation for the aws.cloudwatch.MetricAlarm resource with examp
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Provides a CloudWatch Metric Alarm resource.
+## Example in Conjunction with Scaling Policies
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const batPolicy = new aws.autoscaling.Policy("batPolicy", {
+    scalingAdjustment: 4,
+    adjustmentType: "ChangeInCapacity",
+    cooldown: 300,
+    autoscalingGroupName: aws_autoscaling_group.bar.name,
+});
+const batMetricAlarm = new aws.cloudwatch.MetricAlarm("batMetricAlarm", {
+    comparisonOperator: "GreaterThanOrEqualToThreshold",
+    evaluationPeriods: "2",
+    metricName: "CPUUtilization",
+    namespace: "AWS/EC2",
+    period: "120",
+    statistic: "Average",
+    threshold: "80",
+    dimensions: {
+        AutoScalingGroupName: aws_autoscaling_group.bar.name,
+    },
+    alarmDescription: "This metric monitors ec2 cpu utilization",
+    alarmActions: [batPolicy.arn],
+});
+```
+```python
+import pulumi
+import pulumi_aws as aws
+
+bat_policy = aws.autoscaling.Policy("batPolicy",
+    scaling_adjustment=4,
+    adjustment_type="ChangeInCapacity",
+    cooldown=300,
+    autoscaling_group_name=aws_autoscaling_group["bar"]["name"])
+bat_metric_alarm = aws.cloudwatch.MetricAlarm("batMetricAlarm",
+    comparison_operator="GreaterThanOrEqualToThreshold",
+    evaluation_periods=2,
+    metric_name="CPUUtilization",
+    namespace="AWS/EC2",
+    period=120,
+    statistic="Average",
+    threshold=80,
+    dimensions={
+        "AutoScalingGroupName": aws_autoscaling_group["bar"]["name"],
+    },
+    alarm_description="This metric monitors ec2 cpu utilization",
+    alarm_actions=[bat_policy.arn])
+```
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var batPolicy = new Aws.AutoScaling.Policy("batPolicy", new Aws.AutoScaling.PolicyArgs
+        {
+            ScalingAdjustment = 4,
+            AdjustmentType = "ChangeInCapacity",
+            Cooldown = 300,
+            AutoscalingGroupName = aws_autoscaling_group.Bar.Name,
+        });
+        var batMetricAlarm = new Aws.CloudWatch.MetricAlarm("batMetricAlarm", new Aws.CloudWatch.MetricAlarmArgs
+        {
+            ComparisonOperator = "GreaterThanOrEqualToThreshold",
+            EvaluationPeriods = 2,
+            MetricName = "CPUUtilization",
+            Namespace = "AWS/EC2",
+            Period = 120,
+            Statistic = "Average",
+            Threshold = 80,
+            Dimensions = 
+            {
+                { "AutoScalingGroupName", aws_autoscaling_group.Bar.Name },
+            },
+            AlarmDescription = "This metric monitors ec2 cpu utilization",
+            AlarmActions = 
+            {
+                batPolicy.Arn,
+            },
+        });
+    }
+
+}
+```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/autoscaling"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/cloudwatch"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/sns"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		batPolicy, err := autoscaling.NewPolicy(ctx, "batPolicy", &autoscaling.PolicyArgs{
+			ScalingAdjustment:    pulumi.Int(4),
+			AdjustmentType:       pulumi.String("ChangeInCapacity"),
+			Cooldown:             pulumi.Int(300),
+			AutoscalingGroupName: pulumi.Any(aws_autoscaling_group.Bar.Name),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = cloudwatch.NewMetricAlarm(ctx, "batMetricAlarm", &cloudwatch.MetricAlarmArgs{
+			ComparisonOperator: pulumi.String("GreaterThanOrEqualToThreshold"),
+			EvaluationPeriods:  pulumi.Int(2),
+			MetricName:         pulumi.String("CPUUtilization"),
+			Namespace:          pulumi.String("AWS/EC2"),
+			Period:             pulumi.Int(120),
+			Statistic:          pulumi.String("Average"),
+			Threshold:          pulumi.Float64(80),
+			Dimensions: pulumi.StringMap{
+				"AutoScalingGroupName": pulumi.Any(aws_autoscaling_group.Bar.Name),
+			},
+			AlarmDescription: pulumi.String("This metric monitors ec2 cpu utilization"),
+			AlarmActions: pulumi.AnyArray{
+				batPolicy.Arn,
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 ## Example with an Expression
 
 ```typescript
@@ -173,6 +306,7 @@ import (
 	"fmt"
 
 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/cloudwatch"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/sns"
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
@@ -182,7 +316,7 @@ func main() {
 			AlarmDescription:        pulumi.String(fmt.Sprintf("%v%v", "Request error rate has exceeded 10", "%")),
 			ComparisonOperator:      pulumi.String("GreaterThanOrEqualToThreshold"),
 			EvaluationPeriods:       pulumi.Int(2),
-			InsufficientDataActions: []interface{}{},
+			InsufficientDataActions: pulumi.AnyArray{},
 			MetricQueries: cloudwatch.MetricAlarmMetricQueryArray{
 				&cloudwatch.MetricAlarmMetricQueryArgs{
 					Expression: pulumi.String("m2/m1*100"),
@@ -346,6 +480,7 @@ package main
 
 import (
 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/cloudwatch"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/sns"
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
@@ -355,7 +490,7 @@ func main() {
 			AlarmDescription:        pulumi.String("This metric monitors ec2 cpu utilization"),
 			ComparisonOperator:      pulumi.String("GreaterThanUpperThreshold"),
 			EvaluationPeriods:       pulumi.Int(2),
-			InsufficientDataActions: []interface{}{},
+			InsufficientDataActions: pulumi.AnyArray{},
 			MetricQueries: cloudwatch.MetricAlarmMetricQueryArray{
 				&cloudwatch.MetricAlarmMetricQueryArgs{
 					Expression: pulumi.String("ANOMALY_DETECTION_BAND(m1)"),
@@ -387,6 +522,131 @@ func main() {
 	})
 }
 ```
+
+## Example of monitoring Healthy Hosts on NLB using Target Group and NLB
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const nlbHealthyhosts = new aws.cloudwatch.MetricAlarm("nlbHealthyhosts", {
+    comparisonOperator: "LessThanThreshold",
+    evaluationPeriods: "1",
+    metricName: "HealthyHostCount",
+    namespace: "AWS/NetworkELB",
+    period: "60",
+    statistic: "Average",
+    threshold: _var.logstash_servers_count,
+    alarmDescription: "Number of healthy nodes in Target Group",
+    actionsEnabled: "true",
+    alarmActions: [aws_sns_topic.sns.arn],
+    okActions: [aws_sns_topic.sns.arn],
+    dimensions: {
+        TargetGroup: aws_lb_target_group["lb-tg"].arn_suffix,
+        LoadBalancer: aws_lb.lb.arn_suffix,
+    },
+});
+```
+```python
+import pulumi
+import pulumi_aws as aws
+
+nlb_healthyhosts = aws.cloudwatch.MetricAlarm("nlbHealthyhosts",
+    comparison_operator="LessThanThreshold",
+    evaluation_periods=1,
+    metric_name="HealthyHostCount",
+    namespace="AWS/NetworkELB",
+    period=60,
+    statistic="Average",
+    threshold=var["logstash_servers_count"],
+    alarm_description="Number of healthy nodes in Target Group",
+    actions_enabled=True,
+    alarm_actions=[aws_sns_topic["sns"]["arn"]],
+    ok_actions=[aws_sns_topic["sns"]["arn"]],
+    dimensions={
+        "TargetGroup": aws_lb_target_group["lb-tg"]["arn_suffix"],
+        "LoadBalancer": aws_lb["lb"]["arn_suffix"],
+    })
+```
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var nlbHealthyhosts = new Aws.CloudWatch.MetricAlarm("nlbHealthyhosts", new Aws.CloudWatch.MetricAlarmArgs
+        {
+            ComparisonOperator = "LessThanThreshold",
+            EvaluationPeriods = 1,
+            MetricName = "HealthyHostCount",
+            Namespace = "AWS/NetworkELB",
+            Period = 60,
+            Statistic = "Average",
+            Threshold = @var.Logstash_servers_count,
+            AlarmDescription = "Number of healthy nodes in Target Group",
+            ActionsEnabled = true,
+            AlarmActions = 
+            {
+                aws_sns_topic.Sns.Arn,
+            },
+            OkActions = 
+            {
+                aws_sns_topic.Sns.Arn,
+            },
+            Dimensions = 
+            {
+                { "TargetGroup", aws_lb_target_group.Lb_tg.Arn_suffix },
+                { "LoadBalancer", aws_lb.Lb.Arn_suffix },
+            },
+        });
+    }
+
+}
+```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/cloudwatch"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/sns"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := cloudwatch.NewMetricAlarm(ctx, "nlbHealthyhosts", &cloudwatch.MetricAlarmArgs{
+			ComparisonOperator: pulumi.String("LessThanThreshold"),
+			EvaluationPeriods:  pulumi.Int(1),
+			MetricName:         pulumi.String("HealthyHostCount"),
+			Namespace:          pulumi.String("AWS/NetworkELB"),
+			Period:             pulumi.Int(60),
+			Statistic:          pulumi.String("Average"),
+			Threshold:          pulumi.Any(_var.Logstash_servers_count),
+			AlarmDescription:   pulumi.String("Number of healthy nodes in Target Group"),
+			ActionsEnabled:     pulumi.Bool(true),
+			AlarmActions: pulumi.AnyArray{
+				pulumi.Any(aws_sns_topic.Sns.Arn),
+			},
+			OkActions: pulumi.AnyArray{
+				pulumi.Any(aws_sns_topic.Sns.Arn),
+			},
+			Dimensions: pulumi.StringMap{
+				"TargetGroup":  pulumi.Any(aws_lb_target_group.Lb - tg.Arn_suffix),
+				"LoadBalancer": pulumi.Any(aws_lb.Lb.Arn_suffix),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+> **NOTE:**  You cannot create a metric alarm consisting of both `statistic` and `extended_statistic` parameters.
+You must choose one or the other
 
 {{% examples %}}
 
@@ -436,6 +696,7 @@ package main
 
 import (
 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/cloudwatch"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/sns"
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
@@ -445,7 +706,7 @@ func main() {
 			AlarmDescription:        pulumi.String("This metric monitors ec2 cpu utilization"),
 			ComparisonOperator:      pulumi.String("GreaterThanOrEqualToThreshold"),
 			EvaluationPeriods:       pulumi.Int(2),
-			InsufficientDataActions: []interface{}{},
+			InsufficientDataActions: pulumi.AnyArray{},
 			MetricName:              pulumi.String("CPUUtilization"),
 			Namespace:               pulumi.String("AWS/EC2"),
 			Period:                  pulumi.Int(120),

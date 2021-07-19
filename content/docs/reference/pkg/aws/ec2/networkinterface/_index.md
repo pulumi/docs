@@ -12,6 +12,142 @@ meta_desc: "Documentation for the aws.ec2.NetworkInterface resource with example
 
 Provides an Elastic network interface (ENI) resource.
 
+{{% examples %}}
+
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+
+
+
+
+{{< example csharp >}}
+
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var test = new Aws.Ec2.NetworkInterface("test", new Aws.Ec2.NetworkInterfaceArgs
+        {
+            SubnetId = aws_subnet.Public_a.Id,
+            PrivateIps = 
+            {
+                "10.0.0.50",
+            },
+            SecurityGroups = 
+            {
+                aws_security_group.Web.Id,
+            },
+            Attachments = 
+            {
+                new Aws.Ec2.Inputs.NetworkInterfaceAttachmentArgs
+                {
+                    Instance = aws_instance.Test.Id,
+                    DeviceIndex = 1,
+                },
+            },
+        });
+    }
+
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ec2"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := ec2.NewNetworkInterface(ctx, "test", &ec2.NetworkInterfaceArgs{
+			SubnetId: pulumi.Any(aws_subnet.Public_a.Id),
+			PrivateIps: pulumi.StringArray{
+				pulumi.String("10.0.0.50"),
+			},
+			SecurityGroups: pulumi.StringArray{
+				pulumi.Any(aws_security_group.Web.Id),
+			},
+			Attachments: ec2.NetworkInterfaceAttachmentArray{
+				&ec2.NetworkInterfaceAttachmentArgs{
+					Instance:    pulumi.Any(aws_instance.Test.Id),
+					DeviceIndex: pulumi.Int(1),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+```python
+import pulumi
+import pulumi_aws as aws
+
+test = aws.ec2.NetworkInterface("test",
+    subnet_id=aws_subnet["public_a"]["id"],
+    private_ips=["10.0.0.50"],
+    security_groups=[aws_security_group["web"]["id"]],
+    attachments=[aws.ec2.NetworkInterfaceAttachmentArgs(
+        instance=aws_instance["test"]["id"],
+        device_index=1,
+    )])
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const test = new aws.ec2.NetworkInterface("test", {
+    subnetId: aws_subnet.public_a.id,
+    privateIps: ["10.0.0.50"],
+    securityGroups: [aws_security_group.web.id],
+    attachments: [{
+        instance: aws_instance.test.id,
+        deviceIndex: 1,
+    }],
+});
+```
+
+
+{{< /example >}}
+
+
+
+
+
+{{% /examples %}}
+
+
 
 
 ## Create a NetworkInterface Resource {#create}

@@ -12,6 +12,149 @@ meta_desc: "Documentation for the aws.dms.EventSubscription resource with exampl
 
 Provides a DMS (Data Migration Service) event subscription resource.
 
+{{% examples %}}
+
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+
+
+
+
+{{< example csharp >}}
+
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Aws.Dms.EventSubscription("example", new Aws.Dms.EventSubscriptionArgs
+        {
+            Enabled = true,
+            EventCategories = 
+            {
+                "creation",
+                "failure",
+            },
+            SnsTopicArn = aws_sns_topic.Example.Arn,
+            SourceIds = 
+            {
+                aws_dms_replication_task.Example.Replication_task_id,
+            },
+            SourceType = "replication-task",
+            Tags = 
+            {
+                { "Name", "example" },
+            },
+        });
+    }
+
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/dms"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := dms.NewEventSubscription(ctx, "example", &dms.EventSubscriptionArgs{
+			Enabled: pulumi.Bool(true),
+			EventCategories: pulumi.StringArray{
+				pulumi.String("creation"),
+				pulumi.String("failure"),
+			},
+			SnsTopicArn: pulumi.Any(aws_sns_topic.Example.Arn),
+			SourceIds: pulumi.StringArray{
+				pulumi.Any(aws_dms_replication_task.Example.Replication_task_id),
+			},
+			SourceType: pulumi.String("replication-task"),
+			Tags: pulumi.StringMap{
+				"Name": pulumi.String("example"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+```python
+import pulumi
+import pulumi_aws as aws
+
+example = aws.dms.EventSubscription("example",
+    enabled=True,
+    event_categories=[
+        "creation",
+        "failure",
+    ],
+    sns_topic_arn=aws_sns_topic["example"]["arn"],
+    source_ids=[aws_dms_replication_task["example"]["replication_task_id"]],
+    source_type="replication-task",
+    tags={
+        "Name": "example",
+    })
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const example = new aws.dms.EventSubscription("example", {
+    enabled: true,
+    eventCategories: [
+        "creation",
+        "failure",
+    ],
+    snsTopicArn: aws_sns_topic.example.arn,
+    sourceIds: [aws_dms_replication_task.example.replication_task_id],
+    sourceType: "replication-task",
+    tags: {
+        Name: "example",
+    },
+});
+```
+
+
+{{< /example >}}
+
+
+
+
+
+{{% /examples %}}
+
+
 
 
 ## Create a EventSubscription Resource {#create}

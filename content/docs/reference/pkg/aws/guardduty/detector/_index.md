@@ -36,6 +36,13 @@ class MyStack : Stack
     {
         var myDetector = new Aws.GuardDuty.Detector("myDetector", new Aws.GuardDuty.DetectorArgs
         {
+            Datasources = new Aws.GuardDuty.Inputs.DetectorDatasourcesArgs
+            {
+                S3Logs = new Aws.GuardDuty.Inputs.DetectorDatasourcesS3LogsArgs
+                {
+                    Enable = true,
+                },
+            },
             Enable = true,
         });
     }
@@ -60,6 +67,11 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := guardduty.NewDetector(ctx, "myDetector", &guardduty.DetectorArgs{
+			Datasources: &guardduty.DetectorDatasourcesArgs{
+				S3Logs: &guardduty.DetectorDatasourcesS3LogsArgs{
+					Enable: pulumi.Bool(true),
+				},
+			},
 			Enable: pulumi.Bool(true),
 		})
 		if err != nil {
@@ -80,7 +92,13 @@ func main() {
 import pulumi
 import pulumi_aws as aws
 
-my_detector = aws.guardduty.Detector("myDetector", enable=True)
+my_detector = aws.guardduty.Detector("myDetector",
+    datasources=aws.guardduty.DetectorDatasourcesArgs(
+        s3_logs=aws.guardduty.DetectorDatasourcesS3LogsArgs(
+            enable=True,
+        ),
+    ),
+    enable=True)
 ```
 
 
@@ -95,6 +113,11 @@ import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
 const myDetector = new aws.guardduty.Detector("MyDetector", {
+    datasources: {
+        s3Logs: {
+            enable: true,
+        },
+    },
     enable: true,
 });
 ```
@@ -123,6 +146,7 @@ const myDetector = new aws.guardduty.Detector("MyDetector", {
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">Detector</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
              <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+             <span class="nx">datasources</span><span class="p">:</span> <span class="nx">Optional[DetectorDatasourcesArgs]</span> = None<span class="p">,</span>
              <span class="nx">enable</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
              <span class="nx">finding_publishing_frequency</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
@@ -256,13 +280,22 @@ The Detector resource accepts the following [input]({{< relref "/docs/intro/conc
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="datasources_csharp">
+<a href="#datasources_csharp" style="color: inherit; text-decoration: inherit;">Datasources</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#detectordatasources">Detector<wbr>Datasources<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Describes which data sources will be enabled for the detector. See Data Sources below for more details.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="enable_csharp">
 <a href="#enable_csharp" style="color: inherit; text-decoration: inherit;">Enable</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Enable monitoring and feedback reporting. Setting to `false` is equivalent to "suspending" GuardDuty. Defaults to `true`.
+    <dd>{{% md %}}If true, enables [S3 Protection](https://docs.aws.amazon.com/guardduty/latest/ug/s3_detection.html). Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="findingpublishingfrequency_csharp">
@@ -280,7 +313,7 @@ The Detector resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Key-value map of resource tags.
+    <dd>{{% md %}}Key-value map of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tagsall_csharp">
@@ -296,13 +329,22 @@ The Detector resource accepts the following [input]({{< relref "/docs/intro/conc
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="datasources_go">
+<a href="#datasources_go" style="color: inherit; text-decoration: inherit;">Datasources</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#detectordatasources">Detector<wbr>Datasources<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Describes which data sources will be enabled for the detector. See Data Sources below for more details.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="enable_go">
 <a href="#enable_go" style="color: inherit; text-decoration: inherit;">Enable</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Enable monitoring and feedback reporting. Setting to `false` is equivalent to "suspending" GuardDuty. Defaults to `true`.
+    <dd>{{% md %}}If true, enables [S3 Protection](https://docs.aws.amazon.com/guardduty/latest/ug/s3_detection.html). Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="findingpublishingfrequency_go">
@@ -320,7 +362,7 @@ The Detector resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Key-value map of resource tags.
+    <dd>{{% md %}}Key-value map of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tagsall_go">
@@ -336,13 +378,22 @@ The Detector resource accepts the following [input]({{< relref "/docs/intro/conc
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="datasources_nodejs">
+<a href="#datasources_nodejs" style="color: inherit; text-decoration: inherit;">datasources</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#detectordatasources">Detector<wbr>Datasources<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Describes which data sources will be enabled for the detector. See Data Sources below for more details.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="enable_nodejs">
 <a href="#enable_nodejs" style="color: inherit; text-decoration: inherit;">enable</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Enable monitoring and feedback reporting. Setting to `false` is equivalent to "suspending" GuardDuty. Defaults to `true`.
+    <dd>{{% md %}}If true, enables [S3 Protection](https://docs.aws.amazon.com/guardduty/latest/ug/s3_detection.html). Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="findingpublishingfrequency_nodejs">
@@ -360,7 +411,7 @@ The Detector resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Key-value map of resource tags.
+    <dd>{{% md %}}Key-value map of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tagsall_nodejs">
@@ -376,13 +427,22 @@ The Detector resource accepts the following [input]({{< relref "/docs/intro/conc
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="datasources_python">
+<a href="#datasources_python" style="color: inherit; text-decoration: inherit;">datasources</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#detectordatasources">Detector<wbr>Datasources<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Describes which data sources will be enabled for the detector. See Data Sources below for more details.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="enable_python">
 <a href="#enable_python" style="color: inherit; text-decoration: inherit;">enable</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Enable monitoring and feedback reporting. Setting to `false` is equivalent to "suspending" GuardDuty. Defaults to `true`.
+    <dd>{{% md %}}If true, enables [S3 Protection](https://docs.aws.amazon.com/guardduty/latest/ug/s3_detection.html). Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="finding_publishing_frequency_python">
@@ -400,7 +460,7 @@ The Detector resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Key-value map of resource tags.
+    <dd>{{% md %}}Key-value map of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_all_python">
@@ -558,6 +618,7 @@ Get an existing Detector resource's state with the given name, ID, and optional 
         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
         <span class="nx">account_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">datasources</span><span class="p">:</span> <span class="nx">Optional[DetectorDatasourcesArgs]</span> = None<span class="p">,</span>
         <span class="nx">enable</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">finding_publishing_frequency</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
@@ -692,13 +753,22 @@ The following state arguments are supported:
     <dd>{{% md %}}Amazon Resource Name (ARN) of the GuardDuty detector
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_datasources_csharp">
+<a href="#state_datasources_csharp" style="color: inherit; text-decoration: inherit;">Datasources</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#detectordatasources">Detector<wbr>Datasources<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Describes which data sources will be enabled for the detector. See Data Sources below for more details.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_enable_csharp">
 <a href="#state_enable_csharp" style="color: inherit; text-decoration: inherit;">Enable</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Enable monitoring and feedback reporting. Setting to `false` is equivalent to "suspending" GuardDuty. Defaults to `true`.
+    <dd>{{% md %}}If true, enables [S3 Protection](https://docs.aws.amazon.com/guardduty/latest/ug/s3_detection.html). Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_findingpublishingfrequency_csharp">
@@ -716,7 +786,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Key-value map of resource tags.
+    <dd>{{% md %}}Key-value map of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tagsall_csharp">
@@ -750,13 +820,22 @@ The following state arguments are supported:
     <dd>{{% md %}}Amazon Resource Name (ARN) of the GuardDuty detector
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_datasources_go">
+<a href="#state_datasources_go" style="color: inherit; text-decoration: inherit;">Datasources</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#detectordatasources">Detector<wbr>Datasources<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Describes which data sources will be enabled for the detector. See Data Sources below for more details.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_enable_go">
 <a href="#state_enable_go" style="color: inherit; text-decoration: inherit;">Enable</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Enable monitoring and feedback reporting. Setting to `false` is equivalent to "suspending" GuardDuty. Defaults to `true`.
+    <dd>{{% md %}}If true, enables [S3 Protection](https://docs.aws.amazon.com/guardduty/latest/ug/s3_detection.html). Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_findingpublishingfrequency_go">
@@ -774,7 +853,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Key-value map of resource tags.
+    <dd>{{% md %}}Key-value map of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tagsall_go">
@@ -808,13 +887,22 @@ The following state arguments are supported:
     <dd>{{% md %}}Amazon Resource Name (ARN) of the GuardDuty detector
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_datasources_nodejs">
+<a href="#state_datasources_nodejs" style="color: inherit; text-decoration: inherit;">datasources</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#detectordatasources">Detector<wbr>Datasources<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Describes which data sources will be enabled for the detector. See Data Sources below for more details.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_enable_nodejs">
 <a href="#state_enable_nodejs" style="color: inherit; text-decoration: inherit;">enable</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Enable monitoring and feedback reporting. Setting to `false` is equivalent to "suspending" GuardDuty. Defaults to `true`.
+    <dd>{{% md %}}If true, enables [S3 Protection](https://docs.aws.amazon.com/guardduty/latest/ug/s3_detection.html). Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_findingpublishingfrequency_nodejs">
@@ -832,7 +920,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Key-value map of resource tags.
+    <dd>{{% md %}}Key-value map of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tagsall_nodejs">
@@ -866,13 +954,22 @@ The following state arguments are supported:
     <dd>{{% md %}}Amazon Resource Name (ARN) of the GuardDuty detector
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_datasources_python">
+<a href="#state_datasources_python" style="color: inherit; text-decoration: inherit;">datasources</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#detectordatasources">Detector<wbr>Datasources<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Describes which data sources will be enabled for the detector. See Data Sources below for more details.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_enable_python">
 <a href="#state_enable_python" style="color: inherit; text-decoration: inherit;">enable</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Enable monitoring and feedback reporting. Setting to `false` is equivalent to "suspending" GuardDuty. Defaults to `true`.
+    <dd>{{% md %}}If true, enables [S3 Protection](https://docs.aws.amazon.com/guardduty/latest/ug/s3_detection.html). Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_finding_publishing_frequency_python">
@@ -890,7 +987,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Key-value map of resource tags.
+    <dd>{{% md %}}Key-value map of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_all_python">
@@ -907,6 +1004,118 @@ The following state arguments are supported:
 
 
 
+
+## Supporting Types
+
+
+
+<h4 id="detectordatasources">Detector<wbr>Datasources</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="s3logs_csharp">
+<a href="#s3logs_csharp" style="color: inherit; text-decoration: inherit;">S3Logs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#detectordatasourcess3logs">Detector<wbr>Datasources<wbr>S3Logs</a></span>
+    </dt>
+    <dd>{{% md %}}Describes whether S3 data event logs are enabled as a data source. See S3 Logs below for more details.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="s3logs_go">
+<a href="#s3logs_go" style="color: inherit; text-decoration: inherit;">S3Logs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#detectordatasourcess3logs">Detector<wbr>Datasources<wbr>S3Logs</a></span>
+    </dt>
+    <dd>{{% md %}}Describes whether S3 data event logs are enabled as a data source. See S3 Logs below for more details.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="s3logs_nodejs">
+<a href="#s3logs_nodejs" style="color: inherit; text-decoration: inherit;">s3Logs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#detectordatasourcess3logs">Detector<wbr>Datasources<wbr>S3Logs</a></span>
+    </dt>
+    <dd>{{% md %}}Describes whether S3 data event logs are enabled as a data source. See S3 Logs below for more details.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="s3_logs_python">
+<a href="#s3_logs_python" style="color: inherit; text-decoration: inherit;">s3_<wbr>logs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#detectordatasourcess3logs">Detector<wbr>Datasources<wbr>S3Logs</a></span>
+    </dt>
+    <dd>{{% md %}}Describes whether S3 data event logs are enabled as a data source. See S3 Logs below for more details.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="detectordatasourcess3logs">Detector<wbr>Datasources<wbr>S3Logs</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="enable_csharp">
+<a href="#enable_csharp" style="color: inherit; text-decoration: inherit;">Enable</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If true, enables [S3 Protection](https://docs.aws.amazon.com/guardduty/latest/ug/s3_detection.html). Defaults to `true`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="enable_go">
+<a href="#enable_go" style="color: inherit; text-decoration: inherit;">Enable</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If true, enables [S3 Protection](https://docs.aws.amazon.com/guardduty/latest/ug/s3_detection.html). Defaults to `true`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="enable_nodejs">
+<a href="#enable_nodejs" style="color: inherit; text-decoration: inherit;">enable</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}If true, enables [S3 Protection](https://docs.aws.amazon.com/guardduty/latest/ug/s3_detection.html). Defaults to `true`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="enable_python">
+<a href="#enable_python" style="color: inherit; text-decoration: inherit;">enable</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If true, enables [S3 Protection](https://docs.aws.amazon.com/guardduty/latest/ug/s3_detection.html). Defaults to `true`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
 ## Import
 
 

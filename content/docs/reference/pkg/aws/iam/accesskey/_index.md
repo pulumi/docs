@@ -99,7 +99,7 @@ func main() {
 		}
 		_, err = iam.NewUserPolicy(ctx, "lbRo", &iam.UserPolicyArgs{
 			User:   lbUser.Name,
-			Policy: pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "  \"Version\": \"2012-10-17\",\n", "  \"Statement\": [\n", "    {\n", "      \"Action\": [\n", "        \"ec2:Describe*\"\n", "      ],\n", "      \"Effect\": \"Allow\",\n", "      \"Resource\": \"*\"\n", "    }\n", "  ]\n", "}\n")),
+			Policy: pulumi.Any(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "  \"Version\": \"2012-10-17\",\n", "  \"Statement\": [\n", "    {\n", "      \"Action\": [\n", "        \"ec2:Describe*\"\n", "      ],\n", "      \"Effect\": \"Allow\",\n", "      \"Resource\": \"*\"\n", "    }\n", "  ]\n", "}\n")),
 		})
 		if err != nil {
 			return err
@@ -339,7 +339,7 @@ The AccessKey resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The IAM user to associate with this access key.
+    <dd>{{% md %}}IAM user to associate with this access key.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pgpkey_csharp">
@@ -348,9 +348,7 @@ The AccessKey resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Either a base-64 encoded PGP public key, or a
-keybase username in the form `keybase:some_person_that_exists`, for use
-in the `encrypted_secret` output attribute.
+    <dd>{{% md %}}Either a base-64 encoded PGP public key, or a keybase username in the form `keybase:some_person_that_exists`, for use in the `encrypted_secret` output attribute.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_csharp">
@@ -359,8 +357,7 @@ in the `encrypted_secret` output attribute.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The access key status to apply. Defaults to `Active`.
-Valid values are `Active` and `Inactive`.
+    <dd>{{% md %}}Access key status to apply. Defaults to `Active`. Valid values are `Active` and `Inactive`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -373,7 +370,7 @@ Valid values are `Active` and `Inactive`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The IAM user to associate with this access key.
+    <dd>{{% md %}}IAM user to associate with this access key.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pgpkey_go">
@@ -382,9 +379,7 @@ Valid values are `Active` and `Inactive`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Either a base-64 encoded PGP public key, or a
-keybase username in the form `keybase:some_person_that_exists`, for use
-in the `encrypted_secret` output attribute.
+    <dd>{{% md %}}Either a base-64 encoded PGP public key, or a keybase username in the form `keybase:some_person_that_exists`, for use in the `encrypted_secret` output attribute.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_go">
@@ -393,8 +388,7 @@ in the `encrypted_secret` output attribute.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The access key status to apply. Defaults to `Active`.
-Valid values are `Active` and `Inactive`.
+    <dd>{{% md %}}Access key status to apply. Defaults to `Active`. Valid values are `Active` and `Inactive`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -407,7 +401,7 @@ Valid values are `Active` and `Inactive`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The IAM user to associate with this access key.
+    <dd>{{% md %}}IAM user to associate with this access key.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pgpkey_nodejs">
@@ -416,9 +410,7 @@ Valid values are `Active` and `Inactive`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Either a base-64 encoded PGP public key, or a
-keybase username in the form `keybase:some_person_that_exists`, for use
-in the `encrypted_secret` output attribute.
+    <dd>{{% md %}}Either a base-64 encoded PGP public key, or a keybase username in the form `keybase:some_person_that_exists`, for use in the `encrypted_secret` output attribute.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_nodejs">
@@ -427,8 +419,7 @@ in the `encrypted_secret` output attribute.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The access key status to apply. Defaults to `Active`.
-Valid values are `Active` and `Inactive`.
+    <dd>{{% md %}}Access key status to apply. Defaults to `Active`. Valid values are `Active` and `Inactive`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -441,7 +432,7 @@ Valid values are `Active` and `Inactive`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The IAM user to associate with this access key.
+    <dd>{{% md %}}IAM user to associate with this access key.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pgp_key_python">
@@ -450,9 +441,7 @@ Valid values are `Active` and `Inactive`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Either a base-64 encoded PGP public key, or a
-keybase username in the form `keybase:some_person_that_exists`, for use
-in the `encrypted_secret` output attribute.
+    <dd>{{% md %}}Either a base-64 encoded PGP public key, or a keybase username in the form `keybase:some_person_that_exists`, for use in the `encrypted_secret` output attribute.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_python">
@@ -461,8 +450,7 @@ in the `encrypted_secret` output attribute.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The access key status to apply. Defaults to `Active`.
-Valid values are `Active` and `Inactive`.
+    <dd>{{% md %}}Access key status to apply. Defaults to `Active`. Valid values are `Active` and `Inactive`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -493,6 +481,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="encryptedsessmtppasswordv4_csharp">
+<a href="#encryptedsessmtppasswordv4_csharp" style="color: inherit; text-decoration: inherit;">Encrypted<wbr>Ses<wbr>Smtp<wbr>Password<wbr>V4</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
 </span>
@@ -507,7 +503,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The fingerprint of the PGP key used to encrypt the secret. This attribute is not available for imported resources.
+    <dd>{{% md %}}Fingerprint of the PGP key used to encrypt the secret. This attribute is not available for imported resources.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secret_csharp">
@@ -516,7 +512,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The secret access key. This attribute is not available for imported resources. Note that this will be written to the state file. If you use this, please protect your backend state file judiciously. Alternatively, you may supply a `pgp_key` instead, which will prevent the secret from being stored in plaintext, at the cost of preventing the use of the secret key in automation.
+    <dd>{{% md %}}Secret access key. This attribute is not available for imported resources. Note that this will be written to the state file. If you use this, please protect your backend state file judiciously. Alternatively, you may supply a `pgp_key` instead, which will prevent the secret from being stored in plaintext, at the cost of preventing the use of the secret key in automation.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sessmtppasswordv4_csharp">
@@ -525,7 +521,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The secret access key converted into an SES SMTP password by applying [AWS's documented Sigv4 conversion algorithm](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/smtp-credentials.html#smtp-credentials-convert). This attribute is not available for imported resources. As SigV4 is region specific, valid Provider regions are `ap-south-1`, `ap-southeast-2`, `eu-central-1`, `eu-west-1`, `us-east-1` and `us-west-2`. See current [AWS SES regions](https://docs.aws.amazon.com/general/latest/gr/rande.html#ses_region).
+    <dd>{{% md %}}Secret access key converted into an SES SMTP password by applying [AWS's documented Sigv4 conversion algorithm](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/smtp-credentials.html#smtp-credentials-convert). This attribute is not available for imported resources. As SigV4 is region specific, valid Provider regions are `ap-south-1`, `ap-southeast-2`, `eu-central-1`, `eu-west-1`, `us-east-1` and `us-west-2`. See current [AWS SES regions](https://docs.aws.amazon.com/general/latest/gr/rande.html#ses_region).
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -549,6 +545,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="encryptedsessmtppasswordv4_go">
+<a href="#encryptedsessmtppasswordv4_go" style="color: inherit; text-decoration: inherit;">Encrypted<wbr>Ses<wbr>Smtp<wbr>Password<wbr>V4</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
 </span>
@@ -563,7 +567,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The fingerprint of the PGP key used to encrypt the secret. This attribute is not available for imported resources.
+    <dd>{{% md %}}Fingerprint of the PGP key used to encrypt the secret. This attribute is not available for imported resources.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secret_go">
@@ -572,7 +576,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The secret access key. This attribute is not available for imported resources. Note that this will be written to the state file. If you use this, please protect your backend state file judiciously. Alternatively, you may supply a `pgp_key` instead, which will prevent the secret from being stored in plaintext, at the cost of preventing the use of the secret key in automation.
+    <dd>{{% md %}}Secret access key. This attribute is not available for imported resources. Note that this will be written to the state file. If you use this, please protect your backend state file judiciously. Alternatively, you may supply a `pgp_key` instead, which will prevent the secret from being stored in plaintext, at the cost of preventing the use of the secret key in automation.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sessmtppasswordv4_go">
@@ -581,7 +585,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The secret access key converted into an SES SMTP password by applying [AWS's documented Sigv4 conversion algorithm](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/smtp-credentials.html#smtp-credentials-convert). This attribute is not available for imported resources. As SigV4 is region specific, valid Provider regions are `ap-south-1`, `ap-southeast-2`, `eu-central-1`, `eu-west-1`, `us-east-1` and `us-west-2`. See current [AWS SES regions](https://docs.aws.amazon.com/general/latest/gr/rande.html#ses_region).
+    <dd>{{% md %}}Secret access key converted into an SES SMTP password by applying [AWS's documented Sigv4 conversion algorithm](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/smtp-credentials.html#smtp-credentials-convert). This attribute is not available for imported resources. As SigV4 is region specific, valid Provider regions are `ap-south-1`, `ap-southeast-2`, `eu-central-1`, `eu-west-1`, `us-east-1` and `us-west-2`. See current [AWS SES regions](https://docs.aws.amazon.com/general/latest/gr/rande.html#ses_region).
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -605,6 +609,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="encryptedsessmtppasswordv4_nodejs">
+<a href="#encryptedsessmtppasswordv4_nodejs" style="color: inherit; text-decoration: inherit;">encrypted<wbr>Ses<wbr>Smtp<wbr>Password<wbr>V4</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
@@ -619,7 +631,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The fingerprint of the PGP key used to encrypt the secret. This attribute is not available for imported resources.
+    <dd>{{% md %}}Fingerprint of the PGP key used to encrypt the secret. This attribute is not available for imported resources.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secret_nodejs">
@@ -628,7 +640,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The secret access key. This attribute is not available for imported resources. Note that this will be written to the state file. If you use this, please protect your backend state file judiciously. Alternatively, you may supply a `pgp_key` instead, which will prevent the secret from being stored in plaintext, at the cost of preventing the use of the secret key in automation.
+    <dd>{{% md %}}Secret access key. This attribute is not available for imported resources. Note that this will be written to the state file. If you use this, please protect your backend state file judiciously. Alternatively, you may supply a `pgp_key` instead, which will prevent the secret from being stored in plaintext, at the cost of preventing the use of the secret key in automation.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sessmtppasswordv4_nodejs">
@@ -637,7 +649,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The secret access key converted into an SES SMTP password by applying [AWS's documented Sigv4 conversion algorithm](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/smtp-credentials.html#smtp-credentials-convert). This attribute is not available for imported resources. As SigV4 is region specific, valid Provider regions are `ap-south-1`, `ap-southeast-2`, `eu-central-1`, `eu-west-1`, `us-east-1` and `us-west-2`. See current [AWS SES regions](https://docs.aws.amazon.com/general/latest/gr/rande.html#ses_region).
+    <dd>{{% md %}}Secret access key converted into an SES SMTP password by applying [AWS's documented Sigv4 conversion algorithm](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/smtp-credentials.html#smtp-credentials-convert). This attribute is not available for imported resources. As SigV4 is region specific, valid Provider regions are `ap-south-1`, `ap-southeast-2`, `eu-central-1`, `eu-west-1`, `us-east-1` and `us-west-2`. See current [AWS SES regions](https://docs.aws.amazon.com/general/latest/gr/rande.html#ses_region).
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -661,6 +673,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="encrypted_ses_smtp_password_v4_python">
+<a href="#encrypted_ses_smtp_password_v4_python" style="color: inherit; text-decoration: inherit;">encrypted_<wbr>ses_<wbr>smtp_<wbr>password_<wbr>v4</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
@@ -675,7 +695,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The fingerprint of the PGP key used to encrypt the secret. This attribute is not available for imported resources.
+    <dd>{{% md %}}Fingerprint of the PGP key used to encrypt the secret. This attribute is not available for imported resources.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secret_python">
@@ -684,7 +704,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The secret access key. This attribute is not available for imported resources. Note that this will be written to the state file. If you use this, please protect your backend state file judiciously. Alternatively, you may supply a `pgp_key` instead, which will prevent the secret from being stored in plaintext, at the cost of preventing the use of the secret key in automation.
+    <dd>{{% md %}}Secret access key. This attribute is not available for imported resources. Note that this will be written to the state file. If you use this, please protect your backend state file judiciously. Alternatively, you may supply a `pgp_key` instead, which will prevent the secret from being stored in plaintext, at the cost of preventing the use of the secret key in automation.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ses_smtp_password_v4_python">
@@ -693,7 +713,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The secret access key converted into an SES SMTP password by applying [AWS's documented Sigv4 conversion algorithm](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/smtp-credentials.html#smtp-credentials-convert). This attribute is not available for imported resources. As SigV4 is region specific, valid Provider regions are `ap-south-1`, `ap-southeast-2`, `eu-central-1`, `eu-west-1`, `us-east-1` and `us-west-2`. See current [AWS SES regions](https://docs.aws.amazon.com/general/latest/gr/rande.html#ses_region).
+    <dd>{{% md %}}Secret access key converted into an SES SMTP password by applying [AWS's documented Sigv4 conversion algorithm](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/smtp-credentials.html#smtp-credentials-convert). This attribute is not available for imported resources. As SigV4 is region specific, valid Provider regions are `ap-south-1`, `ap-southeast-2`, `eu-central-1`, `eu-west-1`, `us-east-1` and `us-west-2`. See current [AWS SES regions](https://docs.aws.amazon.com/general/latest/gr/rande.html#ses_region).
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -715,6 +735,7 @@ Get an existing AccessKey resource's state with the given name, ID, and optional
         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
         <span class="nx">create_date</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">encrypted_secret</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">encrypted_ses_smtp_password_v4</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">key_fingerprint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">pgp_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">secret</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -850,13 +871,21 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_encryptedsessmtppasswordv4_csharp">
+<a href="#state_encryptedsessmtppasswordv4_csharp" style="color: inherit; text-decoration: inherit;">Encrypted<wbr>Ses<wbr>Smtp<wbr>Password<wbr>V4</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_keyfingerprint_csharp">
 <a href="#state_keyfingerprint_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Fingerprint</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The fingerprint of the PGP key used to encrypt the secret. This attribute is not available for imported resources.
+    <dd>{{% md %}}Fingerprint of the PGP key used to encrypt the secret. This attribute is not available for imported resources.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_pgpkey_csharp">
@@ -865,9 +894,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Either a base-64 encoded PGP public key, or a
-keybase username in the form `keybase:some_person_that_exists`, for use
-in the `encrypted_secret` output attribute.
+    <dd>{{% md %}}Either a base-64 encoded PGP public key, or a keybase username in the form `keybase:some_person_that_exists`, for use in the `encrypted_secret` output attribute.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_secret_csharp">
@@ -876,7 +903,7 @@ in the `encrypted_secret` output attribute.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The secret access key. This attribute is not available for imported resources. Note that this will be written to the state file. If you use this, please protect your backend state file judiciously. Alternatively, you may supply a `pgp_key` instead, which will prevent the secret from being stored in plaintext, at the cost of preventing the use of the secret key in automation.
+    <dd>{{% md %}}Secret access key. This attribute is not available for imported resources. Note that this will be written to the state file. If you use this, please protect your backend state file judiciously. Alternatively, you may supply a `pgp_key` instead, which will prevent the secret from being stored in plaintext, at the cost of preventing the use of the secret key in automation.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sessmtppasswordv4_csharp">
@@ -885,7 +912,7 @@ in the `encrypted_secret` output attribute.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The secret access key converted into an SES SMTP password by applying [AWS's documented Sigv4 conversion algorithm](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/smtp-credentials.html#smtp-credentials-convert). This attribute is not available for imported resources. As SigV4 is region specific, valid Provider regions are `ap-south-1`, `ap-southeast-2`, `eu-central-1`, `eu-west-1`, `us-east-1` and `us-west-2`. See current [AWS SES regions](https://docs.aws.amazon.com/general/latest/gr/rande.html#ses_region).
+    <dd>{{% md %}}Secret access key converted into an SES SMTP password by applying [AWS's documented Sigv4 conversion algorithm](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/smtp-credentials.html#smtp-credentials-convert). This attribute is not available for imported resources. As SigV4 is region specific, valid Provider regions are `ap-south-1`, `ap-southeast-2`, `eu-central-1`, `eu-west-1`, `us-east-1` and `us-west-2`. See current [AWS SES regions](https://docs.aws.amazon.com/general/latest/gr/rande.html#ses_region).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_csharp">
@@ -894,8 +921,7 @@ in the `encrypted_secret` output attribute.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The access key status to apply. Defaults to `Active`.
-Valid values are `Active` and `Inactive`.
+    <dd>{{% md %}}Access key status to apply. Defaults to `Active`. Valid values are `Active` and `Inactive`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_user_csharp">
@@ -904,7 +930,7 @@ Valid values are `Active` and `Inactive`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The IAM user to associate with this access key.
+    <dd>{{% md %}}IAM user to associate with this access key.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -928,13 +954,21 @@ Valid values are `Active` and `Inactive`.
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_encryptedsessmtppasswordv4_go">
+<a href="#state_encryptedsessmtppasswordv4_go" style="color: inherit; text-decoration: inherit;">Encrypted<wbr>Ses<wbr>Smtp<wbr>Password<wbr>V4</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_keyfingerprint_go">
 <a href="#state_keyfingerprint_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Fingerprint</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The fingerprint of the PGP key used to encrypt the secret. This attribute is not available for imported resources.
+    <dd>{{% md %}}Fingerprint of the PGP key used to encrypt the secret. This attribute is not available for imported resources.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_pgpkey_go">
@@ -943,9 +977,7 @@ Valid values are `Active` and `Inactive`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Either a base-64 encoded PGP public key, or a
-keybase username in the form `keybase:some_person_that_exists`, for use
-in the `encrypted_secret` output attribute.
+    <dd>{{% md %}}Either a base-64 encoded PGP public key, or a keybase username in the form `keybase:some_person_that_exists`, for use in the `encrypted_secret` output attribute.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_secret_go">
@@ -954,7 +986,7 @@ in the `encrypted_secret` output attribute.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The secret access key. This attribute is not available for imported resources. Note that this will be written to the state file. If you use this, please protect your backend state file judiciously. Alternatively, you may supply a `pgp_key` instead, which will prevent the secret from being stored in plaintext, at the cost of preventing the use of the secret key in automation.
+    <dd>{{% md %}}Secret access key. This attribute is not available for imported resources. Note that this will be written to the state file. If you use this, please protect your backend state file judiciously. Alternatively, you may supply a `pgp_key` instead, which will prevent the secret from being stored in plaintext, at the cost of preventing the use of the secret key in automation.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sessmtppasswordv4_go">
@@ -963,7 +995,7 @@ in the `encrypted_secret` output attribute.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The secret access key converted into an SES SMTP password by applying [AWS's documented Sigv4 conversion algorithm](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/smtp-credentials.html#smtp-credentials-convert). This attribute is not available for imported resources. As SigV4 is region specific, valid Provider regions are `ap-south-1`, `ap-southeast-2`, `eu-central-1`, `eu-west-1`, `us-east-1` and `us-west-2`. See current [AWS SES regions](https://docs.aws.amazon.com/general/latest/gr/rande.html#ses_region).
+    <dd>{{% md %}}Secret access key converted into an SES SMTP password by applying [AWS's documented Sigv4 conversion algorithm](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/smtp-credentials.html#smtp-credentials-convert). This attribute is not available for imported resources. As SigV4 is region specific, valid Provider regions are `ap-south-1`, `ap-southeast-2`, `eu-central-1`, `eu-west-1`, `us-east-1` and `us-west-2`. See current [AWS SES regions](https://docs.aws.amazon.com/general/latest/gr/rande.html#ses_region).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_go">
@@ -972,8 +1004,7 @@ in the `encrypted_secret` output attribute.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The access key status to apply. Defaults to `Active`.
-Valid values are `Active` and `Inactive`.
+    <dd>{{% md %}}Access key status to apply. Defaults to `Active`. Valid values are `Active` and `Inactive`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_user_go">
@@ -982,7 +1013,7 @@ Valid values are `Active` and `Inactive`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The IAM user to associate with this access key.
+    <dd>{{% md %}}IAM user to associate with this access key.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1006,13 +1037,21 @@ Valid values are `Active` and `Inactive`.
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_encryptedsessmtppasswordv4_nodejs">
+<a href="#state_encryptedsessmtppasswordv4_nodejs" style="color: inherit; text-decoration: inherit;">encrypted<wbr>Ses<wbr>Smtp<wbr>Password<wbr>V4</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_keyfingerprint_nodejs">
 <a href="#state_keyfingerprint_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Fingerprint</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The fingerprint of the PGP key used to encrypt the secret. This attribute is not available for imported resources.
+    <dd>{{% md %}}Fingerprint of the PGP key used to encrypt the secret. This attribute is not available for imported resources.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_pgpkey_nodejs">
@@ -1021,9 +1060,7 @@ Valid values are `Active` and `Inactive`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Either a base-64 encoded PGP public key, or a
-keybase username in the form `keybase:some_person_that_exists`, for use
-in the `encrypted_secret` output attribute.
+    <dd>{{% md %}}Either a base-64 encoded PGP public key, or a keybase username in the form `keybase:some_person_that_exists`, for use in the `encrypted_secret` output attribute.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_secret_nodejs">
@@ -1032,7 +1069,7 @@ in the `encrypted_secret` output attribute.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The secret access key. This attribute is not available for imported resources. Note that this will be written to the state file. If you use this, please protect your backend state file judiciously. Alternatively, you may supply a `pgp_key` instead, which will prevent the secret from being stored in plaintext, at the cost of preventing the use of the secret key in automation.
+    <dd>{{% md %}}Secret access key. This attribute is not available for imported resources. Note that this will be written to the state file. If you use this, please protect your backend state file judiciously. Alternatively, you may supply a `pgp_key` instead, which will prevent the secret from being stored in plaintext, at the cost of preventing the use of the secret key in automation.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sessmtppasswordv4_nodejs">
@@ -1041,7 +1078,7 @@ in the `encrypted_secret` output attribute.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The secret access key converted into an SES SMTP password by applying [AWS's documented Sigv4 conversion algorithm](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/smtp-credentials.html#smtp-credentials-convert). This attribute is not available for imported resources. As SigV4 is region specific, valid Provider regions are `ap-south-1`, `ap-southeast-2`, `eu-central-1`, `eu-west-1`, `us-east-1` and `us-west-2`. See current [AWS SES regions](https://docs.aws.amazon.com/general/latest/gr/rande.html#ses_region).
+    <dd>{{% md %}}Secret access key converted into an SES SMTP password by applying [AWS's documented Sigv4 conversion algorithm](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/smtp-credentials.html#smtp-credentials-convert). This attribute is not available for imported resources. As SigV4 is region specific, valid Provider regions are `ap-south-1`, `ap-southeast-2`, `eu-central-1`, `eu-west-1`, `us-east-1` and `us-west-2`. See current [AWS SES regions](https://docs.aws.amazon.com/general/latest/gr/rande.html#ses_region).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_nodejs">
@@ -1050,8 +1087,7 @@ in the `encrypted_secret` output attribute.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The access key status to apply. Defaults to `Active`.
-Valid values are `Active` and `Inactive`.
+    <dd>{{% md %}}Access key status to apply. Defaults to `Active`. Valid values are `Active` and `Inactive`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_user_nodejs">
@@ -1060,7 +1096,7 @@ Valid values are `Active` and `Inactive`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The IAM user to associate with this access key.
+    <dd>{{% md %}}IAM user to associate with this access key.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1084,13 +1120,21 @@ Valid values are `Active` and `Inactive`.
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_encrypted_ses_smtp_password_v4_python">
+<a href="#state_encrypted_ses_smtp_password_v4_python" style="color: inherit; text-decoration: inherit;">encrypted_<wbr>ses_<wbr>smtp_<wbr>password_<wbr>v4</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_key_fingerprint_python">
 <a href="#state_key_fingerprint_python" style="color: inherit; text-decoration: inherit;">key_<wbr>fingerprint</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The fingerprint of the PGP key used to encrypt the secret. This attribute is not available for imported resources.
+    <dd>{{% md %}}Fingerprint of the PGP key used to encrypt the secret. This attribute is not available for imported resources.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_pgp_key_python">
@@ -1099,9 +1143,7 @@ Valid values are `Active` and `Inactive`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Either a base-64 encoded PGP public key, or a
-keybase username in the form `keybase:some_person_that_exists`, for use
-in the `encrypted_secret` output attribute.
+    <dd>{{% md %}}Either a base-64 encoded PGP public key, or a keybase username in the form `keybase:some_person_that_exists`, for use in the `encrypted_secret` output attribute.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_secret_python">
@@ -1110,7 +1152,7 @@ in the `encrypted_secret` output attribute.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The secret access key. This attribute is not available for imported resources. Note that this will be written to the state file. If you use this, please protect your backend state file judiciously. Alternatively, you may supply a `pgp_key` instead, which will prevent the secret from being stored in plaintext, at the cost of preventing the use of the secret key in automation.
+    <dd>{{% md %}}Secret access key. This attribute is not available for imported resources. Note that this will be written to the state file. If you use this, please protect your backend state file judiciously. Alternatively, you may supply a `pgp_key` instead, which will prevent the secret from being stored in plaintext, at the cost of preventing the use of the secret key in automation.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ses_smtp_password_v4_python">
@@ -1119,7 +1161,7 @@ in the `encrypted_secret` output attribute.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The secret access key converted into an SES SMTP password by applying [AWS's documented Sigv4 conversion algorithm](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/smtp-credentials.html#smtp-credentials-convert). This attribute is not available for imported resources. As SigV4 is region specific, valid Provider regions are `ap-south-1`, `ap-southeast-2`, `eu-central-1`, `eu-west-1`, `us-east-1` and `us-west-2`. See current [AWS SES regions](https://docs.aws.amazon.com/general/latest/gr/rande.html#ses_region).
+    <dd>{{% md %}}Secret access key converted into an SES SMTP password by applying [AWS's documented Sigv4 conversion algorithm](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/smtp-credentials.html#smtp-credentials-convert). This attribute is not available for imported resources. As SigV4 is region specific, valid Provider regions are `ap-south-1`, `ap-southeast-2`, `eu-central-1`, `eu-west-1`, `us-east-1` and `us-west-2`. See current [AWS SES regions](https://docs.aws.amazon.com/general/latest/gr/rande.html#ses_region).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_python">
@@ -1128,8 +1170,7 @@ in the `encrypted_secret` output attribute.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The access key status to apply. Defaults to `Active`.
-Valid values are `Active` and `Inactive`.
+    <dd>{{% md %}}Access key status to apply. Defaults to `Active`. Valid values are `Active` and `Inactive`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_user_python">
@@ -1138,7 +1179,7 @@ Valid values are `Active` and `Inactive`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The IAM user to associate with this access key.
+    <dd>{{% md %}}IAM user to associate with this access key.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1155,7 +1196,7 @@ IAM Access Keys can be imported using the identifier, e.g.
  $ pulumi import aws:iam/accessKey:AccessKey example AKIA1234567890
 ```
 
- Resource attributes such as `encrypted_secret`, `key_fingerprint`, `pgp_key`, `secret`, and `ses_smtp_password_v4` are not available for imported resources as this information cannot be read from the IAM API.
+ Resource attributes such as `encrypted_secret`, `key_fingerprint`, `pgp_key`, `secret`, `ses_smtp_password_v4`, and `encrypted_ses_smtp_password_v4` are not available for imported resources as this information cannot be read from the IAM API.
 
 
 

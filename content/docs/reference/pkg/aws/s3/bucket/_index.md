@@ -1062,6 +1062,7 @@ package main
 import (
 	"fmt"
 
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws"
 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/iam"
 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/providers"
 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/s3"
@@ -1071,13 +1072,13 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := providers.Newaws(ctx, "central", &providers.awsArgs{
-			Region: pulumi.String("eu-central-1"),
+			Region: "eu-central-1",
 		})
 		if err != nil {
 			return err
 		}
 		replicationRole, err := iam.NewRole(ctx, "replicationRole", &iam.RoleArgs{
-			AssumeRolePolicy: pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "  \"Version\": \"2012-10-17\",\n", "  \"Statement\": [\n", "    {\n", "      \"Action\": \"sts:AssumeRole\",\n", "      \"Principal\": {\n", "        \"Service\": \"s3.amazonaws.com\"\n", "      },\n", "      \"Effect\": \"Allow\",\n", "      \"Sid\": \"\"\n", "    }\n", "  ]\n", "}\n")),
+			AssumeRolePolicy: pulumi.Any(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "  \"Version\": \"2012-10-17\",\n", "  \"Statement\": [\n", "    {\n", "      \"Action\": \"sts:AssumeRole\",\n", "      \"Principal\": {\n", "        \"Service\": \"s3.amazonaws.com\"\n", "      },\n", "      \"Effect\": \"Allow\",\n", "      \"Sid\": \"\"\n", "    }\n", "  ]\n", "}\n")),
 		})
 		if err != nil {
 			return err
@@ -5415,6 +5416,15 @@ developer guide for more information.
     <dd>{{% md %}}The status of the rule. Either `Enabled` or `Disabled`. The rule is ignored if status is not Enabled.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="deletemarkerreplicationstatus_csharp">
+<a href="#deletemarkerreplicationstatus_csharp" style="color: inherit; text-decoration: inherit;">Delete<wbr>Marker<wbr>Replication<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Whether delete markers are replicated. The only valid value is `Enabled`. To disable, omit this argument. This argument is only valid with V2 replication configurations (i.e., when `filter` is used).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="filter_csharp">
 <a href="#filter_csharp" style="color: inherit; text-decoration: inherit;">Filter</a>
 </span>
@@ -5480,6 +5490,15 @@ developer guide for more information.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the rule. Either `Enabled` or `Disabled`. The rule is ignored if status is not Enabled.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="deletemarkerreplicationstatus_go">
+<a href="#deletemarkerreplicationstatus_go" style="color: inherit; text-decoration: inherit;">Delete<wbr>Marker<wbr>Replication<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Whether delete markers are replicated. The only valid value is `Enabled`. To disable, omit this argument. This argument is only valid with V2 replication configurations (i.e., when `filter` is used).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filter_go">
@@ -5549,6 +5568,15 @@ developer guide for more information.
     <dd>{{% md %}}The status of the rule. Either `Enabled` or `Disabled`. The rule is ignored if status is not Enabled.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="deletemarkerreplicationstatus_nodejs">
+<a href="#deletemarkerreplicationstatus_nodejs" style="color: inherit; text-decoration: inherit;">delete<wbr>Marker<wbr>Replication<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Whether delete markers are replicated. The only valid value is `Enabled`. To disable, omit this argument. This argument is only valid with V2 replication configurations (i.e., when `filter` is used).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="filter_nodejs">
 <a href="#filter_nodejs" style="color: inherit; text-decoration: inherit;">filter</a>
 </span>
@@ -5614,6 +5642,15 @@ developer guide for more information.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The status of the rule. Either `Enabled` or `Disabled`. The rule is ignored if status is not Enabled.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="delete_marker_replication_status_python">
+<a href="#delete_marker_replication_status_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>marker_<wbr>replication_<wbr>status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Whether delete markers are replicated. The only valid value is `Enabled`. To disable, omit this argument. This argument is only valid with V2 replication configurations (i.e., when `filter` is used).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filter_python">

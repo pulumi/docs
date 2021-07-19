@@ -327,7 +327,7 @@ func main() {
 			return err
 		}
 		firehoseRole, err := iam.NewRole(ctx, "firehoseRole", &iam.RoleArgs{
-			AssumeRolePolicy: pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "  \"Version\": \"2012-10-17\",\n", "  \"Statement\": [\n", "    {\n", "      \"Action\": \"sts:AssumeRole\",\n", "      \"Principal\": {\n", "        \"Service\": \"firehose.amazonaws.com\"\n", "      },\n", "      \"Effect\": \"Allow\",\n", "      \"Sid\": \"\"\n", "    }\n", "  ]\n", "}\n")),
+			AssumeRolePolicy: pulumi.Any(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "  \"Version\": \"2012-10-17\",\n", "  \"Statement\": [\n", "    {\n", "      \"Action\": \"sts:AssumeRole\",\n", "      \"Principal\": {\n", "        \"Service\": \"firehose.amazonaws.com\"\n", "      },\n", "      \"Effect\": \"Allow\",\n", "      \"Sid\": \"\"\n", "    }\n", "  ]\n", "}\n")),
 		})
 		if err != nil {
 			return err
@@ -847,6 +847,392 @@ const testStream = new aws.kinesis.FirehoseDeliveryStream("testStream", {
             }],
         },
     },
+});
+```
+
+
+{{< /example >}}
+
+
+
+
+### Elasticsearch Destination With VPC
+
+
+{{< example csharp >}}
+
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var testCluster = new Aws.ElasticSearch.Domain("testCluster", new Aws.ElasticSearch.DomainArgs
+        {
+            ClusterConfig = new Aws.ElasticSearch.Inputs.DomainClusterConfigArgs
+            {
+                InstanceCount = 2,
+                ZoneAwarenessEnabled = true,
+                InstanceType = "t2.small.elasticsearch",
+            },
+            EbsOptions = new Aws.ElasticSearch.Inputs.DomainEbsOptionsArgs
+            {
+                EbsEnabled = true,
+                VolumeSize = 10,
+            },
+            VpcOptions = new Aws.ElasticSearch.Inputs.DomainVpcOptionsArgs
+            {
+                SecurityGroupIds = 
+                {
+                    aws_security_group.First.Id,
+                },
+                SubnetIds = 
+                {
+                    aws_subnet.First.Id,
+                    aws_subnet.Second.Id,
+                },
+            },
+        });
+        var firehose_elasticsearch = new Aws.Iam.RolePolicy("firehose-elasticsearch", new Aws.Iam.RolePolicyArgs
+        {
+            Role = aws_iam_role.Firehose.Id,
+            Policy = Output.Tuple(testCluster.Arn, testCluster.Arn).Apply(values =>
+            {
+                var testClusterArn = values.Item1;
+                var testClusterArn1 = values.Item2;
+                return @$"{{
+  ""Version"": ""2012-10-17"",
+  ""Statement"": [
+    {{
+      ""Effect"": ""Allow"",
+      ""Action"": [
+        ""es:*""
+      ],
+      ""Resource"": [
+        ""{testClusterArn}"",
+        ""{testClusterArn1}/*""
+      ]
+        }},
+        {{
+          ""Effect"": ""Allow"",
+          ""Action"": [
+            ""ec2:DescribeVpcs"",
+            ""ec2:DescribeVpcAttribute"",
+            ""ec2:DescribeSubnets"",
+            ""ec2:DescribeSecurityGroups"",
+            ""ec2:DescribeNetworkInterfaces"",
+            ""ec2:CreateNetworkInterface"",
+            ""ec2:CreateNetworkInterfacePermission"",
+            ""ec2:DeleteNetworkInterface""
+          ],
+          ""Resource"": [
+            ""*""
+          ]
+        }}
+  ]
+}}
+";
+            }),
+        });
+        var test = new Aws.Kinesis.FirehoseDeliveryStream("test", new Aws.Kinesis.FirehoseDeliveryStreamArgs
+        {
+            Destination = "elasticsearch",
+            S3Configuration = new Aws.Kinesis.Inputs.FirehoseDeliveryStreamS3ConfigurationArgs
+            {
+                RoleArn = aws_iam_role.Firehose.Arn,
+                BucketArn = aws_s3_bucket.Bucket.Arn,
+            },
+            ElasticsearchConfiguration = new Aws.Kinesis.Inputs.FirehoseDeliveryStreamElasticsearchConfigurationArgs
+            {
+                DomainArn = testCluster.Arn,
+                RoleArn = aws_iam_role.Firehose.Arn,
+                IndexName = "test",
+                TypeName = "test",
+                VpcConfig = new Aws.Kinesis.Inputs.FirehoseDeliveryStreamElasticsearchConfigurationVpcConfigArgs
+                {
+                    SubnetIds = 
+                    {
+                        aws_subnet.First.Id,
+                        aws_subnet.Second.Id,
+                    },
+                    SecurityGroupIds = 
+                    {
+                        aws_security_group.First.Id,
+                    },
+                    RoleArn = aws_iam_role.Firehose.Arn,
+                },
+            },
+        }, new CustomResourceOptions
+        {
+            DependsOn = 
+            {
+                firehose_elasticsearch,
+            },
+        });
+    }
+
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/elasticsearch"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/iam"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/kinesis"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		testCluster, err := elasticsearch.NewDomain(ctx, "testCluster", &elasticsearch.DomainArgs{
+			ClusterConfig: &elasticsearch.DomainClusterConfigArgs{
+				InstanceCount:        pulumi.Int(2),
+				ZoneAwarenessEnabled: pulumi.Bool(true),
+				InstanceType:         pulumi.String("t2.small.elasticsearch"),
+			},
+			EbsOptions: &elasticsearch.DomainEbsOptionsArgs{
+				EbsEnabled: pulumi.Bool(true),
+				VolumeSize: pulumi.Int(10),
+			},
+			VpcOptions: &elasticsearch.DomainVpcOptionsArgs{
+				SecurityGroupIds: pulumi.StringArray{
+					pulumi.Any(aws_security_group.First.Id),
+				},
+				SubnetIds: pulumi.StringArray{
+					pulumi.Any(aws_subnet.First.Id),
+					pulumi.Any(aws_subnet.Second.Id),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		_, err = iam.NewRolePolicy(ctx, "firehose_elasticsearch", &iam.RolePolicyArgs{
+			Role: pulumi.Any(aws_iam_role.Firehose.Id),
+			Policy: pulumi.All(testCluster.Arn, testCluster.Arn).ApplyT(func(_args []interface{}) (string, error) {
+				testClusterArn := _args[0].(string)
+				testClusterArn1 := _args[1].(string)
+				return fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "  \"Version\": \"2012-10-17\",\n", "  \"Statement\": [\n", "    {\n", "      \"Effect\": \"Allow\",\n", "      \"Action\": [\n", "        \"es:*\"\n", "      ],\n", "      \"Resource\": [\n", "        \"", testClusterArn, "\",\n", "        \"", testClusterArn1, "/*\"\n", "      ]\n", "        },\n", "        {\n", "          \"Effect\": \"Allow\",\n", "          \"Action\": [\n", "            \"ec2:DescribeVpcs\",\n", "            \"ec2:DescribeVpcAttribute\",\n", "            \"ec2:DescribeSubnets\",\n", "            \"ec2:DescribeSecurityGroups\",\n", "            \"ec2:DescribeNetworkInterfaces\",\n", "            \"ec2:CreateNetworkInterface\",\n", "            \"ec2:CreateNetworkInterfacePermission\",\n", "            \"ec2:DeleteNetworkInterface\"\n", "          ],\n", "          \"Resource\": [\n", "            \"*\"\n", "          ]\n", "        }\n", "  ]\n", "}\n"), nil
+			}).(pulumi.StringOutput),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = kinesis.NewFirehoseDeliveryStream(ctx, "test", &kinesis.FirehoseDeliveryStreamArgs{
+			Destination: pulumi.String("elasticsearch"),
+			S3Configuration: &kinesis.FirehoseDeliveryStreamS3ConfigurationArgs{
+				RoleArn:   pulumi.Any(aws_iam_role.Firehose.Arn),
+				BucketArn: pulumi.Any(aws_s3_bucket.Bucket.Arn),
+			},
+			ElasticsearchConfiguration: &kinesis.FirehoseDeliveryStreamElasticsearchConfigurationArgs{
+				DomainArn: testCluster.Arn,
+				RoleArn:   pulumi.Any(aws_iam_role.Firehose.Arn),
+				IndexName: pulumi.String("test"),
+				TypeName:  pulumi.String("test"),
+				VpcConfig: &kinesis.FirehoseDeliveryStreamElasticsearchConfigurationVpcConfigArgs{
+					SubnetIds: pulumi.StringArray{
+						pulumi.Any(aws_subnet.First.Id),
+						pulumi.Any(aws_subnet.Second.Id),
+					},
+					SecurityGroupIds: pulumi.StringArray{
+						pulumi.Any(aws_security_group.First.Id),
+					},
+					RoleArn: pulumi.Any(aws_iam_role.Firehose.Arn),
+				},
+			},
+		}, pulumi.DependsOn([]pulumi.Resource{
+			firehose_elasticsearch,
+		}))
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+```python
+import pulumi
+import pulumi_aws as aws
+
+test_cluster = aws.elasticsearch.Domain("testCluster",
+    cluster_config=aws.elasticsearch.DomainClusterConfigArgs(
+        instance_count=2,
+        zone_awareness_enabled=True,
+        instance_type="t2.small.elasticsearch",
+    ),
+    ebs_options=aws.elasticsearch.DomainEbsOptionsArgs(
+        ebs_enabled=True,
+        volume_size=10,
+    ),
+    vpc_options=aws.elasticsearch.DomainVpcOptionsArgs(
+        security_group_ids=[aws_security_group["first"]["id"]],
+        subnet_ids=[
+            aws_subnet["first"]["id"],
+            aws_subnet["second"]["id"],
+        ],
+    ))
+firehose_elasticsearch = aws.iam.RolePolicy("firehose-elasticsearch",
+    role=aws_iam_role["firehose"]["id"],
+    policy=pulumi.Output.all(test_cluster.arn, test_cluster.arn).apply(lambda testClusterArn, testClusterArn1: f"""{{
+  "Version": "2012-10-17",
+  "Statement": [
+    {{
+      "Effect": "Allow",
+      "Action": [
+        "es:*"
+      ],
+      "Resource": [
+        "{test_cluster_arn}",
+        "{test_cluster_arn1}/*"
+      ]
+        }},
+        {{
+          "Effect": "Allow",
+          "Action": [
+            "ec2:DescribeVpcs",
+            "ec2:DescribeVpcAttribute",
+            "ec2:DescribeSubnets",
+            "ec2:DescribeSecurityGroups",
+            "ec2:DescribeNetworkInterfaces",
+            "ec2:CreateNetworkInterface",
+            "ec2:CreateNetworkInterfacePermission",
+            "ec2:DeleteNetworkInterface"
+          ],
+          "Resource": [
+            "*"
+          ]
+        }}
+  ]
+}}
+"""))
+test = aws.kinesis.FirehoseDeliveryStream("test",
+    destination="elasticsearch",
+    s3_configuration=aws.kinesis.FirehoseDeliveryStreamS3ConfigurationArgs(
+        role_arn=aws_iam_role["firehose"]["arn"],
+        bucket_arn=aws_s3_bucket["bucket"]["arn"],
+    ),
+    elasticsearch_configuration=aws.kinesis.FirehoseDeliveryStreamElasticsearchConfigurationArgs(
+        domain_arn=test_cluster.arn,
+        role_arn=aws_iam_role["firehose"]["arn"],
+        index_name="test",
+        type_name="test",
+        vpc_config={
+            "subnet_ids": [
+                aws_subnet["first"]["id"],
+                aws_subnet["second"]["id"],
+            ],
+            "security_group_ids": [aws_security_group["first"]["id"]],
+            "role_arn": aws_iam_role["firehose"]["arn"],
+        },
+    ),
+    opts=pulumi.ResourceOptions(depends_on=[firehose_elasticsearch]))
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const testCluster = new aws.elasticsearch.Domain("testCluster", {
+    clusterConfig: {
+        instanceCount: 2,
+        zoneAwarenessEnabled: true,
+        instanceType: "t2.small.elasticsearch",
+    },
+    ebsOptions: {
+        ebsEnabled: true,
+        volumeSize: 10,
+    },
+    vpcOptions: {
+        securityGroupIds: [aws_security_group.first.id],
+        subnetIds: [
+            aws_subnet.first.id,
+            aws_subnet.second.id,
+        ],
+    },
+});
+const firehose_elasticsearch = new aws.iam.RolePolicy("firehose-elasticsearch", {
+    role: aws_iam_role.firehose.id,
+    policy: pulumi.interpolate`{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "es:*"
+      ],
+      "Resource": [
+        "${testCluster.arn}",
+        "${testCluster.arn}/*"
+      ]
+        },
+        {
+          "Effect": "Allow",
+          "Action": [
+            "ec2:DescribeVpcs",
+            "ec2:DescribeVpcAttribute",
+            "ec2:DescribeSubnets",
+            "ec2:DescribeSecurityGroups",
+            "ec2:DescribeNetworkInterfaces",
+            "ec2:CreateNetworkInterface",
+            "ec2:CreateNetworkInterfacePermission",
+            "ec2:DeleteNetworkInterface"
+          ],
+          "Resource": [
+            "*"
+          ]
+        }
+  ]
+}
+`,
+});
+const test = new aws.kinesis.FirehoseDeliveryStream("test", {
+    destination: "elasticsearch",
+    s3Configuration: {
+        roleArn: aws_iam_role.firehose.arn,
+        bucketArn: aws_s3_bucket.bucket.arn,
+    },
+    elasticsearchConfiguration: {
+        domainArn: testCluster.arn,
+        roleArn: aws_iam_role.firehose.arn,
+        indexName: "test",
+        typeName: "test",
+        vpcConfig: {
+            subnetIds: [
+                aws_subnet.first.id,
+                aws_subnet.second.id,
+            ],
+            securityGroupIds: [aws_security_group.first.id],
+            roleArn: aws_iam_role.firehose.arn,
+        },
+    },
+}, {
+    dependsOn: [firehose_elasticsearch],
 });
 ```
 

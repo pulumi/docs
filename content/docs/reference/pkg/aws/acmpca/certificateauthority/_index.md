@@ -253,9 +253,9 @@ func main() {
 		}
 		exampleBucketPolicy, err := s3.NewBucketPolicy(ctx, "exampleBucketPolicy", &s3.BucketPolicyArgs{
 			Bucket: exampleBucket.ID(),
-			Policy: pulumi.String(acmpcaBucketAccess.ApplyT(func(acmpcaBucketAccess iam.GetPolicyDocumentResult) (string, error) {
+			Policy: acmpcaBucketAccess.ApplyT(func(acmpcaBucketAccess iam.GetPolicyDocumentResult) (string, error) {
 				return acmpcaBucketAccess.Json, nil
-			}).(pulumi.StringOutput)),
+			}).(pulumi.StringOutput),
 		})
 		if err != nil {
 			return err

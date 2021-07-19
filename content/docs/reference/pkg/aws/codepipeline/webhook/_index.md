@@ -231,7 +231,7 @@ func main() {
 		}
 		_, err = github.NewRepositoryWebhook(ctx, "barRepositoryWebhook", &github.RepositoryWebhookArgs{
 			Repository: pulumi.Any(github_repository.Repo.Name),
-			Configuration: &github.RepositoryWebhookConfigurationArgs{
+			Configuration: &RepositoryWebhookConfigurationArgs{
 				Url:         barWebhook.Url,
 				ContentType: pulumi.String("json"),
 				InsecureSsl: pulumi.Bool(true),

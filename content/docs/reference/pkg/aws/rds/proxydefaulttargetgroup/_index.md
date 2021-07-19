@@ -14,6 +14,232 @@ Provides a resource to manage an RDS DB proxy default target group resource.
 
 The `aws.rds.ProxyDefaultTargetGroup` behaves differently from normal resources, in that the provider does not _create_ or _destroy_ this resource, since it implicitly exists as part of an RDS DB Proxy. On the provider resource creation it is automatically imported and on resource destruction, the provider performs no actions in RDS.
 
+{{% examples %}}
+
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+
+
+
+
+{{< example csharp >}}
+
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleProxy = new Aws.Rds.Proxy("exampleProxy", new Aws.Rds.ProxyArgs
+        {
+            DebugLogging = false,
+            EngineFamily = "MYSQL",
+            IdleClientTimeout = 1800,
+            RequireTls = true,
+            RoleArn = aws_iam_role.Example.Arn,
+            VpcSecurityGroupIds = 
+            {
+                aws_security_group.Example.Id,
+            },
+            VpcSubnetIds = 
+            {
+                aws_subnet.Example.Id,
+            },
+            Auths = 
+            {
+                new Aws.Rds.Inputs.ProxyAuthArgs
+                {
+                    AuthScheme = "SECRETS",
+                    Description = "example",
+                    IamAuth = "DISABLED",
+                    SecretArn = aws_secretsmanager_secret.Example.Arn,
+                },
+            },
+            Tags = 
+            {
+                { "Name", "example" },
+                { "Key", "value" },
+            },
+        });
+        var exampleProxyDefaultTargetGroup = new Aws.Rds.ProxyDefaultTargetGroup("exampleProxyDefaultTargetGroup", new Aws.Rds.ProxyDefaultTargetGroupArgs
+        {
+            DbProxyName = exampleProxy.Name,
+            ConnectionPoolConfig = new Aws.Rds.Inputs.ProxyDefaultTargetGroupConnectionPoolConfigArgs
+            {
+                ConnectionBorrowTimeout = 120,
+                InitQuery = "SET x=1, y=2",
+                MaxConnectionsPercent = 100,
+                MaxIdleConnectionsPercent = 50,
+                SessionPinningFilters = 
+                {
+                    "EXCLUDE_VARIABLE_SETS",
+                },
+            },
+        });
+    }
+
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/rds"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleProxy, err := rds.NewProxy(ctx, "exampleProxy", &rds.ProxyArgs{
+			DebugLogging:      pulumi.Bool(false),
+			EngineFamily:      pulumi.String("MYSQL"),
+			IdleClientTimeout: pulumi.Int(1800),
+			RequireTls:        pulumi.Bool(true),
+			RoleArn:           pulumi.Any(aws_iam_role.Example.Arn),
+			VpcSecurityGroupIds: pulumi.StringArray{
+				pulumi.Any(aws_security_group.Example.Id),
+			},
+			VpcSubnetIds: pulumi.StringArray{
+				pulumi.Any(aws_subnet.Example.Id),
+			},
+			Auths: rds.ProxyAuthArray{
+				&rds.ProxyAuthArgs{
+					AuthScheme:  pulumi.String("SECRETS"),
+					Description: pulumi.String("example"),
+					IamAuth:     pulumi.String("DISABLED"),
+					SecretArn:   pulumi.Any(aws_secretsmanager_secret.Example.Arn),
+				},
+			},
+			Tags: pulumi.StringMap{
+				"Name": pulumi.String("example"),
+				"Key":  pulumi.String("value"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		_, err = rds.NewProxyDefaultTargetGroup(ctx, "exampleProxyDefaultTargetGroup", &rds.ProxyDefaultTargetGroupArgs{
+			DbProxyName: exampleProxy.Name,
+			ConnectionPoolConfig: &rds.ProxyDefaultTargetGroupConnectionPoolConfigArgs{
+				ConnectionBorrowTimeout:   pulumi.Int(120),
+				InitQuery:                 pulumi.String("SET x=1, y=2"),
+				MaxConnectionsPercent:     pulumi.Int(100),
+				MaxIdleConnectionsPercent: pulumi.Int(50),
+				SessionPinningFilters: pulumi.StringArray{
+					pulumi.String("EXCLUDE_VARIABLE_SETS"),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+```python
+import pulumi
+import pulumi_aws as aws
+
+example_proxy = aws.rds.Proxy("exampleProxy",
+    debug_logging=False,
+    engine_family="MYSQL",
+    idle_client_timeout=1800,
+    require_tls=True,
+    role_arn=aws_iam_role["example"]["arn"],
+    vpc_security_group_ids=[aws_security_group["example"]["id"]],
+    vpc_subnet_ids=[aws_subnet["example"]["id"]],
+    auths=[aws.rds.ProxyAuthArgs(
+        auth_scheme="SECRETS",
+        description="example",
+        iam_auth="DISABLED",
+        secret_arn=aws_secretsmanager_secret["example"]["arn"],
+    )],
+    tags={
+        "Name": "example",
+        "Key": "value",
+    })
+example_proxy_default_target_group = aws.rds.ProxyDefaultTargetGroup("exampleProxyDefaultTargetGroup",
+    db_proxy_name=example_proxy.name,
+    connection_pool_config=aws.rds.ProxyDefaultTargetGroupConnectionPoolConfigArgs(
+        connection_borrow_timeout=120,
+        init_query="SET x=1, y=2",
+        max_connections_percent=100,
+        max_idle_connections_percent=50,
+        session_pinning_filters=["EXCLUDE_VARIABLE_SETS"],
+    ))
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const exampleProxy = new aws.rds.Proxy("exampleProxy", {
+    debugLogging: false,
+    engineFamily: "MYSQL",
+    idleClientTimeout: 1800,
+    requireTls: true,
+    roleArn: aws_iam_role.example.arn,
+    vpcSecurityGroupIds: [aws_security_group.example.id],
+    vpcSubnetIds: [aws_subnet.example.id],
+    auths: [{
+        authScheme: "SECRETS",
+        description: "example",
+        iamAuth: "DISABLED",
+        secretArn: aws_secretsmanager_secret.example.arn,
+    }],
+    tags: {
+        Name: "example",
+        Key: "value",
+    },
+});
+const exampleProxyDefaultTargetGroup = new aws.rds.ProxyDefaultTargetGroup("exampleProxyDefaultTargetGroup", {
+    dbProxyName: exampleProxy.name,
+    connectionPoolConfig: {
+        connectionBorrowTimeout: 120,
+        initQuery: "SET x=1, y=2",
+        maxConnectionsPercent: 100,
+        maxIdleConnectionsPercent: 50,
+        sessionPinningFilters: ["EXCLUDE_VARIABLE_SETS"],
+    },
+});
+```
+
+
+{{< /example >}}
+
+
+
+
+
+{{% /examples %}}
+
+
 
 
 ## Create a ProxyDefaultTargetGroup Resource {#create}

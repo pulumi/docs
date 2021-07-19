@@ -186,6 +186,7 @@ const cheapWorker = new aws.ec2.SpotInstanceRequest("cheap_worker", {
                         <span class="nx">host_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                         <span class="nx">iam_instance_profile</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                         <span class="nx">instance_initiated_shutdown_behavior</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                        <span class="nx">instance_interruption_behavior</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                         <span class="nx">instance_interruption_behaviour</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                         <span class="nx">instance_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                         <span class="nx">ipv6_address_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
@@ -516,14 +517,23 @@ Note that you can't specify an Availability Zone group or a launch group if you 
     <dd>{{% md %}}Shutdown behavior for the instance. Amazon defaults this to `stop` for EBS-backed instances and `terminate` for instance-store instances. Cannot be set on instance-store instances. See [Shutdown Behavior](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#Using_ChangingInstanceInitiatedShutdownBehavior) for more information.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="instanceinterruptionbehavior_csharp">
+<a href="#instanceinterruptionbehavior_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Interruption<wbr>Behavior</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Indicates Spot instance behavior when it is interrupted. Valid values are `terminate`, `stop`, or `hibernate`. Default value is `terminate`.
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="instanceinterruptionbehaviour_csharp">
 <a href="#instanceinterruptionbehaviour_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Interruption<wbr>Behaviour</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Indicates whether a Spot instance stops or terminates when it is interrupted. Default is `terminate` as this is the current AWS behaviour.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Indicates Spot instance behavior when it is interrupted. Valid values are `terminate`, `stop`, or `hibernate`. Default value is `terminate`. Use the argument `instance_interruption_behavior` instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the parameter &#34;instance_interruption_behavior&#34; instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="ipv6addresscount_csharp">
 <a href="#ipv6addresscount_csharp" style="color: inherit; text-decoration: inherit;">Ipv6Address<wbr>Count</a>
@@ -940,14 +950,23 @@ Note that you can't specify an Availability Zone group or a launch group if you 
     <dd>{{% md %}}Shutdown behavior for the instance. Amazon defaults this to `stop` for EBS-backed instances and `terminate` for instance-store instances. Cannot be set on instance-store instances. See [Shutdown Behavior](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#Using_ChangingInstanceInitiatedShutdownBehavior) for more information.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="instanceinterruptionbehavior_go">
+<a href="#instanceinterruptionbehavior_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Interruption<wbr>Behavior</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Indicates Spot instance behavior when it is interrupted. Valid values are `terminate`, `stop`, or `hibernate`. Default value is `terminate`.
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="instanceinterruptionbehaviour_go">
 <a href="#instanceinterruptionbehaviour_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Interruption<wbr>Behaviour</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Indicates whether a Spot instance stops or terminates when it is interrupted. Default is `terminate` as this is the current AWS behaviour.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Indicates Spot instance behavior when it is interrupted. Valid values are `terminate`, `stop`, or `hibernate`. Default value is `terminate`. Use the argument `instance_interruption_behavior` instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the parameter &#34;instance_interruption_behavior&#34; instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="ipv6addresscount_go">
 <a href="#ipv6addresscount_go" style="color: inherit; text-decoration: inherit;">Ipv6Address<wbr>Count</a>
@@ -1364,14 +1383,23 @@ Note that you can't specify an Availability Zone group or a launch group if you 
     <dd>{{% md %}}Shutdown behavior for the instance. Amazon defaults this to `stop` for EBS-backed instances and `terminate` for instance-store instances. Cannot be set on instance-store instances. See [Shutdown Behavior](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#Using_ChangingInstanceInitiatedShutdownBehavior) for more information.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="instanceinterruptionbehavior_nodejs">
+<a href="#instanceinterruptionbehavior_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Interruption<wbr>Behavior</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Indicates Spot instance behavior when it is interrupted. Valid values are `terminate`, `stop`, or `hibernate`. Default value is `terminate`.
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="instanceinterruptionbehaviour_nodejs">
 <a href="#instanceinterruptionbehaviour_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Interruption<wbr>Behaviour</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Indicates whether a Spot instance stops or terminates when it is interrupted. Default is `terminate` as this is the current AWS behaviour.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Indicates Spot instance behavior when it is interrupted. Valid values are `terminate`, `stop`, or `hibernate`. Default value is `terminate`. Use the argument `instance_interruption_behavior` instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the parameter &#34;instance_interruption_behavior&#34; instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="ipv6addresscount_nodejs">
 <a href="#ipv6addresscount_nodejs" style="color: inherit; text-decoration: inherit;">ipv6Address<wbr>Count</a>
@@ -1788,14 +1816,23 @@ Note that you can't specify an Availability Zone group or a launch group if you 
     <dd>{{% md %}}Shutdown behavior for the instance. Amazon defaults this to `stop` for EBS-backed instances and `terminate` for instance-store instances. Cannot be set on instance-store instances. See [Shutdown Behavior](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#Using_ChangingInstanceInitiatedShutdownBehavior) for more information.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="instance_interruption_behavior_python">
+<a href="#instance_interruption_behavior_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>interruption_<wbr>behavior</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Indicates Spot instance behavior when it is interrupted. Valid values are `terminate`, `stop`, or `hibernate`. Default value is `terminate`.
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="instance_interruption_behaviour_python">
 <a href="#instance_interruption_behaviour_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>interruption_<wbr>behaviour</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Indicates whether a Spot instance stops or terminates when it is interrupted. Default is `terminate` as this is the current AWS behaviour.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Indicates Spot instance behavior when it is interrupted. Valid values are `terminate`, `stop`, or `hibernate`. Default value is `terminate`. Use the argument `instance_interruption_behavior` instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the parameter &#34;instance_interruption_behavior&#34; instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="ipv6_address_count_python">
 <a href="#ipv6_address_count_python" style="color: inherit; text-decoration: inherit;">ipv6_<wbr>address_<wbr>count</a>
@@ -2534,6 +2571,7 @@ Get an existing SpotInstanceRequest resource's state with the given name, ID, an
         <span class="nx">host_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">iam_instance_profile</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">instance_initiated_shutdown_behavior</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">instance_interruption_behavior</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">instance_interruption_behaviour</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">instance_state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">instance_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -2856,14 +2894,23 @@ Note that you can't specify an Availability Zone group or a launch group if you 
     <dd>{{% md %}}Shutdown behavior for the instance. Amazon defaults this to `stop` for EBS-backed instances and `terminate` for instance-store instances. Cannot be set on instance-store instances. See [Shutdown Behavior](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#Using_ChangingInstanceInitiatedShutdownBehavior) for more information.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_instanceinterruptionbehavior_csharp">
+<a href="#state_instanceinterruptionbehavior_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Interruption<wbr>Behavior</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Indicates Spot instance behavior when it is interrupted. Valid values are `terminate`, `stop`, or `hibernate`. Default value is `terminate`.
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_instanceinterruptionbehaviour_csharp">
 <a href="#state_instanceinterruptionbehaviour_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Interruption<wbr>Behaviour</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Indicates whether a Spot instance stops or terminates when it is interrupted. Default is `terminate` as this is the current AWS behaviour.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Indicates Spot instance behavior when it is interrupted. Valid values are `terminate`, `stop`, or `hibernate`. Default value is `terminate`. Use the argument `instance_interruption_behavior` instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the parameter &#34;instance_interruption_behavior&#34; instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_instancestate_csharp">
 <a href="#state_instancestate_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>State</a>
@@ -3382,14 +3429,23 @@ Note that you can't specify an Availability Zone group or a launch group if you 
     <dd>{{% md %}}Shutdown behavior for the instance. Amazon defaults this to `stop` for EBS-backed instances and `terminate` for instance-store instances. Cannot be set on instance-store instances. See [Shutdown Behavior](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#Using_ChangingInstanceInitiatedShutdownBehavior) for more information.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_instanceinterruptionbehavior_go">
+<a href="#state_instanceinterruptionbehavior_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Interruption<wbr>Behavior</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Indicates Spot instance behavior when it is interrupted. Valid values are `terminate`, `stop`, or `hibernate`. Default value is `terminate`.
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_instanceinterruptionbehaviour_go">
 <a href="#state_instanceinterruptionbehaviour_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Interruption<wbr>Behaviour</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Indicates whether a Spot instance stops or terminates when it is interrupted. Default is `terminate` as this is the current AWS behaviour.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Indicates Spot instance behavior when it is interrupted. Valid values are `terminate`, `stop`, or `hibernate`. Default value is `terminate`. Use the argument `instance_interruption_behavior` instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the parameter &#34;instance_interruption_behavior&#34; instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_instancestate_go">
 <a href="#state_instancestate_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>State</a>
@@ -3908,14 +3964,23 @@ Note that you can't specify an Availability Zone group or a launch group if you 
     <dd>{{% md %}}Shutdown behavior for the instance. Amazon defaults this to `stop` for EBS-backed instances and `terminate` for instance-store instances. Cannot be set on instance-store instances. See [Shutdown Behavior](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#Using_ChangingInstanceInitiatedShutdownBehavior) for more information.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_instanceinterruptionbehavior_nodejs">
+<a href="#state_instanceinterruptionbehavior_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Interruption<wbr>Behavior</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Indicates Spot instance behavior when it is interrupted. Valid values are `terminate`, `stop`, or `hibernate`. Default value is `terminate`.
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_instanceinterruptionbehaviour_nodejs">
 <a href="#state_instanceinterruptionbehaviour_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Interruption<wbr>Behaviour</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Indicates whether a Spot instance stops or terminates when it is interrupted. Default is `terminate` as this is the current AWS behaviour.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Indicates Spot instance behavior when it is interrupted. Valid values are `terminate`, `stop`, or `hibernate`. Default value is `terminate`. Use the argument `instance_interruption_behavior` instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the parameter &#34;instance_interruption_behavior&#34; instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_instancestate_nodejs">
 <a href="#state_instancestate_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>State</a>
@@ -4434,14 +4499,23 @@ Note that you can't specify an Availability Zone group or a launch group if you 
     <dd>{{% md %}}Shutdown behavior for the instance. Amazon defaults this to `stop` for EBS-backed instances and `terminate` for instance-store instances. Cannot be set on instance-store instances. See [Shutdown Behavior](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#Using_ChangingInstanceInitiatedShutdownBehavior) for more information.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_instance_interruption_behavior_python">
+<a href="#state_instance_interruption_behavior_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>interruption_<wbr>behavior</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Indicates Spot instance behavior when it is interrupted. Valid values are `terminate`, `stop`, or `hibernate`. Default value is `terminate`.
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_instance_interruption_behaviour_python">
 <a href="#state_instance_interruption_behaviour_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>interruption_<wbr>behaviour</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Indicates whether a Spot instance stops or terminates when it is interrupted. Default is `terminate` as this is the current AWS behaviour.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Indicates Spot instance behavior when it is interrupted. Valid values are `terminate`, `stop`, or `hibernate`. Default value is `terminate`. Use the argument `instance_interruption_behavior` instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the parameter &#34;instance_interruption_behavior&#34; instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_instance_state_python">
 <a href="#state_instance_state_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>state</a>

@@ -12,6 +12,167 @@ meta_desc: "Documentation for the aws.macie.FindingsFilter resource with example
 
 Provides a resource to manage an [Amazon Macie Findings Filter](https://docs.aws.amazon.com/macie/latest/APIReference/findingsfilters-id.html).
 
+{{% examples %}}
+
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+
+
+
+
+{{< example csharp >}}
+
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Aws.Macie2.Account("example", new Aws.Macie2.AccountArgs
+        {
+        });
+        var test = new Aws.Macie.FindingsFilter("test", new Aws.Macie.FindingsFilterArgs
+        {
+            Description = "DESCRIPTION",
+            Position = 1,
+            Action = "ARCHIVE",
+            FindingCriteria = new Aws.Macie.Inputs.FindingsFilterFindingCriteriaArgs
+            {
+                Criterions = 
+                {
+                    new Aws.Macie.Inputs.FindingsFilterFindingCriteriaCriterionArgs
+                    {
+                        Field = "region",
+                        Eqs = 
+                        {
+                            data.Aws_region.Current.Name,
+                        },
+                    },
+                },
+            },
+        }, new CustomResourceOptions
+        {
+            DependsOn = 
+            {
+                aws_macie2_account.Test,
+            },
+        });
+    }
+
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/macie"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/macie2"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := macie2.NewAccount(ctx, "example", nil)
+		if err != nil {
+			return err
+		}
+		_, err = macie.NewFindingsFilter(ctx, "test", &macie.FindingsFilterArgs{
+			Description: pulumi.String("DESCRIPTION"),
+			Position:    pulumi.Int(1),
+			Action:      pulumi.String("ARCHIVE"),
+			FindingCriteria: &macie.FindingsFilterFindingCriteriaArgs{
+				Criterions: macie.FindingsFilterFindingCriteriaCriterionArray{
+					&macie.FindingsFilterFindingCriteriaCriterionArgs{
+						Field: pulumi.String("region"),
+						Eqs: pulumi.StringArray{
+							pulumi.Any(data.Aws_region.Current.Name),
+						},
+					},
+				},
+			},
+		}, pulumi.DependsOn([]pulumi.Resource{
+			aws_macie2_account.Test,
+		}))
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+```python
+import pulumi
+import pulumi_aws as aws
+
+example = aws.macie2.Account("example")
+test = aws.macie.FindingsFilter("test",
+    description="DESCRIPTION",
+    position=1,
+    action="ARCHIVE",
+    finding_criteria=aws.macie.FindingsFilterFindingCriteriaArgs(
+        criterions=[aws.macie.FindingsFilterFindingCriteriaCriterionArgs(
+            field="region",
+            eqs=[data["aws_region"]["current"]["name"]],
+        )],
+    ),
+    opts=pulumi.ResourceOptions(depends_on=[aws_macie2_account["test"]]))
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const example = new aws.macie2.Account("example", {});
+const test = new aws.macie.FindingsFilter("test", {
+    description: "DESCRIPTION",
+    position: 1,
+    action: "ARCHIVE",
+    findingCriteria: {
+        criterions: [{
+            field: "region",
+            eqs: [data.aws_region.current.name],
+        }],
+    },
+}, {
+    dependsOn: [aws_macie2_account.test],
+});
+```
+
+
+{{< /example >}}
+
+
+
+
+
+{{% /examples %}}
+
+
 
 
 ## Create a FindingsFilter Resource {#create}

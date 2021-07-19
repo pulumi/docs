@@ -13,6 +13,352 @@ meta_desc: "Documentation for the aws.cloudwatch.EventTarget resource with examp
 Provides an EventBridge Target resource.
 
 > **Note:** EventBridge was formerly known as CloudWatch Events. The functionality is identical.
+## Example SSM Document Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const ssmLifecycleTrust = aws.iam.getPolicyDocument({
+    statements: [{
+        actions: ["sts:AssumeRole"],
+        principals: [{
+            type: "Service",
+            identifiers: ["events.amazonaws.com"],
+        }],
+    }],
+});
+const stopInstance = new aws.ssm.Document("stopInstance", {
+    documentType: "Command",
+    content: `  {
+    "schemaVersion": "1.2",
+    "description": "Stop an instance",
+    "parameters": {
+
+    },
+    "runtimeConfig": {
+      "aws:runShellScript": {
+        "properties": [
+          {
+            "id": "0.aws:runShellScript",
+            "runCommand": ["halt"]
+          }
+        ]
+      }
+    }
+  }
+`,
+});
+const ssmLifecyclePolicyDocument = stopInstance.arn.apply(arn => aws.iam.getPolicyDocument({
+    statements: [
+        {
+            effect: "Allow",
+            actions: ["ssm:SendCommand"],
+            resources: ["arn:aws:ec2:eu-west-1:1234567890:instance/*"],
+            conditions: [{
+                test: "StringEquals",
+                variable: "ec2:ResourceTag/Terminate",
+                values: ["*"],
+            }],
+        },
+        {
+            effect: "Allow",
+            actions: ["ssm:SendCommand"],
+            resources: [arn],
+        },
+    ],
+}));
+const ssmLifecycleRole = new aws.iam.Role("ssmLifecycleRole", {assumeRolePolicy: ssmLifecycleTrust.then(ssmLifecycleTrust => ssmLifecycleTrust.json)});
+const ssmLifecyclePolicy = new aws.iam.Policy("ssmLifecyclePolicy", {policy: ssmLifecyclePolicyDocument.apply(ssmLifecyclePolicyDocument => ssmLifecyclePolicyDocument.json)});
+const stopInstancesEventRule = new aws.cloudwatch.EventRule("stopInstancesEventRule", {
+    description: "Stop instances nightly",
+    scheduleExpression: "cron(0 0 * * ? *)",
+});
+const stopInstancesEventTarget = new aws.cloudwatch.EventTarget("stopInstancesEventTarget", {
+    arn: stopInstance.arn,
+    rule: stopInstancesEventRule.name,
+    roleArn: ssmLifecycleRole.arn,
+    runCommandTargets: [{
+        key: "tag:Terminate",
+        values: ["midnight"],
+    }],
+});
+```
+```python
+import pulumi
+import pulumi_aws as aws
+
+ssm_lifecycle_trust = aws.iam.get_policy_document(statements=[aws.iam.GetPolicyDocumentStatementArgs(
+    actions=["sts:AssumeRole"],
+    principals=[aws.iam.GetPolicyDocumentStatementPrincipalArgs(
+        type="Service",
+        identifiers=["events.amazonaws.com"],
+    )],
+)])
+stop_instance = aws.ssm.Document("stopInstance",
+    document_type="Command",
+    content="""  {
+    "schemaVersion": "1.2",
+    "description": "Stop an instance",
+    "parameters": {
+
+    },
+    "runtimeConfig": {
+      "aws:runShellScript": {
+        "properties": [
+          {
+            "id": "0.aws:runShellScript",
+            "runCommand": ["halt"]
+          }
+        ]
+      }
+    }
+  }
+""")
+ssm_lifecycle_policy_document = stop_instance.arn.apply(lambda arn: aws.iam.get_policy_document(statements=[
+    aws.iam.GetPolicyDocumentStatementArgs(
+        effect="Allow",
+        actions=["ssm:SendCommand"],
+        resources=["arn:aws:ec2:eu-west-1:1234567890:instance/*"],
+        conditions=[aws.iam.GetPolicyDocumentStatementConditionArgs(
+            test="StringEquals",
+            variable="ec2:ResourceTag/Terminate",
+            values=["*"],
+        )],
+    ),
+    aws.iam.GetPolicyDocumentStatementArgs(
+        effect="Allow",
+        actions=["ssm:SendCommand"],
+        resources=[arn],
+    ),
+]))
+ssm_lifecycle_role = aws.iam.Role("ssmLifecycleRole", assume_role_policy=ssm_lifecycle_trust.json)
+ssm_lifecycle_policy = aws.iam.Policy("ssmLifecyclePolicy", policy=ssm_lifecycle_policy_document.json)
+stop_instances_event_rule = aws.cloudwatch.EventRule("stopInstancesEventRule",
+    description="Stop instances nightly",
+    schedule_expression="cron(0 0 * * ? *)")
+stop_instances_event_target = aws.cloudwatch.EventTarget("stopInstancesEventTarget",
+    arn=stop_instance.arn,
+    rule=stop_instances_event_rule.name,
+    role_arn=ssm_lifecycle_role.arn,
+    run_command_targets=[aws.cloudwatch.EventTargetRunCommandTargetArgs(
+        key="tag:Terminate",
+        values=["midnight"],
+    )])
+```
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var ssmLifecycleTrust = Output.Create(Aws.Iam.GetPolicyDocument.InvokeAsync(new Aws.Iam.GetPolicyDocumentArgs
+        {
+            Statements = 
+            {
+                new Aws.Iam.Inputs.GetPolicyDocumentStatementArgs
+                {
+                    Actions = 
+                    {
+                        "sts:AssumeRole",
+                    },
+                    Principals = 
+                    {
+                        new Aws.Iam.Inputs.GetPolicyDocumentStatementPrincipalArgs
+                        {
+                            Type = "Service",
+                            Identifiers = 
+                            {
+                                "events.amazonaws.com",
+                            },
+                        },
+                    },
+                },
+            },
+        }));
+        var stopInstance = new Aws.Ssm.Document("stopInstance", new Aws.Ssm.DocumentArgs
+        {
+            DocumentType = "Command",
+            Content = @"  {
+    ""schemaVersion"": ""1.2"",
+    ""description"": ""Stop an instance"",
+    ""parameters"": {
+
+    },
+    ""runtimeConfig"": {
+      ""aws:runShellScript"": {
+        ""properties"": [
+          {
+            ""id"": ""0.aws:runShellScript"",
+            ""runCommand"": [""halt""]
+          }
+        ]
+      }
+    }
+  }
+",
+        });
+        var ssmLifecyclePolicyDocument = stopInstance.Arn.Apply(arn => Aws.Iam.GetPolicyDocument.InvokeAsync(new Aws.Iam.GetPolicyDocumentArgs
+        {
+            Statements = 
+            {
+                new Aws.Iam.Inputs.GetPolicyDocumentStatementArgs
+                {
+                    Effect = "Allow",
+                    Actions = 
+                    {
+                        "ssm:SendCommand",
+                    },
+                    Resources = 
+                    {
+                        "arn:aws:ec2:eu-west-1:1234567890:instance/*",
+                    },
+                    Conditions = 
+                    {
+                        new Aws.Iam.Inputs.GetPolicyDocumentStatementConditionArgs
+                        {
+                            Test = "StringEquals",
+                            Variable = "ec2:ResourceTag/Terminate",
+                            Values = 
+                            {
+                                "*",
+                            },
+                        },
+                    },
+                },
+                new Aws.Iam.Inputs.GetPolicyDocumentStatementArgs
+                {
+                    Effect = "Allow",
+                    Actions = 
+                    {
+                        "ssm:SendCommand",
+                    },
+                    Resources = 
+                    {
+                        arn,
+                    },
+                },
+            },
+        }));
+        var ssmLifecycleRole = new Aws.Iam.Role("ssmLifecycleRole", new Aws.Iam.RoleArgs
+        {
+            AssumeRolePolicy = ssmLifecycleTrust.Apply(ssmLifecycleTrust => ssmLifecycleTrust.Json),
+        });
+        var ssmLifecyclePolicy = new Aws.Iam.Policy("ssmLifecyclePolicy", new Aws.Iam.PolicyArgs
+        {
+            Policy = ssmLifecyclePolicyDocument.Apply(ssmLifecyclePolicyDocument => ssmLifecyclePolicyDocument.Json),
+        });
+        var stopInstancesEventRule = new Aws.CloudWatch.EventRule("stopInstancesEventRule", new Aws.CloudWatch.EventRuleArgs
+        {
+            Description = "Stop instances nightly",
+            ScheduleExpression = "cron(0 0 * * ? *)",
+        });
+        var stopInstancesEventTarget = new Aws.CloudWatch.EventTarget("stopInstancesEventTarget", new Aws.CloudWatch.EventTargetArgs
+        {
+            Arn = stopInstance.Arn,
+            Rule = stopInstancesEventRule.Name,
+            RoleArn = ssmLifecycleRole.Arn,
+            RunCommandTargets = 
+            {
+                new Aws.CloudWatch.Inputs.EventTargetRunCommandTargetArgs
+                {
+                    Key = "tag:Terminate",
+                    Values = 
+                    {
+                        "midnight",
+                    },
+                },
+            },
+        });
+    }
+
+}
+```
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/cloudwatch"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/iam"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ssm"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		ssmLifecycleTrust, err := iam.GetPolicyDocument(ctx, &iam.GetPolicyDocumentArgs{
+			Statements: []iam.GetPolicyDocumentStatement{
+				iam.GetPolicyDocumentStatement{
+					Actions: []string{
+						"sts:AssumeRole",
+					},
+					Principals: []iam.GetPolicyDocumentStatementPrincipal{
+						iam.GetPolicyDocumentStatementPrincipal{
+							Type: "Service",
+							Identifiers: []string{
+								"events.amazonaws.com",
+							},
+						},
+					},
+				},
+			},
+		}, nil)
+		if err != nil {
+			return err
+		}
+		stopInstance, err := ssm.NewDocument(ctx, "stopInstance", &ssm.DocumentArgs{
+			DocumentType: pulumi.String("Command"),
+			Content:      pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "  {\n", "    \"schemaVersion\": \"1.2\",\n", "    \"description\": \"Stop an instance\",\n", "    \"parameters\": {\n", "\n", "    },\n", "    \"runtimeConfig\": {\n", "      \"aws:runShellScript\": {\n", "        \"properties\": [\n", "          {\n", "            \"id\": \"0.aws:runShellScript\",\n", "            \"runCommand\": [\"halt\"]\n", "          }\n", "        ]\n", "      }\n", "    }\n", "  }\n")),
+		})
+		if err != nil {
+			return err
+		}
+		ssmLifecycleRole, err := iam.NewRole(ctx, "ssmLifecycleRole", &iam.RoleArgs{
+			AssumeRolePolicy: pulumi.String(ssmLifecycleTrust.Json),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = iam.NewPolicy(ctx, "ssmLifecyclePolicy", &iam.PolicyArgs{
+			Policy: ssmLifecyclePolicyDocument.ApplyT(func(ssmLifecyclePolicyDocument iam.GetPolicyDocumentResult) (string, error) {
+				return ssmLifecyclePolicyDocument.Json, nil
+			}).(pulumi.StringOutput),
+		})
+		if err != nil {
+			return err
+		}
+		stopInstancesEventRule, err := cloudwatch.NewEventRule(ctx, "stopInstancesEventRule", &cloudwatch.EventRuleArgs{
+			Description:        pulumi.String("Stop instances nightly"),
+			ScheduleExpression: pulumi.String("cron(0 0 * * ? *)"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = cloudwatch.NewEventTarget(ctx, "stopInstancesEventTarget", &cloudwatch.EventTargetArgs{
+			Arn:     stopInstance.Arn,
+			Rule:    stopInstancesEventRule.Name,
+			RoleArn: ssmLifecycleRole.Arn,
+			RunCommandTargets: cloudwatch.EventTargetRunCommandTargetArray{
+				&cloudwatch.EventTargetRunCommandTargetArgs{
+					Key: pulumi.String("tag:Terminate"),
+					Values: pulumi.StringArray{
+						pulumi.String("midnight"),
+					},
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 ## Example RunCommand Usage
 
 ```typescript
@@ -875,7 +1221,7 @@ The EventTarget resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) of the target.
+    <dd>{{% md %}}- ARN of the SQS queue specified as the target for the dead-letter queue.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rule_csharp">
@@ -1023,7 +1369,7 @@ The EventTarget resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) of the target.
+    <dd>{{% md %}}- ARN of the SQS queue specified as the target for the dead-letter queue.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rule_go">
@@ -1171,7 +1517,7 @@ The EventTarget resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) of the target.
+    <dd>{{% md %}}- ARN of the SQS queue specified as the target for the dead-letter queue.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rule_nodejs">
@@ -1319,7 +1665,7 @@ The EventTarget resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) of the target.
+    <dd>{{% md %}}- ARN of the SQS queue specified as the target for the dead-letter queue.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rule_python">
@@ -1663,7 +2009,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) of the target.
+    <dd>{{% md %}}- ARN of the SQS queue specified as the target for the dead-letter queue.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_batchtarget_csharp">
@@ -1811,7 +2157,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) of the target.
+    <dd>{{% md %}}- ARN of the SQS queue specified as the target for the dead-letter queue.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_batchtarget_go">
@@ -1959,7 +2305,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) of the target.
+    <dd>{{% md %}}- ARN of the SQS queue specified as the target for the dead-letter queue.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_batchtarget_nodejs">
@@ -2107,7 +2453,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) of the target.
+    <dd>{{% md %}}- ARN of the SQS queue specified as the target for the dead-letter queue.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_batch_target_python">
@@ -2485,6 +2831,24 @@ The following state arguments are supported:
     <dd>{{% md %}}The ARN of the task definition to use if the event target is an Amazon ECS cluster.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="enableecsmanagedtags_csharp">
+<a href="#enableecsmanagedtags_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Ecs<wbr>Managed<wbr>Tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether to enable Amazon ECS managed tags for the task.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enableexecutecommand_csharp">
+<a href="#enableexecutecommand_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Execute<wbr>Command</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether or not to enable the execute command functionality for the containers in this task. If true, this enables execute command functionality on all containers in the task.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="group_csharp">
 <a href="#group_csharp" style="color: inherit; text-decoration: inherit;">Group</a>
 </span>
@@ -2512,6 +2876,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Use this if the ECS task uses the awsvpc network mode. This specifies the VPC subnets and security groups associated with the task, and whether a public IP address is to be used. Required if launch_type is FARGATE because the awsvpc mode is required for Fargate tasks.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="placementconstraints_csharp">
+<a href="#placementconstraints_csharp" style="color: inherit; text-decoration: inherit;">Placement<wbr>Constraints</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#eventtargetecstargetplacementconstraint">List&lt;Event<wbr>Target<wbr>Ecs<wbr>Target<wbr>Placement<wbr>Constraint&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}An array of placement constraint objects to use for the task. You can specify up to 10 constraints per task (including constraints in the task definition and those specified at runtime). See Below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="platformversion_csharp">
 <a href="#platformversion_csharp" style="color: inherit; text-decoration: inherit;">Platform<wbr>Version</a>
 </span>
@@ -2519,6 +2892,24 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the platform version for the task. Specify only the numeric portion of the platform version, such as 1.1.0. This is used only if LaunchType is FARGATE. For more information about valid platform versions, see [AWS Fargate Platform Versions](http://docs.aws.amazon.com/AmazonECS/latest/developerguide/platform_versions.html).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="propagatetags_csharp">
+<a href="#propagatetags_csharp" style="color: inherit; text-decoration: inherit;">Propagate<wbr>Tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether to propagate the tags from the task definition to the task. If no value is specified, the tags are not propagated. Tags can only be propagated to the task during task creation.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tags_csharp">
+<a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A map of tags to assign to ecs resources.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="taskcount_csharp">
@@ -2541,6 +2932,24 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the task definition to use if the event target is an Amazon ECS cluster.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enableecsmanagedtags_go">
+<a href="#enableecsmanagedtags_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Ecs<wbr>Managed<wbr>Tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether to enable Amazon ECS managed tags for the task.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enableexecutecommand_go">
+<a href="#enableexecutecommand_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Execute<wbr>Command</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether or not to enable the execute command functionality for the containers in this task. If true, this enables execute command functionality on all containers in the task.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="group_go">
@@ -2570,6 +2979,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Use this if the ECS task uses the awsvpc network mode. This specifies the VPC subnets and security groups associated with the task, and whether a public IP address is to be used. Required if launch_type is FARGATE because the awsvpc mode is required for Fargate tasks.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="placementconstraints_go">
+<a href="#placementconstraints_go" style="color: inherit; text-decoration: inherit;">Placement<wbr>Constraints</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#eventtargetecstargetplacementconstraint">[]Event<wbr>Target<wbr>Ecs<wbr>Target<wbr>Placement<wbr>Constraint</a></span>
+    </dt>
+    <dd>{{% md %}}An array of placement constraint objects to use for the task. You can specify up to 10 constraints per task (including constraints in the task definition and those specified at runtime). See Below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="platformversion_go">
 <a href="#platformversion_go" style="color: inherit; text-decoration: inherit;">Platform<wbr>Version</a>
 </span>
@@ -2577,6 +2995,24 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the platform version for the task. Specify only the numeric portion of the platform version, such as 1.1.0. This is used only if LaunchType is FARGATE. For more information about valid platform versions, see [AWS Fargate Platform Versions](http://docs.aws.amazon.com/AmazonECS/latest/developerguide/platform_versions.html).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="propagatetags_go">
+<a href="#propagatetags_go" style="color: inherit; text-decoration: inherit;">Propagate<wbr>Tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether to propagate the tags from the task definition to the task. If no value is specified, the tags are not propagated. Tags can only be propagated to the task during task creation.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tags_go">
+<a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}A map of tags to assign to ecs resources.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="taskcount_go">
@@ -2599,6 +3035,24 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the task definition to use if the event target is an Amazon ECS cluster.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enableecsmanagedtags_nodejs">
+<a href="#enableecsmanagedtags_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Ecs<wbr>Managed<wbr>Tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether to enable Amazon ECS managed tags for the task.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enableexecutecommand_nodejs">
+<a href="#enableexecutecommand_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Execute<wbr>Command</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether or not to enable the execute command functionality for the containers in this task. If true, this enables execute command functionality on all containers in the task.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="group_nodejs">
@@ -2628,6 +3082,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Use this if the ECS task uses the awsvpc network mode. This specifies the VPC subnets and security groups associated with the task, and whether a public IP address is to be used. Required if launch_type is FARGATE because the awsvpc mode is required for Fargate tasks.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="placementconstraints_nodejs">
+<a href="#placementconstraints_nodejs" style="color: inherit; text-decoration: inherit;">placement<wbr>Constraints</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#eventtargetecstargetplacementconstraint">Event<wbr>Target<wbr>Ecs<wbr>Target<wbr>Placement<wbr>Constraint[]</a></span>
+    </dt>
+    <dd>{{% md %}}An array of placement constraint objects to use for the task. You can specify up to 10 constraints per task (including constraints in the task definition and those specified at runtime). See Below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="platformversion_nodejs">
 <a href="#platformversion_nodejs" style="color: inherit; text-decoration: inherit;">platform<wbr>Version</a>
 </span>
@@ -2635,6 +3098,24 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the platform version for the task. Specify only the numeric portion of the platform version, such as 1.1.0. This is used only if LaunchType is FARGATE. For more information about valid platform versions, see [AWS Fargate Platform Versions](http://docs.aws.amazon.com/AmazonECS/latest/developerguide/platform_versions.html).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="propagatetags_nodejs">
+<a href="#propagatetags_nodejs" style="color: inherit; text-decoration: inherit;">propagate<wbr>Tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether to propagate the tags from the task definition to the task. If no value is specified, the tags are not propagated. Tags can only be propagated to the task during task creation.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tags_nodejs">
+<a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}A map of tags to assign to ecs resources.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="taskcount_nodejs">
@@ -2657,6 +3138,24 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of the task definition to use if the event target is an Amazon ECS cluster.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enable_ecs_managed_tags_python">
+<a href="#enable_ecs_managed_tags_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>ecs_<wbr>managed_<wbr>tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether to enable Amazon ECS managed tags for the task.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enable_execute_command_python">
+<a href="#enable_execute_command_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>execute_<wbr>command</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether or not to enable the execute command functionality for the containers in this task. If true, this enables execute command functionality on all containers in the task.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="group_python">
@@ -2686,6 +3185,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Use this if the ECS task uses the awsvpc network mode. This specifies the VPC subnets and security groups associated with the task, and whether a public IP address is to be used. Required if launch_type is FARGATE because the awsvpc mode is required for Fargate tasks.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="placement_constraints_python">
+<a href="#placement_constraints_python" style="color: inherit; text-decoration: inherit;">placement_<wbr>constraints</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#eventtargetecstargetplacementconstraint">Sequence[Event<wbr>Target<wbr>Ecs<wbr>Target<wbr>Placement<wbr>Constraint]</a></span>
+    </dt>
+    <dd>{{% md %}}An array of placement constraint objects to use for the task. You can specify up to 10 constraints per task (including constraints in the task definition and those specified at runtime). See Below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="platform_version_python">
 <a href="#platform_version_python" style="color: inherit; text-decoration: inherit;">platform_<wbr>version</a>
 </span>
@@ -2693,6 +3201,24 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the platform version for the task. Specify only the numeric portion of the platform version, such as 1.1.0. This is used only if LaunchType is FARGATE. For more information about valid platform versions, see [AWS Fargate Platform Versions](http://docs.aws.amazon.com/AmazonECS/latest/developerguide/platform_versions.html).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="propagate_tags_python">
+<a href="#propagate_tags_python" style="color: inherit; text-decoration: inherit;">propagate_<wbr>tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether to propagate the tags from the task definition to the task. If no value is specified, the tags are not propagated. Tags can only be propagated to the task during task creation.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tags_python">
+<a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, str]</span>
+    </dt>
+    <dd>{{% md %}}A map of tags to assign to ecs resources.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="task_count_python">
@@ -2828,6 +3354,96 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The security groups associated with the task or service. If you do not specify a security group, the default security group for the VPC is used.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="eventtargetecstargetplacementconstraint">Event<wbr>Target<wbr>Ecs<wbr>Target<wbr>Placement<wbr>Constraint</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Type of constraint. The only valid values at this time are `memberOf` and `distinctInstance`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="expression_csharp">
+<a href="#expression_csharp" style="color: inherit; text-decoration: inherit;">Expression</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Cluster Query Language expression to apply to the constraint. Does not need to be specified for the `distinctInstance` type. For more information, see [Cluster Query Language in the Amazon EC2 Container Service Developer Guide](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cluster-query-language.html).
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Type of constraint. The only valid values at this time are `memberOf` and `distinctInstance`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="expression_go">
+<a href="#expression_go" style="color: inherit; text-decoration: inherit;">Expression</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Cluster Query Language expression to apply to the constraint. Does not need to be specified for the `distinctInstance` type. For more information, see [Cluster Query Language in the Amazon EC2 Container Service Developer Guide](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cluster-query-language.html).
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Type of constraint. The only valid values at this time are `memberOf` and `distinctInstance`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="expression_nodejs">
+<a href="#expression_nodejs" style="color: inherit; text-decoration: inherit;">expression</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Cluster Query Language expression to apply to the constraint. Does not need to be specified for the `distinctInstance` type. For more information, see [Cluster Query Language in the Amazon EC2 Container Service Developer Guide](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cluster-query-language.html).
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Type of constraint. The only valid values at this time are `memberOf` and `distinctInstance`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="expression_python">
+<a href="#expression_python" style="color: inherit; text-decoration: inherit;">expression</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Cluster Query Language expression to apply to the constraint. Does not need to be specified for the `distinctInstance` type. For more information, see [Cluster Query Language in the Amazon EC2 Container Service Developer Guide](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cluster-query-language.html).
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

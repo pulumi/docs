@@ -14,6 +14,263 @@ Manages a FSx Windows File System. See the [FSx Windows Guide](https://docs.aws.
 
 > **NOTE:** Either the `active_directory_id` argument or `self_managed_active_directory` configuration block must be specified.
 
+{{% examples %}}
+
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+
+### Using AWS Directory Service
+
+
+{{< example csharp >}}
+
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Aws.Fsx.WindowsFileSystem("example", new Aws.Fsx.WindowsFileSystemArgs
+        {
+            ActiveDirectoryId = aws_directory_service_directory.Example.Id,
+            KmsKeyId = aws_kms_key.Example.Arn,
+            StorageCapacity = 300,
+            SubnetIds = 
+            {
+                aws_subnet.Example.Id,
+            },
+            ThroughputCapacity = 1024,
+        });
+    }
+
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/fsx"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := fsx.NewWindowsFileSystem(ctx, "example", &fsx.WindowsFileSystemArgs{
+			ActiveDirectoryId: pulumi.Any(aws_directory_service_directory.Example.Id),
+			KmsKeyId:          pulumi.Any(aws_kms_key.Example.Arn),
+			StorageCapacity:   pulumi.Int(300),
+			SubnetIds: pulumi.StringArray{
+				pulumi.Any(aws_subnet.Example.Id),
+			},
+			ThroughputCapacity: pulumi.Int(1024),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+```python
+import pulumi
+import pulumi_aws as aws
+
+example = aws.fsx.WindowsFileSystem("example",
+    active_directory_id=aws_directory_service_directory["example"]["id"],
+    kms_key_id=aws_kms_key["example"]["arn"],
+    storage_capacity=300,
+    subnet_ids=[aws_subnet["example"]["id"]],
+    throughput_capacity=1024)
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const example = new aws.fsx.WindowsFileSystem("example", {
+    activeDirectoryId: aws_directory_service_directory.example.id,
+    kmsKeyId: aws_kms_key.example.arn,
+    storageCapacity: 300,
+    subnetIds: [aws_subnet.example.id],
+    throughputCapacity: 1024,
+});
+```
+
+
+{{< /example >}}
+
+
+
+
+### Using a Self-Managed Microsoft Active Directory
+
+
+{{< example csharp >}}
+
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Aws.Fsx.WindowsFileSystem("example", new Aws.Fsx.WindowsFileSystemArgs
+        {
+            KmsKeyId = aws_kms_key.Example.Arn,
+            StorageCapacity = 300,
+            SubnetIds = 
+            {
+                aws_subnet.Example.Id,
+            },
+            ThroughputCapacity = 1024,
+            SelfManagedActiveDirectory = new Aws.Fsx.Inputs.WindowsFileSystemSelfManagedActiveDirectoryArgs
+            {
+                DnsIps = 
+                {
+                    "10.0.0.111",
+                    "10.0.0.222",
+                },
+                DomainName = "corp.example.com",
+                Password = "avoid-plaintext-passwords",
+                Username = "Admin",
+            },
+        });
+    }
+
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/fsx"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := fsx.NewWindowsFileSystem(ctx, "example", &fsx.WindowsFileSystemArgs{
+			KmsKeyId:        pulumi.Any(aws_kms_key.Example.Arn),
+			StorageCapacity: pulumi.Int(300),
+			SubnetIds: pulumi.StringArray{
+				pulumi.Any(aws_subnet.Example.Id),
+			},
+			ThroughputCapacity: pulumi.Int(1024),
+			SelfManagedActiveDirectory: &fsx.WindowsFileSystemSelfManagedActiveDirectoryArgs{
+				DnsIps: pulumi.StringArray{
+					pulumi.String("10.0.0.111"),
+					pulumi.String("10.0.0.222"),
+				},
+				DomainName: pulumi.String("corp.example.com"),
+				Password:   pulumi.String("avoid-plaintext-passwords"),
+				Username:   pulumi.String("Admin"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+```python
+import pulumi
+import pulumi_aws as aws
+
+example = aws.fsx.WindowsFileSystem("example",
+    kms_key_id=aws_kms_key["example"]["arn"],
+    storage_capacity=300,
+    subnet_ids=[aws_subnet["example"]["id"]],
+    throughput_capacity=1024,
+    self_managed_active_directory=aws.fsx.WindowsFileSystemSelfManagedActiveDirectoryArgs(
+        dns_ips=[
+            "10.0.0.111",
+            "10.0.0.222",
+        ],
+        domain_name="corp.example.com",
+        password="avoid-plaintext-passwords",
+        username="Admin",
+    ))
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const example = new aws.fsx.WindowsFileSystem("example", {
+    kmsKeyId: aws_kms_key.example.arn,
+    storageCapacity: 300,
+    subnetIds: [aws_subnet.example.id],
+    throughputCapacity: 1024,
+    selfManagedActiveDirectory: {
+        dnsIps: [
+            "10.0.0.111",
+            "10.0.0.222",
+        ],
+        domainName: "corp.example.com",
+        password: "avoid-plaintext-passwords",
+        username: "Admin",
+    },
+});
+```
+
+
+{{< /example >}}
+
+
+
+
+
+{{% /examples %}}
+
+
 
 
 ## Create a WindowsFileSystem Resource {#create}
@@ -29,6 +286,7 @@ Manages a FSx Windows File System. See the [FSx Windows Guide](https://docs.aws.
 <span class="k">def </span><span class="nx">WindowsFileSystem</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                       <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
                       <span class="nx">active_directory_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                      <span class="nx">aliases</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
                       <span class="nx">audit_log_configuration</span><span class="p">:</span> <span class="nx">Optional[WindowsFileSystemAuditLogConfigurationArgs]</span> = None<span class="p">,</span>
                       <span class="nx">automatic_backup_retention_days</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
                       <span class="nx">copy_tags_to_backups</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
@@ -211,6 +469,15 @@ The WindowsFileSystem resource accepts the following [input]({{< relref "/docs/i
     <dd>{{% md %}}The ID for an existing Microsoft Active Directory instance that the file system should join when it's created. Cannot be specified with `self_managed_active_directory`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="aliases_csharp">
+<a href="#aliases_csharp" style="color: inherit; text-decoration: inherit;">Aliases</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}An array DNS alias names that you want to associate with the Amazon FSx file system.  For more information, see [Working with DNS Aliases](https://docs.aws.amazon.com/fsx/latest/WindowsGuide/managing-dns-aliases.html)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="auditlogconfiguration_csharp">
 <a href="#auditlogconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Audit<wbr>Log<wbr>Configuration</a>
 </span>
@@ -375,6 +642,15 @@ The WindowsFileSystem resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID for an existing Microsoft Active Directory instance that the file system should join when it's created. Cannot be specified with `self_managed_active_directory`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="aliases_go">
+<a href="#aliases_go" style="color: inherit; text-decoration: inherit;">Aliases</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}An array DNS alias names that you want to associate with the Amazon FSx file system.  For more information, see [Working with DNS Aliases](https://docs.aws.amazon.com/fsx/latest/WindowsGuide/managing-dns-aliases.html)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="auditlogconfiguration_go">
@@ -543,6 +819,15 @@ The WindowsFileSystem resource accepts the following [input]({{< relref "/docs/i
     <dd>{{% md %}}The ID for an existing Microsoft Active Directory instance that the file system should join when it's created. Cannot be specified with `self_managed_active_directory`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="aliases_nodejs">
+<a href="#aliases_nodejs" style="color: inherit; text-decoration: inherit;">aliases</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}An array DNS alias names that you want to associate with the Amazon FSx file system.  For more information, see [Working with DNS Aliases](https://docs.aws.amazon.com/fsx/latest/WindowsGuide/managing-dns-aliases.html)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="auditlogconfiguration_nodejs">
 <a href="#auditlogconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">audit<wbr>Log<wbr>Configuration</a>
 </span>
@@ -707,6 +992,15 @@ The WindowsFileSystem resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID for an existing Microsoft Active Directory instance that the file system should join when it's created. Cannot be specified with `self_managed_active_directory`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="aliases_python">
+<a href="#aliases_python" style="color: inherit; text-decoration: inherit;">aliases</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}An array DNS alias names that you want to associate with the Amazon FSx file system.  For more information, see [Working with DNS Aliases](https://docs.aws.amazon.com/fsx/latest/WindowsGuide/managing-dns-aliases.html)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="audit_log_configuration_python">
@@ -1160,6 +1454,7 @@ Get an existing WindowsFileSystem resource's state with the given name, ID, and 
         <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
         <span class="nx">active_directory_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">aliases</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
         <span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">audit_log_configuration</span><span class="p">:</span> <span class="nx">Optional[WindowsFileSystemAuditLogConfigurationArgs]</span> = None<span class="p">,</span>
         <span class="nx">automatic_backup_retention_days</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
@@ -1303,6 +1598,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID for an existing Microsoft Active Directory instance that the file system should join when it's created. Cannot be specified with `self_managed_active_directory`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_aliases_csharp">
+<a href="#state_aliases_csharp" style="color: inherit; text-decoration: inherit;">Aliases</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}An array DNS alias names that you want to associate with the Amazon FSx file system.  For more information, see [Working with DNS Aliases](https://docs.aws.amazon.com/fsx/latest/WindowsGuide/managing-dns-aliases.html)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_arn_csharp">
@@ -1534,6 +1838,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The ID for an existing Microsoft Active Directory instance that the file system should join when it's created. Cannot be specified with `self_managed_active_directory`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_aliases_go">
+<a href="#state_aliases_go" style="color: inherit; text-decoration: inherit;">Aliases</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}An array DNS alias names that you want to associate with the Amazon FSx file system.  For more information, see [Working with DNS Aliases](https://docs.aws.amazon.com/fsx/latest/WindowsGuide/managing-dns-aliases.html)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_arn_go">
 <a href="#state_arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
 </span>
@@ -1763,6 +2076,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The ID for an existing Microsoft Active Directory instance that the file system should join when it's created. Cannot be specified with `self_managed_active_directory`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_aliases_nodejs">
+<a href="#state_aliases_nodejs" style="color: inherit; text-decoration: inherit;">aliases</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}An array DNS alias names that you want to associate with the Amazon FSx file system.  For more information, see [Working with DNS Aliases](https://docs.aws.amazon.com/fsx/latest/WindowsGuide/managing-dns-aliases.html)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_arn_nodejs">
 <a href="#state_arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
 </span>
@@ -1990,6 +2312,15 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID for an existing Microsoft Active Directory instance that the file system should join when it's created. Cannot be specified with `self_managed_active_directory`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_aliases_python">
+<a href="#state_aliases_python" style="color: inherit; text-decoration: inherit;">aliases</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}An array DNS alias names that you want to associate with the Amazon FSx file system.  For more information, see [Working with DNS Aliases](https://docs.aws.amazon.com/fsx/latest/WindowsGuide/managing-dns-aliases.html)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_arn_python">

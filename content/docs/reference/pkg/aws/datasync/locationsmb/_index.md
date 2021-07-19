@@ -14,6 +14,123 @@ Manages a SMB Location within AWS DataSync.
 
 > **NOTE:** The DataSync Agents must be available before creating this resource.
 
+{{% examples %}}
+
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+
+
+
+
+{{< example csharp >}}
+
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Aws.DataSync.LocationSmb("example", new Aws.DataSync.LocationSmbArgs
+        {
+            ServerHostname = "smb.example.com",
+            Subdirectory = "/exported/path",
+            User = "Guest",
+            Password = "ANotGreatPassword",
+            AgentArns = 
+            {
+                aws_datasync_agent.Example.Arn,
+            },
+        });
+    }
+
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/datasync"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := datasync.NewLocationSmb(ctx, "example", &datasync.LocationSmbArgs{
+			ServerHostname: pulumi.String("smb.example.com"),
+			Subdirectory:   pulumi.String("/exported/path"),
+			User:           pulumi.String("Guest"),
+			Password:       pulumi.String("ANotGreatPassword"),
+			AgentArns: pulumi.StringArray{
+				pulumi.Any(aws_datasync_agent.Example.Arn),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+```python
+import pulumi
+import pulumi_aws as aws
+
+example = aws.datasync.LocationSmb("example",
+    server_hostname="smb.example.com",
+    subdirectory="/exported/path",
+    user="Guest",
+    password="ANotGreatPassword",
+    agent_arns=[aws_datasync_agent["example"]["arn"]])
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const example = new aws.datasync.LocationSmb("example", {
+    serverHostname: "smb.example.com",
+    subdirectory: "/exported/path",
+    user: "Guest",
+    password: "ANotGreatPassword",
+    agentArns: [aws_datasync_agent.example.arn],
+});
+```
+
+
+{{< /example >}}
+
+
+
+
+
+{{% /examples %}}
+
+
 
 
 ## Create a LocationSmb Resource {#create}

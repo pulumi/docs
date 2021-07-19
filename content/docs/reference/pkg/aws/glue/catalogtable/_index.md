@@ -623,7 +623,7 @@ The CatalogTable resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#catalogtablestoragedescriptor">Catalog<wbr>Table<wbr>Storage<wbr>Descriptor<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Configuration block for information about the physical storage of this table. For more information, refer to the [Glue Developer Guide](https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-catalog-tables. html#aws-glue-api-catalog-tables-StorageDescriptor). See `storage_descriptor` below.
+    <dd>{{% md %}}Configuration block for information about the physical storage of this table. For more information, refer to the [Glue Developer Guide](https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-catalog-tables.html#aws-glue-api-catalog-tables-StorageDescriptor). See `storage_descriptor` below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tabletype_csharp">
@@ -753,7 +753,7 @@ The CatalogTable resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#catalogtablestoragedescriptor">Catalog<wbr>Table<wbr>Storage<wbr>Descriptor<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Configuration block for information about the physical storage of this table. For more information, refer to the [Glue Developer Guide](https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-catalog-tables. html#aws-glue-api-catalog-tables-StorageDescriptor). See `storage_descriptor` below.
+    <dd>{{% md %}}Configuration block for information about the physical storage of this table. For more information, refer to the [Glue Developer Guide](https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-catalog-tables.html#aws-glue-api-catalog-tables-StorageDescriptor). See `storage_descriptor` below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tabletype_go">
@@ -883,7 +883,7 @@ The CatalogTable resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#catalogtablestoragedescriptor">Catalog<wbr>Table<wbr>Storage<wbr>Descriptor<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Configuration block for information about the physical storage of this table. For more information, refer to the [Glue Developer Guide](https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-catalog-tables. html#aws-glue-api-catalog-tables-StorageDescriptor). See `storage_descriptor` below.
+    <dd>{{% md %}}Configuration block for information about the physical storage of this table. For more information, refer to the [Glue Developer Guide](https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-catalog-tables.html#aws-glue-api-catalog-tables-StorageDescriptor). See `storage_descriptor` below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tabletype_nodejs">
@@ -1013,7 +1013,7 @@ The CatalogTable resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#catalogtablestoragedescriptor">Catalog<wbr>Table<wbr>Storage<wbr>Descriptor<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Configuration block for information about the physical storage of this table. For more information, refer to the [Glue Developer Guide](https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-catalog-tables. html#aws-glue-api-catalog-tables-StorageDescriptor). See `storage_descriptor` below.
+    <dd>{{% md %}}Configuration block for information about the physical storage of this table. For more information, refer to the [Glue Developer Guide](https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-catalog-tables.html#aws-glue-api-catalog-tables-StorageDescriptor). See `storage_descriptor` below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="table_type_python">
@@ -1383,7 +1383,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#catalogtablestoragedescriptor">Catalog<wbr>Table<wbr>Storage<wbr>Descriptor<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Configuration block for information about the physical storage of this table. For more information, refer to the [Glue Developer Guide](https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-catalog-tables. html#aws-glue-api-catalog-tables-StorageDescriptor). See `storage_descriptor` below.
+    <dd>{{% md %}}Configuration block for information about the physical storage of this table. For more information, refer to the [Glue Developer Guide](https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-catalog-tables.html#aws-glue-api-catalog-tables-StorageDescriptor). See `storage_descriptor` below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tabletype_csharp">
@@ -1522,7 +1522,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#catalogtablestoragedescriptor">Catalog<wbr>Table<wbr>Storage<wbr>Descriptor<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Configuration block for information about the physical storage of this table. For more information, refer to the [Glue Developer Guide](https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-catalog-tables. html#aws-glue-api-catalog-tables-StorageDescriptor). See `storage_descriptor` below.
+    <dd>{{% md %}}Configuration block for information about the physical storage of this table. For more information, refer to the [Glue Developer Guide](https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-catalog-tables.html#aws-glue-api-catalog-tables-StorageDescriptor). See `storage_descriptor` below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tabletype_go">
@@ -1661,7 +1661,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#catalogtablestoragedescriptor">Catalog<wbr>Table<wbr>Storage<wbr>Descriptor<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Configuration block for information about the physical storage of this table. For more information, refer to the [Glue Developer Guide](https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-catalog-tables. html#aws-glue-api-catalog-tables-StorageDescriptor). See `storage_descriptor` below.
+    <dd>{{% md %}}Configuration block for information about the physical storage of this table. For more information, refer to the [Glue Developer Guide](https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-catalog-tables.html#aws-glue-api-catalog-tables-StorageDescriptor). See `storage_descriptor` below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tabletype_nodejs">
@@ -1800,7 +1800,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#catalogtablestoragedescriptor">Catalog<wbr>Table<wbr>Storage<wbr>Descriptor<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Configuration block for information about the physical storage of this table. For more information, refer to the [Glue Developer Guide](https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-catalog-tables. html#aws-glue-api-catalog-tables-StorageDescriptor). See `storage_descriptor` below.
+    <dd>{{% md %}}Configuration block for information about the physical storage of this table. For more information, refer to the [Glue Developer Guide](https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-catalog-tables.html#aws-glue-api-catalog-tables-StorageDescriptor). See `storage_descriptor` below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_table_type_python">

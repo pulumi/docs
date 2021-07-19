@@ -13,6 +13,186 @@ meta_desc: "Documentation for the aws.getIpRanges function with examples, input 
 Use this data source to get the IP ranges of various AWS products and services. For more information about the contents of this data source and required JSON syntax if referencing a custom URL, see the [AWS IP Address Ranges documentation](https://docs.aws.amazon.com/general/latest/gr/aws-ip-ranges.html).
 
 
+{{% examples %}}
+
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+
+
+
+
+{{< example csharp >}}
+
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var europeanEc2 = Output.Create(Aws.GetIpRanges.InvokeAsync(new Aws.GetIpRangesArgs
+        {
+            Regions = 
+            {
+                "eu-west-1",
+                "eu-central-1",
+            },
+            Services = 
+            {
+                "ec2",
+            },
+        }));
+        var fromEurope = new Aws.Ec2.SecurityGroup("fromEurope", new Aws.Ec2.SecurityGroupArgs
+        {
+            Ingress = 
+            {
+                new Aws.Ec2.Inputs.SecurityGroupIngressArgs
+                {
+                    FromPort = 443,
+                    ToPort = 443,
+                    Protocol = "tcp",
+                    CidrBlocks = europeanEc2.Apply(europeanEc2 => europeanEc2.CidrBlocks),
+                    Ipv6CidrBlocks = europeanEc2.Apply(europeanEc2 => europeanEc2.Ipv6CidrBlocks),
+                },
+            },
+            Tags = 
+            {
+                { "CreateDate", europeanEc2.Apply(europeanEc2 => europeanEc2.CreateDate) },
+                { "SyncToken", europeanEc2.Apply(europeanEc2 => europeanEc2.SyncToken) },
+            },
+        });
+    }
+
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ec2"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		europeanEc2, err := aws.GetIpRanges(ctx, &GetIpRangesArgs{
+			Regions: []string{
+				"eu-west-1",
+				"eu-central-1",
+			},
+			Services: []string{
+				"ec2",
+			},
+		}, nil)
+		if err != nil {
+			return err
+		}
+		_, err = ec2.NewSecurityGroup(ctx, "fromEurope", &ec2.SecurityGroupArgs{
+			Ingress: ec2.SecurityGroupIngressArray{
+				&ec2.SecurityGroupIngressArgs{
+					FromPort:       pulumi.Int(443),
+					ToPort:         pulumi.Int(443),
+					Protocol:       pulumi.String("tcp"),
+					CidrBlocks:     interface{}(europeanEc2.CidrBlocks),
+					Ipv6CidrBlocks: interface{}(europeanEc2.Ipv6CidrBlocks),
+				},
+			},
+			Tags: pulumi.StringMap{
+				"CreateDate": pulumi.String(europeanEc2.CreateDate),
+				"SyncToken":  pulumi.Int(europeanEc2.SyncToken),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+```python
+import pulumi
+import pulumi_aws as aws
+
+european_ec2 = aws.get_ip_ranges(regions=[
+        "eu-west-1",
+        "eu-central-1",
+    ],
+    services=["ec2"])
+from_europe = aws.ec2.SecurityGroup("fromEurope",
+    ingress=[aws.ec2.SecurityGroupIngressArgs(
+        from_port="443",
+        to_port="443",
+        protocol="tcp",
+        cidr_blocks=european_ec2.cidr_blocks,
+        ipv6_cidr_blocks=european_ec2.ipv6_cidr_blocks,
+    )],
+    tags={
+        "CreateDate": european_ec2.create_date,
+        "SyncToken": european_ec2.sync_token,
+    })
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const europeanEc2 = aws.getIpRanges({
+    regions: [
+        "eu-west-1",
+        "eu-central-1",
+    ],
+    services: ["ec2"],
+});
+const fromEurope = new aws.ec2.SecurityGroup("fromEurope", {
+    ingress: [{
+        fromPort: "443",
+        toPort: "443",
+        protocol: "tcp",
+        cidrBlocks: europeanEc2.then(europeanEc2 => europeanEc2.cidrBlocks),
+        ipv6CidrBlocks: europeanEc2.then(europeanEc2 => europeanEc2.ipv6CidrBlocks),
+    }],
+    tags: {
+        CreateDate: europeanEc2.then(europeanEc2 => europeanEc2.createDate),
+        SyncToken: europeanEc2.then(europeanEc2 => europeanEc2.syncToken),
+    },
+});
+```
+
+
+{{< /example >}}
+
+
+
+
+
+{{% /examples %}}
+
+
 
 
 ## Using getIpRanges {#using}

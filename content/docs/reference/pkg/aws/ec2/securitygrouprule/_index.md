@@ -31,6 +31,125 @@ a conflict of rule settings and will overwrite rules.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
+
+
+
+{{< example csharp >}}
+
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Aws.Ec2.SecurityGroupRule("example", new Aws.Ec2.SecurityGroupRuleArgs
+        {
+            Type = "ingress",
+            FromPort = 0,
+            ToPort = 65535,
+            Protocol = "tcp",
+            CidrBlocks = 
+            {
+                aws_vpc.Example.Cidr_block,
+            },
+            Ipv6CidrBlocks = 
+            {
+                aws_vpc.Example.Ipv6_cidr_block,
+            },
+            SecurityGroupId = "sg-123456",
+        });
+    }
+
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ec2"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := ec2.NewSecurityGroupRule(ctx, "example", &ec2.SecurityGroupRuleArgs{
+			Type:     pulumi.String("ingress"),
+			FromPort: pulumi.Int(0),
+			ToPort:   pulumi.Int(65535),
+			Protocol: pulumi.String("tcp"),
+			CidrBlocks: pulumi.StringArray{
+				pulumi.Any(aws_vpc.Example.Cidr_block),
+			},
+			Ipv6CidrBlocks: pulumi.StringArray{
+				pulumi.Any(aws_vpc.Example.Ipv6_cidr_block),
+			},
+			SecurityGroupId: pulumi.String("sg-123456"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+```python
+import pulumi
+import pulumi_aws as aws
+
+example = aws.ec2.SecurityGroupRule("example",
+    type="ingress",
+    from_port=0,
+    to_port=65535,
+    protocol="tcp",
+    cidr_blocks=[aws_vpc["example"]["cidr_block"]],
+    ipv6_cidr_blocks=[aws_vpc["example"]["ipv6_cidr_block"]],
+    security_group_id="sg-123456")
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const example = new aws.ec2.SecurityGroupRule("example", {
+    type: "ingress",
+    fromPort: 0,
+    toPort: 65535,
+    protocol: "tcp",
+    cidrBlocks: [aws_vpc.example.cidr_block],
+    ipv6CidrBlocks: [aws_vpc.example.ipv6_cidr_block],
+    securityGroupId: "sg-123456",
+});
+```
+
+
+{{< /example >}}
+
+
+
+
 ### Usage With Prefix List IDs
 
 

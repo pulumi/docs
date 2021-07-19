@@ -12,6 +12,769 @@ meta_desc: "Documentation for the aws.codebuild.Project resource with examples, 
 
 Provides a CodeBuild Project resource. See also the `aws.codebuild.Webhook` resource, which manages the webhook to the source (e.g. the "rebuild every time a code change is pushed" option in the CodeBuild web console).
 
+{{% examples %}}
+
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+
+
+
+
+{{< example csharp >}}
+
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleBucket = new Aws.S3.Bucket("exampleBucket", new Aws.S3.BucketArgs
+        {
+            Acl = "private",
+        });
+        var exampleRole = new Aws.Iam.Role("exampleRole", new Aws.Iam.RoleArgs
+        {
+            AssumeRolePolicy = @"{
+  ""Version"": ""2012-10-17"",
+  ""Statement"": [
+    {
+      ""Effect"": ""Allow"",
+      ""Principal"": {
+        ""Service"": ""codebuild.amazonaws.com""
+      },
+      ""Action"": ""sts:AssumeRole""
+    }
+  ]
+}
+",
+        });
+        var exampleRolePolicy = new Aws.Iam.RolePolicy("exampleRolePolicy", new Aws.Iam.RolePolicyArgs
+        {
+            Role = exampleRole.Name,
+            Policy = Output.Tuple(exampleBucket.Arn, exampleBucket.Arn).Apply(values =>
+            {
+                var exampleBucketArn = values.Item1;
+                var exampleBucketArn1 = values.Item2;
+                return @$"{{
+  ""Version"": ""2012-10-17"",
+  ""Statement"": [
+    {{
+      ""Effect"": ""Allow"",
+      ""Resource"": [
+        ""*""
+      ],
+      ""Action"": [
+        ""logs:CreateLogGroup"",
+        ""logs:CreateLogStream"",
+        ""logs:PutLogEvents""
+      ]
+    }},
+    {{
+      ""Effect"": ""Allow"",
+      ""Action"": [
+        ""ec2:CreateNetworkInterface"",
+        ""ec2:DescribeDhcpOptions"",
+        ""ec2:DescribeNetworkInterfaces"",
+        ""ec2:DeleteNetworkInterface"",
+        ""ec2:DescribeSubnets"",
+        ""ec2:DescribeSecurityGroups"",
+        ""ec2:DescribeVpcs""
+      ],
+      ""Resource"": ""*""
+    }},
+    {{
+      ""Effect"": ""Allow"",
+      ""Action"": [
+        ""ec2:CreateNetworkInterfacePermission""
+      ],
+      ""Resource"": [
+        ""arn:aws:ec2:us-east-1:123456789012:network-interface/*""
+      ],
+      ""Condition"": {{
+        ""StringEquals"": {{
+          ""ec2:Subnet"": [
+            ""{aws_subnet.Example1.Arn}"",
+            ""{aws_subnet.Example2.Arn}""
+          ],
+          ""ec2:AuthorizedService"": ""codebuild.amazonaws.com""
+        }}
+      }}
+    }},
+    {{
+      ""Effect"": ""Allow"",
+      ""Action"": [
+        ""s3:*""
+      ],
+      ""Resource"": [
+        ""{exampleBucketArn}"",
+        ""{exampleBucketArn1}/*""
+      ]
+    }}
+  ]
+}}
+";
+            }),
+        });
+        var exampleProject = new Aws.CodeBuild.Project("exampleProject", new Aws.CodeBuild.ProjectArgs
+        {
+            Description = "test_codebuild_project",
+            BuildTimeout = 5,
+            ServiceRole = exampleRole.Arn,
+            Artifacts = new Aws.CodeBuild.Inputs.ProjectArtifactsArgs
+            {
+                Type = "NO_ARTIFACTS",
+            },
+            Cache = new Aws.CodeBuild.Inputs.ProjectCacheArgs
+            {
+                Type = "S3",
+                Location = exampleBucket.BucketName,
+            },
+            Environment = new Aws.CodeBuild.Inputs.ProjectEnvironmentArgs
+            {
+                ComputeType = "BUILD_GENERAL1_SMALL",
+                Image = "aws/codebuild/standard:1.0",
+                Type = "LINUX_CONTAINER",
+                ImagePullCredentialsType = "CODEBUILD",
+                EnvironmentVariables = 
+                {
+                    new Aws.CodeBuild.Inputs.ProjectEnvironmentEnvironmentVariableArgs
+                    {
+                        Name = "SOME_KEY1",
+                        Value = "SOME_VALUE1",
+                    },
+                    new Aws.CodeBuild.Inputs.ProjectEnvironmentEnvironmentVariableArgs
+                    {
+                        Name = "SOME_KEY2",
+                        Value = "SOME_VALUE2",
+                        Type = "PARAMETER_STORE",
+                    },
+                },
+            },
+            LogsConfig = new Aws.CodeBuild.Inputs.ProjectLogsConfigArgs
+            {
+                CloudwatchLogs = new Aws.CodeBuild.Inputs.ProjectLogsConfigCloudwatchLogsArgs
+                {
+                    GroupName = "log-group",
+                    StreamName = "log-stream",
+                },
+                S3Logs = new Aws.CodeBuild.Inputs.ProjectLogsConfigS3LogsArgs
+                {
+                    Status = "ENABLED",
+                    Location = exampleBucket.Id.Apply(id => $"{id}/build-log"),
+                },
+            },
+            Source = new Aws.CodeBuild.Inputs.ProjectSourceArgs
+            {
+                Type = "GITHUB",
+                Location = "https://github.com/mitchellh/packer.git",
+                GitCloneDepth = 1,
+                GitSubmodulesConfig = new Aws.CodeBuild.Inputs.ProjectSourceGitSubmodulesConfigArgs
+                {
+                    FetchSubmodules = true,
+                },
+            },
+            SourceVersion = "master",
+            VpcConfig = new Aws.CodeBuild.Inputs.ProjectVpcConfigArgs
+            {
+                VpcId = aws_vpc.Example.Id,
+                Subnets = 
+                {
+                    aws_subnet.Example1.Id,
+                    aws_subnet.Example2.Id,
+                },
+                SecurityGroupIds = 
+                {
+                    aws_security_group.Example1.Id,
+                    aws_security_group.Example2.Id,
+                },
+            },
+            Tags = 
+            {
+                { "Environment", "Test" },
+            },
+        });
+        var project_with_cache = new Aws.CodeBuild.Project("project-with-cache", new Aws.CodeBuild.ProjectArgs
+        {
+            Description = "test_codebuild_project_cache",
+            BuildTimeout = 5,
+            QueuedTimeout = 5,
+            ServiceRole = exampleRole.Arn,
+            Artifacts = new Aws.CodeBuild.Inputs.ProjectArtifactsArgs
+            {
+                Type = "NO_ARTIFACTS",
+            },
+            Cache = new Aws.CodeBuild.Inputs.ProjectCacheArgs
+            {
+                Type = "LOCAL",
+                Modes = 
+                {
+                    "LOCAL_DOCKER_LAYER_CACHE",
+                    "LOCAL_SOURCE_CACHE",
+                },
+            },
+            Environment = new Aws.CodeBuild.Inputs.ProjectEnvironmentArgs
+            {
+                ComputeType = "BUILD_GENERAL1_SMALL",
+                Image = "aws/codebuild/standard:1.0",
+                Type = "LINUX_CONTAINER",
+                ImagePullCredentialsType = "CODEBUILD",
+                EnvironmentVariables = 
+                {
+                    new Aws.CodeBuild.Inputs.ProjectEnvironmentEnvironmentVariableArgs
+                    {
+                        Name = "SOME_KEY1",
+                        Value = "SOME_VALUE1",
+                    },
+                },
+            },
+            Source = new Aws.CodeBuild.Inputs.ProjectSourceArgs
+            {
+                Type = "GITHUB",
+                Location = "https://github.com/mitchellh/packer.git",
+                GitCloneDepth = 1,
+            },
+            Tags = 
+            {
+                { "Environment", "Test" },
+            },
+        });
+    }
+
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/codebuild"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/iam"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/s3"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleBucket, err := s3.NewBucket(ctx, "exampleBucket", &s3.BucketArgs{
+			Acl: pulumi.String("private"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleRole, err := iam.NewRole(ctx, "exampleRole", &iam.RoleArgs{
+			AssumeRolePolicy: pulumi.Any(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "  \"Version\": \"2012-10-17\",\n", "  \"Statement\": [\n", "    {\n", "      \"Effect\": \"Allow\",\n", "      \"Principal\": {\n", "        \"Service\": \"codebuild.amazonaws.com\"\n", "      },\n", "      \"Action\": \"sts:AssumeRole\"\n", "    }\n", "  ]\n", "}\n")),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = iam.NewRolePolicy(ctx, "exampleRolePolicy", &iam.RolePolicyArgs{
+			Role: exampleRole.Name,
+			Policy: pulumi.All(exampleBucket.Arn, exampleBucket.Arn).ApplyT(func(_args []interface{}) (string, error) {
+				exampleBucketArn := _args[0].(string)
+				exampleBucketArn1 := _args[1].(string)
+				return fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "  \"Version\": \"2012-10-17\",\n", "  \"Statement\": [\n", "    {\n", "      \"Effect\": \"Allow\",\n", "      \"Resource\": [\n", "        \"*\"\n", "      ],\n", "      \"Action\": [\n", "        \"logs:CreateLogGroup\",\n", "        \"logs:CreateLogStream\",\n", "        \"logs:PutLogEvents\"\n", "      ]\n", "    },\n", "    {\n", "      \"Effect\": \"Allow\",\n", "      \"Action\": [\n", "        \"ec2:CreateNetworkInterface\",\n", "        \"ec2:DescribeDhcpOptions\",\n", "        \"ec2:DescribeNetworkInterfaces\",\n", "        \"ec2:DeleteNetworkInterface\",\n", "        \"ec2:DescribeSubnets\",\n", "        \"ec2:DescribeSecurityGroups\",\n", "        \"ec2:DescribeVpcs\"\n", "      ],\n", "      \"Resource\": \"*\"\n", "    },\n", "    {\n", "      \"Effect\": \"Allow\",\n", "      \"Action\": [\n", "        \"ec2:CreateNetworkInterfacePermission\"\n", "      ],\n", "      \"Resource\": [\n", "        \"arn:aws:ec2:us-east-1:123456789012:network-interface/*\"\n", "      ],\n", "      \"Condition\": {\n", "        \"StringEquals\": {\n", "          \"ec2:Subnet\": [\n", "            \"", aws_subnet.Example1.Arn, "\",\n", "            \"", aws_subnet.Example2.Arn, "\"\n", "          ],\n", "          \"ec2:AuthorizedService\": \"codebuild.amazonaws.com\"\n", "        }\n", "      }\n", "    },\n", "    {\n", "      \"Effect\": \"Allow\",\n", "      \"Action\": [\n", "        \"s3:*\"\n", "      ],\n", "      \"Resource\": [\n", "        \"", exampleBucketArn, "\",\n", "        \"", exampleBucketArn1, "/*\"\n", "      ]\n", "    }\n", "  ]\n", "}\n"), nil
+			}).(pulumi.StringOutput),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = codebuild.NewProject(ctx, "exampleProject", &codebuild.ProjectArgs{
+			Description:  pulumi.String("test_codebuild_project"),
+			BuildTimeout: pulumi.Int(5),
+			ServiceRole:  exampleRole.Arn,
+			Artifacts: &codebuild.ProjectArtifactsArgs{
+				Type: pulumi.String("NO_ARTIFACTS"),
+			},
+			Cache: &codebuild.ProjectCacheArgs{
+				Type:     pulumi.String("S3"),
+				Location: exampleBucket.Bucket,
+			},
+			Environment: &codebuild.ProjectEnvironmentArgs{
+				ComputeType:              pulumi.String("BUILD_GENERAL1_SMALL"),
+				Image:                    pulumi.String("aws/codebuild/standard:1.0"),
+				Type:                     pulumi.String("LINUX_CONTAINER"),
+				ImagePullCredentialsType: pulumi.String("CODEBUILD"),
+				EnvironmentVariables: codebuild.ProjectEnvironmentEnvironmentVariableArray{
+					&codebuild.ProjectEnvironmentEnvironmentVariableArgs{
+						Name:  pulumi.String("SOME_KEY1"),
+						Value: pulumi.String("SOME_VALUE1"),
+					},
+					&codebuild.ProjectEnvironmentEnvironmentVariableArgs{
+						Name:  pulumi.String("SOME_KEY2"),
+						Value: pulumi.String("SOME_VALUE2"),
+						Type:  pulumi.String("PARAMETER_STORE"),
+					},
+				},
+			},
+			LogsConfig: &codebuild.ProjectLogsConfigArgs{
+				CloudwatchLogs: &codebuild.ProjectLogsConfigCloudwatchLogsArgs{
+					GroupName:  pulumi.String("log-group"),
+					StreamName: pulumi.String("log-stream"),
+				},
+				S3Logs: &codebuild.ProjectLogsConfigS3LogsArgs{
+					Status: pulumi.String("ENABLED"),
+					Location: exampleBucket.ID().ApplyT(func(id string) (string, error) {
+						return fmt.Sprintf("%v%v", id, "/build-log"), nil
+					}).(pulumi.StringOutput),
+				},
+			},
+			Source: &codebuild.ProjectSourceArgs{
+				Type:          pulumi.String("GITHUB"),
+				Location:      pulumi.String("https://github.com/mitchellh/packer.git"),
+				GitCloneDepth: pulumi.Int(1),
+				GitSubmodulesConfig: &codebuild.ProjectSourceGitSubmodulesConfigArgs{
+					FetchSubmodules: pulumi.Bool(true),
+				},
+			},
+			SourceVersion: pulumi.String("master"),
+			VpcConfig: &codebuild.ProjectVpcConfigArgs{
+				VpcId: pulumi.Any(aws_vpc.Example.Id),
+				Subnets: pulumi.StringArray{
+					pulumi.Any(aws_subnet.Example1.Id),
+					pulumi.Any(aws_subnet.Example2.Id),
+				},
+				SecurityGroupIds: pulumi.StringArray{
+					pulumi.Any(aws_security_group.Example1.Id),
+					pulumi.Any(aws_security_group.Example2.Id),
+				},
+			},
+			Tags: pulumi.StringMap{
+				"Environment": pulumi.String("Test"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		_, err = codebuild.NewProject(ctx, "project_with_cache", &codebuild.ProjectArgs{
+			Description:   pulumi.String("test_codebuild_project_cache"),
+			BuildTimeout:  pulumi.Int(5),
+			QueuedTimeout: pulumi.Int(5),
+			ServiceRole:   exampleRole.Arn,
+			Artifacts: &codebuild.ProjectArtifactsArgs{
+				Type: pulumi.String("NO_ARTIFACTS"),
+			},
+			Cache: &codebuild.ProjectCacheArgs{
+				Type: pulumi.String("LOCAL"),
+				Modes: pulumi.StringArray{
+					pulumi.String("LOCAL_DOCKER_LAYER_CACHE"),
+					pulumi.String("LOCAL_SOURCE_CACHE"),
+				},
+			},
+			Environment: &codebuild.ProjectEnvironmentArgs{
+				ComputeType:              pulumi.String("BUILD_GENERAL1_SMALL"),
+				Image:                    pulumi.String("aws/codebuild/standard:1.0"),
+				Type:                     pulumi.String("LINUX_CONTAINER"),
+				ImagePullCredentialsType: pulumi.String("CODEBUILD"),
+				EnvironmentVariables: codebuild.ProjectEnvironmentEnvironmentVariableArray{
+					&codebuild.ProjectEnvironmentEnvironmentVariableArgs{
+						Name:  pulumi.String("SOME_KEY1"),
+						Value: pulumi.String("SOME_VALUE1"),
+					},
+				},
+			},
+			Source: &codebuild.ProjectSourceArgs{
+				Type:          pulumi.String("GITHUB"),
+				Location:      pulumi.String("https://github.com/mitchellh/packer.git"),
+				GitCloneDepth: pulumi.Int(1),
+			},
+			Tags: pulumi.StringMap{
+				"Environment": pulumi.String("Test"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+```python
+import pulumi
+import pulumi_aws as aws
+
+example_bucket = aws.s3.Bucket("exampleBucket", acl="private")
+example_role = aws.iam.Role("exampleRole", assume_role_policy="""{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Principal": {
+        "Service": "codebuild.amazonaws.com"
+      },
+      "Action": "sts:AssumeRole"
+    }
+  ]
+}
+""")
+example_role_policy = aws.iam.RolePolicy("exampleRolePolicy",
+    role=example_role.name,
+    policy=pulumi.Output.all(example_bucket.arn, example_bucket.arn).apply(lambda exampleBucketArn, exampleBucketArn1: f"""{{
+  "Version": "2012-10-17",
+  "Statement": [
+    {{
+      "Effect": "Allow",
+      "Resource": [
+        "*"
+      ],
+      "Action": [
+        "logs:CreateLogGroup",
+        "logs:CreateLogStream",
+        "logs:PutLogEvents"
+      ]
+    }},
+    {{
+      "Effect": "Allow",
+      "Action": [
+        "ec2:CreateNetworkInterface",
+        "ec2:DescribeDhcpOptions",
+        "ec2:DescribeNetworkInterfaces",
+        "ec2:DeleteNetworkInterface",
+        "ec2:DescribeSubnets",
+        "ec2:DescribeSecurityGroups",
+        "ec2:DescribeVpcs"
+      ],
+      "Resource": "*"
+    }},
+    {{
+      "Effect": "Allow",
+      "Action": [
+        "ec2:CreateNetworkInterfacePermission"
+      ],
+      "Resource": [
+        "arn:aws:ec2:us-east-1:123456789012:network-interface/*"
+      ],
+      "Condition": {{
+        "StringEquals": {{
+          "ec2:Subnet": [
+            "{aws_subnet["example1"]["arn"]}",
+            "{aws_subnet["example2"]["arn"]}"
+          ],
+          "ec2:AuthorizedService": "codebuild.amazonaws.com"
+        }}
+      }}
+    }},
+    {{
+      "Effect": "Allow",
+      "Action": [
+        "s3:*"
+      ],
+      "Resource": [
+        "{example_bucket_arn}",
+        "{example_bucket_arn1}/*"
+      ]
+    }}
+  ]
+}}
+"""))
+example_project = aws.codebuild.Project("exampleProject",
+    description="test_codebuild_project",
+    build_timeout=5,
+    service_role=example_role.arn,
+    artifacts=aws.codebuild.ProjectArtifactsArgs(
+        type="NO_ARTIFACTS",
+    ),
+    cache=aws.codebuild.ProjectCacheArgs(
+        type="S3",
+        location=example_bucket.bucket,
+    ),
+    environment=aws.codebuild.ProjectEnvironmentArgs(
+        compute_type="BUILD_GENERAL1_SMALL",
+        image="aws/codebuild/standard:1.0",
+        type="LINUX_CONTAINER",
+        image_pull_credentials_type="CODEBUILD",
+        environment_variables=[
+            {
+                "name": "SOME_KEY1",
+                "value": "SOME_VALUE1",
+            },
+            {
+                "name": "SOME_KEY2",
+                "value": "SOME_VALUE2",
+                "type": "PARAMETER_STORE",
+            },
+        ],
+    ),
+    logs_config=aws.codebuild.ProjectLogsConfigArgs(
+        cloudwatch_logs=aws.codebuild.ProjectLogsConfigCloudwatchLogsArgs(
+            group_name="log-group",
+            stream_name="log-stream",
+        ),
+        s3_logs=aws.codebuild.ProjectLogsConfigS3LogsArgs(
+            status="ENABLED",
+            location=example_bucket.id.apply(lambda id: f"{id}/build-log"),
+        ),
+    ),
+    source=aws.codebuild.ProjectSourceArgs(
+        type="GITHUB",
+        location="https://github.com/mitchellh/packer.git",
+        git_clone_depth=1,
+        git_submodules_config=aws.codebuild.ProjectSourceGitSubmodulesConfigArgs(
+            fetch_submodules=True,
+        ),
+    ),
+    source_version="master",
+    vpc_config=aws.codebuild.ProjectVpcConfigArgs(
+        vpc_id=aws_vpc["example"]["id"],
+        subnets=[
+            aws_subnet["example1"]["id"],
+            aws_subnet["example2"]["id"],
+        ],
+        security_group_ids=[
+            aws_security_group["example1"]["id"],
+            aws_security_group["example2"]["id"],
+        ],
+    ),
+    tags={
+        "Environment": "Test",
+    })
+project_with_cache = aws.codebuild.Project("project-with-cache",
+    description="test_codebuild_project_cache",
+    build_timeout=5,
+    queued_timeout=5,
+    service_role=example_role.arn,
+    artifacts=aws.codebuild.ProjectArtifactsArgs(
+        type="NO_ARTIFACTS",
+    ),
+    cache=aws.codebuild.ProjectCacheArgs(
+        type="LOCAL",
+        modes=[
+            "LOCAL_DOCKER_LAYER_CACHE",
+            "LOCAL_SOURCE_CACHE",
+        ],
+    ),
+    environment=aws.codebuild.ProjectEnvironmentArgs(
+        compute_type="BUILD_GENERAL1_SMALL",
+        image="aws/codebuild/standard:1.0",
+        type="LINUX_CONTAINER",
+        image_pull_credentials_type="CODEBUILD",
+        environment_variables=[{
+            "name": "SOME_KEY1",
+            "value": "SOME_VALUE1",
+        }],
+    ),
+    source=aws.codebuild.ProjectSourceArgs(
+        type="GITHUB",
+        location="https://github.com/mitchellh/packer.git",
+        git_clone_depth=1,
+    ),
+    tags={
+        "Environment": "Test",
+    })
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const exampleBucket = new aws.s3.Bucket("exampleBucket", {acl: "private"});
+const exampleRole = new aws.iam.Role("exampleRole", {assumeRolePolicy: `{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Principal": {
+        "Service": "codebuild.amazonaws.com"
+      },
+      "Action": "sts:AssumeRole"
+    }
+  ]
+}
+`});
+const exampleRolePolicy = new aws.iam.RolePolicy("exampleRolePolicy", {
+    role: exampleRole.name,
+    policy: pulumi.interpolate`{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Resource": [
+        "*"
+      ],
+      "Action": [
+        "logs:CreateLogGroup",
+        "logs:CreateLogStream",
+        "logs:PutLogEvents"
+      ]
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "ec2:CreateNetworkInterface",
+        "ec2:DescribeDhcpOptions",
+        "ec2:DescribeNetworkInterfaces",
+        "ec2:DeleteNetworkInterface",
+        "ec2:DescribeSubnets",
+        "ec2:DescribeSecurityGroups",
+        "ec2:DescribeVpcs"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "ec2:CreateNetworkInterfacePermission"
+      ],
+      "Resource": [
+        "arn:aws:ec2:us-east-1:123456789012:network-interface/*"
+      ],
+      "Condition": {
+        "StringEquals": {
+          "ec2:Subnet": [
+            "${aws_subnet.example1.arn}",
+            "${aws_subnet.example2.arn}"
+          ],
+          "ec2:AuthorizedService": "codebuild.amazonaws.com"
+        }
+      }
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "s3:*"
+      ],
+      "Resource": [
+        "${exampleBucket.arn}",
+        "${exampleBucket.arn}/*"
+      ]
+    }
+  ]
+}
+`,
+});
+const exampleProject = new aws.codebuild.Project("exampleProject", {
+    description: "test_codebuild_project",
+    buildTimeout: "5",
+    serviceRole: exampleRole.arn,
+    artifacts: {
+        type: "NO_ARTIFACTS",
+    },
+    cache: {
+        type: "S3",
+        location: exampleBucket.bucket,
+    },
+    environment: {
+        computeType: "BUILD_GENERAL1_SMALL",
+        image: "aws/codebuild/standard:1.0",
+        type: "LINUX_CONTAINER",
+        imagePullCredentialsType: "CODEBUILD",
+        environmentVariables: [
+            {
+                name: "SOME_KEY1",
+                value: "SOME_VALUE1",
+            },
+            {
+                name: "SOME_KEY2",
+                value: "SOME_VALUE2",
+                type: "PARAMETER_STORE",
+            },
+        ],
+    },
+    logsConfig: {
+        cloudwatchLogs: {
+            groupName: "log-group",
+            streamName: "log-stream",
+        },
+        s3Logs: {
+            status: "ENABLED",
+            location: pulumi.interpolate`${exampleBucket.id}/build-log`,
+        },
+    },
+    source: {
+        type: "GITHUB",
+        location: "https://github.com/mitchellh/packer.git",
+        gitCloneDepth: 1,
+        gitSubmodulesConfig: {
+            fetchSubmodules: true,
+        },
+    },
+    sourceVersion: "master",
+    vpcConfig: {
+        vpcId: aws_vpc.example.id,
+        subnets: [
+            aws_subnet.example1.id,
+            aws_subnet.example2.id,
+        ],
+        securityGroupIds: [
+            aws_security_group.example1.id,
+            aws_security_group.example2.id,
+        ],
+    },
+    tags: {
+        Environment: "Test",
+    },
+});
+const project_with_cache = new aws.codebuild.Project("project-with-cache", {
+    description: "test_codebuild_project_cache",
+    buildTimeout: "5",
+    queuedTimeout: "5",
+    serviceRole: exampleRole.arn,
+    artifacts: {
+        type: "NO_ARTIFACTS",
+    },
+    cache: {
+        type: "LOCAL",
+        modes: [
+            "LOCAL_DOCKER_LAYER_CACHE",
+            "LOCAL_SOURCE_CACHE",
+        ],
+    },
+    environment: {
+        computeType: "BUILD_GENERAL1_SMALL",
+        image: "aws/codebuild/standard:1.0",
+        type: "LINUX_CONTAINER",
+        imagePullCredentialsType: "CODEBUILD",
+        environmentVariables: [{
+            name: "SOME_KEY1",
+            value: "SOME_VALUE1",
+        }],
+    },
+    source: {
+        type: "GITHUB",
+        location: "https://github.com/mitchellh/packer.git",
+        gitCloneDepth: 1,
+    },
+    tags: {
+        Environment: "Test",
+    },
+});
+```
+
+
+{{< /example >}}
+
+
+
+
+
+{{% /examples %}}
+
+
 
 
 ## Create a Project Resource {#create}

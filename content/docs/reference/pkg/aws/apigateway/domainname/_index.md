@@ -376,9 +376,9 @@ func main() {
 			DomainName:             pulumi.String("api.example.com"),
 			RegionalCertificateArn: pulumi.Any(aws_acm_certificate_validation.Example.Certificate_arn),
 			EndpointConfiguration: &apigateway.DomainNameEndpointConfigurationArgs{
-				Types: pulumi.String(pulumi.String{
-					pulumi.String("REGIONAL"),
-				}),
+				Types: pulumi.String{
+					"REGIONAL",
+				},
 			},
 		})
 		if err != nil {

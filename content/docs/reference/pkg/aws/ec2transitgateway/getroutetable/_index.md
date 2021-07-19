@@ -25,21 +25,103 @@ Get information on an EC2 Transit Gateway Route Table.
 
 {{< example csharp >}}
 
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = Output.Create(Aws.Ec2TransitGateway.GetRouteTable.InvokeAsync(new Aws.Ec2TransitGateway.GetRouteTableArgs
+        {
+            Filters = 
+            {
+                new Aws.Ec2TransitGateway.Inputs.GetRouteTableFilterArgs
+                {
+                    Name = "default-association-route-table",
+                    Values = 
+                    {
+                        "true",
+                    },
+                },
+                new Aws.Ec2TransitGateway.Inputs.GetRouteTableFilterArgs
+                {
+                    Name = "transit-gateway-id",
+                    Values = 
+                    {
+                        "tgw-12345678",
+                    },
+                },
+            },
+        }));
+    }
+
+}
+```
+
 
 {{< /example >}}
 
 
 {{< example go >}}
 
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ec2transitgateway"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := ec2transitgateway.LookupRouteTable(ctx, &ec2transitgateway.LookupRouteTableArgs{
+			Filters: []ec2transitgateway.GetRouteTableFilter{
+				ec2transitgateway.GetRouteTableFilter{
+					Name: "default-association-route-table",
+					Values: []string{
+						"true",
+					},
+				},
+				ec2transitgateway.GetRouteTableFilter{
+					Name: "transit-gateway-id",
+					Values: []string{
+						"tgw-12345678",
+					},
+				},
+			},
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 
 {{< /example >}}
 
 
 {{< example python >}}
 
-Coming soon!
+```python
+import pulumi
+import pulumi_aws as aws
+
+example = aws.ec2transitgateway.get_route_table(filters=[
+    aws.ec2transitgateway.GetRouteTableFilterArgs(
+        name="default-association-route-table",
+        values=["true"],
+    ),
+    aws.ec2transitgateway.GetRouteTableFilterArgs(
+        name="transit-gateway-id",
+        values=["tgw-12345678"],
+    ),
+])
+```
+
 
 {{< /example >}}
 

@@ -12,6 +12,128 @@ meta_desc: "Documentation for the aws.docdb.SubnetGroup resource with examples, 
 
 Provides an DocumentDB subnet group resource.
 
+{{% examples %}}
+
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+
+
+
+
+{{< example csharp >}}
+
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var @default = new Aws.DocDB.SubnetGroup("default", new Aws.DocDB.SubnetGroupArgs
+        {
+            SubnetIds = 
+            {
+                aws_subnet.Frontend.Id,
+                aws_subnet.Backend.Id,
+            },
+            Tags = 
+            {
+                { "Name", "My docdb subnet group" },
+            },
+        });
+    }
+
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/docdb"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := docdb.NewSubnetGroup(ctx, "_default", &docdb.SubnetGroupArgs{
+			SubnetIds: pulumi.StringArray{
+				pulumi.Any(aws_subnet.Frontend.Id),
+				pulumi.Any(aws_subnet.Backend.Id),
+			},
+			Tags: pulumi.StringMap{
+				"Name": pulumi.String("My docdb subnet group"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+```python
+import pulumi
+import pulumi_aws as aws
+
+default = aws.docdb.SubnetGroup("default",
+    subnet_ids=[
+        aws_subnet["frontend"]["id"],
+        aws_subnet["backend"]["id"],
+    ],
+    tags={
+        "Name": "My docdb subnet group",
+    })
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const _default = new aws.docdb.SubnetGroup("default", {
+    subnetIds: [
+        aws_subnet.frontend.id,
+        aws_subnet.backend.id,
+    ],
+    tags: {
+        Name: "My docdb subnet group",
+    },
+});
+```
+
+
+{{< /example >}}
+
+
+
+
+
+{{% /examples %}}
+
+
 
 
 ## Create a SubnetGroup Resource {#create}

@@ -327,7 +327,7 @@ func main() {
 			return err
 		}
 		testRole, err := iam.NewRole(ctx, "testRole", &iam.RoleArgs{
-			AssumeRolePolicy: pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "  \"Version\": \"2012-10-17\",\n", "  \"Statement\": [\n", "    {\n", "      \"Action\": \"sts:AssumeRole\",\n", "      \"Principal\": {\n", "        \"Service\": \"cognito-idp.amazonaws.com\"\n", "      },\n", "      \"Effect\": \"Allow\",\n", "      \"Sid\": \"\"\n", "    }\n", "  ]\n", "}\n")),
+			AssumeRolePolicy: pulumi.Any(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "  \"Version\": \"2012-10-17\",\n", "  \"Statement\": [\n", "    {\n", "      \"Action\": \"sts:AssumeRole\",\n", "      \"Principal\": {\n", "        \"Service\": \"cognito-idp.amazonaws.com\"\n", "      },\n", "      \"Effect\": \"Allow\",\n", "      \"Sid\": \"\"\n", "    }\n", "  ]\n", "}\n")),
 		})
 		if err != nil {
 			return err
@@ -498,6 +498,7 @@ const testUserPoolClient = new aws.cognito.UserPoolClient("testUserPoolClient", 
                    <span class="nx">analytics_configuration</span><span class="p">:</span> <span class="nx">Optional[UserPoolClientAnalyticsConfigurationArgs]</span> = None<span class="p">,</span>
                    <span class="nx">callback_urls</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
                    <span class="nx">default_redirect_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                   <span class="nx">enable_token_revocation</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
                    <span class="nx">explicit_auth_flows</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
                    <span class="nx">generate_secret</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
                    <span class="nx">id_token_validity</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
@@ -711,6 +712,15 @@ The UserPoolClient resource accepts the following [input]({{< relref "/docs/intr
     <dd>{{% md %}}Default redirect URI. Must be in the list of callback URLs.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="enabletokenrevocation_csharp">
+<a href="#enabletokenrevocation_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Token<wbr>Revocation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enables or disables token revocation.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="explicitauthflows_csharp">
 <a href="#explicitauthflows_csharp" style="color: inherit; text-decoration: inherit;">Explicit<wbr>Auth<wbr>Flows</a>
 </span>
@@ -884,6 +894,15 @@ The UserPoolClient resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Default redirect URI. Must be in the list of callback URLs.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enabletokenrevocation_go">
+<a href="#enabletokenrevocation_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Token<wbr>Revocation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enables or disables token revocation.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="explicitauthflows_go">
@@ -1061,6 +1080,15 @@ The UserPoolClient resource accepts the following [input]({{< relref "/docs/intr
     <dd>{{% md %}}Default redirect URI. Must be in the list of callback URLs.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="enabletokenrevocation_nodejs">
+<a href="#enabletokenrevocation_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Token<wbr>Revocation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Enables or disables token revocation.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="explicitauthflows_nodejs">
 <a href="#explicitauthflows_nodejs" style="color: inherit; text-decoration: inherit;">explicit<wbr>Auth<wbr>Flows</a>
 </span>
@@ -1234,6 +1262,15 @@ The UserPoolClient resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Default redirect URI. Must be in the list of callback URLs.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enable_token_revocation_python">
+<a href="#enable_token_revocation_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>token_<wbr>revocation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enables or disables token revocation.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="explicit_auth_flows_python">
@@ -1451,6 +1488,7 @@ Get an existing UserPoolClient resource's state with the given name, ID, and opt
         <span class="nx">callback_urls</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
         <span class="nx">client_secret</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">default_redirect_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">enable_token_revocation</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">explicit_auth_flows</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
         <span class="nx">generate_secret</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">id_token_validity</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
@@ -1647,6 +1685,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Default redirect URI. Must be in the list of callback URLs.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_enabletokenrevocation_csharp">
+<a href="#state_enabletokenrevocation_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Token<wbr>Revocation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enables or disables token revocation.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_explicitauthflows_csharp">
 <a href="#state_explicitauthflows_csharp" style="color: inherit; text-decoration: inherit;">Explicit<wbr>Auth<wbr>Flows</a>
 </span>
@@ -1829,6 +1876,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Default redirect URI. Must be in the list of callback URLs.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_enabletokenrevocation_go">
+<a href="#state_enabletokenrevocation_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Token<wbr>Revocation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enables or disables token revocation.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_explicitauthflows_go">
@@ -2015,6 +2071,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Default redirect URI. Must be in the list of callback URLs.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_enabletokenrevocation_nodejs">
+<a href="#state_enabletokenrevocation_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Token<wbr>Revocation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Enables or disables token revocation.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_explicitauthflows_nodejs">
 <a href="#state_explicitauthflows_nodejs" style="color: inherit; text-decoration: inherit;">explicit<wbr>Auth<wbr>Flows</a>
 </span>
@@ -2197,6 +2262,15 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Default redirect URI. Must be in the list of callback URLs.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_enable_token_revocation_python">
+<a href="#state_enable_token_revocation_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>token_<wbr>revocation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enables or disables token revocation.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_explicit_auth_flows_python">

@@ -104,7 +104,7 @@ func main() {
 			return err
 		}
 		_, err = elasticbeanstalk.NewApplicationVersion(ctx, "defaultApplicationVersion", &elasticbeanstalk.ApplicationVersionArgs{
-			Application: pulumi.String("tf-test-name"),
+			Application: pulumi.Any("tf-test-name"),
 			Description: pulumi.String("application version"),
 			Bucket:      defaultBucket.ID(),
 			Key:         defaultBucketObject.ID(),

@@ -217,6 +217,255 @@ const s3 = new aws.ec2.VpcEndpoint("s3", {
 
 
 
+### Interface Endpoint Type
+
+
+{{< example csharp >}}
+
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var ec2 = new Aws.Ec2.VpcEndpoint("ec2", new Aws.Ec2.VpcEndpointArgs
+        {
+            VpcId = aws_vpc.Main.Id,
+            ServiceName = "com.amazonaws.us-west-2.ec2",
+            VpcEndpointType = "Interface",
+            SecurityGroupIds = 
+            {
+                aws_security_group.Sg1.Id,
+            },
+            PrivateDnsEnabled = true,
+        });
+    }
+
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ec2"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := ec2.NewVpcEndpoint(ctx, "ec2", &ec2.VpcEndpointArgs{
+			VpcId:           pulumi.Any(aws_vpc.Main.Id),
+			ServiceName:     pulumi.String("com.amazonaws.us-west-2.ec2"),
+			VpcEndpointType: pulumi.String("Interface"),
+			SecurityGroupIds: pulumi.StringArray{
+				pulumi.Any(aws_security_group.Sg1.Id),
+			},
+			PrivateDnsEnabled: pulumi.Bool(true),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+```python
+import pulumi
+import pulumi_aws as aws
+
+ec2 = aws.ec2.VpcEndpoint("ec2",
+    vpc_id=aws_vpc["main"]["id"],
+    service_name="com.amazonaws.us-west-2.ec2",
+    vpc_endpoint_type="Interface",
+    security_group_ids=[aws_security_group["sg1"]["id"]],
+    private_dns_enabled=True)
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const ec2 = new aws.ec2.VpcEndpoint("ec2", {
+    vpcId: aws_vpc.main.id,
+    serviceName: "com.amazonaws.us-west-2.ec2",
+    vpcEndpointType: "Interface",
+    securityGroupIds: [aws_security_group.sg1.id],
+    privateDnsEnabled: true,
+});
+```
+
+
+{{< /example >}}
+
+
+
+
+### Gateway Load Balancer Endpoint Type
+
+
+{{< example csharp >}}
+
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var current = Output.Create(Aws.GetCallerIdentity.InvokeAsync());
+        var exampleVpcEndpointService = new Aws.Ec2.VpcEndpointService("exampleVpcEndpointService", new Aws.Ec2.VpcEndpointServiceArgs
+        {
+            AcceptanceRequired = false,
+            AllowedPrincipals = 
+            {
+                current.Apply(current => current.Arn),
+            },
+            GatewayLoadBalancerArns = 
+            {
+                aws_lb.Example.Arn,
+            },
+        });
+        var exampleVpcEndpoint = new Aws.Ec2.VpcEndpoint("exampleVpcEndpoint", new Aws.Ec2.VpcEndpointArgs
+        {
+            ServiceName = exampleVpcEndpointService.ServiceName,
+            SubnetIds = 
+            {
+                aws_subnet.Example.Id,
+            },
+            VpcEndpointType = exampleVpcEndpointService.ServiceType,
+            VpcId = aws_vpc.Example.Id,
+        });
+    }
+
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ec2"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		current, err := aws.GetCallerIdentity(ctx, nil, nil)
+		if err != nil {
+			return err
+		}
+		exampleVpcEndpointService, err := ec2.NewVpcEndpointService(ctx, "exampleVpcEndpointService", &ec2.VpcEndpointServiceArgs{
+			AcceptanceRequired: pulumi.Bool(false),
+			AllowedPrincipals: pulumi.StringArray{
+				pulumi.String(current.Arn),
+			},
+			GatewayLoadBalancerArns: pulumi.StringArray{
+				pulumi.Any(aws_lb.Example.Arn),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		_, err = ec2.NewVpcEndpoint(ctx, "exampleVpcEndpoint", &ec2.VpcEndpointArgs{
+			ServiceName: exampleVpcEndpointService.ServiceName,
+			SubnetIds: pulumi.StringArray{
+				pulumi.Any(aws_subnet.Example.Id),
+			},
+			VpcEndpointType: exampleVpcEndpointService.ServiceType,
+			VpcId:           pulumi.Any(aws_vpc.Example.Id),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+```python
+import pulumi
+import pulumi_aws as aws
+
+current = aws.get_caller_identity()
+example_vpc_endpoint_service = aws.ec2.VpcEndpointService("exampleVpcEndpointService",
+    acceptance_required=False,
+    allowed_principals=[current.arn],
+    gateway_load_balancer_arns=[aws_lb["example"]["arn"]])
+example_vpc_endpoint = aws.ec2.VpcEndpoint("exampleVpcEndpoint",
+    service_name=example_vpc_endpoint_service.service_name,
+    subnet_ids=[aws_subnet["example"]["id"]],
+    vpc_endpoint_type=example_vpc_endpoint_service.service_type,
+    vpc_id=aws_vpc["example"]["id"])
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const current = aws.getCallerIdentity({});
+const exampleVpcEndpointService = new aws.ec2.VpcEndpointService("exampleVpcEndpointService", {
+    acceptanceRequired: false,
+    allowedPrincipals: [current.then(current => current.arn)],
+    gatewayLoadBalancerArns: [aws_lb.example.arn],
+});
+const exampleVpcEndpoint = new aws.ec2.VpcEndpoint("exampleVpcEndpoint", {
+    serviceName: exampleVpcEndpointService.serviceName,
+    subnetIds: [aws_subnet.example.id],
+    vpcEndpointType: exampleVpcEndpointService.serviceType,
+    vpcId: aws_vpc.example.id,
+});
+```
+
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
 
@@ -408,7 +657,7 @@ The VpcEndpoint resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A policy to attach to the endpoint that controls access to the service. Defaults to full access. All `Gateway` and some `Interface` endpoints support policies - see the [relevant AWS documentation](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-endpoints-access.html) for more details.
+    <dd>{{% md %}}A policy to attach to the endpoint that controls access to the service. This is a JSON formatted string. Defaults to full access. All `Gateway` and some `Interface` endpoints support policies - see the [relevant AWS documentation](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-endpoints-access.html) for more details.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privatednsenabled_csharp">
@@ -512,7 +761,7 @@ Defaults to `false`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A policy to attach to the endpoint that controls access to the service. Defaults to full access. All `Gateway` and some `Interface` endpoints support policies - see the [relevant AWS documentation](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-endpoints-access.html) for more details.
+    <dd>{{% md %}}A policy to attach to the endpoint that controls access to the service. This is a JSON formatted string. Defaults to full access. All `Gateway` and some `Interface` endpoints support policies - see the [relevant AWS documentation](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-endpoints-access.html) for more details.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privatednsenabled_go">
@@ -616,7 +865,7 @@ Defaults to `false`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A policy to attach to the endpoint that controls access to the service. Defaults to full access. All `Gateway` and some `Interface` endpoints support policies - see the [relevant AWS documentation](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-endpoints-access.html) for more details.
+    <dd>{{% md %}}A policy to attach to the endpoint that controls access to the service. This is a JSON formatted string. Defaults to full access. All `Gateway` and some `Interface` endpoints support policies - see the [relevant AWS documentation](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-endpoints-access.html) for more details.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privatednsenabled_nodejs">
@@ -720,7 +969,7 @@ Defaults to `false`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A policy to attach to the endpoint that controls access to the service. Defaults to full access. All `Gateway` and some `Interface` endpoints support policies - see the [relevant AWS documentation](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-endpoints-access.html) for more details.
+    <dd>{{% md %}}A policy to attach to the endpoint that controls access to the service. This is a JSON formatted string. Defaults to full access. All `Gateway` and some `Interface` endpoints support policies - see the [relevant AWS documentation](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-endpoints-access.html) for more details.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="private_dns_enabled_python">
@@ -1338,7 +1587,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A policy to attach to the endpoint that controls access to the service. Defaults to full access. All `Gateway` and some `Interface` endpoints support policies - see the [relevant AWS documentation](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-endpoints-access.html) for more details.
+    <dd>{{% md %}}A policy to attach to the endpoint that controls access to the service. This is a JSON formatted string. Defaults to full access. All `Gateway` and some `Interface` endpoints support policies - see the [relevant AWS documentation](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-endpoints-access.html) for more details.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_prefixlistid_csharp">
@@ -1514,7 +1763,7 @@ Defaults to `false`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A policy to attach to the endpoint that controls access to the service. Defaults to full access. All `Gateway` and some `Interface` endpoints support policies - see the [relevant AWS documentation](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-endpoints-access.html) for more details.
+    <dd>{{% md %}}A policy to attach to the endpoint that controls access to the service. This is a JSON formatted string. Defaults to full access. All `Gateway` and some `Interface` endpoints support policies - see the [relevant AWS documentation](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-endpoints-access.html) for more details.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_prefixlistid_go">
@@ -1690,7 +1939,7 @@ Defaults to `false`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A policy to attach to the endpoint that controls access to the service. Defaults to full access. All `Gateway` and some `Interface` endpoints support policies - see the [relevant AWS documentation](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-endpoints-access.html) for more details.
+    <dd>{{% md %}}A policy to attach to the endpoint that controls access to the service. This is a JSON formatted string. Defaults to full access. All `Gateway` and some `Interface` endpoints support policies - see the [relevant AWS documentation](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-endpoints-access.html) for more details.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_prefixlistid_nodejs">
@@ -1866,7 +2115,7 @@ Defaults to `false`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A policy to attach to the endpoint that controls access to the service. Defaults to full access. All `Gateway` and some `Interface` endpoints support policies - see the [relevant AWS documentation](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-endpoints-access.html) for more details.
+    <dd>{{% md %}}A policy to attach to the endpoint that controls access to the service. This is a JSON formatted string. Defaults to full access. All `Gateway` and some `Interface` endpoints support policies - see the [relevant AWS documentation](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-endpoints-access.html) for more details.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_prefix_list_id_python">

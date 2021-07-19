@@ -35,10 +35,6 @@ class MyStack : Stack
         var app = new Aws.Pinpoint.App("app", new Aws.Pinpoint.AppArgs
         {
         });
-        var identity = new Aws.Ses.DomainIdentity("identity", new Aws.Ses.DomainIdentityArgs
-        {
-            Domain = "example.com",
-        });
         var role = new Aws.Iam.Role("role", new Aws.Iam.RoleArgs
         {
             AssumeRolePolicy = @"{
@@ -60,8 +56,11 @@ class MyStack : Stack
         {
             ApplicationId = app.ApplicationId,
             FromAddress = "user@example.com",
-            Identity = identity.Arn,
             RoleArn = role.Arn,
+        });
+        var identity = new Aws.Ses.DomainIdentity("identity", new Aws.Ses.DomainIdentityArgs
+        {
+            Domain = "example.com",
         });
         var rolePolicy = new Aws.Iam.RolePolicy("rolePolicy", new Aws.Iam.RolePolicyArgs
         {
@@ -110,14 +109,8 @@ func main() {
 		if err != nil {
 			return err
 		}
-		identity, err := ses.NewDomainIdentity(ctx, "identity", &ses.DomainIdentityArgs{
-			Domain: pulumi.String("example.com"),
-		})
-		if err != nil {
-			return err
-		}
 		role, err := iam.NewRole(ctx, "role", &iam.RoleArgs{
-			AssumeRolePolicy: pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "  \"Version\": \"2012-10-17\",\n", "  \"Statement\": [\n", "    {\n", "      \"Action\": \"sts:AssumeRole\",\n", "      \"Principal\": {\n", "        \"Service\": \"pinpoint.amazonaws.com\"\n", "      },\n", "      \"Effect\": \"Allow\",\n", "      \"Sid\": \"\"\n", "    }\n", "  ]\n", "}\n")),
+			AssumeRolePolicy: pulumi.Any(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "  \"Version\": \"2012-10-17\",\n", "  \"Statement\": [\n", "    {\n", "      \"Action\": \"sts:AssumeRole\",\n", "      \"Principal\": {\n", "        \"Service\": \"pinpoint.amazonaws.com\"\n", "      },\n", "      \"Effect\": \"Allow\",\n", "      \"Sid\": \"\"\n", "    }\n", "  ]\n", "}\n")),
 		})
 		if err != nil {
 			return err
@@ -125,15 +118,20 @@ func main() {
 		_, err = pinpoint.NewEmailChannel(ctx, "email", &pinpoint.EmailChannelArgs{
 			ApplicationId: app.ApplicationId,
 			FromAddress:   pulumi.String("user@example.com"),
-			Identity:      identity.Arn,
 			RoleArn:       role.Arn,
+		})
+		if err != nil {
+			return err
+		}
+		_, err = ses.NewDomainIdentity(ctx, "identity", &ses.DomainIdentityArgs{
+			Domain: pulumi.String("example.com"),
 		})
 		if err != nil {
 			return err
 		}
 		_, err = iam.NewRolePolicy(ctx, "rolePolicy", &iam.RolePolicyArgs{
 			Role:   role.ID(),
-			Policy: pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "  \"Version\": \"2012-10-17\",\n", "  \"Statement\": {\n", "    \"Action\": [\n", "      \"mobileanalytics:PutEvents\",\n", "      \"mobileanalytics:PutItems\"\n", "    ],\n", "    \"Effect\": \"Allow\",\n", "    \"Resource\": [\n", "      \"*\"\n", "    ]\n", "  }\n", "}\n")),
+			Policy: pulumi.Any(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "  \"Version\": \"2012-10-17\",\n", "  \"Statement\": {\n", "    \"Action\": [\n", "      \"mobileanalytics:PutEvents\",\n", "      \"mobileanalytics:PutItems\"\n", "    ],\n", "    \"Effect\": \"Allow\",\n", "    \"Resource\": [\n", "      \"*\"\n", "    ]\n", "  }\n", "}\n")),
 		})
 		if err != nil {
 			return err
@@ -154,7 +152,6 @@ import pulumi
 import pulumi_aws as aws
 
 app = aws.pinpoint.App("app")
-identity = aws.ses.DomainIdentity("identity", domain="example.com")
 role = aws.iam.Role("role", assume_role_policy="""{
   "Version": "2012-10-17",
   "Statement": [
@@ -172,8 +169,8 @@ role = aws.iam.Role("role", assume_role_policy="""{
 email = aws.pinpoint.EmailChannel("email",
     application_id=app.application_id,
     from_address="user@example.com",
-    identity=identity.arn,
     role_arn=role.arn)
+identity = aws.ses.DomainIdentity("identity", domain="example.com")
 role_policy = aws.iam.RolePolicy("rolePolicy",
     role=role.id,
     policy="""{
@@ -204,7 +201,6 @@ import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
 const app = new aws.pinpoint.App("app", {});
-const identity = new aws.ses.DomainIdentity("identity", {domain: "example.com"});
 const role = new aws.iam.Role("role", {assumeRolePolicy: `{
   "Version": "2012-10-17",
   "Statement": [
@@ -222,9 +218,9 @@ const role = new aws.iam.Role("role", {assumeRolePolicy: `{
 const email = new aws.pinpoint.EmailChannel("email", {
     applicationId: app.applicationId,
     fromAddress: "user@example.com",
-    identity: identity.arn,
     roleArn: role.arn,
 });
+const identity = new aws.ses.DomainIdentity("identity", {domain: "example.com"});
 const rolePolicy = new aws.iam.RolePolicy("rolePolicy", {
     role: role.id,
     policy: `{
@@ -418,7 +414,7 @@ The EmailChannel resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The email address used to send emails from.
+    <dd>{{% md %}}The email address used to send emails from. You can use email only (`user@example.com`) or friendly address (`User <user@example.com>`). This field comply with [RFC 5322](https://www.ietf.org/rfc/rfc5322.txt).
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="identity_csharp">
@@ -476,7 +472,7 @@ The EmailChannel resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The email address used to send emails from.
+    <dd>{{% md %}}The email address used to send emails from. You can use email only (`user@example.com`) or friendly address (`User <user@example.com>`). This field comply with [RFC 5322](https://www.ietf.org/rfc/rfc5322.txt).
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="identity_go">
@@ -534,7 +530,7 @@ The EmailChannel resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The email address used to send emails from.
+    <dd>{{% md %}}The email address used to send emails from. You can use email only (`user@example.com`) or friendly address (`User <user@example.com>`). This field comply with [RFC 5322](https://www.ietf.org/rfc/rfc5322.txt).
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="identity_nodejs">
@@ -592,7 +588,7 @@ The EmailChannel resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The email address used to send emails from.
+    <dd>{{% md %}}The email address used to send emails from. You can use email only (`user@example.com`) or friendly address (`User <user@example.com>`). This field comply with [RFC 5322](https://www.ietf.org/rfc/rfc5322.txt).
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="identity_python">
@@ -891,7 +887,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The email address used to send emails from.
+    <dd>{{% md %}}The email address used to send emails from. You can use email only (`user@example.com`) or friendly address (`User <user@example.com>`). This field comply with [RFC 5322](https://www.ietf.org/rfc/rfc5322.txt).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_identity_csharp">
@@ -958,7 +954,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The email address used to send emails from.
+    <dd>{{% md %}}The email address used to send emails from. You can use email only (`user@example.com`) or friendly address (`User <user@example.com>`). This field comply with [RFC 5322](https://www.ietf.org/rfc/rfc5322.txt).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_identity_go">
@@ -1025,7 +1021,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The email address used to send emails from.
+    <dd>{{% md %}}The email address used to send emails from. You can use email only (`user@example.com`) or friendly address (`User <user@example.com>`). This field comply with [RFC 5322](https://www.ietf.org/rfc/rfc5322.txt).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_identity_nodejs">
@@ -1092,7 +1088,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The email address used to send emails from.
+    <dd>{{% md %}}The email address used to send emails from. You can use email only (`user@example.com`) or friendly address (`User <user@example.com>`). This field comply with [RFC 5322](https://www.ietf.org/rfc/rfc5322.txt).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_identity_python">

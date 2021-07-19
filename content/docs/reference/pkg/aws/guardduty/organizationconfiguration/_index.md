@@ -42,6 +42,13 @@ class MyStack : Stack
         {
             AutoEnable = true,
             DetectorId = exampleDetector.Id,
+            Datasources = new Aws.GuardDuty.Inputs.OrganizationConfigurationDatasourcesArgs
+            {
+                S3Logs = new Aws.GuardDuty.Inputs.OrganizationConfigurationDatasourcesS3LogsArgs
+                {
+                    AutoEnable = true,
+                },
+            },
         });
     }
 
@@ -73,6 +80,11 @@ func main() {
 		_, err = guardduty.NewOrganizationConfiguration(ctx, "exampleOrganizationConfiguration", &guardduty.OrganizationConfigurationArgs{
 			AutoEnable: pulumi.Bool(true),
 			DetectorId: exampleDetector.ID(),
+			Datasources: &guardduty.OrganizationConfigurationDatasourcesArgs{
+				S3Logs: &guardduty.OrganizationConfigurationDatasourcesS3LogsArgs{
+					AutoEnable: pulumi.Bool(true),
+				},
+			},
 		})
 		if err != nil {
 			return err
@@ -95,7 +107,12 @@ import pulumi_aws as aws
 example_detector = aws.guardduty.Detector("exampleDetector", enable=True)
 example_organization_configuration = aws.guardduty.OrganizationConfiguration("exampleOrganizationConfiguration",
     auto_enable=True,
-    detector_id=example_detector.id)
+    detector_id=example_detector.id,
+    datasources=aws.guardduty.OrganizationConfigurationDatasourcesArgs(
+        s3_logs=aws.guardduty.OrganizationConfigurationDatasourcesS3LogsArgs(
+            auto_enable=True,
+        ),
+    ))
 ```
 
 
@@ -113,6 +130,11 @@ const exampleDetector = new aws.guardduty.Detector("exampleDetector", {enable: t
 const exampleOrganizationConfiguration = new aws.guardduty.OrganizationConfiguration("exampleOrganizationConfiguration", {
     autoEnable: true,
     detectorId: exampleDetector.id,
+    datasources: {
+        s3Logs: {
+            autoEnable: true,
+        },
+    },
 });
 ```
 
@@ -141,6 +163,7 @@ const exampleOrganizationConfiguration = new aws.guardduty.OrganizationConfigura
 <span class="k">def </span><span class="nx">OrganizationConfiguration</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                               <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
                               <span class="nx">auto_enable</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                              <span class="nx">datasources</span><span class="p">:</span> <span class="nx">Optional[OrganizationConfigurationDatasourcesArgs]</span> = None<span class="p">,</span>
                               <span class="nx">detector_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">OrganizationConfiguration</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
@@ -287,6 +310,15 @@ The OrganizationConfiguration resource accepts the following [input]({{< relref 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The detector ID of the GuardDuty account.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="datasources_csharp">
+<a href="#datasources_csharp" style="color: inherit; text-decoration: inherit;">Datasources</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#organizationconfigurationdatasources">Organization<wbr>Configuration<wbr>Datasources<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration for the collected datasources.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -309,6 +341,15 @@ The OrganizationConfiguration resource accepts the following [input]({{< relref 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The detector ID of the GuardDuty account.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="datasources_go">
+<a href="#datasources_go" style="color: inherit; text-decoration: inherit;">Datasources</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#organizationconfigurationdatasources">Organization<wbr>Configuration<wbr>Datasources<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration for the collected datasources.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -331,6 +372,15 @@ The OrganizationConfiguration resource accepts the following [input]({{< relref 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The detector ID of the GuardDuty account.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="datasources_nodejs">
+<a href="#datasources_nodejs" style="color: inherit; text-decoration: inherit;">datasources</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#organizationconfigurationdatasources">Organization<wbr>Configuration<wbr>Datasources<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration for the collected datasources.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -353,6 +403,15 @@ The OrganizationConfiguration resource accepts the following [input]({{< relref 
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The detector ID of the GuardDuty account.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="datasources_python">
+<a href="#datasources_python" style="color: inherit; text-decoration: inherit;">datasources</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#organizationconfigurationdatasources">Organization<wbr>Configuration<wbr>Datasources<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration for the collected datasources.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -428,6 +487,7 @@ Get an existing OrganizationConfiguration resource's state with the given name, 
         <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
         <span class="nx">auto_enable</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">datasources</span><span class="p">:</span> <span class="nx">Optional[OrganizationConfigurationDatasourcesArgs]</span> = None<span class="p">,</span>
         <span class="nx">detector_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> OrganizationConfiguration</code></pre></div>
 {{% /choosable %}}
 
@@ -550,6 +610,15 @@ The following state arguments are supported:
     <dd>{{% md %}}When this setting is enabled, all new accounts that are created in, or added to, the organization are added as a member accounts of the organization’s GuardDuty delegated administrator and GuardDuty is enabled in that AWS Region.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_datasources_csharp">
+<a href="#state_datasources_csharp" style="color: inherit; text-decoration: inherit;">Datasources</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#organizationconfigurationdatasources">Organization<wbr>Configuration<wbr>Datasources<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration for the collected datasources.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_detectorid_csharp">
 <a href="#state_detectorid_csharp" style="color: inherit; text-decoration: inherit;">Detector<wbr>Id</a>
 </span>
@@ -570,6 +639,15 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When this setting is enabled, all new accounts that are created in, or added to, the organization are added as a member accounts of the organization’s GuardDuty delegated administrator and GuardDuty is enabled in that AWS Region.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_datasources_go">
+<a href="#state_datasources_go" style="color: inherit; text-decoration: inherit;">Datasources</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#organizationconfigurationdatasources">Organization<wbr>Configuration<wbr>Datasources<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration for the collected datasources.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_detectorid_go">
@@ -594,6 +672,15 @@ The following state arguments are supported:
     <dd>{{% md %}}When this setting is enabled, all new accounts that are created in, or added to, the organization are added as a member accounts of the organization’s GuardDuty delegated administrator and GuardDuty is enabled in that AWS Region.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_datasources_nodejs">
+<a href="#state_datasources_nodejs" style="color: inherit; text-decoration: inherit;">datasources</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#organizationconfigurationdatasources">Organization<wbr>Configuration<wbr>Datasources<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration for the collected datasources.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_detectorid_nodejs">
 <a href="#state_detectorid_nodejs" style="color: inherit; text-decoration: inherit;">detector<wbr>Id</a>
 </span>
@@ -616,6 +703,15 @@ The following state arguments are supported:
     <dd>{{% md %}}When this setting is enabled, all new accounts that are created in, or added to, the organization are added as a member accounts of the organization’s GuardDuty delegated administrator and GuardDuty is enabled in that AWS Region.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_datasources_python">
+<a href="#state_datasources_python" style="color: inherit; text-decoration: inherit;">datasources</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#organizationconfigurationdatasources">Organization<wbr>Configuration<wbr>Datasources<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration for the collected datasources.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_detector_id_python">
 <a href="#state_detector_id_python" style="color: inherit; text-decoration: inherit;">detector_<wbr>id</a>
 </span>
@@ -630,6 +726,118 @@ The following state arguments are supported:
 
 
 
+
+## Supporting Types
+
+
+
+<h4 id="organizationconfigurationdatasources">Organization<wbr>Configuration<wbr>Datasources</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="s3logs_csharp">
+<a href="#s3logs_csharp" style="color: inherit; text-decoration: inherit;">S3Logs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#organizationconfigurationdatasourcess3logs">Organization<wbr>Configuration<wbr>Datasources<wbr>S3Logs</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration for the builds to store logs to S3.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="s3logs_go">
+<a href="#s3logs_go" style="color: inherit; text-decoration: inherit;">S3Logs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#organizationconfigurationdatasourcess3logs">Organization<wbr>Configuration<wbr>Datasources<wbr>S3Logs</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration for the builds to store logs to S3.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="s3logs_nodejs">
+<a href="#s3logs_nodejs" style="color: inherit; text-decoration: inherit;">s3Logs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#organizationconfigurationdatasourcess3logs">Organization<wbr>Configuration<wbr>Datasources<wbr>S3Logs</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration for the builds to store logs to S3.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="s3_logs_python">
+<a href="#s3_logs_python" style="color: inherit; text-decoration: inherit;">s3_<wbr>logs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#organizationconfigurationdatasourcess3logs">Organization<wbr>Configuration<wbr>Datasources<wbr>S3Logs</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration for the builds to store logs to S3.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="organizationconfigurationdatasourcess3logs">Organization<wbr>Configuration<wbr>Datasources<wbr>S3Logs</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="autoenable_csharp">
+<a href="#autoenable_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Enable</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}When this setting is enabled, all new accounts that are created in, or added to, the organization are added as a member accounts of the organization’s GuardDuty delegated administrator and GuardDuty is enabled in that AWS Region.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="autoenable_go">
+<a href="#autoenable_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Enable</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}When this setting is enabled, all new accounts that are created in, or added to, the organization are added as a member accounts of the organization’s GuardDuty delegated administrator and GuardDuty is enabled in that AWS Region.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="autoenable_nodejs">
+<a href="#autoenable_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Enable</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}When this setting is enabled, all new accounts that are created in, or added to, the organization are added as a member accounts of the organization’s GuardDuty delegated administrator and GuardDuty is enabled in that AWS Region.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="auto_enable_python">
+<a href="#auto_enable_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>enable</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}When this setting is enabled, all new accounts that are created in, or added to, the organization are added as a member accounts of the organization’s GuardDuty delegated administrator and GuardDuty is enabled in that AWS Region.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
 ## Import
 
 

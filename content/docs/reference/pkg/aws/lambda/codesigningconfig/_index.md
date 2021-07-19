@@ -14,6 +14,141 @@ Provides a Lambda Code Signing Config resource. A code signing configuration def
 
 For information about Lambda code signing configurations and how to use them, see [configuring code signing for Lambda functions](https://docs.aws.amazon.com/lambda/latest/dg/configuration-codesigning.html)
 
+{{% examples %}}
+
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+
+
+
+
+{{< example csharp >}}
+
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var newCsc = new Aws.Lambda.CodeSigningConfig("newCsc", new Aws.Lambda.CodeSigningConfigArgs
+        {
+            AllowedPublishers = new Aws.Lambda.Inputs.CodeSigningConfigAllowedPublishersArgs
+            {
+                SigningProfileVersionArns = 
+                {
+                    aws_signer_signing_profile.Example1.Arn,
+                    aws_signer_signing_profile.Example2.Arn,
+                },
+            },
+            Policies = new Aws.Lambda.Inputs.CodeSigningConfigPoliciesArgs
+            {
+                UntrustedArtifactOnDeployment = "Warn",
+            },
+            Description = "My awesome code signing config.",
+        });
+    }
+
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/lambda"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := lambda.NewCodeSigningConfig(ctx, "newCsc", &lambda.CodeSigningConfigArgs{
+			AllowedPublishers: &lambda.CodeSigningConfigAllowedPublishersArgs{
+				SigningProfileVersionArns: pulumi.StringArray{
+					pulumi.Any(aws_signer_signing_profile.Example1.Arn),
+					pulumi.Any(aws_signer_signing_profile.Example2.Arn),
+				},
+			},
+			Policies: &lambda.CodeSigningConfigPoliciesArgs{
+				UntrustedArtifactOnDeployment: pulumi.String("Warn"),
+			},
+			Description: pulumi.String("My awesome code signing config."),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+```python
+import pulumi
+import pulumi_aws as aws
+
+new_csc = aws.lambda_.CodeSigningConfig("newCsc",
+    allowed_publishers=aws.lambda..CodeSigningConfigAllowedPublishersArgs(
+        signing_profile_version_arns=[
+            aws_signer_signing_profile["example1"]["arn"],
+            aws_signer_signing_profile["example2"]["arn"],
+        ],
+    ),
+    policies=aws.lambda..CodeSigningConfigPoliciesArgs(
+        untrusted_artifact_on_deployment="Warn",
+    ),
+    description="My awesome code signing config.")
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const newCsc = new aws.lambda.CodeSigningConfig("newCsc", {
+    allowedPublishers: {
+        signingProfileVersionArns: [
+            aws_signer_signing_profile.example1.arn,
+            aws_signer_signing_profile.example2.arn,
+        ],
+    },
+    policies: {
+        untrustedArtifactOnDeployment: "Warn",
+    },
+    description: "My awesome code signing config.",
+});
+```
+
+
+{{< /example >}}
+
+
+
+
+
+{{% /examples %}}
+
+
 
 
 ## Create a CodeSigningConfig Resource {#create}

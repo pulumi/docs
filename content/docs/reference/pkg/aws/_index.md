@@ -23,6 +23,7 @@ A Pulumi package for creating and managing Amazon Web Services (AWS) cloud resou
     <li><a href="apigateway/" title="apigateway"><span class="symbol module"></span>apigateway</a></li>
     <li><a href="apigatewayv2/" title="apigatewayv2"><span class="symbol module"></span>apigatewayv2</a></li>
     <li><a href="appautoscaling/" title="appautoscaling"><span class="symbol module"></span>appautoscaling</a></li>
+    <li><a href="appconfig/" title="appconfig"><span class="symbol module"></span>appconfig</a></li>
     <li><a href="applicationloadbalancing/" title="applicationloadbalancing"><span class="symbol module"></span>applicationloadbalancing</a></li>
     <li><a href="appmesh/" title="appmesh"><span class="symbol module"></span>appmesh</a></li>
     <li><a href="apprunner/" title="apprunner"><span class="symbol module"></span>apprunner</a></li>
@@ -187,6 +188,6 @@ A Pulumi package for creating and managing Amazon Web Services (AWS) cloud resou
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.12.0</dd>
+	<dd>4.13.0</dd>
 </dl>
 
