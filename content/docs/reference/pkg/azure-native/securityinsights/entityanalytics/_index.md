@@ -313,7 +313,7 @@ The EntityAnalytics resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The setting name. Supports - EyesOn, EntityAnalytics, Ueba{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The setting name. Supports - Anomalies, EyesOn, EntityAnalytics, Ueba{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -357,7 +357,7 @@ The EntityAnalytics resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The setting name. Supports - EyesOn, EntityAnalytics, Ueba{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The setting name. Supports - Anomalies, EyesOn, EntityAnalytics, Ueba{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -401,7 +401,7 @@ The EntityAnalytics resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The setting name. Supports - EyesOn, EntityAnalytics, Ueba{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The setting name. Supports - Anomalies, EyesOn, EntityAnalytics, Ueba{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -445,7 +445,7 @@ The EntityAnalytics resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The setting name. Supports - EyesOn, EntityAnalytics, Ueba{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The setting name. Supports - Anomalies, EyesOn, EntityAnalytics, Ueba{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

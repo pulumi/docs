@@ -322,7 +322,7 @@ The Ueba resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The setting name. Supports - EyesOn, EntityAnalytics, Ueba{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The setting name. Supports - Anomalies, EyesOn, EntityAnalytics, Ueba{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -374,7 +374,7 @@ The Ueba resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The setting name. Supports - EyesOn, EntityAnalytics, Ueba{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The setting name. Supports - Anomalies, EyesOn, EntityAnalytics, Ueba{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -426,7 +426,7 @@ The Ueba resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The setting name. Supports - EyesOn, EntityAnalytics, Ueba{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The setting name. Supports - Anomalies, EyesOn, EntityAnalytics, Ueba{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -478,7 +478,7 @@ The Ueba resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The setting name. Supports - EyesOn, EntityAnalytics, Ueba{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The setting name. Supports - Anomalies, EyesOn, EntityAnalytics, Ueba{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
