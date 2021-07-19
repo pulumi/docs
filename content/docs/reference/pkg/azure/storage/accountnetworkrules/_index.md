@@ -104,7 +104,81 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/network"
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/storage"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
+			Location: pulumi.String("West Europe"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleVirtualNetwork, err := network.NewVirtualNetwork(ctx, "exampleVirtualNetwork", &network.VirtualNetworkArgs{
+			AddressSpaces: pulumi.StringArray{
+				pulumi.String("10.0.0.0/16"),
+			},
+			Location:          exampleResourceGroup.Location,
+			ResourceGroupName: exampleResourceGroup.Name,
+		})
+		if err != nil {
+			return err
+		}
+		_, err = network.NewSubnet(ctx, "exampleSubnet", &network.SubnetArgs{
+			ResourceGroupName:  exampleResourceGroup.Name,
+			VirtualNetworkName: exampleVirtualNetwork.Name,
+			AddressPrefixes: pulumi.StringArray{
+				pulumi.String("10.0.2.0/24"),
+			},
+			ServiceEndpoints: pulumi.StringArray{
+				pulumi.String("Microsoft.Storage"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		_, err = storage.NewAccount(ctx, "exampleAccount", &storage.AccountArgs{
+			ResourceGroupName:      exampleResourceGroup.Name,
+			Location:               exampleResourceGroup.Location,
+			AccountTier:            pulumi.String("Standard"),
+			AccountReplicationType: pulumi.String("GRS"),
+			Tags: pulumi.StringMap{
+				"environment": pulumi.String("staging"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		_, err = storage.NewAccountNetworkRules(ctx, "test", &storage.AccountNetworkRulesArgs{
+			ResourceGroupName:  pulumi.Any(azurerm_resource_group.Test.Name),
+			StorageAccountName: pulumi.Any(azurerm_storage_account.Test.Name),
+			DefaultAction:      pulumi.String("Allow"),
+			IpRules: pulumi.StringArray{
+				pulumi.String("127.0.0.1"),
+			},
+			VirtualNetworkSubnetIds: pulumi.StringArray{
+				pulumi.Any(azurerm_subnet.Test.Id),
+			},
+			Bypasses: pulumi.StringArray{
+				pulumi.String("Metrics"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 
 {{< /example >}}
 

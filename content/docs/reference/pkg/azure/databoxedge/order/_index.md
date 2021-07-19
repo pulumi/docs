@@ -110,10 +110,10 @@ func main() {
 			Contact: &databoxedge.OrderContactArgs{
 				CompanyName: pulumi.String("Contoso Corporation"),
 				Name:        pulumi.String("Bart"),
-				EmailLists: pulumi.StringArray{
-					pulumi.String("bart@example.com"),
+				EmailLists: []string{
+					"bart@example.com",
 				},
-				Phone: pulumi.String("(800) 867-5309"),
+				Phone: "(800) 867-5309",
 			},
 			ShipmentAddress: &databoxedge.OrderShipmentAddressArgs{
 				Addresses: pulumi.StringArray{

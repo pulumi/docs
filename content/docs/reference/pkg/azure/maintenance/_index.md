@@ -13,6 +13,7 @@ Explore the resources and functions of the azure.maintenance module.
 <ul class="api">
     <li><a href="assignmentdedicatedhost" title="AssignmentDedicatedHost"><span class="symbol resource"></span>AssignmentDedicatedHost</a></li>
     <li><a href="assignmentvirtualmachine" title="AssignmentVirtualMachine"><span class="symbol resource"></span>AssignmentVirtualMachine</a></li>
+    <li><a href="assignmentvirtualmachinescaleset" title="AssignmentVirtualMachineScaleSet"><span class="symbol resource"></span>AssignmentVirtualMachineScaleSet</a></li>
     <li><a href="configuration" title="Configuration"><span class="symbol resource"></span>Configuration</a></li>
 </ul>
 
@@ -30,6 +31,6 @@ Explore the resources and functions of the azure.maintenance module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.10.0</dd>
+	<dd>4.11.0</dd>
 </dl>
 

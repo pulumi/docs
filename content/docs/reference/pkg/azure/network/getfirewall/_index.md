@@ -38,7 +38,7 @@ class MyStack : Stack
             Name = "firewall1",
             ResourceGroupName = "firewall-RG",
         }));
-        this.FirewallPrivateIp = example.Apply(example => example.IpConfigurations[0].PrivateIpAddress);
+        this.FirewallPrivateIp = example.Apply(example => example.IpConfigurations?[0]?.PrivateIpAddress);
     }
 
     [Output("firewallPrivateIp")]
@@ -105,7 +105,7 @@ const example = azure.network.getFirewall({
     name: "firewall1",
     resourceGroupName: "firewall-RG",
 });
-export const firewallPrivateIp = example.then(example => example.ipConfigurations[0].privateIpAddress);
+export const firewallPrivateIp = example.then(example => example.ipConfigurations?[0]?.privateIpAddress);
 ```
 
 

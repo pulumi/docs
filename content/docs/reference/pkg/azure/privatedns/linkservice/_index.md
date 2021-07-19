@@ -92,7 +92,7 @@ class MyStack : Stack
             },
             LoadBalancerFrontendIpConfigurationIds = 
             {
-                exampleLoadBalancer.FrontendIpConfigurations.Apply(frontendIpConfigurations => frontendIpConfigurations[0].Id),
+                exampleLoadBalancer.FrontendIpConfigurations.Apply(frontendIpConfigurations => frontendIpConfigurations?[0]?.Id),
             },
             NatIpConfigurations = 
             {
@@ -198,9 +198,9 @@ func main() {
 				pulumi.String("00000000-0000-0000-0000-000000000000"),
 			},
 			LoadBalancerFrontendIpConfigurationIds: pulumi.StringArray{
-				pulumi.String(exampleLoadBalancer.FrontendIpConfigurations.ApplyT(func(frontendIpConfigurations []lb.LoadBalancerFrontendIpConfiguration) (string, error) {
+				exampleLoadBalancer.FrontendIpConfigurations.ApplyT(func(frontendIpConfigurations []lb.LoadBalancerFrontendIpConfiguration) (string, error) {
 					return frontendIpConfigurations[0].Id, nil
-				}).(pulumi.StringOutput)),
+				}).(pulumi.StringOutput),
 			},
 			NatIpConfigurations: privatedns.LinkServiceNatIpConfigurationArray{
 				&privatedns.LinkServiceNatIpConfigurationArgs{
@@ -327,7 +327,7 @@ const exampleLinkService = new azure.privatedns.LinkService("exampleLinkService"
     location: exampleResourceGroup.location,
     autoApprovalSubscriptionIds: ["00000000-0000-0000-0000-000000000000"],
     visibilitySubscriptionIds: ["00000000-0000-0000-0000-000000000000"],
-    loadBalancerFrontendIpConfigurationIds: [exampleLoadBalancer.frontendIpConfigurations.apply(frontendIpConfigurations => frontendIpConfigurations[0].id)],
+    loadBalancerFrontendIpConfigurationIds: [exampleLoadBalancer.frontendIpConfigurations.apply(frontendIpConfigurations => frontendIpConfigurations?[0]?.id)],
     natIpConfigurations: [
         {
             name: "primary",

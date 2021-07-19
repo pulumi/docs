@@ -282,6 +282,15 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="properties_csharp">
+<a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}The properties assigned to the resource.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
 </span>
@@ -306,6 +315,24 @@ The following output properties are available:
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags assigned to the resource.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="visibility_csharp">
+<a href="#visibility_csharp" style="color: inherit; text-decoration: inherit;">Visibility</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The visibility of the Maintenance Configuration.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="windows_csharp">
+<a href="#windows_csharp" style="color: inherit; text-decoration: inherit;">Windows</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getconfigurationwindow">List&lt;Get<wbr>Configuration<wbr>Window&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A `window` block as defined below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -338,6 +365,15 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="properties_go">
+<a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}The properties assigned to the resource.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
 </span>
@@ -362,6 +398,24 @@ The following output properties are available:
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A mapping of tags assigned to the resource.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="visibility_go">
+<a href="#visibility_go" style="color: inherit; text-decoration: inherit;">Visibility</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The visibility of the Maintenance Configuration.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="windows_go">
+<a href="#windows_go" style="color: inherit; text-decoration: inherit;">Windows</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getconfigurationwindow">[]Get<wbr>Configuration<wbr>Window</a></span>
+    </dt>
+    <dd>{{% md %}}A `window` block as defined below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -394,6 +448,15 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="properties_nodejs">
+<a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}The properties assigned to the resource.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
@@ -418,6 +481,24 @@ The following output properties are available:
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags assigned to the resource.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="visibility_nodejs">
+<a href="#visibility_nodejs" style="color: inherit; text-decoration: inherit;">visibility</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The visibility of the Maintenance Configuration.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="windows_nodejs">
+<a href="#windows_nodejs" style="color: inherit; text-decoration: inherit;">windows</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getconfigurationwindow">Get<wbr>Configuration<wbr>Window[]</a></span>
+    </dt>
+    <dd>{{% md %}}A `window` block as defined below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -450,6 +531,15 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="properties_python">
+<a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, str]</span>
+    </dt>
+    <dd>{{% md %}}The properties assigned to the resource.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
@@ -474,6 +564,226 @@ The following output properties are available:
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags assigned to the resource.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="visibility_python">
+<a href="#visibility_python" style="color: inherit; text-decoration: inherit;">visibility</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The visibility of the Maintenance Configuration.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="windows_python">
+<a href="#windows_python" style="color: inherit; text-decoration: inherit;">windows</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getconfigurationwindow">Sequence[Get<wbr>Configuration<wbr>Window]</a></span>
+    </dt>
+    <dd>{{% md %}}A `window` block as defined below.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+
+
+
+## Supporting Types
+
+
+<h4 id="getconfigurationwindow">Get<wbr>Configuration<wbr>Window</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="duration_csharp">
+<a href="#duration_csharp" style="color: inherit; text-decoration: inherit;">Duration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The duration of the maintenance window.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="expirationdatetime_csharp">
+<a href="#expirationdatetime_csharp" style="color: inherit; text-decoration: inherit;">Expiration<wbr>Date<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Effective expiration date of the maintenance window.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="recurevery_csharp">
+<a href="#recurevery_csharp" style="color: inherit; text-decoration: inherit;">Recur<wbr>Every</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="startdatetime_csharp">
+<a href="#startdatetime_csharp" style="color: inherit; text-decoration: inherit;">Start<wbr>Date<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Effective start date of the maintenance window.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="timezone_csharp">
+<a href="#timezone_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Zone</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The time zone for the maintenance window.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="duration_go">
+<a href="#duration_go" style="color: inherit; text-decoration: inherit;">Duration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The duration of the maintenance window.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="expirationdatetime_go">
+<a href="#expirationdatetime_go" style="color: inherit; text-decoration: inherit;">Expiration<wbr>Date<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Effective expiration date of the maintenance window.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="recurevery_go">
+<a href="#recurevery_go" style="color: inherit; text-decoration: inherit;">Recur<wbr>Every</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="startdatetime_go">
+<a href="#startdatetime_go" style="color: inherit; text-decoration: inherit;">Start<wbr>Date<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Effective start date of the maintenance window.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="timezone_go">
+<a href="#timezone_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Zone</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The time zone for the maintenance window.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="duration_nodejs">
+<a href="#duration_nodejs" style="color: inherit; text-decoration: inherit;">duration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The duration of the maintenance window.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="expirationdatetime_nodejs">
+<a href="#expirationdatetime_nodejs" style="color: inherit; text-decoration: inherit;">expiration<wbr>Date<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Effective expiration date of the maintenance window.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="recurevery_nodejs">
+<a href="#recurevery_nodejs" style="color: inherit; text-decoration: inherit;">recur<wbr>Every</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="startdatetime_nodejs">
+<a href="#startdatetime_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Date<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Effective start date of the maintenance window.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="timezone_nodejs">
+<a href="#timezone_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Zone</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The time zone for the maintenance window.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="duration_python">
+<a href="#duration_python" style="color: inherit; text-decoration: inherit;">duration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The duration of the maintenance window.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="expiration_date_time_python">
+<a href="#expiration_date_time_python" style="color: inherit; text-decoration: inherit;">expiration_<wbr>date_<wbr>time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Effective expiration date of the maintenance window.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="recur_every_python">
+<a href="#recur_every_python" style="color: inherit; text-decoration: inherit;">recur_<wbr>every</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="start_date_time_python">
+<a href="#start_date_time_python" style="color: inherit; text-decoration: inherit;">start_<wbr>date_<wbr>time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Effective start date of the maintenance window.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="time_zone_python">
+<a href="#time_zone_python" style="color: inherit; text-decoration: inherit;">time_<wbr>zone</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The time zone for the maintenance window.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

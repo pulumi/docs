@@ -39,7 +39,7 @@ class MyStack : Stack
             LabName = "examplelab",
             ResourceGroupName = "example-resource",
         }));
-        this.LabSubnetName = example.Apply(example => example.AllowedSubnets[0].LabSubnetName);
+        this.LabSubnetName = example.Apply(example => example.AllowedSubnets?[0]?.LabSubnetName);
     }
 
     [Output("labSubnetName")]
@@ -109,7 +109,7 @@ const example = azure.devtest.getVirtualNetwork({
     labName: "examplelab",
     resourceGroupName: "example-resource",
 });
-export const labSubnetName = example.then(example => example.allowedSubnets[0].labSubnetName);
+export const labSubnetName = example.then(example => example.allowedSubnets?[0]?.labSubnetName);
 ```
 
 

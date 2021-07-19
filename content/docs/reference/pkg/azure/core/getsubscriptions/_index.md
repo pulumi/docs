@@ -35,7 +35,7 @@ class MyStack : Stack
     {
         var available = Output.Create(Azure.Core.GetSubscriptions.InvokeAsync());
         this.AvailableSubscriptions = available.Apply(available => available.Subscriptions);
-        this.FirstAvailableSubscriptionDisplayName = available.Apply(available => available.Subscriptions[0].DisplayName);
+        this.FirstAvailableSubscriptionDisplayName = available.Apply(available => available.Subscriptions?[0]?.DisplayName);
     }
 
     [Output("availableSubscriptions")]
@@ -100,7 +100,7 @@ import * as azure from "@pulumi/azure";
 
 const available = azure.core.getSubscriptions({});
 export const availableSubscriptions = available.then(available => available.subscriptions);
-export const firstAvailableSubscriptionDisplayName = available.then(available => available.subscriptions[0].displayName);
+export const firstAvailableSubscriptionDisplayName = available.then(available => available.subscriptions?[0]?.displayName);
 ```
 
 

@@ -38,7 +38,7 @@ class MyStack : Stack
             ServiceId = azurerm_private_link_service.Example.Id,
             ResourceGroupName = azurerm_resource_group.Example.Name,
         }));
-        this.PrivateEndpointStatus = example.Apply(example => example.PrivateEndpointConnections[0].Status);
+        this.PrivateEndpointStatus = example.Apply(example => example.PrivateEndpointConnections?[0]?.Status);
     }
 
     [Output("privateEndpointStatus")]
@@ -105,7 +105,7 @@ const example = azure.privatelink.getServiceEndpointConnections({
     serviceId: azurerm_private_link_service.example.id,
     resourceGroupName: azurerm_resource_group.example.name,
 });
-export const privateEndpointStatus = example.then(example => example.privateEndpointConnections[0].status);
+export const privateEndpointStatus = example.then(example => example.privateEndpointConnections?[0]?.status);
 ```
 
 

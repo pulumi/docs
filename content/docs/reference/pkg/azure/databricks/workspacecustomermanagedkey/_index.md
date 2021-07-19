@@ -185,12 +185,12 @@ func main() {
 		}
 		databricks, err := keyvault.NewAccessPolicy(ctx, "databricks", &keyvault.AccessPolicyArgs{
 			KeyVaultId: exampleKeyVault.ID(),
-			TenantId: pulumi.String(exampleWorkspace.StorageAccountIdentities.ApplyT(func(storageAccountIdentities []databricks.WorkspaceStorageAccountIdentity) (string, error) {
+			TenantId: exampleWorkspace.StorageAccountIdentities.ApplyT(func(storageAccountIdentities []databricks.WorkspaceStorageAccountIdentity) (string, error) {
 				return storageAccountIdentities[0].TenantId, nil
-			}).(pulumi.StringOutput)),
-			ObjectId: pulumi.String(exampleWorkspace.StorageAccountIdentities.ApplyT(func(storageAccountIdentities []databricks.WorkspaceStorageAccountIdentity) (string, error) {
+			}).(pulumi.StringOutput),
+			ObjectId: exampleWorkspace.StorageAccountIdentities.ApplyT(func(storageAccountIdentities []databricks.WorkspaceStorageAccountIdentity) (string, error) {
 				return storageAccountIdentities[0].PrincipalId, nil
-			}).(pulumi.StringOutput)),
+			}).(pulumi.StringOutput),
 			KeyPermissions: pulumi.StringArray{
 				pulumi.String("get"),
 				pulumi.String("unwrapKey"),

@@ -94,7 +94,7 @@ func main() {
 		_, err = datafactory.NewLinkedServiceAzureFunction(ctx, "exampleLinkedServiceAzureFunction", &datafactory.LinkedServiceAzureFunctionArgs{
 			ResourceGroupName: exampleResourceGroup.Name,
 			DataFactoryName:   exampleFactory.Name,
-			Url: exampleFunctionApp.ApplyT(func(exampleFunctionApp appservice.LookupFunctionAppResult) (string, error) {
+			Url: exampleFunctionApp.ApplyT(func(exampleFunctionApp appservice.GetFunctionAppResult) (string, error) {
 				return fmt.Sprintf("%v%v", "https://", exampleFunctionApp.DefaultHostname), nil
 			}).(pulumi.StringOutput),
 			Key: pulumi.String("foo"),
@@ -153,7 +153,7 @@ const exampleFactory = new azure.datafactory.Factory("exampleFactory", {
 const exampleLinkedServiceAzureFunction = new azure.datafactory.LinkedServiceAzureFunction("exampleLinkedServiceAzureFunction", {
     resourceGroupName: exampleResourceGroup.name,
     dataFactoryName: exampleFactory.name,
-    url: pulumi.interpolate`https://${exampleFunctionApp.defaultHostname}`,
+    url: exampleFunctionApp.apply(exampleFunctionApp => `https://${exampleFunctionApp.defaultHostname}`),
     key: "foo",
 });
 ```

@@ -153,7 +153,7 @@ func main() {
 		exampleAssignment, err := authorization.NewAssignment(ctx, "exampleAssignment", &authorization.AssignmentArgs{
 			Scope:              exampleStore.ID(),
 			RoleDefinitionName: pulumi.String("Owner"),
-			PrincipalId: exampleServicePrincipal.ApplyT(func(exampleServicePrincipal azuread.LookupServicePrincipalResult) (string, error) {
+			PrincipalId: exampleServicePrincipal.ApplyT(func(exampleServicePrincipal GetServicePrincipalResult) (string, error) {
 				return exampleServicePrincipal.ObjectId, nil
 			}).(pulumi.StringOutput),
 		})
@@ -258,7 +258,7 @@ const exampleServicePrincipal = exampleAccount.name.apply(name => azuread.getSer
 const exampleAssignment = new azure.authorization.Assignment("exampleAssignment", {
     scope: exampleStore.id,
     roleDefinitionName: "Owner",
-    principalId: exampleServicePrincipal.objectId,
+    principalId: exampleServicePrincipal.apply(exampleServicePrincipal => exampleServicePrincipal.objectId),
 });
 const exampleDatasetDataLakeGen1 = new azure.datashare.DatasetDataLakeGen1("exampleDatasetDataLakeGen1", {
     dataShareId: exampleShare.id,

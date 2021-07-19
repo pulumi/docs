@@ -605,18 +605,18 @@ func main() {
 						},
 					},
 					Recurrence: &monitoring.AutoscaleSettingProfileRecurrenceArgs{
-						Frequency: pulumi.String("Week"),
+						Frequency: "Week",
 						Timezone:  pulumi.String("Pacific Standard Time"),
 						Days: pulumi.StringArray{
 							pulumi.String("Saturday"),
 							pulumi.String("Sunday"),
 						},
-						Hours: pulumi.Int(pulumi.Int{
-							pulumi.Float64(12),
-						}),
-						Minutes: pulumi.Int(pulumi.Int{
-							pulumi.Float64(0),
-						}),
+						Hours: pulumi.Int{
+							12,
+						},
+						Minutes: pulumi.Int{
+							0,
+						},
 					},
 				},
 			},

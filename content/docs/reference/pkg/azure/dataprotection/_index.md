@@ -12,6 +12,7 @@ Explore the resources and functions of the azure.dataprotection module.
 <h2 id="resources">Resources</h2>
 <ul class="api">
     <li><a href="backupinstancepostgresql" title="BackupInstancePostgresql"><span class="symbol resource"></span>BackupInstancePostgresql</a></li>
+    <li><a href="backuppolicydisk" title="BackupPolicyDisk"><span class="symbol resource"></span>BackupPolicyDisk</a></li>
     <li><a href="backuppolicypostgresql" title="BackupPolicyPostgresql"><span class="symbol resource"></span>BackupPolicyPostgresql</a></li>
     <li><a href="backupvault" title="BackupVault"><span class="symbol resource"></span>BackupVault</a></li>
 </ul>
@@ -25,6 +26,6 @@ Explore the resources and functions of the azure.dataprotection module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.10.0</dd>
+	<dd>4.11.0</dd>
 </dl>
 

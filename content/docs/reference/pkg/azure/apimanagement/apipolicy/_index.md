@@ -12,6 +12,153 @@ meta_desc: "Documentation for the azure.apimanagement.ApiPolicy resource with ex
 
 Manages an API Management API Policy
 
+{{% examples %}}
+
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+
+
+
+
+{{< example csharp >}}
+
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleApi = Output.Create(Azure.ApiManagement.GetApi.InvokeAsync(new Azure.ApiManagement.GetApiArgs
+        {
+            ApiName = "my-api",
+            ApiManagementName = "example-apim",
+            ResourceGroupName = "search-service",
+        }));
+        var exampleApiPolicy = new Azure.ApiManagement.ApiPolicy("exampleApiPolicy", new Azure.ApiManagement.ApiPolicyArgs
+        {
+            ApiName = exampleApi.Apply(exampleApi => exampleApi.Name),
+            ApiManagementName = exampleApi.Apply(exampleApi => exampleApi.ApiManagementName),
+            ResourceGroupName = exampleApi.Apply(exampleApi => exampleApi.ResourceGroupName),
+            XmlContent = @"<policies>
+  <inbound>
+    <find-and-replace from=""xyz"" to=""abc"" />
+  </inbound>
+</policies>
+",
+        });
+    }
+
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/apimanagement"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleApi, err := apimanagement.LookupApi(ctx, &apimanagement.LookupApiArgs{
+			ApiName:           "my-api",
+			ApiManagementName: "example-apim",
+			ResourceGroupName: "search-service",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		_, err = apimanagement.NewApiPolicy(ctx, "exampleApiPolicy", &apimanagement.ApiPolicyArgs{
+			ApiName:           pulumi.String(exampleApi.Name),
+			ApiManagementName: pulumi.String(exampleApi.ApiManagementName),
+			ResourceGroupName: pulumi.String(exampleApi.ResourceGroupName),
+			XmlContent:        pulumi.String(fmt.Sprintf("%v%v%v%v%v", "<policies>\n", "  <inbound>\n", "    <find-and-replace from=\"xyz\" to=\"abc\" />\n", "  </inbound>\n", "</policies>\n")),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_api = azure.apimanagement.get_api(api_name="my-api",
+    api_management_name="example-apim",
+    resource_group_name="search-service")
+example_api_policy = azure.apimanagement.ApiPolicy("exampleApiPolicy",
+    api_name=example_api.name,
+    api_management_name=example_api.api_management_name,
+    resource_group_name=example_api.resource_group_name,
+    xml_content="""<policies>
+  <inbound>
+    <find-and-replace from="xyz" to="abc" />
+  </inbound>
+</policies>
+""")
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleApi = azure.apimanagement.getApi({
+    apiName: "my-api",
+    apiManagementName: "example-apim",
+    resourceGroupName: "search-service",
+});
+const exampleApiPolicy = new azure.apimanagement.ApiPolicy("exampleApiPolicy", {
+    apiName: exampleApi.then(exampleApi => exampleApi.name),
+    apiManagementName: exampleApi.then(exampleApi => exampleApi.apiManagementName),
+    resourceGroupName: exampleApi.then(exampleApi => exampleApi.resourceGroupName),
+    xmlContent: `<policies>
+  <inbound>
+    <find-and-replace from="xyz" to="abc" />
+  </inbound>
+</policies>
+`,
+});
+```
+
+
+{{< /example >}}
+
+
+
+
+
+{{% /examples %}}
+
+
 
 
 ## Create a ApiPolicy Resource {#create}

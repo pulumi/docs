@@ -218,7 +218,7 @@ const example = pulumi.all([storage.primaryConnectionString, container.name]).ap
     contentLanguage: "en-US",
     contentType: "application/json",
 }));
-export const sasUrlQueryString = example.sas;
+export const sasUrlQueryString = example.apply(example => example.sas);
 ```
 
 
