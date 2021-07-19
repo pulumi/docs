@@ -79,7 +79,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The setting name. Supports - EyesOn, EntityAnalytics, Ueba{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The setting name. Supports - Anomalies, EyesOn, EntityAnalytics, Ueba{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="workspacename_csharp">
 <a href="#workspacename_csharp" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Name</a>
@@ -115,7 +115,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The setting name. Supports - EyesOn, EntityAnalytics, Ueba{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The setting name. Supports - Anomalies, EyesOn, EntityAnalytics, Ueba{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="workspacename_go">
 <a href="#workspacename_go" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Name</a>
@@ -151,7 +151,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The setting name. Supports - EyesOn, EntityAnalytics, Ueba{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The setting name. Supports - Anomalies, EyesOn, EntityAnalytics, Ueba{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="workspacename_nodejs">
 <a href="#workspacename_nodejs" style="color: inherit; text-decoration: inherit;">workspace<wbr>Name</a>
@@ -187,7 +187,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The setting name. Supports - EyesOn, EntityAnalytics, Ueba{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The setting name. Supports - Anomalies, EyesOn, EntityAnalytics, Ueba{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="workspace_name_python">
 <a href="#workspace_name_python" style="color: inherit; text-decoration: inherit;">workspace_<wbr>name</a>
