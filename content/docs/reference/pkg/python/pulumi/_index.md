@@ -938,7 +938,7 @@ on the Output class in order to observe the value of an output. See
 <a class="reference external" href="/docs/intro/concepts/programming-model/#outputs">the documentation</a> for more details on this part of the Pulumi programming model.</p>
 <dl class="py class">
 <dt id="pulumi.Output">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi.</code><code class="sig-name descname">Output</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resources</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>Awaitable<span class="p">[</span>Set<span class="p">[</span>Resource<span class="p">]</span><span class="p">]</span><span class="p">, </span>Set<span class="p">[</span>Resource<span class="p">]</span><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">future</span><span class="p">:</span> <span class="n">Awaitable<span class="p">[</span>T<span class="p">]</span></span></em>, <em class="sig-param"><span class="n">is_known</span><span class="p">:</span> <span class="n">Awaitable<span class="p">[</span>bool<span class="p">]</span></span></em>, <em class="sig-param"><span class="n">is_secret</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Awaitable<span class="p">[</span>bool<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi.Output" title="Permalink to this definition"></a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi.</code><code class="sig-name descname">Output</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resources</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>Awaitable<span class="p">[</span>Set<span class="p">[</span>Resource<span class="p">]</span><span class="p">]</span><span class="p">, </span>Set<span class="p">[</span>Resource<span class="p">]</span><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">future</span><span class="p">:</span> <span class="n">Awaitable<span class="p">[</span>T_co<span class="p">]</span></span></em>, <em class="sig-param"><span class="n">is_known</span><span class="p">:</span> <span class="n">Awaitable<span class="p">[</span>bool<span class="p">]</span></span></em>, <em class="sig-param"><span class="n">is_secret</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Awaitable<span class="p">[</span>bool<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi.Output" title="Permalink to this definition"></a></dt>
 <dd><p>Output helps encode the relationship between Resources in a Pulumi application. Specifically an
 Output holds onto a piece of Data and the Resource it was generated from. An Output value can
 then be provided when constructing new Resources, allowing that new Resource to know both the
@@ -980,7 +980,7 @@ dependency graph’ to be created, which properly tracks the relationship betwee
 
 <dl class="py method">
 <dt id="pulumi.Output.apply">
-<code class="sig-name descname">apply</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">func</span><span class="p">:</span> <span class="n">Callable<span class="p">[</span><span class="p">[</span>T<span class="p">]</span><span class="p">, </span>Union<span class="p">[</span>U<span class="p">, </span>Awaitable<span class="p">[</span>U<span class="p">]</span><span class="p">, </span>pulumi.output.Output<span class="p">[</span>T<span class="p">]</span><span class="p">]</span><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">run_with_unknowns</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>bool<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi.output.Output<span class="p">[</span>U<span class="p">]</span><a class="headerlink" href="#pulumi.Output.apply" title="Permalink to this definition"></a></dt>
+<code class="sig-name descname">apply</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">func</span><span class="p">:</span> <span class="n">Callable<span class="p">[</span><span class="p">[</span>T_co<span class="p">]</span><span class="p">, </span>Union<span class="p">[</span>U<span class="p">, </span>Awaitable<span class="p">[</span>U<span class="p">]</span><span class="p">, </span>pulumi.output.Output<span class="p">[</span>T<span class="p">]</span><span class="p">]</span><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">run_with_unknowns</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>bool<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi.output.Output<span class="p">[</span>U<span class="p">]</span><a class="headerlink" href="#pulumi.Output.apply" title="Permalink to this definition"></a></dt>
 <dd><p>Transforms the data of the output with the provided func.  The result remains a
 Output so that dependent resources can be properly tracked.</p>
 <p>‘func’ is not allowed to make resources.</p>
@@ -990,7 +990,7 @@ and you want to get a transitive dependency of it.</p>
 during ‘pulumi preview’ (as the values of resources are of course may not be known then).</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>func</strong> (<em>Callable</em><em>[</em><em>[</em><em>T</em><em>]</em><em>,</em><em>Input</em><em>[</em><em>U</em><em>]</em><em>]</em>) – A function that will, given this Output’s value, transform the value to
+<dd class="field-odd"><p><strong>func</strong> (<em>Callable</em><em>[</em><em>[</em><em>T_co</em><em>]</em><em>,</em><em>Input</em><em>[</em><em>U</em><em>]</em><em>]</em>) – A function that will, given this Output’s value, transform the value to
 an Input of some kind, where an Input is either a prompt value, a Future, or another Output of the given
 type.</p>
 </dd>
@@ -1005,18 +1005,18 @@ type.</p>
 
 <dl class="py method">
 <dt id="pulumi.Output.from_input">
-<em class="property">static </em><code class="sig-name descname">from_input</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">val</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>T<span class="p">, </span>Awaitable<span class="p">[</span>T<span class="p">]</span><span class="p">, </span>pulumi.output.Output<span class="p">[</span>T<span class="p">]</span><span class="p">]</span></span></em><span class="sig-paren">)</span> &#x2192; pulumi.output.Output<span class="p">[</span>T<span class="p">]</span><a class="headerlink" href="#pulumi.Output.from_input" title="Permalink to this definition"></a></dt>
+<em class="property">static </em><code class="sig-name descname">from_input</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">val</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>T_co<span class="p">, </span>Awaitable<span class="p">[</span>T_co<span class="p">]</span><span class="p">, </span>pulumi.output.Output<span class="p">[</span>T<span class="p">]</span><span class="p">]</span></span></em><span class="sig-paren">)</span> &#x2192; pulumi.output.Output<span class="p">[</span>T_co<span class="p">]</span><a class="headerlink" href="#pulumi.Output.from_input" title="Permalink to this definition"></a></dt>
 <dd><p>Takes an Input value and produces an Output value from it, deeply unwrapping nested Input values through nested
 lists, dicts, and input classes.  Nested objects of other types (including Resources) are not deeply unwrapped.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>val</strong> (<em>Input</em><em>[</em><em>T</em><em>]</em>) – An Input to be converted to an Output.</p>
+<dd class="field-odd"><p><strong>val</strong> (<em>Input</em><em>[</em><em>T_co</em><em>]</em>) – An Input to be converted to an Output.</p>
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><p>A deeply-unwrapped Output that is guaranteed to not contain any Input values.</p>
 </dd>
 <dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference internal" href="#pulumi.Output" title="pulumi.Output">Output</a>[T]</p>
+<dd class="field-odd"><p><a class="reference internal" href="#pulumi.Output" title="pulumi.Output">Output</a>[T_co]</p>
 </dd>
 </dl>
 </dd></dl>
