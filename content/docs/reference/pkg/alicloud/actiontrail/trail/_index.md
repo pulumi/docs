@@ -300,7 +300,8 @@ The Trail resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional property-deprecated"
+    <dd>{{% md %}}Specifies whether to create a multi-account trail. Valid values:`true`: Create a multi-account trail.`false`: Create a single-account trail. It is the default value.
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="mnstopicarn_csharp">
 <a href="#mnstopicarn_csharp" style="color: inherit; text-decoration: inherit;">Mns<wbr>Topic<wbr>Arn</a>
@@ -420,7 +421,8 @@ The Trail resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional property-deprecated"
+    <dd>{{% md %}}Specifies whether to create a multi-account trail. Valid values:`true`: Create a multi-account trail.`false`: Create a single-account trail. It is the default value.
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="mnstopicarn_go">
 <a href="#mnstopicarn_go" style="color: inherit; text-decoration: inherit;">Mns<wbr>Topic<wbr>Arn</a>
@@ -540,7 +542,8 @@ The Trail resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional property-deprecated"
+    <dd>{{% md %}}Specifies whether to create a multi-account trail. Valid values:`true`: Create a multi-account trail.`false`: Create a single-account trail. It is the default value.
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="mnstopicarn_nodejs">
 <a href="#mnstopicarn_nodejs" style="color: inherit; text-decoration: inherit;">mns<wbr>Topic<wbr>Arn</a>
@@ -660,7 +663,8 @@ The Trail resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional property-deprecated"
+    <dd>{{% md %}}Specifies whether to create a multi-account trail. Valid values:`true`: Create a multi-account trail.`false`: Create a single-account trail. It is the default value.
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="mns_topic_arn_python">
 <a href="#mns_topic_arn_python" style="color: inherit; text-decoration: inherit;">mns_<wbr>topic_<wbr>arn</a>
@@ -973,7 +977,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional property-deprecated"
+    <dd>{{% md %}}Specifies whether to create a multi-account trail. Valid values:`true`: Create a multi-account trail.`false`: Create a single-account trail. It is the default value.
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_mnstopicarn_csharp">
 <a href="#state_mnstopicarn_csharp" style="color: inherit; text-decoration: inherit;">Mns<wbr>Topic<wbr>Arn</a>
@@ -1093,7 +1098,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional property-deprecated"
+    <dd>{{% md %}}Specifies whether to create a multi-account trail. Valid values:`true`: Create a multi-account trail.`false`: Create a single-account trail. It is the default value.
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_mnstopicarn_go">
 <a href="#state_mnstopicarn_go" style="color: inherit; text-decoration: inherit;">Mns<wbr>Topic<wbr>Arn</a>
@@ -1213,7 +1219,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional property-deprecated"
+    <dd>{{% md %}}Specifies whether to create a multi-account trail. Valid values:`true`: Create a multi-account trail.`false`: Create a single-account trail. It is the default value.
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_mnstopicarn_nodejs">
 <a href="#state_mnstopicarn_nodejs" style="color: inherit; text-decoration: inherit;">mns<wbr>Topic<wbr>Arn</a>
@@ -1333,7 +1340,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional property-deprecated"
+    <dd>{{% md %}}Specifies whether to create a multi-account trail. Valid values:`true`: Create a multi-account trail.`false`: Create a single-account trail. It is the default value.
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_mns_topic_arn_python">
 <a href="#state_mns_topic_arn_python" style="color: inherit; text-decoration: inherit;">mns_<wbr>topic_<wbr>arn</a>

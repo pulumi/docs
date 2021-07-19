@@ -57,19 +57,20 @@ class MyStack : Stack
             VpcId = fooNetwork.Id,
             Specification = "Small",
         });
-        var fooEip = new AliCloud.Ecs.Eip("fooEip", new AliCloud.Ecs.EipArgs
+        var fooEipAddress = new AliCloud.Ecs.EipAddress("fooEipAddress", new AliCloud.Ecs.EipAddressArgs
         {
+            AddressName = name,
         });
         var fooEipAssociation = new AliCloud.Ecs.EipAssociation("fooEipAssociation", new AliCloud.Ecs.EipAssociationArgs
         {
-            AllocationId = fooEip.Id,
+            AllocationId = fooEipAddress.Id,
             InstanceId = fooNatGateway.Id,
         });
         var fooSnatEntry = new AliCloud.Vpc.SnatEntry("fooSnatEntry", new AliCloud.Vpc.SnatEntryArgs
         {
             SnatTableId = fooNatGateway.SnatTableIds,
             SourceVswitchId = fooSwitch.Id,
-            SnatIp = fooEip.IpAddress,
+            SnatIp = fooEipAddress.IpAddress,
         });
         var fooSnatEntries = fooSnatEntry.SnatTableId.Apply(snatTableId => AliCloud.Vpc.GetSnatEntries.InvokeAsync(new AliCloud.Vpc.GetSnatEntriesArgs
         {
@@ -133,12 +134,14 @@ func main() {
 		if err != nil {
 			return err
 		}
-		fooEip, err := ecs.NewEip(ctx, "fooEip", nil)
+		fooEipAddress, err := ecs.NewEipAddress(ctx, "fooEipAddress", &ecs.EipAddressArgs{
+			AddressName: pulumi.String(name),
+		})
 		if err != nil {
 			return err
 		}
 		_, err = ecs.NewEipAssociation(ctx, "fooEipAssociation", &ecs.EipAssociationArgs{
-			AllocationId: fooEip.ID(),
+			AllocationId: fooEipAddress.ID(),
 			InstanceId:   fooNatGateway.ID(),
 		})
 		if err != nil {
@@ -147,7 +150,7 @@ func main() {
 		fooSnatEntry, err := vpc.NewSnatEntry(ctx, "fooSnatEntry", &vpc.SnatEntryArgs{
 			SnatTableId:     fooNatGateway.SnatTableIds,
 			SourceVswitchId: fooSwitch.ID(),
-			SnatIp:          fooEip.IpAddress,
+			SnatIp:          fooEipAddress.IpAddress,
 		})
 		if err != nil {
 			return err
@@ -181,14 +184,14 @@ foo_switch = alicloud.vpc.Switch("fooSwitch",
 foo_nat_gateway = alicloud.vpc.NatGateway("fooNatGateway",
     vpc_id=foo_network.id,
     specification="Small")
-foo_eip = alicloud.ecs.Eip("fooEip")
+foo_eip_address = alicloud.ecs.EipAddress("fooEipAddress", address_name=name)
 foo_eip_association = alicloud.ecs.EipAssociation("fooEipAssociation",
-    allocation_id=foo_eip.id,
+    allocation_id=foo_eip_address.id,
     instance_id=foo_nat_gateway.id)
 foo_snat_entry = alicloud.vpc.SnatEntry("fooSnatEntry",
     snat_table_id=foo_nat_gateway.snat_table_ids,
     source_vswitch_id=foo_switch.id,
-    snat_ip=foo_eip.ip_address)
+    snat_ip=foo_eip_address.ip_address)
 foo_snat_entries = foo_snat_entry.snat_table_id.apply(lambda snat_table_id: alicloud.vpc.get_snat_entries(snat_table_id=snat_table_id))
 ```
 
@@ -219,15 +222,15 @@ const fooNatGateway = new alicloud.vpc.NatGateway("fooNatGateway", {
     vpcId: fooNetwork.id,
     specification: "Small",
 });
-const fooEip = new alicloud.ecs.Eip("fooEip", {});
+const fooEipAddress = new alicloud.ecs.EipAddress("fooEipAddress", {addressName: name});
 const fooEipAssociation = new alicloud.ecs.EipAssociation("fooEipAssociation", {
-    allocationId: fooEip.id,
+    allocationId: fooEipAddress.id,
     instanceId: fooNatGateway.id,
 });
 const fooSnatEntry = new alicloud.vpc.SnatEntry("fooSnatEntry", {
     snatTableId: fooNatGateway.snatTableIds,
     sourceVswitchId: fooSwitch.id,
-    snatIp: fooEip.ipAddress,
+    snatIp: fooEipAddress.ipAddress,
 });
 const fooSnatEntries = fooSnatEntry.snatTableId.apply(snatTableId => alicloud.vpc.getSnatEntries({
     snatTableId: snatTableId,

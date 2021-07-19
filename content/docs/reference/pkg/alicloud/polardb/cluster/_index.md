@@ -377,7 +377,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The db_node_class of cluster node.
-**NOTE:** Node specifications are divided into cluster version, single node version and History Library version. They can't change each other, but the general specification and exclusive specification of cluster version can be changed.
+> **NOTE:** Node specifications are divided into cluster version, single node version and History Library version. They can't change each other, but the general specification and exclusive specification of cluster version can be changed.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="dbtype_csharp">
@@ -423,7 +423,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of the PolarDB cluster nodes, default is 2(Each cluster must contain at least a primary node and a read-only node). Add/remove nodes by modifying this parameter, valid values: [2~16].  
-**NOTE:** To avoid adding or removing multiple read-only nodes by mistake, the system allows you to add or remove one read-only node at a time.
+> **NOTE:** To avoid adding or removing multiple read-only nodes by mistake, the system allows you to add or remove one read-only node at a time.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
@@ -441,8 +441,8 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}turn on table auto encryption. Valid values are `ON`, `OFF`. Only MySQL 8.0 supports.
-> **NOTE:** Because of data backup and migration, change DB cluster type and storage would cost 15~20 minutes. Please make full preparation before changing them.
+    <dd>{{% md %}}turn on table auto encryption. Valid values are `ON`, `OFF`. Only MySQL 8.0 supports. 
+> **NOTE:** `encrypt_new_tables` Polardb MySQL 8.0 cluster, after TDE and Automatic Encryption are enabled, all newly created tables are automatically encrypted in the cluster.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maintaintime_csharp">
@@ -533,8 +533,8 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}turn on TDE encryption. Valid values are `Enabled`, `Disabled`. Default to `Disabled`. TDE cannot be closed after it is turned on.
-**NOTE:** `tde_status` cannot modify after created when `db_type` is `PostgreSQL` or `Oracle`.`tde_status` only support modification from `Disabled` to `Enabled` when `db_type` is `MySQL`.
+    <dd>{{% md %}}turn on TDE encryption. Valid values are `Enabled`, `Disabled`. Default to `Disabled`. TDE cannot be closed after it is turned on. 
+> **NOTE:** `tde_status` Cannot modify after created when `db_type` is `PostgreSQL` or `Oracle`.`tde_status` only support modification from `Disabled` to `Enabled` when `db_type` is `MySQL`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vswitchid_csharp">
@@ -543,8 +543,8 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The virtual switch ID to launch DB instances in one VPC.  
-**NOTE:** If vswitch_id is not specified, system will get a vswitch belongs to the user automatically.
+    <dd>{{% md %}}The virtual switch ID to launch DB instances in one VPC.
+> **NOTE:** If vswitch_id is not specified, system will get a vswitch belongs to the user automatically.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zoneid_csharp">
@@ -567,7 +567,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The db_node_class of cluster node.
-**NOTE:** Node specifications are divided into cluster version, single node version and History Library version. They can't change each other, but the general specification and exclusive specification of cluster version can be changed.
+> **NOTE:** Node specifications are divided into cluster version, single node version and History Library version. They can't change each other, but the general specification and exclusive specification of cluster version can be changed.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="dbtype_go">
@@ -613,7 +613,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of the PolarDB cluster nodes, default is 2(Each cluster must contain at least a primary node and a read-only node). Add/remove nodes by modifying this parameter, valid values: [2~16].  
-**NOTE:** To avoid adding or removing multiple read-only nodes by mistake, the system allows you to add or remove one read-only node at a time.
+> **NOTE:** To avoid adding or removing multiple read-only nodes by mistake, the system allows you to add or remove one read-only node at a time.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
@@ -631,8 +631,8 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}turn on table auto encryption. Valid values are `ON`, `OFF`. Only MySQL 8.0 supports.
-> **NOTE:** Because of data backup and migration, change DB cluster type and storage would cost 15~20 minutes. Please make full preparation before changing them.
+    <dd>{{% md %}}turn on table auto encryption. Valid values are `ON`, `OFF`. Only MySQL 8.0 supports. 
+> **NOTE:** `encrypt_new_tables` Polardb MySQL 8.0 cluster, after TDE and Automatic Encryption are enabled, all newly created tables are automatically encrypted in the cluster.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maintaintime_go">
@@ -723,8 +723,8 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}turn on TDE encryption. Valid values are `Enabled`, `Disabled`. Default to `Disabled`. TDE cannot be closed after it is turned on.
-**NOTE:** `tde_status` cannot modify after created when `db_type` is `PostgreSQL` or `Oracle`.`tde_status` only support modification from `Disabled` to `Enabled` when `db_type` is `MySQL`.
+    <dd>{{% md %}}turn on TDE encryption. Valid values are `Enabled`, `Disabled`. Default to `Disabled`. TDE cannot be closed after it is turned on. 
+> **NOTE:** `tde_status` Cannot modify after created when `db_type` is `PostgreSQL` or `Oracle`.`tde_status` only support modification from `Disabled` to `Enabled` when `db_type` is `MySQL`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vswitchid_go">
@@ -733,8 +733,8 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The virtual switch ID to launch DB instances in one VPC.  
-**NOTE:** If vswitch_id is not specified, system will get a vswitch belongs to the user automatically.
+    <dd>{{% md %}}The virtual switch ID to launch DB instances in one VPC.
+> **NOTE:** If vswitch_id is not specified, system will get a vswitch belongs to the user automatically.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zoneid_go">
@@ -757,7 +757,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The db_node_class of cluster node.
-**NOTE:** Node specifications are divided into cluster version, single node version and History Library version. They can't change each other, but the general specification and exclusive specification of cluster version can be changed.
+> **NOTE:** Node specifications are divided into cluster version, single node version and History Library version. They can't change each other, but the general specification and exclusive specification of cluster version can be changed.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="dbtype_nodejs">
@@ -803,7 +803,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of the PolarDB cluster nodes, default is 2(Each cluster must contain at least a primary node and a read-only node). Add/remove nodes by modifying this parameter, valid values: [2~16].  
-**NOTE:** To avoid adding or removing multiple read-only nodes by mistake, the system allows you to add or remove one read-only node at a time.
+> **NOTE:** To avoid adding or removing multiple read-only nodes by mistake, the system allows you to add or remove one read-only node at a time.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
@@ -821,8 +821,8 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}turn on table auto encryption. Valid values are `ON`, `OFF`. Only MySQL 8.0 supports.
-> **NOTE:** Because of data backup and migration, change DB cluster type and storage would cost 15~20 minutes. Please make full preparation before changing them.
+    <dd>{{% md %}}turn on table auto encryption. Valid values are `ON`, `OFF`. Only MySQL 8.0 supports. 
+> **NOTE:** `encrypt_new_tables` Polardb MySQL 8.0 cluster, after TDE and Automatic Encryption are enabled, all newly created tables are automatically encrypted in the cluster.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maintaintime_nodejs">
@@ -913,8 +913,8 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}turn on TDE encryption. Valid values are `Enabled`, `Disabled`. Default to `Disabled`. TDE cannot be closed after it is turned on.
-**NOTE:** `tde_status` cannot modify after created when `db_type` is `PostgreSQL` or `Oracle`.`tde_status` only support modification from `Disabled` to `Enabled` when `db_type` is `MySQL`.
+    <dd>{{% md %}}turn on TDE encryption. Valid values are `Enabled`, `Disabled`. Default to `Disabled`. TDE cannot be closed after it is turned on. 
+> **NOTE:** `tde_status` Cannot modify after created when `db_type` is `PostgreSQL` or `Oracle`.`tde_status` only support modification from `Disabled` to `Enabled` when `db_type` is `MySQL`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vswitchid_nodejs">
@@ -923,8 +923,8 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The virtual switch ID to launch DB instances in one VPC.  
-**NOTE:** If vswitch_id is not specified, system will get a vswitch belongs to the user automatically.
+    <dd>{{% md %}}The virtual switch ID to launch DB instances in one VPC.
+> **NOTE:** If vswitch_id is not specified, system will get a vswitch belongs to the user automatically.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zoneid_nodejs">
@@ -947,7 +947,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The db_node_class of cluster node.
-**NOTE:** Node specifications are divided into cluster version, single node version and History Library version. They can't change each other, but the general specification and exclusive specification of cluster version can be changed.
+> **NOTE:** Node specifications are divided into cluster version, single node version and History Library version. They can't change each other, but the general specification and exclusive specification of cluster version can be changed.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="db_type_python">
@@ -993,7 +993,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of the PolarDB cluster nodes, default is 2(Each cluster must contain at least a primary node and a read-only node). Add/remove nodes by modifying this parameter, valid values: [2~16].  
-**NOTE:** To avoid adding or removing multiple read-only nodes by mistake, the system allows you to add or remove one read-only node at a time.
+> **NOTE:** To avoid adding or removing multiple read-only nodes by mistake, the system allows you to add or remove one read-only node at a time.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
@@ -1011,8 +1011,8 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}turn on table auto encryption. Valid values are `ON`, `OFF`. Only MySQL 8.0 supports.
-> **NOTE:** Because of data backup and migration, change DB cluster type and storage would cost 15~20 minutes. Please make full preparation before changing them.
+    <dd>{{% md %}}turn on table auto encryption. Valid values are `ON`, `OFF`. Only MySQL 8.0 supports. 
+> **NOTE:** `encrypt_new_tables` Polardb MySQL 8.0 cluster, after TDE and Automatic Encryption are enabled, all newly created tables are automatically encrypted in the cluster.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maintain_time_python">
@@ -1103,8 +1103,8 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}turn on TDE encryption. Valid values are `Enabled`, `Disabled`. Default to `Disabled`. TDE cannot be closed after it is turned on.
-**NOTE:** `tde_status` cannot modify after created when `db_type` is `PostgreSQL` or `Oracle`.`tde_status` only support modification from `Disabled` to `Enabled` when `db_type` is `MySQL`.
+    <dd>{{% md %}}turn on TDE encryption. Valid values are `Enabled`, `Disabled`. Default to `Disabled`. TDE cannot be closed after it is turned on. 
+> **NOTE:** `tde_status` Cannot modify after created when `db_type` is `PostgreSQL` or `Oracle`.`tde_status` only support modification from `Disabled` to `Enabled` when `db_type` is `MySQL`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vswitch_id_python">
@@ -1113,8 +1113,8 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The virtual switch ID to launch DB instances in one VPC.  
-**NOTE:** If vswitch_id is not specified, system will get a vswitch belongs to the user automatically.
+    <dd>{{% md %}}The virtual switch ID to launch DB instances in one VPC.
+> **NOTE:** If vswitch_id is not specified, system will get a vswitch belongs to the user automatically.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zone_id_python">
@@ -1401,7 +1401,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The db_node_class of cluster node.
-**NOTE:** Node specifications are divided into cluster version, single node version and History Library version. They can't change each other, but the general specification and exclusive specification of cluster version can be changed.
+> **NOTE:** Node specifications are divided into cluster version, single node version and History Library version. They can't change each other, but the general specification and exclusive specification of cluster version can be changed.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dbnodecount_csharp">
@@ -1411,7 +1411,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of the PolarDB cluster nodes, default is 2(Each cluster must contain at least a primary node and a read-only node). Add/remove nodes by modifying this parameter, valid values: [2~16].  
-**NOTE:** To avoid adding or removing multiple read-only nodes by mistake, the system allows you to add or remove one read-only node at a time.
+> **NOTE:** To avoid adding or removing multiple read-only nodes by mistake, the system allows you to add or remove one read-only node at a time.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dbtype_csharp">
@@ -1447,8 +1447,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}turn on table auto encryption. Valid values are `ON`, `OFF`. Only MySQL 8.0 supports.
-> **NOTE:** Because of data backup and migration, change DB cluster type and storage would cost 15~20 minutes. Please make full preparation before changing them.
+    <dd>{{% md %}}turn on table auto encryption. Valid values are `ON`, `OFF`. Only MySQL 8.0 supports. 
+> **NOTE:** `encrypt_new_tables` Polardb MySQL 8.0 cluster, after TDE and Automatic Encryption are enabled, all newly created tables are automatically encrypted in the cluster.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maintaintime_csharp">
@@ -1539,8 +1539,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}turn on TDE encryption. Valid values are `Enabled`, `Disabled`. Default to `Disabled`. TDE cannot be closed after it is turned on.
-**NOTE:** `tde_status` cannot modify after created when `db_type` is `PostgreSQL` or `Oracle`.`tde_status` only support modification from `Disabled` to `Enabled` when `db_type` is `MySQL`.
+    <dd>{{% md %}}turn on TDE encryption. Valid values are `Enabled`, `Disabled`. Default to `Disabled`. TDE cannot be closed after it is turned on. 
+> **NOTE:** `tde_status` Cannot modify after created when `db_type` is `PostgreSQL` or `Oracle`.`tde_status` only support modification from `Disabled` to `Enabled` when `db_type` is `MySQL`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vswitchid_csharp">
@@ -1549,8 +1549,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The virtual switch ID to launch DB instances in one VPC.  
-**NOTE:** If vswitch_id is not specified, system will get a vswitch belongs to the user automatically.
+    <dd>{{% md %}}The virtual switch ID to launch DB instances in one VPC.
+> **NOTE:** If vswitch_id is not specified, system will get a vswitch belongs to the user automatically.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_zoneid_csharp">
@@ -1600,7 +1600,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The db_node_class of cluster node.
-**NOTE:** Node specifications are divided into cluster version, single node version and History Library version. They can't change each other, but the general specification and exclusive specification of cluster version can be changed.
+> **NOTE:** Node specifications are divided into cluster version, single node version and History Library version. They can't change each other, but the general specification and exclusive specification of cluster version can be changed.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dbnodecount_go">
@@ -1610,7 +1610,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of the PolarDB cluster nodes, default is 2(Each cluster must contain at least a primary node and a read-only node). Add/remove nodes by modifying this parameter, valid values: [2~16].  
-**NOTE:** To avoid adding or removing multiple read-only nodes by mistake, the system allows you to add or remove one read-only node at a time.
+> **NOTE:** To avoid adding or removing multiple read-only nodes by mistake, the system allows you to add or remove one read-only node at a time.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dbtype_go">
@@ -1646,8 +1646,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}turn on table auto encryption. Valid values are `ON`, `OFF`. Only MySQL 8.0 supports.
-> **NOTE:** Because of data backup and migration, change DB cluster type and storage would cost 15~20 minutes. Please make full preparation before changing them.
+    <dd>{{% md %}}turn on table auto encryption. Valid values are `ON`, `OFF`. Only MySQL 8.0 supports. 
+> **NOTE:** `encrypt_new_tables` Polardb MySQL 8.0 cluster, after TDE and Automatic Encryption are enabled, all newly created tables are automatically encrypted in the cluster.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maintaintime_go">
@@ -1738,8 +1738,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}turn on TDE encryption. Valid values are `Enabled`, `Disabled`. Default to `Disabled`. TDE cannot be closed after it is turned on.
-**NOTE:** `tde_status` cannot modify after created when `db_type` is `PostgreSQL` or `Oracle`.`tde_status` only support modification from `Disabled` to `Enabled` when `db_type` is `MySQL`.
+    <dd>{{% md %}}turn on TDE encryption. Valid values are `Enabled`, `Disabled`. Default to `Disabled`. TDE cannot be closed after it is turned on. 
+> **NOTE:** `tde_status` Cannot modify after created when `db_type` is `PostgreSQL` or `Oracle`.`tde_status` only support modification from `Disabled` to `Enabled` when `db_type` is `MySQL`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vswitchid_go">
@@ -1748,8 +1748,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The virtual switch ID to launch DB instances in one VPC.  
-**NOTE:** If vswitch_id is not specified, system will get a vswitch belongs to the user automatically.
+    <dd>{{% md %}}The virtual switch ID to launch DB instances in one VPC.
+> **NOTE:** If vswitch_id is not specified, system will get a vswitch belongs to the user automatically.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_zoneid_go">
@@ -1799,7 +1799,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The db_node_class of cluster node.
-**NOTE:** Node specifications are divided into cluster version, single node version and History Library version. They can't change each other, but the general specification and exclusive specification of cluster version can be changed.
+> **NOTE:** Node specifications are divided into cluster version, single node version and History Library version. They can't change each other, but the general specification and exclusive specification of cluster version can be changed.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dbnodecount_nodejs">
@@ -1809,7 +1809,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of the PolarDB cluster nodes, default is 2(Each cluster must contain at least a primary node and a read-only node). Add/remove nodes by modifying this parameter, valid values: [2~16].  
-**NOTE:** To avoid adding or removing multiple read-only nodes by mistake, the system allows you to add or remove one read-only node at a time.
+> **NOTE:** To avoid adding or removing multiple read-only nodes by mistake, the system allows you to add or remove one read-only node at a time.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dbtype_nodejs">
@@ -1845,8 +1845,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}turn on table auto encryption. Valid values are `ON`, `OFF`. Only MySQL 8.0 supports.
-> **NOTE:** Because of data backup and migration, change DB cluster type and storage would cost 15~20 minutes. Please make full preparation before changing them.
+    <dd>{{% md %}}turn on table auto encryption. Valid values are `ON`, `OFF`. Only MySQL 8.0 supports. 
+> **NOTE:** `encrypt_new_tables` Polardb MySQL 8.0 cluster, after TDE and Automatic Encryption are enabled, all newly created tables are automatically encrypted in the cluster.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maintaintime_nodejs">
@@ -1937,8 +1937,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}turn on TDE encryption. Valid values are `Enabled`, `Disabled`. Default to `Disabled`. TDE cannot be closed after it is turned on.
-**NOTE:** `tde_status` cannot modify after created when `db_type` is `PostgreSQL` or `Oracle`.`tde_status` only support modification from `Disabled` to `Enabled` when `db_type` is `MySQL`.
+    <dd>{{% md %}}turn on TDE encryption. Valid values are `Enabled`, `Disabled`. Default to `Disabled`. TDE cannot be closed after it is turned on. 
+> **NOTE:** `tde_status` Cannot modify after created when `db_type` is `PostgreSQL` or `Oracle`.`tde_status` only support modification from `Disabled` to `Enabled` when `db_type` is `MySQL`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vswitchid_nodejs">
@@ -1947,8 +1947,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The virtual switch ID to launch DB instances in one VPC.  
-**NOTE:** If vswitch_id is not specified, system will get a vswitch belongs to the user automatically.
+    <dd>{{% md %}}The virtual switch ID to launch DB instances in one VPC.
+> **NOTE:** If vswitch_id is not specified, system will get a vswitch belongs to the user automatically.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_zoneid_nodejs">
@@ -1998,7 +1998,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The db_node_class of cluster node.
-**NOTE:** Node specifications are divided into cluster version, single node version and History Library version. They can't change each other, but the general specification and exclusive specification of cluster version can be changed.
+> **NOTE:** Node specifications are divided into cluster version, single node version and History Library version. They can't change each other, but the general specification and exclusive specification of cluster version can be changed.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_db_node_count_python">
@@ -2008,7 +2008,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of the PolarDB cluster nodes, default is 2(Each cluster must contain at least a primary node and a read-only node). Add/remove nodes by modifying this parameter, valid values: [2~16].  
-**NOTE:** To avoid adding or removing multiple read-only nodes by mistake, the system allows you to add or remove one read-only node at a time.
+> **NOTE:** To avoid adding or removing multiple read-only nodes by mistake, the system allows you to add or remove one read-only node at a time.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_db_type_python">
@@ -2044,8 +2044,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}turn on table auto encryption. Valid values are `ON`, `OFF`. Only MySQL 8.0 supports.
-> **NOTE:** Because of data backup and migration, change DB cluster type and storage would cost 15~20 minutes. Please make full preparation before changing them.
+    <dd>{{% md %}}turn on table auto encryption. Valid values are `ON`, `OFF`. Only MySQL 8.0 supports. 
+> **NOTE:** `encrypt_new_tables` Polardb MySQL 8.0 cluster, after TDE and Automatic Encryption are enabled, all newly created tables are automatically encrypted in the cluster.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maintain_time_python">
@@ -2136,8 +2136,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}turn on TDE encryption. Valid values are `Enabled`, `Disabled`. Default to `Disabled`. TDE cannot be closed after it is turned on.
-**NOTE:** `tde_status` cannot modify after created when `db_type` is `PostgreSQL` or `Oracle`.`tde_status` only support modification from `Disabled` to `Enabled` when `db_type` is `MySQL`.
+    <dd>{{% md %}}turn on TDE encryption. Valid values are `Enabled`, `Disabled`. Default to `Disabled`. TDE cannot be closed after it is turned on. 
+> **NOTE:** `tde_status` Cannot modify after created when `db_type` is `PostgreSQL` or `Oracle`.`tde_status` only support modification from `Disabled` to `Enabled` when `db_type` is `MySQL`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vswitch_id_python">
@@ -2146,8 +2146,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The virtual switch ID to launch DB instances in one VPC.  
-**NOTE:** If vswitch_id is not specified, system will get a vswitch belongs to the user automatically.
+    <dd>{{% md %}}The virtual switch ID to launch DB instances in one VPC.
+> **NOTE:** If vswitch_id is not specified, system will get a vswitch belongs to the user automatically.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_zone_id_python">

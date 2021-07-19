@@ -304,6 +304,7 @@ const exampleInstance = new alicloud.rds.Instance("exampleInstance", {
              <span class="nx">client_ca_enabled</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
              <span class="nx">client_cert_revocation_list</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">client_crl_enabled</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+             <span class="nx">connection_string_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">db_instance_ip_array_attribute</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">db_instance_ip_array_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">db_instance_storage_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -320,6 +321,7 @@ const exampleInstance = new alicloud.rds.Instance("exampleInstance", {
              <span class="nx">monitoring_period</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
              <span class="nx">parameters</span><span class="p">:</span> <span class="nx">Optional[Sequence[InstanceParameterArgs]]</span> = None<span class="p">,</span>
              <span class="nx">period</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+             <span class="nx">port</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">private_ip_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">replication_acl</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">resource_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -333,8 +335,12 @@ const exampleInstance = new alicloud.rds.Instance("exampleInstance", {
              <span class="nx">sql_collector_config_value</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
              <span class="nx">sql_collector_status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">ssl_action</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">switch_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">,</span>
+             <span class="nx">target_minor_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">tde_status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">upgrade_db_instance_kernel_version</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+             <span class="nx">upgrade_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">vswitch_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">whitelist_network_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -604,6 +610,14 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
 - 0: disables the CRL
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="connectionstringprefix_csharp">
+<a href="#connectionstringprefix_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>String<wbr>Prefix</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="dbinstanceiparrayattribute_csharp">
 <a href="#dbinstanceiparrayattribute_csharp" style="color: inherit; text-decoration: inherit;">Db<wbr>Instance<wbr>Ip<wbr>Array<wbr>Attribute</a>
 </span>
@@ -716,6 +730,14 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="port_csharp">
+<a href="#port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -840,6 +862,16 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
     <dd>{{% md %}}Actions performed on SSL functions, Valid values: `Open`: turn on SSL encryption; `Close`: turn off SSL encryption; `Update`: update SSL certificate. See more [engine and engineVersion limitation](https://www.alibabacloud.com/help/zh/doc-detail/26254.htm).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="switchtime_csharp">
+<a href="#switchtime_csharp" style="color: inherit; text-decoration: inherit;">Switch<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The specific point in time when you want to perform the update. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. It is valid only when `upgrade_db_instance_kernel_version = true`. The time must be in UTC.
+> **NOTE:** This parameter takes effect only when you set the UpgradeTime parameter to SpecifyTime.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span>
@@ -851,6 +883,22 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
 - Value: It can be up to 128 characters in length. It cannot begin with "aliyun", "acs:", "http://", or "https://". It can be a null string.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="targetminorversion_csharp">
+<a href="#targetminorversion_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Minor<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The minor engine version to which you want to update the instance. If you do not specify this parameter, the instance is updated to the latest minor engine version. It is valid only when `upgrade_db_instance_kernel_version = true`. You must specify the minor engine version in one of the following formats:
+- PostgreSQL: rds_postgres_<Major engine version>00_<Minor engine version>. Example: rds_postgres_1200_20200830.
+- MySQL: <RDS edition>_<Minor engine version>. Examples: rds_20200229, xcluster_20200229, and xcluster80_20200229. The following RDS editions are supported:
+- rds: The instance runs RDS Basic or High-availability Edition.
+- xcluster: The instance runs MySQL 5.7 on RDS Enterprise Edition.
+- xcluster80: The instance runs MySQL 8.0 on RDS Enterprise Edition.
+- SQLServer: <Minor engine version>. Example: 15.0.4073.23.
+> **NOTE:** For more information about minor engine versions, see Release notes of minor AliPG versions, Release notes of minor AliSQL versions, and Release notes of minor engine versions of ApsaraDB RDS for SQL Server.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="tdestatus_csharp">
 <a href="#tdestatus_csharp" style="color: inherit; text-decoration: inherit;">Tde<wbr>Status</a>
 </span>
@@ -858,6 +906,29 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The TDE(Transparent Data Encryption) status. See more [engine and engineVersion limitation](https://www.alibabacloud.com/help/zh/doc-detail/26256.htm).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="upgradedbinstancekernelversion_csharp">
+<a href="#upgradedbinstancekernelversion_csharp" style="color: inherit; text-decoration: inherit;">Upgrade<wbr>Db<wbr>Instance<wbr>Kernel<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether to upgrade a minor version of the kernel. Valid values:
+- true: upgrade
+- false: not to upgrade
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="upgradetime_csharp">
+<a href="#upgradetime_csharp" style="color: inherit; text-decoration: inherit;">Upgrade<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The method to update the minor engine version. Default value: Immediate. It is valid only when `upgrade_db_instance_kernel_version = true`. Valid values:
+- Immediate: The minor engine version is immediately updated.
+- MaintainTime: The minor engine version is updated during the maintenance window. For more information about how to change the maintenance window, see ModifyDBInstanceMaintainTime.
+- SpecifyTime: The minor engine version is updated at the point in time you specify.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vswitchid_csharp">
@@ -1049,6 +1120,14 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
 - 0: disables the CRL
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="connectionstringprefix_go">
+<a href="#connectionstringprefix_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>String<wbr>Prefix</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="dbinstanceiparrayattribute_go">
 <a href="#dbinstanceiparrayattribute_go" style="color: inherit; text-decoration: inherit;">Db<wbr>Instance<wbr>Ip<wbr>Array<wbr>Attribute</a>
 </span>
@@ -1161,6 +1240,14 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="port_go">
+<a href="#port_go" style="color: inherit; text-decoration: inherit;">Port</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1285,6 +1372,16 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
     <dd>{{% md %}}Actions performed on SSL functions, Valid values: `Open`: turn on SSL encryption; `Close`: turn off SSL encryption; `Update`: update SSL certificate. See more [engine and engineVersion limitation](https://www.alibabacloud.com/help/zh/doc-detail/26254.htm).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="switchtime_go">
+<a href="#switchtime_go" style="color: inherit; text-decoration: inherit;">Switch<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The specific point in time when you want to perform the update. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. It is valid only when `upgrade_db_instance_kernel_version = true`. The time must be in UTC.
+> **NOTE:** This parameter takes effect only when you set the UpgradeTime parameter to SpecifyTime.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span>
@@ -1296,6 +1393,22 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
 - Value: It can be up to 128 characters in length. It cannot begin with "aliyun", "acs:", "http://", or "https://". It can be a null string.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="targetminorversion_go">
+<a href="#targetminorversion_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Minor<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The minor engine version to which you want to update the instance. If you do not specify this parameter, the instance is updated to the latest minor engine version. It is valid only when `upgrade_db_instance_kernel_version = true`. You must specify the minor engine version in one of the following formats:
+- PostgreSQL: rds_postgres_<Major engine version>00_<Minor engine version>. Example: rds_postgres_1200_20200830.
+- MySQL: <RDS edition>_<Minor engine version>. Examples: rds_20200229, xcluster_20200229, and xcluster80_20200229. The following RDS editions are supported:
+- rds: The instance runs RDS Basic or High-availability Edition.
+- xcluster: The instance runs MySQL 5.7 on RDS Enterprise Edition.
+- xcluster80: The instance runs MySQL 8.0 on RDS Enterprise Edition.
+- SQLServer: <Minor engine version>. Example: 15.0.4073.23.
+> **NOTE:** For more information about minor engine versions, see Release notes of minor AliPG versions, Release notes of minor AliSQL versions, and Release notes of minor engine versions of ApsaraDB RDS for SQL Server.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="tdestatus_go">
 <a href="#tdestatus_go" style="color: inherit; text-decoration: inherit;">Tde<wbr>Status</a>
 </span>
@@ -1303,6 +1416,29 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The TDE(Transparent Data Encryption) status. See more [engine and engineVersion limitation](https://www.alibabacloud.com/help/zh/doc-detail/26256.htm).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="upgradedbinstancekernelversion_go">
+<a href="#upgradedbinstancekernelversion_go" style="color: inherit; text-decoration: inherit;">Upgrade<wbr>Db<wbr>Instance<wbr>Kernel<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether to upgrade a minor version of the kernel. Valid values:
+- true: upgrade
+- false: not to upgrade
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="upgradetime_go">
+<a href="#upgradetime_go" style="color: inherit; text-decoration: inherit;">Upgrade<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The method to update the minor engine version. Default value: Immediate. It is valid only when `upgrade_db_instance_kernel_version = true`. Valid values:
+- Immediate: The minor engine version is immediately updated.
+- MaintainTime: The minor engine version is updated during the maintenance window. For more information about how to change the maintenance window, see ModifyDBInstanceMaintainTime.
+- SpecifyTime: The minor engine version is updated at the point in time you specify.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vswitchid_go">
@@ -1494,6 +1630,14 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
 - 0: disables the CRL
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="connectionstringprefix_nodejs">
+<a href="#connectionstringprefix_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>String<wbr>Prefix</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="dbinstanceiparrayattribute_nodejs">
 <a href="#dbinstanceiparrayattribute_nodejs" style="color: inherit; text-decoration: inherit;">db<wbr>Instance<wbr>Ip<wbr>Array<wbr>Attribute</a>
 </span>
@@ -1606,6 +1750,14 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="port_nodejs">
+<a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1730,6 +1882,16 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
     <dd>{{% md %}}Actions performed on SSL functions, Valid values: `Open`: turn on SSL encryption; `Close`: turn off SSL encryption; `Update`: update SSL certificate. See more [engine and engineVersion limitation](https://www.alibabacloud.com/help/zh/doc-detail/26254.htm).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="switchtime_nodejs">
+<a href="#switchtime_nodejs" style="color: inherit; text-decoration: inherit;">switch<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The specific point in time when you want to perform the update. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. It is valid only when `upgrade_db_instance_kernel_version = true`. The time must be in UTC.
+> **NOTE:** This parameter takes effect only when you set the UpgradeTime parameter to SpecifyTime.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
@@ -1741,6 +1903,22 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
 - Value: It can be up to 128 characters in length. It cannot begin with "aliyun", "acs:", "http://", or "https://". It can be a null string.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="targetminorversion_nodejs">
+<a href="#targetminorversion_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Minor<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The minor engine version to which you want to update the instance. If you do not specify this parameter, the instance is updated to the latest minor engine version. It is valid only when `upgrade_db_instance_kernel_version = true`. You must specify the minor engine version in one of the following formats:
+- PostgreSQL: rds_postgres_<Major engine version>00_<Minor engine version>. Example: rds_postgres_1200_20200830.
+- MySQL: <RDS edition>_<Minor engine version>. Examples: rds_20200229, xcluster_20200229, and xcluster80_20200229. The following RDS editions are supported:
+- rds: The instance runs RDS Basic or High-availability Edition.
+- xcluster: The instance runs MySQL 5.7 on RDS Enterprise Edition.
+- xcluster80: The instance runs MySQL 8.0 on RDS Enterprise Edition.
+- SQLServer: <Minor engine version>. Example: 15.0.4073.23.
+> **NOTE:** For more information about minor engine versions, see Release notes of minor AliPG versions, Release notes of minor AliSQL versions, and Release notes of minor engine versions of ApsaraDB RDS for SQL Server.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="tdestatus_nodejs">
 <a href="#tdestatus_nodejs" style="color: inherit; text-decoration: inherit;">tde<wbr>Status</a>
 </span>
@@ -1748,6 +1926,29 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The TDE(Transparent Data Encryption) status. See more [engine and engineVersion limitation](https://www.alibabacloud.com/help/zh/doc-detail/26256.htm).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="upgradedbinstancekernelversion_nodejs">
+<a href="#upgradedbinstancekernelversion_nodejs" style="color: inherit; text-decoration: inherit;">upgrade<wbr>Db<wbr>Instance<wbr>Kernel<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether to upgrade a minor version of the kernel. Valid values:
+- true: upgrade
+- false: not to upgrade
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="upgradetime_nodejs">
+<a href="#upgradetime_nodejs" style="color: inherit; text-decoration: inherit;">upgrade<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The method to update the minor engine version. Default value: Immediate. It is valid only when `upgrade_db_instance_kernel_version = true`. Valid values:
+- Immediate: The minor engine version is immediately updated.
+- MaintainTime: The minor engine version is updated during the maintenance window. For more information about how to change the maintenance window, see ModifyDBInstanceMaintainTime.
+- SpecifyTime: The minor engine version is updated at the point in time you specify.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vswitchid_nodejs">
@@ -1939,6 +2140,14 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
 - 0: disables the CRL
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="connection_string_prefix_python">
+<a href="#connection_string_prefix_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>string_<wbr>prefix</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="db_instance_ip_array_attribute_python">
 <a href="#db_instance_ip_array_attribute_python" style="color: inherit; text-decoration: inherit;">db_<wbr>instance_<wbr>ip_<wbr>array_<wbr>attribute</a>
 </span>
@@ -2051,6 +2260,14 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="port_python">
+<a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2175,6 +2392,16 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
     <dd>{{% md %}}Actions performed on SSL functions, Valid values: `Open`: turn on SSL encryption; `Close`: turn off SSL encryption; `Update`: update SSL certificate. See more [engine and engineVersion limitation](https://www.alibabacloud.com/help/zh/doc-detail/26254.htm).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="switch_time_python">
+<a href="#switch_time_python" style="color: inherit; text-decoration: inherit;">switch_<wbr>time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The specific point in time when you want to perform the update. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. It is valid only when `upgrade_db_instance_kernel_version = true`. The time must be in UTC.
+> **NOTE:** This parameter takes effect only when you set the UpgradeTime parameter to SpecifyTime.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
@@ -2186,6 +2413,22 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
 - Value: It can be up to 128 characters in length. It cannot begin with "aliyun", "acs:", "http://", or "https://". It can be a null string.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="target_minor_version_python">
+<a href="#target_minor_version_python" style="color: inherit; text-decoration: inherit;">target_<wbr>minor_<wbr>version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The minor engine version to which you want to update the instance. If you do not specify this parameter, the instance is updated to the latest minor engine version. It is valid only when `upgrade_db_instance_kernel_version = true`. You must specify the minor engine version in one of the following formats:
+- PostgreSQL: rds_postgres_<Major engine version>00_<Minor engine version>. Example: rds_postgres_1200_20200830.
+- MySQL: <RDS edition>_<Minor engine version>. Examples: rds_20200229, xcluster_20200229, and xcluster80_20200229. The following RDS editions are supported:
+- rds: The instance runs RDS Basic or High-availability Edition.
+- xcluster: The instance runs MySQL 5.7 on RDS Enterprise Edition.
+- xcluster80: The instance runs MySQL 8.0 on RDS Enterprise Edition.
+- SQLServer: <Minor engine version>. Example: 15.0.4073.23.
+> **NOTE:** For more information about minor engine versions, see Release notes of minor AliPG versions, Release notes of minor AliSQL versions, and Release notes of minor engine versions of ApsaraDB RDS for SQL Server.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="tde_status_python">
 <a href="#tde_status_python" style="color: inherit; text-decoration: inherit;">tde_<wbr>status</a>
 </span>
@@ -2193,6 +2436,29 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The TDE(Transparent Data Encryption) status. See more [engine and engineVersion limitation](https://www.alibabacloud.com/help/zh/doc-detail/26256.htm).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="upgrade_db_instance_kernel_version_python">
+<a href="#upgrade_db_instance_kernel_version_python" style="color: inherit; text-decoration: inherit;">upgrade_<wbr>db_<wbr>instance_<wbr>kernel_<wbr>version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether to upgrade a minor version of the kernel. Valid values:
+- true: upgrade
+- false: not to upgrade
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="upgrade_time_python">
+<a href="#upgrade_time_python" style="color: inherit; text-decoration: inherit;">upgrade_<wbr>time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The method to update the minor engine version. Default value: Immediate. It is valid only when `upgrade_db_instance_kernel_version = true`. Valid values:
+- Immediate: The minor engine version is immediately updated.
+- MaintainTime: The minor engine version is updated during the maintenance window. For more information about how to change the maintenance window, see ModifyDBInstanceMaintainTime.
+- SpecifyTime: The minor engine version is updated at the point in time you specify.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vswitch_id_python">
@@ -2273,15 +2539,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="port_csharp">
-<a href="#port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}RDS database connection port.
-{{% /md %}}</dd><dt class="property-"
-            title="">
         <span id="sslstatus_csharp">
 <a href="#sslstatus_csharp" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Status</a>
 </span>
@@ -2311,15 +2568,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="port_go">
-<a href="#port_go" style="color: inherit; text-decoration: inherit;">Port</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}RDS database connection port.
-{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sslstatus_go">
 <a href="#sslstatus_go" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Status</a>
@@ -2351,15 +2599,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="port_nodejs">
-<a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}RDS database connection port.
-{{% /md %}}</dd><dt class="property-"
-            title="">
         <span id="sslstatus_nodejs">
 <a href="#sslstatus_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Status</a>
 </span>
@@ -2389,15 +2628,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="port_python">
-<a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}RDS database connection port.
-{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ssl_status_python">
 <a href="#ssl_status_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>status</a>
@@ -2435,6 +2665,7 @@ Get an existing Instance resource's state with the given name, ID, and optional 
         <span class="nx">client_cert_revocation_list</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">client_crl_enabled</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
         <span class="nx">connection_string</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">connection_string_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">db_instance_ip_array_attribute</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">db_instance_ip_array_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">db_instance_storage_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -2466,8 +2697,12 @@ Get an existing Instance resource's state with the given name, ID, and optional 
         <span class="nx">sql_collector_status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">ssl_action</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">ssl_status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">switch_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">,</span>
+        <span class="nx">target_minor_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">tde_status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">upgrade_db_instance_kernel_version</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">upgrade_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">vswitch_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">whitelist_network_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -2687,6 +2922,14 @@ The following state arguments are supported:
     <dd>{{% md %}}RDS database connection string.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_connectionstringprefix_csharp">
+<a href="#state_connectionstringprefix_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>String<wbr>Prefix</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_dbinstanceiparrayattribute_csharp">
 <a href="#state_dbinstanceiparrayattribute_csharp" style="color: inherit; text-decoration: inherit;">Db<wbr>Instance<wbr>Ip<wbr>Array<wbr>Attribute</a>
 </span>
@@ -2850,8 +3093,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}RDS database connection port.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_privateipaddress_csharp">
 <a href="#state_privateipaddress_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Ip<wbr>Address</a>
@@ -2983,6 +3225,16 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
     <dd>{{% md %}}Status of the SSL feature. `Yes`: SSL is turned on; `No`: SSL is turned off.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_switchtime_csharp">
+<a href="#state_switchtime_csharp" style="color: inherit; text-decoration: inherit;">Switch<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The specific point in time when you want to perform the update. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. It is valid only when `upgrade_db_instance_kernel_version = true`. The time must be in UTC.
+> **NOTE:** This parameter takes effect only when you set the UpgradeTime parameter to SpecifyTime.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_tags_csharp">
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span>
@@ -2994,6 +3246,22 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
 - Value: It can be up to 128 characters in length. It cannot begin with "aliyun", "acs:", "http://", or "https://". It can be a null string.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_targetminorversion_csharp">
+<a href="#state_targetminorversion_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Minor<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The minor engine version to which you want to update the instance. If you do not specify this parameter, the instance is updated to the latest minor engine version. It is valid only when `upgrade_db_instance_kernel_version = true`. You must specify the minor engine version in one of the following formats:
+- PostgreSQL: rds_postgres_<Major engine version>00_<Minor engine version>. Example: rds_postgres_1200_20200830.
+- MySQL: <RDS edition>_<Minor engine version>. Examples: rds_20200229, xcluster_20200229, and xcluster80_20200229. The following RDS editions are supported:
+- rds: The instance runs RDS Basic or High-availability Edition.
+- xcluster: The instance runs MySQL 5.7 on RDS Enterprise Edition.
+- xcluster80: The instance runs MySQL 8.0 on RDS Enterprise Edition.
+- SQLServer: <Minor engine version>. Example: 15.0.4073.23.
+> **NOTE:** For more information about minor engine versions, see Release notes of minor AliPG versions, Release notes of minor AliSQL versions, and Release notes of minor engine versions of ApsaraDB RDS for SQL Server.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_tdestatus_csharp">
 <a href="#state_tdestatus_csharp" style="color: inherit; text-decoration: inherit;">Tde<wbr>Status</a>
 </span>
@@ -3001,6 +3269,29 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The TDE(Transparent Data Encryption) status. See more [engine and engineVersion limitation](https://www.alibabacloud.com/help/zh/doc-detail/26256.htm).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_upgradedbinstancekernelversion_csharp">
+<a href="#state_upgradedbinstancekernelversion_csharp" style="color: inherit; text-decoration: inherit;">Upgrade<wbr>Db<wbr>Instance<wbr>Kernel<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether to upgrade a minor version of the kernel. Valid values:
+- true: upgrade
+- false: not to upgrade
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_upgradetime_csharp">
+<a href="#state_upgradetime_csharp" style="color: inherit; text-decoration: inherit;">Upgrade<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The method to update the minor engine version. Default value: Immediate. It is valid only when `upgrade_db_instance_kernel_version = true`. Valid values:
+- Immediate: The minor engine version is immediately updated.
+- MaintainTime: The minor engine version is updated during the maintenance window. For more information about how to change the maintenance window, see ModifyDBInstanceMaintainTime.
+- SpecifyTime: The minor engine version is updated at the point in time you specify.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vswitchid_csharp">
@@ -3158,6 +3449,14 @@ The multiple zone ID can be retrieved by setting `multi` to "true" in the data s
     </dt>
     <dd>{{% md %}}RDS database connection string.
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_connectionstringprefix_go">
+<a href="#state_connectionstringprefix_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>String<wbr>Prefix</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dbinstanceiparrayattribute_go">
 <a href="#state_dbinstanceiparrayattribute_go" style="color: inherit; text-decoration: inherit;">Db<wbr>Instance<wbr>Ip<wbr>Array<wbr>Attribute</a>
@@ -3322,8 +3621,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}RDS database connection port.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_privateipaddress_go">
 <a href="#state_privateipaddress_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Ip<wbr>Address</a>
@@ -3455,6 +3753,16 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
     <dd>{{% md %}}Status of the SSL feature. `Yes`: SSL is turned on; `No`: SSL is turned off.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_switchtime_go">
+<a href="#state_switchtime_go" style="color: inherit; text-decoration: inherit;">Switch<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The specific point in time when you want to perform the update. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. It is valid only when `upgrade_db_instance_kernel_version = true`. The time must be in UTC.
+> **NOTE:** This parameter takes effect only when you set the UpgradeTime parameter to SpecifyTime.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_tags_go">
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span>
@@ -3466,6 +3774,22 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
 - Value: It can be up to 128 characters in length. It cannot begin with "aliyun", "acs:", "http://", or "https://". It can be a null string.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_targetminorversion_go">
+<a href="#state_targetminorversion_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Minor<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The minor engine version to which you want to update the instance. If you do not specify this parameter, the instance is updated to the latest minor engine version. It is valid only when `upgrade_db_instance_kernel_version = true`. You must specify the minor engine version in one of the following formats:
+- PostgreSQL: rds_postgres_<Major engine version>00_<Minor engine version>. Example: rds_postgres_1200_20200830.
+- MySQL: <RDS edition>_<Minor engine version>. Examples: rds_20200229, xcluster_20200229, and xcluster80_20200229. The following RDS editions are supported:
+- rds: The instance runs RDS Basic or High-availability Edition.
+- xcluster: The instance runs MySQL 5.7 on RDS Enterprise Edition.
+- xcluster80: The instance runs MySQL 8.0 on RDS Enterprise Edition.
+- SQLServer: <Minor engine version>. Example: 15.0.4073.23.
+> **NOTE:** For more information about minor engine versions, see Release notes of minor AliPG versions, Release notes of minor AliSQL versions, and Release notes of minor engine versions of ApsaraDB RDS for SQL Server.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_tdestatus_go">
 <a href="#state_tdestatus_go" style="color: inherit; text-decoration: inherit;">Tde<wbr>Status</a>
 </span>
@@ -3473,6 +3797,29 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The TDE(Transparent Data Encryption) status. See more [engine and engineVersion limitation](https://www.alibabacloud.com/help/zh/doc-detail/26256.htm).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_upgradedbinstancekernelversion_go">
+<a href="#state_upgradedbinstancekernelversion_go" style="color: inherit; text-decoration: inherit;">Upgrade<wbr>Db<wbr>Instance<wbr>Kernel<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether to upgrade a minor version of the kernel. Valid values:
+- true: upgrade
+- false: not to upgrade
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_upgradetime_go">
+<a href="#state_upgradetime_go" style="color: inherit; text-decoration: inherit;">Upgrade<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The method to update the minor engine version. Default value: Immediate. It is valid only when `upgrade_db_instance_kernel_version = true`. Valid values:
+- Immediate: The minor engine version is immediately updated.
+- MaintainTime: The minor engine version is updated during the maintenance window. For more information about how to change the maintenance window, see ModifyDBInstanceMaintainTime.
+- SpecifyTime: The minor engine version is updated at the point in time you specify.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vswitchid_go">
@@ -3630,6 +3977,14 @@ The multiple zone ID can be retrieved by setting `multi` to "true" in the data s
     </dt>
     <dd>{{% md %}}RDS database connection string.
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_connectionstringprefix_nodejs">
+<a href="#state_connectionstringprefix_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>String<wbr>Prefix</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dbinstanceiparrayattribute_nodejs">
 <a href="#state_dbinstanceiparrayattribute_nodejs" style="color: inherit; text-decoration: inherit;">db<wbr>Instance<wbr>Ip<wbr>Array<wbr>Attribute</a>
@@ -3794,8 +4149,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}RDS database connection port.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_privateipaddress_nodejs">
 <a href="#state_privateipaddress_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Ip<wbr>Address</a>
@@ -3927,6 +4281,16 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
     <dd>{{% md %}}Status of the SSL feature. `Yes`: SSL is turned on; `No`: SSL is turned off.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_switchtime_nodejs">
+<a href="#state_switchtime_nodejs" style="color: inherit; text-decoration: inherit;">switch<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The specific point in time when you want to perform the update. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. It is valid only when `upgrade_db_instance_kernel_version = true`. The time must be in UTC.
+> **NOTE:** This parameter takes effect only when you set the UpgradeTime parameter to SpecifyTime.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_tags_nodejs">
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
@@ -3938,6 +4302,22 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
 - Value: It can be up to 128 characters in length. It cannot begin with "aliyun", "acs:", "http://", or "https://". It can be a null string.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_targetminorversion_nodejs">
+<a href="#state_targetminorversion_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Minor<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The minor engine version to which you want to update the instance. If you do not specify this parameter, the instance is updated to the latest minor engine version. It is valid only when `upgrade_db_instance_kernel_version = true`. You must specify the minor engine version in one of the following formats:
+- PostgreSQL: rds_postgres_<Major engine version>00_<Minor engine version>. Example: rds_postgres_1200_20200830.
+- MySQL: <RDS edition>_<Minor engine version>. Examples: rds_20200229, xcluster_20200229, and xcluster80_20200229. The following RDS editions are supported:
+- rds: The instance runs RDS Basic or High-availability Edition.
+- xcluster: The instance runs MySQL 5.7 on RDS Enterprise Edition.
+- xcluster80: The instance runs MySQL 8.0 on RDS Enterprise Edition.
+- SQLServer: <Minor engine version>. Example: 15.0.4073.23.
+> **NOTE:** For more information about minor engine versions, see Release notes of minor AliPG versions, Release notes of minor AliSQL versions, and Release notes of minor engine versions of ApsaraDB RDS for SQL Server.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_tdestatus_nodejs">
 <a href="#state_tdestatus_nodejs" style="color: inherit; text-decoration: inherit;">tde<wbr>Status</a>
 </span>
@@ -3945,6 +4325,29 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The TDE(Transparent Data Encryption) status. See more [engine and engineVersion limitation](https://www.alibabacloud.com/help/zh/doc-detail/26256.htm).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_upgradedbinstancekernelversion_nodejs">
+<a href="#state_upgradedbinstancekernelversion_nodejs" style="color: inherit; text-decoration: inherit;">upgrade<wbr>Db<wbr>Instance<wbr>Kernel<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether to upgrade a minor version of the kernel. Valid values:
+- true: upgrade
+- false: not to upgrade
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_upgradetime_nodejs">
+<a href="#state_upgradetime_nodejs" style="color: inherit; text-decoration: inherit;">upgrade<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The method to update the minor engine version. Default value: Immediate. It is valid only when `upgrade_db_instance_kernel_version = true`. Valid values:
+- Immediate: The minor engine version is immediately updated.
+- MaintainTime: The minor engine version is updated during the maintenance window. For more information about how to change the maintenance window, see ModifyDBInstanceMaintainTime.
+- SpecifyTime: The minor engine version is updated at the point in time you specify.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vswitchid_nodejs">
@@ -4102,6 +4505,14 @@ The multiple zone ID can be retrieved by setting `multi` to "true" in the data s
     </dt>
     <dd>{{% md %}}RDS database connection string.
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_connection_string_prefix_python">
+<a href="#state_connection_string_prefix_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>string_<wbr>prefix</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_db_instance_ip_array_attribute_python">
 <a href="#state_db_instance_ip_array_attribute_python" style="color: inherit; text-decoration: inherit;">db_<wbr>instance_<wbr>ip_<wbr>array_<wbr>attribute</a>
@@ -4266,8 +4677,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}RDS database connection port.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_private_ip_address_python">
 <a href="#state_private_ip_address_python" style="color: inherit; text-decoration: inherit;">private_<wbr>ip_<wbr>address</a>
@@ -4399,6 +4809,16 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
     <dd>{{% md %}}Status of the SSL feature. `Yes`: SSL is turned on; `No`: SSL is turned off.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_switch_time_python">
+<a href="#state_switch_time_python" style="color: inherit; text-decoration: inherit;">switch_<wbr>time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The specific point in time when you want to perform the update. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. It is valid only when `upgrade_db_instance_kernel_version = true`. The time must be in UTC.
+> **NOTE:** This parameter takes effect only when you set the UpgradeTime parameter to SpecifyTime.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_tags_python">
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
@@ -4410,6 +4830,22 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
 - Value: It can be up to 128 characters in length. It cannot begin with "aliyun", "acs:", "http://", or "https://". It can be a null string.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_target_minor_version_python">
+<a href="#state_target_minor_version_python" style="color: inherit; text-decoration: inherit;">target_<wbr>minor_<wbr>version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The minor engine version to which you want to update the instance. If you do not specify this parameter, the instance is updated to the latest minor engine version. It is valid only when `upgrade_db_instance_kernel_version = true`. You must specify the minor engine version in one of the following formats:
+- PostgreSQL: rds_postgres_<Major engine version>00_<Minor engine version>. Example: rds_postgres_1200_20200830.
+- MySQL: <RDS edition>_<Minor engine version>. Examples: rds_20200229, xcluster_20200229, and xcluster80_20200229. The following RDS editions are supported:
+- rds: The instance runs RDS Basic or High-availability Edition.
+- xcluster: The instance runs MySQL 5.7 on RDS Enterprise Edition.
+- xcluster80: The instance runs MySQL 8.0 on RDS Enterprise Edition.
+- SQLServer: <Minor engine version>. Example: 15.0.4073.23.
+> **NOTE:** For more information about minor engine versions, see Release notes of minor AliPG versions, Release notes of minor AliSQL versions, and Release notes of minor engine versions of ApsaraDB RDS for SQL Server.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_tde_status_python">
 <a href="#state_tde_status_python" style="color: inherit; text-decoration: inherit;">tde_<wbr>status</a>
 </span>
@@ -4417,6 +4853,29 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The TDE(Transparent Data Encryption) status. See more [engine and engineVersion limitation](https://www.alibabacloud.com/help/zh/doc-detail/26256.htm).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_upgrade_db_instance_kernel_version_python">
+<a href="#state_upgrade_db_instance_kernel_version_python" style="color: inherit; text-decoration: inherit;">upgrade_<wbr>db_<wbr>instance_<wbr>kernel_<wbr>version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether to upgrade a minor version of the kernel. Valid values:
+- true: upgrade
+- false: not to upgrade
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_upgrade_time_python">
+<a href="#state_upgrade_time_python" style="color: inherit; text-decoration: inherit;">upgrade_<wbr>time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The method to update the minor engine version. Default value: Immediate. It is valid only when `upgrade_db_instance_kernel_version = true`. Valid values:
+- Immediate: The minor engine version is immediately updated.
+- MaintainTime: The minor engine version is updated during the maintenance window. For more information about how to change the maintenance window, see ModifyDBInstanceMaintainTime.
+- SpecifyTime: The minor engine version is updated at the point in time you specify.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vswitch_id_python">
