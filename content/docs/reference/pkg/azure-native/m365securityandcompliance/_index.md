@@ -48,6 +48,6 @@ Explore the resources and functions of the azure-native.m365securityandcomplianc
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>1.16.0</dd>
+	<dd>1.18.0</dd>
 </dl>
 

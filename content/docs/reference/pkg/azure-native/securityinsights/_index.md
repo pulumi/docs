@@ -17,6 +17,7 @@ Explore the resources and functions of the azure-native.securityinsights module.
     <li><a href="action" title="Action"><span class="symbol resource"></span>Action</a></li>
     <li><a href="activitycustomentityquery" title="ActivityCustomEntityQuery"><span class="symbol resource"></span>ActivityCustomEntityQuery</a></li>
     <li><a href="alertrule" title="AlertRule"><span class="symbol resource"></span>AlertRule</a></li>
+    <li><a href="anomalies" title="Anomalies"><span class="symbol resource"></span>Anomalies</a></li>
     <li><a href="automationrule" title="AutomationRule"><span class="symbol resource"></span>AutomationRule</a></li>
     <li><a href="awscloudtraildataconnector" title="AwsCloudTrailDataConnector"><span class="symbol resource"></span>AwsCloudTrailDataConnector</a></li>
     <li><a href="bookmark" title="Bookmark"><span class="symbol resource"></span>Bookmark</a></li>
@@ -53,6 +54,7 @@ Explore the resources and functions of the azure-native.securityinsights module.
     <li><a href="getaction" title="GetAction"><span class="symbol function"></span>GetAction</a></li>
     <li><a href="getactivitycustomentityquery" title="GetActivityCustomEntityQuery"><span class="symbol function"></span>GetActivityCustomEntityQuery</a></li>
     <li><a href="getalertrule" title="GetAlertRule"><span class="symbol function"></span>GetAlertRule</a></li>
+    <li><a href="getanomalies" title="GetAnomalies"><span class="symbol function"></span>GetAnomalies</a></li>
     <li><a href="getautomationrule" title="GetAutomationRule"><span class="symbol function"></span>GetAutomationRule</a></li>
     <li><a href="getawscloudtraildataconnector" title="GetAwsCloudTrailDataConnector"><span class="symbol function"></span>GetAwsCloudTrailDataConnector</a></li>
     <li><a href="getbookmark" title="GetBookmark"><span class="symbol function"></span>GetBookmark</a></li>
@@ -91,6 +93,6 @@ Explore the resources and functions of the azure-native.securityinsights module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>1.16.0</dd>
+	<dd>1.18.0</dd>
 </dl>
 

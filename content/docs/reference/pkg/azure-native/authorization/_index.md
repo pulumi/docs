@@ -22,6 +22,7 @@ Explore the resources and functions of the azure-native.authorization module.
     <li><a href="policyexemption" title="PolicyExemption"><span class="symbol resource"></span>PolicyExemption</a></li>
     <li><a href="policysetdefinition" title="PolicySetDefinition"><span class="symbol resource"></span>PolicySetDefinition</a></li>
     <li><a href="policysetdefinitionatmanagementgroup" title="PolicySetDefinitionAtManagementGroup"><span class="symbol resource"></span>PolicySetDefinitionAtManagementGroup</a></li>
+    <li><a href="resourcemanagementprivatelink" title="ResourceManagementPrivateLink"><span class="symbol resource"></span>ResourceManagementPrivateLink</a></li>
     <li><a href="roleassignment" title="RoleAssignment"><span class="symbol resource"></span>RoleAssignment</a></li>
     <li><a href="roledefinition" title="RoleDefinition"><span class="symbol resource"></span>RoleDefinition</a></li>
     <li><a href="rolemanagementpolicyassignment" title="RoleManagementPolicyAssignment"><span class="symbol resource"></span>RoleManagementPolicyAssignment</a></li>
@@ -42,6 +43,7 @@ Explore the resources and functions of the azure-native.authorization module.
     <li><a href="getpolicyexemption" title="GetPolicyExemption"><span class="symbol function"></span>GetPolicyExemption</a></li>
     <li><a href="getpolicysetdefinition" title="GetPolicySetDefinition"><span class="symbol function"></span>GetPolicySetDefinition</a></li>
     <li><a href="getpolicysetdefinitionatmanagementgroup" title="GetPolicySetDefinitionAtManagementGroup"><span class="symbol function"></span>GetPolicySetDefinitionAtManagementGroup</a></li>
+    <li><a href="getresourcemanagementprivatelink" title="GetResourceManagementPrivateLink"><span class="symbol function"></span>GetResourceManagementPrivateLink</a></li>
     <li><a href="getroleassignment" title="GetRoleAssignment"><span class="symbol function"></span>GetRoleAssignment</a></li>
     <li><a href="getroledefinition" title="GetRoleDefinition"><span class="symbol function"></span>GetRoleDefinition</a></li>
     <li><a href="getrolemanagementpolicyassignment" title="GetRoleManagementPolicyAssignment"><span class="symbol function"></span>GetRoleManagementPolicyAssignment</a></li>
@@ -54,6 +56,6 @@ Explore the resources and functions of the azure-native.authorization module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>1.16.0</dd>
+	<dd>1.18.0</dd>
 </dl>
 
