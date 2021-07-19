@@ -199,12 +199,6 @@ get_started:
       text: |
         I've been playing around with Pulumi a bit and I have to say this is really quite well done. The documentation is very polished and all tutorials I tried worked exactly copy paste out of the box.
 
-    - username: rawkode
-      avatar: https://pbs.twimg.com/profile_images/1353335680043249668/pl0F8NOm_400x400.jpg
-      link: https://twitter.com/rawkode/status/1368151631922073600
-      text: |
-        Pulumi and Helm work like toast and cheese, great together 😀
-
     - username: TorstenVolk
       avatar: https://pbs.twimg.com/profile_images/1575782906/110930-ENMA-115240-web_400x400.jpg
       link: https://twitter.com/TorstenVolk/status/1381716012131876869
