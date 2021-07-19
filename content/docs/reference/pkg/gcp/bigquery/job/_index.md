@@ -2468,6 +2468,16 @@ Possible values are `WRITE_TRUNCATE`, `WRITE_APPEND`, and `WRITE_EMPTY`.
     </dt>
     <dd>{{% md %}}Describes the Cloud KMS encryption key that will be used to protect destination BigQuery table.
 The BigQuery Service Account associated with your project requires access to this encryption key.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="kmskeyversion_csharp">
+<a href="#kmskeyversion_csharp" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}-
+Describes the Cloud KMS encryption key version used to protect destination BigQuery table.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2482,6 +2492,16 @@ The BigQuery Service Account associated with your project requires access to thi
     </dt>
     <dd>{{% md %}}Describes the Cloud KMS encryption key that will be used to protect destination BigQuery table.
 The BigQuery Service Account associated with your project requires access to this encryption key.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="kmskeyversion_go">
+<a href="#kmskeyversion_go" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}-
+Describes the Cloud KMS encryption key version used to protect destination BigQuery table.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2496,6 +2516,16 @@ The BigQuery Service Account associated with your project requires access to thi
     </dt>
     <dd>{{% md %}}Describes the Cloud KMS encryption key that will be used to protect destination BigQuery table.
 The BigQuery Service Account associated with your project requires access to this encryption key.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="kmskeyversion_nodejs">
+<a href="#kmskeyversion_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}-
+Describes the Cloud KMS encryption key version used to protect destination BigQuery table.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2510,6 +2540,16 @@ The BigQuery Service Account associated with your project requires access to thi
     </dt>
     <dd>{{% md %}}Describes the Cloud KMS encryption key that will be used to protect destination BigQuery table.
 The BigQuery Service Account associated with your project requires access to this encryption key.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="kms_key_version_python">
+<a href="#kms_key_version_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}-
+Describes the Cloud KMS encryption key version used to protect destination BigQuery table.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -4294,6 +4334,16 @@ Possible values are `WRITE_TRUNCATE`, `WRITE_APPEND`, and `WRITE_EMPTY`.
     </dt>
     <dd>{{% md %}}Describes the Cloud KMS encryption key that will be used to protect destination BigQuery table.
 The BigQuery Service Account associated with your project requires access to this encryption key.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="kmskeyversion_csharp">
+<a href="#kmskeyversion_csharp" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}-
+Describes the Cloud KMS encryption key version used to protect destination BigQuery table.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -4308,6 +4358,16 @@ The BigQuery Service Account associated with your project requires access to thi
     </dt>
     <dd>{{% md %}}Describes the Cloud KMS encryption key that will be used to protect destination BigQuery table.
 The BigQuery Service Account associated with your project requires access to this encryption key.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="kmskeyversion_go">
+<a href="#kmskeyversion_go" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}-
+Describes the Cloud KMS encryption key version used to protect destination BigQuery table.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -4322,6 +4382,16 @@ The BigQuery Service Account associated with your project requires access to thi
     </dt>
     <dd>{{% md %}}Describes the Cloud KMS encryption key that will be used to protect destination BigQuery table.
 The BigQuery Service Account associated with your project requires access to this encryption key.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="kmskeyversion_nodejs">
+<a href="#kmskeyversion_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}-
+Describes the Cloud KMS encryption key version used to protect destination BigQuery table.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -4336,6 +4406,16 @@ The BigQuery Service Account associated with your project requires access to thi
     </dt>
     <dd>{{% md %}}Describes the Cloud KMS encryption key that will be used to protect destination BigQuery table.
 The BigQuery Service Account associated with your project requires access to this encryption key.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="kms_key_version_python">
+<a href="#kms_key_version_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}-
+Describes the Cloud KMS encryption key version used to protect destination BigQuery table.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -5472,6 +5552,16 @@ Possible values are `WRITE_TRUNCATE`, `WRITE_APPEND`, and `WRITE_EMPTY`.
     </dt>
     <dd>{{% md %}}Describes the Cloud KMS encryption key that will be used to protect destination BigQuery table.
 The BigQuery Service Account associated with your project requires access to this encryption key.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="kmskeyversion_csharp">
+<a href="#kmskeyversion_csharp" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}-
+Describes the Cloud KMS encryption key version used to protect destination BigQuery table.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -5486,6 +5576,16 @@ The BigQuery Service Account associated with your project requires access to thi
     </dt>
     <dd>{{% md %}}Describes the Cloud KMS encryption key that will be used to protect destination BigQuery table.
 The BigQuery Service Account associated with your project requires access to this encryption key.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="kmskeyversion_go">
+<a href="#kmskeyversion_go" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}-
+Describes the Cloud KMS encryption key version used to protect destination BigQuery table.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -5500,6 +5600,16 @@ The BigQuery Service Account associated with your project requires access to thi
     </dt>
     <dd>{{% md %}}Describes the Cloud KMS encryption key that will be used to protect destination BigQuery table.
 The BigQuery Service Account associated with your project requires access to this encryption key.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="kmskeyversion_nodejs">
+<a href="#kmskeyversion_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}-
+Describes the Cloud KMS encryption key version used to protect destination BigQuery table.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -5514,6 +5624,16 @@ The BigQuery Service Account associated with your project requires access to thi
     </dt>
     <dd>{{% md %}}Describes the Cloud KMS encryption key that will be used to protect destination BigQuery table.
 The BigQuery Service Account associated with your project requires access to this encryption key.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="kms_key_version_python">
+<a href="#kms_key_version_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}-
+Describes the Cloud KMS encryption key version used to protect destination BigQuery table.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

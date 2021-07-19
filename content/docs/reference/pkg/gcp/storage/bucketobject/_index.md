@@ -139,11 +139,13 @@ const picture = new gcp.storage.BucketObject("picture", {
                  <span class="nx">content_language</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                  <span class="nx">content_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                  <span class="nx">detect_md5hash</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                 <span class="nx">event_based_hold</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
                  <span class="nx">kms_key_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                  <span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
                  <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                  <span class="nx">source</span><span class="p">:</span> <span class="nx">Optional[Union[pulumi.Asset, pulumi.Archive]]</span> = None<span class="p">,</span>
-                 <span class="nx">storage_class</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+                 <span class="nx">storage_class</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                 <span class="nx">temporary_hold</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">BucketObject</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                  <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">BucketObjectArgs</a></span><span class="p">,</span>
@@ -345,6 +347,17 @@ directive to specify caching behavior of object data. If omitted and object is a
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="eventbasedhold_csharp">
+<a href="#eventbasedhold_csharp" style="color: inherit; text-decoration: inherit;">Event<wbr>Based<wbr>Hold</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether an object is under event-based hold. Event-based hold is a way to retain objects until an event occurs, which is
+signified by the hold's release (i.e. this value is set to false). After being released (set to false), such objects
+will be subject to bucket-level retention (if any).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="kmskeyname_csharp">
 <a href="#kmskeyname_csharp" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Name</a>
 </span>
@@ -391,6 +404,16 @@ if `content` is not.
     <dd>{{% md %}}The [StorageClass](https://cloud.google.com/storage/docs/storage-classes) of the new bucket object.
 Supported values include: `MULTI_REGIONAL`, `REGIONAL`, `NEARLINE`, `COLDLINE`, `ARCHIVE`. If not provided, this defaults to the bucket's default
 storage class or to a [standard](https://cloud.google.com/storage/docs/storage-classes#standard) class.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="temporaryhold_csharp">
+<a href="#temporaryhold_csharp" style="color: inherit; text-decoration: inherit;">Temporary<wbr>Hold</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether an object is under temporary hold. While this flag is set to true, the object is protected against deletion and
+overwrites.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -469,6 +492,17 @@ directive to specify caching behavior of object data. If omitted and object is a
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="eventbasedhold_go">
+<a href="#eventbasedhold_go" style="color: inherit; text-decoration: inherit;">Event<wbr>Based<wbr>Hold</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether an object is under event-based hold. Event-based hold is a way to retain objects until an event occurs, which is
+signified by the hold's release (i.e. this value is set to false). After being released (set to false), such objects
+will be subject to bucket-level retention (if any).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="kmskeyname_go">
 <a href="#kmskeyname_go" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Name</a>
 </span>
@@ -515,6 +549,16 @@ if `content` is not.
     <dd>{{% md %}}The [StorageClass](https://cloud.google.com/storage/docs/storage-classes) of the new bucket object.
 Supported values include: `MULTI_REGIONAL`, `REGIONAL`, `NEARLINE`, `COLDLINE`, `ARCHIVE`. If not provided, this defaults to the bucket's default
 storage class or to a [standard](https://cloud.google.com/storage/docs/storage-classes#standard) class.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="temporaryhold_go">
+<a href="#temporaryhold_go" style="color: inherit; text-decoration: inherit;">Temporary<wbr>Hold</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether an object is under temporary hold. While this flag is set to true, the object is protected against deletion and
+overwrites.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -593,6 +637,17 @@ directive to specify caching behavior of object data. If omitted and object is a
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="eventbasedhold_nodejs">
+<a href="#eventbasedhold_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Based<wbr>Hold</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether an object is under event-based hold. Event-based hold is a way to retain objects until an event occurs, which is
+signified by the hold's release (i.e. this value is set to false). After being released (set to false), such objects
+will be subject to bucket-level retention (if any).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="kmskeyname_nodejs">
 <a href="#kmskeyname_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Name</a>
 </span>
@@ -639,6 +694,16 @@ if `content` is not.
     <dd>{{% md %}}The [StorageClass](https://cloud.google.com/storage/docs/storage-classes) of the new bucket object.
 Supported values include: `MULTI_REGIONAL`, `REGIONAL`, `NEARLINE`, `COLDLINE`, `ARCHIVE`. If not provided, this defaults to the bucket's default
 storage class or to a [standard](https://cloud.google.com/storage/docs/storage-classes#standard) class.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="temporaryhold_nodejs">
+<a href="#temporaryhold_nodejs" style="color: inherit; text-decoration: inherit;">temporary<wbr>Hold</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether an object is under temporary hold. While this flag is set to true, the object is protected against deletion and
+overwrites.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -717,6 +782,17 @@ directive to specify caching behavior of object data. If omitted and object is a
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="event_based_hold_python">
+<a href="#event_based_hold_python" style="color: inherit; text-decoration: inherit;">event_<wbr>based_<wbr>hold</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether an object is under event-based hold. Event-based hold is a way to retain objects until an event occurs, which is
+signified by the hold's release (i.e. this value is set to false). After being released (set to false), such objects
+will be subject to bucket-level retention (if any).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="kms_key_name_python">
 <a href="#kms_key_name_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>name</a>
 </span>
@@ -763,6 +839,16 @@ if `content` is not.
     <dd>{{% md %}}The [StorageClass](https://cloud.google.com/storage/docs/storage-classes) of the new bucket object.
 Supported values include: `MULTI_REGIONAL`, `REGIONAL`, `NEARLINE`, `COLDLINE`, `ARCHIVE`. If not provided, this defaults to the bucket's default
 storage class or to a [standard](https://cloud.google.com/storage/docs/storage-classes#standard) class.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="temporary_hold_python">
+<a href="#temporary_hold_python" style="color: inherit; text-decoration: inherit;">temporary_<wbr>hold</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether an object is under temporary hold. While this flag is set to true, the object is protected against deletion and
+overwrites.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1030,6 +1116,7 @@ Get an existing BucketObject resource's state with the given name, ID, and optio
         <span class="nx">content_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">crc32c</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">detect_md5hash</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">event_based_hold</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">kms_key_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">md5hash</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">media_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -1038,7 +1125,8 @@ Get an existing BucketObject resource's state with the given name, ID, and optio
         <span class="nx">output_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">source</span><span class="p">:</span> <span class="nx">Optional[Union[pulumi.Asset, pulumi.Archive]]</span> = None<span class="p">,</span>
-        <span class="nx">storage_class</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> BucketObject</code></pre></div>
+        <span class="nx">storage_class</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">temporary_hold</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">) -&gt;</span> BucketObject</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1232,6 +1320,17 @@ directive to specify caching behavior of object data. If omitted and object is a
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_eventbasedhold_csharp">
+<a href="#state_eventbasedhold_csharp" style="color: inherit; text-decoration: inherit;">Event<wbr>Based<wbr>Hold</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether an object is under event-based hold. Event-based hold is a way to retain objects until an event occurs, which is
+signified by the hold's release (i.e. this value is set to false). After being released (set to false), such objects
+will be subject to bucket-level retention (if any).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_kmskeyname_csharp">
 <a href="#state_kmskeyname_csharp" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Name</a>
 </span>
@@ -1315,6 +1414,16 @@ if `content` is not.
     <dd>{{% md %}}The [StorageClass](https://cloud.google.com/storage/docs/storage-classes) of the new bucket object.
 Supported values include: `MULTI_REGIONAL`, `REGIONAL`, `NEARLINE`, `COLDLINE`, `ARCHIVE`. If not provided, this defaults to the bucket's default
 storage class or to a [standard](https://cloud.google.com/storage/docs/storage-classes#standard) class.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_temporaryhold_csharp">
+<a href="#state_temporaryhold_csharp" style="color: inherit; text-decoration: inherit;">Temporary<wbr>Hold</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether an object is under temporary hold. While this flag is set to true, the object is protected against deletion and
+overwrites.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1402,6 +1511,17 @@ directive to specify caching behavior of object data. If omitted and object is a
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_eventbasedhold_go">
+<a href="#state_eventbasedhold_go" style="color: inherit; text-decoration: inherit;">Event<wbr>Based<wbr>Hold</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether an object is under event-based hold. Event-based hold is a way to retain objects until an event occurs, which is
+signified by the hold's release (i.e. this value is set to false). After being released (set to false), such objects
+will be subject to bucket-level retention (if any).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_kmskeyname_go">
 <a href="#state_kmskeyname_go" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Name</a>
 </span>
@@ -1485,6 +1605,16 @@ if `content` is not.
     <dd>{{% md %}}The [StorageClass](https://cloud.google.com/storage/docs/storage-classes) of the new bucket object.
 Supported values include: `MULTI_REGIONAL`, `REGIONAL`, `NEARLINE`, `COLDLINE`, `ARCHIVE`. If not provided, this defaults to the bucket's default
 storage class or to a [standard](https://cloud.google.com/storage/docs/storage-classes#standard) class.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_temporaryhold_go">
+<a href="#state_temporaryhold_go" style="color: inherit; text-decoration: inherit;">Temporary<wbr>Hold</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether an object is under temporary hold. While this flag is set to true, the object is protected against deletion and
+overwrites.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1572,6 +1702,17 @@ directive to specify caching behavior of object data. If omitted and object is a
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_eventbasedhold_nodejs">
+<a href="#state_eventbasedhold_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Based<wbr>Hold</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether an object is under event-based hold. Event-based hold is a way to retain objects until an event occurs, which is
+signified by the hold's release (i.e. this value is set to false). After being released (set to false), such objects
+will be subject to bucket-level retention (if any).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_kmskeyname_nodejs">
 <a href="#state_kmskeyname_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Name</a>
 </span>
@@ -1655,6 +1796,16 @@ if `content` is not.
     <dd>{{% md %}}The [StorageClass](https://cloud.google.com/storage/docs/storage-classes) of the new bucket object.
 Supported values include: `MULTI_REGIONAL`, `REGIONAL`, `NEARLINE`, `COLDLINE`, `ARCHIVE`. If not provided, this defaults to the bucket's default
 storage class or to a [standard](https://cloud.google.com/storage/docs/storage-classes#standard) class.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_temporaryhold_nodejs">
+<a href="#state_temporaryhold_nodejs" style="color: inherit; text-decoration: inherit;">temporary<wbr>Hold</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether an object is under temporary hold. While this flag is set to true, the object is protected against deletion and
+overwrites.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1742,6 +1893,17 @@ directive to specify caching behavior of object data. If omitted and object is a
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_event_based_hold_python">
+<a href="#state_event_based_hold_python" style="color: inherit; text-decoration: inherit;">event_<wbr>based_<wbr>hold</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether an object is under event-based hold. Event-based hold is a way to retain objects until an event occurs, which is
+signified by the hold's release (i.e. this value is set to false). After being released (set to false), such objects
+will be subject to bucket-level retention (if any).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_kms_key_name_python">
 <a href="#state_kms_key_name_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>name</a>
 </span>
@@ -1825,6 +1987,16 @@ if `content` is not.
     <dd>{{% md %}}The [StorageClass](https://cloud.google.com/storage/docs/storage-classes) of the new bucket object.
 Supported values include: `MULTI_REGIONAL`, `REGIONAL`, `NEARLINE`, `COLDLINE`, `ARCHIVE`. If not provided, this defaults to the bucket's default
 storage class or to a [standard](https://cloud.google.com/storage/docs/storage-classes#standard) class.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_temporary_hold_python">
+<a href="#state_temporary_hold_python" style="color: inherit; text-decoration: inherit;">temporary_<wbr>hold</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether an object is under temporary hold. While this flag is set to true, the object is protected against deletion and
+overwrites.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

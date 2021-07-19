@@ -326,6 +326,14 @@ directive to specify caching behavior of object data. If omitted and object is a
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="eventbasedhold_csharp">
+<a href="#eventbasedhold_csharp" style="color: inherit; text-decoration: inherit;">Event<wbr>Based<wbr>Hold</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
 </span>
@@ -404,6 +412,14 @@ directive to specify caching behavior of object data. If omitted and object is a
 Supported values include: `MULTI_REGIONAL`, `REGIONAL`, `NEARLINE`, `COLDLINE`, `ARCHIVE`. If not provided, this defaults to the bucket's default
 storage class or to a [standard](https://cloud.google.com/storage/docs/storage-classes#standard) class.
 {{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="temporaryhold_csharp">
+<a href="#temporaryhold_csharp" style="color: inherit; text-decoration: inherit;">Temporary<wbr>Hold</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="bucket_csharp">
 <a href="#bucket_csharp" style="color: inherit; text-decoration: inherit;">Bucket</a>
@@ -496,6 +512,14 @@ directive to specify caching behavior of object data. If omitted and object is a
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="eventbasedhold_go">
+<a href="#eventbasedhold_go" style="color: inherit; text-decoration: inherit;">Event<wbr>Based<wbr>Hold</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
 </span>
@@ -574,6 +598,14 @@ directive to specify caching behavior of object data. If omitted and object is a
 Supported values include: `MULTI_REGIONAL`, `REGIONAL`, `NEARLINE`, `COLDLINE`, `ARCHIVE`. If not provided, this defaults to the bucket's default
 storage class or to a [standard](https://cloud.google.com/storage/docs/storage-classes#standard) class.
 {{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="temporaryhold_go">
+<a href="#temporaryhold_go" style="color: inherit; text-decoration: inherit;">Temporary<wbr>Hold</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="bucket_go">
 <a href="#bucket_go" style="color: inherit; text-decoration: inherit;">Bucket</a>
@@ -666,6 +698,14 @@ directive to specify caching behavior of object data. If omitted and object is a
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="eventbasedhold_nodejs">
+<a href="#eventbasedhold_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Based<wbr>Hold</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
@@ -744,6 +784,14 @@ directive to specify caching behavior of object data. If omitted and object is a
 Supported values include: `MULTI_REGIONAL`, `REGIONAL`, `NEARLINE`, `COLDLINE`, `ARCHIVE`. If not provided, this defaults to the bucket's default
 storage class or to a [standard](https://cloud.google.com/storage/docs/storage-classes#standard) class.
 {{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="temporaryhold_nodejs">
+<a href="#temporaryhold_nodejs" style="color: inherit; text-decoration: inherit;">temporary<wbr>Hold</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="bucket_nodejs">
 <a href="#bucket_nodejs" style="color: inherit; text-decoration: inherit;">bucket</a>
@@ -836,6 +884,14 @@ directive to specify caching behavior of object data. If omitted and object is a
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="event_based_hold_python">
+<a href="#event_based_hold_python" style="color: inherit; text-decoration: inherit;">event_<wbr>based_<wbr>hold</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
@@ -914,6 +970,14 @@ directive to specify caching behavior of object data. If omitted and object is a
 Supported values include: `MULTI_REGIONAL`, `REGIONAL`, `NEARLINE`, `COLDLINE`, `ARCHIVE`. If not provided, this defaults to the bucket's default
 storage class or to a [standard](https://cloud.google.com/storage/docs/storage-classes#standard) class.
 {{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="temporary_hold_python">
+<a href="#temporary_hold_python" style="color: inherit; text-decoration: inherit;">temporary_<wbr>hold</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="bucket_python">
 <a href="#bucket_python" style="color: inherit; text-decoration: inherit;">bucket</a>

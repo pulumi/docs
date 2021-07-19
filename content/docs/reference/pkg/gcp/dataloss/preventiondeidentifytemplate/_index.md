@@ -52,6 +52,20 @@ class MyStack : Stack
                             {
                                 new Gcp.DataLoss.Inputs.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationInfoTypeArgs
                                 {
+                                    Name = "FIRST_NAME",
+                                },
+                            },
+                            PrimitiveTransformation = new Gcp.DataLoss.Inputs.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationArgs
+                            {
+                                ReplaceWithInfoTypeConfig = true,
+                            },
+                        },
+                        new Gcp.DataLoss.Inputs.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationArgs
+                        {
+                            InfoTypes = 
+                            {
+                                new Gcp.DataLoss.Inputs.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationInfoTypeArgs
+                                {
                                     Name = "PHONE_NUMBER",
                                 },
                                 new Gcp.DataLoss.Inputs.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationInfoTypeArgs
@@ -160,6 +174,16 @@ func main() {
 						&dataloss.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationArgs{
 							InfoTypes: dataloss.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationInfoTypeArray{
 								&dataloss.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationInfoTypeArgs{
+									Name: pulumi.String("FIRST_NAME"),
+								},
+							},
+							PrimitiveTransformation: &dataloss.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationArgs{
+								ReplaceWithInfoTypeConfig: pulumi.Bool(true),
+							},
+						},
+						&dataloss.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationArgs{
+							InfoTypes: dataloss.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationInfoTypeArray{
+								&dataloss.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationInfoTypeArgs{
 									Name: pulumi.String("PHONE_NUMBER"),
 								},
 								&dataloss.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationInfoTypeArgs{
@@ -244,6 +268,14 @@ basic = gcp.dataloss.PreventionDeidentifyTemplate("basic",
         info_type_transformations=gcp.dataloss.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsArgs(
             transformations=[
                 gcp.dataloss.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationArgs(
+                    info_types=[gcp.dataloss.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationInfoTypeArgs(
+                        name="FIRST_NAME",
+                    )],
+                    primitive_transformation=gcp.dataloss.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationArgs(
+                        replace_with_info_type_config=True,
+                    ),
+                ),
+                gcp.dataloss.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationArgs(
                     info_types=[
                         gcp.dataloss.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationInfoTypeArgs(
                             name="PHONE_NUMBER",
@@ -319,6 +351,14 @@ const basic = new gcp.dataloss.PreventionDeidentifyTemplate("basic", {
     deidentifyConfig: {
         infoTypeTransformations: {
             transformations: [
+                {
+                    infoTypes: [{
+                        name: "FIRST_NAME",
+                    }],
+                    primitiveTransformation: {
+                        replaceWithInfoTypeConfig: true,
+                    },
+                },
                 {
                     infoTypes: [
                         {
@@ -1457,6 +1497,15 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Replace each input value with a given value.
 Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="replacewithinfotypeconfig_csharp">
+<a href="#replacewithinfotypeconfig_csharp" style="color: inherit; text-decoration: inherit;">Replace<wbr>With<wbr>Info<wbr>Type<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Replace each matching finding with the name of the info type.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1482,6 +1531,15 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Replace each input value with a given value.
 Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="replacewithinfotypeconfig_go">
+<a href="#replacewithinfotypeconfig_go" style="color: inherit; text-decoration: inherit;">Replace<wbr>With<wbr>Info<wbr>Type<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Replace each matching finding with the name of the info type.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1507,6 +1565,15 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Replace each input value with a given value.
 Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="replacewithinfotypeconfig_nodejs">
+<a href="#replacewithinfotypeconfig_nodejs" style="color: inherit; text-decoration: inherit;">replace<wbr>With<wbr>Info<wbr>Type<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Replace each matching finding with the name of the info type.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1532,6 +1599,15 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Replace each input value with a given value.
 Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="replace_with_info_type_config_python">
+<a href="#replace_with_info_type_config_python" style="color: inherit; text-decoration: inherit;">replace_<wbr>with_<wbr>info_<wbr>type_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Replace each matching finding with the name of the info type.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

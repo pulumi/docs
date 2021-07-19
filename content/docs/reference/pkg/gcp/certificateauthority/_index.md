@@ -12,9 +12,10 @@ Explore the resources and functions of the gcp.certificateauthority module.
 <h2 id="resources">Resources</h2>
 <ul class="api">
     <li><a href="authority" title="Authority"><span class="symbol resource"></span>Authority</a></li>
-    <li><a href="authorityiambinding" title="AuthorityIamBinding"><span class="symbol resource"></span>AuthorityIamBinding</a></li>
-    <li><a href="authorityiammember" title="AuthorityIamMember"><span class="symbol resource"></span>AuthorityIamMember</a></li>
-    <li><a href="authorityiampolicy" title="AuthorityIamPolicy"><span class="symbol resource"></span>AuthorityIamPolicy</a></li>
+    <li><a href="capool" title="CaPool"><span class="symbol resource"></span>CaPool</a></li>
+    <li><a href="capooliambinding" title="CaPoolIamBinding"><span class="symbol resource"></span>CaPoolIamBinding</a></li>
+    <li><a href="capooliammember" title="CaPoolIamMember"><span class="symbol resource"></span>CaPoolIamMember</a></li>
+    <li><a href="capooliampolicy" title="CaPoolIamPolicy"><span class="symbol resource"></span>CaPoolIamPolicy</a></li>
     <li><a href="certificate" title="Certificate"><span class="symbol resource"></span>Certificate</a></li>
 </ul>
 
@@ -27,6 +28,6 @@ Explore the resources and functions of the gcp.certificateauthority module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>5.11.0</dd>
+	<dd>5.12.0</dd>
 </dl>
 
