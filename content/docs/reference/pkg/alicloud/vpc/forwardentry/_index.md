@@ -55,18 +55,19 @@ class MyStack : Stack
             VpcId = defaultNetwork.Id,
             Specification = "Small",
         });
-        var defaultEip = new AliCloud.Ecs.Eip("defaultEip", new AliCloud.Ecs.EipArgs
+        var defaultEipAddress = new AliCloud.Ecs.EipAddress("defaultEipAddress", new AliCloud.Ecs.EipAddressArgs
         {
+            AddressName = name,
         });
         var defaultEipAssociation = new AliCloud.Ecs.EipAssociation("defaultEipAssociation", new AliCloud.Ecs.EipAssociationArgs
         {
-            AllocationId = defaultEip.Id,
+            AllocationId = defaultEipAddress.Id,
             InstanceId = defaultNatGateway.Id,
         });
         var defaultForwardEntry = new AliCloud.Vpc.ForwardEntry("defaultForwardEntry", new AliCloud.Vpc.ForwardEntryArgs
         {
             ForwardTableId = defaultNatGateway.ForwardTableIds,
-            ExternalIp = defaultEip.IpAddress,
+            ExternalIp = defaultEipAddress.IpAddress,
             ExternalPort = "80",
             IpProtocol = "tcp",
             InternalIp = "172.16.0.3",
@@ -131,12 +132,14 @@ func main() {
 		if err != nil {
 			return err
 		}
-		defaultEip, err := ecs.NewEip(ctx, "defaultEip", nil)
+		defaultEipAddress, err := ecs.NewEipAddress(ctx, "defaultEipAddress", &ecs.EipAddressArgs{
+			AddressName: pulumi.String(name),
+		})
 		if err != nil {
 			return err
 		}
 		_, err = ecs.NewEipAssociation(ctx, "defaultEipAssociation", &ecs.EipAssociationArgs{
-			AllocationId: defaultEip.ID(),
+			AllocationId: defaultEipAddress.ID(),
 			InstanceId:   defaultNatGateway.ID(),
 		})
 		if err != nil {
@@ -144,7 +147,7 @@ func main() {
 		}
 		_, err = vpc.NewForwardEntry(ctx, "defaultForwardEntry", &vpc.ForwardEntryArgs{
 			ForwardTableId: defaultNatGateway.ForwardTableIds,
-			ExternalIp:     defaultEip.IpAddress,
+			ExternalIp:     defaultEipAddress.IpAddress,
 			ExternalPort:   pulumi.String("80"),
 			IpProtocol:     pulumi.String("tcp"),
 			InternalIp:     pulumi.String("172.16.0.3"),
@@ -184,13 +187,13 @@ default_switch = alicloud.vpc.Switch("defaultSwitch",
 default_nat_gateway = alicloud.vpc.NatGateway("defaultNatGateway",
     vpc_id=default_network.id,
     specification="Small")
-default_eip = alicloud.ecs.Eip("defaultEip")
+default_eip_address = alicloud.ecs.EipAddress("defaultEipAddress", address_name=name)
 default_eip_association = alicloud.ecs.EipAssociation("defaultEipAssociation",
-    allocation_id=default_eip.id,
+    allocation_id=default_eip_address.id,
     instance_id=default_nat_gateway.id)
 default_forward_entry = alicloud.vpc.ForwardEntry("defaultForwardEntry",
     forward_table_id=default_nat_gateway.forward_table_ids,
-    external_ip=default_eip.ip_address,
+    external_ip=default_eip_address.ip_address,
     external_port="80",
     ip_protocol="tcp",
     internal_ip="172.16.0.3",
@@ -227,14 +230,14 @@ const defaultNatGateway = new alicloud.vpc.NatGateway("defaultNatGateway", {
     vpcId: defaultNetwork.id,
     specification: "Small",
 });
-const defaultEip = new alicloud.ecs.Eip("defaultEip", {});
+const defaultEipAddress = new alicloud.ecs.EipAddress("defaultEipAddress", {addressName: name});
 const defaultEipAssociation = new alicloud.ecs.EipAssociation("defaultEipAssociation", {
-    allocationId: defaultEip.id,
+    allocationId: defaultEipAddress.id,
     instanceId: defaultNatGateway.id,
 });
 const defaultForwardEntry = new alicloud.vpc.ForwardEntry("defaultForwardEntry", {
     forwardTableId: defaultNatGateway.forwardTableIds,
-    externalIp: defaultEip.ipAddress,
+    externalIp: defaultEipAddress.ipAddress,
     externalPort: "80",
     ipProtocol: "tcp",
     internalIp: "172.16.0.3",

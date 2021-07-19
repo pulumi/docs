@@ -566,7 +566,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}(Available in v1.124.5+) The Alibaba Cloud account name of the member account.
+    <dd>{{% md %}}(Available in v1.125.0+) The Alibaba Cloud account name of the member account.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="displayname_csharp">
@@ -678,7 +678,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}(Available in v1.124.5+) The Alibaba Cloud account name of the member account.
+    <dd>{{% md %}}(Available in v1.125.0+) The Alibaba Cloud account name of the member account.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="displayname_go">
@@ -790,7 +790,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}(Available in v1.124.5+) The Alibaba Cloud account name of the member account.
+    <dd>{{% md %}}(Available in v1.125.0+) The Alibaba Cloud account name of the member account.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="displayname_nodejs">
@@ -902,7 +902,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}(Available in v1.124.5+) The Alibaba Cloud account name of the member account.
+    <dd>{{% md %}}(Available in v1.125.0+) The Alibaba Cloud account name of the member account.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="display_name_python">

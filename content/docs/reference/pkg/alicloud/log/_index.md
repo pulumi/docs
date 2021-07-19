@@ -26,7 +26,9 @@ Explore the resources and functions of the alicloud.log module.
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
+    <li><a href="getprojects" title="GetProjects"><span class="symbol function"></span>GetProjects</a></li>
     <li><a href="getservice" title="GetService"><span class="symbol function"></span>GetService</a></li>
+    <li><a href="getstores" title="GetStores"><span class="symbol function"></span>GetStores</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -38,6 +40,6 @@ Explore the resources and functions of the alicloud.log module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>3.3.0</dd>
+	<dd>3.4.0</dd>
 </dl>
 

@@ -74,9 +74,9 @@ class MyStack : Stack
                 deBandwidthPackageAttachment,
             },
         });
-        var exampleEip = new AliCloud.Ecs.Eip("exampleEip", new AliCloud.Ecs.EipArgs
+        var exampleEipAddress = new AliCloud.Ecs.EipAddress("exampleEipAddress", new AliCloud.Ecs.EipAddressArgs
         {
-            Bandwidth = 10,
+            Bandwidth = "10",
             InternetChargeType = "PayByBandwidth",
         });
         var exampleEndpointGroup = new AliCloud.Ga.EndpointGroup("exampleEndpointGroup", new AliCloud.Ga.EndpointGroupArgs
@@ -86,7 +86,7 @@ class MyStack : Stack
             {
                 new AliCloud.Ga.Inputs.EndpointGroupEndpointConfigurationArgs
                 {
-                    Endpoint = exampleEip.IpAddress,
+                    Endpoint = exampleEipAddress.IpAddress,
                     Type = "PublicIp",
                     Weight = 20,
                 },
@@ -156,8 +156,8 @@ func main() {
 		if err != nil {
 			return err
 		}
-		exampleEip, err := ecs.NewEip(ctx, "exampleEip", &ecs.EipArgs{
-			Bandwidth:          pulumi.Int(10),
+		exampleEipAddress, err := ecs.NewEipAddress(ctx, "exampleEipAddress", &ecs.EipAddressArgs{
+			Bandwidth:          pulumi.String("10"),
 			InternetChargeType: pulumi.String("PayByBandwidth"),
 		})
 		if err != nil {
@@ -167,7 +167,7 @@ func main() {
 			AcceleratorId: exampleAccelerator.ID(),
 			EndpointConfigurations: ga.EndpointGroupEndpointConfigurationArray{
 				&ga.EndpointGroupEndpointConfigurationArgs{
-					Endpoint: exampleEip.IpAddress,
+					Endpoint: exampleEipAddress.IpAddress,
 					Type:     pulumi.String("PublicIp"),
 					Weight:   pulumi.Int(20),
 				},
@@ -214,13 +214,13 @@ example_listener = alicloud.ga.Listener("exampleListener",
         to_port=70,
     )],
     opts=pulumi.ResourceOptions(depends_on=[de_bandwidth_package_attachment]))
-example_eip = alicloud.ecs.Eip("exampleEip",
-    bandwidth=10,
+example_eip_address = alicloud.ecs.EipAddress("exampleEipAddress",
+    bandwidth="10",
     internet_charge_type="PayByBandwidth")
 example_endpoint_group = alicloud.ga.EndpointGroup("exampleEndpointGroup",
     accelerator_id=example_accelerator.id,
     endpoint_configurations=[alicloud.ga.EndpointGroupEndpointConfigurationArgs(
-        endpoint=example_eip.ip_address,
+        endpoint=example_eip_address.ip_address,
         type="PublicIp",
         weight=20,
     )],
@@ -265,14 +265,14 @@ const exampleListener = new alicloud.ga.Listener("exampleListener", {
 }, {
     dependsOn: [deBandwidthPackageAttachment],
 });
-const exampleEip = new alicloud.ecs.Eip("exampleEip", {
+const exampleEipAddress = new alicloud.ecs.EipAddress("exampleEipAddress", {
     bandwidth: "10",
     internetChargeType: "PayByBandwidth",
 });
 const exampleEndpointGroup = new alicloud.ga.EndpointGroup("exampleEndpointGroup", {
     acceleratorId: exampleAccelerator.id,
     endpointConfigurations: [{
-        endpoint: exampleEip.ipAddress,
+        endpoint: exampleEipAddress.ipAddress,
         type: "PublicIp",
         weight: "20",
     }],

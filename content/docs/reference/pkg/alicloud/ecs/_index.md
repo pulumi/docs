@@ -28,6 +28,7 @@ Explore the resources and functions of the alicloud.ecs module.
     <li><a href="ecsnetworkinterfaceattachment" title="EcsNetworkInterfaceAttachment"><span class="symbol resource"></span>EcsNetworkInterfaceAttachment</a></li>
     <li><a href="ecssnapshot" title="EcsSnapshot"><span class="symbol resource"></span>EcsSnapshot</a></li>
     <li><a href="eip" title="Eip"><span class="symbol resource"></span>Eip</a></li>
+    <li><a href="eipaddress" title="EipAddress"><span class="symbol resource"></span>EipAddress</a></li>
     <li><a href="eipassociation" title="EipAssociation"><span class="symbol resource"></span>EipAssociation</a></li>
     <li><a href="hpccluster" title="HpcCluster"><span class="symbol resource"></span>HpcCluster</a></li>
     <li><a href="image" title="Image"><span class="symbol resource"></span>Image</a></li>
@@ -57,6 +58,7 @@ Explore the resources and functions of the alicloud.ecs module.
     <li><a href="getecslaunchtemplates" title="GetEcsLaunchTemplates"><span class="symbol function"></span>GetEcsLaunchTemplates</a></li>
     <li><a href="getecsnetworkinterfaces" title="GetEcsNetworkInterfaces"><span class="symbol function"></span>GetEcsNetworkInterfaces</a></li>
     <li><a href="getecssnapshots" title="GetEcsSnapshots"><span class="symbol function"></span>GetEcsSnapshots</a></li>
+    <li><a href="geteipaddresses" title="GetEipAddresses"><span class="symbol function"></span>GetEipAddresses</a></li>
     <li><a href="geteips" title="GetEips"><span class="symbol function"></span>GetEips</a></li>
     <li><a href="gethpcclusters" title="GetHpcClusters"><span class="symbol function"></span>GetHpcClusters</a></li>
     <li><a href="getimages" title="GetImages"><span class="symbol function"></span>GetImages</a></li>
@@ -79,6 +81,6 @@ Explore the resources and functions of the alicloud.ecs module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>3.3.0</dd>
+	<dd>3.4.0</dd>
 </dl>
 
