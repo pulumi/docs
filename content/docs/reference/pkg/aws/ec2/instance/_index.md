@@ -19,6 +19,185 @@ Provides an EC2 instance resource. This allows instances to be created, updated,
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
+### Basic Example Using AMI Lookup
+
+
+{{< example csharp >}}
+
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var ubuntu = Output.Create(Aws.Ec2.GetAmi.InvokeAsync(new Aws.Ec2.GetAmiArgs
+        {
+            MostRecent = true,
+            Filters = 
+            {
+                new Aws.Ec2.Inputs.GetAmiFilterArgs
+                {
+                    Name = "name",
+                    Values = 
+                    {
+                        "ubuntu/images/hvm-ssd/ubuntu-focal-20.04-amd64-server-*",
+                    },
+                },
+                new Aws.Ec2.Inputs.GetAmiFilterArgs
+                {
+                    Name = "virtualization-type",
+                    Values = 
+                    {
+                        "hvm",
+                    },
+                },
+            },
+            Owners = 
+            {
+                "099720109477",
+            },
+        }));
+        var web = new Aws.Ec2.Instance("web", new Aws.Ec2.InstanceArgs
+        {
+            Ami = ubuntu.Apply(ubuntu => ubuntu.Id),
+            InstanceType = "t3.micro",
+            Tags = 
+            {
+                { "Name", "HelloWorld" },
+            },
+        });
+    }
+
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ec2"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		opt0 := true
+		ubuntu, err := ec2.LookupAmi(ctx, &ec2.LookupAmiArgs{
+			MostRecent: &opt0,
+			Filters: []ec2.GetAmiFilter{
+				ec2.GetAmiFilter{
+					Name: "name",
+					Values: []string{
+						"ubuntu/images/hvm-ssd/ubuntu-focal-20.04-amd64-server-*",
+					},
+				},
+				ec2.GetAmiFilter{
+					Name: "virtualization-type",
+					Values: []string{
+						"hvm",
+					},
+				},
+			},
+			Owners: []string{
+				"099720109477",
+			},
+		}, nil)
+		if err != nil {
+			return err
+		}
+		_, err = ec2.NewInstance(ctx, "web", &ec2.InstanceArgs{
+			Ami:          pulumi.String(ubuntu.Id),
+			InstanceType: pulumi.String("t3.micro"),
+			Tags: pulumi.StringMap{
+				"Name": pulumi.String("HelloWorld"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+```python
+import pulumi
+import pulumi_aws as aws
+
+ubuntu = aws.ec2.get_ami(most_recent=True,
+    filters=[
+        aws.ec2.GetAmiFilterArgs(
+            name="name",
+            values=["ubuntu/images/hvm-ssd/ubuntu-focal-20.04-amd64-server-*"],
+        ),
+        aws.ec2.GetAmiFilterArgs(
+            name="virtualization-type",
+            values=["hvm"],
+        ),
+    ],
+    owners=["099720109477"])
+web = aws.ec2.Instance("web",
+    ami=ubuntu.id,
+    instance_type="t3.micro",
+    tags={
+        "Name": "HelloWorld",
+    })
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const ubuntu = aws.ec2.getAmi({
+    mostRecent: true,
+    filters: [
+        {
+            name: "name",
+            values: ["ubuntu/images/hvm-ssd/ubuntu-focal-20.04-amd64-server-*"],
+        },
+        {
+            name: "virtualization-type",
+            values: ["hvm"],
+        },
+    ],
+    owners: ["099720109477"],
+});
+const web = new aws.ec2.Instance("web", {
+    ami: ubuntu.then(ubuntu => ubuntu.id),
+    instanceType: "t3.micro",
+    tags: {
+        Name: "HelloWorld",
+    },
+});
+```
+
+
+{{< /example >}}
+
+
+
+
 ### Network and Credit Specification Example
 
 

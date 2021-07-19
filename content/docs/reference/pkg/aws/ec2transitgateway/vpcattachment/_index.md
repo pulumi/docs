@@ -12,6 +12,115 @@ meta_desc: "Documentation for the aws.ec2transitgateway.VpcAttachment resource w
 
 Manages an EC2 Transit Gateway VPC Attachment. For examples of custom route table association and propagation, see the EC2 Transit Gateway Networking Examples Guide.
 
+{{% examples %}}
+
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+
+
+
+
+{{< example csharp >}}
+
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Aws.Ec2TransitGateway.VpcAttachment("example", new Aws.Ec2TransitGateway.VpcAttachmentArgs
+        {
+            SubnetIds = 
+            {
+                aws_subnet.Example.Id,
+            },
+            TransitGatewayId = aws_ec2_transit_gateway.Example.Id,
+            VpcId = aws_vpc.Example.Id,
+        });
+    }
+
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ec2transitgateway"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := ec2transitgateway.NewVpcAttachment(ctx, "example", &ec2transitgateway.VpcAttachmentArgs{
+			SubnetIds: pulumi.StringArray{
+				pulumi.Any(aws_subnet.Example.Id),
+			},
+			TransitGatewayId: pulumi.Any(aws_ec2_transit_gateway.Example.Id),
+			VpcId:            pulumi.Any(aws_vpc.Example.Id),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+```python
+import pulumi
+import pulumi_aws as aws
+
+example = aws.ec2transitgateway.VpcAttachment("example",
+    subnet_ids=[aws_subnet["example"]["id"]],
+    transit_gateway_id=aws_ec2_transit_gateway["example"]["id"],
+    vpc_id=aws_vpc["example"]["id"])
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const example = new aws.ec2transitgateway.VpcAttachment("example", {
+    subnetIds: [aws_subnet.example.id],
+    transitGatewayId: aws_ec2_transit_gateway.example.id,
+    vpcId: aws_vpc.example.id,
+});
+```
+
+
+{{< /example >}}
+
+
+
+
+
+{{% /examples %}}
+
+
 
 
 ## Create a VpcAttachment Resource {#create}

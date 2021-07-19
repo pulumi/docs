@@ -53,6 +53,10 @@ class MyStack : Stack
                 exampleOrganization,
             },
         });
+        // Auto enable security hub in organization member accounts
+        var exampleOrganizationConfiguration = new Aws.SecurityHub.OrganizationConfiguration("exampleOrganizationConfiguration", new Aws.SecurityHub.OrganizationConfigurationArgs
+        {
+        });
     }
 
 }
@@ -96,6 +100,10 @@ func main() {
 		if err != nil {
 			return err
 		}
+		_, err = securityhub.NewOrganizationConfiguration(ctx, "exampleOrganizationConfiguration", nil)
+		if err != nil {
+			return err
+		}
 		return nil
 	})
 }
@@ -117,6 +125,8 @@ example_organization = aws.organizations.Organization("exampleOrganization",
 example_account = aws.securityhub.Account("exampleAccount")
 example_organization_admin_account = aws.securityhub.OrganizationAdminAccount("exampleOrganizationAdminAccount", admin_account_id="123456789012",
 opts=pulumi.ResourceOptions(depends_on=[example_organization]))
+# Auto enable security hub in organization member accounts
+example_organization_configuration = aws.securityhub.OrganizationConfiguration("exampleOrganizationConfiguration")
 ```
 
 
@@ -138,6 +148,8 @@ const exampleAccount = new aws.securityhub.Account("exampleAccount", {});
 const exampleOrganizationAdminAccount = new aws.securityhub.OrganizationAdminAccount("exampleOrganizationAdminAccount", {adminAccountId: "123456789012"}, {
     dependsOn: [exampleOrganization],
 });
+// Auto enable security hub in organization member accounts
+const exampleOrganizationConfiguration = new aws.securityhub.OrganizationConfiguration("exampleOrganizationConfiguration", {});
 ```
 
 

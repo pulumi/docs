@@ -523,7 +523,7 @@ func main() {
 		}
 		_, err = lambda.NewPermission(ctx, "lambdaPermission", &lambda.PermissionArgs{
 			Action:    pulumi.String("lambda:InvokeFunction"),
-			Function:  pulumi.String("MyDemoFunction"),
+			Function:  pulumi.Any("MyDemoFunction"),
 			Principal: pulumi.String("apigateway.amazonaws.com"),
 			SourceArn: myDemoAPI.ExecutionArn.ApplyT(func(executionArn string) (string, error) {
 				return fmt.Sprintf("%v%v", executionArn, "/*/*/*"), nil

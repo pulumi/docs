@@ -246,6 +246,117 @@ const example = new aws.route53.HealthCheck("example", {
 
 
 
+### Aggregate Check
+
+
+{{< example csharp >}}
+
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var parent = new Aws.Route53.HealthCheck("parent", new Aws.Route53.HealthCheckArgs
+        {
+            Type = "CALCULATED",
+            ChildHealthThreshold = 1,
+            ChildHealthchecks = 
+            {
+                aws_route53_health_check.Child.Id,
+            },
+            Tags = 
+            {
+                { "Name", "tf-test-calculated-health-check" },
+            },
+        });
+    }
+
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/route53"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := route53.NewHealthCheck(ctx, "parent", &route53.HealthCheckArgs{
+			Type:                 pulumi.String("CALCULATED"),
+			ChildHealthThreshold: pulumi.Int(1),
+			ChildHealthchecks: pulumi.StringArray{
+				pulumi.Any(aws_route53_health_check.Child.Id),
+			},
+			Tags: pulumi.StringMap{
+				"Name": pulumi.String("tf-test-calculated-health-check"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+```python
+import pulumi
+import pulumi_aws as aws
+
+parent = aws.route53.HealthCheck("parent",
+    type="CALCULATED",
+    child_health_threshold=1,
+    child_healthchecks=[aws_route53_health_check["child"]["id"]],
+    tags={
+        "Name": "tf-test-calculated-health-check",
+    })
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const parent = new aws.route53.HealthCheck("parent", {
+    type: "CALCULATED",
+    childHealthThreshold: 1,
+    childHealthchecks: [aws_route53_health_check.child.id],
+    tags: {
+        Name: "tf-test-calculated-health-check",
+    },
+});
+```
+
+
+{{< /example >}}
+
+
+
+
 ### CloudWatch Alarm Check
 
 

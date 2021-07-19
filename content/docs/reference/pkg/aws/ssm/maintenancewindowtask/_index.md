@@ -12,6 +12,577 @@ meta_desc: "Documentation for the aws.ssm.MaintenanceWindowTask resource with ex
 
 Provides an SSM Maintenance Window Task resource
 
+{{% examples %}}
+
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+
+### Automation Tasks
+
+
+{{< example csharp >}}
+
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Aws.Ssm.MaintenanceWindowTask("example", new Aws.Ssm.MaintenanceWindowTaskArgs
+        {
+            MaxConcurrency = "2",
+            MaxErrors = "1",
+            Priority = 1,
+            TaskArn = "AWS-RestartEC2Instance",
+            TaskType = "AUTOMATION",
+            WindowId = aws_ssm_maintenance_window.Example.Id,
+            Targets = 
+            {
+                new Aws.Ssm.Inputs.MaintenanceWindowTaskTargetArgs
+                {
+                    Key = "InstanceIds",
+                    Values = 
+                    {
+                        aws_instance.Example.Id,
+                    },
+                },
+            },
+            TaskInvocationParameters = new Aws.Ssm.Inputs.MaintenanceWindowTaskTaskInvocationParametersArgs
+            {
+                AutomationParameters = new Aws.Ssm.Inputs.MaintenanceWindowTaskTaskInvocationParametersAutomationParametersArgs
+                {
+                    DocumentVersion = "$LATEST",
+                    Parameters = 
+                    {
+                        new Aws.Ssm.Inputs.MaintenanceWindowTaskTaskInvocationParametersAutomationParametersParameterArgs
+                        {
+                            Name = "InstanceId",
+                            Values = 
+                            {
+                                aws_instance.Example.Id,
+                            },
+                        },
+                    },
+                },
+            },
+        });
+    }
+
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ssm"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := ssm.NewMaintenanceWindowTask(ctx, "example", &ssm.MaintenanceWindowTaskArgs{
+			MaxConcurrency: pulumi.String("2"),
+			MaxErrors:      pulumi.String("1"),
+			Priority:       pulumi.Int(1),
+			TaskArn:        pulumi.String("AWS-RestartEC2Instance"),
+			TaskType:       pulumi.String("AUTOMATION"),
+			WindowId:       pulumi.Any(aws_ssm_maintenance_window.Example.Id),
+			Targets: ssm.MaintenanceWindowTaskTargetArray{
+				&ssm.MaintenanceWindowTaskTargetArgs{
+					Key: pulumi.String("InstanceIds"),
+					Values: pulumi.StringArray{
+						pulumi.Any(aws_instance.Example.Id),
+					},
+				},
+			},
+			TaskInvocationParameters: &ssm.MaintenanceWindowTaskTaskInvocationParametersArgs{
+				AutomationParameters: &ssm.MaintenanceWindowTaskTaskInvocationParametersAutomationParametersArgs{
+					DocumentVersion: pulumi.String(fmt.Sprintf("%v%v", "$", "LATEST")),
+					Parameters: ssm.MaintenanceWindowTaskTaskInvocationParametersAutomationParametersParameterArray{
+						&ssm.MaintenanceWindowTaskTaskInvocationParametersAutomationParametersParameterArgs{
+							Name: pulumi.String("InstanceId"),
+							Values: pulumi.StringArray{
+								pulumi.Any(aws_instance.Example.Id),
+							},
+						},
+					},
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+```python
+import pulumi
+import pulumi_aws as aws
+
+example = aws.ssm.MaintenanceWindowTask("example",
+    max_concurrency="2",
+    max_errors="1",
+    priority=1,
+    task_arn="AWS-RestartEC2Instance",
+    task_type="AUTOMATION",
+    window_id=aws_ssm_maintenance_window["example"]["id"],
+    targets=[aws.ssm.MaintenanceWindowTaskTargetArgs(
+        key="InstanceIds",
+        values=[aws_instance["example"]["id"]],
+    )],
+    task_invocation_parameters=aws.ssm.MaintenanceWindowTaskTaskInvocationParametersArgs(
+        automation_parameters=aws.ssm.MaintenanceWindowTaskTaskInvocationParametersAutomationParametersArgs(
+            document_version="$LATEST",
+            parameters=[aws.ssm.MaintenanceWindowTaskTaskInvocationParametersAutomationParametersParameterArgs(
+                name="InstanceId",
+                values=[aws_instance["example"]["id"]],
+            )],
+        ),
+    ))
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const example = new aws.ssm.MaintenanceWindowTask("example", {
+    maxConcurrency: 2,
+    maxErrors: 1,
+    priority: 1,
+    taskArn: "AWS-RestartEC2Instance",
+    taskType: "AUTOMATION",
+    windowId: aws_ssm_maintenance_window.example.id,
+    targets: [{
+        key: "InstanceIds",
+        values: [aws_instance.example.id],
+    }],
+    taskInvocationParameters: {
+        automationParameters: {
+            documentVersion: `$LATEST`,
+            parameters: [{
+                name: "InstanceId",
+                values: [aws_instance.example.id],
+            }],
+        },
+    },
+});
+```
+
+
+{{< /example >}}
+
+
+
+
+### Run Command Tasks
+
+
+{{< example csharp >}}
+
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Aws.Ssm.MaintenanceWindowTask("example", new Aws.Ssm.MaintenanceWindowTaskArgs
+        {
+            MaxConcurrency = "2",
+            MaxErrors = "1",
+            Priority = 1,
+            TaskArn = "AWS-RunShellScript",
+            TaskType = "RUN_COMMAND",
+            WindowId = aws_ssm_maintenance_window.Example.Id,
+            Targets = 
+            {
+                new Aws.Ssm.Inputs.MaintenanceWindowTaskTargetArgs
+                {
+                    Key = "InstanceIds",
+                    Values = 
+                    {
+                        aws_instance.Example.Id,
+                    },
+                },
+            },
+            TaskInvocationParameters = new Aws.Ssm.Inputs.MaintenanceWindowTaskTaskInvocationParametersArgs
+            {
+                RunCommandParameters = new Aws.Ssm.Inputs.MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersArgs
+                {
+                    OutputS3Bucket = aws_s3_bucket.Example.Bucket,
+                    OutputS3KeyPrefix = "output",
+                    ServiceRoleArn = aws_iam_role.Example.Arn,
+                    TimeoutSeconds = 600,
+                    NotificationConfig = new Aws.Ssm.Inputs.MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersNotificationConfigArgs
+                    {
+                        NotificationArn = aws_sns_topic.Example.Arn,
+                        NotificationEvents = 
+                        {
+                            "All",
+                        },
+                        NotificationType = "Command",
+                    },
+                    Parameters = 
+                    {
+                        new Aws.Ssm.Inputs.MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersParameterArgs
+                        {
+                            Name = "commands",
+                            Values = 
+                            {
+                                "date",
+                            },
+                        },
+                    },
+                },
+            },
+        });
+    }
+
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ssm"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := ssm.NewMaintenanceWindowTask(ctx, "example", &ssm.MaintenanceWindowTaskArgs{
+			MaxConcurrency: pulumi.String("2"),
+			MaxErrors:      pulumi.String("1"),
+			Priority:       pulumi.Int(1),
+			TaskArn:        pulumi.String("AWS-RunShellScript"),
+			TaskType:       pulumi.String("RUN_COMMAND"),
+			WindowId:       pulumi.Any(aws_ssm_maintenance_window.Example.Id),
+			Targets: ssm.MaintenanceWindowTaskTargetArray{
+				&ssm.MaintenanceWindowTaskTargetArgs{
+					Key: pulumi.String("InstanceIds"),
+					Values: pulumi.StringArray{
+						pulumi.Any(aws_instance.Example.Id),
+					},
+				},
+			},
+			TaskInvocationParameters: &ssm.MaintenanceWindowTaskTaskInvocationParametersArgs{
+				RunCommandParameters: &ssm.MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersArgs{
+					OutputS3Bucket:    pulumi.Any(aws_s3_bucket.Example.Bucket),
+					OutputS3KeyPrefix: pulumi.String("output"),
+					ServiceRoleArn:    pulumi.Any(aws_iam_role.Example.Arn),
+					TimeoutSeconds:    pulumi.Int(600),
+					NotificationConfig: &ssm.MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersNotificationConfigArgs{
+						NotificationArn: pulumi.Any(aws_sns_topic.Example.Arn),
+						NotificationEvents: pulumi.StringArray{
+							pulumi.String("All"),
+						},
+						NotificationType: pulumi.String("Command"),
+					},
+					Parameters: ssm.MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersParameterArray{
+						&ssm.MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersParameterArgs{
+							Name: pulumi.String("commands"),
+							Values: pulumi.StringArray{
+								pulumi.String("date"),
+							},
+						},
+					},
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+```python
+import pulumi
+import pulumi_aws as aws
+
+example = aws.ssm.MaintenanceWindowTask("example",
+    max_concurrency="2",
+    max_errors="1",
+    priority=1,
+    task_arn="AWS-RunShellScript",
+    task_type="RUN_COMMAND",
+    window_id=aws_ssm_maintenance_window["example"]["id"],
+    targets=[aws.ssm.MaintenanceWindowTaskTargetArgs(
+        key="InstanceIds",
+        values=[aws_instance["example"]["id"]],
+    )],
+    task_invocation_parameters=aws.ssm.MaintenanceWindowTaskTaskInvocationParametersArgs(
+        run_command_parameters=aws.ssm.MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersArgs(
+            output_s3_bucket=aws_s3_bucket["example"]["bucket"],
+            output_s3_key_prefix="output",
+            service_role_arn=aws_iam_role["example"]["arn"],
+            timeout_seconds=600,
+            notification_config=aws.ssm.MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersNotificationConfigArgs(
+                notification_arn=aws_sns_topic["example"]["arn"],
+                notification_events=["All"],
+                notification_type="Command",
+            ),
+            parameters=[aws.ssm.MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersParameterArgs(
+                name="commands",
+                values=["date"],
+            )],
+        ),
+    ))
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const example = new aws.ssm.MaintenanceWindowTask("example", {
+    maxConcurrency: 2,
+    maxErrors: 1,
+    priority: 1,
+    taskArn: "AWS-RunShellScript",
+    taskType: "RUN_COMMAND",
+    windowId: aws_ssm_maintenance_window.example.id,
+    targets: [{
+        key: "InstanceIds",
+        values: [aws_instance.example.id],
+    }],
+    taskInvocationParameters: {
+        runCommandParameters: {
+            outputS3Bucket: aws_s3_bucket.example.bucket,
+            outputS3KeyPrefix: "output",
+            serviceRoleArn: aws_iam_role.example.arn,
+            timeoutSeconds: 600,
+            notificationConfig: {
+                notificationArn: aws_sns_topic.example.arn,
+                notificationEvents: ["All"],
+                notificationType: "Command",
+            },
+            parameters: [{
+                name: "commands",
+                values: ["date"],
+            }],
+        },
+    },
+});
+```
+
+
+{{< /example >}}
+
+
+
+
+### Step Function Tasks
+
+
+{{< example csharp >}}
+
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Aws.Ssm.MaintenanceWindowTask("example", new Aws.Ssm.MaintenanceWindowTaskArgs
+        {
+            MaxConcurrency = "2",
+            MaxErrors = "1",
+            Priority = 1,
+            TaskArn = aws_sfn_activity.Example.Id,
+            TaskType = "STEP_FUNCTIONS",
+            WindowId = aws_ssm_maintenance_window.Example.Id,
+            Targets = 
+            {
+                new Aws.Ssm.Inputs.MaintenanceWindowTaskTargetArgs
+                {
+                    Key = "InstanceIds",
+                    Values = 
+                    {
+                        aws_instance.Example.Id,
+                    },
+                },
+            },
+            TaskInvocationParameters = new Aws.Ssm.Inputs.MaintenanceWindowTaskTaskInvocationParametersArgs
+            {
+                StepFunctionsParameters = new Aws.Ssm.Inputs.MaintenanceWindowTaskTaskInvocationParametersStepFunctionsParametersArgs
+                {
+                    Input = "{\"key1\":\"value1\"}",
+                    Name = "example",
+                },
+            },
+        });
+    }
+
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ssm"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := ssm.NewMaintenanceWindowTask(ctx, "example", &ssm.MaintenanceWindowTaskArgs{
+			MaxConcurrency: pulumi.String("2"),
+			MaxErrors:      pulumi.String("1"),
+			Priority:       pulumi.Int(1),
+			TaskArn:        pulumi.Any(aws_sfn_activity.Example.Id),
+			TaskType:       pulumi.String("STEP_FUNCTIONS"),
+			WindowId:       pulumi.Any(aws_ssm_maintenance_window.Example.Id),
+			Targets: ssm.MaintenanceWindowTaskTargetArray{
+				&ssm.MaintenanceWindowTaskTargetArgs{
+					Key: pulumi.String("InstanceIds"),
+					Values: pulumi.StringArray{
+						pulumi.Any(aws_instance.Example.Id),
+					},
+				},
+			},
+			TaskInvocationParameters: &ssm.MaintenanceWindowTaskTaskInvocationParametersArgs{
+				StepFunctionsParameters: &ssm.MaintenanceWindowTaskTaskInvocationParametersStepFunctionsParametersArgs{
+					Input: pulumi.String("{\"key1\":\"value1\"}"),
+					Name:  pulumi.String("example"),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+```python
+import pulumi
+import pulumi_aws as aws
+
+example = aws.ssm.MaintenanceWindowTask("example",
+    max_concurrency="2",
+    max_errors="1",
+    priority=1,
+    task_arn=aws_sfn_activity["example"]["id"],
+    task_type="STEP_FUNCTIONS",
+    window_id=aws_ssm_maintenance_window["example"]["id"],
+    targets=[aws.ssm.MaintenanceWindowTaskTargetArgs(
+        key="InstanceIds",
+        values=[aws_instance["example"]["id"]],
+    )],
+    task_invocation_parameters=aws.ssm.MaintenanceWindowTaskTaskInvocationParametersArgs(
+        step_functions_parameters=aws.ssm.MaintenanceWindowTaskTaskInvocationParametersStepFunctionsParametersArgs(
+            input="{\"key1\":\"value1\"}",
+            name="example",
+        ),
+    ))
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const example = new aws.ssm.MaintenanceWindowTask("example", {
+    maxConcurrency: 2,
+    maxErrors: 1,
+    priority: 1,
+    taskArn: aws_sfn_activity.example.id,
+    taskType: "STEP_FUNCTIONS",
+    windowId: aws_ssm_maintenance_window.example.id,
+    targets: [{
+        key: "InstanceIds",
+        values: [aws_instance.example.id],
+    }],
+    taskInvocationParameters: {
+        stepFunctionsParameters: {
+            input: "{\"key1\":\"value1\"}",
+            name: "example",
+        },
+    },
+});
+```
+
+
+{{< /example >}}
+
+
+
+
+
+{{% /examples %}}
+
+
 
 
 ## Create a MaintenanceWindowTask Resource {#create}

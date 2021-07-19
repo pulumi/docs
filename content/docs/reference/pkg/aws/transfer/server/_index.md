@@ -198,6 +198,260 @@ const example = new aws.transfer.Server("example", {
 
 
 
+### VPC Endpoint
+
+
+{{< example csharp >}}
+
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Aws.Transfer.Server("example", new Aws.Transfer.ServerArgs
+        {
+            EndpointType = "VPC",
+            EndpointDetails = new Aws.Transfer.Inputs.ServerEndpointDetailsArgs
+            {
+                AddressAllocationIds = 
+                {
+                    aws_eip.Example.Id,
+                },
+                SubnetIds = 
+                {
+                    aws_subnet.Example.Id,
+                },
+                VpcId = aws_vpc.Example.Id,
+            },
+        });
+    }
+
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/transfer"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := transfer.NewServer(ctx, "example", &transfer.ServerArgs{
+			EndpointType: pulumi.String("VPC"),
+			EndpointDetails: &transfer.ServerEndpointDetailsArgs{
+				AddressAllocationIds: pulumi.StringArray{
+					pulumi.Any(aws_eip.Example.Id),
+				},
+				SubnetIds: pulumi.StringArray{
+					pulumi.Any(aws_subnet.Example.Id),
+				},
+				VpcId: pulumi.Any(aws_vpc.Example.Id),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+```python
+import pulumi
+import pulumi_aws as aws
+
+example = aws.transfer.Server("example",
+    endpoint_type="VPC",
+    endpoint_details=aws.transfer.ServerEndpointDetailsArgs(
+        address_allocation_ids=[aws_eip["example"]["id"]],
+        subnet_ids=[aws_subnet["example"]["id"]],
+        vpc_id=aws_vpc["example"]["id"],
+    ))
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const example = new aws.transfer.Server("example", {
+    endpointType: "VPC",
+    endpointDetails: {
+        addressAllocationIds: [aws_eip.example.id],
+        subnetIds: [aws_subnet.example.id],
+        vpcId: aws_vpc.example.id,
+    },
+});
+```
+
+
+{{< /example >}}
+
+
+
+
+### Protocols
+
+
+{{< example csharp >}}
+
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Aws.Transfer.Server("example", new Aws.Transfer.ServerArgs
+        {
+            EndpointType = "VPC",
+            EndpointDetails = new Aws.Transfer.Inputs.ServerEndpointDetailsArgs
+            {
+                SubnetIds = 
+                {
+                    aws_subnet.Example.Id,
+                },
+                VpcId = aws_vpc.Example.Id,
+            },
+            Protocols = 
+            {
+                "FTP",
+                "FTPS",
+            },
+            Certificate = aws_acm_certificate.Example.Arn,
+            IdentityProviderType = "API_GATEWAY",
+            Url = $"{aws_api_gateway_deployment.Example.Invoke_url}{aws_api_gateway_resource.Example.Path}",
+        });
+    }
+
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/transfer"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := transfer.NewServer(ctx, "example", &transfer.ServerArgs{
+			EndpointType: pulumi.String("VPC"),
+			EndpointDetails: &transfer.ServerEndpointDetailsArgs{
+				SubnetIds: pulumi.StringArray{
+					pulumi.Any(aws_subnet.Example.Id),
+				},
+				VpcId: pulumi.Any(aws_vpc.Example.Id),
+			},
+			Protocols: pulumi.StringArray{
+				pulumi.String("FTP"),
+				pulumi.String("FTPS"),
+			},
+			Certificate:          pulumi.Any(aws_acm_certificate.Example.Arn),
+			IdentityProviderType: pulumi.String("API_GATEWAY"),
+			Url:                  pulumi.String(fmt.Sprintf("%v%v", aws_api_gateway_deployment.Example.Invoke_url, aws_api_gateway_resource.Example.Path)),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+```python
+import pulumi
+import pulumi_aws as aws
+
+example = aws.transfer.Server("example",
+    endpoint_type="VPC",
+    endpoint_details=aws.transfer.ServerEndpointDetailsArgs(
+        subnet_ids=[aws_subnet["example"]["id"]],
+        vpc_id=aws_vpc["example"]["id"],
+    ),
+    protocols=[
+        "FTP",
+        "FTPS",
+    ],
+    certificate=aws_acm_certificate["example"]["arn"],
+    identity_provider_type="API_GATEWAY",
+    url=f"{aws_api_gateway_deployment['example']['invoke_url']}{aws_api_gateway_resource['example']['path']}")
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const example = new aws.transfer.Server("example", {
+    endpointType: "VPC",
+    endpointDetails: {
+        subnetIds: [aws_subnet.example.id],
+        vpcId: aws_vpc.example.id,
+    },
+    protocols: [
+        "FTP",
+        "FTPS",
+    ],
+    certificate: aws_acm_certificate.example.arn,
+    identityProviderType: "API_GATEWAY",
+    url: `${aws_api_gateway_deployment.example.invoke_url}${aws_api_gateway_resource.example.path}`,
+});
+```
+
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
 

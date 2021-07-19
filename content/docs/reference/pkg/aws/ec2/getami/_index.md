@@ -26,21 +26,145 @@ resources.
 
 {{< example csharp >}}
 
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = Output.Create(Aws.Ec2.GetAmi.InvokeAsync(new Aws.Ec2.GetAmiArgs
+        {
+            ExecutableUsers = 
+            {
+                "self",
+            },
+            Filters = 
+            {
+                new Aws.Ec2.Inputs.GetAmiFilterArgs
+                {
+                    Name = "name",
+                    Values = 
+                    {
+                        "myami-*",
+                    },
+                },
+                new Aws.Ec2.Inputs.GetAmiFilterArgs
+                {
+                    Name = "root-device-type",
+                    Values = 
+                    {
+                        "ebs",
+                    },
+                },
+                new Aws.Ec2.Inputs.GetAmiFilterArgs
+                {
+                    Name = "virtualization-type",
+                    Values = 
+                    {
+                        "hvm",
+                    },
+                },
+            },
+            MostRecent = true,
+            NameRegex = "^myami-\\d{3}",
+            Owners = 
+            {
+                "self",
+            },
+        }));
+    }
+
+}
+```
+
 
 {{< /example >}}
 
 
 {{< example go >}}
 
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ec2"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		opt0 := true
+		opt1 := "^myami-\\d{3}"
+		_, err := ec2.LookupAmi(ctx, &ec2.LookupAmiArgs{
+			ExecutableUsers: []string{
+				"self",
+			},
+			Filters: []ec2.GetAmiFilter{
+				ec2.GetAmiFilter{
+					Name: "name",
+					Values: []string{
+						"myami-*",
+					},
+				},
+				ec2.GetAmiFilter{
+					Name: "root-device-type",
+					Values: []string{
+						"ebs",
+					},
+				},
+				ec2.GetAmiFilter{
+					Name: "virtualization-type",
+					Values: []string{
+						"hvm",
+					},
+				},
+			},
+			MostRecent: &opt0,
+			NameRegex:  &opt1,
+			Owners: []string{
+				"self",
+			},
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 
 {{< /example >}}
 
 
 {{< example python >}}
 
-Coming soon!
+```python
+import pulumi
+import pulumi_aws as aws
+
+example = aws.ec2.get_ami(executable_users=["self"],
+    filters=[
+        aws.ec2.GetAmiFilterArgs(
+            name="name",
+            values=["myami-*"],
+        ),
+        aws.ec2.GetAmiFilterArgs(
+            name="root-device-type",
+            values=["ebs"],
+        ),
+        aws.ec2.GetAmiFilterArgs(
+            name="virtualization-type",
+            values=["hvm"],
+        ),
+    ],
+    most_recent=True,
+    name_regex="^myami-\\d{3}",
+    owners=["self"])
+```
+
 
 {{< /example >}}
 

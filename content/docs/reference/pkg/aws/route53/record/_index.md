@@ -19,6 +19,112 @@ Provides a Route53 record resource.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
+### Simple routing policy
+
+
+{{< example csharp >}}
+
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var www = new Aws.Route53.Record("www", new Aws.Route53.RecordArgs
+        {
+            ZoneId = aws_route53_zone.Primary.Zone_id,
+            Name = "www.example.com",
+            Type = "A",
+            Ttl = 300,
+            Records = 
+            {
+                aws_eip.Lb.Public_ip,
+            },
+        });
+    }
+
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/route53"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := route53.NewRecord(ctx, "www", &route53.RecordArgs{
+			ZoneId: pulumi.Any(aws_route53_zone.Primary.Zone_id),
+			Name:   pulumi.String("www.example.com"),
+			Type:   pulumi.String("A"),
+			Ttl:    pulumi.Int(300),
+			Records: pulumi.StringArray{
+				pulumi.Any(aws_eip.Lb.Public_ip),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+```python
+import pulumi
+import pulumi_aws as aws
+
+www = aws.route53.Record("www",
+    zone_id=aws_route53_zone["primary"]["zone_id"],
+    name="www.example.com",
+    type="A",
+    ttl=300,
+    records=[aws_eip["lb"]["public_ip"]])
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const www = new aws.route53.Record("www", {
+    zoneId: aws_route53_zone.primary.zone_id,
+    name: "www.example.com",
+    type: "A",
+    ttl: "300",
+    records: [aws_eip.lb.public_ip],
+});
+```
+
+
+{{< /example >}}
+
+
+
+
 ### Weighted routing policy
 
 

@@ -15,6 +15,7 @@ Explore the resources and functions of the aws.cfg module.
     <li><a href="configurationaggregator" title="ConfigurationAggregator"><span class="symbol resource"></span>ConfigurationAggregator</a></li>
     <li><a href="conformancepack" title="ConformancePack"><span class="symbol resource"></span>ConformancePack</a></li>
     <li><a href="deliverychannel" title="DeliveryChannel"><span class="symbol resource"></span>DeliveryChannel</a></li>
+    <li><a href="organizationconformancepack" title="OrganizationConformancePack"><span class="symbol resource"></span>OrganizationConformancePack</a></li>
     <li><a href="organizationcustomrule" title="OrganizationCustomRule"><span class="symbol resource"></span>OrganizationCustomRule</a></li>
     <li><a href="organizationmanagedrule" title="OrganizationManagedRule"><span class="symbol resource"></span>OrganizationManagedRule</a></li>
     <li><a href="recorder" title="Recorder"><span class="symbol resource"></span>Recorder</a></li>
@@ -32,6 +33,6 @@ Explore the resources and functions of the aws.cfg module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.12.0</dd>
+	<dd>4.13.0</dd>
 </dl>
 

@@ -25,21 +25,115 @@ Use this data source to get information about an EBS Snapshot for use when provi
 
 {{< example csharp >}}
 
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var ebsVolume = Output.Create(Aws.Ebs.GetSnapshot.InvokeAsync(new Aws.Ebs.GetSnapshotArgs
+        {
+            Filters = 
+            {
+                new Aws.Ebs.Inputs.GetSnapshotFilterArgs
+                {
+                    Name = "volume-size",
+                    Values = 
+                    {
+                        "40",
+                    },
+                },
+                new Aws.Ebs.Inputs.GetSnapshotFilterArgs
+                {
+                    Name = "tag:Name",
+                    Values = 
+                    {
+                        "Example",
+                    },
+                },
+            },
+            MostRecent = true,
+            Owners = 
+            {
+                "self",
+            },
+        }));
+    }
+
+}
+```
+
 
 {{< /example >}}
 
 
 {{< example go >}}
 
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ebs"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		opt0 := true
+		_, err := ebs.LookupSnapshot(ctx, &ebs.LookupSnapshotArgs{
+			Filters: []ebs.GetSnapshotFilter{
+				ebs.GetSnapshotFilter{
+					Name: "volume-size",
+					Values: []string{
+						"40",
+					},
+				},
+				ebs.GetSnapshotFilter{
+					Name: "tag:Name",
+					Values: []string{
+						"Example",
+					},
+				},
+			},
+			MostRecent: &opt0,
+			Owners: []string{
+				"self",
+			},
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 
 {{< /example >}}
 
 
 {{< example python >}}
 
-Coming soon!
+```python
+import pulumi
+import pulumi_aws as aws
+
+ebs_volume = aws.ebs.get_snapshot(filters=[
+        aws.ebs.GetSnapshotFilterArgs(
+            name="volume-size",
+            values=["40"],
+        ),
+        aws.ebs.GetSnapshotFilterArgs(
+            name="tag:Name",
+            values=["Example"],
+        ),
+    ],
+    most_recent=True,
+    owners=["self"])
+```
+
 
 {{< /example >}}
 

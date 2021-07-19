@@ -26,21 +26,107 @@ resources.
 
 {{< example csharp >}}
 
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var ebsVolume = Output.Create(Aws.Ebs.GetVolume.InvokeAsync(new Aws.Ebs.GetVolumeArgs
+        {
+            Filters = 
+            {
+                new Aws.Ebs.Inputs.GetVolumeFilterArgs
+                {
+                    Name = "volume-type",
+                    Values = 
+                    {
+                        "gp2",
+                    },
+                },
+                new Aws.Ebs.Inputs.GetVolumeFilterArgs
+                {
+                    Name = "tag:Name",
+                    Values = 
+                    {
+                        "Example",
+                    },
+                },
+            },
+            MostRecent = true,
+        }));
+    }
+
+}
+```
+
 
 {{< /example >}}
 
 
 {{< example go >}}
 
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ebs"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		opt0 := true
+		_, err := ebs.LookupVolume(ctx, &ebs.LookupVolumeArgs{
+			Filters: []ebs.GetVolumeFilter{
+				ebs.GetVolumeFilter{
+					Name: "volume-type",
+					Values: []string{
+						"gp2",
+					},
+				},
+				ebs.GetVolumeFilter{
+					Name: "tag:Name",
+					Values: []string{
+						"Example",
+					},
+				},
+			},
+			MostRecent: &opt0,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 
 {{< /example >}}
 
 
 {{< example python >}}
 
-Coming soon!
+```python
+import pulumi
+import pulumi_aws as aws
+
+ebs_volume = aws.ebs.get_volume(filters=[
+        aws.ebs.GetVolumeFilterArgs(
+            name="volume-type",
+            values=["gp2"],
+        ),
+        aws.ebs.GetVolumeFilterArgs(
+            name="tag:Name",
+            values=["Example"],
+        ),
+    ],
+    most_recent=True)
+```
+
 
 {{< /example >}}
 

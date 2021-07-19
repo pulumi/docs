@@ -110,21 +110,103 @@ const example = pulumi.output(aws.ec2.getVpcDhcpOptions({
 
 {{< example csharp >}}
 
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = Output.Create(Aws.Ec2.GetVpcDhcpOptions.InvokeAsync(new Aws.Ec2.GetVpcDhcpOptionsArgs
+        {
+            Filters = 
+            {
+                new Aws.Ec2.Inputs.GetVpcDhcpOptionsFilterArgs
+                {
+                    Name = "key",
+                    Values = 
+                    {
+                        "domain-name",
+                    },
+                },
+                new Aws.Ec2.Inputs.GetVpcDhcpOptionsFilterArgs
+                {
+                    Name = "value",
+                    Values = 
+                    {
+                        "example.com",
+                    },
+                },
+            },
+        }));
+    }
+
+}
+```
+
 
 {{< /example >}}
 
 
 {{< example go >}}
 
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ec2"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := ec2.LookupVpcDhcpOptions(ctx, &ec2.LookupVpcDhcpOptionsArgs{
+			Filters: []ec2.GetVpcDhcpOptionsFilter{
+				ec2.GetVpcDhcpOptionsFilter{
+					Name: "key",
+					Values: []string{
+						"domain-name",
+					},
+				},
+				ec2.GetVpcDhcpOptionsFilter{
+					Name: "value",
+					Values: []string{
+						"example.com",
+					},
+				},
+			},
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 
 {{< /example >}}
 
 
 {{< example python >}}
 
-Coming soon!
+```python
+import pulumi
+import pulumi_aws as aws
+
+example = aws.ec2.get_vpc_dhcp_options(filters=[
+    aws.ec2.GetVpcDhcpOptionsFilterArgs(
+        name="key",
+        values=["domain-name"],
+    ),
+    aws.ec2.GetVpcDhcpOptionsFilterArgs(
+        name="value",
+        values=["example.com"],
+    ),
+])
+```
+
 
 {{< /example >}}
 

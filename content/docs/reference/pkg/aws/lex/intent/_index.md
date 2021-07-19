@@ -53,6 +53,7 @@ class MyStack : Stack
             {
                 Type = "ReturnIntent",
             },
+            Name = "OrderFlowers",
             RejectionStatement = new Aws.Lex.Inputs.IntentRejectionStatementArgs
             {
                 Messages = 
@@ -186,6 +187,7 @@ func main() {
 			FulfillmentActivity: &lex.IntentFulfillmentActivityArgs{
 				Type: pulumi.String("ReturnIntent"),
 			},
+			Name: pulumi.String("OrderFlowers"),
 			RejectionStatement: &lex.IntentRejectionStatementArgs{
 				Messages: lex.IntentRejectionStatementMessageArray{
 					&lex.IntentRejectionStatementMessageArgs{
@@ -211,10 +213,10 @@ func main() {
 					SlotTypeVersion: pulumi.String(fmt.Sprintf("%v%v", "$", "LATEST")),
 					ValueElicitationPrompt: &lex.IntentSlotValueElicitationPromptArgs{
 						MaxAttempts: pulumi.Int(2),
-						Message: pulumi.StringMapArray{
-							pulumi.StringMap{
-								"content":     pulumi.String("What type of flowers would you like to order?"),
-								"contentType": pulumi.String("PlainText"),
+						Message: []map[string]interface{}{
+							map[string]interface{}{
+								"content":     "What type of flowers would you like to order?",
+								"contentType": "PlainText",
 							},
 						},
 					},
@@ -231,10 +233,10 @@ func main() {
 					SlotTypeVersion: pulumi.String(fmt.Sprintf("%v%v", "$", "LATEST")),
 					ValueElicitationPrompt: &lex.IntentSlotValueElicitationPromptArgs{
 						MaxAttempts: pulumi.Int(2),
-						Message: pulumi.StringMapArray{
-							pulumi.StringMap{
-								"content":     pulumi.String("What day do you want the {FlowerType} to be picked up?"),
-								"contentType": pulumi.String("PlainText"),
+						Message: []map[string]interface{}{
+							map[string]interface{}{
+								"content":     "What day do you want the {FlowerType} to be picked up?",
+								"contentType": "PlainText",
 							},
 						},
 					},
@@ -251,10 +253,10 @@ func main() {
 					SlotTypeVersion: pulumi.String(fmt.Sprintf("%v%v", "$", "LATEST")),
 					ValueElicitationPrompt: &lex.IntentSlotValueElicitationPromptArgs{
 						MaxAttempts: pulumi.Int(2),
-						Message: pulumi.StringMapArray{
-							pulumi.StringMap{
-								"content":     pulumi.String("Pick up the {FlowerType} at what time on {PickupDate}?"),
-								"contentType": pulumi.String("PlainText"),
+						Message: []map[string]interface{}{
+							map[string]interface{}{
+								"content":     "Pick up the {FlowerType} at what time on {PickupDate}?",
+								"contentType": "PlainText",
 							},
 						},
 					},
@@ -292,6 +294,7 @@ order_flowers_intent = aws.lex.Intent("orderFlowersIntent",
     fulfillment_activity=aws.lex.IntentFulfillmentActivityArgs(
         type="ReturnIntent",
     ),
+    name="OrderFlowers",
     rejection_statement=aws.lex.IntentRejectionStatementArgs(
         messages=[aws.lex.IntentRejectionStatementMessageArgs(
             content="Okay, I will not place your order.",
@@ -378,6 +381,7 @@ const orderFlowersIntent = new aws.lex.Intent("order_flowers_intent", {
     fulfillmentActivity: {
         type: "ReturnIntent",
     },
+    name: "OrderFlowers",
     rejectionStatement: {
         messages: [{
             content: "Okay, I will not place your order.",

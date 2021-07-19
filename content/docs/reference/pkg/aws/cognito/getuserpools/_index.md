@@ -253,7 +253,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The set of cognito user pool Amazon Resource Names (ARNs).
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -270,7 +271,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}The list of cognito user pool ids.
+    <dd>{{% md %}}The set of cognito user pool ids.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
@@ -291,7 +292,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The set of cognito user pool Amazon Resource Names (ARNs).
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -308,7 +310,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}The list of cognito user pool ids.
+    <dd>{{% md %}}The set of cognito user pool ids.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
@@ -329,7 +331,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The set of cognito user pool Amazon Resource Names (ARNs).
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -346,7 +349,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}The list of cognito user pool ids.
+    <dd>{{% md %}}The set of cognito user pool ids.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
@@ -367,7 +370,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The set of cognito user pool Amazon Resource Names (ARNs).
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -384,7 +388,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}The list of cognito user pool ids.
+    <dd>{{% md %}}The set of cognito user pool ids.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">

@@ -838,6 +838,211 @@ const exampleApplication = new aws.kinesisanalyticsv2.Application("exampleApplic
 
 
 
+### VPC Configuration
+
+
+{{< example csharp >}}
+
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleBucket = new Aws.S3.Bucket("exampleBucket", new Aws.S3.BucketArgs
+        {
+        });
+        var exampleBucketObject = new Aws.S3.BucketObject("exampleBucketObject", new Aws.S3.BucketObjectArgs
+        {
+            Bucket = exampleBucket.BucketName,
+            Key = "example-flink-application",
+            Source = new FileAsset("flink-app.jar"),
+        });
+        var exampleApplication = new Aws.KinesisAnalyticsV2.Application("exampleApplication", new Aws.KinesisAnalyticsV2.ApplicationArgs
+        {
+            RuntimeEnvironment = "FLINK-1_8",
+            ServiceExecutionRole = aws_iam_role.Example.Arn,
+            ApplicationConfiguration = new Aws.KinesisAnalyticsV2.Inputs.ApplicationApplicationConfigurationArgs
+            {
+                ApplicationCodeConfiguration = new Aws.KinesisAnalyticsV2.Inputs.ApplicationApplicationConfigurationApplicationCodeConfigurationArgs
+                {
+                    CodeContent = new Aws.KinesisAnalyticsV2.Inputs.ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContentArgs
+                    {
+                        S3ContentLocation = new Aws.KinesisAnalyticsV2.Inputs.ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContentS3ContentLocationArgs
+                        {
+                            BucketArn = exampleBucket.Arn,
+                            FileKey = exampleBucketObject.Key,
+                        },
+                    },
+                    CodeContentType = "ZIPFILE",
+                },
+                VpcConfiguration = new Aws.KinesisAnalyticsV2.Inputs.ApplicationApplicationConfigurationVpcConfigurationArgs
+                {
+                    SecurityGroupIds = 
+                    {
+                        aws_security_group.Example[0].Id,
+                        aws_security_group.Example[1].Id,
+                    },
+                    SubnetIds = 
+                    {
+                        aws_subnet.Example.Id,
+                    },
+                },
+            },
+        });
+    }
+
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/kinesisanalyticsv2"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/s3"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleBucket, err := s3.NewBucket(ctx, "exampleBucket", nil)
+		if err != nil {
+			return err
+		}
+		exampleBucketObject, err := s3.NewBucketObject(ctx, "exampleBucketObject", &s3.BucketObjectArgs{
+			Bucket: exampleBucket.Bucket,
+			Key:    pulumi.String("example-flink-application"),
+			Source: pulumi.NewFileAsset("flink-app.jar"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = kinesisanalyticsv2.NewApplication(ctx, "exampleApplication", &kinesisanalyticsv2.ApplicationArgs{
+			RuntimeEnvironment:   pulumi.String("FLINK-1_8"),
+			ServiceExecutionRole: pulumi.Any(aws_iam_role.Example.Arn),
+			ApplicationConfiguration: &kinesisanalyticsv2.ApplicationApplicationConfigurationArgs{
+				ApplicationCodeConfiguration: &kinesisanalyticsv2.ApplicationApplicationConfigurationApplicationCodeConfigurationArgs{
+					CodeContent: &kinesisanalyticsv2.ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContentArgs{
+						S3ContentLocation: &kinesisanalyticsv2.ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContentS3ContentLocationArgs{
+							BucketArn: exampleBucket.Arn,
+							FileKey:   exampleBucketObject.Key,
+						},
+					},
+					CodeContentType: pulumi.String("ZIPFILE"),
+				},
+				VpcConfiguration: &kinesisanalyticsv2.ApplicationApplicationConfigurationVpcConfigurationArgs{
+					SecurityGroupIds: pulumi.StringArray{
+						pulumi.Any(aws_security_group.Example[0].Id),
+						pulumi.Any(aws_security_group.Example[1].Id),
+					},
+					SubnetIds: pulumi.StringArray{
+						pulumi.Any(aws_subnet.Example.Id),
+					},
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+```python
+import pulumi
+import pulumi_aws as aws
+
+example_bucket = aws.s3.Bucket("exampleBucket")
+example_bucket_object = aws.s3.BucketObject("exampleBucketObject",
+    bucket=example_bucket.bucket,
+    key="example-flink-application",
+    source=pulumi.FileAsset("flink-app.jar"))
+example_application = aws.kinesisanalyticsv2.Application("exampleApplication",
+    runtime_environment="FLINK-1_8",
+    service_execution_role=aws_iam_role["example"]["arn"],
+    application_configuration=aws.kinesisanalyticsv2.ApplicationApplicationConfigurationArgs(
+        application_code_configuration=aws.kinesisanalyticsv2.ApplicationApplicationConfigurationApplicationCodeConfigurationArgs(
+            code_content=aws.kinesisanalyticsv2.ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContentArgs(
+                s3_content_location=aws.kinesisanalyticsv2.ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContentS3ContentLocationArgs(
+                    bucket_arn=example_bucket.arn,
+                    file_key=example_bucket_object.key,
+                ),
+            ),
+            code_content_type="ZIPFILE",
+        ),
+        vpc_configuration={
+            "security_group_ids": [
+                aws_security_group["example"][0]["id"],
+                aws_security_group["example"][1]["id"],
+            ],
+            "subnet_ids": [aws_subnet["example"]["id"]],
+        },
+    ))
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const exampleBucket = new aws.s3.Bucket("exampleBucket", {});
+const exampleBucketObject = new aws.s3.BucketObject("exampleBucketObject", {
+    bucket: exampleBucket.bucket,
+    key: "example-flink-application",
+    source: new pulumi.asset.FileAsset("flink-app.jar"),
+});
+const exampleApplication = new aws.kinesisanalyticsv2.Application("exampleApplication", {
+    runtimeEnvironment: "FLINK-1_8",
+    serviceExecutionRole: aws_iam_role.example.arn,
+    applicationConfiguration: {
+        applicationCodeConfiguration: {
+            codeContent: {
+                s3ContentLocation: {
+                    bucketArn: exampleBucket.arn,
+                    fileKey: exampleBucketObject.key,
+                },
+            },
+            codeContentType: "ZIPFILE",
+        },
+        vpcConfiguration: {
+            securityGroupIds: [
+                aws_security_group.example[0].id,
+                aws_security_group.example[1].id,
+            ],
+            subnetIds: [aws_subnet.example.id],
+        },
+    },
+});
+```
+
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
 

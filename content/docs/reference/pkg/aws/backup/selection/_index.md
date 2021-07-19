@@ -75,6 +75,7 @@ package main
 import (
 	"fmt"
 
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws"
 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/backup"
 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/iam"
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
@@ -83,7 +84,7 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		exampleRole, err := iam.NewRole(ctx, "exampleRole", &iam.RoleArgs{
-			AssumeRolePolicy: pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "  \"Version\": \"2012-10-17\",\n", "  \"Statement\": [\n", "    {\n", "      \"Action\": [\"sts:AssumeRole\"],\n", "      \"Effect\": \"allow\",\n", "      \"Principal\": {\n", "        \"Service\": [\"backup.amazonaws.com\"]\n", "      }\n", "    }\n", "  ]\n", "}\n")),
+			AssumeRolePolicy: pulumi.Any(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "  \"Version\": \"2012-10-17\",\n", "  \"Statement\": [\n", "    {\n", "      \"Action\": [\"sts:AssumeRole\"],\n", "      \"Effect\": \"allow\",\n", "      \"Principal\": {\n", "        \"Service\": [\"backup.amazonaws.com\"]\n", "      }\n", "    }\n", "  ]\n", "}\n")),
 		})
 		if err != nil {
 			return err
@@ -280,6 +281,116 @@ const example = new aws.backup.Selection("example", {
         key: "foo",
         value: "bar",
     }],
+});
+```
+
+
+{{< /example >}}
+
+
+
+
+### Selecting Backups By Resource
+
+
+{{< example csharp >}}
+
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Aws.Backup.Selection("example", new Aws.Backup.SelectionArgs
+        {
+            IamRoleArn = aws_iam_role.Example.Arn,
+            PlanId = aws_backup_plan.Example.Id,
+            Resources = 
+            {
+                aws_db_instance.Example.Arn,
+                aws_ebs_volume.Example.Arn,
+                aws_efs_file_system.Example.Arn,
+            },
+        });
+    }
+
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/backup"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := backup.NewSelection(ctx, "example", &backup.SelectionArgs{
+			IamRoleArn: pulumi.Any(aws_iam_role.Example.Arn),
+			PlanId:     pulumi.Any(aws_backup_plan.Example.Id),
+			Resources: pulumi.StringArray{
+				pulumi.Any(aws_db_instance.Example.Arn),
+				pulumi.Any(aws_ebs_volume.Example.Arn),
+				pulumi.Any(aws_efs_file_system.Example.Arn),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+```python
+import pulumi
+import pulumi_aws as aws
+
+example = aws.backup.Selection("example",
+    iam_role_arn=aws_iam_role["example"]["arn"],
+    plan_id=aws_backup_plan["example"]["id"],
+    resources=[
+        aws_db_instance["example"]["arn"],
+        aws_ebs_volume["example"]["arn"],
+        aws_efs_file_system["example"]["arn"],
+    ])
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const example = new aws.backup.Selection("example", {
+    iamRoleArn: aws_iam_role.example.arn,
+    planId: aws_backup_plan.example.id,
+    resources: [
+        aws_db_instance.example.arn,
+        aws_ebs_volume.example.arn,
+        aws_efs_file_system.example.arn,
+    ],
 });
 ```
 

@@ -62,6 +62,7 @@ class MyStack : Stack
 package main
 
 import (
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws"
 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/iam"
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
@@ -74,7 +75,7 @@ func main() {
 		}
 		policy, err := iam.NewPolicy(ctx, "policy", &iam.PolicyArgs{
 			Description: pulumi.String("A test policy"),
-			Policy:      pulumi.String("{ ... policy JSON ... }"),
+			Policy:      pulumi.Any("{ ... policy JSON ... }"),
 		})
 		if err != nil {
 			return err

@@ -555,6 +555,7 @@ const examplebucketObject = new aws.s3.BucketObject("examplebucketObject", {
                  <span class="nx">object_lock_retain_until_date</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                  <span class="nx">server_side_encryption</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                  <span class="nx">source</span><span class="p">:</span> <span class="nx">Optional[Union[pulumi.Asset, pulumi.Archive]]</span> = None<span class="p">,</span>
+                 <span class="nx">source_hash</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                  <span class="nx">storage_class</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                  <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
                  <span class="nx">tags_all</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
@@ -694,7 +695,7 @@ The BucketObject resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string | string</span>
     </dt>
-    <dd>{{% md %}}The name of the bucket to put the file in. Alternatively, an [S3 access point](https://docs.aws.amazon.com/AmazonS3/latest/dev/using-access-points.html) ARN can be specified.
+    <dd>{{% md %}}Name of the bucket to put the file in. Alternatively, an [S3 access point](https://docs.aws.amazon.com/AmazonS3/latest/dev/using-access-points.html) ARN can be specified.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="acl_csharp">
@@ -703,7 +704,7 @@ The BucketObject resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The [canned ACL](https://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.html#canned-acl) to apply. Valid values are `private`, `public-read`, `public-read-write`, `aws-exec-read`, `authenticated-read`, `bucket-owner-read`, and `bucket-owner-full-control`. Defaults to `private`.
+    <dd>{{% md %}}[Canned ACL](https://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.html#canned-acl) to apply. Valid values are `private`, `public-read`, `public-read-write`, `aws-exec-read`, `authenticated-read`, `bucket-owner-read`, and `bucket-owner-full-control`. Defaults to `private`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bucketkeyenabled_csharp">
@@ -721,7 +722,7 @@ The BucketObject resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies caching behavior along the request/reply chain Read [w3c cache_control](http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.9) for further details.
+    <dd>{{% md %}}Caching behavior along the request/reply chain Read [w3c cache_control](http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.9) for further details.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="content_csharp">
@@ -748,7 +749,7 @@ The BucketObject resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies presentational information for the object. Read [w3c content_disposition](http://www.w3.org/Protocols/rfc2616/rfc2616-sec19.html#sec19.5.1) for further information.
+    <dd>{{% md %}}Presentational information for the object. Read [w3c content_disposition](http://www.w3.org/Protocols/rfc2616/rfc2616-sec19.html#sec19.5.1) for further information.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="contentencoding_csharp">
@@ -757,7 +758,7 @@ The BucketObject resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies what content encodings have been applied to the object and thus what decoding mechanisms must be applied to obtain the media-type referenced by the Content-Type header field. Read [w3c content encoding](http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.11) for further information.
+    <dd>{{% md %}}Content encodings that have been applied to the object and thus what decoding mechanisms must be applied to obtain the media-type referenced by the Content-Type header field. Read [w3c content encoding](http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.11) for further information.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="contentlanguage_csharp">
@@ -766,7 +767,7 @@ The BucketObject resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The language the content is in e.g. en-US or en-GB.
+    <dd>{{% md %}}Language the content is in e.g. en-US or en-GB.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="contenttype_csharp">
@@ -775,7 +776,7 @@ The BucketObject resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A standard MIME type describing the format of the object data, e.g. application/octet-stream. All Valid MIME Types are valid for this input.
+    <dd>{{% md %}}Standard MIME type describing the format of the object data, e.g. application/octet-stream. All Valid MIME Types are valid for this input.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="etag_csharp">
@@ -784,8 +785,7 @@ The BucketObject resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Used to trigger updates. The only meaningful value is `${filemd5("path/to/file")}` (this provider 0.11.12 or later) or `${md5(file("path/to/file"))}` (this provider 0.11.11 or earlier).
-This attribute is not compatible with KMS encryption, `kms_key_id` or `server_side_encryption = "aws:kms"`.
+    <dd>{{% md %}}Triggers updates when the value changes. The only meaningful value is `filemd5("path/to/file")`. This attribute is not compatible with KMS encryption, `kms_key_id` or `server_side_encryption = "aws:kms"` (see `source_hash` instead).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="forcedestroy_csharp">
@@ -794,8 +794,7 @@ This attribute is not compatible with KMS encryption, `kms_key_id` or `server_si
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Allow the object to be deleted by removing any legal hold on any object version.
-Default is `false`. This value should be set to `true` only if the bucket has S3 object lock enabled.
+    <dd>{{% md %}}Whether to allow the object to be deleted by removing any legal hold on any object version. Default is `false`. This value should be set to `true` only if the bucket has S3 object lock enabled.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="key_csharp">
@@ -804,7 +803,7 @@ Default is `false`. This value should be set to `true` only if the bucket has S3
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the object once it is in the bucket.
+    <dd>{{% md %}}Name of the object once it is in the bucket.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kmskeyid_csharp">
@@ -813,9 +812,7 @@ Default is `false`. This value should be set to `true` only if the bucket has S3
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Amazon Resource Name (ARN) of the KMS Key to use for object encryption. If the S3 Bucket has server-side encryption enabled, that value will automatically be used. If referencing the
-`aws.kms.Key` resource, use the `arn` attribute. If referencing the `aws.kms.Alias` data source or resource, use the `target_key_arn` attribute. The provider will only perform drift detection if a configuration value
-is provided.
+    <dd>{{% md %}}ARN of the KMS Key to use for object encryption. If the S3 Bucket has server-side encryption enabled, that value will automatically be used. If referencing the `aws.kms.Key` resource, use the `arn` attribute. If referencing the `aws.kms.Alias` data source or resource, use the `target_key_arn` attribute. This provider will only perform drift detection if a configuration value is provided.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metadata_csharp">
@@ -824,7 +821,7 @@ is provided.
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}A map of keys/values to provision metadata (will be automatically prefixed by `x-amz-meta-`, note that only lowercase label are currently supported by the AWS Go API).
+    <dd>{{% md %}}Map of keys/values to provision metadata (will be automatically prefixed by `x-amz-meta-`, note that only lowercase label are currently supported by the AWS Go API).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="objectlocklegalholdstatus_csharp">
@@ -833,7 +830,7 @@ is provided.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The [legal hold](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock-overview.html#object-lock-legal-holds) status that you want to apply to the specified object. Valid values are `ON` and `OFF`.
+    <dd>{{% md %}}[Legal hold](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock-overview.html#object-lock-legal-holds) status that you want to apply to the specified object. Valid values are `ON` and `OFF`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="objectlockmode_csharp">
@@ -842,7 +839,7 @@ is provided.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The object lock [retention mode](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock-overview.html#object-lock-retention-modes) that you want to apply to this object. Valid values are `GOVERNANCE` and `COMPLIANCE`.
+    <dd>{{% md %}}Object lock [retention mode](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock-overview.html#object-lock-retention-modes) that you want to apply to this object. Valid values are `GOVERNANCE` and `COMPLIANCE`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="objectlockretainuntildate_csharp">
@@ -851,7 +848,7 @@ is provided.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The date and time, in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8), when this object's object lock will [expire](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock-overview.html#object-lock-retention-periods).
+    <dd>{{% md %}}Date and time, in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8), when this object's object lock will [expire](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock-overview.html#object-lock-retention-periods).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serversideencryption_csharp">
@@ -860,7 +857,7 @@ is provided.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies server-side encryption of the object in S3. Valid values are "`AES256`" and "`aws:kms`".
+    <dd>{{% md %}}Server-side encryption of the object in S3. Valid values are "`AES256`" and "`aws:kms`".
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_csharp">
@@ -869,7 +866,16 @@ is provided.
         <span class="property-indicator"></span>
         <span class="property-type">Asset<wbr>Or<wbr>Archive</span>
     </dt>
-    <dd>{{% md %}}The path to a file that will be read and uploaded as raw bytes for the object content.
+    <dd>{{% md %}}Path to a file that will be read and uploaded as raw bytes for the object content.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sourcehash_csharp">
+<a href="#sourcehash_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Hash</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Triggers updates like `etag` but useful to address `etag` encryption limitations. Set using `filemd5("path/to/source")`. (The value is only stored in state and not saved by AWS.)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageclass_csharp">
@@ -878,8 +884,7 @@ is provided.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the desired [Storage Class](http://docs.aws.amazon.com/AmazonS3/latest/dev/storage-class-intro.html)
-for the object. Can be either "`STANDARD`", "`REDUCED_REDUNDANCY`", "`ONEZONE_IA`", "`INTELLIGENT_TIERING`", "`GLACIER`", "`DEEP_ARCHIVE`", or "`STANDARD_IA`". Defaults to "`STANDARD`".
+    <dd>{{% md %}}[Storage Class](http://docs.aws.amazon.com/AmazonS3/latest/dev/storage-class-intro.html) for the object. Can be either "`STANDARD`", "`REDUCED_REDUNDANCY`", "`ONEZONE_IA`", "`INTELLIGENT_TIERING`", "`GLACIER`", "`DEEP_ARCHIVE`", or "`STANDARD_IA`". Defaults to "`STANDARD`".
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
@@ -888,7 +893,7 @@ for the object. Can be either "`STANDARD`", "`REDUCED_REDUNDANCY`", "`ONEZONE_IA
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}A map of tags to assign to the object. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+    <dd>{{% md %}}Map of tags to assign to the object. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tagsall_csharp">
@@ -897,7 +902,7 @@ for the object. Can be either "`STANDARD`", "`REDUCED_REDUNDANCY`", "`ONEZONE_IA
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider .
+    <dd>{{% md %}}Map of tags assigned to the resource, including those inherited from the provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="websiteredirect_csharp">
@@ -906,7 +911,7 @@ for the object. Can be either "`STANDARD`", "`REDUCED_REDUNDANCY`", "`ONEZONE_IA
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies a target URL for [website redirect](http://docs.aws.amazon.com/AmazonS3/latest/dev/how-to-page-redirect.html).
+    <dd>{{% md %}}Target URL for [website redirect](http://docs.aws.amazon.com/AmazonS3/latest/dev/how-to-page-redirect.html).
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -919,7 +924,7 @@ for the object. Can be either "`STANDARD`", "`REDUCED_REDUNDANCY`", "`ONEZONE_IA
         <span class="property-indicator"></span>
         <span class="property-type">string | string</span>
     </dt>
-    <dd>{{% md %}}The name of the bucket to put the file in. Alternatively, an [S3 access point](https://docs.aws.amazon.com/AmazonS3/latest/dev/using-access-points.html) ARN can be specified.
+    <dd>{{% md %}}Name of the bucket to put the file in. Alternatively, an [S3 access point](https://docs.aws.amazon.com/AmazonS3/latest/dev/using-access-points.html) ARN can be specified.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="acl_go">
@@ -928,7 +933,7 @@ for the object. Can be either "`STANDARD`", "`REDUCED_REDUNDANCY`", "`ONEZONE_IA
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The [canned ACL](https://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.html#canned-acl) to apply. Valid values are `private`, `public-read`, `public-read-write`, `aws-exec-read`, `authenticated-read`, `bucket-owner-read`, and `bucket-owner-full-control`. Defaults to `private`.
+    <dd>{{% md %}}[Canned ACL](https://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.html#canned-acl) to apply. Valid values are `private`, `public-read`, `public-read-write`, `aws-exec-read`, `authenticated-read`, `bucket-owner-read`, and `bucket-owner-full-control`. Defaults to `private`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bucketkeyenabled_go">
@@ -946,7 +951,7 @@ for the object. Can be either "`STANDARD`", "`REDUCED_REDUNDANCY`", "`ONEZONE_IA
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies caching behavior along the request/reply chain Read [w3c cache_control](http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.9) for further details.
+    <dd>{{% md %}}Caching behavior along the request/reply chain Read [w3c cache_control](http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.9) for further details.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="content_go">
@@ -973,7 +978,7 @@ for the object. Can be either "`STANDARD`", "`REDUCED_REDUNDANCY`", "`ONEZONE_IA
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies presentational information for the object. Read [w3c content_disposition](http://www.w3.org/Protocols/rfc2616/rfc2616-sec19.html#sec19.5.1) for further information.
+    <dd>{{% md %}}Presentational information for the object. Read [w3c content_disposition](http://www.w3.org/Protocols/rfc2616/rfc2616-sec19.html#sec19.5.1) for further information.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="contentencoding_go">
@@ -982,7 +987,7 @@ for the object. Can be either "`STANDARD`", "`REDUCED_REDUNDANCY`", "`ONEZONE_IA
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies what content encodings have been applied to the object and thus what decoding mechanisms must be applied to obtain the media-type referenced by the Content-Type header field. Read [w3c content encoding](http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.11) for further information.
+    <dd>{{% md %}}Content encodings that have been applied to the object and thus what decoding mechanisms must be applied to obtain the media-type referenced by the Content-Type header field. Read [w3c content encoding](http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.11) for further information.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="contentlanguage_go">
@@ -991,7 +996,7 @@ for the object. Can be either "`STANDARD`", "`REDUCED_REDUNDANCY`", "`ONEZONE_IA
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The language the content is in e.g. en-US or en-GB.
+    <dd>{{% md %}}Language the content is in e.g. en-US or en-GB.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="contenttype_go">
@@ -1000,7 +1005,7 @@ for the object. Can be either "`STANDARD`", "`REDUCED_REDUNDANCY`", "`ONEZONE_IA
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A standard MIME type describing the format of the object data, e.g. application/octet-stream. All Valid MIME Types are valid for this input.
+    <dd>{{% md %}}Standard MIME type describing the format of the object data, e.g. application/octet-stream. All Valid MIME Types are valid for this input.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="etag_go">
@@ -1009,8 +1014,7 @@ for the object. Can be either "`STANDARD`", "`REDUCED_REDUNDANCY`", "`ONEZONE_IA
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Used to trigger updates. The only meaningful value is `${filemd5("path/to/file")}` (this provider 0.11.12 or later) or `${md5(file("path/to/file"))}` (this provider 0.11.11 or earlier).
-This attribute is not compatible with KMS encryption, `kms_key_id` or `server_side_encryption = "aws:kms"`.
+    <dd>{{% md %}}Triggers updates when the value changes. The only meaningful value is `filemd5("path/to/file")`. This attribute is not compatible with KMS encryption, `kms_key_id` or `server_side_encryption = "aws:kms"` (see `source_hash` instead).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="forcedestroy_go">
@@ -1019,8 +1023,7 @@ This attribute is not compatible with KMS encryption, `kms_key_id` or `server_si
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Allow the object to be deleted by removing any legal hold on any object version.
-Default is `false`. This value should be set to `true` only if the bucket has S3 object lock enabled.
+    <dd>{{% md %}}Whether to allow the object to be deleted by removing any legal hold on any object version. Default is `false`. This value should be set to `true` only if the bucket has S3 object lock enabled.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="key_go">
@@ -1029,7 +1032,7 @@ Default is `false`. This value should be set to `true` only if the bucket has S3
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the object once it is in the bucket.
+    <dd>{{% md %}}Name of the object once it is in the bucket.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kmskeyid_go">
@@ -1038,9 +1041,7 @@ Default is `false`. This value should be set to `true` only if the bucket has S3
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Amazon Resource Name (ARN) of the KMS Key to use for object encryption. If the S3 Bucket has server-side encryption enabled, that value will automatically be used. If referencing the
-`aws.kms.Key` resource, use the `arn` attribute. If referencing the `aws.kms.Alias` data source or resource, use the `target_key_arn` attribute. The provider will only perform drift detection if a configuration value
-is provided.
+    <dd>{{% md %}}ARN of the KMS Key to use for object encryption. If the S3 Bucket has server-side encryption enabled, that value will automatically be used. If referencing the `aws.kms.Key` resource, use the `arn` attribute. If referencing the `aws.kms.Alias` data source or resource, use the `target_key_arn` attribute. This provider will only perform drift detection if a configuration value is provided.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metadata_go">
@@ -1049,7 +1050,7 @@ is provided.
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}A map of keys/values to provision metadata (will be automatically prefixed by `x-amz-meta-`, note that only lowercase label are currently supported by the AWS Go API).
+    <dd>{{% md %}}Map of keys/values to provision metadata (will be automatically prefixed by `x-amz-meta-`, note that only lowercase label are currently supported by the AWS Go API).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="objectlocklegalholdstatus_go">
@@ -1058,7 +1059,7 @@ is provided.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The [legal hold](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock-overview.html#object-lock-legal-holds) status that you want to apply to the specified object. Valid values are `ON` and `OFF`.
+    <dd>{{% md %}}[Legal hold](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock-overview.html#object-lock-legal-holds) status that you want to apply to the specified object. Valid values are `ON` and `OFF`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="objectlockmode_go">
@@ -1067,7 +1068,7 @@ is provided.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The object lock [retention mode](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock-overview.html#object-lock-retention-modes) that you want to apply to this object. Valid values are `GOVERNANCE` and `COMPLIANCE`.
+    <dd>{{% md %}}Object lock [retention mode](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock-overview.html#object-lock-retention-modes) that you want to apply to this object. Valid values are `GOVERNANCE` and `COMPLIANCE`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="objectlockretainuntildate_go">
@@ -1076,7 +1077,7 @@ is provided.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The date and time, in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8), when this object's object lock will [expire](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock-overview.html#object-lock-retention-periods).
+    <dd>{{% md %}}Date and time, in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8), when this object's object lock will [expire](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock-overview.html#object-lock-retention-periods).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serversideencryption_go">
@@ -1085,7 +1086,7 @@ is provided.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies server-side encryption of the object in S3. Valid values are "`AES256`" and "`aws:kms`".
+    <dd>{{% md %}}Server-side encryption of the object in S3. Valid values are "`AES256`" and "`aws:kms`".
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_go">
@@ -1094,7 +1095,16 @@ is provided.
         <span class="property-indicator"></span>
         <span class="property-type">pulumi.<wbr>Asset<wbr>Or<wbr>Archive</span>
     </dt>
-    <dd>{{% md %}}The path to a file that will be read and uploaded as raw bytes for the object content.
+    <dd>{{% md %}}Path to a file that will be read and uploaded as raw bytes for the object content.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sourcehash_go">
+<a href="#sourcehash_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Hash</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Triggers updates like `etag` but useful to address `etag` encryption limitations. Set using `filemd5("path/to/source")`. (The value is only stored in state and not saved by AWS.)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageclass_go">
@@ -1103,8 +1113,7 @@ is provided.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the desired [Storage Class](http://docs.aws.amazon.com/AmazonS3/latest/dev/storage-class-intro.html)
-for the object. Can be either "`STANDARD`", "`REDUCED_REDUNDANCY`", "`ONEZONE_IA`", "`INTELLIGENT_TIERING`", "`GLACIER`", "`DEEP_ARCHIVE`", or "`STANDARD_IA`". Defaults to "`STANDARD`".
+    <dd>{{% md %}}[Storage Class](http://docs.aws.amazon.com/AmazonS3/latest/dev/storage-class-intro.html) for the object. Can be either "`STANDARD`", "`REDUCED_REDUNDANCY`", "`ONEZONE_IA`", "`INTELLIGENT_TIERING`", "`GLACIER`", "`DEEP_ARCHIVE`", or "`STANDARD_IA`". Defaults to "`STANDARD`".
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
@@ -1113,7 +1122,7 @@ for the object. Can be either "`STANDARD`", "`REDUCED_REDUNDANCY`", "`ONEZONE_IA
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}A map of tags to assign to the object. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+    <dd>{{% md %}}Map of tags to assign to the object. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tagsall_go">
@@ -1122,7 +1131,7 @@ for the object. Can be either "`STANDARD`", "`REDUCED_REDUNDANCY`", "`ONEZONE_IA
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider .
+    <dd>{{% md %}}Map of tags assigned to the resource, including those inherited from the provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="websiteredirect_go">
@@ -1131,7 +1140,7 @@ for the object. Can be either "`STANDARD`", "`REDUCED_REDUNDANCY`", "`ONEZONE_IA
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies a target URL for [website redirect](http://docs.aws.amazon.com/AmazonS3/latest/dev/how-to-page-redirect.html).
+    <dd>{{% md %}}Target URL for [website redirect](http://docs.aws.amazon.com/AmazonS3/latest/dev/how-to-page-redirect.html).
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1144,7 +1153,7 @@ for the object. Can be either "`STANDARD`", "`REDUCED_REDUNDANCY`", "`ONEZONE_IA
         <span class="property-indicator"></span>
         <span class="property-type">string | Bucket</span>
     </dt>
-    <dd>{{% md %}}The name of the bucket to put the file in. Alternatively, an [S3 access point](https://docs.aws.amazon.com/AmazonS3/latest/dev/using-access-points.html) ARN can be specified.
+    <dd>{{% md %}}Name of the bucket to put the file in. Alternatively, an [S3 access point](https://docs.aws.amazon.com/AmazonS3/latest/dev/using-access-points.html) ARN can be specified.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="acl_nodejs">
@@ -1153,7 +1162,7 @@ for the object. Can be either "`STANDARD`", "`REDUCED_REDUNDANCY`", "`ONEZONE_IA
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The [canned ACL](https://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.html#canned-acl) to apply. Valid values are `private`, `public-read`, `public-read-write`, `aws-exec-read`, `authenticated-read`, `bucket-owner-read`, and `bucket-owner-full-control`. Defaults to `private`.
+    <dd>{{% md %}}[Canned ACL](https://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.html#canned-acl) to apply. Valid values are `private`, `public-read`, `public-read-write`, `aws-exec-read`, `authenticated-read`, `bucket-owner-read`, and `bucket-owner-full-control`. Defaults to `private`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bucketkeyenabled_nodejs">
@@ -1171,7 +1180,7 @@ for the object. Can be either "`STANDARD`", "`REDUCED_REDUNDANCY`", "`ONEZONE_IA
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies caching behavior along the request/reply chain Read [w3c cache_control](http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.9) for further details.
+    <dd>{{% md %}}Caching behavior along the request/reply chain Read [w3c cache_control](http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.9) for further details.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="content_nodejs">
@@ -1198,7 +1207,7 @@ for the object. Can be either "`STANDARD`", "`REDUCED_REDUNDANCY`", "`ONEZONE_IA
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies presentational information for the object. Read [w3c content_disposition](http://www.w3.org/Protocols/rfc2616/rfc2616-sec19.html#sec19.5.1) for further information.
+    <dd>{{% md %}}Presentational information for the object. Read [w3c content_disposition](http://www.w3.org/Protocols/rfc2616/rfc2616-sec19.html#sec19.5.1) for further information.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="contentencoding_nodejs">
@@ -1207,7 +1216,7 @@ for the object. Can be either "`STANDARD`", "`REDUCED_REDUNDANCY`", "`ONEZONE_IA
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies what content encodings have been applied to the object and thus what decoding mechanisms must be applied to obtain the media-type referenced by the Content-Type header field. Read [w3c content encoding](http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.11) for further information.
+    <dd>{{% md %}}Content encodings that have been applied to the object and thus what decoding mechanisms must be applied to obtain the media-type referenced by the Content-Type header field. Read [w3c content encoding](http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.11) for further information.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="contentlanguage_nodejs">
@@ -1216,7 +1225,7 @@ for the object. Can be either "`STANDARD`", "`REDUCED_REDUNDANCY`", "`ONEZONE_IA
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The language the content is in e.g. en-US or en-GB.
+    <dd>{{% md %}}Language the content is in e.g. en-US or en-GB.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="contenttype_nodejs">
@@ -1225,7 +1234,7 @@ for the object. Can be either "`STANDARD`", "`REDUCED_REDUNDANCY`", "`ONEZONE_IA
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A standard MIME type describing the format of the object data, e.g. application/octet-stream. All Valid MIME Types are valid for this input.
+    <dd>{{% md %}}Standard MIME type describing the format of the object data, e.g. application/octet-stream. All Valid MIME Types are valid for this input.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="etag_nodejs">
@@ -1234,8 +1243,7 @@ for the object. Can be either "`STANDARD`", "`REDUCED_REDUNDANCY`", "`ONEZONE_IA
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Used to trigger updates. The only meaningful value is `${filemd5("path/to/file")}` (this provider 0.11.12 or later) or `${md5(file("path/to/file"))}` (this provider 0.11.11 or earlier).
-This attribute is not compatible with KMS encryption, `kms_key_id` or `server_side_encryption = "aws:kms"`.
+    <dd>{{% md %}}Triggers updates when the value changes. The only meaningful value is `filemd5("path/to/file")`. This attribute is not compatible with KMS encryption, `kms_key_id` or `server_side_encryption = "aws:kms"` (see `source_hash` instead).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="forcedestroy_nodejs">
@@ -1244,8 +1252,7 @@ This attribute is not compatible with KMS encryption, `kms_key_id` or `server_si
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Allow the object to be deleted by removing any legal hold on any object version.
-Default is `false`. This value should be set to `true` only if the bucket has S3 object lock enabled.
+    <dd>{{% md %}}Whether to allow the object to be deleted by removing any legal hold on any object version. Default is `false`. This value should be set to `true` only if the bucket has S3 object lock enabled.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="key_nodejs">
@@ -1254,7 +1261,7 @@ Default is `false`. This value should be set to `true` only if the bucket has S3
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the object once it is in the bucket.
+    <dd>{{% md %}}Name of the object once it is in the bucket.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kmskeyid_nodejs">
@@ -1263,9 +1270,7 @@ Default is `false`. This value should be set to `true` only if the bucket has S3
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Amazon Resource Name (ARN) of the KMS Key to use for object encryption. If the S3 Bucket has server-side encryption enabled, that value will automatically be used. If referencing the
-`aws.kms.Key` resource, use the `arn` attribute. If referencing the `aws.kms.Alias` data source or resource, use the `target_key_arn` attribute. The provider will only perform drift detection if a configuration value
-is provided.
+    <dd>{{% md %}}ARN of the KMS Key to use for object encryption. If the S3 Bucket has server-side encryption enabled, that value will automatically be used. If referencing the `aws.kms.Key` resource, use the `arn` attribute. If referencing the `aws.kms.Alias` data source or resource, use the `target_key_arn` attribute. This provider will only perform drift detection if a configuration value is provided.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metadata_nodejs">
@@ -1274,7 +1279,7 @@ is provided.
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}A map of keys/values to provision metadata (will be automatically prefixed by `x-amz-meta-`, note that only lowercase label are currently supported by the AWS Go API).
+    <dd>{{% md %}}Map of keys/values to provision metadata (will be automatically prefixed by `x-amz-meta-`, note that only lowercase label are currently supported by the AWS Go API).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="objectlocklegalholdstatus_nodejs">
@@ -1283,7 +1288,7 @@ is provided.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The [legal hold](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock-overview.html#object-lock-legal-holds) status that you want to apply to the specified object. Valid values are `ON` and `OFF`.
+    <dd>{{% md %}}[Legal hold](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock-overview.html#object-lock-legal-holds) status that you want to apply to the specified object. Valid values are `ON` and `OFF`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="objectlockmode_nodejs">
@@ -1292,7 +1297,7 @@ is provided.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The object lock [retention mode](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock-overview.html#object-lock-retention-modes) that you want to apply to this object. Valid values are `GOVERNANCE` and `COMPLIANCE`.
+    <dd>{{% md %}}Object lock [retention mode](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock-overview.html#object-lock-retention-modes) that you want to apply to this object. Valid values are `GOVERNANCE` and `COMPLIANCE`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="objectlockretainuntildate_nodejs">
@@ -1301,7 +1306,7 @@ is provided.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The date and time, in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8), when this object's object lock will [expire](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock-overview.html#object-lock-retention-periods).
+    <dd>{{% md %}}Date and time, in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8), when this object's object lock will [expire](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock-overview.html#object-lock-retention-periods).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serversideencryption_nodejs">
@@ -1310,7 +1315,7 @@ is provided.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies server-side encryption of the object in S3. Valid values are "`AES256`" and "`aws:kms`".
+    <dd>{{% md %}}Server-side encryption of the object in S3. Valid values are "`AES256`" and "`aws:kms`".
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_nodejs">
@@ -1319,7 +1324,16 @@ is provided.
         <span class="property-indicator"></span>
         <span class="property-type">pulumi.asset.<wbr>Asset | pulumi.asset.<wbr>Archive</span>
     </dt>
-    <dd>{{% md %}}The path to a file that will be read and uploaded as raw bytes for the object content.
+    <dd>{{% md %}}Path to a file that will be read and uploaded as raw bytes for the object content.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sourcehash_nodejs">
+<a href="#sourcehash_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Hash</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Triggers updates like `etag` but useful to address `etag` encryption limitations. Set using `filemd5("path/to/source")`. (The value is only stored in state and not saved by AWS.)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageclass_nodejs">
@@ -1328,8 +1342,7 @@ is provided.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the desired [Storage Class](http://docs.aws.amazon.com/AmazonS3/latest/dev/storage-class-intro.html)
-for the object. Can be either "`STANDARD`", "`REDUCED_REDUNDANCY`", "`ONEZONE_IA`", "`INTELLIGENT_TIERING`", "`GLACIER`", "`DEEP_ARCHIVE`", or "`STANDARD_IA`". Defaults to "`STANDARD`".
+    <dd>{{% md %}}[Storage Class](http://docs.aws.amazon.com/AmazonS3/latest/dev/storage-class-intro.html) for the object. Can be either "`STANDARD`", "`REDUCED_REDUNDANCY`", "`ONEZONE_IA`", "`INTELLIGENT_TIERING`", "`GLACIER`", "`DEEP_ARCHIVE`", or "`STANDARD_IA`". Defaults to "`STANDARD`".
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
@@ -1338,7 +1351,7 @@ for the object. Can be either "`STANDARD`", "`REDUCED_REDUNDANCY`", "`ONEZONE_IA
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}A map of tags to assign to the object. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+    <dd>{{% md %}}Map of tags to assign to the object. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tagsall_nodejs">
@@ -1347,7 +1360,7 @@ for the object. Can be either "`STANDARD`", "`REDUCED_REDUNDANCY`", "`ONEZONE_IA
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider .
+    <dd>{{% md %}}Map of tags assigned to the resource, including those inherited from the provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="websiteredirect_nodejs">
@@ -1356,7 +1369,7 @@ for the object. Can be either "`STANDARD`", "`REDUCED_REDUNDANCY`", "`ONEZONE_IA
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies a target URL for [website redirect](http://docs.aws.amazon.com/AmazonS3/latest/dev/how-to-page-redirect.html).
+    <dd>{{% md %}}Target URL for [website redirect](http://docs.aws.amazon.com/AmazonS3/latest/dev/how-to-page-redirect.html).
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1369,7 +1382,7 @@ for the object. Can be either "`STANDARD`", "`REDUCED_REDUNDANCY`", "`ONEZONE_IA
         <span class="property-indicator"></span>
         <span class="property-type">str | str</span>
     </dt>
-    <dd>{{% md %}}The name of the bucket to put the file in. Alternatively, an [S3 access point](https://docs.aws.amazon.com/AmazonS3/latest/dev/using-access-points.html) ARN can be specified.
+    <dd>{{% md %}}Name of the bucket to put the file in. Alternatively, an [S3 access point](https://docs.aws.amazon.com/AmazonS3/latest/dev/using-access-points.html) ARN can be specified.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="acl_python">
@@ -1378,7 +1391,7 @@ for the object. Can be either "`STANDARD`", "`REDUCED_REDUNDANCY`", "`ONEZONE_IA
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The [canned ACL](https://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.html#canned-acl) to apply. Valid values are `private`, `public-read`, `public-read-write`, `aws-exec-read`, `authenticated-read`, `bucket-owner-read`, and `bucket-owner-full-control`. Defaults to `private`.
+    <dd>{{% md %}}[Canned ACL](https://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.html#canned-acl) to apply. Valid values are `private`, `public-read`, `public-read-write`, `aws-exec-read`, `authenticated-read`, `bucket-owner-read`, and `bucket-owner-full-control`. Defaults to `private`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bucket_key_enabled_python">
@@ -1396,7 +1409,7 @@ for the object. Can be either "`STANDARD`", "`REDUCED_REDUNDANCY`", "`ONEZONE_IA
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies caching behavior along the request/reply chain Read [w3c cache_control](http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.9) for further details.
+    <dd>{{% md %}}Caching behavior along the request/reply chain Read [w3c cache_control](http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.9) for further details.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="content_python">
@@ -1423,7 +1436,7 @@ for the object. Can be either "`STANDARD`", "`REDUCED_REDUNDANCY`", "`ONEZONE_IA
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies presentational information for the object. Read [w3c content_disposition](http://www.w3.org/Protocols/rfc2616/rfc2616-sec19.html#sec19.5.1) for further information.
+    <dd>{{% md %}}Presentational information for the object. Read [w3c content_disposition](http://www.w3.org/Protocols/rfc2616/rfc2616-sec19.html#sec19.5.1) for further information.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="content_encoding_python">
@@ -1432,7 +1445,7 @@ for the object. Can be either "`STANDARD`", "`REDUCED_REDUNDANCY`", "`ONEZONE_IA
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies what content encodings have been applied to the object and thus what decoding mechanisms must be applied to obtain the media-type referenced by the Content-Type header field. Read [w3c content encoding](http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.11) for further information.
+    <dd>{{% md %}}Content encodings that have been applied to the object and thus what decoding mechanisms must be applied to obtain the media-type referenced by the Content-Type header field. Read [w3c content encoding](http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.11) for further information.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="content_language_python">
@@ -1441,7 +1454,7 @@ for the object. Can be either "`STANDARD`", "`REDUCED_REDUNDANCY`", "`ONEZONE_IA
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The language the content is in e.g. en-US or en-GB.
+    <dd>{{% md %}}Language the content is in e.g. en-US or en-GB.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="content_type_python">
@@ -1450,7 +1463,7 @@ for the object. Can be either "`STANDARD`", "`REDUCED_REDUNDANCY`", "`ONEZONE_IA
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A standard MIME type describing the format of the object data, e.g. application/octet-stream. All Valid MIME Types are valid for this input.
+    <dd>{{% md %}}Standard MIME type describing the format of the object data, e.g. application/octet-stream. All Valid MIME Types are valid for this input.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="etag_python">
@@ -1459,8 +1472,7 @@ for the object. Can be either "`STANDARD`", "`REDUCED_REDUNDANCY`", "`ONEZONE_IA
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Used to trigger updates. The only meaningful value is `${filemd5("path/to/file")}` (this provider 0.11.12 or later) or `${md5(file("path/to/file"))}` (this provider 0.11.11 or earlier).
-This attribute is not compatible with KMS encryption, `kms_key_id` or `server_side_encryption = "aws:kms"`.
+    <dd>{{% md %}}Triggers updates when the value changes. The only meaningful value is `filemd5("path/to/file")`. This attribute is not compatible with KMS encryption, `kms_key_id` or `server_side_encryption = "aws:kms"` (see `source_hash` instead).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="force_destroy_python">
@@ -1469,8 +1481,7 @@ This attribute is not compatible with KMS encryption, `kms_key_id` or `server_si
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Allow the object to be deleted by removing any legal hold on any object version.
-Default is `false`. This value should be set to `true` only if the bucket has S3 object lock enabled.
+    <dd>{{% md %}}Whether to allow the object to be deleted by removing any legal hold on any object version. Default is `false`. This value should be set to `true` only if the bucket has S3 object lock enabled.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="key_python">
@@ -1479,7 +1490,7 @@ Default is `false`. This value should be set to `true` only if the bucket has S3
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the object once it is in the bucket.
+    <dd>{{% md %}}Name of the object once it is in the bucket.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kms_key_id_python">
@@ -1488,9 +1499,7 @@ Default is `false`. This value should be set to `true` only if the bucket has S3
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Amazon Resource Name (ARN) of the KMS Key to use for object encryption. If the S3 Bucket has server-side encryption enabled, that value will automatically be used. If referencing the
-`aws.kms.Key` resource, use the `arn` attribute. If referencing the `aws.kms.Alias` data source or resource, use the `target_key_arn` attribute. The provider will only perform drift detection if a configuration value
-is provided.
+    <dd>{{% md %}}ARN of the KMS Key to use for object encryption. If the S3 Bucket has server-side encryption enabled, that value will automatically be used. If referencing the `aws.kms.Key` resource, use the `arn` attribute. If referencing the `aws.kms.Alias` data source or resource, use the `target_key_arn` attribute. This provider will only perform drift detection if a configuration value is provided.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metadata_python">
@@ -1499,7 +1508,7 @@ is provided.
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}A map of keys/values to provision metadata (will be automatically prefixed by `x-amz-meta-`, note that only lowercase label are currently supported by the AWS Go API).
+    <dd>{{% md %}}Map of keys/values to provision metadata (will be automatically prefixed by `x-amz-meta-`, note that only lowercase label are currently supported by the AWS Go API).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="object_lock_legal_hold_status_python">
@@ -1508,7 +1517,7 @@ is provided.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The [legal hold](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock-overview.html#object-lock-legal-holds) status that you want to apply to the specified object. Valid values are `ON` and `OFF`.
+    <dd>{{% md %}}[Legal hold](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock-overview.html#object-lock-legal-holds) status that you want to apply to the specified object. Valid values are `ON` and `OFF`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="object_lock_mode_python">
@@ -1517,7 +1526,7 @@ is provided.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The object lock [retention mode](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock-overview.html#object-lock-retention-modes) that you want to apply to this object. Valid values are `GOVERNANCE` and `COMPLIANCE`.
+    <dd>{{% md %}}Object lock [retention mode](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock-overview.html#object-lock-retention-modes) that you want to apply to this object. Valid values are `GOVERNANCE` and `COMPLIANCE`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="object_lock_retain_until_date_python">
@@ -1526,7 +1535,7 @@ is provided.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The date and time, in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8), when this object's object lock will [expire](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock-overview.html#object-lock-retention-periods).
+    <dd>{{% md %}}Date and time, in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8), when this object's object lock will [expire](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock-overview.html#object-lock-retention-periods).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="server_side_encryption_python">
@@ -1535,7 +1544,7 @@ is provided.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies server-side encryption of the object in S3. Valid values are "`AES256`" and "`aws:kms`".
+    <dd>{{% md %}}Server-side encryption of the object in S3. Valid values are "`AES256`" and "`aws:kms`".
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_python">
@@ -1544,7 +1553,16 @@ is provided.
         <span class="property-indicator"></span>
         <span class="property-type">Union[pulumi.<wbr>Asset, pulumi.<wbr>Archive]</span>
     </dt>
-    <dd>{{% md %}}The path to a file that will be read and uploaded as raw bytes for the object content.
+    <dd>{{% md %}}Path to a file that will be read and uploaded as raw bytes for the object content.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="source_hash_python">
+<a href="#source_hash_python" style="color: inherit; text-decoration: inherit;">source_<wbr>hash</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Triggers updates like `etag` but useful to address `etag` encryption limitations. Set using `filemd5("path/to/source")`. (The value is only stored in state and not saved by AWS.)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storage_class_python">
@@ -1553,8 +1571,7 @@ is provided.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies the desired [Storage Class](http://docs.aws.amazon.com/AmazonS3/latest/dev/storage-class-intro.html)
-for the object. Can be either "`STANDARD`", "`REDUCED_REDUNDANCY`", "`ONEZONE_IA`", "`INTELLIGENT_TIERING`", "`GLACIER`", "`DEEP_ARCHIVE`", or "`STANDARD_IA`". Defaults to "`STANDARD`".
+    <dd>{{% md %}}[Storage Class](http://docs.aws.amazon.com/AmazonS3/latest/dev/storage-class-intro.html) for the object. Can be either "`STANDARD`", "`REDUCED_REDUNDANCY`", "`ONEZONE_IA`", "`INTELLIGENT_TIERING`", "`GLACIER`", "`DEEP_ARCHIVE`", or "`STANDARD_IA`". Defaults to "`STANDARD`".
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
@@ -1563,7 +1580,7 @@ for the object. Can be either "`STANDARD`", "`REDUCED_REDUNDANCY`", "`ONEZONE_IA
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}A map of tags to assign to the object. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+    <dd>{{% md %}}Map of tags to assign to the object. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_all_python">
@@ -1572,7 +1589,7 @@ for the object. Can be either "`STANDARD`", "`REDUCED_REDUNDANCY`", "`ONEZONE_IA
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider .
+    <dd>{{% md %}}Map of tags assigned to the resource, including those inherited from the provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="website_redirect_python">
@@ -1581,7 +1598,7 @@ for the object. Can be either "`STANDARD`", "`REDUCED_REDUNDANCY`", "`ONEZONE_IA
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies a target URL for [website redirect](http://docs.aws.amazon.com/AmazonS3/latest/dev/how-to-page-redirect.html).
+    <dd>{{% md %}}Target URL for [website redirect](http://docs.aws.amazon.com/AmazonS3/latest/dev/how-to-page-redirect.html).
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1609,8 +1626,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A unique version ID value for the object, if bucket versioning
-is enabled.
+    <dd>{{% md %}}Unique version ID value for the object, if bucket versioning is enabled.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1631,8 +1647,7 @@ is enabled.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A unique version ID value for the object, if bucket versioning
-is enabled.
+    <dd>{{% md %}}Unique version ID value for the object, if bucket versioning is enabled.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1653,8 +1668,7 @@ is enabled.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A unique version ID value for the object, if bucket versioning
-is enabled.
+    <dd>{{% md %}}Unique version ID value for the object, if bucket versioning is enabled.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1675,8 +1689,7 @@ is enabled.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A unique version ID value for the object, if bucket versioning
-is enabled.
+    <dd>{{% md %}}Unique version ID value for the object, if bucket versioning is enabled.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1716,6 +1729,7 @@ Get an existing BucketObject resource's state with the given name, ID, and optio
         <span class="nx">object_lock_retain_until_date</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">server_side_encryption</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">source</span><span class="p">:</span> <span class="nx">Optional[Union[pulumi.Asset, pulumi.Archive]]</span> = None<span class="p">,</span>
+        <span class="nx">source_hash</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">storage_class</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
         <span class="nx">tags_all</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
@@ -1839,7 +1853,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The [canned ACL](https://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.html#canned-acl) to apply. Valid values are `private`, `public-read`, `public-read-write`, `aws-exec-read`, `authenticated-read`, `bucket-owner-read`, and `bucket-owner-full-control`. Defaults to `private`.
+    <dd>{{% md %}}[Canned ACL](https://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.html#canned-acl) to apply. Valid values are `private`, `public-read`, `public-read-write`, `aws-exec-read`, `authenticated-read`, `bucket-owner-read`, and `bucket-owner-full-control`. Defaults to `private`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_bucket_csharp">
@@ -1848,7 +1862,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string | string</span>
     </dt>
-    <dd>{{% md %}}The name of the bucket to put the file in. Alternatively, an [S3 access point](https://docs.aws.amazon.com/AmazonS3/latest/dev/using-access-points.html) ARN can be specified.
+    <dd>{{% md %}}Name of the bucket to put the file in. Alternatively, an [S3 access point](https://docs.aws.amazon.com/AmazonS3/latest/dev/using-access-points.html) ARN can be specified.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_bucketkeyenabled_csharp">
@@ -1866,7 +1880,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies caching behavior along the request/reply chain Read [w3c cache_control](http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.9) for further details.
+    <dd>{{% md %}}Caching behavior along the request/reply chain Read [w3c cache_control](http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.9) for further details.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_content_csharp">
@@ -1893,7 +1907,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies presentational information for the object. Read [w3c content_disposition](http://www.w3.org/Protocols/rfc2616/rfc2616-sec19.html#sec19.5.1) for further information.
+    <dd>{{% md %}}Presentational information for the object. Read [w3c content_disposition](http://www.w3.org/Protocols/rfc2616/rfc2616-sec19.html#sec19.5.1) for further information.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_contentencoding_csharp">
@@ -1902,7 +1916,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies what content encodings have been applied to the object and thus what decoding mechanisms must be applied to obtain the media-type referenced by the Content-Type header field. Read [w3c content encoding](http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.11) for further information.
+    <dd>{{% md %}}Content encodings that have been applied to the object and thus what decoding mechanisms must be applied to obtain the media-type referenced by the Content-Type header field. Read [w3c content encoding](http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.11) for further information.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_contentlanguage_csharp">
@@ -1911,7 +1925,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The language the content is in e.g. en-US or en-GB.
+    <dd>{{% md %}}Language the content is in e.g. en-US or en-GB.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_contenttype_csharp">
@@ -1920,7 +1934,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A standard MIME type describing the format of the object data, e.g. application/octet-stream. All Valid MIME Types are valid for this input.
+    <dd>{{% md %}}Standard MIME type describing the format of the object data, e.g. application/octet-stream. All Valid MIME Types are valid for this input.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_etag_csharp">
@@ -1929,8 +1943,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Used to trigger updates. The only meaningful value is `${filemd5("path/to/file")}` (this provider 0.11.12 or later) or `${md5(file("path/to/file"))}` (this provider 0.11.11 or earlier).
-This attribute is not compatible with KMS encryption, `kms_key_id` or `server_side_encryption = "aws:kms"`.
+    <dd>{{% md %}}Triggers updates when the value changes. The only meaningful value is `filemd5("path/to/file")`. This attribute is not compatible with KMS encryption, `kms_key_id` or `server_side_encryption = "aws:kms"` (see `source_hash` instead).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_forcedestroy_csharp">
@@ -1939,8 +1952,7 @@ This attribute is not compatible with KMS encryption, `kms_key_id` or `server_si
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Allow the object to be deleted by removing any legal hold on any object version.
-Default is `false`. This value should be set to `true` only if the bucket has S3 object lock enabled.
+    <dd>{{% md %}}Whether to allow the object to be deleted by removing any legal hold on any object version. Default is `false`. This value should be set to `true` only if the bucket has S3 object lock enabled.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_key_csharp">
@@ -1949,7 +1961,7 @@ Default is `false`. This value should be set to `true` only if the bucket has S3
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the object once it is in the bucket.
+    <dd>{{% md %}}Name of the object once it is in the bucket.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_kmskeyid_csharp">
@@ -1958,9 +1970,7 @@ Default is `false`. This value should be set to `true` only if the bucket has S3
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Amazon Resource Name (ARN) of the KMS Key to use for object encryption. If the S3 Bucket has server-side encryption enabled, that value will automatically be used. If referencing the
-`aws.kms.Key` resource, use the `arn` attribute. If referencing the `aws.kms.Alias` data source or resource, use the `target_key_arn` attribute. The provider will only perform drift detection if a configuration value
-is provided.
+    <dd>{{% md %}}ARN of the KMS Key to use for object encryption. If the S3 Bucket has server-side encryption enabled, that value will automatically be used. If referencing the `aws.kms.Key` resource, use the `arn` attribute. If referencing the `aws.kms.Alias` data source or resource, use the `target_key_arn` attribute. This provider will only perform drift detection if a configuration value is provided.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_metadata_csharp">
@@ -1969,7 +1979,7 @@ is provided.
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}A map of keys/values to provision metadata (will be automatically prefixed by `x-amz-meta-`, note that only lowercase label are currently supported by the AWS Go API).
+    <dd>{{% md %}}Map of keys/values to provision metadata (will be automatically prefixed by `x-amz-meta-`, note that only lowercase label are currently supported by the AWS Go API).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_objectlocklegalholdstatus_csharp">
@@ -1978,7 +1988,7 @@ is provided.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The [legal hold](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock-overview.html#object-lock-legal-holds) status that you want to apply to the specified object. Valid values are `ON` and `OFF`.
+    <dd>{{% md %}}[Legal hold](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock-overview.html#object-lock-legal-holds) status that you want to apply to the specified object. Valid values are `ON` and `OFF`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_objectlockmode_csharp">
@@ -1987,7 +1997,7 @@ is provided.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The object lock [retention mode](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock-overview.html#object-lock-retention-modes) that you want to apply to this object. Valid values are `GOVERNANCE` and `COMPLIANCE`.
+    <dd>{{% md %}}Object lock [retention mode](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock-overview.html#object-lock-retention-modes) that you want to apply to this object. Valid values are `GOVERNANCE` and `COMPLIANCE`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_objectlockretainuntildate_csharp">
@@ -1996,7 +2006,7 @@ is provided.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The date and time, in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8), when this object's object lock will [expire](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock-overview.html#object-lock-retention-periods).
+    <dd>{{% md %}}Date and time, in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8), when this object's object lock will [expire](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock-overview.html#object-lock-retention-periods).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serversideencryption_csharp">
@@ -2005,7 +2015,7 @@ is provided.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies server-side encryption of the object in S3. Valid values are "`AES256`" and "`aws:kms`".
+    <dd>{{% md %}}Server-side encryption of the object in S3. Valid values are "`AES256`" and "`aws:kms`".
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_source_csharp">
@@ -2014,7 +2024,16 @@ is provided.
         <span class="property-indicator"></span>
         <span class="property-type">Asset<wbr>Or<wbr>Archive</span>
     </dt>
-    <dd>{{% md %}}The path to a file that will be read and uploaded as raw bytes for the object content.
+    <dd>{{% md %}}Path to a file that will be read and uploaded as raw bytes for the object content.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_sourcehash_csharp">
+<a href="#state_sourcehash_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Hash</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Triggers updates like `etag` but useful to address `etag` encryption limitations. Set using `filemd5("path/to/source")`. (The value is only stored in state and not saved by AWS.)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_storageclass_csharp">
@@ -2023,8 +2042,7 @@ is provided.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the desired [Storage Class](http://docs.aws.amazon.com/AmazonS3/latest/dev/storage-class-intro.html)
-for the object. Can be either "`STANDARD`", "`REDUCED_REDUNDANCY`", "`ONEZONE_IA`", "`INTELLIGENT_TIERING`", "`GLACIER`", "`DEEP_ARCHIVE`", or "`STANDARD_IA`". Defaults to "`STANDARD`".
+    <dd>{{% md %}}[Storage Class](http://docs.aws.amazon.com/AmazonS3/latest/dev/storage-class-intro.html) for the object. Can be either "`STANDARD`", "`REDUCED_REDUNDANCY`", "`ONEZONE_IA`", "`INTELLIGENT_TIERING`", "`GLACIER`", "`DEEP_ARCHIVE`", or "`STANDARD_IA`". Defaults to "`STANDARD`".
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_csharp">
@@ -2033,7 +2051,7 @@ for the object. Can be either "`STANDARD`", "`REDUCED_REDUNDANCY`", "`ONEZONE_IA
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}A map of tags to assign to the object. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+    <dd>{{% md %}}Map of tags to assign to the object. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tagsall_csharp">
@@ -2042,7 +2060,7 @@ for the object. Can be either "`STANDARD`", "`REDUCED_REDUNDANCY`", "`ONEZONE_IA
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider .
+    <dd>{{% md %}}Map of tags assigned to the resource, including those inherited from the provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_versionid_csharp">
@@ -2051,8 +2069,7 @@ for the object. Can be either "`STANDARD`", "`REDUCED_REDUNDANCY`", "`ONEZONE_IA
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A unique version ID value for the object, if bucket versioning
-is enabled.
+    <dd>{{% md %}}Unique version ID value for the object, if bucket versioning is enabled.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_websiteredirect_csharp">
@@ -2061,7 +2078,7 @@ is enabled.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies a target URL for [website redirect](http://docs.aws.amazon.com/AmazonS3/latest/dev/how-to-page-redirect.html).
+    <dd>{{% md %}}Target URL for [website redirect](http://docs.aws.amazon.com/AmazonS3/latest/dev/how-to-page-redirect.html).
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2074,7 +2091,7 @@ is enabled.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The [canned ACL](https://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.html#canned-acl) to apply. Valid values are `private`, `public-read`, `public-read-write`, `aws-exec-read`, `authenticated-read`, `bucket-owner-read`, and `bucket-owner-full-control`. Defaults to `private`.
+    <dd>{{% md %}}[Canned ACL](https://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.html#canned-acl) to apply. Valid values are `private`, `public-read`, `public-read-write`, `aws-exec-read`, `authenticated-read`, `bucket-owner-read`, and `bucket-owner-full-control`. Defaults to `private`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_bucket_go">
@@ -2083,7 +2100,7 @@ is enabled.
         <span class="property-indicator"></span>
         <span class="property-type">string | string</span>
     </dt>
-    <dd>{{% md %}}The name of the bucket to put the file in. Alternatively, an [S3 access point](https://docs.aws.amazon.com/AmazonS3/latest/dev/using-access-points.html) ARN can be specified.
+    <dd>{{% md %}}Name of the bucket to put the file in. Alternatively, an [S3 access point](https://docs.aws.amazon.com/AmazonS3/latest/dev/using-access-points.html) ARN can be specified.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_bucketkeyenabled_go">
@@ -2101,7 +2118,7 @@ is enabled.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies caching behavior along the request/reply chain Read [w3c cache_control](http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.9) for further details.
+    <dd>{{% md %}}Caching behavior along the request/reply chain Read [w3c cache_control](http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.9) for further details.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_content_go">
@@ -2128,7 +2145,7 @@ is enabled.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies presentational information for the object. Read [w3c content_disposition](http://www.w3.org/Protocols/rfc2616/rfc2616-sec19.html#sec19.5.1) for further information.
+    <dd>{{% md %}}Presentational information for the object. Read [w3c content_disposition](http://www.w3.org/Protocols/rfc2616/rfc2616-sec19.html#sec19.5.1) for further information.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_contentencoding_go">
@@ -2137,7 +2154,7 @@ is enabled.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies what content encodings have been applied to the object and thus what decoding mechanisms must be applied to obtain the media-type referenced by the Content-Type header field. Read [w3c content encoding](http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.11) for further information.
+    <dd>{{% md %}}Content encodings that have been applied to the object and thus what decoding mechanisms must be applied to obtain the media-type referenced by the Content-Type header field. Read [w3c content encoding](http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.11) for further information.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_contentlanguage_go">
@@ -2146,7 +2163,7 @@ is enabled.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The language the content is in e.g. en-US or en-GB.
+    <dd>{{% md %}}Language the content is in e.g. en-US or en-GB.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_contenttype_go">
@@ -2155,7 +2172,7 @@ is enabled.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A standard MIME type describing the format of the object data, e.g. application/octet-stream. All Valid MIME Types are valid for this input.
+    <dd>{{% md %}}Standard MIME type describing the format of the object data, e.g. application/octet-stream. All Valid MIME Types are valid for this input.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_etag_go">
@@ -2164,8 +2181,7 @@ is enabled.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Used to trigger updates. The only meaningful value is `${filemd5("path/to/file")}` (this provider 0.11.12 or later) or `${md5(file("path/to/file"))}` (this provider 0.11.11 or earlier).
-This attribute is not compatible with KMS encryption, `kms_key_id` or `server_side_encryption = "aws:kms"`.
+    <dd>{{% md %}}Triggers updates when the value changes. The only meaningful value is `filemd5("path/to/file")`. This attribute is not compatible with KMS encryption, `kms_key_id` or `server_side_encryption = "aws:kms"` (see `source_hash` instead).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_forcedestroy_go">
@@ -2174,8 +2190,7 @@ This attribute is not compatible with KMS encryption, `kms_key_id` or `server_si
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Allow the object to be deleted by removing any legal hold on any object version.
-Default is `false`. This value should be set to `true` only if the bucket has S3 object lock enabled.
+    <dd>{{% md %}}Whether to allow the object to be deleted by removing any legal hold on any object version. Default is `false`. This value should be set to `true` only if the bucket has S3 object lock enabled.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_key_go">
@@ -2184,7 +2199,7 @@ Default is `false`. This value should be set to `true` only if the bucket has S3
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the object once it is in the bucket.
+    <dd>{{% md %}}Name of the object once it is in the bucket.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_kmskeyid_go">
@@ -2193,9 +2208,7 @@ Default is `false`. This value should be set to `true` only if the bucket has S3
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Amazon Resource Name (ARN) of the KMS Key to use for object encryption. If the S3 Bucket has server-side encryption enabled, that value will automatically be used. If referencing the
-`aws.kms.Key` resource, use the `arn` attribute. If referencing the `aws.kms.Alias` data source or resource, use the `target_key_arn` attribute. The provider will only perform drift detection if a configuration value
-is provided.
+    <dd>{{% md %}}ARN of the KMS Key to use for object encryption. If the S3 Bucket has server-side encryption enabled, that value will automatically be used. If referencing the `aws.kms.Key` resource, use the `arn` attribute. If referencing the `aws.kms.Alias` data source or resource, use the `target_key_arn` attribute. This provider will only perform drift detection if a configuration value is provided.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_metadata_go">
@@ -2204,7 +2217,7 @@ is provided.
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}A map of keys/values to provision metadata (will be automatically prefixed by `x-amz-meta-`, note that only lowercase label are currently supported by the AWS Go API).
+    <dd>{{% md %}}Map of keys/values to provision metadata (will be automatically prefixed by `x-amz-meta-`, note that only lowercase label are currently supported by the AWS Go API).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_objectlocklegalholdstatus_go">
@@ -2213,7 +2226,7 @@ is provided.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The [legal hold](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock-overview.html#object-lock-legal-holds) status that you want to apply to the specified object. Valid values are `ON` and `OFF`.
+    <dd>{{% md %}}[Legal hold](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock-overview.html#object-lock-legal-holds) status that you want to apply to the specified object. Valid values are `ON` and `OFF`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_objectlockmode_go">
@@ -2222,7 +2235,7 @@ is provided.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The object lock [retention mode](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock-overview.html#object-lock-retention-modes) that you want to apply to this object. Valid values are `GOVERNANCE` and `COMPLIANCE`.
+    <dd>{{% md %}}Object lock [retention mode](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock-overview.html#object-lock-retention-modes) that you want to apply to this object. Valid values are `GOVERNANCE` and `COMPLIANCE`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_objectlockretainuntildate_go">
@@ -2231,7 +2244,7 @@ is provided.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The date and time, in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8), when this object's object lock will [expire](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock-overview.html#object-lock-retention-periods).
+    <dd>{{% md %}}Date and time, in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8), when this object's object lock will [expire](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock-overview.html#object-lock-retention-periods).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serversideencryption_go">
@@ -2240,7 +2253,7 @@ is provided.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies server-side encryption of the object in S3. Valid values are "`AES256`" and "`aws:kms`".
+    <dd>{{% md %}}Server-side encryption of the object in S3. Valid values are "`AES256`" and "`aws:kms`".
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_source_go">
@@ -2249,7 +2262,16 @@ is provided.
         <span class="property-indicator"></span>
         <span class="property-type">pulumi.<wbr>Asset<wbr>Or<wbr>Archive</span>
     </dt>
-    <dd>{{% md %}}The path to a file that will be read and uploaded as raw bytes for the object content.
+    <dd>{{% md %}}Path to a file that will be read and uploaded as raw bytes for the object content.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_sourcehash_go">
+<a href="#state_sourcehash_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Hash</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Triggers updates like `etag` but useful to address `etag` encryption limitations. Set using `filemd5("path/to/source")`. (The value is only stored in state and not saved by AWS.)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_storageclass_go">
@@ -2258,8 +2280,7 @@ is provided.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the desired [Storage Class](http://docs.aws.amazon.com/AmazonS3/latest/dev/storage-class-intro.html)
-for the object. Can be either "`STANDARD`", "`REDUCED_REDUNDANCY`", "`ONEZONE_IA`", "`INTELLIGENT_TIERING`", "`GLACIER`", "`DEEP_ARCHIVE`", or "`STANDARD_IA`". Defaults to "`STANDARD`".
+    <dd>{{% md %}}[Storage Class](http://docs.aws.amazon.com/AmazonS3/latest/dev/storage-class-intro.html) for the object. Can be either "`STANDARD`", "`REDUCED_REDUNDANCY`", "`ONEZONE_IA`", "`INTELLIGENT_TIERING`", "`GLACIER`", "`DEEP_ARCHIVE`", or "`STANDARD_IA`". Defaults to "`STANDARD`".
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
@@ -2268,7 +2289,7 @@ for the object. Can be either "`STANDARD`", "`REDUCED_REDUNDANCY`", "`ONEZONE_IA
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}A map of tags to assign to the object. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+    <dd>{{% md %}}Map of tags to assign to the object. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tagsall_go">
@@ -2277,7 +2298,7 @@ for the object. Can be either "`STANDARD`", "`REDUCED_REDUNDANCY`", "`ONEZONE_IA
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider .
+    <dd>{{% md %}}Map of tags assigned to the resource, including those inherited from the provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_versionid_go">
@@ -2286,8 +2307,7 @@ for the object. Can be either "`STANDARD`", "`REDUCED_REDUNDANCY`", "`ONEZONE_IA
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A unique version ID value for the object, if bucket versioning
-is enabled.
+    <dd>{{% md %}}Unique version ID value for the object, if bucket versioning is enabled.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_websiteredirect_go">
@@ -2296,7 +2316,7 @@ is enabled.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies a target URL for [website redirect](http://docs.aws.amazon.com/AmazonS3/latest/dev/how-to-page-redirect.html).
+    <dd>{{% md %}}Target URL for [website redirect](http://docs.aws.amazon.com/AmazonS3/latest/dev/how-to-page-redirect.html).
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2309,7 +2329,7 @@ is enabled.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The [canned ACL](https://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.html#canned-acl) to apply. Valid values are `private`, `public-read`, `public-read-write`, `aws-exec-read`, `authenticated-read`, `bucket-owner-read`, and `bucket-owner-full-control`. Defaults to `private`.
+    <dd>{{% md %}}[Canned ACL](https://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.html#canned-acl) to apply. Valid values are `private`, `public-read`, `public-read-write`, `aws-exec-read`, `authenticated-read`, `bucket-owner-read`, and `bucket-owner-full-control`. Defaults to `private`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_bucket_nodejs">
@@ -2318,7 +2338,7 @@ is enabled.
         <span class="property-indicator"></span>
         <span class="property-type">string | Bucket</span>
     </dt>
-    <dd>{{% md %}}The name of the bucket to put the file in. Alternatively, an [S3 access point](https://docs.aws.amazon.com/AmazonS3/latest/dev/using-access-points.html) ARN can be specified.
+    <dd>{{% md %}}Name of the bucket to put the file in. Alternatively, an [S3 access point](https://docs.aws.amazon.com/AmazonS3/latest/dev/using-access-points.html) ARN can be specified.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_bucketkeyenabled_nodejs">
@@ -2336,7 +2356,7 @@ is enabled.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies caching behavior along the request/reply chain Read [w3c cache_control](http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.9) for further details.
+    <dd>{{% md %}}Caching behavior along the request/reply chain Read [w3c cache_control](http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.9) for further details.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_content_nodejs">
@@ -2363,7 +2383,7 @@ is enabled.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies presentational information for the object. Read [w3c content_disposition](http://www.w3.org/Protocols/rfc2616/rfc2616-sec19.html#sec19.5.1) for further information.
+    <dd>{{% md %}}Presentational information for the object. Read [w3c content_disposition](http://www.w3.org/Protocols/rfc2616/rfc2616-sec19.html#sec19.5.1) for further information.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_contentencoding_nodejs">
@@ -2372,7 +2392,7 @@ is enabled.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies what content encodings have been applied to the object and thus what decoding mechanisms must be applied to obtain the media-type referenced by the Content-Type header field. Read [w3c content encoding](http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.11) for further information.
+    <dd>{{% md %}}Content encodings that have been applied to the object and thus what decoding mechanisms must be applied to obtain the media-type referenced by the Content-Type header field. Read [w3c content encoding](http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.11) for further information.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_contentlanguage_nodejs">
@@ -2381,7 +2401,7 @@ is enabled.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The language the content is in e.g. en-US or en-GB.
+    <dd>{{% md %}}Language the content is in e.g. en-US or en-GB.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_contenttype_nodejs">
@@ -2390,7 +2410,7 @@ is enabled.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A standard MIME type describing the format of the object data, e.g. application/octet-stream. All Valid MIME Types are valid for this input.
+    <dd>{{% md %}}Standard MIME type describing the format of the object data, e.g. application/octet-stream. All Valid MIME Types are valid for this input.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_etag_nodejs">
@@ -2399,8 +2419,7 @@ is enabled.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Used to trigger updates. The only meaningful value is `${filemd5("path/to/file")}` (this provider 0.11.12 or later) or `${md5(file("path/to/file"))}` (this provider 0.11.11 or earlier).
-This attribute is not compatible with KMS encryption, `kms_key_id` or `server_side_encryption = "aws:kms"`.
+    <dd>{{% md %}}Triggers updates when the value changes. The only meaningful value is `filemd5("path/to/file")`. This attribute is not compatible with KMS encryption, `kms_key_id` or `server_side_encryption = "aws:kms"` (see `source_hash` instead).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_forcedestroy_nodejs">
@@ -2409,8 +2428,7 @@ This attribute is not compatible with KMS encryption, `kms_key_id` or `server_si
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Allow the object to be deleted by removing any legal hold on any object version.
-Default is `false`. This value should be set to `true` only if the bucket has S3 object lock enabled.
+    <dd>{{% md %}}Whether to allow the object to be deleted by removing any legal hold on any object version. Default is `false`. This value should be set to `true` only if the bucket has S3 object lock enabled.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_key_nodejs">
@@ -2419,7 +2437,7 @@ Default is `false`. This value should be set to `true` only if the bucket has S3
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the object once it is in the bucket.
+    <dd>{{% md %}}Name of the object once it is in the bucket.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_kmskeyid_nodejs">
@@ -2428,9 +2446,7 @@ Default is `false`. This value should be set to `true` only if the bucket has S3
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Amazon Resource Name (ARN) of the KMS Key to use for object encryption. If the S3 Bucket has server-side encryption enabled, that value will automatically be used. If referencing the
-`aws.kms.Key` resource, use the `arn` attribute. If referencing the `aws.kms.Alias` data source or resource, use the `target_key_arn` attribute. The provider will only perform drift detection if a configuration value
-is provided.
+    <dd>{{% md %}}ARN of the KMS Key to use for object encryption. If the S3 Bucket has server-side encryption enabled, that value will automatically be used. If referencing the `aws.kms.Key` resource, use the `arn` attribute. If referencing the `aws.kms.Alias` data source or resource, use the `target_key_arn` attribute. This provider will only perform drift detection if a configuration value is provided.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_metadata_nodejs">
@@ -2439,7 +2455,7 @@ is provided.
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}A map of keys/values to provision metadata (will be automatically prefixed by `x-amz-meta-`, note that only lowercase label are currently supported by the AWS Go API).
+    <dd>{{% md %}}Map of keys/values to provision metadata (will be automatically prefixed by `x-amz-meta-`, note that only lowercase label are currently supported by the AWS Go API).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_objectlocklegalholdstatus_nodejs">
@@ -2448,7 +2464,7 @@ is provided.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The [legal hold](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock-overview.html#object-lock-legal-holds) status that you want to apply to the specified object. Valid values are `ON` and `OFF`.
+    <dd>{{% md %}}[Legal hold](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock-overview.html#object-lock-legal-holds) status that you want to apply to the specified object. Valid values are `ON` and `OFF`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_objectlockmode_nodejs">
@@ -2457,7 +2473,7 @@ is provided.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The object lock [retention mode](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock-overview.html#object-lock-retention-modes) that you want to apply to this object. Valid values are `GOVERNANCE` and `COMPLIANCE`.
+    <dd>{{% md %}}Object lock [retention mode](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock-overview.html#object-lock-retention-modes) that you want to apply to this object. Valid values are `GOVERNANCE` and `COMPLIANCE`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_objectlockretainuntildate_nodejs">
@@ -2466,7 +2482,7 @@ is provided.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The date and time, in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8), when this object's object lock will [expire](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock-overview.html#object-lock-retention-periods).
+    <dd>{{% md %}}Date and time, in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8), when this object's object lock will [expire](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock-overview.html#object-lock-retention-periods).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serversideencryption_nodejs">
@@ -2475,7 +2491,7 @@ is provided.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies server-side encryption of the object in S3. Valid values are "`AES256`" and "`aws:kms`".
+    <dd>{{% md %}}Server-side encryption of the object in S3. Valid values are "`AES256`" and "`aws:kms`".
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_source_nodejs">
@@ -2484,7 +2500,16 @@ is provided.
         <span class="property-indicator"></span>
         <span class="property-type">pulumi.asset.<wbr>Asset | pulumi.asset.<wbr>Archive</span>
     </dt>
-    <dd>{{% md %}}The path to a file that will be read and uploaded as raw bytes for the object content.
+    <dd>{{% md %}}Path to a file that will be read and uploaded as raw bytes for the object content.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_sourcehash_nodejs">
+<a href="#state_sourcehash_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Hash</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Triggers updates like `etag` but useful to address `etag` encryption limitations. Set using `filemd5("path/to/source")`. (The value is only stored in state and not saved by AWS.)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_storageclass_nodejs">
@@ -2493,8 +2518,7 @@ is provided.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the desired [Storage Class](http://docs.aws.amazon.com/AmazonS3/latest/dev/storage-class-intro.html)
-for the object. Can be either "`STANDARD`", "`REDUCED_REDUNDANCY`", "`ONEZONE_IA`", "`INTELLIGENT_TIERING`", "`GLACIER`", "`DEEP_ARCHIVE`", or "`STANDARD_IA`". Defaults to "`STANDARD`".
+    <dd>{{% md %}}[Storage Class](http://docs.aws.amazon.com/AmazonS3/latest/dev/storage-class-intro.html) for the object. Can be either "`STANDARD`", "`REDUCED_REDUNDANCY`", "`ONEZONE_IA`", "`INTELLIGENT_TIERING`", "`GLACIER`", "`DEEP_ARCHIVE`", or "`STANDARD_IA`". Defaults to "`STANDARD`".
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_nodejs">
@@ -2503,7 +2527,7 @@ for the object. Can be either "`STANDARD`", "`REDUCED_REDUNDANCY`", "`ONEZONE_IA
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}A map of tags to assign to the object. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+    <dd>{{% md %}}Map of tags to assign to the object. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tagsall_nodejs">
@@ -2512,7 +2536,7 @@ for the object. Can be either "`STANDARD`", "`REDUCED_REDUNDANCY`", "`ONEZONE_IA
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider .
+    <dd>{{% md %}}Map of tags assigned to the resource, including those inherited from the provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_versionid_nodejs">
@@ -2521,8 +2545,7 @@ for the object. Can be either "`STANDARD`", "`REDUCED_REDUNDANCY`", "`ONEZONE_IA
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A unique version ID value for the object, if bucket versioning
-is enabled.
+    <dd>{{% md %}}Unique version ID value for the object, if bucket versioning is enabled.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_websiteredirect_nodejs">
@@ -2531,7 +2554,7 @@ is enabled.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies a target URL for [website redirect](http://docs.aws.amazon.com/AmazonS3/latest/dev/how-to-page-redirect.html).
+    <dd>{{% md %}}Target URL for [website redirect](http://docs.aws.amazon.com/AmazonS3/latest/dev/how-to-page-redirect.html).
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2544,7 +2567,7 @@ is enabled.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The [canned ACL](https://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.html#canned-acl) to apply. Valid values are `private`, `public-read`, `public-read-write`, `aws-exec-read`, `authenticated-read`, `bucket-owner-read`, and `bucket-owner-full-control`. Defaults to `private`.
+    <dd>{{% md %}}[Canned ACL](https://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.html#canned-acl) to apply. Valid values are `private`, `public-read`, `public-read-write`, `aws-exec-read`, `authenticated-read`, `bucket-owner-read`, and `bucket-owner-full-control`. Defaults to `private`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_bucket_python">
@@ -2553,7 +2576,7 @@ is enabled.
         <span class="property-indicator"></span>
         <span class="property-type">str | str</span>
     </dt>
-    <dd>{{% md %}}The name of the bucket to put the file in. Alternatively, an [S3 access point](https://docs.aws.amazon.com/AmazonS3/latest/dev/using-access-points.html) ARN can be specified.
+    <dd>{{% md %}}Name of the bucket to put the file in. Alternatively, an [S3 access point](https://docs.aws.amazon.com/AmazonS3/latest/dev/using-access-points.html) ARN can be specified.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_bucket_key_enabled_python">
@@ -2571,7 +2594,7 @@ is enabled.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies caching behavior along the request/reply chain Read [w3c cache_control](http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.9) for further details.
+    <dd>{{% md %}}Caching behavior along the request/reply chain Read [w3c cache_control](http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.9) for further details.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_content_python">
@@ -2598,7 +2621,7 @@ is enabled.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies presentational information for the object. Read [w3c content_disposition](http://www.w3.org/Protocols/rfc2616/rfc2616-sec19.html#sec19.5.1) for further information.
+    <dd>{{% md %}}Presentational information for the object. Read [w3c content_disposition](http://www.w3.org/Protocols/rfc2616/rfc2616-sec19.html#sec19.5.1) for further information.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_content_encoding_python">
@@ -2607,7 +2630,7 @@ is enabled.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies what content encodings have been applied to the object and thus what decoding mechanisms must be applied to obtain the media-type referenced by the Content-Type header field. Read [w3c content encoding](http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.11) for further information.
+    <dd>{{% md %}}Content encodings that have been applied to the object and thus what decoding mechanisms must be applied to obtain the media-type referenced by the Content-Type header field. Read [w3c content encoding](http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.11) for further information.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_content_language_python">
@@ -2616,7 +2639,7 @@ is enabled.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The language the content is in e.g. en-US or en-GB.
+    <dd>{{% md %}}Language the content is in e.g. en-US or en-GB.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_content_type_python">
@@ -2625,7 +2648,7 @@ is enabled.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A standard MIME type describing the format of the object data, e.g. application/octet-stream. All Valid MIME Types are valid for this input.
+    <dd>{{% md %}}Standard MIME type describing the format of the object data, e.g. application/octet-stream. All Valid MIME Types are valid for this input.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_etag_python">
@@ -2634,8 +2657,7 @@ is enabled.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Used to trigger updates. The only meaningful value is `${filemd5("path/to/file")}` (this provider 0.11.12 or later) or `${md5(file("path/to/file"))}` (this provider 0.11.11 or earlier).
-This attribute is not compatible with KMS encryption, `kms_key_id` or `server_side_encryption = "aws:kms"`.
+    <dd>{{% md %}}Triggers updates when the value changes. The only meaningful value is `filemd5("path/to/file")`. This attribute is not compatible with KMS encryption, `kms_key_id` or `server_side_encryption = "aws:kms"` (see `source_hash` instead).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_force_destroy_python">
@@ -2644,8 +2666,7 @@ This attribute is not compatible with KMS encryption, `kms_key_id` or `server_si
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Allow the object to be deleted by removing any legal hold on any object version.
-Default is `false`. This value should be set to `true` only if the bucket has S3 object lock enabled.
+    <dd>{{% md %}}Whether to allow the object to be deleted by removing any legal hold on any object version. Default is `false`. This value should be set to `true` only if the bucket has S3 object lock enabled.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_key_python">
@@ -2654,7 +2675,7 @@ Default is `false`. This value should be set to `true` only if the bucket has S3
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the object once it is in the bucket.
+    <dd>{{% md %}}Name of the object once it is in the bucket.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_kms_key_id_python">
@@ -2663,9 +2684,7 @@ Default is `false`. This value should be set to `true` only if the bucket has S3
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Amazon Resource Name (ARN) of the KMS Key to use for object encryption. If the S3 Bucket has server-side encryption enabled, that value will automatically be used. If referencing the
-`aws.kms.Key` resource, use the `arn` attribute. If referencing the `aws.kms.Alias` data source or resource, use the `target_key_arn` attribute. The provider will only perform drift detection if a configuration value
-is provided.
+    <dd>{{% md %}}ARN of the KMS Key to use for object encryption. If the S3 Bucket has server-side encryption enabled, that value will automatically be used. If referencing the `aws.kms.Key` resource, use the `arn` attribute. If referencing the `aws.kms.Alias` data source or resource, use the `target_key_arn` attribute. This provider will only perform drift detection if a configuration value is provided.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_metadata_python">
@@ -2674,7 +2693,7 @@ is provided.
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}A map of keys/values to provision metadata (will be automatically prefixed by `x-amz-meta-`, note that only lowercase label are currently supported by the AWS Go API).
+    <dd>{{% md %}}Map of keys/values to provision metadata (will be automatically prefixed by `x-amz-meta-`, note that only lowercase label are currently supported by the AWS Go API).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_object_lock_legal_hold_status_python">
@@ -2683,7 +2702,7 @@ is provided.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The [legal hold](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock-overview.html#object-lock-legal-holds) status that you want to apply to the specified object. Valid values are `ON` and `OFF`.
+    <dd>{{% md %}}[Legal hold](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock-overview.html#object-lock-legal-holds) status that you want to apply to the specified object. Valid values are `ON` and `OFF`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_object_lock_mode_python">
@@ -2692,7 +2711,7 @@ is provided.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The object lock [retention mode](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock-overview.html#object-lock-retention-modes) that you want to apply to this object. Valid values are `GOVERNANCE` and `COMPLIANCE`.
+    <dd>{{% md %}}Object lock [retention mode](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock-overview.html#object-lock-retention-modes) that you want to apply to this object. Valid values are `GOVERNANCE` and `COMPLIANCE`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_object_lock_retain_until_date_python">
@@ -2701,7 +2720,7 @@ is provided.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The date and time, in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8), when this object's object lock will [expire](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock-overview.html#object-lock-retention-periods).
+    <dd>{{% md %}}Date and time, in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8), when this object's object lock will [expire](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock-overview.html#object-lock-retention-periods).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_server_side_encryption_python">
@@ -2710,7 +2729,7 @@ is provided.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies server-side encryption of the object in S3. Valid values are "`AES256`" and "`aws:kms`".
+    <dd>{{% md %}}Server-side encryption of the object in S3. Valid values are "`AES256`" and "`aws:kms`".
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_source_python">
@@ -2719,7 +2738,16 @@ is provided.
         <span class="property-indicator"></span>
         <span class="property-type">Union[pulumi.<wbr>Asset, pulumi.<wbr>Archive]</span>
     </dt>
-    <dd>{{% md %}}The path to a file that will be read and uploaded as raw bytes for the object content.
+    <dd>{{% md %}}Path to a file that will be read and uploaded as raw bytes for the object content.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_source_hash_python">
+<a href="#state_source_hash_python" style="color: inherit; text-decoration: inherit;">source_<wbr>hash</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Triggers updates like `etag` but useful to address `etag` encryption limitations. Set using `filemd5("path/to/source")`. (The value is only stored in state and not saved by AWS.)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_storage_class_python">
@@ -2728,8 +2756,7 @@ is provided.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies the desired [Storage Class](http://docs.aws.amazon.com/AmazonS3/latest/dev/storage-class-intro.html)
-for the object. Can be either "`STANDARD`", "`REDUCED_REDUNDANCY`", "`ONEZONE_IA`", "`INTELLIGENT_TIERING`", "`GLACIER`", "`DEEP_ARCHIVE`", or "`STANDARD_IA`". Defaults to "`STANDARD`".
+    <dd>{{% md %}}[Storage Class](http://docs.aws.amazon.com/AmazonS3/latest/dev/storage-class-intro.html) for the object. Can be either "`STANDARD`", "`REDUCED_REDUNDANCY`", "`ONEZONE_IA`", "`INTELLIGENT_TIERING`", "`GLACIER`", "`DEEP_ARCHIVE`", or "`STANDARD_IA`". Defaults to "`STANDARD`".
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">
@@ -2738,7 +2765,7 @@ for the object. Can be either "`STANDARD`", "`REDUCED_REDUNDANCY`", "`ONEZONE_IA
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}A map of tags to assign to the object. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+    <dd>{{% md %}}Map of tags to assign to the object. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_all_python">
@@ -2747,7 +2774,7 @@ for the object. Can be either "`STANDARD`", "`REDUCED_REDUNDANCY`", "`ONEZONE_IA
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider .
+    <dd>{{% md %}}Map of tags assigned to the resource, including those inherited from the provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_version_id_python">
@@ -2756,8 +2783,7 @@ for the object. Can be either "`STANDARD`", "`REDUCED_REDUNDANCY`", "`ONEZONE_IA
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A unique version ID value for the object, if bucket versioning
-is enabled.
+    <dd>{{% md %}}Unique version ID value for the object, if bucket versioning is enabled.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_website_redirect_python">
@@ -2766,7 +2792,7 @@ is enabled.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies a target URL for [website redirect](http://docs.aws.amazon.com/AmazonS3/latest/dev/how-to-page-redirect.html).
+    <dd>{{% md %}}Target URL for [website redirect](http://docs.aws.amazon.com/AmazonS3/latest/dev/how-to-page-redirect.html).
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

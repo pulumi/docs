@@ -12,6 +12,187 @@ meta_desc: "Documentation for the aws.imagebuilder.InfrastructureConfiguration r
 
 Manages an Image Builder Infrastructure Configuration.
 
+{{% examples %}}
+
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+
+
+
+
+{{< example csharp >}}
+
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Aws.ImageBuilder.InfrastructureConfiguration("example", new Aws.ImageBuilder.InfrastructureConfigurationArgs
+        {
+            Description = "example description",
+            InstanceProfileName = aws_iam_instance_profile.Example.Name,
+            InstanceTypes = 
+            {
+                "t2.nano",
+                "t3.micro",
+            },
+            KeyPair = aws_key_pair.Example.Key_name,
+            SecurityGroupIds = 
+            {
+                aws_security_group.Example.Id,
+            },
+            SnsTopicArn = aws_sns_topic.Example.Arn,
+            SubnetId = aws_subnet.Main.Id,
+            TerminateInstanceOnFailure = true,
+            Logging = new Aws.ImageBuilder.Inputs.InfrastructureConfigurationLoggingArgs
+            {
+                S3Logs = new Aws.ImageBuilder.Inputs.InfrastructureConfigurationLoggingS3LogsArgs
+                {
+                    S3BucketName = aws_s3_bucket.Example.Bucket,
+                    S3KeyPrefix = "logs",
+                },
+            },
+            Tags = 
+            {
+                { "foo", "bar" },
+            },
+        });
+    }
+
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/imagebuilder"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := imagebuilder.NewInfrastructureConfiguration(ctx, "example", &imagebuilder.InfrastructureConfigurationArgs{
+			Description:         pulumi.String("example description"),
+			InstanceProfileName: pulumi.Any(aws_iam_instance_profile.Example.Name),
+			InstanceTypes: pulumi.StringArray{
+				pulumi.String("t2.nano"),
+				pulumi.String("t3.micro"),
+			},
+			KeyPair: pulumi.Any(aws_key_pair.Example.Key_name),
+			SecurityGroupIds: pulumi.StringArray{
+				pulumi.Any(aws_security_group.Example.Id),
+			},
+			SnsTopicArn:                pulumi.Any(aws_sns_topic.Example.Arn),
+			SubnetId:                   pulumi.Any(aws_subnet.Main.Id),
+			TerminateInstanceOnFailure: pulumi.Bool(true),
+			Logging: &imagebuilder.InfrastructureConfigurationLoggingArgs{
+				S3Logs: &imagebuilder.InfrastructureConfigurationLoggingS3LogsArgs{
+					S3BucketName: pulumi.Any(aws_s3_bucket.Example.Bucket),
+					S3KeyPrefix:  pulumi.String("logs"),
+				},
+			},
+			Tags: pulumi.StringMap{
+				"foo": pulumi.String("bar"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+```python
+import pulumi
+import pulumi_aws as aws
+
+example = aws.imagebuilder.InfrastructureConfiguration("example",
+    description="example description",
+    instance_profile_name=aws_iam_instance_profile["example"]["name"],
+    instance_types=[
+        "t2.nano",
+        "t3.micro",
+    ],
+    key_pair=aws_key_pair["example"]["key_name"],
+    security_group_ids=[aws_security_group["example"]["id"]],
+    sns_topic_arn=aws_sns_topic["example"]["arn"],
+    subnet_id=aws_subnet["main"]["id"],
+    terminate_instance_on_failure=True,
+    logging=aws.imagebuilder.InfrastructureConfigurationLoggingArgs(
+        s3_logs=aws.imagebuilder.InfrastructureConfigurationLoggingS3LogsArgs(
+            s3_bucket_name=aws_s3_bucket["example"]["bucket"],
+            s3_key_prefix="logs",
+        ),
+    ),
+    tags={
+        "foo": "bar",
+    })
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const example = new aws.imagebuilder.InfrastructureConfiguration("example", {
+    description: "example description",
+    instanceProfileName: aws_iam_instance_profile.example.name,
+    instanceTypes: [
+        "t2.nano",
+        "t3.micro",
+    ],
+    keyPair: aws_key_pair.example.key_name,
+    securityGroupIds: [aws_security_group.example.id],
+    snsTopicArn: aws_sns_topic.example.arn,
+    subnetId: aws_subnet.main.id,
+    terminateInstanceOnFailure: true,
+    logging: {
+        s3Logs: {
+            s3BucketName: aws_s3_bucket.example.bucket,
+            s3KeyPrefix: "logs",
+        },
+    },
+    tags: {
+        foo: "bar",
+    },
+});
+```
+
+
+{{< /example >}}
+
+
+
+
+
+{{% /examples %}}
+
+
 
 
 ## Create a InfrastructureConfiguration Resource {#create}

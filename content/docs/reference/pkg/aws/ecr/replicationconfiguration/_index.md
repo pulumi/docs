@@ -11,6 +11,128 @@ meta_desc: "Documentation for the aws.ecr.ReplicationConfiguration resource with
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Provides an Elastic Container Registry Replication Configuration.
+## Multiple Region Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const current = aws.getCallerIdentity({});
+const exampleRegions = aws.getRegions({});
+const exampleReplicationConfiguration = new aws.ecr.ReplicationConfiguration("exampleReplicationConfiguration", {replicationConfiguration: {
+    rule: {
+        destinations: [
+            {
+                region: exampleRegions.then(exampleRegions => exampleRegions.names?[0]),
+                registryId: current.then(current => current.accountId),
+            },
+            {
+                region: exampleRegions.then(exampleRegions => exampleRegions.names?[1]),
+                registryId: current.then(current => current.accountId),
+            },
+        ],
+    },
+}});
+```
+```python
+import pulumi
+import pulumi_aws as aws
+
+current = aws.get_caller_identity()
+example_regions = aws.get_regions()
+example_replication_configuration = aws.ecr.ReplicationConfiguration("exampleReplicationConfiguration", replication_configuration=aws.ecr.ReplicationConfigurationReplicationConfigurationArgs(
+    rule=aws.ecr.ReplicationConfigurationReplicationConfigurationRuleArgs(
+        destinations=[
+            aws.ecr.ReplicationConfigurationReplicationConfigurationRuleDestinationArgs(
+                region=example_regions.names[0],
+                registry_id=current.account_id,
+            ),
+            aws.ecr.ReplicationConfigurationReplicationConfigurationRuleDestinationArgs(
+                region=example_regions.names[1],
+                registry_id=current.account_id,
+            ),
+        ],
+    ),
+))
+```
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var current = Output.Create(Aws.GetCallerIdentity.InvokeAsync());
+        var exampleRegions = Output.Create(Aws.GetRegions.InvokeAsync());
+        var exampleReplicationConfiguration = new Aws.Ecr.ReplicationConfiguration("exampleReplicationConfiguration", new Aws.Ecr.ReplicationConfigurationArgs
+        {
+            ReplicationConfiguration = new Aws.Ecr.Inputs.ReplicationConfigurationReplicationConfigurationArgs
+            {
+                Rule = new Aws.Ecr.Inputs.ReplicationConfigurationReplicationConfigurationRuleArgs
+                {
+                    Destinations = 
+                    {
+                        new Aws.Ecr.Inputs.ReplicationConfigurationReplicationConfigurationRuleDestinationArgs
+                        {
+                            Region = exampleRegions.Apply(exampleRegions => exampleRegions.Names?[0]),
+                            RegistryId = current.Apply(current => current.AccountId),
+                        },
+                        new Aws.Ecr.Inputs.ReplicationConfigurationReplicationConfigurationRuleDestinationArgs
+                        {
+                            Region = exampleRegions.Apply(exampleRegions => exampleRegions.Names?[1]),
+                            RegistryId = current.Apply(current => current.AccountId),
+                        },
+                    },
+                },
+            },
+        });
+    }
+
+}
+```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ecr"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		current, err := aws.GetCallerIdentity(ctx, nil, nil)
+		if err != nil {
+			return err
+		}
+		exampleRegions, err := aws.GetRegions(ctx, nil, nil)
+		if err != nil {
+			return err
+		}
+		_, err = ecr.NewReplicationConfiguration(ctx, "exampleReplicationConfiguration", &ecr.ReplicationConfigurationArgs{
+			ReplicationConfiguration: &ecr.ReplicationConfigurationReplicationConfigurationArgs{
+				Rule: &ecr.ReplicationConfigurationReplicationConfigurationRuleArgs{
+					Destinations: ecr.ReplicationConfigurationReplicationConfigurationRuleDestinationArray{
+						&ecr.ReplicationConfigurationReplicationConfigurationRuleDestinationArgs{
+							Region:     pulumi.String(exampleRegions.Names[0]),
+							RegistryId: pulumi.String(current.AccountId),
+						},
+						&ecr.ReplicationConfigurationReplicationConfigurationRuleDestinationArgs{
+							Region:     pulumi.String(exampleRegions.Names[1]),
+							RegistryId: pulumi.String(current.AccountId),
+						},
+					},
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
 
 {{% examples %}}
 

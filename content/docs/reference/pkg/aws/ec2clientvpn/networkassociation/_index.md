@@ -109,6 +109,112 @@ const example = new aws.ec2clientvpn.NetworkAssociation("example", {
 
 
 
+### Using custom security groups
+
+
+{{< example csharp >}}
+
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Aws.Ec2ClientVpn.NetworkAssociation("example", new Aws.Ec2ClientVpn.NetworkAssociationArgs
+        {
+            ClientVpnEndpointId = aws_ec2_client_vpn_endpoint.Example.Id,
+            SubnetId = aws_subnet.Example.Id,
+            SecurityGroups = 
+            {
+                aws_security_group.Example1.Id,
+                aws_security_group.Example2.Id,
+            },
+        });
+    }
+
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ec2clientvpn"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := ec2clientvpn.NewNetworkAssociation(ctx, "example", &ec2clientvpn.NetworkAssociationArgs{
+			ClientVpnEndpointId: pulumi.Any(aws_ec2_client_vpn_endpoint.Example.Id),
+			SubnetId:            pulumi.Any(aws_subnet.Example.Id),
+			SecurityGroups: pulumi.StringArray{
+				pulumi.Any(aws_security_group.Example1.Id),
+				pulumi.Any(aws_security_group.Example2.Id),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+```python
+import pulumi
+import pulumi_aws as aws
+
+example = aws.ec2clientvpn.NetworkAssociation("example",
+    client_vpn_endpoint_id=aws_ec2_client_vpn_endpoint["example"]["id"],
+    subnet_id=aws_subnet["example"]["id"],
+    security_groups=[
+        aws_security_group["example1"]["id"],
+        aws_security_group["example2"]["id"],
+    ])
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const example = new aws.ec2clientvpn.NetworkAssociation("example", {
+    clientVpnEndpointId: aws_ec2_client_vpn_endpoint.example.id,
+    subnetId: aws_subnet.example.id,
+    securityGroups: [
+        aws_security_group.example1.id,
+        aws_security_group.example2.id,
+    ],
+});
+```
+
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
 

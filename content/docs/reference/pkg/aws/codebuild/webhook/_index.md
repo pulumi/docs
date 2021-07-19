@@ -229,7 +229,7 @@ func main() {
 				pulumi.String("push"),
 			},
 			Repository: pulumi.Any(github_repository.Example.Name),
-			Configuration: &github.RepositoryWebhookConfigurationArgs{
+			Configuration: &RepositoryWebhookConfigurationArgs{
 				Url:         exampleWebhook.PayloadUrl,
 				Secret:      exampleWebhook.Secret,
 				ContentType: pulumi.String("json"),

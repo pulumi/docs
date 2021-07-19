@@ -67,9 +67,9 @@ func main() {
 		_, err := fsx.NewLustreFileSystem(ctx, "example", &fsx.LustreFileSystemArgs{
 			ImportPath:      pulumi.String(fmt.Sprintf("%v%v", "s3://", aws_s3_bucket.Example.Bucket)),
 			StorageCapacity: pulumi.Int(1200),
-			SubnetIds: pulumi.String(pulumi.String{
-				pulumi.Any(aws_subnet.Example.Id),
-			}),
+			SubnetIds: pulumi.String{
+				aws_subnet.Example.Id,
+			},
 		})
 		if err != nil {
 			return err

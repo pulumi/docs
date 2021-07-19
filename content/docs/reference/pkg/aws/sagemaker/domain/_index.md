@@ -12,6 +12,433 @@ meta_desc: "Documentation for the aws.sagemaker.Domain resource with examples, i
 
 Provides a Sagemaker Domain resource.
 
+{{% examples %}}
+
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+
+### Basic usage
+
+
+{{< example csharp >}}
+
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleDomain = new Aws.Sagemaker.Domain("exampleDomain", new Aws.Sagemaker.DomainArgs
+        {
+            DomainName = "example",
+            AuthMode = "IAM",
+            VpcId = aws_vpc.Test.Id,
+            SubnetIds = 
+            {
+                aws_subnet.Test.Id,
+            },
+            DefaultUserSettings = new Aws.Sagemaker.Inputs.DomainDefaultUserSettingsArgs
+            {
+                ExecutionRole = aws_iam_role.Test.Arn,
+            },
+        });
+        var examplePolicyDocument = Output.Create(Aws.Iam.GetPolicyDocument.InvokeAsync(new Aws.Iam.GetPolicyDocumentArgs
+        {
+            Statements = 
+            {
+                new Aws.Iam.Inputs.GetPolicyDocumentStatementArgs
+                {
+                    Actions = 
+                    {
+                        "sts:AssumeRole",
+                    },
+                    Principals = 
+                    {
+                        new Aws.Iam.Inputs.GetPolicyDocumentStatementPrincipalArgs
+                        {
+                            Type = "Service",
+                            Identifiers = 
+                            {
+                                "sagemaker.amazonaws.com",
+                            },
+                        },
+                    },
+                },
+            },
+        }));
+        var exampleRole = new Aws.Iam.Role("exampleRole", new Aws.Iam.RoleArgs
+        {
+            Path = "/",
+            AssumeRolePolicy = examplePolicyDocument.Apply(examplePolicyDocument => examplePolicyDocument.Json),
+        });
+    }
+
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/iam"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/sagemaker"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := sagemaker.NewDomain(ctx, "exampleDomain", &sagemaker.DomainArgs{
+			DomainName: pulumi.String("example"),
+			AuthMode:   pulumi.String("IAM"),
+			VpcId:      pulumi.Any(aws_vpc.Test.Id),
+			SubnetIds: pulumi.StringArray{
+				pulumi.Any(aws_subnet.Test.Id),
+			},
+			DefaultUserSettings: &sagemaker.DomainDefaultUserSettingsArgs{
+				ExecutionRole: pulumi.Any(aws_iam_role.Test.Arn),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		examplePolicyDocument, err := iam.GetPolicyDocument(ctx, &iam.GetPolicyDocumentArgs{
+			Statements: []iam.GetPolicyDocumentStatement{
+				iam.GetPolicyDocumentStatement{
+					Actions: []string{
+						"sts:AssumeRole",
+					},
+					Principals: []iam.GetPolicyDocumentStatementPrincipal{
+						iam.GetPolicyDocumentStatementPrincipal{
+							Type: "Service",
+							Identifiers: []string{
+								"sagemaker.amazonaws.com",
+							},
+						},
+					},
+				},
+			},
+		}, nil)
+		if err != nil {
+			return err
+		}
+		_, err = iam.NewRole(ctx, "exampleRole", &iam.RoleArgs{
+			Path:             pulumi.String("/"),
+			AssumeRolePolicy: pulumi.String(examplePolicyDocument.Json),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+```python
+import pulumi
+import pulumi_aws as aws
+
+example_domain = aws.sagemaker.Domain("exampleDomain",
+    domain_name="example",
+    auth_mode="IAM",
+    vpc_id=aws_vpc["test"]["id"],
+    subnet_ids=[aws_subnet["test"]["id"]],
+    default_user_settings=aws.sagemaker.DomainDefaultUserSettingsArgs(
+        execution_role=aws_iam_role["test"]["arn"],
+    ))
+example_policy_document = aws.iam.get_policy_document(statements=[aws.iam.GetPolicyDocumentStatementArgs(
+    actions=["sts:AssumeRole"],
+    principals=[aws.iam.GetPolicyDocumentStatementPrincipalArgs(
+        type="Service",
+        identifiers=["sagemaker.amazonaws.com"],
+    )],
+)])
+example_role = aws.iam.Role("exampleRole",
+    path="/",
+    assume_role_policy=example_policy_document.json)
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const exampleDomain = new aws.sagemaker.Domain("exampleDomain", {
+    domainName: "example",
+    authMode: "IAM",
+    vpcId: aws_vpc.test.id,
+    subnetIds: [aws_subnet.test.id],
+    defaultUserSettings: {
+        executionRole: aws_iam_role.test.arn,
+    },
+});
+const examplePolicyDocument = aws.iam.getPolicyDocument({
+    statements: [{
+        actions: ["sts:AssumeRole"],
+        principals: [{
+            type: "Service",
+            identifiers: ["sagemaker.amazonaws.com"],
+        }],
+    }],
+});
+const exampleRole = new aws.iam.Role("exampleRole", {
+    path: "/",
+    assumeRolePolicy: examplePolicyDocument.then(examplePolicyDocument => examplePolicyDocument.json),
+});
+```
+
+
+{{< /example >}}
+
+
+
+
+### Using Custom Images
+
+
+{{< example csharp >}}
+
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var testImage = new Aws.Sagemaker.Image("testImage", new Aws.Sagemaker.ImageArgs
+        {
+            ImageName = "example",
+            RoleArn = aws_iam_role.Test.Arn,
+        });
+        var testAppImageConfig = new Aws.Sagemaker.AppImageConfig("testAppImageConfig", new Aws.Sagemaker.AppImageConfigArgs
+        {
+            AppImageConfigName = "example",
+            KernelGatewayImageConfig = new Aws.Sagemaker.Inputs.AppImageConfigKernelGatewayImageConfigArgs
+            {
+                KernelSpec = new Aws.Sagemaker.Inputs.AppImageConfigKernelGatewayImageConfigKernelSpecArgs
+                {
+                    Name = "example",
+                },
+            },
+        });
+        var testImageVersion = new Aws.Sagemaker.ImageVersion("testImageVersion", new Aws.Sagemaker.ImageVersionArgs
+        {
+            ImageName = testImage.Id,
+            BaseImage = "base-image",
+        });
+        var testDomain = new Aws.Sagemaker.Domain("testDomain", new Aws.Sagemaker.DomainArgs
+        {
+            DomainName = "example",
+            AuthMode = "IAM",
+            VpcId = aws_vpc.Test.Id,
+            SubnetIds = 
+            {
+                aws_subnet.Test.Id,
+            },
+            DefaultUserSettings = new Aws.Sagemaker.Inputs.DomainDefaultUserSettingsArgs
+            {
+                ExecutionRole = aws_iam_role.Test.Arn,
+                KernelGatewayAppSettings = new Aws.Sagemaker.Inputs.DomainDefaultUserSettingsKernelGatewayAppSettingsArgs
+                {
+                    CustomImages = 
+                    {
+                        new Aws.Sagemaker.Inputs.DomainDefaultUserSettingsKernelGatewayAppSettingsCustomImageArgs
+                        {
+                            AppImageConfigName = testAppImageConfig.AppImageConfigName,
+                            ImageName = testImageVersion.ImageName,
+                        },
+                    },
+                },
+            },
+        });
+    }
+
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/sagemaker"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		testImage, err := sagemaker.NewImage(ctx, "testImage", &sagemaker.ImageArgs{
+			ImageName: pulumi.String("example"),
+			RoleArn:   pulumi.Any(aws_iam_role.Test.Arn),
+		})
+		if err != nil {
+			return err
+		}
+		testAppImageConfig, err := sagemaker.NewAppImageConfig(ctx, "testAppImageConfig", &sagemaker.AppImageConfigArgs{
+			AppImageConfigName: pulumi.String("example"),
+			KernelGatewayImageConfig: &sagemaker.AppImageConfigKernelGatewayImageConfigArgs{
+				KernelSpec: &sagemaker.AppImageConfigKernelGatewayImageConfigKernelSpecArgs{
+					Name: pulumi.String("example"),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		testImageVersion, err := sagemaker.NewImageVersion(ctx, "testImageVersion", &sagemaker.ImageVersionArgs{
+			ImageName: testImage.ID(),
+			BaseImage: pulumi.String("base-image"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = sagemaker.NewDomain(ctx, "testDomain", &sagemaker.DomainArgs{
+			DomainName: pulumi.String("example"),
+			AuthMode:   pulumi.String("IAM"),
+			VpcId:      pulumi.Any(aws_vpc.Test.Id),
+			SubnetIds: pulumi.StringArray{
+				pulumi.Any(aws_subnet.Test.Id),
+			},
+			DefaultUserSettings: &sagemaker.DomainDefaultUserSettingsArgs{
+				ExecutionRole: pulumi.Any(aws_iam_role.Test.Arn),
+				KernelGatewayAppSettings: &sagemaker.DomainDefaultUserSettingsKernelGatewayAppSettingsArgs{
+					CustomImages: sagemaker.DomainDefaultUserSettingsKernelGatewayAppSettingsCustomImageArray{
+						&sagemaker.DomainDefaultUserSettingsKernelGatewayAppSettingsCustomImageArgs{
+							AppImageConfigName: testAppImageConfig.AppImageConfigName,
+							ImageName:          testImageVersion.ImageName,
+						},
+					},
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+```python
+import pulumi
+import pulumi_aws as aws
+
+test_image = aws.sagemaker.Image("testImage",
+    image_name="example",
+    role_arn=aws_iam_role["test"]["arn"])
+test_app_image_config = aws.sagemaker.AppImageConfig("testAppImageConfig",
+    app_image_config_name="example",
+    kernel_gateway_image_config=aws.sagemaker.AppImageConfigKernelGatewayImageConfigArgs(
+        kernel_spec=aws.sagemaker.AppImageConfigKernelGatewayImageConfigKernelSpecArgs(
+            name="example",
+        ),
+    ))
+test_image_version = aws.sagemaker.ImageVersion("testImageVersion",
+    image_name=test_image.id,
+    base_image="base-image")
+test_domain = aws.sagemaker.Domain("testDomain",
+    domain_name="example",
+    auth_mode="IAM",
+    vpc_id=aws_vpc["test"]["id"],
+    subnet_ids=[aws_subnet["test"]["id"]],
+    default_user_settings=aws.sagemaker.DomainDefaultUserSettingsArgs(
+        execution_role=aws_iam_role["test"]["arn"],
+        kernel_gateway_app_settings=aws.sagemaker.DomainDefaultUserSettingsKernelGatewayAppSettingsArgs(
+            custom_images=[aws.sagemaker.DomainDefaultUserSettingsKernelGatewayAppSettingsCustomImageArgs(
+                app_image_config_name=test_app_image_config.app_image_config_name,
+                image_name=test_image_version.image_name,
+            )],
+        ),
+    ))
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const testImage = new aws.sagemaker.Image("testImage", {
+    imageName: "example",
+    roleArn: aws_iam_role.test.arn,
+});
+const testAppImageConfig = new aws.sagemaker.AppImageConfig("testAppImageConfig", {
+    appImageConfigName: "example",
+    kernelGatewayImageConfig: {
+        kernelSpec: {
+            name: "example",
+        },
+    },
+});
+const testImageVersion = new aws.sagemaker.ImageVersion("testImageVersion", {
+    imageName: testImage.id,
+    baseImage: "base-image",
+});
+const testDomain = new aws.sagemaker.Domain("testDomain", {
+    domainName: "example",
+    authMode: "IAM",
+    vpcId: aws_vpc.test.id,
+    subnetIds: [aws_subnet.test.id],
+    defaultUserSettings: {
+        executionRole: aws_iam_role.test.arn,
+        kernelGatewayAppSettings: {
+            customImages: [{
+                appImageConfigName: testAppImageConfig.appImageConfigName,
+                imageName: testImageVersion.imageName,
+            }],
+        },
+    },
+});
+```
+
+
+{{< /example >}}
+
+
+
+
+
+{{% /examples %}}
+
+
 
 
 ## Create a Domain Resource {#create}
@@ -31,6 +458,7 @@ Provides a Sagemaker Domain resource.
            <span class="nx">default_user_settings</span><span class="p">:</span> <span class="nx">Optional[DomainDefaultUserSettingsArgs]</span> = None<span class="p">,</span>
            <span class="nx">domain_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
            <span class="nx">kms_key_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+           <span class="nx">retention_policy</span><span class="p">:</span> <span class="nx">Optional[DomainRetentionPolicyArgs]</span> = None<span class="p">,</span>
            <span class="nx">subnet_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
            <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
            <span class="nx">tags_all</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
@@ -227,6 +655,15 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
     <dd>{{% md %}}The AWS KMS customer managed CMK used to encrypt the EFS volume attached to the domain.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="retentionpolicy_csharp">
+<a href="#retentionpolicy_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#domainretentionpolicy">Domain<wbr>Retention<wbr>Policy<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The retention policy for this domain, which specifies whether resources will be retained after the Domain is deleted. By default, all resources are retained. See Retention Policy below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span>
@@ -310,6 +747,15 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS KMS customer managed CMK used to encrypt the EFS volume attached to the domain.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="retentionpolicy_go">
+<a href="#retentionpolicy_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#domainretentionpolicy">Domain<wbr>Retention<wbr>Policy<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The retention policy for this domain, which specifies whether resources will be retained after the Domain is deleted. By default, all resources are retained. See Retention Policy below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
@@ -397,6 +843,15 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
     <dd>{{% md %}}The AWS KMS customer managed CMK used to encrypt the EFS volume attached to the domain.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="retentionpolicy_nodejs">
+<a href="#retentionpolicy_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#domainretentionpolicy">Domain<wbr>Retention<wbr>Policy<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The retention policy for this domain, which specifies whether resources will be retained after the Domain is deleted. By default, all resources are retained. See Retention Policy below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
@@ -480,6 +935,15 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The AWS KMS customer managed CMK used to encrypt the EFS volume attached to the domain.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="retention_policy_python">
+<a href="#retention_policy_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#domainretentionpolicy">Domain<wbr>Retention<wbr>Policy<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The retention policy for this domain, which specifies whether resources will be retained after the Domain is deleted. By default, all resources are retained. See Retention Policy below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
@@ -723,6 +1187,7 @@ Get an existing Domain resource's state with the given name, ID, and optional ex
         <span class="nx">domain_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">home_efs_file_system_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">kms_key_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">retention_policy</span><span class="p">:</span> <span class="nx">Optional[DomainRetentionPolicyArgs]</span> = None<span class="p">,</span>
         <span class="nx">single_sign_on_managed_application_instance_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">subnet_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
         <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
@@ -904,6 +1369,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The AWS KMS customer managed CMK used to encrypt the EFS volume attached to the domain.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_retentionpolicy_csharp">
+<a href="#state_retentionpolicy_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#domainretentionpolicy">Domain<wbr>Retention<wbr>Policy<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The retention policy for this domain, which specifies whether resources will be retained after the Domain is deleted. By default, all resources are retained. See Retention Policy below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_singlesignonmanagedapplicationinstanceid_csharp">
 <a href="#state_singlesignonmanagedapplicationinstanceid_csharp" style="color: inherit; text-decoration: inherit;">Single<wbr>Sign<wbr>On<wbr>Managed<wbr>Application<wbr>Instance<wbr>Id</a>
 </span>
@@ -1023,6 +1497,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS KMS customer managed CMK used to encrypt the EFS volume attached to the domain.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_retentionpolicy_go">
+<a href="#state_retentionpolicy_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#domainretentionpolicy">Domain<wbr>Retention<wbr>Policy<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The retention policy for this domain, which specifies whether resources will be retained after the Domain is deleted. By default, all resources are retained. See Retention Policy below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_singlesignonmanagedapplicationinstanceid_go">
@@ -1146,6 +1629,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The AWS KMS customer managed CMK used to encrypt the EFS volume attached to the domain.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_retentionpolicy_nodejs">
+<a href="#state_retentionpolicy_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#domainretentionpolicy">Domain<wbr>Retention<wbr>Policy<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The retention policy for this domain, which specifies whether resources will be retained after the Domain is deleted. By default, all resources are retained. See Retention Policy below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_singlesignonmanagedapplicationinstanceid_nodejs">
 <a href="#state_singlesignonmanagedapplicationinstanceid_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Sign<wbr>On<wbr>Managed<wbr>Application<wbr>Instance<wbr>Id</a>
 </span>
@@ -1265,6 +1757,15 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The AWS KMS customer managed CMK used to encrypt the EFS volume attached to the domain.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_retention_policy_python">
+<a href="#state_retention_policy_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#domainretentionpolicy">Domain<wbr>Retention<wbr>Policy<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The retention policy for this domain, which specifies whether resources will be retained after the Domain is deleted. By default, all resources are retained. See Retention Policy below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_single_sign_on_managed_application_instance_id_python">
@@ -2282,6 +2783,60 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of the SageMaker image that the image version belongs to.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="domainretentionpolicy">Domain<wbr>Retention<wbr>Policy</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="homeefsfilesystem_csharp">
+<a href="#homeefsfilesystem_csharp" style="color: inherit; text-decoration: inherit;">Home<wbr>Efs<wbr>File<wbr>System</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The retention policy for data stored on an Amazon Elastic File System (EFS) volume. Default value is `Retain`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="homeefsfilesystem_go">
+<a href="#homeefsfilesystem_go" style="color: inherit; text-decoration: inherit;">Home<wbr>Efs<wbr>File<wbr>System</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The retention policy for data stored on an Amazon Elastic File System (EFS) volume. Default value is `Retain`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="homeefsfilesystem_nodejs">
+<a href="#homeefsfilesystem_nodejs" style="color: inherit; text-decoration: inherit;">home<wbr>Efs<wbr>File<wbr>System</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The retention policy for data stored on an Amazon Elastic File System (EFS) volume. Default value is `Retain`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="home_efs_file_system_python">
+<a href="#home_efs_file_system_python" style="color: inherit; text-decoration: inherit;">home_<wbr>efs_<wbr>file_<wbr>system</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The retention policy for data stored on an Amazon Elastic File System (EFS) volume. Default value is `Retain`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import

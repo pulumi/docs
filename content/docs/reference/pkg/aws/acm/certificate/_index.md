@@ -208,8 +208,8 @@ func main() {
 		exampleSelfSignedCert, err := tls.NewSelfSignedCert(ctx, "exampleSelfSignedCert", &tls.SelfSignedCertArgs{
 			KeyAlgorithm:  pulumi.String("RSA"),
 			PrivateKeyPem: examplePrivateKey.PrivateKeyPem,
-			Subjects: tls.SelfSignedCertSubjectArray{
-				&tls.SelfSignedCertSubjectArgs{
+			Subjects: SelfSignedCertSubjectArray{
+				&SelfSignedCertSubjectArgs{
 					CommonName:   pulumi.String("example.com"),
 					Organization: pulumi.String("ACME Examples, Inc"),
 				},

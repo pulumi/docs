@@ -407,6 +407,289 @@ const testEventBusPolicy = new aws.cloudwatch.EventBusPolicy("testEventBusPolicy
 
 
 
+### Multiple Statements
+
+
+{{< example csharp >}}
+
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var testPolicyDocument = Output.Create(Aws.Iam.GetPolicyDocument.InvokeAsync(new Aws.Iam.GetPolicyDocumentArgs
+        {
+            Statements = 
+            {
+                new Aws.Iam.Inputs.GetPolicyDocumentStatementArgs
+                {
+                    Sid = "DevAccountAccess",
+                    Effect = "Allow",
+                    Actions = 
+                    {
+                        "events:PutEvents",
+                    },
+                    Resources = 
+                    {
+                        "arn:aws:events:eu-west-1:123456789012:event-bus/default",
+                    },
+                    Principals = 
+                    {
+                        new Aws.Iam.Inputs.GetPolicyDocumentStatementPrincipalArgs
+                        {
+                            Type = "AWS",
+                            Identifiers = 
+                            {
+                                "123456789012",
+                            },
+                        },
+                    },
+                },
+                new Aws.Iam.Inputs.GetPolicyDocumentStatementArgs
+                {
+                    Sid = "OrganizationAccess",
+                    Effect = "Allow",
+                    Actions = 
+                    {
+                        "events:DescribeRule",
+                        "events:ListRules",
+                        "events:ListTargetsByRule",
+                        "events:ListTagsForResource",
+                    },
+                    Resources = 
+                    {
+                        "arn:aws:events:eu-west-1:123456789012:rule/*",
+                        "arn:aws:events:eu-west-1:123456789012:event-bus/default",
+                    },
+                    Principals = 
+                    {
+                        new Aws.Iam.Inputs.GetPolicyDocumentStatementPrincipalArgs
+                        {
+                            Type = "AWS",
+                            Identifiers = 
+                            {
+                                "*",
+                            },
+                        },
+                    },
+                    Conditions = 
+                    {
+                        new Aws.Iam.Inputs.GetPolicyDocumentStatementConditionArgs
+                        {
+                            Test = "StringEquals",
+                            Variable = "aws:PrincipalOrgID",
+                            Values = aws_organizations_organization.Example.Id,
+                        },
+                    },
+                },
+            },
+        }));
+        var testEventBusPolicy = new Aws.CloudWatch.EventBusPolicy("testEventBusPolicy", new Aws.CloudWatch.EventBusPolicyArgs
+        {
+            Policy = testPolicyDocument.Apply(testPolicyDocument => testPolicyDocument.Json),
+            EventBusName = aws_cloudwatch_event_bus.Test.Name,
+        });
+    }
+
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/cloudwatch"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/iam"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		testPolicyDocument, err := iam.GetPolicyDocument(ctx, &iam.GetPolicyDocumentArgs{
+			Statements: []iam.GetPolicyDocumentStatement{
+				iam.GetPolicyDocumentStatement{
+					Sid:    "DevAccountAccess",
+					Effect: "Allow",
+					Actions: []string{
+						"events:PutEvents",
+					},
+					Resources: []string{
+						"arn:aws:events:eu-west-1:123456789012:event-bus/default",
+					},
+					Principals: []iam.GetPolicyDocumentStatementPrincipal{
+						iam.GetPolicyDocumentStatementPrincipal{
+							Type: "AWS",
+							Identifiers: []string{
+								"123456789012",
+							},
+						},
+					},
+				},
+				iam.GetPolicyDocumentStatement{
+					Sid:    "OrganizationAccess",
+					Effect: "Allow",
+					Actions: []string{
+						"events:DescribeRule",
+						"events:ListRules",
+						"events:ListTargetsByRule",
+						"events:ListTagsForResource",
+					},
+					Resources: []string{
+						"arn:aws:events:eu-west-1:123456789012:rule/*",
+						"arn:aws:events:eu-west-1:123456789012:event-bus/default",
+					},
+					Principals: []iam.GetPolicyDocumentStatementPrincipal{
+						iam.GetPolicyDocumentStatementPrincipal{
+							Type: "AWS",
+							Identifiers: []string{
+								"*",
+							},
+						},
+					},
+					Conditions: []iam.GetPolicyDocumentStatementCondition{
+						iam.GetPolicyDocumentStatementCondition{
+							Test:     "StringEquals",
+							Variable: "aws:PrincipalOrgID",
+							Values:   aws_organizations_organization.Example.Id,
+						},
+					},
+				},
+			},
+		}, nil)
+		if err != nil {
+			return err
+		}
+		_, err = cloudwatch.NewEventBusPolicy(ctx, "testEventBusPolicy", &cloudwatch.EventBusPolicyArgs{
+			Policy:       pulumi.String(testPolicyDocument.Json),
+			EventBusName: pulumi.Any(aws_cloudwatch_event_bus.Test.Name),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+```python
+import pulumi
+import pulumi_aws as aws
+
+test_policy_document = aws.iam.get_policy_document(statements=[
+    aws.iam.GetPolicyDocumentStatementArgs(
+        sid="DevAccountAccess",
+        effect="Allow",
+        actions=["events:PutEvents"],
+        resources=["arn:aws:events:eu-west-1:123456789012:event-bus/default"],
+        principals=[aws.iam.GetPolicyDocumentStatementPrincipalArgs(
+            type="AWS",
+            identifiers=["123456789012"],
+        )],
+    ),
+    aws.iam.GetPolicyDocumentStatementArgs(
+        sid="OrganizationAccess",
+        effect="Allow",
+        actions=[
+            "events:DescribeRule",
+            "events:ListRules",
+            "events:ListTargetsByRule",
+            "events:ListTagsForResource",
+        ],
+        resources=[
+            "arn:aws:events:eu-west-1:123456789012:rule/*",
+            "arn:aws:events:eu-west-1:123456789012:event-bus/default",
+        ],
+        principals=[aws.iam.GetPolicyDocumentStatementPrincipalArgs(
+            type="AWS",
+            identifiers=["*"],
+        )],
+        conditions=[aws.iam.GetPolicyDocumentStatementConditionArgs(
+            test="StringEquals",
+            variable="aws:PrincipalOrgID",
+            values=aws_organizations_organization["example"]["id"],
+        )],
+    ),
+])
+test_event_bus_policy = aws.cloudwatch.EventBusPolicy("testEventBusPolicy",
+    policy=test_policy_document.json,
+    event_bus_name=aws_cloudwatch_event_bus["test"]["name"])
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const testPolicyDocument = aws.iam.getPolicyDocument({
+    statements: [
+        {
+            sid: "DevAccountAccess",
+            effect: "Allow",
+            actions: ["events:PutEvents"],
+            resources: ["arn:aws:events:eu-west-1:123456789012:event-bus/default"],
+            principals: [{
+                type: "AWS",
+                identifiers: ["123456789012"],
+            }],
+        },
+        {
+            sid: "OrganizationAccess",
+            effect: "Allow",
+            actions: [
+                "events:DescribeRule",
+                "events:ListRules",
+                "events:ListTargetsByRule",
+                "events:ListTagsForResource",
+            ],
+            resources: [
+                "arn:aws:events:eu-west-1:123456789012:rule/*",
+                "arn:aws:events:eu-west-1:123456789012:event-bus/default",
+            ],
+            principals: [{
+                type: "AWS",
+                identifiers: ["*"],
+            }],
+            conditions: [{
+                test: "StringEquals",
+                variable: "aws:PrincipalOrgID",
+                values: aws_organizations_organization.example.id,
+            }],
+        },
+    ],
+});
+const testEventBusPolicy = new aws.cloudwatch.EventBusPolicy("testEventBusPolicy", {
+    policy: testPolicyDocument.then(testPolicyDocument => testPolicyDocument.json),
+    eventBusName: aws_cloudwatch_event_bus.test.name,
+});
+```
+
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
 

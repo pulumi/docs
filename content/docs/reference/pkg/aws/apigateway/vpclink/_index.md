@@ -91,9 +91,9 @@ func main() {
 		}
 		_, err = apigateway.NewVpcLink(ctx, "exampleVpcLink", &apigateway.VpcLinkArgs{
 			Description: pulumi.String("example description"),
-			TargetArn: pulumi.String(pulumi.String{
+			TargetArn: pulumi.String{
 				exampleLoadBalancer.Arn,
-			}),
+			},
 		})
 		if err != nil {
 			return err

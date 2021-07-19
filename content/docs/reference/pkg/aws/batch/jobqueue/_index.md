@@ -12,6 +12,123 @@ meta_desc: "Documentation for the aws.batch.JobQueue resource with examples, inp
 
 Provides a Batch Job Queue resource.
 
+{{% examples %}}
+
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+
+
+
+
+{{< example csharp >}}
+
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var testQueue = new Aws.Batch.JobQueue("testQueue", new Aws.Batch.JobQueueArgs
+        {
+            State = "ENABLED",
+            Priority = 1,
+            ComputeEnvironments = 
+            {
+                aws_batch_compute_environment.Test_environment_1.Arn,
+                aws_batch_compute_environment.Test_environment_2.Arn,
+            },
+        });
+    }
+
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/batch"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := batch.NewJobQueue(ctx, "testQueue", &batch.JobQueueArgs{
+			State:    pulumi.String("ENABLED"),
+			Priority: pulumi.Int(1),
+			ComputeEnvironments: pulumi.StringArray{
+				pulumi.Any(aws_batch_compute_environment.Test_environment_1.Arn),
+				pulumi.Any(aws_batch_compute_environment.Test_environment_2.Arn),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+```python
+import pulumi
+import pulumi_aws as aws
+
+test_queue = aws.batch.JobQueue("testQueue",
+    state="ENABLED",
+    priority=1,
+    compute_environments=[
+        aws_batch_compute_environment["test_environment_1"]["arn"],
+        aws_batch_compute_environment["test_environment_2"]["arn"],
+    ])
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const testQueue = new aws.batch.JobQueue("testQueue", {
+    state: "ENABLED",
+    priority: 1,
+    computeEnvironments: [
+        aws_batch_compute_environment.test_environment_1.arn,
+        aws_batch_compute_environment.test_environment_2.arn,
+    ],
+});
+```
+
+
+{{< /example >}}
+
+
+
+
+
+{{% /examples %}}
+
+
 
 
 ## Create a JobQueue Resource {#create}

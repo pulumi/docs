@@ -158,6 +158,7 @@ package main
 import (
 	"fmt"
 
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws"
 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/batch"
 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ec2"
 	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/iam"
@@ -167,7 +168,7 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		ecsInstanceRoleRole, err := iam.NewRole(ctx, "ecsInstanceRoleRole", &iam.RoleArgs{
-			AssumeRolePolicy: pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "    \"Version\": \"2012-10-17\",\n", "    \"Statement\": [\n", "	{\n", "	    \"Action\": \"sts:AssumeRole\",\n", "	    \"Effect\": \"Allow\",\n", "	    \"Principal\": {\n", "	        \"Service\": \"ec2.amazonaws.com\"\n", "	    }\n", "	}\n", "    ]\n", "}\n")),
+			AssumeRolePolicy: pulumi.Any(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "    \"Version\": \"2012-10-17\",\n", "    \"Statement\": [\n", "	{\n", "	    \"Action\": \"sts:AssumeRole\",\n", "	    \"Effect\": \"Allow\",\n", "	    \"Principal\": {\n", "	        \"Service\": \"ec2.amazonaws.com\"\n", "	    }\n", "	}\n", "    ]\n", "}\n")),
 		})
 		if err != nil {
 			return err
@@ -186,7 +187,7 @@ func main() {
 			return err
 		}
 		awsBatchServiceRoleRole, err := iam.NewRole(ctx, "awsBatchServiceRoleRole", &iam.RoleArgs{
-			AssumeRolePolicy: pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "    \"Version\": \"2012-10-17\",\n", "    \"Statement\": [\n", "	{\n", "	    \"Action\": \"sts:AssumeRole\",\n", "	    \"Effect\": \"Allow\",\n", "	    \"Principal\": {\n", "		\"Service\": \"batch.amazonaws.com\"\n", "	    }\n", "	}\n", "    ]\n", "}\n")),
+			AssumeRolePolicy: pulumi.Any(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "    \"Version\": \"2012-10-17\",\n", "    \"Statement\": [\n", "	{\n", "	    \"Action\": \"sts:AssumeRole\",\n", "	    \"Effect\": \"Allow\",\n", "	    \"Principal\": {\n", "		\"Service\": \"batch.amazonaws.com\"\n", "	    }\n", "	}\n", "    ]\n", "}\n")),
 		})
 		if err != nil {
 			return err
@@ -403,6 +404,145 @@ const sampleComputeEnvironment = new aws.batch.ComputeEnvironment("sampleCompute
     type: "MANAGED",
 }, {
     dependsOn: [awsBatchServiceRoleRolePolicyAttachment],
+});
+```
+
+
+{{< /example >}}
+
+
+
+
+### Fargate Type
+
+
+{{< example csharp >}}
+
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var sample = new Aws.Batch.ComputeEnvironment("sample", new Aws.Batch.ComputeEnvironmentArgs
+        {
+            ComputeEnvironmentName = "sample",
+            ComputeResources = new Aws.Batch.Inputs.ComputeEnvironmentComputeResourcesArgs
+            {
+                MaxVcpus = 16,
+                SecurityGroupIds = 
+                {
+                    aws_security_group.Sample.Id,
+                },
+                Subnets = 
+                {
+                    aws_subnet.Sample.Id,
+                },
+                Type = "FARGATE",
+            },
+            ServiceRole = aws_iam_role.Aws_batch_service_role.Arn,
+            Type = "MANAGED",
+        }, new CustomResourceOptions
+        {
+            DependsOn = 
+            {
+                aws_iam_role_policy_attachment.Aws_batch_service_role,
+            },
+        });
+    }
+
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/batch"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := batch.NewComputeEnvironment(ctx, "sample", &batch.ComputeEnvironmentArgs{
+			ComputeEnvironmentName: pulumi.String("sample"),
+			ComputeResources: &batch.ComputeEnvironmentComputeResourcesArgs{
+				MaxVcpus: pulumi.Int(16),
+				SecurityGroupIds: pulumi.StringArray{
+					pulumi.Any(aws_security_group.Sample.Id),
+				},
+				Subnets: pulumi.StringArray{
+					pulumi.Any(aws_subnet.Sample.Id),
+				},
+				Type: pulumi.String("FARGATE"),
+			},
+			ServiceRole: pulumi.Any(aws_iam_role.Aws_batch_service_role.Arn),
+			Type:        pulumi.String("MANAGED"),
+		}, pulumi.DependsOn([]pulumi.Resource{
+			aws_iam_role_policy_attachment.Aws_batch_service_role,
+		}))
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+```python
+import pulumi
+import pulumi_aws as aws
+
+sample = aws.batch.ComputeEnvironment("sample",
+    compute_environment_name="sample",
+    compute_resources=aws.batch.ComputeEnvironmentComputeResourcesArgs(
+        max_vcpus=16,
+        security_group_ids=[aws_security_group["sample"]["id"]],
+        subnets=[aws_subnet["sample"]["id"]],
+        type="FARGATE",
+    ),
+    service_role=aws_iam_role["aws_batch_service_role"]["arn"],
+    type="MANAGED",
+    opts=pulumi.ResourceOptions(depends_on=[aws_iam_role_policy_attachment["aws_batch_service_role"]]))
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const sample = new aws.batch.ComputeEnvironment("sample", {
+    computeEnvironmentName: "sample",
+    computeResources: {
+        maxVcpus: 16,
+        securityGroupIds: [aws_security_group.sample.id],
+        subnets: [aws_subnet.sample.id],
+        type: "FARGATE",
+    },
+    serviceRole: aws_iam_role.aws_batch_service_role.arn,
+    type: "MANAGED",
+}, {
+    dependsOn: [aws_iam_role_policy_attachment.aws_batch_service_role],
 });
 ```
 

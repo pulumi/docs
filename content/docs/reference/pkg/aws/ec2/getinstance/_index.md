@@ -26,21 +26,107 @@ resources.
 
 {{< example csharp >}}
 
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var foo = Output.Create(Aws.Ec2.GetInstance.InvokeAsync(new Aws.Ec2.GetInstanceArgs
+        {
+            Filters = 
+            {
+                new Aws.Ec2.Inputs.GetInstanceFilterArgs
+                {
+                    Name = "image-id",
+                    Values = 
+                    {
+                        "ami-xxxxxxxx",
+                    },
+                },
+                new Aws.Ec2.Inputs.GetInstanceFilterArgs
+                {
+                    Name = "tag:Name",
+                    Values = 
+                    {
+                        "instance-name-tag",
+                    },
+                },
+            },
+            InstanceId = "i-instanceid",
+        }));
+    }
+
+}
+```
+
 
 {{< /example >}}
 
 
 {{< example go >}}
 
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ec2"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		opt0 := "i-instanceid"
+		_, err := ec2.LookupInstance(ctx, &ec2.LookupInstanceArgs{
+			Filters: []ec2.GetInstanceFilter{
+				ec2.GetInstanceFilter{
+					Name: "image-id",
+					Values: []string{
+						"ami-xxxxxxxx",
+					},
+				},
+				ec2.GetInstanceFilter{
+					Name: "tag:Name",
+					Values: []string{
+						"instance-name-tag",
+					},
+				},
+			},
+			InstanceId: &opt0,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 
 {{< /example >}}
 
 
 {{< example python >}}
 
-Coming soon!
+```python
+import pulumi
+import pulumi_aws as aws
+
+foo = aws.ec2.get_instance(filters=[
+        aws.ec2.GetInstanceFilterArgs(
+            name="image-id",
+            values=["ami-xxxxxxxx"],
+        ),
+        aws.ec2.GetInstanceFilterArgs(
+            name="tag:Name",
+            values=["instance-name-tag"],
+        ),
+    ],
+    instance_id="i-instanceid")
+```
+
 
 {{< /example >}}
 
