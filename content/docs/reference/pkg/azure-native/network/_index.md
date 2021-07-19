@@ -58,6 +58,7 @@ Explore the resources and functions of the azure-native.network module.
     <li><a href="networkmanager" title="NetworkManager"><span class="symbol resource"></span>NetworkManager</a></li>
     <li><a href="networkprofile" title="NetworkProfile"><span class="symbol resource"></span>NetworkProfile</a></li>
     <li><a href="networksecuritygroup" title="NetworkSecurityGroup"><span class="symbol resource"></span>NetworkSecurityGroup</a></li>
+    <li><a href="networksecurityperimeter" title="NetworkSecurityPerimeter"><span class="symbol resource"></span>NetworkSecurityPerimeter</a></li>
     <li><a href="networkvirtualappliance" title="NetworkVirtualAppliance"><span class="symbol resource"></span>NetworkVirtualAppliance</a></li>
     <li><a href="networkwatcher" title="NetworkWatcher"><span class="symbol resource"></span>NetworkWatcher</a></li>
     <li><a href="p2svpngateway" title="P2sVpnGateway"><span class="symbol resource"></span>P2sVpnGateway</a></li>
@@ -165,6 +166,7 @@ Explore the resources and functions of the azure-native.network module.
     <li><a href="getnetworkmanager" title="GetNetworkManager"><span class="symbol function"></span>GetNetworkManager</a></li>
     <li><a href="getnetworkprofile" title="GetNetworkProfile"><span class="symbol function"></span>GetNetworkProfile</a></li>
     <li><a href="getnetworksecuritygroup" title="GetNetworkSecurityGroup"><span class="symbol function"></span>GetNetworkSecurityGroup</a></li>
+    <li><a href="getnetworksecurityperimeter" title="GetNetworkSecurityPerimeter"><span class="symbol function"></span>GetNetworkSecurityPerimeter</a></li>
     <li><a href="getnetworkvirtualappliance" title="GetNetworkVirtualAppliance"><span class="symbol function"></span>GetNetworkVirtualAppliance</a></li>
     <li><a href="getnetworkwatcher" title="GetNetworkWatcher"><span class="symbol function"></span>GetNetworkWatcher</a></li>
     <li><a href="getp2svpngateway" title="GetP2sVpnGateway"><span class="symbol function"></span>GetP2sVpnGateway</a></li>
@@ -239,6 +241,6 @@ Explore the resources and functions of the azure-native.network module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>1.16.0</dd>
+	<dd>1.17.0</dd>
 </dl>
 
