@@ -131,7 +131,7 @@ func mergeOverlaySchemaSpec(mainSpec *pschema.PackageSpec, overlaySpec *pschema.
 			if err != nil {
 				return errors.Wrap(err, "error marshalling Go package info")
 			}
-			mainSpec.Language[lang] = json.RawMessage(string(b))
+			mainSpec.Language[lang] = b
 		case "nodejs":
 			var mainSchemaPkgInfo nodejs.NodePackageInfo
 			if err := json.Unmarshal(mainSpec.Language[lang], &mainSchemaPkgInfo); err != nil {
@@ -156,7 +156,7 @@ func mergeOverlaySchemaSpec(mainSpec *pschema.PackageSpec, overlaySpec *pschema.
 			if err != nil {
 				return errors.Wrap(err, "error marshalling NodeJS package info")
 			}
-			mainSpec.Language[lang] = json.RawMessage(string(b))
+			mainSpec.Language[lang] = b
 		case "csharp":
 			var mainSchemaPkgInfo dotnet.CSharpPackageInfo
 			if err := json.Unmarshal(mainSpec.Language[lang], &mainSchemaPkgInfo); err != nil {
@@ -180,7 +180,7 @@ func mergeOverlaySchemaSpec(mainSpec *pschema.PackageSpec, overlaySpec *pschema.
 			if err != nil {
 				return errors.Wrap(err, "error marshalling C# package info")
 			}
-			mainSpec.Language[lang] = json.RawMessage(string(b))
+			mainSpec.Language[lang] = b
 		}
 	}
 
