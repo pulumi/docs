@@ -345,6 +345,14 @@ The following output properties are available:
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-"
             title="">
+        <span id="advancedmachinefeatures_csharp">
+<a href="#advancedmachinefeatures_csharp" style="color: inherit; text-decoration: inherit;">Advanced<wbr>Machine<wbr>Features</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getinstanceadvancedmachinefeature">List&lt;Get<wbr>Instance<wbr>Advanced<wbr>Machine<wbr>Feature&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="allowstoppingforupdate_csharp">
 <a href="#allowstoppingforupdate_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Stopping<wbr>For<wbr>Update</a>
 </span>
@@ -660,6 +668,14 @@ The following output properties are available:
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-"
+            title="">
+        <span id="advancedmachinefeatures_go">
+<a href="#advancedmachinefeatures_go" style="color: inherit; text-decoration: inherit;">Advanced<wbr>Machine<wbr>Features</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getinstanceadvancedmachinefeature">[]Get<wbr>Instance<wbr>Advanced<wbr>Machine<wbr>Feature</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="allowstoppingforupdate_go">
 <a href="#allowstoppingforupdate_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Stopping<wbr>For<wbr>Update</a>
@@ -977,6 +993,14 @@ The following output properties are available:
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-"
             title="">
+        <span id="advancedmachinefeatures_nodejs">
+<a href="#advancedmachinefeatures_nodejs" style="color: inherit; text-decoration: inherit;">advanced<wbr>Machine<wbr>Features</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getinstanceadvancedmachinefeature">Get<wbr>Instance<wbr>Advanced<wbr>Machine<wbr>Feature[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="allowstoppingforupdate_nodejs">
 <a href="#allowstoppingforupdate_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Stopping<wbr>For<wbr>Update</a>
 </span>
@@ -1292,6 +1316,14 @@ The following output properties are available:
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-"
+            title="">
+        <span id="advanced_machine_features_python">
+<a href="#advanced_machine_features_python" style="color: inherit; text-decoration: inherit;">advanced_<wbr>machine_<wbr>features</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getinstanceadvancedmachinefeature">Sequence[Get<wbr>Instance<wbr>Advanced<wbr>Machine<wbr>Feature]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="allow_stopping_for_update_python">
 <a href="#allow_stopping_for_update_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>stopping_<wbr>for_<wbr>update</a>
@@ -1611,6 +1643,90 @@ The following output properties are available:
 
 ## Supporting Types
 
+
+<h4 id="getinstanceadvancedmachinefeature">Get<wbr>Instance<wbr>Advanced<wbr>Machine<wbr>Feature</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="enablenestedvirtualization_csharp">
+<a href="#enablenestedvirtualization_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Nested<wbr>Virtualization</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="threadspercore_csharp">
+<a href="#threadspercore_csharp" style="color: inherit; text-decoration: inherit;">Threads<wbr>Per<wbr>Core</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="enablenestedvirtualization_go">
+<a href="#enablenestedvirtualization_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Nested<wbr>Virtualization</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="threadspercore_go">
+<a href="#threadspercore_go" style="color: inherit; text-decoration: inherit;">Threads<wbr>Per<wbr>Core</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="enablenestedvirtualization_nodejs">
+<a href="#enablenestedvirtualization_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Nested<wbr>Virtualization</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="threadspercore_nodejs">
+<a href="#threadspercore_nodejs" style="color: inherit; text-decoration: inherit;">threads<wbr>Per<wbr>Core</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="enable_nested_virtualization_python">
+<a href="#enable_nested_virtualization_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>nested_<wbr>virtualization</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="threads_per_core_python">
+<a href="#threads_per_core_python" style="color: inherit; text-decoration: inherit;">threads_<wbr>per_<wbr>core</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
 
 <h4 id="getinstanceattacheddisk">Get<wbr>Instance<wbr>Attached<wbr>Disk</h4>
 

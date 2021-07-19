@@ -13,10 +13,6 @@ meta_desc: "Documentation for the gcp.certificateauthority.Authority resource wi
 A CertificateAuthority represents an individual Certificate Authority. A
 CertificateAuthority can be used to create Certificates.
 
-> **Warning:** Please remember that all resources created during preview (via this provider)
-will be deleted when CA service transitions to General Availability (GA). Relying on these
-certificate authorities for production traffic is discouraged.
-
 To get more information about CertificateAuthority, see:
 
 * [API documentation](https://cloud.google.com/certificate-authority-service/docs/reference/rest)
@@ -46,16 +42,15 @@ class MyStack : Stack
         var @default = new Gcp.CertificateAuthority.Authority("default", new Gcp.CertificateAuthority.AuthorityArgs
         {
             CertificateAuthorityId = "my-certificate-authority",
-            Location = "us-central1",
             Config = new Gcp.CertificateAuthority.Inputs.AuthorityConfigArgs
             {
                 SubjectConfig = new Gcp.CertificateAuthority.Inputs.AuthorityConfigSubjectConfigArgs
                 {
                     Subject = new Gcp.CertificateAuthority.Inputs.AuthorityConfigSubjectConfigSubjectArgs
                     {
+                        CommonName = "my-certificate-authority",
                         Organization = "HashiCorp",
                     },
-                    CommonName = "my-certificate-authority",
                     SubjectAltName = new Gcp.CertificateAuthority.Inputs.AuthorityConfigSubjectConfigSubjectAltNameArgs
                     {
                         DnsNames = 
@@ -64,19 +59,44 @@ class MyStack : Stack
                         },
                     },
                 },
-                ReusableConfig = new Gcp.CertificateAuthority.Inputs.AuthorityConfigReusableConfigArgs
+                X509Config = new Gcp.CertificateAuthority.Inputs.AuthorityConfigX509ConfigArgs
                 {
-                    ReusableConfig = "projects/568668481468/locations/us-central1/reusableConfigs/root-unconstrained",
+                    CaOptions = new Gcp.CertificateAuthority.Inputs.AuthorityConfigX509ConfigCaOptionsArgs
+                    {
+                        IsCa = true,
+                        MaxIssuerPathLength = 10,
+                    },
+                    KeyUsage = new Gcp.CertificateAuthority.Inputs.AuthorityConfigX509ConfigKeyUsageArgs
+                    {
+                        BaseKeyUsage = new Gcp.CertificateAuthority.Inputs.AuthorityConfigX509ConfigKeyUsageBaseKeyUsageArgs
+                        {
+                            CertSign = true,
+                            ContentCommitment = true,
+                            CrlSign = true,
+                            DataEncipherment = true,
+                            DecipherOnly = true,
+                            DigitalSignature = true,
+                            KeyAgreement = true,
+                            KeyEncipherment = false,
+                        },
+                        ExtendedKeyUsage = new Gcp.CertificateAuthority.Inputs.AuthorityConfigX509ConfigKeyUsageExtendedKeyUsageArgs
+                        {
+                            ClientAuth = false,
+                            CodeSigning = true,
+                            EmailProtection = true,
+                            ServerAuth = true,
+                            TimeStamping = true,
+                        },
+                    },
                 },
             },
             KeySpec = new Gcp.CertificateAuthority.Inputs.AuthorityKeySpecArgs
             {
                 Algorithm = "RSA_PKCS1_4096_SHA256",
             },
-            DisableOnDelete = true,
-        }, new CustomResourceOptions
-        {
-            Provider = google_beta,
+            Lifetime = "86400s",
+            Location = "us-central1",
+            Pool = "",
         });
     }
 
@@ -101,28 +121,51 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := certificateauthority.NewAuthority(ctx, "_default", &certificateauthority.AuthorityArgs{
 			CertificateAuthorityId: pulumi.String("my-certificate-authority"),
-			Location:               pulumi.String("us-central1"),
 			Config: &certificateauthority.AuthorityConfigArgs{
 				SubjectConfig: &certificateauthority.AuthorityConfigSubjectConfigArgs{
 					Subject: &certificateauthority.AuthorityConfigSubjectConfigSubjectArgs{
+						CommonName:   pulumi.String("my-certificate-authority"),
 						Organization: pulumi.String("HashiCorp"),
 					},
-					CommonName: pulumi.String("my-certificate-authority"),
 					SubjectAltName: &certificateauthority.AuthorityConfigSubjectConfigSubjectAltNameArgs{
 						DnsNames: pulumi.StringArray{
 							pulumi.String("hashicorp.com"),
 						},
 					},
 				},
-				ReusableConfig: &certificateauthority.AuthorityConfigReusableConfigArgs{
-					ReusableConfig: pulumi.String("projects/568668481468/locations/us-central1/reusableConfigs/root-unconstrained"),
+				X509Config: &certificateauthority.AuthorityConfigX509ConfigArgs{
+					CaOptions: &certificateauthority.AuthorityConfigX509ConfigCaOptionsArgs{
+						IsCa:                pulumi.Bool(true),
+						MaxIssuerPathLength: pulumi.Int(10),
+					},
+					KeyUsage: &certificateauthority.AuthorityConfigX509ConfigKeyUsageArgs{
+						BaseKeyUsage: &certificateauthority.AuthorityConfigX509ConfigKeyUsageBaseKeyUsageArgs{
+							CertSign:          pulumi.Bool(true),
+							ContentCommitment: pulumi.Bool(true),
+							CrlSign:           pulumi.Bool(true),
+							DataEncipherment:  pulumi.Bool(true),
+							DecipherOnly:      pulumi.Bool(true),
+							DigitalSignature:  pulumi.Bool(true),
+							KeyAgreement:      pulumi.Bool(true),
+							KeyEncipherment:   pulumi.Bool(false),
+						},
+						ExtendedKeyUsage: &certificateauthority.AuthorityConfigX509ConfigKeyUsageExtendedKeyUsageArgs{
+							ClientAuth:      pulumi.Bool(false),
+							CodeSigning:     pulumi.Bool(true),
+							EmailProtection: pulumi.Bool(true),
+							ServerAuth:      pulumi.Bool(true),
+							TimeStamping:    pulumi.Bool(true),
+						},
+					},
 				},
 			},
 			KeySpec: &certificateauthority.AuthorityKeySpecArgs{
 				Algorithm: pulumi.String("RSA_PKCS1_4096_SHA256"),
 			},
-			DisableOnDelete: pulumi.Bool(true),
-		}, pulumi.Provider(google_beta))
+			Lifetime: pulumi.String("86400s"),
+			Location: pulumi.String("us-central1"),
+			Pool:     pulumi.String(""),
+		})
 		if err != nil {
 			return err
 		}
@@ -143,26 +186,48 @@ import pulumi_gcp as gcp
 
 default = gcp.certificateauthority.Authority("default",
     certificate_authority_id="my-certificate-authority",
-    location="us-central1",
     config=gcp.certificateauthority.AuthorityConfigArgs(
         subject_config=gcp.certificateauthority.AuthorityConfigSubjectConfigArgs(
             subject=gcp.certificateauthority.AuthorityConfigSubjectConfigSubjectArgs(
+                common_name="my-certificate-authority",
                 organization="HashiCorp",
             ),
-            common_name="my-certificate-authority",
             subject_alt_name=gcp.certificateauthority.AuthorityConfigSubjectConfigSubjectAltNameArgs(
                 dns_names=["hashicorp.com"],
             ),
         ),
-        reusable_config=gcp.certificateauthority.AuthorityConfigReusableConfigArgs(
-            reusable_config="projects/568668481468/locations/us-central1/reusableConfigs/root-unconstrained",
+        x509_config=gcp.certificateauthority.AuthorityConfigX509ConfigArgs(
+            ca_options=gcp.certificateauthority.AuthorityConfigX509ConfigCaOptionsArgs(
+                is_ca=True,
+                max_issuer_path_length=10,
+            ),
+            key_usage=gcp.certificateauthority.AuthorityConfigX509ConfigKeyUsageArgs(
+                base_key_usage=gcp.certificateauthority.AuthorityConfigX509ConfigKeyUsageBaseKeyUsageArgs(
+                    cert_sign=True,
+                    content_commitment=True,
+                    crl_sign=True,
+                    data_encipherment=True,
+                    decipher_only=True,
+                    digital_signature=True,
+                    key_agreement=True,
+                    key_encipherment=False,
+                ),
+                extended_key_usage=gcp.certificateauthority.AuthorityConfigX509ConfigKeyUsageExtendedKeyUsageArgs(
+                    client_auth=False,
+                    code_signing=True,
+                    email_protection=True,
+                    server_auth=True,
+                    time_stamping=True,
+                ),
+            ),
         ),
     ),
     key_spec=gcp.certificateauthority.AuthorityKeySpecArgs(
         algorithm="RSA_PKCS1_4096_SHA256",
     ),
-    disable_on_delete=True,
-    opts=pulumi.ResourceOptions(provider=google_beta))
+    lifetime="86400s",
+    location="us-central1",
+    pool="")
 ```
 
 
@@ -176,29 +241,52 @@ default = gcp.certificateauthority.Authority("default",
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const _default = new gcp.certificateauthority.Authority("default", {
+const defaultAuthority = new gcp.certificateauthority.Authority("default", {
     certificateAuthorityId: "my-certificate-authority",
-    location: "us-central1",
     config: {
         subjectConfig: {
             subject: {
+                commonName: "my-certificate-authority",
                 organization: "HashiCorp",
             },
-            commonName: "my-certificate-authority",
             subjectAltName: {
                 dnsNames: ["hashicorp.com"],
             },
         },
-        reusableConfig: {
-            reusableConfig: "projects/568668481468/locations/us-central1/reusableConfigs/root-unconstrained",
+        x509Config: {
+            caOptions: {
+                isCa: true,
+                maxIssuerPathLength: 10,
+            },
+            keyUsage: {
+                baseKeyUsage: {
+                    certSign: true,
+                    contentCommitment: true,
+                    crlSign: true,
+                    dataEncipherment: true,
+                    decipherOnly: true,
+                    digitalSignature: true,
+                    keyAgreement: true,
+                    keyEncipherment: false,
+                },
+                extendedKeyUsage: {
+                    clientAuth: false,
+                    codeSigning: true,
+                    emailProtection: true,
+                    serverAuth: true,
+                    timeStamping: true,
+                },
+            },
         },
     },
     keySpec: {
         algorithm: "RSA_PKCS1_4096_SHA256",
     },
-    disableOnDelete: true,
-}, {
-    provider: google_beta,
+    lifetime: "86400s",
+    location: "us-central1",
+    // This example assumes this pool already exists.
+    // Pools cannot be deleted in normal test circumstances, so we depend on static pools
+    pool: "",
 });
 ```
 
@@ -208,7 +296,7 @@ const _default = new gcp.certificateauthority.Authority("default", {
 
 
 
-### Privateca Certificate Authority Full
+### Privateca Certificate Authority Byo Key
 
 
 {{< example csharp >}}
@@ -221,65 +309,75 @@ class MyStack : Stack
 {
     public MyStack()
     {
+        var privatecaSa = new Gcp.Projects.ServiceIdentity("privatecaSa", new Gcp.Projects.ServiceIdentityArgs
+        {
+            Service = "privateca.googleapis.com",
+        });
+        var privatecaSaKeyuserSignerverifier = new Gcp.Kms.CryptoKeyIAMBinding("privatecaSaKeyuserSignerverifier", new Gcp.Kms.CryptoKeyIAMBindingArgs
+        {
+            CryptoKeyId = "projects/keys-project/locations/us-central1/keyRings/key-ring/cryptoKeys/crypto-key",
+            Role = "roles/cloudkms.signerVerifier",
+            Members = 
+            {
+                privatecaSa.Email.Apply(email => $"serviceAccount:{email}"),
+            },
+        });
+        var privatecaSaKeyuserViewer = new Gcp.Kms.CryptoKeyIAMBinding("privatecaSaKeyuserViewer", new Gcp.Kms.CryptoKeyIAMBindingArgs
+        {
+            CryptoKeyId = "projects/keys-project/locations/us-central1/keyRings/key-ring/cryptoKeys/crypto-key",
+            Role = "roles/viewer",
+            Members = 
+            {
+                privatecaSa.Email.Apply(email => $"serviceAccount:{email}"),
+            },
+        });
         var @default = new Gcp.CertificateAuthority.Authority("default", new Gcp.CertificateAuthority.AuthorityArgs
         {
+            Pool = "",
             CertificateAuthorityId = "my-certificate-authority",
             Location = "us-central1",
-            Tier = "DEVOPS",
+            KeySpec = new Gcp.CertificateAuthority.Inputs.AuthorityKeySpecArgs
+            {
+                CloudKmsKeyVersion = "projects/keys-project/locations/us-central1/keyRings/key-ring/cryptoKeys/crypto-key/cryptoKeyVersions/1",
+            },
             Config = new Gcp.CertificateAuthority.Inputs.AuthorityConfigArgs
             {
                 SubjectConfig = new Gcp.CertificateAuthority.Inputs.AuthorityConfigSubjectConfigArgs
                 {
                     Subject = new Gcp.CertificateAuthority.Inputs.AuthorityConfigSubjectConfigSubjectArgs
                     {
-                        CountryCode = "US",
-                        Organization = "HashiCorp",
-                        OrganizationalUnit = "Terraform",
-                        Locality = "San Francisco",
-                        Province = "CA",
-                        StreetAddress = "101 2nd St #700",
-                        PostalCode = "94105",
-                    },
-                    CommonName = "my-certificate-authority",
-                    SubjectAltName = new Gcp.CertificateAuthority.Inputs.AuthorityConfigSubjectConfigSubjectAltNameArgs
-                    {
-                        DnsNames = 
-                        {
-                            "hashicorp.com",
-                        },
-                        EmailAddresses = 
-                        {
-                            "email@example.com",
-                        },
-                        IpAddresses = 
-                        {
-                            "127.0.0.1",
-                        },
-                        Uris = 
-                        {
-                            "http://www.ietf.org/rfc/rfc3986.txt",
-                        },
+                        Organization = "Example, Org.",
+                        CommonName = "Example Authority",
                     },
                 },
-                ReusableConfig = new Gcp.CertificateAuthority.Inputs.AuthorityConfigReusableConfigArgs
+                X509Config = new Gcp.CertificateAuthority.Inputs.AuthorityConfigX509ConfigArgs
                 {
-                    ReusableConfig = "projects/568668481468/locations/us-central1/reusableConfigs/root-unconstrained",
+                    CaOptions = new Gcp.CertificateAuthority.Inputs.AuthorityConfigX509ConfigCaOptionsArgs
+                    {
+                        IsCa = true,
+                        MaxIssuerPathLength = 10,
+                    },
+                    KeyUsage = new Gcp.CertificateAuthority.Inputs.AuthorityConfigX509ConfigKeyUsageArgs
+                    {
+                        BaseKeyUsage = new Gcp.CertificateAuthority.Inputs.AuthorityConfigX509ConfigKeyUsageBaseKeyUsageArgs
+                        {
+                            CertSign = true,
+                            CrlSign = true,
+                        },
+                        ExtendedKeyUsage = new Gcp.CertificateAuthority.Inputs.AuthorityConfigX509ConfigKeyUsageExtendedKeyUsageArgs
+                        {
+                            ServerAuth = false,
+                        },
+                    },
                 },
             },
-            Lifetime = "86400s",
-            IssuingOptions = new Gcp.CertificateAuthority.Inputs.AuthorityIssuingOptionsArgs
-            {
-                IncludeCaCertUrl = true,
-                IncludeCrlAccessUrl = false,
-            },
-            KeySpec = new Gcp.CertificateAuthority.Inputs.AuthorityKeySpecArgs
-            {
-                Algorithm = "EC_P256_SHA256",
-            },
-            DisableOnDelete = true,
         }, new CustomResourceOptions
         {
-            Provider = google_beta,
+            DependsOn = 
+            {
+                privatecaSaKeyuserSignerverifier,
+                privatecaSaKeyuserViewer,
+            },
         });
     }
 
@@ -296,57 +394,80 @@ class MyStack : Stack
 package main
 
 import (
+	"fmt"
+
 	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/certificateauthority"
+	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/kms"
+	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/projects"
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := certificateauthority.NewAuthority(ctx, "_default", &certificateauthority.AuthorityArgs{
+		privatecaSa, err := projects.NewServiceIdentity(ctx, "privatecaSa", &projects.ServiceIdentityArgs{
+			Service: pulumi.String("privateca.googleapis.com"),
+		})
+		if err != nil {
+			return err
+		}
+		privatecaSaKeyuserSignerverifier, err := kms.NewCryptoKeyIAMBinding(ctx, "privatecaSaKeyuserSignerverifier", &kms.CryptoKeyIAMBindingArgs{
+			CryptoKeyId: pulumi.String("projects/keys-project/locations/us-central1/keyRings/key-ring/cryptoKeys/crypto-key"),
+			Role:        pulumi.String("roles/cloudkms.signerVerifier"),
+			Members: pulumi.StringArray{
+				privatecaSa.Email.ApplyT(func(email string) (string, error) {
+					return fmt.Sprintf("%v%v", "serviceAccount:", email), nil
+				}).(pulumi.StringOutput),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		privatecaSaKeyuserViewer, err := kms.NewCryptoKeyIAMBinding(ctx, "privatecaSaKeyuserViewer", &kms.CryptoKeyIAMBindingArgs{
+			CryptoKeyId: pulumi.String("projects/keys-project/locations/us-central1/keyRings/key-ring/cryptoKeys/crypto-key"),
+			Role:        pulumi.String("roles/viewer"),
+			Members: pulumi.StringArray{
+				privatecaSa.Email.ApplyT(func(email string) (string, error) {
+					return fmt.Sprintf("%v%v", "serviceAccount:", email), nil
+				}).(pulumi.StringOutput),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		_, err = certificateauthority.NewAuthority(ctx, "_default", &certificateauthority.AuthorityArgs{
+			Pool:                   pulumi.String(""),
 			CertificateAuthorityId: pulumi.String("my-certificate-authority"),
 			Location:               pulumi.String("us-central1"),
-			Tier:                   pulumi.String("DEVOPS"),
+			KeySpec: &certificateauthority.AuthorityKeySpecArgs{
+				CloudKmsKeyVersion: pulumi.String("projects/keys-project/locations/us-central1/keyRings/key-ring/cryptoKeys/crypto-key/cryptoKeyVersions/1"),
+			},
 			Config: &certificateauthority.AuthorityConfigArgs{
 				SubjectConfig: &certificateauthority.AuthorityConfigSubjectConfigArgs{
 					Subject: &certificateauthority.AuthorityConfigSubjectConfigSubjectArgs{
-						CountryCode:        pulumi.String("US"),
-						Organization:       pulumi.String("HashiCorp"),
-						OrganizationalUnit: pulumi.String("Terraform"),
-						Locality:           pulumi.String("San Francisco"),
-						Province:           pulumi.String("CA"),
-						StreetAddress:      pulumi.String("101 2nd St #700"),
-						PostalCode:         pulumi.String("94105"),
+						Organization: pulumi.String("Example, Org."),
+						CommonName:   pulumi.String("Example Authority"),
 					},
-					CommonName: pulumi.String("my-certificate-authority"),
-					SubjectAltName: &certificateauthority.AuthorityConfigSubjectConfigSubjectAltNameArgs{
-						DnsNames: pulumi.StringArray{
-							pulumi.String("hashicorp.com"),
+				},
+				X509Config: &certificateauthority.AuthorityConfigX509ConfigArgs{
+					CaOptions: &certificateauthority.AuthorityConfigX509ConfigCaOptionsArgs{
+						IsCa:                pulumi.Bool(true),
+						MaxIssuerPathLength: pulumi.Int(10),
+					},
+					KeyUsage: &certificateauthority.AuthorityConfigX509ConfigKeyUsageArgs{
+						BaseKeyUsage: &certificateauthority.AuthorityConfigX509ConfigKeyUsageBaseKeyUsageArgs{
+							CertSign: pulumi.Bool(true),
+							CrlSign:  pulumi.Bool(true),
 						},
-						EmailAddresses: pulumi.StringArray{
-							pulumi.String("email@example.com"),
-						},
-						IpAddresses: pulumi.StringArray{
-							pulumi.String("127.0.0.1"),
-						},
-						Uris: pulumi.StringArray{
-							pulumi.String("http://www.ietf.org/rfc/rfc3986.txt"),
+						ExtendedKeyUsage: &certificateauthority.AuthorityConfigX509ConfigKeyUsageExtendedKeyUsageArgs{
+							ServerAuth: pulumi.Bool(false),
 						},
 					},
 				},
-				ReusableConfig: &certificateauthority.AuthorityConfigReusableConfigArgs{
-					ReusableConfig: pulumi.String("projects/568668481468/locations/us-central1/reusableConfigs/root-unconstrained"),
-				},
 			},
-			Lifetime: pulumi.String("86400s"),
-			IssuingOptions: &certificateauthority.AuthorityIssuingOptionsArgs{
-				IncludeCaCertUrl:    pulumi.Bool(true),
-				IncludeCrlAccessUrl: pulumi.Bool(false),
-			},
-			KeySpec: &certificateauthority.AuthorityKeySpecArgs{
-				Algorithm: pulumi.String("EC_P256_SHA256"),
-			},
-			DisableOnDelete: pulumi.Bool(true),
-		}, pulumi.Provider(google_beta))
+		}, pulumi.DependsOn([]pulumi.Resource{
+			privatecaSaKeyuserSignerverifier,
+			privatecaSaKeyuserViewer,
+		}))
 		if err != nil {
 			return err
 		}
@@ -365,43 +486,49 @@ func main() {
 import pulumi
 import pulumi_gcp as gcp
 
+privateca_sa = gcp.projects.ServiceIdentity("privatecaSa", service="privateca.googleapis.com")
+privateca_sa_keyuser_signerverifier = gcp.kms.CryptoKeyIAMBinding("privatecaSaKeyuserSignerverifier",
+    crypto_key_id="projects/keys-project/locations/us-central1/keyRings/key-ring/cryptoKeys/crypto-key",
+    role="roles/cloudkms.signerVerifier",
+    members=[privateca_sa.email.apply(lambda email: f"serviceAccount:{email}")])
+privateca_sa_keyuser_viewer = gcp.kms.CryptoKeyIAMBinding("privatecaSaKeyuserViewer",
+    crypto_key_id="projects/keys-project/locations/us-central1/keyRings/key-ring/cryptoKeys/crypto-key",
+    role="roles/viewer",
+    members=[privateca_sa.email.apply(lambda email: f"serviceAccount:{email}")])
 default = gcp.certificateauthority.Authority("default",
+    pool="",
     certificate_authority_id="my-certificate-authority",
     location="us-central1",
-    tier="DEVOPS",
+    key_spec=gcp.certificateauthority.AuthorityKeySpecArgs(
+        cloud_kms_key_version="projects/keys-project/locations/us-central1/keyRings/key-ring/cryptoKeys/crypto-key/cryptoKeyVersions/1",
+    ),
     config=gcp.certificateauthority.AuthorityConfigArgs(
         subject_config=gcp.certificateauthority.AuthorityConfigSubjectConfigArgs(
             subject=gcp.certificateauthority.AuthorityConfigSubjectConfigSubjectArgs(
-                country_code="US",
-                organization="HashiCorp",
-                organizational_unit="Terraform",
-                locality="San Francisco",
-                province="CA",
-                street_address="101 2nd St #700",
-                postal_code="94105",
-            ),
-            common_name="my-certificate-authority",
-            subject_alt_name=gcp.certificateauthority.AuthorityConfigSubjectConfigSubjectAltNameArgs(
-                dns_names=["hashicorp.com"],
-                email_addresses=["email@example.com"],
-                ip_addresses=["127.0.0.1"],
-                uris=["http://www.ietf.org/rfc/rfc3986.txt"],
+                organization="Example, Org.",
+                common_name="Example Authority",
             ),
         ),
-        reusable_config=gcp.certificateauthority.AuthorityConfigReusableConfigArgs(
-            reusable_config="projects/568668481468/locations/us-central1/reusableConfigs/root-unconstrained",
+        x509_config=gcp.certificateauthority.AuthorityConfigX509ConfigArgs(
+            ca_options=gcp.certificateauthority.AuthorityConfigX509ConfigCaOptionsArgs(
+                is_ca=True,
+                max_issuer_path_length=10,
+            ),
+            key_usage=gcp.certificateauthority.AuthorityConfigX509ConfigKeyUsageArgs(
+                base_key_usage=gcp.certificateauthority.AuthorityConfigX509ConfigKeyUsageBaseKeyUsageArgs(
+                    cert_sign=True,
+                    crl_sign=True,
+                ),
+                extended_key_usage=gcp.certificateauthority.AuthorityConfigX509ConfigKeyUsageExtendedKeyUsageArgs(
+                    server_auth=False,
+                ),
+            ),
         ),
     ),
-    lifetime="86400s",
-    issuing_options=gcp.certificateauthority.AuthorityIssuingOptionsArgs(
-        include_ca_cert_url=True,
-        include_crl_access_url=False,
-    ),
-    key_spec=gcp.certificateauthority.AuthorityKeySpecArgs(
-        algorithm="EC_P256_SHA256",
-    ),
-    disable_on_delete=True,
-    opts=pulumi.ResourceOptions(provider=google_beta))
+    opts=pulumi.ResourceOptions(depends_on=[
+            privateca_sa_keyuser_signerverifier,
+            privateca_sa_keyuser_viewer,
+        ]))
 ```
 
 
@@ -415,44 +542,52 @@ default = gcp.certificateauthority.Authority("default",
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
+const privatecaSa = new gcp.projects.ServiceIdentity("privatecaSa", {service: "privateca.googleapis.com"});
+const privatecaSaKeyuserSignerverifier = new gcp.kms.CryptoKeyIAMBinding("privatecaSaKeyuserSignerverifier", {
+    cryptoKeyId: "projects/keys-project/locations/us-central1/keyRings/key-ring/cryptoKeys/crypto-key",
+    role: "roles/cloudkms.signerVerifier",
+    members: [pulumi.interpolate`serviceAccount:${privatecaSa.email}`],
+});
+const privatecaSaKeyuserViewer = new gcp.kms.CryptoKeyIAMBinding("privatecaSaKeyuserViewer", {
+    cryptoKeyId: "projects/keys-project/locations/us-central1/keyRings/key-ring/cryptoKeys/crypto-key",
+    role: "roles/viewer",
+    members: [pulumi.interpolate`serviceAccount:${privatecaSa.email}`],
+});
 const _default = new gcp.certificateauthority.Authority("default", {
+    pool: "",
     certificateAuthorityId: "my-certificate-authority",
     location: "us-central1",
-    tier: "DEVOPS",
+    keySpec: {
+        cloudKmsKeyVersion: "projects/keys-project/locations/us-central1/keyRings/key-ring/cryptoKeys/crypto-key/cryptoKeyVersions/1",
+    },
     config: {
         subjectConfig: {
             subject: {
-                countryCode: "US",
-                organization: "HashiCorp",
-                organizationalUnit: "Terraform",
-                locality: "San Francisco",
-                province: "CA",
-                streetAddress: "101 2nd St #700",
-                postalCode: "94105",
-            },
-            commonName: "my-certificate-authority",
-            subjectAltName: {
-                dnsNames: ["hashicorp.com"],
-                emailAddresses: ["email@example.com"],
-                ipAddresses: ["127.0.0.1"],
-                uris: ["http://www.ietf.org/rfc/rfc3986.txt"],
+                organization: "Example, Org.",
+                commonName: "Example Authority",
             },
         },
-        reusableConfig: {
-            reusableConfig: "projects/568668481468/locations/us-central1/reusableConfigs/root-unconstrained",
+        x509Config: {
+            caOptions: {
+                isCa: true,
+                maxIssuerPathLength: 10,
+            },
+            keyUsage: {
+                baseKeyUsage: {
+                    certSign: true,
+                    crlSign: true,
+                },
+                extendedKeyUsage: {
+                    serverAuth: false,
+                },
+            },
         },
     },
-    lifetime: "86400s",
-    issuingOptions: {
-        includeCaCertUrl: true,
-        includeCrlAccessUrl: false,
-    },
-    keySpec: {
-        algorithm: "EC_P256_SHA256",
-    },
-    disableOnDelete: true,
 }, {
-    provider: google_beta,
+    dependsOn: [
+        privatecaSaKeyuserSignerverifier,
+        privatecaSaKeyuserViewer,
+    ],
 });
 ```
 
@@ -482,15 +617,14 @@ const _default = new gcp.certificateauthority.Authority("default", {
               <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
               <span class="nx">certificate_authority_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
               <span class="nx">config</span><span class="p">:</span> <span class="nx">Optional[AuthorityConfigArgs]</span> = None<span class="p">,</span>
-              <span class="nx">disable_on_delete</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
               <span class="nx">gcs_bucket</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-              <span class="nx">issuing_options</span><span class="p">:</span> <span class="nx">Optional[AuthorityIssuingOptionsArgs]</span> = None<span class="p">,</span>
+              <span class="nx">ignore_active_certificates_on_deletion</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
               <span class="nx">key_spec</span><span class="p">:</span> <span class="nx">Optional[AuthorityKeySpecArgs]</span> = None<span class="p">,</span>
               <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
               <span class="nx">lifetime</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
               <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">pool</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
               <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-              <span class="nx">tier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
               <span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">Authority</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
@@ -659,18 +793,16 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Location of the CertificateAuthority. A full list of valid locations can be found by
-running `gcloud beta privateca locations list`.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="disableondelete_csharp">
-<a href="#disableondelete_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>On<wbr>Delete</a>
+running `gcloud privateca locations list`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="pool_csharp">
+<a href="#pool_csharp" style="color: inherit; text-decoration: inherit;">Pool</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}If set to `true`, the Certificate Authority will be disabled
-on delete. If the Certitificate Authorities is not disabled,
-it cannot be deleted. Use with care. Defaults to `false`.
+    <dd>{{% md %}}The name of the CaPool this Certificate Authority belongs to.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gcsbucket_csharp">
@@ -686,14 +818,14 @@ my-bucket, you would simply specify `my-bucket`. If not specified, a managed buc
 created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="issuingoptions_csharp">
-<a href="#issuingoptions_csharp" style="color: inherit; text-decoration: inherit;">Issuing<wbr>Options</a>
+        <span id="ignoreactivecertificatesondeletion_csharp">
+<a href="#ignoreactivecertificatesondeletion_csharp" style="color: inherit; text-decoration: inherit;">Ignore<wbr>Active<wbr>Certificates<wbr>On<wbr>Deletion</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authorityissuingoptions">Authority<wbr>Issuing<wbr>Options<wbr>Args</a></span>
+        <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Options that affect all certificates issued by a CertificateAuthority.
-Structure is documented below.
+    <dd>{{% md %}}This field allows the CA to be deleted even if the CA has active certs. Active certs include both unrevoked and unexpired certs.
+Use with care. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_csharp">
@@ -726,19 +858,6 @@ fractional digits, terminated by 's'. Example: "3.5s".
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="tier_csharp">
-<a href="#tier_csharp" style="color: inherit; text-decoration: inherit;">Tier</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Tier of this CertificateAuthority. `ENTERPRISE` Certificate Authorities track
-server side certificates issued, and support certificate revocation. For more details,
-please check the [associated documentation](https://cloud.google.com/certificate-authority-service/docs/tiers).
-Default value is `ENTERPRISE`.
-Possible values are `ENTERPRISE` and `DEVOPS`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_csharp">
@@ -797,18 +916,16 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Location of the CertificateAuthority. A full list of valid locations can be found by
-running `gcloud beta privateca locations list`.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="disableondelete_go">
-<a href="#disableondelete_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>On<wbr>Delete</a>
+running `gcloud privateca locations list`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="pool_go">
+<a href="#pool_go" style="color: inherit; text-decoration: inherit;">Pool</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}If set to `true`, the Certificate Authority will be disabled
-on delete. If the Certitificate Authorities is not disabled,
-it cannot be deleted. Use with care. Defaults to `false`.
+    <dd>{{% md %}}The name of the CaPool this Certificate Authority belongs to.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gcsbucket_go">
@@ -824,14 +941,14 @@ my-bucket, you would simply specify `my-bucket`. If not specified, a managed buc
 created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="issuingoptions_go">
-<a href="#issuingoptions_go" style="color: inherit; text-decoration: inherit;">Issuing<wbr>Options</a>
+        <span id="ignoreactivecertificatesondeletion_go">
+<a href="#ignoreactivecertificatesondeletion_go" style="color: inherit; text-decoration: inherit;">Ignore<wbr>Active<wbr>Certificates<wbr>On<wbr>Deletion</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authorityissuingoptions">Authority<wbr>Issuing<wbr>Options<wbr>Args</a></span>
+        <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Options that affect all certificates issued by a CertificateAuthority.
-Structure is documented below.
+    <dd>{{% md %}}This field allows the CA to be deleted even if the CA has active certs. Active certs include both unrevoked and unexpired certs.
+Use with care. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_go">
@@ -864,19 +981,6 @@ fractional digits, terminated by 's'. Example: "3.5s".
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="tier_go">
-<a href="#tier_go" style="color: inherit; text-decoration: inherit;">Tier</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Tier of this CertificateAuthority. `ENTERPRISE` Certificate Authorities track
-server side certificates issued, and support certificate revocation. For more details,
-please check the [associated documentation](https://cloud.google.com/certificate-authority-service/docs/tiers).
-Default value is `ENTERPRISE`.
-Possible values are `ENTERPRISE` and `DEVOPS`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_go">
@@ -935,18 +1039,16 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Location of the CertificateAuthority. A full list of valid locations can be found by
-running `gcloud beta privateca locations list`.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="disableondelete_nodejs">
-<a href="#disableondelete_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>On<wbr>Delete</a>
+running `gcloud privateca locations list`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="pool_nodejs">
+<a href="#pool_nodejs" style="color: inherit; text-decoration: inherit;">pool</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}If set to `true`, the Certificate Authority will be disabled
-on delete. If the Certitificate Authorities is not disabled,
-it cannot be deleted. Use with care. Defaults to `false`.
+    <dd>{{% md %}}The name of the CaPool this Certificate Authority belongs to.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gcsbucket_nodejs">
@@ -962,14 +1064,14 @@ my-bucket, you would simply specify `my-bucket`. If not specified, a managed buc
 created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="issuingoptions_nodejs">
-<a href="#issuingoptions_nodejs" style="color: inherit; text-decoration: inherit;">issuing<wbr>Options</a>
+        <span id="ignoreactivecertificatesondeletion_nodejs">
+<a href="#ignoreactivecertificatesondeletion_nodejs" style="color: inherit; text-decoration: inherit;">ignore<wbr>Active<wbr>Certificates<wbr>On<wbr>Deletion</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authorityissuingoptions">Authority<wbr>Issuing<wbr>Options<wbr>Args</a></span>
+        <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Options that affect all certificates issued by a CertificateAuthority.
-Structure is documented below.
+    <dd>{{% md %}}This field allows the CA to be deleted even if the CA has active certs. Active certs include both unrevoked and unexpired certs.
+Use with care. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_nodejs">
@@ -1002,19 +1104,6 @@ fractional digits, terminated by 's'. Example: "3.5s".
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="tier_nodejs">
-<a href="#tier_nodejs" style="color: inherit; text-decoration: inherit;">tier</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Tier of this CertificateAuthority. `ENTERPRISE` Certificate Authorities track
-server side certificates issued, and support certificate revocation. For more details,
-please check the [associated documentation](https://cloud.google.com/certificate-authority-service/docs/tiers).
-Default value is `ENTERPRISE`.
-Possible values are `ENTERPRISE` and `DEVOPS`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_nodejs">
@@ -1073,18 +1162,16 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Location of the CertificateAuthority. A full list of valid locations can be found by
-running `gcloud beta privateca locations list`.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="disable_on_delete_python">
-<a href="#disable_on_delete_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>on_<wbr>delete</a>
+running `gcloud privateca locations list`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="pool_python">
+<a href="#pool_python" style="color: inherit; text-decoration: inherit;">pool</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}If set to `true`, the Certificate Authority will be disabled
-on delete. If the Certitificate Authorities is not disabled,
-it cannot be deleted. Use with care. Defaults to `false`.
+    <dd>{{% md %}}The name of the CaPool this Certificate Authority belongs to.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gcs_bucket_python">
@@ -1100,14 +1187,14 @@ my-bucket, you would simply specify `my-bucket`. If not specified, a managed buc
 created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="issuing_options_python">
-<a href="#issuing_options_python" style="color: inherit; text-decoration: inherit;">issuing_<wbr>options</a>
+        <span id="ignore_active_certificates_on_deletion_python">
+<a href="#ignore_active_certificates_on_deletion_python" style="color: inherit; text-decoration: inherit;">ignore_<wbr>active_<wbr>certificates_<wbr>on_<wbr>deletion</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authorityissuingoptions">Authority<wbr>Issuing<wbr>Options<wbr>Args</a></span>
+        <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Options that affect all certificates issued by a CertificateAuthority.
-Structure is documented below.
+    <dd>{{% md %}}This field allows the CA to be deleted even if the CA has active certs. Active certs include both unrevoked and unexpired certs.
+Use with care. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_python">
@@ -1140,19 +1227,6 @@ fractional digits, terminated by 's'. Example: "3.5s".
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="tier_python">
-<a href="#tier_python" style="color: inherit; text-decoration: inherit;">tier</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The Tier of this CertificateAuthority. `ENTERPRISE` Certificate Authorities track
-server side certificates issued, and support certificate revocation. For more details,
-please check the [associated documentation](https://cloud.google.com/certificate-authority-service/docs/tiers).
-Default value is `ENTERPRISE`.
-Possible values are `ENTERPRISE` and `DEVOPS`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_python">
@@ -1477,18 +1551,17 @@ Get an existing Authority resource's state with the given name, ID, and optional
         <span class="nx">certificate_authority_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">config</span><span class="p">:</span> <span class="nx">Optional[AuthorityConfigArgs]</span> = None<span class="p">,</span>
         <span class="nx">create_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-        <span class="nx">disable_on_delete</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">gcs_bucket</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-        <span class="nx">issuing_options</span><span class="p">:</span> <span class="nx">Optional[AuthorityIssuingOptionsArgs]</span> = None<span class="p">,</span>
+        <span class="nx">ignore_active_certificates_on_deletion</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">key_spec</span><span class="p">:</span> <span class="nx">Optional[AuthorityKeySpecArgs]</span> = None<span class="p">,</span>
         <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
         <span class="nx">lifetime</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">pem_ca_certificates</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+        <span class="nx">pool</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-        <span class="nx">tier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">update_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Authority</code></pre></div>
 {{% /choosable %}}
@@ -1641,17 +1714,6 @@ Structure is documented below.
 resolution and up to nine fractional digits. Examples: "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z".
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="state_disableondelete_csharp">
-<a href="#state_disableondelete_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>On<wbr>Delete</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}If set to `true`, the Certificate Authority will be disabled
-on delete. If the Certitificate Authorities is not disabled,
-it cannot be deleted. Use with care. Defaults to `false`.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="state_gcsbucket_csharp">
 <a href="#state_gcsbucket_csharp" style="color: inherit; text-decoration: inherit;">Gcs<wbr>Bucket</a>
 </span>
@@ -1665,14 +1727,14 @@ my-bucket, you would simply specify `my-bucket`. If not specified, a managed buc
 created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="state_issuingoptions_csharp">
-<a href="#state_issuingoptions_csharp" style="color: inherit; text-decoration: inherit;">Issuing<wbr>Options</a>
+        <span id="state_ignoreactivecertificatesondeletion_csharp">
+<a href="#state_ignoreactivecertificatesondeletion_csharp" style="color: inherit; text-decoration: inherit;">Ignore<wbr>Active<wbr>Certificates<wbr>On<wbr>Deletion</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authorityissuingoptions">Authority<wbr>Issuing<wbr>Options<wbr>Args</a></span>
+        <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Options that affect all certificates issued by a CertificateAuthority.
-Structure is documented below.
+    <dd>{{% md %}}This field allows the CA to be deleted even if the CA has active certs. Active certs include both unrevoked and unexpired certs.
+Use with care. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_keyspec_csharp">
@@ -1716,7 +1778,7 @@ fractional digits, terminated by 's'. Example: "3.5s".
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Location of the CertificateAuthority. A full list of valid locations can be found by
-running `gcloud beta privateca locations list`.
+running `gcloud privateca locations list`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
@@ -1739,6 +1801,15 @@ that the root issuer is the final element (consistent with RFC 5246). For a self
 current CertificateAuthority's certificate.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_pool_csharp">
+<a href="#state_pool_csharp" style="color: inherit; text-decoration: inherit;">Pool</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the CaPool this Certificate Authority belongs to.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_project_csharp">
 <a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
 </span>
@@ -1756,19 +1827,6 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The State for this CertificateAuthority.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="state_tier_csharp">
-<a href="#state_tier_csharp" style="color: inherit; text-decoration: inherit;">Tier</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Tier of this CertificateAuthority. `ENTERPRISE` Certificate Authorities track
-server side certificates issued, and support certificate revocation. For more details,
-please check the [associated documentation](https://cloud.google.com/certificate-authority-service/docs/tiers).
-Default value is `ENTERPRISE`.
-Possible values are `ENTERPRISE` and `DEVOPS`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_csharp">
@@ -1837,17 +1895,6 @@ Structure is documented below.
 resolution and up to nine fractional digits. Examples: "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z".
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="state_disableondelete_go">
-<a href="#state_disableondelete_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>On<wbr>Delete</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}If set to `true`, the Certificate Authority will be disabled
-on delete. If the Certitificate Authorities is not disabled,
-it cannot be deleted. Use with care. Defaults to `false`.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="state_gcsbucket_go">
 <a href="#state_gcsbucket_go" style="color: inherit; text-decoration: inherit;">Gcs<wbr>Bucket</a>
 </span>
@@ -1861,14 +1908,14 @@ my-bucket, you would simply specify `my-bucket`. If not specified, a managed buc
 created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="state_issuingoptions_go">
-<a href="#state_issuingoptions_go" style="color: inherit; text-decoration: inherit;">Issuing<wbr>Options</a>
+        <span id="state_ignoreactivecertificatesondeletion_go">
+<a href="#state_ignoreactivecertificatesondeletion_go" style="color: inherit; text-decoration: inherit;">Ignore<wbr>Active<wbr>Certificates<wbr>On<wbr>Deletion</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authorityissuingoptions">Authority<wbr>Issuing<wbr>Options<wbr>Args</a></span>
+        <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Options that affect all certificates issued by a CertificateAuthority.
-Structure is documented below.
+    <dd>{{% md %}}This field allows the CA to be deleted even if the CA has active certs. Active certs include both unrevoked and unexpired certs.
+Use with care. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_keyspec_go">
@@ -1912,7 +1959,7 @@ fractional digits, terminated by 's'. Example: "3.5s".
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Location of the CertificateAuthority. A full list of valid locations can be found by
-running `gcloud beta privateca locations list`.
+running `gcloud privateca locations list`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
@@ -1935,6 +1982,15 @@ that the root issuer is the final element (consistent with RFC 5246). For a self
 current CertificateAuthority's certificate.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_pool_go">
+<a href="#state_pool_go" style="color: inherit; text-decoration: inherit;">Pool</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the CaPool this Certificate Authority belongs to.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_project_go">
 <a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
 </span>
@@ -1952,19 +2008,6 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The State for this CertificateAuthority.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="state_tier_go">
-<a href="#state_tier_go" style="color: inherit; text-decoration: inherit;">Tier</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Tier of this CertificateAuthority. `ENTERPRISE` Certificate Authorities track
-server side certificates issued, and support certificate revocation. For more details,
-please check the [associated documentation](https://cloud.google.com/certificate-authority-service/docs/tiers).
-Default value is `ENTERPRISE`.
-Possible values are `ENTERPRISE` and `DEVOPS`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_go">
@@ -2033,17 +2076,6 @@ Structure is documented below.
 resolution and up to nine fractional digits. Examples: "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z".
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="state_disableondelete_nodejs">
-<a href="#state_disableondelete_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>On<wbr>Delete</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
-    </dt>
-    <dd>{{% md %}}If set to `true`, the Certificate Authority will be disabled
-on delete. If the Certitificate Authorities is not disabled,
-it cannot be deleted. Use with care. Defaults to `false`.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="state_gcsbucket_nodejs">
 <a href="#state_gcsbucket_nodejs" style="color: inherit; text-decoration: inherit;">gcs<wbr>Bucket</a>
 </span>
@@ -2057,14 +2089,14 @@ my-bucket, you would simply specify `my-bucket`. If not specified, a managed buc
 created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="state_issuingoptions_nodejs">
-<a href="#state_issuingoptions_nodejs" style="color: inherit; text-decoration: inherit;">issuing<wbr>Options</a>
+        <span id="state_ignoreactivecertificatesondeletion_nodejs">
+<a href="#state_ignoreactivecertificatesondeletion_nodejs" style="color: inherit; text-decoration: inherit;">ignore<wbr>Active<wbr>Certificates<wbr>On<wbr>Deletion</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authorityissuingoptions">Authority<wbr>Issuing<wbr>Options<wbr>Args</a></span>
+        <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Options that affect all certificates issued by a CertificateAuthority.
-Structure is documented below.
+    <dd>{{% md %}}This field allows the CA to be deleted even if the CA has active certs. Active certs include both unrevoked and unexpired certs.
+Use with care. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_keyspec_nodejs">
@@ -2108,7 +2140,7 @@ fractional digits, terminated by 's'. Example: "3.5s".
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Location of the CertificateAuthority. A full list of valid locations can be found by
-running `gcloud beta privateca locations list`.
+running `gcloud privateca locations list`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
@@ -2131,6 +2163,15 @@ that the root issuer is the final element (consistent with RFC 5246). For a self
 current CertificateAuthority's certificate.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_pool_nodejs">
+<a href="#state_pool_nodejs" style="color: inherit; text-decoration: inherit;">pool</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the CaPool this Certificate Authority belongs to.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_project_nodejs">
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
@@ -2148,19 +2189,6 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The State for this CertificateAuthority.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="state_tier_nodejs">
-<a href="#state_tier_nodejs" style="color: inherit; text-decoration: inherit;">tier</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Tier of this CertificateAuthority. `ENTERPRISE` Certificate Authorities track
-server side certificates issued, and support certificate revocation. For more details,
-please check the [associated documentation](https://cloud.google.com/certificate-authority-service/docs/tiers).
-Default value is `ENTERPRISE`.
-Possible values are `ENTERPRISE` and `DEVOPS`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_nodejs">
@@ -2229,17 +2257,6 @@ Structure is documented below.
 resolution and up to nine fractional digits. Examples: "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z".
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="state_disable_on_delete_python">
-<a href="#state_disable_on_delete_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>on_<wbr>delete</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}If set to `true`, the Certificate Authority will be disabled
-on delete. If the Certitificate Authorities is not disabled,
-it cannot be deleted. Use with care. Defaults to `false`.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="state_gcs_bucket_python">
 <a href="#state_gcs_bucket_python" style="color: inherit; text-decoration: inherit;">gcs_<wbr>bucket</a>
 </span>
@@ -2253,14 +2270,14 @@ my-bucket, you would simply specify `my-bucket`. If not specified, a managed buc
 created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="state_issuing_options_python">
-<a href="#state_issuing_options_python" style="color: inherit; text-decoration: inherit;">issuing_<wbr>options</a>
+        <span id="state_ignore_active_certificates_on_deletion_python">
+<a href="#state_ignore_active_certificates_on_deletion_python" style="color: inherit; text-decoration: inherit;">ignore_<wbr>active_<wbr>certificates_<wbr>on_<wbr>deletion</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authorityissuingoptions">Authority<wbr>Issuing<wbr>Options<wbr>Args</a></span>
+        <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Options that affect all certificates issued by a CertificateAuthority.
-Structure is documented below.
+    <dd>{{% md %}}This field allows the CA to be deleted even if the CA has active certs. Active certs include both unrevoked and unexpired certs.
+Use with care. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_key_spec_python">
@@ -2304,7 +2321,7 @@ fractional digits, terminated by 's'. Example: "3.5s".
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Location of the CertificateAuthority. A full list of valid locations can be found by
-running `gcloud beta privateca locations list`.
+running `gcloud privateca locations list`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
@@ -2327,6 +2344,15 @@ that the root issuer is the final element (consistent with RFC 5246). For a self
 current CertificateAuthority's certificate.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_pool_python">
+<a href="#state_pool_python" style="color: inherit; text-decoration: inherit;">pool</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the CaPool this Certificate Authority belongs to.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_project_python">
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
@@ -2344,19 +2370,6 @@ If it is not provided, the provider project is used.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The State for this CertificateAuthority.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="state_tier_python">
-<a href="#state_tier_python" style="color: inherit; text-decoration: inherit;">tier</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The Tier of this CertificateAuthority. `ENTERPRISE` Certificate Authorities track
-server side certificates issued, and support certificate revocation. For more details,
-please check the [associated documentation](https://cloud.google.com/certificate-authority-service/docs/tiers).
-Default value is `ENTERPRISE`.
-Possible values are `ENTERPRISE` and `DEVOPS`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_python">
@@ -2480,18 +2493,6 @@ resolution and up to nine fractional digits. Examples: "2014-10-02T15:01:23Z" an
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="reusableconfig_csharp">
-<a href="#reusableconfig_csharp" style="color: inherit; text-decoration: inherit;">Reusable<wbr>Config</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authorityconfigreusableconfig">Authority<wbr>Config<wbr>Reusable<wbr>Config</a></span>
-    </dt>
-    <dd>{{% md %}}A resource path to a ReusableConfig in the format
-`projects/*/locations/*/reusableConfigs/*`.
-. Alternatively, one of the short names
-found by running `gcloud beta privateca reusable-configs list`.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="subjectconfig_csharp">
 <a href="#subjectconfig_csharp" style="color: inherit; text-decoration: inherit;">Subject<wbr>Config</a>
 </span>
@@ -2500,23 +2501,21 @@ found by running `gcloud beta privateca reusable-configs list`.
     </dt>
     <dd>{{% md %}}Specifies some of the values in a certificate that are related to the subject.
 Structure is documented below.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="x509config_csharp">
+<a href="#x509config_csharp" style="color: inherit; text-decoration: inherit;">X509Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#authorityconfigx509config">Authority<wbr>Config<wbr>X509Config</a></span>
+    </dt>
+    <dd>{{% md %}}Describes how some of the technical X.509 fields in a certificate should be populated.
+Structure is documented below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="reusableconfig_go">
-<a href="#reusableconfig_go" style="color: inherit; text-decoration: inherit;">Reusable<wbr>Config</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authorityconfigreusableconfig">Authority<wbr>Config<wbr>Reusable<wbr>Config</a></span>
-    </dt>
-    <dd>{{% md %}}A resource path to a ReusableConfig in the format
-`projects/*/locations/*/reusableConfigs/*`.
-. Alternatively, one of the short names
-found by running `gcloud beta privateca reusable-configs list`.
-{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="subjectconfig_go">
 <a href="#subjectconfig_go" style="color: inherit; text-decoration: inherit;">Subject<wbr>Config</a>
@@ -2526,23 +2525,21 @@ found by running `gcloud beta privateca reusable-configs list`.
     </dt>
     <dd>{{% md %}}Specifies some of the values in a certificate that are related to the subject.
 Structure is documented below.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="x509config_go">
+<a href="#x509config_go" style="color: inherit; text-decoration: inherit;">X509Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#authorityconfigx509config">Authority<wbr>Config<wbr>X509Config</a></span>
+    </dt>
+    <dd>{{% md %}}Describes how some of the technical X.509 fields in a certificate should be populated.
+Structure is documented below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="reusableconfig_nodejs">
-<a href="#reusableconfig_nodejs" style="color: inherit; text-decoration: inherit;">reusable<wbr>Config</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authorityconfigreusableconfig">Authority<wbr>Config<wbr>Reusable<wbr>Config</a></span>
-    </dt>
-    <dd>{{% md %}}A resource path to a ReusableConfig in the format
-`projects/*/locations/*/reusableConfigs/*`.
-. Alternatively, one of the short names
-found by running `gcloud beta privateca reusable-configs list`.
-{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="subjectconfig_nodejs">
 <a href="#subjectconfig_nodejs" style="color: inherit; text-decoration: inherit;">subject<wbr>Config</a>
@@ -2552,23 +2549,21 @@ found by running `gcloud beta privateca reusable-configs list`.
     </dt>
     <dd>{{% md %}}Specifies some of the values in a certificate that are related to the subject.
 Structure is documented below.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="x509config_nodejs">
+<a href="#x509config_nodejs" style="color: inherit; text-decoration: inherit;">x509Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#authorityconfigx509config">Authority<wbr>Config<wbr>X509Config</a></span>
+    </dt>
+    <dd>{{% md %}}Describes how some of the technical X.509 fields in a certificate should be populated.
+Structure is documented below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="reusable_config_python">
-<a href="#reusable_config_python" style="color: inherit; text-decoration: inherit;">reusable_<wbr>config</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authorityconfigreusableconfig">Authority<wbr>Config<wbr>Reusable<wbr>Config</a></span>
-    </dt>
-    <dd>{{% md %}}A resource path to a ReusableConfig in the format
-`projects/*/locations/*/reusableConfigs/*`.
-. Alternatively, one of the short names
-found by running `gcloud beta privateca reusable-configs list`.
-{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="subject_config_python">
 <a href="#subject_config_python" style="color: inherit; text-decoration: inherit;">subject_<wbr>config</a>
@@ -2578,72 +2573,16 @@ found by running `gcloud beta privateca reusable-configs list`.
     </dt>
     <dd>{{% md %}}Specifies some of the values in a certificate that are related to the subject.
 Structure is documented below.
-{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="authorityconfigreusableconfig">Authority<wbr>Config<wbr>Reusable<wbr>Config</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="reusableconfig_csharp">
-<a href="#reusableconfig_csharp" style="color: inherit; text-decoration: inherit;">Reusable<wbr>Config</a>
+        <span id="x509_config_python">
+<a href="#x509_config_python" style="color: inherit; text-decoration: inherit;">x509_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#authorityconfigx509config">Authority<wbr>Config<wbr>X509Config</a></span>
     </dt>
-    <dd>{{% md %}}A resource path to a ReusableConfig in the format
-`projects/*/locations/*/reusableConfigs/*`.
-. Alternatively, one of the short names
-found by running `gcloud beta privateca reusable-configs list`.
-{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="reusableconfig_go">
-<a href="#reusableconfig_go" style="color: inherit; text-decoration: inherit;">Reusable<wbr>Config</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A resource path to a ReusableConfig in the format
-`projects/*/locations/*/reusableConfigs/*`.
-. Alternatively, one of the short names
-found by running `gcloud beta privateca reusable-configs list`.
-{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="reusableconfig_nodejs">
-<a href="#reusableconfig_nodejs" style="color: inherit; text-decoration: inherit;">reusable<wbr>Config</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A resource path to a ReusableConfig in the format
-`projects/*/locations/*/reusableConfigs/*`.
-. Alternatively, one of the short names
-found by running `gcloud beta privateca reusable-configs list`.
-{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="reusable_config_python">
-<a href="#reusable_config_python" style="color: inherit; text-decoration: inherit;">reusable_<wbr>config</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}A resource path to a ReusableConfig in the format
-`projects/*/locations/*/reusableConfigs/*`.
-. Alternatively, one of the short names
-found by running `gcloud beta privateca reusable-configs list`.
+    <dd>{{% md %}}Describes how some of the technical X.509 fields in a certificate should be populated.
+Structure is documented below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2651,15 +2590,6 @@ found by running `gcloud beta privateca reusable-configs list`.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="commonname_csharp">
-<a href="#commonname_csharp" style="color: inherit; text-decoration: inherit;">Common<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The common name of the distinguished name.
-{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="subject_csharp">
 <a href="#subject_csharp" style="color: inherit; text-decoration: inherit;">Subject</a>
@@ -2685,15 +2615,6 @@ Structure is documented below.
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="commonname_go">
-<a href="#commonname_go" style="color: inherit; text-decoration: inherit;">Common<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The common name of the distinguished name.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="subject_go">
 <a href="#subject_go" style="color: inherit; text-decoration: inherit;">Subject</a>
 </span>
@@ -2718,15 +2639,6 @@ Structure is documented below.
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="commonname_nodejs">
-<a href="#commonname_nodejs" style="color: inherit; text-decoration: inherit;">common<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The common name of the distinguished name.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="subject_nodejs">
 <a href="#subject_nodejs" style="color: inherit; text-decoration: inherit;">subject</a>
 </span>
@@ -2750,15 +2662,6 @@ Structure is documented below.
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="common_name_python">
-<a href="#common_name_python" style="color: inherit; text-decoration: inherit;">common_<wbr>name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The common name of the distinguished name.
-{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="subject_python">
 <a href="#subject_python" style="color: inherit; text-decoration: inherit;">subject</a>
@@ -2785,6 +2688,15 @@ Structure is documented below.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="commonname_csharp">
+<a href="#commonname_csharp" style="color: inherit; text-decoration: inherit;">Common<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The common name of the distinguished name.
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="organization_csharp">
 <a href="#organization_csharp" style="color: inherit; text-decoration: inherit;">Organization</a>
@@ -2853,6 +2765,15 @@ Structure is documented below.
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
+        <span id="commonname_go">
+<a href="#commonname_go" style="color: inherit; text-decoration: inherit;">Common<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The common name of the distinguished name.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="organization_go">
 <a href="#organization_go" style="color: inherit; text-decoration: inherit;">Organization</a>
 </span>
@@ -2920,6 +2841,15 @@ Structure is documented below.
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
+        <span id="commonname_nodejs">
+<a href="#commonname_nodejs" style="color: inherit; text-decoration: inherit;">common<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The common name of the distinguished name.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="organization_nodejs">
 <a href="#organization_nodejs" style="color: inherit; text-decoration: inherit;">organization</a>
 </span>
@@ -2986,6 +2916,15 @@ Structure is documented below.
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="common_name_python">
+<a href="#common_name_python" style="color: inherit; text-decoration: inherit;">common_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The common name of the distinguished name.
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="organization_python">
 <a href="#organization_python" style="color: inherit; text-decoration: inherit;">organization</a>
@@ -3213,105 +3152,1333 @@ Structure is documented below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
-<h4 id="authorityissuingoptions">Authority<wbr>Issuing<wbr>Options</h4>
+<h4 id="authorityconfigx509config">Authority<wbr>Config<wbr>X509Config</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="caoptions_csharp">
+<a href="#caoptions_csharp" style="color: inherit; text-decoration: inherit;">Ca<wbr>Options</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#authorityconfigx509configcaoptions">Authority<wbr>Config<wbr>X509Config<wbr>Ca<wbr>Options</a></span>
+    </dt>
+    <dd>{{% md %}}Describes values that are relevant in a CA certificate.
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="keyusage_csharp">
+<a href="#keyusage_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Usage</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#authorityconfigx509configkeyusage">Authority<wbr>Config<wbr>X509Config<wbr>Key<wbr>Usage</a></span>
+    </dt>
+    <dd>{{% md %}}Indicates the intended use for keys that correspond to a certificate.
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="additionalextensions_csharp">
+<a href="#additionalextensions_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Extensions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#authorityconfigx509configadditionalextension">List&lt;Authority<wbr>Config<wbr>X509Config<wbr>Additional<wbr>Extension&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies an X.509 extension, which may be used in different parts of X.509 objects like certificates, CSRs, and CRLs.
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="aiaocspservers_csharp">
+<a href="#aiaocspservers_csharp" style="color: inherit; text-decoration: inherit;">Aia<wbr>Ocsp<wbr>Servers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}Describes Online Certificate Status Protocol (OCSP) endpoint addresses that appear in the
+"Authority Information Access" extension in the certificate.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="policyids_csharp">
+<a href="#policyids_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#authorityconfigx509configpolicyid">List&lt;Authority<wbr>Config<wbr>X509Config<wbr>Policy<wbr>Id&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Describes the X.509 certificate policy object identifiers, per https://tools.ietf.org/html/rfc5280#section-4.2.1.4.
+Structure is documented below.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="caoptions_go">
+<a href="#caoptions_go" style="color: inherit; text-decoration: inherit;">Ca<wbr>Options</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#authorityconfigx509configcaoptions">Authority<wbr>Config<wbr>X509Config<wbr>Ca<wbr>Options</a></span>
+    </dt>
+    <dd>{{% md %}}Describes values that are relevant in a CA certificate.
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="keyusage_go">
+<a href="#keyusage_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Usage</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#authorityconfigx509configkeyusage">Authority<wbr>Config<wbr>X509Config<wbr>Key<wbr>Usage</a></span>
+    </dt>
+    <dd>{{% md %}}Indicates the intended use for keys that correspond to a certificate.
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="additionalextensions_go">
+<a href="#additionalextensions_go" style="color: inherit; text-decoration: inherit;">Additional<wbr>Extensions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#authorityconfigx509configadditionalextension">[]Authority<wbr>Config<wbr>X509Config<wbr>Additional<wbr>Extension</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies an X.509 extension, which may be used in different parts of X.509 objects like certificates, CSRs, and CRLs.
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="aiaocspservers_go">
+<a href="#aiaocspservers_go" style="color: inherit; text-decoration: inherit;">Aia<wbr>Ocsp<wbr>Servers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}Describes Online Certificate Status Protocol (OCSP) endpoint addresses that appear in the
+"Authority Information Access" extension in the certificate.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="policyids_go">
+<a href="#policyids_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#authorityconfigx509configpolicyid">[]Authority<wbr>Config<wbr>X509Config<wbr>Policy<wbr>Id</a></span>
+    </dt>
+    <dd>{{% md %}}Describes the X.509 certificate policy object identifiers, per https://tools.ietf.org/html/rfc5280#section-4.2.1.4.
+Structure is documented below.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="caoptions_nodejs">
+<a href="#caoptions_nodejs" style="color: inherit; text-decoration: inherit;">ca<wbr>Options</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#authorityconfigx509configcaoptions">Authority<wbr>Config<wbr>X509Config<wbr>Ca<wbr>Options</a></span>
+    </dt>
+    <dd>{{% md %}}Describes values that are relevant in a CA certificate.
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="keyusage_nodejs">
+<a href="#keyusage_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Usage</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#authorityconfigx509configkeyusage">Authority<wbr>Config<wbr>X509Config<wbr>Key<wbr>Usage</a></span>
+    </dt>
+    <dd>{{% md %}}Indicates the intended use for keys that correspond to a certificate.
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="additionalextensions_nodejs">
+<a href="#additionalextensions_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Extensions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#authorityconfigx509configadditionalextension">Authority<wbr>Config<wbr>X509Config<wbr>Additional<wbr>Extension[]</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies an X.509 extension, which may be used in different parts of X.509 objects like certificates, CSRs, and CRLs.
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="aiaocspservers_nodejs">
+<a href="#aiaocspservers_nodejs" style="color: inherit; text-decoration: inherit;">aia<wbr>Ocsp<wbr>Servers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}Describes Online Certificate Status Protocol (OCSP) endpoint addresses that appear in the
+"Authority Information Access" extension in the certificate.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="policyids_nodejs">
+<a href="#policyids_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#authorityconfigx509configpolicyid">Authority<wbr>Config<wbr>X509Config<wbr>Policy<wbr>Id[]</a></span>
+    </dt>
+    <dd>{{% md %}}Describes the X.509 certificate policy object identifiers, per https://tools.ietf.org/html/rfc5280#section-4.2.1.4.
+Structure is documented below.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="ca_options_python">
+<a href="#ca_options_python" style="color: inherit; text-decoration: inherit;">ca_<wbr>options</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#authorityconfigx509configcaoptions">Authority<wbr>Config<wbr>X509Config<wbr>Ca<wbr>Options</a></span>
+    </dt>
+    <dd>{{% md %}}Describes values that are relevant in a CA certificate.
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="key_usage_python">
+<a href="#key_usage_python" style="color: inherit; text-decoration: inherit;">key_<wbr>usage</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#authorityconfigx509configkeyusage">Authority<wbr>Config<wbr>X509Config<wbr>Key<wbr>Usage</a></span>
+    </dt>
+    <dd>{{% md %}}Indicates the intended use for keys that correspond to a certificate.
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="additional_extensions_python">
+<a href="#additional_extensions_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>extensions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#authorityconfigx509configadditionalextension">Sequence[Authority<wbr>Config<wbr>X509Config<wbr>Additional<wbr>Extension]</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies an X.509 extension, which may be used in different parts of X.509 objects like certificates, CSRs, and CRLs.
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="aia_ocsp_servers_python">
+<a href="#aia_ocsp_servers_python" style="color: inherit; text-decoration: inherit;">aia_<wbr>ocsp_<wbr>servers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}Describes Online Certificate Status Protocol (OCSP) endpoint addresses that appear in the
+"Authority Information Access" extension in the certificate.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="policy_ids_python">
+<a href="#policy_ids_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#authorityconfigx509configpolicyid">Sequence[Authority<wbr>Config<wbr>X509Config<wbr>Policy<wbr>Id]</a></span>
+    </dt>
+    <dd>{{% md %}}Describes the X.509 certificate policy object identifiers, per https://tools.ietf.org/html/rfc5280#section-4.2.1.4.
+Structure is documented below.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="authorityconfigx509configadditionalextension">Authority<wbr>Config<wbr>X509Config<wbr>Additional<wbr>Extension</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="critical_csharp">
+<a href="#critical_csharp" style="color: inherit; text-decoration: inherit;">Critical</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether or not this extension is critical (i.e., if the client does not know how to
+handle this extension, the client should consider this to be an error).
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="objectid_csharp">
+<a href="#objectid_csharp" style="color: inherit; text-decoration: inherit;">Object<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#authorityconfigx509configadditionalextensionobjectid">Authority<wbr>Config<wbr>X509Config<wbr>Additional<wbr>Extension<wbr>Object<wbr>Id</a></span>
+    </dt>
+    <dd>{{% md %}}Describes values that are relevant in a CA certificate.
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_csharp">
+<a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The value of this X.509 extension. A base64-encoded string.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="critical_go">
+<a href="#critical_go" style="color: inherit; text-decoration: inherit;">Critical</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether or not this extension is critical (i.e., if the client does not know how to
+handle this extension, the client should consider this to be an error).
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="objectid_go">
+<a href="#objectid_go" style="color: inherit; text-decoration: inherit;">Object<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#authorityconfigx509configadditionalextensionobjectid">Authority<wbr>Config<wbr>X509Config<wbr>Additional<wbr>Extension<wbr>Object<wbr>Id</a></span>
+    </dt>
+    <dd>{{% md %}}Describes values that are relevant in a CA certificate.
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_go">
+<a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The value of this X.509 extension. A base64-encoded string.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="critical_nodejs">
+<a href="#critical_nodejs" style="color: inherit; text-decoration: inherit;">critical</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether or not this extension is critical (i.e., if the client does not know how to
+handle this extension, the client should consider this to be an error).
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="objectid_nodejs">
+<a href="#objectid_nodejs" style="color: inherit; text-decoration: inherit;">object<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#authorityconfigx509configadditionalextensionobjectid">Authority<wbr>Config<wbr>X509Config<wbr>Additional<wbr>Extension<wbr>Object<wbr>Id</a></span>
+    </dt>
+    <dd>{{% md %}}Describes values that are relevant in a CA certificate.
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_nodejs">
+<a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The value of this X.509 extension. A base64-encoded string.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="critical_python">
+<a href="#critical_python" style="color: inherit; text-decoration: inherit;">critical</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether or not this extension is critical (i.e., if the client does not know how to
+handle this extension, the client should consider this to be an error).
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="object_id_python">
+<a href="#object_id_python" style="color: inherit; text-decoration: inherit;">object_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#authorityconfigx509configadditionalextensionobjectid">Authority<wbr>Config<wbr>X509Config<wbr>Additional<wbr>Extension<wbr>Object<wbr>Id</a></span>
+    </dt>
+    <dd>{{% md %}}Describes values that are relevant in a CA certificate.
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="value_python">
+<a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The value of this X.509 extension. A base64-encoded string.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="authorityconfigx509configadditionalextensionobjectid">Authority<wbr>Config<wbr>X509Config<wbr>Additional<wbr>Extension<wbr>Object<wbr>Id</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="objectidpaths_csharp">
+<a href="#objectidpaths_csharp" style="color: inherit; text-decoration: inherit;">Object<wbr>Id<wbr>Paths</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;int&gt;</span>
+    </dt>
+    <dd>{{% md %}}An ObjectId specifies an object identifier (OID). These provide context and describe types in ASN.1 messages.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="objectidpaths_go">
+<a href="#objectidpaths_go" style="color: inherit; text-decoration: inherit;">Object<wbr>Id<wbr>Paths</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]int</span>
+    </dt>
+    <dd>{{% md %}}An ObjectId specifies an object identifier (OID). These provide context and describe types in ASN.1 messages.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="objectidpaths_nodejs">
+<a href="#objectidpaths_nodejs" style="color: inherit; text-decoration: inherit;">object<wbr>Id<wbr>Paths</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number[]</span>
+    </dt>
+    <dd>{{% md %}}An ObjectId specifies an object identifier (OID). These provide context and describe types in ASN.1 messages.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="object_id_paths_python">
+<a href="#object_id_paths_python" style="color: inherit; text-decoration: inherit;">object_<wbr>id_<wbr>paths</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[int]</span>
+    </dt>
+    <dd>{{% md %}}An ObjectId specifies an object identifier (OID). These provide context and describe types in ASN.1 messages.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="authorityconfigx509configcaoptions">Authority<wbr>Config<wbr>X509Config<wbr>Ca<wbr>Options</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="isca_csharp">
+<a href="#isca_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Ca</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Refers to the "CA" X.509 extension, which is a boolean value. When this value is missing,
+the extension will be omitted from the CA certificate.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="maxissuerpathlength_csharp">
+<a href="#maxissuerpathlength_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Issuer<wbr>Path<wbr>Length</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Refers to the path length restriction X.509 extension. For a CA certificate, this value describes the depth of
+subordinate CA certificates that are allowed. If this value is less than 0, the request will fail. If this
+value is missing, the max path length will be omitted from the CA certificate.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="isca_go">
+<a href="#isca_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Ca</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Refers to the "CA" X.509 extension, which is a boolean value. When this value is missing,
+the extension will be omitted from the CA certificate.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="maxissuerpathlength_go">
+<a href="#maxissuerpathlength_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Issuer<wbr>Path<wbr>Length</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Refers to the path length restriction X.509 extension. For a CA certificate, this value describes the depth of
+subordinate CA certificates that are allowed. If this value is less than 0, the request will fail. If this
+value is missing, the max path length will be omitted from the CA certificate.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="isca_nodejs">
+<a href="#isca_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Ca</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Refers to the "CA" X.509 extension, which is a boolean value. When this value is missing,
+the extension will be omitted from the CA certificate.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="maxissuerpathlength_nodejs">
+<a href="#maxissuerpathlength_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Issuer<wbr>Path<wbr>Length</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Refers to the path length restriction X.509 extension. For a CA certificate, this value describes the depth of
+subordinate CA certificates that are allowed. If this value is less than 0, the request will fail. If this
+value is missing, the max path length will be omitted from the CA certificate.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="is_ca_python">
+<a href="#is_ca_python" style="color: inherit; text-decoration: inherit;">is_<wbr>ca</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Refers to the "CA" X.509 extension, which is a boolean value. When this value is missing,
+the extension will be omitted from the CA certificate.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="max_issuer_path_length_python">
+<a href="#max_issuer_path_length_python" style="color: inherit; text-decoration: inherit;">max_<wbr>issuer_<wbr>path_<wbr>length</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Refers to the path length restriction X.509 extension. For a CA certificate, this value describes the depth of
+subordinate CA certificates that are allowed. If this value is less than 0, the request will fail. If this
+value is missing, the max path length will be omitted from the CA certificate.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="authorityconfigx509configkeyusage">Authority<wbr>Config<wbr>X509Config<wbr>Key<wbr>Usage</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="basekeyusage_csharp">
+<a href="#basekeyusage_csharp" style="color: inherit; text-decoration: inherit;">Base<wbr>Key<wbr>Usage</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#authorityconfigx509configkeyusagebasekeyusage">Authority<wbr>Config<wbr>X509Config<wbr>Key<wbr>Usage<wbr>Base<wbr>Key<wbr>Usage</a></span>
+    </dt>
+    <dd>{{% md %}}Describes high-level ways in which a key may be used.
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="extendedkeyusage_csharp">
+<a href="#extendedkeyusage_csharp" style="color: inherit; text-decoration: inherit;">Extended<wbr>Key<wbr>Usage</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#authorityconfigx509configkeyusageextendedkeyusage">Authority<wbr>Config<wbr>X509Config<wbr>Key<wbr>Usage<wbr>Extended<wbr>Key<wbr>Usage</a></span>
+    </dt>
+    <dd>{{% md %}}Describes high-level ways in which a key may be used.
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="unknownextendedkeyusages_csharp">
+<a href="#unknownextendedkeyusages_csharp" style="color: inherit; text-decoration: inherit;">Unknown<wbr>Extended<wbr>Key<wbr>Usages</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#authorityconfigx509configkeyusageunknownextendedkeyusage">List&lt;Authority<wbr>Config<wbr>X509Config<wbr>Key<wbr>Usage<wbr>Unknown<wbr>Extended<wbr>Key<wbr>Usage&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}An ObjectId specifies an object identifier (OID). These provide context and describe types in ASN.1 messages.
+Structure is documented below.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="basekeyusage_go">
+<a href="#basekeyusage_go" style="color: inherit; text-decoration: inherit;">Base<wbr>Key<wbr>Usage</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#authorityconfigx509configkeyusagebasekeyusage">Authority<wbr>Config<wbr>X509Config<wbr>Key<wbr>Usage<wbr>Base<wbr>Key<wbr>Usage</a></span>
+    </dt>
+    <dd>{{% md %}}Describes high-level ways in which a key may be used.
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="extendedkeyusage_go">
+<a href="#extendedkeyusage_go" style="color: inherit; text-decoration: inherit;">Extended<wbr>Key<wbr>Usage</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#authorityconfigx509configkeyusageextendedkeyusage">Authority<wbr>Config<wbr>X509Config<wbr>Key<wbr>Usage<wbr>Extended<wbr>Key<wbr>Usage</a></span>
+    </dt>
+    <dd>{{% md %}}Describes high-level ways in which a key may be used.
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="unknownextendedkeyusages_go">
+<a href="#unknownextendedkeyusages_go" style="color: inherit; text-decoration: inherit;">Unknown<wbr>Extended<wbr>Key<wbr>Usages</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#authorityconfigx509configkeyusageunknownextendedkeyusage">[]Authority<wbr>Config<wbr>X509Config<wbr>Key<wbr>Usage<wbr>Unknown<wbr>Extended<wbr>Key<wbr>Usage</a></span>
+    </dt>
+    <dd>{{% md %}}An ObjectId specifies an object identifier (OID). These provide context and describe types in ASN.1 messages.
+Structure is documented below.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="basekeyusage_nodejs">
+<a href="#basekeyusage_nodejs" style="color: inherit; text-decoration: inherit;">base<wbr>Key<wbr>Usage</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#authorityconfigx509configkeyusagebasekeyusage">Authority<wbr>Config<wbr>X509Config<wbr>Key<wbr>Usage<wbr>Base<wbr>Key<wbr>Usage</a></span>
+    </dt>
+    <dd>{{% md %}}Describes high-level ways in which a key may be used.
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="extendedkeyusage_nodejs">
+<a href="#extendedkeyusage_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Key<wbr>Usage</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#authorityconfigx509configkeyusageextendedkeyusage">Authority<wbr>Config<wbr>X509Config<wbr>Key<wbr>Usage<wbr>Extended<wbr>Key<wbr>Usage</a></span>
+    </dt>
+    <dd>{{% md %}}Describes high-level ways in which a key may be used.
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="unknownextendedkeyusages_nodejs">
+<a href="#unknownextendedkeyusages_nodejs" style="color: inherit; text-decoration: inherit;">unknown<wbr>Extended<wbr>Key<wbr>Usages</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#authorityconfigx509configkeyusageunknownextendedkeyusage">Authority<wbr>Config<wbr>X509Config<wbr>Key<wbr>Usage<wbr>Unknown<wbr>Extended<wbr>Key<wbr>Usage[]</a></span>
+    </dt>
+    <dd>{{% md %}}An ObjectId specifies an object identifier (OID). These provide context and describe types in ASN.1 messages.
+Structure is documented below.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="base_key_usage_python">
+<a href="#base_key_usage_python" style="color: inherit; text-decoration: inherit;">base_<wbr>key_<wbr>usage</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#authorityconfigx509configkeyusagebasekeyusage">Authority<wbr>Config<wbr>X509Config<wbr>Key<wbr>Usage<wbr>Base<wbr>Key<wbr>Usage</a></span>
+    </dt>
+    <dd>{{% md %}}Describes high-level ways in which a key may be used.
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="extended_key_usage_python">
+<a href="#extended_key_usage_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>key_<wbr>usage</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#authorityconfigx509configkeyusageextendedkeyusage">Authority<wbr>Config<wbr>X509Config<wbr>Key<wbr>Usage<wbr>Extended<wbr>Key<wbr>Usage</a></span>
+    </dt>
+    <dd>{{% md %}}Describes high-level ways in which a key may be used.
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="unknown_extended_key_usages_python">
+<a href="#unknown_extended_key_usages_python" style="color: inherit; text-decoration: inherit;">unknown_<wbr>extended_<wbr>key_<wbr>usages</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#authorityconfigx509configkeyusageunknownextendedkeyusage">Sequence[Authority<wbr>Config<wbr>X509Config<wbr>Key<wbr>Usage<wbr>Unknown<wbr>Extended<wbr>Key<wbr>Usage]</a></span>
+    </dt>
+    <dd>{{% md %}}An ObjectId specifies an object identifier (OID). These provide context and describe types in ASN.1 messages.
+Structure is documented below.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="authorityconfigx509configkeyusagebasekeyusage">Authority<wbr>Config<wbr>X509Config<wbr>Key<wbr>Usage<wbr>Base<wbr>Key<wbr>Usage</h4>
 
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
-        <span id="includecacerturl_csharp">
-<a href="#includecacerturl_csharp" style="color: inherit; text-decoration: inherit;">Include<wbr>Ca<wbr>Cert<wbr>Url</a>
+        <span id="certsign_csharp">
+<a href="#certsign_csharp" style="color: inherit; text-decoration: inherit;">Cert<wbr>Sign</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}When true, includes a URL to the issuing CA certificate in the "authority
-information access" X.509 extension.
+    <dd>{{% md %}}The key may be used to sign certificates.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="includecrlaccessurl_csharp">
-<a href="#includecrlaccessurl_csharp" style="color: inherit; text-decoration: inherit;">Include<wbr>Crl<wbr>Access<wbr>Url</a>
+        <span id="contentcommitment_csharp">
+<a href="#contentcommitment_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Commitment</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}When true, includes a URL to the CRL corresponding to certificates issued from a
-CertificateAuthority. CRLs will expire 7 days from their creation. However, we will
-rebuild daily. CRLs are also rebuilt shortly after a certificate is revoked.
+    <dd>{{% md %}}The key may be used for cryptographic commitments. Note that this may also be referred to as "non-repudiation".
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="crlsign_csharp">
+<a href="#crlsign_csharp" style="color: inherit; text-decoration: inherit;">Crl<wbr>Sign</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}The key may be used sign certificate revocation lists.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dataencipherment_csharp">
+<a href="#dataencipherment_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Encipherment</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}The key may be used to encipher data.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="decipheronly_csharp">
+<a href="#decipheronly_csharp" style="color: inherit; text-decoration: inherit;">Decipher<wbr>Only</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}The key may be used to decipher only.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="digitalsignature_csharp">
+<a href="#digitalsignature_csharp" style="color: inherit; text-decoration: inherit;">Digital<wbr>Signature</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}The key may be used for digital signatures.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="encipheronly_csharp">
+<a href="#encipheronly_csharp" style="color: inherit; text-decoration: inherit;">Encipher<wbr>Only</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}The key may be used to encipher only.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="keyagreement_csharp">
+<a href="#keyagreement_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Agreement</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}The key may be used in a key agreement protocol.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="keyencipherment_csharp">
+<a href="#keyencipherment_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Encipherment</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}The key may be used to encipher other keys.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
-        <span id="includecacerturl_go">
-<a href="#includecacerturl_go" style="color: inherit; text-decoration: inherit;">Include<wbr>Ca<wbr>Cert<wbr>Url</a>
+        <span id="certsign_go">
+<a href="#certsign_go" style="color: inherit; text-decoration: inherit;">Cert<wbr>Sign</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}When true, includes a URL to the issuing CA certificate in the "authority
-information access" X.509 extension.
+    <dd>{{% md %}}The key may be used to sign certificates.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="includecrlaccessurl_go">
-<a href="#includecrlaccessurl_go" style="color: inherit; text-decoration: inherit;">Include<wbr>Crl<wbr>Access<wbr>Url</a>
+        <span id="contentcommitment_go">
+<a href="#contentcommitment_go" style="color: inherit; text-decoration: inherit;">Content<wbr>Commitment</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}When true, includes a URL to the CRL corresponding to certificates issued from a
-CertificateAuthority. CRLs will expire 7 days from their creation. However, we will
-rebuild daily. CRLs are also rebuilt shortly after a certificate is revoked.
+    <dd>{{% md %}}The key may be used for cryptographic commitments. Note that this may also be referred to as "non-repudiation".
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="crlsign_go">
+<a href="#crlsign_go" style="color: inherit; text-decoration: inherit;">Crl<wbr>Sign</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}The key may be used sign certificate revocation lists.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dataencipherment_go">
+<a href="#dataencipherment_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Encipherment</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}The key may be used to encipher data.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="decipheronly_go">
+<a href="#decipheronly_go" style="color: inherit; text-decoration: inherit;">Decipher<wbr>Only</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}The key may be used to decipher only.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="digitalsignature_go">
+<a href="#digitalsignature_go" style="color: inherit; text-decoration: inherit;">Digital<wbr>Signature</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}The key may be used for digital signatures.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="encipheronly_go">
+<a href="#encipheronly_go" style="color: inherit; text-decoration: inherit;">Encipher<wbr>Only</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}The key may be used to encipher only.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="keyagreement_go">
+<a href="#keyagreement_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Agreement</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}The key may be used in a key agreement protocol.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="keyencipherment_go">
+<a href="#keyencipherment_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Encipherment</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}The key may be used to encipher other keys.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
-        <span id="includecacerturl_nodejs">
-<a href="#includecacerturl_nodejs" style="color: inherit; text-decoration: inherit;">include<wbr>Ca<wbr>Cert<wbr>Url</a>
+        <span id="certsign_nodejs">
+<a href="#certsign_nodejs" style="color: inherit; text-decoration: inherit;">cert<wbr>Sign</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}When true, includes a URL to the issuing CA certificate in the "authority
-information access" X.509 extension.
+    <dd>{{% md %}}The key may be used to sign certificates.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="includecrlaccessurl_nodejs">
-<a href="#includecrlaccessurl_nodejs" style="color: inherit; text-decoration: inherit;">include<wbr>Crl<wbr>Access<wbr>Url</a>
+        <span id="contentcommitment_nodejs">
+<a href="#contentcommitment_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Commitment</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}When true, includes a URL to the CRL corresponding to certificates issued from a
-CertificateAuthority. CRLs will expire 7 days from their creation. However, we will
-rebuild daily. CRLs are also rebuilt shortly after a certificate is revoked.
+    <dd>{{% md %}}The key may be used for cryptographic commitments. Note that this may also be referred to as "non-repudiation".
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="crlsign_nodejs">
+<a href="#crlsign_nodejs" style="color: inherit; text-decoration: inherit;">crl<wbr>Sign</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}The key may be used sign certificate revocation lists.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dataencipherment_nodejs">
+<a href="#dataencipherment_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Encipherment</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}The key may be used to encipher data.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="decipheronly_nodejs">
+<a href="#decipheronly_nodejs" style="color: inherit; text-decoration: inherit;">decipher<wbr>Only</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}The key may be used to decipher only.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="digitalsignature_nodejs">
+<a href="#digitalsignature_nodejs" style="color: inherit; text-decoration: inherit;">digital<wbr>Signature</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}The key may be used for digital signatures.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="encipheronly_nodejs">
+<a href="#encipheronly_nodejs" style="color: inherit; text-decoration: inherit;">encipher<wbr>Only</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}The key may be used to encipher only.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="keyagreement_nodejs">
+<a href="#keyagreement_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Agreement</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}The key may be used in a key agreement protocol.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="keyencipherment_nodejs">
+<a href="#keyencipherment_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Encipherment</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}The key may be used to encipher other keys.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
-        <span id="include_ca_cert_url_python">
-<a href="#include_ca_cert_url_python" style="color: inherit; text-decoration: inherit;">include_<wbr>ca_<wbr>cert_<wbr>url</a>
+        <span id="cert_sign_python">
+<a href="#cert_sign_python" style="color: inherit; text-decoration: inherit;">cert_<wbr>sign</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}When true, includes a URL to the issuing CA certificate in the "authority
-information access" X.509 extension.
+    <dd>{{% md %}}The key may be used to sign certificates.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="include_crl_access_url_python">
-<a href="#include_crl_access_url_python" style="color: inherit; text-decoration: inherit;">include_<wbr>crl_<wbr>access_<wbr>url</a>
+        <span id="content_commitment_python">
+<a href="#content_commitment_python" style="color: inherit; text-decoration: inherit;">content_<wbr>commitment</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}When true, includes a URL to the CRL corresponding to certificates issued from a
-CertificateAuthority. CRLs will expire 7 days from their creation. However, we will
-rebuild daily. CRLs are also rebuilt shortly after a certificate is revoked.
+    <dd>{{% md %}}The key may be used for cryptographic commitments. Note that this may also be referred to as "non-repudiation".
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="crl_sign_python">
+<a href="#crl_sign_python" style="color: inherit; text-decoration: inherit;">crl_<wbr>sign</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}The key may be used sign certificate revocation lists.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="data_encipherment_python">
+<a href="#data_encipherment_python" style="color: inherit; text-decoration: inherit;">data_<wbr>encipherment</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}The key may be used to encipher data.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="decipher_only_python">
+<a href="#decipher_only_python" style="color: inherit; text-decoration: inherit;">decipher_<wbr>only</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}The key may be used to decipher only.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="digital_signature_python">
+<a href="#digital_signature_python" style="color: inherit; text-decoration: inherit;">digital_<wbr>signature</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}The key may be used for digital signatures.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="encipher_only_python">
+<a href="#encipher_only_python" style="color: inherit; text-decoration: inherit;">encipher_<wbr>only</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}The key may be used to encipher only.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="key_agreement_python">
+<a href="#key_agreement_python" style="color: inherit; text-decoration: inherit;">key_<wbr>agreement</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}The key may be used in a key agreement protocol.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="key_encipherment_python">
+<a href="#key_encipherment_python" style="color: inherit; text-decoration: inherit;">key_<wbr>encipherment</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}The key may be used to encipher other keys.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="authorityconfigx509configkeyusageextendedkeyusage">Authority<wbr>Config<wbr>X509Config<wbr>Key<wbr>Usage<wbr>Extended<wbr>Key<wbr>Usage</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="clientauth_csharp">
+<a href="#clientauth_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Auth</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Corresponds to OID 1.3.6.1.5.5.7.3.2. Officially described as "TLS WWW client authentication", though regularly used for non-WWW TLS.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="codesigning_csharp">
+<a href="#codesigning_csharp" style="color: inherit; text-decoration: inherit;">Code<wbr>Signing</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Corresponds to OID 1.3.6.1.5.5.7.3.3. Officially described as "Signing of downloadable executable code client authentication".
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="emailprotection_csharp">
+<a href="#emailprotection_csharp" style="color: inherit; text-decoration: inherit;">Email<wbr>Protection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Corresponds to OID 1.3.6.1.5.5.7.3.4. Officially described as "Email protection".
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ocspsigning_csharp">
+<a href="#ocspsigning_csharp" style="color: inherit; text-decoration: inherit;">Ocsp<wbr>Signing</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Corresponds to OID 1.3.6.1.5.5.7.3.9. Officially described as "Signing OCSP responses".
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="serverauth_csharp">
+<a href="#serverauth_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>Auth</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Corresponds to OID 1.3.6.1.5.5.7.3.1. Officially described as "TLS WWW server authentication", though regularly used for non-WWW TLS.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="timestamping_csharp">
+<a href="#timestamping_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Stamping</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Corresponds to OID 1.3.6.1.5.5.7.3.8. Officially described as "Binding the hash of an object to a time".
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="clientauth_go">
+<a href="#clientauth_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Auth</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Corresponds to OID 1.3.6.1.5.5.7.3.2. Officially described as "TLS WWW client authentication", though regularly used for non-WWW TLS.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="codesigning_go">
+<a href="#codesigning_go" style="color: inherit; text-decoration: inherit;">Code<wbr>Signing</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Corresponds to OID 1.3.6.1.5.5.7.3.3. Officially described as "Signing of downloadable executable code client authentication".
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="emailprotection_go">
+<a href="#emailprotection_go" style="color: inherit; text-decoration: inherit;">Email<wbr>Protection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Corresponds to OID 1.3.6.1.5.5.7.3.4. Officially described as "Email protection".
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ocspsigning_go">
+<a href="#ocspsigning_go" style="color: inherit; text-decoration: inherit;">Ocsp<wbr>Signing</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Corresponds to OID 1.3.6.1.5.5.7.3.9. Officially described as "Signing OCSP responses".
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="serverauth_go">
+<a href="#serverauth_go" style="color: inherit; text-decoration: inherit;">Server<wbr>Auth</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Corresponds to OID 1.3.6.1.5.5.7.3.1. Officially described as "TLS WWW server authentication", though regularly used for non-WWW TLS.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="timestamping_go">
+<a href="#timestamping_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Stamping</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Corresponds to OID 1.3.6.1.5.5.7.3.8. Officially described as "Binding the hash of an object to a time".
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="clientauth_nodejs">
+<a href="#clientauth_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Auth</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Corresponds to OID 1.3.6.1.5.5.7.3.2. Officially described as "TLS WWW client authentication", though regularly used for non-WWW TLS.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="codesigning_nodejs">
+<a href="#codesigning_nodejs" style="color: inherit; text-decoration: inherit;">code<wbr>Signing</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Corresponds to OID 1.3.6.1.5.5.7.3.3. Officially described as "Signing of downloadable executable code client authentication".
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="emailprotection_nodejs">
+<a href="#emailprotection_nodejs" style="color: inherit; text-decoration: inherit;">email<wbr>Protection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Corresponds to OID 1.3.6.1.5.5.7.3.4. Officially described as "Email protection".
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ocspsigning_nodejs">
+<a href="#ocspsigning_nodejs" style="color: inherit; text-decoration: inherit;">ocsp<wbr>Signing</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Corresponds to OID 1.3.6.1.5.5.7.3.9. Officially described as "Signing OCSP responses".
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="serverauth_nodejs">
+<a href="#serverauth_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Auth</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Corresponds to OID 1.3.6.1.5.5.7.3.1. Officially described as "TLS WWW server authentication", though regularly used for non-WWW TLS.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="timestamping_nodejs">
+<a href="#timestamping_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Stamping</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Corresponds to OID 1.3.6.1.5.5.7.3.8. Officially described as "Binding the hash of an object to a time".
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="client_auth_python">
+<a href="#client_auth_python" style="color: inherit; text-decoration: inherit;">client_<wbr>auth</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Corresponds to OID 1.3.6.1.5.5.7.3.2. Officially described as "TLS WWW client authentication", though regularly used for non-WWW TLS.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="code_signing_python">
+<a href="#code_signing_python" style="color: inherit; text-decoration: inherit;">code_<wbr>signing</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Corresponds to OID 1.3.6.1.5.5.7.3.3. Officially described as "Signing of downloadable executable code client authentication".
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="email_protection_python">
+<a href="#email_protection_python" style="color: inherit; text-decoration: inherit;">email_<wbr>protection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Corresponds to OID 1.3.6.1.5.5.7.3.4. Officially described as "Email protection".
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ocsp_signing_python">
+<a href="#ocsp_signing_python" style="color: inherit; text-decoration: inherit;">ocsp_<wbr>signing</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Corresponds to OID 1.3.6.1.5.5.7.3.9. Officially described as "Signing OCSP responses".
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="server_auth_python">
+<a href="#server_auth_python" style="color: inherit; text-decoration: inherit;">server_<wbr>auth</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Corresponds to OID 1.3.6.1.5.5.7.3.1. Officially described as "TLS WWW server authentication", though regularly used for non-WWW TLS.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="time_stamping_python">
+<a href="#time_stamping_python" style="color: inherit; text-decoration: inherit;">time_<wbr>stamping</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Corresponds to OID 1.3.6.1.5.5.7.3.8. Officially described as "Binding the hash of an object to a time".
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="authorityconfigx509configkeyusageunknownextendedkeyusage">Authority<wbr>Config<wbr>X509Config<wbr>Key<wbr>Usage<wbr>Unknown<wbr>Extended<wbr>Key<wbr>Usage</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="objectidpaths_csharp">
+<a href="#objectidpaths_csharp" style="color: inherit; text-decoration: inherit;">Object<wbr>Id<wbr>Paths</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;int&gt;</span>
+    </dt>
+    <dd>{{% md %}}An ObjectId specifies an object identifier (OID). These provide context and describe types in ASN.1 messages.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="objectidpaths_go">
+<a href="#objectidpaths_go" style="color: inherit; text-decoration: inherit;">Object<wbr>Id<wbr>Paths</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]int</span>
+    </dt>
+    <dd>{{% md %}}An ObjectId specifies an object identifier (OID). These provide context and describe types in ASN.1 messages.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="objectidpaths_nodejs">
+<a href="#objectidpaths_nodejs" style="color: inherit; text-decoration: inherit;">object<wbr>Id<wbr>Paths</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number[]</span>
+    </dt>
+    <dd>{{% md %}}An ObjectId specifies an object identifier (OID). These provide context and describe types in ASN.1 messages.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="object_id_paths_python">
+<a href="#object_id_paths_python" style="color: inherit; text-decoration: inherit;">object_<wbr>id_<wbr>paths</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[int]</span>
+    </dt>
+    <dd>{{% md %}}An ObjectId specifies an object identifier (OID). These provide context and describe types in ASN.1 messages.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="authorityconfigx509configpolicyid">Authority<wbr>Config<wbr>X509Config<wbr>Policy<wbr>Id</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="objectidpaths_csharp">
+<a href="#objectidpaths_csharp" style="color: inherit; text-decoration: inherit;">Object<wbr>Id<wbr>Paths</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;int&gt;</span>
+    </dt>
+    <dd>{{% md %}}An ObjectId specifies an object identifier (OID). These provide context and describe types in ASN.1 messages.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="objectidpaths_go">
+<a href="#objectidpaths_go" style="color: inherit; text-decoration: inherit;">Object<wbr>Id<wbr>Paths</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]int</span>
+    </dt>
+    <dd>{{% md %}}An ObjectId specifies an object identifier (OID). These provide context and describe types in ASN.1 messages.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="objectidpaths_nodejs">
+<a href="#objectidpaths_nodejs" style="color: inherit; text-decoration: inherit;">object<wbr>Id<wbr>Paths</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number[]</span>
+    </dt>
+    <dd>{{% md %}}An ObjectId specifies an object identifier (OID). These provide context and describe types in ASN.1 messages.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="object_id_paths_python">
+<a href="#object_id_paths_python" style="color: inherit; text-decoration: inherit;">object_<wbr>id_<wbr>paths</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[int]</span>
+    </dt>
+    <dd>{{% md %}}An ObjectId specifies an object identifier (OID). These provide context and describe types in ASN.1 messages.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3422,15 +4589,15 @@ Possible values are `SIGN_HASH_ALGORITHM_UNSPECIFIED`, `RSA_PSS_2048_SHA256`, `R
 CertificateAuthority can be imported using any of these accepted formats
 
 ```sh
- $ pulumi import gcp:certificateauthority/authority:Authority default projects/{{project}}/locations/{{location}}/certificateAuthorities/{{certificate_authority_id}}
+ $ pulumi import gcp:certificateauthority/authority:Authority default projects/{{project}}/locations/{{location}}/caPools/{{pool}}/certificateAuthorities/{{certificate_authority_id}}
 ```
 
 ```sh
- $ pulumi import gcp:certificateauthority/authority:Authority default {{project}}/{{location}}/{{certificate_authority_id}}
+ $ pulumi import gcp:certificateauthority/authority:Authority default {{project}}/{{location}}/{{pool}}/{{certificate_authority_id}}
 ```
 
 ```sh
- $ pulumi import gcp:certificateauthority/authority:Authority default {{location}}/{{certificate_authority_id}}
+ $ pulumi import gcp:certificateauthority/authority:Authority default {{location}}/{{pool}}/{{certificate_authority_id}}
 ```
 
 

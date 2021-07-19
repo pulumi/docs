@@ -822,7 +822,7 @@ documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancetemplateadvancedmachinefeatures">Instance<wbr>Template<wbr>Advanced<wbr>Machine<wbr>Features<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Configure Nested Virtualisation and Simultaneous Hyper Threading  on this VM.
+    <dd>{{% md %}}Configure Nested Virtualisation and Simultaneous Hyper Threading on this VM.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="canipforward_csharp">
@@ -1000,6 +1000,7 @@ Provider if no value is given.
         <span class="property-type"><a href="#instancetemplatereservationaffinity">Instance<wbr>Template<wbr>Reservation<wbr>Affinity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the reservations that this instance can consume from.
+Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scheduling_csharp">
@@ -1070,7 +1071,7 @@ documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancetemplateadvancedmachinefeatures">Instance<wbr>Template<wbr>Advanced<wbr>Machine<wbr>Features<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Configure Nested Virtualisation and Simultaneous Hyper Threading  on this VM.
+    <dd>{{% md %}}Configure Nested Virtualisation and Simultaneous Hyper Threading on this VM.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="canipforward_go">
@@ -1248,6 +1249,7 @@ Provider if no value is given.
         <span class="property-type"><a href="#instancetemplatereservationaffinity">Instance<wbr>Template<wbr>Reservation<wbr>Affinity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the reservations that this instance can consume from.
+Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scheduling_go">
@@ -1318,7 +1320,7 @@ documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancetemplateadvancedmachinefeatures">Instance<wbr>Template<wbr>Advanced<wbr>Machine<wbr>Features<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Configure Nested Virtualisation and Simultaneous Hyper Threading  on this VM.
+    <dd>{{% md %}}Configure Nested Virtualisation and Simultaneous Hyper Threading on this VM.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="canipforward_nodejs">
@@ -1496,6 +1498,7 @@ Provider if no value is given.
         <span class="property-type"><a href="#instancetemplatereservationaffinity">Instance<wbr>Template<wbr>Reservation<wbr>Affinity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the reservations that this instance can consume from.
+Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scheduling_nodejs">
@@ -1566,7 +1569,7 @@ documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancetemplateadvancedmachinefeatures">Instance<wbr>Template<wbr>Advanced<wbr>Machine<wbr>Features<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Configure Nested Virtualisation and Simultaneous Hyper Threading  on this VM.
+    <dd>{{% md %}}Configure Nested Virtualisation and Simultaneous Hyper Threading on this VM.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="can_ip_forward_python">
@@ -1744,6 +1747,7 @@ Provider if no value is given.
         <span class="property-type"><a href="#instancetemplatereservationaffinity">Instance<wbr>Template<wbr>Reservation<wbr>Affinity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the reservations that this instance can consume from.
+Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scheduling_python">
@@ -2109,7 +2113,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancetemplateadvancedmachinefeatures">Instance<wbr>Template<wbr>Advanced<wbr>Machine<wbr>Features<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Configure Nested Virtualisation and Simultaneous Hyper Threading  on this VM.
+    <dd>{{% md %}}Configure Nested Virtualisation and Simultaneous Hyper Threading on this VM.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_canipforward_csharp">
@@ -2316,6 +2320,7 @@ Provider if no value is given.
         <span class="property-type"><a href="#instancetemplatereservationaffinity">Instance<wbr>Template<wbr>Reservation<wbr>Affinity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the reservations that this instance can consume from.
+Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_scheduling_csharp">
@@ -2384,7 +2389,7 @@ this configuration option are detailed below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancetemplateadvancedmachinefeatures">Instance<wbr>Template<wbr>Advanced<wbr>Machine<wbr>Features<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Configure Nested Virtualisation and Simultaneous Hyper Threading  on this VM.
+    <dd>{{% md %}}Configure Nested Virtualisation and Simultaneous Hyper Threading on this VM.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_canipforward_go">
@@ -2591,6 +2596,7 @@ Provider if no value is given.
         <span class="property-type"><a href="#instancetemplatereservationaffinity">Instance<wbr>Template<wbr>Reservation<wbr>Affinity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the reservations that this instance can consume from.
+Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_scheduling_go">
@@ -2659,7 +2665,7 @@ this configuration option are detailed below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancetemplateadvancedmachinefeatures">Instance<wbr>Template<wbr>Advanced<wbr>Machine<wbr>Features<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Configure Nested Virtualisation and Simultaneous Hyper Threading  on this VM.
+    <dd>{{% md %}}Configure Nested Virtualisation and Simultaneous Hyper Threading on this VM.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_canipforward_nodejs">
@@ -2866,6 +2872,7 @@ Provider if no value is given.
         <span class="property-type"><a href="#instancetemplatereservationaffinity">Instance<wbr>Template<wbr>Reservation<wbr>Affinity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the reservations that this instance can consume from.
+Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_scheduling_nodejs">
@@ -2934,7 +2941,7 @@ this configuration option are detailed below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancetemplateadvancedmachinefeatures">Instance<wbr>Template<wbr>Advanced<wbr>Machine<wbr>Features<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Configure Nested Virtualisation and Simultaneous Hyper Threading  on this VM.
+    <dd>{{% md %}}Configure Nested Virtualisation and Simultaneous Hyper Threading on this VM.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_can_ip_forward_python">
@@ -3141,6 +3148,7 @@ Provider if no value is given.
         <span class="property-type"><a href="#instancetemplatereservationaffinity">Instance<wbr>Template<wbr>Reservation<wbr>Affinity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the reservations that this instance can consume from.
+Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_scheduling_python">
@@ -3220,7 +3228,7 @@ this configuration option are detailed below.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Defines whether the instance should have nested virtualization  enabled. Defaults to false.
+    <dd>{{% md %}}Defines whether the instance should have nested virtualization enabled. Defaults to false.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="threadspercore_csharp">
@@ -3242,7 +3250,7 @@ this configuration option are detailed below.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Defines whether the instance should have nested virtualization  enabled. Defaults to false.
+    <dd>{{% md %}}Defines whether the instance should have nested virtualization enabled. Defaults to false.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="threadspercore_go">
@@ -3264,7 +3272,7 @@ this configuration option are detailed below.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Defines whether the instance should have nested virtualization  enabled. Defaults to false.
+    <dd>{{% md %}}Defines whether the instance should have nested virtualization enabled. Defaults to false.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="threadspercore_nodejs">
@@ -3286,7 +3294,7 @@ this configuration option are detailed below.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Defines whether the instance should have nested virtualization  enabled. Defaults to false.
+    <dd>{{% md %}}Defines whether the instance should have nested virtualization enabled. Defaults to false.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="threads_per_core_python">
@@ -3502,7 +3510,7 @@ initialize this disk. This can be one of: the image's `self_link`,
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The accelerator type resource to expose to this instance. E.g. `nvidia-tesla-k80`.
+    <dd>{{% md %}}The type of reservation from which this instance can consume resources.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3653,7 +3661,7 @@ initialize this disk. This can be one of: the image's `self_link`,
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The accelerator type resource to expose to this instance. E.g. `nvidia-tesla-k80`.
+    <dd>{{% md %}}The type of reservation from which this instance can consume resources.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3804,7 +3812,7 @@ initialize this disk. This can be one of: the image's `self_link`,
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The accelerator type resource to expose to this instance. E.g. `nvidia-tesla-k80`.
+    <dd>{{% md %}}The type of reservation from which this instance can consume resources.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -3955,7 +3963,7 @@ initialize this disk. This can be one of: the image's `self_link`,
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The accelerator type resource to expose to this instance. E.g. `nvidia-tesla-k80`.
+    <dd>{{% md %}}The type of reservation from which this instance can consume resources.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -4033,7 +4041,7 @@ initialize this disk. This can be one of: the image's `self_link`,
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The accelerator type resource to expose to this instance. E.g. `nvidia-tesla-k80`.
+    <dd>{{% md %}}The type of reservation from which this instance can consume resources.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -4055,7 +4063,7 @@ initialize this disk. This can be one of: the image's `self_link`,
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The accelerator type resource to expose to this instance. E.g. `nvidia-tesla-k80`.
+    <dd>{{% md %}}The type of reservation from which this instance can consume resources.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -4077,7 +4085,7 @@ initialize this disk. This can be one of: the image's `self_link`,
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The accelerator type resource to expose to this instance. E.g. `nvidia-tesla-k80`.
+    <dd>{{% md %}}The type of reservation from which this instance can consume resources.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -4099,7 +4107,7 @@ initialize this disk. This can be one of: the image's `self_link`,
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The accelerator type resource to expose to this instance. E.g. `nvidia-tesla-k80`.
+    <dd>{{% md %}}The type of reservation from which this instance can consume resources.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -4778,7 +4786,7 @@ range. If left unspecified, the primary range of the subnetwork will be used.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The accelerator type resource to expose to this instance. E.g. `nvidia-tesla-k80`.
+    <dd>{{% md %}}The type of reservation from which this instance can consume resources.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="specificreservation_csharp">
@@ -4787,7 +4795,9 @@ range. If left unspecified, the primary range of the subnetwork will be used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancetemplatereservationaffinityspecificreservation">Instance<wbr>Template<wbr>Reservation<wbr>Affinity<wbr>Specific<wbr>Reservation</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Specifies the label selector for the reservation to use..
+Structure is documented below.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -4799,7 +4809,7 @@ range. If left unspecified, the primary range of the subnetwork will be used.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The accelerator type resource to expose to this instance. E.g. `nvidia-tesla-k80`.
+    <dd>{{% md %}}The type of reservation from which this instance can consume resources.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="specificreservation_go">
@@ -4808,7 +4818,9 @@ range. If left unspecified, the primary range of the subnetwork will be used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancetemplatereservationaffinityspecificreservation">Instance<wbr>Template<wbr>Reservation<wbr>Affinity<wbr>Specific<wbr>Reservation</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Specifies the label selector for the reservation to use..
+Structure is documented below.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -4820,7 +4832,7 @@ range. If left unspecified, the primary range of the subnetwork will be used.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The accelerator type resource to expose to this instance. E.g. `nvidia-tesla-k80`.
+    <dd>{{% md %}}The type of reservation from which this instance can consume resources.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="specificreservation_nodejs">
@@ -4829,7 +4841,9 @@ range. If left unspecified, the primary range of the subnetwork will be used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancetemplatereservationaffinityspecificreservation">Instance<wbr>Template<wbr>Reservation<wbr>Affinity<wbr>Specific<wbr>Reservation</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Specifies the label selector for the reservation to use..
+Structure is documented below.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -4841,7 +4855,7 @@ range. If left unspecified, the primary range of the subnetwork will be used.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The accelerator type resource to expose to this instance. E.g. `nvidia-tesla-k80`.
+    <dd>{{% md %}}The type of reservation from which this instance can consume resources.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="specific_reservation_python">
@@ -4850,7 +4864,9 @@ range. If left unspecified, the primary range of the subnetwork will be used.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instancetemplatereservationaffinityspecificreservation">Instance<wbr>Template<wbr>Reservation<wbr>Affinity<wbr>Specific<wbr>Reservation</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Specifies the label selector for the reservation to use..
+Structure is documented below.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="instancetemplatereservationaffinityspecificreservation">Instance<wbr>Template<wbr>Reservation<wbr>Affinity<wbr>Specific<wbr>Reservation</h4>
@@ -4864,7 +4880,7 @@ range. If left unspecified, the primary range of the subnetwork will be used.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The key for the node affinity label.
+    <dd>{{% md %}}Corresponds to the label key of a reservation resource. To target a SPECIFIC_RESERVATION by name, specify compute.googleapis.com/reservation-name as the key and specify the name of your reservation as the only value.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="values_csharp">
@@ -4873,7 +4889,8 @@ range. If left unspecified, the primary range of the subnetwork will be used.
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Corresponds to the label values of a reservation resource.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -4885,7 +4902,7 @@ range. If left unspecified, the primary range of the subnetwork will be used.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The key for the node affinity label.
+    <dd>{{% md %}}Corresponds to the label key of a reservation resource. To target a SPECIFIC_RESERVATION by name, specify compute.googleapis.com/reservation-name as the key and specify the name of your reservation as the only value.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="values_go">
@@ -4894,7 +4911,8 @@ range. If left unspecified, the primary range of the subnetwork will be used.
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Corresponds to the label values of a reservation resource.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -4906,7 +4924,7 @@ range. If left unspecified, the primary range of the subnetwork will be used.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The key for the node affinity label.
+    <dd>{{% md %}}Corresponds to the label key of a reservation resource. To target a SPECIFIC_RESERVATION by name, specify compute.googleapis.com/reservation-name as the key and specify the name of your reservation as the only value.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="values_nodejs">
@@ -4915,7 +4933,8 @@ range. If left unspecified, the primary range of the subnetwork will be used.
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Corresponds to the label values of a reservation resource.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -4927,7 +4946,7 @@ range. If left unspecified, the primary range of the subnetwork will be used.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The key for the node affinity label.
+    <dd>{{% md %}}Corresponds to the label key of a reservation resource. To target a SPECIFIC_RESERVATION by name, specify compute.googleapis.com/reservation-name as the key and specify the name of your reservation as the only value.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="values_python">
@@ -4936,7 +4955,8 @@ range. If left unspecified, the primary range of the subnetwork will be used.
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Corresponds to the label values of a reservation resource.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="instancetemplatescheduling">Instance<wbr>Template<wbr>Scheduling</h4>
@@ -5180,7 +5200,7 @@ false. Read more on this
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The key for the node affinity label.
+    <dd>{{% md %}}Corresponds to the label key of a reservation resource. To target a SPECIFIC_RESERVATION by name, specify compute.googleapis.com/reservation-name as the key and specify the name of your reservation as the only value.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="operator_csharp">
@@ -5199,7 +5219,8 @@ or `NOT_IN` for anti-affinities.
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Corresponds to the label values of a reservation resource.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -5211,7 +5232,7 @@ or `NOT_IN` for anti-affinities.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The key for the node affinity label.
+    <dd>{{% md %}}Corresponds to the label key of a reservation resource. To target a SPECIFIC_RESERVATION by name, specify compute.googleapis.com/reservation-name as the key and specify the name of your reservation as the only value.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="operator_go">
@@ -5230,7 +5251,8 @@ or `NOT_IN` for anti-affinities.
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Corresponds to the label values of a reservation resource.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -5242,7 +5264,7 @@ or `NOT_IN` for anti-affinities.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The key for the node affinity label.
+    <dd>{{% md %}}Corresponds to the label key of a reservation resource. To target a SPECIFIC_RESERVATION by name, specify compute.googleapis.com/reservation-name as the key and specify the name of your reservation as the only value.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="operator_nodejs">
@@ -5261,7 +5283,8 @@ or `NOT_IN` for anti-affinities.
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Corresponds to the label values of a reservation resource.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -5273,7 +5296,7 @@ or `NOT_IN` for anti-affinities.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The key for the node affinity label.
+    <dd>{{% md %}}Corresponds to the label key of a reservation resource. To target a SPECIFIC_RESERVATION by name, specify compute.googleapis.com/reservation-name as the key and specify the name of your reservation as the only value.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="operator_python">
@@ -5292,7 +5315,8 @@ or `NOT_IN` for anti-affinities.
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Corresponds to the label values of a reservation resource.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="instancetemplateserviceaccount">Instance<wbr>Template<wbr>Service<wbr>Account</h4>

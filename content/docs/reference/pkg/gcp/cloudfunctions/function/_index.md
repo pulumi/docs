@@ -696,7 +696,7 @@ Eg. `"nodejs10"`, `"nodejs12"`, `"nodejs14"`, `"python37"`, `"python38"`, `"pyth
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Region of function. Currently can be only "us-central1". If it is not provided, the provider region is used.
+    <dd>{{% md %}}Region of function. If it is not provided, the provider region is used.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serviceaccountemail_csharp">
@@ -900,7 +900,7 @@ Eg. `"nodejs10"`, `"nodejs12"`, `"nodejs14"`, `"python37"`, `"python38"`, `"pyth
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Region of function. Currently can be only "us-central1". If it is not provided, the provider region is used.
+    <dd>{{% md %}}Region of function. If it is not provided, the provider region is used.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serviceaccountemail_go">
@@ -1104,7 +1104,7 @@ Eg. `"nodejs10"`, `"nodejs12"`, `"nodejs14"`, `"python37"`, `"python38"`, `"pyth
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Region of function. Currently can be only "us-central1". If it is not provided, the provider region is used.
+    <dd>{{% md %}}Region of function. If it is not provided, the provider region is used.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serviceaccountemail_nodejs">
@@ -1308,7 +1308,7 @@ Eg. `"nodejs10"`, `"nodejs12"`, `"nodejs14"`, `"python37"`, `"python38"`, `"pyth
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Region of function. Currently can be only "us-central1". If it is not provided, the provider region is used.
+    <dd>{{% md %}}Region of function. If it is not provided, the provider region is used.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="service_account_email_python">
@@ -1704,7 +1704,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Region of function. Currently can be only "us-central1". If it is not provided, the provider region is used.
+    <dd>{{% md %}}Region of function. If it is not provided, the provider region is used.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_runtime_csharp">
@@ -1908,7 +1908,7 @@ Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Stru
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Region of function. Currently can be only "us-central1". If it is not provided, the provider region is used.
+    <dd>{{% md %}}Region of function. If it is not provided, the provider region is used.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_runtime_go">
@@ -2112,7 +2112,7 @@ Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Stru
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Region of function. Currently can be only "us-central1". If it is not provided, the provider region is used.
+    <dd>{{% md %}}Region of function. If it is not provided, the provider region is used.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_runtime_nodejs">
@@ -2316,7 +2316,7 @@ Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Stru
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Region of function. Currently can be only "us-central1". If it is not provided, the provider region is used.
+    <dd>{{% md %}}Region of function. If it is not provided, the provider region is used.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_runtime_python">

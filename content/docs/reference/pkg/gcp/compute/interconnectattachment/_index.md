@@ -173,6 +173,9 @@ class MyStack : Stack
         var network = new Gcp.Compute.Network("network", new Gcp.Compute.NetworkArgs
         {
             AutoCreateSubnetworks = false,
+        }, new CustomResourceOptions
+        {
+            Provider = google_beta,
         });
         var address = new Gcp.Compute.Address("address", new Gcp.Compute.AddressArgs
         {
@@ -181,6 +184,9 @@ class MyStack : Stack
             Address = "192.168.1.0",
             PrefixLength = 29,
             Network = network.SelfLink,
+        }, new CustomResourceOptions
+        {
+            Provider = google_beta,
         });
         var router = new Gcp.Compute.Router("router", new Gcp.Compute.RouterArgs
         {
@@ -190,6 +196,9 @@ class MyStack : Stack
             {
                 Asn = 16550,
             },
+        }, new CustomResourceOptions
+        {
+            Provider = google_beta,
         });
         var ipsec_encrypted_interconnect_attachment = new Gcp.Compute.InterconnectAttachment("ipsec-encrypted-interconnect-attachment", new Gcp.Compute.InterconnectAttachmentArgs
         {
@@ -201,6 +210,9 @@ class MyStack : Stack
             {
                 address.SelfLink,
             },
+        }, new CustomResourceOptions
+        {
+            Provider = google_beta,
         });
     }
 
@@ -225,7 +237,7 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		network, err := compute.NewNetwork(ctx, "network", &compute.NetworkArgs{
 			AutoCreateSubnetworks: pulumi.Bool(false),
-		})
+		}, pulumi.Provider(google_beta))
 		if err != nil {
 			return err
 		}
@@ -235,7 +247,7 @@ func main() {
 			Address:      pulumi.String("192.168.1.0"),
 			PrefixLength: pulumi.Int(29),
 			Network:      network.SelfLink,
-		})
+		}, pulumi.Provider(google_beta))
 		if err != nil {
 			return err
 		}
@@ -245,7 +257,7 @@ func main() {
 			Bgp: &compute.RouterBgpArgs{
 				Asn: pulumi.Int(16550),
 			},
-		})
+		}, pulumi.Provider(google_beta))
 		if err != nil {
 			return err
 		}
@@ -257,7 +269,7 @@ func main() {
 			IpsecInternalAddresses: pulumi.StringArray{
 				address.SelfLink,
 			},
-		})
+		}, pulumi.Provider(google_beta))
 		if err != nil {
 			return err
 		}
@@ -276,25 +288,29 @@ func main() {
 import pulumi
 import pulumi_gcp as gcp
 
-network = gcp.compute.Network("network", auto_create_subnetworks=False)
+network = gcp.compute.Network("network", auto_create_subnetworks=False,
+opts=pulumi.ResourceOptions(provider=google_beta))
 address = gcp.compute.Address("address",
     address_type="INTERNAL",
     purpose="IPSEC_INTERCONNECT",
     address="192.168.1.0",
     prefix_length=29,
-    network=network.self_link)
+    network=network.self_link,
+    opts=pulumi.ResourceOptions(provider=google_beta))
 router = gcp.compute.Router("router",
     network=network.name,
     encrypted_interconnect_router=True,
     bgp=gcp.compute.RouterBgpArgs(
         asn=16550,
-    ))
+    ),
+    opts=pulumi.ResourceOptions(provider=google_beta))
 ipsec_encrypted_interconnect_attachment = gcp.compute.InterconnectAttachment("ipsec-encrypted-interconnect-attachment",
     edge_availability_domain="AVAILABILITY_DOMAIN_1",
     type="PARTNER",
     router=router.id,
     encryption="IPSEC",
-    ipsec_internal_addresses=[address.self_link])
+    ipsec_internal_addresses=[address.self_link],
+    opts=pulumi.ResourceOptions(provider=google_beta))
 ```
 
 
@@ -308,13 +324,17 @@ ipsec_encrypted_interconnect_attachment = gcp.compute.InterconnectAttachment("ip
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const network = new gcp.compute.Network("network", {autoCreateSubnetworks: false});
+const network = new gcp.compute.Network("network", {autoCreateSubnetworks: false}, {
+    provider: google_beta,
+});
 const address = new gcp.compute.Address("address", {
     addressType: "INTERNAL",
     purpose: "IPSEC_INTERCONNECT",
     address: "192.168.1.0",
     prefixLength: 29,
     network: network.selfLink,
+}, {
+    provider: google_beta,
 });
 const router = new gcp.compute.Router("router", {
     network: network.name,
@@ -322,6 +342,8 @@ const router = new gcp.compute.Router("router", {
     bgp: {
         asn: 16550,
     },
+}, {
+    provider: google_beta,
 });
 const ipsec_encrypted_interconnect_attachment = new gcp.compute.InterconnectAttachment("ipsec-encrypted-interconnect-attachment", {
     edgeAvailabilityDomain: "AVAILABILITY_DOMAIN_1",
@@ -329,6 +351,8 @@ const ipsec_encrypted_interconnect_attachment = new gcp.compute.InterconnectAtta
     router: router.id,
     encryption: "IPSEC",
     ipsecInternalAddresses: [address.selfLink],
+}, {
+    provider: google_beta,
 });
 ```
 
