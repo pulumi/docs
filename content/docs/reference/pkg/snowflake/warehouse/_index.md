@@ -136,10 +136,12 @@ const warehouse = new snowflake.Warehouse("w", {
               <span class="nx">comment</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
               <span class="nx">initially_suspended</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
               <span class="nx">max_cluster_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+              <span class="nx">max_concurrency_level</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
               <span class="nx">min_cluster_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
               <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
               <span class="nx">resource_monitor</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
               <span class="nx">scaling_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">statement_queued_timeout_in_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
               <span class="nx">statement_timeout_in_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
               <span class="nx">wait_for_provisioning</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
               <span class="nx">warehouse_size</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
@@ -316,6 +318,15 @@ The Warehouse resource accepts the following [input]({{< relref "/docs/intro/con
     <dd>{{% md %}}Specifies the maximum number of server clusters for the warehouse.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="maxconcurrencylevel_csharp">
+<a href="#maxconcurrencylevel_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrency<wbr>Level</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Object parameter that specifies the concurrency level for SQL statements (i.e. queries and DML) executed by a warehouse.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="minclustercount_csharp">
 <a href="#minclustercount_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Cluster<wbr>Count</a>
 </span>
@@ -349,6 +360,15 @@ The Warehouse resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the policy for automatically starting and shutting down clusters in a multi-cluster warehouse running in Auto-scale mode.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="statementqueuedtimeoutinseconds_csharp">
+<a href="#statementqueuedtimeoutinseconds_csharp" style="color: inherit; text-decoration: inherit;">Statement<wbr>Queued<wbr>Timeout<wbr>In<wbr>Seconds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Object parameter that specifies the time, in seconds, a SQL statement (query, DDL, DML, etc.) can be queued on a warehouse before it is canceled by the system.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="statementtimeoutinseconds_csharp">
@@ -425,6 +445,15 @@ The Warehouse resource accepts the following [input]({{< relref "/docs/intro/con
     <dd>{{% md %}}Specifies the maximum number of server clusters for the warehouse.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="maxconcurrencylevel_go">
+<a href="#maxconcurrencylevel_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrency<wbr>Level</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Object parameter that specifies the concurrency level for SQL statements (i.e. queries and DML) executed by a warehouse.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="minclustercount_go">
 <a href="#minclustercount_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Cluster<wbr>Count</a>
 </span>
@@ -458,6 +487,15 @@ The Warehouse resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the policy for automatically starting and shutting down clusters in a multi-cluster warehouse running in Auto-scale mode.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="statementqueuedtimeoutinseconds_go">
+<a href="#statementqueuedtimeoutinseconds_go" style="color: inherit; text-decoration: inherit;">Statement<wbr>Queued<wbr>Timeout<wbr>In<wbr>Seconds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Object parameter that specifies the time, in seconds, a SQL statement (query, DDL, DML, etc.) can be queued on a warehouse before it is canceled by the system.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="statementtimeoutinseconds_go">
@@ -534,6 +572,15 @@ The Warehouse resource accepts the following [input]({{< relref "/docs/intro/con
     <dd>{{% md %}}Specifies the maximum number of server clusters for the warehouse.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="maxconcurrencylevel_nodejs">
+<a href="#maxconcurrencylevel_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Concurrency<wbr>Level</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Object parameter that specifies the concurrency level for SQL statements (i.e. queries and DML) executed by a warehouse.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="minclustercount_nodejs">
 <a href="#minclustercount_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Cluster<wbr>Count</a>
 </span>
@@ -567,6 +614,15 @@ The Warehouse resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the policy for automatically starting and shutting down clusters in a multi-cluster warehouse running in Auto-scale mode.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="statementqueuedtimeoutinseconds_nodejs">
+<a href="#statementqueuedtimeoutinseconds_nodejs" style="color: inherit; text-decoration: inherit;">statement<wbr>Queued<wbr>Timeout<wbr>In<wbr>Seconds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Object parameter that specifies the time, in seconds, a SQL statement (query, DDL, DML, etc.) can be queued on a warehouse before it is canceled by the system.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="statementtimeoutinseconds_nodejs">
@@ -643,6 +699,15 @@ The Warehouse resource accepts the following [input]({{< relref "/docs/intro/con
     <dd>{{% md %}}Specifies the maximum number of server clusters for the warehouse.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="max_concurrency_level_python">
+<a href="#max_concurrency_level_python" style="color: inherit; text-decoration: inherit;">max_<wbr>concurrency_<wbr>level</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Object parameter that specifies the concurrency level for SQL statements (i.e. queries and DML) executed by a warehouse.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="min_cluster_count_python">
 <a href="#min_cluster_count_python" style="color: inherit; text-decoration: inherit;">min_<wbr>cluster_<wbr>count</a>
 </span>
@@ -676,6 +741,15 @@ The Warehouse resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the policy for automatically starting and shutting down clusters in a multi-cluster warehouse running in Auto-scale mode.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="statement_queued_timeout_in_seconds_python">
+<a href="#statement_queued_timeout_in_seconds_python" style="color: inherit; text-decoration: inherit;">statement_<wbr>queued_<wbr>timeout_<wbr>in_<wbr>seconds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Object parameter that specifies the time, in seconds, a SQL statement (query, DDL, DML, etc.) can be queued on a warehouse before it is canceled by the system.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="statement_timeout_in_seconds_python">
@@ -781,10 +855,12 @@ Get an existing Warehouse resource's state with the given name, ID, and optional
         <span class="nx">comment</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">initially_suspended</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">max_cluster_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+        <span class="nx">max_concurrency_level</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
         <span class="nx">min_cluster_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">resource_monitor</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">scaling_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">statement_queued_timeout_in_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
         <span class="nx">statement_timeout_in_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
         <span class="nx">wait_for_provisioning</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">warehouse_size</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Warehouse</code></pre></div>
@@ -944,6 +1020,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Specifies the maximum number of server clusters for the warehouse.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_maxconcurrencylevel_csharp">
+<a href="#state_maxconcurrencylevel_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrency<wbr>Level</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Object parameter that specifies the concurrency level for SQL statements (i.e. queries and DML) executed by a warehouse.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_minclustercount_csharp">
 <a href="#state_minclustercount_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Cluster<wbr>Count</a>
 </span>
@@ -977,6 +1062,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the policy for automatically starting and shutting down clusters in a multi-cluster warehouse running in Auto-scale mode.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_statementqueuedtimeoutinseconds_csharp">
+<a href="#state_statementqueuedtimeoutinseconds_csharp" style="color: inherit; text-decoration: inherit;">Statement<wbr>Queued<wbr>Timeout<wbr>In<wbr>Seconds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Object parameter that specifies the time, in seconds, a SQL statement (query, DDL, DML, etc.) can be queued on a warehouse before it is canceled by the system.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_statementtimeoutinseconds_csharp">
@@ -1053,6 +1147,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Specifies the maximum number of server clusters for the warehouse.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_maxconcurrencylevel_go">
+<a href="#state_maxconcurrencylevel_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrency<wbr>Level</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Object parameter that specifies the concurrency level for SQL statements (i.e. queries and DML) executed by a warehouse.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_minclustercount_go">
 <a href="#state_minclustercount_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Cluster<wbr>Count</a>
 </span>
@@ -1086,6 +1189,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the policy for automatically starting and shutting down clusters in a multi-cluster warehouse running in Auto-scale mode.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_statementqueuedtimeoutinseconds_go">
+<a href="#state_statementqueuedtimeoutinseconds_go" style="color: inherit; text-decoration: inherit;">Statement<wbr>Queued<wbr>Timeout<wbr>In<wbr>Seconds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Object parameter that specifies the time, in seconds, a SQL statement (query, DDL, DML, etc.) can be queued on a warehouse before it is canceled by the system.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_statementtimeoutinseconds_go">
@@ -1162,6 +1274,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Specifies the maximum number of server clusters for the warehouse.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_maxconcurrencylevel_nodejs">
+<a href="#state_maxconcurrencylevel_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Concurrency<wbr>Level</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Object parameter that specifies the concurrency level for SQL statements (i.e. queries and DML) executed by a warehouse.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_minclustercount_nodejs">
 <a href="#state_minclustercount_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Cluster<wbr>Count</a>
 </span>
@@ -1195,6 +1316,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the policy for automatically starting and shutting down clusters in a multi-cluster warehouse running in Auto-scale mode.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_statementqueuedtimeoutinseconds_nodejs">
+<a href="#state_statementqueuedtimeoutinseconds_nodejs" style="color: inherit; text-decoration: inherit;">statement<wbr>Queued<wbr>Timeout<wbr>In<wbr>Seconds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Object parameter that specifies the time, in seconds, a SQL statement (query, DDL, DML, etc.) can be queued on a warehouse before it is canceled by the system.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_statementtimeoutinseconds_nodejs">
@@ -1271,6 +1401,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Specifies the maximum number of server clusters for the warehouse.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_max_concurrency_level_python">
+<a href="#state_max_concurrency_level_python" style="color: inherit; text-decoration: inherit;">max_<wbr>concurrency_<wbr>level</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Object parameter that specifies the concurrency level for SQL statements (i.e. queries and DML) executed by a warehouse.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_min_cluster_count_python">
 <a href="#state_min_cluster_count_python" style="color: inherit; text-decoration: inherit;">min_<wbr>cluster_<wbr>count</a>
 </span>
@@ -1304,6 +1443,15 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the policy for automatically starting and shutting down clusters in a multi-cluster warehouse running in Auto-scale mode.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_statement_queued_timeout_in_seconds_python">
+<a href="#state_statement_queued_timeout_in_seconds_python" style="color: inherit; text-decoration: inherit;">statement_<wbr>queued_<wbr>timeout_<wbr>in_<wbr>seconds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Object parameter that specifies the time, in seconds, a SQL statement (query, DDL, DML, etc.) can be queued on a warehouse before it is canceled by the system.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_statement_timeout_in_seconds_python">

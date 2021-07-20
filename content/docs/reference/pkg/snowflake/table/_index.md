@@ -31,21 +31,124 @@ meta_desc: "Documentation for the snowflake.Table resource with examples, input 
 
 {{< example csharp >}}
 
-Coming soon!
+```csharp
+using Pulumi;
+using Snowflake = Pulumi.Snowflake;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var table = new Snowflake.Table("table", new Snowflake.TableArgs
+        {
+            ClusterBies = 
+            {
+                "to_date(DATE)",
+            },
+            Columns = 
+            {
+                new Snowflake.Inputs.TableColumnArgs
+                {
+                    Name = "id",
+                    Type = "int",
+                },
+                new Snowflake.Inputs.TableColumnArgs
+                {
+                    Name = "data",
+                    Type = "text",
+                },
+                new Snowflake.Inputs.TableColumnArgs
+                {
+                    Name = "DATE",
+                    Type = "TIMESTAMP_NTZ(9)",
+                },
+            },
+            Comment = "A table.",
+            Database = "database",
+            Schema = "schmea",
+        });
+    }
+
+}
+```
+
 
 {{< /example >}}
 
 
 {{< example go >}}
 
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-snowflake/sdk/go/snowflake"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := snowflake.NewTable(ctx, "table", &snowflake.TableArgs{
+			ClusterBies: pulumi.StringArray{
+				pulumi.String("to_date(DATE)"),
+			},
+			Columns: TableColumnArray{
+				&TableColumnArgs{
+					Name: pulumi.String("id"),
+					Type: pulumi.String("int"),
+				},
+				&TableColumnArgs{
+					Name: pulumi.String("data"),
+					Type: pulumi.String("text"),
+				},
+				&TableColumnArgs{
+					Name: pulumi.String("DATE"),
+					Type: pulumi.String("TIMESTAMP_NTZ(9)"),
+				},
+			},
+			Comment:  pulumi.String("A table."),
+			Database: pulumi.String("database"),
+			Schema:   pulumi.String("schmea"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 
 {{< /example >}}
 
 
 {{< example python >}}
 
-Coming soon!
+```python
+import pulumi
+import pulumi_snowflake as snowflake
+
+table = snowflake.Table("table",
+    cluster_bies=["to_date(DATE)"],
+    columns=[
+        snowflake.TableColumnArgs(
+            name="id",
+            type="int",
+        ),
+        snowflake.TableColumnArgs(
+            name="data",
+            type="text",
+        ),
+        snowflake.TableColumnArgs(
+            name="DATE",
+            type="TIMESTAMP_NTZ(9)",
+        ),
+    ],
+    comment="A table.",
+    database="database",
+    schema="schmea")
+```
+
 
 {{< /example >}}
 
@@ -75,7 +178,6 @@ const table = new snowflake.Table("table", {
     ],
     comment: "A table.",
     database: "database",
-    owner: "me",
     schema: "schmea",
 });
 ```

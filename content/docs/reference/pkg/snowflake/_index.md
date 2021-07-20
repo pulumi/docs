@@ -80,6 +80,6 @@ A Pulumi package for creating and managing snowflake cloud resources.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`snowflake` Terraform Provider](https://github.com/chanzuckerberg/terraform-provider-snowflake).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>0.1.0</dd>
+	<dd>0.1.1</dd>
 </dl>
 

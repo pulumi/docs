@@ -60,7 +60,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Snowflake AWS Virtual Private Cloud IDs
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="azurevnetsubnetids_csharp">
 <a href="#azurevnetsubnetids_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Vnet<wbr>Subnet<wbr>Ids</a>
@@ -68,7 +69,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Snowflake Azure Virtual Network Subnet IDs
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -89,7 +91,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Snowflake AWS Virtual Private Cloud IDs
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="azurevnetsubnetids_go">
 <a href="#azurevnetsubnetids_go" style="color: inherit; text-decoration: inherit;">Azure<wbr>Vnet<wbr>Subnet<wbr>Ids</a>
@@ -97,7 +100,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Snowflake Azure Virtual Network Subnet IDs
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -118,7 +122,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Snowflake AWS Virtual Private Cloud IDs
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="azurevnetsubnetids_nodejs">
 <a href="#azurevnetsubnetids_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Vnet<wbr>Subnet<wbr>Ids</a>
@@ -126,7 +131,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Snowflake Azure Virtual Network Subnet IDs
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -147,7 +153,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Snowflake AWS Virtual Private Cloud IDs
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="azure_vnet_subnet_ids_python">
 <a href="#azure_vnet_subnet_ids_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>vnet_<wbr>subnet_<wbr>ids</a>
@@ -155,7 +162,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Snowflake Azure Virtual Network Subnet IDs
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
