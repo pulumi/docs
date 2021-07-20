@@ -1293,7 +1293,7 @@ The following state arguments are supported:
 <a href="#state_installedapplications_go" style="color: inherit; text-decoration: inherit;">Installed<wbr>Applications</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusterinstalledapplication">[]Kubernetes<wbr>Cluster<wbr>Installed<wbr>Application</a></span>
+        <span class="property-type"><a href="#kubernetesclusterinstalledapplication">[]Kubernetes<wbr>Cluster<wbr>Installed<wbr>Application<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A unique ID that can be used to identify and reference a Kubernetes cluster.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1302,7 +1302,7 @@ The following state arguments are supported:
 <a href="#state_instances_go" style="color: inherit; text-decoration: inherit;">Instances</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusterinstance">[]Kubernetes<wbr>Cluster<wbr>Instance</a></span>
+        <span class="property-type"><a href="#kubernetesclusterinstance">[]Kubernetes<wbr>Cluster<wbr>Instance<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A list of instance inside the pool
 {{% /md %}}</dd><dt class="property-optional"
@@ -1365,7 +1365,7 @@ The following state arguments are supported:
 <a href="#state_pools_go" style="color: inherit; text-decoration: inherit;">Pools</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusterpool">[]Kubernetes<wbr>Cluster<wbr>Pool</a></span>
+        <span class="property-type"><a href="#kubernetesclusterpool">[]Kubernetes<wbr>Cluster<wbr>Pool<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A list of node pools associated with the cluster. Each node pool exports the following attributes:
 {{% /md %}}</dd><dt class="property-optional"
@@ -2247,7 +2247,7 @@ The following state arguments are supported:
 <a href="#instances_csharp" style="color: inherit; text-decoration: inherit;">Instances</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusterpoolinstance">List&lt;Kubernetes<wbr>Cluster<wbr>Pool<wbr>Instance<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#kubernetesclusterpoolinstance">List&lt;Kubernetes<wbr>Cluster<wbr>Pool<wbr>Instance&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of instance inside the pool
 {{% /md %}}</dd><dt class="property-optional"
@@ -2345,7 +2345,7 @@ The following state arguments are supported:
 <a href="#instances_nodejs" style="color: inherit; text-decoration: inherit;">instances</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusterpoolinstance">Kubernetes<wbr>Cluster<wbr>Pool<wbr>Instance<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#kubernetesclusterpoolinstance">Kubernetes<wbr>Cluster<wbr>Pool<wbr>Instance[]</a></span>
     </dt>
     <dd>{{% md %}}A list of instance inside the pool
 {{% /md %}}</dd><dt class="property-optional"
@@ -2394,7 +2394,7 @@ The following state arguments are supported:
 <a href="#instances_python" style="color: inherit; text-decoration: inherit;">instances</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesclusterpoolinstance">Sequence[Kubernetes<wbr>Cluster<wbr>Pool<wbr>Instance<wbr>Args]</a></span>
+        <span class="property-type"><a href="#kubernetesclusterpoolinstance">Sequence[Kubernetes<wbr>Cluster<wbr>Pool<wbr>Instance]</a></span>
     </dt>
     <dd>{{% md %}}A list of instance inside the pool
 {{% /md %}}</dd><dt class="property-optional"

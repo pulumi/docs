@@ -286,7 +286,7 @@ same backend), default is random
 <a href="#backends_go" style="color: inherit; text-decoration: inherit;">Backends</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalancerbackend">[]Load<wbr>Balancer<wbr>Backend</a></span>
+        <span class="property-type"><a href="#loadbalancerbackend">[]Load<wbr>Balancer<wbr>Backend<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}a list of backend instances, each containing an instance_id, protocol (http or https) and port
 {{% /md %}}</dd><dt class="property-required"
@@ -942,7 +942,7 @@ same backend), default is random
 <a href="#state_backends_go" style="color: inherit; text-decoration: inherit;">Backends</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalancerbackend">[]Load<wbr>Balancer<wbr>Backend</a></span>
+        <span class="property-type"><a href="#loadbalancerbackend">[]Load<wbr>Balancer<wbr>Backend<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}a list of backend instances, each containing an instance_id, protocol (http or https) and port
 {{% /md %}}</dd><dt class="property-optional"
