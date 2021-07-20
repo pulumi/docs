@@ -663,7 +663,7 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#axisleft_go" style="color: inherit; text-decoration: inherit;">Axis<wbr>Left</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timechartaxisleft">Time<wbr>Chart<wbr>Axis<wbr>Left</a></span>
+        <span class="property-type"><a href="#timechartaxisleft">Time<wbr>Chart<wbr>Axis<wbr>Left<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Set of axis options.
 {{% /md %}}</dd><dt class="property-optional"
@@ -672,7 +672,7 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#axisright_go" style="color: inherit; text-decoration: inherit;">Axis<wbr>Right</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timechartaxisright">Time<wbr>Chart<wbr>Axis<wbr>Right</a></span>
+        <span class="property-type"><a href="#timechartaxisright">Time<wbr>Chart<wbr>Axis<wbr>Right<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Set of axis options.
 {{% /md %}}</dd><dt class="property-optional"
@@ -717,7 +717,7 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#eventoptions_go" style="color: inherit; text-decoration: inherit;">Event<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timecharteventoption">[]Time<wbr>Chart<wbr>Event<wbr>Option</a></span>
+        <span class="property-type"><a href="#timecharteventoption">[]Time<wbr>Chart<wbr>Event<wbr>Option<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Event customization options, associated with a publish statement. You will need to use this to change settings for any `events(…)` statements you use.
 {{% /md %}}</dd><dt class="property-optional"
@@ -726,7 +726,7 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#histogramoptions_go" style="color: inherit; text-decoration: inherit;">Histogram<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timecharthistogramoption">[]Time<wbr>Chart<wbr>Histogram<wbr>Option</a></span>
+        <span class="property-type"><a href="#timecharthistogramoption">[]Time<wbr>Chart<wbr>Histogram<wbr>Option<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Only used when `plot_type` is `"Histogram"`. Histogram specific options.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -744,7 +744,7 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#legendoptionsfields_go" style="color: inherit; text-decoration: inherit;">Legend<wbr>Options<wbr>Fields</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timechartlegendoptionsfield">[]Time<wbr>Chart<wbr>Legend<wbr>Options<wbr>Field</a></span>
+        <span class="property-type"><a href="#timechartlegendoptionsfield">[]Time<wbr>Chart<wbr>Legend<wbr>Options<wbr>Field<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List of property names and enabled flags that should be displayed in the data table for the chart, in the order provided. This option cannot be used with `legend_fields_to_hide`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -870,7 +870,7 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#vizoptions_go" style="color: inherit; text-decoration: inherit;">Viz<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timechartvizoption">[]Time<wbr>Chart<wbr>Viz<wbr>Option</a></span>
+        <span class="property-type"><a href="#timechartvizoption">[]Time<wbr>Chart<wbr>Viz<wbr>Option<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Plot-level customization options, associated with a publish statement.
 {{% /md %}}</dd></dl>
@@ -1895,7 +1895,7 @@ The following state arguments are supported:
 <a href="#state_axisleft_go" style="color: inherit; text-decoration: inherit;">Axis<wbr>Left</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timechartaxisleft">Time<wbr>Chart<wbr>Axis<wbr>Left</a></span>
+        <span class="property-type"><a href="#timechartaxisleft">Time<wbr>Chart<wbr>Axis<wbr>Left<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Set of axis options.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1904,7 +1904,7 @@ The following state arguments are supported:
 <a href="#state_axisright_go" style="color: inherit; text-decoration: inherit;">Axis<wbr>Right</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timechartaxisright">Time<wbr>Chart<wbr>Axis<wbr>Right</a></span>
+        <span class="property-type"><a href="#timechartaxisright">Time<wbr>Chart<wbr>Axis<wbr>Right<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Set of axis options.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1949,7 +1949,7 @@ The following state arguments are supported:
 <a href="#state_eventoptions_go" style="color: inherit; text-decoration: inherit;">Event<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timecharteventoption">[]Time<wbr>Chart<wbr>Event<wbr>Option</a></span>
+        <span class="property-type"><a href="#timecharteventoption">[]Time<wbr>Chart<wbr>Event<wbr>Option<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Event customization options, associated with a publish statement. You will need to use this to change settings for any `events(…)` statements you use.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1958,7 +1958,7 @@ The following state arguments are supported:
 <a href="#state_histogramoptions_go" style="color: inherit; text-decoration: inherit;">Histogram<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timecharthistogramoption">[]Time<wbr>Chart<wbr>Histogram<wbr>Option</a></span>
+        <span class="property-type"><a href="#timecharthistogramoption">[]Time<wbr>Chart<wbr>Histogram<wbr>Option<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Only used when `plot_type` is `"Histogram"`. Histogram specific options.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
@@ -1976,7 +1976,7 @@ The following state arguments are supported:
 <a href="#state_legendoptionsfields_go" style="color: inherit; text-decoration: inherit;">Legend<wbr>Options<wbr>Fields</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timechartlegendoptionsfield">[]Time<wbr>Chart<wbr>Legend<wbr>Options<wbr>Field</a></span>
+        <span class="property-type"><a href="#timechartlegendoptionsfield">[]Time<wbr>Chart<wbr>Legend<wbr>Options<wbr>Field<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List of property names and enabled flags that should be displayed in the data table for the chart, in the order provided. This option cannot be used with `legend_fields_to_hide`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2120,7 +2120,7 @@ The following state arguments are supported:
 <a href="#state_vizoptions_go" style="color: inherit; text-decoration: inherit;">Viz<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timechartvizoption">[]Time<wbr>Chart<wbr>Viz<wbr>Option</a></span>
+        <span class="property-type"><a href="#timechartvizoption">[]Time<wbr>Chart<wbr>Viz<wbr>Option<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Plot-level customization options, associated with a publish statement.
 {{% /md %}}</dd></dl>
@@ -2719,7 +2719,7 @@ The following state arguments are supported:
 <a href="#watermarks_csharp" style="color: inherit; text-decoration: inherit;">Watermarks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timechartaxisleftwatermark">List&lt;Pulumi.<wbr>Signal<wbr>Fx.<wbr>Inputs.<wbr>Time<wbr>Chart<wbr>Axis<wbr>Left<wbr>Watermark<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#timechartaxisleftwatermark">List&lt;Pulumi.<wbr>Signal<wbr>Fx.<wbr>Inputs.<wbr>Time<wbr>Chart<wbr>Axis<wbr>Left<wbr>Watermark&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2869,7 +2869,7 @@ The following state arguments are supported:
 <a href="#watermarks_nodejs" style="color: inherit; text-decoration: inherit;">watermarks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timechartaxisleftwatermark">Time<wbr>Chart<wbr>Axis<wbr>Left<wbr>Watermark<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#timechartaxisleftwatermark">Time<wbr>Chart<wbr>Axis<wbr>Left<wbr>Watermark[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2944,7 +2944,7 @@ The following state arguments are supported:
 <a href="#watermarks_python" style="color: inherit; text-decoration: inherit;">watermarks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timechartaxisleftwatermark">Sequence[Time<wbr>Chart<wbr>Axis<wbr>Left<wbr>Watermark<wbr>Args]</a></span>
+        <span class="property-type"><a href="#timechartaxisleftwatermark">Sequence[Time<wbr>Chart<wbr>Axis<wbr>Left<wbr>Watermark]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3107,7 +3107,7 @@ The following state arguments are supported:
 <a href="#watermarks_csharp" style="color: inherit; text-decoration: inherit;">Watermarks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timechartaxisrightwatermark">List&lt;Pulumi.<wbr>Signal<wbr>Fx.<wbr>Inputs.<wbr>Time<wbr>Chart<wbr>Axis<wbr>Right<wbr>Watermark<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#timechartaxisrightwatermark">List&lt;Pulumi.<wbr>Signal<wbr>Fx.<wbr>Inputs.<wbr>Time<wbr>Chart<wbr>Axis<wbr>Right<wbr>Watermark&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3257,7 +3257,7 @@ The following state arguments are supported:
 <a href="#watermarks_nodejs" style="color: inherit; text-decoration: inherit;">watermarks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timechartaxisrightwatermark">Time<wbr>Chart<wbr>Axis<wbr>Right<wbr>Watermark<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#timechartaxisrightwatermark">Time<wbr>Chart<wbr>Axis<wbr>Right<wbr>Watermark[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3332,7 +3332,7 @@ The following state arguments are supported:
 <a href="#watermarks_python" style="color: inherit; text-decoration: inherit;">watermarks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#timechartaxisrightwatermark">Sequence[Time<wbr>Chart<wbr>Axis<wbr>Right<wbr>Watermark<wbr>Args]</a></span>
+        <span class="property-type"><a href="#timechartaxisrightwatermark">Sequence[Time<wbr>Chart<wbr>Axis<wbr>Right<wbr>Watermark]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}

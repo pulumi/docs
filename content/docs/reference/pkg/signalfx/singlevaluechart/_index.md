@@ -454,7 +454,7 @@ The SingleValueChart resource accepts the following [input]({{< relref "/docs/in
 <a href="#colorscales_go" style="color: inherit; text-decoration: inherit;">Color<wbr>Scales</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#singlevaluechartcolorscale">[]Single<wbr>Value<wbr>Chart<wbr>Color<wbr>Scale</a></span>
+        <span class="property-type"><a href="#singlevaluechartcolorscale">[]Single<wbr>Value<wbr>Chart<wbr>Color<wbr>Scale<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Single color range including both the color to display for that range and the borders of the range. Example: `[{ gt = 60, color = "blue" }, { lte = 60, color = "yellow" }]`. Look at this [link](https://docs.signalfx.com/en/latest/charts/chart-options-tab.html).
 {{% /md %}}</dd><dt class="property-optional"
@@ -553,7 +553,7 @@ The SingleValueChart resource accepts the following [input]({{< relref "/docs/in
 <a href="#vizoptions_go" style="color: inherit; text-decoration: inherit;">Viz<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#singlevaluechartvizoption">[]Single<wbr>Value<wbr>Chart<wbr>Viz<wbr>Option</a></span>
+        <span class="property-type"><a href="#singlevaluechartvizoption">[]Single<wbr>Value<wbr>Chart<wbr>Viz<wbr>Option<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Plot-level customization options, associated with a publish statement.
 {{% /md %}}</dd></dl>
@@ -1205,7 +1205,7 @@ The following state arguments are supported:
 <a href="#state_colorscales_go" style="color: inherit; text-decoration: inherit;">Color<wbr>Scales</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#singlevaluechartcolorscale">[]Single<wbr>Value<wbr>Chart<wbr>Color<wbr>Scale</a></span>
+        <span class="property-type"><a href="#singlevaluechartcolorscale">[]Single<wbr>Value<wbr>Chart<wbr>Color<wbr>Scale<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Single color range including both the color to display for that range and the borders of the range. Example: `[{ gt = 60, color = "blue" }, { lte = 60, color = "yellow" }]`. Look at this [link](https://docs.signalfx.com/en/latest/charts/chart-options-tab.html).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1322,7 +1322,7 @@ The following state arguments are supported:
 <a href="#state_vizoptions_go" style="color: inherit; text-decoration: inherit;">Viz<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#singlevaluechartvizoption">[]Single<wbr>Value<wbr>Chart<wbr>Viz<wbr>Option</a></span>
+        <span class="property-type"><a href="#singlevaluechartvizoption">[]Single<wbr>Value<wbr>Chart<wbr>Viz<wbr>Option<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Plot-level customization options, associated with a publish statement.
 {{% /md %}}</dd></dl>

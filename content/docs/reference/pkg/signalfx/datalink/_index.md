@@ -449,7 +449,7 @@ The DataLink resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#targetexternalurls_go" style="color: inherit; text-decoration: inherit;">Target<wbr>External<wbr>Urls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datalinktargetexternalurl">[]Data<wbr>Link<wbr>Target<wbr>External<wbr>Url</a></span>
+        <span class="property-type"><a href="#datalinktargetexternalurl">[]Data<wbr>Link<wbr>Target<wbr>External<wbr>Url<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Link to an external URL
 {{% /md %}}</dd><dt class="property-optional"
@@ -458,7 +458,7 @@ The DataLink resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#targetsignalfxdashboards_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Signalfx<wbr>Dashboards</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datalinktargetsignalfxdashboard">[]Data<wbr>Link<wbr>Target<wbr>Signalfx<wbr>Dashboard</a></span>
+        <span class="property-type"><a href="#datalinktargetsignalfxdashboard">[]Data<wbr>Link<wbr>Target<wbr>Signalfx<wbr>Dashboard<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Link to a SignalFx dashboard
 {{% /md %}}</dd><dt class="property-optional"
@@ -467,7 +467,7 @@ The DataLink resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#targetsplunks_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Splunks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datalinktargetsplunk">[]Data<wbr>Link<wbr>Target<wbr>Splunk</a></span>
+        <span class="property-type"><a href="#datalinktargetsplunk">[]Data<wbr>Link<wbr>Target<wbr>Splunk<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Link to an external URL
 {{% /md %}}</dd></dl>
@@ -867,7 +867,7 @@ The following state arguments are supported:
 <a href="#state_targetexternalurls_go" style="color: inherit; text-decoration: inherit;">Target<wbr>External<wbr>Urls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datalinktargetexternalurl">[]Data<wbr>Link<wbr>Target<wbr>External<wbr>Url</a></span>
+        <span class="property-type"><a href="#datalinktargetexternalurl">[]Data<wbr>Link<wbr>Target<wbr>External<wbr>Url<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Link to an external URL
 {{% /md %}}</dd><dt class="property-optional"
@@ -876,7 +876,7 @@ The following state arguments are supported:
 <a href="#state_targetsignalfxdashboards_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Signalfx<wbr>Dashboards</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datalinktargetsignalfxdashboard">[]Data<wbr>Link<wbr>Target<wbr>Signalfx<wbr>Dashboard</a></span>
+        <span class="property-type"><a href="#datalinktargetsignalfxdashboard">[]Data<wbr>Link<wbr>Target<wbr>Signalfx<wbr>Dashboard<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Link to a SignalFx dashboard
 {{% /md %}}</dd><dt class="property-optional"
@@ -885,7 +885,7 @@ The following state arguments are supported:
 <a href="#state_targetsplunks_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Splunks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datalinktargetsplunk">[]Data<wbr>Link<wbr>Target<wbr>Splunk</a></span>
+        <span class="property-type"><a href="#datalinktargetsplunk">[]Data<wbr>Link<wbr>Target<wbr>Splunk<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Link to an external URL
 {{% /md %}}</dd></dl>

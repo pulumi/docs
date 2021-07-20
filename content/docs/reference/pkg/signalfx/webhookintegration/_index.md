@@ -224,7 +224,7 @@ The WebhookIntegration resource accepts the following [input]({{< relref "/docs/
 <a href="#headers_go" style="color: inherit; text-decoration: inherit;">Headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webhookintegrationheader">[]Webhook<wbr>Integration<wbr>Header</a></span>
+        <span class="property-type"><a href="#webhookintegrationheader">[]Webhook<wbr>Integration<wbr>Header<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A header to send with the request
 {{% /md %}}</dd><dt class="property-optional"
@@ -601,7 +601,7 @@ The following state arguments are supported:
 <a href="#state_headers_go" style="color: inherit; text-decoration: inherit;">Headers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webhookintegrationheader">[]Webhook<wbr>Integration<wbr>Header</a></span>
+        <span class="property-type"><a href="#webhookintegrationheader">[]Webhook<wbr>Integration<wbr>Header<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A header to send with the request
 {{% /md %}}</dd><dt class="property-optional"

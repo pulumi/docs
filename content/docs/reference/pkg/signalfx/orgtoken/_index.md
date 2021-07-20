@@ -389,7 +389,7 @@ https://developers.signalfx.com/v2/docs/detector-model#notifications-models for 
 <a href="#dpmlimits_go" style="color: inherit; text-decoration: inherit;">Dpm<wbr>Limits</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#orgtokendpmlimits">Org<wbr>Token<wbr>Dpm<wbr>Limits</a></span>
+        <span class="property-type"><a href="#orgtokendpmlimits">Org<wbr>Token<wbr>Dpm<wbr>Limits<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specify DPM-based limits for this token.
 {{% /md %}}</dd><dt class="property-optional"
@@ -398,7 +398,7 @@ https://developers.signalfx.com/v2/docs/detector-model#notifications-models for 
 <a href="#hostorusagelimits_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Or<wbr>Usage<wbr>Limits</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#orgtokenhostorusagelimits">Org<wbr>Token<wbr>Host<wbr>Or<wbr>Usage<wbr>Limits</a></span>
+        <span class="property-type"><a href="#orgtokenhostorusagelimits">Org<wbr>Token<wbr>Host<wbr>Or<wbr>Usage<wbr>Limits<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specify Usage-based limits for this token.
 {{% /md %}}</dd><dt class="property-optional"
@@ -857,7 +857,7 @@ https://developers.signalfx.com/v2/docs/detector-model#notifications-models for 
 <a href="#state_dpmlimits_go" style="color: inherit; text-decoration: inherit;">Dpm<wbr>Limits</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#orgtokendpmlimits">Org<wbr>Token<wbr>Dpm<wbr>Limits</a></span>
+        <span class="property-type"><a href="#orgtokendpmlimits">Org<wbr>Token<wbr>Dpm<wbr>Limits<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specify DPM-based limits for this token.
 {{% /md %}}</dd><dt class="property-optional"
@@ -866,7 +866,7 @@ https://developers.signalfx.com/v2/docs/detector-model#notifications-models for 
 <a href="#state_hostorusagelimits_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Or<wbr>Usage<wbr>Limits</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#orgtokenhostorusagelimits">Org<wbr>Token<wbr>Host<wbr>Or<wbr>Usage<wbr>Limits</a></span>
+        <span class="property-type"><a href="#orgtokenhostorusagelimits">Org<wbr>Token<wbr>Host<wbr>Or<wbr>Usage<wbr>Limits<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specify Usage-based limits for this token.
 {{% /md %}}</dd><dt class="property-optional"

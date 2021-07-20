@@ -329,7 +329,7 @@ The AlertMutingRule resource accepts the following [input]({{< relref "/docs/int
 <a href="#filters_go" style="color: inherit; text-decoration: inherit;">Filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertmutingrulefilter">[]Alert<wbr>Muting<wbr>Rule<wbr>Filter</a></span>
+        <span class="property-type"><a href="#alertmutingrulefilter">[]Alert<wbr>Muting<wbr>Rule<wbr>Filter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Filters for this rule. See [Creating muting rules from scratch](https://docs.signalfx.com/en/latest/detect-alert/mute-notifications.html#rule-from-scratch) for more information.
 {{% /md %}}</dd><dt class="property-required"
@@ -768,7 +768,7 @@ The following state arguments are supported:
 <a href="#state_filters_go" style="color: inherit; text-decoration: inherit;">Filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertmutingrulefilter">[]Alert<wbr>Muting<wbr>Rule<wbr>Filter</a></span>
+        <span class="property-type"><a href="#alertmutingrulefilter">[]Alert<wbr>Muting<wbr>Rule<wbr>Filter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Filters for this rule. See [Creating muting rules from scratch](https://docs.signalfx.com/en/latest/detect-alert/mute-notifications.html#rule-from-scratch) for more information.
 {{% /md %}}</dd><dt class="property-optional"

@@ -367,7 +367,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#charts_go" style="color: inherit; text-decoration: inherit;">Charts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardchart">[]Dashboard<wbr>Chart</a></span>
+        <span class="property-type"><a href="#dashboardchart">[]Dashboard<wbr>Chart<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Chart ID and layout information for the charts in the dashboard.
 {{% /md %}}</dd><dt class="property-optional"
@@ -385,7 +385,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#columns_go" style="color: inherit; text-decoration: inherit;">Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardcolumn">[]Dashboard<wbr>Column</a></span>
+        <span class="property-type"><a href="#dashboardcolumn">[]Dashboard<wbr>Column<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Column number for the layout.
 {{% /md %}}</dd><dt class="property-optional"
@@ -428,7 +428,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#eventoverlays_go" style="color: inherit; text-decoration: inherit;">Event<wbr>Overlays</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardeventoverlay">[]Dashboard<wbr>Event<wbr>Overlay</a></span>
+        <span class="property-type"><a href="#dashboardeventoverlay">[]Dashboard<wbr>Event<wbr>Overlay<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specify a list of event overlays to include in the dashboard. Note: These overlays correspond to the *suggested* event overlays specified in the web UI, and they're not automatically applied as active overlays. To set default active event overlays, use the `selected_event_overlay` property instead.
 {{% /md %}}</dd><dt class="property-optional"
@@ -437,7 +437,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#filters_go" style="color: inherit; text-decoration: inherit;">Filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardfilter">[]Dashboard<wbr>Filter</a></span>
+        <span class="property-type"><a href="#dashboardfilter">[]Dashboard<wbr>Filter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Filter to apply to the charts when displaying the dashboard.
 {{% /md %}}</dd><dt class="property-optional"
@@ -446,7 +446,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#grids_go" style="color: inherit; text-decoration: inherit;">Grids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardgrid">[]Dashboard<wbr>Grid</a></span>
+        <span class="property-type"><a href="#dashboardgrid">[]Dashboard<wbr>Grid<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Grid dashboard layout. Charts listed will be placed in a grid by row with the same width and height. If a chart cannot fit in a row, it will be placed automatically in the next row.
 {{% /md %}}</dd><dt class="property-optional"
@@ -464,7 +464,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#selectedeventoverlays_go" style="color: inherit; text-decoration: inherit;">Selected<wbr>Event<wbr>Overlays</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardselectedeventoverlay">[]Dashboard<wbr>Selected<wbr>Event<wbr>Overlay</a></span>
+        <span class="property-type"><a href="#dashboardselectedeventoverlay">[]Dashboard<wbr>Selected<wbr>Event<wbr>Overlay<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines event overlays which are enabled by **default**. Any overlay specified here should have an accompanying entry in `event_overlay`, which are similar to the properties here.
 {{% /md %}}</dd><dt class="property-optional"
@@ -491,7 +491,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#variables_go" style="color: inherit; text-decoration: inherit;">Variables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardvariable">[]Dashboard<wbr>Variable</a></span>
+        <span class="property-type"><a href="#dashboardvariable">[]Dashboard<wbr>Variable<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Dashboard variable to apply to each chart in the dashboard.
 {{% /md %}}</dd></dl>
@@ -1258,7 +1258,7 @@ The following state arguments are supported:
 <a href="#state_charts_go" style="color: inherit; text-decoration: inherit;">Charts</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardchart">[]Dashboard<wbr>Chart</a></span>
+        <span class="property-type"><a href="#dashboardchart">[]Dashboard<wbr>Chart<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Chart ID and layout information for the charts in the dashboard.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1276,7 +1276,7 @@ The following state arguments are supported:
 <a href="#state_columns_go" style="color: inherit; text-decoration: inherit;">Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardcolumn">[]Dashboard<wbr>Column</a></span>
+        <span class="property-type"><a href="#dashboardcolumn">[]Dashboard<wbr>Column<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Column number for the layout.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1328,7 +1328,7 @@ The following state arguments are supported:
 <a href="#state_eventoverlays_go" style="color: inherit; text-decoration: inherit;">Event<wbr>Overlays</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardeventoverlay">[]Dashboard<wbr>Event<wbr>Overlay</a></span>
+        <span class="property-type"><a href="#dashboardeventoverlay">[]Dashboard<wbr>Event<wbr>Overlay<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specify a list of event overlays to include in the dashboard. Note: These overlays correspond to the *suggested* event overlays specified in the web UI, and they're not automatically applied as active overlays. To set default active event overlays, use the `selected_event_overlay` property instead.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1337,7 +1337,7 @@ The following state arguments are supported:
 <a href="#state_filters_go" style="color: inherit; text-decoration: inherit;">Filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardfilter">[]Dashboard<wbr>Filter</a></span>
+        <span class="property-type"><a href="#dashboardfilter">[]Dashboard<wbr>Filter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Filter to apply to the charts when displaying the dashboard.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1346,7 +1346,7 @@ The following state arguments are supported:
 <a href="#state_grids_go" style="color: inherit; text-decoration: inherit;">Grids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardgrid">[]Dashboard<wbr>Grid</a></span>
+        <span class="property-type"><a href="#dashboardgrid">[]Dashboard<wbr>Grid<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Grid dashboard layout. Charts listed will be placed in a grid by row with the same width and height. If a chart cannot fit in a row, it will be placed automatically in the next row.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1364,7 +1364,7 @@ The following state arguments are supported:
 <a href="#state_selectedeventoverlays_go" style="color: inherit; text-decoration: inherit;">Selected<wbr>Event<wbr>Overlays</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardselectedeventoverlay">[]Dashboard<wbr>Selected<wbr>Event<wbr>Overlay</a></span>
+        <span class="property-type"><a href="#dashboardselectedeventoverlay">[]Dashboard<wbr>Selected<wbr>Event<wbr>Overlay<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines event overlays which are enabled by **default**. Any overlay specified here should have an accompanying entry in `event_overlay`, which are similar to the properties here.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1400,7 +1400,7 @@ The following state arguments are supported:
 <a href="#state_variables_go" style="color: inherit; text-decoration: inherit;">Variables</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardvariable">[]Dashboard<wbr>Variable</a></span>
+        <span class="property-type"><a href="#dashboardvariable">[]Dashboard<wbr>Variable<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Dashboard variable to apply to each chart in the dashboard.
 {{% /md %}}</dd></dl>
@@ -2166,7 +2166,7 @@ The following state arguments are supported:
 <a href="#sources_csharp" style="color: inherit; text-decoration: inherit;">Sources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardeventoverlaysource">List&lt;Pulumi.<wbr>Signal<wbr>Fx.<wbr>Inputs.<wbr>Dashboard<wbr>Event<wbr>Overlay<wbr>Source<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#dashboardeventoverlaysource">List&lt;Pulumi.<wbr>Signal<wbr>Fx.<wbr>Inputs.<wbr>Dashboard<wbr>Event<wbr>Overlay<wbr>Source&gt;</a></span>
     </dt>
     <dd>{{% md %}}Each element specifies a filter to use against the signal specified in the `signal`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2282,7 +2282,7 @@ The following state arguments are supported:
 <a href="#sources_nodejs" style="color: inherit; text-decoration: inherit;">sources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardeventoverlaysource">Dashboard<wbr>Event<wbr>Overlay<wbr>Source<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#dashboardeventoverlaysource">Dashboard<wbr>Event<wbr>Overlay<wbr>Source[]</a></span>
     </dt>
     <dd>{{% md %}}Each element specifies a filter to use against the signal specified in the `signal`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2340,7 +2340,7 @@ The following state arguments are supported:
 <a href="#sources_python" style="color: inherit; text-decoration: inherit;">sources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardeventoverlaysource">Sequence[Dashboard<wbr>Event<wbr>Overlay<wbr>Source<wbr>Args]</a></span>
+        <span class="property-type"><a href="#dashboardeventoverlaysource">Sequence[Dashboard<wbr>Event<wbr>Overlay<wbr>Source]</a></span>
     </dt>
     <dd>{{% md %}}Each element specifies a filter to use against the signal specified in the `signal`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2787,7 +2787,7 @@ The following state arguments are supported:
 <a href="#sources_csharp" style="color: inherit; text-decoration: inherit;">Sources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardselectedeventoverlaysource">List&lt;Pulumi.<wbr>Signal<wbr>Fx.<wbr>Inputs.<wbr>Dashboard<wbr>Selected<wbr>Event<wbr>Overlay<wbr>Source<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#dashboardselectedeventoverlaysource">List&lt;Pulumi.<wbr>Signal<wbr>Fx.<wbr>Inputs.<wbr>Dashboard<wbr>Selected<wbr>Event<wbr>Overlay<wbr>Source&gt;</a></span>
     </dt>
     <dd>{{% md %}}Each element specifies a filter to use against the signal specified in the `signal`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2849,7 +2849,7 @@ The following state arguments are supported:
 <a href="#sources_nodejs" style="color: inherit; text-decoration: inherit;">sources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardselectedeventoverlaysource">Dashboard<wbr>Selected<wbr>Event<wbr>Overlay<wbr>Source<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#dashboardselectedeventoverlaysource">Dashboard<wbr>Selected<wbr>Event<wbr>Overlay<wbr>Source[]</a></span>
     </dt>
     <dd>{{% md %}}Each element specifies a filter to use against the signal specified in the `signal`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2880,7 +2880,7 @@ The following state arguments are supported:
 <a href="#sources_python" style="color: inherit; text-decoration: inherit;">sources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardselectedeventoverlaysource">Sequence[Dashboard<wbr>Selected<wbr>Event<wbr>Overlay<wbr>Source<wbr>Args]</a></span>
+        <span class="property-type"><a href="#dashboardselectedeventoverlaysource">Sequence[Dashboard<wbr>Selected<wbr>Event<wbr>Overlay<wbr>Source]</a></span>
     </dt>
     <dd>{{% md %}}Each element specifies a filter to use against the signal specified in the `signal`.
 {{% /md %}}</dd><dt class="property-optional"
