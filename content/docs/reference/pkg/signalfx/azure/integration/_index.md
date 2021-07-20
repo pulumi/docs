@@ -513,7 +513,7 @@ The Integration resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#customnamespacesperservices_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Namespaces<wbr>Per<wbr>Services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationcustomnamespacesperservice">[]Integration<wbr>Custom<wbr>Namespaces<wbr>Per<wbr>Service</a></span>
+        <span class="property-type"><a href="#integrationcustomnamespacesperservice">[]Integration<wbr>Custom<wbr>Namespaces<wbr>Per<wbr>Service<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Allows for more fine-grained control of syncing of custom namespaces, should the boolean convenience parameter `sync_guest_os_namespaces` be not enough. The customer may specify a map of services to custom namespaces. If they do so, for each service which is a key in this map, we will attempt to sync metrics from namespaces in the value list in addition to the default namespaces.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1108,7 +1108,7 @@ The following state arguments are supported:
 <a href="#state_customnamespacesperservices_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Namespaces<wbr>Per<wbr>Services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationcustomnamespacesperservice">[]Integration<wbr>Custom<wbr>Namespaces<wbr>Per<wbr>Service</a></span>
+        <span class="property-type"><a href="#integrationcustomnamespacesperservice">[]Integration<wbr>Custom<wbr>Namespaces<wbr>Per<wbr>Service<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Allows for more fine-grained control of syncing of custom namespaces, should the boolean convenience parameter `sync_guest_os_namespaces` be not enough. The customer may specify a map of services to custom namespaces. If they do so, for each service which is a key in this map, we will attempt to sync metrics from namespaces in the value list in addition to the default namespaces.
 {{% /md %}}</dd><dt class="property-optional"

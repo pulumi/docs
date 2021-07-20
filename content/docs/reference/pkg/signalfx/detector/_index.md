@@ -733,7 +733,7 @@ The Detector resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#rules_go" style="color: inherit; text-decoration: inherit;">Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#detectorrule">[]Detector<wbr>Rule</a></span>
+        <span class="property-type"><a href="#detectorrule">[]Detector<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Set of rules used for alerting.
 {{% /md %}}</dd><dt class="property-optional"
@@ -877,7 +877,7 @@ The Detector resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#vizoptions_go" style="color: inherit; text-decoration: inherit;">Viz<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#detectorvizoption">[]Detector<wbr>Viz<wbr>Option</a></span>
+        <span class="property-type"><a href="#detectorvizoption">[]Detector<wbr>Viz<wbr>Option<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Plot-level customization options, associated with a publish statement.
 {{% /md %}}</dd></dl>
@@ -1713,7 +1713,7 @@ The following state arguments are supported:
 <a href="#state_rules_go" style="color: inherit; text-decoration: inherit;">Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#detectorrule">[]Detector<wbr>Rule</a></span>
+        <span class="property-type"><a href="#detectorrule">[]Detector<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Set of rules used for alerting.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1794,7 +1794,7 @@ The following state arguments are supported:
 <a href="#state_vizoptions_go" style="color: inherit; text-decoration: inherit;">Viz<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#detectorvizoption">[]Detector<wbr>Viz<wbr>Option</a></span>
+        <span class="property-type"><a href="#detectorvizoption">[]Detector<wbr>Viz<wbr>Option<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Plot-level customization options, associated with a publish statement.
 {{% /md %}}</dd></dl>

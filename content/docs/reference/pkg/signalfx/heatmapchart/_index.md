@@ -542,7 +542,7 @@ The HeatmapChart resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#colorrange_go" style="color: inherit; text-decoration: inherit;">Color<wbr>Range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#heatmapchartcolorrange">Heatmap<wbr>Chart<wbr>Color<wbr>Range</a></span>
+        <span class="property-type"><a href="#heatmapchartcolorrange">Heatmap<wbr>Chart<wbr>Color<wbr>Range<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Values and color for the color range. Example: `color_range : { min : 0, max : 100, color : "#0000ff" }`. Look at this [link](https://docs.signalfx.com/en/latest/charts/chart-options-tab.html).
 {{% /md %}}</dd><dt class="property-optional"
@@ -551,7 +551,7 @@ The HeatmapChart resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#colorscales_go" style="color: inherit; text-decoration: inherit;">Color<wbr>Scales</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#heatmapchartcolorscale">[]Heatmap<wbr>Chart<wbr>Color<wbr>Scale</a></span>
+        <span class="property-type"><a href="#heatmapchartcolorscale">[]Heatmap<wbr>Chart<wbr>Color<wbr>Scale<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One to N blocks, each defining a single color range including both the color to display for that range and the borders of the range. Example: `color_scale { gt = 60, color = "blue" } color_scale { lte = 60, color = "yellow" }`. Look at this [link](https://docs.signalfx.com/en/latest/charts/chart-options-tab.html).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1293,7 +1293,7 @@ The following state arguments are supported:
 <a href="#state_colorrange_go" style="color: inherit; text-decoration: inherit;">Color<wbr>Range</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#heatmapchartcolorrange">Heatmap<wbr>Chart<wbr>Color<wbr>Range</a></span>
+        <span class="property-type"><a href="#heatmapchartcolorrange">Heatmap<wbr>Chart<wbr>Color<wbr>Range<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Values and color for the color range. Example: `color_range : { min : 0, max : 100, color : "#0000ff" }`. Look at this [link](https://docs.signalfx.com/en/latest/charts/chart-options-tab.html).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1302,7 +1302,7 @@ The following state arguments are supported:
 <a href="#state_colorscales_go" style="color: inherit; text-decoration: inherit;">Color<wbr>Scales</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#heatmapchartcolorscale">[]Heatmap<wbr>Chart<wbr>Color<wbr>Scale</a></span>
+        <span class="property-type"><a href="#heatmapchartcolorscale">[]Heatmap<wbr>Chart<wbr>Color<wbr>Scale<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One to N blocks, each defining a single color range including both the color to display for that range and the borders of the range. Example: `color_scale { gt = 60, color = "blue" } color_scale { lte = 60, color = "yellow" }`. Look at this [link](https://docs.signalfx.com/en/latest/charts/chart-options-tab.html).
 {{% /md %}}</dd><dt class="property-optional"

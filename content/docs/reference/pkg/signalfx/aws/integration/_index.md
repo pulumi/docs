@@ -588,7 +588,7 @@ The Integration resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#customnamespacesyncrules_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Namespace<wbr>Sync<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationcustomnamespacesyncrule">[]Integration<wbr>Custom<wbr>Namespace<wbr>Sync<wbr>Rule</a></span>
+        <span class="property-type"><a href="#integrationcustomnamespacesyncrule">[]Integration<wbr>Custom<wbr>Namespace<wbr>Sync<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Each element controls the data collected by SignalFx for the specified namespace. Conflicts with the `custom_cloudwatch_namespaces` property.
 {{% /md %}}</dd><dt class="property-optional"
@@ -651,7 +651,7 @@ The Integration resource accepts the following [input]({{< relref "/docs/intro/c
 <a href="#namespacesyncrules_go" style="color: inherit; text-decoration: inherit;">Namespace<wbr>Sync<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationnamespacesyncrule">[]Integration<wbr>Namespace<wbr>Sync<wbr>Rule</a></span>
+        <span class="property-type"><a href="#integrationnamespacesyncrule">[]Integration<wbr>Namespace<wbr>Sync<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Each element in the array is an object that contains an AWS namespace name and a filter that controls the data that SignalFx collects for the namespace. Conflicts with the `services` property. If you don't specify either property, SignalFx syncs all data in all AWS namespaces.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1395,7 +1395,7 @@ The following state arguments are supported:
 <a href="#state_customnamespacesyncrules_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Namespace<wbr>Sync<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationcustomnamespacesyncrule">[]Integration<wbr>Custom<wbr>Namespace<wbr>Sync<wbr>Rule</a></span>
+        <span class="property-type"><a href="#integrationcustomnamespacesyncrule">[]Integration<wbr>Custom<wbr>Namespace<wbr>Sync<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Each element controls the data collected by SignalFx for the specified namespace. Conflicts with the `custom_cloudwatch_namespaces` property.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1476,7 +1476,7 @@ The following state arguments are supported:
 <a href="#state_namespacesyncrules_go" style="color: inherit; text-decoration: inherit;">Namespace<wbr>Sync<wbr>Rules</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationnamespacesyncrule">[]Integration<wbr>Namespace<wbr>Sync<wbr>Rule</a></span>
+        <span class="property-type"><a href="#integrationnamespacesyncrule">[]Integration<wbr>Namespace<wbr>Sync<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Each element in the array is an object that contains an AWS namespace name and a filter that controls the data that SignalFx collects for the namespace. Conflicts with the `services` property. If you don't specify either property, SignalFx syncs all data in all AWS namespaces.
 {{% /md %}}</dd><dt class="property-optional"

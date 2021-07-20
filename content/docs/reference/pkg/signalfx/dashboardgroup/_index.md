@@ -527,7 +527,7 @@ The DashboardGroup resource accepts the following [input]({{< relref "/docs/intr
 <a href="#dashboards_go" style="color: inherit; text-decoration: inherit;">Dashboards</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardgroupdashboard">[]Dashboard<wbr>Group<wbr>Dashboard</a></span>
+        <span class="property-type"><a href="#dashboardgroupdashboard">[]Dashboard<wbr>Group<wbr>Dashboard<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[Mirrored dashboards](https://docs.signalfx.com/en/latest/dashboards/dashboard-mirrors.html) in this dashboard group. **Note:** This feature is not present in all accounts. Please contact support if you are unsure.
 {{% /md %}}</dd><dt class="property-optional"
@@ -545,7 +545,7 @@ The DashboardGroup resource accepts the following [input]({{< relref "/docs/intr
 <a href="#importqualifiers_go" style="color: inherit; text-decoration: inherit;">Import<wbr>Qualifiers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardgroupimportqualifier">[]Dashboard<wbr>Group<wbr>Import<wbr>Qualifier</a></span>
+        <span class="property-type"><a href="#dashboardgroupimportqualifier">[]Dashboard<wbr>Group<wbr>Import<wbr>Qualifier<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -978,7 +978,7 @@ The following state arguments are supported:
 <a href="#state_dashboards_go" style="color: inherit; text-decoration: inherit;">Dashboards</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardgroupdashboard">[]Dashboard<wbr>Group<wbr>Dashboard</a></span>
+        <span class="property-type"><a href="#dashboardgroupdashboard">[]Dashboard<wbr>Group<wbr>Dashboard<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}[Mirrored dashboards](https://docs.signalfx.com/en/latest/dashboards/dashboard-mirrors.html) in this dashboard group. **Note:** This feature is not present in all accounts. Please contact support if you are unsure.
 {{% /md %}}</dd><dt class="property-optional"
@@ -996,7 +996,7 @@ The following state arguments are supported:
 <a href="#state_importqualifiers_go" style="color: inherit; text-decoration: inherit;">Import<wbr>Qualifiers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardgroupimportqualifier">[]Dashboard<wbr>Group<wbr>Import<wbr>Qualifier</a></span>
+        <span class="property-type"><a href="#dashboardgroupimportqualifier">[]Dashboard<wbr>Group<wbr>Import<wbr>Qualifier<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1187,7 +1187,7 @@ The following state arguments are supported:
 <a href="#filteroverrides_csharp" style="color: inherit; text-decoration: inherit;">Filter<wbr>Overrides</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardgroupdashboardfilteroverride">List&lt;Pulumi.<wbr>Signal<wbr>Fx.<wbr>Inputs.<wbr>Dashboard<wbr>Group<wbr>Dashboard<wbr>Filter<wbr>Override<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#dashboardgroupdashboardfilteroverride">List&lt;Pulumi.<wbr>Signal<wbr>Fx.<wbr>Inputs.<wbr>Dashboard<wbr>Group<wbr>Dashboard<wbr>Filter<wbr>Override&gt;</a></span>
     </dt>
     <dd>{{% md %}}The description that will override the original dashboards's description.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1205,7 +1205,7 @@ The following state arguments are supported:
 <a href="#variableoverrides_csharp" style="color: inherit; text-decoration: inherit;">Variable<wbr>Overrides</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardgroupdashboardvariableoverride">List&lt;Pulumi.<wbr>Signal<wbr>Fx.<wbr>Inputs.<wbr>Dashboard<wbr>Group<wbr>Dashboard<wbr>Variable<wbr>Override<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#dashboardgroupdashboardvariableoverride">List&lt;Pulumi.<wbr>Signal<wbr>Fx.<wbr>Inputs.<wbr>Dashboard<wbr>Group<wbr>Dashboard<wbr>Variable<wbr>Override&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1283,7 +1283,7 @@ The following state arguments are supported:
 <a href="#filteroverrides_nodejs" style="color: inherit; text-decoration: inherit;">filter<wbr>Overrides</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardgroupdashboardfilteroverride">Dashboard<wbr>Group<wbr>Dashboard<wbr>Filter<wbr>Override<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#dashboardgroupdashboardfilteroverride">Dashboard<wbr>Group<wbr>Dashboard<wbr>Filter<wbr>Override[]</a></span>
     </dt>
     <dd>{{% md %}}The description that will override the original dashboards's description.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1301,7 +1301,7 @@ The following state arguments are supported:
 <a href="#variableoverrides_nodejs" style="color: inherit; text-decoration: inherit;">variable<wbr>Overrides</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardgroupdashboardvariableoverride">Dashboard<wbr>Group<wbr>Dashboard<wbr>Variable<wbr>Override<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#dashboardgroupdashboardvariableoverride">Dashboard<wbr>Group<wbr>Dashboard<wbr>Variable<wbr>Override[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1331,7 +1331,7 @@ The following state arguments are supported:
 <a href="#filter_overrides_python" style="color: inherit; text-decoration: inherit;">filter_<wbr>overrides</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardgroupdashboardfilteroverride">Sequence[Dashboard<wbr>Group<wbr>Dashboard<wbr>Filter<wbr>Override<wbr>Args]</a></span>
+        <span class="property-type"><a href="#dashboardgroupdashboardfilteroverride">Sequence[Dashboard<wbr>Group<wbr>Dashboard<wbr>Filter<wbr>Override]</a></span>
     </dt>
     <dd>{{% md %}}The description that will override the original dashboards's description.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1349,7 +1349,7 @@ The following state arguments are supported:
 <a href="#variable_overrides_python" style="color: inherit; text-decoration: inherit;">variable_<wbr>overrides</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardgroupdashboardvariableoverride">Sequence[Dashboard<wbr>Group<wbr>Dashboard<wbr>Variable<wbr>Override<wbr>Args]</a></span>
+        <span class="property-type"><a href="#dashboardgroupdashboardvariableoverride">Sequence[Dashboard<wbr>Group<wbr>Dashboard<wbr>Variable<wbr>Override]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1615,7 +1615,7 @@ The following state arguments are supported:
 <a href="#filters_csharp" style="color: inherit; text-decoration: inherit;">Filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardgroupimportqualifierfilter">List&lt;Pulumi.<wbr>Signal<wbr>Fx.<wbr>Inputs.<wbr>Dashboard<wbr>Group<wbr>Import<wbr>Qualifier<wbr>Filter<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#dashboardgroupimportqualifierfilter">List&lt;Pulumi.<wbr>Signal<wbr>Fx.<wbr>Inputs.<wbr>Dashboard<wbr>Group<wbr>Import<wbr>Qualifier<wbr>Filter&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1655,7 +1655,7 @@ The following state arguments are supported:
 <a href="#filters_nodejs" style="color: inherit; text-decoration: inherit;">filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardgroupimportqualifierfilter">Dashboard<wbr>Group<wbr>Import<wbr>Qualifier<wbr>Filter<wbr>Args[]</a></span>
+        <span class="property-type"><a href="#dashboardgroupimportqualifierfilter">Dashboard<wbr>Group<wbr>Import<wbr>Qualifier<wbr>Filter[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1675,7 +1675,7 @@ The following state arguments are supported:
 <a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardgroupimportqualifierfilter">Sequence[Dashboard<wbr>Group<wbr>Import<wbr>Qualifier<wbr>Filter<wbr>Args]</a></span>
+        <span class="property-type"><a href="#dashboardgroupimportqualifierfilter">Sequence[Dashboard<wbr>Group<wbr>Import<wbr>Qualifier<wbr>Filter]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">

@@ -620,7 +620,7 @@ The ListChart resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#colorscales_go" style="color: inherit; text-decoration: inherit;">Color<wbr>Scales</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#listchartcolorscale">[]List<wbr>Chart<wbr>Color<wbr>Scale</a></span>
+        <span class="property-type"><a href="#listchartcolorscale">[]List<wbr>Chart<wbr>Color<wbr>Scale<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Single color range including both the color to display for that range and the borders of the range. Example: `[{ gt = 60, color = "blue" }, { lte = 60, color = "yellow" }]`. Look at this [link](https://docs.signalfx.com/en/latest/charts/chart-options-tab.html).
 {{% /md %}}</dd><dt class="property-optional"
@@ -674,7 +674,7 @@ The ListChart resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#legendoptionsfields_go" style="color: inherit; text-decoration: inherit;">Legend<wbr>Options<wbr>Fields</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#listchartlegendoptionsfield">[]List<wbr>Chart<wbr>Legend<wbr>Options<wbr>Field</a></span>
+        <span class="property-type"><a href="#listchartlegendoptionsfield">[]List<wbr>Chart<wbr>Legend<wbr>Options<wbr>Field<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List of property names and enabled flags that should be displayed in the data table for the chart, in the order provided. This option cannot be used with `legend_fields_to_hide`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -773,7 +773,7 @@ The ListChart resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#vizoptions_go" style="color: inherit; text-decoration: inherit;">Viz<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#listchartvizoption">[]List<wbr>Chart<wbr>Viz<wbr>Option</a></span>
+        <span class="property-type"><a href="#listchartvizoption">[]List<wbr>Chart<wbr>Viz<wbr>Option<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Plot-level customization options, associated with a publish statement.
 {{% /md %}}</dd></dl>
@@ -1593,7 +1593,7 @@ The following state arguments are supported:
 <a href="#state_colorscales_go" style="color: inherit; text-decoration: inherit;">Color<wbr>Scales</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#listchartcolorscale">[]List<wbr>Chart<wbr>Color<wbr>Scale</a></span>
+        <span class="property-type"><a href="#listchartcolorscale">[]List<wbr>Chart<wbr>Color<wbr>Scale<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Single color range including both the color to display for that range and the borders of the range. Example: `[{ gt = 60, color = "blue" }, { lte = 60, color = "yellow" }]`. Look at this [link](https://docs.signalfx.com/en/latest/charts/chart-options-tab.html).
 {{% /md %}}</dd><dt class="property-optional"
@@ -1647,7 +1647,7 @@ The following state arguments are supported:
 <a href="#state_legendoptionsfields_go" style="color: inherit; text-decoration: inherit;">Legend<wbr>Options<wbr>Fields</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#listchartlegendoptionsfield">[]List<wbr>Chart<wbr>Legend<wbr>Options<wbr>Field</a></span>
+        <span class="property-type"><a href="#listchartlegendoptionsfield">[]List<wbr>Chart<wbr>Legend<wbr>Options<wbr>Field<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List of property names and enabled flags that should be displayed in the data table for the chart, in the order provided. This option cannot be used with `legend_fields_to_hide`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1764,7 +1764,7 @@ The following state arguments are supported:
 <a href="#state_vizoptions_go" style="color: inherit; text-decoration: inherit;">Viz<wbr>Options</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#listchartvizoption">[]List<wbr>Chart<wbr>Viz<wbr>Option</a></span>
+        <span class="property-type"><a href="#listchartvizoption">[]List<wbr>Chart<wbr>Viz<wbr>Option<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Plot-level customization options, associated with a publish statement.
 {{% /md %}}</dd></dl>
