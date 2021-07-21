@@ -410,7 +410,7 @@ If you have previously configured the AWS CLI, the same credentials will be used
 
 #### Azure Key Vault
 
-The `azurekeyvault` provider uses an Azure Key Vault key for encryption. This key is specified using an [Azure Key object identifier](https://docs.microsoft.com/en-us/azure/key-vault/about-keys-secrets-and-certificates), which includes both your key vault's name and the key to use: `azurekeyvault://mykeyvaultname.vault.azure.net/keys/mykeyname`.
+The `azurekeyvault` provider uses an Azure Key Vault key for encryption. This key is specified using an [Azure Key object identifier](https://docs.microsoft.com/en-us/azure/key-vault/keys/about-keys), which includes both your key vault's name and the key to use: `azurekeyvault://mykeyvaultname.vault.azure.net/keys/mykeyname`.
 
 For example, this configures a stack to use an Azure Key Vault key named `payroll` in vault `acmecorpsec`:
 
