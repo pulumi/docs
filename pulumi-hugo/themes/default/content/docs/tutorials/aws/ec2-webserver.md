@@ -5,9 +5,9 @@ meta_desc: This tutorial will teach you how to deploy a simple webserver to an
 aliases: ["/docs/reference/tutorials/aws/tutorial-ec2-webserver/"]
 ---
 
-{{< github-buttons "aws-js-webserver" "aws-py-webserver" >}}
+{{< github-buttons "aws-ts-webserver" "aws-js-webserver" "aws-py-webserver" "aws-cs-webserver" >}}
 
-In this tutorial, we will show you how to use JavaScript or Python to deploy a simple webserver using an Amazon EC2 instance.
+In this tutorial, we will show you how to deploy a simple webserver using an Amazon EC2 instance.
 
 {{< multilang-tutorial-prereqs >}}
 
@@ -546,7 +546,7 @@ Hello, World!
 ## Summary
 
 {{< summary >}}
-In this tutorial, we showed you how to use Pulumi programs to create and manage cloud resources in AWS, using TypeScript, JavaScript, or Python (and its corresponding package manager).
+In this tutorial, we showed you how to use Pulumi programs to create and manage cloud resources in AWS, using TypeScript, JavaScript, Python, or C#.
 {{< /summary >}}
 
 <!-- Common links -->

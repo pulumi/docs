@@ -5,6 +5,8 @@ meta_desc: How to create a guestbook application with Redis and Nginx powered by
 aliases: ["/docs/reference/tutorials/kubernetes/tutorial-guestbook/"]
 ---
 
+{{< github-buttons "kubernetes-ts-guestbook" "kubernetes-py-guestbook" "kubernetes-go-guestbook" "kubernetes-cs-guestbook" >}}
+
 In this tutorial, we'll build and deploy
 [the standard Kubernetes Guestbook example](https://github.com/kubernetes/examples/tree/master/guestbook) using Pulumi.
 

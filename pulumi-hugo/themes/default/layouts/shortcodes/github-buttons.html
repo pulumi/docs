@@ -1,8 +1,31 @@
-<p class="mb-4 flex">
-    <a class="flex flex-wrap items-center rounded text-xs text-white bg-blue-600 border-2 border-blue-600 px-2 mr-2 whitespace-nowrap hover:text-white" style="height: 32px" href="https://github.com/pulumi/examples/tree/master/{{ .Get 0 }}" target="_blank">
-        <span><i class="fab fa-github pr-2"></i> View JS Code</span>
-    </a>
-    <a class="flex flex-wrap items-center rounded text-xs text-white bg-blue-600 border-2 border-blue-600 px-2 mr-2 whitespace-nowrap hover:text-white" style="height: 32px" href="https://github.com/pulumi/examples/tree/master/{{ .Get 1 }}" target="_blank">
-        <span><i class="fab fa-github pr-2"></i> View Python Code</span>
-    </a>
-</p>
+{{ $numberOfArguments := (len .Params) }}
+
+{{/* Map of the language tokens to friendly names. */}}
+{{ $langs := (dict "js" "JavaScript" "ts" "TypeScript" "py" "Python" "go" "Go" "cs" "C#") }}
+
+{{ if gt $numberOfArguments 0 }}
+    <p class="mb-4 flex">
+        {{ range (seq 0 (sub $numberOfArguments 1)) }}
+            {{ $project := ($.Get .) }}
+
+            {{/* Arguments are expected to be in the form "cloud-language-name" (e.g., "aws-ts-webserver"). */}}
+            {{ $tokens := (split $project "-") }}
+
+            {{ if $tokens }}
+
+                {{/* Language should be the second item in the list. */}}
+                {{ $lang := index $tokens 1 }}
+
+                {{ if $lang }}
+                    {{ $langName := index $langs $lang }}
+
+                    {{ if $langName }}
+                        <a class="flex flex-wrap items-center rounded text-xs text-white bg-blue-600 border-2 border-blue-600 px-2 mr-2 whitespace-nowrap hover:text-white" style="height: 32px" href="https://github.com/pulumi/examples/tree/master/{{ $project }}" target="_blank">
+                            <span><i class="fab fa-github pr-2"></i> View {{ $langName }} Code</span>
+                        </a>
+                    {{ end }}
+                {{ end }}
+            {{ end }}
+        {{ end }}
+    </p>
+{{ end }}
