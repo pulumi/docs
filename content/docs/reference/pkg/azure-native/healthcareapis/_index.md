@@ -11,14 +11,24 @@ Explore the resources and functions of the azure-native.healthcareapis module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
+    <li><a href="dicomservice" title="DicomService"><span class="symbol resource"></span>DicomService</a></li>
+    <li><a href="fhirservice" title="FhirService"><span class="symbol resource"></span>FhirService</a></li>
+    <li><a href="iotconnector" title="IotConnector"><span class="symbol resource"></span>IotConnector</a></li>
+    <li><a href="iotconnectorfhirdestination" title="IotConnectorFhirDestination"><span class="symbol resource"></span>IotConnectorFhirDestination</a></li>
     <li><a href="privateendpointconnection" title="PrivateEndpointConnection"><span class="symbol resource"></span>PrivateEndpointConnection</a></li>
     <li><a href="service" title="Service"><span class="symbol resource"></span>Service</a></li>
+    <li><a href="workspace" title="Workspace"><span class="symbol resource"></span>Workspace</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
+    <li><a href="getdicomservice" title="GetDicomService"><span class="symbol function"></span>GetDicomService</a></li>
+    <li><a href="getfhirservice" title="GetFhirService"><span class="symbol function"></span>GetFhirService</a></li>
+    <li><a href="getiotconnector" title="GetIotConnector"><span class="symbol function"></span>GetIotConnector</a></li>
+    <li><a href="getiotconnectorfhirdestination" title="GetIotConnectorFhirDestination"><span class="symbol function"></span>GetIotConnectorFhirDestination</a></li>
     <li><a href="getprivateendpointconnection" title="GetPrivateEndpointConnection"><span class="symbol function"></span>GetPrivateEndpointConnection</a></li>
     <li><a href="getservice" title="GetService"><span class="symbol function"></span>GetService</a></li>
+    <li><a href="getworkspace" title="GetWorkspace"><span class="symbol function"></span>GetWorkspace</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -28,6 +38,6 @@ Explore the resources and functions of the azure-native.healthcareapis module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>1.18.0</dd>
+	<dd>1.19.0</dd>
 </dl>
 

@@ -797,7 +797,7 @@ const cluster = new azure_native.servicefabric.Cluster("cluster", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewCluster</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ClusterArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Cluster</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewCluster</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ClusterArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Cluster</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -858,7 +858,7 @@ const cluster = new azure_native.servicefabric.Cluster("cluster", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
@@ -876,7 +876,7 @@ const cluster = new azure_native.servicefabric.Cluster("cluster", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
@@ -2418,7 +2418,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxunusedversionstokeep_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Unused<wbr>Versions<wbr>To<wbr>Keep</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Number of unused versions per application type to keep.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2430,7 +2430,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxunusedversionstokeep_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Unused<wbr>Versions<wbr>To<wbr>Keep</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Number of unused versions per application type to keep.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2454,7 +2454,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_unused_versions_to_keep_python" style="color: inherit; text-decoration: inherit;">max_<wbr>unused_<wbr>versions_<wbr>to_<wbr>keep</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Number of unused versions per application type to keep.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2468,7 +2468,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxunusedversionstokeep_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Unused<wbr>Versions<wbr>To<wbr>Keep</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Number of unused versions per application type to keep.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2480,7 +2480,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxunusedversionstokeep_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Unused<wbr>Versions<wbr>To<wbr>Keep</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Number of unused versions per application type to keep.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2504,7 +2504,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_unused_versions_to_keep_python" style="color: inherit; text-decoration: inherit;">max_<wbr>unused_<wbr>versions_<wbr>to_<wbr>keep</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Number of unused versions per application type to keep.{{% /md %}}</dd></dl>
 {{% /choosable %}}

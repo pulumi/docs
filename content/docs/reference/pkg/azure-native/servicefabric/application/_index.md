@@ -425,7 +425,7 @@ const application = new azure_native.servicefabric.Application("application", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewApplication</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ApplicationArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Application</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewApplication</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ApplicationArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Application</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -486,7 +486,7 @@ const application = new azure_native.servicefabric.Application("application", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
@@ -504,7 +504,7 @@ const application = new azure_native.servicefabric.Application("application", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
@@ -1651,6 +1651,14 @@ When creating a new application with application capacity defined, the product o
     </dt>
     <dd>{{% md %}}If true, then processes are forcefully restarted during upgrade even when the code version has not changed (the upgrade only changes configuration or data).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="recreateapplication_csharp">
+<a href="#recreateapplication_csharp" style="color: inherit; text-decoration: inherit;">Recreate<wbr>Application</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Determines whether the application should be recreated on update. If value=true, the rest of the upgrade policy parameters are not allowed and it will result in availability loss.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="rollingupgrademonitoringpolicy_csharp">
 <a href="#rollingupgrademonitoringpolicy_csharp" style="color: inherit; text-decoration: inherit;">Rolling<wbr>Upgrade<wbr>Monitoring<wbr>Policy</a>
 </span>
@@ -1695,6 +1703,14 @@ When creating a new application with application capacity defined, the product o
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, then processes are forcefully restarted during upgrade even when the code version has not changed (the upgrade only changes configuration or data).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="recreateapplication_go">
+<a href="#recreateapplication_go" style="color: inherit; text-decoration: inherit;">Recreate<wbr>Application</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Determines whether the application should be recreated on update. If value=true, the rest of the upgrade policy parameters are not allowed and it will result in availability loss.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rollingupgrademonitoringpolicy_go">
 <a href="#rollingupgrademonitoringpolicy_go" style="color: inherit; text-decoration: inherit;">Rolling<wbr>Upgrade<wbr>Monitoring<wbr>Policy</a>
@@ -1741,6 +1757,14 @@ When creating a new application with application capacity defined, the product o
     </dt>
     <dd>{{% md %}}If true, then processes are forcefully restarted during upgrade even when the code version has not changed (the upgrade only changes configuration or data).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="recreateapplication_nodejs">
+<a href="#recreateapplication_nodejs" style="color: inherit; text-decoration: inherit;">recreate<wbr>Application</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Determines whether the application should be recreated on update. If value=true, the rest of the upgrade policy parameters are not allowed and it will result in availability loss.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="rollingupgrademonitoringpolicy_nodejs">
 <a href="#rollingupgrademonitoringpolicy_nodejs" style="color: inherit; text-decoration: inherit;">rolling<wbr>Upgrade<wbr>Monitoring<wbr>Policy</a>
 </span>
@@ -1785,6 +1809,14 @@ When creating a new application with application capacity defined, the product o
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, then processes are forcefully restarted during upgrade even when the code version has not changed (the upgrade only changes configuration or data).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="recreate_application_python">
+<a href="#recreate_application_python" style="color: inherit; text-decoration: inherit;">recreate_<wbr>application</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Determines whether the application should be recreated on update. If value=true, the rest of the upgrade policy parameters are not allowed and it will result in availability loss.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rolling_upgrade_monitoring_policy_python">
 <a href="#rolling_upgrade_monitoring_policy_python" style="color: inherit; text-decoration: inherit;">rolling_<wbr>upgrade_<wbr>monitoring_<wbr>policy</a>
@@ -1833,6 +1865,14 @@ When creating a new application with application capacity defined, the product o
     </dt>
     <dd>{{% md %}}If true, then processes are forcefully restarted during upgrade even when the code version has not changed (the upgrade only changes configuration or data).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="recreateapplication_csharp">
+<a href="#recreateapplication_csharp" style="color: inherit; text-decoration: inherit;">Recreate<wbr>Application</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Determines whether the application should be recreated on update. If value=true, the rest of the upgrade policy parameters are not allowed and it will result in availability loss.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="rollingupgrademonitoringpolicy_csharp">
 <a href="#rollingupgrademonitoringpolicy_csharp" style="color: inherit; text-decoration: inherit;">Rolling<wbr>Upgrade<wbr>Monitoring<wbr>Policy</a>
 </span>
@@ -1877,6 +1917,14 @@ When creating a new application with application capacity defined, the product o
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, then processes are forcefully restarted during upgrade even when the code version has not changed (the upgrade only changes configuration or data).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="recreateapplication_go">
+<a href="#recreateapplication_go" style="color: inherit; text-decoration: inherit;">Recreate<wbr>Application</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Determines whether the application should be recreated on update. If value=true, the rest of the upgrade policy parameters are not allowed and it will result in availability loss.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rollingupgrademonitoringpolicy_go">
 <a href="#rollingupgrademonitoringpolicy_go" style="color: inherit; text-decoration: inherit;">Rolling<wbr>Upgrade<wbr>Monitoring<wbr>Policy</a>
@@ -1923,6 +1971,14 @@ When creating a new application with application capacity defined, the product o
     </dt>
     <dd>{{% md %}}If true, then processes are forcefully restarted during upgrade even when the code version has not changed (the upgrade only changes configuration or data).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="recreateapplication_nodejs">
+<a href="#recreateapplication_nodejs" style="color: inherit; text-decoration: inherit;">recreate<wbr>Application</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Determines whether the application should be recreated on update. If value=true, the rest of the upgrade policy parameters are not allowed and it will result in availability loss.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="rollingupgrademonitoringpolicy_nodejs">
 <a href="#rollingupgrademonitoringpolicy_nodejs" style="color: inherit; text-decoration: inherit;">rolling<wbr>Upgrade<wbr>Monitoring<wbr>Policy</a>
 </span>
@@ -1967,6 +2023,14 @@ When creating a new application with application capacity defined, the product o
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, then processes are forcefully restarted during upgrade even when the code version has not changed (the upgrade only changes configuration or data).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="recreate_application_python">
+<a href="#recreate_application_python" style="color: inherit; text-decoration: inherit;">recreate_<wbr>application</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Determines whether the application should be recreated on update. If value=true, the rest of the upgrade policy parameters are not allowed and it will result in availability loss.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rolling_upgrade_monitoring_policy_python">
 <a href="#rolling_upgrade_monitoring_policy_python" style="color: inherit; text-decoration: inherit;">rolling_<wbr>upgrade_<wbr>monitoring_<wbr>policy</a>

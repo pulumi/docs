@@ -135,27 +135,27 @@ import pulumi_azure_native as azure_native
 
 labeling_job = azure_native.machinelearningservices.LabelingJob("labelingJob",
     labeling_job_id="testLabelingJob",
-    properties=azure_native.machinelearningservices.LabelingJobPropertiesArgs(
-        dataset_configuration=azure_native.machinelearningservices.LabelingDatasetConfigurationArgs(
+    properties={
+        "datasetConfiguration": azure_native.machinelearningservices.LabelingDatasetConfigurationArgs(
             asset_name="testdataasset",
             dataset_version="1",
             enable_incremental_dataset_refresh=True,
         ),
-        job_instructions=azure_native.machinelearningservices.LabelingJobInstructionsArgs(
+        "jobInstructions": azure_native.machinelearningservices.LabelingJobInstructionsArgs(
             uri="https://www.testjobInstructions.com/labeling1.txt",
         ),
-        label_categories={
+        "labelCategories": {
             "testCategory": {
                 "allowMultiSelect": False,
                 "classes": {
-                    "testClass1": azure_native.machinelearningservices.LabelClassArgs(
-                        display_name="testClass1",
-                        subclasses={
+                    "testClass1": {
+                        "displayName": "testClass1",
+                        "subclasses": {
                             "testclass1-1": azure_native.machinelearningservices.LabelClassArgs(
                                 display_name="testClass1-1",
                             ),
                         },
-                    ),
+                    },
                     "testClass2": azure_native.machinelearningservices.LabelClassArgs(
                         display_name="testClass2",
                     ),
@@ -163,11 +163,11 @@ labeling_job = azure_native.machinelearningservices.LabelingJob("labelingJob",
                 "displayName": "testCategory",
             },
         },
-        labeling_job_media_properties=azure_native.machinelearningservices.LabelingJobImagePropertiesArgs(
+        "labelingJobMediaProperties": azure_native.machinelearningservices.LabelingJobImagePropertiesArgs(
             annotation_type="BoundingBox",
             media_type="Image",
         ),
-        ml_assist_configuration=azure_native.machinelearningservices.MLAssistConfigurationArgs(
+        "mlAssistConfiguration": azure_native.machinelearningservices.MLAssistConfigurationArgs(
             inferencing_compute_binding=azure_native.machinelearningservices.ComputeBindingArgs(
                 compute_id="inferencingcompute",
             ),
@@ -178,17 +178,17 @@ labeling_job = azure_native.machinelearningservices.LabelingJob("labelingJob",
                 compute_id="trainingcompute",
             ),
         ),
-        properties={
+        "properties": {
             "additionalProp1": "string",
             "additionalProp2": "string",
             "additionalProp3": "string",
         },
-        tags={
+        "tags": {
             "additionalProp1": "string",
             "additionalProp2": "string",
             "additionalProp3": "string",
         },
-    ),
+    },
     resource_group_name="workspace-1234",
     workspace_name="testworkspace")
 
@@ -302,7 +302,7 @@ const labelingJob = new azure_native.machinelearningservices.LabelingJob("labeli
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewLabelingJob</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">LabelingJobArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">LabelingJob</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewLabelingJob</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">LabelingJobArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">LabelingJob</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -363,7 +363,7 @@ const labelingJob = new azure_native.machinelearningservices.LabelingJob("labeli
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
@@ -381,7 +381,7 @@ const labelingJob = new azure_native.machinelearningservices.LabelingJob("labeli
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
