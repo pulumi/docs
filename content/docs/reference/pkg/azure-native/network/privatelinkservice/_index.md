@@ -95,65 +95,7 @@ class MyStack : Stack
 
 {{< example go >}}
 
-
-```go
-package main
-
-import (
-	network "github.com/pulumi/pulumi-azure-native/sdk/go/azure/network"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := network.NewPrivateLinkService(ctx, "privateLinkService", &network.PrivateLinkServiceArgs{
-			AutoApproval: &network.PrivateLinkServicePropertiesAutoApprovalArgs{
-				Subscriptions: pulumi.StringArray{
-					pulumi.String("subscription1"),
-					pulumi.String("subscription2"),
-				},
-			},
-			Fqdns: pulumi.StringArray{
-				pulumi.String("fqdn1"),
-				pulumi.String("fqdn2"),
-				pulumi.String("fqdn3"),
-			},
-			IpConfigurations: network.PrivateLinkServiceIpConfigurationArray{
-				&network.PrivateLinkServiceIpConfigurationArgs{
-					Name:                      pulumi.String("fe-lb"),
-					PrivateIPAddress:          pulumi.String("10.0.1.4"),
-					PrivateIPAddressVersion:   pulumi.String("IPv4"),
-					PrivateIPAllocationMethod: pulumi.String("Static"),
-					Subnet: &network.SubnetArgs{
-						Id: pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnetlb/subnets/subnetlb"),
-					},
-				},
-			},
-			LoadBalancerFrontendIpConfigurations: network.FrontendIPConfigurationArray{
-				&network.FrontendIPConfigurationArgs{
-					Id: pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/frontendIPConfigurations/fe-lb"),
-				},
-			},
-			Location:          pulumi.String("eastus"),
-			ResourceGroupName: pulumi.String("rg1"),
-			ServiceName:       pulumi.String("testPls"),
-			Visibility: &network.PrivateLinkServicePropertiesVisibilityArgs{
-				Subscriptions: pulumi.StringArray{
-					pulumi.String("subscription1"),
-					pulumi.String("subscription2"),
-					pulumi.String("subscription3"),
-				},
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
+Coming soon!
 
 {{< /example >}}
 
@@ -294,7 +236,7 @@ const privateLinkService = new azure_native.network.PrivateLinkService("privateL
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewPrivateLinkService</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">PrivateLinkServiceArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">PrivateLinkService</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewPrivateLinkService</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">PrivateLinkServiceArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">PrivateLinkService</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -355,7 +297,7 @@ const privateLinkService = new azure_native.network.PrivateLinkService("privateL
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
@@ -373,7 +315,7 @@ const privateLinkService = new azure_native.network.PrivateLinkService("privateL
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 

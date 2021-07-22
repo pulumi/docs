@@ -90,6 +90,7 @@ A native Pulumi package for creating and managing Azure resources.
     <li><a href="eventhub/" title="eventhub"><span class="symbol module"></span>eventhub</a></li>
     <li><a href="extendedlocation/" title="extendedlocation"><span class="symbol module"></span>extendedlocation</a></li>
     <li><a href="features/" title="features"><span class="symbol module"></span>features</a></li>
+    <li><a href="fluidrelay/" title="fluidrelay"><span class="symbol module"></span>fluidrelay</a></li>
     <li><a href="guestconfiguration/" title="guestconfiguration"><span class="symbol module"></span>guestconfiguration</a></li>
     <li><a href="hanaonazure/" title="hanaonazure"><span class="symbol module"></span>hanaonazure</a></li>
     <li><a href="hardwaresecuritymodules/" title="hardwaresecuritymodules"><span class="symbol module"></span>hardwaresecuritymodules</a></li>
@@ -195,6 +196,6 @@ A native Pulumi package for creating and managing Azure resources.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>1.18.0</dd>
+	<dd>1.19.0</dd>
 </dl>
 

@@ -286,8 +286,8 @@ import pulumi_azure_native as azure_native
 
 web_service = azure_native.machinelearning.WebService("webService",
     location="West US",
-    properties={
-        "assets": {
+    properties=azure_native.machinelearning.WebServicePropertiesForGraphArgs(
+        assets={
             "asset1": azure_native.machinelearning.AssetItemArgs(
                 location_info=azure_native.machinelearning.BlobLocationArgs(
                     credentials="",
@@ -305,14 +305,14 @@ web_service = azure_native.machinelearning.WebService("webService",
                 type="Module",
             ),
         },
-        "commitmentPlan": azure_native.machinelearning.CommitmentPlanArgs(
+        commitment_plan=azure_native.machinelearning.CommitmentPlanArgs(
             id="/subscriptions/subscriptionId/resourceGroups/resourceGroupName/providers/Microsoft.MachineLearning/commitmentPlans/commitmentPlanName",
         ),
-        "description": "Web Service Description",
-        "diagnostics": azure_native.machinelearning.DiagnosticsConfigurationArgs(
+        description="Web Service Description",
+        diagnostics=azure_native.machinelearning.DiagnosticsConfigurationArgs(
             level="None",
         ),
-        "exampleRequest": azure_native.machinelearning.ExampleRequestArgs(
+        example_request=azure_native.machinelearning.ExampleRequestArgs(
             inputs={
                 "input1": [
                     ["age"],
@@ -323,8 +323,8 @@ web_service = azure_native.machinelearning.WebService("webService",
                 ],
             },
         ),
-        "exposeSampleData": True,
-        "input": azure_native.machinelearning.ServiceInputOutputSpecificationArgs(
+        expose_sample_data=True,
+        input=azure_native.machinelearning.ServiceInputOutputSpecificationArgs(
             description="",
             properties={
                 "input1": azure_native.machinelearning.TableSpecificationArgs(
@@ -342,10 +342,10 @@ web_service = azure_native.machinelearning.WebService("webService",
             title="",
             type="object",
         ),
-        "machineLearningWorkspace": azure_native.machinelearning.MachineLearningWorkspaceArgs(
+        machine_learning_workspace=azure_native.machinelearning.MachineLearningWorkspaceArgs(
             id="workspaceId",
         ),
-        "output": azure_native.machinelearning.ServiceInputOutputSpecificationArgs(
+        output=azure_native.machinelearning.ServiceInputOutputSpecificationArgs(
             description="",
             properties={
                 "output1": azure_native.machinelearning.TableSpecificationArgs(
@@ -368,7 +368,7 @@ web_service = azure_native.machinelearning.WebService("webService",
             title="",
             type="object",
         ),
-        "package": azure_native.machinelearning.GraphPackageArgs(
+        package=azure_native.machinelearning.GraphPackageArgs(
             edges=[
                 azure_native.machinelearning.GraphEdgeArgs(
                     source_node_id="node2",
@@ -431,19 +431,19 @@ web_service = azure_native.machinelearning.WebService("webService",
                 ),
             },
         ),
-        "packageType": "Graph",
-        "parameters": {},
-        "payloadsInBlobStorage": False,
-        "readOnly": False,
-        "realtimeConfiguration": azure_native.machinelearning.RealtimeConfigurationArgs(
+        package_type="Graph",
+        parameters={},
+        payloads_in_blob_storage=False,
+        read_only=False,
+        realtime_configuration=azure_native.machinelearning.RealtimeConfigurationArgs(
             max_concurrent_calls=4,
         ),
-        "storageAccount": azure_native.machinelearning.StorageAccountArgs(
+        storage_account=azure_native.machinelearning.StorageAccountArgs(
             key="Storage_Key",
             name="Storage_Name",
         ),
-        "title": "Web Service Title",
-    },
+        title="Web Service Title",
+    ),
     resource_group_name="OneResourceGroupName",
     tags={
         "tag1": "value1",
@@ -670,7 +670,7 @@ const webService = new azure_native.machinelearning.WebService("webService", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewWebService</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">WebServiceArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">WebService</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewWebService</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">WebServiceArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">WebService</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -731,7 +731,7 @@ const webService = new azure_native.machinelearning.WebService("webService", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
@@ -749,7 +749,7 @@ const webService = new azure_native.machinelearning.WebService("webService", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 

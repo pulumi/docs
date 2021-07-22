@@ -26,6 +26,6 @@ Explore the resources and functions of the azure-native.virtualmachineimages mod
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>1.18.0</dd>
+	<dd>1.19.0</dd>
 </dl>
 

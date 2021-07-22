@@ -964,6 +964,14 @@ When creating a new application with application capacity defined, the product o
     </dt>
     <dd>{{% md %}}If true, then processes are forcefully restarted during upgrade even when the code version has not changed (the upgrade only changes configuration or data).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="recreateapplication_csharp">
+<a href="#recreateapplication_csharp" style="color: inherit; text-decoration: inherit;">Recreate<wbr>Application</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Determines whether the application should be recreated on update. If value=true, the rest of the upgrade policy parameters are not allowed and it will result in availability loss.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="rollingupgrademonitoringpolicy_csharp">
 <a href="#rollingupgrademonitoringpolicy_csharp" style="color: inherit; text-decoration: inherit;">Rolling<wbr>Upgrade<wbr>Monitoring<wbr>Policy</a>
 </span>
@@ -1008,6 +1016,14 @@ When creating a new application with application capacity defined, the product o
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, then processes are forcefully restarted during upgrade even when the code version has not changed (the upgrade only changes configuration or data).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="recreateapplication_go">
+<a href="#recreateapplication_go" style="color: inherit; text-decoration: inherit;">Recreate<wbr>Application</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Determines whether the application should be recreated on update. If value=true, the rest of the upgrade policy parameters are not allowed and it will result in availability loss.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rollingupgrademonitoringpolicy_go">
 <a href="#rollingupgrademonitoringpolicy_go" style="color: inherit; text-decoration: inherit;">Rolling<wbr>Upgrade<wbr>Monitoring<wbr>Policy</a>
@@ -1054,6 +1070,14 @@ When creating a new application with application capacity defined, the product o
     </dt>
     <dd>{{% md %}}If true, then processes are forcefully restarted during upgrade even when the code version has not changed (the upgrade only changes configuration or data).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="recreateapplication_nodejs">
+<a href="#recreateapplication_nodejs" style="color: inherit; text-decoration: inherit;">recreate<wbr>Application</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Determines whether the application should be recreated on update. If value=true, the rest of the upgrade policy parameters are not allowed and it will result in availability loss.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="rollingupgrademonitoringpolicy_nodejs">
 <a href="#rollingupgrademonitoringpolicy_nodejs" style="color: inherit; text-decoration: inherit;">rolling<wbr>Upgrade<wbr>Monitoring<wbr>Policy</a>
 </span>
@@ -1098,6 +1122,14 @@ When creating a new application with application capacity defined, the product o
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, then processes are forcefully restarted during upgrade even when the code version has not changed (the upgrade only changes configuration or data).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="recreate_application_python">
+<a href="#recreate_application_python" style="color: inherit; text-decoration: inherit;">recreate_<wbr>application</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Determines whether the application should be recreated on update. If value=true, the rest of the upgrade policy parameters are not allowed and it will result in availability loss.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rolling_upgrade_monitoring_policy_python">
 <a href="#rolling_upgrade_monitoring_policy_python" style="color: inherit; text-decoration: inherit;">rolling_<wbr>upgrade_<wbr>monitoring_<wbr>policy</a>

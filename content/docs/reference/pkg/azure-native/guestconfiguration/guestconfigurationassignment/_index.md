@@ -52,13 +52,6 @@ class MyStack : Stack
                             Value = "NotePad,sql",
                         },
                     },
-                    ConfigurationSetting = new AzureNative.GuestConfiguration.Inputs.ConfigurationSettingArgs
-                    {
-                        ActionAfterReboot = "ContinueConfiguration",
-                        ConfigurationMode = "MonitorOnly",
-                        ConfigurationModeFrequencyMins = 15,
-                        RebootIfNeeded = false,
-                    },
                     ContentHash = "123contenthash",
                     ContentUri = "https://thisisfake/pacakge",
                     Name = "WhitelistedApplication",
@@ -105,12 +98,6 @@ func main() {
 							Value: pulumi.String("NotePad,sql"),
 						},
 					},
-					ConfigurationSetting: &guestconfiguration.ConfigurationSettingArgs{
-						ActionAfterReboot:              pulumi.String("ContinueConfiguration"),
-						ConfigurationMode:              pulumi.String("MonitorOnly"),
-						ConfigurationModeFrequencyMins: pulumi.Float64(15),
-						RebootIfNeeded:                 pulumi.Bool(false),
-					},
 					ContentHash: pulumi.String("123contenthash"),
 					ContentUri:  pulumi.String("https://thisisfake/pacakge"),
 					Name:        pulumi.String("WhitelistedApplication"),
@@ -152,12 +139,6 @@ guest_configuration_assignment = azure_native.guestconfiguration.GuestConfigurat
                 name="[InstalledApplication]bwhitelistedapp;Name",
                 value="NotePad,sql",
             )],
-            configuration_setting=azure_native.guestconfiguration.ConfigurationSettingArgs(
-                action_after_reboot="ContinueConfiguration",
-                configuration_mode="MonitorOnly",
-                configuration_mode_frequency_mins=15,
-                reboot_if_needed=False,
-            ),
             content_hash="123contenthash",
             content_uri="https://thisisfake/pacakge",
             name="WhitelistedApplication",
@@ -192,12 +173,6 @@ const guestConfigurationAssignment = new azure_native.guestconfiguration.GuestCo
                 name: "[InstalledApplication]bwhitelistedapp;Name",
                 value: "NotePad,sql",
             }],
-            configurationSetting: {
-                actionAfterReboot: "ContinueConfiguration",
-                configurationMode: "MonitorOnly",
-                configurationModeFrequencyMins: 15,
-                rebootIfNeeded: false,
-            },
             contentHash: "123contenthash",
             contentUri: "https://thisisfake/pacakge",
             name: "WhitelistedApplication",
@@ -247,7 +222,7 @@ const guestConfigurationAssignment = new azure_native.guestconfiguration.GuestCo
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewGuestConfigurationAssignment</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">GuestConfigurationAssignmentArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">GuestConfigurationAssignment</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewGuestConfigurationAssignment</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">GuestConfigurationAssignmentArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">GuestConfigurationAssignment</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -308,7 +283,7 @@ const guestConfigurationAssignment = new azure_native.guestconfiguration.GuestCo
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
@@ -326,7 +301,7 @@ const guestConfigurationAssignment = new azure_native.guestconfiguration.GuestCo
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 

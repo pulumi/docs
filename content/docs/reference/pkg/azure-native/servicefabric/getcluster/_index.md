@@ -1395,7 +1395,7 @@ The following output properties are available:
 <a href="#maxunusedversionstokeep_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Unused<wbr>Versions<wbr>To<wbr>Keep</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Number of unused versions per application type to keep.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1407,7 +1407,7 @@ The following output properties are available:
 <a href="#maxunusedversionstokeep_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Unused<wbr>Versions<wbr>To<wbr>Keep</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Number of unused versions per application type to keep.{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1431,7 +1431,7 @@ The following output properties are available:
 <a href="#max_unused_versions_to_keep_python" style="color: inherit; text-decoration: inherit;">max_<wbr>unused_<wbr>versions_<wbr>to_<wbr>keep</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Number of unused versions per application type to keep.{{% /md %}}</dd></dl>
 {{% /choosable %}}
