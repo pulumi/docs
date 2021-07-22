@@ -115,7 +115,7 @@ class MyStack : Stack
         {
             Zone = "us-central1-b",
             AcceleratorType = "v3-8",
-            TensorflowVersion = available.Apply(available => available.Versions[0]),
+            TensorflowVersion = available.Apply(available => available.Versions?[0]),
             CidrBlock = "10.2.0.0/29",
         });
     }
@@ -190,7 +190,7 @@ const available = gcp.tpu.getTensorflowVersions({});
 const tpu = new gcp.tpu.Node("tpu", {
     zone: "us-central1-b",
     acceleratorType: "v3-8",
-    tensorflowVersion: available.then(available => available.versions[0]),
+    tensorflowVersion: available.then(available => available.versions?[0]),
     cidrBlock: "10.2.0.0/29",
 });
 ```

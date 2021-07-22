@@ -38,8 +38,8 @@ class MyStack : Stack
             Name = "my-cluster",
             Location = "us-east1-a",
         }));
-        this.ClusterUsername = myCluster.Apply(myCluster => myCluster.MasterAuths[0].Username);
-        this.ClusterPassword = myCluster.Apply(myCluster => myCluster.MasterAuths[0].Password);
+        this.ClusterUsername = myCluster.Apply(myCluster => myCluster.MasterAuths?[0]?.Username);
+        this.ClusterPassword = myCluster.Apply(myCluster => myCluster.MasterAuths?[0]?.Password);
         this.Endpoint = myCluster.Apply(myCluster => myCluster.Endpoint);
         this.InstanceGroupUrls = myCluster.Apply(myCluster => myCluster.InstanceGroupUrls);
         this.NodeConfig = myCluster.Apply(myCluster => myCluster.NodeConfigs);
@@ -131,8 +131,8 @@ const myCluster = gcp.container.getCluster({
     name: "my-cluster",
     location: "us-east1-a",
 });
-export const clusterUsername = myCluster.then(myCluster => myCluster.masterAuths[0].username);
-export const clusterPassword = myCluster.then(myCluster => myCluster.masterAuths[0].password);
+export const clusterUsername = myCluster.then(myCluster => myCluster.masterAuths?[0]?.username);
+export const clusterPassword = myCluster.then(myCluster => myCluster.masterAuths?[0]?.password);
 export const endpoint = myCluster.then(myCluster => myCluster.endpoint);
 export const instanceGroupUrls = myCluster.then(myCluster => myCluster.instanceGroupUrls);
 export const nodeConfig = myCluster.then(myCluster => myCluster.nodeConfigs);

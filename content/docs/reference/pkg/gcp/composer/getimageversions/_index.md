@@ -41,7 +41,7 @@ class MyStack : Stack
             {
                 SoftwareConfig = new Gcp.Composer.Inputs.EnvironmentConfigSoftwareConfigArgs
                 {
-                    ImageVersion = all.Apply(all => all.ImageVersions[0].ImageVersionId),
+                    ImageVersion = all.Apply(all => all.ImageVersions?[0]?.ImageVersionId),
                 },
             },
         });
@@ -122,7 +122,7 @@ const test = new gcp.composer.Environment("test", {
     region: "us-central1",
     config: {
         softwareConfig: {
-            imageVersion: all.then(all => all.imageVersions[0].imageVersionId),
+            imageVersion: all.then(all => all.imageVersions?[0]?.imageVersionId),
         },
     },
 });

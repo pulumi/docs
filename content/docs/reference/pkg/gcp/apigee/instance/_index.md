@@ -46,7 +46,7 @@ To get more information about Instance, see:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewInstance</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">InstanceArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Instance</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewInstance</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">InstanceArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Instance</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -107,7 +107,7 @@ To get more information about Instance, see:
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
@@ -125,7 +125,7 @@ To get more information about Instance, see:
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
@@ -233,7 +233,7 @@ Use the following format: `projects/([^/]+)/locations/([^/]+)/keyRings/([^/]+)/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The size of the CIDR block range that will be reserved by the instance.
-Possible values are `SLASH_16`, `SLASH_20`, and `SLASH_23`.
+Possible values are `SLASH_16`, `SLASH_20`, and `SLASH_22`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -305,7 +305,7 @@ Use the following format: `projects/([^/]+)/locations/([^/]+)/keyRings/([^/]+)/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The size of the CIDR block range that will be reserved by the instance.
-Possible values are `SLASH_16`, `SLASH_20`, and `SLASH_23`.
+Possible values are `SLASH_16`, `SLASH_20`, and `SLASH_22`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -377,7 +377,7 @@ Use the following format: `projects/([^/]+)/locations/([^/]+)/keyRings/([^/]+)/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The size of the CIDR block range that will be reserved by the instance.
-Possible values are `SLASH_16`, `SLASH_20`, and `SLASH_23`.
+Possible values are `SLASH_16`, `SLASH_20`, and `SLASH_22`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -449,7 +449,7 @@ Use the following format: `projects/([^/]+)/locations/([^/]+)/keyRings/([^/]+)/c
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The size of the CIDR block range that will be reserved by the instance.
-Possible values are `SLASH_16`, `SLASH_20`, and `SLASH_23`.
+Possible values are `SLASH_16`, `SLASH_20`, and `SLASH_22`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -608,7 +608,7 @@ Get an existing Instance resource's state with the given name, ID, and optional 
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetInstance<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">InstanceState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Instance</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetInstance<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">InstanceState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Instance</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -791,7 +791,7 @@ in the format `organizations/{{org_name}}`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The size of the CIDR block range that will be reserved by the instance.
-Possible values are `SLASH_16`, `SLASH_20`, and `SLASH_23`.
+Possible values are `SLASH_16`, `SLASH_20`, and `SLASH_22`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_port_csharp">
@@ -881,7 +881,7 @@ in the format `organizations/{{org_name}}`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The size of the CIDR block range that will be reserved by the instance.
-Possible values are `SLASH_16`, `SLASH_20`, and `SLASH_23`.
+Possible values are `SLASH_16`, `SLASH_20`, and `SLASH_22`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_port_go">
@@ -971,7 +971,7 @@ in the format `organizations/{{org_name}}`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The size of the CIDR block range that will be reserved by the instance.
-Possible values are `SLASH_16`, `SLASH_20`, and `SLASH_23`.
+Possible values are `SLASH_16`, `SLASH_20`, and `SLASH_22`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_port_nodejs">
@@ -1061,7 +1061,7 @@ in the format `organizations/{{org_name}}`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The size of the CIDR block range that will be reserved by the instance.
-Possible values are `SLASH_16`, `SLASH_20`, and `SLASH_23`.
+Possible values are `SLASH_16`, `SLASH_20`, and `SLASH_22`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_port_python">
