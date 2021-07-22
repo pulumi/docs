@@ -55,7 +55,7 @@ class MyStack : Stack
                 Password = "adoy.rm",
             },
         });
-        this.StableChannelVersion = central1b.Apply(central1b => central1b.ReleaseChannelDefaultVersion.STABLE);
+        this.StableChannelVersion = central1b.Apply(central1b => central1b.ReleaseChannelDefaultVersion?.STABLE);
     }
 
     [Output("stableChannelVersion")]
@@ -153,7 +153,7 @@ const foo = new gcp.container.Cluster("foo", {
         password: "adoy.rm",
     },
 });
-export const stableChannelVersion = central1b.then(central1b => central1b.releaseChannelDefaultVersion.STABLE);
+export const stableChannelVersion = central1b.then(central1b => central1b.releaseChannelDefaultVersion?.STABLE);
 ```
 
 

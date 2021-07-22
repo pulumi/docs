@@ -41,7 +41,7 @@ class MyStack : Stack
         }));
         var deletion_candidate = my_org_projects.Apply(my_org_projects => Output.Create(Gcp.Organizations.GetProject.InvokeAsync(new Gcp.Organizations.GetProjectArgs
         {
-            ProjectId = my_org_projects.Projects[0].ProjectId,
+            ProjectId = my_org_projects.Projects?[0]?.ProjectId,
         })));
     }
 
@@ -112,7 +112,7 @@ const my-org-projects = gcp.projects.getProject({
     filter: "parent.id:012345678910 lifecycleState:DELETE_REQUESTED",
 });
 const deletion-candidate = my_org_projects.then(my_org_projects => gcp.organizations.getProject({
-    projectId: my_org_projects.projects[0].projectId,
+    projectId: my_org_projects.projects?[0]?.projectId,
 }));
 ```
 

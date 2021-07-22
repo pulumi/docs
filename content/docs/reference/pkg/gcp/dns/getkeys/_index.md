@@ -48,7 +48,7 @@ class MyStack : Stack
         {
             ManagedZone = id,
         }));
-        this.FooDnsDsRecord = fooDnsKeys.Apply(fooDnsKeys => fooDnsKeys.KeySigningKeys[0].DsRecord);
+        this.FooDnsDsRecord = fooDnsKeys.Apply(fooDnsKeys => fooDnsKeys.KeySigningKeys?[0]?.DsRecord);
     }
 
     [Output("fooDnsDsRecord")]
@@ -131,7 +131,7 @@ const foo = new gcp.dns.ManagedZone("foo", {
 const fooDnsKeys = foo.id.apply(id => gcp.dns.getKeys({
     managedZone: id,
 }));
-export const fooDnsDsRecord = fooDnsKeys.keySigningKeys[0].dsRecord;
+export const fooDnsDsRecord = fooDnsKeys.apply(fooDnsKeys => fooDnsKeys.keySigningKeys?[0]?.dsRecord);
 ```
 
 

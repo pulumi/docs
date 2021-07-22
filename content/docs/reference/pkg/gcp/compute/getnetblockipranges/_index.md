@@ -193,20 +193,13 @@ func main() {
 					},
 				},
 			},
-			SourceRanges: toPulumiStringArray(legacy_hcs.CidrBlocksIpv4s),
+			SourceRanges: interface{}(legacy_hcs.CidrBlocksIpv4s),
 		})
 		if err != nil {
 			return err
 		}
 		return nil
 	})
-}
-func toPulumiStringArray(arr []string) pulumi.StringArray {
-	var pulumiArr pulumi.StringArray
-	for _, v := range arr {
-		pulumiArr = append(pulumiArr, pulumi.String(v))
-	}
-	return pulumiArr
 }
 ```
 

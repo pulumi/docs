@@ -157,9 +157,9 @@ func main() {
 			Protocol:            pulumi.String("HTTP"),
 			LoadBalancingScheme: pulumi.String("INTERNAL_MANAGED"),
 			TimeoutSec:          pulumi.Int(10),
-			HealthChecks: pulumi.String(pulumi.String{
+			HealthChecks: pulumi.String{
 				_default.ID(),
-			}),
+			},
 		})
 		if err != nil {
 			return err
@@ -169,9 +169,9 @@ func main() {
 			Protocol:            pulumi.String("HTTP"),
 			LoadBalancingScheme: pulumi.String("INTERNAL_MANAGED"),
 			TimeoutSec:          pulumi.Int(10),
-			HealthChecks: pulumi.String(pulumi.String{
+			HealthChecks: pulumi.String{
 				_default.ID(),
-			}),
+			},
 		})
 		if err != nil {
 			return err
@@ -564,9 +564,9 @@ func main() {
 		home, err := compute.NewRegionBackendService(ctx, "home", &compute.RegionBackendServiceArgs{
 			Protocol:   pulumi.String("HTTP"),
 			TimeoutSec: pulumi.Int(10),
-			HealthChecks: pulumi.String(pulumi.String{
+			HealthChecks: pulumi.String{
 				_default.ID(),
-			}),
+			},
 			LoadBalancingScheme: pulumi.String("INTERNAL_MANAGED"),
 		})
 		if err != nil {
@@ -754,7 +754,7 @@ regionurlmap = gcp.compute.RegionUrlMap("regionurlmap",
                     "perTryTimeout": {
                         "seconds": 30,
                     },
-                    "retryConditions": [
+                    "retry_conditions": [
                         "5xx",
                         "deadline-exceeded",
                     ],
@@ -1057,9 +1057,9 @@ func main() {
 		home, err := compute.NewRegionBackendService(ctx, "home", &compute.RegionBackendServiceArgs{
 			Protocol:   pulumi.String("HTTP"),
 			TimeoutSec: pulumi.Int(10),
-			HealthChecks: pulumi.String(pulumi.String{
+			HealthChecks: pulumi.String{
 				_default.ID(),
-			}),
+			},
 			LoadBalancingScheme: pulumi.String("INTERNAL_MANAGED"),
 		})
 		if err != nil {
@@ -1176,7 +1176,7 @@ regionurlmap = gcp.compute.RegionUrlMap("regionurlmap",
                     "perTryTimeout": {
                         "seconds": 30,
                     },
-                    "retryConditions": [
+                    "retry_conditions": [
                         "5xx",
                         "deadline-exceeded",
                     ],
@@ -1468,9 +1468,9 @@ func main() {
 		home, err := compute.NewRegionBackendService(ctx, "home", &compute.RegionBackendServiceArgs{
 			Protocol:   pulumi.String("HTTP"),
 			TimeoutSec: pulumi.Int(10),
-			HealthChecks: pulumi.String(pulumi.String{
+			HealthChecks: pulumi.String{
 				_default.ID(),
-			}),
+			},
 			LoadBalancingScheme: pulumi.String("INTERNAL_MANAGED"),
 		})
 		if err != nil {
@@ -1876,9 +1876,9 @@ func main() {
 		home, err := compute.NewRegionBackendService(ctx, "home", &compute.RegionBackendServiceArgs{
 			Protocol:   pulumi.String("HTTP"),
 			TimeoutSec: pulumi.Int(10),
-			HealthChecks: pulumi.String(pulumi.String{
+			HealthChecks: pulumi.String{
 				_default.ID(),
-			}),
+			},
 			LoadBalancingScheme: pulumi.String("INTERNAL_MANAGED"),
 		})
 		if err != nil {
@@ -2099,7 +2099,7 @@ const regionurlmap = new gcp.compute.RegionUrlMap("regionurlmap", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewRegionUrlMap</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">RegionUrlMapArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">RegionUrlMap</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewRegionUrlMap</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">RegionUrlMapArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">RegionUrlMap</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -2160,7 +2160,7 @@ const regionurlmap = new gcp.compute.RegionUrlMap("regionurlmap", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
@@ -2178,7 +2178,7 @@ const regionurlmap = new gcp.compute.RegionUrlMap("regionurlmap", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
@@ -2837,7 +2837,7 @@ Get an existing RegionUrlMap resource's state with the given name, ID, and optio
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetRegionUrlMap<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">RegionUrlMapState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">RegionUrlMap</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetRegionUrlMap<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">RegionUrlMapState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">RegionUrlMap</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}

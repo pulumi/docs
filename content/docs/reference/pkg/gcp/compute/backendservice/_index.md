@@ -86,9 +86,9 @@ func main() {
 			return err
 		}
 		_, err = compute.NewBackendService(ctx, "defaultBackendService", &compute.BackendServiceArgs{
-			HealthChecks: pulumi.String(pulumi.String{
+			HealthChecks: pulumi.String{
 				defaultHttpHealthCheck.ID(),
-			}),
+			},
 		})
 		if err != nil {
 			return err
@@ -201,9 +201,9 @@ func main() {
 			return err
 		}
 		_, err = compute.NewBackendService(ctx, "defaultBackendService", &compute.BackendServiceArgs{
-			HealthChecks: pulumi.String(pulumi.String{
+			HealthChecks: pulumi.String{
 				defaultHttpHealthCheck.ID(),
-			}),
+			},
 			EnableCdn: pulumi.Bool(true),
 			CdnPolicy: &compute.BackendServiceCdnPolicyArgs{
 				SignedUrlCacheMaxAgeSec: pulumi.Int(7200),
@@ -336,9 +336,9 @@ func main() {
 			return err
 		}
 		_, err = compute.NewBackendService(ctx, "defaultBackendService", &compute.BackendServiceArgs{
-			HealthChecks: pulumi.String(pulumi.String{
+			HealthChecks: pulumi.String{
 				defaultHttpHealthCheck.ID(),
-			}),
+			},
 			EnableCdn: pulumi.Bool(true),
 			CdnPolicy: &compute.BackendServiceCdnPolicyArgs{
 				CacheMode:               pulumi.String("CACHE_ALL_STATIC"),
@@ -485,9 +485,9 @@ func main() {
 			return err
 		}
 		_, err = compute.NewBackendService(ctx, "_default", &compute.BackendServiceArgs{
-			HealthChecks: pulumi.String(pulumi.String{
+			HealthChecks: pulumi.String{
 				healthCheck.ID(),
-			}),
+			},
 			LoadBalancingScheme: pulumi.String("INTERNAL_SELF_MANAGED"),
 			LocalityLbPolicy:    pulumi.String("ROUND_ROBIN"),
 		}, pulumi.Provider(google_beta))
@@ -637,9 +637,9 @@ func main() {
 			return err
 		}
 		_, err = compute.NewBackendService(ctx, "_default", &compute.BackendServiceArgs{
-			HealthChecks: pulumi.String(pulumi.String{
+			HealthChecks: pulumi.String{
 				healthCheck.ID(),
-			}),
+			},
 			LoadBalancingScheme: pulumi.String("INTERNAL_SELF_MANAGED"),
 			LocalityLbPolicy:    pulumi.String("RING_HASH"),
 			SessionAffinity:     pulumi.String("HTTP_COOKIE"),
@@ -928,7 +928,7 @@ const _default = new gcp.compute.BackendService("default", {
     enableCdn: true,
     timeoutSec: 10,
     connectionDrainingTimeoutSec: 10,
-    customRequestHeaders: [pulumi.interpolate`host: ${proxy.fqdn}`],
+    customRequestHeaders: [proxy.fqdn.apply(fqdn => `host: ${fqdn}`)],
     customResponseHeaders: ["X-Cache-Hit: {cdn_cache_status}"],
     backends: [{
         group: externalProxy.id,
@@ -992,7 +992,7 @@ const _default = new gcp.compute.BackendService("default", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewBackendService</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">BackendServiceArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">BackendService</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewBackendService</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">BackendServiceArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">BackendService</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -1053,7 +1053,7 @@ const _default = new gcp.compute.BackendService("default", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
@@ -1071,7 +1071,7 @@ const _default = new gcp.compute.BackendService("default", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
@@ -2427,7 +2427,7 @@ Get an existing BackendService resource's state with the given name, ID, and opt
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetBackendService<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">BackendServiceState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">BackendService</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetBackendService<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">BackendServiceState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">BackendService</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}

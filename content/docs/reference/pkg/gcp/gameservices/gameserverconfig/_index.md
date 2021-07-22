@@ -151,7 +151,112 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+```go
+package main
+
+import (
+	"encoding/json"
+
+	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/gameservices"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		defaultGameServerDeployment, err := gameservices.NewGameServerDeployment(ctx, "defaultGameServerDeployment", &gameservices.GameServerDeploymentArgs{
+			DeploymentId: pulumi.String("tf-test-deployment"),
+			Description:  pulumi.String("a deployment description"),
+		})
+		if err != nil {
+			return err
+		}
+		tmpJSON0, err := json.Marshal(map[string]interface{}{
+			"replicas":   1,
+			"scheduling": "Packed",
+			"template": map[string]interface{}{
+				"metadata": map[string]interface{}{
+					"name": "tf-test-game-server-template",
+				},
+				"spec": map[string]interface{}{
+					"ports": []map[string]interface{}{
+						map[string]interface{}{
+							"name":          "default",
+							"portPolicy":    "Dynamic",
+							"containerPort": 7654,
+							"protocol":      "UDP",
+						},
+					},
+					"template": map[string]interface{}{
+						"spec": map[string]interface{}{
+							"containers": []map[string]interface{}{
+								map[string]interface{}{
+									"name":  "simple-udp-server",
+									"image": "gcr.io/agones-images/udp-server:0.14",
+								},
+							},
+						},
+					},
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		json0 := string(tmpJSON0)
+		tmpJSON1, err := json.Marshal(map[string]interface{}{
+			"policy": map[string]interface{}{
+				"type": "Webhook",
+				"webhook": map[string]interface{}{
+					"service": map[string]interface{}{
+						"name":      "autoscaler-webhook-service",
+						"namespace": "default",
+						"path":      "scale",
+					},
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		json1 := string(tmpJSON1)
+		_, err = gameservices.NewGameServerConfig(ctx, "defaultGameServerConfig", &gameservices.GameServerConfigArgs{
+			ConfigId:     pulumi.String("tf-test-config"),
+			DeploymentId: defaultGameServerDeployment.DeploymentId,
+			Description:  pulumi.String("a config description"),
+			FleetConfigs: gameservices.GameServerConfigFleetConfigArray{
+				&gameservices.GameServerConfigFleetConfigArgs{
+					Name:      pulumi.String("something-unique"),
+					FleetSpec: pulumi.String(json0),
+				},
+			},
+			ScalingConfigs: gameservices.GameServerConfigScalingConfigArray{
+				&gameservices.GameServerConfigScalingConfigArgs{
+					Name:                pulumi.String("scaling-config-name"),
+					FleetAutoscalerSpec: pulumi.String(json1),
+					Selectors: gameservices.GameServerConfigScalingConfigSelectorArray{
+						&gameservices.GameServerConfigScalingConfigSelectorArgs{
+							Labels: pulumi.StringMap{
+								"one": pulumi.String("two"),
+							},
+						},
+					},
+					Schedules: gameservices.GameServerConfigScalingConfigScheduleArray{
+						&gameservices.GameServerConfigScalingConfigScheduleArgs{
+							CronJobDuration: pulumi.String("3.500s"),
+							CronSpec:        pulumi.String("0 0 * * 0"),
+						},
+					},
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 
 {{< /example >}}
 
@@ -337,7 +442,7 @@ const defaultGameServerConfig = new gcp.gameservices.GameServerConfig("defaultGa
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewGameServerConfig</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">GameServerConfigArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">GameServerConfig</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewGameServerConfig</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">GameServerConfigArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">GameServerConfig</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -398,7 +503,7 @@ const defaultGameServerConfig = new gcp.gameservices.GameServerConfig("defaultGa
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
@@ -416,7 +521,7 @@ const defaultGameServerConfig = new gcp.gameservices.GameServerConfig("defaultGa
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
@@ -895,7 +1000,7 @@ Get an existing GameServerConfig resource's state with the given name, ID, and o
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetGameServerConfig<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">GameServerConfigState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">GameServerConfig</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetGameServerConfig<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">GameServerConfigState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">GameServerConfig</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}

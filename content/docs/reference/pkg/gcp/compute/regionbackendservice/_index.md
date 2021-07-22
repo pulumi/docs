@@ -91,9 +91,9 @@ func main() {
 		}
 		_, err = compute.NewRegionBackendService(ctx, "defaultRegionBackendService", &compute.RegionBackendServiceArgs{
 			Region: pulumi.String("us-central1"),
-			HealthChecks: pulumi.String(pulumi.String{
+			HealthChecks: pulumi.String{
 				defaultHealthCheck.ID(),
-			}),
+			},
 			ConnectionDrainingTimeoutSec: pulumi.Int(10),
 			SessionAffinity:              pulumi.String("CLIENT_IP"),
 		})
@@ -233,9 +233,9 @@ func main() {
 		}
 		_, err = compute.NewRegionBackendService(ctx, "defaultRegionBackendService", &compute.RegionBackendServiceArgs{
 			Region: pulumi.String("us-central1"),
-			HealthChecks: pulumi.String(pulumi.String{
+			HealthChecks: pulumi.String{
 				defaultRegionHealthCheck.ID(),
-			}),
+			},
 			EnableCdn: pulumi.Bool(true),
 			CdnPolicy: &compute.RegionBackendServiceCdnPolicyArgs{
 				CacheMode:               pulumi.String("CACHE_ALL_STATIC"),
@@ -389,9 +389,9 @@ func main() {
 		}
 		_, err = compute.NewRegionBackendService(ctx, "_default", &compute.RegionBackendServiceArgs{
 			Region: pulumi.String("us-central1"),
-			HealthChecks: pulumi.String(pulumi.String{
+			HealthChecks: pulumi.String{
 				healthCheck.ID(),
-			}),
+			},
 			Protocol:            pulumi.String("HTTP"),
 			LoadBalancingScheme: pulumi.String("INTERNAL_MANAGED"),
 			LocalityLbPolicy:    pulumi.String("ROUND_ROBIN"),
@@ -523,9 +523,9 @@ func main() {
 		}
 		_, err = compute.NewRegionBackendService(ctx, "_default", &compute.RegionBackendServiceArgs{
 			Region: pulumi.String("us-central1"),
-			HealthChecks: pulumi.String(pulumi.String{
+			HealthChecks: pulumi.String{
 				healthCheck.ID(),
-			}),
+			},
 			Protocol:            pulumi.String("TCP"),
 			LoadBalancingScheme: pulumi.String("EXTERNAL"),
 		}, pulumi.Provider(google_beta))
@@ -679,9 +679,9 @@ func main() {
 		}
 		_, err = compute.NewRegionBackendService(ctx, "_default", &compute.RegionBackendServiceArgs{
 			Region: pulumi.String("us-central1"),
-			HealthChecks: pulumi.String(pulumi.String{
+			HealthChecks: pulumi.String{
 				healthCheck.ID(),
-			}),
+			},
 			LoadBalancingScheme: pulumi.String("INTERNAL_MANAGED"),
 			LocalityLbPolicy:    pulumi.String("RING_HASH"),
 			SessionAffinity:     pulumi.String("HTTP_COOKIE"),
@@ -992,9 +992,9 @@ func main() {
 			Region:     pulumi.String("us-central1"),
 			Protocol:   pulumi.String("HTTP"),
 			TimeoutSec: pulumi.Int(10),
-			HealthChecks: pulumi.String(pulumi.String{
+			HealthChecks: pulumi.String{
 				defaultRegionHealthCheck.ID(),
-			}),
+			},
 		})
 		if err != nil {
 			return err
@@ -1186,7 +1186,7 @@ const defaultRegionBackendService = new gcp.compute.RegionBackendService("defaul
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewRegionBackendService</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">RegionBackendServiceArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">RegionBackendService</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewRegionBackendService</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">RegionBackendServiceArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">RegionBackendService</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -1247,7 +1247,7 @@ const defaultRegionBackendService = new gcp.compute.RegionBackendService("defaul
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
@@ -1265,7 +1265,7 @@ const defaultRegionBackendService = new gcp.compute.RegionBackendService("defaul
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
@@ -2592,7 +2592,7 @@ Get an existing RegionBackendService resource's state with the given name, ID, a
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetRegionBackendService<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">RegionBackendServiceState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">RegionBackendService</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetRegionBackendService<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">RegionBackendServiceState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">RegionBackendService</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}

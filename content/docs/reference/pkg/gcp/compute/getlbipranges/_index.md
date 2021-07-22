@@ -91,7 +91,7 @@ func main() {
 					},
 				},
 			},
-			SourceRanges: toPulumiStringArray(ranges.Networks),
+			SourceRanges: interface{}(ranges.Networks),
 			TargetTags: pulumi.StringArray{
 				pulumi.String("InstanceBehindLoadBalancer"),
 			},
@@ -101,13 +101,6 @@ func main() {
 		}
 		return nil
 	})
-}
-func toPulumiStringArray(arr []string) pulumi.StringArray {
-	var pulumiArr pulumi.StringArray
-	for _, v := range arr {
-		pulumiArr = append(pulumiArr, pulumi.String(v))
-	}
-	return pulumiArr
 }
 ```
 

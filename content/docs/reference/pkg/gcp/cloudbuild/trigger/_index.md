@@ -301,18 +301,18 @@ func main() {
 				Options: &cloudbuild.TriggerBuildOptionsArgs{
 					DiskSizeGb:           pulumi.Int(100),
 					DynamicSubstitutions: pulumi.Bool(true),
-					Env: pulumi.StringArray{
-						pulumi.String("ekey = evalue"),
+					Env: []string{
+						"ekey = evalue",
 					},
 					LogStreamingOption:    pulumi.String("STREAM_OFF"),
 					Logging:               pulumi.String("LEGACY"),
 					MachineType:           pulumi.String("N1_HIGHCPU_8"),
 					RequestedVerifyOption: pulumi.String("VERIFIED"),
-					SecretEnv: pulumi.StringArray{
-						pulumi.String("secretenv = svalue"),
+					SecretEnv: []string{
+						"secretenv = svalue",
 					},
-					SourceProvenanceHash: pulumi.StringArray{
-						pulumi.String("MD5"),
+					SourceProvenanceHash: []string{
+						"MD5",
 					},
 					SubstitutionOption: pulumi.String("ALLOW_LOOSE"),
 					Volumes: cloudbuild.TriggerBuildOptionsVolumeArray{
@@ -554,9 +554,11 @@ const build_trigger = new gcp.cloudbuild.Trigger("build-trigger", {
             <span class="nx">included_files</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
             <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">pubsub_config</span><span class="p">:</span> <span class="nx">Optional[TriggerPubsubConfigArgs]</span> = None<span class="p">,</span>
             <span class="nx">substitutions</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
             <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
-            <span class="nx">trigger_template</span><span class="p">:</span> <span class="nx">Optional[TriggerTriggerTemplateArgs]</span> = None<span class="p">)</span>
+            <span class="nx">trigger_template</span><span class="p">:</span> <span class="nx">Optional[TriggerTriggerTemplateArgs]</span> = None<span class="p">,</span>
+            <span class="nx">webhook_config</span><span class="p">:</span> <span class="nx">Optional[TriggerWebhookConfigArgs]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">Trigger</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
             <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">Optional[TriggerArgs]</a></span> = None<span class="p">,</span>
@@ -564,7 +566,7 @@ const build_trigger = new gcp.cloudbuild.Trigger("build-trigger", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewTrigger</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">TriggerArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Trigger</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewTrigger</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">TriggerArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Trigger</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -625,7 +627,7 @@ const build_trigger = new gcp.cloudbuild.Trigger("build-trigger", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
@@ -643,7 +645,7 @@ const build_trigger = new gcp.cloudbuild.Trigger("build-trigger", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
@@ -730,7 +732,7 @@ Structure is documented below.
         <span class="property-type"><a href="#triggergithub">Trigger<wbr>Github<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the configuration of a trigger that creates a build whenever a GitHub event is received.
-One of `trigger_template` or `github` must be provided.
+One of `trigger_template`, `github`, `pubsub_config` or `webhook_config` must be provided.
 Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -787,6 +789,18 @@ Each named volume must be used by at least two build steps.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="pubsubconfig_csharp">
+<a href="#pubsubconfig_csharp" style="color: inherit; text-decoration: inherit;">Pubsub<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#triggerpubsubconfig">Trigger<wbr>Pubsub<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}PubsubConfig describes the configuration of a trigger that creates
+a build whenever a Pub/Sub message is published.
+One of `trigger_template`, `github`, `pubsub_config` or `webhook_config` must be provided.
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="substitutions_csharp">
 <a href="#substitutions_csharp" style="color: inherit; text-decoration: inherit;">Substitutions</a>
 </span>
@@ -815,7 +829,19 @@ If it is not provided, the provider project is used.
 Branch and tag names in trigger templates are interpreted as regular
 expressions. Any branch or tag change that matches that regular
 expression will trigger a build.
-One of `trigger_template` or `github` must be provided.
+One of `trigger_template`, `github`, `pubsub_config` or `webhook_config` must be provided.
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="webhookconfig_csharp">
+<a href="#webhookconfig_csharp" style="color: inherit; text-decoration: inherit;">Webhook<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#triggerwebhookconfig">Trigger<wbr>Webhook<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}WebhookConfig describes the configuration of a trigger that creates
+a build whenever a webhook is sent to a trigger's webhook URL.
+One of `trigger_template`, `github`, `pubsub_config` or `webhook_config` must be provided.
 Structure is documented below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -867,7 +893,7 @@ Structure is documented below.
         <span class="property-type"><a href="#triggergithub">Trigger<wbr>Github<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the configuration of a trigger that creates a build whenever a GitHub event is received.
-One of `trigger_template` or `github` must be provided.
+One of `trigger_template`, `github`, `pubsub_config` or `webhook_config` must be provided.
 Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -924,6 +950,18 @@ Each named volume must be used by at least two build steps.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="pubsubconfig_go">
+<a href="#pubsubconfig_go" style="color: inherit; text-decoration: inherit;">Pubsub<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#triggerpubsubconfig">Trigger<wbr>Pubsub<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}PubsubConfig describes the configuration of a trigger that creates
+a build whenever a Pub/Sub message is published.
+One of `trigger_template`, `github`, `pubsub_config` or `webhook_config` must be provided.
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="substitutions_go">
 <a href="#substitutions_go" style="color: inherit; text-decoration: inherit;">Substitutions</a>
 </span>
@@ -952,7 +990,19 @@ If it is not provided, the provider project is used.
 Branch and tag names in trigger templates are interpreted as regular
 expressions. Any branch or tag change that matches that regular
 expression will trigger a build.
-One of `trigger_template` or `github` must be provided.
+One of `trigger_template`, `github`, `pubsub_config` or `webhook_config` must be provided.
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="webhookconfig_go">
+<a href="#webhookconfig_go" style="color: inherit; text-decoration: inherit;">Webhook<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#triggerwebhookconfig">Trigger<wbr>Webhook<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}WebhookConfig describes the configuration of a trigger that creates
+a build whenever a webhook is sent to a trigger's webhook URL.
+One of `trigger_template`, `github`, `pubsub_config` or `webhook_config` must be provided.
 Structure is documented below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1004,7 +1054,7 @@ Structure is documented below.
         <span class="property-type"><a href="#triggergithub">Trigger<wbr>Github<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the configuration of a trigger that creates a build whenever a GitHub event is received.
-One of `trigger_template` or `github` must be provided.
+One of `trigger_template`, `github`, `pubsub_config` or `webhook_config` must be provided.
 Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1061,6 +1111,18 @@ Each named volume must be used by at least two build steps.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="pubsubconfig_nodejs">
+<a href="#pubsubconfig_nodejs" style="color: inherit; text-decoration: inherit;">pubsub<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#triggerpubsubconfig">Trigger<wbr>Pubsub<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}PubsubConfig describes the configuration of a trigger that creates
+a build whenever a Pub/Sub message is published.
+One of `trigger_template`, `github`, `pubsub_config` or `webhook_config` must be provided.
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="substitutions_nodejs">
 <a href="#substitutions_nodejs" style="color: inherit; text-decoration: inherit;">substitutions</a>
 </span>
@@ -1089,7 +1151,19 @@ If it is not provided, the provider project is used.
 Branch and tag names in trigger templates are interpreted as regular
 expressions. Any branch or tag change that matches that regular
 expression will trigger a build.
-One of `trigger_template` or `github` must be provided.
+One of `trigger_template`, `github`, `pubsub_config` or `webhook_config` must be provided.
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="webhookconfig_nodejs">
+<a href="#webhookconfig_nodejs" style="color: inherit; text-decoration: inherit;">webhook<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#triggerwebhookconfig">Trigger<wbr>Webhook<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}WebhookConfig describes the configuration of a trigger that creates
+a build whenever a webhook is sent to a trigger's webhook URL.
+One of `trigger_template`, `github`, `pubsub_config` or `webhook_config` must be provided.
 Structure is documented below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1141,7 +1215,7 @@ Structure is documented below.
         <span class="property-type"><a href="#triggergithub">Trigger<wbr>Github<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the configuration of a trigger that creates a build whenever a GitHub event is received.
-One of `trigger_template` or `github` must be provided.
+One of `trigger_template`, `github`, `pubsub_config` or `webhook_config` must be provided.
 Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1198,6 +1272,18 @@ Each named volume must be used by at least two build steps.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="pubsub_config_python">
+<a href="#pubsub_config_python" style="color: inherit; text-decoration: inherit;">pubsub_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#triggerpubsubconfig">Trigger<wbr>Pubsub<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}PubsubConfig describes the configuration of a trigger that creates
+a build whenever a Pub/Sub message is published.
+One of `trigger_template`, `github`, `pubsub_config` or `webhook_config` must be provided.
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="substitutions_python">
 <a href="#substitutions_python" style="color: inherit; text-decoration: inherit;">substitutions</a>
 </span>
@@ -1226,7 +1312,19 @@ If it is not provided, the provider project is used.
 Branch and tag names in trigger templates are interpreted as regular
 expressions. Any branch or tag change that matches that regular
 expression will trigger a build.
-One of `trigger_template` or `github` must be provided.
+One of `trigger_template`, `github`, `pubsub_config` or `webhook_config` must be provided.
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="webhook_config_python">
+<a href="#webhook_config_python" style="color: inherit; text-decoration: inherit;">webhook_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#triggerwebhookconfig">Trigger<wbr>Webhook<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}WebhookConfig describes the configuration of a trigger that creates
+a build whenever a webhook is sent to a trigger's webhook URL.
+One of `trigger_template`, `github`, `pubsub_config` or `webhook_config` must be provided.
 Structure is documented below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1384,14 +1482,16 @@ Get an existing Trigger resource's state with the given name, ID, and optional e
         <span class="nx">included_files</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">pubsub_config</span><span class="p">:</span> <span class="nx">Optional[TriggerPubsubConfigArgs]</span> = None<span class="p">,</span>
         <span class="nx">substitutions</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
         <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
         <span class="nx">trigger_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-        <span class="nx">trigger_template</span><span class="p">:</span> <span class="nx">Optional[TriggerTriggerTemplateArgs]</span> = None<span class="p">) -&gt;</span> Trigger</code></pre></div>
+        <span class="nx">trigger_template</span><span class="p">:</span> <span class="nx">Optional[TriggerTriggerTemplateArgs]</span> = None<span class="p">,</span>
+        <span class="nx">webhook_config</span><span class="p">:</span> <span class="nx">Optional[TriggerWebhookConfigArgs]</span> = None<span class="p">) -&gt;</span> Trigger</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetTrigger<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">TriggerState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v5/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Trigger</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetTrigger<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">TriggerState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Trigger</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -1553,7 +1653,7 @@ Structure is documented below.
         <span class="property-type"><a href="#triggergithub">Trigger<wbr>Github<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the configuration of a trigger that creates a build whenever a GitHub event is received.
-One of `trigger_template` or `github` must be provided.
+One of `trigger_template`, `github`, `pubsub_config` or `webhook_config` must be provided.
 Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1610,6 +1710,18 @@ Each named volume must be used by at least two build steps.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_pubsubconfig_csharp">
+<a href="#state_pubsubconfig_csharp" style="color: inherit; text-decoration: inherit;">Pubsub<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#triggerpubsubconfig">Trigger<wbr>Pubsub<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}PubsubConfig describes the configuration of a trigger that creates
+a build whenever a Pub/Sub message is published.
+One of `trigger_template`, `github`, `pubsub_config` or `webhook_config` must be provided.
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_substitutions_csharp">
 <a href="#state_substitutions_csharp" style="color: inherit; text-decoration: inherit;">Substitutions</a>
 </span>
@@ -1647,7 +1759,19 @@ If it is not provided, the provider project is used.
 Branch and tag names in trigger templates are interpreted as regular
 expressions. Any branch or tag change that matches that regular
 expression will trigger a build.
-One of `trigger_template` or `github` must be provided.
+One of `trigger_template`, `github`, `pubsub_config` or `webhook_config` must be provided.
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_webhookconfig_csharp">
+<a href="#state_webhookconfig_csharp" style="color: inherit; text-decoration: inherit;">Webhook<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#triggerwebhookconfig">Trigger<wbr>Webhook<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}WebhookConfig describes the configuration of a trigger that creates
+a build whenever a webhook is sent to a trigger's webhook URL.
+One of `trigger_template`, `github`, `pubsub_config` or `webhook_config` must be provided.
 Structure is documented below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1708,7 +1832,7 @@ Structure is documented below.
         <span class="property-type"><a href="#triggergithub">Trigger<wbr>Github<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the configuration of a trigger that creates a build whenever a GitHub event is received.
-One of `trigger_template` or `github` must be provided.
+One of `trigger_template`, `github`, `pubsub_config` or `webhook_config` must be provided.
 Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1765,6 +1889,18 @@ Each named volume must be used by at least two build steps.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_pubsubconfig_go">
+<a href="#state_pubsubconfig_go" style="color: inherit; text-decoration: inherit;">Pubsub<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#triggerpubsubconfig">Trigger<wbr>Pubsub<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}PubsubConfig describes the configuration of a trigger that creates
+a build whenever a Pub/Sub message is published.
+One of `trigger_template`, `github`, `pubsub_config` or `webhook_config` must be provided.
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_substitutions_go">
 <a href="#state_substitutions_go" style="color: inherit; text-decoration: inherit;">Substitutions</a>
 </span>
@@ -1802,7 +1938,19 @@ If it is not provided, the provider project is used.
 Branch and tag names in trigger templates are interpreted as regular
 expressions. Any branch or tag change that matches that regular
 expression will trigger a build.
-One of `trigger_template` or `github` must be provided.
+One of `trigger_template`, `github`, `pubsub_config` or `webhook_config` must be provided.
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_webhookconfig_go">
+<a href="#state_webhookconfig_go" style="color: inherit; text-decoration: inherit;">Webhook<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#triggerwebhookconfig">Trigger<wbr>Webhook<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}WebhookConfig describes the configuration of a trigger that creates
+a build whenever a webhook is sent to a trigger's webhook URL.
+One of `trigger_template`, `github`, `pubsub_config` or `webhook_config` must be provided.
 Structure is documented below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1863,7 +2011,7 @@ Structure is documented below.
         <span class="property-type"><a href="#triggergithub">Trigger<wbr>Github<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the configuration of a trigger that creates a build whenever a GitHub event is received.
-One of `trigger_template` or `github` must be provided.
+One of `trigger_template`, `github`, `pubsub_config` or `webhook_config` must be provided.
 Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1920,6 +2068,18 @@ Each named volume must be used by at least two build steps.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_pubsubconfig_nodejs">
+<a href="#state_pubsubconfig_nodejs" style="color: inherit; text-decoration: inherit;">pubsub<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#triggerpubsubconfig">Trigger<wbr>Pubsub<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}PubsubConfig describes the configuration of a trigger that creates
+a build whenever a Pub/Sub message is published.
+One of `trigger_template`, `github`, `pubsub_config` or `webhook_config` must be provided.
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_substitutions_nodejs">
 <a href="#state_substitutions_nodejs" style="color: inherit; text-decoration: inherit;">substitutions</a>
 </span>
@@ -1957,7 +2117,19 @@ If it is not provided, the provider project is used.
 Branch and tag names in trigger templates are interpreted as regular
 expressions. Any branch or tag change that matches that regular
 expression will trigger a build.
-One of `trigger_template` or `github` must be provided.
+One of `trigger_template`, `github`, `pubsub_config` or `webhook_config` must be provided.
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_webhookconfig_nodejs">
+<a href="#state_webhookconfig_nodejs" style="color: inherit; text-decoration: inherit;">webhook<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#triggerwebhookconfig">Trigger<wbr>Webhook<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}WebhookConfig describes the configuration of a trigger that creates
+a build whenever a webhook is sent to a trigger's webhook URL.
+One of `trigger_template`, `github`, `pubsub_config` or `webhook_config` must be provided.
 Structure is documented below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2018,7 +2190,7 @@ Structure is documented below.
         <span class="property-type"><a href="#triggergithub">Trigger<wbr>Github<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the configuration of a trigger that creates a build whenever a GitHub event is received.
-One of `trigger_template` or `github` must be provided.
+One of `trigger_template`, `github`, `pubsub_config` or `webhook_config` must be provided.
 Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2075,6 +2247,18 @@ Each named volume must be used by at least two build steps.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_pubsub_config_python">
+<a href="#state_pubsub_config_python" style="color: inherit; text-decoration: inherit;">pubsub_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#triggerpubsubconfig">Trigger<wbr>Pubsub<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}PubsubConfig describes the configuration of a trigger that creates
+a build whenever a Pub/Sub message is published.
+One of `trigger_template`, `github`, `pubsub_config` or `webhook_config` must be provided.
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_substitutions_python">
 <a href="#state_substitutions_python" style="color: inherit; text-decoration: inherit;">substitutions</a>
 </span>
@@ -2112,7 +2296,19 @@ If it is not provided, the provider project is used.
 Branch and tag names in trigger templates are interpreted as regular
 expressions. Any branch or tag change that matches that regular
 expression will trigger a build.
-One of `trigger_template` or `github` must be provided.
+One of `trigger_template`, `github`, `pubsub_config` or `webhook_config` must be provided.
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_webhook_config_python">
+<a href="#state_webhook_config_python" style="color: inherit; text-decoration: inherit;">webhook_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#triggerwebhookconfig">Trigger<wbr>Webhook<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}WebhookConfig describes the configuration of a trigger that creates
+a build whenever a webhook is sent to a trigger's webhook URL.
+One of `trigger_template`, `github`, `pubsub_config` or `webhook_config` must be provided.
 Structure is documented below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -5424,6 +5620,180 @@ Possible values are `COMMENTS_DISABLED`, `COMMENTS_ENABLED`, and `COMMENTS_ENABL
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="triggerpubsubconfig">Trigger<wbr>Pubsub<wbr>Config</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="topic_csharp">
+<a href="#topic_csharp" style="color: inherit; text-decoration: inherit;">Topic</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the topic from which this subscription is receiving messages.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="serviceaccountemail_csharp">
+<a href="#serviceaccountemail_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Account<wbr>Email</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Service account that will make the push request.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_csharp">
+<a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}-
+Potential issues with the underlying Pub/Sub subscription configuration.
+Only populated on get requests.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="subscription_csharp">
+<a href="#subscription_csharp" style="color: inherit; text-decoration: inherit;">Subscription</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}-
+Output only. Name of the subscription.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="topic_go">
+<a href="#topic_go" style="color: inherit; text-decoration: inherit;">Topic</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the topic from which this subscription is receiving messages.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="serviceaccountemail_go">
+<a href="#serviceaccountemail_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Account<wbr>Email</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Service account that will make the push request.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_go">
+<a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}-
+Potential issues with the underlying Pub/Sub subscription configuration.
+Only populated on get requests.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="subscription_go">
+<a href="#subscription_go" style="color: inherit; text-decoration: inherit;">Subscription</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}-
+Output only. Name of the subscription.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="topic_nodejs">
+<a href="#topic_nodejs" style="color: inherit; text-decoration: inherit;">topic</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the topic from which this subscription is receiving messages.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="serviceaccountemail_nodejs">
+<a href="#serviceaccountemail_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Account<wbr>Email</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Service account that will make the push request.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_nodejs">
+<a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}-
+Potential issues with the underlying Pub/Sub subscription configuration.
+Only populated on get requests.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="subscription_nodejs">
+<a href="#subscription_nodejs" style="color: inherit; text-decoration: inherit;">subscription</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}-
+Output only. Name of the subscription.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="topic_python">
+<a href="#topic_python" style="color: inherit; text-decoration: inherit;">topic</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the topic from which this subscription is receiving messages.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="service_account_email_python">
+<a href="#service_account_email_python" style="color: inherit; text-decoration: inherit;">service_<wbr>account_<wbr>email</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Service account that will make the push request.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_python">
+<a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}-
+Potential issues with the underlying Pub/Sub subscription configuration.
+Only populated on get requests.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="subscription_python">
+<a href="#subscription_python" style="color: inherit; text-decoration: inherit;">subscription</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}-
+Output only. Name of the subscription.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
 <h4 id="triggertriggertemplate">Trigger<wbr>Trigger<wbr>Template</h4>
 
 {{% choosable language csharp %}}
@@ -5743,6 +6113,108 @@ If omitted, the project ID requesting the build is assumed.
     <dd>{{% md %}}Regex matching tags to build. Exactly one a of branch name, tag, or commit SHA must be provided.
 The syntax of the regular expressions accepted is the syntax accepted by RE2 and
 described at https://github.com/google/re2/wiki/Syntax
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="triggerwebhookconfig">Trigger<wbr>Webhook<wbr>Config</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="secret_csharp">
+<a href="#secret_csharp" style="color: inherit; text-decoration: inherit;">Secret</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Secrets to decrypt using Cloud Key Management Service.
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_csharp">
+<a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}-
+Potential issues with the underlying Pub/Sub subscription configuration.
+Only populated on get requests.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="secret_go">
+<a href="#secret_go" style="color: inherit; text-decoration: inherit;">Secret</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Secrets to decrypt using Cloud Key Management Service.
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_go">
+<a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}-
+Potential issues with the underlying Pub/Sub subscription configuration.
+Only populated on get requests.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="secret_nodejs">
+<a href="#secret_nodejs" style="color: inherit; text-decoration: inherit;">secret</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Secrets to decrypt using Cloud Key Management Service.
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_nodejs">
+<a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}-
+Potential issues with the underlying Pub/Sub subscription configuration.
+Only populated on get requests.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="secret_python">
+<a href="#secret_python" style="color: inherit; text-decoration: inherit;">secret</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Secrets to decrypt using Cloud Key Management Service.
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_python">
+<a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}-
+Potential issues with the underlying Pub/Sub subscription configuration.
+Only populated on get requests.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import

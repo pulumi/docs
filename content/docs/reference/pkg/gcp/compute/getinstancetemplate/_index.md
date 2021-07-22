@@ -28,21 +28,80 @@ and
 
 {{< example csharp >}}
 
-Coming soon!
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var generic = Output.Create(Gcp.Compute.GetInstanceTemplate.InvokeAsync(new Gcp.Compute.GetInstanceTemplateArgs
+        {
+            Name = "generic-tpl-20200107",
+        }));
+        var generic_regex = Output.Create(Gcp.Compute.GetInstanceTemplate.InvokeAsync(new Gcp.Compute.GetInstanceTemplateArgs
+        {
+            Filter = "name != generic-tpl-20200107",
+            MostRecent = true,
+        }));
+    }
+
+}
+```
+
 
 {{< /example >}}
 
 
 {{< example go >}}
 
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		opt0 := "generic-tpl-20200107"
+		_, err := compute.LookupInstanceTemplate(ctx, &compute.LookupInstanceTemplateArgs{
+			Name: &opt0,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		opt1 := "name != generic-tpl-20200107"
+		opt2 := true
+		_, err = compute.LookupInstanceTemplate(ctx, &compute.LookupInstanceTemplateArgs{
+			Filter:     &opt1,
+			MostRecent: &opt2,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 
 {{< /example >}}
 
 
 {{< example python >}}
 
-Coming soon!
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+generic = gcp.compute.get_instance_template(name="generic-tpl-20200107")
+generic_regex = gcp.compute.get_instance_template(filter="name != generic-tpl-20200107",
+    most_recent=True)
+```
+
 
 {{< /example >}}
 
