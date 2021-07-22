@@ -85,7 +85,7 @@ Overall, Lambda shines for unpredictable or inconsistent workloads and applicati
 
 ## Example: Serverless Video Thumbnailer with AWS Lambda and Pulumi
 
-Let's walk through the steps to build an example application with container-based AWS Lambda. In this scenario, a function runs every time a new video is uploaded to an Amazon S3 bucket. It relies on FFmpeg tools to produce a thumbnail of the uploaded video and uploads the thumbnail back to the same S3 bucket.
+Let's walk through the steps to build an example application with container-based AWS Lambda using [infrastructure as code]({{< relref "/what-is/what-is-infrastructure-as-code" >}}). In this scenario, a function runs every time a new video is uploaded to an Amazon S3 bucket. It relies on FFmpeg tools to produce a thumbnail of the uploaded video and uploads the thumbnail back to the same S3 bucket.
 
 We'll use Pulumi to provision the necessary resources. You can check out the [full source code](https://github.com/pulumi/examples/tree/master/aws-ts-lambda-thumbnailer) in the Pulumi Examples.
 

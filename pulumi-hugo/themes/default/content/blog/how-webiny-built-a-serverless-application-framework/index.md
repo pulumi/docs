@@ -273,6 +273,6 @@ Finally, I already mentioned the [Automation API](https://www.pulumi.com/automat
 
 ## Conclusion
 
-For Webiny, choosing Pulumi as the default infrastructure as code framework was certainly a big leap in the right direction.
+For Webiny, choosing Pulumi as the default [infrastructure as code]({{< relref "/what-is/what-is-infrastructure-as-code" >}}) framework was certainly a big leap in the right direction.
 
 It enabled us to leave the complexities of cloud infrastructure deployments to a product and company whose primary focus is exactly that. And this is what ultimately helped us completely focus on what we care about the most - creating an awesome serverless application framework.

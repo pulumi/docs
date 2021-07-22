@@ -14,7 +14,7 @@
             <div class="w-full lg:w-2/3 bg-gray-200 text-center p-6 lg:p-16 lg:rounded-2xl">
                 <div class="max-w-xl mx-auto">
                     <h2>{{ .Params.best_practices.title }}</h2>
-                    <p class="text-gray-600">{{ .Params.best_practices.description }}</p>
+                    <p class="text-gray-600">{{ .Params.best_practices.description | markdownify }}</p>
                 </div>
             </div>
         </section>

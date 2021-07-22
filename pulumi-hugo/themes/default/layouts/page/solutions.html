@@ -94,7 +94,7 @@
                                 <h5>{{ $item.title }}</h5>
                             </div>
                             <div class="flex items-end flex-grow">
-                                <p>{{ $item.description }}</p>
+                                <p>{{ $item.description | markdownify }}</p>
                             </div>
                         </div>
                     {{ end }}
@@ -112,7 +112,7 @@
                                 <h5>{{ $item.title }}</h5>
                             </div>
                             <div class="flex items-end flex-grow">
-                                <p>{{ $item.description }}</p>
+                                <p>{{ $item.description | markdownify }}</p>
                             </div>
                         </div>
                     {{ end }}
@@ -130,7 +130,7 @@
                                 <h5>{{ $item.title }}</h5>
                             </div>
                             <div class="flex items-end flex-grow">
-                                <p>{{ $item.description }}</p>
+                                <p>{{ $item.description | markdownify }}</p>
                             </div>
                         </div>
                     {{ end }}
@@ -148,7 +148,7 @@
                                 <h5>{{ $item.title }}</h5>
                             </div>
                             <div class="flex items-end flex-grow">
-                                <p>{{ $item.description }}</p>
+                                <p>{{ $item.description | markdownify }}</p>
                             </div>
                         </div>
                     {{ end }}

@@ -40,7 +40,7 @@ overview:
 build:
   title: Build
   description: |
-    Build cloud applications and infrastructure by combining the safety and reliability of infrastructure as code with the power of familiar programming languages and tools.
+    Build cloud applications and infrastructure by combining the safety and reliability of [infrastructure as code](/what-is/what-is-infrastructure-as-code/) with the power of familiar programming languages and tools.
   items:
     - title: Flexible and expressive
       description: Loops, conditionals, functions, classes, and more.
@@ -102,7 +102,7 @@ benefits:
       icon: code-window
       icon_color: salmon
       description: |
-        One consistent approach to cloud engineering provides full access to over 50 cloud providers 
+        One consistent approach to cloud engineering provides full access to over 50 cloud providers
         and works for the entire team as you scale up, eliminating accidental complexity.
 
     - title: Bring the cloud closer to application development

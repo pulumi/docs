@@ -7,7 +7,7 @@ meta_desc: "Learn how to automate AWS resource tagging using Infrastructure and 
 meta_image: "pac-tags-meta.png"
 ---
 
-AWS publishes best practices for how to tag your resources for cost tracking, automation, and organization. But how do you enforce that you're doing it correctly across all of your projects? And is it really necessary to manually track down all those places where you missed a tag and manually patch things up? In this article, we'll see how to use Policy as Code to enforce your team's tagging strategies in addition to some powerful Infrastructure as Code techniques to automate applying your tags in a consistent way across all of your projects and resources.
+AWS publishes best practices for how to tag your resources for cost tracking, automation, and organization. But how do you enforce that you're doing it correctly across all of your projects? And is it really necessary to manually track down all those places where you missed a tag and manually patch things up? In this article, we'll see how to use Policy as Code to enforce your team's tagging strategies in addition to some powerful [Infrastructure as Code]({{< relref "/what-is/what-is-infrastructure-as-code" >}}) techniques to automate applying your tags in a consistent way across all of your projects and resources.
 
 ## Why Tag Your Resources?
 

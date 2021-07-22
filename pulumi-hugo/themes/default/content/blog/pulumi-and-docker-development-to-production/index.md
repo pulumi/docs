@@ -172,7 +172,8 @@ disrupting our development environment!
 
 We often say on this blog that Pulumi is "infrastructure as code", and
 that sentence is definitely true, but I prefer calling it
-"infrastructure as software" instead. The distinction is subtle, but in
+"[infrastructure as software]({{< relref "/what-is/what-is-infrastructure-as-software" >}})"
+instead. The distinction is subtle, but in
 my mind Pulumi brings to the realm of infrastructure the variety of
 tools we already use for software engineering:
 

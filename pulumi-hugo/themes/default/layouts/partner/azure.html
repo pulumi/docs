@@ -9,7 +9,7 @@
         <div class="flex flex-wrap container mx-auto">
             <div class="w-full order-last lg:mt-0 lg:order-first lg:w-1/2 px-5">
                 <h2>{{ .Params.hero.title }}</h2>
-                <p class="mr-4">{{ .Params.hero.description }}</p>
+                <p class="mr-4">{{ .Params.hero.description | markdownify }}</p>
                 <p class="my-6">
                     <a class="inline-flex items-center link" href="{{ relref . .Params.hero.cta_url }}">
                         <span class="inline-block w-6 text-orange-300 mr-3">

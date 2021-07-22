@@ -213,7 +213,7 @@ transcript: |
 
     **Adam Jacob**
 
-    If you think about that, what's the equivalent of the Chrome Debugger for your cloud infrastructure? That's infrastructure as software, right? That's infrastructure as software, because now we're talking about like, "Oh yeah, could I set a breakpoint that happens right before I launch the EC2 instance, or right after, that tells me whether the AMI was right or wrong?" There's so much potential there, but we haven't even begun to tap it.
+    If you think about that, what's the equivalent of the Chrome Debugger for your cloud infrastructure? That's [infrastructure as software](/what-is/what-is-infrastructure-as-software/), right? That's infrastructure as software, because now we're talking about like, "Oh yeah, could I set a breakpoint that happens right before I launch the EC2 instance, or right after, that tells me whether the AMI was right or wrong?" There's so much potential there, but we haven't even begun to tap it.
 
     **Joe Duffy**
 

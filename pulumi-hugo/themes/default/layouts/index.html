@@ -67,7 +67,7 @@
             <div class="flex flex-col lg:flex-row">
                 <div class="w-full lg:w-1/2 lg:mr-32 z-10 bg-white px-8 rounded">
                     <h2>{{ .Params.build.title }}</h2>
-                    <p class="text-lg">{{ .Params.build.description }}</p>
+                    <p class="text-lg">{{ .Params.build.description | markdownify }}</p>
 
                     {{ range $item := .Params.build.items }}
                         <h6>{{ $item.title }}</h6>

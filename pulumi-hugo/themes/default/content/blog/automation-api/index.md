@@ -9,13 +9,13 @@ tags:
     - automation api
 ---
 
-Today’s Infrastructure as Code platforms let organizations build rich, reliable, and complex cloud-based applications and architectures. But as teams move to modern cloud technologies,  they continue to search for ways to drive increased software-driven automation. Although modern Infrastructure as Code tools bring key software engineering benefits to cloud engineering, they remain focused on human-driven workflows. For example, a person running `pulumi up` at their terminal or wiring the Pulumi CLI into their CI/CD system.
+Today’s [Infrastructure as Code]({{< relref "/what-is/what-is-infrastructure-as-code" >}}) platforms let organizations build rich, reliable, and complex cloud-based applications and architectures. But as teams move to modern cloud technologies,  they continue to search for ways to drive increased software-driven automation. Although modern Infrastructure as Code tools bring key software engineering benefits to cloud engineering, they remain focused on human-driven workflows. For example, a person running `pulumi up` at their terminal or wiring the Pulumi CLI into their CI/CD system.
 
 To scale up how we deploy and manage cloud infrastructure and ultimately unlock the cloud's value and agility, we believe it will be critical to build software systems around our Infrastructure as Code platforms - systems that scale with software, not just humans.
 
 <!--more-->
 
-Pulumi's approach of using general purpose languages enables Infrastructure as Software -- bringing all of the great lessons learned over decades of building software to your infrastructure (languages, IDEs, testing, debugging, componentization, packaging, versioning, and more).
+Pulumi's approach of using general purpose languages enables [Infrastructure as Software]({{< relref "/what-is/what-is-infrastructure-as-software" >}}) -- bringing all of the great lessons learned over decades of building software to your infrastructure (languages, IDEs, testing, debugging, componentization, packaging, versioning, and more).
 
 Today we’re excited to announce the Pulumi Automation API, a robust programmatic layer on top of Pulumi’s declarative Infrastructure as Software. The Automation API exposes Pulumi programs and stacks as strongly-typed and composable building blocks.
 

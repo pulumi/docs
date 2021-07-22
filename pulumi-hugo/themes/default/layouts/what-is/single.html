@@ -1,0 +1,70 @@
+{{ define "hero" }}
+    {{ partial "hero" (dict "title" .Params.page_title "small_title" "true")}}
+{{ end }}
+
+{{ define "main" }}
+    <section class="my-16 relative">
+        <div class="shape-background what-is-dots hidden xl:block">
+            <div class="shape-container">
+                <div class="dot-background-container">
+                    <div class="dot-background-overlay"></div>
+                    <div class="dot-background no-animate"></div>
+                </div>
+
+                <div class="circle-top"></div>
+                <div class="circle-middle"></div>
+                <div class="circle-bottom"></div>
+            </div>
+        </div>
+
+        <div class="container mx-auto">
+            <div class="lg:flex lg:justify-end">
+                <div class="lg:max-w-5xl">
+                    <div class="bg-white px-3">
+                        {{ .Content }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Logos -->
+    <section class="container mx-auto text-center my-0 mb-16 lg:my-24 overflow-hidden px-3">
+        <h3 class="text-center mb-10 hidden lg:block">{{ .Params.customer_logos.title }}</h3>
+        <h6 class="text-center mb-10 lg:hidden">{{ .Params.customer_logos.title }}</h6>
+        <pulumi-swiper loop="true" autoplay="true" autoplay-delay="2500" speed="2000">
+            {{ range $logoBunch := .Params.customer_logos.logos }}
+                <pulumi-swipeable>
+                    <div class="flex flex-wrap items-center justify-center">
+                        {{ range $logo := $logoBunch.items }}
+                            <div class="w-1/3 lg:w-1/5 px-2 py-4 lg:py-0 lg:px-8">
+                                {{ partial "customer-logo.html" (dict "logo" $logo "hoverable" true) }}
+                            </div>
+                        {{ end }}
+                    </div>
+                </pulumi-swipeable>
+            {{ end }}
+        </pulumi-swiper>
+    </section>
+
+    <section id="get-started" class="container px-6 lg:px-0 mx-auto my-16">
+        <div class="w-full bg-violet-600 card p-6 lg:p-16 lg:pt-24 text-center">
+            <div class="max-w-xl mx-auto">
+                <h2 class="text-white hidden lg:block px-0 lg:px-16">
+                    Get started with Cloud Engineering
+                </h2>
+                <h4 class="text-white mt-0 lg:hidden">
+                    Get started with Cloud Engineering
+                </h4>
+                <p class="text-white">
+                    Pulumi is a cloud engineering platform that brings infrastructure, application
+                    development, and compliance teams together through a unified software engineering
+                    process to deliver and manage modern cloud applications.
+                </p>
+                <div class="mt-16">
+                    <a class="btn-secondary" href="{{ relref . "/docs/get-started" }}">Get Started</a>
+                </div>
+            </div>
+        </div>
+    </section>
+{{ end }}

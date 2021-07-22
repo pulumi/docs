@@ -1,0 +1,32 @@
+{{ define "hero" }}
+    {{ partial "hero" (dict "title" .Params.title )}}
+{{ end }}
+
+{{ define "main" }}
+    <!-- Set the page context in a variable in a loop. -->
+    {{ $pageContext := . }}
+
+    <!-- Grab the webinar and event page data. -->
+    {{ $topics := (where (where $.Site.Pages "Type" "what-is") "Title" "ne" "What Is?") }}
+
+    <div class="container mx-auto py-16">
+        <h2>Topics</h2>
+
+        <div class="lg:flex lg:flex-wrap lg:items-stretch">
+            {{ range $topics }}
+                <div class="lg:w-1/2 p-6">
+                    <div class="card p-6 h-full">
+                        <a class="hover:underline" href="{{ .Permalink }}">
+                            <div>
+                                <h5>{{ .Params.title }}</h5>
+                            </div>
+                            <div class="description">
+                                <p>{{ .Params.meta_desc }}</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            {{ end }}
+        </div>
+    </div>
+{{ end }}

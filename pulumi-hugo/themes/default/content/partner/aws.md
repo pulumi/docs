@@ -8,9 +8,9 @@ meta_desc: Pulumi provides huge productivity gains and a unified programming mod
 hero:
     title: Cloud Engineering for AWS
     description: |
-        Pulumi's infrastructure as code SDK helps create, deploy, and manage your
-        AWS infrastructure, including containers, serverless functions, and
-        other infrastructure using modern programming languages.
+        Pulumi's [infrastructure as code](/what-is/what-is-infrastructure-as-code/)
+        SDK helps create, deploy, and manage your AWS infrastructure, including containers,
+        serverless functions, and other infrastructure using modern programming languages.
 
 awsx_code: |
     import * as eks from "@pulumi/eks";

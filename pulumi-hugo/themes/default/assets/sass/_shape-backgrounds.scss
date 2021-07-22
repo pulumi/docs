@@ -471,4 +471,48 @@
             }
         }
     }
+
+    &.what-is-dots {
+        .dot-background-container {
+            @apply w-1/4 h-full relative;
+
+            .dot-background-overlay {
+                @apply w-full absolute left-0 top-0;
+                background-color: rgba(255,255,255,0.5);
+                z-index: 0;
+                height: calc(100% - 18rem);
+            }
+
+            .dot-background {
+                @apply absolute left-0 top-0;
+                height: calc(100% - 18rem);
+                top: 18rem;
+            }
+        }
+
+        .circle-top {
+            @apply rounded-full absolute bg-yellow-600;
+            width: 20.25rem;
+            height: 20.25rem;
+            top: 0;
+            left: -1.5rem;
+        }
+
+        .circle-middle {
+            @apply rounded-full absolute bg-salmon-600;
+            width: 8.313rem;
+            height: 8.313rem;
+            top: 50%;
+            bottom: 50%;
+            left: 4.5rem;
+        }
+
+        .circle-bottom {
+            @apply rounded-full absolute bg-purple-600;
+            width: 20.25rem;
+            height: 20.25rem;
+            bottom: -2rem;
+            left: -1.5rem;
+        }
+    }
 }

@@ -33,9 +33,9 @@ greater confidence.
 
 ## Secrets and State
 
-Like many infrastructure as code systems, Pulumi uses a state file to
-describe the current state of your infrastructure. When you run
-`pulumi up`, Pulumi takes your existing state file, runs your program to
+Like many [infrastructure as code]({{< relref "/what-is/what-is-infrastructure-as-code" >}})
+systems, Pulumi uses a state file to describe the current state of your infrastructure.
+When you run `pulumi up`, Pulumi takes your existing state file, runs your program to
 compute a new desired state and compares the two states. It makes
 updates to the current state so it matches the desired state and updates
 its state file as it does so. As part of this, Pulumi needs to retain

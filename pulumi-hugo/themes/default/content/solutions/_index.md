@@ -15,13 +15,13 @@ use_cases:
         - name: Shared services platforms
           case_studies:
             - name: Atlassian
-              link: /case-studies/atlassian          
+              link: /case-studies/atlassian
             - name: Mercedes-Benz
               link: /case-studies/mercedes-benz
             - name: Lemonade
               link: /case-studies/lemonade
           description: |
-            Create reusable infrastructure components or self-service infrastructure platforms that empower your application developers to easily and quickly deploy 
+            Create reusable infrastructure components or self-service infrastructure platforms that empower your application developers to easily and quickly deploy
             and use infrastructure they need to build applications.
 
         - name: Greenfield modern applications
@@ -31,23 +31,23 @@ use_cases:
             - name: Menta Network
               link: /case-studies/menta-network
           description: |
-            Use Pulumi to develop your next greenfield application that uses modern cloud technologies, like containers and serverless. Pulumi is designed for building 
+            Use Pulumi to develop your next greenfield application that uses modern cloud technologies, like containers and serverless. Pulumi is designed for building
             these types of complex and distributed applications.
 
         - name: AI and ML workloads
           description: |
-            Easily provision and maintain machine learning (ML) batch jobs and data processing pipelines. Pulumi provides an easy and automated way to deploy ML stacks 
-            for data scientists and developers. 
+            Easily provision and maintain machine learning (ML) batch jobs and data processing pipelines. Pulumi provides an easy and automated way to deploy ML stacks
+            for data scientists and developers.
 
         - name: Migrate from an existing infrastructure tool
           description: |
-            Adopt Pulumi when your existing infrastructure provisioning tool has reached its limits. Pulumi provides YAML or JSON file converters or you can use Pulumi 
+            Adopt Pulumi when your existing infrastructure provisioning tool has reached its limits. Pulumi provides YAML or JSON file converters or you can use Pulumi
             alongside existing tools.
 
         - name: On-premises to cloud migration
           description: |
-            Simplify your cloud migration with Modern Infrastructure-as-Code. Pulumi lets you model and automate the provisioning of infrastructure being migrated 
-            to the cloud to increase speed and success. 
+            Simplify your cloud migration with Modern Infrastructure-as-Code. Pulumi lets you model and automate the provisioning of infrastructure being migrated
+            to the cloud to increase speed and success.
 
 architectures:
     title: Common Architecture Types
@@ -110,8 +110,8 @@ personas:
               icon: code
               icon_color: purple
               description: |
-                Define infrastructure as code using familiar languages and IDEs: JavaScript,
-                TypeScript, Python, Go, and .NET.
+                Define [infrastructure as code](/what-is/what-is-infrastructure-as-code/) using
+                familiar languages and IDEs: JavaScript, TypeScript, Python, Go, and .NET.
             - title: Cloud programming model
               icon: program
               icon_color: yellow

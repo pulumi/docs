@@ -9,7 +9,7 @@
         <div class="flex flex-wrap container mx-auto">
             <div class="w-full order-last lg:mt-0 lg:order-first lg:w-1/2 px-5">
                 <h2>Create, Manage, & Deploy AWS Resources</h2>
-                <p class="mr-4">{{ .Params.hero.description }}</p>
+                <p class="mr-4">{{ .Params.hero.description | markdownify }}</p>
                 <div>
                     <div class="flex justify-start items-start mt-8">
                         <div class="flex flex-col lg:flex-row items-start">

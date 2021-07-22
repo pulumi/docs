@@ -15,7 +15,7 @@ Azure Synapse is an integrated analytics service that combines enterprise data w
 
 You could use the Azure portal to get started with Azure Synapse, but it can be hard to define sophisticated infrastructure for your analytics pipeline using the portal alone, and many users need to apply version control to their cloud configurations.
 
-The alternative is to use an infrastructure as code tool to automate building and deploying cloud resources. This article demonstrates how to provision an Azure Synapse workspace using Pulumi and general-purpose programming languages like Python and C#.
+The alternative is to use an [infrastructure as code]({{< relref "/what-is/what-is-infrastructure-as-code" >}}) tool to automate building and deploying cloud resources. This article demonstrates how to provision an Azure Synapse workspace using Pulumi and general-purpose programming languages like Python and C#.
 
 <!--more-->
 

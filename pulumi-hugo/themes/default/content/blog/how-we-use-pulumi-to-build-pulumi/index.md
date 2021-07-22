@@ -189,8 +189,8 @@ jump in to the resources defined by this stack in the AWS console.
 
 ## Conclusion
 
-Treating cloud infrastructure as software has changed how we think about
-infrastructure engineering. Using Pulumi for both traditional cloud
+Treating cloud [infrastructure as software]({{< relref "/what-is/what-is-infrastructure-as-software" >}})
+has changed how we think about infrastructure engineering. Using Pulumi for both traditional cloud
 infrastructure as well as to get application code and supporting service
 infrastructure into production provides a simple workflow and the
 ability to create simple high-level APIs to make new services easy to

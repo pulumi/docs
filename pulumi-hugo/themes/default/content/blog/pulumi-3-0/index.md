@@ -13,7 +13,7 @@ tags:
 
 Today we’re excited to announce the availability of Pulumi 3.0, the next major version of the Pulumi open source project, and the foundation for Pulumi’s [Cloud Engineering Platform]({{< relref "/cloud-engineering" >}}).
 
-Pulumi offers the most complete infrastructure as code platform for building, deploying and managing modern cloud infrastructure and applications.  Pulumi enables cloud engineers to use familiar languages to describe their cloud infrastructure - bringing core software engineering tools and practices to bear on managing and getting the maximum value from their cloud platforms of choice - across dozens of cloud and SaaS providers.
+Pulumi offers the most complete [infrastructure as code]({{< relref "/what-is/what-is-infrastructure-as-code" >}}) platform for building, deploying and managing modern cloud infrastructure and applications.  Pulumi enables cloud engineers to use familiar languages to describe their cloud infrastructure - bringing core software engineering tools and practices to bear on managing and getting the maximum value from their cloud platforms of choice - across dozens of cloud and SaaS providers.
 
 Pulumi 3.0 includes dozens of significant new features and hundreds of improvements that build on this foundation.  This release includes more than 200 contributions from over 150 members of the Pulumi community, and builds on feedback from working with thousands of Pulumi users and customers over the last year.
 
