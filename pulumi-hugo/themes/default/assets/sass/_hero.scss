@@ -109,7 +109,6 @@
 
 .page-hero {
     @apply relative w-full;
-    height: 20rem;
 
     .dot-overlay {
         @apply w-full h-full absolute top-0 left-0 pointer-events-none;
@@ -117,10 +116,10 @@
     }
 
     .page-hero-title {
-        @apply w-full h-full absolute top-0 left-0 flex flex-col items-center justify-center pointer-events-none;
+        @apply w-full flex flex-col items-center justify-center pointer-events-none;
 
         h1 {
-            @apply text-center max-w-4xl;
+            @apply text-center max-w-4xl my-10;
             font-size: 5.25rem;
             line-height: 5.5rem !important;
         }
