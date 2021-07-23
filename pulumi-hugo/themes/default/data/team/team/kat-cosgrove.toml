@@ -1,5 +1,11 @@
 id = "kat-cosgrove"
 name = "Kat Cosgrove"
-title = "Developer Advocate"
-company = "JFrog"
-status = "guest"
+title = "Staff Developer Advocate"
+weight = 1
+
+status = "active"
+
+[social]
+github = "katcosgrove"
+twitter = "dixie3flatline"
+linkedin = "katcosgrove"
