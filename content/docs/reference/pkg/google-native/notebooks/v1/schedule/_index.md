@@ -43,7 +43,7 @@ Auto-naming is currently not supported for this resource.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSchedule</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ScheduleArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Schedule</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSchedule</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ScheduleArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Schedule</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -104,7 +104,7 @@ Auto-naming is currently not supported for this resource.
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
@@ -122,7 +122,7 @@ Auto-naming is currently not supported for this resource.
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
@@ -165,22 +165,6 @@ The Schedule resource accepts the following [input]({{< relref "/docs/intro/conc
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="location_csharp">
-<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="project_csharp">
-<a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="scheduleid_csharp">
 <a href="#scheduleid_csharp" style="color: inherit; text-decoration: inherit;">Schedule<wbr>Id</a>
 </span>
@@ -213,6 +197,22 @@ The Schedule resource accepts the following [input]({{< relref "/docs/intro/conc
     </dt>
     <dd>{{% md %}}Notebook Execution Template corresponding to this schedule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="location_csharp">
+<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="project_csharp">
+<a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_csharp">
 <a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
 </span>
@@ -232,22 +232,6 @@ The Schedule resource accepts the following [input]({{< relref "/docs/intro/conc
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="location_go">
-<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="project_go">
-<a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="scheduleid_go">
 <a href="#scheduleid_go" style="color: inherit; text-decoration: inherit;">Schedule<wbr>Id</a>
@@ -281,6 +265,22 @@ The Schedule resource accepts the following [input]({{< relref "/docs/intro/conc
     </dt>
     <dd>{{% md %}}Notebook Execution Template corresponding to this schedule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="location_go">
+<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="project_go">
+<a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_go">
 <a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
 </span>
@@ -300,22 +300,6 @@ The Schedule resource accepts the following [input]({{< relref "/docs/intro/conc
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="location_nodejs">
-<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="project_nodejs">
-<a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="scheduleid_nodejs">
 <a href="#scheduleid_nodejs" style="color: inherit; text-decoration: inherit;">schedule<wbr>Id</a>
@@ -349,6 +333,22 @@ The Schedule resource accepts the following [input]({{< relref "/docs/intro/conc
     </dt>
     <dd>{{% md %}}Notebook Execution Template corresponding to this schedule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="location_nodejs">
+<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="project_nodejs">
+<a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_nodejs">
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
@@ -368,22 +368,6 @@ The Schedule resource accepts the following [input]({{< relref "/docs/intro/conc
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="location_python">
-<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="project_python">
-<a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="schedule_id_python">
 <a href="#schedule_id_python" style="color: inherit; text-decoration: inherit;">schedule_<wbr>id</a>
@@ -416,6 +400,22 @@ The Schedule resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#executiontemplate">Execution<wbr>Template<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Notebook Execution Template corresponding to this schedule.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="location_python">
+<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="project_python">
+<a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_python">
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
@@ -696,6 +696,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}execute metadata including name, hardware spec, region, labels, etc.{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="joburi_csharp">
+<a href="#joburi_csharp" style="color: inherit; text-decoration: inherit;">Job<wbr>Uri</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The URI of the external job used to execute the notebook.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
@@ -763,6 +771,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#executiontemplateresponse">Execution<wbr>Template<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}execute metadata including name, hardware spec, region, labels, etc.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="joburi_go">
+<a href="#joburi_go" style="color: inherit; text-decoration: inherit;">Job<wbr>Uri</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The URI of the external job used to execute the notebook.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -832,6 +848,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}execute metadata including name, hardware spec, region, labels, etc.{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="joburi_nodejs">
+<a href="#joburi_nodejs" style="color: inherit; text-decoration: inherit;">job<wbr>Uri</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The URI of the external job used to execute the notebook.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
@@ -900,6 +924,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}execute metadata including name, hardware spec, region, labels, etc.{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="job_uri_python">
+<a href="#job_uri_python" style="color: inherit; text-decoration: inherit;">job_<wbr>uri</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The URI of the external job used to execute the notebook.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
@@ -936,15 +968,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <h4 id="executiontemplate">Execution<wbr>Template</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="scaletier_csharp">
-<a href="#scaletier_csharp" style="color: inherit; text-decoration: inherit;">Scale<wbr>Tier</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#executiontemplatescaletier">Pulumi.<wbr>Google<wbr>Native.<wbr>Notebooks.<wbr>V1.<wbr>Execution<wbr>Template<wbr>Scale<wbr>Tier</a></span>
-    </dt>
-    <dd>{{% md %}}Scale tier of the hardware used for notebook execution.{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="acceleratorconfig_csharp">
 <a href="#acceleratorconfig_csharp" style="color: inherit; text-decoration: inherit;">Accelerator<wbr>Config</a>
@@ -1020,15 +1044,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="scaletier_go">
-<a href="#scaletier_go" style="color: inherit; text-decoration: inherit;">Scale<wbr>Tier</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#executiontemplatescaletier">Execution<wbr>Template<wbr>Scale<wbr>Tier</a></span>
-    </dt>
-    <dd>{{% md %}}Scale tier of the hardware used for notebook execution.{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="acceleratorconfig_go">
 <a href="#acceleratorconfig_go" style="color: inherit; text-decoration: inherit;">Accelerator<wbr>Config</a>
@@ -1104,15 +1120,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="scaletier_nodejs">
-<a href="#scaletier_nodejs" style="color: inherit; text-decoration: inherit;">scale<wbr>Tier</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#executiontemplatescaletier">Execution<wbr>Template<wbr>Scale<wbr>Tier</a></span>
-    </dt>
-    <dd>{{% md %}}Scale tier of the hardware used for notebook execution.{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="acceleratorconfig_nodejs">
 <a href="#acceleratorconfig_nodejs" style="color: inherit; text-decoration: inherit;">accelerator<wbr>Config</a>
@@ -1188,15 +1196,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="scale_tier_python">
-<a href="#scale_tier_python" style="color: inherit; text-decoration: inherit;">scale_<wbr>tier</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#executiontemplatescaletier">Execution<wbr>Template<wbr>Scale<wbr>Tier</a></span>
-    </dt>
-    <dd>{{% md %}}Scale tier of the hardware used for notebook execution.{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="accelerator_config_python">
 <a href="#accelerator_config_python" style="color: inherit; text-decoration: inherit;">accelerator_<wbr>config</a>
@@ -1340,14 +1340,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Parameters to be overridden in the notebook during execution. Ref https://papermill.readthedocs.io/en/latest/usage-parameterize.html on how to specifying parameters in the input notebook and pass them here in an YAML file. Ex: gs://notebook_user/scheduled_notebooks/sentiment_notebook_params.yaml{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="scaletier_csharp">
-<a href="#scaletier_csharp" style="color: inherit; text-decoration: inherit;">Scale<wbr>Tier</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Scale tier of the hardware used for notebook execution.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="serviceaccount_csharp">
 <a href="#serviceaccount_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Account</a>
 </span>
@@ -1423,14 +1415,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Parameters to be overridden in the notebook during execution. Ref https://papermill.readthedocs.io/en/latest/usage-parameterize.html on how to specifying parameters in the input notebook and pass them here in an YAML file. Ex: gs://notebook_user/scheduled_notebooks/sentiment_notebook_params.yaml{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="scaletier_go">
-<a href="#scaletier_go" style="color: inherit; text-decoration: inherit;">Scale<wbr>Tier</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Scale tier of the hardware used for notebook execution.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="serviceaccount_go">
 <a href="#serviceaccount_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Account</a>
@@ -1508,14 +1492,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Parameters to be overridden in the notebook during execution. Ref https://papermill.readthedocs.io/en/latest/usage-parameterize.html on how to specifying parameters in the input notebook and pass them here in an YAML file. Ex: gs://notebook_user/scheduled_notebooks/sentiment_notebook_params.yaml{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="scaletier_nodejs">
-<a href="#scaletier_nodejs" style="color: inherit; text-decoration: inherit;">scale<wbr>Tier</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Scale tier of the hardware used for notebook execution.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="serviceaccount_nodejs">
 <a href="#serviceaccount_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Account</a>
 </span>
@@ -1592,14 +1568,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Parameters to be overridden in the notebook during execution. Ref https://papermill.readthedocs.io/en/latest/usage-parameterize.html on how to specifying parameters in the input notebook and pass them here in an YAML file. Ex: gs://notebook_user/scheduled_notebooks/sentiment_notebook_params.yaml{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="scale_tier_python">
-<a href="#scale_tier_python" style="color: inherit; text-decoration: inherit;">scale_<wbr>tier</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Scale tier of the hardware used for notebook execution.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="service_account_python">
 <a href="#service_account_python" style="color: inherit; text-decoration: inherit;">service_<wbr>account</a>
 </span>
@@ -1607,52 +1575,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The email address of a service account to use when running the execution. You must have the `iam.serviceAccounts.actAs` permission for the specified service account.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="executiontemplatescaletier">Execution<wbr>Template<wbr>Scale<wbr>Tier</h4>
-
-{{% choosable language csharp %}}
-<dl class="tabular"><dt>Scale<wbr>Tier<wbr>Unspecified</dt>
-    <dd>SCALE_TIER_UNSPECIFIED{{% md %}}Unspecified Scale Tier.{{% /md %}}</dd><dt>Basic</dt>
-    <dd>BASIC{{% md %}}A single worker instance. This tier is suitable for learning how to use Cloud ML, and for experimenting with new models using small datasets.{{% /md %}}</dd><dt>Standard1</dt>
-    <dd>STANDARD_1{{% md %}}Many workers and a few parameter servers.{{% /md %}}</dd><dt>Premium1</dt>
-    <dd>PREMIUM_1{{% md %}}A large number of workers with many parameter servers.{{% /md %}}</dd><dt>Basic<wbr>Gpu</dt>
-    <dd>BASIC_GPU{{% md %}}A single worker instance with a K80 GPU.{{% /md %}}</dd><dt>Basic<wbr>Tpu</dt>
-    <dd>BASIC_TPU{{% md %}}A single worker instance with a Cloud TPU.{{% /md %}}</dd><dt>Custom</dt>
-    <dd>CUSTOM{{% md %}}The CUSTOM tier is not a set tier, but rather enables you to use your own cluster specification. When you use this tier, set values to configure your processing cluster according to these guidelines: * You _must_ set `TrainingInput.masterType` to specify the type of machine to use for your master node. This is the only required setting. * You _may_ set `TrainingInput.workerCount` to specify the number of workers to use. If you specify one or more workers, you _must_ also set `TrainingInput.workerType` to specify the type of machine to use for your worker nodes. * You _may_ set `TrainingInput.parameterServerCount` to specify the number of parameter servers to use. If you specify one or more parameter servers, you _must_ also set `TrainingInput.parameterServerType` to specify the type of machine to use for your parameter servers. Note that all of your workers must use the same machine type, which can be different from your parameter server type and master type. Your parameter servers must likewise use the same machine type, which can be different from your worker type and master type.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="tabular"><dt>Execution<wbr>Template<wbr>Scale<wbr>Tier<wbr>Scale<wbr>Tier<wbr>Unspecified</dt>
-    <dd>SCALE_TIER_UNSPECIFIED{{% md %}}Unspecified Scale Tier.{{% /md %}}</dd><dt>Execution<wbr>Template<wbr>Scale<wbr>Tier<wbr>Basic</dt>
-    <dd>BASIC{{% md %}}A single worker instance. This tier is suitable for learning how to use Cloud ML, and for experimenting with new models using small datasets.{{% /md %}}</dd><dt>Execution<wbr>Template<wbr>Scale<wbr>Tier<wbr>Standard1</dt>
-    <dd>STANDARD_1{{% md %}}Many workers and a few parameter servers.{{% /md %}}</dd><dt>Execution<wbr>Template<wbr>Scale<wbr>Tier<wbr>Premium1</dt>
-    <dd>PREMIUM_1{{% md %}}A large number of workers with many parameter servers.{{% /md %}}</dd><dt>Execution<wbr>Template<wbr>Scale<wbr>Tier<wbr>Basic<wbr>Gpu</dt>
-    <dd>BASIC_GPU{{% md %}}A single worker instance with a K80 GPU.{{% /md %}}</dd><dt>Execution<wbr>Template<wbr>Scale<wbr>Tier<wbr>Basic<wbr>Tpu</dt>
-    <dd>BASIC_TPU{{% md %}}A single worker instance with a Cloud TPU.{{% /md %}}</dd><dt>Execution<wbr>Template<wbr>Scale<wbr>Tier<wbr>Custom</dt>
-    <dd>CUSTOM{{% md %}}The CUSTOM tier is not a set tier, but rather enables you to use your own cluster specification. When you use this tier, set values to configure your processing cluster according to these guidelines: * You _must_ set `TrainingInput.masterType` to specify the type of machine to use for your master node. This is the only required setting. * You _may_ set `TrainingInput.workerCount` to specify the number of workers to use. If you specify one or more workers, you _must_ also set `TrainingInput.workerType` to specify the type of machine to use for your worker nodes. * You _may_ set `TrainingInput.parameterServerCount` to specify the number of parameter servers to use. If you specify one or more parameter servers, you _must_ also set `TrainingInput.parameterServerType` to specify the type of machine to use for your parameter servers. Note that all of your workers must use the same machine type, which can be different from your parameter server type and master type. Your parameter servers must likewise use the same machine type, which can be different from your worker type and master type.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="tabular"><dt>Scale<wbr>Tier<wbr>Unspecified</dt>
-    <dd>SCALE_TIER_UNSPECIFIED{{% md %}}Unspecified Scale Tier.{{% /md %}}</dd><dt>Basic</dt>
-    <dd>BASIC{{% md %}}A single worker instance. This tier is suitable for learning how to use Cloud ML, and for experimenting with new models using small datasets.{{% /md %}}</dd><dt>Standard1</dt>
-    <dd>STANDARD_1{{% md %}}Many workers and a few parameter servers.{{% /md %}}</dd><dt>Premium1</dt>
-    <dd>PREMIUM_1{{% md %}}A large number of workers with many parameter servers.{{% /md %}}</dd><dt>Basic<wbr>Gpu</dt>
-    <dd>BASIC_GPU{{% md %}}A single worker instance with a K80 GPU.{{% /md %}}</dd><dt>Basic<wbr>Tpu</dt>
-    <dd>BASIC_TPU{{% md %}}A single worker instance with a Cloud TPU.{{% /md %}}</dd><dt>Custom</dt>
-    <dd>CUSTOM{{% md %}}The CUSTOM tier is not a set tier, but rather enables you to use your own cluster specification. When you use this tier, set values to configure your processing cluster according to these guidelines: * You _must_ set `TrainingInput.masterType` to specify the type of machine to use for your master node. This is the only required setting. * You _may_ set `TrainingInput.workerCount` to specify the number of workers to use. If you specify one or more workers, you _must_ also set `TrainingInput.workerType` to specify the type of machine to use for your worker nodes. * You _may_ set `TrainingInput.parameterServerCount` to specify the number of parameter servers to use. If you specify one or more parameter servers, you _must_ also set `TrainingInput.parameterServerType` to specify the type of machine to use for your parameter servers. Note that all of your workers must use the same machine type, which can be different from your parameter server type and master type. Your parameter servers must likewise use the same machine type, which can be different from your worker type and master type.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="tabular"><dt>SCALE_TIER_UNSPECIFIED</dt>
-    <dd>SCALE_TIER_UNSPECIFIED{{% md %}}Unspecified Scale Tier.{{% /md %}}</dd><dt>BASIC</dt>
-    <dd>BASIC{{% md %}}A single worker instance. This tier is suitable for learning how to use Cloud ML, and for experimenting with new models using small datasets.{{% /md %}}</dd><dt>STANDARD1</dt>
-    <dd>STANDARD_1{{% md %}}Many workers and a few parameter servers.{{% /md %}}</dd><dt>PREMIUM1</dt>
-    <dd>PREMIUM_1{{% md %}}A large number of workers with many parameter servers.{{% /md %}}</dd><dt>BASIC_GPU</dt>
-    <dd>BASIC_GPU{{% md %}}A single worker instance with a K80 GPU.{{% /md %}}</dd><dt>BASIC_TPU</dt>
-    <dd>BASIC_TPU{{% md %}}A single worker instance with a Cloud TPU.{{% /md %}}</dd><dt>CUSTOM</dt>
-    <dd>CUSTOM{{% md %}}The CUSTOM tier is not a set tier, but rather enables you to use your own cluster specification. When you use this tier, set values to configure your processing cluster according to these guidelines: * You _must_ set `TrainingInput.masterType` to specify the type of machine to use for your master node. This is the only required setting. * You _may_ set `TrainingInput.workerCount` to specify the number of workers to use. If you specify one or more workers, you _must_ also set `TrainingInput.workerType` to specify the type of machine to use for your worker nodes. * You _may_ set `TrainingInput.parameterServerCount` to specify the number of parameter servers to use. If you specify one or more parameter servers, you _must_ also set `TrainingInput.parameterServerType` to specify the type of machine to use for your parameter servers. Note that all of your workers must use the same machine type, which can be different from your parameter server type and master type. Your parameter servers must likewise use the same machine type, which can be different from your worker type and master type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="schedulestate">Schedule<wbr>State</h4>
@@ -1663,7 +1585,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>ENABLED{{% md %}}The job is executing normally.{{% /md %}}</dd><dt>Paused</dt>
     <dd>PAUSED{{% md %}}The job is paused by the user. It will not execute. A user can intentionally pause the job using PauseJobRequest.{{% /md %}}</dd><dt>Disabled</dt>
     <dd>DISABLED{{% md %}}The job is disabled by the system due to error. The user cannot directly set a job to be disabled.{{% /md %}}</dd><dt>Update<wbr>Failed</dt>
-    <dd>UPDATE_FAILED{{% md %}}The job state resulting from a failed CloudScheduler.UpdateJob operation. To recover a job from this state, retry CloudScheduler.UpdateJob until a successful response is received.{{% /md %}}</dd></dl>
+    <dd>UPDATE_FAILED{{% md %}}The job state resulting from a failed CloudScheduler.UpdateJob operation. To recover a job from this state, retry CloudScheduler.UpdateJob until a successful response is received.{{% /md %}}</dd><dt>Initializing</dt>
+    <dd>INITIALIZING{{% md %}}The schedule resource is being created.{{% /md %}}</dd><dt>Deleting</dt>
+    <dd>DELETING{{% md %}}The schedule resource is being deleted.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1672,7 +1596,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>ENABLED{{% md %}}The job is executing normally.{{% /md %}}</dd><dt>Schedule<wbr>State<wbr>Paused</dt>
     <dd>PAUSED{{% md %}}The job is paused by the user. It will not execute. A user can intentionally pause the job using PauseJobRequest.{{% /md %}}</dd><dt>Schedule<wbr>State<wbr>Disabled</dt>
     <dd>DISABLED{{% md %}}The job is disabled by the system due to error. The user cannot directly set a job to be disabled.{{% /md %}}</dd><dt>Schedule<wbr>State<wbr>Update<wbr>Failed</dt>
-    <dd>UPDATE_FAILED{{% md %}}The job state resulting from a failed CloudScheduler.UpdateJob operation. To recover a job from this state, retry CloudScheduler.UpdateJob until a successful response is received.{{% /md %}}</dd></dl>
+    <dd>UPDATE_FAILED{{% md %}}The job state resulting from a failed CloudScheduler.UpdateJob operation. To recover a job from this state, retry CloudScheduler.UpdateJob until a successful response is received.{{% /md %}}</dd><dt>Schedule<wbr>State<wbr>Initializing</dt>
+    <dd>INITIALIZING{{% md %}}The schedule resource is being created.{{% /md %}}</dd><dt>Schedule<wbr>State<wbr>Deleting</dt>
+    <dd>DELETING{{% md %}}The schedule resource is being deleted.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1681,7 +1607,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>ENABLED{{% md %}}The job is executing normally.{{% /md %}}</dd><dt>Paused</dt>
     <dd>PAUSED{{% md %}}The job is paused by the user. It will not execute. A user can intentionally pause the job using PauseJobRequest.{{% /md %}}</dd><dt>Disabled</dt>
     <dd>DISABLED{{% md %}}The job is disabled by the system due to error. The user cannot directly set a job to be disabled.{{% /md %}}</dd><dt>Update<wbr>Failed</dt>
-    <dd>UPDATE_FAILED{{% md %}}The job state resulting from a failed CloudScheduler.UpdateJob operation. To recover a job from this state, retry CloudScheduler.UpdateJob until a successful response is received.{{% /md %}}</dd></dl>
+    <dd>UPDATE_FAILED{{% md %}}The job state resulting from a failed CloudScheduler.UpdateJob operation. To recover a job from this state, retry CloudScheduler.UpdateJob until a successful response is received.{{% /md %}}</dd><dt>Initializing</dt>
+    <dd>INITIALIZING{{% md %}}The schedule resource is being created.{{% /md %}}</dd><dt>Deleting</dt>
+    <dd>DELETING{{% md %}}The schedule resource is being deleted.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1690,7 +1618,9 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>ENABLED{{% md %}}The job is executing normally.{{% /md %}}</dd><dt>PAUSED</dt>
     <dd>PAUSED{{% md %}}The job is paused by the user. It will not execute. A user can intentionally pause the job using PauseJobRequest.{{% /md %}}</dd><dt>DISABLED</dt>
     <dd>DISABLED{{% md %}}The job is disabled by the system due to error. The user cannot directly set a job to be disabled.{{% /md %}}</dd><dt>UPDATE_FAILED</dt>
-    <dd>UPDATE_FAILED{{% md %}}The job state resulting from a failed CloudScheduler.UpdateJob operation. To recover a job from this state, retry CloudScheduler.UpdateJob until a successful response is received.{{% /md %}}</dd></dl>
+    <dd>UPDATE_FAILED{{% md %}}The job state resulting from a failed CloudScheduler.UpdateJob operation. To recover a job from this state, retry CloudScheduler.UpdateJob until a successful response is received.{{% /md %}}</dd><dt>INITIALIZING</dt>
+    <dd>INITIALIZING{{% md %}}The schedule resource is being created.{{% /md %}}</dd><dt>DELETING</dt>
+    <dd>DELETING{{% md %}}The schedule resource is being deleted.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="scheduleracceleratorconfig">Scheduler<wbr>Accelerator<wbr>Config</h4>

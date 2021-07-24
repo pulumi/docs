@@ -55,14 +55,6 @@ The following arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="project_csharp">
-<a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="publicdelegatedprefix_csharp">
 <a href="#publicdelegatedprefix_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Delegated<wbr>Prefix</a>
 </span>
@@ -77,19 +69,19 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="project_csharp">
+<a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="project_go">
-<a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="publicdelegatedprefix_go">
 <a href="#publicdelegatedprefix_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Delegated<wbr>Prefix</a>
@@ -105,19 +97,19 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="project_go">
+<a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="project_nodejs">
-<a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="publicdelegatedprefix_nodejs">
 <a href="#publicdelegatedprefix_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Delegated<wbr>Prefix</a>
@@ -133,19 +125,19 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="project_nodejs">
+<a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="project_python">
-<a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="public_delegated_prefix_python">
 <a href="#public_delegated_prefix_python" style="color: inherit; text-decoration: inherit;">public_<wbr>delegated_<wbr>prefix</a>
@@ -157,6 +149,14 @@ The following arguments are supported:
             title="Required">
         <span id="region_python">
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="project_python">
+<a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>

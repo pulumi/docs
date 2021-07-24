@@ -60,8 +60,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
 </span>
@@ -80,8 +80,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
 </span>
@@ -100,8 +100,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
@@ -120,8 +120,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
@@ -269,7 +269,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rolloutpolicyresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>Alpha.<wbr>Outputs.<wbr>Rollout<wbr>Policy<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}A rollout policy to apply to this image. When specified, the rollout policy overrides per-zone references to the image via the associated image family. The rollout policy restricts the zones where this image is accessible when using a zonal image family reference. When the rollout policy does not include the user specified zone, or if the zone is rolled out, this image is accessible.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}A rollout policy to apply to this image. When specified, the rollout policy overrides per-zone references to the image via the associated image family. The rollout policy restricts the zones where this image is accessible when using a zonal image family reference. When the rollout policy does not include the user specified zone, or if the zone is rolled out, this image is accessible. The rollout policy for this image is read-only, except for allowlisted users. This field might not be configured. To view the latest non-deprecated image in a specific zone, use the imageFamilyViews.get method.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="satisfiespzs_csharp">
 <a href="#satisfiespzs_csharp" style="color: inherit; text-decoration: inherit;">Satisfies<wbr>Pzs</a>
@@ -397,7 +397,15 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Cloud Storage bucket storage location of the image (regional or multi-regional).{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Cloud Storage bucket storage location of the image (regional or multi-regional).{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="userlicenses_csharp">
+<a href="#userlicenses_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Licenses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A list of publicly visible user-licenses. Unlike regular licenses, user provided licenses can be modified after the disk is created. This includes a list of URLs to the license resource. For example, to provide a debian license: https://www.googleapis.com/compute/v1/projects/debian-cloud/global/licenses/debian-9-stretch {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -529,7 +537,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rolloutpolicyresponse">Rollout<wbr>Policy<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}A rollout policy to apply to this image. When specified, the rollout policy overrides per-zone references to the image via the associated image family. The rollout policy restricts the zones where this image is accessible when using a zonal image family reference. When the rollout policy does not include the user specified zone, or if the zone is rolled out, this image is accessible.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}A rollout policy to apply to this image. When specified, the rollout policy overrides per-zone references to the image via the associated image family. The rollout policy restricts the zones where this image is accessible when using a zonal image family reference. When the rollout policy does not include the user specified zone, or if the zone is rolled out, this image is accessible. The rollout policy for this image is read-only, except for allowlisted users. This field might not be configured. To view the latest non-deprecated image in a specific zone, use the imageFamilyViews.get method.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="satisfiespzs_go">
 <a href="#satisfiespzs_go" style="color: inherit; text-decoration: inherit;">Satisfies<wbr>Pzs</a>
@@ -657,7 +665,15 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Cloud Storage bucket storage location of the image (regional or multi-regional).{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Cloud Storage bucket storage location of the image (regional or multi-regional).{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="userlicenses_go">
+<a href="#userlicenses_go" style="color: inherit; text-decoration: inherit;">User<wbr>Licenses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}A list of publicly visible user-licenses. Unlike regular licenses, user provided licenses can be modified after the disk is created. This includes a list of URLs to the license resource. For example, to provide a debian license: https://www.googleapis.com/compute/v1/projects/debian-cloud/global/licenses/debian-9-stretch {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -789,7 +805,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rolloutpolicyresponse">Rollout<wbr>Policy<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}A rollout policy to apply to this image. When specified, the rollout policy overrides per-zone references to the image via the associated image family. The rollout policy restricts the zones where this image is accessible when using a zonal image family reference. When the rollout policy does not include the user specified zone, or if the zone is rolled out, this image is accessible.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}A rollout policy to apply to this image. When specified, the rollout policy overrides per-zone references to the image via the associated image family. The rollout policy restricts the zones where this image is accessible when using a zonal image family reference. When the rollout policy does not include the user specified zone, or if the zone is rolled out, this image is accessible. The rollout policy for this image is read-only, except for allowlisted users. This field might not be configured. To view the latest non-deprecated image in a specific zone, use the imageFamilyViews.get method.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="satisfiespzs_nodejs">
 <a href="#satisfiespzs_nodejs" style="color: inherit; text-decoration: inherit;">satisfies<wbr>Pzs</a>
@@ -917,7 +933,15 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Cloud Storage bucket storage location of the image (regional or multi-regional).{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Cloud Storage bucket storage location of the image (regional or multi-regional).{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="userlicenses_nodejs">
+<a href="#userlicenses_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Licenses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}A list of publicly visible user-licenses. Unlike regular licenses, user provided licenses can be modified after the disk is created. This includes a list of URLs to the license resource. For example, to provide a debian license: https://www.googleapis.com/compute/v1/projects/debian-cloud/global/licenses/debian-9-stretch {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1049,7 +1073,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rolloutpolicyresponse">Rollout<wbr>Policy<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}A rollout policy to apply to this image. When specified, the rollout policy overrides per-zone references to the image via the associated image family. The rollout policy restricts the zones where this image is accessible when using a zonal image family reference. When the rollout policy does not include the user specified zone, or if the zone is rolled out, this image is accessible.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}A rollout policy to apply to this image. When specified, the rollout policy overrides per-zone references to the image via the associated image family. The rollout policy restricts the zones where this image is accessible when using a zonal image family reference. When the rollout policy does not include the user specified zone, or if the zone is rolled out, this image is accessible. The rollout policy for this image is read-only, except for allowlisted users. This field might not be configured. To view the latest non-deprecated image in a specific zone, use the imageFamilyViews.get method.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="satisfies_pzs_python">
 <a href="#satisfies_pzs_python" style="color: inherit; text-decoration: inherit;">satisfies_<wbr>pzs</a>
@@ -1177,7 +1201,15 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Cloud Storage bucket storage location of the image (regional or multi-regional).{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Cloud Storage bucket storage location of the image (regional or multi-regional).{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="user_licenses_python">
+<a href="#user_licenses_python" style="color: inherit; text-decoration: inherit;">user_<wbr>licenses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}A list of publicly visible user-licenses. Unlike regular licenses, user provided licenses can be modified after the disk is created. This includes a list of URLs to the license resource. For example, to provide a debian license: https://www.googleapis.com/compute/v1/projects/debian-cloud/global/licenses/debian-9-stretch {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1419,7 +1451,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rolloutpolicyresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>Alpha.<wbr>Inputs.<wbr>Rollout<wbr>Policy<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The rollout policy of this deprecation. This policy is only enforced by image family views. The rollout policy restricts the zones where the associated resource is considered in a deprecated state. When the rollout policy does not include the user specified zone, or if the zone is rolled out, the associated resource is considered in a deprecated state.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The rollout policy for this deprecation. This policy is only enforced by image family views. The rollout policy restricts the zones where the associated resource is considered in a deprecated state. When the rollout policy does not include the user specified zone, or if the zone is rolled out, the associated resource is considered in a deprecated state. The rollout policy for this deprecation is read-only, except for allowlisted users. This field might not be configured. To view the latest non-deprecated image in a specific zone, use the imageFamilyViews.get method.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1471,7 +1503,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rolloutpolicyresponse">Rollout<wbr>Policy<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The rollout policy of this deprecation. This policy is only enforced by image family views. The rollout policy restricts the zones where the associated resource is considered in a deprecated state. When the rollout policy does not include the user specified zone, or if the zone is rolled out, the associated resource is considered in a deprecated state.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The rollout policy for this deprecation. This policy is only enforced by image family views. The rollout policy restricts the zones where the associated resource is considered in a deprecated state. When the rollout policy does not include the user specified zone, or if the zone is rolled out, the associated resource is considered in a deprecated state. The rollout policy for this deprecation is read-only, except for allowlisted users. This field might not be configured. To view the latest non-deprecated image in a specific zone, use the imageFamilyViews.get method.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1523,7 +1555,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rolloutpolicyresponse">Rollout<wbr>Policy<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The rollout policy of this deprecation. This policy is only enforced by image family views. The rollout policy restricts the zones where the associated resource is considered in a deprecated state. When the rollout policy does not include the user specified zone, or if the zone is rolled out, the associated resource is considered in a deprecated state.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The rollout policy for this deprecation. This policy is only enforced by image family views. The rollout policy restricts the zones where the associated resource is considered in a deprecated state. When the rollout policy does not include the user specified zone, or if the zone is rolled out, the associated resource is considered in a deprecated state. The rollout policy for this deprecation is read-only, except for allowlisted users. This field might not be configured. To view the latest non-deprecated image in a specific zone, use the imageFamilyViews.get method.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1575,7 +1607,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rolloutpolicyresponse">Rollout<wbr>Policy<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The rollout policy of this deprecation. This policy is only enforced by image family views. The rollout policy restricts the zones where the associated resource is considered in a deprecated state. When the rollout policy does not include the user specified zone, or if the zone is rolled out, the associated resource is considered in a deprecated state.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The rollout policy for this deprecation. This policy is only enforced by image family views. The rollout policy restricts the zones where the associated resource is considered in a deprecated state. When the rollout policy does not include the user specified zone, or if the zone is rolled out, the associated resource is considered in a deprecated state. The rollout policy for this deprecation is read-only, except for allowlisted users. This field might not be configured. To view the latest non-deprecated image in a specific zone, use the imageFamilyViews.get method.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="filecontentbufferresponse">File<wbr>Content<wbr>Buffer<wbr>Response</h4>

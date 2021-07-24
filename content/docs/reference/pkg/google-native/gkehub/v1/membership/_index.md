@@ -43,7 +43,7 @@ Auto-naming is currently not supported for this resource.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewMembership</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">MembershipArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Membership</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewMembership</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">MembershipArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Membership</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -104,7 +104,7 @@ Auto-naming is currently not supported for this resource.
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
@@ -122,7 +122,7 @@ Auto-naming is currently not supported for this resource.
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
@@ -165,24 +165,8 @@ The Membership resource accepts the following [input]({{< relref "/docs/intro/co
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="location_csharp">
-<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="membershipid_csharp">
 <a href="#membershipid_csharp" style="color: inherit; text-decoration: inherit;">Membership<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="project_csharp">
-<a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -221,6 +205,22 @@ The Membership resource accepts the following [input]({{< relref "/docs/intro/co
     </dt>
     <dd>{{% md %}}Optional. GCP labels for this membership.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="location_csharp">
+<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="project_csharp">
+<a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="requestid_csharp">
 <a href="#requestid_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Id</a>
 </span>
@@ -233,24 +233,8 @@ The Membership resource accepts the following [input]({{< relref "/docs/intro/co
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="location_go">
-<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="membershipid_go">
 <a href="#membershipid_go" style="color: inherit; text-decoration: inherit;">Membership<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="project_go">
-<a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -289,6 +273,22 @@ The Membership resource accepts the following [input]({{< relref "/docs/intro/co
     </dt>
     <dd>{{% md %}}Optional. GCP labels for this membership.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="location_go">
+<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="project_go">
+<a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="requestid_go">
 <a href="#requestid_go" style="color: inherit; text-decoration: inherit;">Request<wbr>Id</a>
 </span>
@@ -301,24 +301,8 @@ The Membership resource accepts the following [input]({{< relref "/docs/intro/co
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="location_nodejs">
-<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="membershipid_nodejs">
 <a href="#membershipid_nodejs" style="color: inherit; text-decoration: inherit;">membership<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="project_nodejs">
-<a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -357,6 +341,22 @@ The Membership resource accepts the following [input]({{< relref "/docs/intro/co
     </dt>
     <dd>{{% md %}}Optional. GCP labels for this membership.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="location_nodejs">
+<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="project_nodejs">
+<a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="requestid_nodejs">
 <a href="#requestid_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Id</a>
 </span>
@@ -369,24 +369,8 @@ The Membership resource accepts the following [input]({{< relref "/docs/intro/co
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="location_python">
-<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="membership_id_python">
 <a href="#membership_id_python" style="color: inherit; text-decoration: inherit;">membership_<wbr>id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="project_python">
-<a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -424,6 +408,22 @@ The Membership resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Optional. GCP labels for this membership.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="location_python">
+<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="project_python">
+<a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="request_id_python">
 <a href="#request_id_python" style="color: inherit; text-decoration: inherit;">request_<wbr>id</a>
@@ -1038,6 +1038,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
+        <span id="clustermissing_csharp">
+<a href="#clustermissing_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Missing</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If cluster_missing is set then it denotes that the GKE cluster no longer exists in the GKE Control Plane.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="resourcelink_csharp">
 <a href="#resourcelink_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Link</a>
 </span>
@@ -1049,6 +1057,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="clustermissing_go">
+<a href="#clustermissing_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Missing</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If cluster_missing is set then it denotes that the GKE cluster no longer exists in the GKE Control Plane.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcelink_go">
 <a href="#resourcelink_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Link</a>
@@ -1062,6 +1078,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
+        <span id="clustermissing_nodejs">
+<a href="#clustermissing_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Missing</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}If cluster_missing is set then it denotes that the GKE cluster no longer exists in the GKE Control Plane.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="resourcelink_nodejs">
 <a href="#resourcelink_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Link</a>
 </span>
@@ -1073,6 +1097,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="cluster_missing_python">
+<a href="#cluster_missing_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>missing</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If cluster_missing is set then it denotes that the GKE cluster no longer exists in the GKE Control Plane.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_link_python">
 <a href="#resource_link_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>link</a>

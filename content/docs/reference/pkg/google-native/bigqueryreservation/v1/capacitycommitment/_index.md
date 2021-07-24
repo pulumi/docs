@@ -21,7 +21,7 @@ Auto-naming is currently not supported for this resource.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">CapacityCommitment</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">CapacityCommitmentArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">CapacityCommitment</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">CapacityCommitmentArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -37,16 +37,16 @@ Auto-naming is currently not supported for this resource.
                        <span class="nx">slot_count</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">CapacityCommitment</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                       <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">CapacityCommitmentArgs</a></span><span class="p">,</span>
+                       <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">Optional[CapacityCommitmentArgs]</a></span> = None<span class="p">,</span>
                        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewCapacityCommitment</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">CapacityCommitmentArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">CapacityCommitment</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewCapacityCommitment</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">CapacityCommitmentArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">CapacityCommitment</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">CapacityCommitment</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">CapacityCommitmentArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">CapacityCommitment</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">CapacityCommitmentArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -58,7 +58,7 @@ Auto-naming is currently not supported for this resource.
         <span class="property-type">string</span>
     </dt>
     <dd>The unique name of the resource.</dd><dt
-        class="property-required" title="Required">
+        class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">CapacityCommitmentArgs</a></span>
@@ -82,7 +82,7 @@ Auto-naming is currently not supported for this resource.
         <span class="property-type">str</span>
     </dt>
     <dd>The unique name of the resource.</dd><dt
-        class="property-required" title="Required">
+        class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">CapacityCommitmentArgs</a></span>
@@ -103,7 +103,7 @@ Auto-naming is currently not supported for this resource.
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
@@ -112,7 +112,7 @@ Auto-naming is currently not supported for this resource.
         <span class="property-type">string</span>
     </dt>
     <dd>The unique name of the resource.</dd><dt
-        class="property-required" title="Required">
+        class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">CapacityCommitmentArgs</a></span>
@@ -121,7 +121,7 @@ Auto-naming is currently not supported for this resource.
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
@@ -136,7 +136,7 @@ Auto-naming is currently not supported for this resource.
         <span class="property-type">string</span>
     </dt>
     <dd>The unique name of the resource.</dd><dt
-        class="property-required" title="Required">
+        class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">CapacityCommitmentArgs</a></span>
@@ -162,23 +162,7 @@ The CapacityCommitment resource accepts the following [input]({{< relref "/docs/
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="location_csharp">
-<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="project_csharp">
-<a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="capacitycommitmentid_csharp">
 <a href="#capacitycommitmentid_csharp" style="color: inherit; text-decoration: inherit;">Capacity<wbr>Commitment<wbr>Id</a>
@@ -196,6 +180,14 @@ The CapacityCommitment resource accepts the following [input]({{< relref "/docs/
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="location_csharp">
+<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="plan_csharp">
 <a href="#plan_csharp" style="color: inherit; text-decoration: inherit;">Plan</a>
 </span>
@@ -203,6 +195,14 @@ The CapacityCommitment resource accepts the following [input]({{< relref "/docs/
         <span class="property-type"><a href="#capacitycommitmentplan">Pulumi.<wbr>Google<wbr>Native.<wbr>Big<wbr>Query<wbr>Reservation.<wbr>V1.<wbr>Capacity<wbr>Commitment<wbr>Plan</a></span>
     </dt>
     <dd>{{% md %}}Capacity commitment commitment plan.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="project_csharp">
+<a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="renewalplan_csharp">
 <a href="#renewalplan_csharp" style="color: inherit; text-decoration: inherit;">Renewal<wbr>Plan</a>
@@ -222,23 +222,7 @@ The CapacityCommitment resource accepts the following [input]({{< relref "/docs/
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="location_go">
-<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="project_go">
-<a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="capacitycommitmentid_go">
 <a href="#capacitycommitmentid_go" style="color: inherit; text-decoration: inherit;">Capacity<wbr>Commitment<wbr>Id</a>
@@ -256,6 +240,14 @@ The CapacityCommitment resource accepts the following [input]({{< relref "/docs/
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="location_go">
+<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="plan_go">
 <a href="#plan_go" style="color: inherit; text-decoration: inherit;">Plan</a>
 </span>
@@ -263,6 +255,14 @@ The CapacityCommitment resource accepts the following [input]({{< relref "/docs/
         <span class="property-type"><a href="#capacitycommitmentplan">Capacity<wbr>Commitment<wbr>Plan</a></span>
     </dt>
     <dd>{{% md %}}Capacity commitment commitment plan.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="project_go">
+<a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="renewalplan_go">
 <a href="#renewalplan_go" style="color: inherit; text-decoration: inherit;">Renewal<wbr>Plan</a>
@@ -282,23 +282,7 @@ The CapacityCommitment resource accepts the following [input]({{< relref "/docs/
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="location_nodejs">
-<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="project_nodejs">
-<a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="capacitycommitmentid_nodejs">
 <a href="#capacitycommitmentid_nodejs" style="color: inherit; text-decoration: inherit;">capacity<wbr>Commitment<wbr>Id</a>
@@ -316,6 +300,14 @@ The CapacityCommitment resource accepts the following [input]({{< relref "/docs/
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="location_nodejs">
+<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="plan_nodejs">
 <a href="#plan_nodejs" style="color: inherit; text-decoration: inherit;">plan</a>
 </span>
@@ -323,6 +315,14 @@ The CapacityCommitment resource accepts the following [input]({{< relref "/docs/
         <span class="property-type"><a href="#capacitycommitmentplan">Capacity<wbr>Commitment<wbr>Plan</a></span>
     </dt>
     <dd>{{% md %}}Capacity commitment commitment plan.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="project_nodejs">
+<a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="renewalplan_nodejs">
 <a href="#renewalplan_nodejs" style="color: inherit; text-decoration: inherit;">renewal<wbr>Plan</a>
@@ -342,23 +342,7 @@ The CapacityCommitment resource accepts the following [input]({{< relref "/docs/
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="location_python">
-<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="project_python">
-<a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="capacity_commitment_id_python">
 <a href="#capacity_commitment_id_python" style="color: inherit; text-decoration: inherit;">capacity_<wbr>commitment_<wbr>id</a>
@@ -376,6 +360,14 @@ The CapacityCommitment resource accepts the following [input]({{< relref "/docs/
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="location_python">
+<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="plan_python">
 <a href="#plan_python" style="color: inherit; text-decoration: inherit;">plan</a>
 </span>
@@ -383,6 +375,14 @@ The CapacityCommitment resource accepts the following [input]({{< relref "/docs/
         <span class="property-type"><a href="#capacitycommitmentplan">Capacity<wbr>Commitment<wbr>Plan</a></span>
     </dt>
     <dd>{{% md %}}Capacity commitment commitment plan.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="project_python">
+<a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="renewal_plan_python">
 <a href="#renewal_plan_python" style="color: inherit; text-decoration: inherit;">renewal_<wbr>plan</a>

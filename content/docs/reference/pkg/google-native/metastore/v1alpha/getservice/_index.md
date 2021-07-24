@@ -63,16 +63,16 @@ The following arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="project_csharp">
-<a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
+        <span id="serviceid_csharp">
+<a href="#serviceid_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="serviceid_csharp">
-<a href="#serviceid_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Id</a>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="project_csharp">
+<a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -91,16 +91,16 @@ The following arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="project_go">
-<a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
+        <span id="serviceid_go">
+<a href="#serviceid_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="serviceid_go">
-<a href="#serviceid_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Id</a>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="project_go">
+<a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -119,16 +119,16 @@ The following arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="project_nodejs">
-<a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
+        <span id="serviceid_nodejs">
+<a href="#serviceid_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="serviceid_nodejs">
-<a href="#serviceid_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Id</a>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="project_nodejs">
+<a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -147,16 +147,16 @@ The following arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="project_python">
-<a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
+        <span id="service_id_python">
+<a href="#service_id_python" style="color: inherit; text-decoration: inherit;">service_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="service_id_python">
-<a href="#service_id_python" style="color: inherit; text-decoration: inherit;">service_<wbr>id</a>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="project_python">
+<a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -191,6 +191,14 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time when the metastore service was created.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="encryptionconfig_csharp">
+<a href="#encryptionconfig_csharp" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#encryptionconfigresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Metastore.<wbr>V1Alpha.<wbr>Outputs.<wbr>Encryption<wbr>Config<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Immutable. Information used to configure the Dataproc Metastore service to encrypt customer data at rest. Cannot be updated.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="endpointuri_csharp">
 <a href="#endpointuri_csharp" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Uri</a>
@@ -332,6 +340,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The time when the metastore service was created.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="encryptionconfig_go">
+<a href="#encryptionconfig_go" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#encryptionconfigresponse">Encryption<wbr>Config<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Immutable. Information used to configure the Dataproc Metastore service to encrypt customer data at rest. Cannot be updated.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="endpointuri_go">
 <a href="#endpointuri_go" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Uri</a>
 </span>
@@ -472,6 +488,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The time when the metastore service was created.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="encryptionconfig_nodejs">
+<a href="#encryptionconfig_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#encryptionconfigresponse">Encryption<wbr>Config<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Immutable. Information used to configure the Dataproc Metastore service to encrypt customer data at rest. Cannot be updated.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="endpointuri_nodejs">
 <a href="#endpointuri_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Uri</a>
 </span>
@@ -611,6 +635,14 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time when the metastore service was created.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="encryption_config_python">
+<a href="#encryption_config_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#encryptionconfigresponse">Encryption<wbr>Config<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Immutable. Information used to configure the Dataproc Metastore service to encrypt customer data at rest. Cannot be updated.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="endpoint_uri_python">
 <a href="#endpoint_uri_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>uri</a>
@@ -789,6 +821,58 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Defines whether the metastore metadata should be synced to Data Catalog. The default value is to disable syncing metastore metadata to Data Catalog.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="encryptionconfigresponse">Encryption<wbr>Config<wbr>Response</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="kmskey_csharp">
+<a href="#kmskey_csharp" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The fully qualified customer provided Cloud KMS key name to use for customer data encryption, in the following form:projects/{project_number}/locations/{location_id}/keyRings/{key_ring_id}/cryptoKeys/{crypto_key_id}.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="kmskey_go">
+<a href="#kmskey_go" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The fully qualified customer provided Cloud KMS key name to use for customer data encryption, in the following form:projects/{project_number}/locations/{location_id}/keyRings/{key_ring_id}/cryptoKeys/{crypto_key_id}.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="kmskey_nodejs">
+<a href="#kmskey_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The fully qualified customer provided Cloud KMS key name to use for customer data encryption, in the following form:projects/{project_number}/locations/{location_id}/keyRings/{key_ring_id}/cryptoKeys/{crypto_key_id}.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="kms_key_python">
+<a href="#kms_key_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The fully qualified customer provided Cloud KMS key name to use for customer data encryption, in the following form:projects/{project_number}/locations/{location_id}/keyRings/{key_ring_id}/cryptoKeys/{crypto_key_id}.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="hivemetastoreconfigresponse">Hive<wbr>Metastore<wbr>Config<wbr>Response</h4>

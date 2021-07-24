@@ -20,7 +20,7 @@ Creates a GlobalForwardingRule resource in the specified project using the data 
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">GlobalForwardingRule</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">GlobalForwardingRuleArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">GlobalForwardingRule</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">GlobalForwardingRuleArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -52,16 +52,16 @@ Creates a GlobalForwardingRule resource in the specified project using the data 
                          <span class="nx">target</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">GlobalForwardingRule</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                         <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">GlobalForwardingRuleArgs</a></span><span class="p">,</span>
+                         <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">Optional[GlobalForwardingRuleArgs]</a></span> = None<span class="p">,</span>
                          <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewGlobalForwardingRule</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">GlobalForwardingRuleArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">GlobalForwardingRule</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewGlobalForwardingRule</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">GlobalForwardingRuleArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">GlobalForwardingRule</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">GlobalForwardingRule</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">GlobalForwardingRuleArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">GlobalForwardingRule</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">GlobalForwardingRuleArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -73,7 +73,7 @@ Creates a GlobalForwardingRule resource in the specified project using the data 
         <span class="property-type">string</span>
     </dt>
     <dd>The unique name of the resource.</dd><dt
-        class="property-required" title="Required">
+        class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">GlobalForwardingRuleArgs</a></span>
@@ -97,7 +97,7 @@ Creates a GlobalForwardingRule resource in the specified project using the data 
         <span class="property-type">str</span>
     </dt>
     <dd>The unique name of the resource.</dd><dt
-        class="property-required" title="Required">
+        class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">GlobalForwardingRuleArgs</a></span>
@@ -118,7 +118,7 @@ Creates a GlobalForwardingRule resource in the specified project using the data 
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
@@ -127,7 +127,7 @@ Creates a GlobalForwardingRule resource in the specified project using the data 
         <span class="property-type">string</span>
     </dt>
     <dd>The unique name of the resource.</dd><dt
-        class="property-required" title="Required">
+        class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">GlobalForwardingRuleArgs</a></span>
@@ -136,7 +136,7 @@ Creates a GlobalForwardingRule resource in the specified project using the data 
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
@@ -151,7 +151,7 @@ Creates a GlobalForwardingRule resource in the specified project using the data 
         <span class="property-type">string</span>
     </dt>
     <dd>The unique name of the resource.</dd><dt
-        class="property-required" title="Required">
+        class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">GlobalForwardingRuleArgs</a></span>
@@ -177,15 +177,7 @@ The GlobalForwardingRule resource accepts the following [input]({{< relref "/doc
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="project_csharp">
-<a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allports_csharp">
 <a href="#allports_csharp" style="color: inherit; text-decoration: inherit;">All<wbr>Ports</a>
@@ -225,7 +217,7 @@ The GlobalForwardingRule resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}IP address that this forwarding rule serves. When a client sends traffic to this IP address, the forwarding rule directs the traffic to the target that you specify in the forwarding rule. If you don't specify a reserved IP address, an ephemeral IP address is assigned. Methods for specifying an IP address: * IPv4 dotted decimal, as in `100.1.2.3` * Full URL, as in https://www.googleapis.com/compute/v1/projects/project_id/regions/region /addresses/address-name * Partial URL or by name, as in: - projects/project_id/regions/region/addresses/address-name - regions/region/addresses/address-name - global/addresses/address-name - address-name The loadBalancingScheme and the forwarding rule's target determine the type of IP address that you can use. For detailed information, refer to [IP address specifications](/load-balancing/docs/forwarding-rule-concepts#ip_address_specifications). Must be set to `0.0.0.0` when the target is targetGrpcProxy that has validateForProxyless field set to true. For Private Service Connect forwarding rules that forward traffic to Google APIs, IP address must be provided.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}IP address that this forwarding rule serves. When a client sends traffic to this IP address, the forwarding rule directs the traffic to the target that you specify in the forwarding rule. If you don't specify a reserved IP address, an ephemeral IP address is assigned. Methods for specifying an IP address: * IPv4 dotted decimal, as in `100.1.2.3` * Full URL, as in https://www.googleapis.com/compute/v1/projects/project_id/regions/region /addresses/address-name * Partial URL or by name, as in: - projects/project_id/regions/region/addresses/address-name - regions/region/addresses/address-name - global/addresses/address-name - address-name The loadBalancingScheme and the forwarding rule's target determine the type of IP address that you can use. For detailed information, see [IP address specifications](https://cloud.google.com/load-balancing/docs/forwarding-rule-concepts#ip_address_specifications). Must be set to `0.0.0.0` when the target is targetGrpcProxy that has validateForProxyless field set to true. For Private Service Connect forwarding rules that forward traffic to Google APIs, IP address must be provided.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipprotocol_csharp">
 <a href="#ipprotocol_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Protocol</a>
@@ -233,7 +225,7 @@ The GlobalForwardingRule resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#globalforwardingruleipprotocol">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>Beta.<wbr>Global<wbr>Forwarding<wbr>Rule<wbr>Ip<wbr>Protocol</a></span>
     </dt>
-    <dd>{{% md %}}The IP protocol to which this rule applies. For protocol forwarding, valid options are TCP, UDP, ESP, AH, SCTP, ICMP and L3_DEFAULT. The valid IP protocols are different for different load balancing products: - Internal TCP/UDP Load Balancing: The load balancing scheme is INTERNAL, and one of TCP, UDP or L3_DEFAULT is valid. - Traffic Director: The load balancing scheme is INTERNAL_SELF_MANAGED, and only TCP is valid. - Internal HTTP(S) Load Balancing: The load balancing scheme is INTERNAL_MANAGED, and only TCP is valid. - HTTP(S), SSL Proxy, and TCP Proxy Load Balancing: The load balancing scheme is EXTERNAL and only TCP is valid. - Network Load Balancing: The load balancing scheme is EXTERNAL, and one of TCP, UDP or L3_DEFAULT is valid. {{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The IP protocol to which this rule applies. For protocol forwarding, valid options are TCP, UDP, ESP, AH, SCTP, ICMP and L3_DEFAULT. The valid IP protocols are different for different load balancing products as described in [Load balancing features](https://cloud.google.com/load-balancing/docs/features#protocols_from_the_load_balancer_to_the_backends).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipversion_csharp">
 <a href="#ipversion_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Version</a>
@@ -265,7 +257,7 @@ The GlobalForwardingRule resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#globalforwardingruleloadbalancingscheme">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>Beta.<wbr>Global<wbr>Forwarding<wbr>Rule<wbr>Load<wbr>Balancing<wbr>Scheme</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the forwarding rule type. - EXTERNAL is used for: - Classic Cloud VPN gateways - Protocol forwarding to VMs from an external IP address - HTTP(S), SSL Proxy, TCP Proxy, and Network Load Balancing - INTERNAL is used for: - Protocol forwarding to VMs from an internal IP address - Internal TCP/UDP Load Balancing - INTERNAL_MANAGED is used for: - Internal HTTP(S) Load Balancing - INTERNAL_SELF_MANAGED is used for: - Traffic Director For more information about forwarding rules, refer to Forwarding rule concepts.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the forwarding rule type. For more information about forwarding rules, refer to Forwarding rule concepts.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metadatafilters_csharp">
 <a href="#metadatafilters_csharp" style="color: inherit; text-decoration: inherit;">Metadata<wbr>Filters</a>
@@ -273,7 +265,7 @@ The GlobalForwardingRule resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#metadatafilter">List&lt;Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>Beta.<wbr>Inputs.<wbr>Metadata<wbr>Filter<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Opaque filter criteria used by Loadbalancer to restrict routing configuration to a limited set of xDS compliant clients. In their xDS requests to Loadbalancer, xDS clients present node metadata. When there is a match, the relevant configuration is made available to those proxies. Otherwise, all the resources (e.g. TargetHttpProxy, UrlMap) referenced by the ForwardingRule will not be visible to those proxies. For each metadataFilter in this list, if its filterMatchCriteria is set to MATCH_ANY, at least one of the filterLabels must match the corresponding label provided in the metadata. If its filterMatchCriteria is set to MATCH_ALL, then all of its filterLabels must match with corresponding labels provided in the metadata. If multiple metadataFilters are specified, all of them need to be satisfied in order to be considered a match. metadataFilters specified here will be applifed before those specified in the UrlMap that this ForwardingRule references. metadataFilters only applies to Loadbalancers that have their loadBalancingScheme set to INTERNAL_SELF_MANAGED.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Opaque filter criteria used by load balancer to restrict routing configuration to a limited set of xDS compliant clients. In their xDS requests to load balancer, xDS clients present node metadata. When there is a match, the relevant configuration is made available to those proxies. Otherwise, all the resources (e.g. TargetHttpProxy, UrlMap) referenced by the ForwardingRule are not visible to those proxies. For each metadataFilter in this list, if its filterMatchCriteria is set to MATCH_ANY, at least one of the filterLabels must match the corresponding label provided in the metadata. If its filterMatchCriteria is set to MATCH_ALL, then all of its filterLabels must match with corresponding labels provided in the metadata. If multiple metadataFilters are specified, all of them need to be satisfied in order to be considered a match. metadataFilters specified here will be applifed before those specified in the UrlMap that this ForwardingRule references. metadataFilters only applies to Loadbalancers that have their loadBalancingScheme set to INTERNAL_SELF_MANAGED.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -305,7 +297,7 @@ The GlobalForwardingRule resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This field can be used only if: - Load balancing scheme is one of EXTERNAL, INTERNAL_SELF_MANAGED or INTERNAL_MANAGED - IPProtocol is one of TCP, UDP, or SCTP. Packets addressed to ports in the specified range will be forwarded to target or backend_service. You can only use one of ports, port_range, or allPorts. The three are mutually exclusive. Forwarding rules with the same [IPAddress, IPProtocol] pair must have disjoint ports. Some types of forwarding target have constraints on the acceptable ports: - TargetHttpProxy: 80, 8080 - TargetHttpsProxy: 443 - TargetGrpcProxy: no constraints - TargetTcpProxy: 25, 43, 110, 143, 195, 443, 465, 587, 700, 993, 995, 1688, 1883, 5222 - TargetSslProxy: 25, 43, 110, 143, 195, 443, 465, 587, 700, 993, 995, 1688, 1883, 5222 - TargetVpnGateway: 500, 4500 @pattern: \\d+(?:-\\d+)?{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}This field can be used only if: - Load balancing scheme is one of EXTERNAL, INTERNAL_SELF_MANAGED or INTERNAL_MANAGED - IPProtocol is one of TCP, UDP, or SCTP. Packets addressed to ports in the specified range will be forwarded to target or backend_service. You can only use one of ports, port_range, or allPorts. The three are mutually exclusive. Forwarding rules with the same [IPAddress, IPProtocol] pair must have disjoint ports. Some types of forwarding target have constraints on the acceptable ports. For more information, see [Port specifications](https://cloud.google.com/load-balancing/docs/forwarding-rule-concepts#port_specifications). @pattern: \\d+(?:-\\d+)?{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ports_csharp">
 <a href="#ports_csharp" style="color: inherit; text-decoration: inherit;">Ports</a>
@@ -313,7 +305,15 @@ The GlobalForwardingRule resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}The ports field is only supported when the forwarding rule references a backend_service directly. Supported load balancing products are Internal TCP/UDP Load Balancing and Network Load Balancing. Only packets addressed to the specified list of ports are forwarded to backends. You can only use one of ports and port_range, or allPorts. The three are mutually exclusive. You can specify a list of up to five ports, which can be non-contiguous. Forwarding rules with the same [IPAddress, IPProtocol] pair must have disjoint ports. For more information, see [Port specifications](/load-balancing/docs/forwarding-rule-concepts#port_specifications). @pattern: \\d+(?:-\\d+)?{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The ports field is only supported when the forwarding rule references a backend_service directly. Only packets addressed to the [specified list of ports]((https://cloud.google.com/load-balancing/docs/forwarding-rule-concepts#port_specifications)) are forwarded to backends. You can only use one of ports and port_range, or allPorts. The three are mutually exclusive. You can specify a list of up to five ports, which can be non-contiguous. Forwarding rules with the same [IPAddress, IPProtocol] pair must have disjoint ports. @pattern: \\d+(?:-\\d+)?{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="project_csharp">
+<a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pscconnectionstatus_csharp">
 <a href="#pscconnectionstatus_csharp" style="color: inherit; text-decoration: inherit;">Psc<wbr>Connection<wbr>Status</a>
@@ -337,7 +337,7 @@ The GlobalForwardingRule resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#forwardingruleservicedirectoryregistration">List&lt;Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>Beta.<wbr>Inputs.<wbr>Forwarding<wbr>Rule<wbr>Service<wbr>Directory<wbr>Registration<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Service Directory resources to register this forwarding rule with. Currently, only supports a single Service Directory resource. It is only supported for Internal TCP/UDP Load Balancing and Internal HTTP(S) Load Balancing.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Service Directory resources to register this forwarding rule with. Currently, only supports a single Service Directory resource. It is only supported for internal load balancing.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="servicelabel_csharp">
 <a href="#servicelabel_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Label</a>
@@ -353,7 +353,7 @@ The GlobalForwardingRule resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This field is only used for internal load balancing. For internal load balancing, this field identifies the subnetwork that the load balanced IP should belong to for this Forwarding Rule. If the network specified is in auto subnet mode, this field is optional. However, if the network is in custom subnet mode, a subnetwork must be specified.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}This field identifies the subnetwork that the load balanced IP should belong to for this Forwarding Rule, used in internal load balancing and network load balancing with IPv6. If the network specified is in auto subnet mode, this field is optional. However, a subnetwork must be specified if the network is in custom subnet mode or when creating external forwarding rule with IPv6.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="target_csharp">
 <a href="#target_csharp" style="color: inherit; text-decoration: inherit;">Target</a>
@@ -365,15 +365,7 @@ The GlobalForwardingRule resource accepts the following [input]({{< relref "/doc
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="project_go">
-<a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allports_go">
 <a href="#allports_go" style="color: inherit; text-decoration: inherit;">All<wbr>Ports</a>
@@ -413,7 +405,7 @@ The GlobalForwardingRule resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}IP address that this forwarding rule serves. When a client sends traffic to this IP address, the forwarding rule directs the traffic to the target that you specify in the forwarding rule. If you don't specify a reserved IP address, an ephemeral IP address is assigned. Methods for specifying an IP address: * IPv4 dotted decimal, as in `100.1.2.3` * Full URL, as in https://www.googleapis.com/compute/v1/projects/project_id/regions/region /addresses/address-name * Partial URL or by name, as in: - projects/project_id/regions/region/addresses/address-name - regions/region/addresses/address-name - global/addresses/address-name - address-name The loadBalancingScheme and the forwarding rule's target determine the type of IP address that you can use. For detailed information, refer to [IP address specifications](/load-balancing/docs/forwarding-rule-concepts#ip_address_specifications). Must be set to `0.0.0.0` when the target is targetGrpcProxy that has validateForProxyless field set to true. For Private Service Connect forwarding rules that forward traffic to Google APIs, IP address must be provided.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}IP address that this forwarding rule serves. When a client sends traffic to this IP address, the forwarding rule directs the traffic to the target that you specify in the forwarding rule. If you don't specify a reserved IP address, an ephemeral IP address is assigned. Methods for specifying an IP address: * IPv4 dotted decimal, as in `100.1.2.3` * Full URL, as in https://www.googleapis.com/compute/v1/projects/project_id/regions/region /addresses/address-name * Partial URL or by name, as in: - projects/project_id/regions/region/addresses/address-name - regions/region/addresses/address-name - global/addresses/address-name - address-name The loadBalancingScheme and the forwarding rule's target determine the type of IP address that you can use. For detailed information, see [IP address specifications](https://cloud.google.com/load-balancing/docs/forwarding-rule-concepts#ip_address_specifications). Must be set to `0.0.0.0` when the target is targetGrpcProxy that has validateForProxyless field set to true. For Private Service Connect forwarding rules that forward traffic to Google APIs, IP address must be provided.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipprotocol_go">
 <a href="#ipprotocol_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Protocol</a>
@@ -421,7 +413,7 @@ The GlobalForwardingRule resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#globalforwardingruleipprotocol">Global<wbr>Forwarding<wbr>Rule<wbr>Ip<wbr>Protocol</a></span>
     </dt>
-    <dd>{{% md %}}The IP protocol to which this rule applies. For protocol forwarding, valid options are TCP, UDP, ESP, AH, SCTP, ICMP and L3_DEFAULT. The valid IP protocols are different for different load balancing products: - Internal TCP/UDP Load Balancing: The load balancing scheme is INTERNAL, and one of TCP, UDP or L3_DEFAULT is valid. - Traffic Director: The load balancing scheme is INTERNAL_SELF_MANAGED, and only TCP is valid. - Internal HTTP(S) Load Balancing: The load balancing scheme is INTERNAL_MANAGED, and only TCP is valid. - HTTP(S), SSL Proxy, and TCP Proxy Load Balancing: The load balancing scheme is EXTERNAL and only TCP is valid. - Network Load Balancing: The load balancing scheme is EXTERNAL, and one of TCP, UDP or L3_DEFAULT is valid. {{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The IP protocol to which this rule applies. For protocol forwarding, valid options are TCP, UDP, ESP, AH, SCTP, ICMP and L3_DEFAULT. The valid IP protocols are different for different load balancing products as described in [Load balancing features](https://cloud.google.com/load-balancing/docs/features#protocols_from_the_load_balancer_to_the_backends).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipversion_go">
 <a href="#ipversion_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Version</a>
@@ -453,7 +445,7 @@ The GlobalForwardingRule resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#globalforwardingruleloadbalancingscheme">Global<wbr>Forwarding<wbr>Rule<wbr>Load<wbr>Balancing<wbr>Scheme</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the forwarding rule type. - EXTERNAL is used for: - Classic Cloud VPN gateways - Protocol forwarding to VMs from an external IP address - HTTP(S), SSL Proxy, TCP Proxy, and Network Load Balancing - INTERNAL is used for: - Protocol forwarding to VMs from an internal IP address - Internal TCP/UDP Load Balancing - INTERNAL_MANAGED is used for: - Internal HTTP(S) Load Balancing - INTERNAL_SELF_MANAGED is used for: - Traffic Director For more information about forwarding rules, refer to Forwarding rule concepts.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the forwarding rule type. For more information about forwarding rules, refer to Forwarding rule concepts.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metadatafilters_go">
 <a href="#metadatafilters_go" style="color: inherit; text-decoration: inherit;">Metadata<wbr>Filters</a>
@@ -461,7 +453,7 @@ The GlobalForwardingRule resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#metadatafilter">[]Metadata<wbr>Filter<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Opaque filter criteria used by Loadbalancer to restrict routing configuration to a limited set of xDS compliant clients. In their xDS requests to Loadbalancer, xDS clients present node metadata. When there is a match, the relevant configuration is made available to those proxies. Otherwise, all the resources (e.g. TargetHttpProxy, UrlMap) referenced by the ForwardingRule will not be visible to those proxies. For each metadataFilter in this list, if its filterMatchCriteria is set to MATCH_ANY, at least one of the filterLabels must match the corresponding label provided in the metadata. If its filterMatchCriteria is set to MATCH_ALL, then all of its filterLabels must match with corresponding labels provided in the metadata. If multiple metadataFilters are specified, all of them need to be satisfied in order to be considered a match. metadataFilters specified here will be applifed before those specified in the UrlMap that this ForwardingRule references. metadataFilters only applies to Loadbalancers that have their loadBalancingScheme set to INTERNAL_SELF_MANAGED.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Opaque filter criteria used by load balancer to restrict routing configuration to a limited set of xDS compliant clients. In their xDS requests to load balancer, xDS clients present node metadata. When there is a match, the relevant configuration is made available to those proxies. Otherwise, all the resources (e.g. TargetHttpProxy, UrlMap) referenced by the ForwardingRule are not visible to those proxies. For each metadataFilter in this list, if its filterMatchCriteria is set to MATCH_ANY, at least one of the filterLabels must match the corresponding label provided in the metadata. If its filterMatchCriteria is set to MATCH_ALL, then all of its filterLabels must match with corresponding labels provided in the metadata. If multiple metadataFilters are specified, all of them need to be satisfied in order to be considered a match. metadataFilters specified here will be applifed before those specified in the UrlMap that this ForwardingRule references. metadataFilters only applies to Loadbalancers that have their loadBalancingScheme set to INTERNAL_SELF_MANAGED.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -493,7 +485,7 @@ The GlobalForwardingRule resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This field can be used only if: - Load balancing scheme is one of EXTERNAL, INTERNAL_SELF_MANAGED or INTERNAL_MANAGED - IPProtocol is one of TCP, UDP, or SCTP. Packets addressed to ports in the specified range will be forwarded to target or backend_service. You can only use one of ports, port_range, or allPorts. The three are mutually exclusive. Forwarding rules with the same [IPAddress, IPProtocol] pair must have disjoint ports. Some types of forwarding target have constraints on the acceptable ports: - TargetHttpProxy: 80, 8080 - TargetHttpsProxy: 443 - TargetGrpcProxy: no constraints - TargetTcpProxy: 25, 43, 110, 143, 195, 443, 465, 587, 700, 993, 995, 1688, 1883, 5222 - TargetSslProxy: 25, 43, 110, 143, 195, 443, 465, 587, 700, 993, 995, 1688, 1883, 5222 - TargetVpnGateway: 500, 4500 @pattern: \\d+(?:-\\d+)?{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}This field can be used only if: - Load balancing scheme is one of EXTERNAL, INTERNAL_SELF_MANAGED or INTERNAL_MANAGED - IPProtocol is one of TCP, UDP, or SCTP. Packets addressed to ports in the specified range will be forwarded to target or backend_service. You can only use one of ports, port_range, or allPorts. The three are mutually exclusive. Forwarding rules with the same [IPAddress, IPProtocol] pair must have disjoint ports. Some types of forwarding target have constraints on the acceptable ports. For more information, see [Port specifications](https://cloud.google.com/load-balancing/docs/forwarding-rule-concepts#port_specifications). @pattern: \\d+(?:-\\d+)?{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ports_go">
 <a href="#ports_go" style="color: inherit; text-decoration: inherit;">Ports</a>
@@ -501,7 +493,15 @@ The GlobalForwardingRule resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}The ports field is only supported when the forwarding rule references a backend_service directly. Supported load balancing products are Internal TCP/UDP Load Balancing and Network Load Balancing. Only packets addressed to the specified list of ports are forwarded to backends. You can only use one of ports and port_range, or allPorts. The three are mutually exclusive. You can specify a list of up to five ports, which can be non-contiguous. Forwarding rules with the same [IPAddress, IPProtocol] pair must have disjoint ports. For more information, see [Port specifications](/load-balancing/docs/forwarding-rule-concepts#port_specifications). @pattern: \\d+(?:-\\d+)?{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The ports field is only supported when the forwarding rule references a backend_service directly. Only packets addressed to the [specified list of ports]((https://cloud.google.com/load-balancing/docs/forwarding-rule-concepts#port_specifications)) are forwarded to backends. You can only use one of ports and port_range, or allPorts. The three are mutually exclusive. You can specify a list of up to five ports, which can be non-contiguous. Forwarding rules with the same [IPAddress, IPProtocol] pair must have disjoint ports. @pattern: \\d+(?:-\\d+)?{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="project_go">
+<a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pscconnectionstatus_go">
 <a href="#pscconnectionstatus_go" style="color: inherit; text-decoration: inherit;">Psc<wbr>Connection<wbr>Status</a>
@@ -525,7 +525,7 @@ The GlobalForwardingRule resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#forwardingruleservicedirectoryregistration">[]Forwarding<wbr>Rule<wbr>Service<wbr>Directory<wbr>Registration<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Service Directory resources to register this forwarding rule with. Currently, only supports a single Service Directory resource. It is only supported for Internal TCP/UDP Load Balancing and Internal HTTP(S) Load Balancing.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Service Directory resources to register this forwarding rule with. Currently, only supports a single Service Directory resource. It is only supported for internal load balancing.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="servicelabel_go">
 <a href="#servicelabel_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Label</a>
@@ -541,7 +541,7 @@ The GlobalForwardingRule resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This field is only used for internal load balancing. For internal load balancing, this field identifies the subnetwork that the load balanced IP should belong to for this Forwarding Rule. If the network specified is in auto subnet mode, this field is optional. However, if the network is in custom subnet mode, a subnetwork must be specified.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}This field identifies the subnetwork that the load balanced IP should belong to for this Forwarding Rule, used in internal load balancing and network load balancing with IPv6. If the network specified is in auto subnet mode, this field is optional. However, a subnetwork must be specified if the network is in custom subnet mode or when creating external forwarding rule with IPv6.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="target_go">
 <a href="#target_go" style="color: inherit; text-decoration: inherit;">Target</a>
@@ -553,15 +553,7 @@ The GlobalForwardingRule resource accepts the following [input]({{< relref "/doc
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="project_nodejs">
-<a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allports_nodejs">
 <a href="#allports_nodejs" style="color: inherit; text-decoration: inherit;">all<wbr>Ports</a>
@@ -601,7 +593,7 @@ The GlobalForwardingRule resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}IP address that this forwarding rule serves. When a client sends traffic to this IP address, the forwarding rule directs the traffic to the target that you specify in the forwarding rule. If you don't specify a reserved IP address, an ephemeral IP address is assigned. Methods for specifying an IP address: * IPv4 dotted decimal, as in `100.1.2.3` * Full URL, as in https://www.googleapis.com/compute/v1/projects/project_id/regions/region /addresses/address-name * Partial URL or by name, as in: - projects/project_id/regions/region/addresses/address-name - regions/region/addresses/address-name - global/addresses/address-name - address-name The loadBalancingScheme and the forwarding rule's target determine the type of IP address that you can use. For detailed information, refer to [IP address specifications](/load-balancing/docs/forwarding-rule-concepts#ip_address_specifications). Must be set to `0.0.0.0` when the target is targetGrpcProxy that has validateForProxyless field set to true. For Private Service Connect forwarding rules that forward traffic to Google APIs, IP address must be provided.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}IP address that this forwarding rule serves. When a client sends traffic to this IP address, the forwarding rule directs the traffic to the target that you specify in the forwarding rule. If you don't specify a reserved IP address, an ephemeral IP address is assigned. Methods for specifying an IP address: * IPv4 dotted decimal, as in `100.1.2.3` * Full URL, as in https://www.googleapis.com/compute/v1/projects/project_id/regions/region /addresses/address-name * Partial URL or by name, as in: - projects/project_id/regions/region/addresses/address-name - regions/region/addresses/address-name - global/addresses/address-name - address-name The loadBalancingScheme and the forwarding rule's target determine the type of IP address that you can use. For detailed information, see [IP address specifications](https://cloud.google.com/load-balancing/docs/forwarding-rule-concepts#ip_address_specifications). Must be set to `0.0.0.0` when the target is targetGrpcProxy that has validateForProxyless field set to true. For Private Service Connect forwarding rules that forward traffic to Google APIs, IP address must be provided.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipprotocol_nodejs">
 <a href="#ipprotocol_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Protocol</a>
@@ -609,7 +601,7 @@ The GlobalForwardingRule resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#globalforwardingruleipprotocol">Global<wbr>Forwarding<wbr>Rule<wbr>Ip<wbr>Protocol</a></span>
     </dt>
-    <dd>{{% md %}}The IP protocol to which this rule applies. For protocol forwarding, valid options are TCP, UDP, ESP, AH, SCTP, ICMP and L3_DEFAULT. The valid IP protocols are different for different load balancing products: - Internal TCP/UDP Load Balancing: The load balancing scheme is INTERNAL, and one of TCP, UDP or L3_DEFAULT is valid. - Traffic Director: The load balancing scheme is INTERNAL_SELF_MANAGED, and only TCP is valid. - Internal HTTP(S) Load Balancing: The load balancing scheme is INTERNAL_MANAGED, and only TCP is valid. - HTTP(S), SSL Proxy, and TCP Proxy Load Balancing: The load balancing scheme is EXTERNAL and only TCP is valid. - Network Load Balancing: The load balancing scheme is EXTERNAL, and one of TCP, UDP or L3_DEFAULT is valid. {{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The IP protocol to which this rule applies. For protocol forwarding, valid options are TCP, UDP, ESP, AH, SCTP, ICMP and L3_DEFAULT. The valid IP protocols are different for different load balancing products as described in [Load balancing features](https://cloud.google.com/load-balancing/docs/features#protocols_from_the_load_balancer_to_the_backends).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipversion_nodejs">
 <a href="#ipversion_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Version</a>
@@ -641,7 +633,7 @@ The GlobalForwardingRule resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#globalforwardingruleloadbalancingscheme">Global<wbr>Forwarding<wbr>Rule<wbr>Load<wbr>Balancing<wbr>Scheme</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the forwarding rule type. - EXTERNAL is used for: - Classic Cloud VPN gateways - Protocol forwarding to VMs from an external IP address - HTTP(S), SSL Proxy, TCP Proxy, and Network Load Balancing - INTERNAL is used for: - Protocol forwarding to VMs from an internal IP address - Internal TCP/UDP Load Balancing - INTERNAL_MANAGED is used for: - Internal HTTP(S) Load Balancing - INTERNAL_SELF_MANAGED is used for: - Traffic Director For more information about forwarding rules, refer to Forwarding rule concepts.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the forwarding rule type. For more information about forwarding rules, refer to Forwarding rule concepts.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metadatafilters_nodejs">
 <a href="#metadatafilters_nodejs" style="color: inherit; text-decoration: inherit;">metadata<wbr>Filters</a>
@@ -649,7 +641,7 @@ The GlobalForwardingRule resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#metadatafilter">Metadata<wbr>Filter<wbr>Args[]</a></span>
     </dt>
-    <dd>{{% md %}}Opaque filter criteria used by Loadbalancer to restrict routing configuration to a limited set of xDS compliant clients. In their xDS requests to Loadbalancer, xDS clients present node metadata. When there is a match, the relevant configuration is made available to those proxies. Otherwise, all the resources (e.g. TargetHttpProxy, UrlMap) referenced by the ForwardingRule will not be visible to those proxies. For each metadataFilter in this list, if its filterMatchCriteria is set to MATCH_ANY, at least one of the filterLabels must match the corresponding label provided in the metadata. If its filterMatchCriteria is set to MATCH_ALL, then all of its filterLabels must match with corresponding labels provided in the metadata. If multiple metadataFilters are specified, all of them need to be satisfied in order to be considered a match. metadataFilters specified here will be applifed before those specified in the UrlMap that this ForwardingRule references. metadataFilters only applies to Loadbalancers that have their loadBalancingScheme set to INTERNAL_SELF_MANAGED.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Opaque filter criteria used by load balancer to restrict routing configuration to a limited set of xDS compliant clients. In their xDS requests to load balancer, xDS clients present node metadata. When there is a match, the relevant configuration is made available to those proxies. Otherwise, all the resources (e.g. TargetHttpProxy, UrlMap) referenced by the ForwardingRule are not visible to those proxies. For each metadataFilter in this list, if its filterMatchCriteria is set to MATCH_ANY, at least one of the filterLabels must match the corresponding label provided in the metadata. If its filterMatchCriteria is set to MATCH_ALL, then all of its filterLabels must match with corresponding labels provided in the metadata. If multiple metadataFilters are specified, all of them need to be satisfied in order to be considered a match. metadataFilters specified here will be applifed before those specified in the UrlMap that this ForwardingRule references. metadataFilters only applies to Loadbalancers that have their loadBalancingScheme set to INTERNAL_SELF_MANAGED.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -681,7 +673,7 @@ The GlobalForwardingRule resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This field can be used only if: - Load balancing scheme is one of EXTERNAL, INTERNAL_SELF_MANAGED or INTERNAL_MANAGED - IPProtocol is one of TCP, UDP, or SCTP. Packets addressed to ports in the specified range will be forwarded to target or backend_service. You can only use one of ports, port_range, or allPorts. The three are mutually exclusive. Forwarding rules with the same [IPAddress, IPProtocol] pair must have disjoint ports. Some types of forwarding target have constraints on the acceptable ports: - TargetHttpProxy: 80, 8080 - TargetHttpsProxy: 443 - TargetGrpcProxy: no constraints - TargetTcpProxy: 25, 43, 110, 143, 195, 443, 465, 587, 700, 993, 995, 1688, 1883, 5222 - TargetSslProxy: 25, 43, 110, 143, 195, 443, 465, 587, 700, 993, 995, 1688, 1883, 5222 - TargetVpnGateway: 500, 4500 @pattern: \\d+(?:-\\d+)?{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}This field can be used only if: - Load balancing scheme is one of EXTERNAL, INTERNAL_SELF_MANAGED or INTERNAL_MANAGED - IPProtocol is one of TCP, UDP, or SCTP. Packets addressed to ports in the specified range will be forwarded to target or backend_service. You can only use one of ports, port_range, or allPorts. The three are mutually exclusive. Forwarding rules with the same [IPAddress, IPProtocol] pair must have disjoint ports. Some types of forwarding target have constraints on the acceptable ports. For more information, see [Port specifications](https://cloud.google.com/load-balancing/docs/forwarding-rule-concepts#port_specifications). @pattern: \\d+(?:-\\d+)?{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ports_nodejs">
 <a href="#ports_nodejs" style="color: inherit; text-decoration: inherit;">ports</a>
@@ -689,7 +681,15 @@ The GlobalForwardingRule resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}The ports field is only supported when the forwarding rule references a backend_service directly. Supported load balancing products are Internal TCP/UDP Load Balancing and Network Load Balancing. Only packets addressed to the specified list of ports are forwarded to backends. You can only use one of ports and port_range, or allPorts. The three are mutually exclusive. You can specify a list of up to five ports, which can be non-contiguous. Forwarding rules with the same [IPAddress, IPProtocol] pair must have disjoint ports. For more information, see [Port specifications](/load-balancing/docs/forwarding-rule-concepts#port_specifications). @pattern: \\d+(?:-\\d+)?{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The ports field is only supported when the forwarding rule references a backend_service directly. Only packets addressed to the [specified list of ports]((https://cloud.google.com/load-balancing/docs/forwarding-rule-concepts#port_specifications)) are forwarded to backends. You can only use one of ports and port_range, or allPorts. The three are mutually exclusive. You can specify a list of up to five ports, which can be non-contiguous. Forwarding rules with the same [IPAddress, IPProtocol] pair must have disjoint ports. @pattern: \\d+(?:-\\d+)?{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="project_nodejs">
+<a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pscconnectionstatus_nodejs">
 <a href="#pscconnectionstatus_nodejs" style="color: inherit; text-decoration: inherit;">psc<wbr>Connection<wbr>Status</a>
@@ -713,7 +713,7 @@ The GlobalForwardingRule resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#forwardingruleservicedirectoryregistration">Forwarding<wbr>Rule<wbr>Service<wbr>Directory<wbr>Registration<wbr>Args[]</a></span>
     </dt>
-    <dd>{{% md %}}Service Directory resources to register this forwarding rule with. Currently, only supports a single Service Directory resource. It is only supported for Internal TCP/UDP Load Balancing and Internal HTTP(S) Load Balancing.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Service Directory resources to register this forwarding rule with. Currently, only supports a single Service Directory resource. It is only supported for internal load balancing.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="servicelabel_nodejs">
 <a href="#servicelabel_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Label</a>
@@ -729,7 +729,7 @@ The GlobalForwardingRule resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This field is only used for internal load balancing. For internal load balancing, this field identifies the subnetwork that the load balanced IP should belong to for this Forwarding Rule. If the network specified is in auto subnet mode, this field is optional. However, if the network is in custom subnet mode, a subnetwork must be specified.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}This field identifies the subnetwork that the load balanced IP should belong to for this Forwarding Rule, used in internal load balancing and network load balancing with IPv6. If the network specified is in auto subnet mode, this field is optional. However, a subnetwork must be specified if the network is in custom subnet mode or when creating external forwarding rule with IPv6.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="target_nodejs">
 <a href="#target_nodejs" style="color: inherit; text-decoration: inherit;">target</a>
@@ -741,15 +741,7 @@ The GlobalForwardingRule resource accepts the following [input]({{< relref "/doc
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="project_python">
-<a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="all_ports_python">
 <a href="#all_ports_python" style="color: inherit; text-decoration: inherit;">all_<wbr>ports</a>
@@ -789,7 +781,7 @@ The GlobalForwardingRule resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}IP address that this forwarding rule serves. When a client sends traffic to this IP address, the forwarding rule directs the traffic to the target that you specify in the forwarding rule. If you don't specify a reserved IP address, an ephemeral IP address is assigned. Methods for specifying an IP address: * IPv4 dotted decimal, as in `100.1.2.3` * Full URL, as in https://www.googleapis.com/compute/v1/projects/project_id/regions/region /addresses/address-name * Partial URL or by name, as in: - projects/project_id/regions/region/addresses/address-name - regions/region/addresses/address-name - global/addresses/address-name - address-name The loadBalancingScheme and the forwarding rule's target determine the type of IP address that you can use. For detailed information, refer to [IP address specifications](/load-balancing/docs/forwarding-rule-concepts#ip_address_specifications). Must be set to `0.0.0.0` when the target is targetGrpcProxy that has validateForProxyless field set to true. For Private Service Connect forwarding rules that forward traffic to Google APIs, IP address must be provided.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}IP address that this forwarding rule serves. When a client sends traffic to this IP address, the forwarding rule directs the traffic to the target that you specify in the forwarding rule. If you don't specify a reserved IP address, an ephemeral IP address is assigned. Methods for specifying an IP address: * IPv4 dotted decimal, as in `100.1.2.3` * Full URL, as in https://www.googleapis.com/compute/v1/projects/project_id/regions/region /addresses/address-name * Partial URL or by name, as in: - projects/project_id/regions/region/addresses/address-name - regions/region/addresses/address-name - global/addresses/address-name - address-name The loadBalancingScheme and the forwarding rule's target determine the type of IP address that you can use. For detailed information, see [IP address specifications](https://cloud.google.com/load-balancing/docs/forwarding-rule-concepts#ip_address_specifications). Must be set to `0.0.0.0` when the target is targetGrpcProxy that has validateForProxyless field set to true. For Private Service Connect forwarding rules that forward traffic to Google APIs, IP address must be provided.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ip_protocol_python">
 <a href="#ip_protocol_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>protocol</a>
@@ -797,7 +789,7 @@ The GlobalForwardingRule resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#globalforwardingruleipprotocol">Global<wbr>Forwarding<wbr>Rule<wbr>Ip<wbr>Protocol</a></span>
     </dt>
-    <dd>{{% md %}}The IP protocol to which this rule applies. For protocol forwarding, valid options are TCP, UDP, ESP, AH, SCTP, ICMP and L3_DEFAULT. The valid IP protocols are different for different load balancing products: - Internal TCP/UDP Load Balancing: The load balancing scheme is INTERNAL, and one of TCP, UDP or L3_DEFAULT is valid. - Traffic Director: The load balancing scheme is INTERNAL_SELF_MANAGED, and only TCP is valid. - Internal HTTP(S) Load Balancing: The load balancing scheme is INTERNAL_MANAGED, and only TCP is valid. - HTTP(S), SSL Proxy, and TCP Proxy Load Balancing: The load balancing scheme is EXTERNAL and only TCP is valid. - Network Load Balancing: The load balancing scheme is EXTERNAL, and one of TCP, UDP or L3_DEFAULT is valid. {{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The IP protocol to which this rule applies. For protocol forwarding, valid options are TCP, UDP, ESP, AH, SCTP, ICMP and L3_DEFAULT. The valid IP protocols are different for different load balancing products as described in [Load balancing features](https://cloud.google.com/load-balancing/docs/features#protocols_from_the_load_balancer_to_the_backends).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ip_version_python">
 <a href="#ip_version_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>version</a>
@@ -829,7 +821,7 @@ The GlobalForwardingRule resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#globalforwardingruleloadbalancingscheme">Global<wbr>Forwarding<wbr>Rule<wbr>Load<wbr>Balancing<wbr>Scheme</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the forwarding rule type. - EXTERNAL is used for: - Classic Cloud VPN gateways - Protocol forwarding to VMs from an external IP address - HTTP(S), SSL Proxy, TCP Proxy, and Network Load Balancing - INTERNAL is used for: - Protocol forwarding to VMs from an internal IP address - Internal TCP/UDP Load Balancing - INTERNAL_MANAGED is used for: - Internal HTTP(S) Load Balancing - INTERNAL_SELF_MANAGED is used for: - Traffic Director For more information about forwarding rules, refer to Forwarding rule concepts.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the forwarding rule type. For more information about forwarding rules, refer to Forwarding rule concepts.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metadata_filters_python">
 <a href="#metadata_filters_python" style="color: inherit; text-decoration: inherit;">metadata_<wbr>filters</a>
@@ -837,7 +829,7 @@ The GlobalForwardingRule resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#metadatafilter">Sequence[Metadata<wbr>Filter<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Opaque filter criteria used by Loadbalancer to restrict routing configuration to a limited set of xDS compliant clients. In their xDS requests to Loadbalancer, xDS clients present node metadata. When there is a match, the relevant configuration is made available to those proxies. Otherwise, all the resources (e.g. TargetHttpProxy, UrlMap) referenced by the ForwardingRule will not be visible to those proxies. For each metadataFilter in this list, if its filterMatchCriteria is set to MATCH_ANY, at least one of the filterLabels must match the corresponding label provided in the metadata. If its filterMatchCriteria is set to MATCH_ALL, then all of its filterLabels must match with corresponding labels provided in the metadata. If multiple metadataFilters are specified, all of them need to be satisfied in order to be considered a match. metadataFilters specified here will be applifed before those specified in the UrlMap that this ForwardingRule references. metadataFilters only applies to Loadbalancers that have their loadBalancingScheme set to INTERNAL_SELF_MANAGED.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Opaque filter criteria used by load balancer to restrict routing configuration to a limited set of xDS compliant clients. In their xDS requests to load balancer, xDS clients present node metadata. When there is a match, the relevant configuration is made available to those proxies. Otherwise, all the resources (e.g. TargetHttpProxy, UrlMap) referenced by the ForwardingRule are not visible to those proxies. For each metadataFilter in this list, if its filterMatchCriteria is set to MATCH_ANY, at least one of the filterLabels must match the corresponding label provided in the metadata. If its filterMatchCriteria is set to MATCH_ALL, then all of its filterLabels must match with corresponding labels provided in the metadata. If multiple metadataFilters are specified, all of them need to be satisfied in order to be considered a match. metadataFilters specified here will be applifed before those specified in the UrlMap that this ForwardingRule references. metadataFilters only applies to Loadbalancers that have their loadBalancingScheme set to INTERNAL_SELF_MANAGED.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -869,7 +861,7 @@ The GlobalForwardingRule resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}This field can be used only if: - Load balancing scheme is one of EXTERNAL, INTERNAL_SELF_MANAGED or INTERNAL_MANAGED - IPProtocol is one of TCP, UDP, or SCTP. Packets addressed to ports in the specified range will be forwarded to target or backend_service. You can only use one of ports, port_range, or allPorts. The three are mutually exclusive. Forwarding rules with the same [IPAddress, IPProtocol] pair must have disjoint ports. Some types of forwarding target have constraints on the acceptable ports: - TargetHttpProxy: 80, 8080 - TargetHttpsProxy: 443 - TargetGrpcProxy: no constraints - TargetTcpProxy: 25, 43, 110, 143, 195, 443, 465, 587, 700, 993, 995, 1688, 1883, 5222 - TargetSslProxy: 25, 43, 110, 143, 195, 443, 465, 587, 700, 993, 995, 1688, 1883, 5222 - TargetVpnGateway: 500, 4500 @pattern: \\d+(?:-\\d+)?{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}This field can be used only if: - Load balancing scheme is one of EXTERNAL, INTERNAL_SELF_MANAGED or INTERNAL_MANAGED - IPProtocol is one of TCP, UDP, or SCTP. Packets addressed to ports in the specified range will be forwarded to target or backend_service. You can only use one of ports, port_range, or allPorts. The three are mutually exclusive. Forwarding rules with the same [IPAddress, IPProtocol] pair must have disjoint ports. Some types of forwarding target have constraints on the acceptable ports. For more information, see [Port specifications](https://cloud.google.com/load-balancing/docs/forwarding-rule-concepts#port_specifications). @pattern: \\d+(?:-\\d+)?{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ports_python">
 <a href="#ports_python" style="color: inherit; text-decoration: inherit;">ports</a>
@@ -877,7 +869,15 @@ The GlobalForwardingRule resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}The ports field is only supported when the forwarding rule references a backend_service directly. Supported load balancing products are Internal TCP/UDP Load Balancing and Network Load Balancing. Only packets addressed to the specified list of ports are forwarded to backends. You can only use one of ports and port_range, or allPorts. The three are mutually exclusive. You can specify a list of up to five ports, which can be non-contiguous. Forwarding rules with the same [IPAddress, IPProtocol] pair must have disjoint ports. For more information, see [Port specifications](/load-balancing/docs/forwarding-rule-concepts#port_specifications). @pattern: \\d+(?:-\\d+)?{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The ports field is only supported when the forwarding rule references a backend_service directly. Only packets addressed to the [specified list of ports]((https://cloud.google.com/load-balancing/docs/forwarding-rule-concepts#port_specifications)) are forwarded to backends. You can only use one of ports and port_range, or allPorts. The three are mutually exclusive. You can specify a list of up to five ports, which can be non-contiguous. Forwarding rules with the same [IPAddress, IPProtocol] pair must have disjoint ports. @pattern: \\d+(?:-\\d+)?{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="project_python">
+<a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="psc_connection_status_python">
 <a href="#psc_connection_status_python" style="color: inherit; text-decoration: inherit;">psc_<wbr>connection_<wbr>status</a>
@@ -901,7 +901,7 @@ The GlobalForwardingRule resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#forwardingruleservicedirectoryregistration">Sequence[Forwarding<wbr>Rule<wbr>Service<wbr>Directory<wbr>Registration<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Service Directory resources to register this forwarding rule with. Currently, only supports a single Service Directory resource. It is only supported for Internal TCP/UDP Load Balancing and Internal HTTP(S) Load Balancing.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Service Directory resources to register this forwarding rule with. Currently, only supports a single Service Directory resource. It is only supported for internal load balancing.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="service_label_python">
 <a href="#service_label_python" style="color: inherit; text-decoration: inherit;">service_<wbr>label</a>
@@ -917,7 +917,7 @@ The GlobalForwardingRule resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}This field is only used for internal load balancing. For internal load balancing, this field identifies the subnetwork that the load balanced IP should belong to for this Forwarding Rule. If the network specified is in auto subnet mode, this field is optional. However, if the network is in custom subnet mode, a subnetwork must be specified.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}This field identifies the subnetwork that the load balanced IP should belong to for this Forwarding Rule, used in internal load balancing and network load balancing with IPv6. If the network specified is in auto subnet mode, this field is optional. However, a subnetwork must be specified if the network is in custom subnet mode or when creating external forwarding rule with IPv6.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="target_python">
 <a href="#target_python" style="color: inherit; text-decoration: inherit;">target</a>

@@ -199,6 +199,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}IDs of the Long Running Operations (LROs) currently running for this schema. Output only field.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="queryinterpretationconfig_csharp">
+<a href="#queryinterpretationconfig_csharp" style="color: inherit; text-decoration: inherit;">Query<wbr>Interpretation<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#queryinterpretationconfigresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Cloud<wbr>Search.<wbr>V1.<wbr>Outputs.<wbr>Query<wbr>Interpretation<wbr>Config<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The default options for query interpretation{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="scoringconfig_csharp">
 <a href="#scoringconfig_csharp" style="color: inherit; text-decoration: inherit;">Scoring<wbr>Config</a>
 </span>
@@ -274,6 +282,14 @@ The following output properties are available:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}IDs of the Long Running Operations (LROs) currently running for this schema. Output only field.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="queryinterpretationconfig_go">
+<a href="#queryinterpretationconfig_go" style="color: inherit; text-decoration: inherit;">Query<wbr>Interpretation<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#queryinterpretationconfigresponse">Query<wbr>Interpretation<wbr>Config<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The default options for query interpretation{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="scoringconfig_go">
 <a href="#scoringconfig_go" style="color: inherit; text-decoration: inherit;">Scoring<wbr>Config</a>
@@ -351,6 +367,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}IDs of the Long Running Operations (LROs) currently running for this schema. Output only field.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="queryinterpretationconfig_nodejs">
+<a href="#queryinterpretationconfig_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>Interpretation<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#queryinterpretationconfigresponse">Query<wbr>Interpretation<wbr>Config<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The default options for query interpretation{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="scoringconfig_nodejs">
 <a href="#scoringconfig_nodejs" style="color: inherit; text-decoration: inherit;">scoring<wbr>Config</a>
 </span>
@@ -426,6 +450,14 @@ The following output properties are available:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}IDs of the Long Running Operations (LROs) currently running for this schema. Output only field.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="query_interpretation_config_python">
+<a href="#query_interpretation_config_python" style="color: inherit; text-decoration: inherit;">query_<wbr>interpretation_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#queryinterpretationconfigresponse">Query<wbr>Interpretation<wbr>Config<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The default options for query interpretation{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="scoring_config_python">
 <a href="#scoring_config_python" style="color: inherit; text-decoration: inherit;">scoring_<wbr>config</a>
@@ -1048,6 +1080,90 @@ The following output properties are available:
         <span class="property-type"><a href="#valuefilterresponse">Value<wbr>Filter<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="queryinterpretationconfigresponse">Query<wbr>Interpretation<wbr>Config<wbr>Response</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="forcedisablesupplementalresults_csharp">
+<a href="#forcedisablesupplementalresults_csharp" style="color: inherit; text-decoration: inherit;">Force<wbr>Disable<wbr>Supplemental<wbr>Results</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Set this flag to disable supplemental results retrieval, setting a flag here will not retrieve supplemental results for queries associated with a given search application. If this flag is set to True, it will take precedence over the option set at Query level. For the default value of False, query level flag will set the correct interpretation for supplemental results.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="forceverbatimmode_csharp">
+<a href="#forceverbatimmode_csharp" style="color: inherit; text-decoration: inherit;">Force<wbr>Verbatim<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable this flag to turn off all internal optimizations like natural language (NL) interpretation of queries, supplemental results retrieval, and usage of synonyms including custom ones. If this flag is set to True, it will take precedence over the option set at Query level. For the default value of False, query level flag will set the correct interpretation for verbatim mode.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="forcedisablesupplementalresults_go">
+<a href="#forcedisablesupplementalresults_go" style="color: inherit; text-decoration: inherit;">Force<wbr>Disable<wbr>Supplemental<wbr>Results</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Set this flag to disable supplemental results retrieval, setting a flag here will not retrieve supplemental results for queries associated with a given search application. If this flag is set to True, it will take precedence over the option set at Query level. For the default value of False, query level flag will set the correct interpretation for supplemental results.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="forceverbatimmode_go">
+<a href="#forceverbatimmode_go" style="color: inherit; text-decoration: inherit;">Force<wbr>Verbatim<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable this flag to turn off all internal optimizations like natural language (NL) interpretation of queries, supplemental results retrieval, and usage of synonyms including custom ones. If this flag is set to True, it will take precedence over the option set at Query level. For the default value of False, query level flag will set the correct interpretation for verbatim mode.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="forcedisablesupplementalresults_nodejs">
+<a href="#forcedisablesupplementalresults_nodejs" style="color: inherit; text-decoration: inherit;">force<wbr>Disable<wbr>Supplemental<wbr>Results</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Set this flag to disable supplemental results retrieval, setting a flag here will not retrieve supplemental results for queries associated with a given search application. If this flag is set to True, it will take precedence over the option set at Query level. For the default value of False, query level flag will set the correct interpretation for supplemental results.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="forceverbatimmode_nodejs">
+<a href="#forceverbatimmode_nodejs" style="color: inherit; text-decoration: inherit;">force<wbr>Verbatim<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Enable this flag to turn off all internal optimizations like natural language (NL) interpretation of queries, supplemental results retrieval, and usage of synonyms including custom ones. If this flag is set to True, it will take precedence over the option set at Query level. For the default value of False, query level flag will set the correct interpretation for verbatim mode.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="force_disable_supplemental_results_python">
+<a href="#force_disable_supplemental_results_python" style="color: inherit; text-decoration: inherit;">force_<wbr>disable_<wbr>supplemental_<wbr>results</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Set this flag to disable supplemental results retrieval, setting a flag here will not retrieve supplemental results for queries associated with a given search application. If this flag is set to True, it will take precedence over the option set at Query level. For the default value of False, query level flag will set the correct interpretation for supplemental results.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="force_verbatim_mode_python">
+<a href="#force_verbatim_mode_python" style="color: inherit; text-decoration: inherit;">force_<wbr>verbatim_<wbr>mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable this flag to turn off all internal optimizations like natural language (NL) interpretation of queries, supplemental results retrieval, and usage of synonyms including custom ones. If this flag is set to True, it will take precedence over the option set at Query level. For the default value of False, query level flag will set the correct interpretation for verbatim mode.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="scoringconfigresponse">Scoring<wbr>Config<wbr>Response</h4>

@@ -20,7 +20,7 @@ Creates an image in the specified project using the data included in the request
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Image</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ImageArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Image</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">ImageArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -42,6 +42,7 @@ Creates an image in the specified project using the data included in the request
           <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
           <span class="nx">raw_disk</span><span class="p">:</span> <span class="nx">Optional[ImageRawDiskArgs]</span> = None<span class="p">,</span>
           <span class="nx">request_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+          <span class="nx">rollout_override</span><span class="p">:</span> <span class="nx">Optional[RolloutPolicyArgs]</span> = None<span class="p">,</span>
           <span class="nx">shielded_instance_initial_state</span><span class="p">:</span> <span class="nx">Optional[InitialStateConfigArgs]</span> = None<span class="p">,</span>
           <span class="nx">source_disk</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
           <span class="nx">source_disk_encryption_key</span><span class="p">:</span> <span class="nx">Optional[CustomerEncryptionKeyArgs]</span> = None<span class="p">,</span>
@@ -50,19 +51,20 @@ Creates an image in the specified project using the data included in the request
           <span class="nx">source_snapshot</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
           <span class="nx">source_snapshot_encryption_key</span><span class="p">:</span> <span class="nx">Optional[CustomerEncryptionKeyArgs]</span> = None<span class="p">,</span>
           <span class="nx">source_type</span><span class="p">:</span> <span class="nx">Optional[ImageSourceType]</span> = None<span class="p">,</span>
-          <span class="nx">storage_locations</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">)</span>
+          <span class="nx">storage_locations</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+          <span class="nx">user_licenses</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">Image</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-          <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ImageArgs</a></span><span class="p">,</span>
+          <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">Optional[ImageArgs]</a></span> = None<span class="p">,</span>
           <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewImage</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ImageArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Image</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewImage</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">ImageArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Image</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Image</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ImageArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Image</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ImageArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -74,7 +76,7 @@ Creates an image in the specified project using the data included in the request
         <span class="property-type">string</span>
     </dt>
     <dd>The unique name of the resource.</dd><dt
-        class="property-required" title="Required">
+        class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ImageArgs</a></span>
@@ -98,7 +100,7 @@ Creates an image in the specified project using the data included in the request
         <span class="property-type">str</span>
     </dt>
     <dd>The unique name of the resource.</dd><dt
-        class="property-required" title="Required">
+        class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ImageArgs</a></span>
@@ -119,7 +121,7 @@ Creates an image in the specified project using the data included in the request
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
@@ -128,7 +130,7 @@ Creates an image in the specified project using the data included in the request
         <span class="property-type">string</span>
     </dt>
     <dd>The unique name of the resource.</dd><dt
-        class="property-required" title="Required">
+        class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ImageArgs</a></span>
@@ -137,7 +139,7 @@ Creates an image in the specified project using the data included in the request
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
@@ -152,7 +154,7 @@ Creates an image in the specified project using the data included in the request
         <span class="property-type">string</span>
     </dt>
     <dd>The unique name of the resource.</dd><dt
-        class="property-required" title="Required">
+        class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ImageArgs</a></span>
@@ -178,15 +180,7 @@ The Image resource accepts the following [input]({{< relref "/docs/intro/concept
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="project_csharp">
-<a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="archivesizebytes_csharp">
 <a href="#archivesizebytes_csharp" style="color: inherit; text-decoration: inherit;">Archive<wbr>Size<wbr>Bytes</a>
@@ -284,6 +278,14 @@ The Image resource accepts the following [input]({{< relref "/docs/intro/concept
     </dt>
     <dd>{{% md %}}Name of the resource; provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="project_csharp">
+<a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="rawdisk_csharp">
 <a href="#rawdisk_csharp" style="color: inherit; text-decoration: inherit;">Raw<wbr>Disk</a>
 </span>
@@ -299,6 +301,14 @@ The Image resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="rolloutoverride_csharp">
+<a href="#rolloutoverride_csharp" style="color: inherit; text-decoration: inherit;">Rollout<wbr>Override</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rolloutpolicy">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>Beta.<wbr>Inputs.<wbr>Rollout<wbr>Policy<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A rollout policy to apply to this image. When specified, the rollout policy overrides per-zone references to the image via the associated image family. The rollout policy restricts the zones where this image is accessible when using a zonal image family reference. When the rollout policy does not include the user specified zone, or if the zone is rolled out, this image is accessible. The rollout policy for this image is read-only, except for allowlisted users. This field might not be configured. To view the latest non-deprecated image in a specific zone, use the imageFamilyViews.get method.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="shieldedinstanceinitialstate_csharp">
 <a href="#shieldedinstanceinitialstate_csharp" style="color: inherit; text-decoration: inherit;">Shielded<wbr>Instance<wbr>Initial<wbr>State</a>
@@ -370,19 +380,19 @@ The Image resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Cloud Storage bucket storage location of the image (regional or multi-regional).{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Cloud Storage bucket storage location of the image (regional or multi-regional).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="userlicenses_csharp">
+<a href="#userlicenses_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Licenses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A list of publicly visible user-licenses. Unlike regular licenses, user provided licenses can be modified after the disk is created. This includes a list of URLs to the license resource. For example, to provide a debian license: https://www.googleapis.com/compute/v1/projects/debian-cloud/global/licenses/debian-9-stretch {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="project_go">
-<a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="archivesizebytes_go">
 <a href="#archivesizebytes_go" style="color: inherit; text-decoration: inherit;">Archive<wbr>Size<wbr>Bytes</a>
@@ -480,6 +490,14 @@ The Image resource accepts the following [input]({{< relref "/docs/intro/concept
     </dt>
     <dd>{{% md %}}Name of the resource; provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="project_go">
+<a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="rawdisk_go">
 <a href="#rawdisk_go" style="color: inherit; text-decoration: inherit;">Raw<wbr>Disk</a>
 </span>
@@ -495,6 +513,14 @@ The Image resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="rolloutoverride_go">
+<a href="#rolloutoverride_go" style="color: inherit; text-decoration: inherit;">Rollout<wbr>Override</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rolloutpolicy">Rollout<wbr>Policy<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A rollout policy to apply to this image. When specified, the rollout policy overrides per-zone references to the image via the associated image family. The rollout policy restricts the zones where this image is accessible when using a zonal image family reference. When the rollout policy does not include the user specified zone, or if the zone is rolled out, this image is accessible. The rollout policy for this image is read-only, except for allowlisted users. This field might not be configured. To view the latest non-deprecated image in a specific zone, use the imageFamilyViews.get method.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="shieldedinstanceinitialstate_go">
 <a href="#shieldedinstanceinitialstate_go" style="color: inherit; text-decoration: inherit;">Shielded<wbr>Instance<wbr>Initial<wbr>State</a>
@@ -566,19 +592,19 @@ The Image resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Cloud Storage bucket storage location of the image (regional or multi-regional).{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Cloud Storage bucket storage location of the image (regional or multi-regional).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="userlicenses_go">
+<a href="#userlicenses_go" style="color: inherit; text-decoration: inherit;">User<wbr>Licenses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}A list of publicly visible user-licenses. Unlike regular licenses, user provided licenses can be modified after the disk is created. This includes a list of URLs to the license resource. For example, to provide a debian license: https://www.googleapis.com/compute/v1/projects/debian-cloud/global/licenses/debian-9-stretch {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="project_nodejs">
-<a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="archivesizebytes_nodejs">
 <a href="#archivesizebytes_nodejs" style="color: inherit; text-decoration: inherit;">archive<wbr>Size<wbr>Bytes</a>
@@ -676,6 +702,14 @@ The Image resource accepts the following [input]({{< relref "/docs/intro/concept
     </dt>
     <dd>{{% md %}}Name of the resource; provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="project_nodejs">
+<a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="rawdisk_nodejs">
 <a href="#rawdisk_nodejs" style="color: inherit; text-decoration: inherit;">raw<wbr>Disk</a>
 </span>
@@ -691,6 +725,14 @@ The Image resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="rolloutoverride_nodejs">
+<a href="#rolloutoverride_nodejs" style="color: inherit; text-decoration: inherit;">rollout<wbr>Override</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rolloutpolicy">Rollout<wbr>Policy<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A rollout policy to apply to this image. When specified, the rollout policy overrides per-zone references to the image via the associated image family. The rollout policy restricts the zones where this image is accessible when using a zonal image family reference. When the rollout policy does not include the user specified zone, or if the zone is rolled out, this image is accessible. The rollout policy for this image is read-only, except for allowlisted users. This field might not be configured. To view the latest non-deprecated image in a specific zone, use the imageFamilyViews.get method.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="shieldedinstanceinitialstate_nodejs">
 <a href="#shieldedinstanceinitialstate_nodejs" style="color: inherit; text-decoration: inherit;">shielded<wbr>Instance<wbr>Initial<wbr>State</a>
@@ -762,19 +804,19 @@ The Image resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Cloud Storage bucket storage location of the image (regional or multi-regional).{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Cloud Storage bucket storage location of the image (regional or multi-regional).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="userlicenses_nodejs">
+<a href="#userlicenses_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Licenses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}A list of publicly visible user-licenses. Unlike regular licenses, user provided licenses can be modified after the disk is created. This includes a list of URLs to the license resource. For example, to provide a debian license: https://www.googleapis.com/compute/v1/projects/debian-cloud/global/licenses/debian-9-stretch {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="project_python">
-<a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="archive_size_bytes_python">
 <a href="#archive_size_bytes_python" style="color: inherit; text-decoration: inherit;">archive_<wbr>size_<wbr>bytes</a>
@@ -872,6 +914,14 @@ The Image resource accepts the following [input]({{< relref "/docs/intro/concept
     </dt>
     <dd>{{% md %}}Name of the resource; provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="project_python">
+<a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="raw_disk_python">
 <a href="#raw_disk_python" style="color: inherit; text-decoration: inherit;">raw_<wbr>disk</a>
 </span>
@@ -887,6 +937,14 @@ The Image resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="rollout_override_python">
+<a href="#rollout_override_python" style="color: inherit; text-decoration: inherit;">rollout_<wbr>override</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rolloutpolicy">Rollout<wbr>Policy<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A rollout policy to apply to this image. When specified, the rollout policy overrides per-zone references to the image via the associated image family. The rollout policy restricts the zones where this image is accessible when using a zonal image family reference. When the rollout policy does not include the user specified zone, or if the zone is rolled out, this image is accessible. The rollout policy for this image is read-only, except for allowlisted users. This field might not be configured. To view the latest non-deprecated image in a specific zone, use the imageFamilyViews.get method.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="shielded_instance_initial_state_python">
 <a href="#shielded_instance_initial_state_python" style="color: inherit; text-decoration: inherit;">shielded_<wbr>instance_<wbr>initial_<wbr>state</a>
@@ -958,7 +1016,15 @@ The Image resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Cloud Storage bucket storage location of the image (regional or multi-regional).{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Cloud Storage bucket storage location of the image (regional or multi-regional).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="user_licenses_python">
+<a href="#user_licenses_python" style="color: inherit; text-decoration: inherit;">user_<wbr>licenses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}A list of publicly visible user-licenses. Unlike regular licenses, user provided licenses can be modified after the disk is created. This includes a list of URLs to the license resource. For example, to provide a debian license: https://www.googleapis.com/compute/v1/projects/debian-cloud/global/licenses/debian-9-stretch {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1681,7 +1747,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#deprecationstatusstate">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>Beta.<wbr>Deprecation<wbr>Status<wbr>State</a></span>
     </dt>
-    <dd>{{% md %}}The deprecation state of this resource. This can be ACTIVE, DEPRECATED, OBSOLETE, or DELETED. Operations which communicate the end of life date for an image, can use ACTIVE. Operations which create a new resource using a DEPRECATED resource will return successfully, but with a warning indicating the deprecated resource and recommending its replacement. Operations which use OBSOLETE or DELETED resources will be rejected and result in an error.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The deprecation state of this resource. This can be ACTIVE, DEPRECATED, OBSOLETE, or DELETED. Operations which communicate the end of life date for an image, can use ACTIVE. Operations which create a new resource using a DEPRECATED resource will return successfully, but with a warning indicating the deprecated resource and recommending its replacement. Operations which use OBSOLETE or DELETED resources will be rejected and result in an error.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="stateoverride_csharp">
+<a href="#stateoverride_csharp" style="color: inherit; text-decoration: inherit;">State<wbr>Override</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rolloutpolicy">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>Beta.<wbr>Inputs.<wbr>Rollout<wbr>Policy</a></span>
+    </dt>
+    <dd>{{% md %}}The rollout policy for this deprecation. This policy is only enforced by image family views. The rollout policy restricts the zones where the associated resource is considered in a deprecated state. When the rollout policy does not include the user specified zone, or if the zone is rolled out, the associated resource is considered in a deprecated state. The rollout policy for this deprecation is read-only, except for allowlisted users. This field might not be configured. To view the latest non-deprecated image in a specific zone, use the imageFamilyViews.get method.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1725,7 +1799,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#deprecationstatusstate">Deprecation<wbr>Status<wbr>State</a></span>
     </dt>
-    <dd>{{% md %}}The deprecation state of this resource. This can be ACTIVE, DEPRECATED, OBSOLETE, or DELETED. Operations which communicate the end of life date for an image, can use ACTIVE. Operations which create a new resource using a DEPRECATED resource will return successfully, but with a warning indicating the deprecated resource and recommending its replacement. Operations which use OBSOLETE or DELETED resources will be rejected and result in an error.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The deprecation state of this resource. This can be ACTIVE, DEPRECATED, OBSOLETE, or DELETED. Operations which communicate the end of life date for an image, can use ACTIVE. Operations which create a new resource using a DEPRECATED resource will return successfully, but with a warning indicating the deprecated resource and recommending its replacement. Operations which use OBSOLETE or DELETED resources will be rejected and result in an error.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="stateoverride_go">
+<a href="#stateoverride_go" style="color: inherit; text-decoration: inherit;">State<wbr>Override</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rolloutpolicy">Rollout<wbr>Policy</a></span>
+    </dt>
+    <dd>{{% md %}}The rollout policy for this deprecation. This policy is only enforced by image family views. The rollout policy restricts the zones where the associated resource is considered in a deprecated state. When the rollout policy does not include the user specified zone, or if the zone is rolled out, the associated resource is considered in a deprecated state. The rollout policy for this deprecation is read-only, except for allowlisted users. This field might not be configured. To view the latest non-deprecated image in a specific zone, use the imageFamilyViews.get method.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1769,7 +1851,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#deprecationstatusstate">Deprecation<wbr>Status<wbr>State</a></span>
     </dt>
-    <dd>{{% md %}}The deprecation state of this resource. This can be ACTIVE, DEPRECATED, OBSOLETE, or DELETED. Operations which communicate the end of life date for an image, can use ACTIVE. Operations which create a new resource using a DEPRECATED resource will return successfully, but with a warning indicating the deprecated resource and recommending its replacement. Operations which use OBSOLETE or DELETED resources will be rejected and result in an error.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The deprecation state of this resource. This can be ACTIVE, DEPRECATED, OBSOLETE, or DELETED. Operations which communicate the end of life date for an image, can use ACTIVE. Operations which create a new resource using a DEPRECATED resource will return successfully, but with a warning indicating the deprecated resource and recommending its replacement. Operations which use OBSOLETE or DELETED resources will be rejected and result in an error.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="stateoverride_nodejs">
+<a href="#stateoverride_nodejs" style="color: inherit; text-decoration: inherit;">state<wbr>Override</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rolloutpolicy">Rollout<wbr>Policy</a></span>
+    </dt>
+    <dd>{{% md %}}The rollout policy for this deprecation. This policy is only enforced by image family views. The rollout policy restricts the zones where the associated resource is considered in a deprecated state. When the rollout policy does not include the user specified zone, or if the zone is rolled out, the associated resource is considered in a deprecated state. The rollout policy for this deprecation is read-only, except for allowlisted users. This field might not be configured. To view the latest non-deprecated image in a specific zone, use the imageFamilyViews.get method.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1813,7 +1903,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#deprecationstatusstate">Deprecation<wbr>Status<wbr>State</a></span>
     </dt>
-    <dd>{{% md %}}The deprecation state of this resource. This can be ACTIVE, DEPRECATED, OBSOLETE, or DELETED. Operations which communicate the end of life date for an image, can use ACTIVE. Operations which create a new resource using a DEPRECATED resource will return successfully, but with a warning indicating the deprecated resource and recommending its replacement. Operations which use OBSOLETE or DELETED resources will be rejected and result in an error.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The deprecation state of this resource. This can be ACTIVE, DEPRECATED, OBSOLETE, or DELETED. Operations which communicate the end of life date for an image, can use ACTIVE. Operations which create a new resource using a DEPRECATED resource will return successfully, but with a warning indicating the deprecated resource and recommending its replacement. Operations which use OBSOLETE or DELETED resources will be rejected and result in an error.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_override_python">
+<a href="#state_override_python" style="color: inherit; text-decoration: inherit;">state_<wbr>override</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rolloutpolicy">Rollout<wbr>Policy</a></span>
+    </dt>
+    <dd>{{% md %}}The rollout policy for this deprecation. This policy is only enforced by image family views. The rollout policy restricts the zones where the associated resource is considered in a deprecated state. When the rollout policy does not include the user specified zone, or if the zone is rolled out, the associated resource is considered in a deprecated state. The rollout policy for this deprecation is read-only, except for allowlisted users. This field might not be configured. To view the latest non-deprecated image in a specific zone, use the imageFamilyViews.get method.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="deprecationstatusresponse">Deprecation<wbr>Status<wbr>Response</h4>
@@ -1859,7 +1957,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The deprecation state of this resource. This can be ACTIVE, DEPRECATED, OBSOLETE, or DELETED. Operations which communicate the end of life date for an image, can use ACTIVE. Operations which create a new resource using a DEPRECATED resource will return successfully, but with a warning indicating the deprecated resource and recommending its replacement. Operations which use OBSOLETE or DELETED resources will be rejected and result in an error.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The deprecation state of this resource. This can be ACTIVE, DEPRECATED, OBSOLETE, or DELETED. Operations which communicate the end of life date for an image, can use ACTIVE. Operations which create a new resource using a DEPRECATED resource will return successfully, but with a warning indicating the deprecated resource and recommending its replacement. Operations which use OBSOLETE or DELETED resources will be rejected and result in an error.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="stateoverride_csharp">
+<a href="#stateoverride_csharp" style="color: inherit; text-decoration: inherit;">State<wbr>Override</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rolloutpolicyresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>Beta.<wbr>Inputs.<wbr>Rollout<wbr>Policy<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The rollout policy for this deprecation. This policy is only enforced by image family views. The rollout policy restricts the zones where the associated resource is considered in a deprecated state. When the rollout policy does not include the user specified zone, or if the zone is rolled out, the associated resource is considered in a deprecated state. The rollout policy for this deprecation is read-only, except for allowlisted users. This field might not be configured. To view the latest non-deprecated image in a specific zone, use the imageFamilyViews.get method.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1903,7 +2009,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The deprecation state of this resource. This can be ACTIVE, DEPRECATED, OBSOLETE, or DELETED. Operations which communicate the end of life date for an image, can use ACTIVE. Operations which create a new resource using a DEPRECATED resource will return successfully, but with a warning indicating the deprecated resource and recommending its replacement. Operations which use OBSOLETE or DELETED resources will be rejected and result in an error.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The deprecation state of this resource. This can be ACTIVE, DEPRECATED, OBSOLETE, or DELETED. Operations which communicate the end of life date for an image, can use ACTIVE. Operations which create a new resource using a DEPRECATED resource will return successfully, but with a warning indicating the deprecated resource and recommending its replacement. Operations which use OBSOLETE or DELETED resources will be rejected and result in an error.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="stateoverride_go">
+<a href="#stateoverride_go" style="color: inherit; text-decoration: inherit;">State<wbr>Override</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rolloutpolicyresponse">Rollout<wbr>Policy<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The rollout policy for this deprecation. This policy is only enforced by image family views. The rollout policy restricts the zones where the associated resource is considered in a deprecated state. When the rollout policy does not include the user specified zone, or if the zone is rolled out, the associated resource is considered in a deprecated state. The rollout policy for this deprecation is read-only, except for allowlisted users. This field might not be configured. To view the latest non-deprecated image in a specific zone, use the imageFamilyViews.get method.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1947,7 +2061,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The deprecation state of this resource. This can be ACTIVE, DEPRECATED, OBSOLETE, or DELETED. Operations which communicate the end of life date for an image, can use ACTIVE. Operations which create a new resource using a DEPRECATED resource will return successfully, but with a warning indicating the deprecated resource and recommending its replacement. Operations which use OBSOLETE or DELETED resources will be rejected and result in an error.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The deprecation state of this resource. This can be ACTIVE, DEPRECATED, OBSOLETE, or DELETED. Operations which communicate the end of life date for an image, can use ACTIVE. Operations which create a new resource using a DEPRECATED resource will return successfully, but with a warning indicating the deprecated resource and recommending its replacement. Operations which use OBSOLETE or DELETED resources will be rejected and result in an error.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="stateoverride_nodejs">
+<a href="#stateoverride_nodejs" style="color: inherit; text-decoration: inherit;">state<wbr>Override</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rolloutpolicyresponse">Rollout<wbr>Policy<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The rollout policy for this deprecation. This policy is only enforced by image family views. The rollout policy restricts the zones where the associated resource is considered in a deprecated state. When the rollout policy does not include the user specified zone, or if the zone is rolled out, the associated resource is considered in a deprecated state. The rollout policy for this deprecation is read-only, except for allowlisted users. This field might not be configured. To view the latest non-deprecated image in a specific zone, use the imageFamilyViews.get method.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1991,7 +2113,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The deprecation state of this resource. This can be ACTIVE, DEPRECATED, OBSOLETE, or DELETED. Operations which communicate the end of life date for an image, can use ACTIVE. Operations which create a new resource using a DEPRECATED resource will return successfully, but with a warning indicating the deprecated resource and recommending its replacement. Operations which use OBSOLETE or DELETED resources will be rejected and result in an error.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The deprecation state of this resource. This can be ACTIVE, DEPRECATED, OBSOLETE, or DELETED. Operations which communicate the end of life date for an image, can use ACTIVE. Operations which create a new resource using a DEPRECATED resource will return successfully, but with a warning indicating the deprecated resource and recommending its replacement. Operations which use OBSOLETE or DELETED resources will be rejected and result in an error.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="state_override_python">
+<a href="#state_override_python" style="color: inherit; text-decoration: inherit;">state_<wbr>override</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#rolloutpolicyresponse">Rollout<wbr>Policy<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The rollout policy for this deprecation. This policy is only enforced by image family views. The rollout policy restricts the zones where the associated resource is considered in a deprecated state. When the rollout policy does not include the user specified zone, or if the zone is rolled out, the associated resource is considered in a deprecated state. The rollout policy for this deprecation is read-only, except for allowlisted users. This field might not be configured. To view the latest non-deprecated image in a specific zone, use the imageFamilyViews.get method.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="deprecationstatusstate">Deprecation<wbr>Status<wbr>State</h4>
@@ -2870,6 +3000,170 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#filecontentbufferresponse">File<wbr>Content<wbr>Buffer<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The Platform Key (PK).{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="rolloutpolicy">Rollout<wbr>Policy</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="defaultrollouttime_csharp">
+<a href="#defaultrollouttime_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Rollout<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}An optional RFC3339 timestamp on or after which the update is considered rolled out to any zone that is not explicitly stated.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="locationrolloutpolicies_csharp">
+<a href="#locationrolloutpolicies_csharp" style="color: inherit; text-decoration: inherit;">Location<wbr>Rollout<wbr>Policies</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}Location based rollout policies to apply to the resource. Currently only zone names are supported and must be represented as valid URLs, like: zones/us-central1-a. The value expects an RFC3339 timestamp on or after which the update is considered rolled out to the specified location.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="defaultrollouttime_go">
+<a href="#defaultrollouttime_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Rollout<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}An optional RFC3339 timestamp on or after which the update is considered rolled out to any zone that is not explicitly stated.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="locationrolloutpolicies_go">
+<a href="#locationrolloutpolicies_go" style="color: inherit; text-decoration: inherit;">Location<wbr>Rollout<wbr>Policies</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}Location based rollout policies to apply to the resource. Currently only zone names are supported and must be represented as valid URLs, like: zones/us-central1-a. The value expects an RFC3339 timestamp on or after which the update is considered rolled out to the specified location.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="defaultrollouttime_nodejs">
+<a href="#defaultrollouttime_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Rollout<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}An optional RFC3339 timestamp on or after which the update is considered rolled out to any zone that is not explicitly stated.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="locationrolloutpolicies_nodejs">
+<a href="#locationrolloutpolicies_nodejs" style="color: inherit; text-decoration: inherit;">location<wbr>Rollout<wbr>Policies</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}Location based rollout policies to apply to the resource. Currently only zone names are supported and must be represented as valid URLs, like: zones/us-central1-a. The value expects an RFC3339 timestamp on or after which the update is considered rolled out to the specified location.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="default_rollout_time_python">
+<a href="#default_rollout_time_python" style="color: inherit; text-decoration: inherit;">default_<wbr>rollout_<wbr>time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}An optional RFC3339 timestamp on or after which the update is considered rolled out to any zone that is not explicitly stated.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="location_rollout_policies_python">
+<a href="#location_rollout_policies_python" style="color: inherit; text-decoration: inherit;">location_<wbr>rollout_<wbr>policies</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, str]</span>
+    </dt>
+    <dd>{{% md %}}Location based rollout policies to apply to the resource. Currently only zone names are supported and must be represented as valid URLs, like: zones/us-central1-a. The value expects an RFC3339 timestamp on or after which the update is considered rolled out to the specified location.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="rolloutpolicyresponse">Rollout<wbr>Policy<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="defaultrollouttime_csharp">
+<a href="#defaultrollouttime_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Rollout<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}An optional RFC3339 timestamp on or after which the update is considered rolled out to any zone that is not explicitly stated.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="locationrolloutpolicies_csharp">
+<a href="#locationrolloutpolicies_csharp" style="color: inherit; text-decoration: inherit;">Location<wbr>Rollout<wbr>Policies</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}Location based rollout policies to apply to the resource. Currently only zone names are supported and must be represented as valid URLs, like: zones/us-central1-a. The value expects an RFC3339 timestamp on or after which the update is considered rolled out to the specified location.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="defaultrollouttime_go">
+<a href="#defaultrollouttime_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Rollout<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}An optional RFC3339 timestamp on or after which the update is considered rolled out to any zone that is not explicitly stated.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="locationrolloutpolicies_go">
+<a href="#locationrolloutpolicies_go" style="color: inherit; text-decoration: inherit;">Location<wbr>Rollout<wbr>Policies</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}Location based rollout policies to apply to the resource. Currently only zone names are supported and must be represented as valid URLs, like: zones/us-central1-a. The value expects an RFC3339 timestamp on or after which the update is considered rolled out to the specified location.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="defaultrollouttime_nodejs">
+<a href="#defaultrollouttime_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Rollout<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}An optional RFC3339 timestamp on or after which the update is considered rolled out to any zone that is not explicitly stated.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="locationrolloutpolicies_nodejs">
+<a href="#locationrolloutpolicies_nodejs" style="color: inherit; text-decoration: inherit;">location<wbr>Rollout<wbr>Policies</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}Location based rollout policies to apply to the resource. Currently only zone names are supported and must be represented as valid URLs, like: zones/us-central1-a. The value expects an RFC3339 timestamp on or after which the update is considered rolled out to the specified location.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="default_rollout_time_python">
+<a href="#default_rollout_time_python" style="color: inherit; text-decoration: inherit;">default_<wbr>rollout_<wbr>time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}An optional RFC3339 timestamp on or after which the update is considered rolled out to any zone that is not explicitly stated.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="location_rollout_policies_python">
+<a href="#location_rollout_policies_python" style="color: inherit; text-decoration: inherit;">location_<wbr>rollout_<wbr>policies</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, str]</span>
+    </dt>
+    <dd>{{% md %}}Location based rollout policies to apply to the resource. Currently only zone names are supported and must be represented as valid URLs, like: zones/us-central1-a. The value expects an RFC3339 timestamp on or after which the update is considered rolled out to the specified location.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

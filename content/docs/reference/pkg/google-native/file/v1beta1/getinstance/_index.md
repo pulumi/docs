@@ -69,8 +69,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
 </span>
@@ -97,8 +97,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
 </span>
@@ -125,8 +125,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
@@ -153,8 +153,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
@@ -568,7 +568,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the file share (must be 16 characters or less).{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The name of the file share (must be 32 characters or less for High Scale SSD tier, 16 characters or less for all other tiers).{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="nfsexportoptions_csharp">
 <a href="#nfsexportoptions_csharp" style="color: inherit; text-decoration: inherit;">Nfs<wbr>Export<wbr>Options</a>
@@ -604,7 +604,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the file share (must be 16 characters or less).{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The name of the file share (must be 32 characters or less for High Scale SSD tier, 16 characters or less for all other tiers).{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="nfsexportoptions_go">
 <a href="#nfsexportoptions_go" style="color: inherit; text-decoration: inherit;">Nfs<wbr>Export<wbr>Options</a>
@@ -640,7 +640,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the file share (must be 16 characters or less).{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The name of the file share (must be 32 characters or less for High Scale SSD tier, 16 characters or less for all other tiers).{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="nfsexportoptions_nodejs">
 <a href="#nfsexportoptions_nodejs" style="color: inherit; text-decoration: inherit;">nfs<wbr>Export<wbr>Options</a>
@@ -676,7 +676,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the file share (must be 16 characters or less).{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The name of the file share (must be 32 characters or less for High Scale SSD tier, 16 characters or less for all other tiers).{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="nfs_export_options_python">
 <a href="#nfs_export_options_python" style="color: inherit; text-decoration: inherit;">nfs_<wbr>export_<wbr>options</a>
@@ -701,6 +701,14 @@ The following output properties are available:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="connectmode_csharp">
+<a href="#connectmode_csharp" style="color: inherit; text-decoration: inherit;">Connect<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The network connect mode of the Filestore instance. If not provided, the connect mode defaults to DIRECT_PEERING.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ipaddresses_csharp">
 <a href="#ipaddresses_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Addresses</a>
@@ -738,6 +746,14 @@ The following output properties are available:
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
+        <span id="connectmode_go">
+<a href="#connectmode_go" style="color: inherit; text-decoration: inherit;">Connect<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The network connect mode of the Filestore instance. If not provided, the connect mode defaults to DIRECT_PEERING.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="ipaddresses_go">
 <a href="#ipaddresses_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Addresses</a>
 </span>
@@ -774,6 +790,14 @@ The following output properties are available:
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
+        <span id="connectmode_nodejs">
+<a href="#connectmode_nodejs" style="color: inherit; text-decoration: inherit;">connect<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The network connect mode of the Filestore instance. If not provided, the connect mode defaults to DIRECT_PEERING.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="ipaddresses_nodejs">
 <a href="#ipaddresses_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Addresses</a>
 </span>
@@ -809,6 +833,14 @@ The following output properties are available:
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="connect_mode_python">
+<a href="#connect_mode_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The network connect mode of the Filestore instance. If not provided, the connect mode defaults to DIRECT_PEERING.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ip_addresses_python">
 <a href="#ip_addresses_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>addresses</a>

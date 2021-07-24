@@ -42,7 +42,7 @@ Creates a new channel in the specified site.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewChannel</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ChannelArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Channel</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewChannel</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ChannelArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Channel</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -103,7 +103,7 @@ Creates a new channel in the specified site.
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
@@ -121,7 +121,7 @@ Creates a new channel in the specified site.
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
@@ -172,14 +172,6 @@ The Channel resource accepts the following [input]({{< relref "/docs/intro/conce
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="project_csharp">
-<a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="siteid_csharp">
 <a href="#siteid_csharp" style="color: inherit; text-decoration: inherit;">Site<wbr>Id</a>
 </span>
@@ -212,6 +204,14 @@ The Channel resource accepts the following [input]({{< relref "/docs/intro/conce
     </dt>
     <dd>{{% md %}}The fully-qualified resource name for the channel, in the format: sites/ SITE_ID/channels/CHANNEL_ID{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="project_csharp">
+<a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="retainedreleasecount_csharp">
 <a href="#retainedreleasecount_csharp" style="color: inherit; text-decoration: inherit;">Retained<wbr>Release<wbr>Count</a>
 </span>
@@ -234,14 +234,6 @@ The Channel resource accepts the following [input]({{< relref "/docs/intro/conce
             title="Required">
         <span id="channelid_go">
 <a href="#channelid_go" style="color: inherit; text-decoration: inherit;">Channel<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="project_go">
-<a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -280,6 +272,14 @@ The Channel resource accepts the following [input]({{< relref "/docs/intro/conce
     </dt>
     <dd>{{% md %}}The fully-qualified resource name for the channel, in the format: sites/ SITE_ID/channels/CHANNEL_ID{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="project_go">
+<a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="retainedreleasecount_go">
 <a href="#retainedreleasecount_go" style="color: inherit; text-decoration: inherit;">Retained<wbr>Release<wbr>Count</a>
 </span>
@@ -302,14 +302,6 @@ The Channel resource accepts the following [input]({{< relref "/docs/intro/conce
             title="Required">
         <span id="channelid_nodejs">
 <a href="#channelid_nodejs" style="color: inherit; text-decoration: inherit;">channel<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="project_nodejs">
-<a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -348,6 +340,14 @@ The Channel resource accepts the following [input]({{< relref "/docs/intro/conce
     </dt>
     <dd>{{% md %}}The fully-qualified resource name for the channel, in the format: sites/ SITE_ID/channels/CHANNEL_ID{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="project_nodejs">
+<a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="retainedreleasecount_nodejs">
 <a href="#retainedreleasecount_nodejs" style="color: inherit; text-decoration: inherit;">retained<wbr>Release<wbr>Count</a>
 </span>
@@ -370,14 +370,6 @@ The Channel resource accepts the following [input]({{< relref "/docs/intro/conce
             title="Required">
         <span id="channel_id_python">
 <a href="#channel_id_python" style="color: inherit; text-decoration: inherit;">channel_<wbr>id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="project_python">
-<a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -415,6 +407,14 @@ The Channel resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The fully-qualified resource name for the channel, in the format: sites/ SITE_ID/channels/CHANNEL_ID{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="project_python">
+<a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retained_release_count_python">
 <a href="#retained_release_count_python" style="color: inherit; text-decoration: inherit;">retained_<wbr>release_<wbr>count</a>

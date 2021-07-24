@@ -69,8 +69,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
 </span>
@@ -97,8 +97,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
 </span>
@@ -125,8 +125,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
@@ -153,8 +153,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
@@ -367,6 +367,14 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The proxy endpoint that is used to access the Jupyter notebook.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="reservationaffinity_csharp">
+<a href="#reservationaffinity_csharp" style="color: inherit; text-decoration: inherit;">Reservation<wbr>Affinity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#reservationaffinityresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Notebooks.<wbr>V1.<wbr>Outputs.<wbr>Reservation<wbr>Affinity<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Optional. The optional reservation affinity. Setting this field will apply the specified [Zonal Compute Reservation](https://cloud.google.com/compute/docs/instances/reserving-zonal-resources) to this notebook instance.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="serviceaccount_csharp">
 <a href="#serviceaccount_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Account</a>
@@ -636,6 +644,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The proxy endpoint that is used to access the Jupyter notebook.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="reservationaffinity_go">
+<a href="#reservationaffinity_go" style="color: inherit; text-decoration: inherit;">Reservation<wbr>Affinity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#reservationaffinityresponse">Reservation<wbr>Affinity<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Optional. The optional reservation affinity. Setting this field will apply the specified [Zonal Compute Reservation](https://cloud.google.com/compute/docs/instances/reserving-zonal-resources) to this notebook instance.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="serviceaccount_go">
 <a href="#serviceaccount_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Account</a>
 </span>
@@ -904,6 +920,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The proxy endpoint that is used to access the Jupyter notebook.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="reservationaffinity_nodejs">
+<a href="#reservationaffinity_nodejs" style="color: inherit; text-decoration: inherit;">reservation<wbr>Affinity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#reservationaffinityresponse">Reservation<wbr>Affinity<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Optional. The optional reservation affinity. Setting this field will apply the specified [Zonal Compute Reservation](https://cloud.google.com/compute/docs/instances/reserving-zonal-resources) to this notebook instance.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="serviceaccount_nodejs">
 <a href="#serviceaccount_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Account</a>
 </span>
@@ -1171,6 +1195,14 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The proxy endpoint that is used to access the Jupyter notebook.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="reservation_affinity_python">
+<a href="#reservation_affinity_python" style="color: inherit; text-decoration: inherit;">reservation_<wbr>affinity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#reservationaffinityresponse">Reservation<wbr>Affinity<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Optional. The optional reservation affinity. Setting this field will apply the specified [Zonal Compute Reservation](https://cloud.google.com/compute/docs/instances/reserving-zonal-resources) to this notebook instance.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="service_account_python">
 <a href="#service_account_python" style="color: inherit; text-decoration: inherit;">service_<wbr>account</a>
@@ -1873,6 +1905,122 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of a supported feature. Read Enabling guest operating system features to see a list of available options. Valid values: FEATURE_TYPE_UNSPECIFIED MULTI_IP_SUBNET SECURE_BOOT UEFI_COMPATIBLE VIRTIO_SCSI_MULTIQUEUE WINDOWS{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="reservationaffinityresponse">Reservation<wbr>Affinity<wbr>Response</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="consumereservationtype_csharp">
+<a href="#consumereservationtype_csharp" style="color: inherit; text-decoration: inherit;">Consume<wbr>Reservation<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Optional. Type of reservation to consume{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="key_csharp">
+<a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Optional. Corresponds to the label key of reservation resource.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="values_csharp">
+<a href="#values_csharp" style="color: inherit; text-decoration: inherit;">Values</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}Optional. Corresponds to the label values of reservation resource.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="consumereservationtype_go">
+<a href="#consumereservationtype_go" style="color: inherit; text-decoration: inherit;">Consume<wbr>Reservation<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Optional. Type of reservation to consume{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="key_go">
+<a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Optional. Corresponds to the label key of reservation resource.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="values_go">
+<a href="#values_go" style="color: inherit; text-decoration: inherit;">Values</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}Optional. Corresponds to the label values of reservation resource.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="consumereservationtype_nodejs">
+<a href="#consumereservationtype_nodejs" style="color: inherit; text-decoration: inherit;">consume<wbr>Reservation<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Optional. Type of reservation to consume{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="key_nodejs">
+<a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Optional. Corresponds to the label key of reservation resource.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="values_nodejs">
+<a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}Optional. Corresponds to the label values of reservation resource.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="consume_reservation_type_python">
+<a href="#consume_reservation_type_python" style="color: inherit; text-decoration: inherit;">consume_<wbr>reservation_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Optional. Type of reservation to consume{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="key_python">
+<a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Optional. Corresponds to the label key of reservation resource.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="values_python">
+<a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}Optional. Corresponds to the label values of reservation resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="shieldedinstanceconfigresponse">Shielded<wbr>Instance<wbr>Config<wbr>Response</h4>

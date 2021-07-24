@@ -63,16 +63,16 @@ The following arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="project_csharp">
-<a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
+        <span id="servertlspolicyid_csharp">
+<a href="#servertlspolicyid_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>Tls<wbr>Policy<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="servertlspolicyid_csharp">
-<a href="#servertlspolicyid_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>Tls<wbr>Policy<wbr>Id</a>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="project_csharp">
+<a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -91,16 +91,16 @@ The following arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="project_go">
-<a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
+        <span id="servertlspolicyid_go">
+<a href="#servertlspolicyid_go" style="color: inherit; text-decoration: inherit;">Server<wbr>Tls<wbr>Policy<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="servertlspolicyid_go">
-<a href="#servertlspolicyid_go" style="color: inherit; text-decoration: inherit;">Server<wbr>Tls<wbr>Policy<wbr>Id</a>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="project_go">
+<a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -119,16 +119,16 @@ The following arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="project_nodejs">
-<a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
+        <span id="servertlspolicyid_nodejs">
+<a href="#servertlspolicyid_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Tls<wbr>Policy<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="servertlspolicyid_nodejs">
-<a href="#servertlspolicyid_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Tls<wbr>Policy<wbr>Id</a>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="project_nodejs">
+<a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -147,16 +147,16 @@ The following arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="project_python">
-<a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
+        <span id="server_tls_policy_id_python">
+<a href="#server_tls_policy_id_python" style="color: inherit; text-decoration: inherit;">server_<wbr>tls_<wbr>policy_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="server_tls_policy_id_python">
-<a href="#server_tls_policy_id_python" style="color: inherit; text-decoration: inherit;">server_<wbr>tls_<wbr>policy_<wbr>id</a>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="project_python">
+<a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -182,7 +182,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Optional. Determines if server allows plaintext connections. If set to true, server allows plain text connections. By default, it is set to false. This setting is not exclusive of other encryption modes. For example, if allow_open and mtls_policy are set, server allows both plain text and mTLS connections. See documentation of other encryption modes to confirm compatibility.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}} Determines if server allows plaintext connections. If set to true, server allows plain text connections. By default, it is set to false. This setting is not exclusive of other encryption modes. For example, if `allow_open` and `mtls_policy` are set, server allows both plain text and mTLS connections. See documentation of other encryption modes to confirm compatibility.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="createtime_csharp">
 <a href="#createtime_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Time</a>
@@ -198,7 +198,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Optional. Free-text description of the resource.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Free-text description of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="labels_csharp">
 <a href="#labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -206,7 +206,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Optional. Set of label tags associated with the resource.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Set of label tags associated with the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="mtlspolicy_csharp">
 <a href="#mtlspolicy_csharp" style="color: inherit; text-decoration: inherit;">Mtls<wbr>Policy</a>
@@ -214,7 +214,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#mtlspolicyresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Network<wbr>Security.<wbr>V1Beta1.<wbr>Outputs.<wbr>MTLSPolicy<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Optional. Defines a mechanism to provision peer validation certificates for peer to peer authentication (Mutual TLS - mTLS). If not specified, client certificate will not be requested. The connection is treated as TLS and not mTLS. If allow_open and mtls_policy are set, server allows both plain text and mTLS connections.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}} Defines a mechanism to provision peer validation certificates for peer to peer authentication (Mutual TLS - mTLS). If not specified, client certificate will not be requested. The connection is treated as TLS and not mTLS. If `allow_open` and `mtls_policy` are set, server allows both plain text and mTLS connections.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -230,7 +230,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#googlecloudnetworksecurityv1beta1certificateproviderresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Network<wbr>Security.<wbr>V1Beta1.<wbr>Outputs.<wbr>Google<wbr>Cloud<wbr>Networksecurity<wbr>V1beta1Certificate<wbr>Provider<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Optional. Defines a mechanism to provision server identity (public and private keys). Cannot be combined with allow_open as a permissive mode that allows both plain text and TLS is not supported.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}} Defines a mechanism to provision server identity (public and private keys). Cannot be combined with `allow_open` as a permissive mode that allows both plain text and TLS is not supported.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="updatetime_csharp">
 <a href="#updatetime_csharp" style="color: inherit; text-decoration: inherit;">Update<wbr>Time</a>
@@ -250,7 +250,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Optional. Determines if server allows plaintext connections. If set to true, server allows plain text connections. By default, it is set to false. This setting is not exclusive of other encryption modes. For example, if allow_open and mtls_policy are set, server allows both plain text and mTLS connections. See documentation of other encryption modes to confirm compatibility.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}} Determines if server allows plaintext connections. If set to true, server allows plain text connections. By default, it is set to false. This setting is not exclusive of other encryption modes. For example, if `allow_open` and `mtls_policy` are set, server allows both plain text and mTLS connections. See documentation of other encryption modes to confirm compatibility.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="createtime_go">
 <a href="#createtime_go" style="color: inherit; text-decoration: inherit;">Create<wbr>Time</a>
@@ -266,7 +266,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Optional. Free-text description of the resource.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Free-text description of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="labels_go">
 <a href="#labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -274,7 +274,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Optional. Set of label tags associated with the resource.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Set of label tags associated with the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="mtlspolicy_go">
 <a href="#mtlspolicy_go" style="color: inherit; text-decoration: inherit;">Mtls<wbr>Policy</a>
@@ -282,7 +282,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#mtlspolicyresponse">MTLSPolicy<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Optional. Defines a mechanism to provision peer validation certificates for peer to peer authentication (Mutual TLS - mTLS). If not specified, client certificate will not be requested. The connection is treated as TLS and not mTLS. If allow_open and mtls_policy are set, server allows both plain text and mTLS connections.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}} Defines a mechanism to provision peer validation certificates for peer to peer authentication (Mutual TLS - mTLS). If not specified, client certificate will not be requested. The connection is treated as TLS and not mTLS. If `allow_open` and `mtls_policy` are set, server allows both plain text and mTLS connections.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -298,7 +298,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#googlecloudnetworksecurityv1beta1certificateproviderresponse">Google<wbr>Cloud<wbr>Networksecurity<wbr>V1beta1Certificate<wbr>Provider<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Optional. Defines a mechanism to provision server identity (public and private keys). Cannot be combined with allow_open as a permissive mode that allows both plain text and TLS is not supported.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}} Defines a mechanism to provision server identity (public and private keys). Cannot be combined with `allow_open` as a permissive mode that allows both plain text and TLS is not supported.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="updatetime_go">
 <a href="#updatetime_go" style="color: inherit; text-decoration: inherit;">Update<wbr>Time</a>
@@ -318,7 +318,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Optional. Determines if server allows plaintext connections. If set to true, server allows plain text connections. By default, it is set to false. This setting is not exclusive of other encryption modes. For example, if allow_open and mtls_policy are set, server allows both plain text and mTLS connections. See documentation of other encryption modes to confirm compatibility.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}} Determines if server allows plaintext connections. If set to true, server allows plain text connections. By default, it is set to false. This setting is not exclusive of other encryption modes. For example, if `allow_open` and `mtls_policy` are set, server allows both plain text and mTLS connections. See documentation of other encryption modes to confirm compatibility.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="createtime_nodejs">
 <a href="#createtime_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Time</a>
@@ -334,7 +334,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Optional. Free-text description of the resource.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Free-text description of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="labels_nodejs">
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -342,7 +342,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Optional. Set of label tags associated with the resource.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Set of label tags associated with the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="mtlspolicy_nodejs">
 <a href="#mtlspolicy_nodejs" style="color: inherit; text-decoration: inherit;">mtls<wbr>Policy</a>
@@ -350,7 +350,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#mtlspolicyresponse">MTLSPolicy<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Optional. Defines a mechanism to provision peer validation certificates for peer to peer authentication (Mutual TLS - mTLS). If not specified, client certificate will not be requested. The connection is treated as TLS and not mTLS. If allow_open and mtls_policy are set, server allows both plain text and mTLS connections.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}} Defines a mechanism to provision peer validation certificates for peer to peer authentication (Mutual TLS - mTLS). If not specified, client certificate will not be requested. The connection is treated as TLS and not mTLS. If `allow_open` and `mtls_policy` are set, server allows both plain text and mTLS connections.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -366,7 +366,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#googlecloudnetworksecurityv1beta1certificateproviderresponse">Google<wbr>Cloud<wbr>Networksecurity<wbr>V1beta1Certificate<wbr>Provider<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Optional. Defines a mechanism to provision server identity (public and private keys). Cannot be combined with allow_open as a permissive mode that allows both plain text and TLS is not supported.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}} Defines a mechanism to provision server identity (public and private keys). Cannot be combined with `allow_open` as a permissive mode that allows both plain text and TLS is not supported.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="updatetime_nodejs">
 <a href="#updatetime_nodejs" style="color: inherit; text-decoration: inherit;">update<wbr>Time</a>
@@ -386,7 +386,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Optional. Determines if server allows plaintext connections. If set to true, server allows plain text connections. By default, it is set to false. This setting is not exclusive of other encryption modes. For example, if allow_open and mtls_policy are set, server allows both plain text and mTLS connections. See documentation of other encryption modes to confirm compatibility.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}} Determines if server allows plaintext connections. If set to true, server allows plain text connections. By default, it is set to false. This setting is not exclusive of other encryption modes. For example, if `allow_open` and `mtls_policy` are set, server allows both plain text and mTLS connections. See documentation of other encryption modes to confirm compatibility.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="create_time_python">
 <a href="#create_time_python" style="color: inherit; text-decoration: inherit;">create_<wbr>time</a>
@@ -402,7 +402,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Optional. Free-text description of the resource.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Free-text description of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="labels_python">
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -410,7 +410,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Optional. Set of label tags associated with the resource.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Set of label tags associated with the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="mtls_policy_python">
 <a href="#mtls_policy_python" style="color: inherit; text-decoration: inherit;">mtls_<wbr>policy</a>
@@ -418,7 +418,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#mtlspolicyresponse">MTLSPolicy<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Optional. Defines a mechanism to provision peer validation certificates for peer to peer authentication (Mutual TLS - mTLS). If not specified, client certificate will not be requested. The connection is treated as TLS and not mTLS. If allow_open and mtls_policy are set, server allows both plain text and mTLS connections.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}} Defines a mechanism to provision peer validation certificates for peer to peer authentication (Mutual TLS - mTLS). If not specified, client certificate will not be requested. The connection is treated as TLS and not mTLS. If `allow_open` and `mtls_policy` are set, server allows both plain text and mTLS connections.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -434,7 +434,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#googlecloudnetworksecurityv1beta1certificateproviderresponse">Google<wbr>Cloud<wbr>Networksecurity<wbr>V1beta1Certificate<wbr>Provider<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Optional. Defines a mechanism to provision server identity (public and private keys). Cannot be combined with allow_open as a permissive mode that allows both plain text and TLS is not supported.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}} Defines a mechanism to provision server identity (public and private keys). Cannot be combined with `allow_open` as a permissive mode that allows both plain text and TLS is not supported.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="update_time_python">
 <a href="#update_time_python" style="color: inherit; text-decoration: inherit;">update_<wbr>time</a>
@@ -652,7 +652,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#validationcaresponse">List&lt;Pulumi.<wbr>Google<wbr>Native.<wbr>Network<wbr>Security.<wbr>V1Beta1.<wbr>Inputs.<wbr>Validation<wbr>CAResponse&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Defines the mechanism to obtain the Certificate Authority certificate to validate the client certificate.{{% /md %}}</dd></dl>
+    <dd>{{% md %}} Defines the mechanism to obtain the Certificate Authority certificate to validate the client certificate.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -664,7 +664,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#validationcaresponse">[]Validation<wbr>CAResponse</a></span>
     </dt>
-    <dd>{{% md %}}Defines the mechanism to obtain the Certificate Authority certificate to validate the client certificate.{{% /md %}}</dd></dl>
+    <dd>{{% md %}} Defines the mechanism to obtain the Certificate Authority certificate to validate the client certificate.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -676,7 +676,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#validationcaresponse">Validation<wbr>CAResponse[]</a></span>
     </dt>
-    <dd>{{% md %}}Defines the mechanism to obtain the Certificate Authority certificate to validate the client certificate.{{% /md %}}</dd></dl>
+    <dd>{{% md %}} Defines the mechanism to obtain the Certificate Authority certificate to validate the client certificate.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -688,7 +688,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#validationcaresponse">Sequence[Validation<wbr>CAResponse]</a></span>
     </dt>
-    <dd>{{% md %}}Defines the mechanism to obtain the Certificate Authority certificate to validate the client certificate.{{% /md %}}</dd></dl>
+    <dd>{{% md %}} Defines the mechanism to obtain the Certificate Authority certificate to validate the client certificate.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="validationcaresponse">Validation<wbr>CAResponse</h4>

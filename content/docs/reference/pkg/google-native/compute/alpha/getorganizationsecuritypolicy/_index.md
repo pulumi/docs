@@ -1986,7 +1986,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Action to take when requests are under the given threshold. When requests are throttled, this is also the action for all requests which are not dropped. Valid options are "allow", "fairshare", and "drop_overload".{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Action to take for requests that are under the configured rate limit threshold. Valid option is "allow" only.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="enforceonkey_csharp">
 <a href="#enforceonkey_csharp" style="color: inherit; text-decoration: inherit;">Enforce<wbr>On<wbr>Key</a>
@@ -2038,7 +2038,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Action to take when requests are under the given threshold. When requests are throttled, this is also the action for all requests which are not dropped. Valid options are "allow", "fairshare", and "drop_overload".{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Action to take for requests that are under the configured rate limit threshold. Valid option is "allow" only.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="enforceonkey_go">
 <a href="#enforceonkey_go" style="color: inherit; text-decoration: inherit;">Enforce<wbr>On<wbr>Key</a>
@@ -2090,7 +2090,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Action to take when requests are under the given threshold. When requests are throttled, this is also the action for all requests which are not dropped. Valid options are "allow", "fairshare", and "drop_overload".{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Action to take for requests that are under the configured rate limit threshold. Valid option is "allow" only.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="enforceonkey_nodejs">
 <a href="#enforceonkey_nodejs" style="color: inherit; text-decoration: inherit;">enforce<wbr>On<wbr>Key</a>
@@ -2142,7 +2142,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Action to take when requests are under the given threshold. When requests are throttled, this is also the action for all requests which are not dropped. Valid options are "allow", "fairshare", and "drop_overload".{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Action to take for requests that are under the configured rate limit threshold. Valid option is "allow" only.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="enforce_on_key_python">
 <a href="#enforce_on_key_python" style="color: inherit; text-decoration: inherit;">enforce_<wbr>on_<wbr>key</a>

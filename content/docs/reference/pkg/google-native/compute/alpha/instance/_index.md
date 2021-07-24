@@ -20,7 +20,7 @@ Creates an instance resource in the specified project using the data included in
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Instance</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">InstanceArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Instance</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">InstanceArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -66,16 +66,16 @@ Creates an instance resource in the specified project using the data included in
              <span class="nx">zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">Instance</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-             <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">InstanceArgs</a></span><span class="p">,</span>
+             <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">Optional[InstanceArgs]</a></span> = None<span class="p">,</span>
              <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewInstance</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">InstanceArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Instance</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewInstance</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">InstanceArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Instance</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Instance</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">InstanceArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Instance</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">InstanceArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -87,7 +87,7 @@ Creates an instance resource in the specified project using the data included in
         <span class="property-type">string</span>
     </dt>
     <dd>The unique name of the resource.</dd><dt
-        class="property-required" title="Required">
+        class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">InstanceArgs</a></span>
@@ -111,7 +111,7 @@ Creates an instance resource in the specified project using the data included in
         <span class="property-type">str</span>
     </dt>
     <dd>The unique name of the resource.</dd><dt
-        class="property-required" title="Required">
+        class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">InstanceArgs</a></span>
@@ -132,7 +132,7 @@ Creates an instance resource in the specified project using the data included in
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
@@ -141,7 +141,7 @@ Creates an instance resource in the specified project using the data included in
         <span class="property-type">string</span>
     </dt>
     <dd>The unique name of the resource.</dd><dt
-        class="property-required" title="Required">
+        class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">InstanceArgs</a></span>
@@ -150,7 +150,7 @@ Creates an instance resource in the specified project using the data included in
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
@@ -165,7 +165,7 @@ Creates an instance resource in the specified project using the data included in
         <span class="property-type">string</span>
     </dt>
     <dd>The unique name of the resource.</dd><dt
-        class="property-required" title="Required">
+        class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">InstanceArgs</a></span>
@@ -191,23 +191,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="project_csharp">
-<a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="zone_csharp">
-<a href="#zone_csharp" style="color: inherit; text-decoration: inherit;">Zone</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="advancedmachinefeatures_csharp">
 <a href="#advancedmachinefeatures_csharp" style="color: inherit; text-decoration: inherit;">Advanced<wbr>Machine<wbr>Features</a>
@@ -377,6 +361,14 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
     </dt>
     <dd>{{% md %}}The private IPv6 google access type for the VM. If not specified, use INHERIT_FROM_SUBNETWORK as default.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="project_csharp">
+<a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="requestid_csharp">
 <a href="#requestid_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Id</a>
 </span>
@@ -487,27 +479,19 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#tags">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>Alpha.<wbr>Inputs.<wbr>Tags<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Tags to apply to this instance. Tags are used to identify valid sources or targets for network firewalls and are specified by the client during instance creation. The tags can be later modified by the setTags method. Each tag within the list must comply with RFC1035. Multiple tags can be specified via the 'tags.items' field.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Tags to apply to this instance. Tags are used to identify valid sources or targets for network firewalls and are specified by the client during instance creation. The tags can be later modified by the setTags method. Each tag within the list must comply with RFC1035. Multiple tags can be specified via the 'tags.items' field.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="zone_csharp">
+<a href="#zone_csharp" style="color: inherit; text-decoration: inherit;">Zone</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="project_go">
-<a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="zone_go">
-<a href="#zone_go" style="color: inherit; text-decoration: inherit;">Zone</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="advancedmachinefeatures_go">
 <a href="#advancedmachinefeatures_go" style="color: inherit; text-decoration: inherit;">Advanced<wbr>Machine<wbr>Features</a>
@@ -677,6 +661,14 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
     </dt>
     <dd>{{% md %}}The private IPv6 google access type for the VM. If not specified, use INHERIT_FROM_SUBNETWORK as default.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="project_go">
+<a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="requestid_go">
 <a href="#requestid_go" style="color: inherit; text-decoration: inherit;">Request<wbr>Id</a>
 </span>
@@ -787,27 +779,19 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#tags">Tags<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Tags to apply to this instance. Tags are used to identify valid sources or targets for network firewalls and are specified by the client during instance creation. The tags can be later modified by the setTags method. Each tag within the list must comply with RFC1035. Multiple tags can be specified via the 'tags.items' field.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Tags to apply to this instance. Tags are used to identify valid sources or targets for network firewalls and are specified by the client during instance creation. The tags can be later modified by the setTags method. Each tag within the list must comply with RFC1035. Multiple tags can be specified via the 'tags.items' field.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="zone_go">
+<a href="#zone_go" style="color: inherit; text-decoration: inherit;">Zone</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="project_nodejs">
-<a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="zone_nodejs">
-<a href="#zone_nodejs" style="color: inherit; text-decoration: inherit;">zone</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="advancedmachinefeatures_nodejs">
 <a href="#advancedmachinefeatures_nodejs" style="color: inherit; text-decoration: inherit;">advanced<wbr>Machine<wbr>Features</a>
@@ -977,6 +961,14 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
     </dt>
     <dd>{{% md %}}The private IPv6 google access type for the VM. If not specified, use INHERIT_FROM_SUBNETWORK as default.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="project_nodejs">
+<a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="requestid_nodejs">
 <a href="#requestid_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Id</a>
 </span>
@@ -1087,27 +1079,19 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#tags">Tags<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Tags to apply to this instance. Tags are used to identify valid sources or targets for network firewalls and are specified by the client during instance creation. The tags can be later modified by the setTags method. Each tag within the list must comply with RFC1035. Multiple tags can be specified via the 'tags.items' field.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Tags to apply to this instance. Tags are used to identify valid sources or targets for network firewalls and are specified by the client during instance creation. The tags can be later modified by the setTags method. Each tag within the list must comply with RFC1035. Multiple tags can be specified via the 'tags.items' field.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="zone_nodejs">
+<a href="#zone_nodejs" style="color: inherit; text-decoration: inherit;">zone</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="project_python">
-<a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="zone_python">
-<a href="#zone_python" style="color: inherit; text-decoration: inherit;">zone</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="advanced_machine_features_python">
 <a href="#advanced_machine_features_python" style="color: inherit; text-decoration: inherit;">advanced_<wbr>machine_<wbr>features</a>
@@ -1277,6 +1261,14 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
     </dt>
     <dd>{{% md %}}The private IPv6 google access type for the VM. If not specified, use INHERIT_FROM_SUBNETWORK as default.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="project_python">
+<a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="request_id_python">
 <a href="#request_id_python" style="color: inherit; text-decoration: inherit;">request_<wbr>id</a>
 </span>
@@ -1387,7 +1379,15 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#tags">Tags<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Tags to apply to this instance. Tags are used to identify valid sources or targets for network firewalls and are specified by the client during instance creation. The tags can be later modified by the setTags method. Each tag within the list must comply with RFC1035. Multiple tags can be specified via the 'tags.items' field.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Tags to apply to this instance. Tags are used to identify valid sources or targets for network firewalls and are specified by the client during instance creation. The tags can be later modified by the setTags method. Each tag within the list must comply with RFC1035. Multiple tags can be specified via the 'tags.items' field.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="zone_python">
+<a href="#zone_python" style="color: inherit; text-decoration: inherit;">zone</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -8748,6 +8748,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Specifies the availability domain (AD), which this instance should be scheduled on. The AD belongs to the spread GroupPlacementPolicy resource policy that has been assigned to the instance. Specify a value between 1-max count of availability domains in your GroupPlacementPolicy. See go/placement-policy-extension for more details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="currentcpus_csharp">
+<a href="#currentcpus_csharp" style="color: inherit; text-decoration: inherit;">Current<wbr>Cpus</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Current number of vCPUs available for VM. 0 or unset means default vCPUs of the current machine type.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="currentmemorymb_csharp">
+<a href="#currentmemorymb_csharp" style="color: inherit; text-decoration: inherit;">Current<wbr>Memory<wbr>Mb</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Current amount of memory (in MB) available for VM. 0 or unset means default amount of memory of the current machine type.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="hosterrortimeoutseconds_csharp">
 <a href="#hosterrortimeoutseconds_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Error<wbr>Timeout<wbr>Seconds</a>
 </span>
@@ -8847,6 +8863,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the availability domain (AD), which this instance should be scheduled on. The AD belongs to the spread GroupPlacementPolicy resource policy that has been assigned to the instance. Specify a value between 1-max count of availability domains in your GroupPlacementPolicy. See go/placement-policy-extension for more details.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="currentcpus_go">
+<a href="#currentcpus_go" style="color: inherit; text-decoration: inherit;">Current<wbr>Cpus</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Current number of vCPUs available for VM. 0 or unset means default vCPUs of the current machine type.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="currentmemorymb_go">
+<a href="#currentmemorymb_go" style="color: inherit; text-decoration: inherit;">Current<wbr>Memory<wbr>Mb</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Current amount of memory (in MB) available for VM. 0 or unset means default amount of memory of the current machine type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hosterrortimeoutseconds_go">
 <a href="#hosterrortimeoutseconds_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Error<wbr>Timeout<wbr>Seconds</a>
@@ -8948,6 +8980,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Specifies the availability domain (AD), which this instance should be scheduled on. The AD belongs to the spread GroupPlacementPolicy resource policy that has been assigned to the instance. Specify a value between 1-max count of availability domains in your GroupPlacementPolicy. See go/placement-policy-extension for more details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="currentcpus_nodejs">
+<a href="#currentcpus_nodejs" style="color: inherit; text-decoration: inherit;">current<wbr>Cpus</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Current number of vCPUs available for VM. 0 or unset means default vCPUs of the current machine type.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="currentmemorymb_nodejs">
+<a href="#currentmemorymb_nodejs" style="color: inherit; text-decoration: inherit;">current<wbr>Memory<wbr>Mb</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Current amount of memory (in MB) available for VM. 0 or unset means default amount of memory of the current machine type.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="hosterrortimeoutseconds_nodejs">
 <a href="#hosterrortimeoutseconds_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Error<wbr>Timeout<wbr>Seconds</a>
 </span>
@@ -9047,6 +9095,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the availability domain (AD), which this instance should be scheduled on. The AD belongs to the spread GroupPlacementPolicy resource policy that has been assigned to the instance. Specify a value between 1-max count of availability domains in your GroupPlacementPolicy. See go/placement-policy-extension for more details.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="current_cpus_python">
+<a href="#current_cpus_python" style="color: inherit; text-decoration: inherit;">current_<wbr>cpus</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Current number of vCPUs available for VM. 0 or unset means default vCPUs of the current machine type.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="current_memory_mb_python">
+<a href="#current_memory_mb_python" style="color: inherit; text-decoration: inherit;">current_<wbr>memory_<wbr>mb</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Current amount of memory (in MB) available for VM. 0 or unset means default amount of memory of the current machine type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="host_error_timeout_seconds_python">
 <a href="#host_error_timeout_seconds_python" style="color: inherit; text-decoration: inherit;">host_<wbr>error_<wbr>timeout_<wbr>seconds</a>
@@ -9478,6 +9542,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Specifies the availability domain (AD), which this instance should be scheduled on. The AD belongs to the spread GroupPlacementPolicy resource policy that has been assigned to the instance. Specify a value between 1-max count of availability domains in your GroupPlacementPolicy. See go/placement-policy-extension for more details.{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="currentcpus_csharp">
+<a href="#currentcpus_csharp" style="color: inherit; text-decoration: inherit;">Current<wbr>Cpus</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Current number of vCPUs available for VM. 0 or unset means default vCPUs of the current machine type.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="currentmemorymb_csharp">
+<a href="#currentmemorymb_csharp" style="color: inherit; text-decoration: inherit;">Current<wbr>Memory<wbr>Mb</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Current amount of memory (in MB) available for VM. 0 or unset means default amount of memory of the current machine type.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="hosterrortimeoutseconds_csharp">
 <a href="#hosterrortimeoutseconds_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Error<wbr>Timeout<wbr>Seconds</a>
 </span>
@@ -9577,6 +9657,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the availability domain (AD), which this instance should be scheduled on. The AD belongs to the spread GroupPlacementPolicy resource policy that has been assigned to the instance. Specify a value between 1-max count of availability domains in your GroupPlacementPolicy. See go/placement-policy-extension for more details.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="currentcpus_go">
+<a href="#currentcpus_go" style="color: inherit; text-decoration: inherit;">Current<wbr>Cpus</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Current number of vCPUs available for VM. 0 or unset means default vCPUs of the current machine type.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="currentmemorymb_go">
+<a href="#currentmemorymb_go" style="color: inherit; text-decoration: inherit;">Current<wbr>Memory<wbr>Mb</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Current amount of memory (in MB) available for VM. 0 or unset means default amount of memory of the current machine type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="hosterrortimeoutseconds_go">
 <a href="#hosterrortimeoutseconds_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Error<wbr>Timeout<wbr>Seconds</a>
@@ -9678,6 +9774,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Specifies the availability domain (AD), which this instance should be scheduled on. The AD belongs to the spread GroupPlacementPolicy resource policy that has been assigned to the instance. Specify a value between 1-max count of availability domains in your GroupPlacementPolicy. See go/placement-policy-extension for more details.{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="currentcpus_nodejs">
+<a href="#currentcpus_nodejs" style="color: inherit; text-decoration: inherit;">current<wbr>Cpus</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Current number of vCPUs available for VM. 0 or unset means default vCPUs of the current machine type.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="currentmemorymb_nodejs">
+<a href="#currentmemorymb_nodejs" style="color: inherit; text-decoration: inherit;">current<wbr>Memory<wbr>Mb</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Current amount of memory (in MB) available for VM. 0 or unset means default amount of memory of the current machine type.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="hosterrortimeoutseconds_nodejs">
 <a href="#hosterrortimeoutseconds_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Error<wbr>Timeout<wbr>Seconds</a>
 </span>
@@ -9777,6 +9889,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the availability domain (AD), which this instance should be scheduled on. The AD belongs to the spread GroupPlacementPolicy resource policy that has been assigned to the instance. Specify a value between 1-max count of availability domains in your GroupPlacementPolicy. See go/placement-policy-extension for more details.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="current_cpus_python">
+<a href="#current_cpus_python" style="color: inherit; text-decoration: inherit;">current_<wbr>cpus</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Current number of vCPUs available for VM. 0 or unset means default vCPUs of the current machine type.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="current_memory_mb_python">
+<a href="#current_memory_mb_python" style="color: inherit; text-decoration: inherit;">current_<wbr>memory_<wbr>mb</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Current amount of memory (in MB) available for VM. 0 or unset means default amount of memory of the current machine type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="host_error_timeout_seconds_python">
 <a href="#host_error_timeout_seconds_python" style="color: inherit; text-decoration: inherit;">host_<wbr>error_<wbr>timeout_<wbr>seconds</a>

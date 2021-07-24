@@ -63,16 +63,16 @@ The following arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="project_csharp">
-<a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
+        <span id="serviceid_csharp">
+<a href="#serviceid_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="serviceid_csharp">
-<a href="#serviceid_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Id</a>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="project_csharp">
+<a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -91,16 +91,16 @@ The following arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="project_go">
-<a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
+        <span id="serviceid_go">
+<a href="#serviceid_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="serviceid_go">
-<a href="#serviceid_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Id</a>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="project_go">
+<a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -119,16 +119,16 @@ The following arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="project_nodejs">
-<a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
+        <span id="serviceid_nodejs">
+<a href="#serviceid_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="serviceid_nodejs">
-<a href="#serviceid_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Id</a>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="project_nodejs">
+<a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -147,16 +147,16 @@ The following arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="project_python">
-<a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
+        <span id="service_id_python">
+<a href="#service_id_python" style="color: inherit; text-decoration: inherit;">service_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="service_id_python">
-<a href="#service_id_python" style="color: inherit; text-decoration: inherit;">service_<wbr>id</a>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="project_python">
+<a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -3564,7 +3564,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}(Optional) ContainerConcurrency specifies the maximum allowed in-flight (concurrent) requests per container instance of the Revision. Cloud Run fully managed: supported, defaults to 80 Cloud Run for Anthos: supported, defaults to 0, which means concurrency to the application is not limited, and the system decides the target concurrency for the autoscaler.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Optional. ContainerConcurrency specifies the maximum allowed in-flight (concurrent) requests per container instance of the Revision. Cloud Run fully managed: supported, defaults to 80 Cloud Run for Anthos: supported, defaults to 0, which means concurrency to the application is not limited, and the system decides the target concurrency for the autoscaler.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="containers_csharp">
 <a href="#containers_csharp" style="color: inherit; text-decoration: inherit;">Containers</a>
@@ -3608,7 +3608,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}(Optional) ContainerConcurrency specifies the maximum allowed in-flight (concurrent) requests per container instance of the Revision. Cloud Run fully managed: supported, defaults to 80 Cloud Run for Anthos: supported, defaults to 0, which means concurrency to the application is not limited, and the system decides the target concurrency for the autoscaler.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Optional. ContainerConcurrency specifies the maximum allowed in-flight (concurrent) requests per container instance of the Revision. Cloud Run fully managed: supported, defaults to 80 Cloud Run for Anthos: supported, defaults to 0, which means concurrency to the application is not limited, and the system decides the target concurrency for the autoscaler.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="containers_go">
 <a href="#containers_go" style="color: inherit; text-decoration: inherit;">Containers</a>
@@ -3652,7 +3652,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}(Optional) ContainerConcurrency specifies the maximum allowed in-flight (concurrent) requests per container instance of the Revision. Cloud Run fully managed: supported, defaults to 80 Cloud Run for Anthos: supported, defaults to 0, which means concurrency to the application is not limited, and the system decides the target concurrency for the autoscaler.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Optional. ContainerConcurrency specifies the maximum allowed in-flight (concurrent) requests per container instance of the Revision. Cloud Run fully managed: supported, defaults to 80 Cloud Run for Anthos: supported, defaults to 0, which means concurrency to the application is not limited, and the system decides the target concurrency for the autoscaler.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="containers_nodejs">
 <a href="#containers_nodejs" style="color: inherit; text-decoration: inherit;">containers</a>
@@ -3696,7 +3696,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}(Optional) ContainerConcurrency specifies the maximum allowed in-flight (concurrent) requests per container instance of the Revision. Cloud Run fully managed: supported, defaults to 80 Cloud Run for Anthos: supported, defaults to 0, which means concurrency to the application is not limited, and the system decides the target concurrency for the autoscaler.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Optional. ContainerConcurrency specifies the maximum allowed in-flight (concurrent) requests per container instance of the Revision. Cloud Run fully managed: supported, defaults to 80 Cloud Run for Anthos: supported, defaults to 0, which means concurrency to the application is not limited, and the system decides the target concurrency for the autoscaler.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="containers_python">
 <a href="#containers_python" style="color: inherit; text-decoration: inherit;">containers</a>
@@ -4712,7 +4712,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}LatestRevision may be optionally provided to indicate that the latest ready Revision of the Configuration should be used for this traffic target. When provided LatestRevision must be true if RevisionName is empty; it must be false when RevisionName is non-empty. +optional{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Optional. LatestRevision may be provided to indicate that the latest ready Revision of the Configuration should be used for this traffic target. When provided LatestRevision must be true if RevisionName is empty; it must be false when RevisionName is non-empty.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="percent_csharp">
 <a href="#percent_csharp" style="color: inherit; text-decoration: inherit;">Percent</a>
@@ -4736,7 +4736,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Tag is optionally used to expose a dedicated url for referencing this target exclusively. +optional{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Optional. Tag is used to expose a dedicated url for referencing this target exclusively.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="url_csharp">
 <a href="#url_csharp" style="color: inherit; text-decoration: inherit;">Url</a>
@@ -4764,7 +4764,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}LatestRevision may be optionally provided to indicate that the latest ready Revision of the Configuration should be used for this traffic target. When provided LatestRevision must be true if RevisionName is empty; it must be false when RevisionName is non-empty. +optional{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Optional. LatestRevision may be provided to indicate that the latest ready Revision of the Configuration should be used for this traffic target. When provided LatestRevision must be true if RevisionName is empty; it must be false when RevisionName is non-empty.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="percent_go">
 <a href="#percent_go" style="color: inherit; text-decoration: inherit;">Percent</a>
@@ -4788,7 +4788,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Tag is optionally used to expose a dedicated url for referencing this target exclusively. +optional{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Optional. Tag is used to expose a dedicated url for referencing this target exclusively.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="url_go">
 <a href="#url_go" style="color: inherit; text-decoration: inherit;">Url</a>
@@ -4816,7 +4816,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}LatestRevision may be optionally provided to indicate that the latest ready Revision of the Configuration should be used for this traffic target. When provided LatestRevision must be true if RevisionName is empty; it must be false when RevisionName is non-empty. +optional{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Optional. LatestRevision may be provided to indicate that the latest ready Revision of the Configuration should be used for this traffic target. When provided LatestRevision must be true if RevisionName is empty; it must be false when RevisionName is non-empty.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="percent_nodejs">
 <a href="#percent_nodejs" style="color: inherit; text-decoration: inherit;">percent</a>
@@ -4840,7 +4840,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Tag is optionally used to expose a dedicated url for referencing this target exclusively. +optional{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Optional. Tag is used to expose a dedicated url for referencing this target exclusively.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="url_nodejs">
 <a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
@@ -4868,7 +4868,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}LatestRevision may be optionally provided to indicate that the latest ready Revision of the Configuration should be used for this traffic target. When provided LatestRevision must be true if RevisionName is empty; it must be false when RevisionName is non-empty. +optional{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Optional. LatestRevision may be provided to indicate that the latest ready Revision of the Configuration should be used for this traffic target. When provided LatestRevision must be true if RevisionName is empty; it must be false when RevisionName is non-empty.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="percent_python">
 <a href="#percent_python" style="color: inherit; text-decoration: inherit;">percent</a>
@@ -4892,7 +4892,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Tag is optionally used to expose a dedicated url for referencing this target exclusively. +optional{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Optional. Tag is used to expose a dedicated url for referencing this target exclusively.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="url_python">
 <a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>

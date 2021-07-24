@@ -48,7 +48,7 @@ Creates a node pool for a cluster.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewNodePool</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">NodePoolArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">NodePool</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewNodePool</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">NodePoolArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">NodePool</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -109,7 +109,7 @@ Creates a node pool for a cluster.
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
@@ -127,7 +127,7 @@ Creates a node pool for a cluster.
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
@@ -176,22 +176,6 @@ The NodePool resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="location_csharp">
-<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="project_csharp">
-<a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoscaling_csharp">
@@ -225,6 +209,14 @@ The NodePool resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The initial node count for the pool. You must ensure that your Compute Engine [resource quota](https://cloud.google.com/compute/quotas) is sufficient for this number of instances. You must also have available firewall and routes quota.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="location_csharp">
+<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="locations_csharp">
 <a href="#locations_csharp" style="color: inherit; text-decoration: inherit;">Locations</a>
@@ -266,6 +258,14 @@ The NodePool resource accepts the following [input]({{< relref "/docs/intro/conc
     </dt>
     <dd>{{% md %}}The parent (project, location, cluster id) where the node pool will be created. Specified in the format `projects/*/locations/*/clusters/*`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="project_csharp">
+<a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="upgradesettings_csharp">
 <a href="#upgradesettings_csharp" style="color: inherit; text-decoration: inherit;">Upgrade<wbr>Settings</a>
 </span>
@@ -288,22 +288,6 @@ The NodePool resource accepts the following [input]({{< relref "/docs/intro/conc
             title="Required">
         <span id="clusterid_go">
 <a href="#clusterid_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="location_go">
-<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="project_go">
-<a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -341,6 +325,14 @@ The NodePool resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The initial node count for the pool. You must ensure that your Compute Engine [resource quota](https://cloud.google.com/compute/quotas) is sufficient for this number of instances. You must also have available firewall and routes quota.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="location_go">
+<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="locations_go">
 <a href="#locations_go" style="color: inherit; text-decoration: inherit;">Locations</a>
@@ -382,6 +374,14 @@ The NodePool resource accepts the following [input]({{< relref "/docs/intro/conc
     </dt>
     <dd>{{% md %}}The parent (project, location, cluster id) where the node pool will be created. Specified in the format `projects/*/locations/*/clusters/*`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="project_go">
+<a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="upgradesettings_go">
 <a href="#upgradesettings_go" style="color: inherit; text-decoration: inherit;">Upgrade<wbr>Settings</a>
 </span>
@@ -404,22 +404,6 @@ The NodePool resource accepts the following [input]({{< relref "/docs/intro/conc
             title="Required">
         <span id="clusterid_nodejs">
 <a href="#clusterid_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="location_nodejs">
-<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="project_nodejs">
-<a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -457,6 +441,14 @@ The NodePool resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The initial node count for the pool. You must ensure that your Compute Engine [resource quota](https://cloud.google.com/compute/quotas) is sufficient for this number of instances. You must also have available firewall and routes quota.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="location_nodejs">
+<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="locations_nodejs">
 <a href="#locations_nodejs" style="color: inherit; text-decoration: inherit;">locations</a>
@@ -498,6 +490,14 @@ The NodePool resource accepts the following [input]({{< relref "/docs/intro/conc
     </dt>
     <dd>{{% md %}}The parent (project, location, cluster id) where the node pool will be created. Specified in the format `projects/*/locations/*/clusters/*`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="project_nodejs">
+<a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="upgradesettings_nodejs">
 <a href="#upgradesettings_nodejs" style="color: inherit; text-decoration: inherit;">upgrade<wbr>Settings</a>
 </span>
@@ -520,22 +520,6 @@ The NodePool resource accepts the following [input]({{< relref "/docs/intro/conc
             title="Required">
         <span id="cluster_id_python">
 <a href="#cluster_id_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="location_python">
-<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="project_python">
-<a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -573,6 +557,14 @@ The NodePool resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The initial node count for the pool. You must ensure that your Compute Engine [resource quota](https://cloud.google.com/compute/quotas) is sufficient for this number of instances. You must also have available firewall and routes quota.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="location_python">
+<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="locations_python">
 <a href="#locations_python" style="color: inherit; text-decoration: inherit;">locations</a>
@@ -613,6 +605,14 @@ The NodePool resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The parent (project, location, cluster id) where the node pool will be created. Specified in the format `projects/*/locations/*/clusters/*`.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="project_python">
+<a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="upgrade_settings_python">
 <a href="#upgrade_settings_python" style="color: inherit; text-decoration: inherit;">upgrade_<wbr>settings</a>
@@ -3197,7 +3197,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Maximum number of nodes in the NodePool. Must be >= min_node_count. There has to enough quota to scale up the cluster.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Maximum number of nodes in the NodePool. Must be >= min_node_count. There has to be enough quota to scale up the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minnodecount_csharp">
 <a href="#minnodecount_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Node<wbr>Count</a>
@@ -3233,7 +3233,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Maximum number of nodes in the NodePool. Must be >= min_node_count. There has to enough quota to scale up the cluster.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Maximum number of nodes in the NodePool. Must be >= min_node_count. There has to be enough quota to scale up the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minnodecount_go">
 <a href="#minnodecount_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Node<wbr>Count</a>
@@ -3269,7 +3269,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Maximum number of nodes in the NodePool. Must be >= min_node_count. There has to enough quota to scale up the cluster.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Maximum number of nodes in the NodePool. Must be >= min_node_count. There has to be enough quota to scale up the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minnodecount_nodejs">
 <a href="#minnodecount_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Node<wbr>Count</a>
@@ -3305,7 +3305,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Maximum number of nodes in the NodePool. Must be >= min_node_count. There has to enough quota to scale up the cluster.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Maximum number of nodes in the NodePool. Must be >= min_node_count. There has to be enough quota to scale up the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="min_node_count_python">
 <a href="#min_node_count_python" style="color: inherit; text-decoration: inherit;">min_<wbr>node_<wbr>count</a>
@@ -3343,7 +3343,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Maximum number of nodes in the NodePool. Must be >= min_node_count. There has to enough quota to scale up the cluster.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Maximum number of nodes in the NodePool. Must be >= min_node_count. There has to be enough quota to scale up the cluster.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="minnodecount_csharp">
 <a href="#minnodecount_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Node<wbr>Count</a>
@@ -3379,7 +3379,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Maximum number of nodes in the NodePool. Must be >= min_node_count. There has to enough quota to scale up the cluster.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Maximum number of nodes in the NodePool. Must be >= min_node_count. There has to be enough quota to scale up the cluster.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="minnodecount_go">
 <a href="#minnodecount_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Node<wbr>Count</a>
@@ -3415,7 +3415,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Maximum number of nodes in the NodePool. Must be >= min_node_count. There has to enough quota to scale up the cluster.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Maximum number of nodes in the NodePool. Must be >= min_node_count. There has to be enough quota to scale up the cluster.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="minnodecount_nodejs">
 <a href="#minnodecount_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Node<wbr>Count</a>
@@ -3451,7 +3451,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Maximum number of nodes in the NodePool. Must be >= min_node_count. There has to enough quota to scale up the cluster.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Maximum number of nodes in the NodePool. Must be >= min_node_count. There has to be enough quota to scale up the cluster.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="min_node_count_python">
 <a href="#min_node_count_python" style="color: inherit; text-decoration: inherit;">min_<wbr>node_<wbr>count</a>

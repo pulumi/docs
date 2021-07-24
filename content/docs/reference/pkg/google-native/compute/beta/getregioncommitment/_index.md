@@ -63,16 +63,16 @@ The following arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="project_csharp">
-<a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
+        <span id="region_csharp">
+<a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="region_csharp">
-<a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="project_csharp">
+<a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -91,16 +91,16 @@ The following arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="project_go">
-<a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
+        <span id="region_go">
+<a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="region_go">
-<a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="project_go">
+<a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -119,16 +119,16 @@ The following arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="project_nodejs">
-<a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
+        <span id="region_nodejs">
+<a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="region_nodejs">
-<a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="project_nodejs">
+<a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -147,16 +147,16 @@ The following arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="project_python">
-<a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
+        <span id="region_python">
+<a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="region_python">
-<a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="project_python">
+<a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -1414,6 +1414,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Server-defined fully-qualified URL for this resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="sharesettings_csharp">
+<a href="#sharesettings_csharp" style="color: inherit; text-decoration: inherit;">Share<wbr>Settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sharesettingsresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>Beta.<wbr>Inputs.<wbr>Share<wbr>Settings<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Share-settings for shared-reservation{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="specificreservation_csharp">
 <a href="#specificreservation_csharp" style="color: inherit; text-decoration: inherit;">Specific<wbr>Reservation</a>
 </span>
@@ -1505,6 +1513,14 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Server-defined fully-qualified URL for this resource.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="sharesettings_go">
+<a href="#sharesettings_go" style="color: inherit; text-decoration: inherit;">Share<wbr>Settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sharesettingsresponse">Share<wbr>Settings<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Share-settings for shared-reservation{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="specificreservation_go">
 <a href="#specificreservation_go" style="color: inherit; text-decoration: inherit;">Specific<wbr>Reservation</a>
@@ -1598,6 +1614,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Server-defined fully-qualified URL for this resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="sharesettings_nodejs">
+<a href="#sharesettings_nodejs" style="color: inherit; text-decoration: inherit;">share<wbr>Settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sharesettingsresponse">Share<wbr>Settings<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Share-settings for shared-reservation{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="specificreservation_nodejs">
 <a href="#specificreservation_nodejs" style="color: inherit; text-decoration: inherit;">specific<wbr>Reservation</a>
 </span>
@@ -1689,6 +1713,14 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Server-defined fully-qualified URL for this resource.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="share_settings_python">
+<a href="#share_settings_python" style="color: inherit; text-decoration: inherit;">share_<wbr>settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sharesettingsresponse">Share<wbr>Settings<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Share-settings for shared-reservation{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="specific_reservation_python">
 <a href="#specific_reservation_python" style="color: inherit; text-decoration: inherit;">specific_<wbr>reservation</a>
@@ -1837,6 +1869,90 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of resource for which this commitment applies. Possible values are VCPU and MEMORY{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="sharesettingsresponse">Share<wbr>Settings<wbr>Response</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="projects_csharp">
+<a href="#projects_csharp" style="color: inherit; text-decoration: inherit;">Projects</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A List of Project names to specify consumer projects for this shared-reservation. This is only valid when share_type's value is SPECIFIC_PROJECTS.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="sharetype_csharp">
+<a href="#sharetype_csharp" style="color: inherit; text-decoration: inherit;">Share<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Type of sharing for this shared-reservation{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="projects_go">
+<a href="#projects_go" style="color: inherit; text-decoration: inherit;">Projects</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}A List of Project names to specify consumer projects for this shared-reservation. This is only valid when share_type's value is SPECIFIC_PROJECTS.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="sharetype_go">
+<a href="#sharetype_go" style="color: inherit; text-decoration: inherit;">Share<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Type of sharing for this shared-reservation{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="projects_nodejs">
+<a href="#projects_nodejs" style="color: inherit; text-decoration: inherit;">projects</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}A List of Project names to specify consumer projects for this shared-reservation. This is only valid when share_type's value is SPECIFIC_PROJECTS.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="sharetype_nodejs">
+<a href="#sharetype_nodejs" style="color: inherit; text-decoration: inherit;">share<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Type of sharing for this shared-reservation{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="projects_python">
+<a href="#projects_python" style="color: inherit; text-decoration: inherit;">projects</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}A List of Project names to specify consumer projects for this shared-reservation. This is only valid when share_type's value is SPECIFIC_PROJECTS.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="share_type_python">
+<a href="#share_type_python" style="color: inherit; text-decoration: inherit;">share_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Type of sharing for this shared-reservation{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

@@ -61,7 +61,7 @@ Creates a new service configuration (version) for a managed service. This method
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewConfig</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ConfigArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Config</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewConfig</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ConfigArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Config</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -122,7 +122,7 @@ Creates a new service configuration (version) for a managed service. This method
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
@@ -140,7 +140,7 @@ Creates a new service configuration (version) for a managed service. This method
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
@@ -277,7 +277,7 @@ The Config resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#enum">List&lt;Pulumi.<wbr>Google<wbr>Native.<wbr>Service<wbr>Management.<wbr>V1.<wbr>Inputs.<wbr>Enum<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A list of all enum types included in this API service. Enums referenced directly or indirectly by the `apis` are automatically included. Enums which are not referenced but shall be included should be listed here by name. Example: enums: - name: google.someapi.v1.SomeEnum{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}A list of all enum types included in this API service. Enums referenced directly or indirectly by the `apis` are automatically included. Enums which are not referenced but shall be included should be listed here by name by the configuration author. Example: enums: - name: google.someapi.v1.SomeEnum{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="http_csharp">
 <a href="#http_csharp" style="color: inherit; text-decoration: inherit;">Http</a>
@@ -381,7 +381,7 @@ The Config resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The product title for this service.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The product title for this service, it is the name displayed in Google Cloud Console.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="types_csharp">
 <a href="#types_csharp" style="color: inherit; text-decoration: inherit;">Types</a>
@@ -389,7 +389,7 @@ The Config resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#type">List&lt;Pulumi.<wbr>Google<wbr>Native.<wbr>Service<wbr>Management.<wbr>V1.<wbr>Inputs.<wbr>Type<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A list of all proto message types included in this API service. Types referenced directly or indirectly by the `apis` are automatically included. Messages which are not referenced but shall be included, such as types used by the `google.protobuf.Any` type, should be listed here by name. Example: types: - name: google.protobuf.Int32{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}A list of all proto message types included in this API service. Types referenced directly or indirectly by the `apis` are automatically included. Messages which are not referenced but shall be included, such as types used by the `google.protobuf.Any` type, should be listed here by name by the configuration author. Example: types: - name: google.protobuf.Int32{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usage_csharp">
 <a href="#usage_csharp" style="color: inherit; text-decoration: inherit;">Usage</a>
@@ -497,7 +497,7 @@ The Config resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#enum">[]Enum<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A list of all enum types included in this API service. Enums referenced directly or indirectly by the `apis` are automatically included. Enums which are not referenced but shall be included should be listed here by name. Example: enums: - name: google.someapi.v1.SomeEnum{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}A list of all enum types included in this API service. Enums referenced directly or indirectly by the `apis` are automatically included. Enums which are not referenced but shall be included should be listed here by name by the configuration author. Example: enums: - name: google.someapi.v1.SomeEnum{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="http_go">
 <a href="#http_go" style="color: inherit; text-decoration: inherit;">Http</a>
@@ -601,7 +601,7 @@ The Config resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The product title for this service.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The product title for this service, it is the name displayed in Google Cloud Console.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="types_go">
 <a href="#types_go" style="color: inherit; text-decoration: inherit;">Types</a>
@@ -609,7 +609,7 @@ The Config resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#type">[]Type<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A list of all proto message types included in this API service. Types referenced directly or indirectly by the `apis` are automatically included. Messages which are not referenced but shall be included, such as types used by the `google.protobuf.Any` type, should be listed here by name. Example: types: - name: google.protobuf.Int32{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}A list of all proto message types included in this API service. Types referenced directly or indirectly by the `apis` are automatically included. Messages which are not referenced but shall be included, such as types used by the `google.protobuf.Any` type, should be listed here by name by the configuration author. Example: types: - name: google.protobuf.Int32{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usage_go">
 <a href="#usage_go" style="color: inherit; text-decoration: inherit;">Usage</a>
@@ -717,7 +717,7 @@ The Config resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#enum">Enum<wbr>Args[]</a></span>
     </dt>
-    <dd>{{% md %}}A list of all enum types included in this API service. Enums referenced directly or indirectly by the `apis` are automatically included. Enums which are not referenced but shall be included should be listed here by name. Example: enums: - name: google.someapi.v1.SomeEnum{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}A list of all enum types included in this API service. Enums referenced directly or indirectly by the `apis` are automatically included. Enums which are not referenced but shall be included should be listed here by name by the configuration author. Example: enums: - name: google.someapi.v1.SomeEnum{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="http_nodejs">
 <a href="#http_nodejs" style="color: inherit; text-decoration: inherit;">http</a>
@@ -821,7 +821,7 @@ The Config resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The product title for this service.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The product title for this service, it is the name displayed in Google Cloud Console.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="types_nodejs">
 <a href="#types_nodejs" style="color: inherit; text-decoration: inherit;">types</a>
@@ -829,7 +829,7 @@ The Config resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#type">Type<wbr>Args[]</a></span>
     </dt>
-    <dd>{{% md %}}A list of all proto message types included in this API service. Types referenced directly or indirectly by the `apis` are automatically included. Messages which are not referenced but shall be included, such as types used by the `google.protobuf.Any` type, should be listed here by name. Example: types: - name: google.protobuf.Int32{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}A list of all proto message types included in this API service. Types referenced directly or indirectly by the `apis` are automatically included. Messages which are not referenced but shall be included, such as types used by the `google.protobuf.Any` type, should be listed here by name by the configuration author. Example: types: - name: google.protobuf.Int32{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usage_nodejs">
 <a href="#usage_nodejs" style="color: inherit; text-decoration: inherit;">usage</a>
@@ -937,7 +937,7 @@ The Config resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#enum">Sequence[Enum<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}A list of all enum types included in this API service. Enums referenced directly or indirectly by the `apis` are automatically included. Enums which are not referenced but shall be included should be listed here by name. Example: enums: - name: google.someapi.v1.SomeEnum{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}A list of all enum types included in this API service. Enums referenced directly or indirectly by the `apis` are automatically included. Enums which are not referenced but shall be included should be listed here by name by the configuration author. Example: enums: - name: google.someapi.v1.SomeEnum{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="http_python">
 <a href="#http_python" style="color: inherit; text-decoration: inherit;">http</a>
@@ -1041,7 +1041,7 @@ The Config resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The product title for this service.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The product title for this service, it is the name displayed in Google Cloud Console.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="types_python">
 <a href="#types_python" style="color: inherit; text-decoration: inherit;">types</a>
@@ -1049,7 +1049,7 @@ The Config resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#type">Sequence[Type<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}A list of all proto message types included in this API service. Types referenced directly or indirectly by the `apis` are automatically included. Messages which are not referenced but shall be included, such as types used by the `google.protobuf.Any` type, should be listed here by name. Example: types: - name: google.protobuf.Int32{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}A list of all proto message types included in this API service. Types referenced directly or indirectly by the `apis` are automatically included. Messages which are not referenced but shall be included, such as types used by the `google.protobuf.Any` type, should be listed here by name by the configuration author. Example: types: - name: google.protobuf.Int32{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usage_python">
 <a href="#usage_python" style="color: inherit; text-decoration: inherit;">usage</a>
@@ -4716,7 +4716,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A short summary of what the service does. Can only be provided by plain text.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}A short description of what the service does. The summary must be plain text. It becomes the overview of the service displayed in Google Cloud Console. NOTE: This field is equivalent to the standard field `description`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -4768,7 +4768,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A short summary of what the service does. Can only be provided by plain text.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}A short description of what the service does. The summary must be plain text. It becomes the overview of the service displayed in Google Cloud Console. NOTE: This field is equivalent to the standard field `description`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -4820,7 +4820,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A short summary of what the service does. Can only be provided by plain text.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}A short description of what the service does. The summary must be plain text. It becomes the overview of the service displayed in Google Cloud Console. NOTE: This field is equivalent to the standard field `description`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -4872,7 +4872,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A short summary of what the service does. Can only be provided by plain text.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}A short description of what the service does. The summary must be plain text. It becomes the overview of the service displayed in Google Cloud Console. NOTE: This field is equivalent to the standard field `description`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="documentationresponse">Documentation<wbr>Response</h4>
@@ -4926,7 +4926,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A short summary of what the service does. Can only be provided by plain text.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}A short description of what the service does. The summary must be plain text. It becomes the overview of the service displayed in Google Cloud Console. NOTE: This field is equivalent to the standard field `description`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -4978,7 +4978,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A short summary of what the service does. Can only be provided by plain text.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}A short description of what the service does. The summary must be plain text. It becomes the overview of the service displayed in Google Cloud Console. NOTE: This field is equivalent to the standard field `description`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -5030,7 +5030,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A short summary of what the service does. Can only be provided by plain text.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}A short description of what the service does. The summary must be plain text. It becomes the overview of the service displayed in Google Cloud Console. NOTE: This field is equivalent to the standard field `description`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -5082,7 +5082,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A short summary of what the service does. Can only be provided by plain text.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}A short description of what the service does. The summary must be plain text. It becomes the overview of the service displayed in Google Cloud Console. NOTE: This field is equivalent to the standard field `description`.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="documentationrule">Documentation<wbr>Rule</h4>
@@ -5104,7 +5104,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Description of the selected API(s).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The description is the comment in front of the selected proto element, such as a message, a method, a 'service' definition, or a field.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="selector_csharp">
 <a href="#selector_csharp" style="color: inherit; text-decoration: inherit;">Selector</a>
@@ -5112,7 +5112,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The selector is a comma-separated list of patterns. Each pattern is a qualified name of the element which may end in "*", indicating a wildcard. Wildcards are only allowed at the end and for a whole component of the qualified name, i.e. "foo.*" is ok, but not "foo.b*" or "foo.*.bar". A wildcard will match one or more components. To specify a default for all applicable elements, the whole pattern "*" is used.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The selector is a comma-separated list of patterns for any element such as a method, a field, an enum value. Each pattern is a qualified name of the element which may end in "*", indicating a wildcard. Wildcards are only allowed at the end and for a whole component of the qualified name, i.e. "foo.*" is ok, but not "foo.b*" or "foo.*.bar". A wildcard will match one or more components. To specify a default for all applicable elements, the whole pattern "*" is used.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -5132,7 +5132,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Description of the selected API(s).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The description is the comment in front of the selected proto element, such as a message, a method, a 'service' definition, or a field.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="selector_go">
 <a href="#selector_go" style="color: inherit; text-decoration: inherit;">Selector</a>
@@ -5140,7 +5140,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The selector is a comma-separated list of patterns. Each pattern is a qualified name of the element which may end in "*", indicating a wildcard. Wildcards are only allowed at the end and for a whole component of the qualified name, i.e. "foo.*" is ok, but not "foo.b*" or "foo.*.bar". A wildcard will match one or more components. To specify a default for all applicable elements, the whole pattern "*" is used.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The selector is a comma-separated list of patterns for any element such as a method, a field, an enum value. Each pattern is a qualified name of the element which may end in "*", indicating a wildcard. Wildcards are only allowed at the end and for a whole component of the qualified name, i.e. "foo.*" is ok, but not "foo.b*" or "foo.*.bar". A wildcard will match one or more components. To specify a default for all applicable elements, the whole pattern "*" is used.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -5160,7 +5160,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Description of the selected API(s).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The description is the comment in front of the selected proto element, such as a message, a method, a 'service' definition, or a field.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="selector_nodejs">
 <a href="#selector_nodejs" style="color: inherit; text-decoration: inherit;">selector</a>
@@ -5168,7 +5168,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The selector is a comma-separated list of patterns. Each pattern is a qualified name of the element which may end in "*", indicating a wildcard. Wildcards are only allowed at the end and for a whole component of the qualified name, i.e. "foo.*" is ok, but not "foo.b*" or "foo.*.bar". A wildcard will match one or more components. To specify a default for all applicable elements, the whole pattern "*" is used.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The selector is a comma-separated list of patterns for any element such as a method, a field, an enum value. Each pattern is a qualified name of the element which may end in "*", indicating a wildcard. Wildcards are only allowed at the end and for a whole component of the qualified name, i.e. "foo.*" is ok, but not "foo.b*" or "foo.*.bar". A wildcard will match one or more components. To specify a default for all applicable elements, the whole pattern "*" is used.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -5188,7 +5188,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Description of the selected API(s).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The description is the comment in front of the selected proto element, such as a message, a method, a 'service' definition, or a field.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="selector_python">
 <a href="#selector_python" style="color: inherit; text-decoration: inherit;">selector</a>
@@ -5196,7 +5196,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The selector is a comma-separated list of patterns. Each pattern is a qualified name of the element which may end in "*", indicating a wildcard. Wildcards are only allowed at the end and for a whole component of the qualified name, i.e. "foo.*" is ok, but not "foo.b*" or "foo.*.bar". A wildcard will match one or more components. To specify a default for all applicable elements, the whole pattern "*" is used.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The selector is a comma-separated list of patterns for any element such as a method, a field, an enum value. Each pattern is a qualified name of the element which may end in "*", indicating a wildcard. Wildcards are only allowed at the end and for a whole component of the qualified name, i.e. "foo.*" is ok, but not "foo.b*" or "foo.*.bar". A wildcard will match one or more components. To specify a default for all applicable elements, the whole pattern "*" is used.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="documentationruleresponse">Documentation<wbr>Rule<wbr>Response</h4>
@@ -5218,7 +5218,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Description of the selected API(s).{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The description is the comment in front of the selected proto element, such as a message, a method, a 'service' definition, or a field.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="selector_csharp">
 <a href="#selector_csharp" style="color: inherit; text-decoration: inherit;">Selector</a>
@@ -5226,7 +5226,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The selector is a comma-separated list of patterns. Each pattern is a qualified name of the element which may end in "*", indicating a wildcard. Wildcards are only allowed at the end and for a whole component of the qualified name, i.e. "foo.*" is ok, but not "foo.b*" or "foo.*.bar". A wildcard will match one or more components. To specify a default for all applicable elements, the whole pattern "*" is used.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The selector is a comma-separated list of patterns for any element such as a method, a field, an enum value. Each pattern is a qualified name of the element which may end in "*", indicating a wildcard. Wildcards are only allowed at the end and for a whole component of the qualified name, i.e. "foo.*" is ok, but not "foo.b*" or "foo.*.bar". A wildcard will match one or more components. To specify a default for all applicable elements, the whole pattern "*" is used.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -5246,7 +5246,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Description of the selected API(s).{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The description is the comment in front of the selected proto element, such as a message, a method, a 'service' definition, or a field.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="selector_go">
 <a href="#selector_go" style="color: inherit; text-decoration: inherit;">Selector</a>
@@ -5254,7 +5254,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The selector is a comma-separated list of patterns. Each pattern is a qualified name of the element which may end in "*", indicating a wildcard. Wildcards are only allowed at the end and for a whole component of the qualified name, i.e. "foo.*" is ok, but not "foo.b*" or "foo.*.bar". A wildcard will match one or more components. To specify a default for all applicable elements, the whole pattern "*" is used.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The selector is a comma-separated list of patterns for any element such as a method, a field, an enum value. Each pattern is a qualified name of the element which may end in "*", indicating a wildcard. Wildcards are only allowed at the end and for a whole component of the qualified name, i.e. "foo.*" is ok, but not "foo.b*" or "foo.*.bar". A wildcard will match one or more components. To specify a default for all applicable elements, the whole pattern "*" is used.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -5274,7 +5274,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Description of the selected API(s).{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The description is the comment in front of the selected proto element, such as a message, a method, a 'service' definition, or a field.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="selector_nodejs">
 <a href="#selector_nodejs" style="color: inherit; text-decoration: inherit;">selector</a>
@@ -5282,7 +5282,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The selector is a comma-separated list of patterns. Each pattern is a qualified name of the element which may end in "*", indicating a wildcard. Wildcards are only allowed at the end and for a whole component of the qualified name, i.e. "foo.*" is ok, but not "foo.b*" or "foo.*.bar". A wildcard will match one or more components. To specify a default for all applicable elements, the whole pattern "*" is used.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The selector is a comma-separated list of patterns for any element such as a method, a field, an enum value. Each pattern is a qualified name of the element which may end in "*", indicating a wildcard. Wildcards are only allowed at the end and for a whole component of the qualified name, i.e. "foo.*" is ok, but not "foo.b*" or "foo.*.bar". A wildcard will match one or more components. To specify a default for all applicable elements, the whole pattern "*" is used.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -5302,7 +5302,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Description of the selected API(s).{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The description is the comment in front of the selected proto element, such as a message, a method, a 'service' definition, or a field.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="selector_python">
 <a href="#selector_python" style="color: inherit; text-decoration: inherit;">selector</a>
@@ -5310,7 +5310,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The selector is a comma-separated list of patterns. Each pattern is a qualified name of the element which may end in "*", indicating a wildcard. Wildcards are only allowed at the end and for a whole component of the qualified name, i.e. "foo.*" is ok, but not "foo.b*" or "foo.*.bar". A wildcard will match one or more components. To specify a default for all applicable elements, the whole pattern "*" is used.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The selector is a comma-separated list of patterns for any element such as a method, a field, an enum value. Each pattern is a qualified name of the element which may end in "*", indicating a wildcard. Wildcards are only allowed at the end and for a whole component of the qualified name, i.e. "foo.*" is ok, but not "foo.b*" or "foo.*.bar". A wildcard will match one or more components. To specify a default for all applicable elements, the whole pattern "*" is used.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="endpoint">Endpoint</h4>
@@ -11846,7 +11846,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Markdown content of the page. You can use (== include {path} ==) to include content from a Markdown file.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The Markdown content of the page. You can use (== include {path} ==) to include content from a Markdown file. The content can be used to produce the documentation page such as HTML format page.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -11874,7 +11874,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Markdown content of the page. You can use (== include {path} ==) to include content from a Markdown file.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The Markdown content of the page. You can use (== include {path} ==) to include content from a Markdown file. The content can be used to produce the documentation page such as HTML format page.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -11902,7 +11902,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Markdown content of the page. You can use (== include {path} ==) to include content from a Markdown file.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The Markdown content of the page. You can use (== include {path} ==) to include content from a Markdown file. The content can be used to produce the documentation page such as HTML format page.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -11930,7 +11930,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Markdown content of the page. You can use (== include {path} ==) to include content from a Markdown file.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The Markdown content of the page. You can use (== include {path} ==) to include content from a Markdown file. The content can be used to produce the documentation page such as HTML format page.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -11960,7 +11960,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Markdown content of the page. You can use (== include {path} ==) to include content from a Markdown file.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The Markdown content of the page. You can use (== include {path} ==) to include content from a Markdown file. The content can be used to produce the documentation page such as HTML format page.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -11988,7 +11988,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Markdown content of the page. You can use (== include {path} ==) to include content from a Markdown file.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The Markdown content of the page. You can use (== include {path} ==) to include content from a Markdown file. The content can be used to produce the documentation page such as HTML format page.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -12016,7 +12016,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Markdown content of the page. You can use (== include {path} ==) to include content from a Markdown file.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The Markdown content of the page. You can use (== include {path} ==) to include content from a Markdown file. The content can be used to produce the documentation page such as HTML format page.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -12044,7 +12044,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Markdown content of the page. You can use (== include {path} ==) to include content from a Markdown file.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The Markdown content of the page. You can use (== include {path} ==) to include content from a Markdown file. The content can be used to produce the documentation page such as HTML format page.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>

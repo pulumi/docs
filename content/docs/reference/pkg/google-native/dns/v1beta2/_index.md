@@ -14,9 +14,9 @@ Explore the resources and functions of the google-native.dns/v1beta2 module.
     <li><a href="change" title="Change"><span class="symbol resource"></span>Change</a></li>
     <li><a href="managedzone" title="ManagedZone"><span class="symbol resource"></span>ManagedZone</a></li>
     <li><a href="policy" title="Policy"><span class="symbol resource"></span>Policy</a></li>
+    <li><a href="resourcerecordset" title="ResourceRecordSet"><span class="symbol resource"></span>ResourceRecordSet</a></li>
     <li><a href="responsepolicy" title="ResponsePolicy"><span class="symbol resource"></span>ResponsePolicy</a></li>
     <li><a href="responsepolicyrule" title="ResponsePolicyRule"><span class="symbol resource"></span>ResponsePolicyRule</a></li>
-    <li><a href="rrset" title="Rrset"><span class="symbol resource"></span>Rrset</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
@@ -24,9 +24,9 @@ Explore the resources and functions of the google-native.dns/v1beta2 module.
     <li><a href="getchange" title="GetChange"><span class="symbol function"></span>GetChange</a></li>
     <li><a href="getmanagedzone" title="GetManagedZone"><span class="symbol function"></span>GetManagedZone</a></li>
     <li><a href="getpolicy" title="GetPolicy"><span class="symbol function"></span>GetPolicy</a></li>
+    <li><a href="getresourcerecordset" title="GetResourceRecordSet"><span class="symbol function"></span>GetResourceRecordSet</a></li>
     <li><a href="getresponsepolicy" title="GetResponsePolicy"><span class="symbol function"></span>GetResponsePolicy</a></li>
     <li><a href="getresponsepolicyrule" title="GetResponsePolicyRule"><span class="symbol function"></span>GetResponsePolicyRule</a></li>
-    <li><a href="getrrset" title="GetRrset"><span class="symbol function"></span>GetRrset</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -36,6 +36,6 @@ Explore the resources and functions of the google-native.dns/v1beta2 module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.5.0</dd>
+	<dd>0.6.0</dd>
 </dl>
 

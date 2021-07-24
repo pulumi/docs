@@ -41,7 +41,7 @@ Creates an Apigee runtime instance. The instance is accessible from the authoriz
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewInstance</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">InstanceArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Instance</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewInstance</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">InstanceArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Instance</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -102,7 +102,7 @@ Creates an Apigee runtime instance. The instance is accessible from the authoriz
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
@@ -120,7 +120,7 @@ Creates an Apigee runtime instance. The instance is accessible from the authoriz
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
@@ -163,14 +163,6 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="location_csharp">
-<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Compute Engine location where the instance resides.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="organizationid_csharp">
 <a href="#organizationid_csharp" style="color: inherit; text-decoration: inherit;">Organization<wbr>Id</a>
 </span>
@@ -203,6 +195,14 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
     </dt>
     <dd>{{% md %}}Optional. Display name for the instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="location_csharp">
+<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Compute Engine location where the instance resides.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
@@ -222,14 +222,6 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="location_go">
-<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Compute Engine location where the instance resides.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="organizationid_go">
 <a href="#organizationid_go" style="color: inherit; text-decoration: inherit;">Organization<wbr>Id</a>
@@ -263,6 +255,14 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
     </dt>
     <dd>{{% md %}}Optional. Display name for the instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="location_go">
+<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Compute Engine location where the instance resides.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
@@ -282,14 +282,6 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="location_nodejs">
-<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Compute Engine location where the instance resides.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="organizationid_nodejs">
 <a href="#organizationid_nodejs" style="color: inherit; text-decoration: inherit;">organization<wbr>Id</a>
@@ -323,6 +315,14 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
     </dt>
     <dd>{{% md %}}Optional. Display name for the instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="location_nodejs">
+<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Compute Engine location where the instance resides.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
@@ -342,14 +342,6 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="location_python">
-<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Compute Engine location where the instance resides.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="organization_id_python">
 <a href="#organization_id_python" style="color: inherit; text-decoration: inherit;">organization_<wbr>id</a>
@@ -382,6 +374,14 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. Display name for the instance.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="location_python">
+<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Compute Engine location where the instance resides.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -634,7 +634,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>SLASH_17{{% md %}}`/17` CIDR range.{{% /md %}}</dd><dt>Slash18</dt>
     <dd>SLASH_18{{% md %}}`/18` CIDR range.{{% /md %}}</dd><dt>Slash19</dt>
     <dd>SLASH_19{{% md %}}`/19` CIDR range.{{% /md %}}</dd><dt>Slash20</dt>
-    <dd>SLASH_20{{% md %}}`/20` CIDR range.{{% /md %}}</dd><dt>Slash23</dt>
+    <dd>SLASH_20{{% md %}}`/20` CIDR range.{{% /md %}}</dd><dt>Slash22</dt>
+    <dd>SLASH_22{{% md %}}`/22` CIDR range. Supported for evaluation only.{{% /md %}}</dd><dt>Slash23</dt>
     <dd>SLASH_23{{% md %}}`/23` CIDR range. Supported for evaluation only.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -645,7 +646,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>SLASH_17{{% md %}}`/17` CIDR range.{{% /md %}}</dd><dt>Instance<wbr>Peering<wbr>Cidr<wbr>Range<wbr>Slash18</dt>
     <dd>SLASH_18{{% md %}}`/18` CIDR range.{{% /md %}}</dd><dt>Instance<wbr>Peering<wbr>Cidr<wbr>Range<wbr>Slash19</dt>
     <dd>SLASH_19{{% md %}}`/19` CIDR range.{{% /md %}}</dd><dt>Instance<wbr>Peering<wbr>Cidr<wbr>Range<wbr>Slash20</dt>
-    <dd>SLASH_20{{% md %}}`/20` CIDR range.{{% /md %}}</dd><dt>Instance<wbr>Peering<wbr>Cidr<wbr>Range<wbr>Slash23</dt>
+    <dd>SLASH_20{{% md %}}`/20` CIDR range.{{% /md %}}</dd><dt>Instance<wbr>Peering<wbr>Cidr<wbr>Range<wbr>Slash22</dt>
+    <dd>SLASH_22{{% md %}}`/22` CIDR range. Supported for evaluation only.{{% /md %}}</dd><dt>Instance<wbr>Peering<wbr>Cidr<wbr>Range<wbr>Slash23</dt>
     <dd>SLASH_23{{% md %}}`/23` CIDR range. Supported for evaluation only.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -656,7 +658,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>SLASH_17{{% md %}}`/17` CIDR range.{{% /md %}}</dd><dt>Slash18</dt>
     <dd>SLASH_18{{% md %}}`/18` CIDR range.{{% /md %}}</dd><dt>Slash19</dt>
     <dd>SLASH_19{{% md %}}`/19` CIDR range.{{% /md %}}</dd><dt>Slash20</dt>
-    <dd>SLASH_20{{% md %}}`/20` CIDR range.{{% /md %}}</dd><dt>Slash23</dt>
+    <dd>SLASH_20{{% md %}}`/20` CIDR range.{{% /md %}}</dd><dt>Slash22</dt>
+    <dd>SLASH_22{{% md %}}`/22` CIDR range. Supported for evaluation only.{{% /md %}}</dd><dt>Slash23</dt>
     <dd>SLASH_23{{% md %}}`/23` CIDR range. Supported for evaluation only.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -667,7 +670,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>SLASH_17{{% md %}}`/17` CIDR range.{{% /md %}}</dd><dt>SLASH18</dt>
     <dd>SLASH_18{{% md %}}`/18` CIDR range.{{% /md %}}</dd><dt>SLASH19</dt>
     <dd>SLASH_19{{% md %}}`/19` CIDR range.{{% /md %}}</dd><dt>SLASH20</dt>
-    <dd>SLASH_20{{% md %}}`/20` CIDR range.{{% /md %}}</dd><dt>SLASH23</dt>
+    <dd>SLASH_20{{% md %}}`/20` CIDR range.{{% /md %}}</dd><dt>SLASH22</dt>
+    <dd>SLASH_22{{% md %}}`/22` CIDR range. Supported for evaluation only.{{% /md %}}</dd><dt>SLASH23</dt>
     <dd>SLASH_23{{% md %}}`/23` CIDR range. Supported for evaluation only.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 

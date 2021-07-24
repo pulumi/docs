@@ -20,7 +20,7 @@ Creates a new reservation. For more information, read Reserving zonal resources.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Reservation</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ReservationArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Reservation</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">ReservationArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -31,21 +31,22 @@ Creates a new reservation. For more information, read Reserving zonal resources.
                 <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                 <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                 <span class="nx">request_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">share_settings</span><span class="p">:</span> <span class="nx">Optional[ShareSettingsArgs]</span> = None<span class="p">,</span>
                 <span class="nx">specific_reservation</span><span class="p">:</span> <span class="nx">Optional[AllocationSpecificSKUReservationArgs]</span> = None<span class="p">,</span>
                 <span class="nx">specific_reservation_required</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
                 <span class="nx">zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">Reservation</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ReservationInitArgs</a></span><span class="p">,</span>
+                <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">Optional[ReservationInitArgs]</a></span> = None<span class="p">,</span>
                 <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewReservation</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ReservationArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Reservation</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewReservation</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">ReservationArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Reservation</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Reservation</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ReservationArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Reservation</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ReservationArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -57,7 +58,7 @@ Creates a new reservation. For more information, read Reserving zonal resources.
         <span class="property-type">string</span>
     </dt>
     <dd>The unique name of the resource.</dd><dt
-        class="property-required" title="Required">
+        class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ReservationArgs</a></span>
@@ -81,7 +82,7 @@ Creates a new reservation. For more information, read Reserving zonal resources.
         <span class="property-type">str</span>
     </dt>
     <dd>The unique name of the resource.</dd><dt
-        class="property-required" title="Required">
+        class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ReservationInitArgs</a></span>
@@ -102,7 +103,7 @@ Creates a new reservation. For more information, read Reserving zonal resources.
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
@@ -111,7 +112,7 @@ Creates a new reservation. For more information, read Reserving zonal resources.
         <span class="property-type">string</span>
     </dt>
     <dd>The unique name of the resource.</dd><dt
-        class="property-required" title="Required">
+        class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ReservationArgs</a></span>
@@ -120,7 +121,7 @@ Creates a new reservation. For more information, read Reserving zonal resources.
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
@@ -135,7 +136,7 @@ Creates a new reservation. For more information, read Reserving zonal resources.
         <span class="property-type">string</span>
     </dt>
     <dd>The unique name of the resource.</dd><dt
-        class="property-required" title="Required">
+        class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ReservationArgs</a></span>
@@ -161,23 +162,7 @@ The Reservation resource accepts the following [input]({{< relref "/docs/intro/c
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="project_csharp">
-<a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="zone_csharp">
-<a href="#zone_csharp" style="color: inherit; text-decoration: inherit;">Zone</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Zone in which the reservation resides. A zone must be provided if the reservation is created within a commitment.{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -195,6 +180,14 @@ The Reservation resource accepts the following [input]({{< relref "/docs/intro/c
     </dt>
     <dd>{{% md %}}The name of the resource, provided by the client when initially creating the resource. The resource name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="project_csharp">
+<a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="requestid_csharp">
 <a href="#requestid_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Id</a>
 </span>
@@ -202,6 +195,14 @@ The Reservation resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sharesettings_csharp">
+<a href="#sharesettings_csharp" style="color: inherit; text-decoration: inherit;">Share<wbr>Settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sharesettings">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>Beta.<wbr>Inputs.<wbr>Share<wbr>Settings<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Share-settings for shared-reservation{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="specificreservation_csharp">
 <a href="#specificreservation_csharp" style="color: inherit; text-decoration: inherit;">Specific<wbr>Reservation</a>
@@ -217,27 +218,19 @@ The Reservation resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates whether the reservation can be consumed by VMs with affinity for "any" reservation. If the field is set, then only VMs that target the reservation by name can consume from this reservation.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Indicates whether the reservation can be consumed by VMs with affinity for "any" reservation. If the field is set, then only VMs that target the reservation by name can consume from this reservation.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="zone_csharp">
+<a href="#zone_csharp" style="color: inherit; text-decoration: inherit;">Zone</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Zone in which the reservation resides. A zone must be provided if the reservation is created within a commitment.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="project_go">
-<a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="zone_go">
-<a href="#zone_go" style="color: inherit; text-decoration: inherit;">Zone</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Zone in which the reservation resides. A zone must be provided if the reservation is created within a commitment.{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -255,6 +248,14 @@ The Reservation resource accepts the following [input]({{< relref "/docs/intro/c
     </dt>
     <dd>{{% md %}}The name of the resource, provided by the client when initially creating the resource. The resource name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="project_go">
+<a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="requestid_go">
 <a href="#requestid_go" style="color: inherit; text-decoration: inherit;">Request<wbr>Id</a>
 </span>
@@ -262,6 +263,14 @@ The Reservation resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sharesettings_go">
+<a href="#sharesettings_go" style="color: inherit; text-decoration: inherit;">Share<wbr>Settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sharesettings">Share<wbr>Settings<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Share-settings for shared-reservation{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="specificreservation_go">
 <a href="#specificreservation_go" style="color: inherit; text-decoration: inherit;">Specific<wbr>Reservation</a>
@@ -277,27 +286,19 @@ The Reservation resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates whether the reservation can be consumed by VMs with affinity for "any" reservation. If the field is set, then only VMs that target the reservation by name can consume from this reservation.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Indicates whether the reservation can be consumed by VMs with affinity for "any" reservation. If the field is set, then only VMs that target the reservation by name can consume from this reservation.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="zone_go">
+<a href="#zone_go" style="color: inherit; text-decoration: inherit;">Zone</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Zone in which the reservation resides. A zone must be provided if the reservation is created within a commitment.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="project_nodejs">
-<a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="zone_nodejs">
-<a href="#zone_nodejs" style="color: inherit; text-decoration: inherit;">zone</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Zone in which the reservation resides. A zone must be provided if the reservation is created within a commitment.{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -315,6 +316,14 @@ The Reservation resource accepts the following [input]({{< relref "/docs/intro/c
     </dt>
     <dd>{{% md %}}The name of the resource, provided by the client when initially creating the resource. The resource name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="project_nodejs">
+<a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="requestid_nodejs">
 <a href="#requestid_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Id</a>
 </span>
@@ -322,6 +331,14 @@ The Reservation resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sharesettings_nodejs">
+<a href="#sharesettings_nodejs" style="color: inherit; text-decoration: inherit;">share<wbr>Settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sharesettings">Share<wbr>Settings<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Share-settings for shared-reservation{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="specificreservation_nodejs">
 <a href="#specificreservation_nodejs" style="color: inherit; text-decoration: inherit;">specific<wbr>Reservation</a>
@@ -337,27 +354,19 @@ The Reservation resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Indicates whether the reservation can be consumed by VMs with affinity for "any" reservation. If the field is set, then only VMs that target the reservation by name can consume from this reservation.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Indicates whether the reservation can be consumed by VMs with affinity for "any" reservation. If the field is set, then only VMs that target the reservation by name can consume from this reservation.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="zone_nodejs">
+<a href="#zone_nodejs" style="color: inherit; text-decoration: inherit;">zone</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Zone in which the reservation resides. A zone must be provided if the reservation is created within a commitment.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="project_python">
-<a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="zone_python">
-<a href="#zone_python" style="color: inherit; text-decoration: inherit;">zone</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Zone in which the reservation resides. A zone must be provided if the reservation is created within a commitment.{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -375,6 +384,14 @@ The Reservation resource accepts the following [input]({{< relref "/docs/intro/c
     </dt>
     <dd>{{% md %}}The name of the resource, provided by the client when initially creating the resource. The resource name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="project_python">
+<a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="request_id_python">
 <a href="#request_id_python" style="color: inherit; text-decoration: inherit;">request_<wbr>id</a>
 </span>
@@ -382,6 +399,14 @@ The Reservation resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="share_settings_python">
+<a href="#share_settings_python" style="color: inherit; text-decoration: inherit;">share_<wbr>settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sharesettings">Share<wbr>Settings<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Share-settings for shared-reservation{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="specific_reservation_python">
 <a href="#specific_reservation_python" style="color: inherit; text-decoration: inherit;">specific_<wbr>reservation</a>
@@ -397,7 +422,15 @@ The Reservation resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates whether the reservation can be consumed by VMs with affinity for "any" reservation. If the field is set, then only VMs that target the reservation by name can consume from this reservation.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Indicates whether the reservation can be consumed by VMs with affinity for "any" reservation. If the field is set, then only VMs that target the reservation by name can consume from this reservation.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="zone_python">
+<a href="#zone_python" style="color: inherit; text-decoration: inherit;">zone</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Zone in which the reservation resides. A zone must be provided if the reservation is created within a commitment.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1711,6 +1744,196 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#allocationspecificskuallocationreservedinstancepropertiesresponse">Allocation<wbr>Specific<wbr>SKUAllocation<wbr>Reserved<wbr>Instance<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The instance properties for the reservation.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="sharesettings">Share<wbr>Settings</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="projects_csharp">
+<a href="#projects_csharp" style="color: inherit; text-decoration: inherit;">Projects</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A List of Project names to specify consumer projects for this shared-reservation. This is only valid when share_type's value is SPECIFIC_PROJECTS.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sharetype_csharp">
+<a href="#sharetype_csharp" style="color: inherit; text-decoration: inherit;">Share<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sharesettingssharetype">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>Beta.<wbr>Share<wbr>Settings<wbr>Share<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}Type of sharing for this shared-reservation{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="projects_go">
+<a href="#projects_go" style="color: inherit; text-decoration: inherit;">Projects</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}A List of Project names to specify consumer projects for this shared-reservation. This is only valid when share_type's value is SPECIFIC_PROJECTS.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sharetype_go">
+<a href="#sharetype_go" style="color: inherit; text-decoration: inherit;">Share<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sharesettingssharetype">Share<wbr>Settings<wbr>Share<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}Type of sharing for this shared-reservation{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="projects_nodejs">
+<a href="#projects_nodejs" style="color: inherit; text-decoration: inherit;">projects</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}A List of Project names to specify consumer projects for this shared-reservation. This is only valid when share_type's value is SPECIFIC_PROJECTS.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sharetype_nodejs">
+<a href="#sharetype_nodejs" style="color: inherit; text-decoration: inherit;">share<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sharesettingssharetype">Share<wbr>Settings<wbr>Share<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}Type of sharing for this shared-reservation{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="projects_python">
+<a href="#projects_python" style="color: inherit; text-decoration: inherit;">projects</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}A List of Project names to specify consumer projects for this shared-reservation. This is only valid when share_type's value is SPECIFIC_PROJECTS.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="share_type_python">
+<a href="#share_type_python" style="color: inherit; text-decoration: inherit;">share_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sharesettingssharetype">Share<wbr>Settings<wbr>Share<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}Type of sharing for this shared-reservation{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="sharesettingsresponse">Share<wbr>Settings<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="projects_csharp">
+<a href="#projects_csharp" style="color: inherit; text-decoration: inherit;">Projects</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A List of Project names to specify consumer projects for this shared-reservation. This is only valid when share_type's value is SPECIFIC_PROJECTS.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="sharetype_csharp">
+<a href="#sharetype_csharp" style="color: inherit; text-decoration: inherit;">Share<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Type of sharing for this shared-reservation{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="projects_go">
+<a href="#projects_go" style="color: inherit; text-decoration: inherit;">Projects</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}A List of Project names to specify consumer projects for this shared-reservation. This is only valid when share_type's value is SPECIFIC_PROJECTS.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="sharetype_go">
+<a href="#sharetype_go" style="color: inherit; text-decoration: inherit;">Share<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Type of sharing for this shared-reservation{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="projects_nodejs">
+<a href="#projects_nodejs" style="color: inherit; text-decoration: inherit;">projects</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}A List of Project names to specify consumer projects for this shared-reservation. This is only valid when share_type's value is SPECIFIC_PROJECTS.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="sharetype_nodejs">
+<a href="#sharetype_nodejs" style="color: inherit; text-decoration: inherit;">share<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Type of sharing for this shared-reservation{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="projects_python">
+<a href="#projects_python" style="color: inherit; text-decoration: inherit;">projects</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}A List of Project names to specify consumer projects for this shared-reservation. This is only valid when share_type's value is SPECIFIC_PROJECTS.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="share_type_python">
+<a href="#share_type_python" style="color: inherit; text-decoration: inherit;">share_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Type of sharing for this shared-reservation{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="sharesettingssharetype">Share<wbr>Settings<wbr>Share<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Share<wbr>Type<wbr>Unspecified</dt>
+    <dd>SHARE_TYPE_UNSPECIFIED{{% md %}}Default value. This value is unused.{{% /md %}}</dd><dt>Specific<wbr>Projects</dt>
+    <dd>SPECIFIC_PROJECTS{{% md %}}Shared-reservation is open to specific projects{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Share<wbr>Settings<wbr>Share<wbr>Type<wbr>Share<wbr>Type<wbr>Unspecified</dt>
+    <dd>SHARE_TYPE_UNSPECIFIED{{% md %}}Default value. This value is unused.{{% /md %}}</dd><dt>Share<wbr>Settings<wbr>Share<wbr>Type<wbr>Specific<wbr>Projects</dt>
+    <dd>SPECIFIC_PROJECTS{{% md %}}Shared-reservation is open to specific projects{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Share<wbr>Type<wbr>Unspecified</dt>
+    <dd>SHARE_TYPE_UNSPECIFIED{{% md %}}Default value. This value is unused.{{% /md %}}</dd><dt>Specific<wbr>Projects</dt>
+    <dd>SPECIFIC_PROJECTS{{% md %}}Shared-reservation is open to specific projects{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>SHARE_TYPE_UNSPECIFIED</dt>
+    <dd>SHARE_TYPE_UNSPECIFIED{{% md %}}Default value. This value is unused.{{% /md %}}</dd><dt>SPECIFIC_PROJECTS</dt>
+    <dd>SPECIFIC_PROJECTS{{% md %}}Shared-reservation is open to specific projects{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

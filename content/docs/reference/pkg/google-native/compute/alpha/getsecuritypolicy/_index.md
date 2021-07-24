@@ -54,16 +54,16 @@ The following arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="project_csharp">
-<a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
+        <span id="securitypolicy_csharp">
+<a href="#securitypolicy_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="securitypolicy_csharp">
-<a href="#securitypolicy_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Policy</a>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="project_csharp">
+<a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -74,16 +74,16 @@ The following arguments are supported:
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="project_go">
-<a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
+        <span id="securitypolicy_go">
+<a href="#securitypolicy_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="securitypolicy_go">
-<a href="#securitypolicy_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Policy</a>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="project_go">
+<a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -94,16 +94,16 @@ The following arguments are supported:
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="project_nodejs">
-<a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
+        <span id="securitypolicy_nodejs">
+<a href="#securitypolicy_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="securitypolicy_nodejs">
-<a href="#securitypolicy_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Policy</a>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="project_nodejs">
+<a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -114,16 +114,16 @@ The following arguments are supported:
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="project_python">
-<a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
+        <span id="security_policy_python">
+<a href="#security_policy_python" style="color: inherit; text-decoration: inherit;">security_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="security_policy_python">
-<a href="#security_policy_python" style="color: inherit; text-decoration: inherit;">security_<wbr>policy</a>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="project_python">
+<a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -2019,7 +2019,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Action to take when requests are under the given threshold. When requests are throttled, this is also the action for all requests which are not dropped. Valid options are "allow", "fairshare", and "drop_overload".{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Action to take for requests that are under the configured rate limit threshold. Valid option is "allow" only.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="enforceonkey_csharp">
 <a href="#enforceonkey_csharp" style="color: inherit; text-decoration: inherit;">Enforce<wbr>On<wbr>Key</a>
@@ -2071,7 +2071,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Action to take when requests are under the given threshold. When requests are throttled, this is also the action for all requests which are not dropped. Valid options are "allow", "fairshare", and "drop_overload".{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Action to take for requests that are under the configured rate limit threshold. Valid option is "allow" only.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="enforceonkey_go">
 <a href="#enforceonkey_go" style="color: inherit; text-decoration: inherit;">Enforce<wbr>On<wbr>Key</a>
@@ -2123,7 +2123,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Action to take when requests are under the given threshold. When requests are throttled, this is also the action for all requests which are not dropped. Valid options are "allow", "fairshare", and "drop_overload".{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Action to take for requests that are under the configured rate limit threshold. Valid option is "allow" only.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="enforceonkey_nodejs">
 <a href="#enforceonkey_nodejs" style="color: inherit; text-decoration: inherit;">enforce<wbr>On<wbr>Key</a>
@@ -2175,7 +2175,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Action to take when requests are under the given threshold. When requests are throttled, this is also the action for all requests which are not dropped. Valid options are "allow", "fairshare", and "drop_overload".{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Action to take for requests that are under the configured rate limit threshold. Valid option is "allow" only.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="enforce_on_key_python">
 <a href="#enforce_on_key_python" style="color: inherit; text-decoration: inherit;">enforce_<wbr>on_<wbr>key</a>

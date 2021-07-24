@@ -20,7 +20,7 @@ Creates a network endpoint group in the specified project using the parameters t
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">NetworkEndpointGroup</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">NetworkEndpointGroupArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">NetworkEndpointGroup</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">NetworkEndpointGroupArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -37,21 +37,23 @@ Creates a network endpoint group in the specified project using the parameters t
                          <span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                          <span class="nx">network_endpoint_type</span><span class="p">:</span> <span class="nx">Optional[NetworkEndpointGroupNetworkEndpointType]</span> = None<span class="p">,</span>
                          <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                         <span class="nx">psc_target_service</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                          <span class="nx">request_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                         <span class="nx">serverless_deployment</span><span class="p">:</span> <span class="nx">Optional[NetworkEndpointGroupServerlessDeploymentArgs]</span> = None<span class="p">,</span>
                          <span class="nx">subnetwork</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                          <span class="nx">zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">NetworkEndpointGroup</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                         <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">NetworkEndpointGroupArgs</a></span><span class="p">,</span>
+                         <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">Optional[NetworkEndpointGroupArgs]</a></span> = None<span class="p">,</span>
                          <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewNetworkEndpointGroup</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">NetworkEndpointGroupArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">NetworkEndpointGroup</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewNetworkEndpointGroup</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">NetworkEndpointGroupArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">NetworkEndpointGroup</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">NetworkEndpointGroup</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">NetworkEndpointGroupArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">NetworkEndpointGroup</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">NetworkEndpointGroupArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -63,7 +65,7 @@ Creates a network endpoint group in the specified project using the parameters t
         <span class="property-type">string</span>
     </dt>
     <dd>The unique name of the resource.</dd><dt
-        class="property-required" title="Required">
+        class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">NetworkEndpointGroupArgs</a></span>
@@ -87,7 +89,7 @@ Creates a network endpoint group in the specified project using the parameters t
         <span class="property-type">str</span>
     </dt>
     <dd>The unique name of the resource.</dd><dt
-        class="property-required" title="Required">
+        class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">NetworkEndpointGroupArgs</a></span>
@@ -108,7 +110,7 @@ Creates a network endpoint group in the specified project using the parameters t
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
@@ -117,7 +119,7 @@ Creates a network endpoint group in the specified project using the parameters t
         <span class="property-type">string</span>
     </dt>
     <dd>The unique name of the resource.</dd><dt
-        class="property-required" title="Required">
+        class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">NetworkEndpointGroupArgs</a></span>
@@ -126,7 +128,7 @@ Creates a network endpoint group in the specified project using the parameters t
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
@@ -141,7 +143,7 @@ Creates a network endpoint group in the specified project using the parameters t
         <span class="property-type">string</span>
     </dt>
     <dd>The unique name of the resource.</dd><dt
-        class="property-required" title="Required">
+        class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">NetworkEndpointGroupArgs</a></span>
@@ -167,23 +169,7 @@ The NetworkEndpointGroup resource accepts the following [input]({{< relref "/doc
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="project_csharp">
-<a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="zone_csharp">
-<a href="#zone_csharp" style="color: inherit; text-decoration: inherit;">Zone</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="annotations_csharp">
 <a href="#annotations_csharp" style="color: inherit; text-decoration: inherit;">Annotations</a>
@@ -255,7 +241,23 @@ The NetworkEndpointGroup resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#networkendpointgroupnetworkendpointtype">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>Beta.<wbr>Network<wbr>Endpoint<wbr>Group<wbr>Network<wbr>Endpoint<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Type of network endpoints in this network endpoint group. Can be one of GCE_VM_IP_PORT, NON_GCP_PRIVATE_IP_PORT, INTERNET_FQDN_PORT, INTERNET_IP_PORT, or SERVERLESS.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Type of network endpoints in this network endpoint group. Can be one of GCE_VM_IP_PORT, NON_GCP_PRIVATE_IP_PORT, INTERNET_FQDN_PORT, INTERNET_IP_PORT, SERVERLESS, PRIVATE_SERVICE_CONNECT.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="project_csharp">
+<a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="psctargetservice_csharp">
+<a href="#psctargetservice_csharp" style="color: inherit; text-decoration: inherit;">Psc<wbr>Target<wbr>Service</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The target service url used to set up private service connection to a Google API. An example value is: "asia-northeast3-cloudkms.googleapis.com"{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestid_csharp">
 <a href="#requestid_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Id</a>
@@ -265,33 +267,33 @@ The NetworkEndpointGroup resource accepts the following [input]({{< relref "/doc
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="serverlessdeployment_csharp">
+<a href="#serverlessdeployment_csharp" style="color: inherit; text-decoration: inherit;">Serverless<wbr>Deployment</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#networkendpointgroupserverlessdeployment">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>Beta.<wbr>Inputs.<wbr>Network<wbr>Endpoint<wbr>Group<wbr>Serverless<wbr>Deployment<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Only valid when networkEndpointType is "SERVERLESS". Only one of cloudRun, appEngine, cloudFunction or serverlessDeployment may be set.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="subnetwork_csharp">
 <a href="#subnetwork_csharp" style="color: inherit; text-decoration: inherit;">Subnetwork</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Optional URL of the subnetwork to which all network endpoints in the NEG belong.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Optional URL of the subnetwork to which all network endpoints in the NEG belong.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="zone_csharp">
+<a href="#zone_csharp" style="color: inherit; text-decoration: inherit;">Zone</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="project_go">
-<a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="zone_go">
-<a href="#zone_go" style="color: inherit; text-decoration: inherit;">Zone</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="annotations_go">
 <a href="#annotations_go" style="color: inherit; text-decoration: inherit;">Annotations</a>
@@ -363,7 +365,23 @@ The NetworkEndpointGroup resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#networkendpointgroupnetworkendpointtype">Network<wbr>Endpoint<wbr>Group<wbr>Network<wbr>Endpoint<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Type of network endpoints in this network endpoint group. Can be one of GCE_VM_IP_PORT, NON_GCP_PRIVATE_IP_PORT, INTERNET_FQDN_PORT, INTERNET_IP_PORT, or SERVERLESS.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Type of network endpoints in this network endpoint group. Can be one of GCE_VM_IP_PORT, NON_GCP_PRIVATE_IP_PORT, INTERNET_FQDN_PORT, INTERNET_IP_PORT, SERVERLESS, PRIVATE_SERVICE_CONNECT.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="project_go">
+<a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="psctargetservice_go">
+<a href="#psctargetservice_go" style="color: inherit; text-decoration: inherit;">Psc<wbr>Target<wbr>Service</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The target service url used to set up private service connection to a Google API. An example value is: "asia-northeast3-cloudkms.googleapis.com"{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestid_go">
 <a href="#requestid_go" style="color: inherit; text-decoration: inherit;">Request<wbr>Id</a>
@@ -373,33 +391,33 @@ The NetworkEndpointGroup resource accepts the following [input]({{< relref "/doc
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="serverlessdeployment_go">
+<a href="#serverlessdeployment_go" style="color: inherit; text-decoration: inherit;">Serverless<wbr>Deployment</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#networkendpointgroupserverlessdeployment">Network<wbr>Endpoint<wbr>Group<wbr>Serverless<wbr>Deployment<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Only valid when networkEndpointType is "SERVERLESS". Only one of cloudRun, appEngine, cloudFunction or serverlessDeployment may be set.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="subnetwork_go">
 <a href="#subnetwork_go" style="color: inherit; text-decoration: inherit;">Subnetwork</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Optional URL of the subnetwork to which all network endpoints in the NEG belong.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Optional URL of the subnetwork to which all network endpoints in the NEG belong.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="zone_go">
+<a href="#zone_go" style="color: inherit; text-decoration: inherit;">Zone</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="project_nodejs">
-<a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="zone_nodejs">
-<a href="#zone_nodejs" style="color: inherit; text-decoration: inherit;">zone</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="annotations_nodejs">
 <a href="#annotations_nodejs" style="color: inherit; text-decoration: inherit;">annotations</a>
@@ -471,7 +489,23 @@ The NetworkEndpointGroup resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#networkendpointgroupnetworkendpointtype">Network<wbr>Endpoint<wbr>Group<wbr>Network<wbr>Endpoint<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Type of network endpoints in this network endpoint group. Can be one of GCE_VM_IP_PORT, NON_GCP_PRIVATE_IP_PORT, INTERNET_FQDN_PORT, INTERNET_IP_PORT, or SERVERLESS.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Type of network endpoints in this network endpoint group. Can be one of GCE_VM_IP_PORT, NON_GCP_PRIVATE_IP_PORT, INTERNET_FQDN_PORT, INTERNET_IP_PORT, SERVERLESS, PRIVATE_SERVICE_CONNECT.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="project_nodejs">
+<a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="psctargetservice_nodejs">
+<a href="#psctargetservice_nodejs" style="color: inherit; text-decoration: inherit;">psc<wbr>Target<wbr>Service</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The target service url used to set up private service connection to a Google API. An example value is: "asia-northeast3-cloudkms.googleapis.com"{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestid_nodejs">
 <a href="#requestid_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Id</a>
@@ -481,33 +515,33 @@ The NetworkEndpointGroup resource accepts the following [input]({{< relref "/doc
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="serverlessdeployment_nodejs">
+<a href="#serverlessdeployment_nodejs" style="color: inherit; text-decoration: inherit;">serverless<wbr>Deployment</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#networkendpointgroupserverlessdeployment">Network<wbr>Endpoint<wbr>Group<wbr>Serverless<wbr>Deployment<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Only valid when networkEndpointType is "SERVERLESS". Only one of cloudRun, appEngine, cloudFunction or serverlessDeployment may be set.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="subnetwork_nodejs">
 <a href="#subnetwork_nodejs" style="color: inherit; text-decoration: inherit;">subnetwork</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Optional URL of the subnetwork to which all network endpoints in the NEG belong.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Optional URL of the subnetwork to which all network endpoints in the NEG belong.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="zone_nodejs">
+<a href="#zone_nodejs" style="color: inherit; text-decoration: inherit;">zone</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="project_python">
-<a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="zone_python">
-<a href="#zone_python" style="color: inherit; text-decoration: inherit;">zone</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="annotations_python">
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
@@ -579,7 +613,23 @@ The NetworkEndpointGroup resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#networkendpointgroupnetworkendpointtype">Network<wbr>Endpoint<wbr>Group<wbr>Network<wbr>Endpoint<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Type of network endpoints in this network endpoint group. Can be one of GCE_VM_IP_PORT, NON_GCP_PRIVATE_IP_PORT, INTERNET_FQDN_PORT, INTERNET_IP_PORT, or SERVERLESS.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Type of network endpoints in this network endpoint group. Can be one of GCE_VM_IP_PORT, NON_GCP_PRIVATE_IP_PORT, INTERNET_FQDN_PORT, INTERNET_IP_PORT, SERVERLESS, PRIVATE_SERVICE_CONNECT.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="project_python">
+<a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="psc_target_service_python">
+<a href="#psc_target_service_python" style="color: inherit; text-decoration: inherit;">psc_<wbr>target_<wbr>service</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The target service url used to set up private service connection to a Google API. An example value is: "asia-northeast3-cloudkms.googleapis.com"{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="request_id_python">
 <a href="#request_id_python" style="color: inherit; text-decoration: inherit;">request_<wbr>id</a>
@@ -589,13 +639,29 @@ The NetworkEndpointGroup resource accepts the following [input]({{< relref "/doc
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="serverless_deployment_python">
+<a href="#serverless_deployment_python" style="color: inherit; text-decoration: inherit;">serverless_<wbr>deployment</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#networkendpointgroupserverlessdeployment">Network<wbr>Endpoint<wbr>Group<wbr>Serverless<wbr>Deployment<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Only valid when networkEndpointType is "SERVERLESS". Only one of cloudRun, appEngine, cloudFunction or serverlessDeployment may be set.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="subnetwork_python">
 <a href="#subnetwork_python" style="color: inherit; text-decoration: inherit;">subnetwork</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Optional URL of the subnetwork to which all network endpoints in the NEG belong.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Optional URL of the subnetwork to which all network endpoints in the NEG belong.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="zone_python">
+<a href="#zone_python" style="color: inherit; text-decoration: inherit;">zone</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1451,7 +1517,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>GCE_VM_IP_PORT{{% md %}}The network endpoint is represented by IP address and port pair.{{% /md %}}</dd><dt>Internet<wbr>Fqdn<wbr>Port</dt>
     <dd>INTERNET_FQDN_PORT{{% md %}}The network endpoint is represented by fully qualified domain name and port.{{% /md %}}</dd><dt>Internet<wbr>Ip<wbr>Port</dt>
     <dd>INTERNET_IP_PORT{{% md %}}The network endpoint is represented by an internet IP address and port.{{% /md %}}</dd><dt>Non<wbr>Gcp<wbr>Private<wbr>Ip<wbr>Port</dt>
-    <dd>NON_GCP_PRIVATE_IP_PORT{{% md %}}The network endpoint is represented by an IP address and port. The endpoint belongs to a VM or pod running in a customer's on-premises.{{% /md %}}</dd><dt>Serverless</dt>
+    <dd>NON_GCP_PRIVATE_IP_PORT{{% md %}}The network endpoint is represented by an IP address and port. The endpoint belongs to a VM or pod running in a customer's on-premises.{{% /md %}}</dd><dt>Private<wbr>Service<wbr>Connect</dt>
+    <dd>PRIVATE_SERVICE_CONNECT{{% md %}}The network endpoint is either public Google APIs or services exposed by other GCP Project with a Service Attachment. The connection is set up by private service connect{{% /md %}}</dd><dt>Serverless</dt>
     <dd>SERVERLESS{{% md %}}The network endpoint is handled by specified serverless infrastructure.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1461,7 +1528,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>GCE_VM_IP_PORT{{% md %}}The network endpoint is represented by IP address and port pair.{{% /md %}}</dd><dt>Network<wbr>Endpoint<wbr>Group<wbr>Network<wbr>Endpoint<wbr>Type<wbr>Internet<wbr>Fqdn<wbr>Port</dt>
     <dd>INTERNET_FQDN_PORT{{% md %}}The network endpoint is represented by fully qualified domain name and port.{{% /md %}}</dd><dt>Network<wbr>Endpoint<wbr>Group<wbr>Network<wbr>Endpoint<wbr>Type<wbr>Internet<wbr>Ip<wbr>Port</dt>
     <dd>INTERNET_IP_PORT{{% md %}}The network endpoint is represented by an internet IP address and port.{{% /md %}}</dd><dt>Network<wbr>Endpoint<wbr>Group<wbr>Network<wbr>Endpoint<wbr>Type<wbr>Non<wbr>Gcp<wbr>Private<wbr>Ip<wbr>Port</dt>
-    <dd>NON_GCP_PRIVATE_IP_PORT{{% md %}}The network endpoint is represented by an IP address and port. The endpoint belongs to a VM or pod running in a customer's on-premises.{{% /md %}}</dd><dt>Network<wbr>Endpoint<wbr>Group<wbr>Network<wbr>Endpoint<wbr>Type<wbr>Serverless</dt>
+    <dd>NON_GCP_PRIVATE_IP_PORT{{% md %}}The network endpoint is represented by an IP address and port. The endpoint belongs to a VM or pod running in a customer's on-premises.{{% /md %}}</dd><dt>Network<wbr>Endpoint<wbr>Group<wbr>Network<wbr>Endpoint<wbr>Type<wbr>Private<wbr>Service<wbr>Connect</dt>
+    <dd>PRIVATE_SERVICE_CONNECT{{% md %}}The network endpoint is either public Google APIs or services exposed by other GCP Project with a Service Attachment. The connection is set up by private service connect{{% /md %}}</dd><dt>Network<wbr>Endpoint<wbr>Group<wbr>Network<wbr>Endpoint<wbr>Type<wbr>Serverless</dt>
     <dd>SERVERLESS{{% md %}}The network endpoint is handled by specified serverless infrastructure.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1471,7 +1539,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>GCE_VM_IP_PORT{{% md %}}The network endpoint is represented by IP address and port pair.{{% /md %}}</dd><dt>Internet<wbr>Fqdn<wbr>Port</dt>
     <dd>INTERNET_FQDN_PORT{{% md %}}The network endpoint is represented by fully qualified domain name and port.{{% /md %}}</dd><dt>Internet<wbr>Ip<wbr>Port</dt>
     <dd>INTERNET_IP_PORT{{% md %}}The network endpoint is represented by an internet IP address and port.{{% /md %}}</dd><dt>Non<wbr>Gcp<wbr>Private<wbr>Ip<wbr>Port</dt>
-    <dd>NON_GCP_PRIVATE_IP_PORT{{% md %}}The network endpoint is represented by an IP address and port. The endpoint belongs to a VM or pod running in a customer's on-premises.{{% /md %}}</dd><dt>Serverless</dt>
+    <dd>NON_GCP_PRIVATE_IP_PORT{{% md %}}The network endpoint is represented by an IP address and port. The endpoint belongs to a VM or pod running in a customer's on-premises.{{% /md %}}</dd><dt>Private<wbr>Service<wbr>Connect</dt>
+    <dd>PRIVATE_SERVICE_CONNECT{{% md %}}The network endpoint is either public Google APIs or services exposed by other GCP Project with a Service Attachment. The connection is set up by private service connect{{% /md %}}</dd><dt>Serverless</dt>
     <dd>SERVERLESS{{% md %}}The network endpoint is handled by specified serverless infrastructure.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1481,8 +1550,301 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>GCE_VM_IP_PORT{{% md %}}The network endpoint is represented by IP address and port pair.{{% /md %}}</dd><dt>INTERNET_FQDN_PORT</dt>
     <dd>INTERNET_FQDN_PORT{{% md %}}The network endpoint is represented by fully qualified domain name and port.{{% /md %}}</dd><dt>INTERNET_IP_PORT</dt>
     <dd>INTERNET_IP_PORT{{% md %}}The network endpoint is represented by an internet IP address and port.{{% /md %}}</dd><dt>NON_GCP_PRIVATE_IP_PORT</dt>
-    <dd>NON_GCP_PRIVATE_IP_PORT{{% md %}}The network endpoint is represented by an IP address and port. The endpoint belongs to a VM or pod running in a customer's on-premises.{{% /md %}}</dd><dt>SERVERLESS</dt>
+    <dd>NON_GCP_PRIVATE_IP_PORT{{% md %}}The network endpoint is represented by an IP address and port. The endpoint belongs to a VM or pod running in a customer's on-premises.{{% /md %}}</dd><dt>PRIVATE_SERVICE_CONNECT</dt>
+    <dd>PRIVATE_SERVICE_CONNECT{{% md %}}The network endpoint is either public Google APIs or services exposed by other GCP Project with a Service Attachment. The connection is set up by private service connect{{% /md %}}</dd><dt>SERVERLESS</dt>
     <dd>SERVERLESS{{% md %}}The network endpoint is handled by specified serverless infrastructure.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="networkendpointgroupserverlessdeployment">Network<wbr>Endpoint<wbr>Group<wbr>Serverless<wbr>Deployment</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="platform_csharp">
+<a href="#platform_csharp" style="color: inherit; text-decoration: inherit;">Platform</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The platform of the backend target(s) of this NEG. Possible values include: 1. API Gateway: apigateway.googleapis.com 2. App Engine: appengine.googleapis.com 3. Cloud Functions: cloudfunctions.googleapis.com 4. Cloud Run: run.googleapis.com {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="resource_csharp">
+<a href="#resource_csharp" style="color: inherit; text-decoration: inherit;">Resource</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The user-defined name of the workload/instance. This value must be provided explicitly or in the urlMask. The resource identified by this value is platform-specific and is as follows: 1. API Gateway: The gateway ID 2. App Engine: The service name 3. Cloud Functions: The function name 4. Cloud Run: The service name {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="urlmask_csharp">
+<a href="#urlmask_csharp" style="color: inherit; text-decoration: inherit;">Url<wbr>Mask</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A template to parse platform-specific fields from a request URL. URL mask allows for routing to multiple resources on the same serverless platform without having to create multiple Network Endpoint Groups and backend resources. The fields parsed by this template are platform-specific and are as follows: 1. API Gateway: The gateway ID 2. App Engine: The service and version 3. Cloud Functions: The function name 4. Cloud Run: The service and tag {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="version_csharp">
+<a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The optional resource version. The version identified by this value is platform-specific and is follows: 1. API Gateway: Unused 2. App Engine: The service version 3. Cloud Functions: Unused 4. Cloud Run: The service tag {{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="platform_go">
+<a href="#platform_go" style="color: inherit; text-decoration: inherit;">Platform</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The platform of the backend target(s) of this NEG. Possible values include: 1. API Gateway: apigateway.googleapis.com 2. App Engine: appengine.googleapis.com 3. Cloud Functions: cloudfunctions.googleapis.com 4. Cloud Run: run.googleapis.com {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="resource_go">
+<a href="#resource_go" style="color: inherit; text-decoration: inherit;">Resource</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The user-defined name of the workload/instance. This value must be provided explicitly or in the urlMask. The resource identified by this value is platform-specific and is as follows: 1. API Gateway: The gateway ID 2. App Engine: The service name 3. Cloud Functions: The function name 4. Cloud Run: The service name {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="urlmask_go">
+<a href="#urlmask_go" style="color: inherit; text-decoration: inherit;">Url<wbr>Mask</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A template to parse platform-specific fields from a request URL. URL mask allows for routing to multiple resources on the same serverless platform without having to create multiple Network Endpoint Groups and backend resources. The fields parsed by this template are platform-specific and are as follows: 1. API Gateway: The gateway ID 2. App Engine: The service and version 3. Cloud Functions: The function name 4. Cloud Run: The service and tag {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="version_go">
+<a href="#version_go" style="color: inherit; text-decoration: inherit;">Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The optional resource version. The version identified by this value is platform-specific and is follows: 1. API Gateway: Unused 2. App Engine: The service version 3. Cloud Functions: Unused 4. Cloud Run: The service tag {{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="platform_nodejs">
+<a href="#platform_nodejs" style="color: inherit; text-decoration: inherit;">platform</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The platform of the backend target(s) of this NEG. Possible values include: 1. API Gateway: apigateway.googleapis.com 2. App Engine: appengine.googleapis.com 3. Cloud Functions: cloudfunctions.googleapis.com 4. Cloud Run: run.googleapis.com {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="resource_nodejs">
+<a href="#resource_nodejs" style="color: inherit; text-decoration: inherit;">resource</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The user-defined name of the workload/instance. This value must be provided explicitly or in the urlMask. The resource identified by this value is platform-specific and is as follows: 1. API Gateway: The gateway ID 2. App Engine: The service name 3. Cloud Functions: The function name 4. Cloud Run: The service name {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="urlmask_nodejs">
+<a href="#urlmask_nodejs" style="color: inherit; text-decoration: inherit;">url<wbr>Mask</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A template to parse platform-specific fields from a request URL. URL mask allows for routing to multiple resources on the same serverless platform without having to create multiple Network Endpoint Groups and backend resources. The fields parsed by this template are platform-specific and are as follows: 1. API Gateway: The gateway ID 2. App Engine: The service and version 3. Cloud Functions: The function name 4. Cloud Run: The service and tag {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="version_nodejs">
+<a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The optional resource version. The version identified by this value is platform-specific and is follows: 1. API Gateway: Unused 2. App Engine: The service version 3. Cloud Functions: Unused 4. Cloud Run: The service tag {{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="platform_python">
+<a href="#platform_python" style="color: inherit; text-decoration: inherit;">platform</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The platform of the backend target(s) of this NEG. Possible values include: 1. API Gateway: apigateway.googleapis.com 2. App Engine: appengine.googleapis.com 3. Cloud Functions: cloudfunctions.googleapis.com 4. Cloud Run: run.googleapis.com {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="resource_python">
+<a href="#resource_python" style="color: inherit; text-decoration: inherit;">resource</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The user-defined name of the workload/instance. This value must be provided explicitly or in the urlMask. The resource identified by this value is platform-specific and is as follows: 1. API Gateway: The gateway ID 2. App Engine: The service name 3. Cloud Functions: The function name 4. Cloud Run: The service name {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="url_mask_python">
+<a href="#url_mask_python" style="color: inherit; text-decoration: inherit;">url_<wbr>mask</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}A template to parse platform-specific fields from a request URL. URL mask allows for routing to multiple resources on the same serverless platform without having to create multiple Network Endpoint Groups and backend resources. The fields parsed by this template are platform-specific and are as follows: 1. API Gateway: The gateway ID 2. App Engine: The service and version 3. Cloud Functions: The function name 4. Cloud Run: The service and tag {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="version_python">
+<a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The optional resource version. The version identified by this value is platform-specific and is follows: 1. API Gateway: Unused 2. App Engine: The service version 3. Cloud Functions: Unused 4. Cloud Run: The service tag {{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="networkendpointgroupserverlessdeploymentresponse">Network<wbr>Endpoint<wbr>Group<wbr>Serverless<wbr>Deployment<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="platform_csharp">
+<a href="#platform_csharp" style="color: inherit; text-decoration: inherit;">Platform</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The platform of the backend target(s) of this NEG. Possible values include: 1. API Gateway: apigateway.googleapis.com 2. App Engine: appengine.googleapis.com 3. Cloud Functions: cloudfunctions.googleapis.com 4. Cloud Run: run.googleapis.com {{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="resource_csharp">
+<a href="#resource_csharp" style="color: inherit; text-decoration: inherit;">Resource</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The user-defined name of the workload/instance. This value must be provided explicitly or in the urlMask. The resource identified by this value is platform-specific and is as follows: 1. API Gateway: The gateway ID 2. App Engine: The service name 3. Cloud Functions: The function name 4. Cloud Run: The service name {{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="urlmask_csharp">
+<a href="#urlmask_csharp" style="color: inherit; text-decoration: inherit;">Url<wbr>Mask</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A template to parse platform-specific fields from a request URL. URL mask allows for routing to multiple resources on the same serverless platform without having to create multiple Network Endpoint Groups and backend resources. The fields parsed by this template are platform-specific and are as follows: 1. API Gateway: The gateway ID 2. App Engine: The service and version 3. Cloud Functions: The function name 4. Cloud Run: The service and tag {{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="version_csharp">
+<a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The optional resource version. The version identified by this value is platform-specific and is follows: 1. API Gateway: Unused 2. App Engine: The service version 3. Cloud Functions: Unused 4. Cloud Run: The service tag {{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="platform_go">
+<a href="#platform_go" style="color: inherit; text-decoration: inherit;">Platform</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The platform of the backend target(s) of this NEG. Possible values include: 1. API Gateway: apigateway.googleapis.com 2. App Engine: appengine.googleapis.com 3. Cloud Functions: cloudfunctions.googleapis.com 4. Cloud Run: run.googleapis.com {{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="resource_go">
+<a href="#resource_go" style="color: inherit; text-decoration: inherit;">Resource</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The user-defined name of the workload/instance. This value must be provided explicitly or in the urlMask. The resource identified by this value is platform-specific and is as follows: 1. API Gateway: The gateway ID 2. App Engine: The service name 3. Cloud Functions: The function name 4. Cloud Run: The service name {{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="urlmask_go">
+<a href="#urlmask_go" style="color: inherit; text-decoration: inherit;">Url<wbr>Mask</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A template to parse platform-specific fields from a request URL. URL mask allows for routing to multiple resources on the same serverless platform without having to create multiple Network Endpoint Groups and backend resources. The fields parsed by this template are platform-specific and are as follows: 1. API Gateway: The gateway ID 2. App Engine: The service and version 3. Cloud Functions: The function name 4. Cloud Run: The service and tag {{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="version_go">
+<a href="#version_go" style="color: inherit; text-decoration: inherit;">Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The optional resource version. The version identified by this value is platform-specific and is follows: 1. API Gateway: Unused 2. App Engine: The service version 3. Cloud Functions: Unused 4. Cloud Run: The service tag {{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="platform_nodejs">
+<a href="#platform_nodejs" style="color: inherit; text-decoration: inherit;">platform</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The platform of the backend target(s) of this NEG. Possible values include: 1. API Gateway: apigateway.googleapis.com 2. App Engine: appengine.googleapis.com 3. Cloud Functions: cloudfunctions.googleapis.com 4. Cloud Run: run.googleapis.com {{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="resource_nodejs">
+<a href="#resource_nodejs" style="color: inherit; text-decoration: inherit;">resource</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The user-defined name of the workload/instance. This value must be provided explicitly or in the urlMask. The resource identified by this value is platform-specific and is as follows: 1. API Gateway: The gateway ID 2. App Engine: The service name 3. Cloud Functions: The function name 4. Cloud Run: The service name {{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="urlmask_nodejs">
+<a href="#urlmask_nodejs" style="color: inherit; text-decoration: inherit;">url<wbr>Mask</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A template to parse platform-specific fields from a request URL. URL mask allows for routing to multiple resources on the same serverless platform without having to create multiple Network Endpoint Groups and backend resources. The fields parsed by this template are platform-specific and are as follows: 1. API Gateway: The gateway ID 2. App Engine: The service and version 3. Cloud Functions: The function name 4. Cloud Run: The service and tag {{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="version_nodejs">
+<a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The optional resource version. The version identified by this value is platform-specific and is follows: 1. API Gateway: Unused 2. App Engine: The service version 3. Cloud Functions: Unused 4. Cloud Run: The service tag {{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="platform_python">
+<a href="#platform_python" style="color: inherit; text-decoration: inherit;">platform</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The platform of the backend target(s) of this NEG. Possible values include: 1. API Gateway: apigateway.googleapis.com 2. App Engine: appengine.googleapis.com 3. Cloud Functions: cloudfunctions.googleapis.com 4. Cloud Run: run.googleapis.com {{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="resource_python">
+<a href="#resource_python" style="color: inherit; text-decoration: inherit;">resource</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The user-defined name of the workload/instance. This value must be provided explicitly or in the urlMask. The resource identified by this value is platform-specific and is as follows: 1. API Gateway: The gateway ID 2. App Engine: The service name 3. Cloud Functions: The function name 4. Cloud Run: The service name {{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="url_mask_python">
+<a href="#url_mask_python" style="color: inherit; text-decoration: inherit;">url_<wbr>mask</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}A template to parse platform-specific fields from a request URL. URL mask allows for routing to multiple resources on the same serverless platform without having to create multiple Network Endpoint Groups and backend resources. The fields parsed by this template are platform-specific and are as follows: 1. API Gateway: The gateway ID 2. App Engine: The service and version 3. Cloud Functions: The function name 4. Cloud Run: The service and tag {{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="version_python">
+<a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The optional resource version. The version identified by this value is platform-specific and is follows: 1. API Gateway: Unused 2. App Engine: The service version 3. Cloud Functions: Unused 4. Cloud Run: The service tag {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

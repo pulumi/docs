@@ -63,16 +63,16 @@ The following arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="project_csharp">
-<a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
+        <span id="zone_csharp">
+<a href="#zone_csharp" style="color: inherit; text-decoration: inherit;">Zone</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="zone_csharp">
-<a href="#zone_csharp" style="color: inherit; text-decoration: inherit;">Zone</a>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="project_csharp">
+<a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -91,16 +91,16 @@ The following arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="project_go">
-<a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
+        <span id="zone_go">
+<a href="#zone_go" style="color: inherit; text-decoration: inherit;">Zone</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="zone_go">
-<a href="#zone_go" style="color: inherit; text-decoration: inherit;">Zone</a>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="project_go">
+<a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -119,16 +119,16 @@ The following arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="project_nodejs">
-<a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
+        <span id="zone_nodejs">
+<a href="#zone_nodejs" style="color: inherit; text-decoration: inherit;">zone</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="zone_nodejs">
-<a href="#zone_nodejs" style="color: inherit; text-decoration: inherit;">zone</a>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="project_nodejs">
+<a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -147,16 +147,16 @@ The following arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="project_python">
-<a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
+        <span id="zone_python">
+<a href="#zone_python" style="color: inherit; text-decoration: inherit;">zone</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="zone_python">
-<a href="#zone_python" style="color: inherit; text-decoration: inherit;">zone</a>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="project_python">
+<a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -2756,7 +2756,15 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the type of the disk, either SCRATCH or PERSISTENT. If not specified, the default is PERSISTENT.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Specifies the type of the disk, either SCRATCH or PERSISTENT. If not specified, the default is PERSISTENT.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="userlicenses_csharp">
+<a href="#userlicenses_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Licenses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A list of user provided licenses. It represents a list of URLs to the license resource. Unlike regular licenses, user provided licenses can be modified after the disk is created.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -2880,7 +2888,15 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the type of the disk, either SCRATCH or PERSISTENT. If not specified, the default is PERSISTENT.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Specifies the type of the disk, either SCRATCH or PERSISTENT. If not specified, the default is PERSISTENT.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="userlicenses_go">
+<a href="#userlicenses_go" style="color: inherit; text-decoration: inherit;">User<wbr>Licenses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}A list of user provided licenses. It represents a list of URLs to the license resource. Unlike regular licenses, user provided licenses can be modified after the disk is created.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -3004,7 +3020,15 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the type of the disk, either SCRATCH or PERSISTENT. If not specified, the default is PERSISTENT.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Specifies the type of the disk, either SCRATCH or PERSISTENT. If not specified, the default is PERSISTENT.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="userlicenses_nodejs">
+<a href="#userlicenses_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Licenses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}A list of user provided licenses. It represents a list of URLs to the license resource. Unlike regular licenses, user provided licenses can be modified after the disk is created.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -3128,7 +3152,15 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies the type of the disk, either SCRATCH or PERSISTENT. If not specified, the default is PERSISTENT.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Specifies the type of the disk, either SCRATCH or PERSISTENT. If not specified, the default is PERSISTENT.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="user_licenses_python">
+<a href="#user_licenses_python" style="color: inherit; text-decoration: inherit;">user_<wbr>licenses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}A list of user provided licenses. It represents a list of URLs to the license resource. Unlike regular licenses, user provided licenses can be modified after the disk is created.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="confidentialinstanceconfigresponse">Confidential<wbr>Instance<wbr>Config<wbr>Response</h4>
@@ -3994,6 +4026,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The type of vNIC to be used on this interface. This may be gVNIC or VirtioNet.{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="queuecount_csharp">
+<a href="#queuecount_csharp" style="color: inherit; text-decoration: inherit;">Queue<wbr>Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The networking queue count that's specified by users for the network interface. Both Rx and Tx queues will be set to this number. It'll be empty if not specified by the users.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="stacktype_csharp">
 <a href="#stacktype_csharp" style="color: inherit; text-decoration: inherit;">Stack<wbr>Type</a>
 </span>
@@ -4101,6 +4141,14 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of vNIC to be used on this interface. This may be gVNIC or VirtioNet.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="queuecount_go">
+<a href="#queuecount_go" style="color: inherit; text-decoration: inherit;">Queue<wbr>Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The networking queue count that's specified by users for the network interface. Both Rx and Tx queues will be set to this number. It'll be empty if not specified by the users.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="stacktype_go">
 <a href="#stacktype_go" style="color: inherit; text-decoration: inherit;">Stack<wbr>Type</a>
@@ -4210,6 +4258,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The type of vNIC to be used on this interface. This may be gVNIC or VirtioNet.{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="queuecount_nodejs">
+<a href="#queuecount_nodejs" style="color: inherit; text-decoration: inherit;">queue<wbr>Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The networking queue count that's specified by users for the network interface. Both Rx and Tx queues will be set to this number. It'll be empty if not specified by the users.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="stacktype_nodejs">
 <a href="#stacktype_nodejs" style="color: inherit; text-decoration: inherit;">stack<wbr>Type</a>
 </span>
@@ -4317,6 +4373,14 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of vNIC to be used on this interface. This may be gVNIC or VirtioNet.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="queue_count_python">
+<a href="#queue_count_python" style="color: inherit; text-decoration: inherit;">queue_<wbr>count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The networking queue count that's specified by users for the network interface. Both Rx and Tx queues will be set to this number. It'll be empty if not specified by the users.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="stack_type_python">
 <a href="#stack_type_python" style="color: inherit; text-decoration: inherit;">stack_<wbr>type</a>

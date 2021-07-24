@@ -30,6 +30,7 @@ Gets details of a single game server cluster.
                             <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                             <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                             <span class="nx">realm_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                            <span class="nx">view</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetGameServerClusterResult</code></pre></div>
 {{% /choosable %}}
 
@@ -72,16 +73,24 @@ The following arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="realmid_csharp">
+<a href="#realmid_csharp" style="color: inherit; text-decoration: inherit;">Realm<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="realmid_csharp">
-<a href="#realmid_csharp" style="color: inherit; text-decoration: inherit;">Realm<wbr>Id</a>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="view_csharp">
+<a href="#view_csharp" style="color: inherit; text-decoration: inherit;">View</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -108,16 +117,24 @@ The following arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="realmid_go">
+<a href="#realmid_go" style="color: inherit; text-decoration: inherit;">Realm<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="realmid_go">
-<a href="#realmid_go" style="color: inherit; text-decoration: inherit;">Realm<wbr>Id</a>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="view_go">
+<a href="#view_go" style="color: inherit; text-decoration: inherit;">View</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -144,16 +161,24 @@ The following arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="realmid_nodejs">
+<a href="#realmid_nodejs" style="color: inherit; text-decoration: inherit;">realm<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="realmid_nodejs">
-<a href="#realmid_nodejs" style="color: inherit; text-decoration: inherit;">realm<wbr>Id</a>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="view_nodejs">
+<a href="#view_nodejs" style="color: inherit; text-decoration: inherit;">view</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -180,16 +205,24 @@ The following arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="realm_id_python">
+<a href="#realm_id_python" style="color: inherit; text-decoration: inherit;">realm_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="realm_id_python">
-<a href="#realm_id_python" style="color: inherit; text-decoration: inherit;">realm_<wbr>id</a>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="view_python">
+<a href="#view_python" style="color: inherit; text-decoration: inherit;">view</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -208,6 +241,14 @@ The following output properties are available:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-"
+            title="">
+        <span id="clusterstate_csharp">
+<a href="#clusterstate_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#kubernetesclusterstateresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Game<wbr>Services.<wbr>V1.<wbr>Outputs.<wbr>Kubernetes<wbr>Cluster<wbr>State<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The state of the Kubernetes cluster, this will be available if 'view' is set to `FULL` in the relevant List/Get/Preview request.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="connectioninfo_csharp">
 <a href="#connectioninfo_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>Info</a>
@@ -269,6 +310,14 @@ The following output properties are available:
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-"
             title="">
+        <span id="clusterstate_go">
+<a href="#clusterstate_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#kubernetesclusterstateresponse">Kubernetes<wbr>Cluster<wbr>State<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The state of the Kubernetes cluster, this will be available if 'view' is set to `FULL` in the relevant List/Get/Preview request.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="connectioninfo_go">
 <a href="#connectioninfo_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>Info</a>
 </span>
@@ -329,6 +378,14 @@ The following output properties are available:
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-"
             title="">
+        <span id="clusterstate_nodejs">
+<a href="#clusterstate_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#kubernetesclusterstateresponse">Kubernetes<wbr>Cluster<wbr>State<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The state of the Kubernetes cluster, this will be available if 'view' is set to `FULL` in the relevant List/Get/Preview request.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="connectioninfo_nodejs">
 <a href="#connectioninfo_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Info</a>
 </span>
@@ -388,6 +445,14 @@ The following output properties are available:
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-"
+            title="">
+        <span id="cluster_state_python">
+<a href="#cluster_state_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>state</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#kubernetesclusterstateresponse">Kubernetes<wbr>Cluster<wbr>State<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The state of the Kubernetes cluster, this will be available if 'view' is set to `FULL` in the relevant List/Get/Preview request.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="connection_info_python">
 <a href="#connection_info_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>info</a>
@@ -586,6 +651,218 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The full or partial name of a GKE cluster, using one of the following forms: * `projects/{project}/locations/{location}/clusters/{cluster}` * `locations/{location}/clusters/{cluster}` * `{cluster}` If project and location are not specified, the project and location of the GameServerCluster resource are used to generate the full name of the GKE cluster.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="kubernetesclusterstateresponse">Kubernetes<wbr>Cluster<wbr>State<wbr>Response</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="agonesversioninstalled_csharp">
+<a href="#agonesversioninstalled_csharp" style="color: inherit; text-decoration: inherit;">Agones<wbr>Version<wbr>Installed</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The version of Agones currently installed in the registered Kubernetes cluster.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="agonesversiontargeted_csharp">
+<a href="#agonesversiontargeted_csharp" style="color: inherit; text-decoration: inherit;">Agones<wbr>Version<wbr>Targeted</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The version of Agones that is targeted to be installed in the cluster.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="installationstate_csharp">
+<a href="#installationstate_csharp" style="color: inherit; text-decoration: inherit;">Installation<wbr>State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The state for the installed versions of Agones/Kubernetes.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="kubernetesversioninstalled_csharp">
+<a href="#kubernetesversioninstalled_csharp" style="color: inherit; text-decoration: inherit;">Kubernetes<wbr>Version<wbr>Installed</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The version of Kubernetes that is currently used in the registered Kubernetes cluster (as detected by the Cloud Game Servers service).{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="provider_csharp">
+<a href="#provider_csharp" style="color: inherit; text-decoration: inherit;">Provider</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The cloud provider type reported by the first node's providerID in the list of nodes on the Kubernetes endpoint. On Kubernetes platforms that support zero-node clusters (like GKE-on-GCP), the provider type will be empty.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="versioninstallederrormessage_csharp">
+<a href="#versioninstallederrormessage_csharp" style="color: inherit; text-decoration: inherit;">Version<wbr>Installed<wbr>Error<wbr>Message</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The detailed error message for the installed versions of Agones/Kubernetes.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="agonesversioninstalled_go">
+<a href="#agonesversioninstalled_go" style="color: inherit; text-decoration: inherit;">Agones<wbr>Version<wbr>Installed</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The version of Agones currently installed in the registered Kubernetes cluster.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="agonesversiontargeted_go">
+<a href="#agonesversiontargeted_go" style="color: inherit; text-decoration: inherit;">Agones<wbr>Version<wbr>Targeted</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The version of Agones that is targeted to be installed in the cluster.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="installationstate_go">
+<a href="#installationstate_go" style="color: inherit; text-decoration: inherit;">Installation<wbr>State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The state for the installed versions of Agones/Kubernetes.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="kubernetesversioninstalled_go">
+<a href="#kubernetesversioninstalled_go" style="color: inherit; text-decoration: inherit;">Kubernetes<wbr>Version<wbr>Installed</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The version of Kubernetes that is currently used in the registered Kubernetes cluster (as detected by the Cloud Game Servers service).{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="provider_go">
+<a href="#provider_go" style="color: inherit; text-decoration: inherit;">Provider</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The cloud provider type reported by the first node's providerID in the list of nodes on the Kubernetes endpoint. On Kubernetes platforms that support zero-node clusters (like GKE-on-GCP), the provider type will be empty.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="versioninstallederrormessage_go">
+<a href="#versioninstallederrormessage_go" style="color: inherit; text-decoration: inherit;">Version<wbr>Installed<wbr>Error<wbr>Message</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The detailed error message for the installed versions of Agones/Kubernetes.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="agonesversioninstalled_nodejs">
+<a href="#agonesversioninstalled_nodejs" style="color: inherit; text-decoration: inherit;">agones<wbr>Version<wbr>Installed</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The version of Agones currently installed in the registered Kubernetes cluster.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="agonesversiontargeted_nodejs">
+<a href="#agonesversiontargeted_nodejs" style="color: inherit; text-decoration: inherit;">agones<wbr>Version<wbr>Targeted</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The version of Agones that is targeted to be installed in the cluster.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="installationstate_nodejs">
+<a href="#installationstate_nodejs" style="color: inherit; text-decoration: inherit;">installation<wbr>State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The state for the installed versions of Agones/Kubernetes.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="kubernetesversioninstalled_nodejs">
+<a href="#kubernetesversioninstalled_nodejs" style="color: inherit; text-decoration: inherit;">kubernetes<wbr>Version<wbr>Installed</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The version of Kubernetes that is currently used in the registered Kubernetes cluster (as detected by the Cloud Game Servers service).{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="provider_nodejs">
+<a href="#provider_nodejs" style="color: inherit; text-decoration: inherit;">provider</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The cloud provider type reported by the first node's providerID in the list of nodes on the Kubernetes endpoint. On Kubernetes platforms that support zero-node clusters (like GKE-on-GCP), the provider type will be empty.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="versioninstallederrormessage_nodejs">
+<a href="#versioninstallederrormessage_nodejs" style="color: inherit; text-decoration: inherit;">version<wbr>Installed<wbr>Error<wbr>Message</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The detailed error message for the installed versions of Agones/Kubernetes.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="agones_version_installed_python">
+<a href="#agones_version_installed_python" style="color: inherit; text-decoration: inherit;">agones_<wbr>version_<wbr>installed</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The version of Agones currently installed in the registered Kubernetes cluster.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="agones_version_targeted_python">
+<a href="#agones_version_targeted_python" style="color: inherit; text-decoration: inherit;">agones_<wbr>version_<wbr>targeted</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The version of Agones that is targeted to be installed in the cluster.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="installation_state_python">
+<a href="#installation_state_python" style="color: inherit; text-decoration: inherit;">installation_<wbr>state</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The state for the installed versions of Agones/Kubernetes.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="kubernetes_version_installed_python">
+<a href="#kubernetes_version_installed_python" style="color: inherit; text-decoration: inherit;">kubernetes_<wbr>version_<wbr>installed</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The version of Kubernetes that is currently used in the registered Kubernetes cluster (as detected by the Cloud Game Servers service).{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="provider_python">
+<a href="#provider_python" style="color: inherit; text-decoration: inherit;">provider</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The cloud provider type reported by the first node's providerID in the list of nodes on the Kubernetes endpoint. On Kubernetes platforms that support zero-node clusters (like GKE-on-GCP), the provider type will be empty.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="version_installed_error_message_python">
+<a href="#version_installed_error_message_python" style="color: inherit; text-decoration: inherit;">version_<wbr>installed_<wbr>error_<wbr>message</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The detailed error message for the installed versions of Agones/Kubernetes.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

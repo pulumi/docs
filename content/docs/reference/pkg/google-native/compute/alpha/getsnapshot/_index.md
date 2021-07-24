@@ -54,16 +54,16 @@ The following arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="project_csharp">
-<a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
+        <span id="snapshot_csharp">
+<a href="#snapshot_csharp" style="color: inherit; text-decoration: inherit;">Snapshot</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="snapshot_csharp">
-<a href="#snapshot_csharp" style="color: inherit; text-decoration: inherit;">Snapshot</a>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="project_csharp">
+<a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -74,16 +74,16 @@ The following arguments are supported:
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="project_go">
-<a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
+        <span id="snapshot_go">
+<a href="#snapshot_go" style="color: inherit; text-decoration: inherit;">Snapshot</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="snapshot_go">
-<a href="#snapshot_go" style="color: inherit; text-decoration: inherit;">Snapshot</a>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="project_go">
+<a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -94,16 +94,16 @@ The following arguments are supported:
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="project_nodejs">
-<a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
+        <span id="snapshot_nodejs">
+<a href="#snapshot_nodejs" style="color: inherit; text-decoration: inherit;">snapshot</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="snapshot_nodejs">
-<a href="#snapshot_nodejs" style="color: inherit; text-decoration: inherit;">snapshot</a>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="project_nodejs">
+<a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -114,16 +114,16 @@ The following arguments are supported:
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="project_python">
-<a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
+        <span id="snapshot_python">
+<a href="#snapshot_python" style="color: inherit; text-decoration: inherit;">snapshot</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="snapshot_python">
-<a href="#snapshot_python" style="color: inherit; text-decoration: inherit;">snapshot</a>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="project_python">
+<a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -365,7 +365,15 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Cloud Storage bucket storage location of the snapshot (regional or multi-regional).{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Cloud Storage bucket storage location of the snapshot (regional or multi-regional).{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="userlicenses_csharp">
+<a href="#userlicenses_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Licenses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A list of user provided licenses represented by a list of URLs to the license resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -593,7 +601,15 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Cloud Storage bucket storage location of the snapshot (regional or multi-regional).{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Cloud Storage bucket storage location of the snapshot (regional or multi-regional).{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="userlicenses_go">
+<a href="#userlicenses_go" style="color: inherit; text-decoration: inherit;">User<wbr>Licenses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}A list of user provided licenses represented by a list of URLs to the license resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -821,7 +837,15 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Cloud Storage bucket storage location of the snapshot (regional or multi-regional).{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Cloud Storage bucket storage location of the snapshot (regional or multi-regional).{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="userlicenses_nodejs">
+<a href="#userlicenses_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Licenses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}A list of user provided licenses represented by a list of URLs to the license resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1049,7 +1073,15 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Cloud Storage bucket storage location of the snapshot (regional or multi-regional).{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Cloud Storage bucket storage location of the snapshot (regional or multi-regional).{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="user_licenses_python">
+<a href="#user_licenses_python" style="color: inherit; text-decoration: inherit;">user_<wbr>licenses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}A list of user provided licenses represented by a list of URLs to the license resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

@@ -20,7 +20,7 @@ Creates a new policy in the specified project using the data included in the req
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">SecurityPolicy</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SecurityPolicyArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">SecurityPolicy</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">SecurityPolicyArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -43,16 +43,16 @@ Creates a new policy in the specified project using the data included in the req
                    <span class="nx">validate_only</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">SecurityPolicy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                   <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SecurityPolicyArgs</a></span><span class="p">,</span>
+                   <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">Optional[SecurityPolicyArgs]</a></span> = None<span class="p">,</span>
                    <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSecurityPolicy</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">SecurityPolicyArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SecurityPolicy</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSecurityPolicy</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">SecurityPolicyArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SecurityPolicy</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">SecurityPolicy</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">SecurityPolicyArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">SecurityPolicy</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">SecurityPolicyArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -64,7 +64,7 @@ Creates a new policy in the specified project using the data included in the req
         <span class="property-type">string</span>
     </dt>
     <dd>The unique name of the resource.</dd><dt
-        class="property-required" title="Required">
+        class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">SecurityPolicyArgs</a></span>
@@ -88,7 +88,7 @@ Creates a new policy in the specified project using the data included in the req
         <span class="property-type">str</span>
     </dt>
     <dd>The unique name of the resource.</dd><dt
-        class="property-required" title="Required">
+        class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">SecurityPolicyArgs</a></span>
@@ -109,7 +109,7 @@ Creates a new policy in the specified project using the data included in the req
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
@@ -118,7 +118,7 @@ Creates a new policy in the specified project using the data included in the req
         <span class="property-type">string</span>
     </dt>
     <dd>The unique name of the resource.</dd><dt
-        class="property-required" title="Required">
+        class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">SecurityPolicyArgs</a></span>
@@ -127,7 +127,7 @@ Creates a new policy in the specified project using the data included in the req
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
@@ -142,7 +142,7 @@ Creates a new policy in the specified project using the data included in the req
         <span class="property-type">string</span>
     </dt>
     <dd>The unique name of the resource.</dd><dt
-        class="property-required" title="Required">
+        class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">SecurityPolicyArgs</a></span>
@@ -168,15 +168,7 @@ The SecurityPolicy resource accepts the following [input]({{< relref "/docs/intr
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="project_csharp">
-<a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="adaptiveprotectionconfig_csharp">
 <a href="#adaptiveprotectionconfig_csharp" style="color: inherit; text-decoration: inherit;">Adaptive<wbr>Protection<wbr>Config</a>
@@ -250,6 +242,14 @@ The SecurityPolicy resource accepts the following [input]({{< relref "/docs/intr
     </dt>
     <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="project_csharp">
+<a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="requestid_csharp">
 <a href="#requestid_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Id</a>
 </span>
@@ -284,15 +284,7 @@ The SecurityPolicy resource accepts the following [input]({{< relref "/docs/intr
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="project_go">
-<a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="adaptiveprotectionconfig_go">
 <a href="#adaptiveprotectionconfig_go" style="color: inherit; text-decoration: inherit;">Adaptive<wbr>Protection<wbr>Config</a>
@@ -366,6 +358,14 @@ The SecurityPolicy resource accepts the following [input]({{< relref "/docs/intr
     </dt>
     <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="project_go">
+<a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="requestid_go">
 <a href="#requestid_go" style="color: inherit; text-decoration: inherit;">Request<wbr>Id</a>
 </span>
@@ -400,15 +400,7 @@ The SecurityPolicy resource accepts the following [input]({{< relref "/docs/intr
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="project_nodejs">
-<a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="adaptiveprotectionconfig_nodejs">
 <a href="#adaptiveprotectionconfig_nodejs" style="color: inherit; text-decoration: inherit;">adaptive<wbr>Protection<wbr>Config</a>
@@ -482,6 +474,14 @@ The SecurityPolicy resource accepts the following [input]({{< relref "/docs/intr
     </dt>
     <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="project_nodejs">
+<a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="requestid_nodejs">
 <a href="#requestid_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Id</a>
 </span>
@@ -516,15 +516,7 @@ The SecurityPolicy resource accepts the following [input]({{< relref "/docs/intr
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="project_python">
-<a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="adaptive_protection_config_python">
 <a href="#adaptive_protection_config_python" style="color: inherit; text-decoration: inherit;">adaptive_<wbr>protection_<wbr>config</a>
@@ -597,6 +589,14 @@ The SecurityPolicy resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="project_python">
+<a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="request_id_python">
 <a href="#request_id_python" style="color: inherit; text-decoration: inherit;">request_<wbr>id</a>
@@ -3893,7 +3893,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Action to take when requests are under the given threshold. When requests are throttled, this is also the action for all requests which are not dropped. Valid options are "allow", "fairshare", and "drop_overload".{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Action to take for requests that are under the configured rate limit threshold. Valid option is "allow" only.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enforceonkey_csharp">
 <a href="#enforceonkey_csharp" style="color: inherit; text-decoration: inherit;">Enforce<wbr>On<wbr>Key</a>
@@ -3945,7 +3945,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Action to take when requests are under the given threshold. When requests are throttled, this is also the action for all requests which are not dropped. Valid options are "allow", "fairshare", and "drop_overload".{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Action to take for requests that are under the configured rate limit threshold. Valid option is "allow" only.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enforceonkey_go">
 <a href="#enforceonkey_go" style="color: inherit; text-decoration: inherit;">Enforce<wbr>On<wbr>Key</a>
@@ -3997,7 +3997,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Action to take when requests are under the given threshold. When requests are throttled, this is also the action for all requests which are not dropped. Valid options are "allow", "fairshare", and "drop_overload".{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Action to take for requests that are under the configured rate limit threshold. Valid option is "allow" only.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enforceonkey_nodejs">
 <a href="#enforceonkey_nodejs" style="color: inherit; text-decoration: inherit;">enforce<wbr>On<wbr>Key</a>
@@ -4049,7 +4049,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Action to take when requests are under the given threshold. When requests are throttled, this is also the action for all requests which are not dropped. Valid options are "allow", "fairshare", and "drop_overload".{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Action to take for requests that are under the configured rate limit threshold. Valid option is "allow" only.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enforce_on_key_python">
 <a href="#enforce_on_key_python" style="color: inherit; text-decoration: inherit;">enforce_<wbr>on_<wbr>key</a>
@@ -4129,7 +4129,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Action to take when requests are under the given threshold. When requests are throttled, this is also the action for all requests which are not dropped. Valid options are "allow", "fairshare", and "drop_overload".{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Action to take for requests that are under the configured rate limit threshold. Valid option is "allow" only.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="enforceonkey_csharp">
 <a href="#enforceonkey_csharp" style="color: inherit; text-decoration: inherit;">Enforce<wbr>On<wbr>Key</a>
@@ -4181,7 +4181,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Action to take when requests are under the given threshold. When requests are throttled, this is also the action for all requests which are not dropped. Valid options are "allow", "fairshare", and "drop_overload".{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Action to take for requests that are under the configured rate limit threshold. Valid option is "allow" only.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="enforceonkey_go">
 <a href="#enforceonkey_go" style="color: inherit; text-decoration: inherit;">Enforce<wbr>On<wbr>Key</a>
@@ -4233,7 +4233,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Action to take when requests are under the given threshold. When requests are throttled, this is also the action for all requests which are not dropped. Valid options are "allow", "fairshare", and "drop_overload".{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Action to take for requests that are under the configured rate limit threshold. Valid option is "allow" only.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="enforceonkey_nodejs">
 <a href="#enforceonkey_nodejs" style="color: inherit; text-decoration: inherit;">enforce<wbr>On<wbr>Key</a>
@@ -4285,7 +4285,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Action to take when requests are under the given threshold. When requests are throttled, this is also the action for all requests which are not dropped. Valid options are "allow", "fairshare", and "drop_overload".{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Action to take for requests that are under the configured rate limit threshold. Valid option is "allow" only.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="enforce_on_key_python">
 <a href="#enforce_on_key_python" style="color: inherit; text-decoration: inherit;">enforce_<wbr>on_<wbr>key</a>

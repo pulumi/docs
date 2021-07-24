@@ -20,7 +20,7 @@ Creates a new policy in the specified project using the data included in the req
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">SecurityPolicy</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SecurityPolicyArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">SecurityPolicy</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">SecurityPolicyArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -41,16 +41,16 @@ Creates a new policy in the specified project using the data included in the req
                    <span class="nx">validate_only</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">SecurityPolicy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                   <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SecurityPolicyArgs</a></span><span class="p">,</span>
+                   <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">Optional[SecurityPolicyArgs]</a></span> = None<span class="p">,</span>
                    <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSecurityPolicy</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">SecurityPolicyArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SecurityPolicy</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSecurityPolicy</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">SecurityPolicyArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SecurityPolicy</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">SecurityPolicy</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">SecurityPolicyArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">SecurityPolicy</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">SecurityPolicyArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -62,7 +62,7 @@ Creates a new policy in the specified project using the data included in the req
         <span class="property-type">string</span>
     </dt>
     <dd>The unique name of the resource.</dd><dt
-        class="property-required" title="Required">
+        class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">SecurityPolicyArgs</a></span>
@@ -86,7 +86,7 @@ Creates a new policy in the specified project using the data included in the req
         <span class="property-type">str</span>
     </dt>
     <dd>The unique name of the resource.</dd><dt
-        class="property-required" title="Required">
+        class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">SecurityPolicyArgs</a></span>
@@ -107,7 +107,7 @@ Creates a new policy in the specified project using the data included in the req
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
@@ -116,7 +116,7 @@ Creates a new policy in the specified project using the data included in the req
         <span class="property-type">string</span>
     </dt>
     <dd>The unique name of the resource.</dd><dt
-        class="property-required" title="Required">
+        class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">SecurityPolicyArgs</a></span>
@@ -125,7 +125,7 @@ Creates a new policy in the specified project using the data included in the req
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
@@ -140,7 +140,7 @@ Creates a new policy in the specified project using the data included in the req
         <span class="property-type">string</span>
     </dt>
     <dd>The unique name of the resource.</dd><dt
-        class="property-required" title="Required">
+        class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">SecurityPolicyArgs</a></span>
@@ -166,15 +166,7 @@ The SecurityPolicy resource accepts the following [input]({{< relref "/docs/intr
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="project_csharp">
-<a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="adaptiveprotectionconfig_csharp">
 <a href="#adaptiveprotectionconfig_csharp" style="color: inherit; text-decoration: inherit;">Adaptive<wbr>Protection<wbr>Config</a>
@@ -232,6 +224,14 @@ The SecurityPolicy resource accepts the following [input]({{< relref "/docs/intr
     </dt>
     <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="project_csharp">
+<a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="requestid_csharp">
 <a href="#requestid_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Id</a>
 </span>
@@ -266,15 +266,7 @@ The SecurityPolicy resource accepts the following [input]({{< relref "/docs/intr
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="project_go">
-<a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="adaptiveprotectionconfig_go">
 <a href="#adaptiveprotectionconfig_go" style="color: inherit; text-decoration: inherit;">Adaptive<wbr>Protection<wbr>Config</a>
@@ -332,6 +324,14 @@ The SecurityPolicy resource accepts the following [input]({{< relref "/docs/intr
     </dt>
     <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="project_go">
+<a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="requestid_go">
 <a href="#requestid_go" style="color: inherit; text-decoration: inherit;">Request<wbr>Id</a>
 </span>
@@ -366,15 +366,7 @@ The SecurityPolicy resource accepts the following [input]({{< relref "/docs/intr
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="project_nodejs">
-<a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="adaptiveprotectionconfig_nodejs">
 <a href="#adaptiveprotectionconfig_nodejs" style="color: inherit; text-decoration: inherit;">adaptive<wbr>Protection<wbr>Config</a>
@@ -432,6 +424,14 @@ The SecurityPolicy resource accepts the following [input]({{< relref "/docs/intr
     </dt>
     <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="project_nodejs">
+<a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="requestid_nodejs">
 <a href="#requestid_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Id</a>
 </span>
@@ -466,15 +466,7 @@ The SecurityPolicy resource accepts the following [input]({{< relref "/docs/intr
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="project_python">
-<a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="adaptive_protection_config_python">
 <a href="#adaptive_protection_config_python" style="color: inherit; text-decoration: inherit;">adaptive_<wbr>protection_<wbr>config</a>
@@ -531,6 +523,14 @@ The SecurityPolicy resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="project_python">
+<a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="request_id_python">
 <a href="#request_id_python" style="color: inherit; text-decoration: inherit;">request_<wbr>id</a>
@@ -1981,6 +1981,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}An integer indicating the priority of a rule in the list. The priority must be a positive value between 0 and 2147483647. Rules are evaluated from highest to lowest priority where 0 is the highest priority and 2147483647 is the lowest priority.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="ratelimitoptions_csharp">
+<a href="#ratelimitoptions_csharp" style="color: inherit; text-decoration: inherit;">Rate<wbr>Limit<wbr>Options</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#securitypolicyruleratelimitoptions">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>Beta.<wbr>Inputs.<wbr>Security<wbr>Policy<wbr>Rule<wbr>Rate<wbr>Limit<wbr>Options</a></span>
+    </dt>
+    <dd>{{% md %}}Must be specified if the action is "rate_based_ban" or "throttle". Cannot be specified for any other actions.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="redirectoptions_csharp">
 <a href="#redirectoptions_csharp" style="color: inherit; text-decoration: inherit;">Redirect<wbr>Options</a>
 </span>
@@ -2080,6 +2088,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}An integer indicating the priority of a rule in the list. The priority must be a positive value between 0 and 2147483647. Rules are evaluated from highest to lowest priority where 0 is the highest priority and 2147483647 is the lowest priority.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ratelimitoptions_go">
+<a href="#ratelimitoptions_go" style="color: inherit; text-decoration: inherit;">Rate<wbr>Limit<wbr>Options</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#securitypolicyruleratelimitoptions">Security<wbr>Policy<wbr>Rule<wbr>Rate<wbr>Limit<wbr>Options</a></span>
+    </dt>
+    <dd>{{% md %}}Must be specified if the action is "rate_based_ban" or "throttle". Cannot be specified for any other actions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="redirectoptions_go">
 <a href="#redirectoptions_go" style="color: inherit; text-decoration: inherit;">Redirect<wbr>Options</a>
@@ -2181,6 +2197,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}An integer indicating the priority of a rule in the list. The priority must be a positive value between 0 and 2147483647. Rules are evaluated from highest to lowest priority where 0 is the highest priority and 2147483647 is the lowest priority.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="ratelimitoptions_nodejs">
+<a href="#ratelimitoptions_nodejs" style="color: inherit; text-decoration: inherit;">rate<wbr>Limit<wbr>Options</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#securitypolicyruleratelimitoptions">Security<wbr>Policy<wbr>Rule<wbr>Rate<wbr>Limit<wbr>Options</a></span>
+    </dt>
+    <dd>{{% md %}}Must be specified if the action is "rate_based_ban" or "throttle". Cannot be specified for any other actions.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="redirectoptions_nodejs">
 <a href="#redirectoptions_nodejs" style="color: inherit; text-decoration: inherit;">redirect<wbr>Options</a>
 </span>
@@ -2280,6 +2304,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}An integer indicating the priority of a rule in the list. The priority must be a positive value between 0 and 2147483647. Rules are evaluated from highest to lowest priority where 0 is the highest priority and 2147483647 is the lowest priority.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="rate_limit_options_python">
+<a href="#rate_limit_options_python" style="color: inherit; text-decoration: inherit;">rate_<wbr>limit_<wbr>options</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#securitypolicyruleratelimitoptions">Security<wbr>Policy<wbr>Rule<wbr>Rate<wbr>Limit<wbr>Options</a></span>
+    </dt>
+    <dd>{{% md %}}Must be specified if the action is "rate_based_ban" or "throttle". Cannot be specified for any other actions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="redirect_options_python">
 <a href="#redirect_options_python" style="color: inherit; text-decoration: inherit;">redirect_<wbr>options</a>
@@ -3250,6 +3282,616 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>SRC_IPS_V1{{% md %}}Matches the source IP address of a request to the IP ranges supplied in config.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="securitypolicyruleratelimitoptions">Security<wbr>Policy<wbr>Rule<wbr>Rate<wbr>Limit<wbr>Options</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="bandurationsec_csharp">
+<a href="#bandurationsec_csharp" style="color: inherit; text-decoration: inherit;">Ban<wbr>Duration<wbr>Sec</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Can only be specified if the action for the rule is "rate_based_ban". If specified, determines the time (in seconds) the traffic will continue to be banned by the rate limit after the rate falls below the threshold.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="banthreshold_csharp">
+<a href="#banthreshold_csharp" style="color: inherit; text-decoration: inherit;">Ban<wbr>Threshold</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#securitypolicyruleratelimitoptionsthreshold">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>Beta.<wbr>Inputs.<wbr>Security<wbr>Policy<wbr>Rule<wbr>Rate<wbr>Limit<wbr>Options<wbr>Threshold</a></span>
+    </dt>
+    <dd>{{% md %}}Can only be specified if the action for the rule is "rate_based_ban". If specified, the key will be banned for the configured 'ban_duration_sec' when the number of requests that exceed the 'rate_limit_threshold' also exceed this 'ban_threshold'.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="conformaction_csharp">
+<a href="#conformaction_csharp" style="color: inherit; text-decoration: inherit;">Conform<wbr>Action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Action to take for requests that are under the configured rate limit threshold. Valid option is "allow" only.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enforceonkey_csharp">
+<a href="#enforceonkey_csharp" style="color: inherit; text-decoration: inherit;">Enforce<wbr>On<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#securitypolicyruleratelimitoptionsenforceonkey">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>Beta.<wbr>Security<wbr>Policy<wbr>Rule<wbr>Rate<wbr>Limit<wbr>Options<wbr>Enforce<wbr>On<wbr>Key</a></span>
+    </dt>
+    <dd>{{% md %}}Determines the key to enforce the threshold_rps limit on. If key is "IP", each IP has this limit enforced separately, whereas "ALL_IPs" means a single limit is applied to all requests matching this rule.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="exceedaction_csharp">
+<a href="#exceedaction_csharp" style="color: inherit; text-decoration: inherit;">Exceed<wbr>Action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}When a request is denied, returns the HTTP response code specified. Valid options are "deny()" where valid values for status are 403, 404, 429, and 502.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ratelimitthreshold_csharp">
+<a href="#ratelimitthreshold_csharp" style="color: inherit; text-decoration: inherit;">Rate<wbr>Limit<wbr>Threshold</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#securitypolicyruleratelimitoptionsthreshold">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>Beta.<wbr>Inputs.<wbr>Security<wbr>Policy<wbr>Rule<wbr>Rate<wbr>Limit<wbr>Options<wbr>Threshold</a></span>
+    </dt>
+    <dd>{{% md %}}Threshold at which to begin ratelimiting.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="bandurationsec_go">
+<a href="#bandurationsec_go" style="color: inherit; text-decoration: inherit;">Ban<wbr>Duration<wbr>Sec</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Can only be specified if the action for the rule is "rate_based_ban". If specified, determines the time (in seconds) the traffic will continue to be banned by the rate limit after the rate falls below the threshold.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="banthreshold_go">
+<a href="#banthreshold_go" style="color: inherit; text-decoration: inherit;">Ban<wbr>Threshold</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#securitypolicyruleratelimitoptionsthreshold">Security<wbr>Policy<wbr>Rule<wbr>Rate<wbr>Limit<wbr>Options<wbr>Threshold</a></span>
+    </dt>
+    <dd>{{% md %}}Can only be specified if the action for the rule is "rate_based_ban". If specified, the key will be banned for the configured 'ban_duration_sec' when the number of requests that exceed the 'rate_limit_threshold' also exceed this 'ban_threshold'.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="conformaction_go">
+<a href="#conformaction_go" style="color: inherit; text-decoration: inherit;">Conform<wbr>Action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Action to take for requests that are under the configured rate limit threshold. Valid option is "allow" only.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enforceonkey_go">
+<a href="#enforceonkey_go" style="color: inherit; text-decoration: inherit;">Enforce<wbr>On<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#securitypolicyruleratelimitoptionsenforceonkey">Security<wbr>Policy<wbr>Rule<wbr>Rate<wbr>Limit<wbr>Options<wbr>Enforce<wbr>On<wbr>Key</a></span>
+    </dt>
+    <dd>{{% md %}}Determines the key to enforce the threshold_rps limit on. If key is "IP", each IP has this limit enforced separately, whereas "ALL_IPs" means a single limit is applied to all requests matching this rule.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="exceedaction_go">
+<a href="#exceedaction_go" style="color: inherit; text-decoration: inherit;">Exceed<wbr>Action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}When a request is denied, returns the HTTP response code specified. Valid options are "deny()" where valid values for status are 403, 404, 429, and 502.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ratelimitthreshold_go">
+<a href="#ratelimitthreshold_go" style="color: inherit; text-decoration: inherit;">Rate<wbr>Limit<wbr>Threshold</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#securitypolicyruleratelimitoptionsthreshold">Security<wbr>Policy<wbr>Rule<wbr>Rate<wbr>Limit<wbr>Options<wbr>Threshold</a></span>
+    </dt>
+    <dd>{{% md %}}Threshold at which to begin ratelimiting.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="bandurationsec_nodejs">
+<a href="#bandurationsec_nodejs" style="color: inherit; text-decoration: inherit;">ban<wbr>Duration<wbr>Sec</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Can only be specified if the action for the rule is "rate_based_ban". If specified, determines the time (in seconds) the traffic will continue to be banned by the rate limit after the rate falls below the threshold.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="banthreshold_nodejs">
+<a href="#banthreshold_nodejs" style="color: inherit; text-decoration: inherit;">ban<wbr>Threshold</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#securitypolicyruleratelimitoptionsthreshold">Security<wbr>Policy<wbr>Rule<wbr>Rate<wbr>Limit<wbr>Options<wbr>Threshold</a></span>
+    </dt>
+    <dd>{{% md %}}Can only be specified if the action for the rule is "rate_based_ban". If specified, the key will be banned for the configured 'ban_duration_sec' when the number of requests that exceed the 'rate_limit_threshold' also exceed this 'ban_threshold'.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="conformaction_nodejs">
+<a href="#conformaction_nodejs" style="color: inherit; text-decoration: inherit;">conform<wbr>Action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Action to take for requests that are under the configured rate limit threshold. Valid option is "allow" only.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enforceonkey_nodejs">
+<a href="#enforceonkey_nodejs" style="color: inherit; text-decoration: inherit;">enforce<wbr>On<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#securitypolicyruleratelimitoptionsenforceonkey">Security<wbr>Policy<wbr>Rule<wbr>Rate<wbr>Limit<wbr>Options<wbr>Enforce<wbr>On<wbr>Key</a></span>
+    </dt>
+    <dd>{{% md %}}Determines the key to enforce the threshold_rps limit on. If key is "IP", each IP has this limit enforced separately, whereas "ALL_IPs" means a single limit is applied to all requests matching this rule.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="exceedaction_nodejs">
+<a href="#exceedaction_nodejs" style="color: inherit; text-decoration: inherit;">exceed<wbr>Action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}When a request is denied, returns the HTTP response code specified. Valid options are "deny()" where valid values for status are 403, 404, 429, and 502.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ratelimitthreshold_nodejs">
+<a href="#ratelimitthreshold_nodejs" style="color: inherit; text-decoration: inherit;">rate<wbr>Limit<wbr>Threshold</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#securitypolicyruleratelimitoptionsthreshold">Security<wbr>Policy<wbr>Rule<wbr>Rate<wbr>Limit<wbr>Options<wbr>Threshold</a></span>
+    </dt>
+    <dd>{{% md %}}Threshold at which to begin ratelimiting.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="ban_duration_sec_python">
+<a href="#ban_duration_sec_python" style="color: inherit; text-decoration: inherit;">ban_<wbr>duration_<wbr>sec</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Can only be specified if the action for the rule is "rate_based_ban". If specified, determines the time (in seconds) the traffic will continue to be banned by the rate limit after the rate falls below the threshold.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ban_threshold_python">
+<a href="#ban_threshold_python" style="color: inherit; text-decoration: inherit;">ban_<wbr>threshold</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#securitypolicyruleratelimitoptionsthreshold">Security<wbr>Policy<wbr>Rule<wbr>Rate<wbr>Limit<wbr>Options<wbr>Threshold</a></span>
+    </dt>
+    <dd>{{% md %}}Can only be specified if the action for the rule is "rate_based_ban". If specified, the key will be banned for the configured 'ban_duration_sec' when the number of requests that exceed the 'rate_limit_threshold' also exceed this 'ban_threshold'.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="conform_action_python">
+<a href="#conform_action_python" style="color: inherit; text-decoration: inherit;">conform_<wbr>action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Action to take for requests that are under the configured rate limit threshold. Valid option is "allow" only.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enforce_on_key_python">
+<a href="#enforce_on_key_python" style="color: inherit; text-decoration: inherit;">enforce_<wbr>on_<wbr>key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#securitypolicyruleratelimitoptionsenforceonkey">Security<wbr>Policy<wbr>Rule<wbr>Rate<wbr>Limit<wbr>Options<wbr>Enforce<wbr>On<wbr>Key</a></span>
+    </dt>
+    <dd>{{% md %}}Determines the key to enforce the threshold_rps limit on. If key is "IP", each IP has this limit enforced separately, whereas "ALL_IPs" means a single limit is applied to all requests matching this rule.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="exceed_action_python">
+<a href="#exceed_action_python" style="color: inherit; text-decoration: inherit;">exceed_<wbr>action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}When a request is denied, returns the HTTP response code specified. Valid options are "deny()" where valid values for status are 403, 404, 429, and 502.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="rate_limit_threshold_python">
+<a href="#rate_limit_threshold_python" style="color: inherit; text-decoration: inherit;">rate_<wbr>limit_<wbr>threshold</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#securitypolicyruleratelimitoptionsthreshold">Security<wbr>Policy<wbr>Rule<wbr>Rate<wbr>Limit<wbr>Options<wbr>Threshold</a></span>
+    </dt>
+    <dd>{{% md %}}Threshold at which to begin ratelimiting.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="securitypolicyruleratelimitoptionsenforceonkey">Security<wbr>Policy<wbr>Rule<wbr>Rate<wbr>Limit<wbr>Options<wbr>Enforce<wbr>On<wbr>Key</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>All<wbr>Ips</dt>
+    <dd>ALL_IPS</dd><dt>Ip</dt>
+    <dd>IP</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Security<wbr>Policy<wbr>Rule<wbr>Rate<wbr>Limit<wbr>Options<wbr>Enforce<wbr>On<wbr>Key<wbr>All<wbr>Ips</dt>
+    <dd>ALL_IPS</dd><dt>Security<wbr>Policy<wbr>Rule<wbr>Rate<wbr>Limit<wbr>Options<wbr>Enforce<wbr>On<wbr>Key<wbr>Ip</dt>
+    <dd>IP</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>All<wbr>Ips</dt>
+    <dd>ALL_IPS</dd><dt>Ip</dt>
+    <dd>IP</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>ALL_IPS</dt>
+    <dd>ALL_IPS</dd><dt>IP</dt>
+    <dd>IP</dd></dl>
+{{% /choosable %}}
+
+<h4 id="securitypolicyruleratelimitoptionsresponse">Security<wbr>Policy<wbr>Rule<wbr>Rate<wbr>Limit<wbr>Options<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="bandurationsec_csharp">
+<a href="#bandurationsec_csharp" style="color: inherit; text-decoration: inherit;">Ban<wbr>Duration<wbr>Sec</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Can only be specified if the action for the rule is "rate_based_ban". If specified, determines the time (in seconds) the traffic will continue to be banned by the rate limit after the rate falls below the threshold.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="banthreshold_csharp">
+<a href="#banthreshold_csharp" style="color: inherit; text-decoration: inherit;">Ban<wbr>Threshold</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#securitypolicyruleratelimitoptionsthresholdresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>Beta.<wbr>Inputs.<wbr>Security<wbr>Policy<wbr>Rule<wbr>Rate<wbr>Limit<wbr>Options<wbr>Threshold<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Can only be specified if the action for the rule is "rate_based_ban". If specified, the key will be banned for the configured 'ban_duration_sec' when the number of requests that exceed the 'rate_limit_threshold' also exceed this 'ban_threshold'.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="conformaction_csharp">
+<a href="#conformaction_csharp" style="color: inherit; text-decoration: inherit;">Conform<wbr>Action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Action to take for requests that are under the configured rate limit threshold. Valid option is "allow" only.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="enforceonkey_csharp">
+<a href="#enforceonkey_csharp" style="color: inherit; text-decoration: inherit;">Enforce<wbr>On<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Determines the key to enforce the threshold_rps limit on. If key is "IP", each IP has this limit enforced separately, whereas "ALL_IPs" means a single limit is applied to all requests matching this rule.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="exceedaction_csharp">
+<a href="#exceedaction_csharp" style="color: inherit; text-decoration: inherit;">Exceed<wbr>Action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}When a request is denied, returns the HTTP response code specified. Valid options are "deny()" where valid values for status are 403, 404, 429, and 502.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="ratelimitthreshold_csharp">
+<a href="#ratelimitthreshold_csharp" style="color: inherit; text-decoration: inherit;">Rate<wbr>Limit<wbr>Threshold</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#securitypolicyruleratelimitoptionsthresholdresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>Beta.<wbr>Inputs.<wbr>Security<wbr>Policy<wbr>Rule<wbr>Rate<wbr>Limit<wbr>Options<wbr>Threshold<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Threshold at which to begin ratelimiting.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="bandurationsec_go">
+<a href="#bandurationsec_go" style="color: inherit; text-decoration: inherit;">Ban<wbr>Duration<wbr>Sec</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Can only be specified if the action for the rule is "rate_based_ban". If specified, determines the time (in seconds) the traffic will continue to be banned by the rate limit after the rate falls below the threshold.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="banthreshold_go">
+<a href="#banthreshold_go" style="color: inherit; text-decoration: inherit;">Ban<wbr>Threshold</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#securitypolicyruleratelimitoptionsthresholdresponse">Security<wbr>Policy<wbr>Rule<wbr>Rate<wbr>Limit<wbr>Options<wbr>Threshold<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Can only be specified if the action for the rule is "rate_based_ban". If specified, the key will be banned for the configured 'ban_duration_sec' when the number of requests that exceed the 'rate_limit_threshold' also exceed this 'ban_threshold'.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="conformaction_go">
+<a href="#conformaction_go" style="color: inherit; text-decoration: inherit;">Conform<wbr>Action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Action to take for requests that are under the configured rate limit threshold. Valid option is "allow" only.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="enforceonkey_go">
+<a href="#enforceonkey_go" style="color: inherit; text-decoration: inherit;">Enforce<wbr>On<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Determines the key to enforce the threshold_rps limit on. If key is "IP", each IP has this limit enforced separately, whereas "ALL_IPs" means a single limit is applied to all requests matching this rule.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="exceedaction_go">
+<a href="#exceedaction_go" style="color: inherit; text-decoration: inherit;">Exceed<wbr>Action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}When a request is denied, returns the HTTP response code specified. Valid options are "deny()" where valid values for status are 403, 404, 429, and 502.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="ratelimitthreshold_go">
+<a href="#ratelimitthreshold_go" style="color: inherit; text-decoration: inherit;">Rate<wbr>Limit<wbr>Threshold</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#securitypolicyruleratelimitoptionsthresholdresponse">Security<wbr>Policy<wbr>Rule<wbr>Rate<wbr>Limit<wbr>Options<wbr>Threshold<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Threshold at which to begin ratelimiting.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="bandurationsec_nodejs">
+<a href="#bandurationsec_nodejs" style="color: inherit; text-decoration: inherit;">ban<wbr>Duration<wbr>Sec</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Can only be specified if the action for the rule is "rate_based_ban". If specified, determines the time (in seconds) the traffic will continue to be banned by the rate limit after the rate falls below the threshold.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="banthreshold_nodejs">
+<a href="#banthreshold_nodejs" style="color: inherit; text-decoration: inherit;">ban<wbr>Threshold</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#securitypolicyruleratelimitoptionsthresholdresponse">Security<wbr>Policy<wbr>Rule<wbr>Rate<wbr>Limit<wbr>Options<wbr>Threshold<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Can only be specified if the action for the rule is "rate_based_ban". If specified, the key will be banned for the configured 'ban_duration_sec' when the number of requests that exceed the 'rate_limit_threshold' also exceed this 'ban_threshold'.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="conformaction_nodejs">
+<a href="#conformaction_nodejs" style="color: inherit; text-decoration: inherit;">conform<wbr>Action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Action to take for requests that are under the configured rate limit threshold. Valid option is "allow" only.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="enforceonkey_nodejs">
+<a href="#enforceonkey_nodejs" style="color: inherit; text-decoration: inherit;">enforce<wbr>On<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Determines the key to enforce the threshold_rps limit on. If key is "IP", each IP has this limit enforced separately, whereas "ALL_IPs" means a single limit is applied to all requests matching this rule.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="exceedaction_nodejs">
+<a href="#exceedaction_nodejs" style="color: inherit; text-decoration: inherit;">exceed<wbr>Action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}When a request is denied, returns the HTTP response code specified. Valid options are "deny()" where valid values for status are 403, 404, 429, and 502.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="ratelimitthreshold_nodejs">
+<a href="#ratelimitthreshold_nodejs" style="color: inherit; text-decoration: inherit;">rate<wbr>Limit<wbr>Threshold</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#securitypolicyruleratelimitoptionsthresholdresponse">Security<wbr>Policy<wbr>Rule<wbr>Rate<wbr>Limit<wbr>Options<wbr>Threshold<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Threshold at which to begin ratelimiting.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="ban_duration_sec_python">
+<a href="#ban_duration_sec_python" style="color: inherit; text-decoration: inherit;">ban_<wbr>duration_<wbr>sec</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Can only be specified if the action for the rule is "rate_based_ban". If specified, determines the time (in seconds) the traffic will continue to be banned by the rate limit after the rate falls below the threshold.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="ban_threshold_python">
+<a href="#ban_threshold_python" style="color: inherit; text-decoration: inherit;">ban_<wbr>threshold</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#securitypolicyruleratelimitoptionsthresholdresponse">Security<wbr>Policy<wbr>Rule<wbr>Rate<wbr>Limit<wbr>Options<wbr>Threshold<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Can only be specified if the action for the rule is "rate_based_ban". If specified, the key will be banned for the configured 'ban_duration_sec' when the number of requests that exceed the 'rate_limit_threshold' also exceed this 'ban_threshold'.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="conform_action_python">
+<a href="#conform_action_python" style="color: inherit; text-decoration: inherit;">conform_<wbr>action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Action to take for requests that are under the configured rate limit threshold. Valid option is "allow" only.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="enforce_on_key_python">
+<a href="#enforce_on_key_python" style="color: inherit; text-decoration: inherit;">enforce_<wbr>on_<wbr>key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Determines the key to enforce the threshold_rps limit on. If key is "IP", each IP has this limit enforced separately, whereas "ALL_IPs" means a single limit is applied to all requests matching this rule.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="exceed_action_python">
+<a href="#exceed_action_python" style="color: inherit; text-decoration: inherit;">exceed_<wbr>action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}When a request is denied, returns the HTTP response code specified. Valid options are "deny()" where valid values for status are 403, 404, 429, and 502.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="rate_limit_threshold_python">
+<a href="#rate_limit_threshold_python" style="color: inherit; text-decoration: inherit;">rate_<wbr>limit_<wbr>threshold</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#securitypolicyruleratelimitoptionsthresholdresponse">Security<wbr>Policy<wbr>Rule<wbr>Rate<wbr>Limit<wbr>Options<wbr>Threshold<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Threshold at which to begin ratelimiting.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="securitypolicyruleratelimitoptionsthreshold">Security<wbr>Policy<wbr>Rule<wbr>Rate<wbr>Limit<wbr>Options<wbr>Threshold</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="count_csharp">
+<a href="#count_csharp" style="color: inherit; text-decoration: inherit;">Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Number of HTTP(S) requests for calculating the threshold.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="intervalsec_csharp">
+<a href="#intervalsec_csharp" style="color: inherit; text-decoration: inherit;">Interval<wbr>Sec</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Interval over which the threshold is computed.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="count_go">
+<a href="#count_go" style="color: inherit; text-decoration: inherit;">Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Number of HTTP(S) requests for calculating the threshold.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="intervalsec_go">
+<a href="#intervalsec_go" style="color: inherit; text-decoration: inherit;">Interval<wbr>Sec</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Interval over which the threshold is computed.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="count_nodejs">
+<a href="#count_nodejs" style="color: inherit; text-decoration: inherit;">count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Number of HTTP(S) requests for calculating the threshold.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="intervalsec_nodejs">
+<a href="#intervalsec_nodejs" style="color: inherit; text-decoration: inherit;">interval<wbr>Sec</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Interval over which the threshold is computed.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="count_python">
+<a href="#count_python" style="color: inherit; text-decoration: inherit;">count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Number of HTTP(S) requests for calculating the threshold.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="interval_sec_python">
+<a href="#interval_sec_python" style="color: inherit; text-decoration: inherit;">interval_<wbr>sec</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Interval over which the threshold is computed.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="securitypolicyruleratelimitoptionsthresholdresponse">Security<wbr>Policy<wbr>Rule<wbr>Rate<wbr>Limit<wbr>Options<wbr>Threshold<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="count_csharp">
+<a href="#count_csharp" style="color: inherit; text-decoration: inherit;">Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Number of HTTP(S) requests for calculating the threshold.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="intervalsec_csharp">
+<a href="#intervalsec_csharp" style="color: inherit; text-decoration: inherit;">Interval<wbr>Sec</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Interval over which the threshold is computed.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="count_go">
+<a href="#count_go" style="color: inherit; text-decoration: inherit;">Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Number of HTTP(S) requests for calculating the threshold.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="intervalsec_go">
+<a href="#intervalsec_go" style="color: inherit; text-decoration: inherit;">Interval<wbr>Sec</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Interval over which the threshold is computed.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="count_nodejs">
+<a href="#count_nodejs" style="color: inherit; text-decoration: inherit;">count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Number of HTTP(S) requests for calculating the threshold.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="intervalsec_nodejs">
+<a href="#intervalsec_nodejs" style="color: inherit; text-decoration: inherit;">interval<wbr>Sec</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Interval over which the threshold is computed.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="count_python">
+<a href="#count_python" style="color: inherit; text-decoration: inherit;">count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Number of HTTP(S) requests for calculating the threshold.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="interval_sec_python">
+<a href="#interval_sec_python" style="color: inherit; text-decoration: inherit;">interval_<wbr>sec</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Interval over which the threshold is computed.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
 <h4 id="securitypolicyruleredirectoptions">Security<wbr>Policy<wbr>Rule<wbr>Redirect<wbr>Options</h4>
 
 {{% choosable language csharp %}}
@@ -3517,6 +4159,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}An integer indicating the priority of a rule in the list. The priority must be a positive value between 0 and 2147483647. Rules are evaluated from highest to lowest priority where 0 is the highest priority and 2147483647 is the lowest priority.{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="ratelimitoptions_csharp">
+<a href="#ratelimitoptions_csharp" style="color: inherit; text-decoration: inherit;">Rate<wbr>Limit<wbr>Options</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#securitypolicyruleratelimitoptionsresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>Beta.<wbr>Inputs.<wbr>Security<wbr>Policy<wbr>Rule<wbr>Rate<wbr>Limit<wbr>Options<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Must be specified if the action is "rate_based_ban" or "throttle". Cannot be specified for any other actions.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="redirectoptions_csharp">
 <a href="#redirectoptions_csharp" style="color: inherit; text-decoration: inherit;">Redirect<wbr>Options</a>
 </span>
@@ -3632,6 +4282,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}An integer indicating the priority of a rule in the list. The priority must be a positive value between 0 and 2147483647. Rules are evaluated from highest to lowest priority where 0 is the highest priority and 2147483647 is the lowest priority.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="ratelimitoptions_go">
+<a href="#ratelimitoptions_go" style="color: inherit; text-decoration: inherit;">Rate<wbr>Limit<wbr>Options</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#securitypolicyruleratelimitoptionsresponse">Security<wbr>Policy<wbr>Rule<wbr>Rate<wbr>Limit<wbr>Options<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Must be specified if the action is "rate_based_ban" or "throttle". Cannot be specified for any other actions.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="redirectoptions_go">
 <a href="#redirectoptions_go" style="color: inherit; text-decoration: inherit;">Redirect<wbr>Options</a>
@@ -3749,6 +4407,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}An integer indicating the priority of a rule in the list. The priority must be a positive value between 0 and 2147483647. Rules are evaluated from highest to lowest priority where 0 is the highest priority and 2147483647 is the lowest priority.{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="ratelimitoptions_nodejs">
+<a href="#ratelimitoptions_nodejs" style="color: inherit; text-decoration: inherit;">rate<wbr>Limit<wbr>Options</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#securitypolicyruleratelimitoptionsresponse">Security<wbr>Policy<wbr>Rule<wbr>Rate<wbr>Limit<wbr>Options<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Must be specified if the action is "rate_based_ban" or "throttle". Cannot be specified for any other actions.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="redirectoptions_nodejs">
 <a href="#redirectoptions_nodejs" style="color: inherit; text-decoration: inherit;">redirect<wbr>Options</a>
 </span>
@@ -3864,6 +4530,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}An integer indicating the priority of a rule in the list. The priority must be a positive value between 0 and 2147483647. Rules are evaluated from highest to lowest priority where 0 is the highest priority and 2147483647 is the lowest priority.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="rate_limit_options_python">
+<a href="#rate_limit_options_python" style="color: inherit; text-decoration: inherit;">rate_<wbr>limit_<wbr>options</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#securitypolicyruleratelimitoptionsresponse">Security<wbr>Policy<wbr>Rule<wbr>Rate<wbr>Limit<wbr>Options<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Must be specified if the action is "rate_based_ban" or "throttle". Cannot be specified for any other actions.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="redirect_options_python">
 <a href="#redirect_options_python" style="color: inherit; text-decoration: inherit;">redirect_<wbr>options</a>

@@ -189,7 +189,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A unique name (within the transfer project) assigned when the job is created. If this field is empty in a CreateTransferJobRequest, Storage Transfer Service assigns a unique name. Otherwise, the specified name is used as the unique name for this job. If the specified name is in use by a job, the creation request fails with an ALREADY_EXISTS error. This name must start with `"transferJobs/"` prefix and end with a letter or a number, and should be no more than 128 characters. This name must not start with 'transferJobs/OPI'. 'transferJobs/OPI' is a reserved prefix. Example: `"transferJobs/^(?!OPI)[A-Za-z0-9-._~]*[A-Za-z0-9]$"` Invalid job names fail with an INVALID_ARGUMENT error.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}A unique name (within the transfer project) assigned when the job is created. If this field is empty in a CreateTransferJobRequest, Storage Transfer Service assigns a unique name. Otherwise, the specified name is used as the unique name for this job. If the specified name is in use by a job, the creation request fails with an ALREADY_EXISTS error. This name must start with `"transferJobs/"` prefix and end with a letter or a number, and should be no more than 128 characters. For transfers involving PosixFilesystem, this name must start with 'transferJobs/OPI' specifically. For all other transfer types, this name must not start with 'transferJobs/OPI'. 'transferJobs/OPI' is a reserved prefix for PosixFilesystem transfers. Non-PosixFilesystem example: `"transferJobs/^(?!OPI)[A-Za-z0-9-._~]*[A-Za-z0-9]$"` PosixFilesystem example: `"transferJobs/OPI^[A-Za-z0-9-._~]*[A-Za-z0-9]$"` Applications must not rely on the enforcement of naming requirements involving OPI. Invalid job names fail with an INVALID_ARGUMENT error.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="notificationconfig_csharp">
 <a href="#notificationconfig_csharp" style="color: inherit; text-decoration: inherit;">Notification<wbr>Config</a>
@@ -197,7 +197,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#notificationconfigresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Storage<wbr>Transfer.<wbr>V1.<wbr>Outputs.<wbr>Notification<wbr>Config<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Notification configuration.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Notification configuration. This is not supported for transfers involving PosixFilesystem.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -281,7 +281,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A unique name (within the transfer project) assigned when the job is created. If this field is empty in a CreateTransferJobRequest, Storage Transfer Service assigns a unique name. Otherwise, the specified name is used as the unique name for this job. If the specified name is in use by a job, the creation request fails with an ALREADY_EXISTS error. This name must start with `"transferJobs/"` prefix and end with a letter or a number, and should be no more than 128 characters. This name must not start with 'transferJobs/OPI'. 'transferJobs/OPI' is a reserved prefix. Example: `"transferJobs/^(?!OPI)[A-Za-z0-9-._~]*[A-Za-z0-9]$"` Invalid job names fail with an INVALID_ARGUMENT error.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}A unique name (within the transfer project) assigned when the job is created. If this field is empty in a CreateTransferJobRequest, Storage Transfer Service assigns a unique name. Otherwise, the specified name is used as the unique name for this job. If the specified name is in use by a job, the creation request fails with an ALREADY_EXISTS error. This name must start with `"transferJobs/"` prefix and end with a letter or a number, and should be no more than 128 characters. For transfers involving PosixFilesystem, this name must start with 'transferJobs/OPI' specifically. For all other transfer types, this name must not start with 'transferJobs/OPI'. 'transferJobs/OPI' is a reserved prefix for PosixFilesystem transfers. Non-PosixFilesystem example: `"transferJobs/^(?!OPI)[A-Za-z0-9-._~]*[A-Za-z0-9]$"` PosixFilesystem example: `"transferJobs/OPI^[A-Za-z0-9-._~]*[A-Za-z0-9]$"` Applications must not rely on the enforcement of naming requirements involving OPI. Invalid job names fail with an INVALID_ARGUMENT error.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="notificationconfig_go">
 <a href="#notificationconfig_go" style="color: inherit; text-decoration: inherit;">Notification<wbr>Config</a>
@@ -289,7 +289,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#notificationconfigresponse">Notification<wbr>Config<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Notification configuration.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Notification configuration. This is not supported for transfers involving PosixFilesystem.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -373,7 +373,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A unique name (within the transfer project) assigned when the job is created. If this field is empty in a CreateTransferJobRequest, Storage Transfer Service assigns a unique name. Otherwise, the specified name is used as the unique name for this job. If the specified name is in use by a job, the creation request fails with an ALREADY_EXISTS error. This name must start with `"transferJobs/"` prefix and end with a letter or a number, and should be no more than 128 characters. This name must not start with 'transferJobs/OPI'. 'transferJobs/OPI' is a reserved prefix. Example: `"transferJobs/^(?!OPI)[A-Za-z0-9-._~]*[A-Za-z0-9]$"` Invalid job names fail with an INVALID_ARGUMENT error.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}A unique name (within the transfer project) assigned when the job is created. If this field is empty in a CreateTransferJobRequest, Storage Transfer Service assigns a unique name. Otherwise, the specified name is used as the unique name for this job. If the specified name is in use by a job, the creation request fails with an ALREADY_EXISTS error. This name must start with `"transferJobs/"` prefix and end with a letter or a number, and should be no more than 128 characters. For transfers involving PosixFilesystem, this name must start with 'transferJobs/OPI' specifically. For all other transfer types, this name must not start with 'transferJobs/OPI'. 'transferJobs/OPI' is a reserved prefix for PosixFilesystem transfers. Non-PosixFilesystem example: `"transferJobs/^(?!OPI)[A-Za-z0-9-._~]*[A-Za-z0-9]$"` PosixFilesystem example: `"transferJobs/OPI^[A-Za-z0-9-._~]*[A-Za-z0-9]$"` Applications must not rely on the enforcement of naming requirements involving OPI. Invalid job names fail with an INVALID_ARGUMENT error.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="notificationconfig_nodejs">
 <a href="#notificationconfig_nodejs" style="color: inherit; text-decoration: inherit;">notification<wbr>Config</a>
@@ -381,7 +381,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#notificationconfigresponse">Notification<wbr>Config<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Notification configuration.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Notification configuration. This is not supported for transfers involving PosixFilesystem.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -465,7 +465,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A unique name (within the transfer project) assigned when the job is created. If this field is empty in a CreateTransferJobRequest, Storage Transfer Service assigns a unique name. Otherwise, the specified name is used as the unique name for this job. If the specified name is in use by a job, the creation request fails with an ALREADY_EXISTS error. This name must start with `"transferJobs/"` prefix and end with a letter or a number, and should be no more than 128 characters. This name must not start with 'transferJobs/OPI'. 'transferJobs/OPI' is a reserved prefix. Example: `"transferJobs/^(?!OPI)[A-Za-z0-9-._~]*[A-Za-z0-9]$"` Invalid job names fail with an INVALID_ARGUMENT error.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}A unique name (within the transfer project) assigned when the job is created. If this field is empty in a CreateTransferJobRequest, Storage Transfer Service assigns a unique name. Otherwise, the specified name is used as the unique name for this job. If the specified name is in use by a job, the creation request fails with an ALREADY_EXISTS error. This name must start with `"transferJobs/"` prefix and end with a letter or a number, and should be no more than 128 characters. For transfers involving PosixFilesystem, this name must start with 'transferJobs/OPI' specifically. For all other transfer types, this name must not start with 'transferJobs/OPI'. 'transferJobs/OPI' is a reserved prefix for PosixFilesystem transfers. Non-PosixFilesystem example: `"transferJobs/^(?!OPI)[A-Za-z0-9-._~]*[A-Za-z0-9]$"` PosixFilesystem example: `"transferJobs/OPI^[A-Za-z0-9-._~]*[A-Za-z0-9]$"` Applications must not rely on the enforcement of naming requirements involving OPI. Invalid job names fail with an INVALID_ARGUMENT error.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="notification_config_python">
 <a href="#notification_config_python" style="color: inherit; text-decoration: inherit;">notification_<wbr>config</a>
@@ -473,7 +473,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#notificationconfigresponse">Notification<wbr>Config<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Notification configuration.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Notification configuration. This is not supported for transfers involving PosixFilesystem.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>

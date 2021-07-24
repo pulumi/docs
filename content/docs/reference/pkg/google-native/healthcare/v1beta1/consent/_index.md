@@ -46,7 +46,7 @@ Creates a new Consent in the parent consent store.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewConsent</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ConsentArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Consent</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewConsent</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ConsentArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Consent</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -107,7 +107,7 @@ Creates a new Consent in the parent consent store.
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
@@ -125,7 +125,7 @@ Creates a new Consent in the parent consent store.
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
@@ -192,22 +192,6 @@ The Consent resource accepts the following [input]({{< relref "/docs/intro/conce
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="location_csharp">
-<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="project_csharp">
-<a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="state_csharp">
 <a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
 </span>
@@ -232,6 +216,14 @@ The Consent resource accepts the following [input]({{< relref "/docs/intro/conce
     </dt>
     <dd>{{% md %}}Timestamp in UTC of when this Consent is considered expired.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="location_csharp">
+<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="metadata_csharp">
 <a href="#metadata_csharp" style="color: inherit; text-decoration: inherit;">Metadata</a>
 </span>
@@ -255,6 +247,14 @@ The Consent resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="#googlecloudhealthcarev1beta1consentpolicy">List&lt;Pulumi.<wbr>Google<wbr>Native.<wbr>Healthcare.<wbr>V1Beta1.<wbr>Inputs.<wbr>Google<wbr>Cloud<wbr>Healthcare<wbr>V1beta1Consent<wbr>Policy<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Optional. Represents a user's consent in terms of the resources that can be accessed and under what conditions.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="project_csharp">
+<a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ttl_csharp">
 <a href="#ttl_csharp" style="color: inherit; text-decoration: inherit;">Ttl</a>
@@ -292,22 +292,6 @@ The Consent resource accepts the following [input]({{< relref "/docs/intro/conce
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="location_go">
-<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="project_go">
-<a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="state_go">
 <a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
 </span>
@@ -332,6 +316,14 @@ The Consent resource accepts the following [input]({{< relref "/docs/intro/conce
     </dt>
     <dd>{{% md %}}Timestamp in UTC of when this Consent is considered expired.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="location_go">
+<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="metadata_go">
 <a href="#metadata_go" style="color: inherit; text-decoration: inherit;">Metadata</a>
 </span>
@@ -355,6 +347,14 @@ The Consent resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="#googlecloudhealthcarev1beta1consentpolicy">[]Google<wbr>Cloud<wbr>Healthcare<wbr>V1beta1Consent<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Represents a user's consent in terms of the resources that can be accessed and under what conditions.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="project_go">
+<a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ttl_go">
 <a href="#ttl_go" style="color: inherit; text-decoration: inherit;">Ttl</a>
@@ -392,22 +392,6 @@ The Consent resource accepts the following [input]({{< relref "/docs/intro/conce
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="location_nodejs">
-<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="project_nodejs">
-<a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="state_nodejs">
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
@@ -432,6 +416,14 @@ The Consent resource accepts the following [input]({{< relref "/docs/intro/conce
     </dt>
     <dd>{{% md %}}Timestamp in UTC of when this Consent is considered expired.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="location_nodejs">
+<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="metadata_nodejs">
 <a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span>
@@ -455,6 +447,14 @@ The Consent resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="#googlecloudhealthcarev1beta1consentpolicy">Google<wbr>Cloud<wbr>Healthcare<wbr>V1beta1Consent<wbr>Policy<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}Optional. Represents a user's consent in terms of the resources that can be accessed and under what conditions.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="project_nodejs">
+<a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ttl_nodejs">
 <a href="#ttl_nodejs" style="color: inherit; text-decoration: inherit;">ttl</a>
@@ -492,22 +492,6 @@ The Consent resource accepts the following [input]({{< relref "/docs/intro/conce
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="location_python">
-<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="project_python">
-<a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="state_python">
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
@@ -532,6 +516,14 @@ The Consent resource accepts the following [input]({{< relref "/docs/intro/conce
     </dt>
     <dd>{{% md %}}Timestamp in UTC of when this Consent is considered expired.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="location_python">
+<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="metadata_python">
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span>
@@ -555,6 +547,14 @@ The Consent resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="#googlecloudhealthcarev1beta1consentpolicy">Sequence[Google<wbr>Cloud<wbr>Healthcare<wbr>V1beta1Consent<wbr>Policy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Optional. Represents a user's consent in terms of the resources that can be accessed and under what conditions.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="project_python">
+<a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ttl_python">
 <a href="#ttl_python" style="color: inherit; text-decoration: inherit;">ttl</a>
@@ -862,7 +862,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language csharp %}}
 <dl class="tabular"><dt>State<wbr>Unspecified</dt>
-    <dd>STATE_UNSPECIFIED{{% md %}}No state specified.{{% /md %}}</dd><dt>Active</dt>
+    <dd>STATE_UNSPECIFIED{{% md %}}No state specified. Treated as ACTIVE only at the time of resource creation.{{% /md %}}</dd><dt>Active</dt>
     <dd>ACTIVE{{% md %}}The Consent is active and is considered when evaluating a user's consent on resources.{{% /md %}}</dd><dt>Archived</dt>
     <dd>ARCHIVED{{% md %}}When a Consent is updated, the current version is archived and a new one is created with its state set to the updated Consent's previous state.{{% /md %}}</dd><dt>Revoked</dt>
     <dd>REVOKED{{% md %}}A revoked Consent is not considered when evaluating a user's consent on resources.{{% /md %}}</dd><dt>Draft</dt>
@@ -872,7 +872,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language go %}}
 <dl class="tabular"><dt>Consent<wbr>State<wbr>State<wbr>Unspecified</dt>
-    <dd>STATE_UNSPECIFIED{{% md %}}No state specified.{{% /md %}}</dd><dt>Consent<wbr>State<wbr>Active</dt>
+    <dd>STATE_UNSPECIFIED{{% md %}}No state specified. Treated as ACTIVE only at the time of resource creation.{{% /md %}}</dd><dt>Consent<wbr>State<wbr>Active</dt>
     <dd>ACTIVE{{% md %}}The Consent is active and is considered when evaluating a user's consent on resources.{{% /md %}}</dd><dt>Consent<wbr>State<wbr>Archived</dt>
     <dd>ARCHIVED{{% md %}}When a Consent is updated, the current version is archived and a new one is created with its state set to the updated Consent's previous state.{{% /md %}}</dd><dt>Consent<wbr>State<wbr>Revoked</dt>
     <dd>REVOKED{{% md %}}A revoked Consent is not considered when evaluating a user's consent on resources.{{% /md %}}</dd><dt>Consent<wbr>State<wbr>Draft</dt>
@@ -882,7 +882,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language nodejs %}}
 <dl class="tabular"><dt>State<wbr>Unspecified</dt>
-    <dd>STATE_UNSPECIFIED{{% md %}}No state specified.{{% /md %}}</dd><dt>Active</dt>
+    <dd>STATE_UNSPECIFIED{{% md %}}No state specified. Treated as ACTIVE only at the time of resource creation.{{% /md %}}</dd><dt>Active</dt>
     <dd>ACTIVE{{% md %}}The Consent is active and is considered when evaluating a user's consent on resources.{{% /md %}}</dd><dt>Archived</dt>
     <dd>ARCHIVED{{% md %}}When a Consent is updated, the current version is archived and a new one is created with its state set to the updated Consent's previous state.{{% /md %}}</dd><dt>Revoked</dt>
     <dd>REVOKED{{% md %}}A revoked Consent is not considered when evaluating a user's consent on resources.{{% /md %}}</dd><dt>Draft</dt>
@@ -892,7 +892,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language python %}}
 <dl class="tabular"><dt>STATE_UNSPECIFIED</dt>
-    <dd>STATE_UNSPECIFIED{{% md %}}No state specified.{{% /md %}}</dd><dt>ACTIVE</dt>
+    <dd>STATE_UNSPECIFIED{{% md %}}No state specified. Treated as ACTIVE only at the time of resource creation.{{% /md %}}</dd><dt>ACTIVE</dt>
     <dd>ACTIVE{{% md %}}The Consent is active and is considered when evaluating a user's consent on resources.{{% /md %}}</dd><dt>ARCHIVED</dt>
     <dd>ARCHIVED{{% md %}}When a Consent is updated, the current version is archived and a new one is created with its state set to the updated Consent's previous state.{{% /md %}}</dd><dt>REVOKED</dt>
     <dd>REVOKED{{% md %}}A revoked Consent is not considered when evaluating a user's consent on resources.{{% /md %}}</dd><dt>DRAFT</dt>

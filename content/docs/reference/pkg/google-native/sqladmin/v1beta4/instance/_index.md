@@ -20,7 +20,7 @@ Creates a new Cloud SQL instance.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Instance</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">InstanceArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Instance</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">InstanceArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -59,16 +59,16 @@ Creates a new Cloud SQL instance.
              <span class="nx">suspension_reason</span><span class="p">:</span> <span class="nx">Optional[Sequence[InstanceSuspensionReasonItem]]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">Instance</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-             <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">InstanceArgs</a></span><span class="p">,</span>
+             <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">Optional[InstanceArgs]</a></span> = None<span class="p">,</span>
              <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewInstance</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">InstanceArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Instance</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewInstance</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">InstanceArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Instance</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Instance</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">InstanceArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Instance</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">InstanceArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -80,7 +80,7 @@ Creates a new Cloud SQL instance.
         <span class="property-type">string</span>
     </dt>
     <dd>The unique name of the resource.</dd><dt
-        class="property-required" title="Required">
+        class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">InstanceArgs</a></span>
@@ -104,7 +104,7 @@ Creates a new Cloud SQL instance.
         <span class="property-type">str</span>
     </dt>
     <dd>The unique name of the resource.</dd><dt
-        class="property-required" title="Required">
+        class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">InstanceArgs</a></span>
@@ -125,7 +125,7 @@ Creates a new Cloud SQL instance.
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
@@ -134,7 +134,7 @@ Creates a new Cloud SQL instance.
         <span class="property-type">string</span>
     </dt>
     <dd>The unique name of the resource.</dd><dt
-        class="property-required" title="Required">
+        class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">InstanceArgs</a></span>
@@ -143,7 +143,7 @@ Creates a new Cloud SQL instance.
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
@@ -158,7 +158,7 @@ Creates a new Cloud SQL instance.
         <span class="property-type">string</span>
     </dt>
     <dd>The unique name of the resource.</dd><dt
-        class="property-required" title="Required">
+        class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">InstanceArgs</a></span>
@@ -184,15 +184,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="project_csharp">
-<a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The project ID of the project containing the Cloud SQL instance. The Google apps domain is prefixed if applicable.{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="backendtype_csharp">
 <a href="#backendtype_csharp" style="color: inherit; text-decoration: inherit;">Backend<wbr>Type</a>
@@ -322,6 +314,14 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
     </dt>
     <dd>{{% md %}}This field represents the report generated by the proactive database wellness job for OutOfDisk issues. Writers: -- the proactive database wellness job for OOD. Readers: -- the proactive database wellness job{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="project_csharp">
+<a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The project ID of the project containing the Cloud SQL instance. The Google apps domain is prefixed if applicable.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="region_csharp">
 <a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
 </span>
@@ -428,15 +428,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="project_go">
-<a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The project ID of the project containing the Cloud SQL instance. The Google apps domain is prefixed if applicable.{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="backendtype_go">
 <a href="#backendtype_go" style="color: inherit; text-decoration: inherit;">Backend<wbr>Type</a>
@@ -566,6 +558,14 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
     </dt>
     <dd>{{% md %}}This field represents the report generated by the proactive database wellness job for OutOfDisk issues. Writers: -- the proactive database wellness job for OOD. Readers: -- the proactive database wellness job{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="project_go">
+<a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The project ID of the project containing the Cloud SQL instance. The Google apps domain is prefixed if applicable.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="region_go">
 <a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
 </span>
@@ -672,15 +672,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="project_nodejs">
-<a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The project ID of the project containing the Cloud SQL instance. The Google apps domain is prefixed if applicable.{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="backendtype_nodejs">
 <a href="#backendtype_nodejs" style="color: inherit; text-decoration: inherit;">backend<wbr>Type</a>
@@ -810,6 +802,14 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
     </dt>
     <dd>{{% md %}}This field represents the report generated by the proactive database wellness job for OutOfDisk issues. Writers: -- the proactive database wellness job for OOD. Readers: -- the proactive database wellness job{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="project_nodejs">
+<a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The project ID of the project containing the Cloud SQL instance. The Google apps domain is prefixed if applicable.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="region_nodejs">
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
@@ -916,15 +916,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="project_python">
-<a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The project ID of the project containing the Cloud SQL instance. The Google apps domain is prefixed if applicable.{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="backend_type_python">
 <a href="#backend_type_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>type</a>
@@ -1053,6 +1045,14 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#sqloutofdiskreport">Sql<wbr>Out<wbr>Of<wbr>Disk<wbr>Report<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This field represents the report generated by the proactive database wellness job for OutOfDisk issues. Writers: -- the proactive database wellness job for OOD. Readers: -- the proactive database wellness job{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="project_python">
+<a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The project ID of the project containing the Cloud SQL instance. The Google apps domain is prefixed if applicable.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_python">
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -1567,7 +1567,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Reserved for future use.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Postgres only) Whether point in time recovery is enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="replicationlogarchivingenabled_csharp">
 <a href="#replicationlogarchivingenabled_csharp" style="color: inherit; text-decoration: inherit;">Replication<wbr>Log<wbr>Archiving<wbr>Enabled</a>
@@ -1643,7 +1643,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Reserved for future use.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Postgres only) Whether point in time recovery is enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="replicationlogarchivingenabled_go">
 <a href="#replicationlogarchivingenabled_go" style="color: inherit; text-decoration: inherit;">Replication<wbr>Log<wbr>Archiving<wbr>Enabled</a>
@@ -1719,7 +1719,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Reserved for future use.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Postgres only) Whether point in time recovery is enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="replicationlogarchivingenabled_nodejs">
 <a href="#replicationlogarchivingenabled_nodejs" style="color: inherit; text-decoration: inherit;">replication<wbr>Log<wbr>Archiving<wbr>Enabled</a>
@@ -1795,7 +1795,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Reserved for future use.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Postgres only) Whether point in time recovery is enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="replication_log_archiving_enabled_python">
 <a href="#replication_log_archiving_enabled_python" style="color: inherit; text-decoration: inherit;">replication_<wbr>log_<wbr>archiving_<wbr>enabled</a>
@@ -1873,7 +1873,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Reserved for future use.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Postgres only) Whether point in time recovery is enabled.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="replicationlogarchivingenabled_csharp">
 <a href="#replicationlogarchivingenabled_csharp" style="color: inherit; text-decoration: inherit;">Replication<wbr>Log<wbr>Archiving<wbr>Enabled</a>
@@ -1949,7 +1949,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Reserved for future use.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Postgres only) Whether point in time recovery is enabled.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="replicationlogarchivingenabled_go">
 <a href="#replicationlogarchivingenabled_go" style="color: inherit; text-decoration: inherit;">Replication<wbr>Log<wbr>Archiving<wbr>Enabled</a>
@@ -2025,7 +2025,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Reserved for future use.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Postgres only) Whether point in time recovery is enabled.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="replicationlogarchivingenabled_nodejs">
 <a href="#replicationlogarchivingenabled_nodejs" style="color: inherit; text-decoration: inherit;">replication<wbr>Log<wbr>Archiving<wbr>Enabled</a>
@@ -2101,7 +2101,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Reserved for future use.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Postgres only) Whether point in time recovery is enabled.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="replication_log_archiving_enabled_python">
 <a href="#replication_log_archiving_enabled_python" style="color: inherit; text-decoration: inherit;">replication_<wbr>log_<wbr>archiving_<wbr>enabled</a>
@@ -8443,6 +8443,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}If the scheduled maintenance can be rescheduled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="scheduledeadlinetime_csharp">
+<a href="#scheduledeadlinetime_csharp" style="color: inherit; text-decoration: inherit;">Schedule<wbr>Deadline<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Maintenance cannot be rescheduled to start beyond this deadline.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="starttime_csharp">
 <a href="#starttime_csharp" style="color: inherit; text-decoration: inherit;">Start<wbr>Time</a>
 </span>
@@ -8470,6 +8478,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If the scheduled maintenance can be rescheduled.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="scheduledeadlinetime_go">
+<a href="#scheduledeadlinetime_go" style="color: inherit; text-decoration: inherit;">Schedule<wbr>Deadline<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Maintenance cannot be rescheduled to start beyond this deadline.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="starttime_go">
 <a href="#starttime_go" style="color: inherit; text-decoration: inherit;">Start<wbr>Time</a>
@@ -8499,6 +8515,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}If the scheduled maintenance can be rescheduled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="scheduledeadlinetime_nodejs">
+<a href="#scheduledeadlinetime_nodejs" style="color: inherit; text-decoration: inherit;">schedule<wbr>Deadline<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Maintenance cannot be rescheduled to start beyond this deadline.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="starttime_nodejs">
 <a href="#starttime_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Time</a>
 </span>
@@ -8526,6 +8550,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If the scheduled maintenance can be rescheduled.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="schedule_deadline_time_python">
+<a href="#schedule_deadline_time_python" style="color: inherit; text-decoration: inherit;">schedule_<wbr>deadline_<wbr>time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Maintenance cannot be rescheduled to start beyond this deadline.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="start_time_python">
 <a href="#start_time_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time</a>
@@ -8557,6 +8589,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}If the scheduled maintenance can be rescheduled.{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="scheduledeadlinetime_csharp">
+<a href="#scheduledeadlinetime_csharp" style="color: inherit; text-decoration: inherit;">Schedule<wbr>Deadline<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Maintenance cannot be rescheduled to start beyond this deadline.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="starttime_csharp">
 <a href="#starttime_csharp" style="color: inherit; text-decoration: inherit;">Start<wbr>Time</a>
 </span>
@@ -8584,6 +8624,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If the scheduled maintenance can be rescheduled.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="scheduledeadlinetime_go">
+<a href="#scheduledeadlinetime_go" style="color: inherit; text-decoration: inherit;">Schedule<wbr>Deadline<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Maintenance cannot be rescheduled to start beyond this deadline.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="starttime_go">
 <a href="#starttime_go" style="color: inherit; text-decoration: inherit;">Start<wbr>Time</a>
@@ -8613,6 +8661,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}If the scheduled maintenance can be rescheduled.{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="scheduledeadlinetime_nodejs">
+<a href="#scheduledeadlinetime_nodejs" style="color: inherit; text-decoration: inherit;">schedule<wbr>Deadline<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Maintenance cannot be rescheduled to start beyond this deadline.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="starttime_nodejs">
 <a href="#starttime_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Time</a>
 </span>
@@ -8640,6 +8696,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If the scheduled maintenance can be rescheduled.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="schedule_deadline_time_python">
+<a href="#schedule_deadline_time_python" style="color: inherit; text-decoration: inherit;">schedule_<wbr>deadline_<wbr>time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Maintenance cannot be rescheduled to start beyond this deadline.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="start_time_python">
 <a href="#start_time_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time</a>

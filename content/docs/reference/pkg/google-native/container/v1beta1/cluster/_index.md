@@ -20,7 +20,7 @@ Creates a cluster, consisting of the specified number and type of Google Compute
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Cluster</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ClusterArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Cluster</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">ClusterArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -73,16 +73,16 @@ Creates a cluster, consisting of the specified number and type of Google Compute
             <span class="nx">workload_identity_config</span><span class="p">:</span> <span class="nx">Optional[WorkloadIdentityConfigArgs]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">Cluster</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-            <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ClusterArgs</a></span><span class="p">,</span>
+            <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">Optional[ClusterArgs]</a></span> = None<span class="p">,</span>
             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewCluster</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ClusterArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Cluster</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewCluster</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">ClusterArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Cluster</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Cluster</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ClusterArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Cluster</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">ClusterArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -94,7 +94,7 @@ Creates a cluster, consisting of the specified number and type of Google Compute
         <span class="property-type">string</span>
     </dt>
     <dd>The unique name of the resource.</dd><dt
-        class="property-required" title="Required">
+        class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ClusterArgs</a></span>
@@ -118,7 +118,7 @@ Creates a cluster, consisting of the specified number and type of Google Compute
         <span class="property-type">str</span>
     </dt>
     <dd>The unique name of the resource.</dd><dt
-        class="property-required" title="Required">
+        class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ClusterArgs</a></span>
@@ -139,7 +139,7 @@ Creates a cluster, consisting of the specified number and type of Google Compute
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
@@ -148,7 +148,7 @@ Creates a cluster, consisting of the specified number and type of Google Compute
         <span class="property-type">string</span>
     </dt>
     <dd>The unique name of the resource.</dd><dt
-        class="property-required" title="Required">
+        class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ClusterArgs</a></span>
@@ -157,7 +157,7 @@ Creates a cluster, consisting of the specified number and type of Google Compute
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
@@ -172,7 +172,7 @@ Creates a cluster, consisting of the specified number and type of Google Compute
         <span class="property-type">string</span>
     </dt>
     <dd>The unique name of the resource.</dd><dt
-        class="property-required" title="Required">
+        class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ClusterArgs</a></span>
@@ -198,23 +198,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="location_csharp">
-<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="project_csharp">
-<a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="addonsconfig_csharp">
 <a href="#addonsconfig_csharp" style="color: inherit; text-decoration: inherit;">Addons<wbr>Config</a>
@@ -343,6 +327,14 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="#legacyabac">Pulumi.<wbr>Google<wbr>Native.<wbr>Container.<wbr>V1Beta1.<wbr>Inputs.<wbr>Legacy<wbr>Abac<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration for the legacy ABAC authorization mode.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="location_csharp">
+<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="locations_csharp">
 <a href="#locations_csharp" style="color: inherit; text-decoration: inherit;">Locations</a>
@@ -480,6 +472,14 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
     </dt>
     <dd>{{% md %}}Configuration for private cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="project_csharp">
+<a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="releasechannel_csharp">
 <a href="#releasechannel_csharp" style="color: inherit; text-decoration: inherit;">Release<wbr>Channel</a>
 </span>
@@ -554,23 +554,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="location_go">
-<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="project_go">
-<a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="addonsconfig_go">
 <a href="#addonsconfig_go" style="color: inherit; text-decoration: inherit;">Addons<wbr>Config</a>
@@ -699,6 +683,14 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="#legacyabac">Legacy<wbr>Abac<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration for the legacy ABAC authorization mode.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="location_go">
+<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="locations_go">
 <a href="#locations_go" style="color: inherit; text-decoration: inherit;">Locations</a>
@@ -836,6 +828,14 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
     </dt>
     <dd>{{% md %}}Configuration for private cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="project_go">
+<a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="releasechannel_go">
 <a href="#releasechannel_go" style="color: inherit; text-decoration: inherit;">Release<wbr>Channel</a>
 </span>
@@ -910,23 +910,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="location_nodejs">
-<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="project_nodejs">
-<a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="addonsconfig_nodejs">
 <a href="#addonsconfig_nodejs" style="color: inherit; text-decoration: inherit;">addons<wbr>Config</a>
@@ -1055,6 +1039,14 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="#legacyabac">Legacy<wbr>Abac<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration for the legacy ABAC authorization mode.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="location_nodejs">
+<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="locations_nodejs">
 <a href="#locations_nodejs" style="color: inherit; text-decoration: inherit;">locations</a>
@@ -1192,6 +1184,14 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
     </dt>
     <dd>{{% md %}}Configuration for private cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="project_nodejs">
+<a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="releasechannel_nodejs">
 <a href="#releasechannel_nodejs" style="color: inherit; text-decoration: inherit;">release<wbr>Channel</a>
 </span>
@@ -1266,23 +1266,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="location_python">
-<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="project_python">
-<a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="addons_config_python">
 <a href="#addons_config_python" style="color: inherit; text-decoration: inherit;">addons_<wbr>config</a>
@@ -1411,6 +1395,14 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="#legacyabac">Legacy<wbr>Abac<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration for the legacy ABAC authorization mode.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="location_python">
+<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="locations_python">
 <a href="#locations_python" style="color: inherit; text-decoration: inherit;">locations</a>
@@ -1547,6 +1539,14 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="#privateclusterconfig">Private<wbr>Cluster<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration for private cluster.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="project_python">
+<a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="release_channel_python">
 <a href="#release_channel_python" style="color: inherit; text-decoration: inherit;">release_<wbr>channel</a>
@@ -12425,7 +12425,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Maximum number of nodes in the NodePool. Must be >= min_node_count. There has to enough quota to scale up the cluster.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Maximum number of nodes in the NodePool. Must be >= min_node_count. There has to be enough quota to scale up the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minnodecount_csharp">
 <a href="#minnodecount_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Node<wbr>Count</a>
@@ -12461,7 +12461,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Maximum number of nodes in the NodePool. Must be >= min_node_count. There has to enough quota to scale up the cluster.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Maximum number of nodes in the NodePool. Must be >= min_node_count. There has to be enough quota to scale up the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minnodecount_go">
 <a href="#minnodecount_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Node<wbr>Count</a>
@@ -12497,7 +12497,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Maximum number of nodes in the NodePool. Must be >= min_node_count. There has to enough quota to scale up the cluster.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Maximum number of nodes in the NodePool. Must be >= min_node_count. There has to be enough quota to scale up the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minnodecount_nodejs">
 <a href="#minnodecount_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Node<wbr>Count</a>
@@ -12533,7 +12533,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Maximum number of nodes in the NodePool. Must be >= min_node_count. There has to enough quota to scale up the cluster.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Maximum number of nodes in the NodePool. Must be >= min_node_count. There has to be enough quota to scale up the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="min_node_count_python">
 <a href="#min_node_count_python" style="color: inherit; text-decoration: inherit;">min_<wbr>node_<wbr>count</a>
@@ -12571,7 +12571,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Maximum number of nodes in the NodePool. Must be >= min_node_count. There has to enough quota to scale up the cluster.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Maximum number of nodes in the NodePool. Must be >= min_node_count. There has to be enough quota to scale up the cluster.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="minnodecount_csharp">
 <a href="#minnodecount_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Node<wbr>Count</a>
@@ -12607,7 +12607,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Maximum number of nodes in the NodePool. Must be >= min_node_count. There has to enough quota to scale up the cluster.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Maximum number of nodes in the NodePool. Must be >= min_node_count. There has to be enough quota to scale up the cluster.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="minnodecount_go">
 <a href="#minnodecount_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Node<wbr>Count</a>
@@ -12643,7 +12643,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Maximum number of nodes in the NodePool. Must be >= min_node_count. There has to enough quota to scale up the cluster.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Maximum number of nodes in the NodePool. Must be >= min_node_count. There has to be enough quota to scale up the cluster.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="minnodecount_nodejs">
 <a href="#minnodecount_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Node<wbr>Count</a>
@@ -12679,7 +12679,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Maximum number of nodes in the NodePool. Must be >= min_node_count. There has to enough quota to scale up the cluster.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Maximum number of nodes in the NodePool. Must be >= min_node_count. There has to be enough quota to scale up the cluster.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="min_node_count_python">
 <a href="#min_node_count_python" style="color: inherit; text-decoration: inherit;">min_<wbr>node_<wbr>count</a>

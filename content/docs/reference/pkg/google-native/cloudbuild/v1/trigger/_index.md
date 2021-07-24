@@ -42,6 +42,7 @@ Creates a new `BuildTrigger`. This API is experimental.
             <span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">pubsub_config</span><span class="p">:</span> <span class="nx">Optional[PubsubConfigArgs]</span> = None<span class="p">,</span>
             <span class="nx">resource_name_</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">source_to_build</span><span class="p">:</span> <span class="nx">Optional[GitRepoSourceArgs]</span> = None<span class="p">,</span>
             <span class="nx">substitutions</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
             <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
             <span class="nx">trigger_template</span><span class="p">:</span> <span class="nx">Optional[RepoSourceArgs]</span> = None<span class="p">,</span>
@@ -53,7 +54,7 @@ Creates a new `BuildTrigger`. This API is experimental.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewTrigger</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">TriggerArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Trigger</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewTrigger</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">TriggerArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Trigger</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -114,7 +115,7 @@ Creates a new `BuildTrigger`. This API is experimental.
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
@@ -132,7 +133,7 @@ Creates a new `BuildTrigger`. This API is experimental.
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
@@ -174,22 +175,6 @@ The Trigger resource accepts the following [input]({{< relref "/docs/intro/conce
 
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="location_csharp">
-<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="project_csharp">
-<a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="projectid_csharp">
 <a href="#projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -271,6 +256,14 @@ The Trigger resource accepts the following [input]({{< relref "/docs/intro/conce
     </dt>
     <dd>{{% md %}}If any of the files altered in the commit pass the ignored_files filter and included_files is empty, then as far as this filter is concerned, we should trigger the build. If any of the files altered in the commit pass the ignored_files filter and included_files is not empty, then we make sure that at least one of those files matches a included_files glob. If not, then we do not trigger a build.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="location_csharp">
+<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
@@ -278,6 +271,14 @@ The Trigger resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User-assigned name of the trigger. Must be unique within the project. Trigger names must meet the following requirements: + They must contain only alphanumeric characters and dashes. + They can be 1-64 characters long. + They must begin and end with an alphanumeric character.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="project_csharp">
+<a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pubsubconfig_csharp">
 <a href="#pubsubconfig_csharp" style="color: inherit; text-decoration: inherit;">Pubsub<wbr>Config</a>
@@ -294,6 +295,14 @@ The Trigger resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The `Trigger` name with format: `projects/{project}/locations/{location}/triggers/{trigger}`, where {trigger} is a unique identifier generated by the service.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sourcetobuild_csharp">
+<a href="#sourcetobuild_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>To<wbr>Build</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#gitreposource">Pulumi.<wbr>Google<wbr>Native.<wbr>Cloud<wbr>Build.<wbr>V1.<wbr>Inputs.<wbr>Git<wbr>Repo<wbr>Source<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The repo and ref of the repository from which to build. This field is used only for those triggers that do not respond to SCM events. Triggers that respond to such events build source at whatever commit caused the event. This field is currently only used by Webhook, Pub/Sub, Manual, and Cron triggers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="substitutions_csharp">
 <a href="#substitutions_csharp" style="color: inherit; text-decoration: inherit;">Substitutions</a>
@@ -330,22 +339,6 @@ The Trigger resource accepts the following [input]({{< relref "/docs/intro/conce
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="location_go">
-<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="project_go">
-<a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="projectid_go">
 <a href="#projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -427,6 +420,14 @@ The Trigger resource accepts the following [input]({{< relref "/docs/intro/conce
     </dt>
     <dd>{{% md %}}If any of the files altered in the commit pass the ignored_files filter and included_files is empty, then as far as this filter is concerned, we should trigger the build. If any of the files altered in the commit pass the ignored_files filter and included_files is not empty, then we make sure that at least one of those files matches a included_files glob. If not, then we do not trigger a build.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="location_go">
+<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
@@ -434,6 +435,14 @@ The Trigger resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User-assigned name of the trigger. Must be unique within the project. Trigger names must meet the following requirements: + They must contain only alphanumeric characters and dashes. + They can be 1-64 characters long. + They must begin and end with an alphanumeric character.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="project_go">
+<a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pubsubconfig_go">
 <a href="#pubsubconfig_go" style="color: inherit; text-decoration: inherit;">Pubsub<wbr>Config</a>
@@ -450,6 +459,14 @@ The Trigger resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The `Trigger` name with format: `projects/{project}/locations/{location}/triggers/{trigger}`, where {trigger} is a unique identifier generated by the service.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sourcetobuild_go">
+<a href="#sourcetobuild_go" style="color: inherit; text-decoration: inherit;">Source<wbr>To<wbr>Build</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#gitreposource">Git<wbr>Repo<wbr>Source<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The repo and ref of the repository from which to build. This field is used only for those triggers that do not respond to SCM events. Triggers that respond to such events build source at whatever commit caused the event. This field is currently only used by Webhook, Pub/Sub, Manual, and Cron triggers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="substitutions_go">
 <a href="#substitutions_go" style="color: inherit; text-decoration: inherit;">Substitutions</a>
@@ -486,22 +503,6 @@ The Trigger resource accepts the following [input]({{< relref "/docs/intro/conce
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="location_nodejs">
-<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="project_nodejs">
-<a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="projectid_nodejs">
 <a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
@@ -583,6 +584,14 @@ The Trigger resource accepts the following [input]({{< relref "/docs/intro/conce
     </dt>
     <dd>{{% md %}}If any of the files altered in the commit pass the ignored_files filter and included_files is empty, then as far as this filter is concerned, we should trigger the build. If any of the files altered in the commit pass the ignored_files filter and included_files is not empty, then we make sure that at least one of those files matches a included_files glob. If not, then we do not trigger a build.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="location_nodejs">
+<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
@@ -590,6 +599,14 @@ The Trigger resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User-assigned name of the trigger. Must be unique within the project. Trigger names must meet the following requirements: + They must contain only alphanumeric characters and dashes. + They can be 1-64 characters long. + They must begin and end with an alphanumeric character.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="project_nodejs">
+<a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pubsubconfig_nodejs">
 <a href="#pubsubconfig_nodejs" style="color: inherit; text-decoration: inherit;">pubsub<wbr>Config</a>
@@ -606,6 +623,14 @@ The Trigger resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The `Trigger` name with format: `projects/{project}/locations/{location}/triggers/{trigger}`, where {trigger} is a unique identifier generated by the service.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sourcetobuild_nodejs">
+<a href="#sourcetobuild_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>To<wbr>Build</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#gitreposource">Git<wbr>Repo<wbr>Source<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The repo and ref of the repository from which to build. This field is used only for those triggers that do not respond to SCM events. Triggers that respond to such events build source at whatever commit caused the event. This field is currently only used by Webhook, Pub/Sub, Manual, and Cron triggers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="substitutions_nodejs">
 <a href="#substitutions_nodejs" style="color: inherit; text-decoration: inherit;">substitutions</a>
@@ -642,22 +667,6 @@ The Trigger resource accepts the following [input]({{< relref "/docs/intro/conce
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="location_python">
-<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="project_python">
-<a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="project_id_python">
 <a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
@@ -739,6 +748,14 @@ The Trigger resource accepts the following [input]({{< relref "/docs/intro/conce
     </dt>
     <dd>{{% md %}}If any of the files altered in the commit pass the ignored_files filter and included_files is empty, then as far as this filter is concerned, we should trigger the build. If any of the files altered in the commit pass the ignored_files filter and included_files is not empty, then we make sure that at least one of those files matches a included_files glob. If not, then we do not trigger a build.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="location_python">
+<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
@@ -746,6 +763,14 @@ The Trigger resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}User-assigned name of the trigger. Must be unique within the project. Trigger names must meet the following requirements: + They must contain only alphanumeric characters and dashes. + They can be 1-64 characters long. + They must begin and end with an alphanumeric character.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="project_python">
+<a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pubsub_config_python">
 <a href="#pubsub_config_python" style="color: inherit; text-decoration: inherit;">pubsub_<wbr>config</a>
@@ -762,6 +787,14 @@ The Trigger resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The `Trigger` name with format: `projects/{project}/locations/{location}/triggers/{trigger}`, where {trigger} is a unique identifier generated by the service.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="source_to_build_python">
+<a href="#source_to_build_python" style="color: inherit; text-decoration: inherit;">source_<wbr>to_<wbr>build</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#gitreposource">Git<wbr>Repo<wbr>Source<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The repo and ref of the repository from which to build. This field is used only for those triggers that do not respond to SCM events. Triggers that respond to such events build source at whatever commit caused the event. This field is currently only used by Webhook, Pub/Sub, Manual, and Cron triggers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="substitutions_python">
 <a href="#substitutions_python" style="color: inherit; text-decoration: inherit;">substitutions</a>
@@ -1746,7 +1779,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#pooloption">Pulumi.<wbr>Google<wbr>Native.<wbr>Cloud<wbr>Build.<wbr>V1.<wbr>Inputs.<wbr>Pool<wbr>Option</a></span>
     </dt>
-    <dd>{{% md %}}Optional. Specification for execution on a `WorkerPool`. See [running builds in a custom worker pool](https://cloud.google.com/build/docs/custom-workers/run-builds-in-custom-worker-pool) for more information.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Optional. Specification for execution on a `WorkerPool`. See [running builds in a private pool](https://cloud.google.com/build/docs/private-pools/run-builds-in-private-pool) for more information.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestedverifyoption_csharp">
 <a href="#requestedverifyoption_csharp" style="color: inherit; text-decoration: inherit;">Requested<wbr>Verify<wbr>Option</a>
@@ -1854,7 +1887,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#pooloption">Pool<wbr>Option</a></span>
     </dt>
-    <dd>{{% md %}}Optional. Specification for execution on a `WorkerPool`. See [running builds in a custom worker pool](https://cloud.google.com/build/docs/custom-workers/run-builds-in-custom-worker-pool) for more information.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Optional. Specification for execution on a `WorkerPool`. See [running builds in a private pool](https://cloud.google.com/build/docs/private-pools/run-builds-in-private-pool) for more information.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestedverifyoption_go">
 <a href="#requestedverifyoption_go" style="color: inherit; text-decoration: inherit;">Requested<wbr>Verify<wbr>Option</a>
@@ -1962,7 +1995,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#pooloption">Pool<wbr>Option</a></span>
     </dt>
-    <dd>{{% md %}}Optional. Specification for execution on a `WorkerPool`. See [running builds in a custom worker pool](https://cloud.google.com/build/docs/custom-workers/run-builds-in-custom-worker-pool) for more information.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Optional. Specification for execution on a `WorkerPool`. See [running builds in a private pool](https://cloud.google.com/build/docs/private-pools/run-builds-in-private-pool) for more information.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestedverifyoption_nodejs">
 <a href="#requestedverifyoption_nodejs" style="color: inherit; text-decoration: inherit;">requested<wbr>Verify<wbr>Option</a>
@@ -2070,7 +2103,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#pooloption">Pool<wbr>Option</a></span>
     </dt>
-    <dd>{{% md %}}Optional. Specification for execution on a `WorkerPool`. See [running builds in a custom worker pool](https://cloud.google.com/build/docs/custom-workers/run-builds-in-custom-worker-pool) for more information.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Optional. Specification for execution on a `WorkerPool`. See [running builds in a private pool](https://cloud.google.com/build/docs/private-pools/run-builds-in-private-pool) for more information.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requested_verify_option_python">
 <a href="#requested_verify_option_python" style="color: inherit; text-decoration: inherit;">requested_<wbr>verify_<wbr>option</a>
@@ -2316,7 +2349,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#pooloptionresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Cloud<wbr>Build.<wbr>V1.<wbr>Inputs.<wbr>Pool<wbr>Option<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Optional. Specification for execution on a `WorkerPool`. See [running builds in a custom worker pool](https://cloud.google.com/build/docs/custom-workers/run-builds-in-custom-worker-pool) for more information.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Optional. Specification for execution on a `WorkerPool`. See [running builds in a private pool](https://cloud.google.com/build/docs/private-pools/run-builds-in-private-pool) for more information.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="requestedverifyoption_csharp">
 <a href="#requestedverifyoption_csharp" style="color: inherit; text-decoration: inherit;">Requested<wbr>Verify<wbr>Option</a>
@@ -2424,7 +2457,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#pooloptionresponse">Pool<wbr>Option<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Optional. Specification for execution on a `WorkerPool`. See [running builds in a custom worker pool](https://cloud.google.com/build/docs/custom-workers/run-builds-in-custom-worker-pool) for more information.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Optional. Specification for execution on a `WorkerPool`. See [running builds in a private pool](https://cloud.google.com/build/docs/private-pools/run-builds-in-private-pool) for more information.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="requestedverifyoption_go">
 <a href="#requestedverifyoption_go" style="color: inherit; text-decoration: inherit;">Requested<wbr>Verify<wbr>Option</a>
@@ -2532,7 +2565,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#pooloptionresponse">Pool<wbr>Option<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Optional. Specification for execution on a `WorkerPool`. See [running builds in a custom worker pool](https://cloud.google.com/build/docs/custom-workers/run-builds-in-custom-worker-pool) for more information.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Optional. Specification for execution on a `WorkerPool`. See [running builds in a private pool](https://cloud.google.com/build/docs/private-pools/run-builds-in-private-pool) for more information.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="requestedverifyoption_nodejs">
 <a href="#requestedverifyoption_nodejs" style="color: inherit; text-decoration: inherit;">requested<wbr>Verify<wbr>Option</a>
@@ -2640,7 +2673,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#pooloptionresponse">Pool<wbr>Option<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Optional. Specification for execution on a `WorkerPool`. See [running builds in a custom worker pool](https://cloud.google.com/build/docs/custom-workers/run-builds-in-custom-worker-pool) for more information.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Optional. Specification for execution on a `WorkerPool`. See [running builds in a private pool](https://cloud.google.com/build/docs/private-pools/run-builds-in-private-pool) for more information.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="requested_verify_option_python">
 <a href="#requested_verify_option_python" style="color: inherit; text-decoration: inherit;">requested_<wbr>verify_<wbr>option</a>
@@ -2783,6 +2816,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time at which the request to create the build was received.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="failureinfo_csharp">
+<a href="#failureinfo_csharp" style="color: inherit; text-decoration: inherit;">Failure<wbr>Info</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#failureinforesponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Cloud<wbr>Build.<wbr>V1.<wbr>Inputs.<wbr>Failure<wbr>Info<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Contains information about the build when status=FAILURE.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="finishtime_csharp">
 <a href="#finishtime_csharp" style="color: inherit; text-decoration: inherit;">Finish<wbr>Time</a>
@@ -2996,6 +3037,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Time at which the request to create the build was received.{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="failureinfo_go">
+<a href="#failureinfo_go" style="color: inherit; text-decoration: inherit;">Failure<wbr>Info</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#failureinforesponse">Failure<wbr>Info<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Contains information about the build when status=FAILURE.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="finishtime_go">
 <a href="#finishtime_go" style="color: inherit; text-decoration: inherit;">Finish<wbr>Time</a>
 </span>
@@ -3208,6 +3257,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Time at which the request to create the build was received.{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="failureinfo_nodejs">
+<a href="#failureinfo_nodejs" style="color: inherit; text-decoration: inherit;">failure<wbr>Info</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#failureinforesponse">Failure<wbr>Info<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Contains information about the build when status=FAILURE.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="finishtime_nodejs">
 <a href="#finishtime_nodejs" style="color: inherit; text-decoration: inherit;">finish<wbr>Time</a>
 </span>
@@ -3419,6 +3476,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Time at which the request to create the build was received.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="failure_info_python">
+<a href="#failure_info_python" style="color: inherit; text-decoration: inherit;">failure_<wbr>info</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#failureinforesponse">Failure<wbr>Info<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Contains information about the build when status=FAILURE.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="finish_time_python">
 <a href="#finish_time_python" style="color: inherit; text-decoration: inherit;">finish_<wbr>time</a>
@@ -4451,6 +4516,88 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Stores timing information for pushing the specified image.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="failureinforesponse">Failure<wbr>Info<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="detail_csharp">
+<a href="#detail_csharp" style="color: inherit; text-decoration: inherit;">Detail</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Explains the failure issue in more detail using hard-coded text.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the failure.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="detail_go">
+<a href="#detail_go" style="color: inherit; text-decoration: inherit;">Detail</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Explains the failure issue in more detail using hard-coded text.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the failure.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="detail_nodejs">
+<a href="#detail_nodejs" style="color: inherit; text-decoration: inherit;">detail</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Explains the failure issue in more detail using hard-coded text.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the failure.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="detail_python">
+<a href="#detail_python" style="color: inherit; text-decoration: inherit;">detail</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Explains the failure issue in more detail using hard-coded text.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the failure.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
 <h4 id="githubeventsconfig">Git<wbr>Hub<wbr>Events<wbr>Config</h4>
 
 {{% choosable language csharp %}}
@@ -4805,6 +4952,264 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#pushfilterresponse">Push<wbr>Filter<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}filter to match changes in refs like branches, tags.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="gitreposource">Git<wbr>Repo<wbr>Source</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="ref_csharp">
+<a href="#ref_csharp" style="color: inherit; text-decoration: inherit;">Ref</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The branch or tag to use. Must start with "refs/" (required).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="repotype_csharp">
+<a href="#repotype_csharp" style="color: inherit; text-decoration: inherit;">Repo<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#gitreposourcerepotype">Pulumi.<wbr>Google<wbr>Native.<wbr>Cloud<wbr>Build.<wbr>V1.<wbr>Git<wbr>Repo<wbr>Source<wbr>Repo<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}See RepoType below.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="uri_csharp">
+<a href="#uri_csharp" style="color: inherit; text-decoration: inherit;">Uri</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The URI of the repo (required).{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="ref_go">
+<a href="#ref_go" style="color: inherit; text-decoration: inherit;">Ref</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The branch or tag to use. Must start with "refs/" (required).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="repotype_go">
+<a href="#repotype_go" style="color: inherit; text-decoration: inherit;">Repo<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#gitreposourcerepotype">Git<wbr>Repo<wbr>Source<wbr>Repo<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}See RepoType below.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="uri_go">
+<a href="#uri_go" style="color: inherit; text-decoration: inherit;">Uri</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The URI of the repo (required).{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="ref_nodejs">
+<a href="#ref_nodejs" style="color: inherit; text-decoration: inherit;">ref</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The branch or tag to use. Must start with "refs/" (required).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="repotype_nodejs">
+<a href="#repotype_nodejs" style="color: inherit; text-decoration: inherit;">repo<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#gitreposourcerepotype">Git<wbr>Repo<wbr>Source<wbr>Repo<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}See RepoType below.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="uri_nodejs">
+<a href="#uri_nodejs" style="color: inherit; text-decoration: inherit;">uri</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The URI of the repo (required).{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="ref_python">
+<a href="#ref_python" style="color: inherit; text-decoration: inherit;">ref</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The branch or tag to use. Must start with "refs/" (required).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="repo_type_python">
+<a href="#repo_type_python" style="color: inherit; text-decoration: inherit;">repo_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#gitreposourcerepotype">Git<wbr>Repo<wbr>Source<wbr>Repo<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}See RepoType below.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="uri_python">
+<a href="#uri_python" style="color: inherit; text-decoration: inherit;">uri</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The URI of the repo (required).{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="gitreposourcerepotype">Git<wbr>Repo<wbr>Source<wbr>Repo<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Unknown</dt>
+    <dd>UNKNOWN{{% md %}}The default, unknown repo type.{{% /md %}}</dd><dt>Cloud<wbr>Source<wbr>Repositories</dt>
+    <dd>CLOUD_SOURCE_REPOSITORIES{{% md %}}A Google Cloud Source Repositories-hosted repo.{{% /md %}}</dd><dt>Github</dt>
+    <dd>GITHUB{{% md %}}A GitHub-hosted repo not necessarily on "github.com" (i.e. GitHub Enterprise).{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Git<wbr>Repo<wbr>Source<wbr>Repo<wbr>Type<wbr>Unknown</dt>
+    <dd>UNKNOWN{{% md %}}The default, unknown repo type.{{% /md %}}</dd><dt>Git<wbr>Repo<wbr>Source<wbr>Repo<wbr>Type<wbr>Cloud<wbr>Source<wbr>Repositories</dt>
+    <dd>CLOUD_SOURCE_REPOSITORIES{{% md %}}A Google Cloud Source Repositories-hosted repo.{{% /md %}}</dd><dt>Git<wbr>Repo<wbr>Source<wbr>Repo<wbr>Type<wbr>Github</dt>
+    <dd>GITHUB{{% md %}}A GitHub-hosted repo not necessarily on "github.com" (i.e. GitHub Enterprise).{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Unknown</dt>
+    <dd>UNKNOWN{{% md %}}The default, unknown repo type.{{% /md %}}</dd><dt>Cloud<wbr>Source<wbr>Repositories</dt>
+    <dd>CLOUD_SOURCE_REPOSITORIES{{% md %}}A Google Cloud Source Repositories-hosted repo.{{% /md %}}</dd><dt>Github</dt>
+    <dd>GITHUB{{% md %}}A GitHub-hosted repo not necessarily on "github.com" (i.e. GitHub Enterprise).{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>UNKNOWN</dt>
+    <dd>UNKNOWN{{% md %}}The default, unknown repo type.{{% /md %}}</dd><dt>CLOUD_SOURCE_REPOSITORIES</dt>
+    <dd>CLOUD_SOURCE_REPOSITORIES{{% md %}}A Google Cloud Source Repositories-hosted repo.{{% /md %}}</dd><dt>GITHUB</dt>
+    <dd>GITHUB{{% md %}}A GitHub-hosted repo not necessarily on "github.com" (i.e. GitHub Enterprise).{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="gitreposourceresponse">Git<wbr>Repo<wbr>Source<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="ref_csharp">
+<a href="#ref_csharp" style="color: inherit; text-decoration: inherit;">Ref</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The branch or tag to use. Must start with "refs/" (required).{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="repotype_csharp">
+<a href="#repotype_csharp" style="color: inherit; text-decoration: inherit;">Repo<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}See RepoType below.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="uri_csharp">
+<a href="#uri_csharp" style="color: inherit; text-decoration: inherit;">Uri</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The URI of the repo (required).{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="ref_go">
+<a href="#ref_go" style="color: inherit; text-decoration: inherit;">Ref</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The branch or tag to use. Must start with "refs/" (required).{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="repotype_go">
+<a href="#repotype_go" style="color: inherit; text-decoration: inherit;">Repo<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}See RepoType below.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="uri_go">
+<a href="#uri_go" style="color: inherit; text-decoration: inherit;">Uri</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The URI of the repo (required).{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="ref_nodejs">
+<a href="#ref_nodejs" style="color: inherit; text-decoration: inherit;">ref</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The branch or tag to use. Must start with "refs/" (required).{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="repotype_nodejs">
+<a href="#repotype_nodejs" style="color: inherit; text-decoration: inherit;">repo<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}See RepoType below.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="uri_nodejs">
+<a href="#uri_nodejs" style="color: inherit; text-decoration: inherit;">uri</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The URI of the repo (required).{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="ref_python">
+<a href="#ref_python" style="color: inherit; text-decoration: inherit;">ref</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The branch or tag to use. Must start with "refs/" (required).{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="repo_type_python">
+<a href="#repo_type_python" style="color: inherit; text-decoration: inherit;">repo_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}See RepoType below.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="uri_python">
+<a href="#uri_python" style="color: inherit; text-decoration: inherit;">uri</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The URI of the repo (required).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="inlinesecret">Inline<wbr>Secret</h4>
@@ -7506,7 +7911,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Google Cloud Storage object containing the source. This object must be a gzipped archive file (`.tar.gz`) containing source to build.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Google Cloud Storage object containing the source. This object must be a zipped (`.zip`) or gzipped archive file (`.tar.gz`) containing source to build.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -7534,7 +7939,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Google Cloud Storage object containing the source. This object must be a gzipped archive file (`.tar.gz`) containing source to build.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Google Cloud Storage object containing the source. This object must be a zipped (`.zip`) or gzipped archive file (`.tar.gz`) containing source to build.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -7562,7 +7967,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Google Cloud Storage object containing the source. This object must be a gzipped archive file (`.tar.gz`) containing source to build.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Google Cloud Storage object containing the source. This object must be a zipped (`.zip`) or gzipped archive file (`.tar.gz`) containing source to build.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -7590,7 +7995,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Google Cloud Storage object containing the source. This object must be a gzipped archive file (`.tar.gz`) containing source to build.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Google Cloud Storage object containing the source. This object must be a zipped (`.zip`) or gzipped archive file (`.tar.gz`) containing source to build.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="storagesourcemanifest">Storage<wbr>Source<wbr>Manifest</h4>
@@ -7848,7 +8253,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Google Cloud Storage object containing the source. This object must be a gzipped archive file (`.tar.gz`) containing source to build.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Google Cloud Storage object containing the source. This object must be a zipped (`.zip`) or gzipped archive file (`.tar.gz`) containing source to build.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -7876,7 +8281,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Google Cloud Storage object containing the source. This object must be a gzipped archive file (`.tar.gz`) containing source to build.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Google Cloud Storage object containing the source. This object must be a zipped (`.zip`) or gzipped archive file (`.tar.gz`) containing source to build.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -7904,7 +8309,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Google Cloud Storage object containing the source. This object must be a gzipped archive file (`.tar.gz`) containing source to build.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Google Cloud Storage object containing the source. This object must be a zipped (`.zip`) or gzipped archive file (`.tar.gz`) containing source to build.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -7932,7 +8337,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Google Cloud Storage object containing the source. This object must be a gzipped archive file (`.tar.gz`) containing source to build.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Google Cloud Storage object containing the source. This object must be a zipped (`.zip`) or gzipped archive file (`.tar.gz`) containing source to build.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="timespanresponse">Time<wbr>Span<wbr>Response</h4>

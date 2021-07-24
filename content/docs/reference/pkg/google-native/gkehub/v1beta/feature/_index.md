@@ -21,7 +21,7 @@ Auto-naming is currently not supported for this resource.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Feature</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">FeatureArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Feature</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">FeatureArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -37,16 +37,16 @@ Auto-naming is currently not supported for this resource.
             <span class="nx">spec</span><span class="p">:</span> <span class="nx">Optional[CommonFeatureSpecArgs]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">Feature</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-            <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">FeatureArgs</a></span><span class="p">,</span>
+            <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">Optional[FeatureArgs]</a></span> = None<span class="p">,</span>
             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewFeature</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">FeatureArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Feature</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewFeature</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">FeatureArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Feature</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Feature</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">FeatureArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Feature</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">FeatureArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -58,7 +58,7 @@ Auto-naming is currently not supported for this resource.
         <span class="property-type">string</span>
     </dt>
     <dd>The unique name of the resource.</dd><dt
-        class="property-required" title="Required">
+        class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">FeatureArgs</a></span>
@@ -82,7 +82,7 @@ Auto-naming is currently not supported for this resource.
         <span class="property-type">str</span>
     </dt>
     <dd>The unique name of the resource.</dd><dt
-        class="property-required" title="Required">
+        class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">FeatureArgs</a></span>
@@ -103,7 +103,7 @@ Auto-naming is currently not supported for this resource.
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
@@ -112,7 +112,7 @@ Auto-naming is currently not supported for this resource.
         <span class="property-type">string</span>
     </dt>
     <dd>The unique name of the resource.</dd><dt
-        class="property-required" title="Required">
+        class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">FeatureArgs</a></span>
@@ -121,7 +121,7 @@ Auto-naming is currently not supported for this resource.
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
@@ -136,7 +136,7 @@ Auto-naming is currently not supported for this resource.
         <span class="property-type">string</span>
     </dt>
     <dd>The unique name of the resource.</dd><dt
-        class="property-required" title="Required">
+        class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">FeatureArgs</a></span>
@@ -162,23 +162,7 @@ The Feature resource accepts the following [input]({{< relref "/docs/intro/conce
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="location_csharp">
-<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="project_csharp">
-<a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="featureid_csharp">
 <a href="#featureid_csharp" style="color: inherit; text-decoration: inherit;">Feature<wbr>Id</a>
@@ -196,13 +180,29 @@ The Feature resource accepts the following [input]({{< relref "/docs/intro/conce
     </dt>
     <dd>{{% md %}}GCP labels for this Feature.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="location_csharp">
+<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="membershipspecs_csharp">
 <a href="#membershipspecs_csharp" style="color: inherit; text-decoration: inherit;">Membership<wbr>Specs</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Optional. Membership-specific configuration for this Feature. If this Feature does not support any per-Membership configuration, this field may be unused. The keys indicate which Membership the configuration is for, in the form: projects/{p}/locations/{l}/memberships/{m} Where {p} is the project, {l} is a valid location and {m} is a valid Membership in this project at that location. {p} WILL match the Feature's project. {p} will always be returned as the project number, but the project ID is also accepted during input. If the same Membership is specified in the map twice (using the project ID form, and the project number form), exactly ONE of the entries will be saved, with no guarantees as to which. For this reason, it is recommended the same format be used for all entries when mutating a Feature.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Optional. Membership-specific configuration for this Feature. If this Feature does not support any per-Membership configuration, this field may be unused. The keys indicate which Membership the configuration is for, in the form: `projects/{p}/locations/{l}/memberships/{m}` Where {p} is the project, {l} is a valid location and {m} is a valid Membership in this project at that location. {p} WILL match the Feature's project. {p} will always be returned as the project number, but the project ID is also accepted during input. If the same Membership is specified in the map twice (using the project ID form, and the project number form), exactly ONE of the entries will be saved, with no guarantees as to which. For this reason, it is recommended the same format be used for all entries when mutating a Feature.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="project_csharp">
+<a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestid_csharp">
 <a href="#requestid_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Id</a>
@@ -222,23 +222,7 @@ The Feature resource accepts the following [input]({{< relref "/docs/intro/conce
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="location_go">
-<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="project_go">
-<a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="featureid_go">
 <a href="#featureid_go" style="color: inherit; text-decoration: inherit;">Feature<wbr>Id</a>
@@ -256,13 +240,29 @@ The Feature resource accepts the following [input]({{< relref "/docs/intro/conce
     </dt>
     <dd>{{% md %}}GCP labels for this Feature.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="location_go">
+<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="membershipspecs_go">
 <a href="#membershipspecs_go" style="color: inherit; text-decoration: inherit;">Membership<wbr>Specs</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Optional. Membership-specific configuration for this Feature. If this Feature does not support any per-Membership configuration, this field may be unused. The keys indicate which Membership the configuration is for, in the form: projects/{p}/locations/{l}/memberships/{m} Where {p} is the project, {l} is a valid location and {m} is a valid Membership in this project at that location. {p} WILL match the Feature's project. {p} will always be returned as the project number, but the project ID is also accepted during input. If the same Membership is specified in the map twice (using the project ID form, and the project number form), exactly ONE of the entries will be saved, with no guarantees as to which. For this reason, it is recommended the same format be used for all entries when mutating a Feature.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Optional. Membership-specific configuration for this Feature. If this Feature does not support any per-Membership configuration, this field may be unused. The keys indicate which Membership the configuration is for, in the form: `projects/{p}/locations/{l}/memberships/{m}` Where {p} is the project, {l} is a valid location and {m} is a valid Membership in this project at that location. {p} WILL match the Feature's project. {p} will always be returned as the project number, but the project ID is also accepted during input. If the same Membership is specified in the map twice (using the project ID form, and the project number form), exactly ONE of the entries will be saved, with no guarantees as to which. For this reason, it is recommended the same format be used for all entries when mutating a Feature.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="project_go">
+<a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestid_go">
 <a href="#requestid_go" style="color: inherit; text-decoration: inherit;">Request<wbr>Id</a>
@@ -282,23 +282,7 @@ The Feature resource accepts the following [input]({{< relref "/docs/intro/conce
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="location_nodejs">
-<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="project_nodejs">
-<a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="featureid_nodejs">
 <a href="#featureid_nodejs" style="color: inherit; text-decoration: inherit;">feature<wbr>Id</a>
@@ -316,13 +300,29 @@ The Feature resource accepts the following [input]({{< relref "/docs/intro/conce
     </dt>
     <dd>{{% md %}}GCP labels for this Feature.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="location_nodejs">
+<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="membershipspecs_nodejs">
 <a href="#membershipspecs_nodejs" style="color: inherit; text-decoration: inherit;">membership<wbr>Specs</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Optional. Membership-specific configuration for this Feature. If this Feature does not support any per-Membership configuration, this field may be unused. The keys indicate which Membership the configuration is for, in the form: projects/{p}/locations/{l}/memberships/{m} Where {p} is the project, {l} is a valid location and {m} is a valid Membership in this project at that location. {p} WILL match the Feature's project. {p} will always be returned as the project number, but the project ID is also accepted during input. If the same Membership is specified in the map twice (using the project ID form, and the project number form), exactly ONE of the entries will be saved, with no guarantees as to which. For this reason, it is recommended the same format be used for all entries when mutating a Feature.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Optional. Membership-specific configuration for this Feature. If this Feature does not support any per-Membership configuration, this field may be unused. The keys indicate which Membership the configuration is for, in the form: `projects/{p}/locations/{l}/memberships/{m}` Where {p} is the project, {l} is a valid location and {m} is a valid Membership in this project at that location. {p} WILL match the Feature's project. {p} will always be returned as the project number, but the project ID is also accepted during input. If the same Membership is specified in the map twice (using the project ID form, and the project number form), exactly ONE of the entries will be saved, with no guarantees as to which. For this reason, it is recommended the same format be used for all entries when mutating a Feature.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="project_nodejs">
+<a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestid_nodejs">
 <a href="#requestid_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Id</a>
@@ -342,23 +342,7 @@ The Feature resource accepts the following [input]({{< relref "/docs/intro/conce
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="location_python">
-<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="project_python">
-<a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="feature_id_python">
 <a href="#feature_id_python" style="color: inherit; text-decoration: inherit;">feature_<wbr>id</a>
@@ -376,13 +360,29 @@ The Feature resource accepts the following [input]({{< relref "/docs/intro/conce
     </dt>
     <dd>{{% md %}}GCP labels for this Feature.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="location_python">
+<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="membership_specs_python">
 <a href="#membership_specs_python" style="color: inherit; text-decoration: inherit;">membership_<wbr>specs</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Optional. Membership-specific configuration for this Feature. If this Feature does not support any per-Membership configuration, this field may be unused. The keys indicate which Membership the configuration is for, in the form: projects/{p}/locations/{l}/memberships/{m} Where {p} is the project, {l} is a valid location and {m} is a valid Membership in this project at that location. {p} WILL match the Feature's project. {p} will always be returned as the project number, but the project ID is also accepted during input. If the same Membership is specified in the map twice (using the project ID form, and the project number form), exactly ONE of the entries will be saved, with no guarantees as to which. For this reason, it is recommended the same format be used for all entries when mutating a Feature.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Optional. Membership-specific configuration for this Feature. If this Feature does not support any per-Membership configuration, this field may be unused. The keys indicate which Membership the configuration is for, in the form: `projects/{p}/locations/{l}/memberships/{m}` Where {p} is the project, {l} is a valid location and {m} is a valid Membership in this project at that location. {p} WILL match the Feature's project. {p} will always be returned as the project number, but the project ID is also accepted during input. If the same Membership is specified in the map twice (using the project ID form, and the project number form), exactly ONE of the entries will be saved, with no guarantees as to which. For this reason, it is recommended the same format be used for all entries when mutating a Feature.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="project_python">
+<a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="request_id_python">
 <a href="#request_id_python" style="color: inherit; text-decoration: inherit;">request_<wbr>id</a>
@@ -441,7 +441,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Membership-specific Feature status. If this Feature does report any per-Membership status, this field may be unused. The keys indicate which Membership the state is for, in the form: projects/{p}/locations/{l}/memberships/{m} Where {p} is the project number, {l} is a valid location and {m} is a valid Membership in this project at that location. {p} MUST match the Feature's project number.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Membership-specific Feature status. If this Feature does report any per-Membership status, this field may be unused. The keys indicate which Membership the state is for, in the form: `projects/{p}/locations/{l}/memberships/{m}` Where {p} is the project number, {l} is a valid location and {m} is a valid Membership in this project at that location. {p} MUST match the Feature's project number.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -509,7 +509,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Membership-specific Feature status. If this Feature does report any per-Membership status, this field may be unused. The keys indicate which Membership the state is for, in the form: projects/{p}/locations/{l}/memberships/{m} Where {p} is the project number, {l} is a valid location and {m} is a valid Membership in this project at that location. {p} MUST match the Feature's project number.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Membership-specific Feature status. If this Feature does report any per-Membership status, this field may be unused. The keys indicate which Membership the state is for, in the form: `projects/{p}/locations/{l}/memberships/{m}` Where {p} is the project number, {l} is a valid location and {m} is a valid Membership in this project at that location. {p} MUST match the Feature's project number.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -577,7 +577,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Membership-specific Feature status. If this Feature does report any per-Membership status, this field may be unused. The keys indicate which Membership the state is for, in the form: projects/{p}/locations/{l}/memberships/{m} Where {p} is the project number, {l} is a valid location and {m} is a valid Membership in this project at that location. {p} MUST match the Feature's project number.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Membership-specific Feature status. If this Feature does report any per-Membership status, this field may be unused. The keys indicate which Membership the state is for, in the form: `projects/{p}/locations/{l}/memberships/{m}` Where {p} is the project number, {l} is a valid location and {m} is a valid Membership in this project at that location. {p} MUST match the Feature's project number.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -645,7 +645,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Membership-specific Feature status. If this Feature does report any per-Membership status, this field may be unused. The keys indicate which Membership the state is for, in the form: projects/{p}/locations/{l}/memberships/{m} Where {p} is the project number, {l} is a valid location and {m} is a valid Membership in this project at that location. {p} MUST match the Feature's project number.{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Membership-specific Feature status. If this Feature does report any per-Membership status, this field may be unused. The keys indicate which Membership the state is for, in the form: `projects/{p}/locations/{l}/memberships/{m}` Where {p} is the project number, {l} is a valid location and {m} is a valid Membership in this project at that location. {p} MUST match the Feature's project number.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1009,14 +1009,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
-        <span id="billing_csharp">
-<a href="#billing_csharp" style="color: inherit; text-decoration: inherit;">Billing</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#multiclusteringressfeaturespecbilling">Pulumi.<wbr>Google<wbr>Native.<wbr>GKEHub.<wbr>V1Beta.<wbr>Multi<wbr>Cluster<wbr>Ingress<wbr>Feature<wbr>Spec<wbr>Billing</a></span>
-    </dt>
-    <dd>{{% md %}}Customer's billing structure{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="configmembership_csharp">
 <a href="#configmembership_csharp" style="color: inherit; text-decoration: inherit;">Config<wbr>Membership</a>
 </span>
@@ -1028,14 +1020,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="billing_go">
-<a href="#billing_go" style="color: inherit; text-decoration: inherit;">Billing</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#multiclusteringressfeaturespecbilling">Multi<wbr>Cluster<wbr>Ingress<wbr>Feature<wbr>Spec<wbr>Billing</a></span>
-    </dt>
-    <dd>{{% md %}}Customer's billing structure{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="configmembership_go">
 <a href="#configmembership_go" style="color: inherit; text-decoration: inherit;">Config<wbr>Membership</a>
@@ -1049,14 +1033,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
-        <span id="billing_nodejs">
-<a href="#billing_nodejs" style="color: inherit; text-decoration: inherit;">billing</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#multiclusteringressfeaturespecbilling">Multi<wbr>Cluster<wbr>Ingress<wbr>Feature<wbr>Spec<wbr>Billing</a></span>
-    </dt>
-    <dd>{{% md %}}Customer's billing structure{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="configmembership_nodejs">
 <a href="#configmembership_nodejs" style="color: inherit; text-decoration: inherit;">config<wbr>Membership</a>
 </span>
@@ -1068,14 +1044,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="billing_python">
-<a href="#billing_python" style="color: inherit; text-decoration: inherit;">billing</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#multiclusteringressfeaturespecbilling">Multi<wbr>Cluster<wbr>Ingress<wbr>Feature<wbr>Spec<wbr>Billing</a></span>
-    </dt>
-    <dd>{{% md %}}Customer's billing structure{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="config_membership_python">
 <a href="#config_membership_python" style="color: inherit; text-decoration: inherit;">config_<wbr>membership</a>
@@ -1086,48 +1054,10 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Fully-qualified Membership name which hosts the MultiClusterIngress CRD. Example: `projects/foo-proj/locations/global/memberships/bar`{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
-<h4 id="multiclusteringressfeaturespecbilling">Multi<wbr>Cluster<wbr>Ingress<wbr>Feature<wbr>Spec<wbr>Billing</h4>
-
-{{% choosable language csharp %}}
-<dl class="tabular"><dt>Billing<wbr>Unspecified</dt>
-    <dd>BILLING_UNSPECIFIED{{% md %}}Unknown{{% /md %}}</dd><dt>Pay<wbr>As<wbr>You<wbr>Go</dt>
-    <dd>PAY_AS_YOU_GO{{% md %}}User pays a fee per-endpoint.{{% /md %}}</dd><dt>Anthos<wbr>License</dt>
-    <dd>ANTHOS_LICENSE{{% md %}}User is paying for Anthos as a whole.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="tabular"><dt>Multi<wbr>Cluster<wbr>Ingress<wbr>Feature<wbr>Spec<wbr>Billing<wbr>Billing<wbr>Unspecified</dt>
-    <dd>BILLING_UNSPECIFIED{{% md %}}Unknown{{% /md %}}</dd><dt>Multi<wbr>Cluster<wbr>Ingress<wbr>Feature<wbr>Spec<wbr>Billing<wbr>Pay<wbr>As<wbr>You<wbr>Go</dt>
-    <dd>PAY_AS_YOU_GO{{% md %}}User pays a fee per-endpoint.{{% /md %}}</dd><dt>Multi<wbr>Cluster<wbr>Ingress<wbr>Feature<wbr>Spec<wbr>Billing<wbr>Anthos<wbr>License</dt>
-    <dd>ANTHOS_LICENSE{{% md %}}User is paying for Anthos as a whole.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="tabular"><dt>Billing<wbr>Unspecified</dt>
-    <dd>BILLING_UNSPECIFIED{{% md %}}Unknown{{% /md %}}</dd><dt>Pay<wbr>As<wbr>You<wbr>Go</dt>
-    <dd>PAY_AS_YOU_GO{{% md %}}User pays a fee per-endpoint.{{% /md %}}</dd><dt>Anthos<wbr>License</dt>
-    <dd>ANTHOS_LICENSE{{% md %}}User is paying for Anthos as a whole.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="tabular"><dt>BILLING_UNSPECIFIED</dt>
-    <dd>BILLING_UNSPECIFIED{{% md %}}Unknown{{% /md %}}</dd><dt>PAY_AS_YOU_GO</dt>
-    <dd>PAY_AS_YOU_GO{{% md %}}User pays a fee per-endpoint.{{% /md %}}</dd><dt>ANTHOS_LICENSE</dt>
-    <dd>ANTHOS_LICENSE{{% md %}}User is paying for Anthos as a whole.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
 <h4 id="multiclusteringressfeaturespecresponse">Multi<wbr>Cluster<wbr>Ingress<wbr>Feature<wbr>Spec<wbr>Response</h4>
 
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="billing_csharp">
-<a href="#billing_csharp" style="color: inherit; text-decoration: inherit;">Billing</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Customer's billing structure{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="configmembership_csharp">
 <a href="#configmembership_csharp" style="color: inherit; text-decoration: inherit;">Config<wbr>Membership</a>
@@ -1141,14 +1071,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="billing_go">
-<a href="#billing_go" style="color: inherit; text-decoration: inherit;">Billing</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Customer's billing structure{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="configmembership_go">
 <a href="#configmembership_go" style="color: inherit; text-decoration: inherit;">Config<wbr>Membership</a>
 </span>
@@ -1161,14 +1083,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="billing_nodejs">
-<a href="#billing_nodejs" style="color: inherit; text-decoration: inherit;">billing</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Customer's billing structure{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="configmembership_nodejs">
 <a href="#configmembership_nodejs" style="color: inherit; text-decoration: inherit;">config<wbr>Membership</a>
 </span>
@@ -1180,14 +1094,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="billing_python">
-<a href="#billing_python" style="color: inherit; text-decoration: inherit;">billing</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Customer's billing structure{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="config_membership_python">
 <a href="#config_membership_python" style="color: inherit; text-decoration: inherit;">config_<wbr>membership</a>
