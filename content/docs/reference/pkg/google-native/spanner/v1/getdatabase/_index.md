@@ -69,8 +69,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
 </span>
@@ -97,8 +97,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
 </span>
@@ -125,8 +125,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
@@ -153,8 +153,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
@@ -183,6 +183,14 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If exists, the time at which the database creation started.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="defaultleader_csharp">
+<a href="#defaultleader_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Leader</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The read-write region which contains the database's leader replicas. This is the same as the value of default_leader database option set using DatabaseAdmin.CreateDatabase or DatabaseAdmin.UpdateDatabaseDdl. If not explicitly set, this is empty.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="earliestversiontime_csharp">
 <a href="#earliestversiontime_csharp" style="color: inherit; text-decoration: inherit;">Earliest<wbr>Version<wbr>Time</a>
@@ -252,6 +260,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}If exists, the time at which the database creation started.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="defaultleader_go">
+<a href="#defaultleader_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Leader</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The read-write region which contains the database's leader replicas. This is the same as the value of default_leader database option set using DatabaseAdmin.CreateDatabase or DatabaseAdmin.UpdateDatabaseDdl. If not explicitly set, this is empty.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="earliestversiontime_go">
 <a href="#earliestversiontime_go" style="color: inherit; text-decoration: inherit;">Earliest<wbr>Version<wbr>Time</a>
 </span>
@@ -320,6 +336,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}If exists, the time at which the database creation started.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="defaultleader_nodejs">
+<a href="#defaultleader_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Leader</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The read-write region which contains the database's leader replicas. This is the same as the value of default_leader database option set using DatabaseAdmin.CreateDatabase or DatabaseAdmin.UpdateDatabaseDdl. If not explicitly set, this is empty.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="earliestversiontime_nodejs">
 <a href="#earliestversiontime_nodejs" style="color: inherit; text-decoration: inherit;">earliest<wbr>Version<wbr>Time</a>
 </span>
@@ -387,6 +411,14 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}If exists, the time at which the database creation started.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="default_leader_python">
+<a href="#default_leader_python" style="color: inherit; text-decoration: inherit;">default_<wbr>leader</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The read-write region which contains the database's leader replicas. This is the same as the value of default_leader database option set using DatabaseAdmin.CreateDatabase or DatabaseAdmin.UpdateDatabaseDdl. If not explicitly set, this is empty.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="earliest_version_time_python">
 <a href="#earliest_version_time_python" style="color: inherit; text-decoration: inherit;">earliest_<wbr>version_<wbr>time</a>

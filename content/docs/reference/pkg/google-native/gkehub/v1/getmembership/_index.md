@@ -69,8 +69,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
 </span>
@@ -97,8 +97,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
 </span>
@@ -125,8 +125,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
@@ -153,8 +153,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
@@ -734,6 +734,14 @@ The following output properties are available:
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
+        <span id="clustermissing_csharp">
+<a href="#clustermissing_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Missing</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If cluster_missing is set then it denotes that the GKE cluster no longer exists in the GKE Control Plane.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="resourcelink_csharp">
 <a href="#resourcelink_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Link</a>
 </span>
@@ -745,6 +753,14 @@ The following output properties are available:
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="clustermissing_go">
+<a href="#clustermissing_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Missing</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If cluster_missing is set then it denotes that the GKE cluster no longer exists in the GKE Control Plane.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcelink_go">
 <a href="#resourcelink_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Link</a>
@@ -758,6 +774,14 @@ The following output properties are available:
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
+        <span id="clustermissing_nodejs">
+<a href="#clustermissing_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Missing</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}If cluster_missing is set then it denotes that the GKE cluster no longer exists in the GKE Control Plane.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="resourcelink_nodejs">
 <a href="#resourcelink_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Link</a>
 </span>
@@ -769,6 +793,14 @@ The following output properties are available:
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="cluster_missing_python">
+<a href="#cluster_missing_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>missing</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If cluster_missing is set then it denotes that the GKE cluster no longer exists in the GKE Control Plane.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_link_python">
 <a href="#resource_link_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>link</a>

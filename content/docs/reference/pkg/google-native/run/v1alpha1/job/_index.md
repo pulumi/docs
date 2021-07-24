@@ -41,7 +41,7 @@ Auto-naming is currently not supported for this resource.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewJob</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">JobArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Job</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewJob</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">JobArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Job</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -102,7 +102,7 @@ Auto-naming is currently not supported for this resource.
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
@@ -120,7 +120,7 @@ Auto-naming is currently not supported for this resource.
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
@@ -433,170 +433,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
-<h4 id="capabilities">Capabilities</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="add_csharp">
-<a href="#add_csharp" style="color: inherit; text-decoration: inherit;">Add</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
-    </dt>
-    <dd>{{% md %}}Added capabilities +optional{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="drop_csharp">
-<a href="#drop_csharp" style="color: inherit; text-decoration: inherit;">Drop</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
-    </dt>
-    <dd>{{% md %}}Removed capabilities +optional{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="add_go">
-<a href="#add_go" style="color: inherit; text-decoration: inherit;">Add</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}Added capabilities +optional{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="drop_go">
-<a href="#drop_go" style="color: inherit; text-decoration: inherit;">Drop</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}Removed capabilities +optional{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="add_nodejs">
-<a href="#add_nodejs" style="color: inherit; text-decoration: inherit;">add</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
-    </dt>
-    <dd>{{% md %}}Added capabilities +optional{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="drop_nodejs">
-<a href="#drop_nodejs" style="color: inherit; text-decoration: inherit;">drop</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
-    </dt>
-    <dd>{{% md %}}Removed capabilities +optional{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="add_python">
-<a href="#add_python" style="color: inherit; text-decoration: inherit;">add</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
-    </dt>
-    <dd>{{% md %}}Added capabilities +optional{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="drop_python">
-<a href="#drop_python" style="color: inherit; text-decoration: inherit;">drop</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
-    </dt>
-    <dd>{{% md %}}Removed capabilities +optional{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="capabilitiesresponse">Capabilities<wbr>Response</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="add_csharp">
-<a href="#add_csharp" style="color: inherit; text-decoration: inherit;">Add</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
-    </dt>
-    <dd>{{% md %}}Added capabilities +optional{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="drop_csharp">
-<a href="#drop_csharp" style="color: inherit; text-decoration: inherit;">Drop</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
-    </dt>
-    <dd>{{% md %}}Removed capabilities +optional{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="add_go">
-<a href="#add_go" style="color: inherit; text-decoration: inherit;">Add</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}Added capabilities +optional{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="drop_go">
-<a href="#drop_go" style="color: inherit; text-decoration: inherit;">Drop</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}Removed capabilities +optional{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="add_nodejs">
-<a href="#add_nodejs" style="color: inherit; text-decoration: inherit;">add</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
-    </dt>
-    <dd>{{% md %}}Added capabilities +optional{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="drop_nodejs">
-<a href="#drop_nodejs" style="color: inherit; text-decoration: inherit;">drop</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
-    </dt>
-    <dd>{{% md %}}Removed capabilities +optional{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="add_python">
-<a href="#add_python" style="color: inherit; text-decoration: inherit;">add</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
-    </dt>
-    <dd>{{% md %}}Added capabilities +optional{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="drop_python">
-<a href="#drop_python" style="color: inherit; text-decoration: inherit;">drop</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
-    </dt>
-    <dd>{{% md %}}Removed capabilities +optional{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
 <h4 id="configmapenvsource">Config<wbr>Map<wbr>Env<wbr>Source</h4>
 
 {{% choosable language csharp %}}
@@ -616,7 +452,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Cloud Run fully managed: not supported Cloud Run for Anthos: supported The ConfigMap to select from.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The ConfigMap to select from.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="optional_csharp">
 <a href="#optional_csharp" style="color: inherit; text-decoration: inherit;">Optional</a>
@@ -624,7 +460,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Cloud Run fully managed: not supported Cloud Run for Anthos: supported Specify whether the ConfigMap must be defined +optional{{% /md %}}</dd></dl>
+    <dd>{{% md %}}(Optional) Specify whether the ConfigMap must be defined{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -644,7 +480,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Cloud Run fully managed: not supported Cloud Run for Anthos: supported The ConfigMap to select from.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The ConfigMap to select from.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="optional_go">
 <a href="#optional_go" style="color: inherit; text-decoration: inherit;">Optional</a>
@@ -652,7 +488,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Cloud Run fully managed: not supported Cloud Run for Anthos: supported Specify whether the ConfigMap must be defined +optional{{% /md %}}</dd></dl>
+    <dd>{{% md %}}(Optional) Specify whether the ConfigMap must be defined{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -672,7 +508,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Cloud Run fully managed: not supported Cloud Run for Anthos: supported The ConfigMap to select from.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The ConfigMap to select from.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="optional_nodejs">
 <a href="#optional_nodejs" style="color: inherit; text-decoration: inherit;">optional</a>
@@ -680,7 +516,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Cloud Run fully managed: not supported Cloud Run for Anthos: supported Specify whether the ConfigMap must be defined +optional{{% /md %}}</dd></dl>
+    <dd>{{% md %}}(Optional) Specify whether the ConfigMap must be defined{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -700,7 +536,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Cloud Run fully managed: not supported Cloud Run for Anthos: supported The ConfigMap to select from.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The ConfigMap to select from.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="optional_python">
 <a href="#optional_python" style="color: inherit; text-decoration: inherit;">optional</a>
@@ -708,7 +544,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Cloud Run fully managed: not supported Cloud Run for Anthos: supported Specify whether the ConfigMap must be defined +optional{{% /md %}}</dd></dl>
+    <dd>{{% md %}}(Optional) Specify whether the ConfigMap must be defined{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="configmapenvsourceresponse">Config<wbr>Map<wbr>Env<wbr>Source<wbr>Response</h4>
@@ -730,7 +566,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Cloud Run fully managed: not supported Cloud Run for Anthos: supported The ConfigMap to select from.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The ConfigMap to select from.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="optional_csharp">
 <a href="#optional_csharp" style="color: inherit; text-decoration: inherit;">Optional</a>
@@ -738,7 +574,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Cloud Run fully managed: not supported Cloud Run for Anthos: supported Specify whether the ConfigMap must be defined +optional{{% /md %}}</dd></dl>
+    <dd>{{% md %}}(Optional) Specify whether the ConfigMap must be defined{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -758,7 +594,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Cloud Run fully managed: not supported Cloud Run for Anthos: supported The ConfigMap to select from.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The ConfigMap to select from.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="optional_go">
 <a href="#optional_go" style="color: inherit; text-decoration: inherit;">Optional</a>
@@ -766,7 +602,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Cloud Run fully managed: not supported Cloud Run for Anthos: supported Specify whether the ConfigMap must be defined +optional{{% /md %}}</dd></dl>
+    <dd>{{% md %}}(Optional) Specify whether the ConfigMap must be defined{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -786,7 +622,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Cloud Run fully managed: not supported Cloud Run for Anthos: supported The ConfigMap to select from.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The ConfigMap to select from.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="optional_nodejs">
 <a href="#optional_nodejs" style="color: inherit; text-decoration: inherit;">optional</a>
@@ -794,7 +630,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Cloud Run fully managed: not supported Cloud Run for Anthos: supported Specify whether the ConfigMap must be defined +optional{{% /md %}}</dd></dl>
+    <dd>{{% md %}}(Optional) Specify whether the ConfigMap must be defined{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -814,7 +650,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Cloud Run fully managed: not supported Cloud Run for Anthos: supported The ConfigMap to select from.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The ConfigMap to select from.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="optional_python">
 <a href="#optional_python" style="color: inherit; text-decoration: inherit;">optional</a>
@@ -822,7 +658,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Cloud Run fully managed: not supported Cloud Run for Anthos: supported Specify whether the ConfigMap must be defined +optional{{% /md %}}</dd></dl>
+    <dd>{{% md %}}(Optional) Specify whether the ConfigMap must be defined{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="configmapkeyselector">Config<wbr>Map<wbr>Key<wbr>Selector</h4>
@@ -836,7 +672,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Cloud Run fully managed: not supported Cloud Run on GKE: supported The key to select.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The key to select.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="localobjectreference_csharp">
 <a href="#localobjectreference_csharp" style="color: inherit; text-decoration: inherit;">Local<wbr>Object<wbr>Reference</a>
@@ -852,7 +688,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Cloud Run fully managed: not supported Cloud Run on GKE: supported The ConfigMap to select from.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The ConfigMap to select from.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="optional_csharp">
 <a href="#optional_csharp" style="color: inherit; text-decoration: inherit;">Optional</a>
@@ -860,7 +696,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Cloud Run fully managed: not supported Cloud Run on GKE: supported Specify whether the ConfigMap or its key must be defined +optional{{% /md %}}</dd></dl>
+    <dd>{{% md %}}(Optional) Specify whether the ConfigMap or its key must be defined{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -872,7 +708,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Cloud Run fully managed: not supported Cloud Run on GKE: supported The key to select.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The key to select.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="localobjectreference_go">
 <a href="#localobjectreference_go" style="color: inherit; text-decoration: inherit;">Local<wbr>Object<wbr>Reference</a>
@@ -888,7 +724,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Cloud Run fully managed: not supported Cloud Run on GKE: supported The ConfigMap to select from.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The ConfigMap to select from.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="optional_go">
 <a href="#optional_go" style="color: inherit; text-decoration: inherit;">Optional</a>
@@ -896,7 +732,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Cloud Run fully managed: not supported Cloud Run on GKE: supported Specify whether the ConfigMap or its key must be defined +optional{{% /md %}}</dd></dl>
+    <dd>{{% md %}}(Optional) Specify whether the ConfigMap or its key must be defined{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -908,7 +744,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Cloud Run fully managed: not supported Cloud Run on GKE: supported The key to select.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The key to select.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="localobjectreference_nodejs">
 <a href="#localobjectreference_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>Object<wbr>Reference</a>
@@ -924,7 +760,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Cloud Run fully managed: not supported Cloud Run on GKE: supported The ConfigMap to select from.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The ConfigMap to select from.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="optional_nodejs">
 <a href="#optional_nodejs" style="color: inherit; text-decoration: inherit;">optional</a>
@@ -932,7 +768,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Cloud Run fully managed: not supported Cloud Run on GKE: supported Specify whether the ConfigMap or its key must be defined +optional{{% /md %}}</dd></dl>
+    <dd>{{% md %}}(Optional) Specify whether the ConfigMap or its key must be defined{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -944,7 +780,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Cloud Run fully managed: not supported Cloud Run on GKE: supported The key to select.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The key to select.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="local_object_reference_python">
 <a href="#local_object_reference_python" style="color: inherit; text-decoration: inherit;">local_<wbr>object_<wbr>reference</a>
@@ -960,7 +796,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Cloud Run fully managed: not supported Cloud Run on GKE: supported The ConfigMap to select from.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The ConfigMap to select from.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="optional_python">
 <a href="#optional_python" style="color: inherit; text-decoration: inherit;">optional</a>
@@ -968,7 +804,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Cloud Run fully managed: not supported Cloud Run on GKE: supported Specify whether the ConfigMap or its key must be defined +optional{{% /md %}}</dd></dl>
+    <dd>{{% md %}}(Optional) Specify whether the ConfigMap or its key must be defined{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="configmapkeyselectorresponse">Config<wbr>Map<wbr>Key<wbr>Selector<wbr>Response</h4>
@@ -982,7 +818,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Cloud Run fully managed: not supported Cloud Run on GKE: supported The key to select.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The key to select.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="localobjectreference_csharp">
 <a href="#localobjectreference_csharp" style="color: inherit; text-decoration: inherit;">Local<wbr>Object<wbr>Reference</a>
@@ -998,7 +834,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Cloud Run fully managed: not supported Cloud Run on GKE: supported The ConfigMap to select from.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The ConfigMap to select from.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="optional_csharp">
 <a href="#optional_csharp" style="color: inherit; text-decoration: inherit;">Optional</a>
@@ -1006,7 +842,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Cloud Run fully managed: not supported Cloud Run on GKE: supported Specify whether the ConfigMap or its key must be defined +optional{{% /md %}}</dd></dl>
+    <dd>{{% md %}}(Optional) Specify whether the ConfigMap or its key must be defined{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1018,7 +854,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Cloud Run fully managed: not supported Cloud Run on GKE: supported The key to select.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The key to select.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="localobjectreference_go">
 <a href="#localobjectreference_go" style="color: inherit; text-decoration: inherit;">Local<wbr>Object<wbr>Reference</a>
@@ -1034,7 +870,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Cloud Run fully managed: not supported Cloud Run on GKE: supported The ConfigMap to select from.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The ConfigMap to select from.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="optional_go">
 <a href="#optional_go" style="color: inherit; text-decoration: inherit;">Optional</a>
@@ -1042,7 +878,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Cloud Run fully managed: not supported Cloud Run on GKE: supported Specify whether the ConfigMap or its key must be defined +optional{{% /md %}}</dd></dl>
+    <dd>{{% md %}}(Optional) Specify whether the ConfigMap or its key must be defined{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1054,7 +890,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Cloud Run fully managed: not supported Cloud Run on GKE: supported The key to select.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The key to select.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="localobjectreference_nodejs">
 <a href="#localobjectreference_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>Object<wbr>Reference</a>
@@ -1070,7 +906,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Cloud Run fully managed: not supported Cloud Run on GKE: supported The ConfigMap to select from.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The ConfigMap to select from.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="optional_nodejs">
 <a href="#optional_nodejs" style="color: inherit; text-decoration: inherit;">optional</a>
@@ -1078,7 +914,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Cloud Run fully managed: not supported Cloud Run on GKE: supported Specify whether the ConfigMap or its key must be defined +optional{{% /md %}}</dd></dl>
+    <dd>{{% md %}}(Optional) Specify whether the ConfigMap or its key must be defined{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1090,7 +926,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Cloud Run fully managed: not supported Cloud Run on GKE: supported The key to select.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The key to select.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="local_object_reference_python">
 <a href="#local_object_reference_python" style="color: inherit; text-decoration: inherit;">local_<wbr>object_<wbr>reference</a>
@@ -1106,7 +942,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Cloud Run fully managed: not supported Cloud Run on GKE: supported The ConfigMap to select from.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The ConfigMap to select from.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="optional_python">
 <a href="#optional_python" style="color: inherit; text-decoration: inherit;">optional</a>
@@ -1114,7 +950,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Cloud Run fully managed: not supported Cloud Run on GKE: supported Specify whether the ConfigMap or its key must be defined +optional{{% /md %}}</dd></dl>
+    <dd>{{% md %}}(Optional) Specify whether the ConfigMap or its key must be defined{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="configmapvolumesource">Config<wbr>Map<wbr>Volume<wbr>Source</h4>
@@ -1128,7 +964,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Mode bits to use on created files by default. Must be a value between 0 and 0777. Defaults to 0644. Directories within the path are not affected by this setting. This might be in conflict with other options that affect the file mode, like fsGroup, and the result can be other mode bits set.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) Mode bits to use on created files by default. Must be a value between 0 and 0777. Defaults to 0644. Directories within the path are not affected by this setting. This might be in conflict with other options that affect the file mode, like fsGroup, and the result can be other mode bits set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="items_csharp">
 <a href="#items_csharp" style="color: inherit; text-decoration: inherit;">Items</a>
@@ -1136,7 +972,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#keytopath">List&lt;Pulumi.<wbr>Google<wbr>Native.<wbr>Run.<wbr>V1Alpha1.<wbr>Inputs.<wbr>Key<wbr>To<wbr>Path&gt;</a></span>
     </dt>
-    <dd>{{% md %}}If unspecified, each key-value pair in the Data field of the referenced Secret will be projected into the volume as a file whose name is the key and content is the value. If specified, the listed keys will be projected into the specified paths, and unlisted keys will not be present. If a key is specified which is not present in the Secret, the volume setup will error unless it is marked optional.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) If unspecified, each key-value pair in the Data field of the referenced Secret will be projected into the volume as a file whose name is the key and content is the value. If specified, the listed keys will be projected into the specified paths, and unlisted keys will not be present. If a key is specified that is not present in the Secret, the volume setup will error unless it is marked optional.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1152,7 +988,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Specify whether the Secret or its keys must be defined.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}(Optional) Specify whether the Secret or its keys must be defined.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1164,7 +1000,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Mode bits to use on created files by default. Must be a value between 0 and 0777. Defaults to 0644. Directories within the path are not affected by this setting. This might be in conflict with other options that affect the file mode, like fsGroup, and the result can be other mode bits set.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) Mode bits to use on created files by default. Must be a value between 0 and 0777. Defaults to 0644. Directories within the path are not affected by this setting. This might be in conflict with other options that affect the file mode, like fsGroup, and the result can be other mode bits set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="items_go">
 <a href="#items_go" style="color: inherit; text-decoration: inherit;">Items</a>
@@ -1172,7 +1008,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#keytopath">[]Key<wbr>To<wbr>Path</a></span>
     </dt>
-    <dd>{{% md %}}If unspecified, each key-value pair in the Data field of the referenced Secret will be projected into the volume as a file whose name is the key and content is the value. If specified, the listed keys will be projected into the specified paths, and unlisted keys will not be present. If a key is specified which is not present in the Secret, the volume setup will error unless it is marked optional.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) If unspecified, each key-value pair in the Data field of the referenced Secret will be projected into the volume as a file whose name is the key and content is the value. If specified, the listed keys will be projected into the specified paths, and unlisted keys will not be present. If a key is specified that is not present in the Secret, the volume setup will error unless it is marked optional.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1188,7 +1024,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Specify whether the Secret or its keys must be defined.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}(Optional) Specify whether the Secret or its keys must be defined.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1200,7 +1036,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Mode bits to use on created files by default. Must be a value between 0 and 0777. Defaults to 0644. Directories within the path are not affected by this setting. This might be in conflict with other options that affect the file mode, like fsGroup, and the result can be other mode bits set.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) Mode bits to use on created files by default. Must be a value between 0 and 0777. Defaults to 0644. Directories within the path are not affected by this setting. This might be in conflict with other options that affect the file mode, like fsGroup, and the result can be other mode bits set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="items_nodejs">
 <a href="#items_nodejs" style="color: inherit; text-decoration: inherit;">items</a>
@@ -1208,7 +1044,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#keytopath">Key<wbr>To<wbr>Path[]</a></span>
     </dt>
-    <dd>{{% md %}}If unspecified, each key-value pair in the Data field of the referenced Secret will be projected into the volume as a file whose name is the key and content is the value. If specified, the listed keys will be projected into the specified paths, and unlisted keys will not be present. If a key is specified which is not present in the Secret, the volume setup will error unless it is marked optional.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) If unspecified, each key-value pair in the Data field of the referenced Secret will be projected into the volume as a file whose name is the key and content is the value. If specified, the listed keys will be projected into the specified paths, and unlisted keys will not be present. If a key is specified that is not present in the Secret, the volume setup will error unless it is marked optional.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1224,7 +1060,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Specify whether the Secret or its keys must be defined.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}(Optional) Specify whether the Secret or its keys must be defined.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1236,7 +1072,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Mode bits to use on created files by default. Must be a value between 0 and 0777. Defaults to 0644. Directories within the path are not affected by this setting. This might be in conflict with other options that affect the file mode, like fsGroup, and the result can be other mode bits set.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) Mode bits to use on created files by default. Must be a value between 0 and 0777. Defaults to 0644. Directories within the path are not affected by this setting. This might be in conflict with other options that affect the file mode, like fsGroup, and the result can be other mode bits set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="items_python">
 <a href="#items_python" style="color: inherit; text-decoration: inherit;">items</a>
@@ -1244,7 +1080,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#keytopath">Sequence[Key<wbr>To<wbr>Path]</a></span>
     </dt>
-    <dd>{{% md %}}If unspecified, each key-value pair in the Data field of the referenced Secret will be projected into the volume as a file whose name is the key and content is the value. If specified, the listed keys will be projected into the specified paths, and unlisted keys will not be present. If a key is specified which is not present in the Secret, the volume setup will error unless it is marked optional.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) If unspecified, each key-value pair in the Data field of the referenced Secret will be projected into the volume as a file whose name is the key and content is the value. If specified, the listed keys will be projected into the specified paths, and unlisted keys will not be present. If a key is specified that is not present in the Secret, the volume setup will error unless it is marked optional.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1260,7 +1096,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Specify whether the Secret or its keys must be defined.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}(Optional) Specify whether the Secret or its keys must be defined.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="configmapvolumesourceresponse">Config<wbr>Map<wbr>Volume<wbr>Source<wbr>Response</h4>
@@ -1274,7 +1110,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Mode bits to use on created files by default. Must be a value between 0 and 0777. Defaults to 0644. Directories within the path are not affected by this setting. This might be in conflict with other options that affect the file mode, like fsGroup, and the result can be other mode bits set.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) Mode bits to use on created files by default. Must be a value between 0 and 0777. Defaults to 0644. Directories within the path are not affected by this setting. This might be in conflict with other options that affect the file mode, like fsGroup, and the result can be other mode bits set.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="items_csharp">
 <a href="#items_csharp" style="color: inherit; text-decoration: inherit;">Items</a>
@@ -1282,7 +1118,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#keytopathresponse">List&lt;Pulumi.<wbr>Google<wbr>Native.<wbr>Run.<wbr>V1Alpha1.<wbr>Inputs.<wbr>Key<wbr>To<wbr>Path<wbr>Response&gt;</a></span>
     </dt>
-    <dd>{{% md %}}If unspecified, each key-value pair in the Data field of the referenced Secret will be projected into the volume as a file whose name is the key and content is the value. If specified, the listed keys will be projected into the specified paths, and unlisted keys will not be present. If a key is specified which is not present in the Secret, the volume setup will error unless it is marked optional.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) If unspecified, each key-value pair in the Data field of the referenced Secret will be projected into the volume as a file whose name is the key and content is the value. If specified, the listed keys will be projected into the specified paths, and unlisted keys will not be present. If a key is specified that is not present in the Secret, the volume setup will error unless it is marked optional.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1298,7 +1134,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Specify whether the Secret or its keys must be defined.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}(Optional) Specify whether the Secret or its keys must be defined.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1310,7 +1146,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Mode bits to use on created files by default. Must be a value between 0 and 0777. Defaults to 0644. Directories within the path are not affected by this setting. This might be in conflict with other options that affect the file mode, like fsGroup, and the result can be other mode bits set.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) Mode bits to use on created files by default. Must be a value between 0 and 0777. Defaults to 0644. Directories within the path are not affected by this setting. This might be in conflict with other options that affect the file mode, like fsGroup, and the result can be other mode bits set.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="items_go">
 <a href="#items_go" style="color: inherit; text-decoration: inherit;">Items</a>
@@ -1318,7 +1154,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#keytopathresponse">[]Key<wbr>To<wbr>Path<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}If unspecified, each key-value pair in the Data field of the referenced Secret will be projected into the volume as a file whose name is the key and content is the value. If specified, the listed keys will be projected into the specified paths, and unlisted keys will not be present. If a key is specified which is not present in the Secret, the volume setup will error unless it is marked optional.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) If unspecified, each key-value pair in the Data field of the referenced Secret will be projected into the volume as a file whose name is the key and content is the value. If specified, the listed keys will be projected into the specified paths, and unlisted keys will not be present. If a key is specified that is not present in the Secret, the volume setup will error unless it is marked optional.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1334,7 +1170,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Specify whether the Secret or its keys must be defined.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}(Optional) Specify whether the Secret or its keys must be defined.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1346,7 +1182,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Mode bits to use on created files by default. Must be a value between 0 and 0777. Defaults to 0644. Directories within the path are not affected by this setting. This might be in conflict with other options that affect the file mode, like fsGroup, and the result can be other mode bits set.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) Mode bits to use on created files by default. Must be a value between 0 and 0777. Defaults to 0644. Directories within the path are not affected by this setting. This might be in conflict with other options that affect the file mode, like fsGroup, and the result can be other mode bits set.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="items_nodejs">
 <a href="#items_nodejs" style="color: inherit; text-decoration: inherit;">items</a>
@@ -1354,7 +1190,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#keytopathresponse">Key<wbr>To<wbr>Path<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}If unspecified, each key-value pair in the Data field of the referenced Secret will be projected into the volume as a file whose name is the key and content is the value. If specified, the listed keys will be projected into the specified paths, and unlisted keys will not be present. If a key is specified which is not present in the Secret, the volume setup will error unless it is marked optional.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) If unspecified, each key-value pair in the Data field of the referenced Secret will be projected into the volume as a file whose name is the key and content is the value. If specified, the listed keys will be projected into the specified paths, and unlisted keys will not be present. If a key is specified that is not present in the Secret, the volume setup will error unless it is marked optional.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1370,7 +1206,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Specify whether the Secret or its keys must be defined.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}(Optional) Specify whether the Secret or its keys must be defined.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1382,7 +1218,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Mode bits to use on created files by default. Must be a value between 0 and 0777. Defaults to 0644. Directories within the path are not affected by this setting. This might be in conflict with other options that affect the file mode, like fsGroup, and the result can be other mode bits set.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) Mode bits to use on created files by default. Must be a value between 0 and 0777. Defaults to 0644. Directories within the path are not affected by this setting. This might be in conflict with other options that affect the file mode, like fsGroup, and the result can be other mode bits set.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="items_python">
 <a href="#items_python" style="color: inherit; text-decoration: inherit;">items</a>
@@ -1390,7 +1226,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#keytopathresponse">Sequence[Key<wbr>To<wbr>Path<wbr>Response]</a></span>
     </dt>
-    <dd>{{% md %}}If unspecified, each key-value pair in the Data field of the referenced Secret will be projected into the volume as a file whose name is the key and content is the value. If specified, the listed keys will be projected into the specified paths, and unlisted keys will not be present. If a key is specified which is not present in the Secret, the volume setup will error unless it is marked optional.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) If unspecified, each key-value pair in the Data field of the referenced Secret will be projected into the volume as a file whose name is the key and content is the value. If specified, the listed keys will be projected into the specified paths, and unlisted keys will not be present. If a key is specified that is not present in the Secret, the volume setup will error unless it is marked optional.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1406,7 +1242,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Specify whether the Secret or its keys must be defined.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}(Optional) Specify whether the Secret or its keys must be defined.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="container">Container</h4>
@@ -1420,7 +1256,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Arguments to the entrypoint. The docker image's CMD is used if this is not provided. Variable references $(VAR_NAME) are expanded using the container's environment. If a variable cannot be resolved, the reference in the input string will be unchanged. The $(VAR_NAME) syntax can be escaped with a double $$, ie: $$(VAR_NAME). Escaped references will never be expanded, regardless of whether the variable exists or not. Cannot be updated. More info: https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell +optional{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) Arguments to the entrypoint. The docker image's CMD is used if this is not provided. Variable references $(VAR_NAME) are expanded using the container's environment. If a variable cannot be resolved, the reference in the input string will be unchanged. The $(VAR_NAME) syntax can be escaped with a double $$, ie: $$(VAR_NAME). Escaped references will never be expanded, regardless of whether the variable exists or not. More info: https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="command_csharp">
 <a href="#command_csharp" style="color: inherit; text-decoration: inherit;">Command</a>
@@ -1428,7 +1264,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Entrypoint array. Not executed within a shell. The docker image's ENTRYPOINT is used if this is not provided. Variable references $(VAR_NAME) are expanded using the container's environment. If a variable cannot be resolved, the reference in the input string will be unchanged. The $(VAR_NAME) syntax can be escaped with a double $$, ie: $$(VAR_NAME). Escaped references will never be expanded, regardless of whether the variable exists or not. Cannot be updated. More info: https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell +optional{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="env_csharp">
 <a href="#env_csharp" style="color: inherit; text-decoration: inherit;">Env</a>
@@ -1436,7 +1272,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#envvar">List&lt;Pulumi.<wbr>Google<wbr>Native.<wbr>Run.<wbr>V1Alpha1.<wbr>Inputs.<wbr>Env<wbr>Var&gt;</a></span>
     </dt>
-    <dd>{{% md %}}List of environment variables to set in the container. Cannot be updated. +optional{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) List of environment variables to set in the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="envfrom_csharp">
 <a href="#envfrom_csharp" style="color: inherit; text-decoration: inherit;">Env<wbr>From</a>
@@ -1444,7 +1280,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#envfromsource">List&lt;Pulumi.<wbr>Google<wbr>Native.<wbr>Run.<wbr>V1Alpha1.<wbr>Inputs.<wbr>Env<wbr>From<wbr>Source&gt;</a></span>
     </dt>
-    <dd>{{% md %}}List of sources to populate environment variables in the container. The keys defined within a source must be a C_IDENTIFIER. All invalid keys will be reported as an event when the container is starting. When a key exists in multiple sources, the value associated with the last source will take precedence. Values defined by an Env with a duplicate key will take precedence. Cannot be updated. +optional{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) List of sources to populate environment variables in the container. The keys defined within a source must be a C_IDENTIFIER. All invalid keys will be reported as an event when the container is starting. When a key exists in multiple sources, the value associated with the last source will take precedence. Values defined by an Env with a duplicate key will take precedence. Cannot be updated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="image_csharp">
 <a href="#image_csharp" style="color: inherit; text-decoration: inherit;">Image</a>
@@ -1452,7 +1288,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Docker image name. More info: https://kubernetes.io/docs/concepts/containers/images{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Only supports containers from Google Container Registry or Artifact Registry URL of the Container image. More info: https://kubernetes.io/docs/concepts/containers/images{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="imagepullpolicy_csharp">
 <a href="#imagepullpolicy_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Pull<wbr>Policy</a>
@@ -1460,15 +1296,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Image pull policy. One of Always, Never, IfNotPresent. Defaults to Always if :latest tag is specified, or IfNotPresent otherwise. Cannot be updated. More info: https://kubernetes.io/docs/concepts/containers/images#updating-images +optional{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="lifecycle_csharp">
-<a href="#lifecycle_csharp" style="color: inherit; text-decoration: inherit;">Lifecycle</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#lifecycle">Pulumi.<wbr>Google<wbr>Native.<wbr>Run.<wbr>V1Alpha1.<wbr>Inputs.<wbr>Lifecycle</a></span>
-    </dt>
-    <dd>{{% md %}}Actions that the management system should take in response to container lifecycle events. Cannot be updated. +optional{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) Image pull policy. One of Always, Never, IfNotPresent. Defaults to Always if :latest tag is specified, or IfNotPresent otherwise. More info: https://kubernetes.io/docs/concepts/containers/images#updating-images{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="livenessprobe_csharp">
 <a href="#livenessprobe_csharp" style="color: inherit; text-decoration: inherit;">Liveness<wbr>Probe</a>
@@ -1476,7 +1304,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#probe">Pulumi.<wbr>Google<wbr>Native.<wbr>Run.<wbr>V1Alpha1.<wbr>Inputs.<wbr>Probe</a></span>
     </dt>
-    <dd>{{% md %}}Periodic probe of container liveness. Container will be restarted if the probe fails. Cannot be updated. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes +optional{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) Periodic probe of container liveness. Container will be restarted if the probe fails. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1484,7 +1312,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the container specified as a DNS_LABEL. Each container must have a unique name (DNS_LABEL). Cannot be updated.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) Name of the container specified as a DNS_LABEL. Currently unused in Cloud Run. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#dns-label-names{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ports_csharp">
 <a href="#ports_csharp" style="color: inherit; text-decoration: inherit;">Ports</a>
@@ -1492,7 +1320,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerport">List&lt;Pulumi.<wbr>Google<wbr>Native.<wbr>Run.<wbr>V1Alpha1.<wbr>Inputs.<wbr>Container<wbr>Port&gt;</a></span>
     </dt>
-    <dd>{{% md %}}List of ports to expose from the container. Exposing a port here gives the system additional information about the network connections a container uses, but is primarily informational. Not specifying a port here DOES NOT prevent that port from being exposed. Any port which is listening on the default "0.0.0.0" address inside a container will be accessible from the network. Cannot be updated. +optional{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) List of ports to expose from the container. Only a single port can be specified. The specified ports must be listening on all interfaces (0.0.0.0) within the container to be accessible. If omitted, a port number will be chosen and passed to the container through the PORT environment variable for the container to listen on.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="readinessprobe_csharp">
 <a href="#readinessprobe_csharp" style="color: inherit; text-decoration: inherit;">Readiness<wbr>Probe</a>
@@ -1500,7 +1328,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#probe">Pulumi.<wbr>Google<wbr>Native.<wbr>Run.<wbr>V1Alpha1.<wbr>Inputs.<wbr>Probe</a></span>
     </dt>
-    <dd>{{% md %}}Periodic probe of container service readiness. Container will be removed from service endpoints if the probe fails. Cannot be updated. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes +optional{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) Periodic probe of container service readiness. Container will be removed from service endpoints if the probe fails. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resources_csharp">
 <a href="#resources_csharp" style="color: inherit; text-decoration: inherit;">Resources</a>
@@ -1508,7 +1336,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcerequirements">Pulumi.<wbr>Google<wbr>Native.<wbr>Run.<wbr>V1Alpha1.<wbr>Inputs.<wbr>Resource<wbr>Requirements</a></span>
     </dt>
-    <dd>{{% md %}}Compute Resources required by this container. Cannot be updated. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#resources +optional{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) Compute Resources required by this container. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#resources{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="securitycontext_csharp">
 <a href="#securitycontext_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Context</a>
@@ -1516,23 +1344,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#securitycontext">Pulumi.<wbr>Google<wbr>Native.<wbr>Run.<wbr>V1Alpha1.<wbr>Inputs.<wbr>Security<wbr>Context</a></span>
     </dt>
-    <dd>{{% md %}}Security options the pod should run with. More info: https://kubernetes.io/docs/concepts/policy/security-context/ More info: https://kubernetes.io/docs/tasks/configure-pod-container/security-context/ +optional{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) Security options the pod should run with. More info: https://kubernetes.io/docs/concepts/policy/security-context/ More info: https://kubernetes.io/docs/tasks/configure-pod-container/security-context/{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="stdin_csharp">
-<a href="#stdin_csharp" style="color: inherit; text-decoration: inherit;">Stdin</a>
+        <span id="startupprobe_csharp">
+<a href="#startupprobe_csharp" style="color: inherit; text-decoration: inherit;">Startup<wbr>Probe</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="#probe">Pulumi.<wbr>Google<wbr>Native.<wbr>Run.<wbr>V1Alpha1.<wbr>Inputs.<wbr>Probe</a></span>
     </dt>
-    <dd>{{% md %}}Whether this container should allocate a buffer for stdin in the container runtime. If this is not set, reads from stdin in the container will always result in EOF. Default is false. +optional{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="stdinonce_csharp">
-<a href="#stdinonce_csharp" style="color: inherit; text-decoration: inherit;">Stdin<wbr>Once</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Whether the container runtime should close the stdin channel after it has been opened by a single attach. When stdin is true the stdin stream will remain open across multiple attach sessions. If stdinOnce is set to true, stdin is opened on container start, is empty until the first client attaches to stdin, and then remains open and accepts data until the client disconnects, at which time stdin is closed and remains closed until the container is restarted. If this flag is false, a container processes that reads from stdin will never receive an EOF. Default is false +optional{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) Startup probe of application within the container. All other probes are disabled if a startup probe is provided, until it succeeds. Container will not be added to service endpoints if the probe fails. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="terminationmessagepath_csharp">
 <a href="#terminationmessagepath_csharp" style="color: inherit; text-decoration: inherit;">Termination<wbr>Message<wbr>Path</a>
@@ -1540,7 +1360,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Optional: Path at which the file to which the container's termination message will be written is mounted into the container's filesystem. Message written is intended to be brief final status, such as an assertion failure message. Will be truncated by the node if greater than 4096 bytes. The total message length across all containers will be limited to 12kb. Defaults to /dev/termination-log. Cannot be updated. +optional{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) Path at which the file to which the container's termination message will be written is mounted into the container's filesystem. Message written is intended to be brief final status, such as an assertion failure message. Will be truncated by the node if greater than 4096 bytes. The total message length across all containers will be limited to 12kb. Defaults to /dev/termination-log.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="terminationmessagepolicy_csharp">
 <a href="#terminationmessagepolicy_csharp" style="color: inherit; text-decoration: inherit;">Termination<wbr>Message<wbr>Policy</a>
@@ -1548,23 +1368,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Indicate how the termination message should be populated. File will use the contents of terminationMessagePath to populate the container status message on both success and failure. FallbackToLogsOnError will use the last chunk of container log output if the termination message file is empty and the container exited with an error. The log output is limited to 2048 bytes or 80 lines, whichever is smaller. Defaults to File. Cannot be updated. +optional{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="tty_csharp">
-<a href="#tty_csharp" style="color: inherit; text-decoration: inherit;">Tty</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Whether this container should allocate a TTY for itself, also requires 'stdin' to be true. Default is false. +optional{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="volumedevices_csharp">
-<a href="#volumedevices_csharp" style="color: inherit; text-decoration: inherit;">Volume<wbr>Devices</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volumedevice">List&lt;Pulumi.<wbr>Google<wbr>Native.<wbr>Run.<wbr>V1Alpha1.<wbr>Inputs.<wbr>Volume<wbr>Device&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}volumeDevices is the list of block devices to be used by the container. This is an alpha feature and may change in the future. +optional{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) Indicate how the termination message should be populated. File will use the contents of terminationMessagePath to populate the container status message on both success and failure. FallbackToLogsOnError will use the last chunk of container log output if the termination message file is empty and the container exited with an error. The log output is limited to 2048 bytes or 80 lines, whichever is smaller. Defaults to File. Cannot be updated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volumemounts_csharp">
 <a href="#volumemounts_csharp" style="color: inherit; text-decoration: inherit;">Volume<wbr>Mounts</a>
@@ -1572,7 +1376,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#volumemount">List&lt;Pulumi.<wbr>Google<wbr>Native.<wbr>Run.<wbr>V1Alpha1.<wbr>Inputs.<wbr>Volume<wbr>Mount&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Pod volumes to mount into the container's filesystem. Cannot be updated. +optional{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) Volume to mount into the container's filesystem. Only supports SecretVolumeSources. Pod volumes to mount into the container's filesystem.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="workingdir_csharp">
 <a href="#workingdir_csharp" style="color: inherit; text-decoration: inherit;">Working<wbr>Dir</a>
@@ -1580,7 +1384,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Container's working directory. If not specified, the container runtime's default will be used, which might be configured in the container image. Cannot be updated. +optional{{% /md %}}</dd></dl>
+    <dd>{{% md %}}(Optional) Container's working directory. If not specified, the container runtime's default will be used, which might be configured in the container image.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1592,7 +1396,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Arguments to the entrypoint. The docker image's CMD is used if this is not provided. Variable references $(VAR_NAME) are expanded using the container's environment. If a variable cannot be resolved, the reference in the input string will be unchanged. The $(VAR_NAME) syntax can be escaped with a double $$, ie: $$(VAR_NAME). Escaped references will never be expanded, regardless of whether the variable exists or not. Cannot be updated. More info: https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell +optional{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) Arguments to the entrypoint. The docker image's CMD is used if this is not provided. Variable references $(VAR_NAME) are expanded using the container's environment. If a variable cannot be resolved, the reference in the input string will be unchanged. The $(VAR_NAME) syntax can be escaped with a double $$, ie: $$(VAR_NAME). Escaped references will never be expanded, regardless of whether the variable exists or not. More info: https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="command_go">
 <a href="#command_go" style="color: inherit; text-decoration: inherit;">Command</a>
@@ -1600,7 +1404,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Entrypoint array. Not executed within a shell. The docker image's ENTRYPOINT is used if this is not provided. Variable references $(VAR_NAME) are expanded using the container's environment. If a variable cannot be resolved, the reference in the input string will be unchanged. The $(VAR_NAME) syntax can be escaped with a double $$, ie: $$(VAR_NAME). Escaped references will never be expanded, regardless of whether the variable exists or not. Cannot be updated. More info: https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell +optional{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="env_go">
 <a href="#env_go" style="color: inherit; text-decoration: inherit;">Env</a>
@@ -1608,7 +1412,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#envvar">[]Env<wbr>Var</a></span>
     </dt>
-    <dd>{{% md %}}List of environment variables to set in the container. Cannot be updated. +optional{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) List of environment variables to set in the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="envfrom_go">
 <a href="#envfrom_go" style="color: inherit; text-decoration: inherit;">Env<wbr>From</a>
@@ -1616,7 +1420,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#envfromsource">[]Env<wbr>From<wbr>Source</a></span>
     </dt>
-    <dd>{{% md %}}List of sources to populate environment variables in the container. The keys defined within a source must be a C_IDENTIFIER. All invalid keys will be reported as an event when the container is starting. When a key exists in multiple sources, the value associated with the last source will take precedence. Values defined by an Env with a duplicate key will take precedence. Cannot be updated. +optional{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) List of sources to populate environment variables in the container. The keys defined within a source must be a C_IDENTIFIER. All invalid keys will be reported as an event when the container is starting. When a key exists in multiple sources, the value associated with the last source will take precedence. Values defined by an Env with a duplicate key will take precedence. Cannot be updated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="image_go">
 <a href="#image_go" style="color: inherit; text-decoration: inherit;">Image</a>
@@ -1624,7 +1428,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Docker image name. More info: https://kubernetes.io/docs/concepts/containers/images{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Only supports containers from Google Container Registry or Artifact Registry URL of the Container image. More info: https://kubernetes.io/docs/concepts/containers/images{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="imagepullpolicy_go">
 <a href="#imagepullpolicy_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Pull<wbr>Policy</a>
@@ -1632,15 +1436,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Image pull policy. One of Always, Never, IfNotPresent. Defaults to Always if :latest tag is specified, or IfNotPresent otherwise. Cannot be updated. More info: https://kubernetes.io/docs/concepts/containers/images#updating-images +optional{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="lifecycle_go">
-<a href="#lifecycle_go" style="color: inherit; text-decoration: inherit;">Lifecycle</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#lifecycle">Lifecycle</a></span>
-    </dt>
-    <dd>{{% md %}}Actions that the management system should take in response to container lifecycle events. Cannot be updated. +optional{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) Image pull policy. One of Always, Never, IfNotPresent. Defaults to Always if :latest tag is specified, or IfNotPresent otherwise. More info: https://kubernetes.io/docs/concepts/containers/images#updating-images{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="livenessprobe_go">
 <a href="#livenessprobe_go" style="color: inherit; text-decoration: inherit;">Liveness<wbr>Probe</a>
@@ -1648,7 +1444,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#probe">Probe</a></span>
     </dt>
-    <dd>{{% md %}}Periodic probe of container liveness. Container will be restarted if the probe fails. Cannot be updated. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes +optional{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) Periodic probe of container liveness. Container will be restarted if the probe fails. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1656,7 +1452,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the container specified as a DNS_LABEL. Each container must have a unique name (DNS_LABEL). Cannot be updated.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) Name of the container specified as a DNS_LABEL. Currently unused in Cloud Run. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#dns-label-names{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ports_go">
 <a href="#ports_go" style="color: inherit; text-decoration: inherit;">Ports</a>
@@ -1664,7 +1460,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerport">[]Container<wbr>Port</a></span>
     </dt>
-    <dd>{{% md %}}List of ports to expose from the container. Exposing a port here gives the system additional information about the network connections a container uses, but is primarily informational. Not specifying a port here DOES NOT prevent that port from being exposed. Any port which is listening on the default "0.0.0.0" address inside a container will be accessible from the network. Cannot be updated. +optional{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) List of ports to expose from the container. Only a single port can be specified. The specified ports must be listening on all interfaces (0.0.0.0) within the container to be accessible. If omitted, a port number will be chosen and passed to the container through the PORT environment variable for the container to listen on.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="readinessprobe_go">
 <a href="#readinessprobe_go" style="color: inherit; text-decoration: inherit;">Readiness<wbr>Probe</a>
@@ -1672,7 +1468,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#probe">Probe</a></span>
     </dt>
-    <dd>{{% md %}}Periodic probe of container service readiness. Container will be removed from service endpoints if the probe fails. Cannot be updated. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes +optional{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) Periodic probe of container service readiness. Container will be removed from service endpoints if the probe fails. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resources_go">
 <a href="#resources_go" style="color: inherit; text-decoration: inherit;">Resources</a>
@@ -1680,7 +1476,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcerequirements">Resource<wbr>Requirements</a></span>
     </dt>
-    <dd>{{% md %}}Compute Resources required by this container. Cannot be updated. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#resources +optional{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) Compute Resources required by this container. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#resources{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="securitycontext_go">
 <a href="#securitycontext_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Context</a>
@@ -1688,23 +1484,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#securitycontext">Security<wbr>Context</a></span>
     </dt>
-    <dd>{{% md %}}Security options the pod should run with. More info: https://kubernetes.io/docs/concepts/policy/security-context/ More info: https://kubernetes.io/docs/tasks/configure-pod-container/security-context/ +optional{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) Security options the pod should run with. More info: https://kubernetes.io/docs/concepts/policy/security-context/ More info: https://kubernetes.io/docs/tasks/configure-pod-container/security-context/{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="stdin_go">
-<a href="#stdin_go" style="color: inherit; text-decoration: inherit;">Stdin</a>
+        <span id="startupprobe_go">
+<a href="#startupprobe_go" style="color: inherit; text-decoration: inherit;">Startup<wbr>Probe</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="#probe">Probe</a></span>
     </dt>
-    <dd>{{% md %}}Whether this container should allocate a buffer for stdin in the container runtime. If this is not set, reads from stdin in the container will always result in EOF. Default is false. +optional{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="stdinonce_go">
-<a href="#stdinonce_go" style="color: inherit; text-decoration: inherit;">Stdin<wbr>Once</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Whether the container runtime should close the stdin channel after it has been opened by a single attach. When stdin is true the stdin stream will remain open across multiple attach sessions. If stdinOnce is set to true, stdin is opened on container start, is empty until the first client attaches to stdin, and then remains open and accepts data until the client disconnects, at which time stdin is closed and remains closed until the container is restarted. If this flag is false, a container processes that reads from stdin will never receive an EOF. Default is false +optional{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) Startup probe of application within the container. All other probes are disabled if a startup probe is provided, until it succeeds. Container will not be added to service endpoints if the probe fails. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="terminationmessagepath_go">
 <a href="#terminationmessagepath_go" style="color: inherit; text-decoration: inherit;">Termination<wbr>Message<wbr>Path</a>
@@ -1712,7 +1500,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Optional: Path at which the file to which the container's termination message will be written is mounted into the container's filesystem. Message written is intended to be brief final status, such as an assertion failure message. Will be truncated by the node if greater than 4096 bytes. The total message length across all containers will be limited to 12kb. Defaults to /dev/termination-log. Cannot be updated. +optional{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) Path at which the file to which the container's termination message will be written is mounted into the container's filesystem. Message written is intended to be brief final status, such as an assertion failure message. Will be truncated by the node if greater than 4096 bytes. The total message length across all containers will be limited to 12kb. Defaults to /dev/termination-log.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="terminationmessagepolicy_go">
 <a href="#terminationmessagepolicy_go" style="color: inherit; text-decoration: inherit;">Termination<wbr>Message<wbr>Policy</a>
@@ -1720,23 +1508,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Indicate how the termination message should be populated. File will use the contents of terminationMessagePath to populate the container status message on both success and failure. FallbackToLogsOnError will use the last chunk of container log output if the termination message file is empty and the container exited with an error. The log output is limited to 2048 bytes or 80 lines, whichever is smaller. Defaults to File. Cannot be updated. +optional{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="tty_go">
-<a href="#tty_go" style="color: inherit; text-decoration: inherit;">Tty</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Whether this container should allocate a TTY for itself, also requires 'stdin' to be true. Default is false. +optional{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="volumedevices_go">
-<a href="#volumedevices_go" style="color: inherit; text-decoration: inherit;">Volume<wbr>Devices</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volumedevice">[]Volume<wbr>Device</a></span>
-    </dt>
-    <dd>{{% md %}}volumeDevices is the list of block devices to be used by the container. This is an alpha feature and may change in the future. +optional{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) Indicate how the termination message should be populated. File will use the contents of terminationMessagePath to populate the container status message on both success and failure. FallbackToLogsOnError will use the last chunk of container log output if the termination message file is empty and the container exited with an error. The log output is limited to 2048 bytes or 80 lines, whichever is smaller. Defaults to File. Cannot be updated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volumemounts_go">
 <a href="#volumemounts_go" style="color: inherit; text-decoration: inherit;">Volume<wbr>Mounts</a>
@@ -1744,7 +1516,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#volumemount">[]Volume<wbr>Mount</a></span>
     </dt>
-    <dd>{{% md %}}Pod volumes to mount into the container's filesystem. Cannot be updated. +optional{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) Volume to mount into the container's filesystem. Only supports SecretVolumeSources. Pod volumes to mount into the container's filesystem.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="workingdir_go">
 <a href="#workingdir_go" style="color: inherit; text-decoration: inherit;">Working<wbr>Dir</a>
@@ -1752,7 +1524,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Container's working directory. If not specified, the container runtime's default will be used, which might be configured in the container image. Cannot be updated. +optional{{% /md %}}</dd></dl>
+    <dd>{{% md %}}(Optional) Container's working directory. If not specified, the container runtime's default will be used, which might be configured in the container image.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1764,7 +1536,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Arguments to the entrypoint. The docker image's CMD is used if this is not provided. Variable references $(VAR_NAME) are expanded using the container's environment. If a variable cannot be resolved, the reference in the input string will be unchanged. The $(VAR_NAME) syntax can be escaped with a double $$, ie: $$(VAR_NAME). Escaped references will never be expanded, regardless of whether the variable exists or not. Cannot be updated. More info: https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell +optional{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) Arguments to the entrypoint. The docker image's CMD is used if this is not provided. Variable references $(VAR_NAME) are expanded using the container's environment. If a variable cannot be resolved, the reference in the input string will be unchanged. The $(VAR_NAME) syntax can be escaped with a double $$, ie: $$(VAR_NAME). Escaped references will never be expanded, regardless of whether the variable exists or not. More info: https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="command_nodejs">
 <a href="#command_nodejs" style="color: inherit; text-decoration: inherit;">command</a>
@@ -1772,7 +1544,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Entrypoint array. Not executed within a shell. The docker image's ENTRYPOINT is used if this is not provided. Variable references $(VAR_NAME) are expanded using the container's environment. If a variable cannot be resolved, the reference in the input string will be unchanged. The $(VAR_NAME) syntax can be escaped with a double $$, ie: $$(VAR_NAME). Escaped references will never be expanded, regardless of whether the variable exists or not. Cannot be updated. More info: https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell +optional{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="env_nodejs">
 <a href="#env_nodejs" style="color: inherit; text-decoration: inherit;">env</a>
@@ -1780,7 +1552,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#envvar">Env<wbr>Var[]</a></span>
     </dt>
-    <dd>{{% md %}}List of environment variables to set in the container. Cannot be updated. +optional{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) List of environment variables to set in the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="envfrom_nodejs">
 <a href="#envfrom_nodejs" style="color: inherit; text-decoration: inherit;">env<wbr>From</a>
@@ -1788,7 +1560,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#envfromsource">Env<wbr>From<wbr>Source[]</a></span>
     </dt>
-    <dd>{{% md %}}List of sources to populate environment variables in the container. The keys defined within a source must be a C_IDENTIFIER. All invalid keys will be reported as an event when the container is starting. When a key exists in multiple sources, the value associated with the last source will take precedence. Values defined by an Env with a duplicate key will take precedence. Cannot be updated. +optional{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) List of sources to populate environment variables in the container. The keys defined within a source must be a C_IDENTIFIER. All invalid keys will be reported as an event when the container is starting. When a key exists in multiple sources, the value associated with the last source will take precedence. Values defined by an Env with a duplicate key will take precedence. Cannot be updated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="image_nodejs">
 <a href="#image_nodejs" style="color: inherit; text-decoration: inherit;">image</a>
@@ -1796,7 +1568,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Docker image name. More info: https://kubernetes.io/docs/concepts/containers/images{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Only supports containers from Google Container Registry or Artifact Registry URL of the Container image. More info: https://kubernetes.io/docs/concepts/containers/images{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="imagepullpolicy_nodejs">
 <a href="#imagepullpolicy_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Pull<wbr>Policy</a>
@@ -1804,15 +1576,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Image pull policy. One of Always, Never, IfNotPresent. Defaults to Always if :latest tag is specified, or IfNotPresent otherwise. Cannot be updated. More info: https://kubernetes.io/docs/concepts/containers/images#updating-images +optional{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="lifecycle_nodejs">
-<a href="#lifecycle_nodejs" style="color: inherit; text-decoration: inherit;">lifecycle</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#lifecycle">Lifecycle</a></span>
-    </dt>
-    <dd>{{% md %}}Actions that the management system should take in response to container lifecycle events. Cannot be updated. +optional{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) Image pull policy. One of Always, Never, IfNotPresent. Defaults to Always if :latest tag is specified, or IfNotPresent otherwise. More info: https://kubernetes.io/docs/concepts/containers/images#updating-images{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="livenessprobe_nodejs">
 <a href="#livenessprobe_nodejs" style="color: inherit; text-decoration: inherit;">liveness<wbr>Probe</a>
@@ -1820,7 +1584,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#probe">Probe</a></span>
     </dt>
-    <dd>{{% md %}}Periodic probe of container liveness. Container will be restarted if the probe fails. Cannot be updated. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes +optional{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) Periodic probe of container liveness. Container will be restarted if the probe fails. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1828,7 +1592,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the container specified as a DNS_LABEL. Each container must have a unique name (DNS_LABEL). Cannot be updated.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) Name of the container specified as a DNS_LABEL. Currently unused in Cloud Run. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#dns-label-names{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ports_nodejs">
 <a href="#ports_nodejs" style="color: inherit; text-decoration: inherit;">ports</a>
@@ -1836,7 +1600,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerport">Container<wbr>Port[]</a></span>
     </dt>
-    <dd>{{% md %}}List of ports to expose from the container. Exposing a port here gives the system additional information about the network connections a container uses, but is primarily informational. Not specifying a port here DOES NOT prevent that port from being exposed. Any port which is listening on the default "0.0.0.0" address inside a container will be accessible from the network. Cannot be updated. +optional{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) List of ports to expose from the container. Only a single port can be specified. The specified ports must be listening on all interfaces (0.0.0.0) within the container to be accessible. If omitted, a port number will be chosen and passed to the container through the PORT environment variable for the container to listen on.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="readinessprobe_nodejs">
 <a href="#readinessprobe_nodejs" style="color: inherit; text-decoration: inherit;">readiness<wbr>Probe</a>
@@ -1844,7 +1608,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#probe">Probe</a></span>
     </dt>
-    <dd>{{% md %}}Periodic probe of container service readiness. Container will be removed from service endpoints if the probe fails. Cannot be updated. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes +optional{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) Periodic probe of container service readiness. Container will be removed from service endpoints if the probe fails. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resources_nodejs">
 <a href="#resources_nodejs" style="color: inherit; text-decoration: inherit;">resources</a>
@@ -1852,7 +1616,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcerequirements">Resource<wbr>Requirements</a></span>
     </dt>
-    <dd>{{% md %}}Compute Resources required by this container. Cannot be updated. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#resources +optional{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) Compute Resources required by this container. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#resources{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="securitycontext_nodejs">
 <a href="#securitycontext_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Context</a>
@@ -1860,23 +1624,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#securitycontext">Security<wbr>Context</a></span>
     </dt>
-    <dd>{{% md %}}Security options the pod should run with. More info: https://kubernetes.io/docs/concepts/policy/security-context/ More info: https://kubernetes.io/docs/tasks/configure-pod-container/security-context/ +optional{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) Security options the pod should run with. More info: https://kubernetes.io/docs/concepts/policy/security-context/ More info: https://kubernetes.io/docs/tasks/configure-pod-container/security-context/{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="stdin_nodejs">
-<a href="#stdin_nodejs" style="color: inherit; text-decoration: inherit;">stdin</a>
+        <span id="startupprobe_nodejs">
+<a href="#startupprobe_nodejs" style="color: inherit; text-decoration: inherit;">startup<wbr>Probe</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="#probe">Probe</a></span>
     </dt>
-    <dd>{{% md %}}Whether this container should allocate a buffer for stdin in the container runtime. If this is not set, reads from stdin in the container will always result in EOF. Default is false. +optional{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="stdinonce_nodejs">
-<a href="#stdinonce_nodejs" style="color: inherit; text-decoration: inherit;">stdin<wbr>Once</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
-    </dt>
-    <dd>{{% md %}}Whether the container runtime should close the stdin channel after it has been opened by a single attach. When stdin is true the stdin stream will remain open across multiple attach sessions. If stdinOnce is set to true, stdin is opened on container start, is empty until the first client attaches to stdin, and then remains open and accepts data until the client disconnects, at which time stdin is closed and remains closed until the container is restarted. If this flag is false, a container processes that reads from stdin will never receive an EOF. Default is false +optional{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) Startup probe of application within the container. All other probes are disabled if a startup probe is provided, until it succeeds. Container will not be added to service endpoints if the probe fails. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="terminationmessagepath_nodejs">
 <a href="#terminationmessagepath_nodejs" style="color: inherit; text-decoration: inherit;">termination<wbr>Message<wbr>Path</a>
@@ -1884,7 +1640,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Optional: Path at which the file to which the container's termination message will be written is mounted into the container's filesystem. Message written is intended to be brief final status, such as an assertion failure message. Will be truncated by the node if greater than 4096 bytes. The total message length across all containers will be limited to 12kb. Defaults to /dev/termination-log. Cannot be updated. +optional{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) Path at which the file to which the container's termination message will be written is mounted into the container's filesystem. Message written is intended to be brief final status, such as an assertion failure message. Will be truncated by the node if greater than 4096 bytes. The total message length across all containers will be limited to 12kb. Defaults to /dev/termination-log.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="terminationmessagepolicy_nodejs">
 <a href="#terminationmessagepolicy_nodejs" style="color: inherit; text-decoration: inherit;">termination<wbr>Message<wbr>Policy</a>
@@ -1892,23 +1648,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Indicate how the termination message should be populated. File will use the contents of terminationMessagePath to populate the container status message on both success and failure. FallbackToLogsOnError will use the last chunk of container log output if the termination message file is empty and the container exited with an error. The log output is limited to 2048 bytes or 80 lines, whichever is smaller. Defaults to File. Cannot be updated. +optional{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="tty_nodejs">
-<a href="#tty_nodejs" style="color: inherit; text-decoration: inherit;">tty</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
-    </dt>
-    <dd>{{% md %}}Whether this container should allocate a TTY for itself, also requires 'stdin' to be true. Default is false. +optional{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="volumedevices_nodejs">
-<a href="#volumedevices_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Devices</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volumedevice">Volume<wbr>Device[]</a></span>
-    </dt>
-    <dd>{{% md %}}volumeDevices is the list of block devices to be used by the container. This is an alpha feature and may change in the future. +optional{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) Indicate how the termination message should be populated. File will use the contents of terminationMessagePath to populate the container status message on both success and failure. FallbackToLogsOnError will use the last chunk of container log output if the termination message file is empty and the container exited with an error. The log output is limited to 2048 bytes or 80 lines, whichever is smaller. Defaults to File. Cannot be updated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volumemounts_nodejs">
 <a href="#volumemounts_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Mounts</a>
@@ -1916,7 +1656,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#volumemount">Volume<wbr>Mount[]</a></span>
     </dt>
-    <dd>{{% md %}}Pod volumes to mount into the container's filesystem. Cannot be updated. +optional{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) Volume to mount into the container's filesystem. Only supports SecretVolumeSources. Pod volumes to mount into the container's filesystem.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="workingdir_nodejs">
 <a href="#workingdir_nodejs" style="color: inherit; text-decoration: inherit;">working<wbr>Dir</a>
@@ -1924,7 +1664,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Container's working directory. If not specified, the container runtime's default will be used, which might be configured in the container image. Cannot be updated. +optional{{% /md %}}</dd></dl>
+    <dd>{{% md %}}(Optional) Container's working directory. If not specified, the container runtime's default will be used, which might be configured in the container image.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1936,7 +1676,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Arguments to the entrypoint. The docker image's CMD is used if this is not provided. Variable references $(VAR_NAME) are expanded using the container's environment. If a variable cannot be resolved, the reference in the input string will be unchanged. The $(VAR_NAME) syntax can be escaped with a double $$, ie: $$(VAR_NAME). Escaped references will never be expanded, regardless of whether the variable exists or not. Cannot be updated. More info: https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell +optional{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) Arguments to the entrypoint. The docker image's CMD is used if this is not provided. Variable references $(VAR_NAME) are expanded using the container's environment. If a variable cannot be resolved, the reference in the input string will be unchanged. The $(VAR_NAME) syntax can be escaped with a double $$, ie: $$(VAR_NAME). Escaped references will never be expanded, regardless of whether the variable exists or not. More info: https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="command_python">
 <a href="#command_python" style="color: inherit; text-decoration: inherit;">command</a>
@@ -1944,7 +1684,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Entrypoint array. Not executed within a shell. The docker image's ENTRYPOINT is used if this is not provided. Variable references $(VAR_NAME) are expanded using the container's environment. If a variable cannot be resolved, the reference in the input string will be unchanged. The $(VAR_NAME) syntax can be escaped with a double $$, ie: $$(VAR_NAME). Escaped references will never be expanded, regardless of whether the variable exists or not. Cannot be updated. More info: https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell +optional{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="env_python">
 <a href="#env_python" style="color: inherit; text-decoration: inherit;">env</a>
@@ -1952,7 +1692,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#envvar">Sequence[Env<wbr>Var]</a></span>
     </dt>
-    <dd>{{% md %}}List of environment variables to set in the container. Cannot be updated. +optional{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) List of environment variables to set in the container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="env_from_python">
 <a href="#env_from_python" style="color: inherit; text-decoration: inherit;">env_<wbr>from</a>
@@ -1960,7 +1700,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#envfromsource">Sequence[Env<wbr>From<wbr>Source]</a></span>
     </dt>
-    <dd>{{% md %}}List of sources to populate environment variables in the container. The keys defined within a source must be a C_IDENTIFIER. All invalid keys will be reported as an event when the container is starting. When a key exists in multiple sources, the value associated with the last source will take precedence. Values defined by an Env with a duplicate key will take precedence. Cannot be updated. +optional{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) List of sources to populate environment variables in the container. The keys defined within a source must be a C_IDENTIFIER. All invalid keys will be reported as an event when the container is starting. When a key exists in multiple sources, the value associated with the last source will take precedence. Values defined by an Env with a duplicate key will take precedence. Cannot be updated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="image_python">
 <a href="#image_python" style="color: inherit; text-decoration: inherit;">image</a>
@@ -1968,7 +1708,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Docker image name. More info: https://kubernetes.io/docs/concepts/containers/images{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Only supports containers from Google Container Registry or Artifact Registry URL of the Container image. More info: https://kubernetes.io/docs/concepts/containers/images{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="image_pull_policy_python">
 <a href="#image_pull_policy_python" style="color: inherit; text-decoration: inherit;">image_<wbr>pull_<wbr>policy</a>
@@ -1976,15 +1716,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Image pull policy. One of Always, Never, IfNotPresent. Defaults to Always if :latest tag is specified, or IfNotPresent otherwise. Cannot be updated. More info: https://kubernetes.io/docs/concepts/containers/images#updating-images +optional{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="lifecycle_python">
-<a href="#lifecycle_python" style="color: inherit; text-decoration: inherit;">lifecycle</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#lifecycle">Lifecycle</a></span>
-    </dt>
-    <dd>{{% md %}}Actions that the management system should take in response to container lifecycle events. Cannot be updated. +optional{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) Image pull policy. One of Always, Never, IfNotPresent. Defaults to Always if :latest tag is specified, or IfNotPresent otherwise. More info: https://kubernetes.io/docs/concepts/containers/images#updating-images{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="liveness_probe_python">
 <a href="#liveness_probe_python" style="color: inherit; text-decoration: inherit;">liveness_<wbr>probe</a>
@@ -1992,7 +1724,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#probe">Probe</a></span>
     </dt>
-    <dd>{{% md %}}Periodic probe of container liveness. Container will be restarted if the probe fails. Cannot be updated. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes +optional{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) Periodic probe of container liveness. Container will be restarted if the probe fails. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2000,7 +1732,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the container specified as a DNS_LABEL. Each container must have a unique name (DNS_LABEL). Cannot be updated.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) Name of the container specified as a DNS_LABEL. Currently unused in Cloud Run. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#dns-label-names{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ports_python">
 <a href="#ports_python" style="color: inherit; text-decoration: inherit;">ports</a>
@@ -2008,7 +1740,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerport">Sequence[Container<wbr>Port]</a></span>
     </dt>
-    <dd>{{% md %}}List of ports to expose from the container. Exposing a port here gives the system additional information about the network connections a container uses, but is primarily informational. Not specifying a port here DOES NOT prevent that port from being exposed. Any port which is listening on the default "0.0.0.0" address inside a container will be accessible from the network. Cannot be updated. +optional{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) List of ports to expose from the container. Only a single port can be specified. The specified ports must be listening on all interfaces (0.0.0.0) within the container to be accessible. If omitted, a port number will be chosen and passed to the container through the PORT environment variable for the container to listen on.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="readiness_probe_python">
 <a href="#readiness_probe_python" style="color: inherit; text-decoration: inherit;">readiness_<wbr>probe</a>
@@ -2016,7 +1748,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#probe">Probe</a></span>
     </dt>
-    <dd>{{% md %}}Periodic probe of container service readiness. Container will be removed from service endpoints if the probe fails. Cannot be updated. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes +optional{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) Periodic probe of container service readiness. Container will be removed from service endpoints if the probe fails. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resources_python">
 <a href="#resources_python" style="color: inherit; text-decoration: inherit;">resources</a>
@@ -2024,7 +1756,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcerequirements">Resource<wbr>Requirements</a></span>
     </dt>
-    <dd>{{% md %}}Compute Resources required by this container. Cannot be updated. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#resources +optional{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) Compute Resources required by this container. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#resources{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="security_context_python">
 <a href="#security_context_python" style="color: inherit; text-decoration: inherit;">security_<wbr>context</a>
@@ -2032,23 +1764,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#securitycontext">Security<wbr>Context</a></span>
     </dt>
-    <dd>{{% md %}}Security options the pod should run with. More info: https://kubernetes.io/docs/concepts/policy/security-context/ More info: https://kubernetes.io/docs/tasks/configure-pod-container/security-context/ +optional{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) Security options the pod should run with. More info: https://kubernetes.io/docs/concepts/policy/security-context/ More info: https://kubernetes.io/docs/tasks/configure-pod-container/security-context/{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="stdin_python">
-<a href="#stdin_python" style="color: inherit; text-decoration: inherit;">stdin</a>
+        <span id="startup_probe_python">
+<a href="#startup_probe_python" style="color: inherit; text-decoration: inherit;">startup_<wbr>probe</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="#probe">Probe</a></span>
     </dt>
-    <dd>{{% md %}}Whether this container should allocate a buffer for stdin in the container runtime. If this is not set, reads from stdin in the container will always result in EOF. Default is false. +optional{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="stdin_once_python">
-<a href="#stdin_once_python" style="color: inherit; text-decoration: inherit;">stdin_<wbr>once</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Whether the container runtime should close the stdin channel after it has been opened by a single attach. When stdin is true the stdin stream will remain open across multiple attach sessions. If stdinOnce is set to true, stdin is opened on container start, is empty until the first client attaches to stdin, and then remains open and accepts data until the client disconnects, at which time stdin is closed and remains closed until the container is restarted. If this flag is false, a container processes that reads from stdin will never receive an EOF. Default is false +optional{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) Startup probe of application within the container. All other probes are disabled if a startup probe is provided, until it succeeds. Container will not be added to service endpoints if the probe fails. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="termination_message_path_python">
 <a href="#termination_message_path_python" style="color: inherit; text-decoration: inherit;">termination_<wbr>message_<wbr>path</a>
@@ -2056,7 +1780,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Optional: Path at which the file to which the container's termination message will be written is mounted into the container's filesystem. Message written is intended to be brief final status, such as an assertion failure message. Will be truncated by the node if greater than 4096 bytes. The total message length across all containers will be limited to 12kb. Defaults to /dev/termination-log. Cannot be updated. +optional{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) Path at which the file to which the container's termination message will be written is mounted into the container's filesystem. Message written is intended to be brief final status, such as an assertion failure message. Will be truncated by the node if greater than 4096 bytes. The total message length across all containers will be limited to 12kb. Defaults to /dev/termination-log.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="termination_message_policy_python">
 <a href="#termination_message_policy_python" style="color: inherit; text-decoration: inherit;">termination_<wbr>message_<wbr>policy</a>
@@ -2064,23 +1788,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Indicate how the termination message should be populated. File will use the contents of terminationMessagePath to populate the container status message on both success and failure. FallbackToLogsOnError will use the last chunk of container log output if the termination message file is empty and the container exited with an error. The log output is limited to 2048 bytes or 80 lines, whichever is smaller. Defaults to File. Cannot be updated. +optional{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="tty_python">
-<a href="#tty_python" style="color: inherit; text-decoration: inherit;">tty</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Whether this container should allocate a TTY for itself, also requires 'stdin' to be true. Default is false. +optional{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="volume_devices_python">
-<a href="#volume_devices_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>devices</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volumedevice">Sequence[Volume<wbr>Device]</a></span>
-    </dt>
-    <dd>{{% md %}}volumeDevices is the list of block devices to be used by the container. This is an alpha feature and may change in the future. +optional{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) Indicate how the termination message should be populated. File will use the contents of terminationMessagePath to populate the container status message on both success and failure. FallbackToLogsOnError will use the last chunk of container log output if the termination message file is empty and the container exited with an error. The log output is limited to 2048 bytes or 80 lines, whichever is smaller. Defaults to File. Cannot be updated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volume_mounts_python">
 <a href="#volume_mounts_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>mounts</a>
@@ -2088,7 +1796,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#volumemount">Sequence[Volume<wbr>Mount]</a></span>
     </dt>
-    <dd>{{% md %}}Pod volumes to mount into the container's filesystem. Cannot be updated. +optional{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) Volume to mount into the container's filesystem. Only supports SecretVolumeSources. Pod volumes to mount into the container's filesystem.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="working_dir_python">
 <a href="#working_dir_python" style="color: inherit; text-decoration: inherit;">working_<wbr>dir</a>
@@ -2096,7 +1804,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Container's working directory. If not specified, the container runtime's default will be used, which might be configured in the container image. Cannot be updated. +optional{{% /md %}}</dd></dl>
+    <dd>{{% md %}}(Optional) Container's working directory. If not specified, the container runtime's default will be used, which might be configured in the container image.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="containerport">Container<wbr>Port</h4>
@@ -2110,23 +1818,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of port to expose on the pod's IP address. This must be a valid port number, 0 < x < 65536.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="hostip_csharp">
-<a href="#hostip_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>IP</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}What host IP to bind the external port to. +optional{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="hostport_csharp">
-<a href="#hostport_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Port</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Number of port to expose on the host. If specified, this must be a valid port number, 0 < x < 65536. If HostNetwork is specified, this must match ContainerPort. Most containers do not need this. +optional{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) Port number the container listens on. This must be a valid port number, 0 < x < 65536.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2134,7 +1826,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}If specified, this must be an IANA_SVC_NAME and unique within the pod. Each named port in a pod must have a unique name. Name for the port that can be referred to by services. +optional{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) If specified, used to specify which protocol to use. Allowed values are "http1" and "h2c".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="protocol_csharp">
 <a href="#protocol_csharp" style="color: inherit; text-decoration: inherit;">Protocol</a>
@@ -2142,7 +1834,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Protocol for port. Must be UDP or TCP. Defaults to "TCP". +optional{{% /md %}}</dd></dl>
+    <dd>{{% md %}}(Optional) Protocol for port. Must be "TCP". Defaults to "TCP".{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -2154,23 +1846,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of port to expose on the pod's IP address. This must be a valid port number, 0 < x < 65536.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="hostip_go">
-<a href="#hostip_go" style="color: inherit; text-decoration: inherit;">Host<wbr>IP</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}What host IP to bind the external port to. +optional{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="hostport_go">
-<a href="#hostport_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Port</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Number of port to expose on the host. If specified, this must be a valid port number, 0 < x < 65536. If HostNetwork is specified, this must match ContainerPort. Most containers do not need this. +optional{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) Port number the container listens on. This must be a valid port number, 0 < x < 65536.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2178,7 +1854,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}If specified, this must be an IANA_SVC_NAME and unique within the pod. Each named port in a pod must have a unique name. Name for the port that can be referred to by services. +optional{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) If specified, used to specify which protocol to use. Allowed values are "http1" and "h2c".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="protocol_go">
 <a href="#protocol_go" style="color: inherit; text-decoration: inherit;">Protocol</a>
@@ -2186,7 +1862,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Protocol for port. Must be UDP or TCP. Defaults to "TCP". +optional{{% /md %}}</dd></dl>
+    <dd>{{% md %}}(Optional) Protocol for port. Must be "TCP". Defaults to "TCP".{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2198,23 +1874,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Number of port to expose on the pod's IP address. This must be a valid port number, 0 < x < 65536.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="hostip_nodejs">
-<a href="#hostip_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>IP</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}What host IP to bind the external port to. +optional{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="hostport_nodejs">
-<a href="#hostport_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Port</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}Number of port to expose on the host. If specified, this must be a valid port number, 0 < x < 65536. If HostNetwork is specified, this must match ContainerPort. Most containers do not need this. +optional{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) Port number the container listens on. This must be a valid port number, 0 < x < 65536.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2222,7 +1882,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}If specified, this must be an IANA_SVC_NAME and unique within the pod. Each named port in a pod must have a unique name. Name for the port that can be referred to by services. +optional{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) If specified, used to specify which protocol to use. Allowed values are "http1" and "h2c".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="protocol_nodejs">
 <a href="#protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
@@ -2230,7 +1890,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Protocol for port. Must be UDP or TCP. Defaults to "TCP". +optional{{% /md %}}</dd></dl>
+    <dd>{{% md %}}(Optional) Protocol for port. Must be "TCP". Defaults to "TCP".{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -2242,23 +1902,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of port to expose on the pod's IP address. This must be a valid port number, 0 < x < 65536.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="host_ip_python">
-<a href="#host_ip_python" style="color: inherit; text-decoration: inherit;">host_<wbr>ip</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}What host IP to bind the external port to. +optional{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="host_port_python">
-<a href="#host_port_python" style="color: inherit; text-decoration: inherit;">host_<wbr>port</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Number of port to expose on the host. If specified, this must be a valid port number, 0 < x < 65536. If HostNetwork is specified, this must match ContainerPort. Most containers do not need this. +optional{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) Port number the container listens on. This must be a valid port number, 0 < x < 65536.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2266,7 +1910,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}If specified, this must be an IANA_SVC_NAME and unique within the pod. Each named port in a pod must have a unique name. Name for the port that can be referred to by services. +optional{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) If specified, used to specify which protocol to use. Allowed values are "http1" and "h2c".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="protocol_python">
 <a href="#protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
@@ -2274,7 +1918,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Protocol for port. Must be UDP or TCP. Defaults to "TCP". +optional{{% /md %}}</dd></dl>
+    <dd>{{% md %}}(Optional) Protocol for port. Must be "TCP". Defaults to "TCP".{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="containerportresponse">Container<wbr>Port<wbr>Response</h4>
@@ -2288,23 +1932,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of port to expose on the pod's IP address. This must be a valid port number, 0 < x < 65536.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="hostip_csharp">
-<a href="#hostip_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>IP</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}What host IP to bind the external port to. +optional{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="hostport_csharp">
-<a href="#hostport_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Port</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Number of port to expose on the host. If specified, this must be a valid port number, 0 < x < 65536. If HostNetwork is specified, this must match ContainerPort. Most containers do not need this. +optional{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) Port number the container listens on. This must be a valid port number, 0 < x < 65536.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2312,7 +1940,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}If specified, this must be an IANA_SVC_NAME and unique within the pod. Each named port in a pod must have a unique name. Name for the port that can be referred to by services. +optional{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) If specified, used to specify which protocol to use. Allowed values are "http1" and "h2c".{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="protocol_csharp">
 <a href="#protocol_csharp" style="color: inherit; text-decoration: inherit;">Protocol</a>
@@ -2320,7 +1948,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Protocol for port. Must be UDP or TCP. Defaults to "TCP". +optional{{% /md %}}</dd></dl>
+    <dd>{{% md %}}(Optional) Protocol for port. Must be "TCP". Defaults to "TCP".{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -2332,23 +1960,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of port to expose on the pod's IP address. This must be a valid port number, 0 < x < 65536.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="hostip_go">
-<a href="#hostip_go" style="color: inherit; text-decoration: inherit;">Host<wbr>IP</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}What host IP to bind the external port to. +optional{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="hostport_go">
-<a href="#hostport_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Port</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Number of port to expose on the host. If specified, this must be a valid port number, 0 < x < 65536. If HostNetwork is specified, this must match ContainerPort. Most containers do not need this. +optional{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) Port number the container listens on. This must be a valid port number, 0 < x < 65536.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2356,7 +1968,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}If specified, this must be an IANA_SVC_NAME and unique within the pod. Each named port in a pod must have a unique name. Name for the port that can be referred to by services. +optional{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) If specified, used to specify which protocol to use. Allowed values are "http1" and "h2c".{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="protocol_go">
 <a href="#protocol_go" style="color: inherit; text-decoration: inherit;">Protocol</a>
@@ -2364,7 +1976,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Protocol for port. Must be UDP or TCP. Defaults to "TCP". +optional{{% /md %}}</dd></dl>
+    <dd>{{% md %}}(Optional) Protocol for port. Must be "TCP". Defaults to "TCP".{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2376,23 +1988,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Number of port to expose on the pod's IP address. This must be a valid port number, 0 < x < 65536.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="hostip_nodejs">
-<a href="#hostip_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>IP</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}What host IP to bind the external port to. +optional{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="hostport_nodejs">
-<a href="#hostport_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Port</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}Number of port to expose on the host. If specified, this must be a valid port number, 0 < x < 65536. If HostNetwork is specified, this must match ContainerPort. Most containers do not need this. +optional{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) Port number the container listens on. This must be a valid port number, 0 < x < 65536.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2400,7 +1996,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}If specified, this must be an IANA_SVC_NAME and unique within the pod. Each named port in a pod must have a unique name. Name for the port that can be referred to by services. +optional{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) If specified, used to specify which protocol to use. Allowed values are "http1" and "h2c".{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="protocol_nodejs">
 <a href="#protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
@@ -2408,7 +2004,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Protocol for port. Must be UDP or TCP. Defaults to "TCP". +optional{{% /md %}}</dd></dl>
+    <dd>{{% md %}}(Optional) Protocol for port. Must be "TCP". Defaults to "TCP".{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -2420,23 +2016,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of port to expose on the pod's IP address. This must be a valid port number, 0 < x < 65536.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="host_ip_python">
-<a href="#host_ip_python" style="color: inherit; text-decoration: inherit;">host_<wbr>ip</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}What host IP to bind the external port to. +optional{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="host_port_python">
-<a href="#host_port_python" style="color: inherit; text-decoration: inherit;">host_<wbr>port</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Number of port to expose on the host. If specified, this must be a valid port number, 0 < x < 65536. If HostNetwork is specified, this must match ContainerPort. Most containers do not need this. +optional{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) Port number the container listens on. This must be a valid port number, 0 < x < 65536.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2444,7 +2024,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}If specified, this must be an IANA_SVC_NAME and unique within the pod. Each named port in a pod must have a unique name. Name for the port that can be referred to by services. +optional{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) If specified, used to specify which protocol to use. Allowed values are "http1" and "h2c".{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="protocol_python">
 <a href="#protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
@@ -2452,7 +2032,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Protocol for port. Must be UDP or TCP. Defaults to "TCP". +optional{{% /md %}}</dd></dl>
+    <dd>{{% md %}}(Optional) Protocol for port. Must be "TCP". Defaults to "TCP".{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="containerresponse">Container<wbr>Response</h4>
@@ -2466,7 +2046,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Arguments to the entrypoint. The docker image's CMD is used if this is not provided. Variable references $(VAR_NAME) are expanded using the container's environment. If a variable cannot be resolved, the reference in the input string will be unchanged. The $(VAR_NAME) syntax can be escaped with a double $$, ie: $$(VAR_NAME). Escaped references will never be expanded, regardless of whether the variable exists or not. Cannot be updated. More info: https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell +optional{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) Arguments to the entrypoint. The docker image's CMD is used if this is not provided. Variable references $(VAR_NAME) are expanded using the container's environment. If a variable cannot be resolved, the reference in the input string will be unchanged. The $(VAR_NAME) syntax can be escaped with a double $$, ie: $$(VAR_NAME). Escaped references will never be expanded, regardless of whether the variable exists or not. More info: https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="command_csharp">
 <a href="#command_csharp" style="color: inherit; text-decoration: inherit;">Command</a>
@@ -2474,7 +2054,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Entrypoint array. Not executed within a shell. The docker image's ENTRYPOINT is used if this is not provided. Variable references $(VAR_NAME) are expanded using the container's environment. If a variable cannot be resolved, the reference in the input string will be unchanged. The $(VAR_NAME) syntax can be escaped with a double $$, ie: $$(VAR_NAME). Escaped references will never be expanded, regardless of whether the variable exists or not. Cannot be updated. More info: https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell +optional{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="env_csharp">
 <a href="#env_csharp" style="color: inherit; text-decoration: inherit;">Env</a>
@@ -2482,7 +2062,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#envvarresponse">List&lt;Pulumi.<wbr>Google<wbr>Native.<wbr>Run.<wbr>V1Alpha1.<wbr>Inputs.<wbr>Env<wbr>Var<wbr>Response&gt;</a></span>
     </dt>
-    <dd>{{% md %}}List of environment variables to set in the container. Cannot be updated. +optional{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) List of environment variables to set in the container.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="envfrom_csharp">
 <a href="#envfrom_csharp" style="color: inherit; text-decoration: inherit;">Env<wbr>From</a>
@@ -2490,7 +2070,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#envfromsourceresponse">List&lt;Pulumi.<wbr>Google<wbr>Native.<wbr>Run.<wbr>V1Alpha1.<wbr>Inputs.<wbr>Env<wbr>From<wbr>Source<wbr>Response&gt;</a></span>
     </dt>
-    <dd>{{% md %}}List of sources to populate environment variables in the container. The keys defined within a source must be a C_IDENTIFIER. All invalid keys will be reported as an event when the container is starting. When a key exists in multiple sources, the value associated with the last source will take precedence. Values defined by an Env with a duplicate key will take precedence. Cannot be updated. +optional{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) List of sources to populate environment variables in the container. The keys defined within a source must be a C_IDENTIFIER. All invalid keys will be reported as an event when the container is starting. When a key exists in multiple sources, the value associated with the last source will take precedence. Values defined by an Env with a duplicate key will take precedence. Cannot be updated.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="image_csharp">
 <a href="#image_csharp" style="color: inherit; text-decoration: inherit;">Image</a>
@@ -2498,7 +2078,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Docker image name. More info: https://kubernetes.io/docs/concepts/containers/images{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Only supports containers from Google Container Registry or Artifact Registry URL of the Container image. More info: https://kubernetes.io/docs/concepts/containers/images{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="imagepullpolicy_csharp">
 <a href="#imagepullpolicy_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Pull<wbr>Policy</a>
@@ -2506,15 +2086,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Image pull policy. One of Always, Never, IfNotPresent. Defaults to Always if :latest tag is specified, or IfNotPresent otherwise. Cannot be updated. More info: https://kubernetes.io/docs/concepts/containers/images#updating-images +optional{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="lifecycle_csharp">
-<a href="#lifecycle_csharp" style="color: inherit; text-decoration: inherit;">Lifecycle</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#lifecycleresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Run.<wbr>V1Alpha1.<wbr>Inputs.<wbr>Lifecycle<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}Actions that the management system should take in response to container lifecycle events. Cannot be updated. +optional{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) Image pull policy. One of Always, Never, IfNotPresent. Defaults to Always if :latest tag is specified, or IfNotPresent otherwise. More info: https://kubernetes.io/docs/concepts/containers/images#updating-images{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="livenessprobe_csharp">
 <a href="#livenessprobe_csharp" style="color: inherit; text-decoration: inherit;">Liveness<wbr>Probe</a>
@@ -2522,7 +2094,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#proberesponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Run.<wbr>V1Alpha1.<wbr>Inputs.<wbr>Probe<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Periodic probe of container liveness. Container will be restarted if the probe fails. Cannot be updated. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes +optional{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) Periodic probe of container liveness. Container will be restarted if the probe fails. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2530,7 +2102,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the container specified as a DNS_LABEL. Each container must have a unique name (DNS_LABEL). Cannot be updated.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) Name of the container specified as a DNS_LABEL. Currently unused in Cloud Run. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#dns-label-names{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ports_csharp">
 <a href="#ports_csharp" style="color: inherit; text-decoration: inherit;">Ports</a>
@@ -2538,7 +2110,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerportresponse">List&lt;Pulumi.<wbr>Google<wbr>Native.<wbr>Run.<wbr>V1Alpha1.<wbr>Inputs.<wbr>Container<wbr>Port<wbr>Response&gt;</a></span>
     </dt>
-    <dd>{{% md %}}List of ports to expose from the container. Exposing a port here gives the system additional information about the network connections a container uses, but is primarily informational. Not specifying a port here DOES NOT prevent that port from being exposed. Any port which is listening on the default "0.0.0.0" address inside a container will be accessible from the network. Cannot be updated. +optional{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) List of ports to expose from the container. Only a single port can be specified. The specified ports must be listening on all interfaces (0.0.0.0) within the container to be accessible. If omitted, a port number will be chosen and passed to the container through the PORT environment variable for the container to listen on.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="readinessprobe_csharp">
 <a href="#readinessprobe_csharp" style="color: inherit; text-decoration: inherit;">Readiness<wbr>Probe</a>
@@ -2546,7 +2118,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#proberesponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Run.<wbr>V1Alpha1.<wbr>Inputs.<wbr>Probe<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Periodic probe of container service readiness. Container will be removed from service endpoints if the probe fails. Cannot be updated. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes +optional{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) Periodic probe of container service readiness. Container will be removed from service endpoints if the probe fails. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resources_csharp">
 <a href="#resources_csharp" style="color: inherit; text-decoration: inherit;">Resources</a>
@@ -2554,7 +2126,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcerequirementsresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Run.<wbr>V1Alpha1.<wbr>Inputs.<wbr>Resource<wbr>Requirements<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Compute Resources required by this container. Cannot be updated. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#resources +optional{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) Compute Resources required by this container. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#resources{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="securitycontext_csharp">
 <a href="#securitycontext_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Context</a>
@@ -2562,23 +2134,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#securitycontextresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Run.<wbr>V1Alpha1.<wbr>Inputs.<wbr>Security<wbr>Context<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Security options the pod should run with. More info: https://kubernetes.io/docs/concepts/policy/security-context/ More info: https://kubernetes.io/docs/tasks/configure-pod-container/security-context/ +optional{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) Security options the pod should run with. More info: https://kubernetes.io/docs/concepts/policy/security-context/ More info: https://kubernetes.io/docs/tasks/configure-pod-container/security-context/{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="stdin_csharp">
-<a href="#stdin_csharp" style="color: inherit; text-decoration: inherit;">Stdin</a>
+        <span id="startupprobe_csharp">
+<a href="#startupprobe_csharp" style="color: inherit; text-decoration: inherit;">Startup<wbr>Probe</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="#proberesponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Run.<wbr>V1Alpha1.<wbr>Inputs.<wbr>Probe<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Whether this container should allocate a buffer for stdin in the container runtime. If this is not set, reads from stdin in the container will always result in EOF. Default is false. +optional{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="stdinonce_csharp">
-<a href="#stdinonce_csharp" style="color: inherit; text-decoration: inherit;">Stdin<wbr>Once</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Whether the container runtime should close the stdin channel after it has been opened by a single attach. When stdin is true the stdin stream will remain open across multiple attach sessions. If stdinOnce is set to true, stdin is opened on container start, is empty until the first client attaches to stdin, and then remains open and accepts data until the client disconnects, at which time stdin is closed and remains closed until the container is restarted. If this flag is false, a container processes that reads from stdin will never receive an EOF. Default is false +optional{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) Startup probe of application within the container. All other probes are disabled if a startup probe is provided, until it succeeds. Container will not be added to service endpoints if the probe fails. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="terminationmessagepath_csharp">
 <a href="#terminationmessagepath_csharp" style="color: inherit; text-decoration: inherit;">Termination<wbr>Message<wbr>Path</a>
@@ -2586,7 +2150,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Optional: Path at which the file to which the container's termination message will be written is mounted into the container's filesystem. Message written is intended to be brief final status, such as an assertion failure message. Will be truncated by the node if greater than 4096 bytes. The total message length across all containers will be limited to 12kb. Defaults to /dev/termination-log. Cannot be updated. +optional{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) Path at which the file to which the container's termination message will be written is mounted into the container's filesystem. Message written is intended to be brief final status, such as an assertion failure message. Will be truncated by the node if greater than 4096 bytes. The total message length across all containers will be limited to 12kb. Defaults to /dev/termination-log.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="terminationmessagepolicy_csharp">
 <a href="#terminationmessagepolicy_csharp" style="color: inherit; text-decoration: inherit;">Termination<wbr>Message<wbr>Policy</a>
@@ -2594,23 +2158,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Indicate how the termination message should be populated. File will use the contents of terminationMessagePath to populate the container status message on both success and failure. FallbackToLogsOnError will use the last chunk of container log output if the termination message file is empty and the container exited with an error. The log output is limited to 2048 bytes or 80 lines, whichever is smaller. Defaults to File. Cannot be updated. +optional{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="tty_csharp">
-<a href="#tty_csharp" style="color: inherit; text-decoration: inherit;">Tty</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Whether this container should allocate a TTY for itself, also requires 'stdin' to be true. Default is false. +optional{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="volumedevices_csharp">
-<a href="#volumedevices_csharp" style="color: inherit; text-decoration: inherit;">Volume<wbr>Devices</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volumedeviceresponse">List&lt;Pulumi.<wbr>Google<wbr>Native.<wbr>Run.<wbr>V1Alpha1.<wbr>Inputs.<wbr>Volume<wbr>Device<wbr>Response&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}volumeDevices is the list of block devices to be used by the container. This is an alpha feature and may change in the future. +optional{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) Indicate how the termination message should be populated. File will use the contents of terminationMessagePath to populate the container status message on both success and failure. FallbackToLogsOnError will use the last chunk of container log output if the termination message file is empty and the container exited with an error. The log output is limited to 2048 bytes or 80 lines, whichever is smaller. Defaults to File. Cannot be updated.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="volumemounts_csharp">
 <a href="#volumemounts_csharp" style="color: inherit; text-decoration: inherit;">Volume<wbr>Mounts</a>
@@ -2618,7 +2166,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#volumemountresponse">List&lt;Pulumi.<wbr>Google<wbr>Native.<wbr>Run.<wbr>V1Alpha1.<wbr>Inputs.<wbr>Volume<wbr>Mount<wbr>Response&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Pod volumes to mount into the container's filesystem. Cannot be updated. +optional{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) Volume to mount into the container's filesystem. Only supports SecretVolumeSources. Pod volumes to mount into the container's filesystem.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="workingdir_csharp">
 <a href="#workingdir_csharp" style="color: inherit; text-decoration: inherit;">Working<wbr>Dir</a>
@@ -2626,7 +2174,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Container's working directory. If not specified, the container runtime's default will be used, which might be configured in the container image. Cannot be updated. +optional{{% /md %}}</dd></dl>
+    <dd>{{% md %}}(Optional) Container's working directory. If not specified, the container runtime's default will be used, which might be configured in the container image.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -2638,7 +2186,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Arguments to the entrypoint. The docker image's CMD is used if this is not provided. Variable references $(VAR_NAME) are expanded using the container's environment. If a variable cannot be resolved, the reference in the input string will be unchanged. The $(VAR_NAME) syntax can be escaped with a double $$, ie: $$(VAR_NAME). Escaped references will never be expanded, regardless of whether the variable exists or not. Cannot be updated. More info: https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell +optional{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) Arguments to the entrypoint. The docker image's CMD is used if this is not provided. Variable references $(VAR_NAME) are expanded using the container's environment. If a variable cannot be resolved, the reference in the input string will be unchanged. The $(VAR_NAME) syntax can be escaped with a double $$, ie: $$(VAR_NAME). Escaped references will never be expanded, regardless of whether the variable exists or not. More info: https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="command_go">
 <a href="#command_go" style="color: inherit; text-decoration: inherit;">Command</a>
@@ -2646,7 +2194,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Entrypoint array. Not executed within a shell. The docker image's ENTRYPOINT is used if this is not provided. Variable references $(VAR_NAME) are expanded using the container's environment. If a variable cannot be resolved, the reference in the input string will be unchanged. The $(VAR_NAME) syntax can be escaped with a double $$, ie: $$(VAR_NAME). Escaped references will never be expanded, regardless of whether the variable exists or not. Cannot be updated. More info: https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell +optional{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="env_go">
 <a href="#env_go" style="color: inherit; text-decoration: inherit;">Env</a>
@@ -2654,7 +2202,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#envvarresponse">[]Env<wbr>Var<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}List of environment variables to set in the container. Cannot be updated. +optional{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) List of environment variables to set in the container.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="envfrom_go">
 <a href="#envfrom_go" style="color: inherit; text-decoration: inherit;">Env<wbr>From</a>
@@ -2662,7 +2210,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#envfromsourceresponse">[]Env<wbr>From<wbr>Source<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}List of sources to populate environment variables in the container. The keys defined within a source must be a C_IDENTIFIER. All invalid keys will be reported as an event when the container is starting. When a key exists in multiple sources, the value associated with the last source will take precedence. Values defined by an Env with a duplicate key will take precedence. Cannot be updated. +optional{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) List of sources to populate environment variables in the container. The keys defined within a source must be a C_IDENTIFIER. All invalid keys will be reported as an event when the container is starting. When a key exists in multiple sources, the value associated with the last source will take precedence. Values defined by an Env with a duplicate key will take precedence. Cannot be updated.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="image_go">
 <a href="#image_go" style="color: inherit; text-decoration: inherit;">Image</a>
@@ -2670,7 +2218,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Docker image name. More info: https://kubernetes.io/docs/concepts/containers/images{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Only supports containers from Google Container Registry or Artifact Registry URL of the Container image. More info: https://kubernetes.io/docs/concepts/containers/images{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="imagepullpolicy_go">
 <a href="#imagepullpolicy_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Pull<wbr>Policy</a>
@@ -2678,15 +2226,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Image pull policy. One of Always, Never, IfNotPresent. Defaults to Always if :latest tag is specified, or IfNotPresent otherwise. Cannot be updated. More info: https://kubernetes.io/docs/concepts/containers/images#updating-images +optional{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="lifecycle_go">
-<a href="#lifecycle_go" style="color: inherit; text-decoration: inherit;">Lifecycle</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#lifecycleresponse">Lifecycle<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}Actions that the management system should take in response to container lifecycle events. Cannot be updated. +optional{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) Image pull policy. One of Always, Never, IfNotPresent. Defaults to Always if :latest tag is specified, or IfNotPresent otherwise. More info: https://kubernetes.io/docs/concepts/containers/images#updating-images{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="livenessprobe_go">
 <a href="#livenessprobe_go" style="color: inherit; text-decoration: inherit;">Liveness<wbr>Probe</a>
@@ -2694,7 +2234,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#proberesponse">Probe<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Periodic probe of container liveness. Container will be restarted if the probe fails. Cannot be updated. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes +optional{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) Periodic probe of container liveness. Container will be restarted if the probe fails. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2702,7 +2242,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the container specified as a DNS_LABEL. Each container must have a unique name (DNS_LABEL). Cannot be updated.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) Name of the container specified as a DNS_LABEL. Currently unused in Cloud Run. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#dns-label-names{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ports_go">
 <a href="#ports_go" style="color: inherit; text-decoration: inherit;">Ports</a>
@@ -2710,7 +2250,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerportresponse">[]Container<wbr>Port<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}List of ports to expose from the container. Exposing a port here gives the system additional information about the network connections a container uses, but is primarily informational. Not specifying a port here DOES NOT prevent that port from being exposed. Any port which is listening on the default "0.0.0.0" address inside a container will be accessible from the network. Cannot be updated. +optional{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) List of ports to expose from the container. Only a single port can be specified. The specified ports must be listening on all interfaces (0.0.0.0) within the container to be accessible. If omitted, a port number will be chosen and passed to the container through the PORT environment variable for the container to listen on.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="readinessprobe_go">
 <a href="#readinessprobe_go" style="color: inherit; text-decoration: inherit;">Readiness<wbr>Probe</a>
@@ -2718,7 +2258,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#proberesponse">Probe<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Periodic probe of container service readiness. Container will be removed from service endpoints if the probe fails. Cannot be updated. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes +optional{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) Periodic probe of container service readiness. Container will be removed from service endpoints if the probe fails. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resources_go">
 <a href="#resources_go" style="color: inherit; text-decoration: inherit;">Resources</a>
@@ -2726,7 +2266,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcerequirementsresponse">Resource<wbr>Requirements<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Compute Resources required by this container. Cannot be updated. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#resources +optional{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) Compute Resources required by this container. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#resources{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="securitycontext_go">
 <a href="#securitycontext_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Context</a>
@@ -2734,23 +2274,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#securitycontextresponse">Security<wbr>Context<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Security options the pod should run with. More info: https://kubernetes.io/docs/concepts/policy/security-context/ More info: https://kubernetes.io/docs/tasks/configure-pod-container/security-context/ +optional{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) Security options the pod should run with. More info: https://kubernetes.io/docs/concepts/policy/security-context/ More info: https://kubernetes.io/docs/tasks/configure-pod-container/security-context/{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="stdin_go">
-<a href="#stdin_go" style="color: inherit; text-decoration: inherit;">Stdin</a>
+        <span id="startupprobe_go">
+<a href="#startupprobe_go" style="color: inherit; text-decoration: inherit;">Startup<wbr>Probe</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="#proberesponse">Probe<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Whether this container should allocate a buffer for stdin in the container runtime. If this is not set, reads from stdin in the container will always result in EOF. Default is false. +optional{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="stdinonce_go">
-<a href="#stdinonce_go" style="color: inherit; text-decoration: inherit;">Stdin<wbr>Once</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Whether the container runtime should close the stdin channel after it has been opened by a single attach. When stdin is true the stdin stream will remain open across multiple attach sessions. If stdinOnce is set to true, stdin is opened on container start, is empty until the first client attaches to stdin, and then remains open and accepts data until the client disconnects, at which time stdin is closed and remains closed until the container is restarted. If this flag is false, a container processes that reads from stdin will never receive an EOF. Default is false +optional{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) Startup probe of application within the container. All other probes are disabled if a startup probe is provided, until it succeeds. Container will not be added to service endpoints if the probe fails. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="terminationmessagepath_go">
 <a href="#terminationmessagepath_go" style="color: inherit; text-decoration: inherit;">Termination<wbr>Message<wbr>Path</a>
@@ -2758,7 +2290,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Optional: Path at which the file to which the container's termination message will be written is mounted into the container's filesystem. Message written is intended to be brief final status, such as an assertion failure message. Will be truncated by the node if greater than 4096 bytes. The total message length across all containers will be limited to 12kb. Defaults to /dev/termination-log. Cannot be updated. +optional{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) Path at which the file to which the container's termination message will be written is mounted into the container's filesystem. Message written is intended to be brief final status, such as an assertion failure message. Will be truncated by the node if greater than 4096 bytes. The total message length across all containers will be limited to 12kb. Defaults to /dev/termination-log.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="terminationmessagepolicy_go">
 <a href="#terminationmessagepolicy_go" style="color: inherit; text-decoration: inherit;">Termination<wbr>Message<wbr>Policy</a>
@@ -2766,23 +2298,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Indicate how the termination message should be populated. File will use the contents of terminationMessagePath to populate the container status message on both success and failure. FallbackToLogsOnError will use the last chunk of container log output if the termination message file is empty and the container exited with an error. The log output is limited to 2048 bytes or 80 lines, whichever is smaller. Defaults to File. Cannot be updated. +optional{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="tty_go">
-<a href="#tty_go" style="color: inherit; text-decoration: inherit;">Tty</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Whether this container should allocate a TTY for itself, also requires 'stdin' to be true. Default is false. +optional{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="volumedevices_go">
-<a href="#volumedevices_go" style="color: inherit; text-decoration: inherit;">Volume<wbr>Devices</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volumedeviceresponse">[]Volume<wbr>Device<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}volumeDevices is the list of block devices to be used by the container. This is an alpha feature and may change in the future. +optional{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) Indicate how the termination message should be populated. File will use the contents of terminationMessagePath to populate the container status message on both success and failure. FallbackToLogsOnError will use the last chunk of container log output if the termination message file is empty and the container exited with an error. The log output is limited to 2048 bytes or 80 lines, whichever is smaller. Defaults to File. Cannot be updated.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="volumemounts_go">
 <a href="#volumemounts_go" style="color: inherit; text-decoration: inherit;">Volume<wbr>Mounts</a>
@@ -2790,7 +2306,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#volumemountresponse">[]Volume<wbr>Mount<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Pod volumes to mount into the container's filesystem. Cannot be updated. +optional{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) Volume to mount into the container's filesystem. Only supports SecretVolumeSources. Pod volumes to mount into the container's filesystem.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="workingdir_go">
 <a href="#workingdir_go" style="color: inherit; text-decoration: inherit;">Working<wbr>Dir</a>
@@ -2798,7 +2314,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Container's working directory. If not specified, the container runtime's default will be used, which might be configured in the container image. Cannot be updated. +optional{{% /md %}}</dd></dl>
+    <dd>{{% md %}}(Optional) Container's working directory. If not specified, the container runtime's default will be used, which might be configured in the container image.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2810,7 +2326,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Arguments to the entrypoint. The docker image's CMD is used if this is not provided. Variable references $(VAR_NAME) are expanded using the container's environment. If a variable cannot be resolved, the reference in the input string will be unchanged. The $(VAR_NAME) syntax can be escaped with a double $$, ie: $$(VAR_NAME). Escaped references will never be expanded, regardless of whether the variable exists or not. Cannot be updated. More info: https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell +optional{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) Arguments to the entrypoint. The docker image's CMD is used if this is not provided. Variable references $(VAR_NAME) are expanded using the container's environment. If a variable cannot be resolved, the reference in the input string will be unchanged. The $(VAR_NAME) syntax can be escaped with a double $$, ie: $$(VAR_NAME). Escaped references will never be expanded, regardless of whether the variable exists or not. More info: https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="command_nodejs">
 <a href="#command_nodejs" style="color: inherit; text-decoration: inherit;">command</a>
@@ -2818,7 +2334,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Entrypoint array. Not executed within a shell. The docker image's ENTRYPOINT is used if this is not provided. Variable references $(VAR_NAME) are expanded using the container's environment. If a variable cannot be resolved, the reference in the input string will be unchanged. The $(VAR_NAME) syntax can be escaped with a double $$, ie: $$(VAR_NAME). Escaped references will never be expanded, regardless of whether the variable exists or not. Cannot be updated. More info: https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell +optional{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="env_nodejs">
 <a href="#env_nodejs" style="color: inherit; text-decoration: inherit;">env</a>
@@ -2826,7 +2342,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#envvarresponse">Env<wbr>Var<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}List of environment variables to set in the container. Cannot be updated. +optional{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) List of environment variables to set in the container.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="envfrom_nodejs">
 <a href="#envfrom_nodejs" style="color: inherit; text-decoration: inherit;">env<wbr>From</a>
@@ -2834,7 +2350,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#envfromsourceresponse">Env<wbr>From<wbr>Source<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}List of sources to populate environment variables in the container. The keys defined within a source must be a C_IDENTIFIER. All invalid keys will be reported as an event when the container is starting. When a key exists in multiple sources, the value associated with the last source will take precedence. Values defined by an Env with a duplicate key will take precedence. Cannot be updated. +optional{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) List of sources to populate environment variables in the container. The keys defined within a source must be a C_IDENTIFIER. All invalid keys will be reported as an event when the container is starting. When a key exists in multiple sources, the value associated with the last source will take precedence. Values defined by an Env with a duplicate key will take precedence. Cannot be updated.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="image_nodejs">
 <a href="#image_nodejs" style="color: inherit; text-decoration: inherit;">image</a>
@@ -2842,7 +2358,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Docker image name. More info: https://kubernetes.io/docs/concepts/containers/images{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Only supports containers from Google Container Registry or Artifact Registry URL of the Container image. More info: https://kubernetes.io/docs/concepts/containers/images{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="imagepullpolicy_nodejs">
 <a href="#imagepullpolicy_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Pull<wbr>Policy</a>
@@ -2850,15 +2366,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Image pull policy. One of Always, Never, IfNotPresent. Defaults to Always if :latest tag is specified, or IfNotPresent otherwise. Cannot be updated. More info: https://kubernetes.io/docs/concepts/containers/images#updating-images +optional{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="lifecycle_nodejs">
-<a href="#lifecycle_nodejs" style="color: inherit; text-decoration: inherit;">lifecycle</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#lifecycleresponse">Lifecycle<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}Actions that the management system should take in response to container lifecycle events. Cannot be updated. +optional{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) Image pull policy. One of Always, Never, IfNotPresent. Defaults to Always if :latest tag is specified, or IfNotPresent otherwise. More info: https://kubernetes.io/docs/concepts/containers/images#updating-images{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="livenessprobe_nodejs">
 <a href="#livenessprobe_nodejs" style="color: inherit; text-decoration: inherit;">liveness<wbr>Probe</a>
@@ -2866,7 +2374,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#proberesponse">Probe<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Periodic probe of container liveness. Container will be restarted if the probe fails. Cannot be updated. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes +optional{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) Periodic probe of container liveness. Container will be restarted if the probe fails. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2874,7 +2382,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the container specified as a DNS_LABEL. Each container must have a unique name (DNS_LABEL). Cannot be updated.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) Name of the container specified as a DNS_LABEL. Currently unused in Cloud Run. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#dns-label-names{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ports_nodejs">
 <a href="#ports_nodejs" style="color: inherit; text-decoration: inherit;">ports</a>
@@ -2882,7 +2390,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerportresponse">Container<wbr>Port<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}List of ports to expose from the container. Exposing a port here gives the system additional information about the network connections a container uses, but is primarily informational. Not specifying a port here DOES NOT prevent that port from being exposed. Any port which is listening on the default "0.0.0.0" address inside a container will be accessible from the network. Cannot be updated. +optional{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) List of ports to expose from the container. Only a single port can be specified. The specified ports must be listening on all interfaces (0.0.0.0) within the container to be accessible. If omitted, a port number will be chosen and passed to the container through the PORT environment variable for the container to listen on.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="readinessprobe_nodejs">
 <a href="#readinessprobe_nodejs" style="color: inherit; text-decoration: inherit;">readiness<wbr>Probe</a>
@@ -2890,7 +2398,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#proberesponse">Probe<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Periodic probe of container service readiness. Container will be removed from service endpoints if the probe fails. Cannot be updated. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes +optional{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) Periodic probe of container service readiness. Container will be removed from service endpoints if the probe fails. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resources_nodejs">
 <a href="#resources_nodejs" style="color: inherit; text-decoration: inherit;">resources</a>
@@ -2898,7 +2406,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcerequirementsresponse">Resource<wbr>Requirements<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Compute Resources required by this container. Cannot be updated. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#resources +optional{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) Compute Resources required by this container. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#resources{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="securitycontext_nodejs">
 <a href="#securitycontext_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Context</a>
@@ -2906,23 +2414,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#securitycontextresponse">Security<wbr>Context<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Security options the pod should run with. More info: https://kubernetes.io/docs/concepts/policy/security-context/ More info: https://kubernetes.io/docs/tasks/configure-pod-container/security-context/ +optional{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) Security options the pod should run with. More info: https://kubernetes.io/docs/concepts/policy/security-context/ More info: https://kubernetes.io/docs/tasks/configure-pod-container/security-context/{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="stdin_nodejs">
-<a href="#stdin_nodejs" style="color: inherit; text-decoration: inherit;">stdin</a>
+        <span id="startupprobe_nodejs">
+<a href="#startupprobe_nodejs" style="color: inherit; text-decoration: inherit;">startup<wbr>Probe</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="#proberesponse">Probe<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Whether this container should allocate a buffer for stdin in the container runtime. If this is not set, reads from stdin in the container will always result in EOF. Default is false. +optional{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="stdinonce_nodejs">
-<a href="#stdinonce_nodejs" style="color: inherit; text-decoration: inherit;">stdin<wbr>Once</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
-    </dt>
-    <dd>{{% md %}}Whether the container runtime should close the stdin channel after it has been opened by a single attach. When stdin is true the stdin stream will remain open across multiple attach sessions. If stdinOnce is set to true, stdin is opened on container start, is empty until the first client attaches to stdin, and then remains open and accepts data until the client disconnects, at which time stdin is closed and remains closed until the container is restarted. If this flag is false, a container processes that reads from stdin will never receive an EOF. Default is false +optional{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) Startup probe of application within the container. All other probes are disabled if a startup probe is provided, until it succeeds. Container will not be added to service endpoints if the probe fails. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="terminationmessagepath_nodejs">
 <a href="#terminationmessagepath_nodejs" style="color: inherit; text-decoration: inherit;">termination<wbr>Message<wbr>Path</a>
@@ -2930,7 +2430,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Optional: Path at which the file to which the container's termination message will be written is mounted into the container's filesystem. Message written is intended to be brief final status, such as an assertion failure message. Will be truncated by the node if greater than 4096 bytes. The total message length across all containers will be limited to 12kb. Defaults to /dev/termination-log. Cannot be updated. +optional{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) Path at which the file to which the container's termination message will be written is mounted into the container's filesystem. Message written is intended to be brief final status, such as an assertion failure message. Will be truncated by the node if greater than 4096 bytes. The total message length across all containers will be limited to 12kb. Defaults to /dev/termination-log.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="terminationmessagepolicy_nodejs">
 <a href="#terminationmessagepolicy_nodejs" style="color: inherit; text-decoration: inherit;">termination<wbr>Message<wbr>Policy</a>
@@ -2938,23 +2438,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Indicate how the termination message should be populated. File will use the contents of terminationMessagePath to populate the container status message on both success and failure. FallbackToLogsOnError will use the last chunk of container log output if the termination message file is empty and the container exited with an error. The log output is limited to 2048 bytes or 80 lines, whichever is smaller. Defaults to File. Cannot be updated. +optional{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="tty_nodejs">
-<a href="#tty_nodejs" style="color: inherit; text-decoration: inherit;">tty</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
-    </dt>
-    <dd>{{% md %}}Whether this container should allocate a TTY for itself, also requires 'stdin' to be true. Default is false. +optional{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="volumedevices_nodejs">
-<a href="#volumedevices_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Devices</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volumedeviceresponse">Volume<wbr>Device<wbr>Response[]</a></span>
-    </dt>
-    <dd>{{% md %}}volumeDevices is the list of block devices to be used by the container. This is an alpha feature and may change in the future. +optional{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) Indicate how the termination message should be populated. File will use the contents of terminationMessagePath to populate the container status message on both success and failure. FallbackToLogsOnError will use the last chunk of container log output if the termination message file is empty and the container exited with an error. The log output is limited to 2048 bytes or 80 lines, whichever is smaller. Defaults to File. Cannot be updated.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="volumemounts_nodejs">
 <a href="#volumemounts_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Mounts</a>
@@ -2962,7 +2446,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#volumemountresponse">Volume<wbr>Mount<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}Pod volumes to mount into the container's filesystem. Cannot be updated. +optional{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) Volume to mount into the container's filesystem. Only supports SecretVolumeSources. Pod volumes to mount into the container's filesystem.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="workingdir_nodejs">
 <a href="#workingdir_nodejs" style="color: inherit; text-decoration: inherit;">working<wbr>Dir</a>
@@ -2970,7 +2454,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Container's working directory. If not specified, the container runtime's default will be used, which might be configured in the container image. Cannot be updated. +optional{{% /md %}}</dd></dl>
+    <dd>{{% md %}}(Optional) Container's working directory. If not specified, the container runtime's default will be used, which might be configured in the container image.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -2982,7 +2466,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Arguments to the entrypoint. The docker image's CMD is used if this is not provided. Variable references $(VAR_NAME) are expanded using the container's environment. If a variable cannot be resolved, the reference in the input string will be unchanged. The $(VAR_NAME) syntax can be escaped with a double $$, ie: $$(VAR_NAME). Escaped references will never be expanded, regardless of whether the variable exists or not. Cannot be updated. More info: https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell +optional{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) Arguments to the entrypoint. The docker image's CMD is used if this is not provided. Variable references $(VAR_NAME) are expanded using the container's environment. If a variable cannot be resolved, the reference in the input string will be unchanged. The $(VAR_NAME) syntax can be escaped with a double $$, ie: $$(VAR_NAME). Escaped references will never be expanded, regardless of whether the variable exists or not. More info: https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="command_python">
 <a href="#command_python" style="color: inherit; text-decoration: inherit;">command</a>
@@ -2990,7 +2474,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Entrypoint array. Not executed within a shell. The docker image's ENTRYPOINT is used if this is not provided. Variable references $(VAR_NAME) are expanded using the container's environment. If a variable cannot be resolved, the reference in the input string will be unchanged. The $(VAR_NAME) syntax can be escaped with a double $$, ie: $$(VAR_NAME). Escaped references will never be expanded, regardless of whether the variable exists or not. Cannot be updated. More info: https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell +optional{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="env_python">
 <a href="#env_python" style="color: inherit; text-decoration: inherit;">env</a>
@@ -2998,7 +2482,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#envvarresponse">Sequence[Env<wbr>Var<wbr>Response]</a></span>
     </dt>
-    <dd>{{% md %}}List of environment variables to set in the container. Cannot be updated. +optional{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) List of environment variables to set in the container.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="env_from_python">
 <a href="#env_from_python" style="color: inherit; text-decoration: inherit;">env_<wbr>from</a>
@@ -3006,7 +2490,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#envfromsourceresponse">Sequence[Env<wbr>From<wbr>Source<wbr>Response]</a></span>
     </dt>
-    <dd>{{% md %}}List of sources to populate environment variables in the container. The keys defined within a source must be a C_IDENTIFIER. All invalid keys will be reported as an event when the container is starting. When a key exists in multiple sources, the value associated with the last source will take precedence. Values defined by an Env with a duplicate key will take precedence. Cannot be updated. +optional{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) List of sources to populate environment variables in the container. The keys defined within a source must be a C_IDENTIFIER. All invalid keys will be reported as an event when the container is starting. When a key exists in multiple sources, the value associated with the last source will take precedence. Values defined by an Env with a duplicate key will take precedence. Cannot be updated.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="image_python">
 <a href="#image_python" style="color: inherit; text-decoration: inherit;">image</a>
@@ -3014,7 +2498,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Docker image name. More info: https://kubernetes.io/docs/concepts/containers/images{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Only supports containers from Google Container Registry or Artifact Registry URL of the Container image. More info: https://kubernetes.io/docs/concepts/containers/images{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="image_pull_policy_python">
 <a href="#image_pull_policy_python" style="color: inherit; text-decoration: inherit;">image_<wbr>pull_<wbr>policy</a>
@@ -3022,15 +2506,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Image pull policy. One of Always, Never, IfNotPresent. Defaults to Always if :latest tag is specified, or IfNotPresent otherwise. Cannot be updated. More info: https://kubernetes.io/docs/concepts/containers/images#updating-images +optional{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="lifecycle_python">
-<a href="#lifecycle_python" style="color: inherit; text-decoration: inherit;">lifecycle</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#lifecycleresponse">Lifecycle<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}Actions that the management system should take in response to container lifecycle events. Cannot be updated. +optional{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) Image pull policy. One of Always, Never, IfNotPresent. Defaults to Always if :latest tag is specified, or IfNotPresent otherwise. More info: https://kubernetes.io/docs/concepts/containers/images#updating-images{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="liveness_probe_python">
 <a href="#liveness_probe_python" style="color: inherit; text-decoration: inherit;">liveness_<wbr>probe</a>
@@ -3038,7 +2514,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#proberesponse">Probe<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Periodic probe of container liveness. Container will be restarted if the probe fails. Cannot be updated. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes +optional{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) Periodic probe of container liveness. Container will be restarted if the probe fails. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -3046,7 +2522,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the container specified as a DNS_LABEL. Each container must have a unique name (DNS_LABEL). Cannot be updated.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) Name of the container specified as a DNS_LABEL. Currently unused in Cloud Run. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#dns-label-names{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ports_python">
 <a href="#ports_python" style="color: inherit; text-decoration: inherit;">ports</a>
@@ -3054,7 +2530,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerportresponse">Sequence[Container<wbr>Port<wbr>Response]</a></span>
     </dt>
-    <dd>{{% md %}}List of ports to expose from the container. Exposing a port here gives the system additional information about the network connections a container uses, but is primarily informational. Not specifying a port here DOES NOT prevent that port from being exposed. Any port which is listening on the default "0.0.0.0" address inside a container will be accessible from the network. Cannot be updated. +optional{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) List of ports to expose from the container. Only a single port can be specified. The specified ports must be listening on all interfaces (0.0.0.0) within the container to be accessible. If omitted, a port number will be chosen and passed to the container through the PORT environment variable for the container to listen on.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="readiness_probe_python">
 <a href="#readiness_probe_python" style="color: inherit; text-decoration: inherit;">readiness_<wbr>probe</a>
@@ -3062,7 +2538,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#proberesponse">Probe<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Periodic probe of container service readiness. Container will be removed from service endpoints if the probe fails. Cannot be updated. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes +optional{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) Periodic probe of container service readiness. Container will be removed from service endpoints if the probe fails. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resources_python">
 <a href="#resources_python" style="color: inherit; text-decoration: inherit;">resources</a>
@@ -3070,7 +2546,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcerequirementsresponse">Resource<wbr>Requirements<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Compute Resources required by this container. Cannot be updated. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#resources +optional{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) Compute Resources required by this container. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#resources{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="security_context_python">
 <a href="#security_context_python" style="color: inherit; text-decoration: inherit;">security_<wbr>context</a>
@@ -3078,23 +2554,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#securitycontextresponse">Security<wbr>Context<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Security options the pod should run with. More info: https://kubernetes.io/docs/concepts/policy/security-context/ More info: https://kubernetes.io/docs/tasks/configure-pod-container/security-context/ +optional{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) Security options the pod should run with. More info: https://kubernetes.io/docs/concepts/policy/security-context/ More info: https://kubernetes.io/docs/tasks/configure-pod-container/security-context/{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="stdin_python">
-<a href="#stdin_python" style="color: inherit; text-decoration: inherit;">stdin</a>
+        <span id="startup_probe_python">
+<a href="#startup_probe_python" style="color: inherit; text-decoration: inherit;">startup_<wbr>probe</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="#proberesponse">Probe<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Whether this container should allocate a buffer for stdin in the container runtime. If this is not set, reads from stdin in the container will always result in EOF. Default is false. +optional{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="stdin_once_python">
-<a href="#stdin_once_python" style="color: inherit; text-decoration: inherit;">stdin_<wbr>once</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Whether the container runtime should close the stdin channel after it has been opened by a single attach. When stdin is true the stdin stream will remain open across multiple attach sessions. If stdinOnce is set to true, stdin is opened on container start, is empty until the first client attaches to stdin, and then remains open and accepts data until the client disconnects, at which time stdin is closed and remains closed until the container is restarted. If this flag is false, a container processes that reads from stdin will never receive an EOF. Default is false +optional{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) Startup probe of application within the container. All other probes are disabled if a startup probe is provided, until it succeeds. Container will not be added to service endpoints if the probe fails. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="termination_message_path_python">
 <a href="#termination_message_path_python" style="color: inherit; text-decoration: inherit;">termination_<wbr>message_<wbr>path</a>
@@ -3102,7 +2570,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Optional: Path at which the file to which the container's termination message will be written is mounted into the container's filesystem. Message written is intended to be brief final status, such as an assertion failure message. Will be truncated by the node if greater than 4096 bytes. The total message length across all containers will be limited to 12kb. Defaults to /dev/termination-log. Cannot be updated. +optional{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) Path at which the file to which the container's termination message will be written is mounted into the container's filesystem. Message written is intended to be brief final status, such as an assertion failure message. Will be truncated by the node if greater than 4096 bytes. The total message length across all containers will be limited to 12kb. Defaults to /dev/termination-log.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="termination_message_policy_python">
 <a href="#termination_message_policy_python" style="color: inherit; text-decoration: inherit;">termination_<wbr>message_<wbr>policy</a>
@@ -3110,23 +2578,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Indicate how the termination message should be populated. File will use the contents of terminationMessagePath to populate the container status message on both success and failure. FallbackToLogsOnError will use the last chunk of container log output if the termination message file is empty and the container exited with an error. The log output is limited to 2048 bytes or 80 lines, whichever is smaller. Defaults to File. Cannot be updated. +optional{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="tty_python">
-<a href="#tty_python" style="color: inherit; text-decoration: inherit;">tty</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Whether this container should allocate a TTY for itself, also requires 'stdin' to be true. Default is false. +optional{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="volume_devices_python">
-<a href="#volume_devices_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>devices</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volumedeviceresponse">Sequence[Volume<wbr>Device<wbr>Response]</a></span>
-    </dt>
-    <dd>{{% md %}}volumeDevices is the list of block devices to be used by the container. This is an alpha feature and may change in the future. +optional{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) Indicate how the termination message should be populated. File will use the contents of terminationMessagePath to populate the container status message on both success and failure. FallbackToLogsOnError will use the last chunk of container log output if the termination message file is empty and the container exited with an error. The log output is limited to 2048 bytes or 80 lines, whichever is smaller. Defaults to File. Cannot be updated.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="volume_mounts_python">
 <a href="#volume_mounts_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>mounts</a>
@@ -3134,7 +2586,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#volumemountresponse">Sequence[Volume<wbr>Mount<wbr>Response]</a></span>
     </dt>
-    <dd>{{% md %}}Pod volumes to mount into the container's filesystem. Cannot be updated. +optional{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) Volume to mount into the container's filesystem. Only supports SecretVolumeSources. Pod volumes to mount into the container's filesystem.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="working_dir_python">
 <a href="#working_dir_python" style="color: inherit; text-decoration: inherit;">working_<wbr>dir</a>
@@ -3142,7 +2594,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Container's working directory. If not specified, the container runtime's default will be used, which might be configured in the container image. Cannot be updated. +optional{{% /md %}}</dd></dl>
+    <dd>{{% md %}}(Optional) Container's working directory. If not specified, the container runtime's default will be used, which might be configured in the container image.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="envfromsource">Env<wbr>From<wbr>Source</h4>
@@ -3156,7 +2608,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#configmapenvsource">Pulumi.<wbr>Google<wbr>Native.<wbr>Run.<wbr>V1Alpha1.<wbr>Inputs.<wbr>Config<wbr>Map<wbr>Env<wbr>Source</a></span>
     </dt>
-    <dd>{{% md %}}The ConfigMap to select from +optional{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) The ConfigMap to select from{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="prefix_csharp">
 <a href="#prefix_csharp" style="color: inherit; text-decoration: inherit;">Prefix</a>
@@ -3164,7 +2616,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}An optional identifier to prepend to each key in the ConfigMap. Must be a C_IDENTIFIER. +optional{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) An optional identifier to prepend to each key in the ConfigMap. Must be a C_IDENTIFIER.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secretref_csharp">
 <a href="#secretref_csharp" style="color: inherit; text-decoration: inherit;">Secret<wbr>Ref</a>
@@ -3172,7 +2624,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretenvsource">Pulumi.<wbr>Google<wbr>Native.<wbr>Run.<wbr>V1Alpha1.<wbr>Inputs.<wbr>Secret<wbr>Env<wbr>Source</a></span>
     </dt>
-    <dd>{{% md %}}The Secret to select from +optional{{% /md %}}</dd></dl>
+    <dd>{{% md %}}(Optional) The Secret to select from{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -3184,7 +2636,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#configmapenvsource">Config<wbr>Map<wbr>Env<wbr>Source</a></span>
     </dt>
-    <dd>{{% md %}}The ConfigMap to select from +optional{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) The ConfigMap to select from{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="prefix_go">
 <a href="#prefix_go" style="color: inherit; text-decoration: inherit;">Prefix</a>
@@ -3192,7 +2644,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}An optional identifier to prepend to each key in the ConfigMap. Must be a C_IDENTIFIER. +optional{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) An optional identifier to prepend to each key in the ConfigMap. Must be a C_IDENTIFIER.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secretref_go">
 <a href="#secretref_go" style="color: inherit; text-decoration: inherit;">Secret<wbr>Ref</a>
@@ -3200,7 +2652,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretenvsource">Secret<wbr>Env<wbr>Source</a></span>
     </dt>
-    <dd>{{% md %}}The Secret to select from +optional{{% /md %}}</dd></dl>
+    <dd>{{% md %}}(Optional) The Secret to select from{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -3212,7 +2664,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#configmapenvsource">Config<wbr>Map<wbr>Env<wbr>Source</a></span>
     </dt>
-    <dd>{{% md %}}The ConfigMap to select from +optional{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) The ConfigMap to select from{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="prefix_nodejs">
 <a href="#prefix_nodejs" style="color: inherit; text-decoration: inherit;">prefix</a>
@@ -3220,7 +2672,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}An optional identifier to prepend to each key in the ConfigMap. Must be a C_IDENTIFIER. +optional{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) An optional identifier to prepend to each key in the ConfigMap. Must be a C_IDENTIFIER.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secretref_nodejs">
 <a href="#secretref_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Ref</a>
@@ -3228,7 +2680,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretenvsource">Secret<wbr>Env<wbr>Source</a></span>
     </dt>
-    <dd>{{% md %}}The Secret to select from +optional{{% /md %}}</dd></dl>
+    <dd>{{% md %}}(Optional) The Secret to select from{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -3240,7 +2692,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#configmapenvsource">Config<wbr>Map<wbr>Env<wbr>Source</a></span>
     </dt>
-    <dd>{{% md %}}The ConfigMap to select from +optional{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) The ConfigMap to select from{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="prefix_python">
 <a href="#prefix_python" style="color: inherit; text-decoration: inherit;">prefix</a>
@@ -3248,7 +2700,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}An optional identifier to prepend to each key in the ConfigMap. Must be a C_IDENTIFIER. +optional{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) An optional identifier to prepend to each key in the ConfigMap. Must be a C_IDENTIFIER.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secret_ref_python">
 <a href="#secret_ref_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>ref</a>
@@ -3256,7 +2708,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretenvsource">Secret<wbr>Env<wbr>Source</a></span>
     </dt>
-    <dd>{{% md %}}The Secret to select from +optional{{% /md %}}</dd></dl>
+    <dd>{{% md %}}(Optional) The Secret to select from{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="envfromsourceresponse">Env<wbr>From<wbr>Source<wbr>Response</h4>
@@ -3270,7 +2722,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#configmapenvsourceresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Run.<wbr>V1Alpha1.<wbr>Inputs.<wbr>Config<wbr>Map<wbr>Env<wbr>Source<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The ConfigMap to select from +optional{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) The ConfigMap to select from{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="prefix_csharp">
 <a href="#prefix_csharp" style="color: inherit; text-decoration: inherit;">Prefix</a>
@@ -3278,7 +2730,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}An optional identifier to prepend to each key in the ConfigMap. Must be a C_IDENTIFIER. +optional{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) An optional identifier to prepend to each key in the ConfigMap. Must be a C_IDENTIFIER.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="secretref_csharp">
 <a href="#secretref_csharp" style="color: inherit; text-decoration: inherit;">Secret<wbr>Ref</a>
@@ -3286,7 +2738,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretenvsourceresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Run.<wbr>V1Alpha1.<wbr>Inputs.<wbr>Secret<wbr>Env<wbr>Source<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The Secret to select from +optional{{% /md %}}</dd></dl>
+    <dd>{{% md %}}(Optional) The Secret to select from{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -3298,7 +2750,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#configmapenvsourceresponse">Config<wbr>Map<wbr>Env<wbr>Source<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The ConfigMap to select from +optional{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) The ConfigMap to select from{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="prefix_go">
 <a href="#prefix_go" style="color: inherit; text-decoration: inherit;">Prefix</a>
@@ -3306,7 +2758,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}An optional identifier to prepend to each key in the ConfigMap. Must be a C_IDENTIFIER. +optional{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) An optional identifier to prepend to each key in the ConfigMap. Must be a C_IDENTIFIER.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="secretref_go">
 <a href="#secretref_go" style="color: inherit; text-decoration: inherit;">Secret<wbr>Ref</a>
@@ -3314,7 +2766,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretenvsourceresponse">Secret<wbr>Env<wbr>Source<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The Secret to select from +optional{{% /md %}}</dd></dl>
+    <dd>{{% md %}}(Optional) The Secret to select from{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -3326,7 +2778,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#configmapenvsourceresponse">Config<wbr>Map<wbr>Env<wbr>Source<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The ConfigMap to select from +optional{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) The ConfigMap to select from{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="prefix_nodejs">
 <a href="#prefix_nodejs" style="color: inherit; text-decoration: inherit;">prefix</a>
@@ -3334,7 +2786,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}An optional identifier to prepend to each key in the ConfigMap. Must be a C_IDENTIFIER. +optional{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) An optional identifier to prepend to each key in the ConfigMap. Must be a C_IDENTIFIER.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="secretref_nodejs">
 <a href="#secretref_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Ref</a>
@@ -3342,7 +2794,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretenvsourceresponse">Secret<wbr>Env<wbr>Source<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The Secret to select from +optional{{% /md %}}</dd></dl>
+    <dd>{{% md %}}(Optional) The Secret to select from{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -3354,7 +2806,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#configmapenvsourceresponse">Config<wbr>Map<wbr>Env<wbr>Source<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The ConfigMap to select from +optional{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) The ConfigMap to select from{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="prefix_python">
 <a href="#prefix_python" style="color: inherit; text-decoration: inherit;">prefix</a>
@@ -3362,7 +2814,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}An optional identifier to prepend to each key in the ConfigMap. Must be a C_IDENTIFIER. +optional{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) An optional identifier to prepend to each key in the ConfigMap. Must be a C_IDENTIFIER.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="secret_ref_python">
 <a href="#secret_ref_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>ref</a>
@@ -3370,7 +2822,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretenvsourceresponse">Secret<wbr>Env<wbr>Source<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The Secret to select from +optional{{% /md %}}</dd></dl>
+    <dd>{{% md %}}(Optional) The Secret to select from{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="envvar">Env<wbr>Var</h4>
@@ -3392,7 +2844,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Variable references $(VAR_NAME) are expanded using the previous defined environment variables in the container and any route environment variables. If a variable cannot be resolved, the reference in the input string will be unchanged. The $(VAR_NAME) syntax can be escaped with a double $$, ie: $$(VAR_NAME). Escaped references will never be expanded, regardless of whether the variable exists or not. Defaults to "". +optional{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) Variable references $(VAR_NAME) are expanded using the previous defined environment variables in the container and any route environment variables. If a variable cannot be resolved, the reference in the input string will be unchanged. The $(VAR_NAME) syntax can be escaped with a double $$, ie: $$(VAR_NAME). Escaped references will never be expanded, regardless of whether the variable exists or not. Defaults to "".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="valuefrom_csharp">
 <a href="#valuefrom_csharp" style="color: inherit; text-decoration: inherit;">Value<wbr>From</a>
@@ -3400,7 +2852,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#envvarsource">Pulumi.<wbr>Google<wbr>Native.<wbr>Run.<wbr>V1Alpha1.<wbr>Inputs.<wbr>Env<wbr>Var<wbr>Source</a></span>
     </dt>
-    <dd>{{% md %}}Cloud Run fully managed: supported Source for the environment variable's value. Only supports secret_key_ref. Cloud Run for Anthos: supported Source for the environment variable's value. Cannot be used if value is not empty. +optional{{% /md %}}</dd></dl>
+    <dd>{{% md %}}(Optional) Source for the environment variable's value. Only supports secret_key_ref. Source for the environment variable's value. Cannot be used if value is not empty.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -3420,7 +2872,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Variable references $(VAR_NAME) are expanded using the previous defined environment variables in the container and any route environment variables. If a variable cannot be resolved, the reference in the input string will be unchanged. The $(VAR_NAME) syntax can be escaped with a double $$, ie: $$(VAR_NAME). Escaped references will never be expanded, regardless of whether the variable exists or not. Defaults to "". +optional{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) Variable references $(VAR_NAME) are expanded using the previous defined environment variables in the container and any route environment variables. If a variable cannot be resolved, the reference in the input string will be unchanged. The $(VAR_NAME) syntax can be escaped with a double $$, ie: $$(VAR_NAME). Escaped references will never be expanded, regardless of whether the variable exists or not. Defaults to "".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="valuefrom_go">
 <a href="#valuefrom_go" style="color: inherit; text-decoration: inherit;">Value<wbr>From</a>
@@ -3428,7 +2880,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#envvarsource">Env<wbr>Var<wbr>Source</a></span>
     </dt>
-    <dd>{{% md %}}Cloud Run fully managed: supported Source for the environment variable's value. Only supports secret_key_ref. Cloud Run for Anthos: supported Source for the environment variable's value. Cannot be used if value is not empty. +optional{{% /md %}}</dd></dl>
+    <dd>{{% md %}}(Optional) Source for the environment variable's value. Only supports secret_key_ref. Source for the environment variable's value. Cannot be used if value is not empty.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -3448,7 +2900,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Variable references $(VAR_NAME) are expanded using the previous defined environment variables in the container and any route environment variables. If a variable cannot be resolved, the reference in the input string will be unchanged. The $(VAR_NAME) syntax can be escaped with a double $$, ie: $$(VAR_NAME). Escaped references will never be expanded, regardless of whether the variable exists or not. Defaults to "". +optional{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) Variable references $(VAR_NAME) are expanded using the previous defined environment variables in the container and any route environment variables. If a variable cannot be resolved, the reference in the input string will be unchanged. The $(VAR_NAME) syntax can be escaped with a double $$, ie: $$(VAR_NAME). Escaped references will never be expanded, regardless of whether the variable exists or not. Defaults to "".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="valuefrom_nodejs">
 <a href="#valuefrom_nodejs" style="color: inherit; text-decoration: inherit;">value<wbr>From</a>
@@ -3456,7 +2908,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#envvarsource">Env<wbr>Var<wbr>Source</a></span>
     </dt>
-    <dd>{{% md %}}Cloud Run fully managed: supported Source for the environment variable's value. Only supports secret_key_ref. Cloud Run for Anthos: supported Source for the environment variable's value. Cannot be used if value is not empty. +optional{{% /md %}}</dd></dl>
+    <dd>{{% md %}}(Optional) Source for the environment variable's value. Only supports secret_key_ref. Source for the environment variable's value. Cannot be used if value is not empty.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -3476,7 +2928,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Variable references $(VAR_NAME) are expanded using the previous defined environment variables in the container and any route environment variables. If a variable cannot be resolved, the reference in the input string will be unchanged. The $(VAR_NAME) syntax can be escaped with a double $$, ie: $$(VAR_NAME). Escaped references will never be expanded, regardless of whether the variable exists or not. Defaults to "". +optional{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) Variable references $(VAR_NAME) are expanded using the previous defined environment variables in the container and any route environment variables. If a variable cannot be resolved, the reference in the input string will be unchanged. The $(VAR_NAME) syntax can be escaped with a double $$, ie: $$(VAR_NAME). Escaped references will never be expanded, regardless of whether the variable exists or not. Defaults to "".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_from_python">
 <a href="#value_from_python" style="color: inherit; text-decoration: inherit;">value_<wbr>from</a>
@@ -3484,7 +2936,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#envvarsource">Env<wbr>Var<wbr>Source</a></span>
     </dt>
-    <dd>{{% md %}}Cloud Run fully managed: supported Source for the environment variable's value. Only supports secret_key_ref. Cloud Run for Anthos: supported Source for the environment variable's value. Cannot be used if value is not empty. +optional{{% /md %}}</dd></dl>
+    <dd>{{% md %}}(Optional) Source for the environment variable's value. Only supports secret_key_ref. Source for the environment variable's value. Cannot be used if value is not empty.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="envvarresponse">Env<wbr>Var<wbr>Response</h4>
@@ -3506,7 +2958,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Variable references $(VAR_NAME) are expanded using the previous defined environment variables in the container and any route environment variables. If a variable cannot be resolved, the reference in the input string will be unchanged. The $(VAR_NAME) syntax can be escaped with a double $$, ie: $$(VAR_NAME). Escaped references will never be expanded, regardless of whether the variable exists or not. Defaults to "". +optional{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) Variable references $(VAR_NAME) are expanded using the previous defined environment variables in the container and any route environment variables. If a variable cannot be resolved, the reference in the input string will be unchanged. The $(VAR_NAME) syntax can be escaped with a double $$, ie: $$(VAR_NAME). Escaped references will never be expanded, regardless of whether the variable exists or not. Defaults to "".{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="valuefrom_csharp">
 <a href="#valuefrom_csharp" style="color: inherit; text-decoration: inherit;">Value<wbr>From</a>
@@ -3514,7 +2966,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#envvarsourceresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Run.<wbr>V1Alpha1.<wbr>Inputs.<wbr>Env<wbr>Var<wbr>Source<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Cloud Run fully managed: supported Source for the environment variable's value. Only supports secret_key_ref. Cloud Run for Anthos: supported Source for the environment variable's value. Cannot be used if value is not empty. +optional{{% /md %}}</dd></dl>
+    <dd>{{% md %}}(Optional) Source for the environment variable's value. Only supports secret_key_ref. Source for the environment variable's value. Cannot be used if value is not empty.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -3534,7 +2986,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Variable references $(VAR_NAME) are expanded using the previous defined environment variables in the container and any route environment variables. If a variable cannot be resolved, the reference in the input string will be unchanged. The $(VAR_NAME) syntax can be escaped with a double $$, ie: $$(VAR_NAME). Escaped references will never be expanded, regardless of whether the variable exists or not. Defaults to "". +optional{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) Variable references $(VAR_NAME) are expanded using the previous defined environment variables in the container and any route environment variables. If a variable cannot be resolved, the reference in the input string will be unchanged. The $(VAR_NAME) syntax can be escaped with a double $$, ie: $$(VAR_NAME). Escaped references will never be expanded, regardless of whether the variable exists or not. Defaults to "".{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="valuefrom_go">
 <a href="#valuefrom_go" style="color: inherit; text-decoration: inherit;">Value<wbr>From</a>
@@ -3542,7 +2994,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#envvarsourceresponse">Env<wbr>Var<wbr>Source<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Cloud Run fully managed: supported Source for the environment variable's value. Only supports secret_key_ref. Cloud Run for Anthos: supported Source for the environment variable's value. Cannot be used if value is not empty. +optional{{% /md %}}</dd></dl>
+    <dd>{{% md %}}(Optional) Source for the environment variable's value. Only supports secret_key_ref. Source for the environment variable's value. Cannot be used if value is not empty.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -3562,7 +3014,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Variable references $(VAR_NAME) are expanded using the previous defined environment variables in the container and any route environment variables. If a variable cannot be resolved, the reference in the input string will be unchanged. The $(VAR_NAME) syntax can be escaped with a double $$, ie: $$(VAR_NAME). Escaped references will never be expanded, regardless of whether the variable exists or not. Defaults to "". +optional{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) Variable references $(VAR_NAME) are expanded using the previous defined environment variables in the container and any route environment variables. If a variable cannot be resolved, the reference in the input string will be unchanged. The $(VAR_NAME) syntax can be escaped with a double $$, ie: $$(VAR_NAME). Escaped references will never be expanded, regardless of whether the variable exists or not. Defaults to "".{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="valuefrom_nodejs">
 <a href="#valuefrom_nodejs" style="color: inherit; text-decoration: inherit;">value<wbr>From</a>
@@ -3570,7 +3022,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#envvarsourceresponse">Env<wbr>Var<wbr>Source<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Cloud Run fully managed: supported Source for the environment variable's value. Only supports secret_key_ref. Cloud Run for Anthos: supported Source for the environment variable's value. Cannot be used if value is not empty. +optional{{% /md %}}</dd></dl>
+    <dd>{{% md %}}(Optional) Source for the environment variable's value. Only supports secret_key_ref. Source for the environment variable's value. Cannot be used if value is not empty.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -3590,7 +3042,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Variable references $(VAR_NAME) are expanded using the previous defined environment variables in the container and any route environment variables. If a variable cannot be resolved, the reference in the input string will be unchanged. The $(VAR_NAME) syntax can be escaped with a double $$, ie: $$(VAR_NAME). Escaped references will never be expanded, regardless of whether the variable exists or not. Defaults to "". +optional{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) Variable references $(VAR_NAME) are expanded using the previous defined environment variables in the container and any route environment variables. If a variable cannot be resolved, the reference in the input string will be unchanged. The $(VAR_NAME) syntax can be escaped with a double $$, ie: $$(VAR_NAME). Escaped references will never be expanded, regardless of whether the variable exists or not. Defaults to "".{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_from_python">
 <a href="#value_from_python" style="color: inherit; text-decoration: inherit;">value_<wbr>from</a>
@@ -3598,7 +3050,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#envvarsourceresponse">Env<wbr>Var<wbr>Source<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Cloud Run fully managed: supported Source for the environment variable's value. Only supports secret_key_ref. Cloud Run for Anthos: supported Source for the environment variable's value. Cannot be used if value is not empty. +optional{{% /md %}}</dd></dl>
+    <dd>{{% md %}}(Optional) Source for the environment variable's value. Only supports secret_key_ref. Source for the environment variable's value. Cannot be used if value is not empty.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="envvarsource">Env<wbr>Var<wbr>Source</h4>
@@ -3612,7 +3064,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#configmapkeyselector">Pulumi.<wbr>Google<wbr>Native.<wbr>Run.<wbr>V1Alpha1.<wbr>Inputs.<wbr>Config<wbr>Map<wbr>Key<wbr>Selector</a></span>
     </dt>
-    <dd>{{% md %}}Cloud Run fully managed: not supported Cloud Run on GKE: supported Selects a key of a ConfigMap. +optional{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) Not supported by Cloud Run Selects a key of a ConfigMap.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secretkeyref_csharp">
 <a href="#secretkeyref_csharp" style="color: inherit; text-decoration: inherit;">Secret<wbr>Key<wbr>Ref</a>
@@ -3620,7 +3072,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretkeyselector">Pulumi.<wbr>Google<wbr>Native.<wbr>Run.<wbr>V1Alpha1.<wbr>Inputs.<wbr>Secret<wbr>Key<wbr>Selector</a></span>
     </dt>
-    <dd>{{% md %}}Cloud Run fully managed: supported. Selects a key (version) of a secret in Secret Manager. Cloud Run for Anthos: supported. Selects a key of a secret in the pod's namespace. +optional{{% /md %}}</dd></dl>
+    <dd>{{% md %}}(Optional) Selects a key (version) of a secret in Secret Manager.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -3632,7 +3084,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#configmapkeyselector">Config<wbr>Map<wbr>Key<wbr>Selector</a></span>
     </dt>
-    <dd>{{% md %}}Cloud Run fully managed: not supported Cloud Run on GKE: supported Selects a key of a ConfigMap. +optional{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) Not supported by Cloud Run Selects a key of a ConfigMap.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secretkeyref_go">
 <a href="#secretkeyref_go" style="color: inherit; text-decoration: inherit;">Secret<wbr>Key<wbr>Ref</a>
@@ -3640,7 +3092,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretkeyselector">Secret<wbr>Key<wbr>Selector</a></span>
     </dt>
-    <dd>{{% md %}}Cloud Run fully managed: supported. Selects a key (version) of a secret in Secret Manager. Cloud Run for Anthos: supported. Selects a key of a secret in the pod's namespace. +optional{{% /md %}}</dd></dl>
+    <dd>{{% md %}}(Optional) Selects a key (version) of a secret in Secret Manager.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -3652,7 +3104,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#configmapkeyselector">Config<wbr>Map<wbr>Key<wbr>Selector</a></span>
     </dt>
-    <dd>{{% md %}}Cloud Run fully managed: not supported Cloud Run on GKE: supported Selects a key of a ConfigMap. +optional{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) Not supported by Cloud Run Selects a key of a ConfigMap.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secretkeyref_nodejs">
 <a href="#secretkeyref_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Key<wbr>Ref</a>
@@ -3660,7 +3112,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretkeyselector">Secret<wbr>Key<wbr>Selector</a></span>
     </dt>
-    <dd>{{% md %}}Cloud Run fully managed: supported. Selects a key (version) of a secret in Secret Manager. Cloud Run for Anthos: supported. Selects a key of a secret in the pod's namespace. +optional{{% /md %}}</dd></dl>
+    <dd>{{% md %}}(Optional) Selects a key (version) of a secret in Secret Manager.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -3672,7 +3124,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#configmapkeyselector">Config<wbr>Map<wbr>Key<wbr>Selector</a></span>
     </dt>
-    <dd>{{% md %}}Cloud Run fully managed: not supported Cloud Run on GKE: supported Selects a key of a ConfigMap. +optional{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) Not supported by Cloud Run Selects a key of a ConfigMap.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secret_key_ref_python">
 <a href="#secret_key_ref_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>key_<wbr>ref</a>
@@ -3680,7 +3132,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretkeyselector">Secret<wbr>Key<wbr>Selector</a></span>
     </dt>
-    <dd>{{% md %}}Cloud Run fully managed: supported. Selects a key (version) of a secret in Secret Manager. Cloud Run for Anthos: supported. Selects a key of a secret in the pod's namespace. +optional{{% /md %}}</dd></dl>
+    <dd>{{% md %}}(Optional) Selects a key (version) of a secret in Secret Manager.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="envvarsourceresponse">Env<wbr>Var<wbr>Source<wbr>Response</h4>
@@ -3694,7 +3146,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#configmapkeyselectorresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Run.<wbr>V1Alpha1.<wbr>Inputs.<wbr>Config<wbr>Map<wbr>Key<wbr>Selector<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Cloud Run fully managed: not supported Cloud Run on GKE: supported Selects a key of a ConfigMap. +optional{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) Not supported by Cloud Run Selects a key of a ConfigMap.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="secretkeyref_csharp">
 <a href="#secretkeyref_csharp" style="color: inherit; text-decoration: inherit;">Secret<wbr>Key<wbr>Ref</a>
@@ -3702,7 +3154,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretkeyselectorresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Run.<wbr>V1Alpha1.<wbr>Inputs.<wbr>Secret<wbr>Key<wbr>Selector<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Cloud Run fully managed: supported. Selects a key (version) of a secret in Secret Manager. Cloud Run for Anthos: supported. Selects a key of a secret in the pod's namespace. +optional{{% /md %}}</dd></dl>
+    <dd>{{% md %}}(Optional) Selects a key (version) of a secret in Secret Manager.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -3714,7 +3166,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#configmapkeyselectorresponse">Config<wbr>Map<wbr>Key<wbr>Selector<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Cloud Run fully managed: not supported Cloud Run on GKE: supported Selects a key of a ConfigMap. +optional{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) Not supported by Cloud Run Selects a key of a ConfigMap.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="secretkeyref_go">
 <a href="#secretkeyref_go" style="color: inherit; text-decoration: inherit;">Secret<wbr>Key<wbr>Ref</a>
@@ -3722,7 +3174,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretkeyselectorresponse">Secret<wbr>Key<wbr>Selector<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Cloud Run fully managed: supported. Selects a key (version) of a secret in Secret Manager. Cloud Run for Anthos: supported. Selects a key of a secret in the pod's namespace. +optional{{% /md %}}</dd></dl>
+    <dd>{{% md %}}(Optional) Selects a key (version) of a secret in Secret Manager.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -3734,7 +3186,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#configmapkeyselectorresponse">Config<wbr>Map<wbr>Key<wbr>Selector<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Cloud Run fully managed: not supported Cloud Run on GKE: supported Selects a key of a ConfigMap. +optional{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) Not supported by Cloud Run Selects a key of a ConfigMap.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="secretkeyref_nodejs">
 <a href="#secretkeyref_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Key<wbr>Ref</a>
@@ -3742,7 +3194,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretkeyselectorresponse">Secret<wbr>Key<wbr>Selector<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Cloud Run fully managed: supported. Selects a key (version) of a secret in Secret Manager. Cloud Run for Anthos: supported. Selects a key of a secret in the pod's namespace. +optional{{% /md %}}</dd></dl>
+    <dd>{{% md %}}(Optional) Selects a key (version) of a secret in Secret Manager.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -3754,7 +3206,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#configmapkeyselectorresponse">Config<wbr>Map<wbr>Key<wbr>Selector<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Cloud Run fully managed: not supported Cloud Run on GKE: supported Selects a key of a ConfigMap. +optional{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) Not supported by Cloud Run Selects a key of a ConfigMap.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="secret_key_ref_python">
 <a href="#secret_key_ref_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>key_<wbr>ref</a>
@@ -3762,7 +3214,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretkeyselectorresponse">Secret<wbr>Key<wbr>Selector<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Cloud Run fully managed: supported. Selects a key (version) of a secret in Secret Manager. Cloud Run for Anthos: supported. Selects a key of a secret in the pod's namespace. +optional{{% /md %}}</dd></dl>
+    <dd>{{% md %}}(Optional) Selects a key (version) of a secret in Secret Manager.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="execaction">Exec<wbr>Action</h4>
@@ -3776,7 +3228,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Command is the command line to execute inside the container, the working directory for the command is root ('/') in the container's filesystem. The command is simply exec'd, it is not run inside a shell, so traditional shell instructions ('|', etc) won't work. To use a shell, you need to explicitly call out to that shell. Exit status of 0 is treated as live/healthy and non-zero is unhealthy. +optional{{% /md %}}</dd></dl>
+    <dd>{{% md %}}(Optional) Command is the command line to execute inside the container, the working directory for the command is root ('/') in the container's filesystem. The command is simply exec'd, it is not run inside a shell, so traditional shell instructions ('|', etc) won't work. To use a shell, you need to explicitly call out to that shell. Exit status of 0 is treated as live/healthy and non-zero is unhealthy.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -3788,7 +3240,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Command is the command line to execute inside the container, the working directory for the command is root ('/') in the container's filesystem. The command is simply exec'd, it is not run inside a shell, so traditional shell instructions ('|', etc) won't work. To use a shell, you need to explicitly call out to that shell. Exit status of 0 is treated as live/healthy and non-zero is unhealthy. +optional{{% /md %}}</dd></dl>
+    <dd>{{% md %}}(Optional) Command is the command line to execute inside the container, the working directory for the command is root ('/') in the container's filesystem. The command is simply exec'd, it is not run inside a shell, so traditional shell instructions ('|', etc) won't work. To use a shell, you need to explicitly call out to that shell. Exit status of 0 is treated as live/healthy and non-zero is unhealthy.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -3800,7 +3252,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Command is the command line to execute inside the container, the working directory for the command is root ('/') in the container's filesystem. The command is simply exec'd, it is not run inside a shell, so traditional shell instructions ('|', etc) won't work. To use a shell, you need to explicitly call out to that shell. Exit status of 0 is treated as live/healthy and non-zero is unhealthy. +optional{{% /md %}}</dd></dl>
+    <dd>{{% md %}}(Optional) Command is the command line to execute inside the container, the working directory for the command is root ('/') in the container's filesystem. The command is simply exec'd, it is not run inside a shell, so traditional shell instructions ('|', etc) won't work. To use a shell, you need to explicitly call out to that shell. Exit status of 0 is treated as live/healthy and non-zero is unhealthy.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -3812,7 +3264,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Command is the command line to execute inside the container, the working directory for the command is root ('/') in the container's filesystem. The command is simply exec'd, it is not run inside a shell, so traditional shell instructions ('|', etc) won't work. To use a shell, you need to explicitly call out to that shell. Exit status of 0 is treated as live/healthy and non-zero is unhealthy. +optional{{% /md %}}</dd></dl>
+    <dd>{{% md %}}(Optional) Command is the command line to execute inside the container, the working directory for the command is root ('/') in the container's filesystem. The command is simply exec'd, it is not run inside a shell, so traditional shell instructions ('|', etc) won't work. To use a shell, you need to explicitly call out to that shell. Exit status of 0 is treated as live/healthy and non-zero is unhealthy.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="execactionresponse">Exec<wbr>Action<wbr>Response</h4>
@@ -3826,7 +3278,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Command is the command line to execute inside the container, the working directory for the command is root ('/') in the container's filesystem. The command is simply exec'd, it is not run inside a shell, so traditional shell instructions ('|', etc) won't work. To use a shell, you need to explicitly call out to that shell. Exit status of 0 is treated as live/healthy and non-zero is unhealthy. +optional{{% /md %}}</dd></dl>
+    <dd>{{% md %}}(Optional) Command is the command line to execute inside the container, the working directory for the command is root ('/') in the container's filesystem. The command is simply exec'd, it is not run inside a shell, so traditional shell instructions ('|', etc) won't work. To use a shell, you need to explicitly call out to that shell. Exit status of 0 is treated as live/healthy and non-zero is unhealthy.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -3838,7 +3290,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Command is the command line to execute inside the container, the working directory for the command is root ('/') in the container's filesystem. The command is simply exec'd, it is not run inside a shell, so traditional shell instructions ('|', etc) won't work. To use a shell, you need to explicitly call out to that shell. Exit status of 0 is treated as live/healthy and non-zero is unhealthy. +optional{{% /md %}}</dd></dl>
+    <dd>{{% md %}}(Optional) Command is the command line to execute inside the container, the working directory for the command is root ('/') in the container's filesystem. The command is simply exec'd, it is not run inside a shell, so traditional shell instructions ('|', etc) won't work. To use a shell, you need to explicitly call out to that shell. Exit status of 0 is treated as live/healthy and non-zero is unhealthy.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -3850,7 +3302,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Command is the command line to execute inside the container, the working directory for the command is root ('/') in the container's filesystem. The command is simply exec'd, it is not run inside a shell, so traditional shell instructions ('|', etc) won't work. To use a shell, you need to explicitly call out to that shell. Exit status of 0 is treated as live/healthy and non-zero is unhealthy. +optional{{% /md %}}</dd></dl>
+    <dd>{{% md %}}(Optional) Command is the command line to execute inside the container, the working directory for the command is root ('/') in the container's filesystem. The command is simply exec'd, it is not run inside a shell, so traditional shell instructions ('|', etc) won't work. To use a shell, you need to explicitly call out to that shell. Exit status of 0 is treated as live/healthy and non-zero is unhealthy.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -3862,7 +3314,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Command is the command line to execute inside the container, the working directory for the command is root ('/') in the container's filesystem. The command is simply exec'd, it is not run inside a shell, so traditional shell instructions ('|', etc) won't work. To use a shell, you need to explicitly call out to that shell. Exit status of 0 is treated as live/healthy and non-zero is unhealthy. +optional{{% /md %}}</dd></dl>
+    <dd>{{% md %}}(Optional) Command is the command line to execute inside the container, the working directory for the command is root ('/') in the container's filesystem. The command is simply exec'd, it is not run inside a shell, so traditional shell instructions ('|', etc) won't work. To use a shell, you need to explicitly call out to that shell. Exit status of 0 is treated as live/healthy and non-zero is unhealthy.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="httpgetaction">HTTPGet<wbr>Action</h4>
@@ -3876,7 +3328,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Host name to connect to, defaults to the pod IP. You probably want to set "Host" in httpHeaders instead. +optional{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) Host name to connect to, defaults to the pod IP. You probably want to set "Host" in httpHeaders instead.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="httpheaders_csharp">
 <a href="#httpheaders_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Headers</a>
@@ -3884,7 +3336,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#httpheader">List&lt;Pulumi.<wbr>Google<wbr>Native.<wbr>Run.<wbr>V1Alpha1.<wbr>Inputs.<wbr>HTTPHeader&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Custom headers to set in the request. HTTP allows repeated headers. +optional{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) Custom headers to set in the request. HTTP allows repeated headers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_csharp">
 <a href="#path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
@@ -3892,15 +3344,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Path to access on the HTTP server. +optional{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="port_csharp">
-<a href="#port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#intorstring">Pulumi.<wbr>Google<wbr>Native.<wbr>Run.<wbr>V1Alpha1.<wbr>Inputs.<wbr>Int<wbr>Or<wbr>String</a></span>
-    </dt>
-    <dd>{{% md %}}Name or number of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) Path to access on the HTTP server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scheme_csharp">
 <a href="#scheme_csharp" style="color: inherit; text-decoration: inherit;">Scheme</a>
@@ -3908,7 +3352,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Scheme to use for connecting to the host. Defaults to HTTP. +optional{{% /md %}}</dd></dl>
+    <dd>{{% md %}}(Optional) Scheme to use for connecting to the host. Defaults to HTTP.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -3920,7 +3364,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Host name to connect to, defaults to the pod IP. You probably want to set "Host" in httpHeaders instead. +optional{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) Host name to connect to, defaults to the pod IP. You probably want to set "Host" in httpHeaders instead.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="httpheaders_go">
 <a href="#httpheaders_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Headers</a>
@@ -3928,7 +3372,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#httpheader">[]HTTPHeader</a></span>
     </dt>
-    <dd>{{% md %}}Custom headers to set in the request. HTTP allows repeated headers. +optional{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) Custom headers to set in the request. HTTP allows repeated headers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_go">
 <a href="#path_go" style="color: inherit; text-decoration: inherit;">Path</a>
@@ -3936,15 +3380,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Path to access on the HTTP server. +optional{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="port_go">
-<a href="#port_go" style="color: inherit; text-decoration: inherit;">Port</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#intorstring">Int<wbr>Or<wbr>String</a></span>
-    </dt>
-    <dd>{{% md %}}Name or number of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) Path to access on the HTTP server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scheme_go">
 <a href="#scheme_go" style="color: inherit; text-decoration: inherit;">Scheme</a>
@@ -3952,7 +3388,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Scheme to use for connecting to the host. Defaults to HTTP. +optional{{% /md %}}</dd></dl>
+    <dd>{{% md %}}(Optional) Scheme to use for connecting to the host. Defaults to HTTP.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -3964,7 +3400,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Host name to connect to, defaults to the pod IP. You probably want to set "Host" in httpHeaders instead. +optional{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) Host name to connect to, defaults to the pod IP. You probably want to set "Host" in httpHeaders instead.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="httpheaders_nodejs">
 <a href="#httpheaders_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Headers</a>
@@ -3972,7 +3408,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#httpheader">HTTPHeader[]</a></span>
     </dt>
-    <dd>{{% md %}}Custom headers to set in the request. HTTP allows repeated headers. +optional{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) Custom headers to set in the request. HTTP allows repeated headers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_nodejs">
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
@@ -3980,15 +3416,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Path to access on the HTTP server. +optional{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="port_nodejs">
-<a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#intorstring">Int<wbr>Or<wbr>String</a></span>
-    </dt>
-    <dd>{{% md %}}Name or number of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) Path to access on the HTTP server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scheme_nodejs">
 <a href="#scheme_nodejs" style="color: inherit; text-decoration: inherit;">scheme</a>
@@ -3996,7 +3424,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Scheme to use for connecting to the host. Defaults to HTTP. +optional{{% /md %}}</dd></dl>
+    <dd>{{% md %}}(Optional) Scheme to use for connecting to the host. Defaults to HTTP.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -4008,7 +3436,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Host name to connect to, defaults to the pod IP. You probably want to set "Host" in httpHeaders instead. +optional{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) Host name to connect to, defaults to the pod IP. You probably want to set "Host" in httpHeaders instead.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="http_headers_python">
 <a href="#http_headers_python" style="color: inherit; text-decoration: inherit;">http_<wbr>headers</a>
@@ -4016,7 +3444,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#httpheader">Sequence[HTTPHeader]</a></span>
     </dt>
-    <dd>{{% md %}}Custom headers to set in the request. HTTP allows repeated headers. +optional{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) Custom headers to set in the request. HTTP allows repeated headers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_python">
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
@@ -4024,15 +3452,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Path to access on the HTTP server. +optional{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="port_python">
-<a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#intorstring">Int<wbr>Or<wbr>String</a></span>
-    </dt>
-    <dd>{{% md %}}Name or number of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) Path to access on the HTTP server.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scheme_python">
 <a href="#scheme_python" style="color: inherit; text-decoration: inherit;">scheme</a>
@@ -4040,7 +3460,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Scheme to use for connecting to the host. Defaults to HTTP. +optional{{% /md %}}</dd></dl>
+    <dd>{{% md %}}(Optional) Scheme to use for connecting to the host. Defaults to HTTP.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="httpgetactionresponse">HTTPGet<wbr>Action<wbr>Response</h4>
@@ -4054,7 +3474,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Host name to connect to, defaults to the pod IP. You probably want to set "Host" in httpHeaders instead. +optional{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) Host name to connect to, defaults to the pod IP. You probably want to set "Host" in httpHeaders instead.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="httpheaders_csharp">
 <a href="#httpheaders_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Headers</a>
@@ -4062,7 +3482,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#httpheaderresponse">List&lt;Pulumi.<wbr>Google<wbr>Native.<wbr>Run.<wbr>V1Alpha1.<wbr>Inputs.<wbr>HTTPHeader<wbr>Response&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Custom headers to set in the request. HTTP allows repeated headers. +optional{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) Custom headers to set in the request. HTTP allows repeated headers.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="path_csharp">
 <a href="#path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
@@ -4070,15 +3490,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Path to access on the HTTP server. +optional{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="port_csharp">
-<a href="#port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#intorstringresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Run.<wbr>V1Alpha1.<wbr>Inputs.<wbr>Int<wbr>Or<wbr>String<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}Name or number of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) Path to access on the HTTP server.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="scheme_csharp">
 <a href="#scheme_csharp" style="color: inherit; text-decoration: inherit;">Scheme</a>
@@ -4086,7 +3498,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Scheme to use for connecting to the host. Defaults to HTTP. +optional{{% /md %}}</dd></dl>
+    <dd>{{% md %}}(Optional) Scheme to use for connecting to the host. Defaults to HTTP.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -4098,7 +3510,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Host name to connect to, defaults to the pod IP. You probably want to set "Host" in httpHeaders instead. +optional{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) Host name to connect to, defaults to the pod IP. You probably want to set "Host" in httpHeaders instead.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="httpheaders_go">
 <a href="#httpheaders_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Headers</a>
@@ -4106,7 +3518,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#httpheaderresponse">[]HTTPHeader<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Custom headers to set in the request. HTTP allows repeated headers. +optional{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) Custom headers to set in the request. HTTP allows repeated headers.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="path_go">
 <a href="#path_go" style="color: inherit; text-decoration: inherit;">Path</a>
@@ -4114,15 +3526,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Path to access on the HTTP server. +optional{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="port_go">
-<a href="#port_go" style="color: inherit; text-decoration: inherit;">Port</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#intorstringresponse">Int<wbr>Or<wbr>String<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}Name or number of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) Path to access on the HTTP server.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="scheme_go">
 <a href="#scheme_go" style="color: inherit; text-decoration: inherit;">Scheme</a>
@@ -4130,7 +3534,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Scheme to use for connecting to the host. Defaults to HTTP. +optional{{% /md %}}</dd></dl>
+    <dd>{{% md %}}(Optional) Scheme to use for connecting to the host. Defaults to HTTP.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -4142,7 +3546,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Host name to connect to, defaults to the pod IP. You probably want to set "Host" in httpHeaders instead. +optional{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) Host name to connect to, defaults to the pod IP. You probably want to set "Host" in httpHeaders instead.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="httpheaders_nodejs">
 <a href="#httpheaders_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Headers</a>
@@ -4150,7 +3554,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#httpheaderresponse">HTTPHeader<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}Custom headers to set in the request. HTTP allows repeated headers. +optional{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) Custom headers to set in the request. HTTP allows repeated headers.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="path_nodejs">
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
@@ -4158,15 +3562,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Path to access on the HTTP server. +optional{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="port_nodejs">
-<a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#intorstringresponse">Int<wbr>Or<wbr>String<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}Name or number of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) Path to access on the HTTP server.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="scheme_nodejs">
 <a href="#scheme_nodejs" style="color: inherit; text-decoration: inherit;">scheme</a>
@@ -4174,7 +3570,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Scheme to use for connecting to the host. Defaults to HTTP. +optional{{% /md %}}</dd></dl>
+    <dd>{{% md %}}(Optional) Scheme to use for connecting to the host. Defaults to HTTP.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -4186,7 +3582,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Host name to connect to, defaults to the pod IP. You probably want to set "Host" in httpHeaders instead. +optional{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) Host name to connect to, defaults to the pod IP. You probably want to set "Host" in httpHeaders instead.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="http_headers_python">
 <a href="#http_headers_python" style="color: inherit; text-decoration: inherit;">http_<wbr>headers</a>
@@ -4194,7 +3590,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#httpheaderresponse">Sequence[HTTPHeader<wbr>Response]</a></span>
     </dt>
-    <dd>{{% md %}}Custom headers to set in the request. HTTP allows repeated headers. +optional{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) Custom headers to set in the request. HTTP allows repeated headers.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="path_python">
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
@@ -4202,15 +3598,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Path to access on the HTTP server. +optional{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="port_python">
-<a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#intorstringresponse">Int<wbr>Or<wbr>String<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}Name or number of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) Path to access on the HTTP server.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="scheme_python">
 <a href="#scheme_python" style="color: inherit; text-decoration: inherit;">scheme</a>
@@ -4218,7 +3606,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Scheme to use for connecting to the host. Defaults to HTTP. +optional{{% /md %}}</dd></dl>
+    <dd>{{% md %}}(Optional) Scheme to use for connecting to the host. Defaults to HTTP.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="httpheader">HTTPHeader</h4>
@@ -4383,234 +3771,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The header field value{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="handler">Handler</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="exec_csharp">
-<a href="#exec_csharp" style="color: inherit; text-decoration: inherit;">Exec</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#execaction">Pulumi.<wbr>Google<wbr>Native.<wbr>Run.<wbr>V1Alpha1.<wbr>Inputs.<wbr>Exec<wbr>Action</a></span>
-    </dt>
-    <dd>{{% md %}}One and only one of the following should be specified. Exec specifies the action to take. +optional{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="httpget_csharp">
-<a href="#httpget_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Get</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpgetaction">Pulumi.<wbr>Google<wbr>Native.<wbr>Run.<wbr>V1Alpha1.<wbr>Inputs.<wbr>HTTPGet<wbr>Action</a></span>
-    </dt>
-    <dd>{{% md %}}HTTPGet specifies the http request to perform. +optional{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="tcpsocket_csharp">
-<a href="#tcpsocket_csharp" style="color: inherit; text-decoration: inherit;">Tcp<wbr>Socket</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tcpsocketaction">Pulumi.<wbr>Google<wbr>Native.<wbr>Run.<wbr>V1Alpha1.<wbr>Inputs.<wbr>TCPSocket<wbr>Action</a></span>
-    </dt>
-    <dd>{{% md %}}TCPSocket specifies an action involving a TCP port. TCP hooks not yet supported{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="exec_go">
-<a href="#exec_go" style="color: inherit; text-decoration: inherit;">Exec</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#execaction">Exec<wbr>Action</a></span>
-    </dt>
-    <dd>{{% md %}}One and only one of the following should be specified. Exec specifies the action to take. +optional{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="httpget_go">
-<a href="#httpget_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Get</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpgetaction">HTTPGet<wbr>Action</a></span>
-    </dt>
-    <dd>{{% md %}}HTTPGet specifies the http request to perform. +optional{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="tcpsocket_go">
-<a href="#tcpsocket_go" style="color: inherit; text-decoration: inherit;">Tcp<wbr>Socket</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tcpsocketaction">TCPSocket<wbr>Action</a></span>
-    </dt>
-    <dd>{{% md %}}TCPSocket specifies an action involving a TCP port. TCP hooks not yet supported{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="exec_nodejs">
-<a href="#exec_nodejs" style="color: inherit; text-decoration: inherit;">exec</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#execaction">Exec<wbr>Action</a></span>
-    </dt>
-    <dd>{{% md %}}One and only one of the following should be specified. Exec specifies the action to take. +optional{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="httpget_nodejs">
-<a href="#httpget_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Get</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpgetaction">HTTPGet<wbr>Action</a></span>
-    </dt>
-    <dd>{{% md %}}HTTPGet specifies the http request to perform. +optional{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="tcpsocket_nodejs">
-<a href="#tcpsocket_nodejs" style="color: inherit; text-decoration: inherit;">tcp<wbr>Socket</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tcpsocketaction">TCPSocket<wbr>Action</a></span>
-    </dt>
-    <dd>{{% md %}}TCPSocket specifies an action involving a TCP port. TCP hooks not yet supported{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="exec__python">
-<a href="#exec__python" style="color: inherit; text-decoration: inherit;">exec_</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#execaction">Exec<wbr>Action</a></span>
-    </dt>
-    <dd>{{% md %}}One and only one of the following should be specified. Exec specifies the action to take. +optional{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="http_get_python">
-<a href="#http_get_python" style="color: inherit; text-decoration: inherit;">http_<wbr>get</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpgetaction">HTTPGet<wbr>Action</a></span>
-    </dt>
-    <dd>{{% md %}}HTTPGet specifies the http request to perform. +optional{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="tcp_socket_python">
-<a href="#tcp_socket_python" style="color: inherit; text-decoration: inherit;">tcp_<wbr>socket</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tcpsocketaction">TCPSocket<wbr>Action</a></span>
-    </dt>
-    <dd>{{% md %}}TCPSocket specifies an action involving a TCP port. TCP hooks not yet supported{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="handlerresponse">Handler<wbr>Response</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="exec_csharp">
-<a href="#exec_csharp" style="color: inherit; text-decoration: inherit;">Exec</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#execactionresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Run.<wbr>V1Alpha1.<wbr>Inputs.<wbr>Exec<wbr>Action<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}One and only one of the following should be specified. Exec specifies the action to take. +optional{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="httpget_csharp">
-<a href="#httpget_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Get</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpgetactionresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Run.<wbr>V1Alpha1.<wbr>Inputs.<wbr>HTTPGet<wbr>Action<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}HTTPGet specifies the http request to perform. +optional{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="tcpsocket_csharp">
-<a href="#tcpsocket_csharp" style="color: inherit; text-decoration: inherit;">Tcp<wbr>Socket</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tcpsocketactionresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Run.<wbr>V1Alpha1.<wbr>Inputs.<wbr>TCPSocket<wbr>Action<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}TCPSocket specifies an action involving a TCP port. TCP hooks not yet supported{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="exec_go">
-<a href="#exec_go" style="color: inherit; text-decoration: inherit;">Exec</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#execactionresponse">Exec<wbr>Action<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}One and only one of the following should be specified. Exec specifies the action to take. +optional{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="httpget_go">
-<a href="#httpget_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Get</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpgetactionresponse">HTTPGet<wbr>Action<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}HTTPGet specifies the http request to perform. +optional{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="tcpsocket_go">
-<a href="#tcpsocket_go" style="color: inherit; text-decoration: inherit;">Tcp<wbr>Socket</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tcpsocketactionresponse">TCPSocket<wbr>Action<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}TCPSocket specifies an action involving a TCP port. TCP hooks not yet supported{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="exec_nodejs">
-<a href="#exec_nodejs" style="color: inherit; text-decoration: inherit;">exec</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#execactionresponse">Exec<wbr>Action<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}One and only one of the following should be specified. Exec specifies the action to take. +optional{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="httpget_nodejs">
-<a href="#httpget_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Get</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpgetactionresponse">HTTPGet<wbr>Action<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}HTTPGet specifies the http request to perform. +optional{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="tcpsocket_nodejs">
-<a href="#tcpsocket_nodejs" style="color: inherit; text-decoration: inherit;">tcp<wbr>Socket</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tcpsocketactionresponse">TCPSocket<wbr>Action<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}TCPSocket specifies an action involving a TCP port. TCP hooks not yet supported{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="exec__python">
-<a href="#exec__python" style="color: inherit; text-decoration: inherit;">exec_</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#execactionresponse">Exec<wbr>Action<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}One and only one of the following should be specified. Exec specifies the action to take. +optional{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="http_get_python">
-<a href="#http_get_python" style="color: inherit; text-decoration: inherit;">http_<wbr>get</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#httpgetactionresponse">HTTPGet<wbr>Action<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}HTTPGet specifies the http request to perform. +optional{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="tcp_socket_python">
-<a href="#tcp_socket_python" style="color: inherit; text-decoration: inherit;">tcp_<wbr>socket</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tcpsocketactionresponse">TCPSocket<wbr>Action<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}TCPSocket specifies an action involving a TCP port. TCP hooks not yet supported{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="instancespec">Instance<wbr>Spec</h4>
@@ -5615,234 +4775,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#instancespecresponse">Instance<wbr>Spec<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Optional. Specification of the desired behavior of the instance. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status +optional{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="intorstring">Int<wbr>Or<wbr>String</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="intval_csharp">
-<a href="#intval_csharp" style="color: inherit; text-decoration: inherit;">Int<wbr>Val</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The int value.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="strval_csharp">
-<a href="#strval_csharp" style="color: inherit; text-decoration: inherit;">Str<wbr>Val</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The string value.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="type_csharp">
-<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The type of the value.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="intval_go">
-<a href="#intval_go" style="color: inherit; text-decoration: inherit;">Int<wbr>Val</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The int value.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="strval_go">
-<a href="#strval_go" style="color: inherit; text-decoration: inherit;">Str<wbr>Val</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The string value.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="type_go">
-<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The type of the value.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="intval_nodejs">
-<a href="#intval_nodejs" style="color: inherit; text-decoration: inherit;">int<wbr>Val</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}The int value.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="strval_nodejs">
-<a href="#strval_nodejs" style="color: inherit; text-decoration: inherit;">str<wbr>Val</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The string value.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="type_nodejs">
-<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}The type of the value.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="int_val_python">
-<a href="#int_val_python" style="color: inherit; text-decoration: inherit;">int_<wbr>val</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The int value.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="str_val_python">
-<a href="#str_val_python" style="color: inherit; text-decoration: inherit;">str_<wbr>val</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The string value.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="type_python">
-<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The type of the value.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="intorstringresponse">Int<wbr>Or<wbr>String<wbr>Response</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="intval_csharp">
-<a href="#intval_csharp" style="color: inherit; text-decoration: inherit;">Int<wbr>Val</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The int value.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="strval_csharp">
-<a href="#strval_csharp" style="color: inherit; text-decoration: inherit;">Str<wbr>Val</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The string value.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_csharp">
-<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The type of the value.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="intval_go">
-<a href="#intval_go" style="color: inherit; text-decoration: inherit;">Int<wbr>Val</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The int value.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="strval_go">
-<a href="#strval_go" style="color: inherit; text-decoration: inherit;">Str<wbr>Val</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The string value.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_go">
-<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The type of the value.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="intval_nodejs">
-<a href="#intval_nodejs" style="color: inherit; text-decoration: inherit;">int<wbr>Val</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}The int value.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="strval_nodejs">
-<a href="#strval_nodejs" style="color: inherit; text-decoration: inherit;">str<wbr>Val</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The string value.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_nodejs">
-<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}The type of the value.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="int_val_python">
-<a href="#int_val_python" style="color: inherit; text-decoration: inherit;">int_<wbr>val</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The int value.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="str_val_python">
-<a href="#str_val_python" style="color: inherit; text-decoration: inherit;">str_<wbr>val</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The string value.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_python">
-<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The type of the value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="jobcondition">Job<wbr>Condition</h4>
@@ -7308,7 +6240,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Cloud Run fully managed: supported The Cloud Secret Manager secret version. Can be 'latest' for the latest value or an integer for a specific version. Cloud Run for Anthos: supported The key to project.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The Cloud Secret Manager secret version. Can be 'latest' for the latest value or an integer for a specific version. The key to project.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mode_csharp">
 <a href="#mode_csharp" style="color: inherit; text-decoration: inherit;">Mode</a>
@@ -7316,7 +6248,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Mode bits to use on this file, must be a value between 0 and 0777. If not specified, the volume defaultMode will be used. This might be in conflict with other options that affect the file mode, like fsGroup, and the result can be other mode bits set. +optional{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) Mode bits to use on this file, must be a value between 0000 and 0777. If not specified, the volume defaultMode will be used. This might be in conflict with other options that affect the file mode, like fsGroup, and the result can be other mode bits set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_csharp">
 <a href="#path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
@@ -7324,7 +6256,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Cloud Run fully managed: supported Cloud Run for Anthos: supported The relative path of the file to map the key to. May not be an absolute path. May not contain the path element '..'. May not start with the string '..'.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The relative path of the file to map the key to. May not be an absolute path. May not contain the path element '..'. May not start with the string '..'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -7336,7 +6268,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Cloud Run fully managed: supported The Cloud Secret Manager secret version. Can be 'latest' for the latest value or an integer for a specific version. Cloud Run for Anthos: supported The key to project.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The Cloud Secret Manager secret version. Can be 'latest' for the latest value or an integer for a specific version. The key to project.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mode_go">
 <a href="#mode_go" style="color: inherit; text-decoration: inherit;">Mode</a>
@@ -7344,7 +6276,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Mode bits to use on this file, must be a value between 0 and 0777. If not specified, the volume defaultMode will be used. This might be in conflict with other options that affect the file mode, like fsGroup, and the result can be other mode bits set. +optional{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) Mode bits to use on this file, must be a value between 0000 and 0777. If not specified, the volume defaultMode will be used. This might be in conflict with other options that affect the file mode, like fsGroup, and the result can be other mode bits set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_go">
 <a href="#path_go" style="color: inherit; text-decoration: inherit;">Path</a>
@@ -7352,7 +6284,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Cloud Run fully managed: supported Cloud Run for Anthos: supported The relative path of the file to map the key to. May not be an absolute path. May not contain the path element '..'. May not start with the string '..'.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The relative path of the file to map the key to. May not be an absolute path. May not contain the path element '..'. May not start with the string '..'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -7364,7 +6296,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Cloud Run fully managed: supported The Cloud Secret Manager secret version. Can be 'latest' for the latest value or an integer for a specific version. Cloud Run for Anthos: supported The key to project.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The Cloud Secret Manager secret version. Can be 'latest' for the latest value or an integer for a specific version. The key to project.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mode_nodejs">
 <a href="#mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
@@ -7372,7 +6304,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Mode bits to use on this file, must be a value between 0 and 0777. If not specified, the volume defaultMode will be used. This might be in conflict with other options that affect the file mode, like fsGroup, and the result can be other mode bits set. +optional{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) Mode bits to use on this file, must be a value between 0000 and 0777. If not specified, the volume defaultMode will be used. This might be in conflict with other options that affect the file mode, like fsGroup, and the result can be other mode bits set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_nodejs">
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
@@ -7380,7 +6312,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Cloud Run fully managed: supported Cloud Run for Anthos: supported The relative path of the file to map the key to. May not be an absolute path. May not contain the path element '..'. May not start with the string '..'.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The relative path of the file to map the key to. May not be an absolute path. May not contain the path element '..'. May not start with the string '..'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -7392,7 +6324,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Cloud Run fully managed: supported The Cloud Secret Manager secret version. Can be 'latest' for the latest value or an integer for a specific version. Cloud Run for Anthos: supported The key to project.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The Cloud Secret Manager secret version. Can be 'latest' for the latest value or an integer for a specific version. The key to project.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mode_python">
 <a href="#mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
@@ -7400,7 +6332,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Mode bits to use on this file, must be a value between 0 and 0777. If not specified, the volume defaultMode will be used. This might be in conflict with other options that affect the file mode, like fsGroup, and the result can be other mode bits set. +optional{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) Mode bits to use on this file, must be a value between 0000 and 0777. If not specified, the volume defaultMode will be used. This might be in conflict with other options that affect the file mode, like fsGroup, and the result can be other mode bits set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_python">
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
@@ -7408,7 +6340,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Cloud Run fully managed: supported Cloud Run for Anthos: supported The relative path of the file to map the key to. May not be an absolute path. May not contain the path element '..'. May not start with the string '..'.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The relative path of the file to map the key to. May not be an absolute path. May not contain the path element '..'. May not start with the string '..'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="keytopathresponse">Key<wbr>To<wbr>Path<wbr>Response</h4>
@@ -7422,7 +6354,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Cloud Run fully managed: supported The Cloud Secret Manager secret version. Can be 'latest' for the latest value or an integer for a specific version. Cloud Run for Anthos: supported The key to project.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The Cloud Secret Manager secret version. Can be 'latest' for the latest value or an integer for a specific version. The key to project.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="mode_csharp">
 <a href="#mode_csharp" style="color: inherit; text-decoration: inherit;">Mode</a>
@@ -7430,7 +6362,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Mode bits to use on this file, must be a value between 0 and 0777. If not specified, the volume defaultMode will be used. This might be in conflict with other options that affect the file mode, like fsGroup, and the result can be other mode bits set. +optional{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) Mode bits to use on this file, must be a value between 0000 and 0777. If not specified, the volume defaultMode will be used. This might be in conflict with other options that affect the file mode, like fsGroup, and the result can be other mode bits set.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="path_csharp">
 <a href="#path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
@@ -7438,7 +6370,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Cloud Run fully managed: supported Cloud Run for Anthos: supported The relative path of the file to map the key to. May not be an absolute path. May not contain the path element '..'. May not start with the string '..'.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The relative path of the file to map the key to. May not be an absolute path. May not contain the path element '..'. May not start with the string '..'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -7450,7 +6382,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Cloud Run fully managed: supported The Cloud Secret Manager secret version. Can be 'latest' for the latest value or an integer for a specific version. Cloud Run for Anthos: supported The key to project.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The Cloud Secret Manager secret version. Can be 'latest' for the latest value or an integer for a specific version. The key to project.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="mode_go">
 <a href="#mode_go" style="color: inherit; text-decoration: inherit;">Mode</a>
@@ -7458,7 +6390,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Mode bits to use on this file, must be a value between 0 and 0777. If not specified, the volume defaultMode will be used. This might be in conflict with other options that affect the file mode, like fsGroup, and the result can be other mode bits set. +optional{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) Mode bits to use on this file, must be a value between 0000 and 0777. If not specified, the volume defaultMode will be used. This might be in conflict with other options that affect the file mode, like fsGroup, and the result can be other mode bits set.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="path_go">
 <a href="#path_go" style="color: inherit; text-decoration: inherit;">Path</a>
@@ -7466,7 +6398,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Cloud Run fully managed: supported Cloud Run for Anthos: supported The relative path of the file to map the key to. May not be an absolute path. May not contain the path element '..'. May not start with the string '..'.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The relative path of the file to map the key to. May not be an absolute path. May not contain the path element '..'. May not start with the string '..'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -7478,7 +6410,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Cloud Run fully managed: supported The Cloud Secret Manager secret version. Can be 'latest' for the latest value or an integer for a specific version. Cloud Run for Anthos: supported The key to project.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The Cloud Secret Manager secret version. Can be 'latest' for the latest value or an integer for a specific version. The key to project.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="mode_nodejs">
 <a href="#mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
@@ -7486,7 +6418,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Mode bits to use on this file, must be a value between 0 and 0777. If not specified, the volume defaultMode will be used. This might be in conflict with other options that affect the file mode, like fsGroup, and the result can be other mode bits set. +optional{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) Mode bits to use on this file, must be a value between 0000 and 0777. If not specified, the volume defaultMode will be used. This might be in conflict with other options that affect the file mode, like fsGroup, and the result can be other mode bits set.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="path_nodejs">
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
@@ -7494,7 +6426,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Cloud Run fully managed: supported Cloud Run for Anthos: supported The relative path of the file to map the key to. May not be an absolute path. May not contain the path element '..'. May not start with the string '..'.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The relative path of the file to map the key to. May not be an absolute path. May not contain the path element '..'. May not start with the string '..'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -7506,7 +6438,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Cloud Run fully managed: supported The Cloud Secret Manager secret version. Can be 'latest' for the latest value or an integer for a specific version. Cloud Run for Anthos: supported The key to project.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The Cloud Secret Manager secret version. Can be 'latest' for the latest value or an integer for a specific version. The key to project.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="mode_python">
 <a href="#mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
@@ -7514,7 +6446,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Mode bits to use on this file, must be a value between 0 and 0777. If not specified, the volume defaultMode will be used. This might be in conflict with other options that affect the file mode, like fsGroup, and the result can be other mode bits set. +optional{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) Mode bits to use on this file, must be a value between 0000 and 0777. If not specified, the volume defaultMode will be used. This might be in conflict with other options that affect the file mode, like fsGroup, and the result can be other mode bits set.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="path_python">
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
@@ -7522,171 +6454,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Cloud Run fully managed: supported Cloud Run for Anthos: supported The relative path of the file to map the key to. May not be an absolute path. May not contain the path element '..'. May not start with the string '..'.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="lifecycle">Lifecycle</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="poststart_csharp">
-<a href="#poststart_csharp" style="color: inherit; text-decoration: inherit;">Post<wbr>Start</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#handler">Pulumi.<wbr>Google<wbr>Native.<wbr>Run.<wbr>V1Alpha1.<wbr>Inputs.<wbr>Handler</a></span>
-    </dt>
-    <dd>{{% md %}}PostStart is called immediately after a container is created. If the handler fails, the container is terminated and restarted according to its restart policy. Other management of the container blocks until the hook completes. More info: https://kubernetes.io/docs/concepts/containers/container-lifecycle-hooks/#container-hooks +optional{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="prestop_csharp">
-<a href="#prestop_csharp" style="color: inherit; text-decoration: inherit;">Pre<wbr>Stop</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#handler">Pulumi.<wbr>Google<wbr>Native.<wbr>Run.<wbr>V1Alpha1.<wbr>Inputs.<wbr>Handler</a></span>
-    </dt>
-    <dd>{{% md %}}PreStop is called immediately before a container is terminated. The container is terminated after the handler completes. The reason for termination is passed to the handler. Regardless of the outcome of the handler, the container is eventually terminated. Other management of the container blocks until the hook completes. More info: https://kubernetes.io/docs/concepts/containers/container-lifecycle-hooks/#container-hooks +optional{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="poststart_go">
-<a href="#poststart_go" style="color: inherit; text-decoration: inherit;">Post<wbr>Start</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#handler">Handler</a></span>
-    </dt>
-    <dd>{{% md %}}PostStart is called immediately after a container is created. If the handler fails, the container is terminated and restarted according to its restart policy. Other management of the container blocks until the hook completes. More info: https://kubernetes.io/docs/concepts/containers/container-lifecycle-hooks/#container-hooks +optional{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="prestop_go">
-<a href="#prestop_go" style="color: inherit; text-decoration: inherit;">Pre<wbr>Stop</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#handler">Handler</a></span>
-    </dt>
-    <dd>{{% md %}}PreStop is called immediately before a container is terminated. The container is terminated after the handler completes. The reason for termination is passed to the handler. Regardless of the outcome of the handler, the container is eventually terminated. Other management of the container blocks until the hook completes. More info: https://kubernetes.io/docs/concepts/containers/container-lifecycle-hooks/#container-hooks +optional{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="poststart_nodejs">
-<a href="#poststart_nodejs" style="color: inherit; text-decoration: inherit;">post<wbr>Start</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#handler">Handler</a></span>
-    </dt>
-    <dd>{{% md %}}PostStart is called immediately after a container is created. If the handler fails, the container is terminated and restarted according to its restart policy. Other management of the container blocks until the hook completes. More info: https://kubernetes.io/docs/concepts/containers/container-lifecycle-hooks/#container-hooks +optional{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="prestop_nodejs">
-<a href="#prestop_nodejs" style="color: inherit; text-decoration: inherit;">pre<wbr>Stop</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#handler">Handler</a></span>
-    </dt>
-    <dd>{{% md %}}PreStop is called immediately before a container is terminated. The container is terminated after the handler completes. The reason for termination is passed to the handler. Regardless of the outcome of the handler, the container is eventually terminated. Other management of the container blocks until the hook completes. More info: https://kubernetes.io/docs/concepts/containers/container-lifecycle-hooks/#container-hooks +optional{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="post_start_python">
-<a href="#post_start_python" style="color: inherit; text-decoration: inherit;">post_<wbr>start</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#handler">Handler</a></span>
-    </dt>
-    <dd>{{% md %}}PostStart is called immediately after a container is created. If the handler fails, the container is terminated and restarted according to its restart policy. Other management of the container blocks until the hook completes. More info: https://kubernetes.io/docs/concepts/containers/container-lifecycle-hooks/#container-hooks +optional{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="pre_stop_python">
-<a href="#pre_stop_python" style="color: inherit; text-decoration: inherit;">pre_<wbr>stop</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#handler">Handler</a></span>
-    </dt>
-    <dd>{{% md %}}PreStop is called immediately before a container is terminated. The container is terminated after the handler completes. The reason for termination is passed to the handler. Regardless of the outcome of the handler, the container is eventually terminated. Other management of the container blocks until the hook completes. More info: https://kubernetes.io/docs/concepts/containers/container-lifecycle-hooks/#container-hooks +optional{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="lifecycleresponse">Lifecycle<wbr>Response</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="poststart_csharp">
-<a href="#poststart_csharp" style="color: inherit; text-decoration: inherit;">Post<wbr>Start</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#handlerresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Run.<wbr>V1Alpha1.<wbr>Inputs.<wbr>Handler<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}PostStart is called immediately after a container is created. If the handler fails, the container is terminated and restarted according to its restart policy. Other management of the container blocks until the hook completes. More info: https://kubernetes.io/docs/concepts/containers/container-lifecycle-hooks/#container-hooks +optional{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="prestop_csharp">
-<a href="#prestop_csharp" style="color: inherit; text-decoration: inherit;">Pre<wbr>Stop</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#handlerresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Run.<wbr>V1Alpha1.<wbr>Inputs.<wbr>Handler<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}PreStop is called immediately before a container is terminated. The container is terminated after the handler completes. The reason for termination is passed to the handler. Regardless of the outcome of the handler, the container is eventually terminated. Other management of the container blocks until the hook completes. More info: https://kubernetes.io/docs/concepts/containers/container-lifecycle-hooks/#container-hooks +optional{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="poststart_go">
-<a href="#poststart_go" style="color: inherit; text-decoration: inherit;">Post<wbr>Start</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#handlerresponse">Handler<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}PostStart is called immediately after a container is created. If the handler fails, the container is terminated and restarted according to its restart policy. Other management of the container blocks until the hook completes. More info: https://kubernetes.io/docs/concepts/containers/container-lifecycle-hooks/#container-hooks +optional{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="prestop_go">
-<a href="#prestop_go" style="color: inherit; text-decoration: inherit;">Pre<wbr>Stop</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#handlerresponse">Handler<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}PreStop is called immediately before a container is terminated. The container is terminated after the handler completes. The reason for termination is passed to the handler. Regardless of the outcome of the handler, the container is eventually terminated. Other management of the container blocks until the hook completes. More info: https://kubernetes.io/docs/concepts/containers/container-lifecycle-hooks/#container-hooks +optional{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="poststart_nodejs">
-<a href="#poststart_nodejs" style="color: inherit; text-decoration: inherit;">post<wbr>Start</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#handlerresponse">Handler<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}PostStart is called immediately after a container is created. If the handler fails, the container is terminated and restarted according to its restart policy. Other management of the container blocks until the hook completes. More info: https://kubernetes.io/docs/concepts/containers/container-lifecycle-hooks/#container-hooks +optional{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="prestop_nodejs">
-<a href="#prestop_nodejs" style="color: inherit; text-decoration: inherit;">pre<wbr>Stop</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#handlerresponse">Handler<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}PreStop is called immediately before a container is terminated. The container is terminated after the handler completes. The reason for termination is passed to the handler. Regardless of the outcome of the handler, the container is eventually terminated. Other management of the container blocks until the hook completes. More info: https://kubernetes.io/docs/concepts/containers/container-lifecycle-hooks/#container-hooks +optional{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="post_start_python">
-<a href="#post_start_python" style="color: inherit; text-decoration: inherit;">post_<wbr>start</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#handlerresponse">Handler<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}PostStart is called immediately after a container is created. If the handler fails, the container is terminated and restarted according to its restart policy. Other management of the container blocks until the hook completes. More info: https://kubernetes.io/docs/concepts/containers/container-lifecycle-hooks/#container-hooks +optional{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="pre_stop_python">
-<a href="#pre_stop_python" style="color: inherit; text-decoration: inherit;">pre_<wbr>stop</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#handlerresponse">Handler<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}PreStop is called immediately before a container is terminated. The container is terminated after the handler completes. The reason for termination is passed to the handler. Regardless of the outcome of the handler, the container is eventually terminated. Other management of the container blocks until the hook completes. More info: https://kubernetes.io/docs/concepts/containers/container-lifecycle-hooks/#container-hooks +optional{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The relative path of the file to map the key to. May not be an absolute path. May not contain the path element '..'. May not start with the string '..'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="localobjectreference">Local<wbr>Object<wbr>Reference</h4>
@@ -7700,7 +6468,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names{{% /md %}}</dd></dl>
+    <dd>{{% md %}}(Optional) Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -7712,7 +6480,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names{{% /md %}}</dd></dl>
+    <dd>{{% md %}}(Optional) Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -7724,7 +6492,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names{{% /md %}}</dd></dl>
+    <dd>{{% md %}}(Optional) Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -7736,7 +6504,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names{{% /md %}}</dd></dl>
+    <dd>{{% md %}}(Optional) Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="localobjectreferenceresponse">Local<wbr>Object<wbr>Reference<wbr>Response</h4>
@@ -7750,7 +6518,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names{{% /md %}}</dd></dl>
+    <dd>{{% md %}}(Optional) Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -7762,7 +6530,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names{{% /md %}}</dd></dl>
+    <dd>{{% md %}}(Optional) Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -7774,7 +6542,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names{{% /md %}}</dd></dl>
+    <dd>{{% md %}}(Optional) Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -7786,7 +6554,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names{{% /md %}}</dd></dl>
+    <dd>{{% md %}}(Optional) Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="objectmeta">Object<wbr>Meta</h4>
@@ -7800,7 +6568,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Annotations is an unstructured key value map stored with a resource that may be set by external tools to store and retrieve arbitrary metadata. They are not queryable and should be preserved when modifying objects. More info: http://kubernetes.io/docs/user-guide/annotations +optional{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) Annotations is an unstructured key value map stored with a resource that may be set by external tools to store and retrieve arbitrary metadata. They are not queryable and should be preserved when modifying objects. More info: http://kubernetes.io/docs/user-guide/annotations{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clustername_csharp">
 <a href="#clustername_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Name</a>
@@ -7808,7 +6576,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Not currently supported by Cloud Run. The name of the cluster which the object belongs to. This is used to distinguish resources with same name and namespace in different clusters. This field is not set anywhere right now and apiserver is going to ignore it if set in create or update request. +optional{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) Not supported by Cloud Run The name of the cluster which the object belongs to. This is used to distinguish resources with same name and namespace in different clusters. This field is not set anywhere right now and apiserver is going to ignore it if set in create or update request.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="creationtimestamp_csharp">
 <a href="#creationtimestamp_csharp" style="color: inherit; text-decoration: inherit;">Creation<wbr>Timestamp</a>
@@ -7816,7 +6584,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}CreationTimestamp is a timestamp representing the server time when this object was created. It is not guaranteed to be set in happens-before order across separate operations. Clients may not set this value. It is represented in RFC3339 form and is in UTC. Populated by the system. Read-only. Null for lists. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata +optional{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) CreationTimestamp is a timestamp representing the server time when this object was created. It is not guaranteed to be set in happens-before order across separate operations. Clients may not set this value. It is represented in RFC3339 form and is in UTC. Populated by the system. Read-only. Null for lists. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deletiongraceperiodseconds_csharp">
 <a href="#deletiongraceperiodseconds_csharp" style="color: inherit; text-decoration: inherit;">Deletion<wbr>Grace<wbr>Period<wbr>Seconds</a>
@@ -7824,7 +6592,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Not currently supported by Cloud Run. Number of seconds allowed for this object to gracefully terminate before it will be removed from the system. Only set when deletionTimestamp is also set. May only be shortened. Read-only. +optional{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) Not supported by Cloud Run Number of seconds allowed for this object to gracefully terminate before it will be removed from the system. Only set when deletionTimestamp is also set. May only be shortened. Read-only.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deletiontimestamp_csharp">
 <a href="#deletiontimestamp_csharp" style="color: inherit; text-decoration: inherit;">Deletion<wbr>Timestamp</a>
@@ -7832,7 +6600,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}DeletionTimestamp is RFC 3339 date and time at which this resource will be deleted. This field is set by the server when a graceful deletion is requested by the user, and is not directly settable by a client. The resource is expected to be deleted (no longer visible from resource lists, and not reachable by name) after the time in this field, once the finalizers list is empty. As long as the finalizers list contains items, deletion is blocked. Once the deletionTimestamp is set, this value may not be unset or be set further into the future, although it may be shortened or the resource may be deleted prior to this time. For example, a user may request that a pod is deleted in 30 seconds. The Kubelet will react by sending a graceful termination signal to the containers in the pod. After that 30 seconds, the Kubelet will send a hard termination signal (SIGKILL) to the container and after cleanup, remove the pod from the API. In the presence of network partitions, this object may still exist after this timestamp, until an administrator or automated process can determine the resource is fully terminated. If not set, graceful deletion of the object has not been requested. Populated by the system when a graceful deletion is requested. Read-only. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata +optional{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) Not supported by Cloud Run DeletionTimestamp is RFC 3339 date and time at which this resource will be deleted. This field is set by the server when a graceful deletion is requested by the user, and is not directly settable by a client. The resource is expected to be deleted (no longer visible from resource lists, and not reachable by name) after the time in this field, once the finalizers list is empty. As long as the finalizers list contains items, deletion is blocked. Once the deletionTimestamp is set, this value may not be unset or be set further into the future, although it may be shortened or the resource may be deleted prior to this time. For example, a user may request that a pod is deleted in 30 seconds. The Kubelet will react by sending a graceful termination signal to the containers in the pod. After that 30 seconds, the Kubelet will send a hard termination signal (SIGKILL) to the container and after cleanup, remove the pod from the API. In the presence of network partitions, this object may still exist after this timestamp, until an administrator or automated process can determine the resource is fully terminated. If not set, graceful deletion of the object has not been requested. Populated by the system when a graceful deletion is requested. Read-only. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="finalizers_csharp">
 <a href="#finalizers_csharp" style="color: inherit; text-decoration: inherit;">Finalizers</a>
@@ -7840,7 +6608,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Not currently supported by Cloud Run. Must be empty before the object is deleted from the registry. Each entry is an identifier for the responsible component that will remove the entry from the list. If the deletionTimestamp of the object is non-nil, entries in this list can only be removed. +optional +patchStrategy=merge{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) Not supported by Cloud Run Must be empty before the object is deleted from the registry. Each entry is an identifier for the responsible component that will remove the entry from the list. If the deletionTimestamp of the object is non-nil, entries in this list can only be removed. +patchStrategy=merge{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="generatename_csharp">
 <a href="#generatename_csharp" style="color: inherit; text-decoration: inherit;">Generate<wbr>Name</a>
@@ -7848,7 +6616,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Not currently supported by Cloud Run. GenerateName is an optional prefix, used by the server, to generate a unique name ONLY IF the Name field has not been provided. If this field is used, the name returned to the client will be different than the name passed. This value will also be combined with a unique suffix. The provided value has the same validation rules as the Name field, and may be truncated by the length of the suffix required to make the value unique on the server. If this field is specified and the generated name exists, the server will NOT return a 409 - instead, it will either return 201 Created or 500 with Reason ServerTimeout indicating a unique name could not be found in the time allotted, and the client should retry (optionally after the time indicated in the Retry-After header). Applied only if Name is not specified. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#idempotency +optional string generateName = 2;{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) Not supported by Cloud Run GenerateName is an optional prefix, used by the server, to generate a unique name ONLY IF the Name field has not been provided. If this field is used, the name returned to the client will be different than the name passed. This value will also be combined with a unique suffix. The provided value has the same validation rules as the Name field, and may be truncated by the length of the suffix required to make the value unique on the server. If this field is specified and the generated name exists, the server will NOT return a 409 - instead, it will either return 201 Created or 500 with Reason ServerTimeout indicating a unique name could not be found in the time allotted, and the client should retry (optionally after the time indicated in the Retry-After header). Applied only if Name is not specified. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#idempotency string generateName = 2;{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="generation_csharp">
 <a href="#generation_csharp" style="color: inherit; text-decoration: inherit;">Generation</a>
@@ -7856,7 +6624,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}A sequence number representing a specific generation of the desired state. Populated by the system. Read-only. +optional{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) A sequence number representing a specific generation of the desired state. Populated by the system. Read-only.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_csharp">
 <a href="#labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -7864,7 +6632,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and routes. More info: http://kubernetes.io/docs/user-guide/labels +optional{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and routes. More info: http://kubernetes.io/docs/user-guide/labels{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -7888,7 +6656,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#ownerreference">List&lt;Pulumi.<wbr>Google<wbr>Native.<wbr>Run.<wbr>V1Alpha1.<wbr>Inputs.<wbr>Owner<wbr>Reference&gt;</a></span>
     </dt>
-    <dd>{{% md %}}List of objects that own this object. If ALL objects in the list have been deleted, this object will be garbage collected. +optional{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) Not supported by Cloud Run List of objects that own this object. If ALL objects in the list have been deleted, this object will be garbage collected.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourceversion_csharp">
 <a href="#resourceversion_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Version</a>
@@ -7896,7 +6664,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}An opaque value that represents the internal version of this object that can be used by clients to determine when objects have changed. May be used for optimistic concurrency, change detection, and the watch operation on a resource or set of resources. Clients must treat these values as opaque and passed unmodified back to the server. They may only be valid for a particular resource or set of resources. Populated by the system. Read-only. Value must be treated as opaque by clients and . More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#concurrency-control-and-consistency +optional{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Optional. An opaque value that represents the internal version of this object that can be used by clients to determine when objects have changed. May be used for optimistic concurrency, change detection, and the watch operation on a resource or set of resources. Clients must treat these values as opaque and passed unmodified back to the server or omit the value to disable conflict-detection. They may only be valid for a particular resource or set of resources. Populated by the system. Read-only. Value must be treated as opaque by clients or omitted. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#concurrency-control-and-consistency{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="selflink_csharp">
 <a href="#selflink_csharp" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
@@ -7904,7 +6672,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SelfLink is a URL representing this object. Populated by the system. Read-only. +optional string selfLink = 4;{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) SelfLink is a URL representing this object. Populated by the system. Read-only. string selfLink = 4;{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="uid_csharp">
 <a href="#uid_csharp" style="color: inherit; text-decoration: inherit;">Uid</a>
@@ -7912,7 +6680,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}UID is the unique in time and space value for this object. It is typically generated by the server on successful creation of a resource and is not allowed to change on PUT operations. Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-guide/identifiers#uids +optional{{% /md %}}</dd></dl>
+    <dd>{{% md %}}(Optional) UID is the unique in time and space value for this object. It is typically generated by the server on successful creation of a resource and is not allowed to change on PUT operations. Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-guide/identifiers#uids{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -7924,7 +6692,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Annotations is an unstructured key value map stored with a resource that may be set by external tools to store and retrieve arbitrary metadata. They are not queryable and should be preserved when modifying objects. More info: http://kubernetes.io/docs/user-guide/annotations +optional{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) Annotations is an unstructured key value map stored with a resource that may be set by external tools to store and retrieve arbitrary metadata. They are not queryable and should be preserved when modifying objects. More info: http://kubernetes.io/docs/user-guide/annotations{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clustername_go">
 <a href="#clustername_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Name</a>
@@ -7932,7 +6700,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Not currently supported by Cloud Run. The name of the cluster which the object belongs to. This is used to distinguish resources with same name and namespace in different clusters. This field is not set anywhere right now and apiserver is going to ignore it if set in create or update request. +optional{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) Not supported by Cloud Run The name of the cluster which the object belongs to. This is used to distinguish resources with same name and namespace in different clusters. This field is not set anywhere right now and apiserver is going to ignore it if set in create or update request.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="creationtimestamp_go">
 <a href="#creationtimestamp_go" style="color: inherit; text-decoration: inherit;">Creation<wbr>Timestamp</a>
@@ -7940,7 +6708,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}CreationTimestamp is a timestamp representing the server time when this object was created. It is not guaranteed to be set in happens-before order across separate operations. Clients may not set this value. It is represented in RFC3339 form and is in UTC. Populated by the system. Read-only. Null for lists. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata +optional{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) CreationTimestamp is a timestamp representing the server time when this object was created. It is not guaranteed to be set in happens-before order across separate operations. Clients may not set this value. It is represented in RFC3339 form and is in UTC. Populated by the system. Read-only. Null for lists. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deletiongraceperiodseconds_go">
 <a href="#deletiongraceperiodseconds_go" style="color: inherit; text-decoration: inherit;">Deletion<wbr>Grace<wbr>Period<wbr>Seconds</a>
@@ -7948,7 +6716,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Not currently supported by Cloud Run. Number of seconds allowed for this object to gracefully terminate before it will be removed from the system. Only set when deletionTimestamp is also set. May only be shortened. Read-only. +optional{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) Not supported by Cloud Run Number of seconds allowed for this object to gracefully terminate before it will be removed from the system. Only set when deletionTimestamp is also set. May only be shortened. Read-only.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deletiontimestamp_go">
 <a href="#deletiontimestamp_go" style="color: inherit; text-decoration: inherit;">Deletion<wbr>Timestamp</a>
@@ -7956,7 +6724,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}DeletionTimestamp is RFC 3339 date and time at which this resource will be deleted. This field is set by the server when a graceful deletion is requested by the user, and is not directly settable by a client. The resource is expected to be deleted (no longer visible from resource lists, and not reachable by name) after the time in this field, once the finalizers list is empty. As long as the finalizers list contains items, deletion is blocked. Once the deletionTimestamp is set, this value may not be unset or be set further into the future, although it may be shortened or the resource may be deleted prior to this time. For example, a user may request that a pod is deleted in 30 seconds. The Kubelet will react by sending a graceful termination signal to the containers in the pod. After that 30 seconds, the Kubelet will send a hard termination signal (SIGKILL) to the container and after cleanup, remove the pod from the API. In the presence of network partitions, this object may still exist after this timestamp, until an administrator or automated process can determine the resource is fully terminated. If not set, graceful deletion of the object has not been requested. Populated by the system when a graceful deletion is requested. Read-only. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata +optional{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) Not supported by Cloud Run DeletionTimestamp is RFC 3339 date and time at which this resource will be deleted. This field is set by the server when a graceful deletion is requested by the user, and is not directly settable by a client. The resource is expected to be deleted (no longer visible from resource lists, and not reachable by name) after the time in this field, once the finalizers list is empty. As long as the finalizers list contains items, deletion is blocked. Once the deletionTimestamp is set, this value may not be unset or be set further into the future, although it may be shortened or the resource may be deleted prior to this time. For example, a user may request that a pod is deleted in 30 seconds. The Kubelet will react by sending a graceful termination signal to the containers in the pod. After that 30 seconds, the Kubelet will send a hard termination signal (SIGKILL) to the container and after cleanup, remove the pod from the API. In the presence of network partitions, this object may still exist after this timestamp, until an administrator or automated process can determine the resource is fully terminated. If not set, graceful deletion of the object has not been requested. Populated by the system when a graceful deletion is requested. Read-only. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="finalizers_go">
 <a href="#finalizers_go" style="color: inherit; text-decoration: inherit;">Finalizers</a>
@@ -7964,7 +6732,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Not currently supported by Cloud Run. Must be empty before the object is deleted from the registry. Each entry is an identifier for the responsible component that will remove the entry from the list. If the deletionTimestamp of the object is non-nil, entries in this list can only be removed. +optional +patchStrategy=merge{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) Not supported by Cloud Run Must be empty before the object is deleted from the registry. Each entry is an identifier for the responsible component that will remove the entry from the list. If the deletionTimestamp of the object is non-nil, entries in this list can only be removed. +patchStrategy=merge{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="generatename_go">
 <a href="#generatename_go" style="color: inherit; text-decoration: inherit;">Generate<wbr>Name</a>
@@ -7972,7 +6740,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Not currently supported by Cloud Run. GenerateName is an optional prefix, used by the server, to generate a unique name ONLY IF the Name field has not been provided. If this field is used, the name returned to the client will be different than the name passed. This value will also be combined with a unique suffix. The provided value has the same validation rules as the Name field, and may be truncated by the length of the suffix required to make the value unique on the server. If this field is specified and the generated name exists, the server will NOT return a 409 - instead, it will either return 201 Created or 500 with Reason ServerTimeout indicating a unique name could not be found in the time allotted, and the client should retry (optionally after the time indicated in the Retry-After header). Applied only if Name is not specified. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#idempotency +optional string generateName = 2;{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) Not supported by Cloud Run GenerateName is an optional prefix, used by the server, to generate a unique name ONLY IF the Name field has not been provided. If this field is used, the name returned to the client will be different than the name passed. This value will also be combined with a unique suffix. The provided value has the same validation rules as the Name field, and may be truncated by the length of the suffix required to make the value unique on the server. If this field is specified and the generated name exists, the server will NOT return a 409 - instead, it will either return 201 Created or 500 with Reason ServerTimeout indicating a unique name could not be found in the time allotted, and the client should retry (optionally after the time indicated in the Retry-After header). Applied only if Name is not specified. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#idempotency string generateName = 2;{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="generation_go">
 <a href="#generation_go" style="color: inherit; text-decoration: inherit;">Generation</a>
@@ -7980,7 +6748,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}A sequence number representing a specific generation of the desired state. Populated by the system. Read-only. +optional{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) A sequence number representing a specific generation of the desired state. Populated by the system. Read-only.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_go">
 <a href="#labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -7988,7 +6756,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and routes. More info: http://kubernetes.io/docs/user-guide/labels +optional{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and routes. More info: http://kubernetes.io/docs/user-guide/labels{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -8012,7 +6780,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#ownerreference">[]Owner<wbr>Reference</a></span>
     </dt>
-    <dd>{{% md %}}List of objects that own this object. If ALL objects in the list have been deleted, this object will be garbage collected. +optional{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) Not supported by Cloud Run List of objects that own this object. If ALL objects in the list have been deleted, this object will be garbage collected.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourceversion_go">
 <a href="#resourceversion_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Version</a>
@@ -8020,7 +6788,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}An opaque value that represents the internal version of this object that can be used by clients to determine when objects have changed. May be used for optimistic concurrency, change detection, and the watch operation on a resource or set of resources. Clients must treat these values as opaque and passed unmodified back to the server. They may only be valid for a particular resource or set of resources. Populated by the system. Read-only. Value must be treated as opaque by clients and . More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#concurrency-control-and-consistency +optional{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Optional. An opaque value that represents the internal version of this object that can be used by clients to determine when objects have changed. May be used for optimistic concurrency, change detection, and the watch operation on a resource or set of resources. Clients must treat these values as opaque and passed unmodified back to the server or omit the value to disable conflict-detection. They may only be valid for a particular resource or set of resources. Populated by the system. Read-only. Value must be treated as opaque by clients or omitted. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#concurrency-control-and-consistency{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="selflink_go">
 <a href="#selflink_go" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
@@ -8028,7 +6796,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SelfLink is a URL representing this object. Populated by the system. Read-only. +optional string selfLink = 4;{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) SelfLink is a URL representing this object. Populated by the system. Read-only. string selfLink = 4;{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="uid_go">
 <a href="#uid_go" style="color: inherit; text-decoration: inherit;">Uid</a>
@@ -8036,7 +6804,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}UID is the unique in time and space value for this object. It is typically generated by the server on successful creation of a resource and is not allowed to change on PUT operations. Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-guide/identifiers#uids +optional{{% /md %}}</dd></dl>
+    <dd>{{% md %}}(Optional) UID is the unique in time and space value for this object. It is typically generated by the server on successful creation of a resource and is not allowed to change on PUT operations. Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-guide/identifiers#uids{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -8048,7 +6816,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Annotations is an unstructured key value map stored with a resource that may be set by external tools to store and retrieve arbitrary metadata. They are not queryable and should be preserved when modifying objects. More info: http://kubernetes.io/docs/user-guide/annotations +optional{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) Annotations is an unstructured key value map stored with a resource that may be set by external tools to store and retrieve arbitrary metadata. They are not queryable and should be preserved when modifying objects. More info: http://kubernetes.io/docs/user-guide/annotations{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clustername_nodejs">
 <a href="#clustername_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Name</a>
@@ -8056,7 +6824,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Not currently supported by Cloud Run. The name of the cluster which the object belongs to. This is used to distinguish resources with same name and namespace in different clusters. This field is not set anywhere right now and apiserver is going to ignore it if set in create or update request. +optional{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) Not supported by Cloud Run The name of the cluster which the object belongs to. This is used to distinguish resources with same name and namespace in different clusters. This field is not set anywhere right now and apiserver is going to ignore it if set in create or update request.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="creationtimestamp_nodejs">
 <a href="#creationtimestamp_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Timestamp</a>
@@ -8064,7 +6832,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}CreationTimestamp is a timestamp representing the server time when this object was created. It is not guaranteed to be set in happens-before order across separate operations. Clients may not set this value. It is represented in RFC3339 form and is in UTC. Populated by the system. Read-only. Null for lists. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata +optional{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) CreationTimestamp is a timestamp representing the server time when this object was created. It is not guaranteed to be set in happens-before order across separate operations. Clients may not set this value. It is represented in RFC3339 form and is in UTC. Populated by the system. Read-only. Null for lists. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deletiongraceperiodseconds_nodejs">
 <a href="#deletiongraceperiodseconds_nodejs" style="color: inherit; text-decoration: inherit;">deletion<wbr>Grace<wbr>Period<wbr>Seconds</a>
@@ -8072,7 +6840,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Not currently supported by Cloud Run. Number of seconds allowed for this object to gracefully terminate before it will be removed from the system. Only set when deletionTimestamp is also set. May only be shortened. Read-only. +optional{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) Not supported by Cloud Run Number of seconds allowed for this object to gracefully terminate before it will be removed from the system. Only set when deletionTimestamp is also set. May only be shortened. Read-only.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deletiontimestamp_nodejs">
 <a href="#deletiontimestamp_nodejs" style="color: inherit; text-decoration: inherit;">deletion<wbr>Timestamp</a>
@@ -8080,7 +6848,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}DeletionTimestamp is RFC 3339 date and time at which this resource will be deleted. This field is set by the server when a graceful deletion is requested by the user, and is not directly settable by a client. The resource is expected to be deleted (no longer visible from resource lists, and not reachable by name) after the time in this field, once the finalizers list is empty. As long as the finalizers list contains items, deletion is blocked. Once the deletionTimestamp is set, this value may not be unset or be set further into the future, although it may be shortened or the resource may be deleted prior to this time. For example, a user may request that a pod is deleted in 30 seconds. The Kubelet will react by sending a graceful termination signal to the containers in the pod. After that 30 seconds, the Kubelet will send a hard termination signal (SIGKILL) to the container and after cleanup, remove the pod from the API. In the presence of network partitions, this object may still exist after this timestamp, until an administrator or automated process can determine the resource is fully terminated. If not set, graceful deletion of the object has not been requested. Populated by the system when a graceful deletion is requested. Read-only. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata +optional{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) Not supported by Cloud Run DeletionTimestamp is RFC 3339 date and time at which this resource will be deleted. This field is set by the server when a graceful deletion is requested by the user, and is not directly settable by a client. The resource is expected to be deleted (no longer visible from resource lists, and not reachable by name) after the time in this field, once the finalizers list is empty. As long as the finalizers list contains items, deletion is blocked. Once the deletionTimestamp is set, this value may not be unset or be set further into the future, although it may be shortened or the resource may be deleted prior to this time. For example, a user may request that a pod is deleted in 30 seconds. The Kubelet will react by sending a graceful termination signal to the containers in the pod. After that 30 seconds, the Kubelet will send a hard termination signal (SIGKILL) to the container and after cleanup, remove the pod from the API. In the presence of network partitions, this object may still exist after this timestamp, until an administrator or automated process can determine the resource is fully terminated. If not set, graceful deletion of the object has not been requested. Populated by the system when a graceful deletion is requested. Read-only. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="finalizers_nodejs">
 <a href="#finalizers_nodejs" style="color: inherit; text-decoration: inherit;">finalizers</a>
@@ -8088,7 +6856,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Not currently supported by Cloud Run. Must be empty before the object is deleted from the registry. Each entry is an identifier for the responsible component that will remove the entry from the list. If the deletionTimestamp of the object is non-nil, entries in this list can only be removed. +optional +patchStrategy=merge{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) Not supported by Cloud Run Must be empty before the object is deleted from the registry. Each entry is an identifier for the responsible component that will remove the entry from the list. If the deletionTimestamp of the object is non-nil, entries in this list can only be removed. +patchStrategy=merge{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="generatename_nodejs">
 <a href="#generatename_nodejs" style="color: inherit; text-decoration: inherit;">generate<wbr>Name</a>
@@ -8096,7 +6864,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Not currently supported by Cloud Run. GenerateName is an optional prefix, used by the server, to generate a unique name ONLY IF the Name field has not been provided. If this field is used, the name returned to the client will be different than the name passed. This value will also be combined with a unique suffix. The provided value has the same validation rules as the Name field, and may be truncated by the length of the suffix required to make the value unique on the server. If this field is specified and the generated name exists, the server will NOT return a 409 - instead, it will either return 201 Created or 500 with Reason ServerTimeout indicating a unique name could not be found in the time allotted, and the client should retry (optionally after the time indicated in the Retry-After header). Applied only if Name is not specified. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#idempotency +optional string generateName = 2;{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) Not supported by Cloud Run GenerateName is an optional prefix, used by the server, to generate a unique name ONLY IF the Name field has not been provided. If this field is used, the name returned to the client will be different than the name passed. This value will also be combined with a unique suffix. The provided value has the same validation rules as the Name field, and may be truncated by the length of the suffix required to make the value unique on the server. If this field is specified and the generated name exists, the server will NOT return a 409 - instead, it will either return 201 Created or 500 with Reason ServerTimeout indicating a unique name could not be found in the time allotted, and the client should retry (optionally after the time indicated in the Retry-After header). Applied only if Name is not specified. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#idempotency string generateName = 2;{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="generation_nodejs">
 <a href="#generation_nodejs" style="color: inherit; text-decoration: inherit;">generation</a>
@@ -8104,7 +6872,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}A sequence number representing a specific generation of the desired state. Populated by the system. Read-only. +optional{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) A sequence number representing a specific generation of the desired state. Populated by the system. Read-only.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_nodejs">
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -8112,7 +6880,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and routes. More info: http://kubernetes.io/docs/user-guide/labels +optional{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and routes. More info: http://kubernetes.io/docs/user-guide/labels{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -8136,7 +6904,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#ownerreference">Owner<wbr>Reference[]</a></span>
     </dt>
-    <dd>{{% md %}}List of objects that own this object. If ALL objects in the list have been deleted, this object will be garbage collected. +optional{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) Not supported by Cloud Run List of objects that own this object. If ALL objects in the list have been deleted, this object will be garbage collected.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourceversion_nodejs">
 <a href="#resourceversion_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Version</a>
@@ -8144,7 +6912,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}An opaque value that represents the internal version of this object that can be used by clients to determine when objects have changed. May be used for optimistic concurrency, change detection, and the watch operation on a resource or set of resources. Clients must treat these values as opaque and passed unmodified back to the server. They may only be valid for a particular resource or set of resources. Populated by the system. Read-only. Value must be treated as opaque by clients and . More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#concurrency-control-and-consistency +optional{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Optional. An opaque value that represents the internal version of this object that can be used by clients to determine when objects have changed. May be used for optimistic concurrency, change detection, and the watch operation on a resource or set of resources. Clients must treat these values as opaque and passed unmodified back to the server or omit the value to disable conflict-detection. They may only be valid for a particular resource or set of resources. Populated by the system. Read-only. Value must be treated as opaque by clients or omitted. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#concurrency-control-and-consistency{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="selflink_nodejs">
 <a href="#selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
@@ -8152,7 +6920,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SelfLink is a URL representing this object. Populated by the system. Read-only. +optional string selfLink = 4;{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) SelfLink is a URL representing this object. Populated by the system. Read-only. string selfLink = 4;{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="uid_nodejs">
 <a href="#uid_nodejs" style="color: inherit; text-decoration: inherit;">uid</a>
@@ -8160,7 +6928,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}UID is the unique in time and space value for this object. It is typically generated by the server on successful creation of a resource and is not allowed to change on PUT operations. Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-guide/identifiers#uids +optional{{% /md %}}</dd></dl>
+    <dd>{{% md %}}(Optional) UID is the unique in time and space value for this object. It is typically generated by the server on successful creation of a resource and is not allowed to change on PUT operations. Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-guide/identifiers#uids{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -8172,7 +6940,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Annotations is an unstructured key value map stored with a resource that may be set by external tools to store and retrieve arbitrary metadata. They are not queryable and should be preserved when modifying objects. More info: http://kubernetes.io/docs/user-guide/annotations +optional{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) Annotations is an unstructured key value map stored with a resource that may be set by external tools to store and retrieve arbitrary metadata. They are not queryable and should be preserved when modifying objects. More info: http://kubernetes.io/docs/user-guide/annotations{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cluster_name_python">
 <a href="#cluster_name_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>name</a>
@@ -8180,7 +6948,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Not currently supported by Cloud Run. The name of the cluster which the object belongs to. This is used to distinguish resources with same name and namespace in different clusters. This field is not set anywhere right now and apiserver is going to ignore it if set in create or update request. +optional{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) Not supported by Cloud Run The name of the cluster which the object belongs to. This is used to distinguish resources with same name and namespace in different clusters. This field is not set anywhere right now and apiserver is going to ignore it if set in create or update request.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="creation_timestamp_python">
 <a href="#creation_timestamp_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>timestamp</a>
@@ -8188,7 +6956,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}CreationTimestamp is a timestamp representing the server time when this object was created. It is not guaranteed to be set in happens-before order across separate operations. Clients may not set this value. It is represented in RFC3339 form and is in UTC. Populated by the system. Read-only. Null for lists. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata +optional{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) CreationTimestamp is a timestamp representing the server time when this object was created. It is not guaranteed to be set in happens-before order across separate operations. Clients may not set this value. It is represented in RFC3339 form and is in UTC. Populated by the system. Read-only. Null for lists. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deletion_grace_period_seconds_python">
 <a href="#deletion_grace_period_seconds_python" style="color: inherit; text-decoration: inherit;">deletion_<wbr>grace_<wbr>period_<wbr>seconds</a>
@@ -8196,7 +6964,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Not currently supported by Cloud Run. Number of seconds allowed for this object to gracefully terminate before it will be removed from the system. Only set when deletionTimestamp is also set. May only be shortened. Read-only. +optional{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) Not supported by Cloud Run Number of seconds allowed for this object to gracefully terminate before it will be removed from the system. Only set when deletionTimestamp is also set. May only be shortened. Read-only.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deletion_timestamp_python">
 <a href="#deletion_timestamp_python" style="color: inherit; text-decoration: inherit;">deletion_<wbr>timestamp</a>
@@ -8204,7 +6972,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}DeletionTimestamp is RFC 3339 date and time at which this resource will be deleted. This field is set by the server when a graceful deletion is requested by the user, and is not directly settable by a client. The resource is expected to be deleted (no longer visible from resource lists, and not reachable by name) after the time in this field, once the finalizers list is empty. As long as the finalizers list contains items, deletion is blocked. Once the deletionTimestamp is set, this value may not be unset or be set further into the future, although it may be shortened or the resource may be deleted prior to this time. For example, a user may request that a pod is deleted in 30 seconds. The Kubelet will react by sending a graceful termination signal to the containers in the pod. After that 30 seconds, the Kubelet will send a hard termination signal (SIGKILL) to the container and after cleanup, remove the pod from the API. In the presence of network partitions, this object may still exist after this timestamp, until an administrator or automated process can determine the resource is fully terminated. If not set, graceful deletion of the object has not been requested. Populated by the system when a graceful deletion is requested. Read-only. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata +optional{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) Not supported by Cloud Run DeletionTimestamp is RFC 3339 date and time at which this resource will be deleted. This field is set by the server when a graceful deletion is requested by the user, and is not directly settable by a client. The resource is expected to be deleted (no longer visible from resource lists, and not reachable by name) after the time in this field, once the finalizers list is empty. As long as the finalizers list contains items, deletion is blocked. Once the deletionTimestamp is set, this value may not be unset or be set further into the future, although it may be shortened or the resource may be deleted prior to this time. For example, a user may request that a pod is deleted in 30 seconds. The Kubelet will react by sending a graceful termination signal to the containers in the pod. After that 30 seconds, the Kubelet will send a hard termination signal (SIGKILL) to the container and after cleanup, remove the pod from the API. In the presence of network partitions, this object may still exist after this timestamp, until an administrator or automated process can determine the resource is fully terminated. If not set, graceful deletion of the object has not been requested. Populated by the system when a graceful deletion is requested. Read-only. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="finalizers_python">
 <a href="#finalizers_python" style="color: inherit; text-decoration: inherit;">finalizers</a>
@@ -8212,7 +6980,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Not currently supported by Cloud Run. Must be empty before the object is deleted from the registry. Each entry is an identifier for the responsible component that will remove the entry from the list. If the deletionTimestamp of the object is non-nil, entries in this list can only be removed. +optional +patchStrategy=merge{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) Not supported by Cloud Run Must be empty before the object is deleted from the registry. Each entry is an identifier for the responsible component that will remove the entry from the list. If the deletionTimestamp of the object is non-nil, entries in this list can only be removed. +patchStrategy=merge{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="generate_name_python">
 <a href="#generate_name_python" style="color: inherit; text-decoration: inherit;">generate_<wbr>name</a>
@@ -8220,7 +6988,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Not currently supported by Cloud Run. GenerateName is an optional prefix, used by the server, to generate a unique name ONLY IF the Name field has not been provided. If this field is used, the name returned to the client will be different than the name passed. This value will also be combined with a unique suffix. The provided value has the same validation rules as the Name field, and may be truncated by the length of the suffix required to make the value unique on the server. If this field is specified and the generated name exists, the server will NOT return a 409 - instead, it will either return 201 Created or 500 with Reason ServerTimeout indicating a unique name could not be found in the time allotted, and the client should retry (optionally after the time indicated in the Retry-After header). Applied only if Name is not specified. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#idempotency +optional string generateName = 2;{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) Not supported by Cloud Run GenerateName is an optional prefix, used by the server, to generate a unique name ONLY IF the Name field has not been provided. If this field is used, the name returned to the client will be different than the name passed. This value will also be combined with a unique suffix. The provided value has the same validation rules as the Name field, and may be truncated by the length of the suffix required to make the value unique on the server. If this field is specified and the generated name exists, the server will NOT return a 409 - instead, it will either return 201 Created or 500 with Reason ServerTimeout indicating a unique name could not be found in the time allotted, and the client should retry (optionally after the time indicated in the Retry-After header). Applied only if Name is not specified. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#idempotency string generateName = 2;{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="generation_python">
 <a href="#generation_python" style="color: inherit; text-decoration: inherit;">generation</a>
@@ -8228,7 +6996,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}A sequence number representing a specific generation of the desired state. Populated by the system. Read-only. +optional{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) A sequence number representing a specific generation of the desired state. Populated by the system. Read-only.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_python">
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -8236,7 +7004,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and routes. More info: http://kubernetes.io/docs/user-guide/labels +optional{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and routes. More info: http://kubernetes.io/docs/user-guide/labels{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -8260,7 +7028,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#ownerreference">Sequence[Owner<wbr>Reference]</a></span>
     </dt>
-    <dd>{{% md %}}List of objects that own this object. If ALL objects in the list have been deleted, this object will be garbage collected. +optional{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) Not supported by Cloud Run List of objects that own this object. If ALL objects in the list have been deleted, this object will be garbage collected.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resource_version_python">
 <a href="#resource_version_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>version</a>
@@ -8268,7 +7036,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}An opaque value that represents the internal version of this object that can be used by clients to determine when objects have changed. May be used for optimistic concurrency, change detection, and the watch operation on a resource or set of resources. Clients must treat these values as opaque and passed unmodified back to the server. They may only be valid for a particular resource or set of resources. Populated by the system. Read-only. Value must be treated as opaque by clients and . More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#concurrency-control-and-consistency +optional{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Optional. An opaque value that represents the internal version of this object that can be used by clients to determine when objects have changed. May be used for optimistic concurrency, change detection, and the watch operation on a resource or set of resources. Clients must treat these values as opaque and passed unmodified back to the server or omit the value to disable conflict-detection. They may only be valid for a particular resource or set of resources. Populated by the system. Read-only. Value must be treated as opaque by clients or omitted. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#concurrency-control-and-consistency{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="self_link_python">
 <a href="#self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
@@ -8276,7 +7044,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}SelfLink is a URL representing this object. Populated by the system. Read-only. +optional string selfLink = 4;{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) SelfLink is a URL representing this object. Populated by the system. Read-only. string selfLink = 4;{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="uid_python">
 <a href="#uid_python" style="color: inherit; text-decoration: inherit;">uid</a>
@@ -8284,7 +7052,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}UID is the unique in time and space value for this object. It is typically generated by the server on successful creation of a resource and is not allowed to change on PUT operations. Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-guide/identifiers#uids +optional{{% /md %}}</dd></dl>
+    <dd>{{% md %}}(Optional) UID is the unique in time and space value for this object. It is typically generated by the server on successful creation of a resource and is not allowed to change on PUT operations. Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-guide/identifiers#uids{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="objectmetaresponse">Object<wbr>Meta<wbr>Response</h4>
@@ -8298,7 +7066,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Annotations is an unstructured key value map stored with a resource that may be set by external tools to store and retrieve arbitrary metadata. They are not queryable and should be preserved when modifying objects. More info: http://kubernetes.io/docs/user-guide/annotations +optional{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) Annotations is an unstructured key value map stored with a resource that may be set by external tools to store and retrieve arbitrary metadata. They are not queryable and should be preserved when modifying objects. More info: http://kubernetes.io/docs/user-guide/annotations{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="clustername_csharp">
 <a href="#clustername_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Name</a>
@@ -8306,7 +7074,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Not currently supported by Cloud Run. The name of the cluster which the object belongs to. This is used to distinguish resources with same name and namespace in different clusters. This field is not set anywhere right now and apiserver is going to ignore it if set in create or update request. +optional{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) Not supported by Cloud Run The name of the cluster which the object belongs to. This is used to distinguish resources with same name and namespace in different clusters. This field is not set anywhere right now and apiserver is going to ignore it if set in create or update request.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="creationtimestamp_csharp">
 <a href="#creationtimestamp_csharp" style="color: inherit; text-decoration: inherit;">Creation<wbr>Timestamp</a>
@@ -8314,7 +7082,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}CreationTimestamp is a timestamp representing the server time when this object was created. It is not guaranteed to be set in happens-before order across separate operations. Clients may not set this value. It is represented in RFC3339 form and is in UTC. Populated by the system. Read-only. Null for lists. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata +optional{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) CreationTimestamp is a timestamp representing the server time when this object was created. It is not guaranteed to be set in happens-before order across separate operations. Clients may not set this value. It is represented in RFC3339 form and is in UTC. Populated by the system. Read-only. Null for lists. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="deletiongraceperiodseconds_csharp">
 <a href="#deletiongraceperiodseconds_csharp" style="color: inherit; text-decoration: inherit;">Deletion<wbr>Grace<wbr>Period<wbr>Seconds</a>
@@ -8322,7 +7090,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Not currently supported by Cloud Run. Number of seconds allowed for this object to gracefully terminate before it will be removed from the system. Only set when deletionTimestamp is also set. May only be shortened. Read-only. +optional{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) Not supported by Cloud Run Number of seconds allowed for this object to gracefully terminate before it will be removed from the system. Only set when deletionTimestamp is also set. May only be shortened. Read-only.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="deletiontimestamp_csharp">
 <a href="#deletiontimestamp_csharp" style="color: inherit; text-decoration: inherit;">Deletion<wbr>Timestamp</a>
@@ -8330,7 +7098,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}DeletionTimestamp is RFC 3339 date and time at which this resource will be deleted. This field is set by the server when a graceful deletion is requested by the user, and is not directly settable by a client. The resource is expected to be deleted (no longer visible from resource lists, and not reachable by name) after the time in this field, once the finalizers list is empty. As long as the finalizers list contains items, deletion is blocked. Once the deletionTimestamp is set, this value may not be unset or be set further into the future, although it may be shortened or the resource may be deleted prior to this time. For example, a user may request that a pod is deleted in 30 seconds. The Kubelet will react by sending a graceful termination signal to the containers in the pod. After that 30 seconds, the Kubelet will send a hard termination signal (SIGKILL) to the container and after cleanup, remove the pod from the API. In the presence of network partitions, this object may still exist after this timestamp, until an administrator or automated process can determine the resource is fully terminated. If not set, graceful deletion of the object has not been requested. Populated by the system when a graceful deletion is requested. Read-only. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata +optional{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) Not supported by Cloud Run DeletionTimestamp is RFC 3339 date and time at which this resource will be deleted. This field is set by the server when a graceful deletion is requested by the user, and is not directly settable by a client. The resource is expected to be deleted (no longer visible from resource lists, and not reachable by name) after the time in this field, once the finalizers list is empty. As long as the finalizers list contains items, deletion is blocked. Once the deletionTimestamp is set, this value may not be unset or be set further into the future, although it may be shortened or the resource may be deleted prior to this time. For example, a user may request that a pod is deleted in 30 seconds. The Kubelet will react by sending a graceful termination signal to the containers in the pod. After that 30 seconds, the Kubelet will send a hard termination signal (SIGKILL) to the container and after cleanup, remove the pod from the API. In the presence of network partitions, this object may still exist after this timestamp, until an administrator or automated process can determine the resource is fully terminated. If not set, graceful deletion of the object has not been requested. Populated by the system when a graceful deletion is requested. Read-only. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="finalizers_csharp">
 <a href="#finalizers_csharp" style="color: inherit; text-decoration: inherit;">Finalizers</a>
@@ -8338,7 +7106,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Not currently supported by Cloud Run. Must be empty before the object is deleted from the registry. Each entry is an identifier for the responsible component that will remove the entry from the list. If the deletionTimestamp of the object is non-nil, entries in this list can only be removed. +optional +patchStrategy=merge{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) Not supported by Cloud Run Must be empty before the object is deleted from the registry. Each entry is an identifier for the responsible component that will remove the entry from the list. If the deletionTimestamp of the object is non-nil, entries in this list can only be removed. +patchStrategy=merge{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="generatename_csharp">
 <a href="#generatename_csharp" style="color: inherit; text-decoration: inherit;">Generate<wbr>Name</a>
@@ -8346,7 +7114,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Not currently supported by Cloud Run. GenerateName is an optional prefix, used by the server, to generate a unique name ONLY IF the Name field has not been provided. If this field is used, the name returned to the client will be different than the name passed. This value will also be combined with a unique suffix. The provided value has the same validation rules as the Name field, and may be truncated by the length of the suffix required to make the value unique on the server. If this field is specified and the generated name exists, the server will NOT return a 409 - instead, it will either return 201 Created or 500 with Reason ServerTimeout indicating a unique name could not be found in the time allotted, and the client should retry (optionally after the time indicated in the Retry-After header). Applied only if Name is not specified. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#idempotency +optional string generateName = 2;{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) Not supported by Cloud Run GenerateName is an optional prefix, used by the server, to generate a unique name ONLY IF the Name field has not been provided. If this field is used, the name returned to the client will be different than the name passed. This value will also be combined with a unique suffix. The provided value has the same validation rules as the Name field, and may be truncated by the length of the suffix required to make the value unique on the server. If this field is specified and the generated name exists, the server will NOT return a 409 - instead, it will either return 201 Created or 500 with Reason ServerTimeout indicating a unique name could not be found in the time allotted, and the client should retry (optionally after the time indicated in the Retry-After header). Applied only if Name is not specified. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#idempotency string generateName = 2;{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="generation_csharp">
 <a href="#generation_csharp" style="color: inherit; text-decoration: inherit;">Generation</a>
@@ -8354,7 +7122,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}A sequence number representing a specific generation of the desired state. Populated by the system. Read-only. +optional{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) A sequence number representing a specific generation of the desired state. Populated by the system. Read-only.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="labels_csharp">
 <a href="#labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -8362,7 +7130,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and routes. More info: http://kubernetes.io/docs/user-guide/labels +optional{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and routes. More info: http://kubernetes.io/docs/user-guide/labels{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -8386,7 +7154,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#ownerreferenceresponse">List&lt;Pulumi.<wbr>Google<wbr>Native.<wbr>Run.<wbr>V1Alpha1.<wbr>Inputs.<wbr>Owner<wbr>Reference<wbr>Response&gt;</a></span>
     </dt>
-    <dd>{{% md %}}List of objects that own this object. If ALL objects in the list have been deleted, this object will be garbage collected. +optional{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) Not supported by Cloud Run List of objects that own this object. If ALL objects in the list have been deleted, this object will be garbage collected.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourceversion_csharp">
 <a href="#resourceversion_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Version</a>
@@ -8394,7 +7162,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}An opaque value that represents the internal version of this object that can be used by clients to determine when objects have changed. May be used for optimistic concurrency, change detection, and the watch operation on a resource or set of resources. Clients must treat these values as opaque and passed unmodified back to the server. They may only be valid for a particular resource or set of resources. Populated by the system. Read-only. Value must be treated as opaque by clients and . More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#concurrency-control-and-consistency +optional{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Optional. An opaque value that represents the internal version of this object that can be used by clients to determine when objects have changed. May be used for optimistic concurrency, change detection, and the watch operation on a resource or set of resources. Clients must treat these values as opaque and passed unmodified back to the server or omit the value to disable conflict-detection. They may only be valid for a particular resource or set of resources. Populated by the system. Read-only. Value must be treated as opaque by clients or omitted. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#concurrency-control-and-consistency{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="selflink_csharp">
 <a href="#selflink_csharp" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
@@ -8402,7 +7170,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SelfLink is a URL representing this object. Populated by the system. Read-only. +optional string selfLink = 4;{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) SelfLink is a URL representing this object. Populated by the system. Read-only. string selfLink = 4;{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="uid_csharp">
 <a href="#uid_csharp" style="color: inherit; text-decoration: inherit;">Uid</a>
@@ -8410,7 +7178,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}UID is the unique in time and space value for this object. It is typically generated by the server on successful creation of a resource and is not allowed to change on PUT operations. Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-guide/identifiers#uids +optional{{% /md %}}</dd></dl>
+    <dd>{{% md %}}(Optional) UID is the unique in time and space value for this object. It is typically generated by the server on successful creation of a resource and is not allowed to change on PUT operations. Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-guide/identifiers#uids{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -8422,7 +7190,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Annotations is an unstructured key value map stored with a resource that may be set by external tools to store and retrieve arbitrary metadata. They are not queryable and should be preserved when modifying objects. More info: http://kubernetes.io/docs/user-guide/annotations +optional{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) Annotations is an unstructured key value map stored with a resource that may be set by external tools to store and retrieve arbitrary metadata. They are not queryable and should be preserved when modifying objects. More info: http://kubernetes.io/docs/user-guide/annotations{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="clustername_go">
 <a href="#clustername_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Name</a>
@@ -8430,7 +7198,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Not currently supported by Cloud Run. The name of the cluster which the object belongs to. This is used to distinguish resources with same name and namespace in different clusters. This field is not set anywhere right now and apiserver is going to ignore it if set in create or update request. +optional{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) Not supported by Cloud Run The name of the cluster which the object belongs to. This is used to distinguish resources with same name and namespace in different clusters. This field is not set anywhere right now and apiserver is going to ignore it if set in create or update request.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="creationtimestamp_go">
 <a href="#creationtimestamp_go" style="color: inherit; text-decoration: inherit;">Creation<wbr>Timestamp</a>
@@ -8438,7 +7206,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}CreationTimestamp is a timestamp representing the server time when this object was created. It is not guaranteed to be set in happens-before order across separate operations. Clients may not set this value. It is represented in RFC3339 form and is in UTC. Populated by the system. Read-only. Null for lists. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata +optional{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) CreationTimestamp is a timestamp representing the server time when this object was created. It is not guaranteed to be set in happens-before order across separate operations. Clients may not set this value. It is represented in RFC3339 form and is in UTC. Populated by the system. Read-only. Null for lists. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="deletiongraceperiodseconds_go">
 <a href="#deletiongraceperiodseconds_go" style="color: inherit; text-decoration: inherit;">Deletion<wbr>Grace<wbr>Period<wbr>Seconds</a>
@@ -8446,7 +7214,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Not currently supported by Cloud Run. Number of seconds allowed for this object to gracefully terminate before it will be removed from the system. Only set when deletionTimestamp is also set. May only be shortened. Read-only. +optional{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) Not supported by Cloud Run Number of seconds allowed for this object to gracefully terminate before it will be removed from the system. Only set when deletionTimestamp is also set. May only be shortened. Read-only.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="deletiontimestamp_go">
 <a href="#deletiontimestamp_go" style="color: inherit; text-decoration: inherit;">Deletion<wbr>Timestamp</a>
@@ -8454,7 +7222,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}DeletionTimestamp is RFC 3339 date and time at which this resource will be deleted. This field is set by the server when a graceful deletion is requested by the user, and is not directly settable by a client. The resource is expected to be deleted (no longer visible from resource lists, and not reachable by name) after the time in this field, once the finalizers list is empty. As long as the finalizers list contains items, deletion is blocked. Once the deletionTimestamp is set, this value may not be unset or be set further into the future, although it may be shortened or the resource may be deleted prior to this time. For example, a user may request that a pod is deleted in 30 seconds. The Kubelet will react by sending a graceful termination signal to the containers in the pod. After that 30 seconds, the Kubelet will send a hard termination signal (SIGKILL) to the container and after cleanup, remove the pod from the API. In the presence of network partitions, this object may still exist after this timestamp, until an administrator or automated process can determine the resource is fully terminated. If not set, graceful deletion of the object has not been requested. Populated by the system when a graceful deletion is requested. Read-only. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata +optional{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) Not supported by Cloud Run DeletionTimestamp is RFC 3339 date and time at which this resource will be deleted. This field is set by the server when a graceful deletion is requested by the user, and is not directly settable by a client. The resource is expected to be deleted (no longer visible from resource lists, and not reachable by name) after the time in this field, once the finalizers list is empty. As long as the finalizers list contains items, deletion is blocked. Once the deletionTimestamp is set, this value may not be unset or be set further into the future, although it may be shortened or the resource may be deleted prior to this time. For example, a user may request that a pod is deleted in 30 seconds. The Kubelet will react by sending a graceful termination signal to the containers in the pod. After that 30 seconds, the Kubelet will send a hard termination signal (SIGKILL) to the container and after cleanup, remove the pod from the API. In the presence of network partitions, this object may still exist after this timestamp, until an administrator or automated process can determine the resource is fully terminated. If not set, graceful deletion of the object has not been requested. Populated by the system when a graceful deletion is requested. Read-only. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="finalizers_go">
 <a href="#finalizers_go" style="color: inherit; text-decoration: inherit;">Finalizers</a>
@@ -8462,7 +7230,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Not currently supported by Cloud Run. Must be empty before the object is deleted from the registry. Each entry is an identifier for the responsible component that will remove the entry from the list. If the deletionTimestamp of the object is non-nil, entries in this list can only be removed. +optional +patchStrategy=merge{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) Not supported by Cloud Run Must be empty before the object is deleted from the registry. Each entry is an identifier for the responsible component that will remove the entry from the list. If the deletionTimestamp of the object is non-nil, entries in this list can only be removed. +patchStrategy=merge{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="generatename_go">
 <a href="#generatename_go" style="color: inherit; text-decoration: inherit;">Generate<wbr>Name</a>
@@ -8470,7 +7238,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Not currently supported by Cloud Run. GenerateName is an optional prefix, used by the server, to generate a unique name ONLY IF the Name field has not been provided. If this field is used, the name returned to the client will be different than the name passed. This value will also be combined with a unique suffix. The provided value has the same validation rules as the Name field, and may be truncated by the length of the suffix required to make the value unique on the server. If this field is specified and the generated name exists, the server will NOT return a 409 - instead, it will either return 201 Created or 500 with Reason ServerTimeout indicating a unique name could not be found in the time allotted, and the client should retry (optionally after the time indicated in the Retry-After header). Applied only if Name is not specified. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#idempotency +optional string generateName = 2;{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) Not supported by Cloud Run GenerateName is an optional prefix, used by the server, to generate a unique name ONLY IF the Name field has not been provided. If this field is used, the name returned to the client will be different than the name passed. This value will also be combined with a unique suffix. The provided value has the same validation rules as the Name field, and may be truncated by the length of the suffix required to make the value unique on the server. If this field is specified and the generated name exists, the server will NOT return a 409 - instead, it will either return 201 Created or 500 with Reason ServerTimeout indicating a unique name could not be found in the time allotted, and the client should retry (optionally after the time indicated in the Retry-After header). Applied only if Name is not specified. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#idempotency string generateName = 2;{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="generation_go">
 <a href="#generation_go" style="color: inherit; text-decoration: inherit;">Generation</a>
@@ -8478,7 +7246,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}A sequence number representing a specific generation of the desired state. Populated by the system. Read-only. +optional{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) A sequence number representing a specific generation of the desired state. Populated by the system. Read-only.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="labels_go">
 <a href="#labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -8486,7 +7254,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and routes. More info: http://kubernetes.io/docs/user-guide/labels +optional{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and routes. More info: http://kubernetes.io/docs/user-guide/labels{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -8510,7 +7278,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#ownerreferenceresponse">[]Owner<wbr>Reference<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}List of objects that own this object. If ALL objects in the list have been deleted, this object will be garbage collected. +optional{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) Not supported by Cloud Run List of objects that own this object. If ALL objects in the list have been deleted, this object will be garbage collected.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourceversion_go">
 <a href="#resourceversion_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Version</a>
@@ -8518,7 +7286,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}An opaque value that represents the internal version of this object that can be used by clients to determine when objects have changed. May be used for optimistic concurrency, change detection, and the watch operation on a resource or set of resources. Clients must treat these values as opaque and passed unmodified back to the server. They may only be valid for a particular resource or set of resources. Populated by the system. Read-only. Value must be treated as opaque by clients and . More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#concurrency-control-and-consistency +optional{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Optional. An opaque value that represents the internal version of this object that can be used by clients to determine when objects have changed. May be used for optimistic concurrency, change detection, and the watch operation on a resource or set of resources. Clients must treat these values as opaque and passed unmodified back to the server or omit the value to disable conflict-detection. They may only be valid for a particular resource or set of resources. Populated by the system. Read-only. Value must be treated as opaque by clients or omitted. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#concurrency-control-and-consistency{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="selflink_go">
 <a href="#selflink_go" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
@@ -8526,7 +7294,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SelfLink is a URL representing this object. Populated by the system. Read-only. +optional string selfLink = 4;{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) SelfLink is a URL representing this object. Populated by the system. Read-only. string selfLink = 4;{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="uid_go">
 <a href="#uid_go" style="color: inherit; text-decoration: inherit;">Uid</a>
@@ -8534,7 +7302,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}UID is the unique in time and space value for this object. It is typically generated by the server on successful creation of a resource and is not allowed to change on PUT operations. Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-guide/identifiers#uids +optional{{% /md %}}</dd></dl>
+    <dd>{{% md %}}(Optional) UID is the unique in time and space value for this object. It is typically generated by the server on successful creation of a resource and is not allowed to change on PUT operations. Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-guide/identifiers#uids{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -8546,7 +7314,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Annotations is an unstructured key value map stored with a resource that may be set by external tools to store and retrieve arbitrary metadata. They are not queryable and should be preserved when modifying objects. More info: http://kubernetes.io/docs/user-guide/annotations +optional{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) Annotations is an unstructured key value map stored with a resource that may be set by external tools to store and retrieve arbitrary metadata. They are not queryable and should be preserved when modifying objects. More info: http://kubernetes.io/docs/user-guide/annotations{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="clustername_nodejs">
 <a href="#clustername_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Name</a>
@@ -8554,7 +7322,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Not currently supported by Cloud Run. The name of the cluster which the object belongs to. This is used to distinguish resources with same name and namespace in different clusters. This field is not set anywhere right now and apiserver is going to ignore it if set in create or update request. +optional{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) Not supported by Cloud Run The name of the cluster which the object belongs to. This is used to distinguish resources with same name and namespace in different clusters. This field is not set anywhere right now and apiserver is going to ignore it if set in create or update request.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="creationtimestamp_nodejs">
 <a href="#creationtimestamp_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Timestamp</a>
@@ -8562,7 +7330,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}CreationTimestamp is a timestamp representing the server time when this object was created. It is not guaranteed to be set in happens-before order across separate operations. Clients may not set this value. It is represented in RFC3339 form and is in UTC. Populated by the system. Read-only. Null for lists. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata +optional{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) CreationTimestamp is a timestamp representing the server time when this object was created. It is not guaranteed to be set in happens-before order across separate operations. Clients may not set this value. It is represented in RFC3339 form and is in UTC. Populated by the system. Read-only. Null for lists. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="deletiongraceperiodseconds_nodejs">
 <a href="#deletiongraceperiodseconds_nodejs" style="color: inherit; text-decoration: inherit;">deletion<wbr>Grace<wbr>Period<wbr>Seconds</a>
@@ -8570,7 +7338,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Not currently supported by Cloud Run. Number of seconds allowed for this object to gracefully terminate before it will be removed from the system. Only set when deletionTimestamp is also set. May only be shortened. Read-only. +optional{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) Not supported by Cloud Run Number of seconds allowed for this object to gracefully terminate before it will be removed from the system. Only set when deletionTimestamp is also set. May only be shortened. Read-only.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="deletiontimestamp_nodejs">
 <a href="#deletiontimestamp_nodejs" style="color: inherit; text-decoration: inherit;">deletion<wbr>Timestamp</a>
@@ -8578,7 +7346,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}DeletionTimestamp is RFC 3339 date and time at which this resource will be deleted. This field is set by the server when a graceful deletion is requested by the user, and is not directly settable by a client. The resource is expected to be deleted (no longer visible from resource lists, and not reachable by name) after the time in this field, once the finalizers list is empty. As long as the finalizers list contains items, deletion is blocked. Once the deletionTimestamp is set, this value may not be unset or be set further into the future, although it may be shortened or the resource may be deleted prior to this time. For example, a user may request that a pod is deleted in 30 seconds. The Kubelet will react by sending a graceful termination signal to the containers in the pod. After that 30 seconds, the Kubelet will send a hard termination signal (SIGKILL) to the container and after cleanup, remove the pod from the API. In the presence of network partitions, this object may still exist after this timestamp, until an administrator or automated process can determine the resource is fully terminated. If not set, graceful deletion of the object has not been requested. Populated by the system when a graceful deletion is requested. Read-only. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata +optional{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) Not supported by Cloud Run DeletionTimestamp is RFC 3339 date and time at which this resource will be deleted. This field is set by the server when a graceful deletion is requested by the user, and is not directly settable by a client. The resource is expected to be deleted (no longer visible from resource lists, and not reachable by name) after the time in this field, once the finalizers list is empty. As long as the finalizers list contains items, deletion is blocked. Once the deletionTimestamp is set, this value may not be unset or be set further into the future, although it may be shortened or the resource may be deleted prior to this time. For example, a user may request that a pod is deleted in 30 seconds. The Kubelet will react by sending a graceful termination signal to the containers in the pod. After that 30 seconds, the Kubelet will send a hard termination signal (SIGKILL) to the container and after cleanup, remove the pod from the API. In the presence of network partitions, this object may still exist after this timestamp, until an administrator or automated process can determine the resource is fully terminated. If not set, graceful deletion of the object has not been requested. Populated by the system when a graceful deletion is requested. Read-only. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="finalizers_nodejs">
 <a href="#finalizers_nodejs" style="color: inherit; text-decoration: inherit;">finalizers</a>
@@ -8586,7 +7354,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Not currently supported by Cloud Run. Must be empty before the object is deleted from the registry. Each entry is an identifier for the responsible component that will remove the entry from the list. If the deletionTimestamp of the object is non-nil, entries in this list can only be removed. +optional +patchStrategy=merge{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) Not supported by Cloud Run Must be empty before the object is deleted from the registry. Each entry is an identifier for the responsible component that will remove the entry from the list. If the deletionTimestamp of the object is non-nil, entries in this list can only be removed. +patchStrategy=merge{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="generatename_nodejs">
 <a href="#generatename_nodejs" style="color: inherit; text-decoration: inherit;">generate<wbr>Name</a>
@@ -8594,7 +7362,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Not currently supported by Cloud Run. GenerateName is an optional prefix, used by the server, to generate a unique name ONLY IF the Name field has not been provided. If this field is used, the name returned to the client will be different than the name passed. This value will also be combined with a unique suffix. The provided value has the same validation rules as the Name field, and may be truncated by the length of the suffix required to make the value unique on the server. If this field is specified and the generated name exists, the server will NOT return a 409 - instead, it will either return 201 Created or 500 with Reason ServerTimeout indicating a unique name could not be found in the time allotted, and the client should retry (optionally after the time indicated in the Retry-After header). Applied only if Name is not specified. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#idempotency +optional string generateName = 2;{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) Not supported by Cloud Run GenerateName is an optional prefix, used by the server, to generate a unique name ONLY IF the Name field has not been provided. If this field is used, the name returned to the client will be different than the name passed. This value will also be combined with a unique suffix. The provided value has the same validation rules as the Name field, and may be truncated by the length of the suffix required to make the value unique on the server. If this field is specified and the generated name exists, the server will NOT return a 409 - instead, it will either return 201 Created or 500 with Reason ServerTimeout indicating a unique name could not be found in the time allotted, and the client should retry (optionally after the time indicated in the Retry-After header). Applied only if Name is not specified. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#idempotency string generateName = 2;{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="generation_nodejs">
 <a href="#generation_nodejs" style="color: inherit; text-decoration: inherit;">generation</a>
@@ -8602,7 +7370,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}A sequence number representing a specific generation of the desired state. Populated by the system. Read-only. +optional{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) A sequence number representing a specific generation of the desired state. Populated by the system. Read-only.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="labels_nodejs">
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -8610,7 +7378,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and routes. More info: http://kubernetes.io/docs/user-guide/labels +optional{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and routes. More info: http://kubernetes.io/docs/user-guide/labels{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -8634,7 +7402,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#ownerreferenceresponse">Owner<wbr>Reference<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}List of objects that own this object. If ALL objects in the list have been deleted, this object will be garbage collected. +optional{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) Not supported by Cloud Run List of objects that own this object. If ALL objects in the list have been deleted, this object will be garbage collected.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourceversion_nodejs">
 <a href="#resourceversion_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Version</a>
@@ -8642,7 +7410,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}An opaque value that represents the internal version of this object that can be used by clients to determine when objects have changed. May be used for optimistic concurrency, change detection, and the watch operation on a resource or set of resources. Clients must treat these values as opaque and passed unmodified back to the server. They may only be valid for a particular resource or set of resources. Populated by the system. Read-only. Value must be treated as opaque by clients and . More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#concurrency-control-and-consistency +optional{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Optional. An opaque value that represents the internal version of this object that can be used by clients to determine when objects have changed. May be used for optimistic concurrency, change detection, and the watch operation on a resource or set of resources. Clients must treat these values as opaque and passed unmodified back to the server or omit the value to disable conflict-detection. They may only be valid for a particular resource or set of resources. Populated by the system. Read-only. Value must be treated as opaque by clients or omitted. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#concurrency-control-and-consistency{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="selflink_nodejs">
 <a href="#selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
@@ -8650,7 +7418,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SelfLink is a URL representing this object. Populated by the system. Read-only. +optional string selfLink = 4;{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) SelfLink is a URL representing this object. Populated by the system. Read-only. string selfLink = 4;{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="uid_nodejs">
 <a href="#uid_nodejs" style="color: inherit; text-decoration: inherit;">uid</a>
@@ -8658,7 +7426,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}UID is the unique in time and space value for this object. It is typically generated by the server on successful creation of a resource and is not allowed to change on PUT operations. Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-guide/identifiers#uids +optional{{% /md %}}</dd></dl>
+    <dd>{{% md %}}(Optional) UID is the unique in time and space value for this object. It is typically generated by the server on successful creation of a resource and is not allowed to change on PUT operations. Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-guide/identifiers#uids{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -8670,7 +7438,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Annotations is an unstructured key value map stored with a resource that may be set by external tools to store and retrieve arbitrary metadata. They are not queryable and should be preserved when modifying objects. More info: http://kubernetes.io/docs/user-guide/annotations +optional{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) Annotations is an unstructured key value map stored with a resource that may be set by external tools to store and retrieve arbitrary metadata. They are not queryable and should be preserved when modifying objects. More info: http://kubernetes.io/docs/user-guide/annotations{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="cluster_name_python">
 <a href="#cluster_name_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>name</a>
@@ -8678,7 +7446,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Not currently supported by Cloud Run. The name of the cluster which the object belongs to. This is used to distinguish resources with same name and namespace in different clusters. This field is not set anywhere right now and apiserver is going to ignore it if set in create or update request. +optional{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) Not supported by Cloud Run The name of the cluster which the object belongs to. This is used to distinguish resources with same name and namespace in different clusters. This field is not set anywhere right now and apiserver is going to ignore it if set in create or update request.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="creation_timestamp_python">
 <a href="#creation_timestamp_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>timestamp</a>
@@ -8686,7 +7454,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}CreationTimestamp is a timestamp representing the server time when this object was created. It is not guaranteed to be set in happens-before order across separate operations. Clients may not set this value. It is represented in RFC3339 form and is in UTC. Populated by the system. Read-only. Null for lists. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata +optional{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) CreationTimestamp is a timestamp representing the server time when this object was created. It is not guaranteed to be set in happens-before order across separate operations. Clients may not set this value. It is represented in RFC3339 form and is in UTC. Populated by the system. Read-only. Null for lists. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="deletion_grace_period_seconds_python">
 <a href="#deletion_grace_period_seconds_python" style="color: inherit; text-decoration: inherit;">deletion_<wbr>grace_<wbr>period_<wbr>seconds</a>
@@ -8694,7 +7462,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Not currently supported by Cloud Run. Number of seconds allowed for this object to gracefully terminate before it will be removed from the system. Only set when deletionTimestamp is also set. May only be shortened. Read-only. +optional{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) Not supported by Cloud Run Number of seconds allowed for this object to gracefully terminate before it will be removed from the system. Only set when deletionTimestamp is also set. May only be shortened. Read-only.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="deletion_timestamp_python">
 <a href="#deletion_timestamp_python" style="color: inherit; text-decoration: inherit;">deletion_<wbr>timestamp</a>
@@ -8702,7 +7470,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}DeletionTimestamp is RFC 3339 date and time at which this resource will be deleted. This field is set by the server when a graceful deletion is requested by the user, and is not directly settable by a client. The resource is expected to be deleted (no longer visible from resource lists, and not reachable by name) after the time in this field, once the finalizers list is empty. As long as the finalizers list contains items, deletion is blocked. Once the deletionTimestamp is set, this value may not be unset or be set further into the future, although it may be shortened or the resource may be deleted prior to this time. For example, a user may request that a pod is deleted in 30 seconds. The Kubelet will react by sending a graceful termination signal to the containers in the pod. After that 30 seconds, the Kubelet will send a hard termination signal (SIGKILL) to the container and after cleanup, remove the pod from the API. In the presence of network partitions, this object may still exist after this timestamp, until an administrator or automated process can determine the resource is fully terminated. If not set, graceful deletion of the object has not been requested. Populated by the system when a graceful deletion is requested. Read-only. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata +optional{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) Not supported by Cloud Run DeletionTimestamp is RFC 3339 date and time at which this resource will be deleted. This field is set by the server when a graceful deletion is requested by the user, and is not directly settable by a client. The resource is expected to be deleted (no longer visible from resource lists, and not reachable by name) after the time in this field, once the finalizers list is empty. As long as the finalizers list contains items, deletion is blocked. Once the deletionTimestamp is set, this value may not be unset or be set further into the future, although it may be shortened or the resource may be deleted prior to this time. For example, a user may request that a pod is deleted in 30 seconds. The Kubelet will react by sending a graceful termination signal to the containers in the pod. After that 30 seconds, the Kubelet will send a hard termination signal (SIGKILL) to the container and after cleanup, remove the pod from the API. In the presence of network partitions, this object may still exist after this timestamp, until an administrator or automated process can determine the resource is fully terminated. If not set, graceful deletion of the object has not been requested. Populated by the system when a graceful deletion is requested. Read-only. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="finalizers_python">
 <a href="#finalizers_python" style="color: inherit; text-decoration: inherit;">finalizers</a>
@@ -8710,7 +7478,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Not currently supported by Cloud Run. Must be empty before the object is deleted from the registry. Each entry is an identifier for the responsible component that will remove the entry from the list. If the deletionTimestamp of the object is non-nil, entries in this list can only be removed. +optional +patchStrategy=merge{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) Not supported by Cloud Run Must be empty before the object is deleted from the registry. Each entry is an identifier for the responsible component that will remove the entry from the list. If the deletionTimestamp of the object is non-nil, entries in this list can only be removed. +patchStrategy=merge{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="generate_name_python">
 <a href="#generate_name_python" style="color: inherit; text-decoration: inherit;">generate_<wbr>name</a>
@@ -8718,7 +7486,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Not currently supported by Cloud Run. GenerateName is an optional prefix, used by the server, to generate a unique name ONLY IF the Name field has not been provided. If this field is used, the name returned to the client will be different than the name passed. This value will also be combined with a unique suffix. The provided value has the same validation rules as the Name field, and may be truncated by the length of the suffix required to make the value unique on the server. If this field is specified and the generated name exists, the server will NOT return a 409 - instead, it will either return 201 Created or 500 with Reason ServerTimeout indicating a unique name could not be found in the time allotted, and the client should retry (optionally after the time indicated in the Retry-After header). Applied only if Name is not specified. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#idempotency +optional string generateName = 2;{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) Not supported by Cloud Run GenerateName is an optional prefix, used by the server, to generate a unique name ONLY IF the Name field has not been provided. If this field is used, the name returned to the client will be different than the name passed. This value will also be combined with a unique suffix. The provided value has the same validation rules as the Name field, and may be truncated by the length of the suffix required to make the value unique on the server. If this field is specified and the generated name exists, the server will NOT return a 409 - instead, it will either return 201 Created or 500 with Reason ServerTimeout indicating a unique name could not be found in the time allotted, and the client should retry (optionally after the time indicated in the Retry-After header). Applied only if Name is not specified. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#idempotency string generateName = 2;{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="generation_python">
 <a href="#generation_python" style="color: inherit; text-decoration: inherit;">generation</a>
@@ -8726,7 +7494,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}A sequence number representing a specific generation of the desired state. Populated by the system. Read-only. +optional{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) A sequence number representing a specific generation of the desired state. Populated by the system. Read-only.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="labels_python">
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -8734,7 +7502,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and routes. More info: http://kubernetes.io/docs/user-guide/labels +optional{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and routes. More info: http://kubernetes.io/docs/user-guide/labels{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -8758,7 +7526,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#ownerreferenceresponse">Sequence[Owner<wbr>Reference<wbr>Response]</a></span>
     </dt>
-    <dd>{{% md %}}List of objects that own this object. If ALL objects in the list have been deleted, this object will be garbage collected. +optional{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) Not supported by Cloud Run List of objects that own this object. If ALL objects in the list have been deleted, this object will be garbage collected.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_version_python">
 <a href="#resource_version_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>version</a>
@@ -8766,7 +7534,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}An opaque value that represents the internal version of this object that can be used by clients to determine when objects have changed. May be used for optimistic concurrency, change detection, and the watch operation on a resource or set of resources. Clients must treat these values as opaque and passed unmodified back to the server. They may only be valid for a particular resource or set of resources. Populated by the system. Read-only. Value must be treated as opaque by clients and . More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#concurrency-control-and-consistency +optional{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Optional. An opaque value that represents the internal version of this object that can be used by clients to determine when objects have changed. May be used for optimistic concurrency, change detection, and the watch operation on a resource or set of resources. Clients must treat these values as opaque and passed unmodified back to the server or omit the value to disable conflict-detection. They may only be valid for a particular resource or set of resources. Populated by the system. Read-only. Value must be treated as opaque by clients or omitted. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#concurrency-control-and-consistency{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="self_link_python">
 <a href="#self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
@@ -8774,7 +7542,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}SelfLink is a URL representing this object. Populated by the system. Read-only. +optional string selfLink = 4;{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) SelfLink is a URL representing this object. Populated by the system. Read-only. string selfLink = 4;{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="uid_python">
 <a href="#uid_python" style="color: inherit; text-decoration: inherit;">uid</a>
@@ -8782,7 +7550,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}UID is the unique in time and space value for this object. It is typically generated by the server on successful creation of a resource and is not allowed to change on PUT operations. Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-guide/identifiers#uids +optional{{% /md %}}</dd></dl>
+    <dd>{{% md %}}(Optional) UID is the unique in time and space value for this object. It is typically generated by the server on successful creation of a resource and is not allowed to change on PUT operations. Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-guide/identifiers#uids{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="ownerreference">Owner<wbr>Reference</h4>
@@ -9210,21 +7978,29 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="exec_csharp">
+<a href="#exec_csharp" style="color: inherit; text-decoration: inherit;">Exec</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#execaction">Pulumi.<wbr>Google<wbr>Native.<wbr>Run.<wbr>V1Alpha1.<wbr>Inputs.<wbr>Exec<wbr>Action</a></span>
+    </dt>
+    <dd>{{% md %}}(Optional) One and only one of the following should be specified. Exec specifies the action to take. A field inlined from the Handler message.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="failurethreshold_csharp">
 <a href="#failurethreshold_csharp" style="color: inherit; text-decoration: inherit;">Failure<wbr>Threshold</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Minimum consecutive failures for the probe to be considered failed after having succeeded. Defaults to 3. Minimum value is 1. +optional{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) Minimum consecutive failures for the probe to be considered failed after having succeeded. Defaults to 3. Minimum value is 1.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="handler_csharp">
-<a href="#handler_csharp" style="color: inherit; text-decoration: inherit;">Handler</a>
+        <span id="httpget_csharp">
+<a href="#httpget_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Get</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#handler">Pulumi.<wbr>Google<wbr>Native.<wbr>Run.<wbr>V1Alpha1.<wbr>Inputs.<wbr>Handler</a></span>
+        <span class="property-type"><a href="#httpgetaction">Pulumi.<wbr>Google<wbr>Native.<wbr>Run.<wbr>V1Alpha1.<wbr>Inputs.<wbr>HTTPGet<wbr>Action</a></span>
     </dt>
-    <dd>{{% md %}}The action taken to determine the health of a container{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) HTTPGet specifies the http request to perform. A field inlined from the Handler message.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="initialdelayseconds_csharp">
 <a href="#initialdelayseconds_csharp" style="color: inherit; text-decoration: inherit;">Initial<wbr>Delay<wbr>Seconds</a>
@@ -9232,7 +8008,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of seconds after the container has started before liveness probes are initiated. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes +optional{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) Number of seconds after the container has started before liveness probes are initiated. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="periodseconds_csharp">
 <a href="#periodseconds_csharp" style="color: inherit; text-decoration: inherit;">Period<wbr>Seconds</a>
@@ -9240,7 +8016,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}How often (in seconds) to perform the probe. Default to 10 seconds. Minimum value is 1. +optional{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) How often (in seconds) to perform the probe. Default to 10 seconds. Minimum value is 1.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="successthreshold_csharp">
 <a href="#successthreshold_csharp" style="color: inherit; text-decoration: inherit;">Success<wbr>Threshold</a>
@@ -9248,7 +8024,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Minimum consecutive successes for the probe to be considered successful after having failed. Defaults to 1. Must be 1 for liveness. Minimum value is 1. +optional{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) Minimum consecutive successes for the probe to be considered successful after having failed. Defaults to 1. Must be 1 for liveness. Minimum value is 1.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tcpsocket_csharp">
+<a href="#tcpsocket_csharp" style="color: inherit; text-decoration: inherit;">Tcp<wbr>Socket</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#tcpsocketaction">Pulumi.<wbr>Google<wbr>Native.<wbr>Run.<wbr>V1Alpha1.<wbr>Inputs.<wbr>TCPSocket<wbr>Action</a></span>
+    </dt>
+    <dd>{{% md %}}(Optional) TCPSocket specifies an action involving a TCP port. TCP hooks not yet supported A field inlined from the Handler message.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeoutseconds_csharp">
 <a href="#timeoutseconds_csharp" style="color: inherit; text-decoration: inherit;">Timeout<wbr>Seconds</a>
@@ -9256,11 +8040,19 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of seconds after which the probe times out. Defaults to 1 second. Minimum value is 1. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes +optional{{% /md %}}</dd></dl>
+    <dd>{{% md %}}(Optional) Number of seconds after which the probe times out. Defaults to 1 second. Minimum value is 1. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="exec_go">
+<a href="#exec_go" style="color: inherit; text-decoration: inherit;">Exec</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#execaction">Exec<wbr>Action</a></span>
+    </dt>
+    <dd>{{% md %}}(Optional) One and only one of the following should be specified. Exec specifies the action to take. A field inlined from the Handler message.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="failurethreshold_go">
 <a href="#failurethreshold_go" style="color: inherit; text-decoration: inherit;">Failure<wbr>Threshold</a>
@@ -9268,15 +8060,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Minimum consecutive failures for the probe to be considered failed after having succeeded. Defaults to 3. Minimum value is 1. +optional{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) Minimum consecutive failures for the probe to be considered failed after having succeeded. Defaults to 3. Minimum value is 1.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="handler_go">
-<a href="#handler_go" style="color: inherit; text-decoration: inherit;">Handler</a>
+        <span id="httpget_go">
+<a href="#httpget_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Get</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#handler">Handler</a></span>
+        <span class="property-type"><a href="#httpgetaction">HTTPGet<wbr>Action</a></span>
     </dt>
-    <dd>{{% md %}}The action taken to determine the health of a container{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) HTTPGet specifies the http request to perform. A field inlined from the Handler message.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="initialdelayseconds_go">
 <a href="#initialdelayseconds_go" style="color: inherit; text-decoration: inherit;">Initial<wbr>Delay<wbr>Seconds</a>
@@ -9284,7 +8076,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of seconds after the container has started before liveness probes are initiated. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes +optional{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) Number of seconds after the container has started before liveness probes are initiated. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="periodseconds_go">
 <a href="#periodseconds_go" style="color: inherit; text-decoration: inherit;">Period<wbr>Seconds</a>
@@ -9292,7 +8084,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}How often (in seconds) to perform the probe. Default to 10 seconds. Minimum value is 1. +optional{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) How often (in seconds) to perform the probe. Default to 10 seconds. Minimum value is 1.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="successthreshold_go">
 <a href="#successthreshold_go" style="color: inherit; text-decoration: inherit;">Success<wbr>Threshold</a>
@@ -9300,7 +8092,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Minimum consecutive successes for the probe to be considered successful after having failed. Defaults to 1. Must be 1 for liveness. Minimum value is 1. +optional{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) Minimum consecutive successes for the probe to be considered successful after having failed. Defaults to 1. Must be 1 for liveness. Minimum value is 1.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tcpsocket_go">
+<a href="#tcpsocket_go" style="color: inherit; text-decoration: inherit;">Tcp<wbr>Socket</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#tcpsocketaction">TCPSocket<wbr>Action</a></span>
+    </dt>
+    <dd>{{% md %}}(Optional) TCPSocket specifies an action involving a TCP port. TCP hooks not yet supported A field inlined from the Handler message.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeoutseconds_go">
 <a href="#timeoutseconds_go" style="color: inherit; text-decoration: inherit;">Timeout<wbr>Seconds</a>
@@ -9308,11 +8108,19 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of seconds after which the probe times out. Defaults to 1 second. Minimum value is 1. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes +optional{{% /md %}}</dd></dl>
+    <dd>{{% md %}}(Optional) Number of seconds after which the probe times out. Defaults to 1 second. Minimum value is 1. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="exec_nodejs">
+<a href="#exec_nodejs" style="color: inherit; text-decoration: inherit;">exec</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#execaction">Exec<wbr>Action</a></span>
+    </dt>
+    <dd>{{% md %}}(Optional) One and only one of the following should be specified. Exec specifies the action to take. A field inlined from the Handler message.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="failurethreshold_nodejs">
 <a href="#failurethreshold_nodejs" style="color: inherit; text-decoration: inherit;">failure<wbr>Threshold</a>
@@ -9320,15 +8128,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Minimum consecutive failures for the probe to be considered failed after having succeeded. Defaults to 3. Minimum value is 1. +optional{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) Minimum consecutive failures for the probe to be considered failed after having succeeded. Defaults to 3. Minimum value is 1.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="handler_nodejs">
-<a href="#handler_nodejs" style="color: inherit; text-decoration: inherit;">handler</a>
+        <span id="httpget_nodejs">
+<a href="#httpget_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Get</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#handler">Handler</a></span>
+        <span class="property-type"><a href="#httpgetaction">HTTPGet<wbr>Action</a></span>
     </dt>
-    <dd>{{% md %}}The action taken to determine the health of a container{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) HTTPGet specifies the http request to perform. A field inlined from the Handler message.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="initialdelayseconds_nodejs">
 <a href="#initialdelayseconds_nodejs" style="color: inherit; text-decoration: inherit;">initial<wbr>Delay<wbr>Seconds</a>
@@ -9336,7 +8144,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Number of seconds after the container has started before liveness probes are initiated. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes +optional{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) Number of seconds after the container has started before liveness probes are initiated. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="periodseconds_nodejs">
 <a href="#periodseconds_nodejs" style="color: inherit; text-decoration: inherit;">period<wbr>Seconds</a>
@@ -9344,7 +8152,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}How often (in seconds) to perform the probe. Default to 10 seconds. Minimum value is 1. +optional{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) How often (in seconds) to perform the probe. Default to 10 seconds. Minimum value is 1.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="successthreshold_nodejs">
 <a href="#successthreshold_nodejs" style="color: inherit; text-decoration: inherit;">success<wbr>Threshold</a>
@@ -9352,7 +8160,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Minimum consecutive successes for the probe to be considered successful after having failed. Defaults to 1. Must be 1 for liveness. Minimum value is 1. +optional{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) Minimum consecutive successes for the probe to be considered successful after having failed. Defaults to 1. Must be 1 for liveness. Minimum value is 1.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tcpsocket_nodejs">
+<a href="#tcpsocket_nodejs" style="color: inherit; text-decoration: inherit;">tcp<wbr>Socket</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#tcpsocketaction">TCPSocket<wbr>Action</a></span>
+    </dt>
+    <dd>{{% md %}}(Optional) TCPSocket specifies an action involving a TCP port. TCP hooks not yet supported A field inlined from the Handler message.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeoutseconds_nodejs">
 <a href="#timeoutseconds_nodejs" style="color: inherit; text-decoration: inherit;">timeout<wbr>Seconds</a>
@@ -9360,11 +8176,19 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Number of seconds after which the probe times out. Defaults to 1 second. Minimum value is 1. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes +optional{{% /md %}}</dd></dl>
+    <dd>{{% md %}}(Optional) Number of seconds after which the probe times out. Defaults to 1 second. Minimum value is 1. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="exec__python">
+<a href="#exec__python" style="color: inherit; text-decoration: inherit;">exec_</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#execaction">Exec<wbr>Action</a></span>
+    </dt>
+    <dd>{{% md %}}(Optional) One and only one of the following should be specified. Exec specifies the action to take. A field inlined from the Handler message.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="failure_threshold_python">
 <a href="#failure_threshold_python" style="color: inherit; text-decoration: inherit;">failure_<wbr>threshold</a>
@@ -9372,15 +8196,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Minimum consecutive failures for the probe to be considered failed after having succeeded. Defaults to 3. Minimum value is 1. +optional{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) Minimum consecutive failures for the probe to be considered failed after having succeeded. Defaults to 3. Minimum value is 1.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="handler_python">
-<a href="#handler_python" style="color: inherit; text-decoration: inherit;">handler</a>
+        <span id="http_get_python">
+<a href="#http_get_python" style="color: inherit; text-decoration: inherit;">http_<wbr>get</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#handler">Handler</a></span>
+        <span class="property-type"><a href="#httpgetaction">HTTPGet<wbr>Action</a></span>
     </dt>
-    <dd>{{% md %}}The action taken to determine the health of a container{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) HTTPGet specifies the http request to perform. A field inlined from the Handler message.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="initial_delay_seconds_python">
 <a href="#initial_delay_seconds_python" style="color: inherit; text-decoration: inherit;">initial_<wbr>delay_<wbr>seconds</a>
@@ -9388,7 +8212,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of seconds after the container has started before liveness probes are initiated. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes +optional{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) Number of seconds after the container has started before liveness probes are initiated. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="period_seconds_python">
 <a href="#period_seconds_python" style="color: inherit; text-decoration: inherit;">period_<wbr>seconds</a>
@@ -9396,7 +8220,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}How often (in seconds) to perform the probe. Default to 10 seconds. Minimum value is 1. +optional{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) How often (in seconds) to perform the probe. Default to 10 seconds. Minimum value is 1.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="success_threshold_python">
 <a href="#success_threshold_python" style="color: inherit; text-decoration: inherit;">success_<wbr>threshold</a>
@@ -9404,7 +8228,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Minimum consecutive successes for the probe to be considered successful after having failed. Defaults to 1. Must be 1 for liveness. Minimum value is 1. +optional{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) Minimum consecutive successes for the probe to be considered successful after having failed. Defaults to 1. Must be 1 for liveness. Minimum value is 1.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tcp_socket_python">
+<a href="#tcp_socket_python" style="color: inherit; text-decoration: inherit;">tcp_<wbr>socket</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#tcpsocketaction">TCPSocket<wbr>Action</a></span>
+    </dt>
+    <dd>{{% md %}}(Optional) TCPSocket specifies an action involving a TCP port. TCP hooks not yet supported A field inlined from the Handler message.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeout_seconds_python">
 <a href="#timeout_seconds_python" style="color: inherit; text-decoration: inherit;">timeout_<wbr>seconds</a>
@@ -9412,7 +8244,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of seconds after which the probe times out. Defaults to 1 second. Minimum value is 1. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes +optional{{% /md %}}</dd></dl>
+    <dd>{{% md %}}(Optional) Number of seconds after which the probe times out. Defaults to 1 second. Minimum value is 1. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="proberesponse">Probe<wbr>Response</h4>
@@ -9420,21 +8252,29 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
+        <span id="exec_csharp">
+<a href="#exec_csharp" style="color: inherit; text-decoration: inherit;">Exec</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#execactionresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Run.<wbr>V1Alpha1.<wbr>Inputs.<wbr>Exec<wbr>Action<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}(Optional) One and only one of the following should be specified. Exec specifies the action to take. A field inlined from the Handler message.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="failurethreshold_csharp">
 <a href="#failurethreshold_csharp" style="color: inherit; text-decoration: inherit;">Failure<wbr>Threshold</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Minimum consecutive failures for the probe to be considered failed after having succeeded. Defaults to 3. Minimum value is 1. +optional{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) Minimum consecutive failures for the probe to be considered failed after having succeeded. Defaults to 3. Minimum value is 1.{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="handler_csharp">
-<a href="#handler_csharp" style="color: inherit; text-decoration: inherit;">Handler</a>
+        <span id="httpget_csharp">
+<a href="#httpget_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Get</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#handlerresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Run.<wbr>V1Alpha1.<wbr>Inputs.<wbr>Handler<wbr>Response</a></span>
+        <span class="property-type"><a href="#httpgetactionresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Run.<wbr>V1Alpha1.<wbr>Inputs.<wbr>HTTPGet<wbr>Action<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The action taken to determine the health of a container{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) HTTPGet specifies the http request to perform. A field inlined from the Handler message.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="initialdelayseconds_csharp">
 <a href="#initialdelayseconds_csharp" style="color: inherit; text-decoration: inherit;">Initial<wbr>Delay<wbr>Seconds</a>
@@ -9442,7 +8282,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of seconds after the container has started before liveness probes are initiated. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes +optional{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) Number of seconds after the container has started before liveness probes are initiated. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="periodseconds_csharp">
 <a href="#periodseconds_csharp" style="color: inherit; text-decoration: inherit;">Period<wbr>Seconds</a>
@@ -9450,7 +8290,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}How often (in seconds) to perform the probe. Default to 10 seconds. Minimum value is 1. +optional{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) How often (in seconds) to perform the probe. Default to 10 seconds. Minimum value is 1.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="successthreshold_csharp">
 <a href="#successthreshold_csharp" style="color: inherit; text-decoration: inherit;">Success<wbr>Threshold</a>
@@ -9458,7 +8298,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Minimum consecutive successes for the probe to be considered successful after having failed. Defaults to 1. Must be 1 for liveness. Minimum value is 1. +optional{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) Minimum consecutive successes for the probe to be considered successful after having failed. Defaults to 1. Must be 1 for liveness. Minimum value is 1.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="tcpsocket_csharp">
+<a href="#tcpsocket_csharp" style="color: inherit; text-decoration: inherit;">Tcp<wbr>Socket</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#tcpsocketactionresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Run.<wbr>V1Alpha1.<wbr>Inputs.<wbr>TCPSocket<wbr>Action<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}(Optional) TCPSocket specifies an action involving a TCP port. TCP hooks not yet supported A field inlined from the Handler message.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="timeoutseconds_csharp">
 <a href="#timeoutseconds_csharp" style="color: inherit; text-decoration: inherit;">Timeout<wbr>Seconds</a>
@@ -9466,11 +8314,19 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of seconds after which the probe times out. Defaults to 1 second. Minimum value is 1. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes +optional{{% /md %}}</dd></dl>
+    <dd>{{% md %}}(Optional) Number of seconds after which the probe times out. Defaults to 1 second. Minimum value is 1. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="exec_go">
+<a href="#exec_go" style="color: inherit; text-decoration: inherit;">Exec</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#execactionresponse">Exec<wbr>Action<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}(Optional) One and only one of the following should be specified. Exec specifies the action to take. A field inlined from the Handler message.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="failurethreshold_go">
 <a href="#failurethreshold_go" style="color: inherit; text-decoration: inherit;">Failure<wbr>Threshold</a>
@@ -9478,15 +8334,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Minimum consecutive failures for the probe to be considered failed after having succeeded. Defaults to 3. Minimum value is 1. +optional{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) Minimum consecutive failures for the probe to be considered failed after having succeeded. Defaults to 3. Minimum value is 1.{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="handler_go">
-<a href="#handler_go" style="color: inherit; text-decoration: inherit;">Handler</a>
+        <span id="httpget_go">
+<a href="#httpget_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Get</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#handlerresponse">Handler<wbr>Response</a></span>
+        <span class="property-type"><a href="#httpgetactionresponse">HTTPGet<wbr>Action<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The action taken to determine the health of a container{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) HTTPGet specifies the http request to perform. A field inlined from the Handler message.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="initialdelayseconds_go">
 <a href="#initialdelayseconds_go" style="color: inherit; text-decoration: inherit;">Initial<wbr>Delay<wbr>Seconds</a>
@@ -9494,7 +8350,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of seconds after the container has started before liveness probes are initiated. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes +optional{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) Number of seconds after the container has started before liveness probes are initiated. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="periodseconds_go">
 <a href="#periodseconds_go" style="color: inherit; text-decoration: inherit;">Period<wbr>Seconds</a>
@@ -9502,7 +8358,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}How often (in seconds) to perform the probe. Default to 10 seconds. Minimum value is 1. +optional{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) How often (in seconds) to perform the probe. Default to 10 seconds. Minimum value is 1.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="successthreshold_go">
 <a href="#successthreshold_go" style="color: inherit; text-decoration: inherit;">Success<wbr>Threshold</a>
@@ -9510,7 +8366,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Minimum consecutive successes for the probe to be considered successful after having failed. Defaults to 1. Must be 1 for liveness. Minimum value is 1. +optional{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) Minimum consecutive successes for the probe to be considered successful after having failed. Defaults to 1. Must be 1 for liveness. Minimum value is 1.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="tcpsocket_go">
+<a href="#tcpsocket_go" style="color: inherit; text-decoration: inherit;">Tcp<wbr>Socket</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#tcpsocketactionresponse">TCPSocket<wbr>Action<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}(Optional) TCPSocket specifies an action involving a TCP port. TCP hooks not yet supported A field inlined from the Handler message.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="timeoutseconds_go">
 <a href="#timeoutseconds_go" style="color: inherit; text-decoration: inherit;">Timeout<wbr>Seconds</a>
@@ -9518,11 +8382,19 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of seconds after which the probe times out. Defaults to 1 second. Minimum value is 1. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes +optional{{% /md %}}</dd></dl>
+    <dd>{{% md %}}(Optional) Number of seconds after which the probe times out. Defaults to 1 second. Minimum value is 1. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="exec_nodejs">
+<a href="#exec_nodejs" style="color: inherit; text-decoration: inherit;">exec</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#execactionresponse">Exec<wbr>Action<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}(Optional) One and only one of the following should be specified. Exec specifies the action to take. A field inlined from the Handler message.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="failurethreshold_nodejs">
 <a href="#failurethreshold_nodejs" style="color: inherit; text-decoration: inherit;">failure<wbr>Threshold</a>
@@ -9530,15 +8402,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Minimum consecutive failures for the probe to be considered failed after having succeeded. Defaults to 3. Minimum value is 1. +optional{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) Minimum consecutive failures for the probe to be considered failed after having succeeded. Defaults to 3. Minimum value is 1.{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="handler_nodejs">
-<a href="#handler_nodejs" style="color: inherit; text-decoration: inherit;">handler</a>
+        <span id="httpget_nodejs">
+<a href="#httpget_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Get</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#handlerresponse">Handler<wbr>Response</a></span>
+        <span class="property-type"><a href="#httpgetactionresponse">HTTPGet<wbr>Action<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The action taken to determine the health of a container{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) HTTPGet specifies the http request to perform. A field inlined from the Handler message.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="initialdelayseconds_nodejs">
 <a href="#initialdelayseconds_nodejs" style="color: inherit; text-decoration: inherit;">initial<wbr>Delay<wbr>Seconds</a>
@@ -9546,7 +8418,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Number of seconds after the container has started before liveness probes are initiated. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes +optional{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) Number of seconds after the container has started before liveness probes are initiated. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="periodseconds_nodejs">
 <a href="#periodseconds_nodejs" style="color: inherit; text-decoration: inherit;">period<wbr>Seconds</a>
@@ -9554,7 +8426,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}How often (in seconds) to perform the probe. Default to 10 seconds. Minimum value is 1. +optional{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) How often (in seconds) to perform the probe. Default to 10 seconds. Minimum value is 1.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="successthreshold_nodejs">
 <a href="#successthreshold_nodejs" style="color: inherit; text-decoration: inherit;">success<wbr>Threshold</a>
@@ -9562,7 +8434,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Minimum consecutive successes for the probe to be considered successful after having failed. Defaults to 1. Must be 1 for liveness. Minimum value is 1. +optional{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) Minimum consecutive successes for the probe to be considered successful after having failed. Defaults to 1. Must be 1 for liveness. Minimum value is 1.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="tcpsocket_nodejs">
+<a href="#tcpsocket_nodejs" style="color: inherit; text-decoration: inherit;">tcp<wbr>Socket</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#tcpsocketactionresponse">TCPSocket<wbr>Action<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}(Optional) TCPSocket specifies an action involving a TCP port. TCP hooks not yet supported A field inlined from the Handler message.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="timeoutseconds_nodejs">
 <a href="#timeoutseconds_nodejs" style="color: inherit; text-decoration: inherit;">timeout<wbr>Seconds</a>
@@ -9570,11 +8450,19 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Number of seconds after which the probe times out. Defaults to 1 second. Minimum value is 1. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes +optional{{% /md %}}</dd></dl>
+    <dd>{{% md %}}(Optional) Number of seconds after which the probe times out. Defaults to 1 second. Minimum value is 1. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="exec__python">
+<a href="#exec__python" style="color: inherit; text-decoration: inherit;">exec_</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#execactionresponse">Exec<wbr>Action<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}(Optional) One and only one of the following should be specified. Exec specifies the action to take. A field inlined from the Handler message.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="failure_threshold_python">
 <a href="#failure_threshold_python" style="color: inherit; text-decoration: inherit;">failure_<wbr>threshold</a>
@@ -9582,15 +8470,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Minimum consecutive failures for the probe to be considered failed after having succeeded. Defaults to 3. Minimum value is 1. +optional{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) Minimum consecutive failures for the probe to be considered failed after having succeeded. Defaults to 3. Minimum value is 1.{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="handler_python">
-<a href="#handler_python" style="color: inherit; text-decoration: inherit;">handler</a>
+        <span id="http_get_python">
+<a href="#http_get_python" style="color: inherit; text-decoration: inherit;">http_<wbr>get</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#handlerresponse">Handler<wbr>Response</a></span>
+        <span class="property-type"><a href="#httpgetactionresponse">HTTPGet<wbr>Action<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The action taken to determine the health of a container{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) HTTPGet specifies the http request to perform. A field inlined from the Handler message.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="initial_delay_seconds_python">
 <a href="#initial_delay_seconds_python" style="color: inherit; text-decoration: inherit;">initial_<wbr>delay_<wbr>seconds</a>
@@ -9598,7 +8486,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of seconds after the container has started before liveness probes are initiated. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes +optional{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) Number of seconds after the container has started before liveness probes are initiated. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="period_seconds_python">
 <a href="#period_seconds_python" style="color: inherit; text-decoration: inherit;">period_<wbr>seconds</a>
@@ -9606,7 +8494,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}How often (in seconds) to perform the probe. Default to 10 seconds. Minimum value is 1. +optional{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) How often (in seconds) to perform the probe. Default to 10 seconds. Minimum value is 1.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="success_threshold_python">
 <a href="#success_threshold_python" style="color: inherit; text-decoration: inherit;">success_<wbr>threshold</a>
@@ -9614,7 +8502,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Minimum consecutive successes for the probe to be considered successful after having failed. Defaults to 1. Must be 1 for liveness. Minimum value is 1. +optional{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) Minimum consecutive successes for the probe to be considered successful after having failed. Defaults to 1. Must be 1 for liveness. Minimum value is 1.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="tcp_socket_python">
+<a href="#tcp_socket_python" style="color: inherit; text-decoration: inherit;">tcp_<wbr>socket</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#tcpsocketactionresponse">TCPSocket<wbr>Action<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}(Optional) TCPSocket specifies an action involving a TCP port. TCP hooks not yet supported A field inlined from the Handler message.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="timeout_seconds_python">
 <a href="#timeout_seconds_python" style="color: inherit; text-decoration: inherit;">timeout_<wbr>seconds</a>
@@ -9622,7 +8518,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of seconds after which the probe times out. Defaults to 1 second. Minimum value is 1. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes +optional{{% /md %}}</dd></dl>
+    <dd>{{% md %}}(Optional) Number of seconds after which the probe times out. Defaults to 1 second. Minimum value is 1. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="resourcerequirements">Resource<wbr>Requirements</h4>
@@ -9636,7 +8532,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Limits describes the maximum amount of compute resources allowed. The values of the map is string form of the 'quantity' k8s type: https://github.com/kubernetes/kubernetes/blob/master/staging/src/k8s.io/apimachinery/pkg/api/resource/quantity.go{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) Only memory and CPU are supported. Note: The only supported values for CPU are '1', '2', and '4'. Setting 4 CPU requires at least 2Gi of memory. Limits describes the maximum amount of compute resources allowed. The values of the map is string form of the 'quantity' k8s type: https://github.com/kubernetes/kubernetes/blob/master/staging/src/k8s.io/apimachinery/pkg/api/resource/quantity.go{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requests_csharp">
 <a href="#requests_csharp" style="color: inherit; text-decoration: inherit;">Requests</a>
@@ -9644,7 +8540,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Requests describes the minimum amount of compute resources required. If Requests is omitted for a container, it defaults to Limits if that is explicitly specified, otherwise to an implementation-defined value. The values of the map is string form of the 'quantity' k8s type: https://github.com/kubernetes/kubernetes/blob/master/staging/src/k8s.io/apimachinery/pkg/api/resource/quantity.go{{% /md %}}</dd></dl>
+    <dd>{{% md %}}(Optional) Only memory and CPU are supported. Note: The only supported values for CPU are '1' and '2'. Requests describes the minimum amount of compute resources required. If Requests is omitted for a container, it defaults to Limits if that is explicitly specified, otherwise to an implementation-defined value. The values of the map is string form of the 'quantity' k8s type: https://github.com/kubernetes/kubernetes/blob/master/staging/src/k8s.io/apimachinery/pkg/api/resource/quantity.go{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -9656,7 +8552,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Limits describes the maximum amount of compute resources allowed. The values of the map is string form of the 'quantity' k8s type: https://github.com/kubernetes/kubernetes/blob/master/staging/src/k8s.io/apimachinery/pkg/api/resource/quantity.go{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) Only memory and CPU are supported. Note: The only supported values for CPU are '1', '2', and '4'. Setting 4 CPU requires at least 2Gi of memory. Limits describes the maximum amount of compute resources allowed. The values of the map is string form of the 'quantity' k8s type: https://github.com/kubernetes/kubernetes/blob/master/staging/src/k8s.io/apimachinery/pkg/api/resource/quantity.go{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requests_go">
 <a href="#requests_go" style="color: inherit; text-decoration: inherit;">Requests</a>
@@ -9664,7 +8560,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Requests describes the minimum amount of compute resources required. If Requests is omitted for a container, it defaults to Limits if that is explicitly specified, otherwise to an implementation-defined value. The values of the map is string form of the 'quantity' k8s type: https://github.com/kubernetes/kubernetes/blob/master/staging/src/k8s.io/apimachinery/pkg/api/resource/quantity.go{{% /md %}}</dd></dl>
+    <dd>{{% md %}}(Optional) Only memory and CPU are supported. Note: The only supported values for CPU are '1' and '2'. Requests describes the minimum amount of compute resources required. If Requests is omitted for a container, it defaults to Limits if that is explicitly specified, otherwise to an implementation-defined value. The values of the map is string form of the 'quantity' k8s type: https://github.com/kubernetes/kubernetes/blob/master/staging/src/k8s.io/apimachinery/pkg/api/resource/quantity.go{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -9676,7 +8572,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Limits describes the maximum amount of compute resources allowed. The values of the map is string form of the 'quantity' k8s type: https://github.com/kubernetes/kubernetes/blob/master/staging/src/k8s.io/apimachinery/pkg/api/resource/quantity.go{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) Only memory and CPU are supported. Note: The only supported values for CPU are '1', '2', and '4'. Setting 4 CPU requires at least 2Gi of memory. Limits describes the maximum amount of compute resources allowed. The values of the map is string form of the 'quantity' k8s type: https://github.com/kubernetes/kubernetes/blob/master/staging/src/k8s.io/apimachinery/pkg/api/resource/quantity.go{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requests_nodejs">
 <a href="#requests_nodejs" style="color: inherit; text-decoration: inherit;">requests</a>
@@ -9684,7 +8580,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Requests describes the minimum amount of compute resources required. If Requests is omitted for a container, it defaults to Limits if that is explicitly specified, otherwise to an implementation-defined value. The values of the map is string form of the 'quantity' k8s type: https://github.com/kubernetes/kubernetes/blob/master/staging/src/k8s.io/apimachinery/pkg/api/resource/quantity.go{{% /md %}}</dd></dl>
+    <dd>{{% md %}}(Optional) Only memory and CPU are supported. Note: The only supported values for CPU are '1' and '2'. Requests describes the minimum amount of compute resources required. If Requests is omitted for a container, it defaults to Limits if that is explicitly specified, otherwise to an implementation-defined value. The values of the map is string form of the 'quantity' k8s type: https://github.com/kubernetes/kubernetes/blob/master/staging/src/k8s.io/apimachinery/pkg/api/resource/quantity.go{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -9696,7 +8592,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Limits describes the maximum amount of compute resources allowed. The values of the map is string form of the 'quantity' k8s type: https://github.com/kubernetes/kubernetes/blob/master/staging/src/k8s.io/apimachinery/pkg/api/resource/quantity.go{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) Only memory and CPU are supported. Note: The only supported values for CPU are '1', '2', and '4'. Setting 4 CPU requires at least 2Gi of memory. Limits describes the maximum amount of compute resources allowed. The values of the map is string form of the 'quantity' k8s type: https://github.com/kubernetes/kubernetes/blob/master/staging/src/k8s.io/apimachinery/pkg/api/resource/quantity.go{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requests_python">
 <a href="#requests_python" style="color: inherit; text-decoration: inherit;">requests</a>
@@ -9704,7 +8600,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Requests describes the minimum amount of compute resources required. If Requests is omitted for a container, it defaults to Limits if that is explicitly specified, otherwise to an implementation-defined value. The values of the map is string form of the 'quantity' k8s type: https://github.com/kubernetes/kubernetes/blob/master/staging/src/k8s.io/apimachinery/pkg/api/resource/quantity.go{{% /md %}}</dd></dl>
+    <dd>{{% md %}}(Optional) Only memory and CPU are supported. Note: The only supported values for CPU are '1' and '2'. Requests describes the minimum amount of compute resources required. If Requests is omitted for a container, it defaults to Limits if that is explicitly specified, otherwise to an implementation-defined value. The values of the map is string form of the 'quantity' k8s type: https://github.com/kubernetes/kubernetes/blob/master/staging/src/k8s.io/apimachinery/pkg/api/resource/quantity.go{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="resourcerequirementsresponse">Resource<wbr>Requirements<wbr>Response</h4>
@@ -9718,7 +8614,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Limits describes the maximum amount of compute resources allowed. The values of the map is string form of the 'quantity' k8s type: https://github.com/kubernetes/kubernetes/blob/master/staging/src/k8s.io/apimachinery/pkg/api/resource/quantity.go{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) Only memory and CPU are supported. Note: The only supported values for CPU are '1', '2', and '4'. Setting 4 CPU requires at least 2Gi of memory. Limits describes the maximum amount of compute resources allowed. The values of the map is string form of the 'quantity' k8s type: https://github.com/kubernetes/kubernetes/blob/master/staging/src/k8s.io/apimachinery/pkg/api/resource/quantity.go{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="requests_csharp">
 <a href="#requests_csharp" style="color: inherit; text-decoration: inherit;">Requests</a>
@@ -9726,7 +8622,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Requests describes the minimum amount of compute resources required. If Requests is omitted for a container, it defaults to Limits if that is explicitly specified, otherwise to an implementation-defined value. The values of the map is string form of the 'quantity' k8s type: https://github.com/kubernetes/kubernetes/blob/master/staging/src/k8s.io/apimachinery/pkg/api/resource/quantity.go{{% /md %}}</dd></dl>
+    <dd>{{% md %}}(Optional) Only memory and CPU are supported. Note: The only supported values for CPU are '1' and '2'. Requests describes the minimum amount of compute resources required. If Requests is omitted for a container, it defaults to Limits if that is explicitly specified, otherwise to an implementation-defined value. The values of the map is string form of the 'quantity' k8s type: https://github.com/kubernetes/kubernetes/blob/master/staging/src/k8s.io/apimachinery/pkg/api/resource/quantity.go{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -9738,7 +8634,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Limits describes the maximum amount of compute resources allowed. The values of the map is string form of the 'quantity' k8s type: https://github.com/kubernetes/kubernetes/blob/master/staging/src/k8s.io/apimachinery/pkg/api/resource/quantity.go{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) Only memory and CPU are supported. Note: The only supported values for CPU are '1', '2', and '4'. Setting 4 CPU requires at least 2Gi of memory. Limits describes the maximum amount of compute resources allowed. The values of the map is string form of the 'quantity' k8s type: https://github.com/kubernetes/kubernetes/blob/master/staging/src/k8s.io/apimachinery/pkg/api/resource/quantity.go{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="requests_go">
 <a href="#requests_go" style="color: inherit; text-decoration: inherit;">Requests</a>
@@ -9746,7 +8642,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Requests describes the minimum amount of compute resources required. If Requests is omitted for a container, it defaults to Limits if that is explicitly specified, otherwise to an implementation-defined value. The values of the map is string form of the 'quantity' k8s type: https://github.com/kubernetes/kubernetes/blob/master/staging/src/k8s.io/apimachinery/pkg/api/resource/quantity.go{{% /md %}}</dd></dl>
+    <dd>{{% md %}}(Optional) Only memory and CPU are supported. Note: The only supported values for CPU are '1' and '2'. Requests describes the minimum amount of compute resources required. If Requests is omitted for a container, it defaults to Limits if that is explicitly specified, otherwise to an implementation-defined value. The values of the map is string form of the 'quantity' k8s type: https://github.com/kubernetes/kubernetes/blob/master/staging/src/k8s.io/apimachinery/pkg/api/resource/quantity.go{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -9758,7 +8654,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Limits describes the maximum amount of compute resources allowed. The values of the map is string form of the 'quantity' k8s type: https://github.com/kubernetes/kubernetes/blob/master/staging/src/k8s.io/apimachinery/pkg/api/resource/quantity.go{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) Only memory and CPU are supported. Note: The only supported values for CPU are '1', '2', and '4'. Setting 4 CPU requires at least 2Gi of memory. Limits describes the maximum amount of compute resources allowed. The values of the map is string form of the 'quantity' k8s type: https://github.com/kubernetes/kubernetes/blob/master/staging/src/k8s.io/apimachinery/pkg/api/resource/quantity.go{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="requests_nodejs">
 <a href="#requests_nodejs" style="color: inherit; text-decoration: inherit;">requests</a>
@@ -9766,7 +8662,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Requests describes the minimum amount of compute resources required. If Requests is omitted for a container, it defaults to Limits if that is explicitly specified, otherwise to an implementation-defined value. The values of the map is string form of the 'quantity' k8s type: https://github.com/kubernetes/kubernetes/blob/master/staging/src/k8s.io/apimachinery/pkg/api/resource/quantity.go{{% /md %}}</dd></dl>
+    <dd>{{% md %}}(Optional) Only memory and CPU are supported. Note: The only supported values for CPU are '1' and '2'. Requests describes the minimum amount of compute resources required. If Requests is omitted for a container, it defaults to Limits if that is explicitly specified, otherwise to an implementation-defined value. The values of the map is string form of the 'quantity' k8s type: https://github.com/kubernetes/kubernetes/blob/master/staging/src/k8s.io/apimachinery/pkg/api/resource/quantity.go{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -9778,7 +8674,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Limits describes the maximum amount of compute resources allowed. The values of the map is string form of the 'quantity' k8s type: https://github.com/kubernetes/kubernetes/blob/master/staging/src/k8s.io/apimachinery/pkg/api/resource/quantity.go{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) Only memory and CPU are supported. Note: The only supported values for CPU are '1', '2', and '4'. Setting 4 CPU requires at least 2Gi of memory. Limits describes the maximum amount of compute resources allowed. The values of the map is string form of the 'quantity' k8s type: https://github.com/kubernetes/kubernetes/blob/master/staging/src/k8s.io/apimachinery/pkg/api/resource/quantity.go{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="requests_python">
 <a href="#requests_python" style="color: inherit; text-decoration: inherit;">requests</a>
@@ -9786,299 +8682,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Requests describes the minimum amount of compute resources required. If Requests is omitted for a container, it defaults to Limits if that is explicitly specified, otherwise to an implementation-defined value. The values of the map is string form of the 'quantity' k8s type: https://github.com/kubernetes/kubernetes/blob/master/staging/src/k8s.io/apimachinery/pkg/api/resource/quantity.go{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="selinuxoptions">SELinux<wbr>Options</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="level_csharp">
-<a href="#level_csharp" style="color: inherit; text-decoration: inherit;">Level</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Level is SELinux level label that applies to the container. +optional{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="role_csharp">
-<a href="#role_csharp" style="color: inherit; text-decoration: inherit;">Role</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Role is a SELinux role label that applies to the container. +optional{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="type_csharp">
-<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Type is a SELinux type label that applies to the container. +optional{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="user_csharp">
-<a href="#user_csharp" style="color: inherit; text-decoration: inherit;">User</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}User is a SELinux user label that applies to the container. +optional{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="level_go">
-<a href="#level_go" style="color: inherit; text-decoration: inherit;">Level</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Level is SELinux level label that applies to the container. +optional{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="role_go">
-<a href="#role_go" style="color: inherit; text-decoration: inherit;">Role</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Role is a SELinux role label that applies to the container. +optional{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="type_go">
-<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Type is a SELinux type label that applies to the container. +optional{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="user_go">
-<a href="#user_go" style="color: inherit; text-decoration: inherit;">User</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}User is a SELinux user label that applies to the container. +optional{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="level_nodejs">
-<a href="#level_nodejs" style="color: inherit; text-decoration: inherit;">level</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Level is SELinux level label that applies to the container. +optional{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="role_nodejs">
-<a href="#role_nodejs" style="color: inherit; text-decoration: inherit;">role</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Role is a SELinux role label that applies to the container. +optional{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="type_nodejs">
-<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Type is a SELinux type label that applies to the container. +optional{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="user_nodejs">
-<a href="#user_nodejs" style="color: inherit; text-decoration: inherit;">user</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}User is a SELinux user label that applies to the container. +optional{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="level_python">
-<a href="#level_python" style="color: inherit; text-decoration: inherit;">level</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Level is SELinux level label that applies to the container. +optional{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="role_python">
-<a href="#role_python" style="color: inherit; text-decoration: inherit;">role</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Role is a SELinux role label that applies to the container. +optional{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="type_python">
-<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Type is a SELinux type label that applies to the container. +optional{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="user_python">
-<a href="#user_python" style="color: inherit; text-decoration: inherit;">user</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}User is a SELinux user label that applies to the container. +optional{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="selinuxoptionsresponse">SELinux<wbr>Options<wbr>Response</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="level_csharp">
-<a href="#level_csharp" style="color: inherit; text-decoration: inherit;">Level</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Level is SELinux level label that applies to the container. +optional{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="role_csharp">
-<a href="#role_csharp" style="color: inherit; text-decoration: inherit;">Role</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Role is a SELinux role label that applies to the container. +optional{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_csharp">
-<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Type is a SELinux type label that applies to the container. +optional{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="user_csharp">
-<a href="#user_csharp" style="color: inherit; text-decoration: inherit;">User</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}User is a SELinux user label that applies to the container. +optional{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="level_go">
-<a href="#level_go" style="color: inherit; text-decoration: inherit;">Level</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Level is SELinux level label that applies to the container. +optional{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="role_go">
-<a href="#role_go" style="color: inherit; text-decoration: inherit;">Role</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Role is a SELinux role label that applies to the container. +optional{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_go">
-<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Type is a SELinux type label that applies to the container. +optional{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="user_go">
-<a href="#user_go" style="color: inherit; text-decoration: inherit;">User</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}User is a SELinux user label that applies to the container. +optional{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="level_nodejs">
-<a href="#level_nodejs" style="color: inherit; text-decoration: inherit;">level</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Level is SELinux level label that applies to the container. +optional{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="role_nodejs">
-<a href="#role_nodejs" style="color: inherit; text-decoration: inherit;">role</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Role is a SELinux role label that applies to the container. +optional{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_nodejs">
-<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Type is a SELinux type label that applies to the container. +optional{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="user_nodejs">
-<a href="#user_nodejs" style="color: inherit; text-decoration: inherit;">user</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}User is a SELinux user label that applies to the container. +optional{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="level_python">
-<a href="#level_python" style="color: inherit; text-decoration: inherit;">level</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Level is SELinux level label that applies to the container. +optional{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="role_python">
-<a href="#role_python" style="color: inherit; text-decoration: inherit;">role</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Role is a SELinux role label that applies to the container. +optional{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="type_python">
-<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Type is a SELinux type label that applies to the container. +optional{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="user_python">
-<a href="#user_python" style="color: inherit; text-decoration: inherit;">user</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}User is a SELinux user label that applies to the container. +optional{{% /md %}}</dd></dl>
+    <dd>{{% md %}}(Optional) Only memory and CPU are supported. Note: The only supported values for CPU are '1' and '2'. Requests describes the minimum amount of compute resources required. If Requests is omitted for a container, it defaults to Limits if that is explicitly specified, otherwise to an implementation-defined value. The values of the map is string form of the 'quantity' k8s type: https://github.com/kubernetes/kubernetes/blob/master/staging/src/k8s.io/apimachinery/pkg/api/resource/quantity.go{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="secretenvsource">Secret<wbr>Env<wbr>Source</h4>
@@ -10100,7 +8704,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Cloud Run fully managed: not supported Cloud Run for Anthos: supported The Secret to select from.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The Secret to select from.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="optional_csharp">
 <a href="#optional_csharp" style="color: inherit; text-decoration: inherit;">Optional</a>
@@ -10108,7 +8712,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Cloud Run fully managed: not supported Cloud Run for Anthos: supported Specify whether the Secret must be defined +optional{{% /md %}}</dd></dl>
+    <dd>{{% md %}}(Optional) Specify whether the Secret must be defined{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -10128,7 +8732,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Cloud Run fully managed: not supported Cloud Run for Anthos: supported The Secret to select from.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The Secret to select from.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="optional_go">
 <a href="#optional_go" style="color: inherit; text-decoration: inherit;">Optional</a>
@@ -10136,7 +8740,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Cloud Run fully managed: not supported Cloud Run for Anthos: supported Specify whether the Secret must be defined +optional{{% /md %}}</dd></dl>
+    <dd>{{% md %}}(Optional) Specify whether the Secret must be defined{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -10156,7 +8760,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Cloud Run fully managed: not supported Cloud Run for Anthos: supported The Secret to select from.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The Secret to select from.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="optional_nodejs">
 <a href="#optional_nodejs" style="color: inherit; text-decoration: inherit;">optional</a>
@@ -10164,7 +8768,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Cloud Run fully managed: not supported Cloud Run for Anthos: supported Specify whether the Secret must be defined +optional{{% /md %}}</dd></dl>
+    <dd>{{% md %}}(Optional) Specify whether the Secret must be defined{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -10184,7 +8788,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Cloud Run fully managed: not supported Cloud Run for Anthos: supported The Secret to select from.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The Secret to select from.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="optional_python">
 <a href="#optional_python" style="color: inherit; text-decoration: inherit;">optional</a>
@@ -10192,7 +8796,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Cloud Run fully managed: not supported Cloud Run for Anthos: supported Specify whether the Secret must be defined +optional{{% /md %}}</dd></dl>
+    <dd>{{% md %}}(Optional) Specify whether the Secret must be defined{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="secretenvsourceresponse">Secret<wbr>Env<wbr>Source<wbr>Response</h4>
@@ -10214,7 +8818,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Cloud Run fully managed: not supported Cloud Run for Anthos: supported The Secret to select from.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The Secret to select from.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="optional_csharp">
 <a href="#optional_csharp" style="color: inherit; text-decoration: inherit;">Optional</a>
@@ -10222,7 +8826,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Cloud Run fully managed: not supported Cloud Run for Anthos: supported Specify whether the Secret must be defined +optional{{% /md %}}</dd></dl>
+    <dd>{{% md %}}(Optional) Specify whether the Secret must be defined{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -10242,7 +8846,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Cloud Run fully managed: not supported Cloud Run for Anthos: supported The Secret to select from.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The Secret to select from.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="optional_go">
 <a href="#optional_go" style="color: inherit; text-decoration: inherit;">Optional</a>
@@ -10250,7 +8854,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Cloud Run fully managed: not supported Cloud Run for Anthos: supported Specify whether the Secret must be defined +optional{{% /md %}}</dd></dl>
+    <dd>{{% md %}}(Optional) Specify whether the Secret must be defined{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -10270,7 +8874,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Cloud Run fully managed: not supported Cloud Run for Anthos: supported The Secret to select from.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The Secret to select from.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="optional_nodejs">
 <a href="#optional_nodejs" style="color: inherit; text-decoration: inherit;">optional</a>
@@ -10278,7 +8882,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Cloud Run fully managed: not supported Cloud Run for Anthos: supported Specify whether the Secret must be defined +optional{{% /md %}}</dd></dl>
+    <dd>{{% md %}}(Optional) Specify whether the Secret must be defined{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -10298,7 +8902,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Cloud Run fully managed: not supported Cloud Run for Anthos: supported The Secret to select from.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The Secret to select from.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="optional_python">
 <a href="#optional_python" style="color: inherit; text-decoration: inherit;">optional</a>
@@ -10306,7 +8910,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Cloud Run fully managed: not supported Cloud Run for Anthos: supported Specify whether the Secret must be defined +optional{{% /md %}}</dd></dl>
+    <dd>{{% md %}}(Optional) Specify whether the Secret must be defined{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="secretkeyselector">Secret<wbr>Key<wbr>Selector</h4>
@@ -10320,7 +8924,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Cloud Run fully managed: supported A Cloud Secret Manager secret version. Must be 'latest' for the latest version or an integer for a specific version. Cloud Run for Anthos: supported The key of the secret to select from. Must be a valid secret key.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}A Cloud Secret Manager secret version. Must be 'latest' for the latest version or an integer for a specific version. The key of the secret to select from. Must be a valid secret key.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="localobjectreference_csharp">
 <a href="#localobjectreference_csharp" style="color: inherit; text-decoration: inherit;">Local<wbr>Object<wbr>Reference</a>
@@ -10336,7 +8940,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Cloud Run fully managed: supported The name of the secret in Cloud Secret Manager. By default, the secret is assumed to be in the same project. If the secret is in another project, you must define an alias. An alias definition has the form: :projects//secrets/. If multiple alias definitions are needed, they must be separated by commas. The alias definitions must be set on the run.googleapis.com/secrets annotation. Cloud Run for Anthos: supported The name of the secret in the pod's namespace to select from.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The name of the secret in Cloud Secret Manager. By default, the secret is assumed to be in the same project. If the secret is in another project, you must define an alias. An alias definition has the form: :projects//secrets/. If multiple alias definitions are needed, they must be separated by commas. The alias definitions must be set on the run.googleapis.com/secrets annotation. The name of the secret in the pod's namespace to select from.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="optional_csharp">
 <a href="#optional_csharp" style="color: inherit; text-decoration: inherit;">Optional</a>
@@ -10344,7 +8948,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Cloud Run fully managed: not supported Cloud Run on GKE: supported Specify whether the Secret or its key must be defined +optional{{% /md %}}</dd></dl>
+    <dd>{{% md %}}(Optional) Specify whether the Secret or its key must be defined{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -10356,7 +8960,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Cloud Run fully managed: supported A Cloud Secret Manager secret version. Must be 'latest' for the latest version or an integer for a specific version. Cloud Run for Anthos: supported The key of the secret to select from. Must be a valid secret key.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}A Cloud Secret Manager secret version. Must be 'latest' for the latest version or an integer for a specific version. The key of the secret to select from. Must be a valid secret key.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="localobjectreference_go">
 <a href="#localobjectreference_go" style="color: inherit; text-decoration: inherit;">Local<wbr>Object<wbr>Reference</a>
@@ -10372,7 +8976,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Cloud Run fully managed: supported The name of the secret in Cloud Secret Manager. By default, the secret is assumed to be in the same project. If the secret is in another project, you must define an alias. An alias definition has the form: :projects//secrets/. If multiple alias definitions are needed, they must be separated by commas. The alias definitions must be set on the run.googleapis.com/secrets annotation. Cloud Run for Anthos: supported The name of the secret in the pod's namespace to select from.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The name of the secret in Cloud Secret Manager. By default, the secret is assumed to be in the same project. If the secret is in another project, you must define an alias. An alias definition has the form: :projects//secrets/. If multiple alias definitions are needed, they must be separated by commas. The alias definitions must be set on the run.googleapis.com/secrets annotation. The name of the secret in the pod's namespace to select from.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="optional_go">
 <a href="#optional_go" style="color: inherit; text-decoration: inherit;">Optional</a>
@@ -10380,7 +8984,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Cloud Run fully managed: not supported Cloud Run on GKE: supported Specify whether the Secret or its key must be defined +optional{{% /md %}}</dd></dl>
+    <dd>{{% md %}}(Optional) Specify whether the Secret or its key must be defined{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -10392,7 +8996,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Cloud Run fully managed: supported A Cloud Secret Manager secret version. Must be 'latest' for the latest version or an integer for a specific version. Cloud Run for Anthos: supported The key of the secret to select from. Must be a valid secret key.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}A Cloud Secret Manager secret version. Must be 'latest' for the latest version or an integer for a specific version. The key of the secret to select from. Must be a valid secret key.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="localobjectreference_nodejs">
 <a href="#localobjectreference_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>Object<wbr>Reference</a>
@@ -10408,7 +9012,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Cloud Run fully managed: supported The name of the secret in Cloud Secret Manager. By default, the secret is assumed to be in the same project. If the secret is in another project, you must define an alias. An alias definition has the form: :projects//secrets/. If multiple alias definitions are needed, they must be separated by commas. The alias definitions must be set on the run.googleapis.com/secrets annotation. Cloud Run for Anthos: supported The name of the secret in the pod's namespace to select from.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The name of the secret in Cloud Secret Manager. By default, the secret is assumed to be in the same project. If the secret is in another project, you must define an alias. An alias definition has the form: :projects//secrets/. If multiple alias definitions are needed, they must be separated by commas. The alias definitions must be set on the run.googleapis.com/secrets annotation. The name of the secret in the pod's namespace to select from.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="optional_nodejs">
 <a href="#optional_nodejs" style="color: inherit; text-decoration: inherit;">optional</a>
@@ -10416,7 +9020,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Cloud Run fully managed: not supported Cloud Run on GKE: supported Specify whether the Secret or its key must be defined +optional{{% /md %}}</dd></dl>
+    <dd>{{% md %}}(Optional) Specify whether the Secret or its key must be defined{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -10428,7 +9032,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Cloud Run fully managed: supported A Cloud Secret Manager secret version. Must be 'latest' for the latest version or an integer for a specific version. Cloud Run for Anthos: supported The key of the secret to select from. Must be a valid secret key.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}A Cloud Secret Manager secret version. Must be 'latest' for the latest version or an integer for a specific version. The key of the secret to select from. Must be a valid secret key.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="local_object_reference_python">
 <a href="#local_object_reference_python" style="color: inherit; text-decoration: inherit;">local_<wbr>object_<wbr>reference</a>
@@ -10444,7 +9048,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Cloud Run fully managed: supported The name of the secret in Cloud Secret Manager. By default, the secret is assumed to be in the same project. If the secret is in another project, you must define an alias. An alias definition has the form: :projects//secrets/. If multiple alias definitions are needed, they must be separated by commas. The alias definitions must be set on the run.googleapis.com/secrets annotation. Cloud Run for Anthos: supported The name of the secret in the pod's namespace to select from.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The name of the secret in Cloud Secret Manager. By default, the secret is assumed to be in the same project. If the secret is in another project, you must define an alias. An alias definition has the form: :projects//secrets/. If multiple alias definitions are needed, they must be separated by commas. The alias definitions must be set on the run.googleapis.com/secrets annotation. The name of the secret in the pod's namespace to select from.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="optional_python">
 <a href="#optional_python" style="color: inherit; text-decoration: inherit;">optional</a>
@@ -10452,7 +9056,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Cloud Run fully managed: not supported Cloud Run on GKE: supported Specify whether the Secret or its key must be defined +optional{{% /md %}}</dd></dl>
+    <dd>{{% md %}}(Optional) Specify whether the Secret or its key must be defined{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="secretkeyselectorresponse">Secret<wbr>Key<wbr>Selector<wbr>Response</h4>
@@ -10466,7 +9070,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Cloud Run fully managed: supported A Cloud Secret Manager secret version. Must be 'latest' for the latest version or an integer for a specific version. Cloud Run for Anthos: supported The key of the secret to select from. Must be a valid secret key.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}A Cloud Secret Manager secret version. Must be 'latest' for the latest version or an integer for a specific version. The key of the secret to select from. Must be a valid secret key.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="localobjectreference_csharp">
 <a href="#localobjectreference_csharp" style="color: inherit; text-decoration: inherit;">Local<wbr>Object<wbr>Reference</a>
@@ -10482,7 +9086,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Cloud Run fully managed: supported The name of the secret in Cloud Secret Manager. By default, the secret is assumed to be in the same project. If the secret is in another project, you must define an alias. An alias definition has the form: :projects//secrets/. If multiple alias definitions are needed, they must be separated by commas. The alias definitions must be set on the run.googleapis.com/secrets annotation. Cloud Run for Anthos: supported The name of the secret in the pod's namespace to select from.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The name of the secret in Cloud Secret Manager. By default, the secret is assumed to be in the same project. If the secret is in another project, you must define an alias. An alias definition has the form: :projects//secrets/. If multiple alias definitions are needed, they must be separated by commas. The alias definitions must be set on the run.googleapis.com/secrets annotation. The name of the secret in the pod's namespace to select from.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="optional_csharp">
 <a href="#optional_csharp" style="color: inherit; text-decoration: inherit;">Optional</a>
@@ -10490,7 +9094,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Cloud Run fully managed: not supported Cloud Run on GKE: supported Specify whether the Secret or its key must be defined +optional{{% /md %}}</dd></dl>
+    <dd>{{% md %}}(Optional) Specify whether the Secret or its key must be defined{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -10502,7 +9106,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Cloud Run fully managed: supported A Cloud Secret Manager secret version. Must be 'latest' for the latest version or an integer for a specific version. Cloud Run for Anthos: supported The key of the secret to select from. Must be a valid secret key.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}A Cloud Secret Manager secret version. Must be 'latest' for the latest version or an integer for a specific version. The key of the secret to select from. Must be a valid secret key.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="localobjectreference_go">
 <a href="#localobjectreference_go" style="color: inherit; text-decoration: inherit;">Local<wbr>Object<wbr>Reference</a>
@@ -10518,7 +9122,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Cloud Run fully managed: supported The name of the secret in Cloud Secret Manager. By default, the secret is assumed to be in the same project. If the secret is in another project, you must define an alias. An alias definition has the form: :projects//secrets/. If multiple alias definitions are needed, they must be separated by commas. The alias definitions must be set on the run.googleapis.com/secrets annotation. Cloud Run for Anthos: supported The name of the secret in the pod's namespace to select from.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The name of the secret in Cloud Secret Manager. By default, the secret is assumed to be in the same project. If the secret is in another project, you must define an alias. An alias definition has the form: :projects//secrets/. If multiple alias definitions are needed, they must be separated by commas. The alias definitions must be set on the run.googleapis.com/secrets annotation. The name of the secret in the pod's namespace to select from.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="optional_go">
 <a href="#optional_go" style="color: inherit; text-decoration: inherit;">Optional</a>
@@ -10526,7 +9130,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Cloud Run fully managed: not supported Cloud Run on GKE: supported Specify whether the Secret or its key must be defined +optional{{% /md %}}</dd></dl>
+    <dd>{{% md %}}(Optional) Specify whether the Secret or its key must be defined{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -10538,7 +9142,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Cloud Run fully managed: supported A Cloud Secret Manager secret version. Must be 'latest' for the latest version or an integer for a specific version. Cloud Run for Anthos: supported The key of the secret to select from. Must be a valid secret key.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}A Cloud Secret Manager secret version. Must be 'latest' for the latest version or an integer for a specific version. The key of the secret to select from. Must be a valid secret key.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="localobjectreference_nodejs">
 <a href="#localobjectreference_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>Object<wbr>Reference</a>
@@ -10554,7 +9158,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Cloud Run fully managed: supported The name of the secret in Cloud Secret Manager. By default, the secret is assumed to be in the same project. If the secret is in another project, you must define an alias. An alias definition has the form: :projects//secrets/. If multiple alias definitions are needed, they must be separated by commas. The alias definitions must be set on the run.googleapis.com/secrets annotation. Cloud Run for Anthos: supported The name of the secret in the pod's namespace to select from.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The name of the secret in Cloud Secret Manager. By default, the secret is assumed to be in the same project. If the secret is in another project, you must define an alias. An alias definition has the form: :projects//secrets/. If multiple alias definitions are needed, they must be separated by commas. The alias definitions must be set on the run.googleapis.com/secrets annotation. The name of the secret in the pod's namespace to select from.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="optional_nodejs">
 <a href="#optional_nodejs" style="color: inherit; text-decoration: inherit;">optional</a>
@@ -10562,7 +9166,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Cloud Run fully managed: not supported Cloud Run on GKE: supported Specify whether the Secret or its key must be defined +optional{{% /md %}}</dd></dl>
+    <dd>{{% md %}}(Optional) Specify whether the Secret or its key must be defined{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -10574,7 +9178,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Cloud Run fully managed: supported A Cloud Secret Manager secret version. Must be 'latest' for the latest version or an integer for a specific version. Cloud Run for Anthos: supported The key of the secret to select from. Must be a valid secret key.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}A Cloud Secret Manager secret version. Must be 'latest' for the latest version or an integer for a specific version. The key of the secret to select from. Must be a valid secret key.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="local_object_reference_python">
 <a href="#local_object_reference_python" style="color: inherit; text-decoration: inherit;">local_<wbr>object_<wbr>reference</a>
@@ -10590,7 +9194,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Cloud Run fully managed: supported The name of the secret in Cloud Secret Manager. By default, the secret is assumed to be in the same project. If the secret is in another project, you must define an alias. An alias definition has the form: :projects//secrets/. If multiple alias definitions are needed, they must be separated by commas. The alias definitions must be set on the run.googleapis.com/secrets annotation. Cloud Run for Anthos: supported The name of the secret in the pod's namespace to select from.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The name of the secret in Cloud Secret Manager. By default, the secret is assumed to be in the same project. If the secret is in another project, you must define an alias. An alias definition has the form: :projects//secrets/. If multiple alias definitions are needed, they must be separated by commas. The alias definitions must be set on the run.googleapis.com/secrets annotation. The name of the secret in the pod's namespace to select from.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="optional_python">
 <a href="#optional_python" style="color: inherit; text-decoration: inherit;">optional</a>
@@ -10598,7 +9202,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Cloud Run fully managed: not supported Cloud Run on GKE: supported Specify whether the Secret or its key must be defined +optional{{% /md %}}</dd></dl>
+    <dd>{{% md %}}(Optional) Specify whether the Secret or its key must be defined{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="secretvolumesource">Secret<wbr>Volume<wbr>Source</h4>
@@ -10612,7 +9216,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Mode bits to use on created files by default. Must be a value between 0 and 0777. Defaults to 0644. Directories within the path are not affected by this setting. This might be in conflict with other options that affect the file mode, like fsGroup, and the result can be other mode bits set.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) Mode bits to use on created files by default. Must be a value between 0000 and 0777. Defaults to 0644. Directories within the path are not affected by this setting. This might be in conflict with other options that affect the file mode, like fsGroup, and the result can be other mode bits set. NOTE: This is an integer representation of the mode bits. So, the integer value should look exactly as the chmod numeric notation, i.e. Unix chmod "777" (a=rwx) should have the integer value 777.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="items_csharp">
 <a href="#items_csharp" style="color: inherit; text-decoration: inherit;">Items</a>
@@ -10620,7 +9224,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#keytopath">List&lt;Pulumi.<wbr>Google<wbr>Native.<wbr>Run.<wbr>V1Alpha1.<wbr>Inputs.<wbr>Key<wbr>To<wbr>Path&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Cloud Run fully managed: supported If unspecified, the volume will expose a file whose name is the secret_name. If specified, the key will be used as the version to fetch from Cloud Secret Manager and the path will be the name of the file exposed in the volume. When items are defined, they must specify a key and a path. Cloud Run for Anthos: supported If unspecified, each key-value pair in the Data field of the referenced Secret will be projected into the volume as a file whose name is the key and content is the value. If specified, the listed keys will be projected into the specified paths, and unlisted keys will not be present. If a key is specified which is not present in the Secret, the volume setup will error unless it is marked optional.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) If unspecified, the volume will expose a file whose name is the secret_name. If specified, the key will be used as the version to fetch from Cloud Secret Manager and the path will be the name of the file exposed in the volume. When items are defined, they must specify a key and a path. If unspecified, each key-value pair in the Data field of the referenced Secret will be projected into the volume as a file whose name is the key and content is the value. If specified, the listed keys will be projected into the specified paths, and unlisted keys will not be present. If a key is specified that is not present in the Secret, the volume setup will error unless it is marked optional.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="optional_csharp">
 <a href="#optional_csharp" style="color: inherit; text-decoration: inherit;">Optional</a>
@@ -10628,7 +9232,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Specify whether the Secret or its keys must be defined.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) Specify whether the Secret or its keys must be defined.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secretname_csharp">
 <a href="#secretname_csharp" style="color: inherit; text-decoration: inherit;">Secret<wbr>Name</a>
@@ -10636,7 +9240,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Cloud Run fully managed: supported The name of the secret in Cloud Secret Manager. By default, the secret is assumed to be in the same project. If the secret is in another project, you must define an alias. An alias definition has the form: :projects//secrets/. If multiple alias definitions are needed, they must be separated by commas. The alias definitions must be set on the run.googleapis.com/secrets annotation. Cloud Run for Anthos: supported Name of the secret in the container's namespace to use.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The name of the secret in Cloud Secret Manager. By default, the secret is assumed to be in the same project. If the secret is in another project, you must define an alias. An alias definition has the form: :projects//secrets/. If multiple alias definitions are needed, they must be separated by commas. The alias definitions must be set on the run.googleapis.com/secrets annotation. Name of the secret in the container's namespace to use.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -10648,7 +9252,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Mode bits to use on created files by default. Must be a value between 0 and 0777. Defaults to 0644. Directories within the path are not affected by this setting. This might be in conflict with other options that affect the file mode, like fsGroup, and the result can be other mode bits set.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) Mode bits to use on created files by default. Must be a value between 0000 and 0777. Defaults to 0644. Directories within the path are not affected by this setting. This might be in conflict with other options that affect the file mode, like fsGroup, and the result can be other mode bits set. NOTE: This is an integer representation of the mode bits. So, the integer value should look exactly as the chmod numeric notation, i.e. Unix chmod "777" (a=rwx) should have the integer value 777.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="items_go">
 <a href="#items_go" style="color: inherit; text-decoration: inherit;">Items</a>
@@ -10656,7 +9260,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#keytopath">[]Key<wbr>To<wbr>Path</a></span>
     </dt>
-    <dd>{{% md %}}Cloud Run fully managed: supported If unspecified, the volume will expose a file whose name is the secret_name. If specified, the key will be used as the version to fetch from Cloud Secret Manager and the path will be the name of the file exposed in the volume. When items are defined, they must specify a key and a path. Cloud Run for Anthos: supported If unspecified, each key-value pair in the Data field of the referenced Secret will be projected into the volume as a file whose name is the key and content is the value. If specified, the listed keys will be projected into the specified paths, and unlisted keys will not be present. If a key is specified which is not present in the Secret, the volume setup will error unless it is marked optional.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) If unspecified, the volume will expose a file whose name is the secret_name. If specified, the key will be used as the version to fetch from Cloud Secret Manager and the path will be the name of the file exposed in the volume. When items are defined, they must specify a key and a path. If unspecified, each key-value pair in the Data field of the referenced Secret will be projected into the volume as a file whose name is the key and content is the value. If specified, the listed keys will be projected into the specified paths, and unlisted keys will not be present. If a key is specified that is not present in the Secret, the volume setup will error unless it is marked optional.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="optional_go">
 <a href="#optional_go" style="color: inherit; text-decoration: inherit;">Optional</a>
@@ -10664,7 +9268,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Specify whether the Secret or its keys must be defined.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) Specify whether the Secret or its keys must be defined.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secretname_go">
 <a href="#secretname_go" style="color: inherit; text-decoration: inherit;">Secret<wbr>Name</a>
@@ -10672,7 +9276,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Cloud Run fully managed: supported The name of the secret in Cloud Secret Manager. By default, the secret is assumed to be in the same project. If the secret is in another project, you must define an alias. An alias definition has the form: :projects//secrets/. If multiple alias definitions are needed, they must be separated by commas. The alias definitions must be set on the run.googleapis.com/secrets annotation. Cloud Run for Anthos: supported Name of the secret in the container's namespace to use.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The name of the secret in Cloud Secret Manager. By default, the secret is assumed to be in the same project. If the secret is in another project, you must define an alias. An alias definition has the form: :projects//secrets/. If multiple alias definitions are needed, they must be separated by commas. The alias definitions must be set on the run.googleapis.com/secrets annotation. Name of the secret in the container's namespace to use.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -10684,7 +9288,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Mode bits to use on created files by default. Must be a value between 0 and 0777. Defaults to 0644. Directories within the path are not affected by this setting. This might be in conflict with other options that affect the file mode, like fsGroup, and the result can be other mode bits set.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) Mode bits to use on created files by default. Must be a value between 0000 and 0777. Defaults to 0644. Directories within the path are not affected by this setting. This might be in conflict with other options that affect the file mode, like fsGroup, and the result can be other mode bits set. NOTE: This is an integer representation of the mode bits. So, the integer value should look exactly as the chmod numeric notation, i.e. Unix chmod "777" (a=rwx) should have the integer value 777.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="items_nodejs">
 <a href="#items_nodejs" style="color: inherit; text-decoration: inherit;">items</a>
@@ -10692,7 +9296,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#keytopath">Key<wbr>To<wbr>Path[]</a></span>
     </dt>
-    <dd>{{% md %}}Cloud Run fully managed: supported If unspecified, the volume will expose a file whose name is the secret_name. If specified, the key will be used as the version to fetch from Cloud Secret Manager and the path will be the name of the file exposed in the volume. When items are defined, they must specify a key and a path. Cloud Run for Anthos: supported If unspecified, each key-value pair in the Data field of the referenced Secret will be projected into the volume as a file whose name is the key and content is the value. If specified, the listed keys will be projected into the specified paths, and unlisted keys will not be present. If a key is specified which is not present in the Secret, the volume setup will error unless it is marked optional.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) If unspecified, the volume will expose a file whose name is the secret_name. If specified, the key will be used as the version to fetch from Cloud Secret Manager and the path will be the name of the file exposed in the volume. When items are defined, they must specify a key and a path. If unspecified, each key-value pair in the Data field of the referenced Secret will be projected into the volume as a file whose name is the key and content is the value. If specified, the listed keys will be projected into the specified paths, and unlisted keys will not be present. If a key is specified that is not present in the Secret, the volume setup will error unless it is marked optional.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="optional_nodejs">
 <a href="#optional_nodejs" style="color: inherit; text-decoration: inherit;">optional</a>
@@ -10700,7 +9304,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Specify whether the Secret or its keys must be defined.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) Specify whether the Secret or its keys must be defined.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secretname_nodejs">
 <a href="#secretname_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Name</a>
@@ -10708,7 +9312,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Cloud Run fully managed: supported The name of the secret in Cloud Secret Manager. By default, the secret is assumed to be in the same project. If the secret is in another project, you must define an alias. An alias definition has the form: :projects//secrets/. If multiple alias definitions are needed, they must be separated by commas. The alias definitions must be set on the run.googleapis.com/secrets annotation. Cloud Run for Anthos: supported Name of the secret in the container's namespace to use.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The name of the secret in Cloud Secret Manager. By default, the secret is assumed to be in the same project. If the secret is in another project, you must define an alias. An alias definition has the form: :projects//secrets/. If multiple alias definitions are needed, they must be separated by commas. The alias definitions must be set on the run.googleapis.com/secrets annotation. Name of the secret in the container's namespace to use.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -10720,7 +9324,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Mode bits to use on created files by default. Must be a value between 0 and 0777. Defaults to 0644. Directories within the path are not affected by this setting. This might be in conflict with other options that affect the file mode, like fsGroup, and the result can be other mode bits set.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) Mode bits to use on created files by default. Must be a value between 0000 and 0777. Defaults to 0644. Directories within the path are not affected by this setting. This might be in conflict with other options that affect the file mode, like fsGroup, and the result can be other mode bits set. NOTE: This is an integer representation of the mode bits. So, the integer value should look exactly as the chmod numeric notation, i.e. Unix chmod "777" (a=rwx) should have the integer value 777.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="items_python">
 <a href="#items_python" style="color: inherit; text-decoration: inherit;">items</a>
@@ -10728,7 +9332,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#keytopath">Sequence[Key<wbr>To<wbr>Path]</a></span>
     </dt>
-    <dd>{{% md %}}Cloud Run fully managed: supported If unspecified, the volume will expose a file whose name is the secret_name. If specified, the key will be used as the version to fetch from Cloud Secret Manager and the path will be the name of the file exposed in the volume. When items are defined, they must specify a key and a path. Cloud Run for Anthos: supported If unspecified, each key-value pair in the Data field of the referenced Secret will be projected into the volume as a file whose name is the key and content is the value. If specified, the listed keys will be projected into the specified paths, and unlisted keys will not be present. If a key is specified which is not present in the Secret, the volume setup will error unless it is marked optional.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) If unspecified, the volume will expose a file whose name is the secret_name. If specified, the key will be used as the version to fetch from Cloud Secret Manager and the path will be the name of the file exposed in the volume. When items are defined, they must specify a key and a path. If unspecified, each key-value pair in the Data field of the referenced Secret will be projected into the volume as a file whose name is the key and content is the value. If specified, the listed keys will be projected into the specified paths, and unlisted keys will not be present. If a key is specified that is not present in the Secret, the volume setup will error unless it is marked optional.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="optional_python">
 <a href="#optional_python" style="color: inherit; text-decoration: inherit;">optional</a>
@@ -10736,7 +9340,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Specify whether the Secret or its keys must be defined.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) Specify whether the Secret or its keys must be defined.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secret_name_python">
 <a href="#secret_name_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>name</a>
@@ -10744,7 +9348,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Cloud Run fully managed: supported The name of the secret in Cloud Secret Manager. By default, the secret is assumed to be in the same project. If the secret is in another project, you must define an alias. An alias definition has the form: :projects//secrets/. If multiple alias definitions are needed, they must be separated by commas. The alias definitions must be set on the run.googleapis.com/secrets annotation. Cloud Run for Anthos: supported Name of the secret in the container's namespace to use.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The name of the secret in Cloud Secret Manager. By default, the secret is assumed to be in the same project. If the secret is in another project, you must define an alias. An alias definition has the form: :projects//secrets/. If multiple alias definitions are needed, they must be separated by commas. The alias definitions must be set on the run.googleapis.com/secrets annotation. Name of the secret in the container's namespace to use.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="secretvolumesourceresponse">Secret<wbr>Volume<wbr>Source<wbr>Response</h4>
@@ -10758,7 +9362,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Mode bits to use on created files by default. Must be a value between 0 and 0777. Defaults to 0644. Directories within the path are not affected by this setting. This might be in conflict with other options that affect the file mode, like fsGroup, and the result can be other mode bits set.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) Mode bits to use on created files by default. Must be a value between 0000 and 0777. Defaults to 0644. Directories within the path are not affected by this setting. This might be in conflict with other options that affect the file mode, like fsGroup, and the result can be other mode bits set. NOTE: This is an integer representation of the mode bits. So, the integer value should look exactly as the chmod numeric notation, i.e. Unix chmod "777" (a=rwx) should have the integer value 777.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="items_csharp">
 <a href="#items_csharp" style="color: inherit; text-decoration: inherit;">Items</a>
@@ -10766,7 +9370,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#keytopathresponse">List&lt;Pulumi.<wbr>Google<wbr>Native.<wbr>Run.<wbr>V1Alpha1.<wbr>Inputs.<wbr>Key<wbr>To<wbr>Path<wbr>Response&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Cloud Run fully managed: supported If unspecified, the volume will expose a file whose name is the secret_name. If specified, the key will be used as the version to fetch from Cloud Secret Manager and the path will be the name of the file exposed in the volume. When items are defined, they must specify a key and a path. Cloud Run for Anthos: supported If unspecified, each key-value pair in the Data field of the referenced Secret will be projected into the volume as a file whose name is the key and content is the value. If specified, the listed keys will be projected into the specified paths, and unlisted keys will not be present. If a key is specified which is not present in the Secret, the volume setup will error unless it is marked optional.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) If unspecified, the volume will expose a file whose name is the secret_name. If specified, the key will be used as the version to fetch from Cloud Secret Manager and the path will be the name of the file exposed in the volume. When items are defined, they must specify a key and a path. If unspecified, each key-value pair in the Data field of the referenced Secret will be projected into the volume as a file whose name is the key and content is the value. If specified, the listed keys will be projected into the specified paths, and unlisted keys will not be present. If a key is specified that is not present in the Secret, the volume setup will error unless it is marked optional.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="optional_csharp">
 <a href="#optional_csharp" style="color: inherit; text-decoration: inherit;">Optional</a>
@@ -10774,7 +9378,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Specify whether the Secret or its keys must be defined.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) Specify whether the Secret or its keys must be defined.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="secretname_csharp">
 <a href="#secretname_csharp" style="color: inherit; text-decoration: inherit;">Secret<wbr>Name</a>
@@ -10782,7 +9386,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Cloud Run fully managed: supported The name of the secret in Cloud Secret Manager. By default, the secret is assumed to be in the same project. If the secret is in another project, you must define an alias. An alias definition has the form: :projects//secrets/. If multiple alias definitions are needed, they must be separated by commas. The alias definitions must be set on the run.googleapis.com/secrets annotation. Cloud Run for Anthos: supported Name of the secret in the container's namespace to use.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The name of the secret in Cloud Secret Manager. By default, the secret is assumed to be in the same project. If the secret is in another project, you must define an alias. An alias definition has the form: :projects//secrets/. If multiple alias definitions are needed, they must be separated by commas. The alias definitions must be set on the run.googleapis.com/secrets annotation. Name of the secret in the container's namespace to use.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -10794,7 +9398,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Mode bits to use on created files by default. Must be a value between 0 and 0777. Defaults to 0644. Directories within the path are not affected by this setting. This might be in conflict with other options that affect the file mode, like fsGroup, and the result can be other mode bits set.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) Mode bits to use on created files by default. Must be a value between 0000 and 0777. Defaults to 0644. Directories within the path are not affected by this setting. This might be in conflict with other options that affect the file mode, like fsGroup, and the result can be other mode bits set. NOTE: This is an integer representation of the mode bits. So, the integer value should look exactly as the chmod numeric notation, i.e. Unix chmod "777" (a=rwx) should have the integer value 777.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="items_go">
 <a href="#items_go" style="color: inherit; text-decoration: inherit;">Items</a>
@@ -10802,7 +9406,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#keytopathresponse">[]Key<wbr>To<wbr>Path<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Cloud Run fully managed: supported If unspecified, the volume will expose a file whose name is the secret_name. If specified, the key will be used as the version to fetch from Cloud Secret Manager and the path will be the name of the file exposed in the volume. When items are defined, they must specify a key and a path. Cloud Run for Anthos: supported If unspecified, each key-value pair in the Data field of the referenced Secret will be projected into the volume as a file whose name is the key and content is the value. If specified, the listed keys will be projected into the specified paths, and unlisted keys will not be present. If a key is specified which is not present in the Secret, the volume setup will error unless it is marked optional.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) If unspecified, the volume will expose a file whose name is the secret_name. If specified, the key will be used as the version to fetch from Cloud Secret Manager and the path will be the name of the file exposed in the volume. When items are defined, they must specify a key and a path. If unspecified, each key-value pair in the Data field of the referenced Secret will be projected into the volume as a file whose name is the key and content is the value. If specified, the listed keys will be projected into the specified paths, and unlisted keys will not be present. If a key is specified that is not present in the Secret, the volume setup will error unless it is marked optional.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="optional_go">
 <a href="#optional_go" style="color: inherit; text-decoration: inherit;">Optional</a>
@@ -10810,7 +9414,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Specify whether the Secret or its keys must be defined.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) Specify whether the Secret or its keys must be defined.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="secretname_go">
 <a href="#secretname_go" style="color: inherit; text-decoration: inherit;">Secret<wbr>Name</a>
@@ -10818,7 +9422,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Cloud Run fully managed: supported The name of the secret in Cloud Secret Manager. By default, the secret is assumed to be in the same project. If the secret is in another project, you must define an alias. An alias definition has the form: :projects//secrets/. If multiple alias definitions are needed, they must be separated by commas. The alias definitions must be set on the run.googleapis.com/secrets annotation. Cloud Run for Anthos: supported Name of the secret in the container's namespace to use.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The name of the secret in Cloud Secret Manager. By default, the secret is assumed to be in the same project. If the secret is in another project, you must define an alias. An alias definition has the form: :projects//secrets/. If multiple alias definitions are needed, they must be separated by commas. The alias definitions must be set on the run.googleapis.com/secrets annotation. Name of the secret in the container's namespace to use.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -10830,7 +9434,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Mode bits to use on created files by default. Must be a value between 0 and 0777. Defaults to 0644. Directories within the path are not affected by this setting. This might be in conflict with other options that affect the file mode, like fsGroup, and the result can be other mode bits set.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) Mode bits to use on created files by default. Must be a value between 0000 and 0777. Defaults to 0644. Directories within the path are not affected by this setting. This might be in conflict with other options that affect the file mode, like fsGroup, and the result can be other mode bits set. NOTE: This is an integer representation of the mode bits. So, the integer value should look exactly as the chmod numeric notation, i.e. Unix chmod "777" (a=rwx) should have the integer value 777.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="items_nodejs">
 <a href="#items_nodejs" style="color: inherit; text-decoration: inherit;">items</a>
@@ -10838,7 +9442,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#keytopathresponse">Key<wbr>To<wbr>Path<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}Cloud Run fully managed: supported If unspecified, the volume will expose a file whose name is the secret_name. If specified, the key will be used as the version to fetch from Cloud Secret Manager and the path will be the name of the file exposed in the volume. When items are defined, they must specify a key and a path. Cloud Run for Anthos: supported If unspecified, each key-value pair in the Data field of the referenced Secret will be projected into the volume as a file whose name is the key and content is the value. If specified, the listed keys will be projected into the specified paths, and unlisted keys will not be present. If a key is specified which is not present in the Secret, the volume setup will error unless it is marked optional.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) If unspecified, the volume will expose a file whose name is the secret_name. If specified, the key will be used as the version to fetch from Cloud Secret Manager and the path will be the name of the file exposed in the volume. When items are defined, they must specify a key and a path. If unspecified, each key-value pair in the Data field of the referenced Secret will be projected into the volume as a file whose name is the key and content is the value. If specified, the listed keys will be projected into the specified paths, and unlisted keys will not be present. If a key is specified that is not present in the Secret, the volume setup will error unless it is marked optional.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="optional_nodejs">
 <a href="#optional_nodejs" style="color: inherit; text-decoration: inherit;">optional</a>
@@ -10846,7 +9450,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Specify whether the Secret or its keys must be defined.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) Specify whether the Secret or its keys must be defined.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="secretname_nodejs">
 <a href="#secretname_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Name</a>
@@ -10854,7 +9458,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Cloud Run fully managed: supported The name of the secret in Cloud Secret Manager. By default, the secret is assumed to be in the same project. If the secret is in another project, you must define an alias. An alias definition has the form: :projects//secrets/. If multiple alias definitions are needed, they must be separated by commas. The alias definitions must be set on the run.googleapis.com/secrets annotation. Cloud Run for Anthos: supported Name of the secret in the container's namespace to use.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The name of the secret in Cloud Secret Manager. By default, the secret is assumed to be in the same project. If the secret is in another project, you must define an alias. An alias definition has the form: :projects//secrets/. If multiple alias definitions are needed, they must be separated by commas. The alias definitions must be set on the run.googleapis.com/secrets annotation. Name of the secret in the container's namespace to use.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -10866,7 +9470,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Mode bits to use on created files by default. Must be a value between 0 and 0777. Defaults to 0644. Directories within the path are not affected by this setting. This might be in conflict with other options that affect the file mode, like fsGroup, and the result can be other mode bits set.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) Mode bits to use on created files by default. Must be a value between 0000 and 0777. Defaults to 0644. Directories within the path are not affected by this setting. This might be in conflict with other options that affect the file mode, like fsGroup, and the result can be other mode bits set. NOTE: This is an integer representation of the mode bits. So, the integer value should look exactly as the chmod numeric notation, i.e. Unix chmod "777" (a=rwx) should have the integer value 777.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="items_python">
 <a href="#items_python" style="color: inherit; text-decoration: inherit;">items</a>
@@ -10874,7 +9478,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#keytopathresponse">Sequence[Key<wbr>To<wbr>Path<wbr>Response]</a></span>
     </dt>
-    <dd>{{% md %}}Cloud Run fully managed: supported If unspecified, the volume will expose a file whose name is the secret_name. If specified, the key will be used as the version to fetch from Cloud Secret Manager and the path will be the name of the file exposed in the volume. When items are defined, they must specify a key and a path. Cloud Run for Anthos: supported If unspecified, each key-value pair in the Data field of the referenced Secret will be projected into the volume as a file whose name is the key and content is the value. If specified, the listed keys will be projected into the specified paths, and unlisted keys will not be present. If a key is specified which is not present in the Secret, the volume setup will error unless it is marked optional.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) If unspecified, the volume will expose a file whose name is the secret_name. If specified, the key will be used as the version to fetch from Cloud Secret Manager and the path will be the name of the file exposed in the volume. When items are defined, they must specify a key and a path. If unspecified, each key-value pair in the Data field of the referenced Secret will be projected into the volume as a file whose name is the key and content is the value. If specified, the listed keys will be projected into the specified paths, and unlisted keys will not be present. If a key is specified that is not present in the Secret, the volume setup will error unless it is marked optional.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="optional_python">
 <a href="#optional_python" style="color: inherit; text-decoration: inherit;">optional</a>
@@ -10882,7 +9486,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Specify whether the Secret or its keys must be defined.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) Specify whether the Secret or its keys must be defined.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="secret_name_python">
 <a href="#secret_name_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>name</a>
@@ -10890,7 +9494,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Cloud Run fully managed: supported The name of the secret in Cloud Secret Manager. By default, the secret is assumed to be in the same project. If the secret is in another project, you must define an alias. An alias definition has the form: :projects//secrets/. If multiple alias definitions are needed, they must be separated by commas. The alias definitions must be set on the run.googleapis.com/secrets annotation. Cloud Run for Anthos: supported Name of the secret in the container's namespace to use.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The name of the secret in Cloud Secret Manager. By default, the secret is assumed to be in the same project. If the secret is in another project, you must define an alias. An alias definition has the form: :projects//secrets/. If multiple alias definitions are needed, they must be separated by commas. The alias definitions must be set on the run.googleapis.com/secrets annotation. Name of the secret in the container's namespace to use.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="securitycontext">Security<wbr>Context</h4>
@@ -10898,121 +9502,17 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
-        <span id="allowprivilegeescalation_csharp">
-<a href="#allowprivilegeescalation_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Privilege<wbr>Escalation</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}AllowPrivilegeEscalation controls whether a process can gain more privileges than its parent process. This bool directly controls if the no_new_privs flag will be set on the container process. AllowPrivilegeEscalation is true always when the container is: 1) run as Privileged 2) has CAP_SYS_ADMIN +optional{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="capabilities_csharp">
-<a href="#capabilities_csharp" style="color: inherit; text-decoration: inherit;">Capabilities</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#capabilities">Pulumi.<wbr>Google<wbr>Native.<wbr>Run.<wbr>V1Alpha1.<wbr>Inputs.<wbr>Capabilities</a></span>
-    </dt>
-    <dd>{{% md %}}The capabilities to add/drop when running containers. Defaults to the default set of capabilities granted by the container runtime. +optional{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="privileged_csharp">
-<a href="#privileged_csharp" style="color: inherit; text-decoration: inherit;">Privileged</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Run container in privileged mode. Processes in privileged containers are essentially equivalent to root on the host. Defaults to false. +optional{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="readonlyrootfilesystem_csharp">
-<a href="#readonlyrootfilesystem_csharp" style="color: inherit; text-decoration: inherit;">Read<wbr>Only<wbr>Root<wbr>Filesystem</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Whether this container has a read-only root filesystem. Default is false. +optional{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="runasgroup_csharp">
-<a href="#runasgroup_csharp" style="color: inherit; text-decoration: inherit;">Run<wbr>As<wbr>Group</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The GID to run the entrypoint of the container process. Uses runtime default if unset. May also be set in PodSecurityContext. If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence. +optional{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="runasnonroot_csharp">
-<a href="#runasnonroot_csharp" style="color: inherit; text-decoration: inherit;">Run<wbr>As<wbr>Non<wbr>Root</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Indicates that the container must run as a non-root user. If true, the Kubelet will validate the image at runtime to ensure that it does not run as UID 0 (root) and fail to start the container if it does. If unset or false, no such validation will be performed. May also be set in PodSecurityContext. If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence. +optional{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="runasuser_csharp">
 <a href="#runasuser_csharp" style="color: inherit; text-decoration: inherit;">Run<wbr>As<wbr>User</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The UID to run the entrypoint of the container process. Defaults to user specified in image metadata if unspecified. May also be set in PodSecurityContext. If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence. +optional{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="selinuxoptions_csharp">
-<a href="#selinuxoptions_csharp" style="color: inherit; text-decoration: inherit;">Se<wbr>Linux<wbr>Options</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#selinuxoptions">Pulumi.<wbr>Google<wbr>Native.<wbr>Run.<wbr>V1Alpha1.<wbr>Inputs.<wbr>SELinux<wbr>Options</a></span>
-    </dt>
-    <dd>{{% md %}}The SELinux context to be applied to the container. If unspecified, the container runtime will allocate a random SELinux context for each container. May also be set in PodSecurityContext. If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence. +optional{{% /md %}}</dd></dl>
+    <dd>{{% md %}}(Optional) The UID to run the entrypoint of the container process. Defaults to user specified in image metadata if unspecified. May also be set in PodSecurityContext. If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="allowprivilegeescalation_go">
-<a href="#allowprivilegeescalation_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Privilege<wbr>Escalation</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}AllowPrivilegeEscalation controls whether a process can gain more privileges than its parent process. This bool directly controls if the no_new_privs flag will be set on the container process. AllowPrivilegeEscalation is true always when the container is: 1) run as Privileged 2) has CAP_SYS_ADMIN +optional{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="capabilities_go">
-<a href="#capabilities_go" style="color: inherit; text-decoration: inherit;">Capabilities</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#capabilities">Capabilities</a></span>
-    </dt>
-    <dd>{{% md %}}The capabilities to add/drop when running containers. Defaults to the default set of capabilities granted by the container runtime. +optional{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="privileged_go">
-<a href="#privileged_go" style="color: inherit; text-decoration: inherit;">Privileged</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Run container in privileged mode. Processes in privileged containers are essentially equivalent to root on the host. Defaults to false. +optional{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="readonlyrootfilesystem_go">
-<a href="#readonlyrootfilesystem_go" style="color: inherit; text-decoration: inherit;">Read<wbr>Only<wbr>Root<wbr>Filesystem</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Whether this container has a read-only root filesystem. Default is false. +optional{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="runasgroup_go">
-<a href="#runasgroup_go" style="color: inherit; text-decoration: inherit;">Run<wbr>As<wbr>Group</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The GID to run the entrypoint of the container process. Uses runtime default if unset. May also be set in PodSecurityContext. If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence. +optional{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="runasnonroot_go">
-<a href="#runasnonroot_go" style="color: inherit; text-decoration: inherit;">Run<wbr>As<wbr>Non<wbr>Root</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Indicates that the container must run as a non-root user. If true, the Kubelet will validate the image at runtime to ensure that it does not run as UID 0 (root) and fail to start the container if it does. If unset or false, no such validation will be performed. May also be set in PodSecurityContext. If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence. +optional{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="runasuser_go">
 <a href="#runasuser_go" style="color: inherit; text-decoration: inherit;">Run<wbr>As<wbr>User</a>
@@ -11020,67 +9520,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The UID to run the entrypoint of the container process. Defaults to user specified in image metadata if unspecified. May also be set in PodSecurityContext. If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence. +optional{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="selinuxoptions_go">
-<a href="#selinuxoptions_go" style="color: inherit; text-decoration: inherit;">Se<wbr>Linux<wbr>Options</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#selinuxoptions">SELinux<wbr>Options</a></span>
-    </dt>
-    <dd>{{% md %}}The SELinux context to be applied to the container. If unspecified, the container runtime will allocate a random SELinux context for each container. May also be set in PodSecurityContext. If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence. +optional{{% /md %}}</dd></dl>
+    <dd>{{% md %}}(Optional) The UID to run the entrypoint of the container process. Defaults to user specified in image metadata if unspecified. May also be set in PodSecurityContext. If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="allowprivilegeescalation_nodejs">
-<a href="#allowprivilegeescalation_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Privilege<wbr>Escalation</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
-    </dt>
-    <dd>{{% md %}}AllowPrivilegeEscalation controls whether a process can gain more privileges than its parent process. This bool directly controls if the no_new_privs flag will be set on the container process. AllowPrivilegeEscalation is true always when the container is: 1) run as Privileged 2) has CAP_SYS_ADMIN +optional{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="capabilities_nodejs">
-<a href="#capabilities_nodejs" style="color: inherit; text-decoration: inherit;">capabilities</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#capabilities">Capabilities</a></span>
-    </dt>
-    <dd>{{% md %}}The capabilities to add/drop when running containers. Defaults to the default set of capabilities granted by the container runtime. +optional{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="privileged_nodejs">
-<a href="#privileged_nodejs" style="color: inherit; text-decoration: inherit;">privileged</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
-    </dt>
-    <dd>{{% md %}}Run container in privileged mode. Processes in privileged containers are essentially equivalent to root on the host. Defaults to false. +optional{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="readonlyrootfilesystem_nodejs">
-<a href="#readonlyrootfilesystem_nodejs" style="color: inherit; text-decoration: inherit;">read<wbr>Only<wbr>Root<wbr>Filesystem</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
-    </dt>
-    <dd>{{% md %}}Whether this container has a read-only root filesystem. Default is false. +optional{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="runasgroup_nodejs">
-<a href="#runasgroup_nodejs" style="color: inherit; text-decoration: inherit;">run<wbr>As<wbr>Group</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}The GID to run the entrypoint of the container process. Uses runtime default if unset. May also be set in PodSecurityContext. If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence. +optional{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="runasnonroot_nodejs">
-<a href="#runasnonroot_nodejs" style="color: inherit; text-decoration: inherit;">run<wbr>As<wbr>Non<wbr>Root</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
-    </dt>
-    <dd>{{% md %}}Indicates that the container must run as a non-root user. If true, the Kubelet will validate the image at runtime to ensure that it does not run as UID 0 (root) and fail to start the container if it does. If unset or false, no such validation will be performed. May also be set in PodSecurityContext. If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence. +optional{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="runasuser_nodejs">
 <a href="#runasuser_nodejs" style="color: inherit; text-decoration: inherit;">run<wbr>As<wbr>User</a>
@@ -11088,67 +9532,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The UID to run the entrypoint of the container process. Defaults to user specified in image metadata if unspecified. May also be set in PodSecurityContext. If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence. +optional{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="selinuxoptions_nodejs">
-<a href="#selinuxoptions_nodejs" style="color: inherit; text-decoration: inherit;">se<wbr>Linux<wbr>Options</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#selinuxoptions">SELinux<wbr>Options</a></span>
-    </dt>
-    <dd>{{% md %}}The SELinux context to be applied to the container. If unspecified, the container runtime will allocate a random SELinux context for each container. May also be set in PodSecurityContext. If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence. +optional{{% /md %}}</dd></dl>
+    <dd>{{% md %}}(Optional) The UID to run the entrypoint of the container process. Defaults to user specified in image metadata if unspecified. May also be set in PodSecurityContext. If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="allow_privilege_escalation_python">
-<a href="#allow_privilege_escalation_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>privilege_<wbr>escalation</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}AllowPrivilegeEscalation controls whether a process can gain more privileges than its parent process. This bool directly controls if the no_new_privs flag will be set on the container process. AllowPrivilegeEscalation is true always when the container is: 1) run as Privileged 2) has CAP_SYS_ADMIN +optional{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="capabilities_python">
-<a href="#capabilities_python" style="color: inherit; text-decoration: inherit;">capabilities</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#capabilities">Capabilities</a></span>
-    </dt>
-    <dd>{{% md %}}The capabilities to add/drop when running containers. Defaults to the default set of capabilities granted by the container runtime. +optional{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="privileged_python">
-<a href="#privileged_python" style="color: inherit; text-decoration: inherit;">privileged</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Run container in privileged mode. Processes in privileged containers are essentially equivalent to root on the host. Defaults to false. +optional{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="read_only_root_filesystem_python">
-<a href="#read_only_root_filesystem_python" style="color: inherit; text-decoration: inherit;">read_<wbr>only_<wbr>root_<wbr>filesystem</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Whether this container has a read-only root filesystem. Default is false. +optional{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="run_as_group_python">
-<a href="#run_as_group_python" style="color: inherit; text-decoration: inherit;">run_<wbr>as_<wbr>group</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The GID to run the entrypoint of the container process. Uses runtime default if unset. May also be set in PodSecurityContext. If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence. +optional{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="run_as_non_root_python">
-<a href="#run_as_non_root_python" style="color: inherit; text-decoration: inherit;">run_<wbr>as_<wbr>non_<wbr>root</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Indicates that the container must run as a non-root user. If true, the Kubelet will validate the image at runtime to ensure that it does not run as UID 0 (root) and fail to start the container if it does. If unset or false, no such validation will be performed. May also be set in PodSecurityContext. If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence. +optional{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="run_as_user_python">
 <a href="#run_as_user_python" style="color: inherit; text-decoration: inherit;">run_<wbr>as_<wbr>user</a>
@@ -11156,15 +9544,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The UID to run the entrypoint of the container process. Defaults to user specified in image metadata if unspecified. May also be set in PodSecurityContext. If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence. +optional{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="se_linux_options_python">
-<a href="#se_linux_options_python" style="color: inherit; text-decoration: inherit;">se_<wbr>linux_<wbr>options</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#selinuxoptions">SELinux<wbr>Options</a></span>
-    </dt>
-    <dd>{{% md %}}The SELinux context to be applied to the container. If unspecified, the container runtime will allocate a random SELinux context for each container. May also be set in PodSecurityContext. If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence. +optional{{% /md %}}</dd></dl>
+    <dd>{{% md %}}(Optional) The UID to run the entrypoint of the container process. Defaults to user specified in image metadata if unspecified. May also be set in PodSecurityContext. If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="securitycontextresponse">Security<wbr>Context<wbr>Response</h4>
@@ -11172,121 +9552,17 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="allowprivilegeescalation_csharp">
-<a href="#allowprivilegeescalation_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Privilege<wbr>Escalation</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}AllowPrivilegeEscalation controls whether a process can gain more privileges than its parent process. This bool directly controls if the no_new_privs flag will be set on the container process. AllowPrivilegeEscalation is true always when the container is: 1) run as Privileged 2) has CAP_SYS_ADMIN +optional{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="capabilities_csharp">
-<a href="#capabilities_csharp" style="color: inherit; text-decoration: inherit;">Capabilities</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#capabilitiesresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Run.<wbr>V1Alpha1.<wbr>Inputs.<wbr>Capabilities<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}The capabilities to add/drop when running containers. Defaults to the default set of capabilities granted by the container runtime. +optional{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="privileged_csharp">
-<a href="#privileged_csharp" style="color: inherit; text-decoration: inherit;">Privileged</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Run container in privileged mode. Processes in privileged containers are essentially equivalent to root on the host. Defaults to false. +optional{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="readonlyrootfilesystem_csharp">
-<a href="#readonlyrootfilesystem_csharp" style="color: inherit; text-decoration: inherit;">Read<wbr>Only<wbr>Root<wbr>Filesystem</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Whether this container has a read-only root filesystem. Default is false. +optional{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="runasgroup_csharp">
-<a href="#runasgroup_csharp" style="color: inherit; text-decoration: inherit;">Run<wbr>As<wbr>Group</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The GID to run the entrypoint of the container process. Uses runtime default if unset. May also be set in PodSecurityContext. If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence. +optional{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="runasnonroot_csharp">
-<a href="#runasnonroot_csharp" style="color: inherit; text-decoration: inherit;">Run<wbr>As<wbr>Non<wbr>Root</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Indicates that the container must run as a non-root user. If true, the Kubelet will validate the image at runtime to ensure that it does not run as UID 0 (root) and fail to start the container if it does. If unset or false, no such validation will be performed. May also be set in PodSecurityContext. If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence. +optional{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="runasuser_csharp">
 <a href="#runasuser_csharp" style="color: inherit; text-decoration: inherit;">Run<wbr>As<wbr>User</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The UID to run the entrypoint of the container process. Defaults to user specified in image metadata if unspecified. May also be set in PodSecurityContext. If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence. +optional{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="selinuxoptions_csharp">
-<a href="#selinuxoptions_csharp" style="color: inherit; text-decoration: inherit;">Se<wbr>Linux<wbr>Options</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#selinuxoptionsresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Run.<wbr>V1Alpha1.<wbr>Inputs.<wbr>SELinux<wbr>Options<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}The SELinux context to be applied to the container. If unspecified, the container runtime will allocate a random SELinux context for each container. May also be set in PodSecurityContext. If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence. +optional{{% /md %}}</dd></dl>
+    <dd>{{% md %}}(Optional) The UID to run the entrypoint of the container process. Defaults to user specified in image metadata if unspecified. May also be set in PodSecurityContext. If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="allowprivilegeescalation_go">
-<a href="#allowprivilegeescalation_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Privilege<wbr>Escalation</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}AllowPrivilegeEscalation controls whether a process can gain more privileges than its parent process. This bool directly controls if the no_new_privs flag will be set on the container process. AllowPrivilegeEscalation is true always when the container is: 1) run as Privileged 2) has CAP_SYS_ADMIN +optional{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="capabilities_go">
-<a href="#capabilities_go" style="color: inherit; text-decoration: inherit;">Capabilities</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#capabilitiesresponse">Capabilities<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}The capabilities to add/drop when running containers. Defaults to the default set of capabilities granted by the container runtime. +optional{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="privileged_go">
-<a href="#privileged_go" style="color: inherit; text-decoration: inherit;">Privileged</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Run container in privileged mode. Processes in privileged containers are essentially equivalent to root on the host. Defaults to false. +optional{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="readonlyrootfilesystem_go">
-<a href="#readonlyrootfilesystem_go" style="color: inherit; text-decoration: inherit;">Read<wbr>Only<wbr>Root<wbr>Filesystem</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Whether this container has a read-only root filesystem. Default is false. +optional{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="runasgroup_go">
-<a href="#runasgroup_go" style="color: inherit; text-decoration: inherit;">Run<wbr>As<wbr>Group</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The GID to run the entrypoint of the container process. Uses runtime default if unset. May also be set in PodSecurityContext. If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence. +optional{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="runasnonroot_go">
-<a href="#runasnonroot_go" style="color: inherit; text-decoration: inherit;">Run<wbr>As<wbr>Non<wbr>Root</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Indicates that the container must run as a non-root user. If true, the Kubelet will validate the image at runtime to ensure that it does not run as UID 0 (root) and fail to start the container if it does. If unset or false, no such validation will be performed. May also be set in PodSecurityContext. If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence. +optional{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="runasuser_go">
 <a href="#runasuser_go" style="color: inherit; text-decoration: inherit;">Run<wbr>As<wbr>User</a>
@@ -11294,67 +9570,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The UID to run the entrypoint of the container process. Defaults to user specified in image metadata if unspecified. May also be set in PodSecurityContext. If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence. +optional{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="selinuxoptions_go">
-<a href="#selinuxoptions_go" style="color: inherit; text-decoration: inherit;">Se<wbr>Linux<wbr>Options</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#selinuxoptionsresponse">SELinux<wbr>Options<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}The SELinux context to be applied to the container. If unspecified, the container runtime will allocate a random SELinux context for each container. May also be set in PodSecurityContext. If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence. +optional{{% /md %}}</dd></dl>
+    <dd>{{% md %}}(Optional) The UID to run the entrypoint of the container process. Defaults to user specified in image metadata if unspecified. May also be set in PodSecurityContext. If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="allowprivilegeescalation_nodejs">
-<a href="#allowprivilegeescalation_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Privilege<wbr>Escalation</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
-    </dt>
-    <dd>{{% md %}}AllowPrivilegeEscalation controls whether a process can gain more privileges than its parent process. This bool directly controls if the no_new_privs flag will be set on the container process. AllowPrivilegeEscalation is true always when the container is: 1) run as Privileged 2) has CAP_SYS_ADMIN +optional{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="capabilities_nodejs">
-<a href="#capabilities_nodejs" style="color: inherit; text-decoration: inherit;">capabilities</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#capabilitiesresponse">Capabilities<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}The capabilities to add/drop when running containers. Defaults to the default set of capabilities granted by the container runtime. +optional{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="privileged_nodejs">
-<a href="#privileged_nodejs" style="color: inherit; text-decoration: inherit;">privileged</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
-    </dt>
-    <dd>{{% md %}}Run container in privileged mode. Processes in privileged containers are essentially equivalent to root on the host. Defaults to false. +optional{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="readonlyrootfilesystem_nodejs">
-<a href="#readonlyrootfilesystem_nodejs" style="color: inherit; text-decoration: inherit;">read<wbr>Only<wbr>Root<wbr>Filesystem</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
-    </dt>
-    <dd>{{% md %}}Whether this container has a read-only root filesystem. Default is false. +optional{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="runasgroup_nodejs">
-<a href="#runasgroup_nodejs" style="color: inherit; text-decoration: inherit;">run<wbr>As<wbr>Group</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}The GID to run the entrypoint of the container process. Uses runtime default if unset. May also be set in PodSecurityContext. If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence. +optional{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="runasnonroot_nodejs">
-<a href="#runasnonroot_nodejs" style="color: inherit; text-decoration: inherit;">run<wbr>As<wbr>Non<wbr>Root</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
-    </dt>
-    <dd>{{% md %}}Indicates that the container must run as a non-root user. If true, the Kubelet will validate the image at runtime to ensure that it does not run as UID 0 (root) and fail to start the container if it does. If unset or false, no such validation will be performed. May also be set in PodSecurityContext. If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence. +optional{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="runasuser_nodejs">
 <a href="#runasuser_nodejs" style="color: inherit; text-decoration: inherit;">run<wbr>As<wbr>User</a>
@@ -11362,67 +9582,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The UID to run the entrypoint of the container process. Defaults to user specified in image metadata if unspecified. May also be set in PodSecurityContext. If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence. +optional{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="selinuxoptions_nodejs">
-<a href="#selinuxoptions_nodejs" style="color: inherit; text-decoration: inherit;">se<wbr>Linux<wbr>Options</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#selinuxoptionsresponse">SELinux<wbr>Options<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}The SELinux context to be applied to the container. If unspecified, the container runtime will allocate a random SELinux context for each container. May also be set in PodSecurityContext. If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence. +optional{{% /md %}}</dd></dl>
+    <dd>{{% md %}}(Optional) The UID to run the entrypoint of the container process. Defaults to user specified in image metadata if unspecified. May also be set in PodSecurityContext. If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="allow_privilege_escalation_python">
-<a href="#allow_privilege_escalation_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>privilege_<wbr>escalation</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}AllowPrivilegeEscalation controls whether a process can gain more privileges than its parent process. This bool directly controls if the no_new_privs flag will be set on the container process. AllowPrivilegeEscalation is true always when the container is: 1) run as Privileged 2) has CAP_SYS_ADMIN +optional{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="capabilities_python">
-<a href="#capabilities_python" style="color: inherit; text-decoration: inherit;">capabilities</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#capabilitiesresponse">Capabilities<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}The capabilities to add/drop when running containers. Defaults to the default set of capabilities granted by the container runtime. +optional{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="privileged_python">
-<a href="#privileged_python" style="color: inherit; text-decoration: inherit;">privileged</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Run container in privileged mode. Processes in privileged containers are essentially equivalent to root on the host. Defaults to false. +optional{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="read_only_root_filesystem_python">
-<a href="#read_only_root_filesystem_python" style="color: inherit; text-decoration: inherit;">read_<wbr>only_<wbr>root_<wbr>filesystem</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Whether this container has a read-only root filesystem. Default is false. +optional{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="run_as_group_python">
-<a href="#run_as_group_python" style="color: inherit; text-decoration: inherit;">run_<wbr>as_<wbr>group</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The GID to run the entrypoint of the container process. Uses runtime default if unset. May also be set in PodSecurityContext. If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence. +optional{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="run_as_non_root_python">
-<a href="#run_as_non_root_python" style="color: inherit; text-decoration: inherit;">run_<wbr>as_<wbr>non_<wbr>root</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Indicates that the container must run as a non-root user. If true, the Kubelet will validate the image at runtime to ensure that it does not run as UID 0 (root) and fail to start the container if it does. If unset or false, no such validation will be performed. May also be set in PodSecurityContext. If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence. +optional{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="run_as_user_python">
 <a href="#run_as_user_python" style="color: inherit; text-decoration: inherit;">run_<wbr>as_<wbr>user</a>
@@ -11430,15 +9594,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The UID to run the entrypoint of the container process. Defaults to user specified in image metadata if unspecified. May also be set in PodSecurityContext. If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence. +optional{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="se_linux_options_python">
-<a href="#se_linux_options_python" style="color: inherit; text-decoration: inherit;">se_<wbr>linux_<wbr>options</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#selinuxoptionsresponse">SELinux<wbr>Options<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}The SELinux context to be applied to the container. If unspecified, the container runtime will allocate a random SELinux context for each container. May also be set in PodSecurityContext. If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence. +optional{{% /md %}}</dd></dl>
+    <dd>{{% md %}}(Optional) The UID to run the entrypoint of the container process. Defaults to user specified in image metadata if unspecified. May also be set in PodSecurityContext. If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="tcpsocketaction">TCPSocket<wbr>Action</h4>
@@ -11452,15 +9608,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Optional: Host name to connect to, defaults to the pod IP. +optional{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) Optional: Host name to connect to, defaults to the pod IP.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_csharp">
 <a href="#port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#intorstring">Pulumi.<wbr>Google<wbr>Native.<wbr>Run.<wbr>V1Alpha1.<wbr>Inputs.<wbr>Int<wbr>Or<wbr>String</a></span>
+        <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number or name of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Number or name of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME. This field is currently limited to integer types only because of proto's inability to properly support the IntOrString golang type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -11472,15 +9628,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Optional: Host name to connect to, defaults to the pod IP. +optional{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) Optional: Host name to connect to, defaults to the pod IP.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_go">
 <a href="#port_go" style="color: inherit; text-decoration: inherit;">Port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#intorstring">Int<wbr>Or<wbr>String</a></span>
+        <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number or name of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Number or name of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME. This field is currently limited to integer types only because of proto's inability to properly support the IntOrString golang type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -11492,15 +9648,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Optional: Host name to connect to, defaults to the pod IP. +optional{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) Optional: Host name to connect to, defaults to the pod IP.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_nodejs">
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#intorstring">Int<wbr>Or<wbr>String</a></span>
+        <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Number or name of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Number or name of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME. This field is currently limited to integer types only because of proto's inability to properly support the IntOrString golang type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -11512,15 +9668,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Optional: Host name to connect to, defaults to the pod IP. +optional{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) Optional: Host name to connect to, defaults to the pod IP.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_python">
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#intorstring">Int<wbr>Or<wbr>String</a></span>
+        <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number or name of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Number or name of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME. This field is currently limited to integer types only because of proto's inability to properly support the IntOrString golang type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="tcpsocketactionresponse">TCPSocket<wbr>Action<wbr>Response</h4>
@@ -11534,15 +9690,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Optional: Host name to connect to, defaults to the pod IP. +optional{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) Optional: Host name to connect to, defaults to the pod IP.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="port_csharp">
 <a href="#port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#intorstringresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Run.<wbr>V1Alpha1.<wbr>Inputs.<wbr>Int<wbr>Or<wbr>String<wbr>Response</a></span>
+        <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number or name of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Number or name of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME. This field is currently limited to integer types only because of proto's inability to properly support the IntOrString golang type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -11554,15 +9710,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Optional: Host name to connect to, defaults to the pod IP. +optional{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) Optional: Host name to connect to, defaults to the pod IP.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="port_go">
 <a href="#port_go" style="color: inherit; text-decoration: inherit;">Port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#intorstringresponse">Int<wbr>Or<wbr>String<wbr>Response</a></span>
+        <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number or name of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Number or name of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME. This field is currently limited to integer types only because of proto's inability to properly support the IntOrString golang type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -11574,15 +9730,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Optional: Host name to connect to, defaults to the pod IP. +optional{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) Optional: Host name to connect to, defaults to the pod IP.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="port_nodejs">
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#intorstringresponse">Int<wbr>Or<wbr>String<wbr>Response</a></span>
+        <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Number or name of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Number or name of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME. This field is currently limited to integer types only because of proto's inability to properly support the IntOrString golang type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -11594,15 +9750,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Optional: Host name to connect to, defaults to the pod IP. +optional{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) Optional: Host name to connect to, defaults to the pod IP.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="port_python">
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#intorstringresponse">Int<wbr>Or<wbr>String<wbr>Response</a></span>
+        <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number or name of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Number or name of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME. This field is currently limited to integer types only because of proto's inability to properly support the IntOrString golang type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="volume">Volume</h4>
@@ -11719,170 +9875,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
-<h4 id="volumedevice">Volume<wbr>Device</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="devicepath_csharp">
-<a href="#devicepath_csharp" style="color: inherit; text-decoration: inherit;">Device<wbr>Path</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}devicePath is the path inside of the container that the device will be mapped to.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="name_csharp">
-<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}name must match the name of a persistentVolumeClaim in the pod{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="devicepath_go">
-<a href="#devicepath_go" style="color: inherit; text-decoration: inherit;">Device<wbr>Path</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}devicePath is the path inside of the container that the device will be mapped to.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="name_go">
-<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}name must match the name of a persistentVolumeClaim in the pod{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="devicepath_nodejs">
-<a href="#devicepath_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Path</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}devicePath is the path inside of the container that the device will be mapped to.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="name_nodejs">
-<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}name must match the name of a persistentVolumeClaim in the pod{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="device_path_python">
-<a href="#device_path_python" style="color: inherit; text-decoration: inherit;">device_<wbr>path</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}devicePath is the path inside of the container that the device will be mapped to.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="name_python">
-<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}name must match the name of a persistentVolumeClaim in the pod{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="volumedeviceresponse">Volume<wbr>Device<wbr>Response</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="devicepath_csharp">
-<a href="#devicepath_csharp" style="color: inherit; text-decoration: inherit;">Device<wbr>Path</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}devicePath is the path inside of the container that the device will be mapped to.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_csharp">
-<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}name must match the name of a persistentVolumeClaim in the pod{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="devicepath_go">
-<a href="#devicepath_go" style="color: inherit; text-decoration: inherit;">Device<wbr>Path</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}devicePath is the path inside of the container that the device will be mapped to.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_go">
-<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}name must match the name of a persistentVolumeClaim in the pod{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="devicepath_nodejs">
-<a href="#devicepath_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Path</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}devicePath is the path inside of the container that the device will be mapped to.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_nodejs">
-<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}name must match the name of a persistentVolumeClaim in the pod{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="device_path_python">
-<a href="#device_path_python" style="color: inherit; text-decoration: inherit;">device_<wbr>path</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}devicePath is the path inside of the container that the device will be mapped to.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="name_python">
-<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}name must match the name of a persistentVolumeClaim in the pod{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
 <h4 id="volumemount">Volume<wbr>Mount</h4>
 
 {{% choosable language csharp %}}
@@ -11895,14 +9887,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path within the container at which the volume should be mounted. Must not contain ':'.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="mountpropagation_csharp">
-<a href="#mountpropagation_csharp" style="color: inherit; text-decoration: inherit;">Mount<wbr>Propagation</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}mountPropagation determines how mounts are propagated from the host to container and the other way around. When not set, MountPropagationHostToContainer is used. This field is beta in 1.10. +optional{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -11918,7 +9902,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Mounted read-only if true, read-write otherwise (false or unspecified). Defaults to false. +optional{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) Only true is accepted. Defaults to true.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subpath_csharp">
 <a href="#subpath_csharp" style="color: inherit; text-decoration: inherit;">Sub<wbr>Path</a>
@@ -11926,7 +9910,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Path within the volume from which the container's volume should be mounted. Defaults to "" (volume's root). +optional{{% /md %}}</dd></dl>
+    <dd>{{% md %}}(Optional) Path within the volume from which the container's volume should be mounted. Defaults to "" (volume's root).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -11939,14 +9923,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path within the container at which the volume should be mounted. Must not contain ':'.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="mountpropagation_go">
-<a href="#mountpropagation_go" style="color: inherit; text-decoration: inherit;">Mount<wbr>Propagation</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}mountPropagation determines how mounts are propagated from the host to container and the other way around. When not set, MountPropagationHostToContainer is used. This field is beta in 1.10. +optional{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -11962,7 +9938,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Mounted read-only if true, read-write otherwise (false or unspecified). Defaults to false. +optional{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) Only true is accepted. Defaults to true.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subpath_go">
 <a href="#subpath_go" style="color: inherit; text-decoration: inherit;">Sub<wbr>Path</a>
@@ -11970,7 +9946,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Path within the volume from which the container's volume should be mounted. Defaults to "" (volume's root). +optional{{% /md %}}</dd></dl>
+    <dd>{{% md %}}(Optional) Path within the volume from which the container's volume should be mounted. Defaults to "" (volume's root).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -11983,14 +9959,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path within the container at which the volume should be mounted. Must not contain ':'.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="mountpropagation_nodejs">
-<a href="#mountpropagation_nodejs" style="color: inherit; text-decoration: inherit;">mount<wbr>Propagation</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}mountPropagation determines how mounts are propagated from the host to container and the other way around. When not set, MountPropagationHostToContainer is used. This field is beta in 1.10. +optional{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -12006,7 +9974,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Mounted read-only if true, read-write otherwise (false or unspecified). Defaults to false. +optional{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) Only true is accepted. Defaults to true.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subpath_nodejs">
 <a href="#subpath_nodejs" style="color: inherit; text-decoration: inherit;">sub<wbr>Path</a>
@@ -12014,7 +9982,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Path within the volume from which the container's volume should be mounted. Defaults to "" (volume's root). +optional{{% /md %}}</dd></dl>
+    <dd>{{% md %}}(Optional) Path within the volume from which the container's volume should be mounted. Defaults to "" (volume's root).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -12027,14 +9995,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Path within the container at which the volume should be mounted. Must not contain ':'.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="mount_propagation_python">
-<a href="#mount_propagation_python" style="color: inherit; text-decoration: inherit;">mount_<wbr>propagation</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}mountPropagation determines how mounts are propagated from the host to container and the other way around. When not set, MountPropagationHostToContainer is used. This field is beta in 1.10. +optional{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -12050,7 +10010,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Mounted read-only if true, read-write otherwise (false or unspecified). Defaults to false. +optional{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}(Optional) Only true is accepted. Defaults to true.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sub_path_python">
 <a href="#sub_path_python" style="color: inherit; text-decoration: inherit;">sub_<wbr>path</a>
@@ -12058,7 +10018,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Path within the volume from which the container's volume should be mounted. Defaults to "" (volume's root). +optional{{% /md %}}</dd></dl>
+    <dd>{{% md %}}(Optional) Path within the volume from which the container's volume should be mounted. Defaults to "" (volume's root).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="volumemountresponse">Volume<wbr>Mount<wbr>Response</h4>
@@ -12074,14 +10034,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Path within the container at which the volume should be mounted. Must not contain ':'.{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="mountpropagation_csharp">
-<a href="#mountpropagation_csharp" style="color: inherit; text-decoration: inherit;">Mount<wbr>Propagation</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}mountPropagation determines how mounts are propagated from the host to container and the other way around. When not set, MountPropagationHostToContainer is used. This field is beta in 1.10. +optional{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
@@ -12096,7 +10048,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Mounted read-only if true, read-write otherwise (false or unspecified). Defaults to false. +optional{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) Only true is accepted. Defaults to true.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="subpath_csharp">
 <a href="#subpath_csharp" style="color: inherit; text-decoration: inherit;">Sub<wbr>Path</a>
@@ -12104,7 +10056,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Path within the volume from which the container's volume should be mounted. Defaults to "" (volume's root). +optional{{% /md %}}</dd></dl>
+    <dd>{{% md %}}(Optional) Path within the volume from which the container's volume should be mounted. Defaults to "" (volume's root).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -12117,14 +10069,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path within the container at which the volume should be mounted. Must not contain ':'.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="mountpropagation_go">
-<a href="#mountpropagation_go" style="color: inherit; text-decoration: inherit;">Mount<wbr>Propagation</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}mountPropagation determines how mounts are propagated from the host to container and the other way around. When not set, MountPropagationHostToContainer is used. This field is beta in 1.10. +optional{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -12140,7 +10084,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Mounted read-only if true, read-write otherwise (false or unspecified). Defaults to false. +optional{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) Only true is accepted. Defaults to true.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="subpath_go">
 <a href="#subpath_go" style="color: inherit; text-decoration: inherit;">Sub<wbr>Path</a>
@@ -12148,7 +10092,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Path within the volume from which the container's volume should be mounted. Defaults to "" (volume's root). +optional{{% /md %}}</dd></dl>
+    <dd>{{% md %}}(Optional) Path within the volume from which the container's volume should be mounted. Defaults to "" (volume's root).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -12161,14 +10105,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path within the container at which the volume should be mounted. Must not contain ':'.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="mountpropagation_nodejs">
-<a href="#mountpropagation_nodejs" style="color: inherit; text-decoration: inherit;">mount<wbr>Propagation</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}mountPropagation determines how mounts are propagated from the host to container and the other way around. When not set, MountPropagationHostToContainer is used. This field is beta in 1.10. +optional{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -12184,7 +10120,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Mounted read-only if true, read-write otherwise (false or unspecified). Defaults to false. +optional{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) Only true is accepted. Defaults to true.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="subpath_nodejs">
 <a href="#subpath_nodejs" style="color: inherit; text-decoration: inherit;">sub<wbr>Path</a>
@@ -12192,7 +10128,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Path within the volume from which the container's volume should be mounted. Defaults to "" (volume's root). +optional{{% /md %}}</dd></dl>
+    <dd>{{% md %}}(Optional) Path within the volume from which the container's volume should be mounted. Defaults to "" (volume's root).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -12205,14 +10141,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Path within the container at which the volume should be mounted. Must not contain ':'.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="mount_propagation_python">
-<a href="#mount_propagation_python" style="color: inherit; text-decoration: inherit;">mount_<wbr>propagation</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}mountPropagation determines how mounts are propagated from the host to container and the other way around. When not set, MountPropagationHostToContainer is used. This field is beta in 1.10. +optional{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -12228,7 +10156,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Mounted read-only if true, read-write otherwise (false or unspecified). Defaults to false. +optional{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Optional) Only true is accepted. Defaults to true.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sub_path_python">
 <a href="#sub_path_python" style="color: inherit; text-decoration: inherit;">sub_<wbr>path</a>
@@ -12236,7 +10164,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Path within the volume from which the container's volume should be mounted. Defaults to "" (volume's root). +optional{{% /md %}}</dd></dl>
+    <dd>{{% md %}}(Optional) Path within the volume from which the container's volume should be mounted. Defaults to "" (volume's root).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="volumeresponse">Volume<wbr>Response</h4>

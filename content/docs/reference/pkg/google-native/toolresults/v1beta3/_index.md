@@ -32,6 +32,6 @@ Explore the resources and functions of the google-native.toolresults/v1beta3 mod
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.5.0</dd>
+	<dd>0.6.0</dd>
 </dl>
 

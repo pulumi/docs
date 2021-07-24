@@ -20,7 +20,7 @@ Creates an instance template in the specified project using the data that is inc
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">InstanceTemplate</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">InstanceTemplateArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">InstanceTemplate</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">InstanceTemplateArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -36,16 +36,16 @@ Creates an instance template in the specified project using the data that is inc
                      <span class="nx">source_instance_params</span><span class="p">:</span> <span class="nx">Optional[SourceInstanceParamsArgs]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">InstanceTemplate</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                     <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">InstanceTemplateArgs</a></span><span class="p">,</span>
+                     <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">Optional[InstanceTemplateArgs]</a></span> = None<span class="p">,</span>
                      <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewInstanceTemplate</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">InstanceTemplateArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">InstanceTemplate</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewInstanceTemplate</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">InstanceTemplateArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">InstanceTemplate</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">InstanceTemplate</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">InstanceTemplateArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">InstanceTemplate</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">InstanceTemplateArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -57,7 +57,7 @@ Creates an instance template in the specified project using the data that is inc
         <span class="property-type">string</span>
     </dt>
     <dd>The unique name of the resource.</dd><dt
-        class="property-required" title="Required">
+        class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">InstanceTemplateArgs</a></span>
@@ -81,7 +81,7 @@ Creates an instance template in the specified project using the data that is inc
         <span class="property-type">str</span>
     </dt>
     <dd>The unique name of the resource.</dd><dt
-        class="property-required" title="Required">
+        class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">InstanceTemplateArgs</a></span>
@@ -102,7 +102,7 @@ Creates an instance template in the specified project using the data that is inc
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
@@ -111,7 +111,7 @@ Creates an instance template in the specified project using the data that is inc
         <span class="property-type">string</span>
     </dt>
     <dd>The unique name of the resource.</dd><dt
-        class="property-required" title="Required">
+        class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">InstanceTemplateArgs</a></span>
@@ -120,7 +120,7 @@ Creates an instance template in the specified project using the data that is inc
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
@@ -135,7 +135,7 @@ Creates an instance template in the specified project using the data that is inc
         <span class="property-type">string</span>
     </dt>
     <dd>The unique name of the resource.</dd><dt
-        class="property-required" title="Required">
+        class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">InstanceTemplateArgs</a></span>
@@ -161,15 +161,7 @@ The InstanceTemplate resource accepts the following [input]({{< relref "/docs/in
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="project_csharp">
-<a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -186,6 +178,14 @@ The InstanceTemplate resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the resource; provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="project_csharp">
+<a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="properties_csharp">
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -221,15 +221,7 @@ The InstanceTemplate resource accepts the following [input]({{< relref "/docs/in
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="project_go">
-<a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -246,6 +238,14 @@ The InstanceTemplate resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the resource; provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="project_go">
+<a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="properties_go">
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -281,15 +281,7 @@ The InstanceTemplate resource accepts the following [input]({{< relref "/docs/in
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="project_nodejs">
-<a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -306,6 +298,14 @@ The InstanceTemplate resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the resource; provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="project_nodejs">
+<a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="properties_nodejs">
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -341,15 +341,7 @@ The InstanceTemplate resource accepts the following [input]({{< relref "/docs/in
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="project_python">
-<a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -366,6 +358,14 @@ The InstanceTemplate resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the resource; provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="project_python">
+<a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="properties_python">
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -9038,6 +9038,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Specifies the availability domain (AD), which this instance should be scheduled on. The AD belongs to the spread GroupPlacementPolicy resource policy that has been assigned to the instance. Specify a value between 1-max count of availability domains in your GroupPlacementPolicy. See go/placement-policy-extension for more details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="currentcpus_csharp">
+<a href="#currentcpus_csharp" style="color: inherit; text-decoration: inherit;">Current<wbr>Cpus</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Current number of vCPUs available for VM. 0 or unset means default vCPUs of the current machine type.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="currentmemorymb_csharp">
+<a href="#currentmemorymb_csharp" style="color: inherit; text-decoration: inherit;">Current<wbr>Memory<wbr>Mb</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Current amount of memory (in MB) available for VM. 0 or unset means default amount of memory of the current machine type.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="hosterrortimeoutseconds_csharp">
 <a href="#hosterrortimeoutseconds_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Error<wbr>Timeout<wbr>Seconds</a>
 </span>
@@ -9137,6 +9153,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the availability domain (AD), which this instance should be scheduled on. The AD belongs to the spread GroupPlacementPolicy resource policy that has been assigned to the instance. Specify a value between 1-max count of availability domains in your GroupPlacementPolicy. See go/placement-policy-extension for more details.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="currentcpus_go">
+<a href="#currentcpus_go" style="color: inherit; text-decoration: inherit;">Current<wbr>Cpus</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Current number of vCPUs available for VM. 0 or unset means default vCPUs of the current machine type.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="currentmemorymb_go">
+<a href="#currentmemorymb_go" style="color: inherit; text-decoration: inherit;">Current<wbr>Memory<wbr>Mb</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Current amount of memory (in MB) available for VM. 0 or unset means default amount of memory of the current machine type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hosterrortimeoutseconds_go">
 <a href="#hosterrortimeoutseconds_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Error<wbr>Timeout<wbr>Seconds</a>
@@ -9238,6 +9270,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Specifies the availability domain (AD), which this instance should be scheduled on. The AD belongs to the spread GroupPlacementPolicy resource policy that has been assigned to the instance. Specify a value between 1-max count of availability domains in your GroupPlacementPolicy. See go/placement-policy-extension for more details.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="currentcpus_nodejs">
+<a href="#currentcpus_nodejs" style="color: inherit; text-decoration: inherit;">current<wbr>Cpus</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Current number of vCPUs available for VM. 0 or unset means default vCPUs of the current machine type.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="currentmemorymb_nodejs">
+<a href="#currentmemorymb_nodejs" style="color: inherit; text-decoration: inherit;">current<wbr>Memory<wbr>Mb</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Current amount of memory (in MB) available for VM. 0 or unset means default amount of memory of the current machine type.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="hosterrortimeoutseconds_nodejs">
 <a href="#hosterrortimeoutseconds_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Error<wbr>Timeout<wbr>Seconds</a>
 </span>
@@ -9337,6 +9385,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the availability domain (AD), which this instance should be scheduled on. The AD belongs to the spread GroupPlacementPolicy resource policy that has been assigned to the instance. Specify a value between 1-max count of availability domains in your GroupPlacementPolicy. See go/placement-policy-extension for more details.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="current_cpus_python">
+<a href="#current_cpus_python" style="color: inherit; text-decoration: inherit;">current_<wbr>cpus</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Current number of vCPUs available for VM. 0 or unset means default vCPUs of the current machine type.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="current_memory_mb_python">
+<a href="#current_memory_mb_python" style="color: inherit; text-decoration: inherit;">current_<wbr>memory_<wbr>mb</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Current amount of memory (in MB) available for VM. 0 or unset means default amount of memory of the current machine type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="host_error_timeout_seconds_python">
 <a href="#host_error_timeout_seconds_python" style="color: inherit; text-decoration: inherit;">host_<wbr>error_<wbr>timeout_<wbr>seconds</a>
@@ -9768,6 +9832,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Specifies the availability domain (AD), which this instance should be scheduled on. The AD belongs to the spread GroupPlacementPolicy resource policy that has been assigned to the instance. Specify a value between 1-max count of availability domains in your GroupPlacementPolicy. See go/placement-policy-extension for more details.{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="currentcpus_csharp">
+<a href="#currentcpus_csharp" style="color: inherit; text-decoration: inherit;">Current<wbr>Cpus</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Current number of vCPUs available for VM. 0 or unset means default vCPUs of the current machine type.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="currentmemorymb_csharp">
+<a href="#currentmemorymb_csharp" style="color: inherit; text-decoration: inherit;">Current<wbr>Memory<wbr>Mb</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Current amount of memory (in MB) available for VM. 0 or unset means default amount of memory of the current machine type.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="hosterrortimeoutseconds_csharp">
 <a href="#hosterrortimeoutseconds_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Error<wbr>Timeout<wbr>Seconds</a>
 </span>
@@ -9867,6 +9947,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the availability domain (AD), which this instance should be scheduled on. The AD belongs to the spread GroupPlacementPolicy resource policy that has been assigned to the instance. Specify a value between 1-max count of availability domains in your GroupPlacementPolicy. See go/placement-policy-extension for more details.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="currentcpus_go">
+<a href="#currentcpus_go" style="color: inherit; text-decoration: inherit;">Current<wbr>Cpus</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Current number of vCPUs available for VM. 0 or unset means default vCPUs of the current machine type.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="currentmemorymb_go">
+<a href="#currentmemorymb_go" style="color: inherit; text-decoration: inherit;">Current<wbr>Memory<wbr>Mb</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Current amount of memory (in MB) available for VM. 0 or unset means default amount of memory of the current machine type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="hosterrortimeoutseconds_go">
 <a href="#hosterrortimeoutseconds_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Error<wbr>Timeout<wbr>Seconds</a>
@@ -9968,6 +10064,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Specifies the availability domain (AD), which this instance should be scheduled on. The AD belongs to the spread GroupPlacementPolicy resource policy that has been assigned to the instance. Specify a value between 1-max count of availability domains in your GroupPlacementPolicy. See go/placement-policy-extension for more details.{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="currentcpus_nodejs">
+<a href="#currentcpus_nodejs" style="color: inherit; text-decoration: inherit;">current<wbr>Cpus</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Current number of vCPUs available for VM. 0 or unset means default vCPUs of the current machine type.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="currentmemorymb_nodejs">
+<a href="#currentmemorymb_nodejs" style="color: inherit; text-decoration: inherit;">current<wbr>Memory<wbr>Mb</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Current amount of memory (in MB) available for VM. 0 or unset means default amount of memory of the current machine type.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="hosterrortimeoutseconds_nodejs">
 <a href="#hosterrortimeoutseconds_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Error<wbr>Timeout<wbr>Seconds</a>
 </span>
@@ -10067,6 +10179,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the availability domain (AD), which this instance should be scheduled on. The AD belongs to the spread GroupPlacementPolicy resource policy that has been assigned to the instance. Specify a value between 1-max count of availability domains in your GroupPlacementPolicy. See go/placement-policy-extension for more details.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="current_cpus_python">
+<a href="#current_cpus_python" style="color: inherit; text-decoration: inherit;">current_<wbr>cpus</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Current number of vCPUs available for VM. 0 or unset means default vCPUs of the current machine type.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="current_memory_mb_python">
+<a href="#current_memory_mb_python" style="color: inherit; text-decoration: inherit;">current_<wbr>memory_<wbr>mb</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Current amount of memory (in MB) available for VM. 0 or unset means default amount of memory of the current machine type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="host_error_timeout_seconds_python">
 <a href="#host_error_timeout_seconds_python" style="color: inherit; text-decoration: inherit;">host_<wbr>error_<wbr>timeout_<wbr>seconds</a>

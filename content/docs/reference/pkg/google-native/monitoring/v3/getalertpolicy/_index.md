@@ -60,8 +60,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
 </span>
@@ -80,8 +80,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
 </span>
@@ -100,8 +100,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
@@ -120,8 +120,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
@@ -707,7 +707,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#notificationratelimitresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Monitoring.<wbr>V3.<wbr>Inputs.<wbr>Notification<wbr>Rate<wbr>Limit<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Required for alert policies with a LogMatch condition.Providing this for alert policies that are not log-based is unimplemented.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Required for alert policies with a LogMatch condition.This limit is not implemented for alert policies that are not log-based.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -719,7 +719,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#notificationratelimitresponse">Notification<wbr>Rate<wbr>Limit<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Required for alert policies with a LogMatch condition.Providing this for alert policies that are not log-based is unimplemented.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Required for alert policies with a LogMatch condition.This limit is not implemented for alert policies that are not log-based.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -731,7 +731,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#notificationratelimitresponse">Notification<wbr>Rate<wbr>Limit<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Required for alert policies with a LogMatch condition.Providing this for alert policies that are not log-based is unimplemented.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Required for alert policies with a LogMatch condition.This limit is not implemented for alert policies that are not log-based.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -743,7 +743,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#notificationratelimitresponse">Notification<wbr>Rate<wbr>Limit<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Required for alert policies with a LogMatch condition.Providing this for alert policies that are not log-based is unimplemented.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Required for alert policies with a LogMatch condition.This limit is not implemented for alert policies that are not log-based.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="conditionresponse">Condition<wbr>Response</h4>

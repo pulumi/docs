@@ -60,8 +60,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
 </span>
@@ -80,8 +80,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
 </span>
@@ -100,8 +100,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
@@ -120,8 +120,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
@@ -150,6 +150,14 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional. The name of delegated administrator account used to perform Active Directory operations. If not specified, `setupadmin` will be used.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="auditlogsenabled_csharp">
+<a href="#auditlogsenabled_csharp" style="color: inherit; text-decoration: inherit;">Audit<wbr>Logs<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Optional. Configuration for audit logs. True if audit logs are enabled, else false. Default is audit logs disabled.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="authorizednetworks_csharp">
 <a href="#authorizednetworks_csharp" style="color: inherit; text-decoration: inherit;">Authorized<wbr>Networks</a>
@@ -251,6 +259,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Optional. The name of delegated administrator account used to perform Active Directory operations. If not specified, `setupadmin` will be used.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="auditlogsenabled_go">
+<a href="#auditlogsenabled_go" style="color: inherit; text-decoration: inherit;">Audit<wbr>Logs<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Optional. Configuration for audit logs. True if audit logs are enabled, else false. Default is audit logs disabled.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="authorizednetworks_go">
 <a href="#authorizednetworks_go" style="color: inherit; text-decoration: inherit;">Authorized<wbr>Networks</a>
 </span>
@@ -351,6 +367,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Optional. The name of delegated administrator account used to perform Active Directory operations. If not specified, `setupadmin` will be used.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="auditlogsenabled_nodejs">
+<a href="#auditlogsenabled_nodejs" style="color: inherit; text-decoration: inherit;">audit<wbr>Logs<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Optional. Configuration for audit logs. True if audit logs are enabled, else false. Default is audit logs disabled.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="authorizednetworks_nodejs">
 <a href="#authorizednetworks_nodejs" style="color: inherit; text-decoration: inherit;">authorized<wbr>Networks</a>
 </span>
@@ -450,6 +474,14 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional. The name of delegated administrator account used to perform Active Directory operations. If not specified, `setupadmin` will be used.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="audit_logs_enabled_python">
+<a href="#audit_logs_enabled_python" style="color: inherit; text-decoration: inherit;">audit_<wbr>logs_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Optional. Configuration for audit logs. True if audit logs are enabled, else false. Default is audit logs disabled.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="authorized_networks_python">
 <a href="#authorized_networks_python" style="color: inherit; text-decoration: inherit;">authorized_<wbr>networks</a>

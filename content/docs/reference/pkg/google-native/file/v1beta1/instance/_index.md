@@ -44,7 +44,7 @@ Auto-naming is currently not supported for this resource.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewInstance</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">InstanceArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Instance</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewInstance</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">InstanceArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Instance</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -105,7 +105,7 @@ Auto-naming is currently not supported for this resource.
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
@@ -123,7 +123,7 @@ Auto-naming is currently not supported for this resource.
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
@@ -172,22 +172,6 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="location_csharp">
-<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="project_csharp">
-<a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
@@ -222,6 +206,14 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
     </dt>
     <dd>{{% md %}}Resource labels to represent user provided metadata.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="location_csharp">
+<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="networks_csharp">
 <a href="#networks_csharp" style="color: inherit; text-decoration: inherit;">Networks</a>
 </span>
@@ -229,6 +221,14 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#networkconfig">List&lt;Pulumi.<wbr>Google<wbr>Native.<wbr>File.<wbr>V1Beta1.<wbr>Inputs.<wbr>Network<wbr>Config<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}VPC networks to which the instance is connected. For this version, only a single network is supported.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="project_csharp">
+<a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tier_csharp">
 <a href="#tier_csharp" style="color: inherit; text-decoration: inherit;">Tier</a>
@@ -244,22 +244,6 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
             title="Required">
         <span id="instanceid_go">
 <a href="#instanceid_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="location_go">
-<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="project_go">
-<a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -298,6 +282,14 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
     </dt>
     <dd>{{% md %}}Resource labels to represent user provided metadata.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="location_go">
+<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="networks_go">
 <a href="#networks_go" style="color: inherit; text-decoration: inherit;">Networks</a>
 </span>
@@ -305,6 +297,14 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#networkconfig">[]Network<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}VPC networks to which the instance is connected. For this version, only a single network is supported.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="project_go">
+<a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tier_go">
 <a href="#tier_go" style="color: inherit; text-decoration: inherit;">Tier</a>
@@ -320,22 +320,6 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
             title="Required">
         <span id="instanceid_nodejs">
 <a href="#instanceid_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="location_nodejs">
-<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="project_nodejs">
-<a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -374,6 +358,14 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
     </dt>
     <dd>{{% md %}}Resource labels to represent user provided metadata.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="location_nodejs">
+<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="networks_nodejs">
 <a href="#networks_nodejs" style="color: inherit; text-decoration: inherit;">networks</a>
 </span>
@@ -381,6 +373,14 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#networkconfig">Network<wbr>Config<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}VPC networks to which the instance is connected. For this version, only a single network is supported.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="project_nodejs">
+<a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tier_nodejs">
 <a href="#tier_nodejs" style="color: inherit; text-decoration: inherit;">tier</a>
@@ -396,22 +396,6 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
             title="Required">
         <span id="instance_id_python">
 <a href="#instance_id_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="location_python">
-<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="project_python">
-<a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -450,6 +434,14 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
     </dt>
     <dd>{{% md %}}Resource labels to represent user provided metadata.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="location_python">
+<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="networks_python">
 <a href="#networks_python" style="color: inherit; text-decoration: inherit;">networks</a>
 </span>
@@ -457,6 +449,14 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#networkconfig">Sequence[Network<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}VPC networks to which the instance is connected. For this version, only a single network is supported.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="project_python">
+<a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tier_python">
 <a href="#tier_python" style="color: inherit; text-decoration: inherit;">tier</a>
@@ -711,7 +711,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the file share (must be 16 characters or less).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The name of the file share (must be 32 characters or less for High Scale SSD tier, 16 characters or less for all other tiers).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nfsexportoptions_csharp">
 <a href="#nfsexportoptions_csharp" style="color: inherit; text-decoration: inherit;">Nfs<wbr>Export<wbr>Options</a>
@@ -747,7 +747,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the file share (must be 16 characters or less).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The name of the file share (must be 32 characters or less for High Scale SSD tier, 16 characters or less for all other tiers).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nfsexportoptions_go">
 <a href="#nfsexportoptions_go" style="color: inherit; text-decoration: inherit;">Nfs<wbr>Export<wbr>Options</a>
@@ -783,7 +783,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the file share (must be 16 characters or less).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The name of the file share (must be 32 characters or less for High Scale SSD tier, 16 characters or less for all other tiers).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nfsexportoptions_nodejs">
 <a href="#nfsexportoptions_nodejs" style="color: inherit; text-decoration: inherit;">nfs<wbr>Export<wbr>Options</a>
@@ -819,7 +819,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the file share (must be 16 characters or less).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The name of the file share (must be 32 characters or less for High Scale SSD tier, 16 characters or less for all other tiers).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nfs_export_options_python">
 <a href="#nfs_export_options_python" style="color: inherit; text-decoration: inherit;">nfs_<wbr>export_<wbr>options</a>
@@ -857,7 +857,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the file share (must be 16 characters or less).{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The name of the file share (must be 32 characters or less for High Scale SSD tier, 16 characters or less for all other tiers).{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="nfsexportoptions_csharp">
 <a href="#nfsexportoptions_csharp" style="color: inherit; text-decoration: inherit;">Nfs<wbr>Export<wbr>Options</a>
@@ -893,7 +893,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the file share (must be 16 characters or less).{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The name of the file share (must be 32 characters or less for High Scale SSD tier, 16 characters or less for all other tiers).{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="nfsexportoptions_go">
 <a href="#nfsexportoptions_go" style="color: inherit; text-decoration: inherit;">Nfs<wbr>Export<wbr>Options</a>
@@ -929,7 +929,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the file share (must be 16 characters or less).{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The name of the file share (must be 32 characters or less for High Scale SSD tier, 16 characters or less for all other tiers).{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="nfsexportoptions_nodejs">
 <a href="#nfsexportoptions_nodejs" style="color: inherit; text-decoration: inherit;">nfs<wbr>Export<wbr>Options</a>
@@ -965,7 +965,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the file share (must be 16 characters or less).{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The name of the file share (must be 32 characters or less for High Scale SSD tier, 16 characters or less for all other tiers).{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="nfs_export_options_python">
 <a href="#nfs_export_options_python" style="color: inherit; text-decoration: inherit;">nfs_<wbr>export_<wbr>options</a>
@@ -993,7 +993,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>PREMIUM{{% md %}}PREMIUM tier. BASIC_SSD is the preferred term for this tier.{{% /md %}}</dd><dt>Basic<wbr>Hdd</dt>
     <dd>BASIC_HDD{{% md %}}BASIC instances offer a maximum capacity of 63.9 TB. BASIC_HDD is an alias for STANDARD Tier, offering economical performance backed by HDD.{{% /md %}}</dd><dt>Basic<wbr>Ssd</dt>
     <dd>BASIC_SSD{{% md %}}BASIC instances offer a maximum capacity of 63.9 TB. BASIC_SSD is an alias for PREMIUM Tier, and offers improved performance backed by SSD.{{% /md %}}</dd><dt>High<wbr>Scale<wbr>Ssd</dt>
-    <dd>HIGH_SCALE_SSD{{% md %}}HIGH_SCALE instances offer expanded capacity and performance scaling capabilities.{{% /md %}}</dd></dl>
+    <dd>HIGH_SCALE_SSD{{% md %}}HIGH_SCALE instances offer expanded capacity and performance scaling capabilities.{{% /md %}}</dd><dt>Enterprise</dt>
+    <dd>ENTERPRISE{{% md %}}ENTERPRISE instances offer the features and availability needed for mission-critical workloads.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1003,7 +1004,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>PREMIUM{{% md %}}PREMIUM tier. BASIC_SSD is the preferred term for this tier.{{% /md %}}</dd><dt>Instance<wbr>Tier<wbr>Basic<wbr>Hdd</dt>
     <dd>BASIC_HDD{{% md %}}BASIC instances offer a maximum capacity of 63.9 TB. BASIC_HDD is an alias for STANDARD Tier, offering economical performance backed by HDD.{{% /md %}}</dd><dt>Instance<wbr>Tier<wbr>Basic<wbr>Ssd</dt>
     <dd>BASIC_SSD{{% md %}}BASIC instances offer a maximum capacity of 63.9 TB. BASIC_SSD is an alias for PREMIUM Tier, and offers improved performance backed by SSD.{{% /md %}}</dd><dt>Instance<wbr>Tier<wbr>High<wbr>Scale<wbr>Ssd</dt>
-    <dd>HIGH_SCALE_SSD{{% md %}}HIGH_SCALE instances offer expanded capacity and performance scaling capabilities.{{% /md %}}</dd></dl>
+    <dd>HIGH_SCALE_SSD{{% md %}}HIGH_SCALE instances offer expanded capacity and performance scaling capabilities.{{% /md %}}</dd><dt>Instance<wbr>Tier<wbr>Enterprise</dt>
+    <dd>ENTERPRISE{{% md %}}ENTERPRISE instances offer the features and availability needed for mission-critical workloads.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1013,7 +1015,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>PREMIUM{{% md %}}PREMIUM tier. BASIC_SSD is the preferred term for this tier.{{% /md %}}</dd><dt>Basic<wbr>Hdd</dt>
     <dd>BASIC_HDD{{% md %}}BASIC instances offer a maximum capacity of 63.9 TB. BASIC_HDD is an alias for STANDARD Tier, offering economical performance backed by HDD.{{% /md %}}</dd><dt>Basic<wbr>Ssd</dt>
     <dd>BASIC_SSD{{% md %}}BASIC instances offer a maximum capacity of 63.9 TB. BASIC_SSD is an alias for PREMIUM Tier, and offers improved performance backed by SSD.{{% /md %}}</dd><dt>High<wbr>Scale<wbr>Ssd</dt>
-    <dd>HIGH_SCALE_SSD{{% md %}}HIGH_SCALE instances offer expanded capacity and performance scaling capabilities.{{% /md %}}</dd></dl>
+    <dd>HIGH_SCALE_SSD{{% md %}}HIGH_SCALE instances offer expanded capacity and performance scaling capabilities.{{% /md %}}</dd><dt>Enterprise</dt>
+    <dd>ENTERPRISE{{% md %}}ENTERPRISE instances offer the features and availability needed for mission-critical workloads.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1023,13 +1026,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>PREMIUM{{% md %}}PREMIUM tier. BASIC_SSD is the preferred term for this tier.{{% /md %}}</dd><dt>BASIC_HDD</dt>
     <dd>BASIC_HDD{{% md %}}BASIC instances offer a maximum capacity of 63.9 TB. BASIC_HDD is an alias for STANDARD Tier, offering economical performance backed by HDD.{{% /md %}}</dd><dt>BASIC_SSD</dt>
     <dd>BASIC_SSD{{% md %}}BASIC instances offer a maximum capacity of 63.9 TB. BASIC_SSD is an alias for PREMIUM Tier, and offers improved performance backed by SSD.{{% /md %}}</dd><dt>HIGH_SCALE_SSD</dt>
-    <dd>HIGH_SCALE_SSD{{% md %}}HIGH_SCALE instances offer expanded capacity and performance scaling capabilities.{{% /md %}}</dd></dl>
+    <dd>HIGH_SCALE_SSD{{% md %}}HIGH_SCALE instances offer expanded capacity and performance scaling capabilities.{{% /md %}}</dd><dt>ENTERPRISE</dt>
+    <dd>ENTERPRISE{{% md %}}ENTERPRISE instances offer the features and availability needed for mission-critical workloads.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="networkconfig">Network<wbr>Config</h4>
 
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="connectmode_csharp">
+<a href="#connectmode_csharp" style="color: inherit; text-decoration: inherit;">Connect<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#networkconfigconnectmode">Pulumi.<wbr>Google<wbr>Native.<wbr>File.<wbr>V1Beta1.<wbr>Network<wbr>Config<wbr>Connect<wbr>Mode</a></span>
+    </dt>
+    <dd>{{% md %}}The network connect mode of the Filestore instance. If not provided, the connect mode defaults to DIRECT_PEERING.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="modes_csharp">
 <a href="#modes_csharp" style="color: inherit; text-decoration: inherit;">Modes</a>
@@ -1059,6 +1071,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="connectmode_go">
+<a href="#connectmode_go" style="color: inherit; text-decoration: inherit;">Connect<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#networkconfigconnectmode">Network<wbr>Config<wbr>Connect<wbr>Mode</a></span>
+    </dt>
+    <dd>{{% md %}}The network connect mode of the Filestore instance. If not provided, the connect mode defaults to DIRECT_PEERING.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="modes_go">
 <a href="#modes_go" style="color: inherit; text-decoration: inherit;">Modes</a>
 </span>
@@ -1086,6 +1106,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="connectmode_nodejs">
+<a href="#connectmode_nodejs" style="color: inherit; text-decoration: inherit;">connect<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#networkconfigconnectmode">Network<wbr>Config<wbr>Connect<wbr>Mode</a></span>
+    </dt>
+    <dd>{{% md %}}The network connect mode of the Filestore instance. If not provided, the connect mode defaults to DIRECT_PEERING.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="modes_nodejs">
 <a href="#modes_nodejs" style="color: inherit; text-decoration: inherit;">modes</a>
@@ -1115,6 +1143,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="connect_mode_python">
+<a href="#connect_mode_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#networkconfigconnectmode">Network<wbr>Config<wbr>Connect<wbr>Mode</a></span>
+    </dt>
+    <dd>{{% md %}}The network connect mode of the Filestore instance. If not provided, the connect mode defaults to DIRECT_PEERING.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="modes_python">
 <a href="#modes_python" style="color: inherit; text-decoration: inherit;">modes</a>
 </span>
@@ -1138,6 +1174,36 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A /29 CIDR block for Basic or a /23 CIDR block for High Scale in one of the [internal IP address ranges](https://www.arin.net/knowledge/address_filters.html) that identifies the range of IP addresses reserved for this instance. For example, 10.0.0.0/29 or 192.168.0.0/23. The range you specify can't overlap with either existing subnets or assigned IP address ranges for other Cloud Filestore instances in the selected VPC network.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="networkconfigconnectmode">Network<wbr>Config<wbr>Connect<wbr>Mode</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Connect<wbr>Mode<wbr>Unspecified</dt>
+    <dd>CONNECT_MODE_UNSPECIFIED{{% md %}}ConnectMode not set.{{% /md %}}</dd><dt>Direct<wbr>Peering</dt>
+    <dd>DIRECT_PEERING{{% md %}}Connect via direct peering to the Filestore service.{{% /md %}}</dd><dt>Private<wbr>Service<wbr>Access</dt>
+    <dd>PRIVATE_SERVICE_ACCESS{{% md %}}Connect to your Filestore instance using Private Service Access. Private services access provides an IP address range for multiple Google Cloud services, including Filestore.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Network<wbr>Config<wbr>Connect<wbr>Mode<wbr>Connect<wbr>Mode<wbr>Unspecified</dt>
+    <dd>CONNECT_MODE_UNSPECIFIED{{% md %}}ConnectMode not set.{{% /md %}}</dd><dt>Network<wbr>Config<wbr>Connect<wbr>Mode<wbr>Direct<wbr>Peering</dt>
+    <dd>DIRECT_PEERING{{% md %}}Connect via direct peering to the Filestore service.{{% /md %}}</dd><dt>Network<wbr>Config<wbr>Connect<wbr>Mode<wbr>Private<wbr>Service<wbr>Access</dt>
+    <dd>PRIVATE_SERVICE_ACCESS{{% md %}}Connect to your Filestore instance using Private Service Access. Private services access provides an IP address range for multiple Google Cloud services, including Filestore.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Connect<wbr>Mode<wbr>Unspecified</dt>
+    <dd>CONNECT_MODE_UNSPECIFIED{{% md %}}ConnectMode not set.{{% /md %}}</dd><dt>Direct<wbr>Peering</dt>
+    <dd>DIRECT_PEERING{{% md %}}Connect via direct peering to the Filestore service.{{% /md %}}</dd><dt>Private<wbr>Service<wbr>Access</dt>
+    <dd>PRIVATE_SERVICE_ACCESS{{% md %}}Connect to your Filestore instance using Private Service Access. Private services access provides an IP address range for multiple Google Cloud services, including Filestore.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>CONNECT_MODE_UNSPECIFIED</dt>
+    <dd>CONNECT_MODE_UNSPECIFIED{{% md %}}ConnectMode not set.{{% /md %}}</dd><dt>DIRECT_PEERING</dt>
+    <dd>DIRECT_PEERING{{% md %}}Connect via direct peering to the Filestore service.{{% /md %}}</dd><dt>PRIVATE_SERVICE_ACCESS</dt>
+    <dd>PRIVATE_SERVICE_ACCESS{{% md %}}Connect to your Filestore instance using Private Service Access. Private services access provides an IP address range for multiple Google Cloud services, including Filestore.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="networkconfigmodesitem">Network<wbr>Config<wbr>Modes<wbr>Item</h4>
@@ -1170,6 +1236,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="connectmode_csharp">
+<a href="#connectmode_csharp" style="color: inherit; text-decoration: inherit;">Connect<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The network connect mode of the Filestore instance. If not provided, the connect mode defaults to DIRECT_PEERING.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ipaddresses_csharp">
 <a href="#ipaddresses_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Addresses</a>
@@ -1207,6 +1281,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
+        <span id="connectmode_go">
+<a href="#connectmode_go" style="color: inherit; text-decoration: inherit;">Connect<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The network connect mode of the Filestore instance. If not provided, the connect mode defaults to DIRECT_PEERING.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="ipaddresses_go">
 <a href="#ipaddresses_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Addresses</a>
 </span>
@@ -1243,6 +1325,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
+        <span id="connectmode_nodejs">
+<a href="#connectmode_nodejs" style="color: inherit; text-decoration: inherit;">connect<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The network connect mode of the Filestore instance. If not provided, the connect mode defaults to DIRECT_PEERING.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="ipaddresses_nodejs">
 <a href="#ipaddresses_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Addresses</a>
 </span>
@@ -1278,6 +1368,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="connect_mode_python">
+<a href="#connect_mode_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The network connect mode of the Filestore instance. If not provided, the connect mode defaults to DIRECT_PEERING.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ip_addresses_python">
 <a href="#ip_addresses_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>addresses</a>

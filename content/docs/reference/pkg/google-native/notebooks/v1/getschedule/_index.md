@@ -63,16 +63,16 @@ The following arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="project_csharp">
-<a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
+        <span id="scheduleid_csharp">
+<a href="#scheduleid_csharp" style="color: inherit; text-decoration: inherit;">Schedule<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="scheduleid_csharp">
-<a href="#scheduleid_csharp" style="color: inherit; text-decoration: inherit;">Schedule<wbr>Id</a>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="project_csharp">
+<a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -91,16 +91,16 @@ The following arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="project_go">
-<a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
+        <span id="scheduleid_go">
+<a href="#scheduleid_go" style="color: inherit; text-decoration: inherit;">Schedule<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="scheduleid_go">
-<a href="#scheduleid_go" style="color: inherit; text-decoration: inherit;">Schedule<wbr>Id</a>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="project_go">
+<a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -119,16 +119,16 @@ The following arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="project_nodejs">
-<a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
+        <span id="scheduleid_nodejs">
+<a href="#scheduleid_nodejs" style="color: inherit; text-decoration: inherit;">schedule<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="scheduleid_nodejs">
-<a href="#scheduleid_nodejs" style="color: inherit; text-decoration: inherit;">schedule<wbr>Id</a>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="project_nodejs">
+<a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -147,16 +147,16 @@ The following arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="project_python">
-<a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
+        <span id="schedule_id_python">
+<a href="#schedule_id_python" style="color: inherit; text-decoration: inherit;">schedule_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="schedule_id_python">
-<a href="#schedule_id_python" style="color: inherit; text-decoration: inherit;">schedule_<wbr>id</a>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="project_python">
+<a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -554,6 +554,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}execute metadata including name, hardware spec, region, labels, etc.{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="joburi_csharp">
+<a href="#joburi_csharp" style="color: inherit; text-decoration: inherit;">Job<wbr>Uri</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The URI of the external job used to execute the notebook.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
@@ -621,6 +629,14 @@ The following output properties are available:
         <span class="property-type"><a href="#executiontemplateresponse">Execution<wbr>Template<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}execute metadata including name, hardware spec, region, labels, etc.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="joburi_go">
+<a href="#joburi_go" style="color: inherit; text-decoration: inherit;">Job<wbr>Uri</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The URI of the external job used to execute the notebook.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -690,6 +706,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}execute metadata including name, hardware spec, region, labels, etc.{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="joburi_nodejs">
+<a href="#joburi_nodejs" style="color: inherit; text-decoration: inherit;">job<wbr>Uri</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The URI of the external job used to execute the notebook.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
@@ -757,6 +781,14 @@ The following output properties are available:
         <span class="property-type"><a href="#executiontemplateresponse">Execution<wbr>Template<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}execute metadata including name, hardware spec, region, labels, etc.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="job_uri_python">
+<a href="#job_uri_python" style="color: inherit; text-decoration: inherit;">job_<wbr>uri</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The URI of the external job used to execute the notebook.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -862,14 +894,6 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Parameters to be overridden in the notebook during execution. Ref https://papermill.readthedocs.io/en/latest/usage-parameterize.html on how to specifying parameters in the input notebook and pass them here in an YAML file. Ex: gs://notebook_user/scheduled_notebooks/sentiment_notebook_params.yaml{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="scaletier_csharp">
-<a href="#scaletier_csharp" style="color: inherit; text-decoration: inherit;">Scale<wbr>Tier</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Scale tier of the hardware used for notebook execution.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="serviceaccount_csharp">
 <a href="#serviceaccount_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Account</a>
 </span>
@@ -945,14 +969,6 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Parameters to be overridden in the notebook during execution. Ref https://papermill.readthedocs.io/en/latest/usage-parameterize.html on how to specifying parameters in the input notebook and pass them here in an YAML file. Ex: gs://notebook_user/scheduled_notebooks/sentiment_notebook_params.yaml{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="scaletier_go">
-<a href="#scaletier_go" style="color: inherit; text-decoration: inherit;">Scale<wbr>Tier</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Scale tier of the hardware used for notebook execution.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="serviceaccount_go">
 <a href="#serviceaccount_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Account</a>
@@ -1030,14 +1046,6 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Parameters to be overridden in the notebook during execution. Ref https://papermill.readthedocs.io/en/latest/usage-parameterize.html on how to specifying parameters in the input notebook and pass them here in an YAML file. Ex: gs://notebook_user/scheduled_notebooks/sentiment_notebook_params.yaml{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="scaletier_nodejs">
-<a href="#scaletier_nodejs" style="color: inherit; text-decoration: inherit;">scale<wbr>Tier</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Scale tier of the hardware used for notebook execution.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="serviceaccount_nodejs">
 <a href="#serviceaccount_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Account</a>
 </span>
@@ -1113,14 +1121,6 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Parameters to be overridden in the notebook during execution. Ref https://papermill.readthedocs.io/en/latest/usage-parameterize.html on how to specifying parameters in the input notebook and pass them here in an YAML file. Ex: gs://notebook_user/scheduled_notebooks/sentiment_notebook_params.yaml{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="scale_tier_python">
-<a href="#scale_tier_python" style="color: inherit; text-decoration: inherit;">scale_<wbr>tier</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Scale tier of the hardware used for notebook execution.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="service_account_python">
 <a href="#service_account_python" style="color: inherit; text-decoration: inherit;">service_<wbr>account</a>

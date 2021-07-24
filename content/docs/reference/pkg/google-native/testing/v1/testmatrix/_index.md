@@ -43,7 +43,7 @@ Auto-naming is currently not supported for this resource.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewTestMatrix</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">TestMatrixArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">TestMatrix</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewTestMatrix</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">TestMatrixArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">TestMatrix</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -104,7 +104,7 @@ Auto-naming is currently not supported for this resource.
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
@@ -122,7 +122,7 @@ Auto-naming is currently not supported for this resource.
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
@@ -173,14 +173,6 @@ The TestMatrix resource accepts the following [input]({{< relref "/docs/intro/co
     </dt>
     <dd>{{% md %}}The devices the tests are being executed on.{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="project_csharp">
-<a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The cloud project that owns the test matrix.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="resultstorage_csharp">
 <a href="#resultstorage_csharp" style="color: inherit; text-decoration: inherit;">Result<wbr>Storage</a>
 </span>
@@ -221,6 +213,14 @@ The TestMatrix resource accepts the following [input]({{< relref "/docs/intro/co
     </dt>
     <dd>{{% md %}}The number of times a TestExecution should be re-attempted if one or more of its test cases fail for any reason. The maximum number of reruns allowed is 10. Default is 0, which implies no reruns.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="project_csharp">
+<a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The cloud project that owns the test matrix.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="requestid_csharp">
 <a href="#requestid_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Id</a>
 </span>
@@ -240,14 +240,6 @@ The TestMatrix resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type"><a href="#environmentmatrix">Environment<wbr>Matrix<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The devices the tests are being executed on.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="project_go">
-<a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The cloud project that owns the test matrix.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resultstorage_go">
 <a href="#resultstorage_go" style="color: inherit; text-decoration: inherit;">Result<wbr>Storage</a>
@@ -289,6 +281,14 @@ The TestMatrix resource accepts the following [input]({{< relref "/docs/intro/co
     </dt>
     <dd>{{% md %}}The number of times a TestExecution should be re-attempted if one or more of its test cases fail for any reason. The maximum number of reruns allowed is 10. Default is 0, which implies no reruns.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="project_go">
+<a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The cloud project that owns the test matrix.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="requestid_go">
 <a href="#requestid_go" style="color: inherit; text-decoration: inherit;">Request<wbr>Id</a>
 </span>
@@ -308,14 +308,6 @@ The TestMatrix resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type"><a href="#environmentmatrix">Environment<wbr>Matrix<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The devices the tests are being executed on.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="project_nodejs">
-<a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The cloud project that owns the test matrix.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resultstorage_nodejs">
 <a href="#resultstorage_nodejs" style="color: inherit; text-decoration: inherit;">result<wbr>Storage</a>
@@ -357,6 +349,14 @@ The TestMatrix resource accepts the following [input]({{< relref "/docs/intro/co
     </dt>
     <dd>{{% md %}}The number of times a TestExecution should be re-attempted if one or more of its test cases fail for any reason. The maximum number of reruns allowed is 10. Default is 0, which implies no reruns.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="project_nodejs">
+<a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The cloud project that owns the test matrix.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="requestid_nodejs">
 <a href="#requestid_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Id</a>
 </span>
@@ -376,14 +376,6 @@ The TestMatrix resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type"><a href="#environmentmatrix">Environment<wbr>Matrix<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The devices the tests are being executed on.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="project_python">
-<a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The cloud project that owns the test matrix.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="result_storage_python">
 <a href="#result_storage_python" style="color: inherit; text-decoration: inherit;">result_<wbr>storage</a>
@@ -424,6 +416,14 @@ The TestMatrix resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of times a TestExecution should be re-attempted if one or more of its test cases fail for any reason. The maximum number of reruns allowed is 10. Default is 0, which implies no reruns.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="project_python">
+<a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The cloud project that owns the test matrix.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="request_id_python">
 <a href="#request_id_python" style="color: inherit; text-decoration: inherit;">request_<wbr>id</a>
@@ -2178,6 +2178,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}A set of directives Robo should apply during the crawl. This allows users to customize the crawl. For example, the username and password for a test account can be provided.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="robomode_csharp">
+<a href="#robomode_csharp" style="color: inherit; text-decoration: inherit;">Robo<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#androidrobotestrobomode">Pulumi.<wbr>Google<wbr>Native.<wbr>Testing.<wbr>V1.<wbr>Android<wbr>Robo<wbr>Test<wbr>Robo<wbr>Mode</a></span>
+    </dt>
+    <dd>{{% md %}}The mode in which Robo should run. Most clients should allow the server to populate this field automatically.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="roboscript_csharp">
 <a href="#roboscript_csharp" style="color: inherit; text-decoration: inherit;">Robo<wbr>Script</a>
 </span>
@@ -2253,6 +2261,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#robodirective">[]Robo<wbr>Directive</a></span>
     </dt>
     <dd>{{% md %}}A set of directives Robo should apply during the crawl. This allows users to customize the crawl. For example, the username and password for a test account can be provided.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="robomode_go">
+<a href="#robomode_go" style="color: inherit; text-decoration: inherit;">Robo<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#androidrobotestrobomode">Android<wbr>Robo<wbr>Test<wbr>Robo<wbr>Mode</a></span>
+    </dt>
+    <dd>{{% md %}}The mode in which Robo should run. Most clients should allow the server to populate this field automatically.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="roboscript_go">
 <a href="#roboscript_go" style="color: inherit; text-decoration: inherit;">Robo<wbr>Script</a>
@@ -2330,6 +2346,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}A set of directives Robo should apply during the crawl. This allows users to customize the crawl. For example, the username and password for a test account can be provided.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="robomode_nodejs">
+<a href="#robomode_nodejs" style="color: inherit; text-decoration: inherit;">robo<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#androidrobotestrobomode">Android<wbr>Robo<wbr>Test<wbr>Robo<wbr>Mode</a></span>
+    </dt>
+    <dd>{{% md %}}The mode in which Robo should run. Most clients should allow the server to populate this field automatically.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="roboscript_nodejs">
 <a href="#roboscript_nodejs" style="color: inherit; text-decoration: inherit;">robo<wbr>Script</a>
 </span>
@@ -2405,6 +2429,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#robodirective">Sequence[Robo<wbr>Directive]</a></span>
     </dt>
     <dd>{{% md %}}A set of directives Robo should apply during the crawl. This allows users to customize the crawl. For example, the username and password for a test account can be provided.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="robo_mode_python">
+<a href="#robo_mode_python" style="color: inherit; text-decoration: inherit;">robo_<wbr>mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#androidrobotestrobomode">Android<wbr>Robo<wbr>Test<wbr>Robo<wbr>Mode</a></span>
+    </dt>
+    <dd>{{% md %}}The mode in which Robo should run. Most clients should allow the server to populate this field automatically.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="robo_script_python">
 <a href="#robo_script_python" style="color: inherit; text-decoration: inherit;">robo_<wbr>script</a>
@@ -2484,6 +2516,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}A set of directives Robo should apply during the crawl. This allows users to customize the crawl. For example, the username and password for a test account can be provided.{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="robomode_csharp">
+<a href="#robomode_csharp" style="color: inherit; text-decoration: inherit;">Robo<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The mode in which Robo should run. Most clients should allow the server to populate this field automatically.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="roboscript_csharp">
 <a href="#roboscript_csharp" style="color: inherit; text-decoration: inherit;">Robo<wbr>Script</a>
 </span>
@@ -2559,6 +2599,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#robodirectiveresponse">[]Robo<wbr>Directive<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}A set of directives Robo should apply during the crawl. This allows users to customize the crawl. For example, the username and password for a test account can be provided.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="robomode_go">
+<a href="#robomode_go" style="color: inherit; text-decoration: inherit;">Robo<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The mode in which Robo should run. Most clients should allow the server to populate this field automatically.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="roboscript_go">
 <a href="#roboscript_go" style="color: inherit; text-decoration: inherit;">Robo<wbr>Script</a>
@@ -2636,6 +2684,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}A set of directives Robo should apply during the crawl. This allows users to customize the crawl. For example, the username and password for a test account can be provided.{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="robomode_nodejs">
+<a href="#robomode_nodejs" style="color: inherit; text-decoration: inherit;">robo<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The mode in which Robo should run. Most clients should allow the server to populate this field automatically.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="roboscript_nodejs">
 <a href="#roboscript_nodejs" style="color: inherit; text-decoration: inherit;">robo<wbr>Script</a>
 </span>
@@ -2712,6 +2768,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}A set of directives Robo should apply during the crawl. This allows users to customize the crawl. For example, the username and password for a test account can be provided.{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="robo_mode_python">
+<a href="#robo_mode_python" style="color: inherit; text-decoration: inherit;">robo_<wbr>mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The mode in which Robo should run. Most clients should allow the server to populate this field automatically.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="robo_script_python">
 <a href="#robo_script_python" style="color: inherit; text-decoration: inherit;">robo_<wbr>script</a>
 </span>
@@ -2727,6 +2791,36 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#robostartingintentresponse">Sequence[Robo<wbr>Starting<wbr>Intent<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The intents used to launch the app for the crawl. If none are provided, then the main launcher activity is launched. If some are provided, then only those provided are launched (the main launcher activity must be provided explicitly).{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="androidrobotestrobomode">Android<wbr>Robo<wbr>Test<wbr>Robo<wbr>Mode</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Robo<wbr>Mode<wbr>Unspecified</dt>
+    <dd>ROBO_MODE_UNSPECIFIED{{% md %}}LINT.IfChange This means that the server should choose the mode. Recommended.{{% /md %}}</dd><dt>Robo<wbr>Version1</dt>
+    <dd>ROBO_VERSION_1{{% md %}}Runs Robo in UIAutomator-only mode without app resigning{{% /md %}}</dd><dt>Robo<wbr>Version2</dt>
+    <dd>ROBO_VERSION_2{{% md %}}Runs Robo in standard Espresso with UIAutomator fallback{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Android<wbr>Robo<wbr>Test<wbr>Robo<wbr>Mode<wbr>Robo<wbr>Mode<wbr>Unspecified</dt>
+    <dd>ROBO_MODE_UNSPECIFIED{{% md %}}LINT.IfChange This means that the server should choose the mode. Recommended.{{% /md %}}</dd><dt>Android<wbr>Robo<wbr>Test<wbr>Robo<wbr>Mode<wbr>Robo<wbr>Version1</dt>
+    <dd>ROBO_VERSION_1{{% md %}}Runs Robo in UIAutomator-only mode without app resigning{{% /md %}}</dd><dt>Android<wbr>Robo<wbr>Test<wbr>Robo<wbr>Mode<wbr>Robo<wbr>Version2</dt>
+    <dd>ROBO_VERSION_2{{% md %}}Runs Robo in standard Espresso with UIAutomator fallback{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Robo<wbr>Mode<wbr>Unspecified</dt>
+    <dd>ROBO_MODE_UNSPECIFIED{{% md %}}LINT.IfChange This means that the server should choose the mode. Recommended.{{% /md %}}</dd><dt>Robo<wbr>Version1</dt>
+    <dd>ROBO_VERSION_1{{% md %}}Runs Robo in UIAutomator-only mode without app resigning{{% /md %}}</dd><dt>Robo<wbr>Version2</dt>
+    <dd>ROBO_VERSION_2{{% md %}}Runs Robo in standard Espresso with UIAutomator fallback{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>ROBO_MODE_UNSPECIFIED</dt>
+    <dd>ROBO_MODE_UNSPECIFIED{{% md %}}LINT.IfChange This means that the server should choose the mode. Recommended.{{% /md %}}</dd><dt>ROBO_VERSION1</dt>
+    <dd>ROBO_VERSION_1{{% md %}}Runs Robo in UIAutomator-only mode without app resigning{{% /md %}}</dd><dt>ROBO_VERSION2</dt>
+    <dd>ROBO_VERSION_2{{% md %}}Runs Robo in standard Espresso with UIAutomator fallback{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="androidtestloop">Android<wbr>Test<wbr>Loop</h4>
@@ -7599,106 +7693,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}URI for the action.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
-<h4 id="systracesetup">Systrace<wbr>Setup</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="durationseconds_csharp">
-<a href="#durationseconds_csharp" style="color: inherit; text-decoration: inherit;">Duration<wbr>Seconds</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Systrace duration in seconds. Should be between 1 and 30 seconds. 0 disables systrace.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="durationseconds_go">
-<a href="#durationseconds_go" style="color: inherit; text-decoration: inherit;">Duration<wbr>Seconds</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Systrace duration in seconds. Should be between 1 and 30 seconds. 0 disables systrace.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="durationseconds_nodejs">
-<a href="#durationseconds_nodejs" style="color: inherit; text-decoration: inherit;">duration<wbr>Seconds</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}Systrace duration in seconds. Should be between 1 and 30 seconds. 0 disables systrace.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="duration_seconds_python">
-<a href="#duration_seconds_python" style="color: inherit; text-decoration: inherit;">duration_<wbr>seconds</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Systrace duration in seconds. Should be between 1 and 30 seconds. 0 disables systrace.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="systracesetupresponse">Systrace<wbr>Setup<wbr>Response</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="durationseconds_csharp">
-<a href="#durationseconds_csharp" style="color: inherit; text-decoration: inherit;">Duration<wbr>Seconds</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Systrace duration in seconds. Should be between 1 and 30 seconds. 0 disables systrace.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="durationseconds_go">
-<a href="#durationseconds_go" style="color: inherit; text-decoration: inherit;">Duration<wbr>Seconds</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Systrace duration in seconds. Should be between 1 and 30 seconds. 0 disables systrace.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="durationseconds_nodejs">
-<a href="#durationseconds_nodejs" style="color: inherit; text-decoration: inherit;">duration<wbr>Seconds</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}Systrace duration in seconds. Should be between 1 and 30 seconds. 0 disables systrace.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="duration_seconds_python">
-<a href="#duration_seconds_python" style="color: inherit; text-decoration: inherit;">duration_<wbr>seconds</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Systrace duration in seconds. Should be between 1 and 30 seconds. 0 disables systrace.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
 <h4 id="testdetailsresponse">Test<wbr>Details<wbr>Response</h4>
 
 {{% choosable language csharp %}}
@@ -8146,15 +8140,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The network traffic profile used for running the test. Available network profiles can be queried by using the NETWORK_CONFIGURATION environment type when calling TestEnvironmentDiscoveryService.GetTestEnvironmentCatalog.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="systrace_csharp">
-<a href="#systrace_csharp" style="color: inherit; text-decoration: inherit;">Systrace</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systracesetup">Pulumi.<wbr>Google<wbr>Native.<wbr>Testing.<wbr>V1.<wbr>Inputs.<wbr>Systrace<wbr>Setup</a></span>
-    </dt>
-    <dd>{{% md %}}Systrace configuration for the run. If set a systrace will be taken, starting on test start and lasting for the configured duration. The systrace file thus obtained is put in the results bucket together with the other artifacts from the run.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The network traffic profile used for running the test. Available network profiles can be queried by using the NETWORK_CONFIGURATION environment type when calling TestEnvironmentDiscoveryService.GetTestEnvironmentCatalog.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -8214,15 +8200,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The network traffic profile used for running the test. Available network profiles can be queried by using the NETWORK_CONFIGURATION environment type when calling TestEnvironmentDiscoveryService.GetTestEnvironmentCatalog.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="systrace_go">
-<a href="#systrace_go" style="color: inherit; text-decoration: inherit;">Systrace</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systracesetup">Systrace<wbr>Setup</a></span>
-    </dt>
-    <dd>{{% md %}}Systrace configuration for the run. If set a systrace will be taken, starting on test start and lasting for the configured duration. The systrace file thus obtained is put in the results bucket together with the other artifacts from the run.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The network traffic profile used for running the test. Available network profiles can be queried by using the NETWORK_CONFIGURATION environment type when calling TestEnvironmentDiscoveryService.GetTestEnvironmentCatalog.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -8282,15 +8260,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The network traffic profile used for running the test. Available network profiles can be queried by using the NETWORK_CONFIGURATION environment type when calling TestEnvironmentDiscoveryService.GetTestEnvironmentCatalog.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="systrace_nodejs">
-<a href="#systrace_nodejs" style="color: inherit; text-decoration: inherit;">systrace</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systracesetup">Systrace<wbr>Setup</a></span>
-    </dt>
-    <dd>{{% md %}}Systrace configuration for the run. If set a systrace will be taken, starting on test start and lasting for the configured duration. The systrace file thus obtained is put in the results bucket together with the other artifacts from the run.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The network traffic profile used for running the test. Available network profiles can be queried by using the NETWORK_CONFIGURATION environment type when calling TestEnvironmentDiscoveryService.GetTestEnvironmentCatalog.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -8350,15 +8320,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The network traffic profile used for running the test. Available network profiles can be queried by using the NETWORK_CONFIGURATION environment type when calling TestEnvironmentDiscoveryService.GetTestEnvironmentCatalog.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="systrace_python">
-<a href="#systrace_python" style="color: inherit; text-decoration: inherit;">systrace</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systracesetup">Systrace<wbr>Setup</a></span>
-    </dt>
-    <dd>{{% md %}}Systrace configuration for the run. If set a systrace will be taken, starting on test start and lasting for the configured duration. The systrace file thus obtained is put in the results bucket together with the other artifacts from the run.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The network traffic profile used for running the test. Available network profiles can be queried by using the NETWORK_CONFIGURATION environment type when calling TestEnvironmentDiscoveryService.GetTestEnvironmentCatalog.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="testsetupresponse">Test<wbr>Setup<wbr>Response</h4>
@@ -8420,15 +8382,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The network traffic profile used for running the test. Available network profiles can be queried by using the NETWORK_CONFIGURATION environment type when calling TestEnvironmentDiscoveryService.GetTestEnvironmentCatalog.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="systrace_csharp">
-<a href="#systrace_csharp" style="color: inherit; text-decoration: inherit;">Systrace</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systracesetupresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Testing.<wbr>V1.<wbr>Inputs.<wbr>Systrace<wbr>Setup<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}Systrace configuration for the run. If set a systrace will be taken, starting on test start and lasting for the configured duration. The systrace file thus obtained is put in the results bucket together with the other artifacts from the run.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The network traffic profile used for running the test. Available network profiles can be queried by using the NETWORK_CONFIGURATION environment type when calling TestEnvironmentDiscoveryService.GetTestEnvironmentCatalog.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -8488,15 +8442,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The network traffic profile used for running the test. Available network profiles can be queried by using the NETWORK_CONFIGURATION environment type when calling TestEnvironmentDiscoveryService.GetTestEnvironmentCatalog.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="systrace_go">
-<a href="#systrace_go" style="color: inherit; text-decoration: inherit;">Systrace</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systracesetupresponse">Systrace<wbr>Setup<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}Systrace configuration for the run. If set a systrace will be taken, starting on test start and lasting for the configured duration. The systrace file thus obtained is put in the results bucket together with the other artifacts from the run.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The network traffic profile used for running the test. Available network profiles can be queried by using the NETWORK_CONFIGURATION environment type when calling TestEnvironmentDiscoveryService.GetTestEnvironmentCatalog.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -8556,15 +8502,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The network traffic profile used for running the test. Available network profiles can be queried by using the NETWORK_CONFIGURATION environment type when calling TestEnvironmentDiscoveryService.GetTestEnvironmentCatalog.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="systrace_nodejs">
-<a href="#systrace_nodejs" style="color: inherit; text-decoration: inherit;">systrace</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systracesetupresponse">Systrace<wbr>Setup<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}Systrace configuration for the run. If set a systrace will be taken, starting on test start and lasting for the configured duration. The systrace file thus obtained is put in the results bucket together with the other artifacts from the run.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The network traffic profile used for running the test. Available network profiles can be queried by using the NETWORK_CONFIGURATION environment type when calling TestEnvironmentDiscoveryService.GetTestEnvironmentCatalog.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -8624,15 +8562,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The network traffic profile used for running the test. Available network profiles can be queried by using the NETWORK_CONFIGURATION environment type when calling TestEnvironmentDiscoveryService.GetTestEnvironmentCatalog.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="systrace_python">
-<a href="#systrace_python" style="color: inherit; text-decoration: inherit;">systrace</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#systracesetupresponse">Systrace<wbr>Setup<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}Systrace configuration for the run. If set a systrace will be taken, starting on test start and lasting for the configured duration. The systrace file thus obtained is put in the results bucket together with the other artifacts from the run.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The network traffic profile used for running the test. Available network profiles can be queried by using the NETWORK_CONFIGURATION environment type when calling TestEnvironmentDiscoveryService.GetTestEnvironmentCatalog.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="testspecification">Test<wbr>Specification</h4>

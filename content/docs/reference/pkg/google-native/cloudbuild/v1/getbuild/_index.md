@@ -81,16 +81,16 @@ The following arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="project_csharp">
-<a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
+        <span id="projectid_csharp">
+<a href="#projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="projectid_csharp">
-<a href="#projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="project_csharp">
+<a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -125,16 +125,16 @@ The following arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="project_go">
-<a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
+        <span id="projectid_go">
+<a href="#projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="projectid_go">
-<a href="#projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="project_go">
+<a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -169,16 +169,16 @@ The following arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="project_nodejs">
-<a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
+        <span id="projectid_nodejs">
+<a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="projectid_nodejs">
-<a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="project_nodejs">
+<a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -213,16 +213,16 @@ The following arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="project_python">
-<a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
+        <span id="project_id_python">
+<a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="project_id_python">
-<a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="project_python">
+<a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -273,6 +273,14 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time at which the request to create the build was received.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="failureinfo_csharp">
+<a href="#failureinfo_csharp" style="color: inherit; text-decoration: inherit;">Failure<wbr>Info</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#failureinforesponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Cloud<wbr>Build.<wbr>V1.<wbr>Outputs.<wbr>Failure<wbr>Info<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Contains information about the build when status=FAILURE.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="finishtime_csharp">
 <a href="#finishtime_csharp" style="color: inherit; text-decoration: inherit;">Finish<wbr>Time</a>
@@ -486,6 +494,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Time at which the request to create the build was received.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="failureinfo_go">
+<a href="#failureinfo_go" style="color: inherit; text-decoration: inherit;">Failure<wbr>Info</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#failureinforesponse">Failure<wbr>Info<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Contains information about the build when status=FAILURE.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="finishtime_go">
 <a href="#finishtime_go" style="color: inherit; text-decoration: inherit;">Finish<wbr>Time</a>
 </span>
@@ -698,6 +714,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Time at which the request to create the build was received.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="failureinfo_nodejs">
+<a href="#failureinfo_nodejs" style="color: inherit; text-decoration: inherit;">failure<wbr>Info</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#failureinforesponse">Failure<wbr>Info<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Contains information about the build when status=FAILURE.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="finishtime_nodejs">
 <a href="#finishtime_nodejs" style="color: inherit; text-decoration: inherit;">finish<wbr>Time</a>
 </span>
@@ -909,6 +933,14 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Time at which the request to create the build was received.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="failure_info_python">
+<a href="#failure_info_python" style="color: inherit; text-decoration: inherit;">failure_<wbr>info</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#failureinforesponse">Failure<wbr>Info<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Contains information about the build when status=FAILURE.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="finish_time_python">
 <a href="#finish_time_python" style="color: inherit; text-decoration: inherit;">finish_<wbr>time</a>
@@ -1354,7 +1386,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#pooloptionresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Cloud<wbr>Build.<wbr>V1.<wbr>Inputs.<wbr>Pool<wbr>Option<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Optional. Specification for execution on a `WorkerPool`. See [running builds in a custom worker pool](https://cloud.google.com/build/docs/custom-workers/run-builds-in-custom-worker-pool) for more information.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Optional. Specification for execution on a `WorkerPool`. See [running builds in a private pool](https://cloud.google.com/build/docs/private-pools/run-builds-in-private-pool) for more information.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="requestedverifyoption_csharp">
 <a href="#requestedverifyoption_csharp" style="color: inherit; text-decoration: inherit;">Requested<wbr>Verify<wbr>Option</a>
@@ -1462,7 +1494,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#pooloptionresponse">Pool<wbr>Option<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Optional. Specification for execution on a `WorkerPool`. See [running builds in a custom worker pool](https://cloud.google.com/build/docs/custom-workers/run-builds-in-custom-worker-pool) for more information.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Optional. Specification for execution on a `WorkerPool`. See [running builds in a private pool](https://cloud.google.com/build/docs/private-pools/run-builds-in-private-pool) for more information.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="requestedverifyoption_go">
 <a href="#requestedverifyoption_go" style="color: inherit; text-decoration: inherit;">Requested<wbr>Verify<wbr>Option</a>
@@ -1570,7 +1602,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#pooloptionresponse">Pool<wbr>Option<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Optional. Specification for execution on a `WorkerPool`. See [running builds in a custom worker pool](https://cloud.google.com/build/docs/custom-workers/run-builds-in-custom-worker-pool) for more information.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Optional. Specification for execution on a `WorkerPool`. See [running builds in a private pool](https://cloud.google.com/build/docs/private-pools/run-builds-in-private-pool) for more information.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="requestedverifyoption_nodejs">
 <a href="#requestedverifyoption_nodejs" style="color: inherit; text-decoration: inherit;">requested<wbr>Verify<wbr>Option</a>
@@ -1678,7 +1710,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#pooloptionresponse">Pool<wbr>Option<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Optional. Specification for execution on a `WorkerPool`. See [running builds in a custom worker pool](https://cloud.google.com/build/docs/custom-workers/run-builds-in-custom-worker-pool) for more information.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Optional. Specification for execution on a `WorkerPool`. See [running builds in a private pool](https://cloud.google.com/build/docs/private-pools/run-builds-in-private-pool) for more information.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="requested_verify_option_python">
 <a href="#requested_verify_option_python" style="color: inherit; text-decoration: inherit;">requested_<wbr>verify_<wbr>option</a>
@@ -2247,6 +2279,90 @@ The following output properties are available:
         <span class="property-type"><a href="#timespanresponse">Time<wbr>Span<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Stores timing information for pushing the specified image.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="failureinforesponse">Failure<wbr>Info<wbr>Response</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="detail_csharp">
+<a href="#detail_csharp" style="color: inherit; text-decoration: inherit;">Detail</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Explains the failure issue in more detail using hard-coded text.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the failure.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="detail_go">
+<a href="#detail_go" style="color: inherit; text-decoration: inherit;">Detail</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Explains the failure issue in more detail using hard-coded text.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the failure.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="detail_nodejs">
+<a href="#detail_nodejs" style="color: inherit; text-decoration: inherit;">detail</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Explains the failure issue in more detail using hard-coded text.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the failure.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="detail_python">
+<a href="#detail_python" style="color: inherit; text-decoration: inherit;">detail</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Explains the failure issue in more detail using hard-coded text.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the failure.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="inlinesecretresponse">Inline<wbr>Secret<wbr>Response</h4>
@@ -3534,7 +3650,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Google Cloud Storage object containing the source. This object must be a gzipped archive file (`.tar.gz`) containing source to build.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Google Cloud Storage object containing the source. This object must be a zipped (`.zip`) or gzipped archive file (`.tar.gz`) containing source to build.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -3562,7 +3678,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Google Cloud Storage object containing the source. This object must be a gzipped archive file (`.tar.gz`) containing source to build.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Google Cloud Storage object containing the source. This object must be a zipped (`.zip`) or gzipped archive file (`.tar.gz`) containing source to build.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -3590,7 +3706,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Google Cloud Storage object containing the source. This object must be a gzipped archive file (`.tar.gz`) containing source to build.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Google Cloud Storage object containing the source. This object must be a zipped (`.zip`) or gzipped archive file (`.tar.gz`) containing source to build.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -3618,7 +3734,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Google Cloud Storage object containing the source. This object must be a gzipped archive file (`.tar.gz`) containing source to build.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Google Cloud Storage object containing the source. This object must be a zipped (`.zip`) or gzipped archive file (`.tar.gz`) containing source to build.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="timespanresponse">Time<wbr>Span<wbr>Response</h4>

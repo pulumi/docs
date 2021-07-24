@@ -63,16 +63,16 @@ The following arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="project_csharp">
-<a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
+        <span id="zone_csharp">
+<a href="#zone_csharp" style="color: inherit; text-decoration: inherit;">Zone</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="zone_csharp">
-<a href="#zone_csharp" style="color: inherit; text-decoration: inherit;">Zone</a>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="project_csharp">
+<a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -91,16 +91,16 @@ The following arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="project_go">
-<a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
+        <span id="zone_go">
+<a href="#zone_go" style="color: inherit; text-decoration: inherit;">Zone</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="zone_go">
-<a href="#zone_go" style="color: inherit; text-decoration: inherit;">Zone</a>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="project_go">
+<a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -119,16 +119,16 @@ The following arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="project_nodejs">
-<a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
+        <span id="zone_nodejs">
+<a href="#zone_nodejs" style="color: inherit; text-decoration: inherit;">zone</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="zone_nodejs">
-<a href="#zone_nodejs" style="color: inherit; text-decoration: inherit;">zone</a>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="project_nodejs">
+<a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -147,16 +147,16 @@ The following arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="project_python">
-<a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
+        <span id="zone_python">
+<a href="#zone_python" style="color: inherit; text-decoration: inherit;">zone</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="zone_python">
-<a href="#zone_python" style="color: inherit; text-decoration: inherit;">zone</a>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="project_python">
+<a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -5586,6 +5586,22 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies the availability domain (AD), which this instance should be scheduled on. The AD belongs to the spread GroupPlacementPolicy resource policy that has been assigned to the instance. Specify a value between 1-max count of availability domains in your GroupPlacementPolicy. See go/placement-policy-extension for more details.{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="currentcpus_csharp">
+<a href="#currentcpus_csharp" style="color: inherit; text-decoration: inherit;">Current<wbr>Cpus</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Current number of vCPUs available for VM. 0 or unset means default vCPUs of the current machine type.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="currentmemorymb_csharp">
+<a href="#currentmemorymb_csharp" style="color: inherit; text-decoration: inherit;">Current<wbr>Memory<wbr>Mb</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Current amount of memory (in MB) available for VM. 0 or unset means default amount of memory of the current machine type.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="hosterrortimeoutseconds_csharp">
 <a href="#hosterrortimeoutseconds_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Error<wbr>Timeout<wbr>Seconds</a>
 </span>
@@ -5685,6 +5701,22 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the availability domain (AD), which this instance should be scheduled on. The AD belongs to the spread GroupPlacementPolicy resource policy that has been assigned to the instance. Specify a value between 1-max count of availability domains in your GroupPlacementPolicy. See go/placement-policy-extension for more details.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="currentcpus_go">
+<a href="#currentcpus_go" style="color: inherit; text-decoration: inherit;">Current<wbr>Cpus</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Current number of vCPUs available for VM. 0 or unset means default vCPUs of the current machine type.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="currentmemorymb_go">
+<a href="#currentmemorymb_go" style="color: inherit; text-decoration: inherit;">Current<wbr>Memory<wbr>Mb</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Current amount of memory (in MB) available for VM. 0 or unset means default amount of memory of the current machine type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="hosterrortimeoutseconds_go">
 <a href="#hosterrortimeoutseconds_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Error<wbr>Timeout<wbr>Seconds</a>
@@ -5786,6 +5818,22 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies the availability domain (AD), which this instance should be scheduled on. The AD belongs to the spread GroupPlacementPolicy resource policy that has been assigned to the instance. Specify a value between 1-max count of availability domains in your GroupPlacementPolicy. See go/placement-policy-extension for more details.{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="currentcpus_nodejs">
+<a href="#currentcpus_nodejs" style="color: inherit; text-decoration: inherit;">current<wbr>Cpus</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Current number of vCPUs available for VM. 0 or unset means default vCPUs of the current machine type.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="currentmemorymb_nodejs">
+<a href="#currentmemorymb_nodejs" style="color: inherit; text-decoration: inherit;">current<wbr>Memory<wbr>Mb</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Current amount of memory (in MB) available for VM. 0 or unset means default amount of memory of the current machine type.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="hosterrortimeoutseconds_nodejs">
 <a href="#hosterrortimeoutseconds_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Error<wbr>Timeout<wbr>Seconds</a>
 </span>
@@ -5885,6 +5933,22 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the availability domain (AD), which this instance should be scheduled on. The AD belongs to the spread GroupPlacementPolicy resource policy that has been assigned to the instance. Specify a value between 1-max count of availability domains in your GroupPlacementPolicy. See go/placement-policy-extension for more details.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="current_cpus_python">
+<a href="#current_cpus_python" style="color: inherit; text-decoration: inherit;">current_<wbr>cpus</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Current number of vCPUs available for VM. 0 or unset means default vCPUs of the current machine type.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="current_memory_mb_python">
+<a href="#current_memory_mb_python" style="color: inherit; text-decoration: inherit;">current_<wbr>memory_<wbr>mb</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Current amount of memory (in MB) available for VM. 0 or unset means default amount of memory of the current machine type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="host_error_timeout_seconds_python">
 <a href="#host_error_timeout_seconds_python" style="color: inherit; text-decoration: inherit;">host_<wbr>error_<wbr>timeout_<wbr>seconds</a>

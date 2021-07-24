@@ -60,8 +60,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
 </span>
@@ -80,8 +80,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
 </span>
@@ -100,8 +100,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
@@ -120,8 +120,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
@@ -1323,7 +1323,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Reserved for future use.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Postgres only) Whether point in time recovery is enabled.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="replicationlogarchivingenabled_csharp">
 <a href="#replicationlogarchivingenabled_csharp" style="color: inherit; text-decoration: inherit;">Replication<wbr>Log<wbr>Archiving<wbr>Enabled</a>
@@ -1399,7 +1399,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Reserved for future use.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Postgres only) Whether point in time recovery is enabled.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="replicationlogarchivingenabled_go">
 <a href="#replicationlogarchivingenabled_go" style="color: inherit; text-decoration: inherit;">Replication<wbr>Log<wbr>Archiving<wbr>Enabled</a>
@@ -1475,7 +1475,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Reserved for future use.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Postgres only) Whether point in time recovery is enabled.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="replicationlogarchivingenabled_nodejs">
 <a href="#replicationlogarchivingenabled_nodejs" style="color: inherit; text-decoration: inherit;">replication<wbr>Log<wbr>Archiving<wbr>Enabled</a>
@@ -1551,7 +1551,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Reserved for future use.{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}(Postgres only) Whether point in time recovery is enabled.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="replication_log_archiving_enabled_python">
 <a href="#replication_log_archiving_enabled_python" style="color: inherit; text-decoration: inherit;">replication_<wbr>log_<wbr>archiving_<wbr>enabled</a>
@@ -4533,6 +4533,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}If the scheduled maintenance can be rescheduled.{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="scheduledeadlinetime_csharp">
+<a href="#scheduledeadlinetime_csharp" style="color: inherit; text-decoration: inherit;">Schedule<wbr>Deadline<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Maintenance cannot be rescheduled to start beyond this deadline.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="starttime_csharp">
 <a href="#starttime_csharp" style="color: inherit; text-decoration: inherit;">Start<wbr>Time</a>
 </span>
@@ -4560,6 +4568,14 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If the scheduled maintenance can be rescheduled.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="scheduledeadlinetime_go">
+<a href="#scheduledeadlinetime_go" style="color: inherit; text-decoration: inherit;">Schedule<wbr>Deadline<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Maintenance cannot be rescheduled to start beyond this deadline.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="starttime_go">
 <a href="#starttime_go" style="color: inherit; text-decoration: inherit;">Start<wbr>Time</a>
@@ -4589,6 +4605,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}If the scheduled maintenance can be rescheduled.{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="scheduledeadlinetime_nodejs">
+<a href="#scheduledeadlinetime_nodejs" style="color: inherit; text-decoration: inherit;">schedule<wbr>Deadline<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Maintenance cannot be rescheduled to start beyond this deadline.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="starttime_nodejs">
 <a href="#starttime_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Time</a>
 </span>
@@ -4616,6 +4640,14 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If the scheduled maintenance can be rescheduled.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="schedule_deadline_time_python">
+<a href="#schedule_deadline_time_python" style="color: inherit; text-decoration: inherit;">schedule_<wbr>deadline_<wbr>time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Maintenance cannot be rescheduled to start beyond this deadline.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="start_time_python">
 <a href="#start_time_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time</a>

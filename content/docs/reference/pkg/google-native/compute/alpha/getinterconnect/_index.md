@@ -60,8 +60,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
 </span>
@@ -80,8 +80,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
 </span>
@@ -100,8 +100,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
@@ -120,8 +120,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
@@ -262,6 +262,22 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL of the InterconnectLocation object that represents where this connection is to be provisioned.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="macsec_csharp">
+<a href="#macsec_csharp" style="color: inherit; text-decoration: inherit;">Macsec</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#interconnectmacsecresponse">Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>Alpha.<wbr>Outputs.<wbr>Interconnect<wbr>Macsec<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration to enable Media Access Control security (MACsec) on the Interconnect between Google and your on-premises router.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="macsecenabled_csharp">
+<a href="#macsecenabled_csharp" style="color: inherit; text-decoration: inherit;">Macsec<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable or disable MACsec on this Interconnect. MACsec enablement will fail if the macsec object is not specified.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -467,6 +483,22 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}URL of the InterconnectLocation object that represents where this connection is to be provisioned.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="macsec_go">
+<a href="#macsec_go" style="color: inherit; text-decoration: inherit;">Macsec</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#interconnectmacsecresponse">Interconnect<wbr>Macsec<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration to enable Media Access Control security (MACsec) on the Interconnect between Google and your on-premises router.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="macsecenabled_go">
+<a href="#macsecenabled_go" style="color: inherit; text-decoration: inherit;">Macsec<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable or disable MACsec on this Interconnect. MACsec enablement will fail if the macsec object is not specified.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
@@ -670,6 +702,22 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL of the InterconnectLocation object that represents where this connection is to be provisioned.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="macsec_nodejs">
+<a href="#macsec_nodejs" style="color: inherit; text-decoration: inherit;">macsec</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#interconnectmacsecresponse">Interconnect<wbr>Macsec<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration to enable Media Access Control security (MACsec) on the Interconnect between Google and your on-premises router.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="macsecenabled_nodejs">
+<a href="#macsecenabled_nodejs" style="color: inherit; text-decoration: inherit;">macsec<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Enable or disable MACsec on this Interconnect. MACsec enablement will fail if the macsec object is not specified.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -875,6 +923,22 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}URL of the InterconnectLocation object that represents where this connection is to be provisioned.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="macsec_python">
+<a href="#macsec_python" style="color: inherit; text-decoration: inherit;">macsec</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#interconnectmacsecresponse">Interconnect<wbr>Macsec<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration to enable Media Access Control security (MACsec) on the Interconnect between Google and your on-premises router.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="macsec_enabled_python">
+<a href="#macsec_enabled_python" style="color: inherit; text-decoration: inherit;">macsec_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable or disable MACsec on this Interconnect. MACsec enablement will fail if the macsec object is not specified.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
@@ -1076,6 +1140,174 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Google-side demarc ID for this circuit. Assigned at circuit turn-up and provided by Google to the customer in the LOA.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="interconnectmacsecpresharedkeyresponse">Interconnect<wbr>Macsec<wbr>Pre<wbr>Shared<wbr>Key<wbr>Response</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A name for this pre-shared key. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="starttime_csharp">
+<a href="#starttime_csharp" style="color: inherit; text-decoration: inherit;">Start<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A RFC3339 timestamp on or after which the key is valid. startTime can be in the future. If the keychain has a single key, startTime can be omitted. If the keychain has multiple keys, startTime is mandatory for each key. The start times of keys must be in increasing order. The start times of two consecutive keys must be at least 6 hours apart.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A name for this pre-shared key. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="starttime_go">
+<a href="#starttime_go" style="color: inherit; text-decoration: inherit;">Start<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A RFC3339 timestamp on or after which the key is valid. startTime can be in the future. If the keychain has a single key, startTime can be omitted. If the keychain has multiple keys, startTime is mandatory for each key. The start times of keys must be in increasing order. The start times of two consecutive keys must be at least 6 hours apart.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A name for this pre-shared key. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="starttime_nodejs">
+<a href="#starttime_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A RFC3339 timestamp on or after which the key is valid. startTime can be in the future. If the keychain has a single key, startTime can be omitted. If the keychain has multiple keys, startTime is mandatory for each key. The start times of keys must be in increasing order. The start times of two consecutive keys must be at least 6 hours apart.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}A name for this pre-shared key. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="start_time_python">
+<a href="#start_time_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}A RFC3339 timestamp on or after which the key is valid. startTime can be in the future. If the keychain has a single key, startTime can be omitted. If the keychain has multiple keys, startTime is mandatory for each key. The start times of keys must be in increasing order. The start times of two consecutive keys must be at least 6 hours apart.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="interconnectmacsecresponse">Interconnect<wbr>Macsec<wbr>Response</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="failopen_csharp">
+<a href="#failopen_csharp" style="color: inherit; text-decoration: inherit;">Fail<wbr>Open</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If set to true, the Interconnect will be configured with a should-secure MACsec security policy, that allows the Google router to fallback to cleartext traffic if the MKA session cannot be established. By default, the Interconnect will be configured with a must-secure security policy that drops all traffic if the MKA session cannot be established with your router.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="presharedkeys_csharp">
+<a href="#presharedkeys_csharp" style="color: inherit; text-decoration: inherit;">Pre<wbr>Shared<wbr>Keys</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#interconnectmacsecpresharedkeyresponse">List&lt;Pulumi.<wbr>Google<wbr>Native.<wbr>Compute.<wbr>Alpha.<wbr>Inputs.<wbr>Interconnect<wbr>Macsec<wbr>Pre<wbr>Shared<wbr>Key<wbr>Response&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A keychain placeholder describing a set of named key objects along with their start times. A MACsec CKN/CAK will be generated for each key in the key chain. Google router will automatically pick the key with the most recent startTime when establishing or re-establishing a MACsec secure link.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="failopen_go">
+<a href="#failopen_go" style="color: inherit; text-decoration: inherit;">Fail<wbr>Open</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If set to true, the Interconnect will be configured with a should-secure MACsec security policy, that allows the Google router to fallback to cleartext traffic if the MKA session cannot be established. By default, the Interconnect will be configured with a must-secure security policy that drops all traffic if the MKA session cannot be established with your router.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="presharedkeys_go">
+<a href="#presharedkeys_go" style="color: inherit; text-decoration: inherit;">Pre<wbr>Shared<wbr>Keys</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#interconnectmacsecpresharedkeyresponse">[]Interconnect<wbr>Macsec<wbr>Pre<wbr>Shared<wbr>Key<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}A keychain placeholder describing a set of named key objects along with their start times. A MACsec CKN/CAK will be generated for each key in the key chain. Google router will automatically pick the key with the most recent startTime when establishing or re-establishing a MACsec secure link.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="failopen_nodejs">
+<a href="#failopen_nodejs" style="color: inherit; text-decoration: inherit;">fail<wbr>Open</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}If set to true, the Interconnect will be configured with a should-secure MACsec security policy, that allows the Google router to fallback to cleartext traffic if the MKA session cannot be established. By default, the Interconnect will be configured with a must-secure security policy that drops all traffic if the MKA session cannot be established with your router.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="presharedkeys_nodejs">
+<a href="#presharedkeys_nodejs" style="color: inherit; text-decoration: inherit;">pre<wbr>Shared<wbr>Keys</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#interconnectmacsecpresharedkeyresponse">Interconnect<wbr>Macsec<wbr>Pre<wbr>Shared<wbr>Key<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}A keychain placeholder describing a set of named key objects along with their start times. A MACsec CKN/CAK will be generated for each key in the key chain. Google router will automatically pick the key with the most recent startTime when establishing or re-establishing a MACsec secure link.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="fail_open_python">
+<a href="#fail_open_python" style="color: inherit; text-decoration: inherit;">fail_<wbr>open</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If set to true, the Interconnect will be configured with a should-secure MACsec security policy, that allows the Google router to fallback to cleartext traffic if the MKA session cannot be established. By default, the Interconnect will be configured with a must-secure security policy that drops all traffic if the MKA session cannot be established with your router.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="pre_shared_keys_python">
+<a href="#pre_shared_keys_python" style="color: inherit; text-decoration: inherit;">pre_<wbr>shared_<wbr>keys</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#interconnectmacsecpresharedkeyresponse">Sequence[Interconnect<wbr>Macsec<wbr>Pre<wbr>Shared<wbr>Key<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}A keychain placeholder describing a set of named key objects along with their start times. A MACsec CKN/CAK will be generated for each key in the key chain. Google router will automatically pick the key with the most recent startTime when establishing or re-establishing a MACsec secure link.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="interconnectoutagenotificationresponse">Interconnect<wbr>Outage<wbr>Notification<wbr>Response</h4>

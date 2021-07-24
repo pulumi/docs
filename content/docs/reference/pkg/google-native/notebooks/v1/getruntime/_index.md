@@ -63,16 +63,16 @@ The following arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="project_csharp">
-<a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
+        <span id="runtimeid_csharp">
+<a href="#runtimeid_csharp" style="color: inherit; text-decoration: inherit;">Runtime<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="runtimeid_csharp">
-<a href="#runtimeid_csharp" style="color: inherit; text-decoration: inherit;">Runtime<wbr>Id</a>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="project_csharp">
+<a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -91,16 +91,16 @@ The following arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="project_go">
-<a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
+        <span id="runtimeid_go">
+<a href="#runtimeid_go" style="color: inherit; text-decoration: inherit;">Runtime<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="runtimeid_go">
-<a href="#runtimeid_go" style="color: inherit; text-decoration: inherit;">Runtime<wbr>Id</a>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="project_go">
+<a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -119,16 +119,16 @@ The following arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="project_nodejs">
-<a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
+        <span id="runtimeid_nodejs">
+<a href="#runtimeid_nodejs" style="color: inherit; text-decoration: inherit;">runtime<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="runtimeid_nodejs">
-<a href="#runtimeid_nodejs" style="color: inherit; text-decoration: inherit;">runtime<wbr>Id</a>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="project_nodejs">
+<a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -147,16 +147,16 @@ The following arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="project_python">
-<a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
+        <span id="runtime_id_python">
+<a href="#runtime_id_python" style="color: inherit; text-decoration: inherit;">runtime_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="runtime_id_python">
-<a href="#runtime_id_python" style="color: inherit; text-decoration: inherit;">runtime_<wbr>id</a>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="project_python">
+<a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -1652,7 +1652,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Runtime will automatically shutdown after idle_shutdown_time. Default: False{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Runtime will automatically shutdown after idle_shutdown_time. Default: True{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="idleshutdowntimeout_csharp">
 <a href="#idleshutdowntimeout_csharp" style="color: inherit; text-decoration: inherit;">Idle<wbr>Shutdown<wbr>Timeout</a>
@@ -1660,7 +1660,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Time in minutes to wait before shuting down runtime. Default: 90 minutes{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Time in minutes to wait before shuting down runtime. Default: 180 minutes{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="installgpudriver_csharp">
 <a href="#installgpudriver_csharp" style="color: inherit; text-decoration: inherit;">Install<wbr>Gpu<wbr>Driver</a>
@@ -1712,7 +1712,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Runtime will automatically shutdown after idle_shutdown_time. Default: False{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Runtime will automatically shutdown after idle_shutdown_time. Default: True{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="idleshutdowntimeout_go">
 <a href="#idleshutdowntimeout_go" style="color: inherit; text-decoration: inherit;">Idle<wbr>Shutdown<wbr>Timeout</a>
@@ -1720,7 +1720,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Time in minutes to wait before shuting down runtime. Default: 90 minutes{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Time in minutes to wait before shuting down runtime. Default: 180 minutes{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="installgpudriver_go">
 <a href="#installgpudriver_go" style="color: inherit; text-decoration: inherit;">Install<wbr>Gpu<wbr>Driver</a>
@@ -1772,7 +1772,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Runtime will automatically shutdown after idle_shutdown_time. Default: False{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Runtime will automatically shutdown after idle_shutdown_time. Default: True{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="idleshutdowntimeout_nodejs">
 <a href="#idleshutdowntimeout_nodejs" style="color: inherit; text-decoration: inherit;">idle<wbr>Shutdown<wbr>Timeout</a>
@@ -1780,7 +1780,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Time in minutes to wait before shuting down runtime. Default: 90 minutes{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Time in minutes to wait before shuting down runtime. Default: 180 minutes{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="installgpudriver_nodejs">
 <a href="#installgpudriver_nodejs" style="color: inherit; text-decoration: inherit;">install<wbr>Gpu<wbr>Driver</a>
@@ -1832,7 +1832,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Runtime will automatically shutdown after idle_shutdown_time. Default: False{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Runtime will automatically shutdown after idle_shutdown_time. Default: True{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="idle_shutdown_timeout_python">
 <a href="#idle_shutdown_timeout_python" style="color: inherit; text-decoration: inherit;">idle_<wbr>shutdown_<wbr>timeout</a>
@@ -1840,7 +1840,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Time in minutes to wait before shuting down runtime. Default: 90 minutes{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Time in minutes to wait before shuting down runtime. Default: 180 minutes{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="install_gpu_driver_python">
 <a href="#install_gpu_driver_python" style="color: inherit; text-decoration: inherit;">install_<wbr>gpu_<wbr>driver</a>
