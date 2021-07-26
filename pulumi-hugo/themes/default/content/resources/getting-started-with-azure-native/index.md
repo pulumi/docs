@@ -77,6 +77,9 @@ main:
         - name: Matt Stratton
           role: Developer Advocate, Pulumi
 
+        - name: Mikhail Shilkov
+          role: Software Engineer, Pulumi
+
     # A bullet point list containing what the user will learn during the webinar.
     learn:
         - The basics of the Pulumi Programming Model.
