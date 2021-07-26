@@ -687,7 +687,7 @@ const s3Distribution = new aws.cloudfront.Distribution("s3Distribution", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDistribution</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">DistributionArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Distribution</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDistribution</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">DistributionArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Distribution</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -748,7 +748,7 @@ const s3Distribution = new aws.cloudfront.Distribution("s3Distribution", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
@@ -766,7 +766,7 @@ const s3Distribution = new aws.cloudfront.Distribution("s3Distribution", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
@@ -2150,7 +2150,7 @@ Get an existing Distribution resource's state with the given name, ID, and optio
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDistribution<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">DistributionState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Distribution</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDistribution<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">DistributionState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Distribution</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -8116,8 +8116,10 @@ this, `acm_certificate_arn`, or `cloudfront_default_certificate`.
     </dt>
     <dd>{{% md %}}The minimum version of the SSL protocol that
 you want CloudFront to use for HTTPS connections. Can only be set if
-`cloudfront_default_certificate = false`. One of `SSLv3`, `TLSv1`,
-`TLSv1_2016`, `TLSv1.1_2016`, `TLSv1.2_2018` or `TLSv1.2_2019`. Default: `TLSv1`. **NOTE**:
+`cloudfront_default_certificate = false`. See all possible values in
+[this](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/secure-connections-supported-viewer-protocols-ciphers.html)
+table under "Security policy." Some examples include: `TLSv1.2_2019` and
+`TLSv1.2_2021`. Default: `TLSv1`. **NOTE**:
 If you are using a custom certificate (specified with `acm_certificate_arn`
 or `iam_certificate_id`), and have specified `sni-only` in
 `ssl_support_method`, `TLSv1` or later must be specified. If you have
@@ -8180,8 +8182,10 @@ this, `acm_certificate_arn`, or `cloudfront_default_certificate`.
     </dt>
     <dd>{{% md %}}The minimum version of the SSL protocol that
 you want CloudFront to use for HTTPS connections. Can only be set if
-`cloudfront_default_certificate = false`. One of `SSLv3`, `TLSv1`,
-`TLSv1_2016`, `TLSv1.1_2016`, `TLSv1.2_2018` or `TLSv1.2_2019`. Default: `TLSv1`. **NOTE**:
+`cloudfront_default_certificate = false`. See all possible values in
+[this](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/secure-connections-supported-viewer-protocols-ciphers.html)
+table under "Security policy." Some examples include: `TLSv1.2_2019` and
+`TLSv1.2_2021`. Default: `TLSv1`. **NOTE**:
 If you are using a custom certificate (specified with `acm_certificate_arn`
 or `iam_certificate_id`), and have specified `sni-only` in
 `ssl_support_method`, `TLSv1` or later must be specified. If you have
@@ -8244,8 +8248,10 @@ this, `acm_certificate_arn`, or `cloudfront_default_certificate`.
     </dt>
     <dd>{{% md %}}The minimum version of the SSL protocol that
 you want CloudFront to use for HTTPS connections. Can only be set if
-`cloudfront_default_certificate = false`. One of `SSLv3`, `TLSv1`,
-`TLSv1_2016`, `TLSv1.1_2016`, `TLSv1.2_2018` or `TLSv1.2_2019`. Default: `TLSv1`. **NOTE**:
+`cloudfront_default_certificate = false`. See all possible values in
+[this](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/secure-connections-supported-viewer-protocols-ciphers.html)
+table under "Security policy." Some examples include: `TLSv1.2_2019` and
+`TLSv1.2_2021`. Default: `TLSv1`. **NOTE**:
 If you are using a custom certificate (specified with `acm_certificate_arn`
 or `iam_certificate_id`), and have specified `sni-only` in
 `ssl_support_method`, `TLSv1` or later must be specified. If you have
@@ -8308,8 +8314,10 @@ this, `acm_certificate_arn`, or `cloudfront_default_certificate`.
     </dt>
     <dd>{{% md %}}The minimum version of the SSL protocol that
 you want CloudFront to use for HTTPS connections. Can only be set if
-`cloudfront_default_certificate = false`. One of `SSLv3`, `TLSv1`,
-`TLSv1_2016`, `TLSv1.1_2016`, `TLSv1.2_2018` or `TLSv1.2_2019`. Default: `TLSv1`. **NOTE**:
+`cloudfront_default_certificate = false`. See all possible values in
+[this](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/secure-connections-supported-viewer-protocols-ciphers.html)
+table under "Security policy." Some examples include: `TLSv1.2_2019` and
+`TLSv1.2_2021`. Default: `TLSv1`. **NOTE**:
 If you are using a custom certificate (specified with `acm_certificate_arn`
 or `iam_certificate_id`), and have specified `sni-only` in
 `ssl_support_method`, `TLSv1` or later must be specified. If you have
