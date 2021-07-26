@@ -434,7 +434,7 @@ const fooInstance = new aws.ec2.Instance("fooInstance", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Instance</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">InstanceArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Instance</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">InstanceArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -462,6 +462,7 @@ const fooInstance = new aws.ec2.Instance("fooInstance", {
              <span class="nx">ipv6_address_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
              <span class="nx">ipv6_addresses</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
              <span class="nx">key_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">launch_template</span><span class="p">:</span> <span class="nx">Optional[InstanceLaunchTemplateArgs]</span> = None<span class="p">,</span>
              <span class="nx">metadata_options</span><span class="p">:</span> <span class="nx">Optional[InstanceMetadataOptionsArgs]</span> = None<span class="p">,</span>
              <span class="nx">monitoring</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
              <span class="nx">network_interfaces</span><span class="p">:</span> <span class="nx">Optional[Sequence[InstanceNetworkInterfaceArgs]]</span> = None<span class="p">,</span>
@@ -481,16 +482,16 @@ const fooInstance = new aws.ec2.Instance("fooInstance", {
              <span class="nx">vpc_security_group_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">Instance</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-             <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">InstanceArgs</a></span><span class="p">,</span>
+             <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">Optional[InstanceArgs]</a></span> = None<span class="p">,</span>
              <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewInstance</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">InstanceArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Instance</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewInstance</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">InstanceArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Instance</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Instance</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">InstanceArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Instance</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">InstanceArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -502,7 +503,7 @@ const fooInstance = new aws.ec2.Instance("fooInstance", {
         <span class="property-type">string</span>
     </dt>
     <dd>The unique name of the resource.</dd><dt
-        class="property-required" title="Required">
+        class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">InstanceArgs</a></span>
@@ -526,7 +527,7 @@ const fooInstance = new aws.ec2.Instance("fooInstance", {
         <span class="property-type">str</span>
     </dt>
     <dd>The unique name of the resource.</dd><dt
-        class="property-required" title="Required">
+        class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">InstanceArgs</a></span>
@@ -547,7 +548,7 @@ const fooInstance = new aws.ec2.Instance("fooInstance", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
@@ -556,7 +557,7 @@ const fooInstance = new aws.ec2.Instance("fooInstance", {
         <span class="property-type">string</span>
     </dt>
     <dd>The unique name of the resource.</dd><dt
-        class="property-required" title="Required">
+        class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">InstanceArgs</a></span>
@@ -565,7 +566,7 @@ const fooInstance = new aws.ec2.Instance("fooInstance", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
@@ -580,7 +581,7 @@ const fooInstance = new aws.ec2.Instance("fooInstance", {
         <span class="property-type">string</span>
     </dt>
     <dd>The unique name of the resource.</dd><dt
-        class="property-required" title="Required">
+        class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">InstanceArgs</a></span>
@@ -606,24 +607,15 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
         <span id="ami_csharp">
 <a href="#ami_csharp" style="color: inherit; text-decoration: inherit;">Ami</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}AMI to use for the instance.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="instancetype_csharp">
-<a href="#instancetype_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#instancetype">Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Instance<wbr>Type</a></span>
-    </dt>
-    <dd>{{% md %}}Type of instance to start. Updates to this field will trigger a stop/start of the EC2 instance.
+    <dd>{{% md %}}AMI to use for the instance. Required unless `launch_template` is specified and the Launch Template specifes an AMI. If an AMI is specified in the Launch Template, setting `ami` will override the AMI specified in the Launch Template.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="associatepublicipaddress_csharp">
@@ -770,6 +762,15 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
     <dd>{{% md %}}Shutdown behavior for the instance. Amazon defaults this to `stop` for EBS-backed instances and `terminate` for instance-store instances. Cannot be set on instance-store instances. See [Shutdown Behavior](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#Using_ChangingInstanceInitiatedShutdownBehavior) for more information.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="instancetype_csharp">
+<a href="#instancetype_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#instancetype">Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Instance<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}The instance type to use for the instance. Updates to this field will trigger a stop/start of the EC2 instance.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="ipv6addresscount_csharp">
 <a href="#ipv6addresscount_csharp" style="color: inherit; text-decoration: inherit;">Ipv6Address<wbr>Count</a>
 </span>
@@ -795,6 +796,16 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Key name of the Key Pair to use for the instance; which can be managed using the `aws.ec2.KeyPair` resource.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="launchtemplate_csharp">
+<a href="#launchtemplate_csharp" style="color: inherit; text-decoration: inherit;">Launch<wbr>Template</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancelaunchtemplate">Instance<wbr>Launch<wbr>Template<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies a Launch Template to configure the instance. Parameters configured on this resource will override the corresponding parameters in the Launch Template.
+See Launch Template Specification below for more details.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metadataoptions_csharp">
@@ -952,24 +963,15 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
         <span id="ami_go">
 <a href="#ami_go" style="color: inherit; text-decoration: inherit;">Ami</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}AMI to use for the instance.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="instancetype_go">
-<a href="#instancetype_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#instancetype">Instance<wbr>Type</a></span>
-    </dt>
-    <dd>{{% md %}}Type of instance to start. Updates to this field will trigger a stop/start of the EC2 instance.
+    <dd>{{% md %}}AMI to use for the instance. Required unless `launch_template` is specified and the Launch Template specifes an AMI. If an AMI is specified in the Launch Template, setting `ami` will override the AMI specified in the Launch Template.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="associatepublicipaddress_go">
@@ -1116,6 +1118,15 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
     <dd>{{% md %}}Shutdown behavior for the instance. Amazon defaults this to `stop` for EBS-backed instances and `terminate` for instance-store instances. Cannot be set on instance-store instances. See [Shutdown Behavior](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#Using_ChangingInstanceInitiatedShutdownBehavior) for more information.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="instancetype_go">
+<a href="#instancetype_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#instancetype">Instance<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}The instance type to use for the instance. Updates to this field will trigger a stop/start of the EC2 instance.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="ipv6addresscount_go">
 <a href="#ipv6addresscount_go" style="color: inherit; text-decoration: inherit;">Ipv6Address<wbr>Count</a>
 </span>
@@ -1141,6 +1152,16 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Key name of the Key Pair to use for the instance; which can be managed using the `aws.ec2.KeyPair` resource.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="launchtemplate_go">
+<a href="#launchtemplate_go" style="color: inherit; text-decoration: inherit;">Launch<wbr>Template</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancelaunchtemplate">Instance<wbr>Launch<wbr>Template<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies a Launch Template to configure the instance. Parameters configured on this resource will override the corresponding parameters in the Launch Template.
+See Launch Template Specification below for more details.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metadataoptions_go">
@@ -1298,24 +1319,15 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
         <span id="ami_nodejs">
 <a href="#ami_nodejs" style="color: inherit; text-decoration: inherit;">ami</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}AMI to use for the instance.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="instancetype_nodejs">
-<a href="#instancetype_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#instancetype">Instance<wbr>Type</a></span>
-    </dt>
-    <dd>{{% md %}}Type of instance to start. Updates to this field will trigger a stop/start of the EC2 instance.
+    <dd>{{% md %}}AMI to use for the instance. Required unless `launch_template` is specified and the Launch Template specifes an AMI. If an AMI is specified in the Launch Template, setting `ami` will override the AMI specified in the Launch Template.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="associatepublicipaddress_nodejs">
@@ -1462,6 +1474,15 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
     <dd>{{% md %}}Shutdown behavior for the instance. Amazon defaults this to `stop` for EBS-backed instances and `terminate` for instance-store instances. Cannot be set on instance-store instances. See [Shutdown Behavior](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#Using_ChangingInstanceInitiatedShutdownBehavior) for more information.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="instancetype_nodejs">
+<a href="#instancetype_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#instancetype">Instance<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}The instance type to use for the instance. Updates to this field will trigger a stop/start of the EC2 instance.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="ipv6addresscount_nodejs">
 <a href="#ipv6addresscount_nodejs" style="color: inherit; text-decoration: inherit;">ipv6Address<wbr>Count</a>
 </span>
@@ -1487,6 +1508,16 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Key name of the Key Pair to use for the instance; which can be managed using the `aws.ec2.KeyPair` resource.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="launchtemplate_nodejs">
+<a href="#launchtemplate_nodejs" style="color: inherit; text-decoration: inherit;">launch<wbr>Template</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancelaunchtemplate">Instance<wbr>Launch<wbr>Template<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies a Launch Template to configure the instance. Parameters configured on this resource will override the corresponding parameters in the Launch Template.
+See Launch Template Specification below for more details.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metadataoptions_nodejs">
@@ -1644,24 +1675,15 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-required"
-            title="Required">
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
         <span id="ami_python">
 <a href="#ami_python" style="color: inherit; text-decoration: inherit;">ami</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}AMI to use for the instance.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="instance_type_python">
-<a href="#instance_type_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#instancetype">Instance<wbr>Type</a></span>
-    </dt>
-    <dd>{{% md %}}Type of instance to start. Updates to this field will trigger a stop/start of the EC2 instance.
+    <dd>{{% md %}}AMI to use for the instance. Required unless `launch_template` is specified and the Launch Template specifes an AMI. If an AMI is specified in the Launch Template, setting `ami` will override the AMI specified in the Launch Template.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="associate_public_ip_address_python">
@@ -1808,6 +1830,15 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
     <dd>{{% md %}}Shutdown behavior for the instance. Amazon defaults this to `stop` for EBS-backed instances and `terminate` for instance-store instances. Cannot be set on instance-store instances. See [Shutdown Behavior](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#Using_ChangingInstanceInitiatedShutdownBehavior) for more information.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="instance_type_python">
+<a href="#instance_type_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str | <a href="#instancetype">Instance<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}The instance type to use for the instance. Updates to this field will trigger a stop/start of the EC2 instance.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="ipv6_address_count_python">
 <a href="#ipv6_address_count_python" style="color: inherit; text-decoration: inherit;">ipv6_<wbr>address_<wbr>count</a>
 </span>
@@ -1833,6 +1864,16 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Key name of the Key Pair to use for the instance; which can be managed using the `aws.ec2.KeyPair` resource.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="launch_template_python">
+<a href="#launch_template_python" style="color: inherit; text-decoration: inherit;">launch_<wbr>template</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancelaunchtemplate">Instance<wbr>Launch<wbr>Template<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies a Launch Template to configure the instance. Parameters configured on this resource will override the corresponding parameters in the Launch Template.
+See Launch Template Specification below for more details.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metadata_options_python">
@@ -2371,6 +2412,7 @@ Get an existing Instance resource's state with the given name, ID, and optional 
         <span class="nx">ipv6_address_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
         <span class="nx">ipv6_addresses</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
         <span class="nx">key_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">launch_template</span><span class="p">:</span> <span class="nx">Optional[InstanceLaunchTemplateArgs]</span> = None<span class="p">,</span>
         <span class="nx">metadata_options</span><span class="p">:</span> <span class="nx">Optional[InstanceMetadataOptionsArgs]</span> = None<span class="p">,</span>
         <span class="nx">monitoring</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">network_interfaces</span><span class="p">:</span> <span class="nx">Optional[Sequence[InstanceNetworkInterfaceArgs]]</span> = None<span class="p">,</span>
@@ -2397,7 +2439,7 @@ Get an existing Instance resource's state with the given name, ID, and optional 
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetInstance<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">InstanceState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Instance</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetInstance<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">InstanceState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Instance</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -2512,7 +2554,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}AMI to use for the instance.
+    <dd>{{% md %}}AMI to use for the instance. Required unless `launch_template` is specified and the Launch Template specifes an AMI. If an AMI is specified in the Launch Template, setting `ami` will override the AMI specified in the Launch Template.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_arn_csharp">
@@ -2674,7 +2716,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#instancetype">Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Instance<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Type of instance to start. Updates to this field will trigger a stop/start of the EC2 instance.
+    <dd>{{% md %}}The instance type to use for the instance. Updates to this field will trigger a stop/start of the EC2 instance.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipv6addresscount_csharp">
@@ -2702,6 +2744,16 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Key name of the Key Pair to use for the instance; which can be managed using the `aws.ec2.KeyPair` resource.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_launchtemplate_csharp">
+<a href="#state_launchtemplate_csharp" style="color: inherit; text-decoration: inherit;">Launch<wbr>Template</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancelaunchtemplate">Instance<wbr>Launch<wbr>Template<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies a Launch Template to configure the instance. Parameters configured on this resource will override the corresponding parameters in the Launch Template.
+See Launch Template Specification below for more details.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_metadataoptions_csharp">
@@ -2930,7 +2982,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}AMI to use for the instance.
+    <dd>{{% md %}}AMI to use for the instance. Required unless `launch_template` is specified and the Launch Template specifes an AMI. If an AMI is specified in the Launch Template, setting `ami` will override the AMI specified in the Launch Template.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_arn_go">
@@ -3101,7 +3153,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#instancetype">Instance<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Type of instance to start. Updates to this field will trigger a stop/start of the EC2 instance.
+    <dd>{{% md %}}The instance type to use for the instance. Updates to this field will trigger a stop/start of the EC2 instance.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipv6addresscount_go">
@@ -3129,6 +3181,16 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Key name of the Key Pair to use for the instance; which can be managed using the `aws.ec2.KeyPair` resource.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_launchtemplate_go">
+<a href="#state_launchtemplate_go" style="color: inherit; text-decoration: inherit;">Launch<wbr>Template</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancelaunchtemplate">Instance<wbr>Launch<wbr>Template<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies a Launch Template to configure the instance. Parameters configured on this resource will override the corresponding parameters in the Launch Template.
+See Launch Template Specification below for more details.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_metadataoptions_go">
@@ -3348,7 +3410,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}AMI to use for the instance.
+    <dd>{{% md %}}AMI to use for the instance. Required unless `launch_template` is specified and the Launch Template specifes an AMI. If an AMI is specified in the Launch Template, setting `ami` will override the AMI specified in the Launch Template.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_arn_nodejs">
@@ -3519,7 +3581,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#instancetype">Instance<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Type of instance to start. Updates to this field will trigger a stop/start of the EC2 instance.
+    <dd>{{% md %}}The instance type to use for the instance. Updates to this field will trigger a stop/start of the EC2 instance.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipv6addresscount_nodejs">
@@ -3547,6 +3609,16 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Key name of the Key Pair to use for the instance; which can be managed using the `aws.ec2.KeyPair` resource.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_launchtemplate_nodejs">
+<a href="#state_launchtemplate_nodejs" style="color: inherit; text-decoration: inherit;">launch<wbr>Template</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancelaunchtemplate">Instance<wbr>Launch<wbr>Template<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies a Launch Template to configure the instance. Parameters configured on this resource will override the corresponding parameters in the Launch Template.
+See Launch Template Specification below for more details.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_metadataoptions_nodejs">
@@ -3766,7 +3838,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}AMI to use for the instance.
+    <dd>{{% md %}}AMI to use for the instance. Required unless `launch_template` is specified and the Launch Template specifes an AMI. If an AMI is specified in the Launch Template, setting `ami` will override the AMI specified in the Launch Template.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_arn_python">
@@ -3937,7 +4009,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#instancetype">Instance<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Type of instance to start. Updates to this field will trigger a stop/start of the EC2 instance.
+    <dd>{{% md %}}The instance type to use for the instance. Updates to this field will trigger a stop/start of the EC2 instance.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipv6_address_count_python">
@@ -3965,6 +4037,16 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Key name of the Key Pair to use for the instance; which can be managed using the `aws.ec2.KeyPair` resource.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_launch_template_python">
+<a href="#state_launch_template_python" style="color: inherit; text-decoration: inherit;">launch_<wbr>template</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancelaunchtemplate">Instance<wbr>Launch<wbr>Template<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies a Launch Template to configure the instance. Parameters configured on this resource will override the corresponding parameters in the Launch Template.
+See Launch Template Specification below for more details.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_metadata_options_python">
@@ -4973,6 +5055,132 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Instance Store Device Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#InstanceStoreDeviceNames) (e.g. `ephemeral0`).
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="instancelaunchtemplate">Instance<wbr>Launch<wbr>Template</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the launch template. Conflicts with `name`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the launch template. Conflicts with `id`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="version_csharp">
+<a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Template version. Can be a specific version number, `$Latest` or `$Default`. The default value is `$Default`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the launch template. Conflicts with `name`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the launch template. Conflicts with `id`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="version_go">
+<a href="#version_go" style="color: inherit; text-decoration: inherit;">Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Template version. Can be a specific version number, `$Latest` or `$Default`. The default value is `$Default`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the launch template. Conflicts with `name`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the launch template. Conflicts with `id`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="version_nodejs">
+<a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Template version. Can be a specific version number, `$Latest` or `$Default`. The default value is `$Default`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ID of the launch template. Conflicts with `name`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the launch template. Conflicts with `id`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="version_python">
+<a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Template version. Can be a specific version number, `$Latest` or `$Default`. The default value is `$Default`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

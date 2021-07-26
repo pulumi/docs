@@ -1080,6 +1080,7 @@ const yada = new aws.cloudwatch.EventTarget("yada", {
                 <span class="nx">input_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                 <span class="nx">input_transformer</span><span class="p">:</span> <span class="nx">Optional[EventTargetInputTransformerArgs]</span> = None<span class="p">,</span>
                 <span class="nx">kinesis_target</span><span class="p">:</span> <span class="nx">Optional[EventTargetKinesisTargetArgs]</span> = None<span class="p">,</span>
+                <span class="nx">redshift_target</span><span class="p">:</span> <span class="nx">Optional[EventTargetRedshiftTargetArgs]</span> = None<span class="p">,</span>
                 <span class="nx">retry_policy</span><span class="p">:</span> <span class="nx">Optional[EventTargetRetryPolicyArgs]</span> = None<span class="p">,</span>
                 <span class="nx">role_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                 <span class="nx">rule</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -1093,7 +1094,7 @@ const yada = new aws.cloudwatch.EventTarget("yada", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewEventTarget</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">EventTargetArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">EventTarget</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewEventTarget</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">EventTargetArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">EventTarget</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -1154,7 +1155,7 @@ const yada = new aws.cloudwatch.EventTarget("yada", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
@@ -1172,7 +1173,7 @@ const yada = new aws.cloudwatch.EventTarget("yada", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
@@ -1312,6 +1313,15 @@ The EventTarget resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#eventtargetkinesistarget">Event<wbr>Target<wbr>Kinesis<wbr>Target<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Parameters used when you are using the rule to invoke an Amazon Kinesis Stream. Documented below. A maximum of 1 are allowed.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="redshifttarget_csharp">
+<a href="#redshifttarget_csharp" style="color: inherit; text-decoration: inherit;">Redshift<wbr>Target</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#eventtargetredshifttarget">Event<wbr>Target<wbr>Redshift<wbr>Target<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Parameters used when you are using the rule to invoke an Amazon Redshift Statement. Documented below. A maximum of 1 are allowed.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retrypolicy_csharp">
@@ -1462,6 +1472,15 @@ The EventTarget resource accepts the following [input]({{< relref "/docs/intro/c
     <dd>{{% md %}}Parameters used when you are using the rule to invoke an Amazon Kinesis Stream. Documented below. A maximum of 1 are allowed.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="redshifttarget_go">
+<a href="#redshifttarget_go" style="color: inherit; text-decoration: inherit;">Redshift<wbr>Target</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#eventtargetredshifttarget">Event<wbr>Target<wbr>Redshift<wbr>Target<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Parameters used when you are using the rule to invoke an Amazon Redshift Statement. Documented below. A maximum of 1 are allowed.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="retrypolicy_go">
 <a href="#retrypolicy_go" style="color: inherit; text-decoration: inherit;">Retry<wbr>Policy</a>
 </span>
@@ -1608,6 +1627,15 @@ The EventTarget resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#eventtargetkinesistarget">Event<wbr>Target<wbr>Kinesis<wbr>Target<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Parameters used when you are using the rule to invoke an Amazon Kinesis Stream. Documented below. A maximum of 1 are allowed.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="redshifttarget_nodejs">
+<a href="#redshifttarget_nodejs" style="color: inherit; text-decoration: inherit;">redshift<wbr>Target</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#eventtargetredshifttarget">Event<wbr>Target<wbr>Redshift<wbr>Target<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Parameters used when you are using the rule to invoke an Amazon Redshift Statement. Documented below. A maximum of 1 are allowed.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retrypolicy_nodejs">
@@ -1758,6 +1786,15 @@ The EventTarget resource accepts the following [input]({{< relref "/docs/intro/c
     <dd>{{% md %}}Parameters used when you are using the rule to invoke an Amazon Kinesis Stream. Documented below. A maximum of 1 are allowed.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="redshift_target_python">
+<a href="#redshift_target_python" style="color: inherit; text-decoration: inherit;">redshift_<wbr>target</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#eventtargetredshifttarget">Event<wbr>Target<wbr>Redshift<wbr>Target<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Parameters used when you are using the rule to invoke an Amazon Redshift Statement. Documented below. A maximum of 1 are allowed.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="retry_policy_python">
 <a href="#retry_policy_python" style="color: inherit; text-decoration: inherit;">retry_<wbr>policy</a>
 </span>
@@ -1885,6 +1922,7 @@ Get an existing EventTarget resource's state with the given name, ID, and option
         <span class="nx">input_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">input_transformer</span><span class="p">:</span> <span class="nx">Optional[EventTargetInputTransformerArgs]</span> = None<span class="p">,</span>
         <span class="nx">kinesis_target</span><span class="p">:</span> <span class="nx">Optional[EventTargetKinesisTargetArgs]</span> = None<span class="p">,</span>
+        <span class="nx">redshift_target</span><span class="p">:</span> <span class="nx">Optional[EventTargetRedshiftTargetArgs]</span> = None<span class="p">,</span>
         <span class="nx">retry_policy</span><span class="p">:</span> <span class="nx">Optional[EventTargetRetryPolicyArgs]</span> = None<span class="p">,</span>
         <span class="nx">role_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">rule</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -1894,7 +1932,7 @@ Get an existing EventTarget resource's state with the given name, ID, and option
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetEventTarget<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">EventTargetState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">EventTarget</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetEventTarget<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">EventTargetState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">EventTarget</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -2093,6 +2131,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Parameters used when you are using the rule to invoke an Amazon Kinesis Stream. Documented below. A maximum of 1 are allowed.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_redshifttarget_csharp">
+<a href="#state_redshifttarget_csharp" style="color: inherit; text-decoration: inherit;">Redshift<wbr>Target</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#eventtargetredshifttarget">Event<wbr>Target<wbr>Redshift<wbr>Target<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Parameters used when you are using the rule to invoke an Amazon Redshift Statement. Documented below. A maximum of 1 are allowed.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_retrypolicy_csharp">
 <a href="#state_retrypolicy_csharp" style="color: inherit; text-decoration: inherit;">Retry<wbr>Policy</a>
 </span>
@@ -2239,6 +2286,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="#eventtargetkinesistarget">Event<wbr>Target<wbr>Kinesis<wbr>Target<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Parameters used when you are using the rule to invoke an Amazon Kinesis Stream. Documented below. A maximum of 1 are allowed.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_redshifttarget_go">
+<a href="#state_redshifttarget_go" style="color: inherit; text-decoration: inherit;">Redshift<wbr>Target</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#eventtargetredshifttarget">Event<wbr>Target<wbr>Redshift<wbr>Target<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Parameters used when you are using the rule to invoke an Amazon Redshift Statement. Documented below. A maximum of 1 are allowed.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_retrypolicy_go">
@@ -2389,6 +2445,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Parameters used when you are using the rule to invoke an Amazon Kinesis Stream. Documented below. A maximum of 1 are allowed.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_redshifttarget_nodejs">
+<a href="#state_redshifttarget_nodejs" style="color: inherit; text-decoration: inherit;">redshift<wbr>Target</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#eventtargetredshifttarget">Event<wbr>Target<wbr>Redshift<wbr>Target<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Parameters used when you are using the rule to invoke an Amazon Redshift Statement. Documented below. A maximum of 1 are allowed.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_retrypolicy_nodejs">
 <a href="#state_retrypolicy_nodejs" style="color: inherit; text-decoration: inherit;">retry<wbr>Policy</a>
 </span>
@@ -2535,6 +2600,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="#eventtargetkinesistarget">Event<wbr>Target<wbr>Kinesis<wbr>Target<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Parameters used when you are using the rule to invoke an Amazon Kinesis Stream. Documented below. A maximum of 1 are allowed.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_redshift_target_python">
+<a href="#state_redshift_target_python" style="color: inherit; text-decoration: inherit;">redshift_<wbr>target</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#eventtargetredshifttarget">Event<wbr>Target<wbr>Redshift<wbr>Target<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Parameters used when you are using the rule to invoke an Amazon Redshift Statement. Documented below. A maximum of 1 are allowed.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_retry_policy_python">
@@ -3726,6 +3800,240 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The JSON path to be extracted from the event and used as the partition key.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="eventtargetredshifttarget">Event<wbr>Target<wbr>Redshift<wbr>Target</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="database_csharp">
+<a href="#database_csharp" style="color: inherit; text-decoration: inherit;">Database</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the database.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dbuser_csharp">
+<a href="#dbuser_csharp" style="color: inherit; text-decoration: inherit;">Db<wbr>User</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The database user name.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="secretsmanagerarn_csharp">
+<a href="#secretsmanagerarn_csharp" style="color: inherit; text-decoration: inherit;">Secrets<wbr>Manager<wbr>Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name or ARN of the secret that enables access to the database.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sql_csharp">
+<a href="#sql_csharp" style="color: inherit; text-decoration: inherit;">Sql</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The SQL statement text to run.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="statementname_csharp">
+<a href="#statementname_csharp" style="color: inherit; text-decoration: inherit;">Statement<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the SQL statement.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="withevent_csharp">
+<a href="#withevent_csharp" style="color: inherit; text-decoration: inherit;">With<wbr>Event</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether to send an event back to EventBridge after the SQL statement runs.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="database_go">
+<a href="#database_go" style="color: inherit; text-decoration: inherit;">Database</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the database.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dbuser_go">
+<a href="#dbuser_go" style="color: inherit; text-decoration: inherit;">Db<wbr>User</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The database user name.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="secretsmanagerarn_go">
+<a href="#secretsmanagerarn_go" style="color: inherit; text-decoration: inherit;">Secrets<wbr>Manager<wbr>Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name or ARN of the secret that enables access to the database.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sql_go">
+<a href="#sql_go" style="color: inherit; text-decoration: inherit;">Sql</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The SQL statement text to run.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="statementname_go">
+<a href="#statementname_go" style="color: inherit; text-decoration: inherit;">Statement<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the SQL statement.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="withevent_go">
+<a href="#withevent_go" style="color: inherit; text-decoration: inherit;">With<wbr>Event</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether to send an event back to EventBridge after the SQL statement runs.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="database_nodejs">
+<a href="#database_nodejs" style="color: inherit; text-decoration: inherit;">database</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the database.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dbuser_nodejs">
+<a href="#dbuser_nodejs" style="color: inherit; text-decoration: inherit;">db<wbr>User</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The database user name.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="secretsmanagerarn_nodejs">
+<a href="#secretsmanagerarn_nodejs" style="color: inherit; text-decoration: inherit;">secrets<wbr>Manager<wbr>Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name or ARN of the secret that enables access to the database.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sql_nodejs">
+<a href="#sql_nodejs" style="color: inherit; text-decoration: inherit;">sql</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The SQL statement text to run.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="statementname_nodejs">
+<a href="#statementname_nodejs" style="color: inherit; text-decoration: inherit;">statement<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the SQL statement.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="withevent_nodejs">
+<a href="#withevent_nodejs" style="color: inherit; text-decoration: inherit;">with<wbr>Event</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether to send an event back to EventBridge after the SQL statement runs.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="database_python">
+<a href="#database_python" style="color: inherit; text-decoration: inherit;">database</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the database.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="db_user_python">
+<a href="#db_user_python" style="color: inherit; text-decoration: inherit;">db_<wbr>user</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The database user name.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="secrets_manager_arn_python">
+<a href="#secrets_manager_arn_python" style="color: inherit; text-decoration: inherit;">secrets_<wbr>manager_<wbr>arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name or ARN of the secret that enables access to the database.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sql_python">
+<a href="#sql_python" style="color: inherit; text-decoration: inherit;">sql</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The SQL statement text to run.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="statement_name_python">
+<a href="#statement_name_python" style="color: inherit; text-decoration: inherit;">statement_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the SQL statement.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="with_event_python">
+<a href="#with_event_python" style="color: inherit; text-decoration: inherit;">with_<wbr>event</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether to send an event back to EventBridge after the SQL statement runs.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

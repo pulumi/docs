@@ -13,6 +13,7 @@ Explore the resources and functions of the aws.appconfig module.
 <ul class="api">
     <li><a href="application" title="Application"><span class="symbol resource"></span>Application</a></li>
     <li><a href="configurationprofile" title="ConfigurationProfile"><span class="symbol resource"></span>ConfigurationProfile</a></li>
+    <li><a href="deployment" title="Deployment"><span class="symbol resource"></span>Deployment</a></li>
     <li><a href="deploymentstrategy" title="DeploymentStrategy"><span class="symbol resource"></span>DeploymentStrategy</a></li>
     <li><a href="environment" title="Environment"><span class="symbol resource"></span>Environment</a></li>
     <li><a href="hostedconfigurationversion" title="HostedConfigurationVersion"><span class="symbol resource"></span>HostedConfigurationVersion</a></li>
@@ -27,6 +28,6 @@ Explore the resources and functions of the aws.appconfig module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.13.0</dd>
+	<dd>4.14.0</dd>
 </dl>
 

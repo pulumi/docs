@@ -235,6 +235,7 @@ const example = new aws.storagegateway.SmbFileShare("example", {
                  <span class="nx">admin_user_lists</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
                  <span class="nx">audit_destination_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                  <span class="nx">authentication</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                 <span class="nx">bucket_region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                  <span class="nx">cache_attributes</span><span class="p">:</span> <span class="nx">Optional[SmbFileShareCacheAttributesArgs]</span> = None<span class="p">,</span>
                  <span class="nx">case_sensitivity</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                  <span class="nx">default_storage_class</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -247,13 +248,15 @@ const example = new aws.storagegateway.SmbFileShare("example", {
                  <span class="nx">location_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                  <span class="nx">notification_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                  <span class="nx">object_acl</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                 <span class="nx">oplocks_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
                  <span class="nx">read_only</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
                  <span class="nx">requester_pays</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
                  <span class="nx">role_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                  <span class="nx">smb_acl_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
                  <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
                  <span class="nx">tags_all</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
-                 <span class="nx">valid_user_lists</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">)</span>
+                 <span class="nx">valid_user_lists</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+                 <span class="nx">vpc_endpoint_dns_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">SmbFileShare</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                  <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SmbFileShareArgs</a></span><span class="p">,</span>
@@ -261,7 +264,7 @@ const example = new aws.storagegateway.SmbFileShare("example", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSmbFileShare</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">SmbFileShareArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SmbFileShare</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSmbFileShare</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">SmbFileShareArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SmbFileShare</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -322,7 +325,7 @@ const example = new aws.storagegateway.SmbFileShare("example", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
@@ -340,7 +343,7 @@ const example = new aws.storagegateway.SmbFileShare("example", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
@@ -446,6 +449,15 @@ The SmbFileShare resource accepts the following [input]({{< relref "/docs/intro/
     <dd>{{% md %}}The authentication method that users use to access the file share. Defaults to `ActiveDirectory`. Valid values: `ActiveDirectory`, `GuestAccess`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="bucketregion_csharp">
+<a href="#bucketregion_csharp" style="color: inherit; text-decoration: inherit;">Bucket<wbr>Region</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The region of the S3 buck used by the file share. Required when specifying a `vpc_endpoint_dns_name`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="cacheattributes_csharp">
 <a href="#cacheattributes_csharp" style="color: inherit; text-decoration: inherit;">Cache<wbr>Attributes</a>
 </span>
@@ -536,6 +548,15 @@ The SmbFileShare resource accepts the following [input]({{< relref "/docs/intro/
     <dd>{{% md %}}Access Control List permission for S3 bucket objects. Defaults to `private`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="oplocksenabled_csharp">
+<a href="#oplocksenabled_csharp" style="color: inherit; text-decoration: inherit;">Oplocks<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Boolean to indicate Opportunistic lock (oplock) status. Defaults to `true`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="readonly_csharp">
 <a href="#readonly_csharp" style="color: inherit; text-decoration: inherit;">Read<wbr>Only</a>
 </span>
@@ -588,6 +609,15 @@ The SmbFileShare resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of users in the Active Directory that are allowed to access the file share. Only valid if `authentication` is set to `ActiveDirectory`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="vpcendpointdnsname_csharp">
+<a href="#vpcendpointdnsname_csharp" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Endpoint<wbr>Dns<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The DNS name of the VPC endpoint for S3 private link.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -655,6 +685,15 @@ The SmbFileShare resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The authentication method that users use to access the file share. Defaults to `ActiveDirectory`. Valid values: `ActiveDirectory`, `GuestAccess`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="bucketregion_go">
+<a href="#bucketregion_go" style="color: inherit; text-decoration: inherit;">Bucket<wbr>Region</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The region of the S3 buck used by the file share. Required when specifying a `vpc_endpoint_dns_name`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cacheattributes_go">
@@ -747,6 +786,15 @@ The SmbFileShare resource accepts the following [input]({{< relref "/docs/intro/
     <dd>{{% md %}}Access Control List permission for S3 bucket objects. Defaults to `private`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="oplocksenabled_go">
+<a href="#oplocksenabled_go" style="color: inherit; text-decoration: inherit;">Oplocks<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Boolean to indicate Opportunistic lock (oplock) status. Defaults to `true`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="readonly_go">
 <a href="#readonly_go" style="color: inherit; text-decoration: inherit;">Read<wbr>Only</a>
 </span>
@@ -799,6 +847,15 @@ The SmbFileShare resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of users in the Active Directory that are allowed to access the file share. Only valid if `authentication` is set to `ActiveDirectory`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="vpcendpointdnsname_go">
+<a href="#vpcendpointdnsname_go" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Endpoint<wbr>Dns<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The DNS name of the VPC endpoint for S3 private link.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -866,6 +923,15 @@ The SmbFileShare resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The authentication method that users use to access the file share. Defaults to `ActiveDirectory`. Valid values: `ActiveDirectory`, `GuestAccess`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="bucketregion_nodejs">
+<a href="#bucketregion_nodejs" style="color: inherit; text-decoration: inherit;">bucket<wbr>Region</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The region of the S3 buck used by the file share. Required when specifying a `vpc_endpoint_dns_name`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cacheattributes_nodejs">
@@ -958,6 +1024,15 @@ The SmbFileShare resource accepts the following [input]({{< relref "/docs/intro/
     <dd>{{% md %}}Access Control List permission for S3 bucket objects. Defaults to `private`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="oplocksenabled_nodejs">
+<a href="#oplocksenabled_nodejs" style="color: inherit; text-decoration: inherit;">oplocks<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Boolean to indicate Opportunistic lock (oplock) status. Defaults to `true`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="readonly_nodejs">
 <a href="#readonly_nodejs" style="color: inherit; text-decoration: inherit;">read<wbr>Only</a>
 </span>
@@ -1010,6 +1085,15 @@ The SmbFileShare resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of users in the Active Directory that are allowed to access the file share. Only valid if `authentication` is set to `ActiveDirectory`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="vpcendpointdnsname_nodejs">
+<a href="#vpcendpointdnsname_nodejs" style="color: inherit; text-decoration: inherit;">vpc<wbr>Endpoint<wbr>Dns<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The DNS name of the VPC endpoint for S3 private link.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1077,6 +1161,15 @@ The SmbFileShare resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The authentication method that users use to access the file share. Defaults to `ActiveDirectory`. Valid values: `ActiveDirectory`, `GuestAccess`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="bucket_region_python">
+<a href="#bucket_region_python" style="color: inherit; text-decoration: inherit;">bucket_<wbr>region</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The region of the S3 buck used by the file share. Required when specifying a `vpc_endpoint_dns_name`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cache_attributes_python">
@@ -1169,6 +1262,15 @@ The SmbFileShare resource accepts the following [input]({{< relref "/docs/intro/
     <dd>{{% md %}}Access Control List permission for S3 bucket objects. Defaults to `private`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="oplocks_enabled_python">
+<a href="#oplocks_enabled_python" style="color: inherit; text-decoration: inherit;">oplocks_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Boolean to indicate Opportunistic lock (oplock) status. Defaults to `true`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="read_only_python">
 <a href="#read_only_python" style="color: inherit; text-decoration: inherit;">read_<wbr>only</a>
 </span>
@@ -1221,6 +1323,15 @@ The SmbFileShare resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of users in the Active Directory that are allowed to access the file share. Only valid if `authentication` is set to `ActiveDirectory`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="vpc_endpoint_dns_name_python">
+<a href="#vpc_endpoint_dns_name_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>endpoint_<wbr>dns_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The DNS name of the VPC endpoint for S3 private link.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1408,6 +1519,7 @@ Get an existing SmbFileShare resource's state with the given name, ID, and optio
         <span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">audit_destination_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">authentication</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">bucket_region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">cache_attributes</span><span class="p">:</span> <span class="nx">Optional[SmbFileShareCacheAttributesArgs]</span> = None<span class="p">,</span>
         <span class="nx">case_sensitivity</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">default_storage_class</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -1421,6 +1533,7 @@ Get an existing SmbFileShare resource's state with the given name, ID, and optio
         <span class="nx">location_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">notification_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">object_acl</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">oplocks_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">read_only</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">requester_pays</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
@@ -1428,11 +1541,12 @@ Get an existing SmbFileShare resource's state with the given name, ID, and optio
         <span class="nx">smb_acl_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
         <span class="nx">tags_all</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
-        <span class="nx">valid_user_lists</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">) -&gt;</span> SmbFileShare</code></pre></div>
+        <span class="nx">valid_user_lists</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+        <span class="nx">vpc_endpoint_dns_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> SmbFileShare</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSmbFileShare<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">SmbFileShareState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SmbFileShare</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSmbFileShare<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">SmbFileShareState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SmbFileShare</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -1586,6 +1700,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The authentication method that users use to access the file share. Defaults to `ActiveDirectory`. Valid values: `ActiveDirectory`, `GuestAccess`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_bucketregion_csharp">
+<a href="#state_bucketregion_csharp" style="color: inherit; text-decoration: inherit;">Bucket<wbr>Region</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The region of the S3 buck used by the file share. Required when specifying a `vpc_endpoint_dns_name`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_cacheattributes_csharp">
 <a href="#state_cacheattributes_csharp" style="color: inherit; text-decoration: inherit;">Cache<wbr>Attributes</a>
 </span>
@@ -1703,6 +1826,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Access Control List permission for S3 bucket objects. Defaults to `private`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_oplocksenabled_csharp">
+<a href="#state_oplocksenabled_csharp" style="color: inherit; text-decoration: inherit;">Oplocks<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Boolean to indicate Opportunistic lock (oplock) status. Defaults to `true`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_path_csharp">
 <a href="#state_path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
 </span>
@@ -1773,6 +1905,15 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of users in the Active Directory that are allowed to access the file share. Only valid if `authentication` is set to `ActiveDirectory`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_vpcendpointdnsname_csharp">
+<a href="#state_vpcendpointdnsname_csharp" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Endpoint<wbr>Dns<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The DNS name of the VPC endpoint for S3 private link.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1822,6 +1963,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The authentication method that users use to access the file share. Defaults to `ActiveDirectory`. Valid values: `ActiveDirectory`, `GuestAccess`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_bucketregion_go">
+<a href="#state_bucketregion_go" style="color: inherit; text-decoration: inherit;">Bucket<wbr>Region</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The region of the S3 buck used by the file share. Required when specifying a `vpc_endpoint_dns_name`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cacheattributes_go">
@@ -1941,6 +2091,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Access Control List permission for S3 bucket objects. Defaults to `private`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_oplocksenabled_go">
+<a href="#state_oplocksenabled_go" style="color: inherit; text-decoration: inherit;">Oplocks<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Boolean to indicate Opportunistic lock (oplock) status. Defaults to `true`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_path_go">
 <a href="#state_path_go" style="color: inherit; text-decoration: inherit;">Path</a>
 </span>
@@ -2011,6 +2170,15 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of users in the Active Directory that are allowed to access the file share. Only valid if `authentication` is set to `ActiveDirectory`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_vpcendpointdnsname_go">
+<a href="#state_vpcendpointdnsname_go" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Endpoint<wbr>Dns<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The DNS name of the VPC endpoint for S3 private link.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2060,6 +2228,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The authentication method that users use to access the file share. Defaults to `ActiveDirectory`. Valid values: `ActiveDirectory`, `GuestAccess`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_bucketregion_nodejs">
+<a href="#state_bucketregion_nodejs" style="color: inherit; text-decoration: inherit;">bucket<wbr>Region</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The region of the S3 buck used by the file share. Required when specifying a `vpc_endpoint_dns_name`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cacheattributes_nodejs">
@@ -2179,6 +2356,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Access Control List permission for S3 bucket objects. Defaults to `private`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_oplocksenabled_nodejs">
+<a href="#state_oplocksenabled_nodejs" style="color: inherit; text-decoration: inherit;">oplocks<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Boolean to indicate Opportunistic lock (oplock) status. Defaults to `true`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_path_nodejs">
 <a href="#state_path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
@@ -2249,6 +2435,15 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of users in the Active Directory that are allowed to access the file share. Only valid if `authentication` is set to `ActiveDirectory`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_vpcendpointdnsname_nodejs">
+<a href="#state_vpcendpointdnsname_nodejs" style="color: inherit; text-decoration: inherit;">vpc<wbr>Endpoint<wbr>Dns<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The DNS name of the VPC endpoint for S3 private link.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2298,6 +2493,15 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The authentication method that users use to access the file share. Defaults to `ActiveDirectory`. Valid values: `ActiveDirectory`, `GuestAccess`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_bucket_region_python">
+<a href="#state_bucket_region_python" style="color: inherit; text-decoration: inherit;">bucket_<wbr>region</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The region of the S3 buck used by the file share. Required when specifying a `vpc_endpoint_dns_name`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cache_attributes_python">
@@ -2417,6 +2621,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Access Control List permission for S3 bucket objects. Defaults to `private`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_oplocks_enabled_python">
+<a href="#state_oplocks_enabled_python" style="color: inherit; text-decoration: inherit;">oplocks_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Boolean to indicate Opportunistic lock (oplock) status. Defaults to `true`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_path_python">
 <a href="#state_path_python" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
@@ -2487,6 +2700,15 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of users in the Active Directory that are allowed to access the file share. Only valid if `authentication` is set to `ActiveDirectory`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_vpc_endpoint_dns_name_python">
+<a href="#state_vpc_endpoint_dns_name_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>endpoint_<wbr>dns_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The DNS name of the VPC endpoint for S3 private link.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
