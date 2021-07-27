@@ -12,7 +12,7 @@ tags:
 
 ---
 
-Cloud engineering brings industry-standard software development practices to building, deploying, and managing cloud infrastructure. Testing is a common practice for evaluating software to ensure that it meets requirements. Similarly, infrastructure testing checks for missing requirements, bugs, and errors; it also ensures security, reliability, and performance. Testing uses manual or automated tools to identify bugs that can cause unexpected infrastructure behavior.
+Cloud engineering brings industry-standard software development practices to building, deploying, and managing cloud infrastructure. Testing is a common practice for evaluating software to ensure that it meets requirements. Similarly, [infrastructure testing]({{< relref "/what-is/how-to-step-up-cloud-infrastructure-testing" >}}) checks for missing requirements, bugs, and errors; it also ensures security, reliability, and performance. Testing uses manual or automated tools to identify bugs that can cause unexpected infrastructure behavior.
 
 There are many benefits to infrastructure testing, including:
 

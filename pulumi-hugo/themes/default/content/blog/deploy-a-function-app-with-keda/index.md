@@ -52,7 +52,7 @@ queue.onEvent("MyHandler", async (context, msg) => {
 
 ## KEDA
 
-Over the last few years, Kubernetes has gained traction across many industries. KEDA is provides a way to design and run event-driven applications inside a Kubernetes cluster. KEDA implements the autoscaling components in terms of Kubernetes tools.
+Over the last few years, Kubernetes has gained traction across many industries. KEDA is provides a way to design and run event-driven applications inside a Kubernetes cluster. KEDA implements the [autoscaling]({{< relref "/what-is/what-is-cloud-infrastructure-autoscaling" >}}) components in terms of Kubernetes tools.
 
 The target Function App is packaged together with the Azure Functions runtime into a custom **Docker image** and published to a **registry**. A Kubernetes **deployment** utilizes that image and configures the parameters to connect it to the target event source (for instance, a queue):
 

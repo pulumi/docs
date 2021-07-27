@@ -71,7 +71,7 @@ A fixed level of provisioned concurrency works well for stable workloads.
 
 However, many workloads fluctuate a lot. Extreme elasticity and lack of configuration parameters have always been the essential benefits of AWS Lambda. It works great if you can tolerate the cold starts that come during scale-out. If not, you can explore more advanced scenarios for provisioning concurrency dynamically.
 
-Instead of choosing a permanently fixed value, you can configure provisioned concurrency to autoscale. The first required component is the autoscaling target:
+Instead of choosing a permanently fixed value, you can configure provisioned concurrency to autoscale. The first required component is the [autoscaling]({{< relref "/what-is/what-is-cloud-infrastructure-autoscaling" >}}) target:
 
 ```ts
 const resourceId = pulumi.interpolate`function:${lambda.name}:${lambda.version}`;
