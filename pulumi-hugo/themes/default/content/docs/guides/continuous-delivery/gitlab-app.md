@@ -16,10 +16,16 @@ To enable the integration with your GitLab project, you will need to ensure you 
 * [Signup](https://app.pulumi.com/signup) for a Pulumi account with your GitLab identity (or link your GitLab identity with an existing account.)
 * If your GitLab Project is under a GitLab Group, ensure that the group is added to Pulumi as an [organization](https://app.pulumi.com/site/trial)
 
+## Prerequisites
+
+* You must have a GitLab identity associated with your Pulumi account.
+* If you are integrating a GitLab project that is under a group, [add an organization]({{< relref "/docs/intro/console/organizations#creating-an-organization" >}})
+  in Pulumi.
+  * After you add the organization, ensure that it uses GitLab [as its identity provider]({{< relref "/docs/intro/console/organizations#changing-identity-providers" >}}).
+
 ## Configuring the GitLab Webhook
 
 * Create a [Pulumi access token](https://app.pulumi.com/account/tokens) using the account that you would like the merge request notes to be posted as. Save this token as we will use this momentarily in a following step.
-  * The Pulumi account you use must have a GitLab identity associated with it, as well as have access to the GitLab Group for your project if your project is under a group.
 * You can configure a Group Hook or a Project Hook. The configuration values you use are the same regardless of where the webhook is registered on GitLab.
 * Configuring a webhook at the Group-level means that you don't have to configure the webhook for every project manually.
 If you only want to configure a webhook for a certain project, then you may do that as well.
