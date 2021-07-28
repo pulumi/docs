@@ -52,7 +52,7 @@ function checkPageMetaDescription(meta) {
         } else if (metaLength < 50) {
             return "Meta description is too short. Must be at least 50 characters";
         } else if (metaLength > 160) {
-            return "Meta descripiton is too long. Must be shorter than 160 characters";
+            return "Meta description is too long. Must be shorter than 160 characters";
         }
     } else {
         return "Meta description is not a valid string";
