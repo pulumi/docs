@@ -160,7 +160,6 @@ function nodeSDKRedirect(uri: string): string | undefined {
         "cloud",
         "policy",
         "awsx",
-        "eks",
         "kubernetesx",
         "terraform",
     ];
