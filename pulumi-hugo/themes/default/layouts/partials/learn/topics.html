@@ -2,8 +2,8 @@
 {{ $topics := sort .module.CurrentSection.Pages ".Params.index" }}
 
 {{ if eq .mode "sidebar" }}
-    <aside>
-        <h5 class="uppercase text-sm mt-2 mb-2 pb-2 text-gray-600 border-gray-200">Topics</h5>
+    <aside class="toc px-4">
+        <h5 class="mb-8 mt-2">Topics</h5>
         <ul class="p-0">
             {{ range $index, $topic := $topics }}
                 <li class="flex items-center list-none border-gray-200

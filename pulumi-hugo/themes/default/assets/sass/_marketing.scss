@@ -4,7 +4,7 @@
     }
 }
 
-body:not(.section-docs):not(.section-blog):not(.section-authors):not(.section-tags):not(.section-legal) {
+body:not(.section-docs):not(.section-blog):not(.section-learn):not(.section-authors):not(.section-tags):not(.section-legal) {
     @apply overflow-x-hidden;
 
     h1 {
