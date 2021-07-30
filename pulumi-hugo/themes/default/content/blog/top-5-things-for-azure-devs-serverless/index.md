@@ -3,6 +3,7 @@ title: "Top 5 an Azure Developer Needs to Know: Serverless"
 date: 2021-07-30
 meta_desc: "Building and deploying serverless functions for Azure developers"
 meta_image: azure-top-5.png
+draft: true
 authors:
     - sophia-parafina
 tags:

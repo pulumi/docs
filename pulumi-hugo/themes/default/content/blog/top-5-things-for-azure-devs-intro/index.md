@@ -3,6 +3,7 @@ title: "Top 5 an Azure Developer Needs to Know: Introduction"
 date: 2021-07-28
 meta_desc: "Introduction to Azure Cloud series for developers."
 meta_image: azure-top-5.png
+draft: true
 authors:
     - sophia-parafina
 tags:
