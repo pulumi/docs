@@ -30,6 +30,11 @@ const config = {
     // doEdgeRedirects is whether to perform redirects at the CloudFront layer.
     // Setting this true will add a Lambda@Edge function that handles that redirect logic.
     doEdgeRedirects: stackConfig.getBoolean("doEdgeRedirects") || false,
+    // makeFallbackBucket toggles whether to configure a bucket for serving the website
+    // directly out of S3 --- for example, when CloudFront is unavailable. In order to
+    // comply with AWS configuration rules, the bucket will be named to match the
+    // configured `websiteDomain`.
+    makeFallbackBucket: stackConfig.getBoolean("makeFallbackBucket") || false,
 };
 
 // originBucketName is the name of the S3 bucket to use as the CloudFront origin for the
@@ -66,6 +71,24 @@ const uploadsBucket = new aws.s3.Bucket("uploads-bucket", {
         indexDocument: "index.html",
     },
 });
+
+// Optionally create a fallback bucket for serving the website directly out of S3 when necessary.
+// https://docs.aws.amazon.com/AmazonS3/latest/userguide/website-hosting-custom-domain-walkthrough.html
+if (config.makeFallbackBucket) {
+    const fallbackBucket = new aws.s3.Bucket(
+        "fallback-bucket", {
+            bucket: config.websiteDomain,
+            acl: aws.s3.PublicReadAcl,
+            website: {
+                indexDocument: "index.html",
+                errorDocument: "404.html",
+            },
+        },
+        {
+            protect: true,
+        },
+    );
+}
 
 // The origin bucket needs to have the "public-read" ACL so its contents can be read by
 // CloudFront and served. But we deny the s3:ListBucket permission to anyone but account
@@ -378,3 +401,4 @@ export const uploadsBucketName = uploadsBucket.bucket;
 export const originBucketWebsiteDomain = originBucket.websiteDomain;
 export const originBucketWebsiteEndpoint = originBucket.websiteEndpoint;
 export const cloudFrontDomain = cdn.domainName;
+export const websiteDomain = config.websiteDomain;
