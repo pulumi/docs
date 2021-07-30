@@ -11,7 +11,7 @@ tags:
 
 ---
 
-In the [previous article]({{< relref "/blog/top-5-things-for-azure-devs-vms" >}}), we did a deep dive into virtual machines, first looking at creating and deploying a virtual machine using the Azure Portal, then repeating the process using infrastructure as code. We further demonstrated how to automate provisioning as part of cloud engineering's build and deploy processes.
+In the previous article, we did a deep dive into virtual machines, first looking at creating and deploying a virtual machine using the Azure Portal, then repeating the process using infrastructure as code. We further demonstrated how to automate provisioning as part of cloud engineering's build and deploy processes.
 
 This article will explore the other end of the cloud infrastructure with serverless, which is an on-demand, fully-managed cloud architecture.
 
