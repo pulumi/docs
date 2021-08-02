@@ -1,6 +1,6 @@
 ---
 title: "Top 5 an Azure Developer Needs to Know: Introduction"
-date: 2021-07-28
+date: 2021-08-02
 meta_desc: "Introduction to Azure Cloud series for developers."
 meta_image: azure-top-5.png
 draft: true
@@ -112,4 +112,4 @@ So here are the top 5 things essential to know as an Azure developer:
 - configuring Azure Kubernetes Service and deploying containerized applications
 - using Azure DevOps to automate the building and deployment of infrastructure and applications
 
-First up and next in this series of articles is deploying an Azure virtual machine with an application.
+First up and next in this series of articles is deploying Azure virtual machines with an application.
