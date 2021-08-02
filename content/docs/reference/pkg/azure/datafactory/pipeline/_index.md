@@ -304,9 +304,11 @@ const test = new azure.datafactory.Pipeline("test", {
              <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
              <span class="nx">activities_json</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">annotations</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+             <span class="nx">concurrency</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
              <span class="nx">data_factory_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">folder</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">moniter_metrics_after_duration</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">parameters</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
              <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -318,7 +320,7 @@ const test = new azure.datafactory.Pipeline("test", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewPipeline</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">PipelineArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Pipeline</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewPipeline</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">PipelineArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Pipeline</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -379,7 +381,7 @@ const test = new azure.datafactory.Pipeline("test", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
@@ -397,7 +399,7 @@ const test = new azure.datafactory.Pipeline("test", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
@@ -429,7 +431,7 @@ const test = new azure.datafactory.Pipeline("test", {
 
 ## Pipeline Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Architecture and Concepts docs.
 
 ### Inputs
 
@@ -476,6 +478,15 @@ The Pipeline resource accepts the following [input]({{< relref "/docs/intro/conc
     <dd>{{% md %}}List of tags that can be used for describing the Data Factory Pipeline.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="concurrency_csharp">
+<a href="#concurrency_csharp" style="color: inherit; text-decoration: inherit;">Concurrency</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The max number of concurrent runs for the Data Factory Pipeline. Must be between `1` and `50`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
 </span>
@@ -492,6 +503,15 @@ The Pipeline resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The folder that this Pipeline is in. If not specified, the Pipeline will appear at the root level.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="monitermetricsafterduration_csharp">
+<a href="#monitermetricsafterduration_csharp" style="color: inherit; text-decoration: inherit;">Moniter<wbr>Metrics<wbr>After<wbr>Duration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The TimeSpan value after which an Azure Monitoring Metric is fired.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
@@ -561,6 +581,15 @@ The Pipeline resource accepts the following [input]({{< relref "/docs/intro/conc
     <dd>{{% md %}}List of tags that can be used for describing the Data Factory Pipeline.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="concurrency_go">
+<a href="#concurrency_go" style="color: inherit; text-decoration: inherit;">Concurrency</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The max number of concurrent runs for the Data Factory Pipeline. Must be between `1` and `50`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
 </span>
@@ -577,6 +606,15 @@ The Pipeline resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The folder that this Pipeline is in. If not specified, the Pipeline will appear at the root level.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="monitermetricsafterduration_go">
+<a href="#monitermetricsafterduration_go" style="color: inherit; text-decoration: inherit;">Moniter<wbr>Metrics<wbr>After<wbr>Duration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The TimeSpan value after which an Azure Monitoring Metric is fired.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
@@ -646,6 +684,15 @@ The Pipeline resource accepts the following [input]({{< relref "/docs/intro/conc
     <dd>{{% md %}}List of tags that can be used for describing the Data Factory Pipeline.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="concurrency_nodejs">
+<a href="#concurrency_nodejs" style="color: inherit; text-decoration: inherit;">concurrency</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The max number of concurrent runs for the Data Factory Pipeline. Must be between `1` and `50`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
@@ -662,6 +709,15 @@ The Pipeline resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The folder that this Pipeline is in. If not specified, the Pipeline will appear at the root level.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="monitermetricsafterduration_nodejs">
+<a href="#monitermetricsafterduration_nodejs" style="color: inherit; text-decoration: inherit;">moniter<wbr>Metrics<wbr>After<wbr>Duration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The TimeSpan value after which an Azure Monitoring Metric is fired.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
@@ -731,6 +787,15 @@ The Pipeline resource accepts the following [input]({{< relref "/docs/intro/conc
     <dd>{{% md %}}List of tags that can be used for describing the Data Factory Pipeline.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="concurrency_python">
+<a href="#concurrency_python" style="color: inherit; text-decoration: inherit;">concurrency</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The max number of concurrent runs for the Data Factory Pipeline. Must be between `1` and `50`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
@@ -747,6 +812,15 @@ The Pipeline resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The folder that this Pipeline is in. If not specified, the Pipeline will appear at the root level.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="moniter_metrics_after_duration_python">
+<a href="#moniter_metrics_after_duration_python" style="color: inherit; text-decoration: inherit;">moniter_<wbr>metrics_<wbr>after_<wbr>duration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The TimeSpan value after which an Azure Monitoring Metric is fired.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
@@ -850,9 +924,11 @@ Get an existing Pipeline resource's state with the given name, ID, and optional 
         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
         <span class="nx">activities_json</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">annotations</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+        <span class="nx">concurrency</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
         <span class="nx">data_factory_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">folder</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">moniter_metrics_after_duration</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">parameters</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
         <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -860,7 +936,7 @@ Get an existing Pipeline resource's state with the given name, ID, and optional 
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetPipeline<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">PipelineState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Pipeline</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetPipeline<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">PipelineState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Pipeline</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -987,6 +1063,15 @@ The following state arguments are supported:
     <dd>{{% md %}}List of tags that can be used for describing the Data Factory Pipeline.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_concurrency_csharp">
+<a href="#state_concurrency_csharp" style="color: inherit; text-decoration: inherit;">Concurrency</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The max number of concurrent runs for the Data Factory Pipeline. Must be between `1` and `50`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_datafactoryname_csharp">
 <a href="#state_datafactoryname_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Factory<wbr>Name</a>
 </span>
@@ -1012,6 +1097,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The folder that this Pipeline is in. If not specified, the Pipeline will appear at the root level.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_monitermetricsafterduration_csharp">
+<a href="#state_monitermetricsafterduration_csharp" style="color: inherit; text-decoration: inherit;">Moniter<wbr>Metrics<wbr>After<wbr>Duration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The TimeSpan value after which an Azure Monitoring Metric is fired.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
@@ -1072,6 +1166,15 @@ The following state arguments are supported:
     <dd>{{% md %}}List of tags that can be used for describing the Data Factory Pipeline.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_concurrency_go">
+<a href="#state_concurrency_go" style="color: inherit; text-decoration: inherit;">Concurrency</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The max number of concurrent runs for the Data Factory Pipeline. Must be between `1` and `50`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_datafactoryname_go">
 <a href="#state_datafactoryname_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Factory<wbr>Name</a>
 </span>
@@ -1097,6 +1200,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The folder that this Pipeline is in. If not specified, the Pipeline will appear at the root level.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_monitermetricsafterduration_go">
+<a href="#state_monitermetricsafterduration_go" style="color: inherit; text-decoration: inherit;">Moniter<wbr>Metrics<wbr>After<wbr>Duration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The TimeSpan value after which an Azure Monitoring Metric is fired.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
@@ -1157,6 +1269,15 @@ The following state arguments are supported:
     <dd>{{% md %}}List of tags that can be used for describing the Data Factory Pipeline.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_concurrency_nodejs">
+<a href="#state_concurrency_nodejs" style="color: inherit; text-decoration: inherit;">concurrency</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The max number of concurrent runs for the Data Factory Pipeline. Must be between `1` and `50`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_datafactoryname_nodejs">
 <a href="#state_datafactoryname_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Factory<wbr>Name</a>
 </span>
@@ -1182,6 +1303,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The folder that this Pipeline is in. If not specified, the Pipeline will appear at the root level.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_monitermetricsafterduration_nodejs">
+<a href="#state_monitermetricsafterduration_nodejs" style="color: inherit; text-decoration: inherit;">moniter<wbr>Metrics<wbr>After<wbr>Duration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The TimeSpan value after which an Azure Monitoring Metric is fired.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
@@ -1242,6 +1372,15 @@ The following state arguments are supported:
     <dd>{{% md %}}List of tags that can be used for describing the Data Factory Pipeline.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_concurrency_python">
+<a href="#state_concurrency_python" style="color: inherit; text-decoration: inherit;">concurrency</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The max number of concurrent runs for the Data Factory Pipeline. Must be between `1` and `50`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_data_factory_name_python">
 <a href="#state_data_factory_name_python" style="color: inherit; text-decoration: inherit;">data_<wbr>factory_<wbr>name</a>
 </span>
@@ -1267,6 +1406,15 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The folder that this Pipeline is in. If not specified, the Pipeline will appear at the root level.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_moniter_metrics_after_duration_python">
+<a href="#state_moniter_metrics_after_duration_python" style="color: inherit; text-decoration: inherit;">moniter_<wbr>metrics_<wbr>after_<wbr>duration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The TimeSpan value after which an Azure Monitoring Metric is fired.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">

@@ -52,6 +52,7 @@ A Pulumi package based on the azurerm Terraform Provider for creating and managi
     <li><a href="devtest/" title="devtest"><span class="symbol module"></span>devtest</a></li>
     <li><a href="digitaltwins/" title="digitaltwins"><span class="symbol module"></span>digitaltwins</a></li>
     <li><a href="dns/" title="dns"><span class="symbol module"></span>dns</a></li>
+    <li><a href="domainservices/" title="domainservices"><span class="symbol module"></span>domainservices</a></li>
     <li><a href="eventgrid/" title="eventgrid"><span class="symbol module"></span>eventgrid</a></li>
     <li><a href="eventhub/" title="eventhub"><span class="symbol module"></span>eventhub</a></li>
     <li><a href="frontdoor/" title="frontdoor"><span class="symbol module"></span>frontdoor</a></li>
@@ -128,6 +129,6 @@ A Pulumi package based on the azurerm Terraform Provider for creating and managi
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.11.0</dd>
+	<dd>4.12.0</dd>
 </dl>
 

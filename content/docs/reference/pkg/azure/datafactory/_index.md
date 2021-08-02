@@ -48,9 +48,12 @@ Explore the resources and functions of the azure.datafactory module.
     <li><a href="linkedservicesqlserver" title="LinkedServiceSqlServer"><span class="symbol resource"></span>LinkedServiceSqlServer</a></li>
     <li><a href="linkedservicesynapse" title="LinkedServiceSynapse"><span class="symbol resource"></span>LinkedServiceSynapse</a></li>
     <li><a href="linkedserviceweb" title="LinkedServiceWeb"><span class="symbol resource"></span>LinkedServiceWeb</a></li>
+    <li><a href="managedprivateendpoint" title="ManagedPrivateEndpoint"><span class="symbol resource"></span>ManagedPrivateEndpoint</a></li>
     <li><a href="pipeline" title="Pipeline"><span class="symbol resource"></span>Pipeline</a></li>
     <li><a href="triggerblobevent" title="TriggerBlobEvent"><span class="symbol resource"></span>TriggerBlobEvent</a></li>
+    <li><a href="triggercustomevent" title="TriggerCustomEvent"><span class="symbol resource"></span>TriggerCustomEvent</a></li>
     <li><a href="triggerschedule" title="TriggerSchedule"><span class="symbol resource"></span>TriggerSchedule</a></li>
+    <li><a href="triggertumblingwindow" title="TriggerTumblingWindow"><span class="symbol resource"></span>TriggerTumblingWindow</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
@@ -67,6 +70,6 @@ Explore the resources and functions of the azure.datafactory module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.11.0</dd>
+	<dd>4.12.0</dd>
 </dl>
 

@@ -66,6 +66,7 @@ Explore the resources and functions of the azure.network module.
     <li><a href="virtualhubip" title="VirtualHubIp"><span class="symbol resource"></span>VirtualHubIp</a></li>
     <li><a href="virtualhubroutetable" title="VirtualHubRouteTable"><span class="symbol resource"></span>VirtualHubRouteTable</a></li>
     <li><a href="virtualnetwork" title="VirtualNetwork"><span class="symbol resource"></span>VirtualNetwork</a></li>
+    <li><a href="virtualnetworkdnsservers" title="VirtualNetworkDnsServers"><span class="symbol resource"></span>VirtualNetworkDnsServers</a></li>
     <li><a href="virtualnetworkgateway" title="VirtualNetworkGateway"><span class="symbol resource"></span>VirtualNetworkGateway</a></li>
     <li><a href="virtualnetworkgatewayconnection" title="VirtualNetworkGatewayConnection"><span class="symbol resource"></span>VirtualNetworkGatewayConnection</a></li>
     <li><a href="virtualnetworkpeering" title="VirtualNetworkPeering"><span class="symbol resource"></span>VirtualNetworkPeering</a></li>
@@ -115,6 +116,6 @@ Explore the resources and functions of the azure.network module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.11.0</dd>
+	<dd>4.12.0</dd>
 </dl>
 
