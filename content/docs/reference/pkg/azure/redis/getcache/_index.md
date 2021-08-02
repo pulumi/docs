@@ -1130,6 +1130,15 @@ The following output properties are available:
     <dd>{{% md %}}the Weekday name for the patch item
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="maintenancewindow_csharp">
+<a href="#maintenancewindow_csharp" style="color: inherit; text-decoration: inherit;">Maintenance<wbr>Window</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ISO 8601 timespan which specifies the amount of time the Redis Cache can be updated.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="starthourutc_csharp">
 <a href="#starthourutc_csharp" style="color: inherit; text-decoration: inherit;">Start<wbr>Hour<wbr>Utc</a>
 </span>
@@ -1150,6 +1159,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}the Weekday name for the patch item
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="maintenancewindow_go">
+<a href="#maintenancewindow_go" style="color: inherit; text-decoration: inherit;">Maintenance<wbr>Window</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ISO 8601 timespan which specifies the amount of time the Redis Cache can be updated.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="starthourutc_go">
@@ -1174,6 +1192,15 @@ The following output properties are available:
     <dd>{{% md %}}the Weekday name for the patch item
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="maintenancewindow_nodejs">
+<a href="#maintenancewindow_nodejs" style="color: inherit; text-decoration: inherit;">maintenance<wbr>Window</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ISO 8601 timespan which specifies the amount of time the Redis Cache can be updated.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="starthourutc_nodejs">
 <a href="#starthourutc_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Hour<wbr>Utc</a>
 </span>
@@ -1194,6 +1221,15 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}the Weekday name for the patch item
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="maintenance_window_python">
+<a href="#maintenance_window_python" style="color: inherit; text-decoration: inherit;">maintenance_<wbr>window</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ISO 8601 timespan which specifies the amount of time the Redis Cache can be updated.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="start_hour_utc_python">

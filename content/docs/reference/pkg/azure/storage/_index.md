@@ -42,6 +42,7 @@ Explore the resources and functions of the azure.storage module.
     <li><a href="getblob" title="GetBlob"><span class="symbol function"></span>GetBlob</a></li>
     <li><a href="getencryptionscope" title="GetEncryptionScope"><span class="symbol function"></span>GetEncryptionScope</a></li>
     <li><a href="getpolicy" title="GetPolicy"><span class="symbol function"></span>GetPolicy</a></li>
+    <li><a href="getshare" title="GetShare"><span class="symbol function"></span>GetShare</a></li>
     <li><a href="getstoragecontainer" title="GetStorageContainer"><span class="symbol function"></span>GetStorageContainer</a></li>
     <li><a href="getsync" title="GetSync"><span class="symbol function"></span>GetSync</a></li>
     <li><a href="getsyncgroup" title="GetSyncGroup"><span class="symbol function"></span>GetSyncGroup</a></li>
@@ -57,6 +58,6 @@ Explore the resources and functions of the azure.storage module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.11.0</dd>
+	<dd>4.12.0</dd>
 </dl>
 

@@ -325,6 +325,7 @@ const exampleFlexibleServer = new azure.postgresql.FlexibleServer("exampleFlexib
                    <span class="nx">backup_retention_days</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
                    <span class="nx">create_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                    <span class="nx">delegated_subnet_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                   <span class="nx">high_availability</span><span class="p">:</span> <span class="nx">Optional[FlexibleServerHighAvailabilityArgs]</span> = None<span class="p">,</span>
                    <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                    <span class="nx">maintenance_window</span><span class="p">:</span> <span class="nx">Optional[FlexibleServerMaintenanceWindowArgs]</span> = None<span class="p">,</span>
                    <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -344,7 +345,7 @@ const exampleFlexibleServer = new azure.postgresql.FlexibleServer("exampleFlexib
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewFlexibleServer</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">FlexibleServerArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">FlexibleServer</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewFlexibleServer</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">FlexibleServerArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">FlexibleServer</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -405,7 +406,7 @@ const exampleFlexibleServer = new azure.postgresql.FlexibleServer("exampleFlexib
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
@@ -423,7 +424,7 @@ const exampleFlexibleServer = new azure.postgresql.FlexibleServer("exampleFlexib
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
@@ -455,7 +456,7 @@ const exampleFlexibleServer = new azure.postgresql.FlexibleServer("exampleFlexib
 
 ## FlexibleServer Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Architecture and Concepts docs.
 
 ### Inputs
 
@@ -518,6 +519,15 @@ The FlexibleServer resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the virtual network subnet to create the PostgreSQL Flexible Server. The provided subnet should not have any other resource deployed in it and this subnet will be delegated to the PostgreSQL Flexible Server, if not already delegated. Changing this forces a new PostgreSQL Flexible Server to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="highavailability_csharp">
+<a href="#highavailability_csharp" style="color: inherit; text-decoration: inherit;">High<wbr>Availability</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#flexibleserverhighavailability">Flexible<wbr>Server<wbr>High<wbr>Availability<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `high_availability` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_csharp">
@@ -677,6 +687,15 @@ The FlexibleServer resource accepts the following [input]({{< relref "/docs/intr
     <dd>{{% md %}}The ID of the virtual network subnet to create the PostgreSQL Flexible Server. The provided subnet should not have any other resource deployed in it and this subnet will be delegated to the PostgreSQL Flexible Server, if not already delegated. Changing this forces a new PostgreSQL Flexible Server to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="highavailability_go">
+<a href="#highavailability_go" style="color: inherit; text-decoration: inherit;">High<wbr>Availability</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#flexibleserverhighavailability">Flexible<wbr>Server<wbr>High<wbr>Availability<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `high_availability` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
 </span>
@@ -834,6 +853,15 @@ The FlexibleServer resource accepts the following [input]({{< relref "/docs/intr
     <dd>{{% md %}}The ID of the virtual network subnet to create the PostgreSQL Flexible Server. The provided subnet should not have any other resource deployed in it and this subnet will be delegated to the PostgreSQL Flexible Server, if not already delegated. Changing this forces a new PostgreSQL Flexible Server to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="highavailability_nodejs">
+<a href="#highavailability_nodejs" style="color: inherit; text-decoration: inherit;">high<wbr>Availability</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#flexibleserverhighavailability">Flexible<wbr>Server<wbr>High<wbr>Availability<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `high_availability` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
@@ -989,6 +1017,15 @@ The FlexibleServer resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the virtual network subnet to create the PostgreSQL Flexible Server. The provided subnet should not have any other resource deployed in it and this subnet will be delegated to the PostgreSQL Flexible Server, if not already delegated. Changing this forces a new PostgreSQL Flexible Server to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="high_availability_python">
+<a href="#high_availability_python" style="color: inherit; text-decoration: inherit;">high_<wbr>availability</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#flexibleserverhighavailability">Flexible<wbr>Server<wbr>High<wbr>Availability<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `high_availability` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_python">
@@ -1277,6 +1314,7 @@ Get an existing FlexibleServer resource's state with the given name, ID, and opt
         <span class="nx">create_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">delegated_subnet_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">fqdn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">high_availability</span><span class="p">:</span> <span class="nx">Optional[FlexibleServerHighAvailabilityArgs]</span> = None<span class="p">,</span>
         <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">maintenance_window</span><span class="p">:</span> <span class="nx">Optional[FlexibleServerMaintenanceWindowArgs]</span> = None<span class="p">,</span>
         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -1293,7 +1331,7 @@ Get an existing FlexibleServer resource's state with the given name, ID, and opt
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetFlexibleServer<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">FlexibleServerState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">FlexibleServer</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetFlexibleServer<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">FlexibleServerState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">FlexibleServer</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -1463,6 +1501,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The FQDN of the PostgreSQL Flexible Server.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_highavailability_csharp">
+<a href="#state_highavailability_csharp" style="color: inherit; text-decoration: inherit;">High<wbr>Availability</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#flexibleserverhighavailability">Flexible<wbr>Server<wbr>High<wbr>Availability<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `high_availability` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_csharp">
@@ -1649,6 +1696,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The FQDN of the PostgreSQL Flexible Server.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_highavailability_go">
+<a href="#state_highavailability_go" style="color: inherit; text-decoration: inherit;">High<wbr>Availability</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#flexibleserverhighavailability">Flexible<wbr>Server<wbr>High<wbr>Availability<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `high_availability` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_location_go">
 <a href="#state_location_go" style="color: inherit; text-decoration: inherit;">Location</a>
 </span>
@@ -1831,6 +1887,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The FQDN of the PostgreSQL Flexible Server.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_highavailability_nodejs">
+<a href="#state_highavailability_nodejs" style="color: inherit; text-decoration: inherit;">high<wbr>Availability</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#flexibleserverhighavailability">Flexible<wbr>Server<wbr>High<wbr>Availability<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `high_availability` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_nodejs">
@@ -2017,6 +2082,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The FQDN of the PostgreSQL Flexible Server.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_high_availability_python">
+<a href="#state_high_availability_python" style="color: inherit; text-decoration: inherit;">high_<wbr>availability</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#flexibleserverhighavailability">Flexible<wbr>Server<wbr>High<wbr>Availability<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `high_availability` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_location_python">
 <a href="#state_location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
@@ -2143,6 +2217,96 @@ The following state arguments are supported:
 ## Supporting Types
 
 
+
+<h4 id="flexibleserverhighavailability">Flexible<wbr>Server<wbr>High<wbr>Availability</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="mode_csharp">
+<a href="#mode_csharp" style="color: inherit; text-decoration: inherit;">Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The high availability mode for the PostgreSQL Flexible Server. The only possible value is `ZoneRedundant`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="standbyavailabilityzone_csharp">
+<a href="#standbyavailabilityzone_csharp" style="color: inherit; text-decoration: inherit;">Standby<wbr>Availability<wbr>Zone</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The availability zone of the standby Flexible Server. Possible values are `1`, `2` and `3`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="mode_go">
+<a href="#mode_go" style="color: inherit; text-decoration: inherit;">Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The high availability mode for the PostgreSQL Flexible Server. The only possible value is `ZoneRedundant`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="standbyavailabilityzone_go">
+<a href="#standbyavailabilityzone_go" style="color: inherit; text-decoration: inherit;">Standby<wbr>Availability<wbr>Zone</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The availability zone of the standby Flexible Server. Possible values are `1`, `2` and `3`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="mode_nodejs">
+<a href="#mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The high availability mode for the PostgreSQL Flexible Server. The only possible value is `ZoneRedundant`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="standbyavailabilityzone_nodejs">
+<a href="#standbyavailabilityzone_nodejs" style="color: inherit; text-decoration: inherit;">standby<wbr>Availability<wbr>Zone</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The availability zone of the standby Flexible Server. Possible values are `1`, `2` and `3`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="mode_python">
+<a href="#mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The high availability mode for the PostgreSQL Flexible Server. The only possible value is `ZoneRedundant`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="standby_availability_zone_python">
+<a href="#standby_availability_zone_python" style="color: inherit; text-decoration: inherit;">standby_<wbr>availability_<wbr>zone</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The availability zone of the standby Flexible Server. Possible values are `1`, `2` and `3`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
 
 <h4 id="flexibleservermaintenancewindow">Flexible<wbr>Server<wbr>Maintenance<wbr>Window</h4>
 

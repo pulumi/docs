@@ -154,11 +154,15 @@ const exampleChannelsRegistration = new azure.bot.ChannelsRegistration("exampleC
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">ChannelsRegistration</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                          <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                         <span class="nx">cmk_key_vault_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                         <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                          <span class="nx">developer_app_insights_api_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                          <span class="nx">developer_app_insights_application_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                          <span class="nx">developer_app_insights_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                          <span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                          <span class="nx">endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                         <span class="nx">icon_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                         <span class="nx">isolated_network_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
                          <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                          <span class="nx">microsoft_app_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                          <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -172,7 +176,7 @@ const exampleChannelsRegistration = new azure.bot.ChannelsRegistration("exampleC
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewChannelsRegistration</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ChannelsRegistrationArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ChannelsRegistration</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewChannelsRegistration</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ChannelsRegistrationArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ChannelsRegistration</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -233,7 +237,7 @@ const exampleChannelsRegistration = new azure.bot.ChannelsRegistration("exampleC
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
@@ -251,7 +255,7 @@ const exampleChannelsRegistration = new azure.bot.ChannelsRegistration("exampleC
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
@@ -283,7 +287,7 @@ const exampleChannelsRegistration = new azure.bot.ChannelsRegistration("exampleC
 
 ## ChannelsRegistration Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Architecture and Concepts docs.
 
 ### Inputs
 
@@ -319,6 +323,24 @@ The ChannelsRegistration resource accepts the following [input]({{< relref "/doc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SKU of the Bot Channels Registration. Valid values include `F0` or `S1`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="cmkkeyvaulturl_csharp">
+<a href="#cmkkeyvaulturl_csharp" style="color: inherit; text-decoration: inherit;">Cmk<wbr>Key<wbr>Vault<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The CMK Key Vault Key URL to encrypt the Bot Channels Registration with the Customer Managed Encryption Key.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="description_csharp">
+<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The description of the Bot Channels Registration.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="developerappinsightsapikey_csharp">
@@ -364,6 +386,24 @@ The ChannelsRegistration resource accepts the following [input]({{< relref "/doc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Bot Channels Registration endpoint.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="iconurl_csharp">
+<a href="#iconurl_csharp" style="color: inherit; text-decoration: inherit;">Icon<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The icon URL to visually identify the Bot Channels Registration.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="isolatednetworkenabled_csharp">
+<a href="#isolatednetworkenabled_csharp" style="color: inherit; text-decoration: inherit;">Isolated<wbr>Network<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Is the Bot Channels Registration in an isolated network?
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_csharp">
@@ -424,6 +464,24 @@ The ChannelsRegistration resource accepts the following [input]({{< relref "/doc
     <dd>{{% md %}}The SKU of the Bot Channels Registration. Valid values include `F0` or `S1`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="cmkkeyvaulturl_go">
+<a href="#cmkkeyvaulturl_go" style="color: inherit; text-decoration: inherit;">Cmk<wbr>Key<wbr>Vault<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The CMK Key Vault Key URL to encrypt the Bot Channels Registration with the Customer Managed Encryption Key.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="description_go">
+<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The description of the Bot Channels Registration.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="developerappinsightsapikey_go">
 <a href="#developerappinsightsapikey_go" style="color: inherit; text-decoration: inherit;">Developer<wbr>App<wbr>Insights<wbr>Api<wbr>Key</a>
 </span>
@@ -467,6 +525,24 @@ The ChannelsRegistration resource accepts the following [input]({{< relref "/doc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Bot Channels Registration endpoint.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="iconurl_go">
+<a href="#iconurl_go" style="color: inherit; text-decoration: inherit;">Icon<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The icon URL to visually identify the Bot Channels Registration.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="isolatednetworkenabled_go">
+<a href="#isolatednetworkenabled_go" style="color: inherit; text-decoration: inherit;">Isolated<wbr>Network<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Is the Bot Channels Registration in an isolated network?
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_go">
@@ -527,6 +603,24 @@ The ChannelsRegistration resource accepts the following [input]({{< relref "/doc
     <dd>{{% md %}}The SKU of the Bot Channels Registration. Valid values include `F0` or `S1`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="cmkkeyvaulturl_nodejs">
+<a href="#cmkkeyvaulturl_nodejs" style="color: inherit; text-decoration: inherit;">cmk<wbr>Key<wbr>Vault<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The CMK Key Vault Key URL to encrypt the Bot Channels Registration with the Customer Managed Encryption Key.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="description_nodejs">
+<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The description of the Bot Channels Registration.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="developerappinsightsapikey_nodejs">
 <a href="#developerappinsightsapikey_nodejs" style="color: inherit; text-decoration: inherit;">developer<wbr>App<wbr>Insights<wbr>Api<wbr>Key</a>
 </span>
@@ -570,6 +664,24 @@ The ChannelsRegistration resource accepts the following [input]({{< relref "/doc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Bot Channels Registration endpoint.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="iconurl_nodejs">
+<a href="#iconurl_nodejs" style="color: inherit; text-decoration: inherit;">icon<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The icon URL to visually identify the Bot Channels Registration.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="isolatednetworkenabled_nodejs">
+<a href="#isolatednetworkenabled_nodejs" style="color: inherit; text-decoration: inherit;">isolated<wbr>Network<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Is the Bot Channels Registration in an isolated network?
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_nodejs">
@@ -630,6 +742,24 @@ The ChannelsRegistration resource accepts the following [input]({{< relref "/doc
     <dd>{{% md %}}The SKU of the Bot Channels Registration. Valid values include `F0` or `S1`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="cmk_key_vault_url_python">
+<a href="#cmk_key_vault_url_python" style="color: inherit; text-decoration: inherit;">cmk_<wbr>key_<wbr>vault_<wbr>url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The CMK Key Vault Key URL to encrypt the Bot Channels Registration with the Customer Managed Encryption Key.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="description_python">
+<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The description of the Bot Channels Registration.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="developer_app_insights_api_key_python">
 <a href="#developer_app_insights_api_key_python" style="color: inherit; text-decoration: inherit;">developer_<wbr>app_<wbr>insights_<wbr>api_<wbr>key</a>
 </span>
@@ -673,6 +803,24 @@ The ChannelsRegistration resource accepts the following [input]({{< relref "/doc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Bot Channels Registration endpoint.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="icon_url_python">
+<a href="#icon_url_python" style="color: inherit; text-decoration: inherit;">icon_<wbr>url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The icon URL to visually identify the Bot Channels Registration.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="isolated_network_enabled_python">
+<a href="#isolated_network_enabled_python" style="color: inherit; text-decoration: inherit;">isolated_<wbr>network_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Is the Bot Channels Registration in an isolated network?
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_python">
@@ -774,11 +922,15 @@ Get an existing ChannelsRegistration resource's state with the given name, ID, a
 <span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
         <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">cmk_key_vault_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">developer_app_insights_api_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">developer_app_insights_application_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">developer_app_insights_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">icon_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">isolated_network_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">microsoft_app_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -788,7 +940,7 @@ Get an existing ChannelsRegistration resource's state with the given name, ID, a
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetChannelsRegistration<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">ChannelsRegistrationState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ChannelsRegistration</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetChannelsRegistration<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">ChannelsRegistrationState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ChannelsRegistration</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -897,6 +1049,24 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="state_cmkkeyvaulturl_csharp">
+<a href="#state_cmkkeyvaulturl_csharp" style="color: inherit; text-decoration: inherit;">Cmk<wbr>Key<wbr>Vault<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The CMK Key Vault Key URL to encrypt the Bot Channels Registration with the Customer Managed Encryption Key.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_description_csharp">
+<a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The description of the Bot Channels Registration.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_developerappinsightsapikey_csharp">
 <a href="#state_developerappinsightsapikey_csharp" style="color: inherit; text-decoration: inherit;">Developer<wbr>App<wbr>Insights<wbr>Api<wbr>Key</a>
 </span>
@@ -940,6 +1110,24 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Bot Channels Registration endpoint.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_iconurl_csharp">
+<a href="#state_iconurl_csharp" style="color: inherit; text-decoration: inherit;">Icon<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The icon URL to visually identify the Bot Channels Registration.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_isolatednetworkenabled_csharp">
+<a href="#state_isolatednetworkenabled_csharp" style="color: inherit; text-decoration: inherit;">Isolated<wbr>Network<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Is the Bot Channels Registration in an isolated network?
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_csharp">
@@ -1000,6 +1188,24 @@ The following state arguments are supported:
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="state_cmkkeyvaulturl_go">
+<a href="#state_cmkkeyvaulturl_go" style="color: inherit; text-decoration: inherit;">Cmk<wbr>Key<wbr>Vault<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The CMK Key Vault Key URL to encrypt the Bot Channels Registration with the Customer Managed Encryption Key.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_description_go">
+<a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The description of the Bot Channels Registration.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_developerappinsightsapikey_go">
 <a href="#state_developerappinsightsapikey_go" style="color: inherit; text-decoration: inherit;">Developer<wbr>App<wbr>Insights<wbr>Api<wbr>Key</a>
 </span>
@@ -1043,6 +1249,24 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Bot Channels Registration endpoint.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_iconurl_go">
+<a href="#state_iconurl_go" style="color: inherit; text-decoration: inherit;">Icon<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The icon URL to visually identify the Bot Channels Registration.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_isolatednetworkenabled_go">
+<a href="#state_isolatednetworkenabled_go" style="color: inherit; text-decoration: inherit;">Isolated<wbr>Network<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Is the Bot Channels Registration in an isolated network?
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_go">
@@ -1103,6 +1327,24 @@ The following state arguments are supported:
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="state_cmkkeyvaulturl_nodejs">
+<a href="#state_cmkkeyvaulturl_nodejs" style="color: inherit; text-decoration: inherit;">cmk<wbr>Key<wbr>Vault<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The CMK Key Vault Key URL to encrypt the Bot Channels Registration with the Customer Managed Encryption Key.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_description_nodejs">
+<a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The description of the Bot Channels Registration.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_developerappinsightsapikey_nodejs">
 <a href="#state_developerappinsightsapikey_nodejs" style="color: inherit; text-decoration: inherit;">developer<wbr>App<wbr>Insights<wbr>Api<wbr>Key</a>
 </span>
@@ -1146,6 +1388,24 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Bot Channels Registration endpoint.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_iconurl_nodejs">
+<a href="#state_iconurl_nodejs" style="color: inherit; text-decoration: inherit;">icon<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The icon URL to visually identify the Bot Channels Registration.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_isolatednetworkenabled_nodejs">
+<a href="#state_isolatednetworkenabled_nodejs" style="color: inherit; text-decoration: inherit;">isolated<wbr>Network<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Is the Bot Channels Registration in an isolated network?
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_nodejs">
@@ -1206,6 +1466,24 @@ The following state arguments are supported:
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="state_cmk_key_vault_url_python">
+<a href="#state_cmk_key_vault_url_python" style="color: inherit; text-decoration: inherit;">cmk_<wbr>key_<wbr>vault_<wbr>url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The CMK Key Vault Key URL to encrypt the Bot Channels Registration with the Customer Managed Encryption Key.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_description_python">
+<a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The description of the Bot Channels Registration.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_developer_app_insights_api_key_python">
 <a href="#state_developer_app_insights_api_key_python" style="color: inherit; text-decoration: inherit;">developer_<wbr>app_<wbr>insights_<wbr>api_<wbr>key</a>
 </span>
@@ -1249,6 +1527,24 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Bot Channels Registration endpoint.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_icon_url_python">
+<a href="#state_icon_url_python" style="color: inherit; text-decoration: inherit;">icon_<wbr>url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The icon URL to visually identify the Bot Channels Registration.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_isolated_network_enabled_python">
+<a href="#state_isolated_network_enabled_python" style="color: inherit; text-decoration: inherit;">isolated_<wbr>network_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Is the Bot Channels Registration in an isolated network?
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_python">

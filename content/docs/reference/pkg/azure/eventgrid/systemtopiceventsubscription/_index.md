@@ -237,6 +237,7 @@ const exampleSystemTopicEventSubscription = new azure.eventgrid.SystemTopicEvent
 <span class="k">def </span><span class="nx">SystemTopicEventSubscription</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                                  <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
                                  <span class="nx">advanced_filter</span><span class="p">:</span> <span class="nx">Optional[SystemTopicEventSubscriptionAdvancedFilterArgs]</span> = None<span class="p">,</span>
+                                 <span class="nx">advanced_filtering_on_arrays_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
                                  <span class="nx">azure_function_endpoint</span><span class="p">:</span> <span class="nx">Optional[SystemTopicEventSubscriptionAzureFunctionEndpointArgs]</span> = None<span class="p">,</span>
                                  <span class="nx">event_delivery_schema</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                                  <span class="nx">eventhub_endpoint_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -261,7 +262,7 @@ const exampleSystemTopicEventSubscription = new azure.eventgrid.SystemTopicEvent
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSystemTopicEventSubscription</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">SystemTopicEventSubscriptionArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SystemTopicEventSubscription</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSystemTopicEventSubscription</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">SystemTopicEventSubscriptionArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SystemTopicEventSubscription</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -322,7 +323,7 @@ const exampleSystemTopicEventSubscription = new azure.eventgrid.SystemTopicEvent
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
@@ -340,7 +341,7 @@ const exampleSystemTopicEventSubscription = new azure.eventgrid.SystemTopicEvent
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
@@ -372,7 +373,7 @@ const exampleSystemTopicEventSubscription = new azure.eventgrid.SystemTopicEvent
 
 ## SystemTopicEventSubscription Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Architecture and Concepts docs.
 
 ### Inputs
 
@@ -408,6 +409,15 @@ The SystemTopicEventSubscription resource accepts the following [input]({{< relr
         <span class="property-type"><a href="#systemtopiceventsubscriptionadvancedfilter">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `advanced_filter` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="advancedfilteringonarraysenabled_csharp">
+<a href="#advancedfilteringonarraysenabled_csharp" style="color: inherit; text-decoration: inherit;">Advanced<wbr>Filtering<wbr>On<wbr>Arrays<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether advanced filters should be evaluated against an array of values instead of expecting a singular value. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="azurefunctionendpoint_csharp">
@@ -576,6 +586,15 @@ The SystemTopicEventSubscription resource accepts the following [input]({{< relr
     <dd>{{% md %}}A `advanced_filter` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="advancedfilteringonarraysenabled_go">
+<a href="#advancedfilteringonarraysenabled_go" style="color: inherit; text-decoration: inherit;">Advanced<wbr>Filtering<wbr>On<wbr>Arrays<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether advanced filters should be evaluated against an array of values instead of expecting a singular value. Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="azurefunctionendpoint_go">
 <a href="#azurefunctionendpoint_go" style="color: inherit; text-decoration: inherit;">Azure<wbr>Function<wbr>Endpoint</a>
 </span>
@@ -742,6 +761,15 @@ The SystemTopicEventSubscription resource accepts the following [input]({{< relr
     <dd>{{% md %}}A `advanced_filter` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="advancedfilteringonarraysenabled_nodejs">
+<a href="#advancedfilteringonarraysenabled_nodejs" style="color: inherit; text-decoration: inherit;">advanced<wbr>Filtering<wbr>On<wbr>Arrays<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether advanced filters should be evaluated against an array of values instead of expecting a singular value. Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="azurefunctionendpoint_nodejs">
 <a href="#azurefunctionendpoint_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Function<wbr>Endpoint</a>
 </span>
@@ -906,6 +934,15 @@ The SystemTopicEventSubscription resource accepts the following [input]({{< relr
         <span class="property-type"><a href="#systemtopiceventsubscriptionadvancedfilter">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `advanced_filter` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="advanced_filtering_on_arrays_enabled_python">
+<a href="#advanced_filtering_on_arrays_enabled_python" style="color: inherit; text-decoration: inherit;">advanced_<wbr>filtering_<wbr>on_<wbr>arrays_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether advanced filters should be evaluated against an array of values instead of expecting a singular value. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="azure_function_endpoint_python">
@@ -1116,6 +1153,7 @@ Get an existing SystemTopicEventSubscription resource's state with the given nam
         <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
         <span class="nx">advanced_filter</span><span class="p">:</span> <span class="nx">Optional[SystemTopicEventSubscriptionAdvancedFilterArgs]</span> = None<span class="p">,</span>
+        <span class="nx">advanced_filtering_on_arrays_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">azure_function_endpoint</span><span class="p">:</span> <span class="nx">Optional[SystemTopicEventSubscriptionAzureFunctionEndpointArgs]</span> = None<span class="p">,</span>
         <span class="nx">event_delivery_schema</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">eventhub_endpoint_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -1136,7 +1174,7 @@ Get an existing SystemTopicEventSubscription resource's state with the given nam
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSystemTopicEventSubscription<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">SystemTopicEventSubscriptionState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SystemTopicEventSubscription</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSystemTopicEventSubscription<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">SystemTopicEventSubscriptionState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SystemTopicEventSubscription</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -1252,6 +1290,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="#systemtopiceventsubscriptionadvancedfilter">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `advanced_filter` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_advancedfilteringonarraysenabled_csharp">
+<a href="#state_advancedfilteringonarraysenabled_csharp" style="color: inherit; text-decoration: inherit;">Advanced<wbr>Filtering<wbr>On<wbr>Arrays<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether advanced filters should be evaluated against an array of values instead of expecting a singular value. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_azurefunctionendpoint_csharp">
@@ -1420,6 +1467,15 @@ The following state arguments are supported:
     <dd>{{% md %}}A `advanced_filter` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_advancedfilteringonarraysenabled_go">
+<a href="#state_advancedfilteringonarraysenabled_go" style="color: inherit; text-decoration: inherit;">Advanced<wbr>Filtering<wbr>On<wbr>Arrays<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether advanced filters should be evaluated against an array of values instead of expecting a singular value. Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_azurefunctionendpoint_go">
 <a href="#state_azurefunctionendpoint_go" style="color: inherit; text-decoration: inherit;">Azure<wbr>Function<wbr>Endpoint</a>
 </span>
@@ -1586,6 +1642,15 @@ The following state arguments are supported:
     <dd>{{% md %}}A `advanced_filter` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_advancedfilteringonarraysenabled_nodejs">
+<a href="#state_advancedfilteringonarraysenabled_nodejs" style="color: inherit; text-decoration: inherit;">advanced<wbr>Filtering<wbr>On<wbr>Arrays<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether advanced filters should be evaluated against an array of values instead of expecting a singular value. Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_azurefunctionendpoint_nodejs">
 <a href="#state_azurefunctionendpoint_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Function<wbr>Endpoint</a>
 </span>
@@ -1750,6 +1815,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="#systemtopiceventsubscriptionadvancedfilter">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `advanced_filter` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_advanced_filtering_on_arrays_enabled_python">
+<a href="#state_advanced_filtering_on_arrays_enabled_python" style="color: inherit; text-decoration: inherit;">advanced_<wbr>filtering_<wbr>on_<wbr>arrays_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether advanced filters should be evaluated against an array of values instead of expecting a singular value. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_azure_function_endpoint_python">

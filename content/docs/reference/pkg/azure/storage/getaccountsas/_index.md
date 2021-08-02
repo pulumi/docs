@@ -262,6 +262,7 @@ export const sasUrlQueryString = exampleAccountSAS.apply(exampleAccountSAS => ex
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_account_sas(</span><span class="nx">connection_string</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                     <span class="nx">expiry</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                     <span class="nx">https_only</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                    <span class="nx">ip_addresses</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                     <span class="nx">permissions</span><span class="p">:</span> <span class="nx">Optional[GetAccountSASPermissions]</span> = None<span class="p">,</span>
                     <span class="nx">resource_types</span><span class="p">:</span> <span class="nx">Optional[GetAccountSASResourceTypes]</span> = None<span class="p">,</span>
                     <span class="nx">services</span><span class="p">:</span> <span class="nx">Optional[GetAccountSASServices]</span> = None<span class="p">,</span>
@@ -356,6 +357,15 @@ The following arguments are supported:
     <dd>{{% md %}}Only permit `https` access. If `false`, both `http` and `https` are permitted. Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="ipaddresses_csharp">
+<a href="#ipaddresses_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Addresses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}IP address, or a range of IP addresses, from which to accept requests. When specifying a range, note that the range is inclusive.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="signedversion_csharp">
 <a href="#signedversion_csharp" style="color: inherit; text-decoration: inherit;">Signed<wbr>Version</a>
 </span>
@@ -430,6 +440,15 @@ The following arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Only permit `https` access. If `false`, both `http` and `https` are permitted. Defaults to `true`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ipaddresses_go">
+<a href="#ipaddresses_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Addresses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}IP address, or a range of IP addresses, from which to accept requests. When specifying a range, note that the range is inclusive.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="signedversion_go">
@@ -508,6 +527,15 @@ The following arguments are supported:
     <dd>{{% md %}}Only permit `https` access. If `false`, both `http` and `https` are permitted. Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="ipaddresses_nodejs">
+<a href="#ipaddresses_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Addresses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}IP address, or a range of IP addresses, from which to accept requests. When specifying a range, note that the range is inclusive.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="signedversion_nodejs">
 <a href="#signedversion_nodejs" style="color: inherit; text-decoration: inherit;">signed<wbr>Version</a>
 </span>
@@ -582,6 +610,15 @@ The following arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Only permit `https` access. If `false`, both `http` and `https` are permitted. Defaults to `true`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ip_addresses_python">
+<a href="#ip_addresses_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>addresses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}IP address, or a range of IP addresses, from which to accept requests. When specifying a range, note that the range is inclusive.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="signed_version_python">
@@ -680,6 +717,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="ipaddresses_csharp">
+<a href="#ipaddresses_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Addresses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="signedversion_csharp">
 <a href="#signedversion_csharp" style="color: inherit; text-decoration: inherit;">Signed<wbr>Version</a>
 </span>
@@ -763,6 +808,14 @@ The following output properties are available:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="ipaddresses_go">
+<a href="#ipaddresses_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Addresses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
@@ -852,6 +905,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="ipaddresses_nodejs">
+<a href="#ipaddresses_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Addresses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="signedversion_nodejs">
 <a href="#signedversion_nodejs" style="color: inherit; text-decoration: inherit;">signed<wbr>Version</a>
 </span>
@@ -935,6 +996,14 @@ The following output properties are available:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="ip_addresses_python">
+<a href="#ip_addresses_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>addresses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">

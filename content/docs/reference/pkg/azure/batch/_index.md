@@ -14,6 +14,7 @@ Explore the resources and functions of the azure.batch module.
     <li><a href="account" title="Account"><span class="symbol resource"></span>Account</a></li>
     <li><a href="application" title="Application"><span class="symbol resource"></span>Application</a></li>
     <li><a href="certificate" title="Certificate"><span class="symbol resource"></span>Certificate</a></li>
+    <li><a href="job" title="Job"><span class="symbol resource"></span>Job</a></li>
     <li><a href="pool" title="Pool"><span class="symbol resource"></span>Pool</a></li>
 </ul>
 
@@ -33,6 +34,6 @@ Explore the resources and functions of the azure.batch module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.11.0</dd>
+	<dd>4.12.0</dd>
 </dl>
 

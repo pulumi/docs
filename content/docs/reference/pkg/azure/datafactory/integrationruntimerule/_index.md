@@ -169,7 +169,8 @@ const exampleIntegrationRuntimeRule = new azure.datafactory.IntegrationRuntimeRu
                            <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                            <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                            <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                           <span class="nx">time_to_live_min</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">)</span>
+                           <span class="nx">time_to_live_min</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+                           <span class="nx">virtual_network_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">IntegrationRuntimeRule</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                            <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">IntegrationRuntimeRuleArgs</a></span><span class="p">,</span>
@@ -177,7 +178,7 @@ const exampleIntegrationRuntimeRule = new azure.datafactory.IntegrationRuntimeRu
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewIntegrationRuntimeRule</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">IntegrationRuntimeRuleArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">IntegrationRuntimeRule</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewIntegrationRuntimeRule</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">IntegrationRuntimeRuleArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">IntegrationRuntimeRule</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -238,7 +239,7 @@ const exampleIntegrationRuntimeRule = new azure.datafactory.IntegrationRuntimeRu
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
@@ -256,7 +257,7 @@ const exampleIntegrationRuntimeRule = new azure.datafactory.IntegrationRuntimeRu
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
@@ -288,7 +289,7 @@ const exampleIntegrationRuntimeRule = new azure.datafactory.IntegrationRuntimeRu
 
 ## IntegrationRuntimeRule Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Architecture and Concepts docs.
 
 ### Inputs
 
@@ -369,6 +370,15 @@ The IntegrationRuntimeRule resource accepts the following [input]({{< relref "/d
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Time to live (in minutes) setting of the cluster which will execute data flow job. Defaults to `0`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="virtualnetworkenabled_csharp">
+<a href="#virtualnetworkenabled_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Is Integration Runtime compute provisioned within Managed Virtual Network? Changing this forces a new resource to be created.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -445,6 +455,15 @@ The IntegrationRuntimeRule resource accepts the following [input]({{< relref "/d
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Time to live (in minutes) setting of the cluster which will execute data flow job. Defaults to `0`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="virtualnetworkenabled_go">
+<a href="#virtualnetworkenabled_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Is Integration Runtime compute provisioned within Managed Virtual Network? Changing this forces a new resource to be created.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -521,6 +540,15 @@ The IntegrationRuntimeRule resource accepts the following [input]({{< relref "/d
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Time to live (in minutes) setting of the cluster which will execute data flow job. Defaults to `0`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="virtualnetworkenabled_nodejs">
+<a href="#virtualnetworkenabled_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Network<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Is Integration Runtime compute provisioned within Managed Virtual Network? Changing this forces a new resource to be created.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -597,6 +625,15 @@ The IntegrationRuntimeRule resource accepts the following [input]({{< relref "/d
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Time to live (in minutes) setting of the cluster which will execute data flow job. Defaults to `0`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="virtual_network_enabled_python">
+<a href="#virtual_network_enabled_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>network_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Is Integration Runtime compute provisioned within Managed Virtual Network? Changing this forces a new resource to be created.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -678,11 +715,12 @@ Get an existing IntegrationRuntimeRule resource's state with the given name, ID,
         <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-        <span class="nx">time_to_live_min</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">) -&gt;</span> IntegrationRuntimeRule</code></pre></div>
+        <span class="nx">time_to_live_min</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+        <span class="nx">virtual_network_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">) -&gt;</span> IntegrationRuntimeRule</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetIntegrationRuntimeRule<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">IntegrationRuntimeRuleState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">IntegrationRuntimeRule</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetIntegrationRuntimeRule<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">IntegrationRuntimeRuleState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">IntegrationRuntimeRule</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -861,6 +899,15 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Time to live (in minutes) setting of the cluster which will execute data flow job. Defaults to `0`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_virtualnetworkenabled_csharp">
+<a href="#state_virtualnetworkenabled_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Is Integration Runtime compute provisioned within Managed Virtual Network? Changing this forces a new resource to be created.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -937,6 +984,15 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Time to live (in minutes) setting of the cluster which will execute data flow job. Defaults to `0`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_virtualnetworkenabled_go">
+<a href="#state_virtualnetworkenabled_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Is Integration Runtime compute provisioned within Managed Virtual Network? Changing this forces a new resource to be created.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1013,6 +1069,15 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Time to live (in minutes) setting of the cluster which will execute data flow job. Defaults to `0`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_virtualnetworkenabled_nodejs">
+<a href="#state_virtualnetworkenabled_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Network<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Is Integration Runtime compute provisioned within Managed Virtual Network? Changing this forces a new resource to be created.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1089,6 +1154,15 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Time to live (in minutes) setting of the cluster which will execute data flow job. Defaults to `0`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_virtual_network_enabled_python">
+<a href="#state_virtual_network_enabled_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>network_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Is Integration Runtime compute provisioned within Managed Virtual Network? Changing this forces a new resource to be created.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

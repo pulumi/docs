@@ -171,12 +171,15 @@ const exampleIntegrationRuntimeSsis = new azure.datafactory.IntegrationRuntimeSs
                            <span class="nx">data_factory_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                            <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                            <span class="nx">edition</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                           <span class="nx">express_custom_setup</span><span class="p">:</span> <span class="nx">Optional[IntegrationRuntimeSsisExpressCustomSetupArgs]</span> = None<span class="p">,</span>
                            <span class="nx">license_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                            <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                            <span class="nx">max_parallel_executions_per_node</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
                            <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                            <span class="nx">node_size</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                            <span class="nx">number_of_nodes</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+                           <span class="nx">package_stores</span><span class="p">:</span> <span class="nx">Optional[Sequence[IntegrationRuntimeSsisPackageStoreArgs]]</span> = None<span class="p">,</span>
+                           <span class="nx">proxy</span><span class="p">:</span> <span class="nx">Optional[IntegrationRuntimeSsisProxyArgs]</span> = None<span class="p">,</span>
                            <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                            <span class="nx">vnet_integration</span><span class="p">:</span> <span class="nx">Optional[IntegrationRuntimeSsisVnetIntegrationArgs]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
@@ -186,7 +189,7 @@ const exampleIntegrationRuntimeSsis = new azure.datafactory.IntegrationRuntimeSs
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewIntegrationRuntimeSsis</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">IntegrationRuntimeSsisArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">IntegrationRuntimeSsis</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewIntegrationRuntimeSsis</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">IntegrationRuntimeSsisArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">IntegrationRuntimeSsis</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -247,7 +250,7 @@ const exampleIntegrationRuntimeSsis = new azure.datafactory.IntegrationRuntimeSs
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
@@ -265,7 +268,7 @@ const exampleIntegrationRuntimeSsis = new azure.datafactory.IntegrationRuntimeSs
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
@@ -297,7 +300,7 @@ const exampleIntegrationRuntimeSsis = new azure.datafactory.IntegrationRuntimeSs
 
 ## IntegrationRuntimeSsis Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Architecture and Concepts docs.
 
 ### Inputs
 
@@ -371,6 +374,15 @@ The IntegrationRuntimeSsis resource accepts the following [input]({{< relref "/d
     <dd>{{% md %}}The Azure-SSIS Integration Runtime edition. Valid values are `Standard` and `Enterprise`. Defaults to `Standard`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="expresscustomsetup_csharp">
+<a href="#expresscustomsetup_csharp" style="color: inherit; text-decoration: inherit;">Express<wbr>Custom<wbr>Setup</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#integrationruntimessisexpresscustomsetup">Integration<wbr>Runtime<wbr>Ssis<wbr>Express<wbr>Custom<wbr>Setup<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}An `express_custom_setup` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="licensetype_csharp">
 <a href="#licensetype_csharp" style="color: inherit; text-decoration: inherit;">License<wbr>Type</a>
 </span>
@@ -414,6 +426,24 @@ The IntegrationRuntimeSsis resource accepts the following [input]({{< relref "/d
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of nodes for the Azure-SSIS Integration Runtime. Max is `10`. Defaults to `1`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="packagestores_csharp">
+<a href="#packagestores_csharp" style="color: inherit; text-decoration: inherit;">Package<wbr>Stores</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#integrationruntimessispackagestore">List&lt;Integration<wbr>Runtime<wbr>Ssis<wbr>Package<wbr>Store<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `package_store` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="proxy_csharp">
+<a href="#proxy_csharp" style="color: inherit; text-decoration: inherit;">Proxy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#integrationruntimessisproxy">Integration<wbr>Runtime<wbr>Ssis<wbr>Proxy<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `proxy` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vnetintegration_csharp">
@@ -492,6 +522,15 @@ The IntegrationRuntimeSsis resource accepts the following [input]({{< relref "/d
     <dd>{{% md %}}The Azure-SSIS Integration Runtime edition. Valid values are `Standard` and `Enterprise`. Defaults to `Standard`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="expresscustomsetup_go">
+<a href="#expresscustomsetup_go" style="color: inherit; text-decoration: inherit;">Express<wbr>Custom<wbr>Setup</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#integrationruntimessisexpresscustomsetup">Integration<wbr>Runtime<wbr>Ssis<wbr>Express<wbr>Custom<wbr>Setup<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}An `express_custom_setup` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="licensetype_go">
 <a href="#licensetype_go" style="color: inherit; text-decoration: inherit;">License<wbr>Type</a>
 </span>
@@ -535,6 +574,24 @@ The IntegrationRuntimeSsis resource accepts the following [input]({{< relref "/d
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of nodes for the Azure-SSIS Integration Runtime. Max is `10`. Defaults to `1`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="packagestores_go">
+<a href="#packagestores_go" style="color: inherit; text-decoration: inherit;">Package<wbr>Stores</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#integrationruntimessispackagestore">[]Integration<wbr>Runtime<wbr>Ssis<wbr>Package<wbr>Store<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `package_store` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="proxy_go">
+<a href="#proxy_go" style="color: inherit; text-decoration: inherit;">Proxy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#integrationruntimessisproxy">Integration<wbr>Runtime<wbr>Ssis<wbr>Proxy<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `proxy` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vnetintegration_go">
@@ -613,6 +670,15 @@ The IntegrationRuntimeSsis resource accepts the following [input]({{< relref "/d
     <dd>{{% md %}}The Azure-SSIS Integration Runtime edition. Valid values are `Standard` and `Enterprise`. Defaults to `Standard`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="expresscustomsetup_nodejs">
+<a href="#expresscustomsetup_nodejs" style="color: inherit; text-decoration: inherit;">express<wbr>Custom<wbr>Setup</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#integrationruntimessisexpresscustomsetup">Integration<wbr>Runtime<wbr>Ssis<wbr>Express<wbr>Custom<wbr>Setup<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}An `express_custom_setup` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="licensetype_nodejs">
 <a href="#licensetype_nodejs" style="color: inherit; text-decoration: inherit;">license<wbr>Type</a>
 </span>
@@ -656,6 +722,24 @@ The IntegrationRuntimeSsis resource accepts the following [input]({{< relref "/d
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of nodes for the Azure-SSIS Integration Runtime. Max is `10`. Defaults to `1`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="packagestores_nodejs">
+<a href="#packagestores_nodejs" style="color: inherit; text-decoration: inherit;">package<wbr>Stores</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#integrationruntimessispackagestore">Integration<wbr>Runtime<wbr>Ssis<wbr>Package<wbr>Store<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `package_store` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="proxy_nodejs">
+<a href="#proxy_nodejs" style="color: inherit; text-decoration: inherit;">proxy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#integrationruntimessisproxy">Integration<wbr>Runtime<wbr>Ssis<wbr>Proxy<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `proxy` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vnetintegration_nodejs">
@@ -734,6 +818,15 @@ The IntegrationRuntimeSsis resource accepts the following [input]({{< relref "/d
     <dd>{{% md %}}The Azure-SSIS Integration Runtime edition. Valid values are `Standard` and `Enterprise`. Defaults to `Standard`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="express_custom_setup_python">
+<a href="#express_custom_setup_python" style="color: inherit; text-decoration: inherit;">express_<wbr>custom_<wbr>setup</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#integrationruntimessisexpresscustomsetup">Integration<wbr>Runtime<wbr>Ssis<wbr>Express<wbr>Custom<wbr>Setup<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}An `express_custom_setup` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="license_type_python">
 <a href="#license_type_python" style="color: inherit; text-decoration: inherit;">license_<wbr>type</a>
 </span>
@@ -777,6 +870,24 @@ The IntegrationRuntimeSsis resource accepts the following [input]({{< relref "/d
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of nodes for the Azure-SSIS Integration Runtime. Max is `10`. Defaults to `1`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="package_stores_python">
+<a href="#package_stores_python" style="color: inherit; text-decoration: inherit;">package_<wbr>stores</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#integrationruntimessispackagestore">Sequence[Integration<wbr>Runtime<wbr>Ssis<wbr>Package<wbr>Store<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `package_store` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="proxy_python">
+<a href="#proxy_python" style="color: inherit; text-decoration: inherit;">proxy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#integrationruntimessisproxy">Integration<wbr>Runtime<wbr>Ssis<wbr>Proxy<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `proxy` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vnet_integration_python">
@@ -865,18 +976,21 @@ Get an existing IntegrationRuntimeSsis resource's state with the given name, ID,
         <span class="nx">data_factory_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">edition</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">express_custom_setup</span><span class="p">:</span> <span class="nx">Optional[IntegrationRuntimeSsisExpressCustomSetupArgs]</span> = None<span class="p">,</span>
         <span class="nx">license_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">max_parallel_executions_per_node</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">node_size</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">number_of_nodes</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+        <span class="nx">package_stores</span><span class="p">:</span> <span class="nx">Optional[Sequence[IntegrationRuntimeSsisPackageStoreArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">proxy</span><span class="p">:</span> <span class="nx">Optional[IntegrationRuntimeSsisProxyArgs]</span> = None<span class="p">,</span>
         <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">vnet_integration</span><span class="p">:</span> <span class="nx">Optional[IntegrationRuntimeSsisVnetIntegrationArgs]</span> = None<span class="p">) -&gt;</span> IntegrationRuntimeSsis</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetIntegrationRuntimeSsis<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">IntegrationRuntimeSsisState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">IntegrationRuntimeSsis</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetIntegrationRuntimeSsis<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">IntegrationRuntimeSsisState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">IntegrationRuntimeSsis</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -1030,6 +1144,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The Azure-SSIS Integration Runtime edition. Valid values are `Standard` and `Enterprise`. Defaults to `Standard`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_expresscustomsetup_csharp">
+<a href="#state_expresscustomsetup_csharp" style="color: inherit; text-decoration: inherit;">Express<wbr>Custom<wbr>Setup</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#integrationruntimessisexpresscustomsetup">Integration<wbr>Runtime<wbr>Ssis<wbr>Express<wbr>Custom<wbr>Setup<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}An `express_custom_setup` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_licensetype_csharp">
 <a href="#state_licensetype_csharp" style="color: inherit; text-decoration: inherit;">License<wbr>Type</a>
 </span>
@@ -1082,6 +1205,24 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of nodes for the Azure-SSIS Integration Runtime. Max is `10`. Defaults to `1`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_packagestores_csharp">
+<a href="#state_packagestores_csharp" style="color: inherit; text-decoration: inherit;">Package<wbr>Stores</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#integrationruntimessispackagestore">List&lt;Integration<wbr>Runtime<wbr>Ssis<wbr>Package<wbr>Store<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `package_store` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_proxy_csharp">
+<a href="#state_proxy_csharp" style="color: inherit; text-decoration: inherit;">Proxy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#integrationruntimessisproxy">Integration<wbr>Runtime<wbr>Ssis<wbr>Proxy<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `proxy` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_csharp">
@@ -1151,6 +1292,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The Azure-SSIS Integration Runtime edition. Valid values are `Standard` and `Enterprise`. Defaults to `Standard`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_expresscustomsetup_go">
+<a href="#state_expresscustomsetup_go" style="color: inherit; text-decoration: inherit;">Express<wbr>Custom<wbr>Setup</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#integrationruntimessisexpresscustomsetup">Integration<wbr>Runtime<wbr>Ssis<wbr>Express<wbr>Custom<wbr>Setup<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}An `express_custom_setup` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_licensetype_go">
 <a href="#state_licensetype_go" style="color: inherit; text-decoration: inherit;">License<wbr>Type</a>
 </span>
@@ -1203,6 +1353,24 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of nodes for the Azure-SSIS Integration Runtime. Max is `10`. Defaults to `1`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_packagestores_go">
+<a href="#state_packagestores_go" style="color: inherit; text-decoration: inherit;">Package<wbr>Stores</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#integrationruntimessispackagestore">[]Integration<wbr>Runtime<wbr>Ssis<wbr>Package<wbr>Store<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `package_store` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_proxy_go">
+<a href="#state_proxy_go" style="color: inherit; text-decoration: inherit;">Proxy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#integrationruntimessisproxy">Integration<wbr>Runtime<wbr>Ssis<wbr>Proxy<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `proxy` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_go">
@@ -1272,6 +1440,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The Azure-SSIS Integration Runtime edition. Valid values are `Standard` and `Enterprise`. Defaults to `Standard`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_expresscustomsetup_nodejs">
+<a href="#state_expresscustomsetup_nodejs" style="color: inherit; text-decoration: inherit;">express<wbr>Custom<wbr>Setup</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#integrationruntimessisexpresscustomsetup">Integration<wbr>Runtime<wbr>Ssis<wbr>Express<wbr>Custom<wbr>Setup<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}An `express_custom_setup` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_licensetype_nodejs">
 <a href="#state_licensetype_nodejs" style="color: inherit; text-decoration: inherit;">license<wbr>Type</a>
 </span>
@@ -1324,6 +1501,24 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of nodes for the Azure-SSIS Integration Runtime. Max is `10`. Defaults to `1`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_packagestores_nodejs">
+<a href="#state_packagestores_nodejs" style="color: inherit; text-decoration: inherit;">package<wbr>Stores</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#integrationruntimessispackagestore">Integration<wbr>Runtime<wbr>Ssis<wbr>Package<wbr>Store<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `package_store` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_proxy_nodejs">
+<a href="#state_proxy_nodejs" style="color: inherit; text-decoration: inherit;">proxy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#integrationruntimessisproxy">Integration<wbr>Runtime<wbr>Ssis<wbr>Proxy<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `proxy` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_nodejs">
@@ -1393,6 +1588,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The Azure-SSIS Integration Runtime edition. Valid values are `Standard` and `Enterprise`. Defaults to `Standard`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_express_custom_setup_python">
+<a href="#state_express_custom_setup_python" style="color: inherit; text-decoration: inherit;">express_<wbr>custom_<wbr>setup</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#integrationruntimessisexpresscustomsetup">Integration<wbr>Runtime<wbr>Ssis<wbr>Express<wbr>Custom<wbr>Setup<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}An `express_custom_setup` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_license_type_python">
 <a href="#state_license_type_python" style="color: inherit; text-decoration: inherit;">license_<wbr>type</a>
 </span>
@@ -1445,6 +1649,24 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of nodes for the Azure-SSIS Integration Runtime. Max is `10`. Defaults to `1`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_package_stores_python">
+<a href="#state_package_stores_python" style="color: inherit; text-decoration: inherit;">package_<wbr>stores</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#integrationruntimessispackagestore">Sequence[Integration<wbr>Runtime<wbr>Ssis<wbr>Package<wbr>Store<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `package_store` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_proxy_python">
+<a href="#state_proxy_python" style="color: inherit; text-decoration: inherit;">proxy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#integrationruntimessisproxy">Integration<wbr>Runtime<wbr>Ssis<wbr>Proxy<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `proxy` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resource_group_name_python">
@@ -1507,6 +1729,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Administrator login password for the SQL Server.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="dualstandbypairname_csharp">
+<a href="#dualstandbypairname_csharp" style="color: inherit; text-decoration: inherit;">Dual<wbr>Standby<wbr>Pair<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The dual standby Azure-SSIS Integration Runtime pair with SSISDB failover.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="pricingtier_csharp">
 <a href="#pricingtier_csharp" style="color: inherit; text-decoration: inherit;">Pricing<wbr>Tier</a>
 </span>
@@ -1545,6 +1776,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Administrator login password for the SQL Server.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dualstandbypairname_go">
+<a href="#dualstandbypairname_go" style="color: inherit; text-decoration: inherit;">Dual<wbr>Standby<wbr>Pair<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The dual standby Azure-SSIS Integration Runtime pair with SSISDB failover.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pricingtier_go">
@@ -1587,6 +1827,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Administrator login password for the SQL Server.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="dualstandbypairname_nodejs">
+<a href="#dualstandbypairname_nodejs" style="color: inherit; text-decoration: inherit;">dual<wbr>Standby<wbr>Pair<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The dual standby Azure-SSIS Integration Runtime pair with SSISDB failover.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="pricingtier_nodejs">
 <a href="#pricingtier_nodejs" style="color: inherit; text-decoration: inherit;">pricing<wbr>Tier</a>
 </span>
@@ -1625,6 +1874,15 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Administrator login password for the SQL Server.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dual_standby_pair_name_python">
+<a href="#dual_standby_pair_name_python" style="color: inherit; text-decoration: inherit;">dual_<wbr>standby_<wbr>pair_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The dual standby Azure-SSIS Integration Runtime pair with SSISDB failover.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pricing_tier_python">
@@ -1727,6 +1985,996 @@ The following state arguments are supported:
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="integrationruntimessisexpresscustomsetup">Integration<wbr>Runtime<wbr>Ssis<wbr>Express<wbr>Custom<wbr>Setup</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="commandkeys_csharp">
+<a href="#commandkeys_csharp" style="color: inherit; text-decoration: inherit;">Command<wbr>Keys</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#integrationruntimessisexpresscustomsetupcommandkey">List&lt;Integration<wbr>Runtime<wbr>Ssis<wbr>Express<wbr>Custom<wbr>Setup<wbr>Command<wbr>Key&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `command_key` blocks as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="components_csharp">
+<a href="#components_csharp" style="color: inherit; text-decoration: inherit;">Components</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#integrationruntimessisexpresscustomsetupcomponent">List&lt;Integration<wbr>Runtime<wbr>Ssis<wbr>Express<wbr>Custom<wbr>Setup<wbr>Component&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `component` blocks as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="environment_csharp">
+<a href="#environment_csharp" style="color: inherit; text-decoration: inherit;">Environment</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}The Environment Variables for the Azure-SSIS Integration Runtime.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="powershellversion_csharp">
+<a href="#powershellversion_csharp" style="color: inherit; text-decoration: inherit;">Powershell<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The version of Azure Powershell installed for the Azure-SSIS Integration Runtime.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="commandkeys_go">
+<a href="#commandkeys_go" style="color: inherit; text-decoration: inherit;">Command<wbr>Keys</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#integrationruntimessisexpresscustomsetupcommandkey">[]Integration<wbr>Runtime<wbr>Ssis<wbr>Express<wbr>Custom<wbr>Setup<wbr>Command<wbr>Key</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `command_key` blocks as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="components_go">
+<a href="#components_go" style="color: inherit; text-decoration: inherit;">Components</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#integrationruntimessisexpresscustomsetupcomponent">[]Integration<wbr>Runtime<wbr>Ssis<wbr>Express<wbr>Custom<wbr>Setup<wbr>Component</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `component` blocks as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="environment_go">
+<a href="#environment_go" style="color: inherit; text-decoration: inherit;">Environment</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}The Environment Variables for the Azure-SSIS Integration Runtime.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="powershellversion_go">
+<a href="#powershellversion_go" style="color: inherit; text-decoration: inherit;">Powershell<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The version of Azure Powershell installed for the Azure-SSIS Integration Runtime.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="commandkeys_nodejs">
+<a href="#commandkeys_nodejs" style="color: inherit; text-decoration: inherit;">command<wbr>Keys</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#integrationruntimessisexpresscustomsetupcommandkey">Integration<wbr>Runtime<wbr>Ssis<wbr>Express<wbr>Custom<wbr>Setup<wbr>Command<wbr>Key[]</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `command_key` blocks as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="components_nodejs">
+<a href="#components_nodejs" style="color: inherit; text-decoration: inherit;">components</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#integrationruntimessisexpresscustomsetupcomponent">Integration<wbr>Runtime<wbr>Ssis<wbr>Express<wbr>Custom<wbr>Setup<wbr>Component[]</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `component` blocks as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="environment_nodejs">
+<a href="#environment_nodejs" style="color: inherit; text-decoration: inherit;">environment</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}The Environment Variables for the Azure-SSIS Integration Runtime.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="powershellversion_nodejs">
+<a href="#powershellversion_nodejs" style="color: inherit; text-decoration: inherit;">powershell<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The version of Azure Powershell installed for the Azure-SSIS Integration Runtime.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="command_keys_python">
+<a href="#command_keys_python" style="color: inherit; text-decoration: inherit;">command_<wbr>keys</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#integrationruntimessisexpresscustomsetupcommandkey">Sequence[Integration<wbr>Runtime<wbr>Ssis<wbr>Express<wbr>Custom<wbr>Setup<wbr>Command<wbr>Key]</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `command_key` blocks as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="components_python">
+<a href="#components_python" style="color: inherit; text-decoration: inherit;">components</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#integrationruntimessisexpresscustomsetupcomponent">Sequence[Integration<wbr>Runtime<wbr>Ssis<wbr>Express<wbr>Custom<wbr>Setup<wbr>Component]</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `component` blocks as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="environment_python">
+<a href="#environment_python" style="color: inherit; text-decoration: inherit;">environment</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, str]</span>
+    </dt>
+    <dd>{{% md %}}The Environment Variables for the Azure-SSIS Integration Runtime.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="powershell_version_python">
+<a href="#powershell_version_python" style="color: inherit; text-decoration: inherit;">powershell_<wbr>version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The version of Azure Powershell installed for the Azure-SSIS Integration Runtime.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="integrationruntimessisexpresscustomsetupcommandkey">Integration<wbr>Runtime<wbr>Ssis<wbr>Express<wbr>Custom<wbr>Setup<wbr>Command<wbr>Key</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="targetname_csharp">
+<a href="#targetname_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The target computer or domain name.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="username_csharp">
+<a href="#username_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The username for the target device.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="keyvaultpassword_csharp">
+<a href="#keyvaultpassword_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Password</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#integrationruntimessisexpresscustomsetupcommandkeykeyvaultpassword">Integration<wbr>Runtime<wbr>Ssis<wbr>Express<wbr>Custom<wbr>Setup<wbr>Command<wbr>Key<wbr>Key<wbr>Vault<wbr>Password</a></span>
+    </dt>
+    <dd>{{% md %}}A `key_vault_secret_reference` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="password_csharp">
+<a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The password for the target device.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="targetname_go">
+<a href="#targetname_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The target computer or domain name.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="username_go">
+<a href="#username_go" style="color: inherit; text-decoration: inherit;">User<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The username for the target device.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="keyvaultpassword_go">
+<a href="#keyvaultpassword_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Password</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#integrationruntimessisexpresscustomsetupcommandkeykeyvaultpassword">Integration<wbr>Runtime<wbr>Ssis<wbr>Express<wbr>Custom<wbr>Setup<wbr>Command<wbr>Key<wbr>Key<wbr>Vault<wbr>Password</a></span>
+    </dt>
+    <dd>{{% md %}}A `key_vault_secret_reference` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="password_go">
+<a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The password for the target device.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="targetname_nodejs">
+<a href="#targetname_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The target computer or domain name.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="username_nodejs">
+<a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The username for the target device.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="keyvaultpassword_nodejs">
+<a href="#keyvaultpassword_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Vault<wbr>Password</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#integrationruntimessisexpresscustomsetupcommandkeykeyvaultpassword">Integration<wbr>Runtime<wbr>Ssis<wbr>Express<wbr>Custom<wbr>Setup<wbr>Command<wbr>Key<wbr>Key<wbr>Vault<wbr>Password</a></span>
+    </dt>
+    <dd>{{% md %}}A `key_vault_secret_reference` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="password_nodejs">
+<a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The password for the target device.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="target_name_python">
+<a href="#target_name_python" style="color: inherit; text-decoration: inherit;">target_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The target computer or domain name.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="user_name_python">
+<a href="#user_name_python" style="color: inherit; text-decoration: inherit;">user_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The username for the target device.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="key_vault_password_python">
+<a href="#key_vault_password_python" style="color: inherit; text-decoration: inherit;">key_<wbr>vault_<wbr>password</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#integrationruntimessisexpresscustomsetupcommandkeykeyvaultpassword">Integration<wbr>Runtime<wbr>Ssis<wbr>Express<wbr>Custom<wbr>Setup<wbr>Command<wbr>Key<wbr>Key<wbr>Vault<wbr>Password</a></span>
+    </dt>
+    <dd>{{% md %}}A `key_vault_secret_reference` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="password_python">
+<a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The password for the target device.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="integrationruntimessisexpresscustomsetupcommandkeykeyvaultpassword">Integration<wbr>Runtime<wbr>Ssis<wbr>Express<wbr>Custom<wbr>Setup<wbr>Command<wbr>Key<wbr>Key<wbr>Vault<wbr>Password</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="linkedservicename_csharp">
+<a href="#linkedservicename_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the name of an existing Key Vault Data Factory Linked Service.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="secretname_csharp">
+<a href="#secretname_csharp" style="color: inherit; text-decoration: inherit;">Secret<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the secret name in Azure Key Vault.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="parameters_csharp">
+<a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A map of parameters to associate with the Key Vault Data Factory Linked Service.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="secretversion_csharp">
+<a href="#secretversion_csharp" style="color: inherit; text-decoration: inherit;">Secret<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the secret version in Azure Key Vault.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="linkedservicename_go">
+<a href="#linkedservicename_go" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the name of an existing Key Vault Data Factory Linked Service.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="secretname_go">
+<a href="#secretname_go" style="color: inherit; text-decoration: inherit;">Secret<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the secret name in Azure Key Vault.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="parameters_go">
+<a href="#parameters_go" style="color: inherit; text-decoration: inherit;">Parameters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}A map of parameters to associate with the Key Vault Data Factory Linked Service.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="secretversion_go">
+<a href="#secretversion_go" style="color: inherit; text-decoration: inherit;">Secret<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the secret version in Azure Key Vault.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="linkedservicename_nodejs">
+<a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the name of an existing Key Vault Data Factory Linked Service.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="secretname_nodejs">
+<a href="#secretname_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the secret name in Azure Key Vault.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="parameters_nodejs">
+<a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}A map of parameters to associate with the Key Vault Data Factory Linked Service.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="secretversion_nodejs">
+<a href="#secretversion_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the secret version in Azure Key Vault.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="linked_service_name_python">
+<a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specifies the name of an existing Key Vault Data Factory Linked Service.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="secret_name_python">
+<a href="#secret_name_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specifies the secret name in Azure Key Vault.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="parameters_python">
+<a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, str]</span>
+    </dt>
+    <dd>{{% md %}}A map of parameters to associate with the Key Vault Data Factory Linked Service.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="secret_version_python">
+<a href="#secret_version_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specifies the secret version in Azure Key Vault.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="integrationruntimessisexpresscustomsetupcomponent">Integration<wbr>Runtime<wbr>Ssis<wbr>Express<wbr>Custom<wbr>Setup<wbr>Component</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Component Name installed for the Azure-SSIS Integration Runtime.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="keyvaultlicense_csharp">
+<a href="#keyvaultlicense_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>License</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#integrationruntimessisexpresscustomsetupcomponentkeyvaultlicense">Integration<wbr>Runtime<wbr>Ssis<wbr>Express<wbr>Custom<wbr>Setup<wbr>Component<wbr>Key<wbr>Vault<wbr>License</a></span>
+    </dt>
+    <dd>{{% md %}}A `key_vault_secret_reference` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="license_csharp">
+<a href="#license_csharp" style="color: inherit; text-decoration: inherit;">License</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The license used for the Component.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Component Name installed for the Azure-SSIS Integration Runtime.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="keyvaultlicense_go">
+<a href="#keyvaultlicense_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>License</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#integrationruntimessisexpresscustomsetupcomponentkeyvaultlicense">Integration<wbr>Runtime<wbr>Ssis<wbr>Express<wbr>Custom<wbr>Setup<wbr>Component<wbr>Key<wbr>Vault<wbr>License</a></span>
+    </dt>
+    <dd>{{% md %}}A `key_vault_secret_reference` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="license_go">
+<a href="#license_go" style="color: inherit; text-decoration: inherit;">License</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The license used for the Component.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Component Name installed for the Azure-SSIS Integration Runtime.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="keyvaultlicense_nodejs">
+<a href="#keyvaultlicense_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Vault<wbr>License</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#integrationruntimessisexpresscustomsetupcomponentkeyvaultlicense">Integration<wbr>Runtime<wbr>Ssis<wbr>Express<wbr>Custom<wbr>Setup<wbr>Component<wbr>Key<wbr>Vault<wbr>License</a></span>
+    </dt>
+    <dd>{{% md %}}A `key_vault_secret_reference` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="license_nodejs">
+<a href="#license_nodejs" style="color: inherit; text-decoration: inherit;">license</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The license used for the Component.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Component Name installed for the Azure-SSIS Integration Runtime.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="key_vault_license_python">
+<a href="#key_vault_license_python" style="color: inherit; text-decoration: inherit;">key_<wbr>vault_<wbr>license</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#integrationruntimessisexpresscustomsetupcomponentkeyvaultlicense">Integration<wbr>Runtime<wbr>Ssis<wbr>Express<wbr>Custom<wbr>Setup<wbr>Component<wbr>Key<wbr>Vault<wbr>License</a></span>
+    </dt>
+    <dd>{{% md %}}A `key_vault_secret_reference` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="license_python">
+<a href="#license_python" style="color: inherit; text-decoration: inherit;">license</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The license used for the Component.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="integrationruntimessisexpresscustomsetupcomponentkeyvaultlicense">Integration<wbr>Runtime<wbr>Ssis<wbr>Express<wbr>Custom<wbr>Setup<wbr>Component<wbr>Key<wbr>Vault<wbr>License</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="linkedservicename_csharp">
+<a href="#linkedservicename_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the name of an existing Key Vault Data Factory Linked Service.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="secretname_csharp">
+<a href="#secretname_csharp" style="color: inherit; text-decoration: inherit;">Secret<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the secret name in Azure Key Vault.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="parameters_csharp">
+<a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A map of parameters to associate with the Key Vault Data Factory Linked Service.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="secretversion_csharp">
+<a href="#secretversion_csharp" style="color: inherit; text-decoration: inherit;">Secret<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the secret version in Azure Key Vault.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="linkedservicename_go">
+<a href="#linkedservicename_go" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the name of an existing Key Vault Data Factory Linked Service.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="secretname_go">
+<a href="#secretname_go" style="color: inherit; text-decoration: inherit;">Secret<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the secret name in Azure Key Vault.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="parameters_go">
+<a href="#parameters_go" style="color: inherit; text-decoration: inherit;">Parameters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}A map of parameters to associate with the Key Vault Data Factory Linked Service.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="secretversion_go">
+<a href="#secretversion_go" style="color: inherit; text-decoration: inherit;">Secret<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the secret version in Azure Key Vault.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="linkedservicename_nodejs">
+<a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the name of an existing Key Vault Data Factory Linked Service.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="secretname_nodejs">
+<a href="#secretname_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the secret name in Azure Key Vault.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="parameters_nodejs">
+<a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}A map of parameters to associate with the Key Vault Data Factory Linked Service.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="secretversion_nodejs">
+<a href="#secretversion_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the secret version in Azure Key Vault.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="linked_service_name_python">
+<a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specifies the name of an existing Key Vault Data Factory Linked Service.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="secret_name_python">
+<a href="#secret_name_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specifies the secret name in Azure Key Vault.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="parameters_python">
+<a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, str]</span>
+    </dt>
+    <dd>{{% md %}}A map of parameters to associate with the Key Vault Data Factory Linked Service.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="secret_version_python">
+<a href="#secret_version_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specifies the secret version in Azure Key Vault.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="integrationruntimessispackagestore">Integration<wbr>Runtime<wbr>Ssis<wbr>Package<wbr>Store</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="linkedservicename_csharp">
+<a href="#linkedservicename_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the Linked Service to associate with the packages.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the package store.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="linkedservicename_go">
+<a href="#linkedservicename_go" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the Linked Service to associate with the packages.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the package store.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="linkedservicename_nodejs">
+<a href="#linkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the Linked Service to associate with the packages.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the package store.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="linked_service_name_python">
+<a href="#linked_service_name_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Name of the Linked Service to associate with the packages.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Name of the package store.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="integrationruntimessisproxy">Integration<wbr>Runtime<wbr>Ssis<wbr>Proxy</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="selfhostedintegrationruntimename_csharp">
+<a href="#selfhostedintegrationruntimename_csharp" style="color: inherit; text-decoration: inherit;">Self<wbr>Hosted<wbr>Integration<wbr>Runtime<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of Self Hosted Integration Runtime as a proxy.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="stagingstoragelinkedservicename_csharp">
+<a href="#stagingstoragelinkedservicename_csharp" style="color: inherit; text-decoration: inherit;">Staging<wbr>Storage<wbr>Linked<wbr>Service<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of Azure Blob Storage linked service to reference the staging data store to be used when moving data between self-hosted and Azure-SSIS integration runtimes.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="path_csharp">
+<a href="#path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The path in the data store to be used when moving data between Self-Hosted and Azure-SSIS Integration Runtimes.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="selfhostedintegrationruntimename_go">
+<a href="#selfhostedintegrationruntimename_go" style="color: inherit; text-decoration: inherit;">Self<wbr>Hosted<wbr>Integration<wbr>Runtime<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of Self Hosted Integration Runtime as a proxy.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="stagingstoragelinkedservicename_go">
+<a href="#stagingstoragelinkedservicename_go" style="color: inherit; text-decoration: inherit;">Staging<wbr>Storage<wbr>Linked<wbr>Service<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of Azure Blob Storage linked service to reference the staging data store to be used when moving data between self-hosted and Azure-SSIS integration runtimes.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="path_go">
+<a href="#path_go" style="color: inherit; text-decoration: inherit;">Path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The path in the data store to be used when moving data between Self-Hosted and Azure-SSIS Integration Runtimes.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="selfhostedintegrationruntimename_nodejs">
+<a href="#selfhostedintegrationruntimename_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Hosted<wbr>Integration<wbr>Runtime<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of Self Hosted Integration Runtime as a proxy.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="stagingstoragelinkedservicename_nodejs">
+<a href="#stagingstoragelinkedservicename_nodejs" style="color: inherit; text-decoration: inherit;">staging<wbr>Storage<wbr>Linked<wbr>Service<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of Azure Blob Storage linked service to reference the staging data store to be used when moving data between self-hosted and Azure-SSIS integration runtimes.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="path_nodejs">
+<a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The path in the data store to be used when moving data between Self-Hosted and Azure-SSIS Integration Runtimes.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="self_hosted_integration_runtime_name_python">
+<a href="#self_hosted_integration_runtime_name_python" style="color: inherit; text-decoration: inherit;">self_<wbr>hosted_<wbr>integration_<wbr>runtime_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Name of Self Hosted Integration Runtime as a proxy.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="staging_storage_linked_service_name_python">
+<a href="#staging_storage_linked_service_name_python" style="color: inherit; text-decoration: inherit;">staging_<wbr>storage_<wbr>linked_<wbr>service_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Name of Azure Blob Storage linked service to reference the staging data store to be used when moving data between self-hosted and Azure-SSIS integration runtimes.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="path_python">
+<a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The path in the data store to be used when moving data between Self-Hosted and Azure-SSIS Integration Runtimes.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
 <h4 id="integrationruntimessisvnetintegration">Integration<wbr>Runtime<wbr>Ssis<wbr>Vnet<wbr>Integration</h4>
 
 {{% choosable language csharp %}}
@@ -1748,6 +2996,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the virtual network to which the nodes of the Azure-SSIS Integration Runtime will be added.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="publicips_csharp">
+<a href="#publicips_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Ips</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}Static public IP addresses for the Azure-SSIS Integration Runtime. The size must be 2.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1770,6 +3027,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the virtual network to which the nodes of the Azure-SSIS Integration Runtime will be added.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="publicips_go">
+<a href="#publicips_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Ips</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}Static public IP addresses for the Azure-SSIS Integration Runtime. The size must be 2.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1792,6 +3058,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the virtual network to which the nodes of the Azure-SSIS Integration Runtime will be added.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="publicips_nodejs">
+<a href="#publicips_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Ips</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}Static public IP addresses for the Azure-SSIS Integration Runtime. The size must be 2.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1814,6 +3089,15 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ID of the virtual network to which the nodes of the Azure-SSIS Integration Runtime will be added.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="public_ips_python">
+<a href="#public_ips_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ips</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}Static public IP addresses for the Azure-SSIS Integration Runtime. The size must be 2.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
