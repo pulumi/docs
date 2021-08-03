@@ -16,6 +16,10 @@ Defines a map of Fastly dictionary items that can be used to populate a service 
 
 If this provider is being used to populate the initial content of a dictionary which you intend to manage via API or UI, then the lifecycle `ignore_changes` field can be used with the resource.  An example of this configuration is provided below.
 
+## Limitations
+
+- `write_only` dictionaries are not supported
+
 {{% examples %}}
 
 ## Example Usage
@@ -366,7 +370,7 @@ for (const range of Object.entries(myservice.dictionaries.apply(dictionaries => 
 
 ## ServiceDictionaryItemsv1 Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Architecture and Concepts docs.
 
 ### Inputs
 
