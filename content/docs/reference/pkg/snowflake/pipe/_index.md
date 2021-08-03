@@ -98,6 +98,7 @@ const pipe = new snowflake.Pipe("pipe", {
          <span class="nx">comment</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
          <span class="nx">copy_statement</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
          <span class="nx">database</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+         <span class="nx">error_integration</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
          <span class="nx">integration</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
          <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
          <span class="nx">schema</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
@@ -108,7 +109,7 @@ const pipe = new snowflake.Pipe("pipe", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewPipe</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">PipeArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Pipe</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewPipe</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">PipeArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Pipe</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -169,7 +170,7 @@ const pipe = new snowflake.Pipe("pipe", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
@@ -187,7 +188,7 @@ const pipe = new snowflake.Pipe("pipe", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
@@ -219,7 +220,7 @@ const pipe = new snowflake.Pipe("pipe", {
 
 ## Pipe Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Architecture and Concepts docs.
 
 ### Inputs
 
@@ -282,6 +283,15 @@ The Pipe resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies a comment for the pipe.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="errorintegration_csharp">
+<a href="#errorintegration_csharp" style="color: inherit; text-decoration: inherit;">Error<wbr>Integration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the name of the notification integration used for error notifications.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="integration_csharp">
@@ -360,6 +370,15 @@ The Pipe resource accepts the following [input]({{< relref "/docs/intro/concepts
     <dd>{{% md %}}Specifies a comment for the pipe.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="errorintegration_go">
+<a href="#errorintegration_go" style="color: inherit; text-decoration: inherit;">Error<wbr>Integration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the name of the notification integration used for error notifications.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="integration_go">
 <a href="#integration_go" style="color: inherit; text-decoration: inherit;">Integration</a>
 </span>
@@ -436,6 +455,15 @@ The Pipe resource accepts the following [input]({{< relref "/docs/intro/concepts
     <dd>{{% md %}}Specifies a comment for the pipe.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="errorintegration_nodejs">
+<a href="#errorintegration_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Integration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the name of the notification integration used for error notifications.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="integration_nodejs">
 <a href="#integration_nodejs" style="color: inherit; text-decoration: inherit;">integration</a>
 </span>
@@ -510,6 +538,15 @@ The Pipe resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies a comment for the pipe.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="error_integration_python">
+<a href="#error_integration_python" style="color: inherit; text-decoration: inherit;">error_<wbr>integration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specifies the name of the notification integration used for error notifications.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="integration_python">
@@ -679,6 +716,7 @@ Get an existing Pipe resource's state with the given name, ID, and optional extr
         <span class="nx">comment</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">copy_statement</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">database</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">error_integration</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">integration</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">notification_channel</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -687,7 +725,7 @@ Get an existing Pipe resource's state with the given name, ID, and optional extr
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetPipe<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">PipeState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Pipe</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetPipe<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">PipeState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Pipe</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -841,6 +879,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The database in which to create the pipe.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_errorintegration_csharp">
+<a href="#state_errorintegration_csharp" style="color: inherit; text-decoration: inherit;">Error<wbr>Integration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the name of the notification integration used for error notifications.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_integration_csharp">
 <a href="#state_integration_csharp" style="color: inherit; text-decoration: inherit;">Integration</a>
 </span>
@@ -933,6 +980,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The database in which to create the pipe.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_errorintegration_go">
+<a href="#state_errorintegration_go" style="color: inherit; text-decoration: inherit;">Error<wbr>Integration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the name of the notification integration used for error notifications.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_integration_go">
@@ -1029,6 +1085,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The database in which to create the pipe.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_errorintegration_nodejs">
+<a href="#state_errorintegration_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Integration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the name of the notification integration used for error notifications.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_integration_nodejs">
 <a href="#state_integration_nodejs" style="color: inherit; text-decoration: inherit;">integration</a>
 </span>
@@ -1121,6 +1186,15 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The database in which to create the pipe.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_error_integration_python">
+<a href="#state_error_integration_python" style="color: inherit; text-decoration: inherit;">error_<wbr>integration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specifies the name of the notification integration used for error notifications.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_integration_python">

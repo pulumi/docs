@@ -34,6 +34,7 @@ A Pulumi package for creating and managing snowflake cloud resources.
     <li><a href="networkpolicyattachment" title="NetworkPolicyAttachment"><span class="symbol resource"></span>NetworkPolicyAttachment</a></li>
     <li><a href="notificationintegration" title="NotificationIntegration"><span class="symbol resource"></span>NotificationIntegration</a></li>
     <li><a href="pipe" title="Pipe"><span class="symbol resource"></span>Pipe</a></li>
+    <li><a href="pipegrant" title="PipeGrant"><span class="symbol resource"></span>PipeGrant</a></li>
     <li><a href="proceduregrant" title="ProcedureGrant"><span class="symbol resource"></span>ProcedureGrant</a></li>
     <li><a href="provider" title="Provider"><span class="symbol resource"></span>Provider</a></li>
     <li><a href="resourcemonitor" title="ResourceMonitor"><span class="symbol resource"></span>ResourceMonitor</a></li>
@@ -54,6 +55,7 @@ A Pulumi package for creating and managing snowflake cloud resources.
     <li><a href="table" title="Table"><span class="symbol resource"></span>Table</a></li>
     <li><a href="tablegrant" title="TableGrant"><span class="symbol resource"></span>TableGrant</a></li>
     <li><a href="task" title="Task"><span class="symbol resource"></span>Task</a></li>
+    <li><a href="taskgrant" title="TaskGrant"><span class="symbol resource"></span>TaskGrant</a></li>
     <li><a href="user" title="User"><span class="symbol resource"></span>User</a></li>
     <li><a href="userpublickeys" title="UserPublicKeys"><span class="symbol resource"></span>UserPublicKeys</a></li>
     <li><a href="view" title="View"><span class="symbol resource"></span>View</a></li>
@@ -65,10 +67,14 @@ A Pulumi package for creating and managing snowflake cloud resources.
 <h2 id="functions">Functions</h2>
 <ul class="api">
     <li><a href="getcurrentaccount" title="GetCurrentAccount"><span class="symbol function"></span>GetCurrentAccount</a></li>
+    <li><a href="getmaterializedviews" title="GetMaterializedViews"><span class="symbol function"></span>GetMaterializedViews</a></li>
+    <li><a href="getschemas" title="GetSchemas"><span class="symbol function"></span>GetSchemas</a></li>
     <li><a href="getsystemgeneratescimaccesstoken" title="GetSystemGenerateScimAccessToken"><span class="symbol function"></span>GetSystemGenerateScimAccessToken</a></li>
     <li><a href="getsystemgetawssnsiampolicy" title="GetSystemGetAwsSnsIamPolicy"><span class="symbol function"></span>GetSystemGetAwsSnsIamPolicy</a></li>
     <li><a href="getsystemgetprivatelinkconfig" title="GetSystemGetPrivateLinkConfig"><span class="symbol function"></span>GetSystemGetPrivateLinkConfig</a></li>
     <li><a href="getsystemgetsnowflakeplatforminfo" title="GetSystemGetSnowflakePlatformInfo"><span class="symbol function"></span>GetSystemGetSnowflakePlatformInfo</a></li>
+    <li><a href="gettables" title="GetTables"><span class="symbol function"></span>GetTables</a></li>
+    <li><a href="getviews" title="GetViews"><span class="symbol function"></span>GetViews</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -80,6 +86,6 @@ A Pulumi package for creating and managing snowflake cloud resources.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`snowflake` Terraform Provider](https://github.com/chanzuckerberg/terraform-provider-snowflake).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>0.1.1</dd>
+	<dd>0.1.2</dd>
 </dl>
 
