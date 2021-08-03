@@ -12,6 +12,8 @@ Explore the resources and functions of the openstack.dns module.
 <h2 id="resources">Resources</h2>
 <ul class="api">
     <li><a href="recordset" title="RecordSet"><span class="symbol resource"></span>RecordSet</a></li>
+    <li><a href="transferaccept" title="TransferAccept"><span class="symbol resource"></span>TransferAccept</a></li>
+    <li><a href="transferrequest" title="TransferRequest"><span class="symbol resource"></span>TransferRequest</a></li>
     <li><a href="zone" title="Zone"><span class="symbol resource"></span>Zone</a></li>
 </ul>
 
@@ -29,6 +31,6 @@ Explore the resources and functions of the openstack.dns module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`openstack` Terraform Provider](https://github.com/terraform-provider-openstack/terraform-provider-openstack).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>3.2.0</dd>
+	<dd>3.3.0</dd>
 </dl>
 
