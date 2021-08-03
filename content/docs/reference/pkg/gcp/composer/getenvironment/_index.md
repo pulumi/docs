@@ -458,6 +458,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="maintenancewindows_csharp">
+<a href="#maintenancewindows_csharp" style="color: inherit; text-decoration: inherit;">Maintenance<wbr>Windows</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getenvironmentconfigmaintenancewindow">List&lt;Get<wbr>Environment<wbr>Config<wbr>Maintenance<wbr>Window&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="nodeconfigs_csharp">
 <a href="#nodeconfigs_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Configs</a>
 </span>
@@ -547,6 +555,14 @@ The following output properties are available:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="maintenancewindows_go">
+<a href="#maintenancewindows_go" style="color: inherit; text-decoration: inherit;">Maintenance<wbr>Windows</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getenvironmentconfigmaintenancewindow">[]Get<wbr>Environment<wbr>Config<wbr>Maintenance<wbr>Window</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -642,6 +658,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="maintenancewindows_nodejs">
+<a href="#maintenancewindows_nodejs" style="color: inherit; text-decoration: inherit;">maintenance<wbr>Windows</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getenvironmentconfigmaintenancewindow">Get<wbr>Environment<wbr>Config<wbr>Maintenance<wbr>Window[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="nodeconfigs_nodejs">
 <a href="#nodeconfigs_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Configs</a>
 </span>
@@ -731,6 +755,14 @@ The following output properties are available:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="maintenance_windows_python">
+<a href="#maintenance_windows_python" style="color: inherit; text-decoration: inherit;">maintenance_<wbr>windows</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getenvironmentconfigmaintenancewindow">Sequence[Get<wbr>Environment<wbr>Config<wbr>Maintenance<wbr>Window]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -880,6 +912,122 @@ The following output properties are available:
             title="Required">
         <span id="kms_key_name_python">
 <a href="#kms_key_name_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="getenvironmentconfigmaintenancewindow">Get<wbr>Environment<wbr>Config<wbr>Maintenance<wbr>Window</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="endtime_csharp">
+<a href="#endtime_csharp" style="color: inherit; text-decoration: inherit;">End<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="recurrence_csharp">
+<a href="#recurrence_csharp" style="color: inherit; text-decoration: inherit;">Recurrence</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="starttime_csharp">
+<a href="#starttime_csharp" style="color: inherit; text-decoration: inherit;">Start<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="endtime_go">
+<a href="#endtime_go" style="color: inherit; text-decoration: inherit;">End<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="recurrence_go">
+<a href="#recurrence_go" style="color: inherit; text-decoration: inherit;">Recurrence</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="starttime_go">
+<a href="#starttime_go" style="color: inherit; text-decoration: inherit;">Start<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="endtime_nodejs">
+<a href="#endtime_nodejs" style="color: inherit; text-decoration: inherit;">end<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="recurrence_nodejs">
+<a href="#recurrence_nodejs" style="color: inherit; text-decoration: inherit;">recurrence</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="starttime_nodejs">
+<a href="#starttime_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="end_time_python">
+<a href="#end_time_python" style="color: inherit; text-decoration: inherit;">end_<wbr>time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="recurrence_python">
+<a href="#recurrence_python" style="color: inherit; text-decoration: inherit;">recurrence</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="start_time_python">
+<a href="#start_time_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>

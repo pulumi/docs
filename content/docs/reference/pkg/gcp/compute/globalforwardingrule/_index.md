@@ -798,6 +798,212 @@ const defaultGlobalForwardingRule = new gcp.compute.GlobalForwardingRule("defaul
 
 
 
+### Private Service Connect Google Apis
+
+
+{{< example csharp >}}
+
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var network = new Gcp.Compute.Network("network", new Gcp.Compute.NetworkArgs
+        {
+            Project = "my-project-name",
+            AutoCreateSubnetworks = false,
+        }, new CustomResourceOptions
+        {
+            Provider = google_beta,
+        });
+        var vpcSubnetwork = new Gcp.Compute.Subnetwork("vpcSubnetwork", new Gcp.Compute.SubnetworkArgs
+        {
+            Project = network.Project,
+            IpCidrRange = "10.2.0.0/16",
+            Region = "us-central1",
+            Network = network.Id,
+            PrivateIpGoogleAccess = true,
+        }, new CustomResourceOptions
+        {
+            Provider = google_beta,
+        });
+        var defaultGlobalAddress = new Gcp.Compute.GlobalAddress("defaultGlobalAddress", new Gcp.Compute.GlobalAddressArgs
+        {
+            Project = network.Project,
+            AddressType = "INTERNAL",
+            Purpose = "PRIVATE_SERVICE_CONNECT",
+            Network = network.Id,
+            Address = "100.100.100.106",
+        }, new CustomResourceOptions
+        {
+            Provider = google_beta,
+        });
+        var defaultGlobalForwardingRule = new Gcp.Compute.GlobalForwardingRule("defaultGlobalForwardingRule", new Gcp.Compute.GlobalForwardingRuleArgs
+        {
+            Project = network.Project,
+            Target = "all-apis",
+            Network = network.Id,
+            IpAddress = defaultGlobalAddress.Id,
+            LoadBalancingScheme = "",
+        }, new CustomResourceOptions
+        {
+            Provider = google_beta,
+        });
+    }
+
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		network, err := compute.NewNetwork(ctx, "network", &compute.NetworkArgs{
+			Project:               pulumi.String("my-project-name"),
+			AutoCreateSubnetworks: pulumi.Bool(false),
+		}, pulumi.Provider(google_beta))
+		if err != nil {
+			return err
+		}
+		_, err = compute.NewSubnetwork(ctx, "vpcSubnetwork", &compute.SubnetworkArgs{
+			Project:               network.Project,
+			IpCidrRange:           pulumi.String("10.2.0.0/16"),
+			Region:                pulumi.String("us-central1"),
+			Network:               network.ID(),
+			PrivateIpGoogleAccess: pulumi.Bool(true),
+		}, pulumi.Provider(google_beta))
+		if err != nil {
+			return err
+		}
+		defaultGlobalAddress, err := compute.NewGlobalAddress(ctx, "defaultGlobalAddress", &compute.GlobalAddressArgs{
+			Project:     network.Project,
+			AddressType: pulumi.String("INTERNAL"),
+			Purpose:     pulumi.String("PRIVATE_SERVICE_CONNECT"),
+			Network:     network.ID(),
+			Address:     pulumi.String("100.100.100.106"),
+		}, pulumi.Provider(google_beta))
+		if err != nil {
+			return err
+		}
+		_, err = compute.NewGlobalForwardingRule(ctx, "defaultGlobalForwardingRule", &compute.GlobalForwardingRuleArgs{
+			Project:             network.Project,
+			Target:              pulumi.String("all-apis"),
+			Network:             network.ID(),
+			IpAddress:           defaultGlobalAddress.ID(),
+			LoadBalancingScheme: pulumi.String(""),
+		}, pulumi.Provider(google_beta))
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+network = gcp.compute.Network("network",
+    project="my-project-name",
+    auto_create_subnetworks=False,
+    opts=pulumi.ResourceOptions(provider=google_beta))
+vpc_subnetwork = gcp.compute.Subnetwork("vpcSubnetwork",
+    project=network.project,
+    ip_cidr_range="10.2.0.0/16",
+    region="us-central1",
+    network=network.id,
+    private_ip_google_access=True,
+    opts=pulumi.ResourceOptions(provider=google_beta))
+default_global_address = gcp.compute.GlobalAddress("defaultGlobalAddress",
+    project=network.project,
+    address_type="INTERNAL",
+    purpose="PRIVATE_SERVICE_CONNECT",
+    network=network.id,
+    address="100.100.100.106",
+    opts=pulumi.ResourceOptions(provider=google_beta))
+default_global_forwarding_rule = gcp.compute.GlobalForwardingRule("defaultGlobalForwardingRule",
+    project=network.project,
+    target="all-apis",
+    network=network.id,
+    ip_address=default_global_address.id,
+    load_balancing_scheme="",
+    opts=pulumi.ResourceOptions(provider=google_beta))
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const network = new gcp.compute.Network("network", {
+    project: "my-project-name",
+    autoCreateSubnetworks: false,
+}, {
+    provider: google_beta,
+});
+const vpcSubnetwork = new gcp.compute.Subnetwork("vpcSubnetwork", {
+    project: network.project,
+    ipCidrRange: "10.2.0.0/16",
+    region: "us-central1",
+    network: network.id,
+    privateIpGoogleAccess: true,
+}, {
+    provider: google_beta,
+});
+const defaultGlobalAddress = new gcp.compute.GlobalAddress("defaultGlobalAddress", {
+    project: network.project,
+    addressType: "INTERNAL",
+    purpose: "PRIVATE_SERVICE_CONNECT",
+    network: network.id,
+    address: "100.100.100.106",
+}, {
+    provider: google_beta,
+});
+const defaultGlobalForwardingRule = new gcp.compute.GlobalForwardingRule("defaultGlobalForwardingRule", {
+    project: network.project,
+    target: "all-apis",
+    network: network.id,
+    ipAddress: defaultGlobalAddress.id,
+    loadBalancingScheme: "",
+}, {
+    provider: google_beta,
+});
+```
+
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
 
@@ -946,7 +1152,7 @@ const defaultGlobalForwardingRule = new gcp.compute.GlobalForwardingRule("defaul
 
 ## GlobalForwardingRule Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Architecture and Concepts docs.
 
 ### Inputs
 

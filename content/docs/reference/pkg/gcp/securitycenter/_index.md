@@ -11,6 +11,7 @@ Explore the resources and functions of the gcp.securitycenter module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
+    <li><a href="notificationconfig" title="NotificationConfig"><span class="symbol resource"></span>NotificationConfig</a></li>
     <li><a href="source" title="Source"><span class="symbol resource"></span>Source</a></li>
 </ul>
 
@@ -23,6 +24,6 @@ Explore the resources and functions of the gcp.securitycenter module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>5.13.0</dd>
+	<dd>5.14.0</dd>
 </dl>
 
