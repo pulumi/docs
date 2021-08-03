@@ -139,6 +139,37 @@ class MyStack : Stack
                                 },
                             },
                         },
+                        new Gcp.DataLoss.Inputs.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationArgs
+                        {
+                            InfoTypes = 
+                            {
+                                new Gcp.DataLoss.Inputs.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationInfoTypeArgs
+                                {
+                                    Name = "CREDIT_CARD_NUMBER",
+                                },
+                            },
+                            PrimitiveTransformation = new Gcp.DataLoss.Inputs.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationArgs
+                            {
+                                CryptoDeterministicConfig = new Gcp.DataLoss.Inputs.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoDeterministicConfigArgs
+                                {
+                                    Context = new Gcp.DataLoss.Inputs.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoDeterministicConfigContextArgs
+                                    {
+                                        Name = "sometweak",
+                                    },
+                                    CryptoKey = new Gcp.DataLoss.Inputs.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoDeterministicConfigCryptoKeyArgs
+                                    {
+                                        Transient = new Gcp.DataLoss.Inputs.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoDeterministicConfigCryptoKeyTransientArgs
+                                        {
+                                            Name = "beep",
+                                        },
+                                    },
+                                    SurrogateInfoType = new Gcp.DataLoss.Inputs.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoDeterministicConfigSurrogateInfoTypeArgs
+                                    {
+                                        Name = "abc",
+                                    },
+                                },
+                            },
+                        },
                     },
                 },
             },
@@ -238,6 +269,28 @@ func main() {
 								},
 							},
 						},
+						&dataloss.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationArgs{
+							InfoTypes: dataloss.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationInfoTypeArray{
+								&dataloss.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationInfoTypeArgs{
+									Name: pulumi.String("CREDIT_CARD_NUMBER"),
+								},
+							},
+							PrimitiveTransformation: &dataloss.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationArgs{
+								CryptoDeterministicConfig: &dataloss.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoDeterministicConfigArgs{
+									Context: &dataloss.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoDeterministicConfigContextArgs{
+										Name: pulumi.String("sometweak"),
+									},
+									CryptoKey: &dataloss.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoDeterministicConfigCryptoKeyArgs{
+										Transient: &dataloss.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoDeterministicConfigCryptoKeyTransientArgs{
+											Name: pulumi.String("beep"),
+										},
+									},
+									SurrogateInfoType: &dataloss.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoDeterministicConfigSurrogateInfoTypeArgs{
+										Name: pulumi.String("abc"),
+									},
+								},
+							},
+						},
 					},
 				},
 			},
@@ -328,6 +381,26 @@ basic = gcp.dataloss.PreventionDeidentifyTemplate("basic",
                         ),
                     ),
                 ),
+                gcp.dataloss.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationArgs(
+                    info_types=[gcp.dataloss.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationInfoTypeArgs(
+                        name="CREDIT_CARD_NUMBER",
+                    )],
+                    primitive_transformation=gcp.dataloss.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationArgs(
+                        crypto_deterministic_config=gcp.dataloss.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoDeterministicConfigArgs(
+                            context=gcp.dataloss.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoDeterministicConfigContextArgs(
+                                name="sometweak",
+                            ),
+                            crypto_key={
+                                "transient": {
+                                    "name": "beep",
+                                },
+                            },
+                            surrogate_info_type=gcp.dataloss.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoDeterministicConfigSurrogateInfoTypeArgs(
+                                name="abc",
+                            ),
+                        ),
+                    ),
+                ),
             ],
         ),
     ),
@@ -408,6 +481,26 @@ const basic = new gcp.dataloss.PreventionDeidentifyTemplate("basic", {
                                     month: 1,
                                     year: 2020,
                                 },
+                            },
+                        },
+                    },
+                },
+                {
+                    infoTypes: [{
+                        name: "CREDIT_CARD_NUMBER",
+                    }],
+                    primitiveTransformation: {
+                        cryptoDeterministicConfig: {
+                            context: {
+                                name: "sometweak",
+                            },
+                            cryptoKey: {
+                                transient: {
+                                    name: "beep",
+                                },
+                            },
+                            surrogateInfoType: {
+                                name: "abc",
                             },
                         },
                     },
@@ -567,7 +660,7 @@ const basic = new gcp.dataloss.PreventionDeidentifyTemplate("basic", {
 
 ## PreventionDeidentifyTemplate Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Architecture and Concepts docs.
 
 ### Inputs
 
@@ -779,7 +872,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the information type.
+    <dd>{{% md %}}Name of the information type. Either a name of your choosing when creating a CustomInfoType, or one of the names listed at [https://cloud.google.com/dlp/docs/infotypes-reference](https://cloud.google.com/dlp/docs/infotypes-reference) when specifying a built-in type. When sending Cloud DLP results to Data Catalog, infoType names should conform to the pattern `[A-Za-z0-9$-_]{1,64}`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -800,7 +893,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the information type.
+    <dd>{{% md %}}Name of the information type. Either a name of your choosing when creating a CustomInfoType, or one of the names listed at [https://cloud.google.com/dlp/docs/infotypes-reference](https://cloud.google.com/dlp/docs/infotypes-reference) when specifying a built-in type. When sending Cloud DLP results to Data Catalog, infoType names should conform to the pattern `[A-Za-z0-9$-_]{1,64}`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -821,7 +914,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the information type.
+    <dd>{{% md %}}Name of the information type. Either a name of your choosing when creating a CustomInfoType, or one of the names listed at [https://cloud.google.com/dlp/docs/infotypes-reference](https://cloud.google.com/dlp/docs/infotypes-reference) when specifying a built-in type. When sending Cloud DLP results to Data Catalog, infoType names should conform to the pattern `[A-Za-z0-9$-_]{1,64}`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -842,7 +935,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the information type.
+    <dd>{{% md %}}Name of the information type. Either a name of your choosing when creating a CustomInfoType, or one of the names listed at [https://cloud.google.com/dlp/docs/infotypes-reference](https://cloud.google.com/dlp/docs/infotypes-reference) when specifying a built-in type. When sending Cloud DLP results to Data Catalog, infoType names should conform to the pattern `[A-Za-z0-9$-_]{1,64}`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1013,7 +1106,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the information type.
+    <dd>{{% md %}}Name of the information type. Either a name of your choosing when creating a CustomInfoType, or one of the names listed at [https://cloud.google.com/dlp/docs/infotypes-reference](https://cloud.google.com/dlp/docs/infotypes-reference) when specifying a built-in type. When sending Cloud DLP results to Data Catalog, infoType names should conform to the pattern `[A-Za-z0-9$-_]{1,64}`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_parent_csharp">
@@ -1067,7 +1160,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the information type.
+    <dd>{{% md %}}Name of the information type. Either a name of your choosing when creating a CustomInfoType, or one of the names listed at [https://cloud.google.com/dlp/docs/infotypes-reference](https://cloud.google.com/dlp/docs/infotypes-reference) when specifying a built-in type. When sending Cloud DLP results to Data Catalog, infoType names should conform to the pattern `[A-Za-z0-9$-_]{1,64}`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_parent_go">
@@ -1121,7 +1214,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the information type.
+    <dd>{{% md %}}Name of the information type. Either a name of your choosing when creating a CustomInfoType, or one of the names listed at [https://cloud.google.com/dlp/docs/infotypes-reference](https://cloud.google.com/dlp/docs/infotypes-reference) when specifying a built-in type. When sending Cloud DLP results to Data Catalog, infoType names should conform to the pattern `[A-Za-z0-9$-_]{1,64}`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_parent_nodejs">
@@ -1175,7 +1268,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the information type.
+    <dd>{{% md %}}Name of the information type. Either a name of your choosing when creating a CustomInfoType, or one of the names listed at [https://cloud.google.com/dlp/docs/infotypes-reference](https://cloud.google.com/dlp/docs/infotypes-reference) when specifying a built-in type. When sending Cloud DLP results to Data Catalog, infoType names should conform to the pattern `[A-Za-z0-9$-_]{1,64}`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_parent_python">
@@ -1430,7 +1523,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the information type.
+    <dd>{{% md %}}Name of the information type. Either a name of your choosing when creating a CustomInfoType, or one of the names listed at [https://cloud.google.com/dlp/docs/infotypes-reference](https://cloud.google.com/dlp/docs/infotypes-reference) when specifying a built-in type. When sending Cloud DLP results to Data Catalog, infoType names should conform to the pattern `[A-Za-z0-9$-_]{1,64}`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1443,7 +1536,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the information type.
+    <dd>{{% md %}}Name of the information type. Either a name of your choosing when creating a CustomInfoType, or one of the names listed at [https://cloud.google.com/dlp/docs/infotypes-reference](https://cloud.google.com/dlp/docs/infotypes-reference) when specifying a built-in type. When sending Cloud DLP results to Data Catalog, infoType names should conform to the pattern `[A-Za-z0-9$-_]{1,64}`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1456,7 +1549,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the information type.
+    <dd>{{% md %}}Name of the information type. Either a name of your choosing when creating a CustomInfoType, or one of the names listed at [https://cloud.google.com/dlp/docs/infotypes-reference](https://cloud.google.com/dlp/docs/infotypes-reference) when specifying a built-in type. When sending Cloud DLP results to Data Catalog, infoType names should conform to the pattern `[A-Za-z0-9$-_]{1,64}`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1469,7 +1562,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the information type.
+    <dd>{{% md %}}Name of the information type. Either a name of your choosing when creating a CustomInfoType, or one of the names listed at [https://cloud.google.com/dlp/docs/infotypes-reference](https://cloud.google.com/dlp/docs/infotypes-reference) when specifying a built-in type. When sending Cloud DLP results to Data Catalog, infoType names should conform to the pattern `[A-Za-z0-9$-_]{1,64}`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1486,6 +1579,27 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Partially mask a string by replacing a given number of characters with a fixed character.
 Masking can start from the beginning or end of the string.
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="cryptodeterministicconfig_csharp">
+<a href="#cryptodeterministicconfig_csharp" style="color: inherit; text-decoration: inherit;">Crypto<wbr>Deterministic<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#preventiondeidentifytemplatedeidentifyconfiginfotypetransformationstransformationprimitivetransformationcryptodeterministicconfig">Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Info<wbr>Type<wbr>Transformations<wbr>Transformation<wbr>Primitive<wbr>Transformation<wbr>Crypto<wbr>Deterministic<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}Pseudonymization method that generates deterministic encryption for the given input. Outputs a base64 encoded representation of the encrypted output. Uses AES-SIV based on the RFC [https://tools.ietf.org/html/rfc5297](https://tools.ietf.org/html/rfc5297).
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="cryptoreplaceffxfpeconfig_csharp">
+<a href="#cryptoreplaceffxfpeconfig_csharp" style="color: inherit; text-decoration: inherit;">Crypto<wbr>Replace<wbr>Ffx<wbr>Fpe<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#preventiondeidentifytemplatedeidentifyconfiginfotypetransformationstransformationprimitivetransformationcryptoreplaceffxfpeconfig">Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Info<wbr>Type<wbr>Transformations<wbr>Transformation<wbr>Primitive<wbr>Transformation<wbr>Crypto<wbr>Replace<wbr>Ffx<wbr>Fpe<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}Replaces an identifier with a surrogate using Format Preserving Encryption (FPE) with the FFX mode of operation; however when used in the `content.reidentify` API method, it serves the opposite function by reversing the surrogate back into the original identifier. The identifier must be encoded as ASCII. For a given crypto key and context, the same identifier will be replaced with the same surrogate. Identifiers must be at least two characters long. In the case that the identifier is the empty string, it will be skipped. See [https://cloud.google.com/dlp/docs/pseudonymization](https://cloud.google.com/dlp/docs/pseudonymization) to learn more.
+Note: We recommend using CryptoDeterministicConfig for all use cases which do not require preserving the input alphabet space and size, plus warrant referential integrity.
 Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1523,6 +1637,27 @@ Masking can start from the beginning or end of the string.
 Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="cryptodeterministicconfig_go">
+<a href="#cryptodeterministicconfig_go" style="color: inherit; text-decoration: inherit;">Crypto<wbr>Deterministic<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#preventiondeidentifytemplatedeidentifyconfiginfotypetransformationstransformationprimitivetransformationcryptodeterministicconfig">Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Info<wbr>Type<wbr>Transformations<wbr>Transformation<wbr>Primitive<wbr>Transformation<wbr>Crypto<wbr>Deterministic<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}Pseudonymization method that generates deterministic encryption for the given input. Outputs a base64 encoded representation of the encrypted output. Uses AES-SIV based on the RFC [https://tools.ietf.org/html/rfc5297](https://tools.ietf.org/html/rfc5297).
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="cryptoreplaceffxfpeconfig_go">
+<a href="#cryptoreplaceffxfpeconfig_go" style="color: inherit; text-decoration: inherit;">Crypto<wbr>Replace<wbr>Ffx<wbr>Fpe<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#preventiondeidentifytemplatedeidentifyconfiginfotypetransformationstransformationprimitivetransformationcryptoreplaceffxfpeconfig">Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Info<wbr>Type<wbr>Transformations<wbr>Transformation<wbr>Primitive<wbr>Transformation<wbr>Crypto<wbr>Replace<wbr>Ffx<wbr>Fpe<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}Replaces an identifier with a surrogate using Format Preserving Encryption (FPE) with the FFX mode of operation; however when used in the `content.reidentify` API method, it serves the opposite function by reversing the surrogate back into the original identifier. The identifier must be encoded as ASCII. For a given crypto key and context, the same identifier will be replaced with the same surrogate. Identifiers must be at least two characters long. In the case that the identifier is the empty string, it will be skipped. See [https://cloud.google.com/dlp/docs/pseudonymization](https://cloud.google.com/dlp/docs/pseudonymization) to learn more.
+Note: We recommend using CryptoDeterministicConfig for all use cases which do not require preserving the input alphabet space and size, plus warrant referential integrity.
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="replaceconfig_go">
 <a href="#replaceconfig_go" style="color: inherit; text-decoration: inherit;">Replace<wbr>Config</a>
 </span>
@@ -1557,6 +1692,27 @@ Masking can start from the beginning or end of the string.
 Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="cryptodeterministicconfig_nodejs">
+<a href="#cryptodeterministicconfig_nodejs" style="color: inherit; text-decoration: inherit;">crypto<wbr>Deterministic<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#preventiondeidentifytemplatedeidentifyconfiginfotypetransformationstransformationprimitivetransformationcryptodeterministicconfig">Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Info<wbr>Type<wbr>Transformations<wbr>Transformation<wbr>Primitive<wbr>Transformation<wbr>Crypto<wbr>Deterministic<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}Pseudonymization method that generates deterministic encryption for the given input. Outputs a base64 encoded representation of the encrypted output. Uses AES-SIV based on the RFC [https://tools.ietf.org/html/rfc5297](https://tools.ietf.org/html/rfc5297).
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="cryptoreplaceffxfpeconfig_nodejs">
+<a href="#cryptoreplaceffxfpeconfig_nodejs" style="color: inherit; text-decoration: inherit;">crypto<wbr>Replace<wbr>Ffx<wbr>Fpe<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#preventiondeidentifytemplatedeidentifyconfiginfotypetransformationstransformationprimitivetransformationcryptoreplaceffxfpeconfig">Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Info<wbr>Type<wbr>Transformations<wbr>Transformation<wbr>Primitive<wbr>Transformation<wbr>Crypto<wbr>Replace<wbr>Ffx<wbr>Fpe<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}Replaces an identifier with a surrogate using Format Preserving Encryption (FPE) with the FFX mode of operation; however when used in the `content.reidentify` API method, it serves the opposite function by reversing the surrogate back into the original identifier. The identifier must be encoded as ASCII. For a given crypto key and context, the same identifier will be replaced with the same surrogate. Identifiers must be at least two characters long. In the case that the identifier is the empty string, it will be skipped. See [https://cloud.google.com/dlp/docs/pseudonymization](https://cloud.google.com/dlp/docs/pseudonymization) to learn more.
+Note: We recommend using CryptoDeterministicConfig for all use cases which do not require preserving the input alphabet space and size, plus warrant referential integrity.
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="replaceconfig_nodejs">
 <a href="#replaceconfig_nodejs" style="color: inherit; text-decoration: inherit;">replace<wbr>Config</a>
 </span>
@@ -1588,6 +1744,27 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Partially mask a string by replacing a given number of characters with a fixed character.
 Masking can start from the beginning or end of the string.
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="crypto_deterministic_config_python">
+<a href="#crypto_deterministic_config_python" style="color: inherit; text-decoration: inherit;">crypto_<wbr>deterministic_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#preventiondeidentifytemplatedeidentifyconfiginfotypetransformationstransformationprimitivetransformationcryptodeterministicconfig">Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Info<wbr>Type<wbr>Transformations<wbr>Transformation<wbr>Primitive<wbr>Transformation<wbr>Crypto<wbr>Deterministic<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}Pseudonymization method that generates deterministic encryption for the given input. Outputs a base64 encoded representation of the encrypted output. Uses AES-SIV based on the RFC [https://tools.ietf.org/html/rfc5297](https://tools.ietf.org/html/rfc5297).
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="crypto_replace_ffx_fpe_config_python">
+<a href="#crypto_replace_ffx_fpe_config_python" style="color: inherit; text-decoration: inherit;">crypto_<wbr>replace_<wbr>ffx_<wbr>fpe_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#preventiondeidentifytemplatedeidentifyconfiginfotypetransformationstransformationprimitivetransformationcryptoreplaceffxfpeconfig">Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Info<wbr>Type<wbr>Transformations<wbr>Transformation<wbr>Primitive<wbr>Transformation<wbr>Crypto<wbr>Replace<wbr>Ffx<wbr>Fpe<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}Replaces an identifier with a surrogate using Format Preserving Encryption (FPE) with the FFX mode of operation; however when used in the `content.reidentify` API method, it serves the opposite function by reversing the surrogate back into the original identifier. The identifier must be encoded as ASCII. For a given crypto key and context, the same identifier will be replaced with the same surrogate. Identifiers must be at least two characters long. In the case that the identifier is the empty string, it will be skipped. See [https://cloud.google.com/dlp/docs/pseudonymization](https://cloud.google.com/dlp/docs/pseudonymization) to learn more.
+Note: We recommend using CryptoDeterministicConfig for all use cases which do not require preserving the input alphabet space and size, plus warrant referential integrity.
 Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1880,6 +2057,1390 @@ Possible values are `NUMERIC`, `ALPHA_UPPER_CASE`, `ALPHA_LOWER_CASE`, `PUNCTUAT
     </dt>
     <dd>{{% md %}}Common characters to not transform when masking. Useful to avoid removing punctuation.
 Possible values are `NUMERIC`, `ALPHA_UPPER_CASE`, `ALPHA_LOWER_CASE`, `PUNCTUATION`, and `WHITESPACE`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="preventiondeidentifytemplatedeidentifyconfiginfotypetransformationstransformationprimitivetransformationcryptodeterministicconfig">Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Info<wbr>Type<wbr>Transformations<wbr>Transformation<wbr>Primitive<wbr>Transformation<wbr>Crypto<wbr>Deterministic<wbr>Config</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="context_csharp">
+<a href="#context_csharp" style="color: inherit; text-decoration: inherit;">Context</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#preventiondeidentifytemplatedeidentifyconfiginfotypetransformationstransformationprimitivetransformationcryptodeterministicconfigcontext">Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Info<wbr>Type<wbr>Transformations<wbr>Transformation<wbr>Primitive<wbr>Transformation<wbr>Crypto<wbr>Deterministic<wbr>Config<wbr>Context</a></span>
+    </dt>
+    <dd>{{% md %}}The 'tweak', a context may be used for higher security since the same identifier in two different contexts won't be given the same surrogate. If the context is not set, a default tweak will be used.
+If the context is set but:
+1.  there is no record present when transforming a given value or
+2.  the field is not present when transforming a given value,
+a default tweak will be used.
+Note that case (1) is expected when an `InfoTypeTransformation` is applied to both structured and non-structured `ContentItem`s. Currently, the referenced field may be of value type integer or string.
+The tweak is constructed as a sequence of bytes in big endian byte order such that:
+*   a 64 bit integer is encoded followed by a single byte of value 1
+*   a string is encoded in UTF-8 format followed by a single byte of value 2
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="cryptokey_csharp">
+<a href="#cryptokey_csharp" style="color: inherit; text-decoration: inherit;">Crypto<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#preventiondeidentifytemplatedeidentifyconfiginfotypetransformationstransformationprimitivetransformationcryptodeterministicconfigcryptokey">Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Info<wbr>Type<wbr>Transformations<wbr>Transformation<wbr>Primitive<wbr>Transformation<wbr>Crypto<wbr>Deterministic<wbr>Config<wbr>Crypto<wbr>Key</a></span>
+    </dt>
+    <dd>{{% md %}}The key used by the encryption algorithm.
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="surrogateinfotype_csharp">
+<a href="#surrogateinfotype_csharp" style="color: inherit; text-decoration: inherit;">Surrogate<wbr>Info<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#preventiondeidentifytemplatedeidentifyconfiginfotypetransformationstransformationprimitivetransformationcryptodeterministicconfigsurrogateinfotype">Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Info<wbr>Type<wbr>Transformations<wbr>Transformation<wbr>Primitive<wbr>Transformation<wbr>Crypto<wbr>Deterministic<wbr>Config<wbr>Surrogate<wbr>Info<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}The custom infoType to annotate the surrogate with. This annotation will be applied to the surrogate by prefixing it with the name of the custom infoType followed by the number of characters comprising the surrogate. The following scheme defines the format: info\_type\_name(surrogate\_character\_count):surrogate
+For example, if the name of custom infoType is 'MY\_TOKEN\_INFO\_TYPE' and the surrogate is 'abc', the full replacement value will be: 'MY\_TOKEN\_INFO\_TYPE(3):abc'
+This annotation identifies the surrogate when inspecting content using the custom infoType [`SurrogateType`](https://cloud.google.com/dlp/docs/reference/rest/v2/InspectConfig#surrogatetype). This facilitates reversal of the surrogate when it occurs in free text.
+In order for inspection to work properly, the name of this infoType must not occur naturally anywhere in your data; otherwise, inspection may find a surrogate that does not correspond to an actual identifier. Therefore, choose your custom infoType name carefully after considering what your data looks like. One way to select a name that has a high chance of yielding reliable detection is to include one or more unicode characters that are highly improbable to exist in your data. For example, assuming your data is entered from a regular ASCII keyboard, the symbol with the hex code point 29DD might be used like so: ⧝MY\_TOKEN\_TYPE
+Structure is documented below.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="context_go">
+<a href="#context_go" style="color: inherit; text-decoration: inherit;">Context</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#preventiondeidentifytemplatedeidentifyconfiginfotypetransformationstransformationprimitivetransformationcryptodeterministicconfigcontext">Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Info<wbr>Type<wbr>Transformations<wbr>Transformation<wbr>Primitive<wbr>Transformation<wbr>Crypto<wbr>Deterministic<wbr>Config<wbr>Context</a></span>
+    </dt>
+    <dd>{{% md %}}The 'tweak', a context may be used for higher security since the same identifier in two different contexts won't be given the same surrogate. If the context is not set, a default tweak will be used.
+If the context is set but:
+1.  there is no record present when transforming a given value or
+2.  the field is not present when transforming a given value,
+a default tweak will be used.
+Note that case (1) is expected when an `InfoTypeTransformation` is applied to both structured and non-structured `ContentItem`s. Currently, the referenced field may be of value type integer or string.
+The tweak is constructed as a sequence of bytes in big endian byte order such that:
+*   a 64 bit integer is encoded followed by a single byte of value 1
+*   a string is encoded in UTF-8 format followed by a single byte of value 2
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="cryptokey_go">
+<a href="#cryptokey_go" style="color: inherit; text-decoration: inherit;">Crypto<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#preventiondeidentifytemplatedeidentifyconfiginfotypetransformationstransformationprimitivetransformationcryptodeterministicconfigcryptokey">Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Info<wbr>Type<wbr>Transformations<wbr>Transformation<wbr>Primitive<wbr>Transformation<wbr>Crypto<wbr>Deterministic<wbr>Config<wbr>Crypto<wbr>Key</a></span>
+    </dt>
+    <dd>{{% md %}}The key used by the encryption algorithm.
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="surrogateinfotype_go">
+<a href="#surrogateinfotype_go" style="color: inherit; text-decoration: inherit;">Surrogate<wbr>Info<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#preventiondeidentifytemplatedeidentifyconfiginfotypetransformationstransformationprimitivetransformationcryptodeterministicconfigsurrogateinfotype">Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Info<wbr>Type<wbr>Transformations<wbr>Transformation<wbr>Primitive<wbr>Transformation<wbr>Crypto<wbr>Deterministic<wbr>Config<wbr>Surrogate<wbr>Info<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}The custom infoType to annotate the surrogate with. This annotation will be applied to the surrogate by prefixing it with the name of the custom infoType followed by the number of characters comprising the surrogate. The following scheme defines the format: info\_type\_name(surrogate\_character\_count):surrogate
+For example, if the name of custom infoType is 'MY\_TOKEN\_INFO\_TYPE' and the surrogate is 'abc', the full replacement value will be: 'MY\_TOKEN\_INFO\_TYPE(3):abc'
+This annotation identifies the surrogate when inspecting content using the custom infoType [`SurrogateType`](https://cloud.google.com/dlp/docs/reference/rest/v2/InspectConfig#surrogatetype). This facilitates reversal of the surrogate when it occurs in free text.
+In order for inspection to work properly, the name of this infoType must not occur naturally anywhere in your data; otherwise, inspection may find a surrogate that does not correspond to an actual identifier. Therefore, choose your custom infoType name carefully after considering what your data looks like. One way to select a name that has a high chance of yielding reliable detection is to include one or more unicode characters that are highly improbable to exist in your data. For example, assuming your data is entered from a regular ASCII keyboard, the symbol with the hex code point 29DD might be used like so: ⧝MY\_TOKEN\_TYPE
+Structure is documented below.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="context_nodejs">
+<a href="#context_nodejs" style="color: inherit; text-decoration: inherit;">context</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#preventiondeidentifytemplatedeidentifyconfiginfotypetransformationstransformationprimitivetransformationcryptodeterministicconfigcontext">Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Info<wbr>Type<wbr>Transformations<wbr>Transformation<wbr>Primitive<wbr>Transformation<wbr>Crypto<wbr>Deterministic<wbr>Config<wbr>Context</a></span>
+    </dt>
+    <dd>{{% md %}}The 'tweak', a context may be used for higher security since the same identifier in two different contexts won't be given the same surrogate. If the context is not set, a default tweak will be used.
+If the context is set but:
+1.  there is no record present when transforming a given value or
+2.  the field is not present when transforming a given value,
+a default tweak will be used.
+Note that case (1) is expected when an `InfoTypeTransformation` is applied to both structured and non-structured `ContentItem`s. Currently, the referenced field may be of value type integer or string.
+The tweak is constructed as a sequence of bytes in big endian byte order such that:
+*   a 64 bit integer is encoded followed by a single byte of value 1
+*   a string is encoded in UTF-8 format followed by a single byte of value 2
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="cryptokey_nodejs">
+<a href="#cryptokey_nodejs" style="color: inherit; text-decoration: inherit;">crypto<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#preventiondeidentifytemplatedeidentifyconfiginfotypetransformationstransformationprimitivetransformationcryptodeterministicconfigcryptokey">Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Info<wbr>Type<wbr>Transformations<wbr>Transformation<wbr>Primitive<wbr>Transformation<wbr>Crypto<wbr>Deterministic<wbr>Config<wbr>Crypto<wbr>Key</a></span>
+    </dt>
+    <dd>{{% md %}}The key used by the encryption algorithm.
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="surrogateinfotype_nodejs">
+<a href="#surrogateinfotype_nodejs" style="color: inherit; text-decoration: inherit;">surrogate<wbr>Info<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#preventiondeidentifytemplatedeidentifyconfiginfotypetransformationstransformationprimitivetransformationcryptodeterministicconfigsurrogateinfotype">Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Info<wbr>Type<wbr>Transformations<wbr>Transformation<wbr>Primitive<wbr>Transformation<wbr>Crypto<wbr>Deterministic<wbr>Config<wbr>Surrogate<wbr>Info<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}The custom infoType to annotate the surrogate with. This annotation will be applied to the surrogate by prefixing it with the name of the custom infoType followed by the number of characters comprising the surrogate. The following scheme defines the format: info\_type\_name(surrogate\_character\_count):surrogate
+For example, if the name of custom infoType is 'MY\_TOKEN\_INFO\_TYPE' and the surrogate is 'abc', the full replacement value will be: 'MY\_TOKEN\_INFO\_TYPE(3):abc'
+This annotation identifies the surrogate when inspecting content using the custom infoType [`SurrogateType`](https://cloud.google.com/dlp/docs/reference/rest/v2/InspectConfig#surrogatetype). This facilitates reversal of the surrogate when it occurs in free text.
+In order for inspection to work properly, the name of this infoType must not occur naturally anywhere in your data; otherwise, inspection may find a surrogate that does not correspond to an actual identifier. Therefore, choose your custom infoType name carefully after considering what your data looks like. One way to select a name that has a high chance of yielding reliable detection is to include one or more unicode characters that are highly improbable to exist in your data. For example, assuming your data is entered from a regular ASCII keyboard, the symbol with the hex code point 29DD might be used like so: ⧝MY\_TOKEN\_TYPE
+Structure is documented below.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="context_python">
+<a href="#context_python" style="color: inherit; text-decoration: inherit;">context</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#preventiondeidentifytemplatedeidentifyconfiginfotypetransformationstransformationprimitivetransformationcryptodeterministicconfigcontext">Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Info<wbr>Type<wbr>Transformations<wbr>Transformation<wbr>Primitive<wbr>Transformation<wbr>Crypto<wbr>Deterministic<wbr>Config<wbr>Context</a></span>
+    </dt>
+    <dd>{{% md %}}The 'tweak', a context may be used for higher security since the same identifier in two different contexts won't be given the same surrogate. If the context is not set, a default tweak will be used.
+If the context is set but:
+1.  there is no record present when transforming a given value or
+2.  the field is not present when transforming a given value,
+a default tweak will be used.
+Note that case (1) is expected when an `InfoTypeTransformation` is applied to both structured and non-structured `ContentItem`s. Currently, the referenced field may be of value type integer or string.
+The tweak is constructed as a sequence of bytes in big endian byte order such that:
+*   a 64 bit integer is encoded followed by a single byte of value 1
+*   a string is encoded in UTF-8 format followed by a single byte of value 2
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="crypto_key_python">
+<a href="#crypto_key_python" style="color: inherit; text-decoration: inherit;">crypto_<wbr>key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#preventiondeidentifytemplatedeidentifyconfiginfotypetransformationstransformationprimitivetransformationcryptodeterministicconfigcryptokey">Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Info<wbr>Type<wbr>Transformations<wbr>Transformation<wbr>Primitive<wbr>Transformation<wbr>Crypto<wbr>Deterministic<wbr>Config<wbr>Crypto<wbr>Key</a></span>
+    </dt>
+    <dd>{{% md %}}The key used by the encryption algorithm.
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="surrogate_info_type_python">
+<a href="#surrogate_info_type_python" style="color: inherit; text-decoration: inherit;">surrogate_<wbr>info_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#preventiondeidentifytemplatedeidentifyconfiginfotypetransformationstransformationprimitivetransformationcryptodeterministicconfigsurrogateinfotype">Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Info<wbr>Type<wbr>Transformations<wbr>Transformation<wbr>Primitive<wbr>Transformation<wbr>Crypto<wbr>Deterministic<wbr>Config<wbr>Surrogate<wbr>Info<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}The custom infoType to annotate the surrogate with. This annotation will be applied to the surrogate by prefixing it with the name of the custom infoType followed by the number of characters comprising the surrogate. The following scheme defines the format: info\_type\_name(surrogate\_character\_count):surrogate
+For example, if the name of custom infoType is 'MY\_TOKEN\_INFO\_TYPE' and the surrogate is 'abc', the full replacement value will be: 'MY\_TOKEN\_INFO\_TYPE(3):abc'
+This annotation identifies the surrogate when inspecting content using the custom infoType [`SurrogateType`](https://cloud.google.com/dlp/docs/reference/rest/v2/InspectConfig#surrogatetype). This facilitates reversal of the surrogate when it occurs in free text.
+In order for inspection to work properly, the name of this infoType must not occur naturally anywhere in your data; otherwise, inspection may find a surrogate that does not correspond to an actual identifier. Therefore, choose your custom infoType name carefully after considering what your data looks like. One way to select a name that has a high chance of yielding reliable detection is to include one or more unicode characters that are highly improbable to exist in your data. For example, assuming your data is entered from a regular ASCII keyboard, the symbol with the hex code point 29DD might be used like so: ⧝MY\_TOKEN\_TYPE
+Structure is documented below.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="preventiondeidentifytemplatedeidentifyconfiginfotypetransformationstransformationprimitivetransformationcryptodeterministicconfigcontext">Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Info<wbr>Type<wbr>Transformations<wbr>Transformation<wbr>Primitive<wbr>Transformation<wbr>Crypto<wbr>Deterministic<wbr>Config<wbr>Context</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the information type. Either a name of your choosing when creating a CustomInfoType, or one of the names listed at [https://cloud.google.com/dlp/docs/infotypes-reference](https://cloud.google.com/dlp/docs/infotypes-reference) when specifying a built-in type. When sending Cloud DLP results to Data Catalog, infoType names should conform to the pattern `[A-Za-z0-9$-_]{1,64}`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the information type. Either a name of your choosing when creating a CustomInfoType, or one of the names listed at [https://cloud.google.com/dlp/docs/infotypes-reference](https://cloud.google.com/dlp/docs/infotypes-reference) when specifying a built-in type. When sending Cloud DLP results to Data Catalog, infoType names should conform to the pattern `[A-Za-z0-9$-_]{1,64}`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the information type. Either a name of your choosing when creating a CustomInfoType, or one of the names listed at [https://cloud.google.com/dlp/docs/infotypes-reference](https://cloud.google.com/dlp/docs/infotypes-reference) when specifying a built-in type. When sending Cloud DLP results to Data Catalog, infoType names should conform to the pattern `[A-Za-z0-9$-_]{1,64}`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Name of the information type. Either a name of your choosing when creating a CustomInfoType, or one of the names listed at [https://cloud.google.com/dlp/docs/infotypes-reference](https://cloud.google.com/dlp/docs/infotypes-reference) when specifying a built-in type. When sending Cloud DLP results to Data Catalog, infoType names should conform to the pattern `[A-Za-z0-9$-_]{1,64}`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="preventiondeidentifytemplatedeidentifyconfiginfotypetransformationstransformationprimitivetransformationcryptodeterministicconfigcryptokey">Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Info<wbr>Type<wbr>Transformations<wbr>Transformation<wbr>Primitive<wbr>Transformation<wbr>Crypto<wbr>Deterministic<wbr>Config<wbr>Crypto<wbr>Key</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="kmswrapped_csharp">
+<a href="#kmswrapped_csharp" style="color: inherit; text-decoration: inherit;">Kms<wbr>Wrapped</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#preventiondeidentifytemplatedeidentifyconfiginfotypetransformationstransformationprimitivetransformationcryptodeterministicconfigcryptokeykmswrapped">Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Info<wbr>Type<wbr>Transformations<wbr>Transformation<wbr>Primitive<wbr>Transformation<wbr>Crypto<wbr>Deterministic<wbr>Config<wbr>Crypto<wbr>Key<wbr>Kms<wbr>Wrapped</a></span>
+    </dt>
+    <dd>{{% md %}}Kms wrapped key
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="transient_csharp">
+<a href="#transient_csharp" style="color: inherit; text-decoration: inherit;">Transient</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#preventiondeidentifytemplatedeidentifyconfiginfotypetransformationstransformationprimitivetransformationcryptodeterministicconfigcryptokeytransient">Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Info<wbr>Type<wbr>Transformations<wbr>Transformation<wbr>Primitive<wbr>Transformation<wbr>Crypto<wbr>Deterministic<wbr>Config<wbr>Crypto<wbr>Key<wbr>Transient</a></span>
+    </dt>
+    <dd>{{% md %}}Transient crypto key
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="unwrapped_csharp">
+<a href="#unwrapped_csharp" style="color: inherit; text-decoration: inherit;">Unwrapped</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#preventiondeidentifytemplatedeidentifyconfiginfotypetransformationstransformationprimitivetransformationcryptodeterministicconfigcryptokeyunwrapped">Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Info<wbr>Type<wbr>Transformations<wbr>Transformation<wbr>Primitive<wbr>Transformation<wbr>Crypto<wbr>Deterministic<wbr>Config<wbr>Crypto<wbr>Key<wbr>Unwrapped</a></span>
+    </dt>
+    <dd>{{% md %}}Unwrapped crypto key
+Structure is documented below.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="kmswrapped_go">
+<a href="#kmswrapped_go" style="color: inherit; text-decoration: inherit;">Kms<wbr>Wrapped</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#preventiondeidentifytemplatedeidentifyconfiginfotypetransformationstransformationprimitivetransformationcryptodeterministicconfigcryptokeykmswrapped">Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Info<wbr>Type<wbr>Transformations<wbr>Transformation<wbr>Primitive<wbr>Transformation<wbr>Crypto<wbr>Deterministic<wbr>Config<wbr>Crypto<wbr>Key<wbr>Kms<wbr>Wrapped</a></span>
+    </dt>
+    <dd>{{% md %}}Kms wrapped key
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="transient_go">
+<a href="#transient_go" style="color: inherit; text-decoration: inherit;">Transient</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#preventiondeidentifytemplatedeidentifyconfiginfotypetransformationstransformationprimitivetransformationcryptodeterministicconfigcryptokeytransient">Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Info<wbr>Type<wbr>Transformations<wbr>Transformation<wbr>Primitive<wbr>Transformation<wbr>Crypto<wbr>Deterministic<wbr>Config<wbr>Crypto<wbr>Key<wbr>Transient</a></span>
+    </dt>
+    <dd>{{% md %}}Transient crypto key
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="unwrapped_go">
+<a href="#unwrapped_go" style="color: inherit; text-decoration: inherit;">Unwrapped</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#preventiondeidentifytemplatedeidentifyconfiginfotypetransformationstransformationprimitivetransformationcryptodeterministicconfigcryptokeyunwrapped">Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Info<wbr>Type<wbr>Transformations<wbr>Transformation<wbr>Primitive<wbr>Transformation<wbr>Crypto<wbr>Deterministic<wbr>Config<wbr>Crypto<wbr>Key<wbr>Unwrapped</a></span>
+    </dt>
+    <dd>{{% md %}}Unwrapped crypto key
+Structure is documented below.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="kmswrapped_nodejs">
+<a href="#kmswrapped_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Wrapped</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#preventiondeidentifytemplatedeidentifyconfiginfotypetransformationstransformationprimitivetransformationcryptodeterministicconfigcryptokeykmswrapped">Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Info<wbr>Type<wbr>Transformations<wbr>Transformation<wbr>Primitive<wbr>Transformation<wbr>Crypto<wbr>Deterministic<wbr>Config<wbr>Crypto<wbr>Key<wbr>Kms<wbr>Wrapped</a></span>
+    </dt>
+    <dd>{{% md %}}Kms wrapped key
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="transient_nodejs">
+<a href="#transient_nodejs" style="color: inherit; text-decoration: inherit;">transient</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#preventiondeidentifytemplatedeidentifyconfiginfotypetransformationstransformationprimitivetransformationcryptodeterministicconfigcryptokeytransient">Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Info<wbr>Type<wbr>Transformations<wbr>Transformation<wbr>Primitive<wbr>Transformation<wbr>Crypto<wbr>Deterministic<wbr>Config<wbr>Crypto<wbr>Key<wbr>Transient</a></span>
+    </dt>
+    <dd>{{% md %}}Transient crypto key
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="unwrapped_nodejs">
+<a href="#unwrapped_nodejs" style="color: inherit; text-decoration: inherit;">unwrapped</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#preventiondeidentifytemplatedeidentifyconfiginfotypetransformationstransformationprimitivetransformationcryptodeterministicconfigcryptokeyunwrapped">Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Info<wbr>Type<wbr>Transformations<wbr>Transformation<wbr>Primitive<wbr>Transformation<wbr>Crypto<wbr>Deterministic<wbr>Config<wbr>Crypto<wbr>Key<wbr>Unwrapped</a></span>
+    </dt>
+    <dd>{{% md %}}Unwrapped crypto key
+Structure is documented below.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="kms_wrapped_python">
+<a href="#kms_wrapped_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>wrapped</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#preventiondeidentifytemplatedeidentifyconfiginfotypetransformationstransformationprimitivetransformationcryptodeterministicconfigcryptokeykmswrapped">Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Info<wbr>Type<wbr>Transformations<wbr>Transformation<wbr>Primitive<wbr>Transformation<wbr>Crypto<wbr>Deterministic<wbr>Config<wbr>Crypto<wbr>Key<wbr>Kms<wbr>Wrapped</a></span>
+    </dt>
+    <dd>{{% md %}}Kms wrapped key
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="transient_python">
+<a href="#transient_python" style="color: inherit; text-decoration: inherit;">transient</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#preventiondeidentifytemplatedeidentifyconfiginfotypetransformationstransformationprimitivetransformationcryptodeterministicconfigcryptokeytransient">Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Info<wbr>Type<wbr>Transformations<wbr>Transformation<wbr>Primitive<wbr>Transformation<wbr>Crypto<wbr>Deterministic<wbr>Config<wbr>Crypto<wbr>Key<wbr>Transient</a></span>
+    </dt>
+    <dd>{{% md %}}Transient crypto key
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="unwrapped_python">
+<a href="#unwrapped_python" style="color: inherit; text-decoration: inherit;">unwrapped</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#preventiondeidentifytemplatedeidentifyconfiginfotypetransformationstransformationprimitivetransformationcryptodeterministicconfigcryptokeyunwrapped">Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Info<wbr>Type<wbr>Transformations<wbr>Transformation<wbr>Primitive<wbr>Transformation<wbr>Crypto<wbr>Deterministic<wbr>Config<wbr>Crypto<wbr>Key<wbr>Unwrapped</a></span>
+    </dt>
+    <dd>{{% md %}}Unwrapped crypto key
+Structure is documented below.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="preventiondeidentifytemplatedeidentifyconfiginfotypetransformationstransformationprimitivetransformationcryptodeterministicconfigcryptokeykmswrapped">Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Info<wbr>Type<wbr>Transformations<wbr>Transformation<wbr>Primitive<wbr>Transformation<wbr>Crypto<wbr>Deterministic<wbr>Config<wbr>Crypto<wbr>Key<wbr>Kms<wbr>Wrapped</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="cryptokeyname_csharp">
+<a href="#cryptokeyname_csharp" style="color: inherit; text-decoration: inherit;">Crypto<wbr>Key<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The resource name of the KMS CryptoKey to use for unwrapping.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="wrappedkey_csharp">
+<a href="#wrappedkey_csharp" style="color: inherit; text-decoration: inherit;">Wrapped<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The wrapped data crypto key.
+A base64-encoded string.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="cryptokeyname_go">
+<a href="#cryptokeyname_go" style="color: inherit; text-decoration: inherit;">Crypto<wbr>Key<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The resource name of the KMS CryptoKey to use for unwrapping.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="wrappedkey_go">
+<a href="#wrappedkey_go" style="color: inherit; text-decoration: inherit;">Wrapped<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The wrapped data crypto key.
+A base64-encoded string.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="cryptokeyname_nodejs">
+<a href="#cryptokeyname_nodejs" style="color: inherit; text-decoration: inherit;">crypto<wbr>Key<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The resource name of the KMS CryptoKey to use for unwrapping.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="wrappedkey_nodejs">
+<a href="#wrappedkey_nodejs" style="color: inherit; text-decoration: inherit;">wrapped<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The wrapped data crypto key.
+A base64-encoded string.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="crypto_key_name_python">
+<a href="#crypto_key_name_python" style="color: inherit; text-decoration: inherit;">crypto_<wbr>key_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The resource name of the KMS CryptoKey to use for unwrapping.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="wrapped_key_python">
+<a href="#wrapped_key_python" style="color: inherit; text-decoration: inherit;">wrapped_<wbr>key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The wrapped data crypto key.
+A base64-encoded string.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="preventiondeidentifytemplatedeidentifyconfiginfotypetransformationstransformationprimitivetransformationcryptodeterministicconfigcryptokeytransient">Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Info<wbr>Type<wbr>Transformations<wbr>Transformation<wbr>Primitive<wbr>Transformation<wbr>Crypto<wbr>Deterministic<wbr>Config<wbr>Crypto<wbr>Key<wbr>Transient</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the information type. Either a name of your choosing when creating a CustomInfoType, or one of the names listed at [https://cloud.google.com/dlp/docs/infotypes-reference](https://cloud.google.com/dlp/docs/infotypes-reference) when specifying a built-in type. When sending Cloud DLP results to Data Catalog, infoType names should conform to the pattern `[A-Za-z0-9$-_]{1,64}`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the information type. Either a name of your choosing when creating a CustomInfoType, or one of the names listed at [https://cloud.google.com/dlp/docs/infotypes-reference](https://cloud.google.com/dlp/docs/infotypes-reference) when specifying a built-in type. When sending Cloud DLP results to Data Catalog, infoType names should conform to the pattern `[A-Za-z0-9$-_]{1,64}`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the information type. Either a name of your choosing when creating a CustomInfoType, or one of the names listed at [https://cloud.google.com/dlp/docs/infotypes-reference](https://cloud.google.com/dlp/docs/infotypes-reference) when specifying a built-in type. When sending Cloud DLP results to Data Catalog, infoType names should conform to the pattern `[A-Za-z0-9$-_]{1,64}`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Name of the information type. Either a name of your choosing when creating a CustomInfoType, or one of the names listed at [https://cloud.google.com/dlp/docs/infotypes-reference](https://cloud.google.com/dlp/docs/infotypes-reference) when specifying a built-in type. When sending Cloud DLP results to Data Catalog, infoType names should conform to the pattern `[A-Za-z0-9$-_]{1,64}`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="preventiondeidentifytemplatedeidentifyconfiginfotypetransformationstransformationprimitivetransformationcryptodeterministicconfigcryptokeyunwrapped">Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Info<wbr>Type<wbr>Transformations<wbr>Transformation<wbr>Primitive<wbr>Transformation<wbr>Crypto<wbr>Deterministic<wbr>Config<wbr>Crypto<wbr>Key<wbr>Unwrapped</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="key_csharp">
+<a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A 128/192/256 bit key.
+A base64-encoded string.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="key_go">
+<a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A 128/192/256 bit key.
+A base64-encoded string.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="key_nodejs">
+<a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A 128/192/256 bit key.
+A base64-encoded string.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="key_python">
+<a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}A 128/192/256 bit key.
+A base64-encoded string.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="preventiondeidentifytemplatedeidentifyconfiginfotypetransformationstransformationprimitivetransformationcryptodeterministicconfigsurrogateinfotype">Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Info<wbr>Type<wbr>Transformations<wbr>Transformation<wbr>Primitive<wbr>Transformation<wbr>Crypto<wbr>Deterministic<wbr>Config<wbr>Surrogate<wbr>Info<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the information type. Either a name of your choosing when creating a CustomInfoType, or one of the names listed at [https://cloud.google.com/dlp/docs/infotypes-reference](https://cloud.google.com/dlp/docs/infotypes-reference) when specifying a built-in type. When sending Cloud DLP results to Data Catalog, infoType names should conform to the pattern `[A-Za-z0-9$-_]{1,64}`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the information type. Either a name of your choosing when creating a CustomInfoType, or one of the names listed at [https://cloud.google.com/dlp/docs/infotypes-reference](https://cloud.google.com/dlp/docs/infotypes-reference) when specifying a built-in type. When sending Cloud DLP results to Data Catalog, infoType names should conform to the pattern `[A-Za-z0-9$-_]{1,64}`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the information type. Either a name of your choosing when creating a CustomInfoType, or one of the names listed at [https://cloud.google.com/dlp/docs/infotypes-reference](https://cloud.google.com/dlp/docs/infotypes-reference) when specifying a built-in type. When sending Cloud DLP results to Data Catalog, infoType names should conform to the pattern `[A-Za-z0-9$-_]{1,64}`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Name of the information type. Either a name of your choosing when creating a CustomInfoType, or one of the names listed at [https://cloud.google.com/dlp/docs/infotypes-reference](https://cloud.google.com/dlp/docs/infotypes-reference) when specifying a built-in type. When sending Cloud DLP results to Data Catalog, infoType names should conform to the pattern `[A-Za-z0-9$-_]{1,64}`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="preventiondeidentifytemplatedeidentifyconfiginfotypetransformationstransformationprimitivetransformationcryptoreplaceffxfpeconfig">Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Info<wbr>Type<wbr>Transformations<wbr>Transformation<wbr>Primitive<wbr>Transformation<wbr>Crypto<wbr>Replace<wbr>Ffx<wbr>Fpe<wbr>Config</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="commonalphabet_csharp">
+<a href="#commonalphabet_csharp" style="color: inherit; text-decoration: inherit;">Common<wbr>Alphabet</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Common alphabets.
+Possible values are `FFX_COMMON_NATIVE_ALPHABET_UNSPECIFIED`, `NUMERIC`, `HEXADECIMAL`, `UPPER_CASE_ALPHA_NUMERIC`, and `ALPHA_NUMERIC`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="context_csharp">
+<a href="#context_csharp" style="color: inherit; text-decoration: inherit;">Context</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#preventiondeidentifytemplatedeidentifyconfiginfotypetransformationstransformationprimitivetransformationcryptoreplaceffxfpeconfigcontext">Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Info<wbr>Type<wbr>Transformations<wbr>Transformation<wbr>Primitive<wbr>Transformation<wbr>Crypto<wbr>Replace<wbr>Ffx<wbr>Fpe<wbr>Config<wbr>Context</a></span>
+    </dt>
+    <dd>{{% md %}}The 'tweak', a context may be used for higher security since the same identifier in two different contexts won't be given the same surrogate. If the context is not set, a default tweak will be used.
+If the context is set but:
+1.  there is no record present when transforming a given value or
+2.  the field is not present when transforming a given value,
+a default tweak will be used.
+Note that case (1) is expected when an `InfoTypeTransformation` is applied to both structured and non-structured `ContentItem`s. Currently, the referenced field may be of value type integer or string.
+The tweak is constructed as a sequence of bytes in big endian byte order such that:
+*   a 64 bit integer is encoded followed by a single byte of value 1
+*   a string is encoded in UTF-8 format followed by a single byte of value 2
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="cryptokey_csharp">
+<a href="#cryptokey_csharp" style="color: inherit; text-decoration: inherit;">Crypto<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#preventiondeidentifytemplatedeidentifyconfiginfotypetransformationstransformationprimitivetransformationcryptoreplaceffxfpeconfigcryptokey">Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Info<wbr>Type<wbr>Transformations<wbr>Transformation<wbr>Primitive<wbr>Transformation<wbr>Crypto<wbr>Replace<wbr>Ffx<wbr>Fpe<wbr>Config<wbr>Crypto<wbr>Key</a></span>
+    </dt>
+    <dd>{{% md %}}The key used by the encryption algorithm.
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="customalphabet_csharp">
+<a href="#customalphabet_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Alphabet</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}This is supported by mapping these to the alphanumeric characters that the FFX mode natively supports. This happens before/after encryption/decryption. Each character listed must appear only once. Number of characters must be in the range \[2, 95\]. This must be encoded as ASCII. The order of characters does not matter. The full list of allowed characters is:
+``0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz ~`!@#$%^&*()_-+={[}]|:;"'<,>.?/``
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="radix_csharp">
+<a href="#radix_csharp" style="color: inherit; text-decoration: inherit;">Radix</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The native way to select the alphabet. Must be in the range \[2, 95\].
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="surrogateinfotype_csharp">
+<a href="#surrogateinfotype_csharp" style="color: inherit; text-decoration: inherit;">Surrogate<wbr>Info<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#preventiondeidentifytemplatedeidentifyconfiginfotypetransformationstransformationprimitivetransformationcryptoreplaceffxfpeconfigsurrogateinfotype">Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Info<wbr>Type<wbr>Transformations<wbr>Transformation<wbr>Primitive<wbr>Transformation<wbr>Crypto<wbr>Replace<wbr>Ffx<wbr>Fpe<wbr>Config<wbr>Surrogate<wbr>Info<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}The custom infoType to annotate the surrogate with. This annotation will be applied to the surrogate by prefixing it with the name of the custom infoType followed by the number of characters comprising the surrogate. The following scheme defines the format: info\_type\_name(surrogate\_character\_count):surrogate
+For example, if the name of custom infoType is 'MY\_TOKEN\_INFO\_TYPE' and the surrogate is 'abc', the full replacement value will be: 'MY\_TOKEN\_INFO\_TYPE(3):abc'
+This annotation identifies the surrogate when inspecting content using the custom infoType [`SurrogateType`](https://cloud.google.com/dlp/docs/reference/rest/v2/InspectConfig#surrogatetype). This facilitates reversal of the surrogate when it occurs in free text.
+In order for inspection to work properly, the name of this infoType must not occur naturally anywhere in your data; otherwise, inspection may find a surrogate that does not correspond to an actual identifier. Therefore, choose your custom infoType name carefully after considering what your data looks like. One way to select a name that has a high chance of yielding reliable detection is to include one or more unicode characters that are highly improbable to exist in your data. For example, assuming your data is entered from a regular ASCII keyboard, the symbol with the hex code point 29DD might be used like so: ⧝MY\_TOKEN\_TYPE
+Structure is documented below.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="commonalphabet_go">
+<a href="#commonalphabet_go" style="color: inherit; text-decoration: inherit;">Common<wbr>Alphabet</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Common alphabets.
+Possible values are `FFX_COMMON_NATIVE_ALPHABET_UNSPECIFIED`, `NUMERIC`, `HEXADECIMAL`, `UPPER_CASE_ALPHA_NUMERIC`, and `ALPHA_NUMERIC`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="context_go">
+<a href="#context_go" style="color: inherit; text-decoration: inherit;">Context</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#preventiondeidentifytemplatedeidentifyconfiginfotypetransformationstransformationprimitivetransformationcryptoreplaceffxfpeconfigcontext">Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Info<wbr>Type<wbr>Transformations<wbr>Transformation<wbr>Primitive<wbr>Transformation<wbr>Crypto<wbr>Replace<wbr>Ffx<wbr>Fpe<wbr>Config<wbr>Context</a></span>
+    </dt>
+    <dd>{{% md %}}The 'tweak', a context may be used for higher security since the same identifier in two different contexts won't be given the same surrogate. If the context is not set, a default tweak will be used.
+If the context is set but:
+1.  there is no record present when transforming a given value or
+2.  the field is not present when transforming a given value,
+a default tweak will be used.
+Note that case (1) is expected when an `InfoTypeTransformation` is applied to both structured and non-structured `ContentItem`s. Currently, the referenced field may be of value type integer or string.
+The tweak is constructed as a sequence of bytes in big endian byte order such that:
+*   a 64 bit integer is encoded followed by a single byte of value 1
+*   a string is encoded in UTF-8 format followed by a single byte of value 2
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="cryptokey_go">
+<a href="#cryptokey_go" style="color: inherit; text-decoration: inherit;">Crypto<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#preventiondeidentifytemplatedeidentifyconfiginfotypetransformationstransformationprimitivetransformationcryptoreplaceffxfpeconfigcryptokey">Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Info<wbr>Type<wbr>Transformations<wbr>Transformation<wbr>Primitive<wbr>Transformation<wbr>Crypto<wbr>Replace<wbr>Ffx<wbr>Fpe<wbr>Config<wbr>Crypto<wbr>Key</a></span>
+    </dt>
+    <dd>{{% md %}}The key used by the encryption algorithm.
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="customalphabet_go">
+<a href="#customalphabet_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Alphabet</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}This is supported by mapping these to the alphanumeric characters that the FFX mode natively supports. This happens before/after encryption/decryption. Each character listed must appear only once. Number of characters must be in the range \[2, 95\]. This must be encoded as ASCII. The order of characters does not matter. The full list of allowed characters is:
+``0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz ~`!@#$%^&*()_-+={[}]|:;"'<,>.?/``
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="radix_go">
+<a href="#radix_go" style="color: inherit; text-decoration: inherit;">Radix</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The native way to select the alphabet. Must be in the range \[2, 95\].
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="surrogateinfotype_go">
+<a href="#surrogateinfotype_go" style="color: inherit; text-decoration: inherit;">Surrogate<wbr>Info<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#preventiondeidentifytemplatedeidentifyconfiginfotypetransformationstransformationprimitivetransformationcryptoreplaceffxfpeconfigsurrogateinfotype">Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Info<wbr>Type<wbr>Transformations<wbr>Transformation<wbr>Primitive<wbr>Transformation<wbr>Crypto<wbr>Replace<wbr>Ffx<wbr>Fpe<wbr>Config<wbr>Surrogate<wbr>Info<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}The custom infoType to annotate the surrogate with. This annotation will be applied to the surrogate by prefixing it with the name of the custom infoType followed by the number of characters comprising the surrogate. The following scheme defines the format: info\_type\_name(surrogate\_character\_count):surrogate
+For example, if the name of custom infoType is 'MY\_TOKEN\_INFO\_TYPE' and the surrogate is 'abc', the full replacement value will be: 'MY\_TOKEN\_INFO\_TYPE(3):abc'
+This annotation identifies the surrogate when inspecting content using the custom infoType [`SurrogateType`](https://cloud.google.com/dlp/docs/reference/rest/v2/InspectConfig#surrogatetype). This facilitates reversal of the surrogate when it occurs in free text.
+In order for inspection to work properly, the name of this infoType must not occur naturally anywhere in your data; otherwise, inspection may find a surrogate that does not correspond to an actual identifier. Therefore, choose your custom infoType name carefully after considering what your data looks like. One way to select a name that has a high chance of yielding reliable detection is to include one or more unicode characters that are highly improbable to exist in your data. For example, assuming your data is entered from a regular ASCII keyboard, the symbol with the hex code point 29DD might be used like so: ⧝MY\_TOKEN\_TYPE
+Structure is documented below.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="commonalphabet_nodejs">
+<a href="#commonalphabet_nodejs" style="color: inherit; text-decoration: inherit;">common<wbr>Alphabet</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Common alphabets.
+Possible values are `FFX_COMMON_NATIVE_ALPHABET_UNSPECIFIED`, `NUMERIC`, `HEXADECIMAL`, `UPPER_CASE_ALPHA_NUMERIC`, and `ALPHA_NUMERIC`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="context_nodejs">
+<a href="#context_nodejs" style="color: inherit; text-decoration: inherit;">context</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#preventiondeidentifytemplatedeidentifyconfiginfotypetransformationstransformationprimitivetransformationcryptoreplaceffxfpeconfigcontext">Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Info<wbr>Type<wbr>Transformations<wbr>Transformation<wbr>Primitive<wbr>Transformation<wbr>Crypto<wbr>Replace<wbr>Ffx<wbr>Fpe<wbr>Config<wbr>Context</a></span>
+    </dt>
+    <dd>{{% md %}}The 'tweak', a context may be used for higher security since the same identifier in two different contexts won't be given the same surrogate. If the context is not set, a default tweak will be used.
+If the context is set but:
+1.  there is no record present when transforming a given value or
+2.  the field is not present when transforming a given value,
+a default tweak will be used.
+Note that case (1) is expected when an `InfoTypeTransformation` is applied to both structured and non-structured `ContentItem`s. Currently, the referenced field may be of value type integer or string.
+The tweak is constructed as a sequence of bytes in big endian byte order such that:
+*   a 64 bit integer is encoded followed by a single byte of value 1
+*   a string is encoded in UTF-8 format followed by a single byte of value 2
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="cryptokey_nodejs">
+<a href="#cryptokey_nodejs" style="color: inherit; text-decoration: inherit;">crypto<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#preventiondeidentifytemplatedeidentifyconfiginfotypetransformationstransformationprimitivetransformationcryptoreplaceffxfpeconfigcryptokey">Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Info<wbr>Type<wbr>Transformations<wbr>Transformation<wbr>Primitive<wbr>Transformation<wbr>Crypto<wbr>Replace<wbr>Ffx<wbr>Fpe<wbr>Config<wbr>Crypto<wbr>Key</a></span>
+    </dt>
+    <dd>{{% md %}}The key used by the encryption algorithm.
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="customalphabet_nodejs">
+<a href="#customalphabet_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Alphabet</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}This is supported by mapping these to the alphanumeric characters that the FFX mode natively supports. This happens before/after encryption/decryption. Each character listed must appear only once. Number of characters must be in the range \[2, 95\]. This must be encoded as ASCII. The order of characters does not matter. The full list of allowed characters is:
+``0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz ~`!@#$%^&*()_-+={[}]|:;"'<,>.?/``
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="radix_nodejs">
+<a href="#radix_nodejs" style="color: inherit; text-decoration: inherit;">radix</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The native way to select the alphabet. Must be in the range \[2, 95\].
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="surrogateinfotype_nodejs">
+<a href="#surrogateinfotype_nodejs" style="color: inherit; text-decoration: inherit;">surrogate<wbr>Info<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#preventiondeidentifytemplatedeidentifyconfiginfotypetransformationstransformationprimitivetransformationcryptoreplaceffxfpeconfigsurrogateinfotype">Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Info<wbr>Type<wbr>Transformations<wbr>Transformation<wbr>Primitive<wbr>Transformation<wbr>Crypto<wbr>Replace<wbr>Ffx<wbr>Fpe<wbr>Config<wbr>Surrogate<wbr>Info<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}The custom infoType to annotate the surrogate with. This annotation will be applied to the surrogate by prefixing it with the name of the custom infoType followed by the number of characters comprising the surrogate. The following scheme defines the format: info\_type\_name(surrogate\_character\_count):surrogate
+For example, if the name of custom infoType is 'MY\_TOKEN\_INFO\_TYPE' and the surrogate is 'abc', the full replacement value will be: 'MY\_TOKEN\_INFO\_TYPE(3):abc'
+This annotation identifies the surrogate when inspecting content using the custom infoType [`SurrogateType`](https://cloud.google.com/dlp/docs/reference/rest/v2/InspectConfig#surrogatetype). This facilitates reversal of the surrogate when it occurs in free text.
+In order for inspection to work properly, the name of this infoType must not occur naturally anywhere in your data; otherwise, inspection may find a surrogate that does not correspond to an actual identifier. Therefore, choose your custom infoType name carefully after considering what your data looks like. One way to select a name that has a high chance of yielding reliable detection is to include one or more unicode characters that are highly improbable to exist in your data. For example, assuming your data is entered from a regular ASCII keyboard, the symbol with the hex code point 29DD might be used like so: ⧝MY\_TOKEN\_TYPE
+Structure is documented below.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="common_alphabet_python">
+<a href="#common_alphabet_python" style="color: inherit; text-decoration: inherit;">common_<wbr>alphabet</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Common alphabets.
+Possible values are `FFX_COMMON_NATIVE_ALPHABET_UNSPECIFIED`, `NUMERIC`, `HEXADECIMAL`, `UPPER_CASE_ALPHA_NUMERIC`, and `ALPHA_NUMERIC`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="context_python">
+<a href="#context_python" style="color: inherit; text-decoration: inherit;">context</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#preventiondeidentifytemplatedeidentifyconfiginfotypetransformationstransformationprimitivetransformationcryptoreplaceffxfpeconfigcontext">Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Info<wbr>Type<wbr>Transformations<wbr>Transformation<wbr>Primitive<wbr>Transformation<wbr>Crypto<wbr>Replace<wbr>Ffx<wbr>Fpe<wbr>Config<wbr>Context</a></span>
+    </dt>
+    <dd>{{% md %}}The 'tweak', a context may be used for higher security since the same identifier in two different contexts won't be given the same surrogate. If the context is not set, a default tweak will be used.
+If the context is set but:
+1.  there is no record present when transforming a given value or
+2.  the field is not present when transforming a given value,
+a default tweak will be used.
+Note that case (1) is expected when an `InfoTypeTransformation` is applied to both structured and non-structured `ContentItem`s. Currently, the referenced field may be of value type integer or string.
+The tweak is constructed as a sequence of bytes in big endian byte order such that:
+*   a 64 bit integer is encoded followed by a single byte of value 1
+*   a string is encoded in UTF-8 format followed by a single byte of value 2
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="crypto_key_python">
+<a href="#crypto_key_python" style="color: inherit; text-decoration: inherit;">crypto_<wbr>key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#preventiondeidentifytemplatedeidentifyconfiginfotypetransformationstransformationprimitivetransformationcryptoreplaceffxfpeconfigcryptokey">Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Info<wbr>Type<wbr>Transformations<wbr>Transformation<wbr>Primitive<wbr>Transformation<wbr>Crypto<wbr>Replace<wbr>Ffx<wbr>Fpe<wbr>Config<wbr>Crypto<wbr>Key</a></span>
+    </dt>
+    <dd>{{% md %}}The key used by the encryption algorithm.
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="custom_alphabet_python">
+<a href="#custom_alphabet_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>alphabet</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}This is supported by mapping these to the alphanumeric characters that the FFX mode natively supports. This happens before/after encryption/decryption. Each character listed must appear only once. Number of characters must be in the range \[2, 95\]. This must be encoded as ASCII. The order of characters does not matter. The full list of allowed characters is:
+``0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz ~`!@#$%^&*()_-+={[}]|:;"'<,>.?/``
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="radix_python">
+<a href="#radix_python" style="color: inherit; text-decoration: inherit;">radix</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The native way to select the alphabet. Must be in the range \[2, 95\].
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="surrogate_info_type_python">
+<a href="#surrogate_info_type_python" style="color: inherit; text-decoration: inherit;">surrogate_<wbr>info_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#preventiondeidentifytemplatedeidentifyconfiginfotypetransformationstransformationprimitivetransformationcryptoreplaceffxfpeconfigsurrogateinfotype">Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Info<wbr>Type<wbr>Transformations<wbr>Transformation<wbr>Primitive<wbr>Transformation<wbr>Crypto<wbr>Replace<wbr>Ffx<wbr>Fpe<wbr>Config<wbr>Surrogate<wbr>Info<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}The custom infoType to annotate the surrogate with. This annotation will be applied to the surrogate by prefixing it with the name of the custom infoType followed by the number of characters comprising the surrogate. The following scheme defines the format: info\_type\_name(surrogate\_character\_count):surrogate
+For example, if the name of custom infoType is 'MY\_TOKEN\_INFO\_TYPE' and the surrogate is 'abc', the full replacement value will be: 'MY\_TOKEN\_INFO\_TYPE(3):abc'
+This annotation identifies the surrogate when inspecting content using the custom infoType [`SurrogateType`](https://cloud.google.com/dlp/docs/reference/rest/v2/InspectConfig#surrogatetype). This facilitates reversal of the surrogate when it occurs in free text.
+In order for inspection to work properly, the name of this infoType must not occur naturally anywhere in your data; otherwise, inspection may find a surrogate that does not correspond to an actual identifier. Therefore, choose your custom infoType name carefully after considering what your data looks like. One way to select a name that has a high chance of yielding reliable detection is to include one or more unicode characters that are highly improbable to exist in your data. For example, assuming your data is entered from a regular ASCII keyboard, the symbol with the hex code point 29DD might be used like so: ⧝MY\_TOKEN\_TYPE
+Structure is documented below.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="preventiondeidentifytemplatedeidentifyconfiginfotypetransformationstransformationprimitivetransformationcryptoreplaceffxfpeconfigcontext">Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Info<wbr>Type<wbr>Transformations<wbr>Transformation<wbr>Primitive<wbr>Transformation<wbr>Crypto<wbr>Replace<wbr>Ffx<wbr>Fpe<wbr>Config<wbr>Context</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the information type. Either a name of your choosing when creating a CustomInfoType, or one of the names listed at [https://cloud.google.com/dlp/docs/infotypes-reference](https://cloud.google.com/dlp/docs/infotypes-reference) when specifying a built-in type. When sending Cloud DLP results to Data Catalog, infoType names should conform to the pattern `[A-Za-z0-9$-_]{1,64}`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the information type. Either a name of your choosing when creating a CustomInfoType, or one of the names listed at [https://cloud.google.com/dlp/docs/infotypes-reference](https://cloud.google.com/dlp/docs/infotypes-reference) when specifying a built-in type. When sending Cloud DLP results to Data Catalog, infoType names should conform to the pattern `[A-Za-z0-9$-_]{1,64}`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the information type. Either a name of your choosing when creating a CustomInfoType, or one of the names listed at [https://cloud.google.com/dlp/docs/infotypes-reference](https://cloud.google.com/dlp/docs/infotypes-reference) when specifying a built-in type. When sending Cloud DLP results to Data Catalog, infoType names should conform to the pattern `[A-Za-z0-9$-_]{1,64}`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Name of the information type. Either a name of your choosing when creating a CustomInfoType, or one of the names listed at [https://cloud.google.com/dlp/docs/infotypes-reference](https://cloud.google.com/dlp/docs/infotypes-reference) when specifying a built-in type. When sending Cloud DLP results to Data Catalog, infoType names should conform to the pattern `[A-Za-z0-9$-_]{1,64}`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="preventiondeidentifytemplatedeidentifyconfiginfotypetransformationstransformationprimitivetransformationcryptoreplaceffxfpeconfigcryptokey">Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Info<wbr>Type<wbr>Transformations<wbr>Transformation<wbr>Primitive<wbr>Transformation<wbr>Crypto<wbr>Replace<wbr>Ffx<wbr>Fpe<wbr>Config<wbr>Crypto<wbr>Key</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="kmswrapped_csharp">
+<a href="#kmswrapped_csharp" style="color: inherit; text-decoration: inherit;">Kms<wbr>Wrapped</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#preventiondeidentifytemplatedeidentifyconfiginfotypetransformationstransformationprimitivetransformationcryptoreplaceffxfpeconfigcryptokeykmswrapped">Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Info<wbr>Type<wbr>Transformations<wbr>Transformation<wbr>Primitive<wbr>Transformation<wbr>Crypto<wbr>Replace<wbr>Ffx<wbr>Fpe<wbr>Config<wbr>Crypto<wbr>Key<wbr>Kms<wbr>Wrapped</a></span>
+    </dt>
+    <dd>{{% md %}}Kms wrapped key
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="transient_csharp">
+<a href="#transient_csharp" style="color: inherit; text-decoration: inherit;">Transient</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#preventiondeidentifytemplatedeidentifyconfiginfotypetransformationstransformationprimitivetransformationcryptoreplaceffxfpeconfigcryptokeytransient">Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Info<wbr>Type<wbr>Transformations<wbr>Transformation<wbr>Primitive<wbr>Transformation<wbr>Crypto<wbr>Replace<wbr>Ffx<wbr>Fpe<wbr>Config<wbr>Crypto<wbr>Key<wbr>Transient</a></span>
+    </dt>
+    <dd>{{% md %}}Transient crypto key
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="unwrapped_csharp">
+<a href="#unwrapped_csharp" style="color: inherit; text-decoration: inherit;">Unwrapped</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#preventiondeidentifytemplatedeidentifyconfiginfotypetransformationstransformationprimitivetransformationcryptoreplaceffxfpeconfigcryptokeyunwrapped">Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Info<wbr>Type<wbr>Transformations<wbr>Transformation<wbr>Primitive<wbr>Transformation<wbr>Crypto<wbr>Replace<wbr>Ffx<wbr>Fpe<wbr>Config<wbr>Crypto<wbr>Key<wbr>Unwrapped</a></span>
+    </dt>
+    <dd>{{% md %}}Unwrapped crypto key
+Structure is documented below.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="kmswrapped_go">
+<a href="#kmswrapped_go" style="color: inherit; text-decoration: inherit;">Kms<wbr>Wrapped</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#preventiondeidentifytemplatedeidentifyconfiginfotypetransformationstransformationprimitivetransformationcryptoreplaceffxfpeconfigcryptokeykmswrapped">Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Info<wbr>Type<wbr>Transformations<wbr>Transformation<wbr>Primitive<wbr>Transformation<wbr>Crypto<wbr>Replace<wbr>Ffx<wbr>Fpe<wbr>Config<wbr>Crypto<wbr>Key<wbr>Kms<wbr>Wrapped</a></span>
+    </dt>
+    <dd>{{% md %}}Kms wrapped key
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="transient_go">
+<a href="#transient_go" style="color: inherit; text-decoration: inherit;">Transient</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#preventiondeidentifytemplatedeidentifyconfiginfotypetransformationstransformationprimitivetransformationcryptoreplaceffxfpeconfigcryptokeytransient">Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Info<wbr>Type<wbr>Transformations<wbr>Transformation<wbr>Primitive<wbr>Transformation<wbr>Crypto<wbr>Replace<wbr>Ffx<wbr>Fpe<wbr>Config<wbr>Crypto<wbr>Key<wbr>Transient</a></span>
+    </dt>
+    <dd>{{% md %}}Transient crypto key
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="unwrapped_go">
+<a href="#unwrapped_go" style="color: inherit; text-decoration: inherit;">Unwrapped</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#preventiondeidentifytemplatedeidentifyconfiginfotypetransformationstransformationprimitivetransformationcryptoreplaceffxfpeconfigcryptokeyunwrapped">Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Info<wbr>Type<wbr>Transformations<wbr>Transformation<wbr>Primitive<wbr>Transformation<wbr>Crypto<wbr>Replace<wbr>Ffx<wbr>Fpe<wbr>Config<wbr>Crypto<wbr>Key<wbr>Unwrapped</a></span>
+    </dt>
+    <dd>{{% md %}}Unwrapped crypto key
+Structure is documented below.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="kmswrapped_nodejs">
+<a href="#kmswrapped_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Wrapped</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#preventiondeidentifytemplatedeidentifyconfiginfotypetransformationstransformationprimitivetransformationcryptoreplaceffxfpeconfigcryptokeykmswrapped">Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Info<wbr>Type<wbr>Transformations<wbr>Transformation<wbr>Primitive<wbr>Transformation<wbr>Crypto<wbr>Replace<wbr>Ffx<wbr>Fpe<wbr>Config<wbr>Crypto<wbr>Key<wbr>Kms<wbr>Wrapped</a></span>
+    </dt>
+    <dd>{{% md %}}Kms wrapped key
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="transient_nodejs">
+<a href="#transient_nodejs" style="color: inherit; text-decoration: inherit;">transient</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#preventiondeidentifytemplatedeidentifyconfiginfotypetransformationstransformationprimitivetransformationcryptoreplaceffxfpeconfigcryptokeytransient">Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Info<wbr>Type<wbr>Transformations<wbr>Transformation<wbr>Primitive<wbr>Transformation<wbr>Crypto<wbr>Replace<wbr>Ffx<wbr>Fpe<wbr>Config<wbr>Crypto<wbr>Key<wbr>Transient</a></span>
+    </dt>
+    <dd>{{% md %}}Transient crypto key
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="unwrapped_nodejs">
+<a href="#unwrapped_nodejs" style="color: inherit; text-decoration: inherit;">unwrapped</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#preventiondeidentifytemplatedeidentifyconfiginfotypetransformationstransformationprimitivetransformationcryptoreplaceffxfpeconfigcryptokeyunwrapped">Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Info<wbr>Type<wbr>Transformations<wbr>Transformation<wbr>Primitive<wbr>Transformation<wbr>Crypto<wbr>Replace<wbr>Ffx<wbr>Fpe<wbr>Config<wbr>Crypto<wbr>Key<wbr>Unwrapped</a></span>
+    </dt>
+    <dd>{{% md %}}Unwrapped crypto key
+Structure is documented below.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="kms_wrapped_python">
+<a href="#kms_wrapped_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>wrapped</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#preventiondeidentifytemplatedeidentifyconfiginfotypetransformationstransformationprimitivetransformationcryptoreplaceffxfpeconfigcryptokeykmswrapped">Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Info<wbr>Type<wbr>Transformations<wbr>Transformation<wbr>Primitive<wbr>Transformation<wbr>Crypto<wbr>Replace<wbr>Ffx<wbr>Fpe<wbr>Config<wbr>Crypto<wbr>Key<wbr>Kms<wbr>Wrapped</a></span>
+    </dt>
+    <dd>{{% md %}}Kms wrapped key
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="transient_python">
+<a href="#transient_python" style="color: inherit; text-decoration: inherit;">transient</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#preventiondeidentifytemplatedeidentifyconfiginfotypetransformationstransformationprimitivetransformationcryptoreplaceffxfpeconfigcryptokeytransient">Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Info<wbr>Type<wbr>Transformations<wbr>Transformation<wbr>Primitive<wbr>Transformation<wbr>Crypto<wbr>Replace<wbr>Ffx<wbr>Fpe<wbr>Config<wbr>Crypto<wbr>Key<wbr>Transient</a></span>
+    </dt>
+    <dd>{{% md %}}Transient crypto key
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="unwrapped_python">
+<a href="#unwrapped_python" style="color: inherit; text-decoration: inherit;">unwrapped</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#preventiondeidentifytemplatedeidentifyconfiginfotypetransformationstransformationprimitivetransformationcryptoreplaceffxfpeconfigcryptokeyunwrapped">Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Info<wbr>Type<wbr>Transformations<wbr>Transformation<wbr>Primitive<wbr>Transformation<wbr>Crypto<wbr>Replace<wbr>Ffx<wbr>Fpe<wbr>Config<wbr>Crypto<wbr>Key<wbr>Unwrapped</a></span>
+    </dt>
+    <dd>{{% md %}}Unwrapped crypto key
+Structure is documented below.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="preventiondeidentifytemplatedeidentifyconfiginfotypetransformationstransformationprimitivetransformationcryptoreplaceffxfpeconfigcryptokeykmswrapped">Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Info<wbr>Type<wbr>Transformations<wbr>Transformation<wbr>Primitive<wbr>Transformation<wbr>Crypto<wbr>Replace<wbr>Ffx<wbr>Fpe<wbr>Config<wbr>Crypto<wbr>Key<wbr>Kms<wbr>Wrapped</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="cryptokeyname_csharp">
+<a href="#cryptokeyname_csharp" style="color: inherit; text-decoration: inherit;">Crypto<wbr>Key<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The resource name of the KMS CryptoKey to use for unwrapping.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="wrappedkey_csharp">
+<a href="#wrappedkey_csharp" style="color: inherit; text-decoration: inherit;">Wrapped<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The wrapped data crypto key.
+A base64-encoded string.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="cryptokeyname_go">
+<a href="#cryptokeyname_go" style="color: inherit; text-decoration: inherit;">Crypto<wbr>Key<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The resource name of the KMS CryptoKey to use for unwrapping.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="wrappedkey_go">
+<a href="#wrappedkey_go" style="color: inherit; text-decoration: inherit;">Wrapped<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The wrapped data crypto key.
+A base64-encoded string.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="cryptokeyname_nodejs">
+<a href="#cryptokeyname_nodejs" style="color: inherit; text-decoration: inherit;">crypto<wbr>Key<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The resource name of the KMS CryptoKey to use for unwrapping.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="wrappedkey_nodejs">
+<a href="#wrappedkey_nodejs" style="color: inherit; text-decoration: inherit;">wrapped<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The wrapped data crypto key.
+A base64-encoded string.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="crypto_key_name_python">
+<a href="#crypto_key_name_python" style="color: inherit; text-decoration: inherit;">crypto_<wbr>key_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The resource name of the KMS CryptoKey to use for unwrapping.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="wrapped_key_python">
+<a href="#wrapped_key_python" style="color: inherit; text-decoration: inherit;">wrapped_<wbr>key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The wrapped data crypto key.
+A base64-encoded string.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="preventiondeidentifytemplatedeidentifyconfiginfotypetransformationstransformationprimitivetransformationcryptoreplaceffxfpeconfigcryptokeytransient">Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Info<wbr>Type<wbr>Transformations<wbr>Transformation<wbr>Primitive<wbr>Transformation<wbr>Crypto<wbr>Replace<wbr>Ffx<wbr>Fpe<wbr>Config<wbr>Crypto<wbr>Key<wbr>Transient</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the information type. Either a name of your choosing when creating a CustomInfoType, or one of the names listed at [https://cloud.google.com/dlp/docs/infotypes-reference](https://cloud.google.com/dlp/docs/infotypes-reference) when specifying a built-in type. When sending Cloud DLP results to Data Catalog, infoType names should conform to the pattern `[A-Za-z0-9$-_]{1,64}`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the information type. Either a name of your choosing when creating a CustomInfoType, or one of the names listed at [https://cloud.google.com/dlp/docs/infotypes-reference](https://cloud.google.com/dlp/docs/infotypes-reference) when specifying a built-in type. When sending Cloud DLP results to Data Catalog, infoType names should conform to the pattern `[A-Za-z0-9$-_]{1,64}`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the information type. Either a name of your choosing when creating a CustomInfoType, or one of the names listed at [https://cloud.google.com/dlp/docs/infotypes-reference](https://cloud.google.com/dlp/docs/infotypes-reference) when specifying a built-in type. When sending Cloud DLP results to Data Catalog, infoType names should conform to the pattern `[A-Za-z0-9$-_]{1,64}`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Name of the information type. Either a name of your choosing when creating a CustomInfoType, or one of the names listed at [https://cloud.google.com/dlp/docs/infotypes-reference](https://cloud.google.com/dlp/docs/infotypes-reference) when specifying a built-in type. When sending Cloud DLP results to Data Catalog, infoType names should conform to the pattern `[A-Za-z0-9$-_]{1,64}`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="preventiondeidentifytemplatedeidentifyconfiginfotypetransformationstransformationprimitivetransformationcryptoreplaceffxfpeconfigcryptokeyunwrapped">Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Info<wbr>Type<wbr>Transformations<wbr>Transformation<wbr>Primitive<wbr>Transformation<wbr>Crypto<wbr>Replace<wbr>Ffx<wbr>Fpe<wbr>Config<wbr>Crypto<wbr>Key<wbr>Unwrapped</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="key_csharp">
+<a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A 128/192/256 bit key.
+A base64-encoded string.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="key_go">
+<a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A 128/192/256 bit key.
+A base64-encoded string.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="key_nodejs">
+<a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A 128/192/256 bit key.
+A base64-encoded string.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="key_python">
+<a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}A 128/192/256 bit key.
+A base64-encoded string.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="preventiondeidentifytemplatedeidentifyconfiginfotypetransformationstransformationprimitivetransformationcryptoreplaceffxfpeconfigsurrogateinfotype">Prevention<wbr>Deidentify<wbr>Template<wbr>Deidentify<wbr>Config<wbr>Info<wbr>Type<wbr>Transformations<wbr>Transformation<wbr>Primitive<wbr>Transformation<wbr>Crypto<wbr>Replace<wbr>Ffx<wbr>Fpe<wbr>Config<wbr>Surrogate<wbr>Info<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the information type. Either a name of your choosing when creating a CustomInfoType, or one of the names listed at [https://cloud.google.com/dlp/docs/infotypes-reference](https://cloud.google.com/dlp/docs/infotypes-reference) when specifying a built-in type. When sending Cloud DLP results to Data Catalog, infoType names should conform to the pattern `[A-Za-z0-9$-_]{1,64}`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the information type. Either a name of your choosing when creating a CustomInfoType, or one of the names listed at [https://cloud.google.com/dlp/docs/infotypes-reference](https://cloud.google.com/dlp/docs/infotypes-reference) when specifying a built-in type. When sending Cloud DLP results to Data Catalog, infoType names should conform to the pattern `[A-Za-z0-9$-_]{1,64}`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the information type. Either a name of your choosing when creating a CustomInfoType, or one of the names listed at [https://cloud.google.com/dlp/docs/infotypes-reference](https://cloud.google.com/dlp/docs/infotypes-reference) when specifying a built-in type. When sending Cloud DLP results to Data Catalog, infoType names should conform to the pattern `[A-Za-z0-9$-_]{1,64}`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Name of the information type. Either a name of your choosing when creating a CustomInfoType, or one of the names listed at [https://cloud.google.com/dlp/docs/infotypes-reference](https://cloud.google.com/dlp/docs/infotypes-reference) when specifying a built-in type. When sending Cloud DLP results to Data Catalog, infoType names should conform to the pattern `[A-Za-z0-9$-_]{1,64}`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

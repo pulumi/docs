@@ -380,7 +380,7 @@ const queryConfig = new gcp.bigquery.DataTransferConfig("queryConfig", {
 
 ## DataTransferConfig Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Architecture and Concepts docs.
 
 ### Inputs
 
@@ -398,15 +398,6 @@ The DataTransferConfig resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The data source id. Cannot be changed once the transfer config is created.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="destinationdatasetid_csharp">
-<a href="#destinationdatasetid_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>Dataset<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The BigQuery target dataset id.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="displayname_csharp">
@@ -438,6 +429,15 @@ For example, if dataRefreshWindowDays = 10, then every day BigQuery
 reingests data for [today-10, today-1], rather than ingesting data for
 just [today-1]. Only valid if the data source supports the feature.
 Set the value to 0 to use the default value.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="destinationdatasetid_csharp">
+<a href="#destinationdatasetid_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>Dataset<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The BigQuery target dataset id.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disabled_csharp">
@@ -555,15 +555,6 @@ requesting user calling this API has permissions to act as this service account.
     <dd>{{% md %}}The data source id. Cannot be changed once the transfer config is created.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="destinationdatasetid_go">
-<a href="#destinationdatasetid_go" style="color: inherit; text-decoration: inherit;">Destination<wbr>Dataset<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The BigQuery target dataset id.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="displayname_go">
 <a href="#displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
 </span>
@@ -593,6 +584,15 @@ For example, if dataRefreshWindowDays = 10, then every day BigQuery
 reingests data for [today-10, today-1], rather than ingesting data for
 just [today-1]. Only valid if the data source supports the feature.
 Set the value to 0 to use the default value.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="destinationdatasetid_go">
+<a href="#destinationdatasetid_go" style="color: inherit; text-decoration: inherit;">Destination<wbr>Dataset<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The BigQuery target dataset id.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disabled_go">
@@ -710,15 +710,6 @@ requesting user calling this API has permissions to act as this service account.
     <dd>{{% md %}}The data source id. Cannot be changed once the transfer config is created.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="destinationdatasetid_nodejs">
-<a href="#destinationdatasetid_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Dataset<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The BigQuery target dataset id.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="displayname_nodejs">
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
 </span>
@@ -748,6 +739,15 @@ For example, if dataRefreshWindowDays = 10, then every day BigQuery
 reingests data for [today-10, today-1], rather than ingesting data for
 just [today-1]. Only valid if the data source supports the feature.
 Set the value to 0 to use the default value.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="destinationdatasetid_nodejs">
+<a href="#destinationdatasetid_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Dataset<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The BigQuery target dataset id.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disabled_nodejs">
@@ -865,15 +865,6 @@ requesting user calling this API has permissions to act as this service account.
     <dd>{{% md %}}The data source id. Cannot be changed once the transfer config is created.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="destination_dataset_id_python">
-<a href="#destination_dataset_id_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>dataset_<wbr>id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The BigQuery target dataset id.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="display_name_python">
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
 </span>
@@ -903,6 +894,15 @@ For example, if dataRefreshWindowDays = 10, then every day BigQuery
 reingests data for [today-10, today-1], rather than ingesting data for
 just [today-1]. Only valid if the data source supports the feature.
 Set the value to 0 to use the default value.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="destination_dataset_id_python">
+<a href="#destination_dataset_id_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>dataset_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The BigQuery target dataset id.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disabled_python">

@@ -180,6 +180,9 @@ class MyStack : Stack
             {
                 Port = 80,
             },
+        }, new CustomResourceOptions
+        {
+            Provider = google_beta,
         });
         var defaultRegionBackendService = new Gcp.Compute.RegionBackendService("defaultRegionBackendService", new Gcp.Compute.RegionBackendServiceArgs
         {
@@ -200,6 +203,9 @@ class MyStack : Stack
             },
             LoadBalancingScheme = "EXTERNAL",
             Protocol = "HTTP",
+        }, new CustomResourceOptions
+        {
+            Provider = google_beta,
         });
     }
 
@@ -227,7 +233,7 @@ func main() {
 			HttpHealthCheck: &compute.RegionHealthCheckHttpHealthCheckArgs{
 				Port: pulumi.Int(80),
 			},
-		})
+		}, pulumi.Provider(google_beta))
 		if err != nil {
 			return err
 		}
@@ -247,7 +253,7 @@ func main() {
 			},
 			LoadBalancingScheme: pulumi.String("EXTERNAL"),
 			Protocol:            pulumi.String("HTTP"),
-		})
+		}, pulumi.Provider(google_beta))
 		if err != nil {
 			return err
 		}
@@ -270,7 +276,8 @@ default_region_health_check = gcp.compute.RegionHealthCheck("defaultRegionHealth
     region="us-central1",
     http_health_check=gcp.compute.RegionHealthCheckHttpHealthCheckArgs(
         port=80,
-    ))
+    ),
+    opts=pulumi.ResourceOptions(provider=google_beta))
 default_region_backend_service = gcp.compute.RegionBackendService("defaultRegionBackendService",
     region="us-central1",
     health_checks=[default_region_health_check.id],
@@ -284,7 +291,8 @@ default_region_backend_service = gcp.compute.RegionBackendService("defaultRegion
         signed_url_cache_max_age_sec=7200,
     ),
     load_balancing_scheme="EXTERNAL",
-    protocol="HTTP")
+    protocol="HTTP",
+    opts=pulumi.ResourceOptions(provider=google_beta))
 ```
 
 
@@ -303,6 +311,8 @@ const defaultRegionHealthCheck = new gcp.compute.RegionHealthCheck("defaultRegio
     httpHealthCheck: {
         port: 80,
     },
+}, {
+    provider: google_beta,
 });
 const defaultRegionBackendService = new gcp.compute.RegionBackendService("defaultRegionBackendService", {
     region: "us-central1",
@@ -318,6 +328,8 @@ const defaultRegionBackendService = new gcp.compute.RegionBackendService("defaul
     },
     loadBalancingScheme: "EXTERNAL",
     protocol: "HTTP",
+}, {
+    provider: google_beta,
 });
 ```
 
@@ -1297,7 +1309,7 @@ const defaultRegionBackendService = new gcp.compute.RegionBackendService("defaul
 
 ## RegionBackendService Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Architecture and Concepts docs.
 
 ### Inputs
 

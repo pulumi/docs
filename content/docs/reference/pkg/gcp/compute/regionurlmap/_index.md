@@ -2210,7 +2210,7 @@ const regionurlmap = new gcp.compute.RegionUrlMap("regionurlmap", {
 
 ## RegionUrlMap Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Architecture and Concepts docs.
 
 ### Inputs
 
@@ -4588,7 +4588,7 @@ the request method will be retained.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The list of path patterns to match. Each must start with / and the only place a
-* is allowed is at the end following a /. The string fed to the path matcher
+\* is allowed is at the end following a /. The string fed to the path matcher
 does not include any text after the first ? or #, and those chars are not
 allowed here.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4640,7 +4640,7 @@ Structure is documented below.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The list of path patterns to match. Each must start with / and the only place a
-* is allowed is at the end following a /. The string fed to the path matcher
+\* is allowed is at the end following a /. The string fed to the path matcher
 does not include any text after the first ? or #, and those chars are not
 allowed here.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4692,7 +4692,7 @@ Structure is documented below.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The list of path patterns to match. Each must start with / and the only place a
-* is allowed is at the end following a /. The string fed to the path matcher
+\* is allowed is at the end following a /. The string fed to the path matcher
 does not include any text after the first ? or #, and those chars are not
 allowed here.
 {{% /md %}}</dd><dt class="property-optional"
@@ -4744,7 +4744,7 @@ Structure is documented below.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The list of path patterns to match. Each must start with / and the only place a
-* is allowed is at the end following a /. The string fed to the path matcher
+\* is allowed is at the end following a /. The string fed to the path matcher
 does not include any text after the first ? or #, and those chars are not
 allowed here.
 {{% /md %}}</dd><dt class="property-optional"

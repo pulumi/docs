@@ -1103,7 +1103,7 @@ const _default = new gcp.compute.BackendService("default", {
 
 ## BackendService Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Architecture and Concepts docs.
 
 ### Inputs
 
@@ -3905,8 +3905,7 @@ either maxRate or maxRatePerInstance must be set.
         <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Used when balancingMode is UTILIZATION. This ratio defines the
-CPU utilization target for the group. The default is 0.8. Valid
-range is [0.0, 1.0].
+CPU utilization target for the group. Valid range is [0.0, 1.0].
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -4055,8 +4054,7 @@ either maxRate or maxRatePerInstance must be set.
         <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Used when balancingMode is UTILIZATION. This ratio defines the
-CPU utilization target for the group. The default is 0.8. Valid
-range is [0.0, 1.0].
+CPU utilization target for the group. Valid range is [0.0, 1.0].
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -4205,8 +4203,7 @@ either maxRate or maxRatePerInstance must be set.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Used when balancingMode is UTILIZATION. This ratio defines the
-CPU utilization target for the group. The default is 0.8. Valid
-range is [0.0, 1.0].
+CPU utilization target for the group. Valid range is [0.0, 1.0].
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -4355,8 +4352,7 @@ either maxRate or maxRatePerInstance must be set.
         <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Used when balancingMode is UTILIZATION. This ratio defines the
-CPU utilization target for the group. The default is 0.8. Valid
-range is [0.0, 1.0].
+CPU utilization target for the group. Valid range is [0.0, 1.0].
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
