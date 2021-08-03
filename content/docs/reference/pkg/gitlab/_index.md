@@ -33,6 +33,7 @@ A Pulumi package for creating and managing GitLab resources.
     <li><a href="pipelinetrigger" title="PipelineTrigger"><span class="symbol resource"></span>PipelineTrigger</a></li>
     <li><a href="project" title="Project"><span class="symbol resource"></span>Project</a></li>
     <li><a href="projectapprovalrule" title="ProjectApprovalRule"><span class="symbol resource"></span>ProjectApprovalRule</a></li>
+    <li><a href="projectbadge" title="ProjectBadge"><span class="symbol resource"></span>ProjectBadge</a></li>
     <li><a href="projectcluster" title="ProjectCluster"><span class="symbol resource"></span>ProjectCluster</a></li>
     <li><a href="projectfreezeperiod" title="ProjectFreezePeriod"><span class="symbol resource"></span>ProjectFreezePeriod</a></li>
     <li><a href="projecthook" title="ProjectHook"><span class="symbol resource"></span>ProjectHook</a></li>
@@ -69,6 +70,6 @@ A Pulumi package for creating and managing GitLab resources.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`gitlab` Terraform Provider](https://github.com/gitlabhq/terraform-provider-gitlab).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.1.0</dd>
+	<dd>4.2.0</dd>
 </dl>
 
