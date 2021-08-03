@@ -9,8 +9,14 @@ meta_desc: "Explore the resources and functions of the alicloud.sae module."
 
 Explore the resources and functions of the alicloud.sae module.
 
+<h2 id="resources">Resources</h2>
+<ul class="api">
+    <li><a href="namespace" title="Namespace"><span class="symbol resource"></span>Namespace</a></li>
+</ul>
+
 <h2 id="functions">Functions</h2>
 <ul class="api">
+    <li><a href="getnamespaces" title="GetNamespaces"><span class="symbol function"></span>GetNamespaces</a></li>
     <li><a href="getservice" title="GetService"><span class="symbol function"></span>GetService</a></li>
 </ul>
 
@@ -23,6 +29,6 @@ Explore the resources and functions of the alicloud.sae module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>3.4.0</dd>
+	<dd>3.5.0</dd>
 </dl>
 

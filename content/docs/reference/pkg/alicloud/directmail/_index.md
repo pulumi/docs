@@ -28,6 +28,6 @@ Explore the resources and functions of the alicloud.directmail module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>3.4.0</dd>
+	<dd>3.5.0</dd>
 </dl>
 

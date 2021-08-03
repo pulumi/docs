@@ -11,12 +11,14 @@ Explore the resources and functions of the alicloud.cassandra module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
+    <li><a href="backupplan" title="BackupPlan"><span class="symbol resource"></span>BackupPlan</a></li>
     <li><a href="cluster" title="Cluster"><span class="symbol resource"></span>Cluster</a></li>
     <li><a href="datacenter" title="DataCenter"><span class="symbol resource"></span>DataCenter</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
+    <li><a href="getbackupplans" title="GetBackupPlans"><span class="symbol function"></span>GetBackupPlans</a></li>
     <li><a href="getclusters" title="GetClusters"><span class="symbol function"></span>GetClusters</a></li>
     <li><a href="getdatacenters" title="GetDataCenters"><span class="symbol function"></span>GetDataCenters</a></li>
     <li><a href="getzones" title="GetZones"><span class="symbol function"></span>GetZones</a></li>
@@ -31,6 +33,6 @@ Explore the resources and functions of the alicloud.cassandra module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>3.4.0</dd>
+	<dd>3.5.0</dd>
 </dl>
 

@@ -236,6 +236,7 @@ const defaultCluster = new alicloud.polardb.Cluster("defaultCluster", {
             <span class="nx">period</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
             <span class="nx">renewal_status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">resource_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">security_group_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
             <span class="nx">security_ips</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
             <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">,</span>
             <span class="nx">tde_status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -359,7 +360,7 @@ const defaultCluster = new alicloud.polardb.Cluster("defaultCluster", {
 
 ## Cluster Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Architecture and Concepts docs.
 
 ### Inputs
 
@@ -505,6 +506,16 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of resource group which the PolarDB cluster belongs. If not specified, then it belongs to the default resource group.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="securitygroupids_csharp">
+<a href="#securitygroupids_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Group<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}The ID of the security group. Separate multiple security groups with commas (,). You can add a maximum of three security groups to a cluster.
+> **NOTE:** Because of data backup and migration, change DB cluster type and storage would cost 15~20 minutes. Please make full preparation before changing them.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="securityips_csharp">
@@ -697,6 +708,16 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
     <dd>{{% md %}}The ID of resource group which the PolarDB cluster belongs. If not specified, then it belongs to the default resource group.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="securitygroupids_go">
+<a href="#securitygroupids_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Group<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the security group. Separate multiple security groups with commas (,). You can add a maximum of three security groups to a cluster.
+> **NOTE:** Because of data backup and migration, change DB cluster type and storage would cost 15~20 minutes. Please make full preparation before changing them.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="securityips_go">
 <a href="#securityips_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Ips</a>
 </span>
@@ -885,6 +906,16 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of resource group which the PolarDB cluster belongs. If not specified, then it belongs to the default resource group.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="securitygroupids_nodejs">
+<a href="#securitygroupids_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Group<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}The ID of the security group. Separate multiple security groups with commas (,). You can add a maximum of three security groups to a cluster.
+> **NOTE:** Because of data backup and migration, change DB cluster type and storage would cost 15~20 minutes. Please make full preparation before changing them.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="securityips_nodejs">
@@ -1077,6 +1108,16 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
     <dd>{{% md %}}The ID of resource group which the PolarDB cluster belongs. If not specified, then it belongs to the default resource group.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="security_group_ids_python">
+<a href="#security_group_ids_python" style="color: inherit; text-decoration: inherit;">security_<wbr>group_<wbr>ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}The ID of the security group. Separate multiple security groups with commas (,). You can add a maximum of three security groups to a cluster.
+> **NOTE:** Because of data backup and migration, change DB cluster type and storage would cost 15~20 minutes. Please make full preparation before changing them.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="security_ips_python">
 <a href="#security_ips_python" style="color: inherit; text-decoration: inherit;">security_<wbr>ips</a>
 </span>
@@ -1250,6 +1291,7 @@ Get an existing Cluster resource's state with the given name, ID, and optional e
         <span class="nx">period</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
         <span class="nx">renewal_status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">resource_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">security_group_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
         <span class="nx">security_ips</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
         <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">,</span>
         <span class="nx">tde_status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -1513,6 +1555,16 @@ The following state arguments are supported:
     <dd>{{% md %}}The ID of resource group which the PolarDB cluster belongs. If not specified, then it belongs to the default resource group.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_securitygroupids_csharp">
+<a href="#state_securitygroupids_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Group<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}The ID of the security group. Separate multiple security groups with commas (,). You can add a maximum of three security groups to a cluster.
+> **NOTE:** Because of data backup and migration, change DB cluster type and storage would cost 15~20 minutes. Please make full preparation before changing them.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_securityips_csharp">
 <a href="#state_securityips_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Ips</a>
 </span>
@@ -1710,6 +1762,16 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of resource group which the PolarDB cluster belongs. If not specified, then it belongs to the default resource group.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_securitygroupids_go">
+<a href="#state_securitygroupids_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Group<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the security group. Separate multiple security groups with commas (,). You can add a maximum of three security groups to a cluster.
+> **NOTE:** Because of data backup and migration, change DB cluster type and storage would cost 15~20 minutes. Please make full preparation before changing them.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_securityips_go">
@@ -1911,6 +1973,16 @@ The following state arguments are supported:
     <dd>{{% md %}}The ID of resource group which the PolarDB cluster belongs. If not specified, then it belongs to the default resource group.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_securitygroupids_nodejs">
+<a href="#state_securitygroupids_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Group<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}The ID of the security group. Separate multiple security groups with commas (,). You can add a maximum of three security groups to a cluster.
+> **NOTE:** Because of data backup and migration, change DB cluster type and storage would cost 15~20 minutes. Please make full preparation before changing them.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_securityips_nodejs">
 <a href="#state_securityips_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Ips</a>
 </span>
@@ -2108,6 +2180,16 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of resource group which the PolarDB cluster belongs. If not specified, then it belongs to the default resource group.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_security_group_ids_python">
+<a href="#state_security_group_ids_python" style="color: inherit; text-decoration: inherit;">security_<wbr>group_<wbr>ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}The ID of the security group. Separate multiple security groups with commas (,). You can add a maximum of three security groups to a cluster.
+> **NOTE:** Because of data backup and migration, change DB cluster type and storage would cost 15~20 minutes. Please make full preparation before changing them.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_security_ips_python">

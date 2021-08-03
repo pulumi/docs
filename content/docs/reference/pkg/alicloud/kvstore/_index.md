@@ -24,6 +24,7 @@ Explore the resources and functions of the alicloud.kvstore module.
     <li><a href="getinstanceclasses" title="GetInstanceClasses"><span class="symbol function"></span>GetInstanceClasses</a></li>
     <li><a href="getinstanceengines" title="GetInstanceEngines"><span class="symbol function"></span>GetInstanceEngines</a></li>
     <li><a href="getinstances" title="GetInstances"><span class="symbol function"></span>GetInstances</a></li>
+    <li><a href="getpermission" title="GetPermission"><span class="symbol function"></span>GetPermission</a></li>
     <li><a href="getzones" title="GetZones"><span class="symbol function"></span>GetZones</a></li>
 </ul>
 
@@ -36,6 +37,6 @@ Explore the resources and functions of the alicloud.kvstore module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>3.4.0</dd>
+	<dd>3.5.0</dd>
 </dl>
 

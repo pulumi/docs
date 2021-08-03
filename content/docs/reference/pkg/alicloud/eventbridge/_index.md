@@ -12,13 +12,14 @@ Explore the resources and functions of the alicloud.eventbridge module.
 <h2 id="resources">Resources</h2>
 <ul class="api">
     <li><a href="eventbus" title="EventBus"><span class="symbol resource"></span>EventBus</a></li>
-    <li><a href="schemagroup" title="SchemaGroup"><span class="symbol resource"></span>SchemaGroup</a></li>
+    <li><a href="rule" title="Rule"><span class="symbol resource"></span>Rule</a></li>
+    <li><a href="slr" title="Slr"><span class="symbol resource"></span>Slr</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
     <li><a href="geteventbuses" title="GetEventBuses"><span class="symbol function"></span>GetEventBuses</a></li>
-    <li><a href="getschemagroups" title="GetSchemaGroups"><span class="symbol function"></span>GetSchemaGroups</a></li>
+    <li><a href="getrules" title="GetRules"><span class="symbol function"></span>GetRules</a></li>
     <li><a href="getservice" title="GetService"><span class="symbol function"></span>GetService</a></li>
 </ul>
 
@@ -31,6 +32,6 @@ Explore the resources and functions of the alicloud.eventbridge module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>3.4.0</dd>
+	<dd>3.5.0</dd>
 </dl>
 

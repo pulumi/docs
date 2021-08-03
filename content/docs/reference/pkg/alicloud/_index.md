@@ -19,6 +19,7 @@ A Pulumi package for creating and managing AliCloud resources.
     <li><a href="alikafka/" title="alikafka"><span class="symbol module"></span>alikafka</a></li>
     <li><a href="amqp/" title="amqp"><span class="symbol module"></span>amqp</a></li>
     <li><a href="apigateway/" title="apigateway"><span class="symbol module"></span>apigateway</a></li>
+    <li><a href="arms/" title="arms"><span class="symbol module"></span>arms</a></li>
     <li><a href="brain/" title="brain"><span class="symbol module"></span>brain</a></li>
     <li><a href="cas/" title="cas"><span class="symbol module"></span>cas</a></li>
     <li><a href="cassandra/" title="cassandra"><span class="symbol module"></span>cassandra</a></li>
@@ -26,6 +27,7 @@ A Pulumi package for creating and managing AliCloud resources.
     <li><a href="cen/" title="cen"><span class="symbol module"></span>cen</a></li>
     <li><a href="cfg/" title="cfg"><span class="symbol module"></span>cfg</a></li>
     <li><a href="cloudconnect/" title="cloudconnect"><span class="symbol module"></span>cloudconnect</a></li>
+    <li><a href="cloudfirewall/" title="cloudfirewall"><span class="symbol module"></span>cloudfirewall</a></li>
     <li><a href="cloudstoragegateway/" title="cloudstoragegateway"><span class="symbol module"></span>cloudstoragegateway</a></li>
     <li><a href="cms/" title="cms"><span class="symbol module"></span>cms</a></li>
     <li><a href="cr/" title="cr"><span class="symbol module"></span>cr</a></li>
@@ -52,6 +54,7 @@ A Pulumi package for creating and managing AliCloud resources.
     <li><a href="ga/" title="ga"><span class="symbol module"></span>ga</a></li>
     <li><a href="gpdb/" title="gpdb"><span class="symbol module"></span>gpdb</a></li>
     <li><a href="hbase/" title="hbase"><span class="symbol module"></span>hbase</a></li>
+    <li><a href="hbr/" title="hbr"><span class="symbol module"></span>hbr</a></li>
     <li><a href="iot/" title="iot"><span class="symbol module"></span>iot</a></li>
     <li><a href="kms/" title="kms"><span class="symbol module"></span>kms</a></li>
     <li><a href="kvstore/" title="kvstore"><span class="symbol module"></span>kvstore</a></li>
@@ -108,6 +111,6 @@ A Pulumi package for creating and managing AliCloud resources.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>3.4.0</dd>
+	<dd>3.5.0</dd>
 </dl>
 

@@ -160,7 +160,7 @@ Log store can be imported using the id, e.g.
 
 ## Store Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Architecture and Concepts docs.
 
 ### Inputs
 
@@ -195,7 +195,7 @@ The Store resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Determines whether to automatically split a shard. Default to `true`.
+    <dd>{{% md %}}Determines whether to automatically split a shard. Default to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablewebtracking_csharp">
@@ -280,7 +280,7 @@ The Store resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Determines whether to automatically split a shard. Default to `true`.
+    <dd>{{% md %}}Determines whether to automatically split a shard. Default to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablewebtracking_go">
@@ -365,7 +365,7 @@ The Store resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Determines whether to automatically split a shard. Default to `true`.
+    <dd>{{% md %}}Determines whether to automatically split a shard. Default to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablewebtracking_nodejs">
@@ -450,7 +450,7 @@ The Store resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Determines whether to automatically split a shard. Default to `true`.
+    <dd>{{% md %}}Determines whether to automatically split a shard. Default to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enable_web_tracking_python">
@@ -748,7 +748,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Determines whether to automatically split a shard. Default to `true`.
+    <dd>{{% md %}}Determines whether to automatically split a shard. Default to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enablewebtracking_csharp">
@@ -841,7 +841,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Determines whether to automatically split a shard. Default to `true`.
+    <dd>{{% md %}}Determines whether to automatically split a shard. Default to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enablewebtracking_go">
@@ -934,7 +934,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Determines whether to automatically split a shard. Default to `true`.
+    <dd>{{% md %}}Determines whether to automatically split a shard. Default to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enablewebtracking_nodejs">
@@ -1027,7 +1027,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Determines whether to automatically split a shard. Default to `true`.
+    <dd>{{% md %}}Determines whether to automatically split a shard. Default to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enable_web_tracking_python">

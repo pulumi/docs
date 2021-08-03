@@ -312,11 +312,13 @@ const exampleInstance = new alicloud.rds.Instance("exampleInstance", {
              <span class="nx">engine</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">engine_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">force_restart</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+             <span class="nx">ha_config</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">instance_charge_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">instance_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">instance_storage</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
              <span class="nx">instance_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">maintain_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">manual_ha_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">modify_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">monitoring_period</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
              <span class="nx">parameters</span><span class="p">:</span> <span class="nx">Optional[Sequence[InstanceParameterArgs]]</span> = None<span class="p">,</span>
@@ -335,6 +337,9 @@ const exampleInstance = new alicloud.rds.Instance("exampleInstance", {
              <span class="nx">sql_collector_config_value</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
              <span class="nx">sql_collector_status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">ssl_action</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">storage_auto_scale</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">storage_threshold</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+             <span class="nx">storage_upper_bound</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
              <span class="nx">switch_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">,</span>
              <span class="nx">target_minor_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -464,7 +469,7 @@ const exampleInstance = new alicloud.rds.Instance("exampleInstance", {
 
 ## Instance Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Architecture and Concepts docs.
 
 ### Inputs
 
@@ -668,6 +673,17 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
     <dd>{{% md %}}Set it to true to make some parameter efficient when modifying them. Default to false.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="haconfig_csharp">
+<a href="#haconfig_csharp" style="color: inherit; text-decoration: inherit;">Ha<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The primary/secondary switchover mode of the instance. Default value: Auto. Valid values:
+- Auto: The system automatically switches over services from the primary to secondary instances in the event of a fault.
+- Manual: You must manually switch over services from the primary to secondary instances in the event of a fault.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="instancechargetype_csharp">
 <a href="#instancechargetype_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Charge<wbr>Type</a>
 </span>
@@ -693,6 +709,15 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Maintainable time period format of the instance: HH:MMZ-HH:MMZ (UTC time)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="manualhatime_csharp">
+<a href="#manualhatime_csharp" style="color: inherit; text-decoration: inherit;">Manual<wbr>Ha<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The time after when you want to enable automatic primary/secondary switchover. At most, you can set this parameter to 23:59:59 seven days later. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="modifymode_csharp">
@@ -862,6 +887,40 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
     <dd>{{% md %}}Actions performed on SSL functions, Valid values: `Open`: turn on SSL encryption; `Close`: turn off SSL encryption; `Update`: update SSL certificate. See more [engine and engineVersion limitation](https://www.alibabacloud.com/help/zh/doc-detail/26254.htm).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="storageautoscale_csharp">
+<a href="#storageautoscale_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Auto<wbr>Scale</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Automatic storage space expansion switch. Valid values:
+- Enable
+- Disable
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="storagethreshold_csharp">
+<a href="#storagethreshold_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Threshold</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The trigger threshold (percentage) for automatic storage space expansion. Valid values:
+- 10
+- 20
+- 30
+- 40
+- 50
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="storageupperbound_csharp">
+<a href="#storageupperbound_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Upper<wbr>Bound</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The upper limit of the total storage space for automatic expansion of the storage space, that is, automatic expansion will not cause the total storage space of the instance to exceed this value. Unit: GB. The value must be ≥0.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="switchtime_csharp">
 <a href="#switchtime_csharp" style="color: inherit; text-decoration: inherit;">Switch<wbr>Time</a>
 </span>
@@ -869,7 +928,6 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The specific point in time when you want to perform the update. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. It is valid only when `upgrade_db_instance_kernel_version = true`. The time must be in UTC.
-> **NOTE:** This parameter takes effect only when you set the UpgradeTime parameter to SpecifyTime.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
@@ -896,7 +954,6 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
 - xcluster: The instance runs MySQL 5.7 on RDS Enterprise Edition.
 - xcluster80: The instance runs MySQL 8.0 on RDS Enterprise Edition.
 - SQLServer: <Minor engine version>. Example: 15.0.4073.23.
-> **NOTE:** For more information about minor engine versions, see Release notes of minor AliPG versions, Release notes of minor AliSQL versions, and Release notes of minor engine versions of ApsaraDB RDS for SQL Server.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tdestatus_csharp">
@@ -1178,6 +1235,17 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
     <dd>{{% md %}}Set it to true to make some parameter efficient when modifying them. Default to false.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="haconfig_go">
+<a href="#haconfig_go" style="color: inherit; text-decoration: inherit;">Ha<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The primary/secondary switchover mode of the instance. Default value: Auto. Valid values:
+- Auto: The system automatically switches over services from the primary to secondary instances in the event of a fault.
+- Manual: You must manually switch over services from the primary to secondary instances in the event of a fault.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="instancechargetype_go">
 <a href="#instancechargetype_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Charge<wbr>Type</a>
 </span>
@@ -1203,6 +1271,15 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Maintainable time period format of the instance: HH:MMZ-HH:MMZ (UTC time)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="manualhatime_go">
+<a href="#manualhatime_go" style="color: inherit; text-decoration: inherit;">Manual<wbr>Ha<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The time after when you want to enable automatic primary/secondary switchover. At most, you can set this parameter to 23:59:59 seven days later. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="modifymode_go">
@@ -1372,6 +1449,40 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
     <dd>{{% md %}}Actions performed on SSL functions, Valid values: `Open`: turn on SSL encryption; `Close`: turn off SSL encryption; `Update`: update SSL certificate. See more [engine and engineVersion limitation](https://www.alibabacloud.com/help/zh/doc-detail/26254.htm).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="storageautoscale_go">
+<a href="#storageautoscale_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Auto<wbr>Scale</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Automatic storage space expansion switch. Valid values:
+- Enable
+- Disable
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="storagethreshold_go">
+<a href="#storagethreshold_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Threshold</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The trigger threshold (percentage) for automatic storage space expansion. Valid values:
+- 10
+- 20
+- 30
+- 40
+- 50
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="storageupperbound_go">
+<a href="#storageupperbound_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Upper<wbr>Bound</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The upper limit of the total storage space for automatic expansion of the storage space, that is, automatic expansion will not cause the total storage space of the instance to exceed this value. Unit: GB. The value must be ≥0.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="switchtime_go">
 <a href="#switchtime_go" style="color: inherit; text-decoration: inherit;">Switch<wbr>Time</a>
 </span>
@@ -1379,7 +1490,6 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The specific point in time when you want to perform the update. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. It is valid only when `upgrade_db_instance_kernel_version = true`. The time must be in UTC.
-> **NOTE:** This parameter takes effect only when you set the UpgradeTime parameter to SpecifyTime.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
@@ -1406,7 +1516,6 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
 - xcluster: The instance runs MySQL 5.7 on RDS Enterprise Edition.
 - xcluster80: The instance runs MySQL 8.0 on RDS Enterprise Edition.
 - SQLServer: <Minor engine version>. Example: 15.0.4073.23.
-> **NOTE:** For more information about minor engine versions, see Release notes of minor AliPG versions, Release notes of minor AliSQL versions, and Release notes of minor engine versions of ApsaraDB RDS for SQL Server.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tdestatus_go">
@@ -1688,6 +1797,17 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
     <dd>{{% md %}}Set it to true to make some parameter efficient when modifying them. Default to false.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="haconfig_nodejs">
+<a href="#haconfig_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The primary/secondary switchover mode of the instance. Default value: Auto. Valid values:
+- Auto: The system automatically switches over services from the primary to secondary instances in the event of a fault.
+- Manual: You must manually switch over services from the primary to secondary instances in the event of a fault.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="instancechargetype_nodejs">
 <a href="#instancechargetype_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Charge<wbr>Type</a>
 </span>
@@ -1713,6 +1833,15 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Maintainable time period format of the instance: HH:MMZ-HH:MMZ (UTC time)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="manualhatime_nodejs">
+<a href="#manualhatime_nodejs" style="color: inherit; text-decoration: inherit;">manual<wbr>Ha<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The time after when you want to enable automatic primary/secondary switchover. At most, you can set this parameter to 23:59:59 seven days later. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="modifymode_nodejs">
@@ -1882,6 +2011,40 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
     <dd>{{% md %}}Actions performed on SSL functions, Valid values: `Open`: turn on SSL encryption; `Close`: turn off SSL encryption; `Update`: update SSL certificate. See more [engine and engineVersion limitation](https://www.alibabacloud.com/help/zh/doc-detail/26254.htm).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="storageautoscale_nodejs">
+<a href="#storageautoscale_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Auto<wbr>Scale</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Automatic storage space expansion switch. Valid values:
+- Enable
+- Disable
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="storagethreshold_nodejs">
+<a href="#storagethreshold_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Threshold</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The trigger threshold (percentage) for automatic storage space expansion. Valid values:
+- 10
+- 20
+- 30
+- 40
+- 50
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="storageupperbound_nodejs">
+<a href="#storageupperbound_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Upper<wbr>Bound</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The upper limit of the total storage space for automatic expansion of the storage space, that is, automatic expansion will not cause the total storage space of the instance to exceed this value. Unit: GB. The value must be ≥0.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="switchtime_nodejs">
 <a href="#switchtime_nodejs" style="color: inherit; text-decoration: inherit;">switch<wbr>Time</a>
 </span>
@@ -1889,7 +2052,6 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The specific point in time when you want to perform the update. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. It is valid only when `upgrade_db_instance_kernel_version = true`. The time must be in UTC.
-> **NOTE:** This parameter takes effect only when you set the UpgradeTime parameter to SpecifyTime.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
@@ -1916,7 +2078,6 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
 - xcluster: The instance runs MySQL 5.7 on RDS Enterprise Edition.
 - xcluster80: The instance runs MySQL 8.0 on RDS Enterprise Edition.
 - SQLServer: <Minor engine version>. Example: 15.0.4073.23.
-> **NOTE:** For more information about minor engine versions, see Release notes of minor AliPG versions, Release notes of minor AliSQL versions, and Release notes of minor engine versions of ApsaraDB RDS for SQL Server.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tdestatus_nodejs">
@@ -2198,6 +2359,17 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
     <dd>{{% md %}}Set it to true to make some parameter efficient when modifying them. Default to false.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="ha_config_python">
+<a href="#ha_config_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The primary/secondary switchover mode of the instance. Default value: Auto. Valid values:
+- Auto: The system automatically switches over services from the primary to secondary instances in the event of a fault.
+- Manual: You must manually switch over services from the primary to secondary instances in the event of a fault.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="instance_charge_type_python">
 <a href="#instance_charge_type_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>charge_<wbr>type</a>
 </span>
@@ -2223,6 +2395,15 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Maintainable time period format of the instance: HH:MMZ-HH:MMZ (UTC time)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="manual_ha_time_python">
+<a href="#manual_ha_time_python" style="color: inherit; text-decoration: inherit;">manual_<wbr>ha_<wbr>time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The time after when you want to enable automatic primary/secondary switchover. At most, you can set this parameter to 23:59:59 seven days later. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="modify_mode_python">
@@ -2392,6 +2573,40 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
     <dd>{{% md %}}Actions performed on SSL functions, Valid values: `Open`: turn on SSL encryption; `Close`: turn off SSL encryption; `Update`: update SSL certificate. See more [engine and engineVersion limitation](https://www.alibabacloud.com/help/zh/doc-detail/26254.htm).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="storage_auto_scale_python">
+<a href="#storage_auto_scale_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>auto_<wbr>scale</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Automatic storage space expansion switch. Valid values:
+- Enable
+- Disable
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="storage_threshold_python">
+<a href="#storage_threshold_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>threshold</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The trigger threshold (percentage) for automatic storage space expansion. Valid values:
+- 10
+- 20
+- 30
+- 40
+- 50
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="storage_upper_bound_python">
+<a href="#storage_upper_bound_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>upper_<wbr>bound</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The upper limit of the total storage space for automatic expansion of the storage space, that is, automatic expansion will not cause the total storage space of the instance to exceed this value. Unit: GB. The value must be ≥0.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="switch_time_python">
 <a href="#switch_time_python" style="color: inherit; text-decoration: inherit;">switch_<wbr>time</a>
 </span>
@@ -2399,7 +2614,6 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The specific point in time when you want to perform the update. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. It is valid only when `upgrade_db_instance_kernel_version = true`. The time must be in UTC.
-> **NOTE:** This parameter takes effect only when you set the UpgradeTime parameter to SpecifyTime.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
@@ -2426,7 +2640,6 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
 - xcluster: The instance runs MySQL 5.7 on RDS Enterprise Edition.
 - xcluster80: The instance runs MySQL 8.0 on RDS Enterprise Edition.
 - SQLServer: <Minor engine version>. Example: 15.0.4073.23.
-> **NOTE:** For more information about minor engine versions, see Release notes of minor AliPG versions, Release notes of minor AliSQL versions, and Release notes of minor engine versions of ApsaraDB RDS for SQL Server.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tde_status_python">
@@ -2673,11 +2886,13 @@ Get an existing Instance resource's state with the given name, ID, and optional 
         <span class="nx">engine</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">engine_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">force_restart</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">ha_config</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">instance_charge_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">instance_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">instance_storage</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
         <span class="nx">instance_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">maintain_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">manual_ha_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">modify_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">monitoring_period</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
         <span class="nx">parameters</span><span class="p">:</span> <span class="nx">Optional[Sequence[InstanceParameterArgs]]</span> = None<span class="p">,</span>
@@ -2697,6 +2912,9 @@ Get an existing Instance resource's state with the given name, ID, and optional 
         <span class="nx">sql_collector_status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">ssl_action</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">ssl_status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">storage_auto_scale</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">storage_threshold</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+        <span class="nx">storage_upper_bound</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
         <span class="nx">switch_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">,</span>
         <span class="nx">target_minor_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -2998,6 +3216,17 @@ The following state arguments are supported:
     <dd>{{% md %}}Set it to true to make some parameter efficient when modifying them. Default to false.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_haconfig_csharp">
+<a href="#state_haconfig_csharp" style="color: inherit; text-decoration: inherit;">Ha<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The primary/secondary switchover mode of the instance. Default value: Auto. Valid values:
+- Auto: The system automatically switches over services from the primary to secondary instances in the event of a fault.
+- Manual: You must manually switch over services from the primary to secondary instances in the event of a fault.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_instancechargetype_csharp">
 <a href="#state_instancechargetype_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Charge<wbr>Type</a>
 </span>
@@ -3047,6 +3276,15 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Maintainable time period format of the instance: HH:MMZ-HH:MMZ (UTC time)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_manualhatime_csharp">
+<a href="#state_manualhatime_csharp" style="color: inherit; text-decoration: inherit;">Manual<wbr>Ha<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The time after when you want to enable automatic primary/secondary switchover. At most, you can set this parameter to 23:59:59 seven days later. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_modifymode_csharp">
@@ -3225,6 +3463,40 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
     <dd>{{% md %}}Status of the SSL feature. `Yes`: SSL is turned on; `No`: SSL is turned off.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_storageautoscale_csharp">
+<a href="#state_storageautoscale_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Auto<wbr>Scale</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Automatic storage space expansion switch. Valid values:
+- Enable
+- Disable
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_storagethreshold_csharp">
+<a href="#state_storagethreshold_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Threshold</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The trigger threshold (percentage) for automatic storage space expansion. Valid values:
+- 10
+- 20
+- 30
+- 40
+- 50
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_storageupperbound_csharp">
+<a href="#state_storageupperbound_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Upper<wbr>Bound</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The upper limit of the total storage space for automatic expansion of the storage space, that is, automatic expansion will not cause the total storage space of the instance to exceed this value. Unit: GB. The value must be ≥0.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_switchtime_csharp">
 <a href="#state_switchtime_csharp" style="color: inherit; text-decoration: inherit;">Switch<wbr>Time</a>
 </span>
@@ -3232,7 +3504,6 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The specific point in time when you want to perform the update. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. It is valid only when `upgrade_db_instance_kernel_version = true`. The time must be in UTC.
-> **NOTE:** This parameter takes effect only when you set the UpgradeTime parameter to SpecifyTime.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_csharp">
@@ -3259,7 +3530,6 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
 - xcluster: The instance runs MySQL 5.7 on RDS Enterprise Edition.
 - xcluster80: The instance runs MySQL 8.0 on RDS Enterprise Edition.
 - SQLServer: <Minor engine version>. Example: 15.0.4073.23.
-> **NOTE:** For more information about minor engine versions, see Release notes of minor AliPG versions, Release notes of minor AliSQL versions, and Release notes of minor engine versions of ApsaraDB RDS for SQL Server.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tdestatus_csharp">
@@ -3526,6 +3796,17 @@ The multiple zone ID can be retrieved by setting `multi` to "true" in the data s
     <dd>{{% md %}}Set it to true to make some parameter efficient when modifying them. Default to false.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_haconfig_go">
+<a href="#state_haconfig_go" style="color: inherit; text-decoration: inherit;">Ha<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The primary/secondary switchover mode of the instance. Default value: Auto. Valid values:
+- Auto: The system automatically switches over services from the primary to secondary instances in the event of a fault.
+- Manual: You must manually switch over services from the primary to secondary instances in the event of a fault.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_instancechargetype_go">
 <a href="#state_instancechargetype_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Charge<wbr>Type</a>
 </span>
@@ -3575,6 +3856,15 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Maintainable time period format of the instance: HH:MMZ-HH:MMZ (UTC time)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_manualhatime_go">
+<a href="#state_manualhatime_go" style="color: inherit; text-decoration: inherit;">Manual<wbr>Ha<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The time after when you want to enable automatic primary/secondary switchover. At most, you can set this parameter to 23:59:59 seven days later. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_modifymode_go">
@@ -3753,6 +4043,40 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
     <dd>{{% md %}}Status of the SSL feature. `Yes`: SSL is turned on; `No`: SSL is turned off.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_storageautoscale_go">
+<a href="#state_storageautoscale_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Auto<wbr>Scale</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Automatic storage space expansion switch. Valid values:
+- Enable
+- Disable
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_storagethreshold_go">
+<a href="#state_storagethreshold_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Threshold</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The trigger threshold (percentage) for automatic storage space expansion. Valid values:
+- 10
+- 20
+- 30
+- 40
+- 50
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_storageupperbound_go">
+<a href="#state_storageupperbound_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Upper<wbr>Bound</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The upper limit of the total storage space for automatic expansion of the storage space, that is, automatic expansion will not cause the total storage space of the instance to exceed this value. Unit: GB. The value must be ≥0.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_switchtime_go">
 <a href="#state_switchtime_go" style="color: inherit; text-decoration: inherit;">Switch<wbr>Time</a>
 </span>
@@ -3760,7 +4084,6 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The specific point in time when you want to perform the update. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. It is valid only when `upgrade_db_instance_kernel_version = true`. The time must be in UTC.
-> **NOTE:** This parameter takes effect only when you set the UpgradeTime parameter to SpecifyTime.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
@@ -3787,7 +4110,6 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
 - xcluster: The instance runs MySQL 5.7 on RDS Enterprise Edition.
 - xcluster80: The instance runs MySQL 8.0 on RDS Enterprise Edition.
 - SQLServer: <Minor engine version>. Example: 15.0.4073.23.
-> **NOTE:** For more information about minor engine versions, see Release notes of minor AliPG versions, Release notes of minor AliSQL versions, and Release notes of minor engine versions of ApsaraDB RDS for SQL Server.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tdestatus_go">
@@ -4054,6 +4376,17 @@ The multiple zone ID can be retrieved by setting `multi` to "true" in the data s
     <dd>{{% md %}}Set it to true to make some parameter efficient when modifying them. Default to false.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_haconfig_nodejs">
+<a href="#state_haconfig_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The primary/secondary switchover mode of the instance. Default value: Auto. Valid values:
+- Auto: The system automatically switches over services from the primary to secondary instances in the event of a fault.
+- Manual: You must manually switch over services from the primary to secondary instances in the event of a fault.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_instancechargetype_nodejs">
 <a href="#state_instancechargetype_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Charge<wbr>Type</a>
 </span>
@@ -4103,6 +4436,15 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Maintainable time period format of the instance: HH:MMZ-HH:MMZ (UTC time)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_manualhatime_nodejs">
+<a href="#state_manualhatime_nodejs" style="color: inherit; text-decoration: inherit;">manual<wbr>Ha<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The time after when you want to enable automatic primary/secondary switchover. At most, you can set this parameter to 23:59:59 seven days later. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_modifymode_nodejs">
@@ -4281,6 +4623,40 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
     <dd>{{% md %}}Status of the SSL feature. `Yes`: SSL is turned on; `No`: SSL is turned off.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_storageautoscale_nodejs">
+<a href="#state_storageautoscale_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Auto<wbr>Scale</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Automatic storage space expansion switch. Valid values:
+- Enable
+- Disable
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_storagethreshold_nodejs">
+<a href="#state_storagethreshold_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Threshold</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The trigger threshold (percentage) for automatic storage space expansion. Valid values:
+- 10
+- 20
+- 30
+- 40
+- 50
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_storageupperbound_nodejs">
+<a href="#state_storageupperbound_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Upper<wbr>Bound</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The upper limit of the total storage space for automatic expansion of the storage space, that is, automatic expansion will not cause the total storage space of the instance to exceed this value. Unit: GB. The value must be ≥0.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_switchtime_nodejs">
 <a href="#state_switchtime_nodejs" style="color: inherit; text-decoration: inherit;">switch<wbr>Time</a>
 </span>
@@ -4288,7 +4664,6 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The specific point in time when you want to perform the update. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. It is valid only when `upgrade_db_instance_kernel_version = true`. The time must be in UTC.
-> **NOTE:** This parameter takes effect only when you set the UpgradeTime parameter to SpecifyTime.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_nodejs">
@@ -4315,7 +4690,6 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
 - xcluster: The instance runs MySQL 5.7 on RDS Enterprise Edition.
 - xcluster80: The instance runs MySQL 8.0 on RDS Enterprise Edition.
 - SQLServer: <Minor engine version>. Example: 15.0.4073.23.
-> **NOTE:** For more information about minor engine versions, see Release notes of minor AliPG versions, Release notes of minor AliSQL versions, and Release notes of minor engine versions of ApsaraDB RDS for SQL Server.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tdestatus_nodejs">
@@ -4582,6 +4956,17 @@ The multiple zone ID can be retrieved by setting `multi` to "true" in the data s
     <dd>{{% md %}}Set it to true to make some parameter efficient when modifying them. Default to false.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_ha_config_python">
+<a href="#state_ha_config_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The primary/secondary switchover mode of the instance. Default value: Auto. Valid values:
+- Auto: The system automatically switches over services from the primary to secondary instances in the event of a fault.
+- Manual: You must manually switch over services from the primary to secondary instances in the event of a fault.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_instance_charge_type_python">
 <a href="#state_instance_charge_type_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>charge_<wbr>type</a>
 </span>
@@ -4631,6 +5016,15 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Maintainable time period format of the instance: HH:MMZ-HH:MMZ (UTC time)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_manual_ha_time_python">
+<a href="#state_manual_ha_time_python" style="color: inherit; text-decoration: inherit;">manual_<wbr>ha_<wbr>time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The time after when you want to enable automatic primary/secondary switchover. At most, you can set this parameter to 23:59:59 seven days later. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_modify_mode_python">
@@ -4809,6 +5203,40 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
     <dd>{{% md %}}Status of the SSL feature. `Yes`: SSL is turned on; `No`: SSL is turned off.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_storage_auto_scale_python">
+<a href="#state_storage_auto_scale_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>auto_<wbr>scale</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Automatic storage space expansion switch. Valid values:
+- Enable
+- Disable
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_storage_threshold_python">
+<a href="#state_storage_threshold_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>threshold</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The trigger threshold (percentage) for automatic storage space expansion. Valid values:
+- 10
+- 20
+- 30
+- 40
+- 50
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_storage_upper_bound_python">
+<a href="#state_storage_upper_bound_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>upper_<wbr>bound</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The upper limit of the total storage space for automatic expansion of the storage space, that is, automatic expansion will not cause the total storage space of the instance to exceed this value. Unit: GB. The value must be ≥0.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_switch_time_python">
 <a href="#state_switch_time_python" style="color: inherit; text-decoration: inherit;">switch_<wbr>time</a>
 </span>
@@ -4816,7 +5244,6 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The specific point in time when you want to perform the update. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. It is valid only when `upgrade_db_instance_kernel_version = true`. The time must be in UTC.
-> **NOTE:** This parameter takes effect only when you set the UpgradeTime parameter to SpecifyTime.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">
@@ -4843,7 +5270,6 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
 - xcluster: The instance runs MySQL 5.7 on RDS Enterprise Edition.
 - xcluster80: The instance runs MySQL 8.0 on RDS Enterprise Edition.
 - SQLServer: <Minor engine version>. Example: 15.0.4073.23.
-> **NOTE:** For more information about minor engine versions, see Release notes of minor AliPG versions, Release notes of minor AliSQL versions, and Release notes of minor engine versions of ApsaraDB RDS for SQL Server.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tde_status_python">

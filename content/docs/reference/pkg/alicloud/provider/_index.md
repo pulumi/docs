@@ -168,7 +168,7 @@ construction to achieve fine-grained programmatic control over provider settings
 
 ## Provider Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Architecture and Concepts docs.
 
 ### Inputs
 
@@ -1164,6 +1164,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="arms_csharp">
+<a href="#arms_csharp" style="color: inherit; text-decoration: inherit;">Arms</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="brainindustrial_csharp">
 <a href="#brainindustrial_csharp" style="color: inherit; text-decoration: inherit;">Brain<wbr>Industrial</a>
 </span>
@@ -1212,8 +1220,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="cen_csharp">
-<a href="#cen_csharp" style="color: inherit; text-decoration: inherit;">Cen</a>
+        <span id="cds_csharp">
+<a href="#cds_csharp" style="color: inherit; text-decoration: inherit;">Cds</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -1406,6 +1414,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="gpdb_csharp">
 <a href="#gpdb_csharp" style="color: inherit; text-decoration: inherit;">Gpdb</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="hbr_csharp">
+<a href="#hbr_csharp" style="color: inherit; text-decoration: inherit;">Hbr</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -1620,6 +1636,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="serverless_csharp">
+<a href="#serverless_csharp" style="color: inherit; text-decoration: inherit;">Serverless</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="sgw_csharp">
 <a href="#sgw_csharp" style="color: inherit; text-decoration: inherit;">Sgw</a>
 </span>
@@ -1704,6 +1728,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="arms_go">
+<a href="#arms_go" style="color: inherit; text-decoration: inherit;">Arms</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="brainindustrial_go">
 <a href="#brainindustrial_go" style="color: inherit; text-decoration: inherit;">Brain<wbr>Industrial</a>
 </span>
@@ -1752,8 +1784,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="cen_go">
-<a href="#cen_go" style="color: inherit; text-decoration: inherit;">Cen</a>
+        <span id="cds_go">
+<a href="#cds_go" style="color: inherit; text-decoration: inherit;">Cds</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -1946,6 +1978,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="gpdb_go">
 <a href="#gpdb_go" style="color: inherit; text-decoration: inherit;">Gpdb</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="hbr_go">
+<a href="#hbr_go" style="color: inherit; text-decoration: inherit;">Hbr</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -2160,6 +2200,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="serverless_go">
+<a href="#serverless_go" style="color: inherit; text-decoration: inherit;">Serverless</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="sgw_go">
 <a href="#sgw_go" style="color: inherit; text-decoration: inherit;">Sgw</a>
 </span>
@@ -2244,6 +2292,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="arms_nodejs">
+<a href="#arms_nodejs" style="color: inherit; text-decoration: inherit;">arms</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="brainindustrial_nodejs">
 <a href="#brainindustrial_nodejs" style="color: inherit; text-decoration: inherit;">brain<wbr>Industrial</a>
 </span>
@@ -2292,8 +2348,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="cen_nodejs">
-<a href="#cen_nodejs" style="color: inherit; text-decoration: inherit;">cen</a>
+        <span id="cds_nodejs">
+<a href="#cds_nodejs" style="color: inherit; text-decoration: inherit;">cds</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -2486,6 +2542,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="gpdb_nodejs">
 <a href="#gpdb_nodejs" style="color: inherit; text-decoration: inherit;">gpdb</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="hbr_nodejs">
+<a href="#hbr_nodejs" style="color: inherit; text-decoration: inherit;">hbr</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -2700,6 +2764,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="serverless_nodejs">
+<a href="#serverless_nodejs" style="color: inherit; text-decoration: inherit;">serverless</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="sgw_nodejs">
 <a href="#sgw_nodejs" style="color: inherit; text-decoration: inherit;">sgw</a>
 </span>
@@ -2784,6 +2856,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="arms_python">
+<a href="#arms_python" style="color: inherit; text-decoration: inherit;">arms</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="brain_industrial_python">
 <a href="#brain_industrial_python" style="color: inherit; text-decoration: inherit;">brain_<wbr>industrial</a>
 </span>
@@ -2832,8 +2912,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="cen_python">
-<a href="#cen_python" style="color: inherit; text-decoration: inherit;">cen</a>
+        <span id="cds_python">
+<a href="#cds_python" style="color: inherit; text-decoration: inherit;">cds</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -3026,6 +3106,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="gpdb_python">
 <a href="#gpdb_python" style="color: inherit; text-decoration: inherit;">gpdb</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="hbr_python">
+<a href="#hbr_python" style="color: inherit; text-decoration: inherit;">hbr</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -3234,6 +3322,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="ros_python">
 <a href="#ros_python" style="color: inherit; text-decoration: inherit;">ros</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="serverless_python">
+<a href="#serverless_python" style="color: inherit; text-decoration: inherit;">serverless</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>

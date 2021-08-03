@@ -20,6 +20,9 @@ You can see detail product introduction [here](https://www.alibabacloud.com/help
 
 > **NOTE:**  Create instance or change instance would cost 10~15 minutes. Please make full preparation.
 
+> **NOTE:**  This resource is used to manage a Reserved Storage Mode instance, and creating new reserved storage mode instance is no longer supported since v1.127.0.
+You can still use this resource to mange the instance which has been already created, but can not create a new one.
+
 {{% examples %}}
 
 ## Example Usage
@@ -351,7 +354,7 @@ const example = new alicloud.gpdb.Instance("example", {
 
 ## Instance Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Architecture and Concepts docs.
 
 ### Inputs
 
