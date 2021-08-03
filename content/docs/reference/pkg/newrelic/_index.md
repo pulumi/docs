@@ -34,6 +34,7 @@ A Pulumi package for creating and managing New Relic resources.
     <li><a href="nrqlalertcondition" title="NrqlAlertCondition"><span class="symbol resource"></span>NrqlAlertCondition</a></li>
     <li><a href="nrqldroprule" title="NrqlDropRule"><span class="symbol resource"></span>NrqlDropRule</a></li>
     <li><a href="onedashboard" title="OneDashboard"><span class="symbol resource"></span>OneDashboard</a></li>
+    <li><a href="onedashboardraw" title="OneDashboardRaw"><span class="symbol resource"></span>OneDashboardRaw</a></li>
     <li><a href="provider" title="Provider"><span class="symbol resource"></span>Provider</a></li>
 </ul>
 
@@ -56,6 +57,6 @@ A Pulumi package for creating and managing New Relic resources.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`newrelic` Terraform Provider](https://github.com/newrelic/terraform-provider-newrelic).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.2.0</dd>
+	<dd>4.3.0</dd>
 </dl>
 
