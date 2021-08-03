@@ -1,9 +1,8 @@
 ---
 title: "Top 5 Things an Azure Developer Needs to Know: VMs"
-date: 2021-07-29
+date: 2021-08-03
 meta_desc: "Building and deploying virtual machines for Azure developers"
 meta_image: azure-top-5.png
-draft: true
 authors:
     - sophia-parafina
 tags:
@@ -11,11 +10,9 @@ tags:
     - virtual machines
 ---
 
-So you want to be an Azure dev and all-around infrastructure wizard? Let's start with the basics, virtual machines! In the previous article, the common use case for virtual machines is migrating applications from dedicated hardware. You want full control of the machine to install required software for the application or configure storage and networking.
+So you want to be an Azure dev and all-around infrastructure wizard? Let's start with the basics, virtual machines! In the [previous article]({{< relref "/blog/top-5-things-for-azure-devs-intro">}}), the common use case for virtual machines is migrating applications from dedicated hardware. You want full control of the machine to install required software for the application or configure storage and networking.
 
-Azure provides many ways to create and configure virtual machines ranging from [the Azure CLI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli) to [the Azure Portal](https://azure.microsoft.com/en-us/features/azure-portal/). In this article, we'll first create a virtual machine using the portal to understand the requirements and process; then, we'll do it with code using [Pulumi's Azure Native provider](https://www.pulumi.com/docs/intro/cloud-providers/azure/), which is built directly from the Azure API.
-
-A native provider provides functionality mapped directly from the underlying API; in the case of the new Azure Provider, functionality is mapped directly from the Azure Resource Manager API surface.
+Azure provides many ways to create and configure virtual machines ranging from [the Azure CLI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli) to [the Azure Portal](https://azure.microsoft.com/en-us/features/azure-portal/). In this article, we'll first create a virtual machine using the portal to understand the requirements and process; then, we'll do it with code using [Pulumi's Azure Native provider](https://www.pulumi.com/docs/intro/cloud-providers/azure/), which is built directly from the Azure Resource Manager API.
 
 <!--more-->
 
@@ -23,7 +20,7 @@ A native provider provides functionality mapped directly from the underlying API
 
 When creating virtual machines, you should consider the operating system, storage requirements, and VM size with regard to CPU to memory ratio. Azure offers [many sizes for virtual machines](https://docs.microsoft.com/en-us/azure/virtual-machines/sizes) depending on your workload. If you're migrating a traditional n-tier application to the cloud, it's best to start with virtual machines that match your current configuration.
 
-This article will use a simple example of deploying a static web application on a virtual machine to illustrate the process step by step. To get started, sign in to the [Azure Portal](https://portal.azure.com/).
+This article uses a simple example to deploy a static web application on a virtual machine to illustrate the process. To get started, sign in to the [Azure Portal](https://portal.azure.com/).
 
 **Step 1**:
 
@@ -75,7 +72,7 @@ There's a better way using infrastructure as code and cloud engineering methodol
 
 ## Cloud Engineering to the Rescue!
 
-Creating and provisioning one VM isn't difficult, but migrating a traditional n-tier application often requires multiple virtual machines including those needed for horizontal scaling. This is where infrastructure as code excels. By using [cloud engineering]({{< relref "/wtf-is-cloud-engineering" >}}), we can automate [build]({{ < relref "/blog/wtf-is-cloud-engineering#build" >}}), [deploy]({{ < relref "/blog/wtf-is-cloud-engineering#deploy" >}}), and [manage]({{ < relref "/blog/wtf-is-cloud-engineering#manage" >}}) process for any infrastructure or application.
+Creating and provisioning one VM isn't difficult, but migrating a traditional n-tier application often requires multiple virtual machines including those needed for horizontal scaling. This is where infrastructure as code excels. By using [cloud engineering]({{< relref "/wtf-is-cloud-engineering" >}}), we can automate [build]({{< relref "/blog/wtf-is-cloud-engineering#build" >}}), [deploy]({{< relref "/blog/wtf-is-cloud-engineering#deploy" >}}), and [manage]({{< relref "/blog/wtf-is-cloud-engineering#manage" >}}) process for any infrastructure or application.
 
 Let's look at an example of deploying a web server using a virtual machine. The complete example is available in either [Python](https://github.com/pulumi/examples/tree/master/azure-py-webserver) or [Typescript](https://github.com/pulumi/examples/tree/master/azure-ts-webserver). We will examine the Python code.
 
@@ -97,7 +94,7 @@ password = config.require("password")
 resource_group = resources.ResourceGroup("server")
 ```
 
-The next part createst the networking resources, including a dynamically allocated public IP address for the server.
+The next part creates the networking resources, including a dynamically allocated public IP address for the server.
 
 ```python
 net = network.VirtualNetwork(
