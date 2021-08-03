@@ -1,7 +1,7 @@
 ---
-title: "Kenshoo Migrates to AWS with Pulumi"
+title: "Skai Migrates to AWS with Pulumi"
 date: 2021-05-04
-meta_desc: "Kenshoo used Pulumi from their private cloud infrastructure to the AWS public cloud."
+meta_desc: "Skai used Pulumi from their private cloud infrastructure to the AWS public cloud."
 meta_image: kenshoo.png
 authors:
     - danny-zalkind
@@ -11,17 +11,17 @@ tags:
     - migration
 ---
 
-> Danny Zalkind is the DevOps group manager for Kenshoo, an award-winning intelligent marketing platform. He brings his 15 years of exprience of managing tech teams to his current role where he's dedicated to allow Kenshoo R&D to efficiently produce and serve software. You can find him on [Linkedin](https://www.linkedin.com/in/danny-zalkind-01602b56/).
+> Danny Zalkind is the DevOps group manager for Skai, an award-winning intelligent marketing platform. He brings his 15 years of exprience of managing tech teams to his current role where he's dedicated to allow Skai R&D to efficiently produce and serve software. You can find him on [Linkedin](https://www.linkedin.com/in/danny-zalkind-01602b56/).
 
-Kenshoo is an independent, global marketing platform for strategy, measurement, and best-of-breed activation across all of the world’s most influential digital channels. Kenshoo’s solution provides data-driven insights and optimization technology to help companies make informed decisions and scale performance across critical publishers.
+Skai is an independent, global marketing platform for strategy, measurement, and best-of-breed activation across all of the world’s most influential digital channels. Skai’s solution provides data-driven insights and optimization technology to help companies make informed decisions and scale performance across critical publishers.
 
-Kenshoo possesses a highly technical engineering organization with over 350 software engineers, data experts, and DevOps engineers.
+Skai possesses a highly technical engineering organization with over 350 software engineers, data experts, and DevOps engineers.
 
 <!--more-->
 
-## Why Kenshoo is moving to AWS
+## Why Skai is moving to AWS
 
-The public cloud is not entirely new to us. Kenshoo’s microservices have been running on AWS for a few years now. Our core monolith service is hosted in a data center running our private cloud infrastructure with its hundreds of Terabytes of data.
+The public cloud is not entirely new to us. Skai’s microservices have been running on AWS for a few years now. Our core monolith service is hosted in a data center running our private cloud infrastructure with its hundreds of Terabytes of data.
 
 As our business grew, we noticed that our private cloud infrastructure could not keep pace with our business needs. Adding new capacity to our private cloud could take months of purchasing hardware, preparation, shipping, and deployment.
 
@@ -33,11 +33,11 @@ We sought out the best infrastructure provider to shift as many services as poss
 
 ## How Pulumi helped with migration
 
-Once the team selected a cloud platform, it was time to plan and execute the migration. Kenshoo’s DevOps group was selected to lead the project.
+Once the team selected a cloud platform, it was time to plan and execute the migration. Skai’s DevOps group was selected to lead the project.
 
 ### Why Pulumi
 
-Kenshoo’s private cloud infrastructure was provisioned and deployed using a combination of Puppet and Fabric. The code was long, full of customizations, not readable, and challenging to troubleshoot.
+Skai’s private cloud infrastructure was provisioned and deployed using a combination of Puppet and Fabric. The code was long, full of customizations, not readable, and challenging to troubleshoot.
 
 We were looking for a new solution that would:
 
@@ -52,7 +52,7 @@ We immediately fell in love with Pulumi, with its programmatic design, extensive
 
 ### Project and Stack design
 
-When the Kenshoo team decided to standardize on Pulumi, we designed our architecture to support our use case and development cycle.
+When the Skai team decided to standardize on Pulumi, we designed our architecture to support our use case and development cycle.
 
 We decided to create a project for each AWS organization OUs and a stack for each instance of our application service.
 
