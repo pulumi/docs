@@ -1,7 +1,7 @@
 ---
 # Name of the webinar.
-title: "How to Build a Self-Service Cloud with Python"
-meta_desc: "In this workshop, you’ll build a Python & Flask web application that lets you and your developers deploy applications at the click of a button."
+title: "AzureFunBytes - Infrastructure as Code with Pulumi"
+meta_desc: "Matty Stratton will join host Jay Gordon the Azure FunBytes live stream for an informal exploration on how to create and configure cloud resources in Azure."
 
 # A featured webinar will display first in the list.
 featured: false
@@ -20,7 +20,7 @@ unlisted: false
 
 # Gated webinars will have a registration form and the user will need
 # to fill out the form before viewing.
-gated: true
+gated: false
 
 # The layout of the landing page.
 type: webinars
@@ -29,57 +29,47 @@ type: webinars
 # landing/registration page. If the webinar is external you will need
 # set the 'block_external_search_index' flag to true so Google does not index
 # the webinar page created.
-external: false
-block_external_search_index: false
+external: true
+block_external_search_index: true
 
 # The url slug for the webinar landing page. If this is an external
 # webinar, use the external URL as the value here.
-url_slug: "getting-started-with-automation-api"
+url_slug: "https://aka.ms/LearnTV"
 
 # The content of the hero section.
 hero:
     # The title text in the hero. This also serves as the pages H1.
-    title: "How to Build a Self-Service Cloud with Python"
+    title: ""
     # The image the appears on the right hand side of the hero.
     image: "/icons/containers.svg"
 
 # Webinar pages support multiple session via the 'multiple' property.
-multiple:
-    - datetime: 2021-08-17T09:00:00-07:00
-      hubspot_form_id: 18955e07-057b-4147-acb0-22ce92f13720
-
-    - datetime: 2021-08-25T06:00:00-07:00
-      hubspot_form_id: 25c90b21-1f57-49be-a171-b63ce46e7b57
-
-    - datetime: 2021-09-09T04:00:00-07:00
-      hubspot_form_id: c217773f-0f19-4b49-9f2a-ce17841b04f7
+# multiple:
+#   - datetime: 2020-02-05T10:00:00-07:00
+#     hubspot_form_id: ""
+#     gotowebinar_key: ""
 
 # Content for the left hand side section of the page.
 main:
     # Webinar title.
-    title: "How to Build a Self-Service Cloud with Python"
+    title: ""
     # URL for embedding a URL for ungated webinars.
-    youtube_url: "https://www.youtube.com/embed/24qnvC-dvvw"
+    youtube_url: ""
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
-    sortable_date: 2021-05-20T09:00:00-07:00
+    sortable_date: 2021-08-12T11:00:00-07:00
     # Duration of the webinar.
-    duration: "2 hours"
+    duration: "1 hour"
     # Datetime of the webinar.
-    datetime: "MAY 20, 2020"
+    datetime: ""
     # Description of the webinar.
-    description: |
-        Pulumi’s Automation API opens new horizons for infrastructure provisioning. In this workshop, you’ll examine the powerful new capabilities of Pulumi’s latest feature by building a Python & Flask web application that lets developers deploy applications at the click of a button.
+    description: ""
 
     # The webinar presenters
     presenters:
-        - name: Kat Cosgrove
-          role: Staff Developer Advocate, Pulumi
-        - name: Matty Stratton
-          role: Staff Developer Advocate, Pulumi
-
+        - name: ""
+          role: ""
 
     # A bullet point list containing what the user will learn during the webinar.
     learn:
-        - How to create cloud infrastructure with Pulumi's Automation API.
-        - How to build a self-service cloud platform for deploying applications.
+        - ""
 ---

@@ -38,7 +38,7 @@ url_slug: "getting-started-with-azure-native"
 
 # Webinar pages support multiple session via the 'multiple' property.
 multiple:
-    - datetime: 2021-08-05T09:00:00-07:00
+    - datetime: 2021-08-12T09:00:00-07:00
       hubspot_form_id: d69a09b6-9f49-4d07-a4fd-98668b1fac26
 
     - datetime: 2021-08-11T04:00:00-07:00
