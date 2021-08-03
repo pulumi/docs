@@ -1,7 +1,7 @@
 ---
 title: "Cloud Engineering on the Rise"
 date: 2021-08-03
-meta_desc: "Infrastructure as Code case studies with Pulumi, Atlassian, SANS, and Kenshoo"
+meta_desc: "Infrastructure as Code case studies with Pulumi, Atlassian, SANS, and Skai"
 meta_image: pulumi.png
 authors:
     - george-huang
@@ -18,7 +18,7 @@ Pulumi is born from the experiences and needs of teams practicing cloud engineer
 
 Recently, we published several case studies about how teams are applying cloud engineering best practices. Cloud engineers apply standard software engineering practices and tools uniformly across infrastructure management, application development, and security to tame the complexity of delivering and managing modern cloud applications. We’ve published on our [website]({{< relref "/cloud-engineering" >}}) and in this [blog]({{< relref "/blog/infrastructure-testing-concepts" >}}) some of the key cloud engineering best practices that we see broadly across the community, and encourage you to read further to see three stories of cloud engineering in action.
 
-These three case studies highlight a small sampling of the many types of companies and teams representing cloud engineers. Some are platform teams at large organizations, like Atlassian, who are responsible for empowering the rest of their developer teams. We also see DevOps teams using cloud engineering, such as at Kenshoo and SANS Institute. There are other types of teams, like full-stack engineers or SREs, which we will share in future posts. All of these teams share a software engineering mindset and make a leveraged impact on the business by increasing speed, automation, reliability, and agility through cloud infrastructure innovation.
+These three case studies highlight a small sampling of the many types of companies and teams representing cloud engineers. Some are platform teams at large organizations, like Atlassian, who are responsible for empowering the rest of their developer teams. We also see DevOps teams using cloud engineering, such as at Skai and SANS Institute. There are other types of teams, like full-stack engineers or SREs, which we will share in future posts. All of these teams share a software engineering mindset and make a leveraged impact on the business by increasing speed, automation, reliability, and agility through cloud infrastructure innovation.
 <br>
 <br>
 
@@ -70,13 +70,11 @@ SANS Institute is the global leader in cybersecurity training. Using Pulumi, the
 <br>
 <br>
 
-![Kenshoo](./kenshoo-wordmark.png)
+![Skai](./skai-logo.png)
 
-<!-- ## Kenshoo -->
+Skai is an independent, global marketing platform for strategy, measurement, and best-of-breed activation across all of the world’s most influential digital channels. Skai possesses a highly technical engineering organization with over 350 software engineers, data experts, and DevOps engineers.  Skai’s microservices run on AWS, but its core monolith service was hosted in a data center running private cloud infrastructure. Skai’s DevOps group needed to migrate the service to the cloud because demand increased. Skai’s DevOps team decided to transition from using its legacy infrastructure tool because its domain-specific language (DSL) wouldn’t be suited to the demands of the newly migrated modern cloud architectures. Instead, Skai sought a solution that enabled it to use familiar languages and software engineering best practices to manage its infrastructure. That’s why Skai chose the Pulumi Cloud Engineering Platform to build, deploy, and manage its infrastructure with Python.
 
-Kenshoo is an independent, global marketing platform for strategy, measurement, and best-of-breed activation across all of the world’s most influential digital channels. Kenshoo possesses a highly technical engineering organization with over 350 software engineers, data experts, and DevOps engineers.  Kenshoo’s microservices run on AWS, but its core monolith service was hosted in a data center running private cloud infrastructure. Kenshoo’s DevOps group needed to migrate the service to the cloud because demand increased. Kenshoo’s DevOps team decided to transition from using its legacy infrastructure tool because its domain-specific language (DSL) wouldn’t be suited to the demands of the newly migrated modern cloud architectures. Instead, Kenshoo sought a solution that enabled it to use familiar languages and software engineering best practices to manage its infrastructure. That’s why Kenshoo chose the Pulumi Cloud Engineering Platform to build, deploy, and manage its infrastructure with Python.
-
-### Kenshoo's Key Practices
+### Skai's Key Practices
 
 - Builds infrastructure as code in Python.
 - Leverages reusable infrastructure components.
@@ -84,7 +82,7 @@ Kenshoo is an independent, global marketing platform for strategy, measurement, 
 - Teams use a “loosely-coupled, tightly-aligned” approach to create component classes for different infrastructure elements, with each team working on a different element.
 - Uses Python code to integrate infrastructure processes with internal metadata and IT systems.
 
-### Kenshoo's Results
+### Skai's Results
 
 - Migrated a core monolith service with hundreds of terabytes of data from a data center to AWS.
 - Refactored the service’s infrastructure from being managed with a legacy infrastructure configuration tool to Pulumi, using Python as the language of choice.

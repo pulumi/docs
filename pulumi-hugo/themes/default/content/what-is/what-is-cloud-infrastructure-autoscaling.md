@@ -19,7 +19,7 @@ customer_logos:
       - mindbody
       - sourcegraph
       - fenergo
-      - kenshoo
+      - skai
       - lemonade
     - items:
       - clearsale
