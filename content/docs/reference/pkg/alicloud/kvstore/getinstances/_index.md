@@ -2080,6 +2080,15 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
     <dd>{{% md %}}The name of the instance.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="secondaryzoneid_csharp">
+<a href="#secondaryzoneid_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Zone<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}(Optional, Available in 1.128.0+) The ID of the secondary zone to which you want to migrate the ApsaraDB for Redis instance.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="securitygroupid_csharp">
 <a href="#securitygroupid_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Group<wbr>Id</a>
 </span>
@@ -2539,6 +2548,15 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the instance.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="secondaryzoneid_go">
+<a href="#secondaryzoneid_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Zone<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}(Optional, Available in 1.128.0+) The ID of the secondary zone to which you want to migrate the ApsaraDB for Redis instance.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="securitygroupid_go">
@@ -3002,6 +3020,15 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
     <dd>{{% md %}}The name of the instance.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="secondaryzoneid_nodejs">
+<a href="#secondaryzoneid_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Zone<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}(Optional, Available in 1.128.0+) The ID of the secondary zone to which you want to migrate the ApsaraDB for Redis instance.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="securitygroupid_nodejs">
 <a href="#securitygroupid_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Group<wbr>Id</a>
 </span>
@@ -3461,6 +3488,15 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the instance.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="secondary_zone_id_python">
+<a href="#secondary_zone_id_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>zone_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}(Optional, Available in 1.128.0+) The ID of the secondary zone to which you want to migrate the ApsaraDB for Redis instance.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="security_group_id_python">

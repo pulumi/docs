@@ -37,12 +37,15 @@ Cluster nodepool can be imported using the id, e.g. Then complete the nodepool.t
              <span class="nx">auto_renew_period</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
              <span class="nx">cluster_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">data_disks</span><span class="p">:</span> <span class="nx">Optional[Sequence[NodePoolDataDiskArgs]]</span> = None<span class="p">,</span>
+             <span class="nx">format_disk</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
              <span class="nx">image_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">install_cloud_monitor</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
              <span class="nx">instance_charge_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">instance_types</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+             <span class="nx">instances</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
              <span class="nx">internet_charge_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">internet_max_bandwidth_out</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+             <span class="nx">keep_instance_name</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
              <span class="nx">key_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">kms_encrypted_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Sequence[NodePoolLabelArgs]]</span> = None<span class="p">,</span>
@@ -53,8 +56,10 @@ Cluster nodepool can be imported using the id, e.g. Then complete the nodepool.t
              <span class="nx">password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">period</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
              <span class="nx">period_unit</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">platform</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">resource_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">scaling_config</span><span class="p">:</span> <span class="nx">Optional[NodePoolScalingConfigArgs]</span> = None<span class="p">,</span>
+             <span class="nx">scaling_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">security_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">spot_price_limits</span><span class="p">:</span> <span class="nx">Optional[Sequence[NodePoolSpotPriceLimitArgs]]</span> = None<span class="p">,</span>
              <span class="nx">spot_strategy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -184,7 +189,7 @@ Cluster nodepool can be imported using the id, e.g. Then complete the nodepool.t
 
 ## NodePool Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Architecture and Concepts docs.
 
 ### Inputs
 
@@ -249,6 +254,15 @@ The NodePool resource accepts the following [input]({{< relref "/docs/intro/conc
     <dd>{{% md %}}The data disk configurations of worker nodes, such as the disk type and disk size.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="formatdisk_csharp">
+<a href="#formatdisk_csharp" style="color: inherit; text-decoration: inherit;">Format<wbr>Disk</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}After you select this check box, if data disks have been attached to the specified ECS instances and the file system of the last data disk is uninitialized, the system automatically formats the last data disk to ext4 and mounts the data disk to /var/lib/docker and /var/lib/kubelet. The original data on the disk will be cleared. Make sure that you back up data in advance. If no data disk is mounted on the ECS instance, no new data disk will be purchased. Default is `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="imageid_csharp">
 <a href="#imageid_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Id</a>
 </span>
@@ -276,6 +290,15 @@ The NodePool resource accepts the following [input]({{< relref "/docs/intro/conc
     <dd>{{% md %}}Node payment type. Valid values: `PostPaid`, `PrePaid`, default is `PostPaid`. If value is `PrePaid`, the arguments `period`, `period_unit`, `auto_renew` and `auto_renew_period` are required.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="instances_csharp">
+<a href="#instances_csharp" style="color: inherit; text-decoration: inherit;">Instances</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}The instance list. Add existing nodes under the same cluster VPC to the node pool.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="internetchargetype_csharp">
 <a href="#internetchargetype_csharp" style="color: inherit; text-decoration: inherit;">Internet<wbr>Charge<wbr>Type</a>
 </span>
@@ -292,6 +315,15 @@ The NodePool resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum outbound bandwidth for the public network. Unit: Mbit/s. Valid values: 0 to 100.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="keepinstancename_csharp">
+<a href="#keepinstancename_csharp" style="color: inherit; text-decoration: inherit;">Keep<wbr>Instance<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Add an existing instance to the node pool, whether to keep the original instance name. It is recommended to set to `true`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keyname_csharp">
@@ -384,6 +416,15 @@ The NodePool resource accepts the following [input]({{< relref "/docs/intro/conc
     <dd>{{% md %}}Node payment period unit, valid value: `Month`. Default is `Month`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="platform_csharp">
+<a href="#platform_csharp" style="color: inherit; text-decoration: inherit;">Platform</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The platform. One of `AliyunLinux`, `Windows`, `CentOS`, `WindowsCore`. If you select `Windows` or `WindowsCore`, the `passord` is required.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="resourcegroupid_csharp">
 <a href="#resourcegroupid_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Id</a>
 </span>
@@ -400,6 +441,15 @@ The NodePool resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#nodepoolscalingconfig">Pulumi.<wbr>Ali<wbr>Cloud.<wbr>CS.<wbr>Inputs.<wbr>Node<wbr>Pool<wbr>Scaling<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Auto scaling node pool configuration. For more details, see `scaling_config`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="scalingpolicy_csharp">
+<a href="#scalingpolicy_csharp" style="color: inherit; text-decoration: inherit;">Scaling<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The scaling mode. Valid values: `release`, `recycle`, default is `release`. Standard mode(release): Create and release ECS instances based on requests.Swift mode(recycle): Create, stop, adn restart ECS instances based on needs. New ECS instances are only created when no stopped ECS instance is avalible. This mode further accelerates the scaling process. Apart from ECS instances that use local storage, when an ECS instance is stopped, you are only chatged for storage space.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="securitygroupid_csharp">
@@ -549,6 +599,15 @@ The NodePool resource accepts the following [input]({{< relref "/docs/intro/conc
     <dd>{{% md %}}The data disk configurations of worker nodes, such as the disk type and disk size.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="formatdisk_go">
+<a href="#formatdisk_go" style="color: inherit; text-decoration: inherit;">Format<wbr>Disk</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}After you select this check box, if data disks have been attached to the specified ECS instances and the file system of the last data disk is uninitialized, the system automatically formats the last data disk to ext4 and mounts the data disk to /var/lib/docker and /var/lib/kubelet. The original data on the disk will be cleared. Make sure that you back up data in advance. If no data disk is mounted on the ECS instance, no new data disk will be purchased. Default is `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="imageid_go">
 <a href="#imageid_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Id</a>
 </span>
@@ -576,6 +635,15 @@ The NodePool resource accepts the following [input]({{< relref "/docs/intro/conc
     <dd>{{% md %}}Node payment type. Valid values: `PostPaid`, `PrePaid`, default is `PostPaid`. If value is `PrePaid`, the arguments `period`, `period_unit`, `auto_renew` and `auto_renew_period` are required.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="instances_go">
+<a href="#instances_go" style="color: inherit; text-decoration: inherit;">Instances</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}The instance list. Add existing nodes under the same cluster VPC to the node pool.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="internetchargetype_go">
 <a href="#internetchargetype_go" style="color: inherit; text-decoration: inherit;">Internet<wbr>Charge<wbr>Type</a>
 </span>
@@ -592,6 +660,15 @@ The NodePool resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum outbound bandwidth for the public network. Unit: Mbit/s. Valid values: 0 to 100.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="keepinstancename_go">
+<a href="#keepinstancename_go" style="color: inherit; text-decoration: inherit;">Keep<wbr>Instance<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Add an existing instance to the node pool, whether to keep the original instance name. It is recommended to set to `true`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keyname_go">
@@ -684,6 +761,15 @@ The NodePool resource accepts the following [input]({{< relref "/docs/intro/conc
     <dd>{{% md %}}Node payment period unit, valid value: `Month`. Default is `Month`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="platform_go">
+<a href="#platform_go" style="color: inherit; text-decoration: inherit;">Platform</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The platform. One of `AliyunLinux`, `Windows`, `CentOS`, `WindowsCore`. If you select `Windows` or `WindowsCore`, the `passord` is required.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="resourcegroupid_go">
 <a href="#resourcegroupid_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Id</a>
 </span>
@@ -700,6 +786,15 @@ The NodePool resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#nodepoolscalingconfig">Node<wbr>Pool<wbr>Scaling<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Auto scaling node pool configuration. For more details, see `scaling_config`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="scalingpolicy_go">
+<a href="#scalingpolicy_go" style="color: inherit; text-decoration: inherit;">Scaling<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The scaling mode. Valid values: `release`, `recycle`, default is `release`. Standard mode(release): Create and release ECS instances based on requests.Swift mode(recycle): Create, stop, adn restart ECS instances based on needs. New ECS instances are only created when no stopped ECS instance is avalible. This mode further accelerates the scaling process. Apart from ECS instances that use local storage, when an ECS instance is stopped, you are only chatged for storage space.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="securitygroupid_go">
@@ -849,6 +944,15 @@ The NodePool resource accepts the following [input]({{< relref "/docs/intro/conc
     <dd>{{% md %}}The data disk configurations of worker nodes, such as the disk type and disk size.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="formatdisk_nodejs">
+<a href="#formatdisk_nodejs" style="color: inherit; text-decoration: inherit;">format<wbr>Disk</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}After you select this check box, if data disks have been attached to the specified ECS instances and the file system of the last data disk is uninitialized, the system automatically formats the last data disk to ext4 and mounts the data disk to /var/lib/docker and /var/lib/kubelet. The original data on the disk will be cleared. Make sure that you back up data in advance. If no data disk is mounted on the ECS instance, no new data disk will be purchased. Default is `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="imageid_nodejs">
 <a href="#imageid_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Id</a>
 </span>
@@ -876,6 +980,15 @@ The NodePool resource accepts the following [input]({{< relref "/docs/intro/conc
     <dd>{{% md %}}Node payment type. Valid values: `PostPaid`, `PrePaid`, default is `PostPaid`. If value is `PrePaid`, the arguments `period`, `period_unit`, `auto_renew` and `auto_renew_period` are required.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="instances_nodejs">
+<a href="#instances_nodejs" style="color: inherit; text-decoration: inherit;">instances</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}The instance list. Add existing nodes under the same cluster VPC to the node pool.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="internetchargetype_nodejs">
 <a href="#internetchargetype_nodejs" style="color: inherit; text-decoration: inherit;">internet<wbr>Charge<wbr>Type</a>
 </span>
@@ -892,6 +1005,15 @@ The NodePool resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum outbound bandwidth for the public network. Unit: Mbit/s. Valid values: 0 to 100.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="keepinstancename_nodejs">
+<a href="#keepinstancename_nodejs" style="color: inherit; text-decoration: inherit;">keep<wbr>Instance<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Add an existing instance to the node pool, whether to keep the original instance name. It is recommended to set to `true`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keyname_nodejs">
@@ -984,6 +1106,15 @@ The NodePool resource accepts the following [input]({{< relref "/docs/intro/conc
     <dd>{{% md %}}Node payment period unit, valid value: `Month`. Default is `Month`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="platform_nodejs">
+<a href="#platform_nodejs" style="color: inherit; text-decoration: inherit;">platform</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The platform. One of `AliyunLinux`, `Windows`, `CentOS`, `WindowsCore`. If you select `Windows` or `WindowsCore`, the `passord` is required.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="resourcegroupid_nodejs">
 <a href="#resourcegroupid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Id</a>
 </span>
@@ -1000,6 +1131,15 @@ The NodePool resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#nodepoolscalingconfig">Node<wbr>Pool<wbr>Scaling<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Auto scaling node pool configuration. For more details, see `scaling_config`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="scalingpolicy_nodejs">
+<a href="#scalingpolicy_nodejs" style="color: inherit; text-decoration: inherit;">scaling<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The scaling mode. Valid values: `release`, `recycle`, default is `release`. Standard mode(release): Create and release ECS instances based on requests.Swift mode(recycle): Create, stop, adn restart ECS instances based on needs. New ECS instances are only created when no stopped ECS instance is avalible. This mode further accelerates the scaling process. Apart from ECS instances that use local storage, when an ECS instance is stopped, you are only chatged for storage space.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="securitygroupid_nodejs">
@@ -1149,6 +1289,15 @@ The NodePool resource accepts the following [input]({{< relref "/docs/intro/conc
     <dd>{{% md %}}The data disk configurations of worker nodes, such as the disk type and disk size.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="format_disk_python">
+<a href="#format_disk_python" style="color: inherit; text-decoration: inherit;">format_<wbr>disk</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}After you select this check box, if data disks have been attached to the specified ECS instances and the file system of the last data disk is uninitialized, the system automatically formats the last data disk to ext4 and mounts the data disk to /var/lib/docker and /var/lib/kubelet. The original data on the disk will be cleared. Make sure that you back up data in advance. If no data disk is mounted on the ECS instance, no new data disk will be purchased. Default is `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="image_id_python">
 <a href="#image_id_python" style="color: inherit; text-decoration: inherit;">image_<wbr>id</a>
 </span>
@@ -1176,6 +1325,15 @@ The NodePool resource accepts the following [input]({{< relref "/docs/intro/conc
     <dd>{{% md %}}Node payment type. Valid values: `PostPaid`, `PrePaid`, default is `PostPaid`. If value is `PrePaid`, the arguments `period`, `period_unit`, `auto_renew` and `auto_renew_period` are required.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="instances_python">
+<a href="#instances_python" style="color: inherit; text-decoration: inherit;">instances</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}The instance list. Add existing nodes under the same cluster VPC to the node pool.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="internet_charge_type_python">
 <a href="#internet_charge_type_python" style="color: inherit; text-decoration: inherit;">internet_<wbr>charge_<wbr>type</a>
 </span>
@@ -1192,6 +1350,15 @@ The NodePool resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum outbound bandwidth for the public network. Unit: Mbit/s. Valid values: 0 to 100.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="keep_instance_name_python">
+<a href="#keep_instance_name_python" style="color: inherit; text-decoration: inherit;">keep_<wbr>instance_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Add an existing instance to the node pool, whether to keep the original instance name. It is recommended to set to `true`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="key_name_python">
@@ -1284,6 +1451,15 @@ The NodePool resource accepts the following [input]({{< relref "/docs/intro/conc
     <dd>{{% md %}}Node payment period unit, valid value: `Month`. Default is `Month`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="platform_python">
+<a href="#platform_python" style="color: inherit; text-decoration: inherit;">platform</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The platform. One of `AliyunLinux`, `Windows`, `CentOS`, `WindowsCore`. If you select `Windows` or `WindowsCore`, the `passord` is required.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="resource_group_id_python">
 <a href="#resource_group_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>id</a>
 </span>
@@ -1300,6 +1476,15 @@ The NodePool resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#nodepoolscalingconfig">Node<wbr>Pool<wbr>Scaling<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Auto scaling node pool configuration. For more details, see `scaling_config`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="scaling_policy_python">
+<a href="#scaling_policy_python" style="color: inherit; text-decoration: inherit;">scaling_<wbr>policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The scaling mode. Valid values: `release`, `recycle`, default is `release`. Standard mode(release): Create and release ECS instances based on requests.Swift mode(recycle): Create, stop, adn restart ECS instances based on needs. New ECS instances are only created when no stopped ECS instance is avalible. This mode further accelerates the scaling process. Apart from ECS instances that use local storage, when an ECS instance is stopped, you are only chatged for storage space.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="security_group_id_python">
@@ -1535,12 +1720,15 @@ Get an existing NodePool resource's state with the given name, ID, and optional 
         <span class="nx">auto_renew_period</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
         <span class="nx">cluster_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">data_disks</span><span class="p">:</span> <span class="nx">Optional[Sequence[NodePoolDataDiskArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">format_disk</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">image_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">install_cloud_monitor</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">instance_charge_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">instance_types</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+        <span class="nx">instances</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
         <span class="nx">internet_charge_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">internet_max_bandwidth_out</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+        <span class="nx">keep_instance_name</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">key_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">kms_encrypted_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Sequence[NodePoolLabelArgs]]</span> = None<span class="p">,</span>
@@ -1551,9 +1739,11 @@ Get an existing NodePool resource's state with the given name, ID, and optional 
         <span class="nx">password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">period</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
         <span class="nx">period_unit</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">platform</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">resource_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">scaling_config</span><span class="p">:</span> <span class="nx">Optional[NodePoolScalingConfigArgs]</span> = None<span class="p">,</span>
         <span class="nx">scaling_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">scaling_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">security_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">spot_price_limits</span><span class="p">:</span> <span class="nx">Optional[Sequence[NodePoolSpotPriceLimitArgs]]</span> = None<span class="p">,</span>
         <span class="nx">spot_strategy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -1714,6 +1904,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The data disk configurations of worker nodes, such as the disk type and disk size.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_formatdisk_csharp">
+<a href="#state_formatdisk_csharp" style="color: inherit; text-decoration: inherit;">Format<wbr>Disk</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}After you select this check box, if data disks have been attached to the specified ECS instances and the file system of the last data disk is uninitialized, the system automatically formats the last data disk to ext4 and mounts the data disk to /var/lib/docker and /var/lib/kubelet. The original data on the disk will be cleared. Make sure that you back up data in advance. If no data disk is mounted on the ECS instance, no new data disk will be purchased. Default is `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_imageid_csharp">
 <a href="#state_imageid_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Id</a>
 </span>
@@ -1750,6 +1949,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The instance type of worker node.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_instances_csharp">
+<a href="#state_instances_csharp" style="color: inherit; text-decoration: inherit;">Instances</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}The instance list. Add existing nodes under the same cluster VPC to the node pool.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_internetchargetype_csharp">
 <a href="#state_internetchargetype_csharp" style="color: inherit; text-decoration: inherit;">Internet<wbr>Charge<wbr>Type</a>
 </span>
@@ -1766,6 +1974,15 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum outbound bandwidth for the public network. Unit: Mbit/s. Valid values: 0 to 100.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_keepinstancename_csharp">
+<a href="#state_keepinstancename_csharp" style="color: inherit; text-decoration: inherit;">Keep<wbr>Instance<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Add an existing instance to the node pool, whether to keep the original instance name. It is recommended to set to `true`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_keyname_csharp">
@@ -1858,6 +2075,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Node payment period unit, valid value: `Month`. Default is `Month`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_platform_csharp">
+<a href="#state_platform_csharp" style="color: inherit; text-decoration: inherit;">Platform</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The platform. One of `AliyunLinux`, `Windows`, `CentOS`, `WindowsCore`. If you select `Windows` or `WindowsCore`, the `passord` is required.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_resourcegroupid_csharp">
 <a href="#state_resourcegroupid_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Id</a>
 </span>
@@ -1883,6 +2109,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Available in 1.105.0+) Id of the Scaling Group.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_scalingpolicy_csharp">
+<a href="#state_scalingpolicy_csharp" style="color: inherit; text-decoration: inherit;">Scaling<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The scaling mode. Valid values: `release`, `recycle`, default is `release`. Standard mode(release): Create and release ECS instances based on requests.Swift mode(recycle): Create, stop, adn restart ECS instances based on needs. New ECS instances are only created when no stopped ECS instance is avalible. This mode further accelerates the scaling process. Apart from ECS instances that use local storage, when an ECS instance is stopped, you are only chatged for storage space.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_securitygroupid_csharp">
@@ -2031,6 +2266,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The data disk configurations of worker nodes, such as the disk type and disk size.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_formatdisk_go">
+<a href="#state_formatdisk_go" style="color: inherit; text-decoration: inherit;">Format<wbr>Disk</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}After you select this check box, if data disks have been attached to the specified ECS instances and the file system of the last data disk is uninitialized, the system automatically formats the last data disk to ext4 and mounts the data disk to /var/lib/docker and /var/lib/kubelet. The original data on the disk will be cleared. Make sure that you back up data in advance. If no data disk is mounted on the ECS instance, no new data disk will be purchased. Default is `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_imageid_go">
 <a href="#state_imageid_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Id</a>
 </span>
@@ -2067,6 +2311,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The instance type of worker node.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_instances_go">
+<a href="#state_instances_go" style="color: inherit; text-decoration: inherit;">Instances</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}The instance list. Add existing nodes under the same cluster VPC to the node pool.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_internetchargetype_go">
 <a href="#state_internetchargetype_go" style="color: inherit; text-decoration: inherit;">Internet<wbr>Charge<wbr>Type</a>
 </span>
@@ -2083,6 +2336,15 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum outbound bandwidth for the public network. Unit: Mbit/s. Valid values: 0 to 100.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_keepinstancename_go">
+<a href="#state_keepinstancename_go" style="color: inherit; text-decoration: inherit;">Keep<wbr>Instance<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Add an existing instance to the node pool, whether to keep the original instance name. It is recommended to set to `true`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_keyname_go">
@@ -2175,6 +2437,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Node payment period unit, valid value: `Month`. Default is `Month`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_platform_go">
+<a href="#state_platform_go" style="color: inherit; text-decoration: inherit;">Platform</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The platform. One of `AliyunLinux`, `Windows`, `CentOS`, `WindowsCore`. If you select `Windows` or `WindowsCore`, the `passord` is required.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_resourcegroupid_go">
 <a href="#state_resourcegroupid_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Id</a>
 </span>
@@ -2200,6 +2471,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Available in 1.105.0+) Id of the Scaling Group.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_scalingpolicy_go">
+<a href="#state_scalingpolicy_go" style="color: inherit; text-decoration: inherit;">Scaling<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The scaling mode. Valid values: `release`, `recycle`, default is `release`. Standard mode(release): Create and release ECS instances based on requests.Swift mode(recycle): Create, stop, adn restart ECS instances based on needs. New ECS instances are only created when no stopped ECS instance is avalible. This mode further accelerates the scaling process. Apart from ECS instances that use local storage, when an ECS instance is stopped, you are only chatged for storage space.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_securitygroupid_go">
@@ -2348,6 +2628,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The data disk configurations of worker nodes, such as the disk type and disk size.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_formatdisk_nodejs">
+<a href="#state_formatdisk_nodejs" style="color: inherit; text-decoration: inherit;">format<wbr>Disk</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}After you select this check box, if data disks have been attached to the specified ECS instances and the file system of the last data disk is uninitialized, the system automatically formats the last data disk to ext4 and mounts the data disk to /var/lib/docker and /var/lib/kubelet. The original data on the disk will be cleared. Make sure that you back up data in advance. If no data disk is mounted on the ECS instance, no new data disk will be purchased. Default is `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_imageid_nodejs">
 <a href="#state_imageid_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Id</a>
 </span>
@@ -2384,6 +2673,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The instance type of worker node.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_instances_nodejs">
+<a href="#state_instances_nodejs" style="color: inherit; text-decoration: inherit;">instances</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}The instance list. Add existing nodes under the same cluster VPC to the node pool.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_internetchargetype_nodejs">
 <a href="#state_internetchargetype_nodejs" style="color: inherit; text-decoration: inherit;">internet<wbr>Charge<wbr>Type</a>
 </span>
@@ -2400,6 +2698,15 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum outbound bandwidth for the public network. Unit: Mbit/s. Valid values: 0 to 100.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_keepinstancename_nodejs">
+<a href="#state_keepinstancename_nodejs" style="color: inherit; text-decoration: inherit;">keep<wbr>Instance<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Add an existing instance to the node pool, whether to keep the original instance name. It is recommended to set to `true`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_keyname_nodejs">
@@ -2492,6 +2799,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Node payment period unit, valid value: `Month`. Default is `Month`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_platform_nodejs">
+<a href="#state_platform_nodejs" style="color: inherit; text-decoration: inherit;">platform</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The platform. One of `AliyunLinux`, `Windows`, `CentOS`, `WindowsCore`. If you select `Windows` or `WindowsCore`, the `passord` is required.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_resourcegroupid_nodejs">
 <a href="#state_resourcegroupid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Id</a>
 </span>
@@ -2517,6 +2833,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Available in 1.105.0+) Id of the Scaling Group.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_scalingpolicy_nodejs">
+<a href="#state_scalingpolicy_nodejs" style="color: inherit; text-decoration: inherit;">scaling<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The scaling mode. Valid values: `release`, `recycle`, default is `release`. Standard mode(release): Create and release ECS instances based on requests.Swift mode(recycle): Create, stop, adn restart ECS instances based on needs. New ECS instances are only created when no stopped ECS instance is avalible. This mode further accelerates the scaling process. Apart from ECS instances that use local storage, when an ECS instance is stopped, you are only chatged for storage space.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_securitygroupid_nodejs">
@@ -2665,6 +2990,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The data disk configurations of worker nodes, such as the disk type and disk size.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_format_disk_python">
+<a href="#state_format_disk_python" style="color: inherit; text-decoration: inherit;">format_<wbr>disk</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}After you select this check box, if data disks have been attached to the specified ECS instances and the file system of the last data disk is uninitialized, the system automatically formats the last data disk to ext4 and mounts the data disk to /var/lib/docker and /var/lib/kubelet. The original data on the disk will be cleared. Make sure that you back up data in advance. If no data disk is mounted on the ECS instance, no new data disk will be purchased. Default is `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_image_id_python">
 <a href="#state_image_id_python" style="color: inherit; text-decoration: inherit;">image_<wbr>id</a>
 </span>
@@ -2701,6 +3035,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The instance type of worker node.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_instances_python">
+<a href="#state_instances_python" style="color: inherit; text-decoration: inherit;">instances</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}The instance list. Add existing nodes under the same cluster VPC to the node pool.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_internet_charge_type_python">
 <a href="#state_internet_charge_type_python" style="color: inherit; text-decoration: inherit;">internet_<wbr>charge_<wbr>type</a>
 </span>
@@ -2717,6 +3060,15 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum outbound bandwidth for the public network. Unit: Mbit/s. Valid values: 0 to 100.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_keep_instance_name_python">
+<a href="#state_keep_instance_name_python" style="color: inherit; text-decoration: inherit;">keep_<wbr>instance_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Add an existing instance to the node pool, whether to keep the original instance name. It is recommended to set to `true`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_key_name_python">
@@ -2809,6 +3161,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Node payment period unit, valid value: `Month`. Default is `Month`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_platform_python">
+<a href="#state_platform_python" style="color: inherit; text-decoration: inherit;">platform</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The platform. One of `AliyunLinux`, `Windows`, `CentOS`, `WindowsCore`. If you select `Windows` or `WindowsCore`, the `passord` is required.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_resource_group_id_python">
 <a href="#state_resource_group_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>id</a>
 </span>
@@ -2834,6 +3195,15 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(Available in 1.105.0+) Id of the Scaling Group.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_scaling_policy_python">
+<a href="#state_scaling_policy_python" style="color: inherit; text-decoration: inherit;">scaling_<wbr>policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The scaling mode. Valid values: `release`, `recycle`, default is `release`. Standard mode(release): Create and release ECS instances based on requests.Swift mode(recycle): Create, stop, adn restart ECS instances based on needs. New ECS instances are only created when no stopped ECS instance is avalible. This mode further accelerates the scaling process. Apart from ECS instances that use local storage, when an ECS instance is stopped, you are only chatged for storage space.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_security_group_id_python">

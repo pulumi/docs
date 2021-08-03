@@ -301,7 +301,11 @@ const defaultReadOnlyInstance = new alicloud.rds.ReadOnlyInstance("defaultReadOn
                      <span class="nx">server_cert</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                      <span class="nx">server_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                      <span class="nx">ssl_enabled</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+                     <span class="nx">switch_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                      <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">,</span>
+                     <span class="nx">target_minor_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                     <span class="nx">upgrade_db_instance_kernel_version</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                     <span class="nx">upgrade_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                      <span class="nx">vswitch_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                      <span class="nx">zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
@@ -422,7 +426,7 @@ const defaultReadOnlyInstance = new alicloud.rds.ReadOnlyInstance("defaultReadOn
 
 ## ReadOnlyInstance Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Architecture and Concepts docs.
 
 ### Inputs
 
@@ -612,6 +616,15 @@ The ReadOnlyInstance resource accepts the following [input]({{< relref "/docs/in
 - 0: disables SSL encryption
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="switchtime_csharp">
+<a href="#switchtime_csharp" style="color: inherit; text-decoration: inherit;">Switch<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The specific point in time when you want to perform the update. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. It is valid only when `upgrade_db_instance_kernel_version = true`. The time must be in UTC.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span>
@@ -621,6 +634,44 @@ The ReadOnlyInstance resource accepts the following [input]({{< relref "/docs/in
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 - Key: It can be up to 64 characters in length. It cannot begin with "aliyun", "acs:", "http://", or "https://". It cannot be a null string.
 - Value: It can be up to 128 characters in length. It cannot begin with "aliyun", "acs:", "http://", or "https://". It can be a null string.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="targetminorversion_csharp">
+<a href="#targetminorversion_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Minor<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The minor engine version to which you want to update the instance. If you do not specify this parameter, the instance is updated to the latest minor engine version. It is valid only when `upgrade_db_instance_kernel_version = true`. You must specify the minor engine version in one of the following formats:
+- PostgreSQL: rds_postgres_<Major engine version>00_<Minor engine version>. Example: rds_postgres_1200_20200830.
+- MySQL: <RDS edition>_<Minor engine version>. Examples: rds_20200229, xcluster_20200229, and xcluster80_20200229. The following RDS editions are supported:
+- rds: The instance runs RDS Basic or High-availability Edition.
+- xcluster: The instance runs MySQL 5.7 on RDS Enterprise Edition.
+- xcluster80: The instance runs MySQL 8.0 on RDS Enterprise Edition.
+- SQLServer: <Minor engine version>. Example: 15.0.4073.23.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="upgradedbinstancekernelversion_csharp">
+<a href="#upgradedbinstancekernelversion_csharp" style="color: inherit; text-decoration: inherit;">Upgrade<wbr>Db<wbr>Instance<wbr>Kernel<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether to upgrade a minor version of the kernel. Valid values:
+- true: upgrade
+- false: not to upgrade
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="upgradetime_csharp">
+<a href="#upgradetime_csharp" style="color: inherit; text-decoration: inherit;">Upgrade<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The method to update the minor engine version. Default value: Immediate. It is valid only when `upgrade_db_instance_kernel_version = true`. Valid values:
+- Immediate: The minor engine version is immediately updated.
+- MaintainTime: The minor engine version is updated during the maintenance window. For more information about how to change the maintenance window, see ModifyDBInstanceMaintainTime.
+- SpecifyTime: The minor engine version is updated at the point in time you specify.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vswitchid_csharp">
@@ -824,6 +875,15 @@ The ReadOnlyInstance resource accepts the following [input]({{< relref "/docs/in
 - 0: disables SSL encryption
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="switchtime_go">
+<a href="#switchtime_go" style="color: inherit; text-decoration: inherit;">Switch<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The specific point in time when you want to perform the update. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. It is valid only when `upgrade_db_instance_kernel_version = true`. The time must be in UTC.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span>
@@ -833,6 +893,44 @@ The ReadOnlyInstance resource accepts the following [input]({{< relref "/docs/in
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 - Key: It can be up to 64 characters in length. It cannot begin with "aliyun", "acs:", "http://", or "https://". It cannot be a null string.
 - Value: It can be up to 128 characters in length. It cannot begin with "aliyun", "acs:", "http://", or "https://". It can be a null string.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="targetminorversion_go">
+<a href="#targetminorversion_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Minor<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The minor engine version to which you want to update the instance. If you do not specify this parameter, the instance is updated to the latest minor engine version. It is valid only when `upgrade_db_instance_kernel_version = true`. You must specify the minor engine version in one of the following formats:
+- PostgreSQL: rds_postgres_<Major engine version>00_<Minor engine version>. Example: rds_postgres_1200_20200830.
+- MySQL: <RDS edition>_<Minor engine version>. Examples: rds_20200229, xcluster_20200229, and xcluster80_20200229. The following RDS editions are supported:
+- rds: The instance runs RDS Basic or High-availability Edition.
+- xcluster: The instance runs MySQL 5.7 on RDS Enterprise Edition.
+- xcluster80: The instance runs MySQL 8.0 on RDS Enterprise Edition.
+- SQLServer: <Minor engine version>. Example: 15.0.4073.23.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="upgradedbinstancekernelversion_go">
+<a href="#upgradedbinstancekernelversion_go" style="color: inherit; text-decoration: inherit;">Upgrade<wbr>Db<wbr>Instance<wbr>Kernel<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether to upgrade a minor version of the kernel. Valid values:
+- true: upgrade
+- false: not to upgrade
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="upgradetime_go">
+<a href="#upgradetime_go" style="color: inherit; text-decoration: inherit;">Upgrade<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The method to update the minor engine version. Default value: Immediate. It is valid only when `upgrade_db_instance_kernel_version = true`. Valid values:
+- Immediate: The minor engine version is immediately updated.
+- MaintainTime: The minor engine version is updated during the maintenance window. For more information about how to change the maintenance window, see ModifyDBInstanceMaintainTime.
+- SpecifyTime: The minor engine version is updated at the point in time you specify.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vswitchid_go">
@@ -1036,6 +1134,15 @@ The ReadOnlyInstance resource accepts the following [input]({{< relref "/docs/in
 - 0: disables SSL encryption
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="switchtime_nodejs">
+<a href="#switchtime_nodejs" style="color: inherit; text-decoration: inherit;">switch<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The specific point in time when you want to perform the update. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. It is valid only when `upgrade_db_instance_kernel_version = true`. The time must be in UTC.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
@@ -1045,6 +1152,44 @@ The ReadOnlyInstance resource accepts the following [input]({{< relref "/docs/in
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 - Key: It can be up to 64 characters in length. It cannot begin with "aliyun", "acs:", "http://", or "https://". It cannot be a null string.
 - Value: It can be up to 128 characters in length. It cannot begin with "aliyun", "acs:", "http://", or "https://". It can be a null string.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="targetminorversion_nodejs">
+<a href="#targetminorversion_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Minor<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The minor engine version to which you want to update the instance. If you do not specify this parameter, the instance is updated to the latest minor engine version. It is valid only when `upgrade_db_instance_kernel_version = true`. You must specify the minor engine version in one of the following formats:
+- PostgreSQL: rds_postgres_<Major engine version>00_<Minor engine version>. Example: rds_postgres_1200_20200830.
+- MySQL: <RDS edition>_<Minor engine version>. Examples: rds_20200229, xcluster_20200229, and xcluster80_20200229. The following RDS editions are supported:
+- rds: The instance runs RDS Basic or High-availability Edition.
+- xcluster: The instance runs MySQL 5.7 on RDS Enterprise Edition.
+- xcluster80: The instance runs MySQL 8.0 on RDS Enterprise Edition.
+- SQLServer: <Minor engine version>. Example: 15.0.4073.23.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="upgradedbinstancekernelversion_nodejs">
+<a href="#upgradedbinstancekernelversion_nodejs" style="color: inherit; text-decoration: inherit;">upgrade<wbr>Db<wbr>Instance<wbr>Kernel<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether to upgrade a minor version of the kernel. Valid values:
+- true: upgrade
+- false: not to upgrade
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="upgradetime_nodejs">
+<a href="#upgradetime_nodejs" style="color: inherit; text-decoration: inherit;">upgrade<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The method to update the minor engine version. Default value: Immediate. It is valid only when `upgrade_db_instance_kernel_version = true`. Valid values:
+- Immediate: The minor engine version is immediately updated.
+- MaintainTime: The minor engine version is updated during the maintenance window. For more information about how to change the maintenance window, see ModifyDBInstanceMaintainTime.
+- SpecifyTime: The minor engine version is updated at the point in time you specify.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vswitchid_nodejs">
@@ -1248,6 +1393,15 @@ The ReadOnlyInstance resource accepts the following [input]({{< relref "/docs/in
 - 0: disables SSL encryption
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="switch_time_python">
+<a href="#switch_time_python" style="color: inherit; text-decoration: inherit;">switch_<wbr>time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The specific point in time when you want to perform the update. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. It is valid only when `upgrade_db_instance_kernel_version = true`. The time must be in UTC.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
@@ -1257,6 +1411,44 @@ The ReadOnlyInstance resource accepts the following [input]({{< relref "/docs/in
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 - Key: It can be up to 64 characters in length. It cannot begin with "aliyun", "acs:", "http://", or "https://". It cannot be a null string.
 - Value: It can be up to 128 characters in length. It cannot begin with "aliyun", "acs:", "http://", or "https://". It can be a null string.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="target_minor_version_python">
+<a href="#target_minor_version_python" style="color: inherit; text-decoration: inherit;">target_<wbr>minor_<wbr>version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The minor engine version to which you want to update the instance. If you do not specify this parameter, the instance is updated to the latest minor engine version. It is valid only when `upgrade_db_instance_kernel_version = true`. You must specify the minor engine version in one of the following formats:
+- PostgreSQL: rds_postgres_<Major engine version>00_<Minor engine version>. Example: rds_postgres_1200_20200830.
+- MySQL: <RDS edition>_<Minor engine version>. Examples: rds_20200229, xcluster_20200229, and xcluster80_20200229. The following RDS editions are supported:
+- rds: The instance runs RDS Basic or High-availability Edition.
+- xcluster: The instance runs MySQL 5.7 on RDS Enterprise Edition.
+- xcluster80: The instance runs MySQL 8.0 on RDS Enterprise Edition.
+- SQLServer: <Minor engine version>. Example: 15.0.4073.23.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="upgrade_db_instance_kernel_version_python">
+<a href="#upgrade_db_instance_kernel_version_python" style="color: inherit; text-decoration: inherit;">upgrade_<wbr>db_<wbr>instance_<wbr>kernel_<wbr>version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether to upgrade a minor version of the kernel. Valid values:
+- true: upgrade
+- false: not to upgrade
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="upgrade_time_python">
+<a href="#upgrade_time_python" style="color: inherit; text-decoration: inherit;">upgrade_<wbr>time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The method to update the minor engine version. Default value: Immediate. It is valid only when `upgrade_db_instance_kernel_version = true`. Valid values:
+- Immediate: The minor engine version is immediately updated.
+- MaintainTime: The minor engine version is updated during the maintenance window. For more information about how to change the maintenance window, see ModifyDBInstanceMaintainTime.
+- SpecifyTime: The minor engine version is updated at the point in time you specify.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vswitch_id_python">
@@ -1478,7 +1670,11 @@ Get an existing ReadOnlyInstance resource's state with the given name, ID, and o
         <span class="nx">server_cert</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">server_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">ssl_enabled</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+        <span class="nx">switch_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">,</span>
+        <span class="nx">target_minor_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">upgrade_db_instance_kernel_version</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">upgrade_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">vswitch_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> ReadOnlyInstance</code></pre></div>
 {{% /choosable %}}
@@ -1799,6 +1995,15 @@ The following state arguments are supported:
 - 0: disables SSL encryption
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_switchtime_csharp">
+<a href="#state_switchtime_csharp" style="color: inherit; text-decoration: inherit;">Switch<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The specific point in time when you want to perform the update. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. It is valid only when `upgrade_db_instance_kernel_version = true`. The time must be in UTC.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_tags_csharp">
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span>
@@ -1808,6 +2013,44 @@ The following state arguments are supported:
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 - Key: It can be up to 64 characters in length. It cannot begin with "aliyun", "acs:", "http://", or "https://". It cannot be a null string.
 - Value: It can be up to 128 characters in length. It cannot begin with "aliyun", "acs:", "http://", or "https://". It can be a null string.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_targetminorversion_csharp">
+<a href="#state_targetminorversion_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Minor<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The minor engine version to which you want to update the instance. If you do not specify this parameter, the instance is updated to the latest minor engine version. It is valid only when `upgrade_db_instance_kernel_version = true`. You must specify the minor engine version in one of the following formats:
+- PostgreSQL: rds_postgres_<Major engine version>00_<Minor engine version>. Example: rds_postgres_1200_20200830.
+- MySQL: <RDS edition>_<Minor engine version>. Examples: rds_20200229, xcluster_20200229, and xcluster80_20200229. The following RDS editions are supported:
+- rds: The instance runs RDS Basic or High-availability Edition.
+- xcluster: The instance runs MySQL 5.7 on RDS Enterprise Edition.
+- xcluster80: The instance runs MySQL 8.0 on RDS Enterprise Edition.
+- SQLServer: <Minor engine version>. Example: 15.0.4073.23.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_upgradedbinstancekernelversion_csharp">
+<a href="#state_upgradedbinstancekernelversion_csharp" style="color: inherit; text-decoration: inherit;">Upgrade<wbr>Db<wbr>Instance<wbr>Kernel<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether to upgrade a minor version of the kernel. Valid values:
+- true: upgrade
+- false: not to upgrade
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_upgradetime_csharp">
+<a href="#state_upgradetime_csharp" style="color: inherit; text-decoration: inherit;">Upgrade<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The method to update the minor engine version. Default value: Immediate. It is valid only when `upgrade_db_instance_kernel_version = true`. Valid values:
+- Immediate: The minor engine version is immediately updated.
+- MaintainTime: The minor engine version is updated during the maintenance window. For more information about how to change the maintenance window, see ModifyDBInstanceMaintainTime.
+- SpecifyTime: The minor engine version is updated at the point in time you specify.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vswitchid_csharp">
@@ -2038,6 +2281,15 @@ The following state arguments are supported:
 - 0: disables SSL encryption
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_switchtime_go">
+<a href="#state_switchtime_go" style="color: inherit; text-decoration: inherit;">Switch<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The specific point in time when you want to perform the update. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. It is valid only when `upgrade_db_instance_kernel_version = true`. The time must be in UTC.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_tags_go">
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span>
@@ -2047,6 +2299,44 @@ The following state arguments are supported:
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 - Key: It can be up to 64 characters in length. It cannot begin with "aliyun", "acs:", "http://", or "https://". It cannot be a null string.
 - Value: It can be up to 128 characters in length. It cannot begin with "aliyun", "acs:", "http://", or "https://". It can be a null string.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_targetminorversion_go">
+<a href="#state_targetminorversion_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Minor<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The minor engine version to which you want to update the instance. If you do not specify this parameter, the instance is updated to the latest minor engine version. It is valid only when `upgrade_db_instance_kernel_version = true`. You must specify the minor engine version in one of the following formats:
+- PostgreSQL: rds_postgres_<Major engine version>00_<Minor engine version>. Example: rds_postgres_1200_20200830.
+- MySQL: <RDS edition>_<Minor engine version>. Examples: rds_20200229, xcluster_20200229, and xcluster80_20200229. The following RDS editions are supported:
+- rds: The instance runs RDS Basic or High-availability Edition.
+- xcluster: The instance runs MySQL 5.7 on RDS Enterprise Edition.
+- xcluster80: The instance runs MySQL 8.0 on RDS Enterprise Edition.
+- SQLServer: <Minor engine version>. Example: 15.0.4073.23.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_upgradedbinstancekernelversion_go">
+<a href="#state_upgradedbinstancekernelversion_go" style="color: inherit; text-decoration: inherit;">Upgrade<wbr>Db<wbr>Instance<wbr>Kernel<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether to upgrade a minor version of the kernel. Valid values:
+- true: upgrade
+- false: not to upgrade
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_upgradetime_go">
+<a href="#state_upgradetime_go" style="color: inherit; text-decoration: inherit;">Upgrade<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The method to update the minor engine version. Default value: Immediate. It is valid only when `upgrade_db_instance_kernel_version = true`. Valid values:
+- Immediate: The minor engine version is immediately updated.
+- MaintainTime: The minor engine version is updated during the maintenance window. For more information about how to change the maintenance window, see ModifyDBInstanceMaintainTime.
+- SpecifyTime: The minor engine version is updated at the point in time you specify.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vswitchid_go">
@@ -2277,6 +2567,15 @@ The following state arguments are supported:
 - 0: disables SSL encryption
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_switchtime_nodejs">
+<a href="#state_switchtime_nodejs" style="color: inherit; text-decoration: inherit;">switch<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The specific point in time when you want to perform the update. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. It is valid only when `upgrade_db_instance_kernel_version = true`. The time must be in UTC.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_tags_nodejs">
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
@@ -2286,6 +2585,44 @@ The following state arguments are supported:
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 - Key: It can be up to 64 characters in length. It cannot begin with "aliyun", "acs:", "http://", or "https://". It cannot be a null string.
 - Value: It can be up to 128 characters in length. It cannot begin with "aliyun", "acs:", "http://", or "https://". It can be a null string.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_targetminorversion_nodejs">
+<a href="#state_targetminorversion_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Minor<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The minor engine version to which you want to update the instance. If you do not specify this parameter, the instance is updated to the latest minor engine version. It is valid only when `upgrade_db_instance_kernel_version = true`. You must specify the minor engine version in one of the following formats:
+- PostgreSQL: rds_postgres_<Major engine version>00_<Minor engine version>. Example: rds_postgres_1200_20200830.
+- MySQL: <RDS edition>_<Minor engine version>. Examples: rds_20200229, xcluster_20200229, and xcluster80_20200229. The following RDS editions are supported:
+- rds: The instance runs RDS Basic or High-availability Edition.
+- xcluster: The instance runs MySQL 5.7 on RDS Enterprise Edition.
+- xcluster80: The instance runs MySQL 8.0 on RDS Enterprise Edition.
+- SQLServer: <Minor engine version>. Example: 15.0.4073.23.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_upgradedbinstancekernelversion_nodejs">
+<a href="#state_upgradedbinstancekernelversion_nodejs" style="color: inherit; text-decoration: inherit;">upgrade<wbr>Db<wbr>Instance<wbr>Kernel<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether to upgrade a minor version of the kernel. Valid values:
+- true: upgrade
+- false: not to upgrade
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_upgradetime_nodejs">
+<a href="#state_upgradetime_nodejs" style="color: inherit; text-decoration: inherit;">upgrade<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The method to update the minor engine version. Default value: Immediate. It is valid only when `upgrade_db_instance_kernel_version = true`. Valid values:
+- Immediate: The minor engine version is immediately updated.
+- MaintainTime: The minor engine version is updated during the maintenance window. For more information about how to change the maintenance window, see ModifyDBInstanceMaintainTime.
+- SpecifyTime: The minor engine version is updated at the point in time you specify.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vswitchid_nodejs">
@@ -2516,6 +2853,15 @@ The following state arguments are supported:
 - 0: disables SSL encryption
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_switch_time_python">
+<a href="#state_switch_time_python" style="color: inherit; text-decoration: inherit;">switch_<wbr>time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The specific point in time when you want to perform the update. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. It is valid only when `upgrade_db_instance_kernel_version = true`. The time must be in UTC.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_tags_python">
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
@@ -2525,6 +2871,44 @@ The following state arguments are supported:
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 - Key: It can be up to 64 characters in length. It cannot begin with "aliyun", "acs:", "http://", or "https://". It cannot be a null string.
 - Value: It can be up to 128 characters in length. It cannot begin with "aliyun", "acs:", "http://", or "https://". It can be a null string.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_target_minor_version_python">
+<a href="#state_target_minor_version_python" style="color: inherit; text-decoration: inherit;">target_<wbr>minor_<wbr>version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The minor engine version to which you want to update the instance. If you do not specify this parameter, the instance is updated to the latest minor engine version. It is valid only when `upgrade_db_instance_kernel_version = true`. You must specify the minor engine version in one of the following formats:
+- PostgreSQL: rds_postgres_<Major engine version>00_<Minor engine version>. Example: rds_postgres_1200_20200830.
+- MySQL: <RDS edition>_<Minor engine version>. Examples: rds_20200229, xcluster_20200229, and xcluster80_20200229. The following RDS editions are supported:
+- rds: The instance runs RDS Basic or High-availability Edition.
+- xcluster: The instance runs MySQL 5.7 on RDS Enterprise Edition.
+- xcluster80: The instance runs MySQL 8.0 on RDS Enterprise Edition.
+- SQLServer: <Minor engine version>. Example: 15.0.4073.23.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_upgrade_db_instance_kernel_version_python">
+<a href="#state_upgrade_db_instance_kernel_version_python" style="color: inherit; text-decoration: inherit;">upgrade_<wbr>db_<wbr>instance_<wbr>kernel_<wbr>version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether to upgrade a minor version of the kernel. Valid values:
+- true: upgrade
+- false: not to upgrade
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_upgrade_time_python">
+<a href="#state_upgrade_time_python" style="color: inherit; text-decoration: inherit;">upgrade_<wbr>time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The method to update the minor engine version. Default value: Immediate. It is valid only when `upgrade_db_instance_kernel_version = true`. Valid values:
+- Immediate: The minor engine version is immediately updated.
+- MaintainTime: The minor engine version is updated during the maintenance window. For more information about how to change the maintenance window, see ModifyDBInstanceMaintainTime.
+- SpecifyTime: The minor engine version is updated at the point in time you specify.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vswitch_id_python">

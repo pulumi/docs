@@ -203,6 +203,7 @@ const example = new alicloud.kvstore.Instance("example", {
              <span class="nx">coupon_no</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">db_instance_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">dedicated_host_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">dry_run</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
              <span class="nx">enable_backup_log</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
              <span class="nx">enable_public</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
              <span class="nx">engine_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -231,6 +232,7 @@ const example = new alicloud.kvstore.Instance("example", {
              <span class="nx">private_ip</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">resource_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">restore_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">secondary_zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">security_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">security_ip_group_attribute</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">security_ip_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -359,7 +361,7 @@ const example = new alicloud.kvstore.Instance("example", {
 
 ## Instance Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Architecture and Concepts docs.
 
 ### Inputs
 
@@ -494,6 +496,17 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the dedicated cluster. This parameter is required when you create an ApsaraDB for Redis instance in a dedicated cluster.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dryrun_csharp">
+<a href="#dryrun_csharp" style="color: inherit; text-decoration: inherit;">Dry<wbr>Run</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether to precheck the request. Valid values:
+* true: prechecks the request without creating an instance. The system prechecks the required parameters, request format, service limits, and available resources. If the request fails the precheck, the corresponding error message is returned. If the request passes the precheck, the DryRunOperation error code is returned.
+* false: checks the request. After the request passes the check, an instance is created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablebackuplog_csharp">
@@ -747,6 +760,15 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
     <dd>{{% md %}}The point in time of a backup file.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="secondaryzoneid_csharp">
+<a href="#secondaryzoneid_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Zone<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the secondary zone to which you want to migrate the ApsaraDB for Redis instance.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="securitygroupid_csharp">
 <a href="#securitygroupid_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Group<wbr>Id</a>
 </span>
@@ -966,6 +988,17 @@ Note: This functionality is supported by Cluster mode (Redis 2.8, 4.0, 5.0) and 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the dedicated cluster. This parameter is required when you create an ApsaraDB for Redis instance in a dedicated cluster.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dryrun_go">
+<a href="#dryrun_go" style="color: inherit; text-decoration: inherit;">Dry<wbr>Run</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether to precheck the request. Valid values:
+* true: prechecks the request without creating an instance. The system prechecks the required parameters, request format, service limits, and available resources. If the request fails the precheck, the corresponding error message is returned. If the request passes the precheck, the DryRunOperation error code is returned.
+* false: checks the request. After the request passes the check, an instance is created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablebackuplog_go">
@@ -1219,6 +1252,15 @@ Note: This functionality is supported by Cluster mode (Redis 2.8, 4.0, 5.0) and 
     <dd>{{% md %}}The point in time of a backup file.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="secondaryzoneid_go">
+<a href="#secondaryzoneid_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Zone<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the secondary zone to which you want to migrate the ApsaraDB for Redis instance.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="securitygroupid_go">
 <a href="#securitygroupid_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Group<wbr>Id</a>
 </span>
@@ -1438,6 +1480,17 @@ Note: This functionality is supported by Cluster mode (Redis 2.8, 4.0, 5.0) and 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the dedicated cluster. This parameter is required when you create an ApsaraDB for Redis instance in a dedicated cluster.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dryrun_nodejs">
+<a href="#dryrun_nodejs" style="color: inherit; text-decoration: inherit;">dry<wbr>Run</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether to precheck the request. Valid values:
+* true: prechecks the request without creating an instance. The system prechecks the required parameters, request format, service limits, and available resources. If the request fails the precheck, the corresponding error message is returned. If the request passes the precheck, the DryRunOperation error code is returned.
+* false: checks the request. After the request passes the check, an instance is created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablebackuplog_nodejs">
@@ -1691,6 +1744,15 @@ Note: This functionality is supported by Cluster mode (Redis 2.8, 4.0, 5.0) and 
     <dd>{{% md %}}The point in time of a backup file.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="secondaryzoneid_nodejs">
+<a href="#secondaryzoneid_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Zone<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the secondary zone to which you want to migrate the ApsaraDB for Redis instance.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="securitygroupid_nodejs">
 <a href="#securitygroupid_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Group<wbr>Id</a>
 </span>
@@ -1910,6 +1972,17 @@ Note: This functionality is supported by Cluster mode (Redis 2.8, 4.0, 5.0) and 
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the dedicated cluster. This parameter is required when you create an ApsaraDB for Redis instance in a dedicated cluster.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dry_run_python">
+<a href="#dry_run_python" style="color: inherit; text-decoration: inherit;">dry_<wbr>run</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether to precheck the request. Valid values:
+* true: prechecks the request without creating an instance. The system prechecks the required parameters, request format, service limits, and available resources. If the request fails the precheck, the corresponding error message is returned. If the request passes the precheck, the DryRunOperation error code is returned.
+* false: checks the request. After the request passes the check, an instance is created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enable_backup_log_python">
@@ -2161,6 +2234,15 @@ Note: This functionality is supported by Cluster mode (Redis 2.8, 4.0, 5.0) and 
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The point in time of a backup file.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="secondary_zone_id_python">
+<a href="#secondary_zone_id_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>zone_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ID of the secondary zone to which you want to migrate the ApsaraDB for Redis instance.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="security_group_id_python">
@@ -2555,6 +2637,7 @@ Get an existing Instance resource's state with the given name, ID, and optional 
         <span class="nx">coupon_no</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">db_instance_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">dedicated_host_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">dry_run</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">enable_backup_log</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
         <span class="nx">enable_public</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">end_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -2585,6 +2668,7 @@ Get an existing Instance resource's state with the given name, ID, and optional 
         <span class="nx">qps</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
         <span class="nx">resource_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">restore_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">secondary_zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">security_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">security_ip_group_attribute</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">security_ip_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -2859,6 +2943,17 @@ The following state arguments are supported:
     <dd>{{% md %}}The ID of the dedicated cluster. This parameter is required when you create an ApsaraDB for Redis instance in a dedicated cluster.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_dryrun_csharp">
+<a href="#state_dryrun_csharp" style="color: inherit; text-decoration: inherit;">Dry<wbr>Run</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether to precheck the request. Valid values:
+* true: prechecks the request without creating an instance. The system prechecks the required parameters, request format, service limits, and available resources. If the request fails the precheck, the corresponding error message is returned. If the request passes the precheck, the DryRunOperation error code is returned.
+* false: checks the request. After the request passes the check, an instance is created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_enablebackuplog_csharp">
 <a href="#state_enablebackuplog_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Backup<wbr>Log</a>
 </span>
@@ -3128,6 +3223,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The point in time of a backup file.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_secondaryzoneid_csharp">
+<a href="#state_secondaryzoneid_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Zone<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the secondary zone to which you want to migrate the ApsaraDB for Redis instance.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_securitygroupid_csharp">
 <a href="#state_securitygroupid_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Group<wbr>Id</a>
 </span>
@@ -3382,6 +3486,17 @@ Note: This functionality is supported by Cluster mode (Redis 2.8, 4.0, 5.0) and 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the dedicated cluster. This parameter is required when you create an ApsaraDB for Redis instance in a dedicated cluster.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_dryrun_go">
+<a href="#state_dryrun_go" style="color: inherit; text-decoration: inherit;">Dry<wbr>Run</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether to precheck the request. Valid values:
+* true: prechecks the request without creating an instance. The system prechecks the required parameters, request format, service limits, and available resources. If the request fails the precheck, the corresponding error message is returned. If the request passes the precheck, the DryRunOperation error code is returned.
+* false: checks the request. After the request passes the check, an instance is created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enablebackuplog_go">
@@ -3653,6 +3768,15 @@ Note: This functionality is supported by Cluster mode (Redis 2.8, 4.0, 5.0) and 
     <dd>{{% md %}}The point in time of a backup file.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_secondaryzoneid_go">
+<a href="#state_secondaryzoneid_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Zone<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the secondary zone to which you want to migrate the ApsaraDB for Redis instance.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_securitygroupid_go">
 <a href="#state_securitygroupid_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Group<wbr>Id</a>
 </span>
@@ -3907,6 +4031,17 @@ Note: This functionality is supported by Cluster mode (Redis 2.8, 4.0, 5.0) and 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the dedicated cluster. This parameter is required when you create an ApsaraDB for Redis instance in a dedicated cluster.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_dryrun_nodejs">
+<a href="#state_dryrun_nodejs" style="color: inherit; text-decoration: inherit;">dry<wbr>Run</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether to precheck the request. Valid values:
+* true: prechecks the request without creating an instance. The system prechecks the required parameters, request format, service limits, and available resources. If the request fails the precheck, the corresponding error message is returned. If the request passes the precheck, the DryRunOperation error code is returned.
+* false: checks the request. After the request passes the check, an instance is created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enablebackuplog_nodejs">
@@ -4178,6 +4313,15 @@ Note: This functionality is supported by Cluster mode (Redis 2.8, 4.0, 5.0) and 
     <dd>{{% md %}}The point in time of a backup file.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_secondaryzoneid_nodejs">
+<a href="#state_secondaryzoneid_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Zone<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the secondary zone to which you want to migrate the ApsaraDB for Redis instance.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_securitygroupid_nodejs">
 <a href="#state_securitygroupid_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Group<wbr>Id</a>
 </span>
@@ -4432,6 +4576,17 @@ Note: This functionality is supported by Cluster mode (Redis 2.8, 4.0, 5.0) and 
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the dedicated cluster. This parameter is required when you create an ApsaraDB for Redis instance in a dedicated cluster.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_dry_run_python">
+<a href="#state_dry_run_python" style="color: inherit; text-decoration: inherit;">dry_<wbr>run</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether to precheck the request. Valid values:
+* true: prechecks the request without creating an instance. The system prechecks the required parameters, request format, service limits, and available resources. If the request fails the precheck, the corresponding error message is returned. If the request passes the precheck, the DryRunOperation error code is returned.
+* false: checks the request. After the request passes the check, an instance is created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enable_backup_log_python">
@@ -4701,6 +4856,15 @@ Note: This functionality is supported by Cluster mode (Redis 2.8, 4.0, 5.0) and 
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The point in time of a backup file.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_secondary_zone_id_python">
+<a href="#state_secondary_zone_id_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>zone_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ID of the secondary zone to which you want to migrate the ApsaraDB for Redis instance.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_security_group_id_python">

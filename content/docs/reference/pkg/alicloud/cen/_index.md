@@ -23,6 +23,7 @@ Explore the resources and functions of the alicloud.cen module.
     <li><a href="routemap" title="RouteMap"><span class="symbol resource"></span>RouteMap</a></li>
     <li><a href="routeservice" title="RouteService"><span class="symbol resource"></span>RouteService</a></li>
     <li><a href="transitrouter" title="TransitRouter"><span class="symbol resource"></span>TransitRouter</a></li>
+    <li><a href="transitrouterpeerattachment" title="TransitRouterPeerAttachment"><span class="symbol resource"></span>TransitRouterPeerAttachment</a></li>
     <li><a href="transitrouterrouteentry" title="TransitRouterRouteEntry"><span class="symbol resource"></span>TransitRouterRouteEntry</a></li>
     <li><a href="transitrouterroutetable" title="TransitRouterRouteTable"><span class="symbol resource"></span>TransitRouterRouteTable</a></li>
     <li><a href="transitrouterroutetableassociation" title="TransitRouterRouteTableAssociation"><span class="symbol resource"></span>TransitRouterRouteTableAssociation</a></li>
@@ -44,6 +45,7 @@ Explore the resources and functions of the alicloud.cen module.
     <li><a href="getrouteentries" title="GetRouteEntries"><span class="symbol function"></span>GetRouteEntries</a></li>
     <li><a href="getroutemaps" title="GetRouteMaps"><span class="symbol function"></span>GetRouteMaps</a></li>
     <li><a href="getrouteservices" title="GetRouteServices"><span class="symbol function"></span>GetRouteServices</a></li>
+    <li><a href="gettransitrouterpeerattachments" title="GetTransitRouterPeerAttachments"><span class="symbol function"></span>GetTransitRouterPeerAttachments</a></li>
     <li><a href="gettransitrouterrouteentries" title="GetTransitRouterRouteEntries"><span class="symbol function"></span>GetTransitRouterRouteEntries</a></li>
     <li><a href="gettransitrouterroutetableassociations" title="GetTransitRouterRouteTableAssociations"><span class="symbol function"></span>GetTransitRouterRouteTableAssociations</a></li>
     <li><a href="gettransitrouterroutetablepropagations" title="GetTransitRouterRouteTablePropagations"><span class="symbol function"></span>GetTransitRouterRouteTablePropagations</a></li>
@@ -63,6 +65,6 @@ Explore the resources and functions of the alicloud.cen module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>3.4.0</dd>
+	<dd>3.5.0</dd>
 </dl>
 

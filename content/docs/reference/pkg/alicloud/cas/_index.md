@@ -12,11 +12,13 @@ Explore the resources and functions of the alicloud.cas module.
 <h2 id="resources">Resources</h2>
 <ul class="api">
     <li><a href="certificate" title="Certificate"><span class="symbol resource"></span>Certificate</a></li>
+    <li><a href="servicecertificate" title="ServiceCertificate"><span class="symbol resource"></span>ServiceCertificate</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
     <li><a href="getcertificates" title="GetCertificates"><span class="symbol function"></span>GetCertificates</a></li>
+    <li><a href="getservicecertificates" title="GetServiceCertificates"><span class="symbol function"></span>GetServiceCertificates</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -28,6 +30,6 @@ Explore the resources and functions of the alicloud.cas module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>3.4.0</dd>
+	<dd>3.5.0</dd>
 </dl>
 

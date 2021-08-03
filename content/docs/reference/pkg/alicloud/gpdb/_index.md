@@ -12,6 +12,7 @@ Explore the resources and functions of the alicloud.gpdb module.
 <h2 id="resources">Resources</h2>
 <ul class="api">
     <li><a href="connection" title="Connection"><span class="symbol resource"></span>Connection</a></li>
+    <li><a href="elasticinstance" title="ElasticInstance"><span class="symbol resource"></span>ElasticInstance</a></li>
     <li><a href="instance" title="Instance"><span class="symbol resource"></span>Instance</a></li>
 </ul>
 
@@ -30,6 +31,6 @@ Explore the resources and functions of the alicloud.gpdb module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>3.4.0</dd>
+	<dd>3.5.0</dd>
 </dl>
 
