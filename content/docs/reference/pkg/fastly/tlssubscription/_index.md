@@ -14,7 +14,7 @@ Enables TLS on a domain using a certificate managed by Fastly.
 
 DNS records need to be modified on the domain being secured, in order to respond to the ACME domain ownership challenge.
 
-There are two options for doing this: the `managed_dns_challenge`, which is the default method; and the `managed_http_challenges`, which points production traffic to Fastly.
+There are two options for doing this: the `managed_dns_challenges`, which is the default method; and the `managed_http_challenges`, which points production traffic to Fastly.
 
 > See the [Fastly documentation](https://docs.fastly.com/en/guides/serving-https-traffic-using-fastly-managed-certificates#verifying-domain-ownership) for more information on verifying domain ownership.
 
@@ -239,7 +239,7 @@ const exampleTlsSubscription = new fastly.TlsSubscription("exampleTlsSubscriptio
 
 ## TlsSubscription Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Architecture and Concepts docs.
 
 ### Inputs
 
@@ -504,8 +504,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
-            title="">
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property- property-deprecated"
+            title=", Deprecated">
         <span id="manageddnschallenge_csharp">
 <a href="#manageddnschallenge_csharp" style="color: inherit; text-decoration: inherit;">Managed<wbr>Dns<wbr>Challenge</a>
 </span>
@@ -513,6 +513,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}The details required to configure DNS to respond to ACME DNS challenge in order to verify domain ownership.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use &#39;managed_dns_challenges&#39; attribute instead{{% /md %}}</p></dd><dt class="property-"
+            title="">
+        <span id="manageddnschallenges_csharp">
+<a href="#manageddnschallenges_csharp" style="color: inherit; text-decoration: inherit;">Managed<wbr>Dns<wbr>Challenges</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#tlssubscriptionmanageddnschallenge">List&lt;Tls<wbr>Subscription<wbr>Managed<wbr>Dns<wbr>Challenge&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A list of options for configuring DNS to respond to ACME DNS challenge in order to verify domain ownership.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="managedhttpchallenges_csharp">
@@ -561,8 +570,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
-            title="">
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property- property-deprecated"
+            title=", Deprecated">
         <span id="manageddnschallenge_go">
 <a href="#manageddnschallenge_go" style="color: inherit; text-decoration: inherit;">Managed<wbr>Dns<wbr>Challenge</a>
 </span>
@@ -570,6 +579,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}The details required to configure DNS to respond to ACME DNS challenge in order to verify domain ownership.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use &#39;managed_dns_challenges&#39; attribute instead{{% /md %}}</p></dd><dt class="property-"
+            title="">
+        <span id="manageddnschallenges_go">
+<a href="#manageddnschallenges_go" style="color: inherit; text-decoration: inherit;">Managed<wbr>Dns<wbr>Challenges</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#tlssubscriptionmanageddnschallenge">[]Tls<wbr>Subscription<wbr>Managed<wbr>Dns<wbr>Challenge</a></span>
+    </dt>
+    <dd>{{% md %}}A list of options for configuring DNS to respond to ACME DNS challenge in order to verify domain ownership.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="managedhttpchallenges_go">
@@ -618,8 +636,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
-            title="">
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property- property-deprecated"
+            title=", Deprecated">
         <span id="manageddnschallenge_nodejs">
 <a href="#manageddnschallenge_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Dns<wbr>Challenge</a>
 </span>
@@ -627,6 +645,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}The details required to configure DNS to respond to ACME DNS challenge in order to verify domain ownership.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use &#39;managed_dns_challenges&#39; attribute instead{{% /md %}}</p></dd><dt class="property-"
+            title="">
+        <span id="manageddnschallenges_nodejs">
+<a href="#manageddnschallenges_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Dns<wbr>Challenges</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#tlssubscriptionmanageddnschallenge">Tls<wbr>Subscription<wbr>Managed<wbr>Dns<wbr>Challenge[]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of options for configuring DNS to respond to ACME DNS challenge in order to verify domain ownership.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="managedhttpchallenges_nodejs">
@@ -675,8 +702,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
-            title="">
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property- property-deprecated"
+            title=", Deprecated">
         <span id="managed_dns_challenge_python">
 <a href="#managed_dns_challenge_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>dns_<wbr>challenge</a>
 </span>
@@ -684,6 +711,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The details required to configure DNS to respond to ACME DNS challenge in order to verify domain ownership.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use &#39;managed_dns_challenges&#39; attribute instead{{% /md %}}</p></dd><dt class="property-"
+            title="">
+        <span id="managed_dns_challenges_python">
+<a href="#managed_dns_challenges_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>dns_<wbr>challenges</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#tlssubscriptionmanageddnschallenge">Sequence[Tls<wbr>Subscription<wbr>Managed<wbr>Dns<wbr>Challenge]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of options for configuring DNS to respond to ACME DNS challenge in order to verify domain ownership.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="managed_http_challenges_python">
@@ -738,6 +774,7 @@ Get an existing TlsSubscription resource's state with the given name, ID, and op
         <span class="nx">force_destroy</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">force_update</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">managed_dns_challenge</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+        <span class="nx">managed_dns_challenges</span><span class="p">:</span> <span class="nx">Optional[Sequence[TlsSubscriptionManagedDnsChallengeArgs]]</span> = None<span class="p">,</span>
         <span class="nx">managed_http_challenges</span><span class="p">:</span> <span class="nx">Optional[Sequence[TlsSubscriptionManagedHttpChallengeArgs]]</span> = None<span class="p">,</span>
         <span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">updated_at</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> TlsSubscription</code></pre></div>
@@ -914,8 +951,8 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Always update subscription, even when active domains are present. Defaults to false.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_manageddnschallenge_csharp">
 <a href="#state_manageddnschallenge_csharp" style="color: inherit; text-decoration: inherit;">Managed<wbr>Dns<wbr>Challenge</a>
 </span>
@@ -923,6 +960,15 @@ The following state arguments are supported:
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}The details required to configure DNS to respond to ACME DNS challenge in order to verify domain ownership.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use &#39;managed_dns_challenges&#39; attribute instead{{% /md %}}</p></dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_manageddnschallenges_csharp">
+<a href="#state_manageddnschallenges_csharp" style="color: inherit; text-decoration: inherit;">Managed<wbr>Dns<wbr>Challenges</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#tlssubscriptionmanageddnschallenge">List&lt;Tls<wbr>Subscription<wbr>Managed<wbr>Dns<wbr>Challenge<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A list of options for configuring DNS to respond to ACME DNS challenge in order to verify domain ownership.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_managedhttpchallenges_csharp">
@@ -1017,8 +1063,8 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Always update subscription, even when active domains are present. Defaults to false.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_manageddnschallenge_go">
 <a href="#state_manageddnschallenge_go" style="color: inherit; text-decoration: inherit;">Managed<wbr>Dns<wbr>Challenge</a>
 </span>
@@ -1026,6 +1072,15 @@ The following state arguments are supported:
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}The details required to configure DNS to respond to ACME DNS challenge in order to verify domain ownership.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use &#39;managed_dns_challenges&#39; attribute instead{{% /md %}}</p></dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_manageddnschallenges_go">
+<a href="#state_manageddnschallenges_go" style="color: inherit; text-decoration: inherit;">Managed<wbr>Dns<wbr>Challenges</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#tlssubscriptionmanageddnschallenge">[]Tls<wbr>Subscription<wbr>Managed<wbr>Dns<wbr>Challenge<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A list of options for configuring DNS to respond to ACME DNS challenge in order to verify domain ownership.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_managedhttpchallenges_go">
@@ -1120,8 +1175,8 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Always update subscription, even when active domains are present. Defaults to false.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_manageddnschallenge_nodejs">
 <a href="#state_manageddnschallenge_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Dns<wbr>Challenge</a>
 </span>
@@ -1129,6 +1184,15 @@ The following state arguments are supported:
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}The details required to configure DNS to respond to ACME DNS challenge in order to verify domain ownership.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use &#39;managed_dns_challenges&#39; attribute instead{{% /md %}}</p></dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_manageddnschallenges_nodejs">
+<a href="#state_manageddnschallenges_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Dns<wbr>Challenges</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#tlssubscriptionmanageddnschallenge">Tls<wbr>Subscription<wbr>Managed<wbr>Dns<wbr>Challenge<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of options for configuring DNS to respond to ACME DNS challenge in order to verify domain ownership.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_managedhttpchallenges_nodejs">
@@ -1223,8 +1287,8 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Always update subscription, even when active domains are present. Defaults to false.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_managed_dns_challenge_python">
 <a href="#state_managed_dns_challenge_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>dns_<wbr>challenge</a>
 </span>
@@ -1232,6 +1296,15 @@ The following state arguments are supported:
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The details required to configure DNS to respond to ACME DNS challenge in order to verify domain ownership.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use &#39;managed_dns_challenges&#39; attribute instead{{% /md %}}</p></dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_managed_dns_challenges_python">
+<a href="#state_managed_dns_challenges_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>dns_<wbr>challenges</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#tlssubscriptionmanageddnschallenge">Sequence[Tls<wbr>Subscription<wbr>Managed<wbr>Dns<wbr>Challenge<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of options for configuring DNS to respond to ACME DNS challenge in order to verify domain ownership.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_managed_http_challenges_python">
@@ -1270,6 +1343,132 @@ The following state arguments are supported:
 ## Supporting Types
 
 
+
+<h4 id="tlssubscriptionmanageddnschallenge">Tls<wbr>Subscription<wbr>Managed<wbr>Dns<wbr>Challenge</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="recordname_csharp">
+<a href="#recordname_csharp" style="color: inherit; text-decoration: inherit;">Record<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the DNS record to add. For example `example.com`. Best accessed through a `for` expression to filter the relevant record.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="recordtype_csharp">
+<a href="#recordtype_csharp" style="color: inherit; text-decoration: inherit;">Record<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of DNS record to add, e.g. `A`, or `CNAME`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="recordvalue_csharp">
+<a href="#recordvalue_csharp" style="color: inherit; text-decoration: inherit;">Record<wbr>Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The value to which the DNS record should point, e.g. `xxxxx.fastly-validations.com`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="recordname_go">
+<a href="#recordname_go" style="color: inherit; text-decoration: inherit;">Record<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the DNS record to add. For example `example.com`. Best accessed through a `for` expression to filter the relevant record.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="recordtype_go">
+<a href="#recordtype_go" style="color: inherit; text-decoration: inherit;">Record<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of DNS record to add, e.g. `A`, or `CNAME`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="recordvalue_go">
+<a href="#recordvalue_go" style="color: inherit; text-decoration: inherit;">Record<wbr>Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The value to which the DNS record should point, e.g. `xxxxx.fastly-validations.com`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="recordname_nodejs">
+<a href="#recordname_nodejs" style="color: inherit; text-decoration: inherit;">record<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the DNS record to add. For example `example.com`. Best accessed through a `for` expression to filter the relevant record.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="recordtype_nodejs">
+<a href="#recordtype_nodejs" style="color: inherit; text-decoration: inherit;">record<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of DNS record to add, e.g. `A`, or `CNAME`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="recordvalue_nodejs">
+<a href="#recordvalue_nodejs" style="color: inherit; text-decoration: inherit;">record<wbr>Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The value to which the DNS record should point, e.g. `xxxxx.fastly-validations.com`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="record_name_python">
+<a href="#record_name_python" style="color: inherit; text-decoration: inherit;">record_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the DNS record to add. For example `example.com`. Best accessed through a `for` expression to filter the relevant record.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="record_type_python">
+<a href="#record_type_python" style="color: inherit; text-decoration: inherit;">record_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The type of DNS record to add, e.g. `A`, or `CNAME`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="record_value_python">
+<a href="#record_value_python" style="color: inherit; text-decoration: inherit;">record_<wbr>value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The value to which the DNS record should point, e.g. `xxxxx.fastly-validations.com`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
 
 <h4 id="tlssubscriptionmanagedhttpchallenge">Tls<wbr>Subscription<wbr>Managed<wbr>Http<wbr>Challenge</h4>
 

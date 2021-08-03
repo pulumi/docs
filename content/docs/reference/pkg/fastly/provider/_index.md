@@ -31,7 +31,8 @@ construction to achieve fine-grained programmatic control over provider settings
 <span class="k">def </span><span class="nx">Provider</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
              <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
              <span class="nx">api_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-             <span class="nx">base_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+             <span class="nx">base_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">no_auth</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">Provider</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
              <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">Optional[ProviderArgs]</a></span> = None<span class="p">,</span>
@@ -150,7 +151,7 @@ construction to achieve fine-grained programmatic control over provider settings
 
 ## Provider Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Architecture and Concepts docs.
 
 ### Inputs
 
@@ -177,6 +178,15 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Fastly API URL
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="noauth_csharp">
+<a href="#noauth_csharp" style="color: inherit; text-decoration: inherit;">No<wbr>Auth</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Set this to `true` if you only need data source that does not require authentication such as `fastly_ip_ranges`
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -199,6 +209,15 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Fastly API URL
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="noauth_go">
+<a href="#noauth_go" style="color: inherit; text-decoration: inherit;">No<wbr>Auth</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Set this to `true` if you only need data source that does not require authentication such as `fastly_ip_ranges`
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -221,6 +240,15 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Fastly API URL
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="noauth_nodejs">
+<a href="#noauth_nodejs" style="color: inherit; text-decoration: inherit;">no<wbr>Auth</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Set this to `true` if you only need data source that does not require authentication such as `fastly_ip_ranges`
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -243,6 +271,15 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Fastly API URL
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="no_auth_python">
+<a href="#no_auth_python" style="color: inherit; text-decoration: inherit;">no_<wbr>auth</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Set this to `true` if you only need data source that does not require authentication such as `fastly_ip_ranges`
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
