@@ -1,8 +1,8 @@
 
 ---
-title: "MaskingPolicyGrant"
-title_tag: "snowflake.MaskingPolicyGrant"
-meta_desc: "Documentation for the snowflake.MaskingPolicyGrant resource with examples, input properties, output properties, lookup functions, and supporting types."
+title: "TaskGrant"
+title_tag: "snowflake.TaskGrant"
+meta_desc: "Documentation for the snowflake.TaskGrant resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -13,36 +13,37 @@ meta_desc: "Documentation for the snowflake.MaskingPolicyGrant resource with exa
 
 
 
-## Create a MaskingPolicyGrant Resource {#create}
+## Create a TaskGrant Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">MaskingPolicyGrant</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">MaskingPolicyGrantArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">TaskGrant</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">TaskGrantArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">MaskingPolicyGrant</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                       <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-                       <span class="nx">database_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                       <span class="nx">masking_policy_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                       <span class="nx">privilege</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                       <span class="nx">roles</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
-                       <span class="nx">schema_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                       <span class="nx">with_grant_option</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span>
+<span class="k">def </span><span class="nx">TaskGrant</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+              <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+              <span class="nx">database_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">on_future</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+              <span class="nx">privilege</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">roles</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+              <span class="nx">schema_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">task_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+              <span class="nx">with_grant_option</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">MaskingPolicyGrant</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                       <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">MaskingPolicyGrantArgs</a></span><span class="p">,</span>
-                       <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<span class="k">def </span><span class="nx">TaskGrant</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+              <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">TaskGrantArgs</a></span><span class="p">,</span>
+              <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewMaskingPolicyGrant</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">MaskingPolicyGrantArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">MaskingPolicyGrant</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewTaskGrant</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">TaskGrantArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">TaskGrant</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">MaskingPolicyGrant</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">MaskingPolicyGrantArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">TaskGrant</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">TaskGrantArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -57,7 +58,7 @@ meta_desc: "Documentation for the snowflake.MaskingPolicyGrant resource with exa
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">MaskingPolicyGrantArgs</a></span>
+        <span class="property-type"><a href="#inputs">TaskGrantArgs</a></span>
     </dt>
     <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
@@ -81,7 +82,7 @@ meta_desc: "Documentation for the snowflake.MaskingPolicyGrant resource with exa
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">MaskingPolicyGrantArgs</a></span>
+        <span class="property-type"><a href="#inputs">TaskGrantArgs</a></span>
     </dt>
     <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
@@ -111,7 +112,7 @@ meta_desc: "Documentation for the snowflake.MaskingPolicyGrant resource with exa
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">MaskingPolicyGrantArgs</a></span>
+        <span class="property-type"><a href="#inputs">TaskGrantArgs</a></span>
     </dt>
     <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
@@ -135,7 +136,7 @@ meta_desc: "Documentation for the snowflake.MaskingPolicyGrant resource with exa
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">MaskingPolicyGrantArgs</a></span>
+        <span class="property-type"><a href="#inputs">TaskGrantArgs</a></span>
     </dt>
     <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
@@ -147,13 +148,13 @@ meta_desc: "Documentation for the snowflake.MaskingPolicyGrant resource with exa
 
 {{% /choosable %}}
 
-## MaskingPolicyGrant Resource Properties {#properties}
+## TaskGrant Resource Properties {#properties}
 
 To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Architecture and Concepts docs.
 
 ### Inputs
 
-The MaskingPolicyGrant resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
+The TaskGrant resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -166,16 +167,7 @@ The MaskingPolicyGrant resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the database containing the masking policy on which to grant privileges.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="maskingpolicyname_csharp">
-<a href="#maskingpolicyname_csharp" style="color: inherit; text-decoration: inherit;">Masking<wbr>Policy<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the masking policy on which to grant privileges immediately.
+    <dd>{{% md %}}The name of the database containing the current or future tasks on which to grant privileges.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="schemaname_csharp">
@@ -184,7 +176,18 @@ The MaskingPolicyGrant resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the schema containing the masking policy on which to grant privileges.
+    <dd>{{% md %}}The name of the schema containing the current or future tasks on which to grant privileges.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="onfuture_csharp">
+<a href="#onfuture_csharp" style="color: inherit; text-decoration: inherit;">On<wbr>Future</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}When this is set to true and a schema_name is provided, apply this grant on all future tasks in the given schema. When
+this is true and no schema_name is provided apply this grant on all future tasks in the given database. The task_name
+field must be unset in order to use on_future.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privilege_csharp">
@@ -193,7 +196,7 @@ The MaskingPolicyGrant resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The privilege to grant on the masking policy.
+    <dd>{{% md %}}The privilege to grant on the current or future task.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="roles_csharp">
@@ -203,6 +206,15 @@ The MaskingPolicyGrant resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Grants privilege to these roles.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="taskname_csharp">
+<a href="#taskname_csharp" style="color: inherit; text-decoration: inherit;">Task<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the task on which to grant privileges immediately (only valid if on_future is false).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="withgrantoption_csharp">
@@ -224,16 +236,7 @@ The MaskingPolicyGrant resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the database containing the masking policy on which to grant privileges.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="maskingpolicyname_go">
-<a href="#maskingpolicyname_go" style="color: inherit; text-decoration: inherit;">Masking<wbr>Policy<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the masking policy on which to grant privileges immediately.
+    <dd>{{% md %}}The name of the database containing the current or future tasks on which to grant privileges.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="schemaname_go">
@@ -242,7 +245,18 @@ The MaskingPolicyGrant resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the schema containing the masking policy on which to grant privileges.
+    <dd>{{% md %}}The name of the schema containing the current or future tasks on which to grant privileges.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="onfuture_go">
+<a href="#onfuture_go" style="color: inherit; text-decoration: inherit;">On<wbr>Future</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}When this is set to true and a schema_name is provided, apply this grant on all future tasks in the given schema. When
+this is true and no schema_name is provided apply this grant on all future tasks in the given database. The task_name
+field must be unset in order to use on_future.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privilege_go">
@@ -251,7 +265,7 @@ The MaskingPolicyGrant resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The privilege to grant on the masking policy.
+    <dd>{{% md %}}The privilege to grant on the current or future task.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="roles_go">
@@ -261,6 +275,15 @@ The MaskingPolicyGrant resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Grants privilege to these roles.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="taskname_go">
+<a href="#taskname_go" style="color: inherit; text-decoration: inherit;">Task<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the task on which to grant privileges immediately (only valid if on_future is false).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="withgrantoption_go">
@@ -282,16 +305,7 @@ The MaskingPolicyGrant resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the database containing the masking policy on which to grant privileges.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="maskingpolicyname_nodejs">
-<a href="#maskingpolicyname_nodejs" style="color: inherit; text-decoration: inherit;">masking<wbr>Policy<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the masking policy on which to grant privileges immediately.
+    <dd>{{% md %}}The name of the database containing the current or future tasks on which to grant privileges.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="schemaname_nodejs">
@@ -300,7 +314,18 @@ The MaskingPolicyGrant resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the schema containing the masking policy on which to grant privileges.
+    <dd>{{% md %}}The name of the schema containing the current or future tasks on which to grant privileges.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="onfuture_nodejs">
+<a href="#onfuture_nodejs" style="color: inherit; text-decoration: inherit;">on<wbr>Future</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}When this is set to true and a schema_name is provided, apply this grant on all future tasks in the given schema. When
+this is true and no schema_name is provided apply this grant on all future tasks in the given database. The task_name
+field must be unset in order to use on_future.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privilege_nodejs">
@@ -309,7 +334,7 @@ The MaskingPolicyGrant resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The privilege to grant on the masking policy.
+    <dd>{{% md %}}The privilege to grant on the current or future task.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="roles_nodejs">
@@ -319,6 +344,15 @@ The MaskingPolicyGrant resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Grants privilege to these roles.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="taskname_nodejs">
+<a href="#taskname_nodejs" style="color: inherit; text-decoration: inherit;">task<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the task on which to grant privileges immediately (only valid if on_future is false).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="withgrantoption_nodejs">
@@ -340,16 +374,7 @@ The MaskingPolicyGrant resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the database containing the masking policy on which to grant privileges.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="masking_policy_name_python">
-<a href="#masking_policy_name_python" style="color: inherit; text-decoration: inherit;">masking_<wbr>policy_<wbr>name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the masking policy on which to grant privileges immediately.
+    <dd>{{% md %}}The name of the database containing the current or future tasks on which to grant privileges.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="schema_name_python">
@@ -358,7 +383,18 @@ The MaskingPolicyGrant resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the schema containing the masking policy on which to grant privileges.
+    <dd>{{% md %}}The name of the schema containing the current or future tasks on which to grant privileges.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="on_future_python">
+<a href="#on_future_python" style="color: inherit; text-decoration: inherit;">on_<wbr>future</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}When this is set to true and a schema_name is provided, apply this grant on all future tasks in the given schema. When
+this is true and no schema_name is provided apply this grant on all future tasks in the given database. The task_name
+field must be unset in order to use on_future.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privilege_python">
@@ -367,7 +403,7 @@ The MaskingPolicyGrant resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The privilege to grant on the masking policy.
+    <dd>{{% md %}}The privilege to grant on the current or future task.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="roles_python">
@@ -377,6 +413,15 @@ The MaskingPolicyGrant resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Grants privilege to these roles.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="task_name_python">
+<a href="#task_name_python" style="color: inherit; text-decoration: inherit;">task_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the task on which to grant privileges immediately (only valid if on_future is false).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="with_grant_option_python">
@@ -392,7 +437,7 @@ The MaskingPolicyGrant resource accepts the following [input]({{< relref "/docs/
 
 ### Outputs
 
-All [input](#inputs) properties are implicitly available as output properties. Additionally, the MaskingPolicyGrant resource produces the following output properties:
+All [input](#inputs) properties are implicitly available as output properties. Additionally, the TaskGrant resource produces the following output properties:
 
 
 
@@ -446,13 +491,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
-## Look up an Existing MaskingPolicyGrant Resource {#look-up}
+## Look up an Existing TaskGrant Resource {#look-up}
 
-Get an existing MaskingPolicyGrant resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
+Get an existing TaskGrant resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">MaskingPolicyGrantState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">MaskingPolicyGrant</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">TaskGrantState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">TaskGrant</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -461,19 +506,20 @@ Get an existing MaskingPolicyGrant resource's state with the given name, ID, and
         <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
         <span class="nx">database_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-        <span class="nx">masking_policy_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">on_future</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">privilege</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">roles</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
         <span class="nx">schema_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-        <span class="nx">with_grant_option</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">) -&gt;</span> MaskingPolicyGrant</code></pre></div>
+        <span class="nx">task_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">with_grant_option</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">) -&gt;</span> TaskGrant</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetMaskingPolicyGrant<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">MaskingPolicyGrantState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">MaskingPolicyGrant</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetTaskGrant<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">TaskGrantState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">TaskGrant</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">MaskingPolicyGrant</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">MaskingPolicyGrantState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">TaskGrant</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">TaskGrantState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -584,16 +630,18 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the database containing the masking policy on which to grant privileges.
+    <dd>{{% md %}}The name of the database containing the current or future tasks on which to grant privileges.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="state_maskingpolicyname_csharp">
-<a href="#state_maskingpolicyname_csharp" style="color: inherit; text-decoration: inherit;">Masking<wbr>Policy<wbr>Name</a>
+        <span id="state_onfuture_csharp">
+<a href="#state_onfuture_csharp" style="color: inherit; text-decoration: inherit;">On<wbr>Future</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The name of the masking policy on which to grant privileges immediately.
+    <dd>{{% md %}}When this is set to true and a schema_name is provided, apply this grant on all future tasks in the given schema. When
+this is true and no schema_name is provided apply this grant on all future tasks in the given database. The task_name
+field must be unset in order to use on_future.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_privilege_csharp">
@@ -602,7 +650,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The privilege to grant on the masking policy.
+    <dd>{{% md %}}The privilege to grant on the current or future task.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_roles_csharp">
@@ -620,7 +668,16 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the schema containing the masking policy on which to grant privileges.
+    <dd>{{% md %}}The name of the schema containing the current or future tasks on which to grant privileges.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_taskname_csharp">
+<a href="#state_taskname_csharp" style="color: inherit; text-decoration: inherit;">Task<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the task on which to grant privileges immediately (only valid if on_future is false).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_withgrantoption_csharp">
@@ -642,16 +699,18 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the database containing the masking policy on which to grant privileges.
+    <dd>{{% md %}}The name of the database containing the current or future tasks on which to grant privileges.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="state_maskingpolicyname_go">
-<a href="#state_maskingpolicyname_go" style="color: inherit; text-decoration: inherit;">Masking<wbr>Policy<wbr>Name</a>
+        <span id="state_onfuture_go">
+<a href="#state_onfuture_go" style="color: inherit; text-decoration: inherit;">On<wbr>Future</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The name of the masking policy on which to grant privileges immediately.
+    <dd>{{% md %}}When this is set to true and a schema_name is provided, apply this grant on all future tasks in the given schema. When
+this is true and no schema_name is provided apply this grant on all future tasks in the given database. The task_name
+field must be unset in order to use on_future.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_privilege_go">
@@ -660,7 +719,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The privilege to grant on the masking policy.
+    <dd>{{% md %}}The privilege to grant on the current or future task.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_roles_go">
@@ -678,7 +737,16 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the schema containing the masking policy on which to grant privileges.
+    <dd>{{% md %}}The name of the schema containing the current or future tasks on which to grant privileges.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_taskname_go">
+<a href="#state_taskname_go" style="color: inherit; text-decoration: inherit;">Task<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the task on which to grant privileges immediately (only valid if on_future is false).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_withgrantoption_go">
@@ -700,16 +768,18 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the database containing the masking policy on which to grant privileges.
+    <dd>{{% md %}}The name of the database containing the current or future tasks on which to grant privileges.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="state_maskingpolicyname_nodejs">
-<a href="#state_maskingpolicyname_nodejs" style="color: inherit; text-decoration: inherit;">masking<wbr>Policy<wbr>Name</a>
+        <span id="state_onfuture_nodejs">
+<a href="#state_onfuture_nodejs" style="color: inherit; text-decoration: inherit;">on<wbr>Future</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}The name of the masking policy on which to grant privileges immediately.
+    <dd>{{% md %}}When this is set to true and a schema_name is provided, apply this grant on all future tasks in the given schema. When
+this is true and no schema_name is provided apply this grant on all future tasks in the given database. The task_name
+field must be unset in order to use on_future.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_privilege_nodejs">
@@ -718,7 +788,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The privilege to grant on the masking policy.
+    <dd>{{% md %}}The privilege to grant on the current or future task.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_roles_nodejs">
@@ -736,7 +806,16 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the schema containing the masking policy on which to grant privileges.
+    <dd>{{% md %}}The name of the schema containing the current or future tasks on which to grant privileges.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_taskname_nodejs">
+<a href="#state_taskname_nodejs" style="color: inherit; text-decoration: inherit;">task<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the task on which to grant privileges immediately (only valid if on_future is false).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_withgrantoption_nodejs">
@@ -758,16 +837,18 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the database containing the masking policy on which to grant privileges.
+    <dd>{{% md %}}The name of the database containing the current or future tasks on which to grant privileges.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="state_masking_policy_name_python">
-<a href="#state_masking_policy_name_python" style="color: inherit; text-decoration: inherit;">masking_<wbr>policy_<wbr>name</a>
+        <span id="state_on_future_python">
+<a href="#state_on_future_python" style="color: inherit; text-decoration: inherit;">on_<wbr>future</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The name of the masking policy on which to grant privileges immediately.
+    <dd>{{% md %}}When this is set to true and a schema_name is provided, apply this grant on all future tasks in the given schema. When
+this is true and no schema_name is provided apply this grant on all future tasks in the given database. The task_name
+field must be unset in order to use on_future.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_privilege_python">
@@ -776,7 +857,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The privilege to grant on the masking policy.
+    <dd>{{% md %}}The privilege to grant on the current or future task.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_roles_python">
@@ -794,7 +875,16 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the schema containing the masking policy on which to grant privileges.
+    <dd>{{% md %}}The name of the schema containing the current or future tasks on which to grant privileges.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_task_name_python">
+<a href="#state_task_name_python" style="color: inherit; text-decoration: inherit;">task_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the task on which to grant privileges immediately (only valid if on_future is false).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_with_grant_option_python">

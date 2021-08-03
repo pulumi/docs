@@ -50,11 +50,13 @@ class MyStack : Stack
                 new Snowflake.Inputs.TableColumnArgs
                 {
                     Name = "id",
+                    Nullable = true,
                     Type = "int",
                 },
                 new Snowflake.Inputs.TableColumnArgs
                 {
                     Name = "data",
+                    Nullable = false,
                     Type = "text",
                 },
                 new Snowflake.Inputs.TableColumnArgs
@@ -65,6 +67,14 @@ class MyStack : Stack
             },
             Comment = "A table.",
             Database = "database",
+            PrimaryKey = new Snowflake.Inputs.TablePrimaryKeyArgs
+            {
+                Keys = 
+                {
+                    "data",
+                },
+                Name = "my_key",
+            },
             Schema = "schmea",
         });
     }
@@ -94,12 +104,14 @@ func main() {
 			},
 			Columns: TableColumnArray{
 				&TableColumnArgs{
-					Name: pulumi.String("id"),
-					Type: pulumi.String("int"),
+					Name:     pulumi.String("id"),
+					Nullable: pulumi.Bool(true),
+					Type:     pulumi.String("int"),
 				},
 				&TableColumnArgs{
-					Name: pulumi.String("data"),
-					Type: pulumi.String("text"),
+					Name:     pulumi.String("data"),
+					Nullable: pulumi.Bool(false),
+					Type:     pulumi.String("text"),
 				},
 				&TableColumnArgs{
 					Name: pulumi.String("DATE"),
@@ -108,7 +120,13 @@ func main() {
 			},
 			Comment:  pulumi.String("A table."),
 			Database: pulumi.String("database"),
-			Schema:   pulumi.String("schmea"),
+			PrimaryKey: &TablePrimaryKeyArgs{
+				Keys: pulumi.StringArray{
+					pulumi.String("data"),
+				},
+				Name: pulumi.String("my_key"),
+			},
+			Schema: pulumi.String("schmea"),
 		})
 		if err != nil {
 			return err
@@ -133,10 +151,12 @@ table = snowflake.Table("table",
     columns=[
         snowflake.TableColumnArgs(
             name="id",
+            nullable=True,
             type="int",
         ),
         snowflake.TableColumnArgs(
             name="data",
+            nullable=False,
             type="text",
         ),
         snowflake.TableColumnArgs(
@@ -146,6 +166,10 @@ table = snowflake.Table("table",
     ],
     comment="A table.",
     database="database",
+    primary_key=snowflake.TablePrimaryKeyArgs(
+        keys=["data"],
+        name="my_key",
+    ),
     schema="schmea")
 ```
 
@@ -165,10 +189,12 @@ const table = new snowflake.Table("table", {
     columns: [
         {
             name: "id",
+            nullable: true,
             type: "int",
         },
         {
             name: "data",
+            nullable: false,
             type: "text",
         },
         {
@@ -178,6 +204,10 @@ const table = new snowflake.Table("table", {
     ],
     comment: "A table.",
     database: "database",
+    primaryKey: {
+        keys: ["data"],
+        name: "my_key",
+    },
     schema: "schmea",
 });
 ```
@@ -211,6 +241,7 @@ const table = new snowflake.Table("table", {
           <span class="nx">comment</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
           <span class="nx">database</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
           <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+          <span class="nx">primary_key</span><span class="p">:</span> <span class="nx">Optional[TablePrimaryKeyArgs]</span> = None<span class="p">,</span>
           <span class="nx">schema</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">Table</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
@@ -219,7 +250,7 @@ const table = new snowflake.Table("table", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewTable</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">TableArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Table</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewTable</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">TableArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Table</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -280,7 +311,7 @@ const table = new snowflake.Table("table", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
@@ -298,7 +329,7 @@ const table = new snowflake.Table("table", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
@@ -330,7 +361,7 @@ const table = new snowflake.Table("table", {
 
 ## Table Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Architecture and Concepts docs.
 
 ### Inputs
 
@@ -374,7 +405,7 @@ The Table resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}A list of one of more table columns/expressions to be used as clustering key(s) for the table
+    <dd>{{% md %}}A list of one or more table columns/expressions to be used as clustering key(s) for the table
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="comment_csharp">
@@ -393,6 +424,15 @@ The Table resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the identifier for the table; must be unique for the database and schema in which the table is created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="primarykey_csharp">
+<a href="#primarykey_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#tableprimarykey">Table<wbr>Primary<wbr>Key<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Definitions of primary key constraint to create on table
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -432,7 +472,7 @@ The Table resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}A list of one of more table columns/expressions to be used as clustering key(s) for the table
+    <dd>{{% md %}}A list of one or more table columns/expressions to be used as clustering key(s) for the table
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="comment_go">
@@ -451,6 +491,15 @@ The Table resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the identifier for the table; must be unique for the database and schema in which the table is created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="primarykey_go">
+<a href="#primarykey_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#tableprimarykey">Table<wbr>Primary<wbr>Key<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Definitions of primary key constraint to create on table
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -490,7 +539,7 @@ The Table resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}A list of one of more table columns/expressions to be used as clustering key(s) for the table
+    <dd>{{% md %}}A list of one or more table columns/expressions to be used as clustering key(s) for the table
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="comment_nodejs">
@@ -509,6 +558,15 @@ The Table resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the identifier for the table; must be unique for the database and schema in which the table is created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="primarykey_nodejs">
+<a href="#primarykey_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#tableprimarykey">Table<wbr>Primary<wbr>Key<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Definitions of primary key constraint to create on table
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -548,7 +606,7 @@ The Table resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}A list of one of more table columns/expressions to be used as clustering key(s) for the table
+    <dd>{{% md %}}A list of one or more table columns/expressions to be used as clustering key(s) for the table
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="comment_python">
@@ -567,6 +625,15 @@ The Table resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the identifier for the table; must be unique for the database and schema in which the table is created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="primary_key_python">
+<a href="#primary_key_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#tableprimarykey">Table<wbr>Primary<wbr>Key<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Definitions of primary key constraint to create on table
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -683,11 +750,12 @@ Get an existing Table resource's state with the given name, ID, and optional ext
         <span class="nx">database</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">owner</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">primary_key</span><span class="p">:</span> <span class="nx">Optional[TablePrimaryKeyArgs]</span> = None<span class="p">,</span>
         <span class="nx">schema</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Table</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetTable<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">TableState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Table</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetTable<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">TableState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Table</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -802,7 +870,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}A list of one of more table columns/expressions to be used as clustering key(s) for the table
+    <dd>{{% md %}}A list of one or more table columns/expressions to be used as clustering key(s) for the table
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_columns_csharp">
@@ -850,6 +918,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Name of the role that owns the table.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_primarykey_csharp">
+<a href="#state_primarykey_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#tableprimarykey">Table<wbr>Primary<wbr>Key<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Definitions of primary key constraint to create on table
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_schema_csharp">
 <a href="#state_schema_csharp" style="color: inherit; text-decoration: inherit;">Schema</a>
 </span>
@@ -869,7 +946,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}A list of one of more table columns/expressions to be used as clustering key(s) for the table
+    <dd>{{% md %}}A list of one or more table columns/expressions to be used as clustering key(s) for the table
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_columns_go">
@@ -917,6 +994,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Name of the role that owns the table.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_primarykey_go">
+<a href="#state_primarykey_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#tableprimarykey">Table<wbr>Primary<wbr>Key<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Definitions of primary key constraint to create on table
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_schema_go">
 <a href="#state_schema_go" style="color: inherit; text-decoration: inherit;">Schema</a>
 </span>
@@ -936,7 +1022,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}A list of one of more table columns/expressions to be used as clustering key(s) for the table
+    <dd>{{% md %}}A list of one or more table columns/expressions to be used as clustering key(s) for the table
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_columns_nodejs">
@@ -984,6 +1070,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Name of the role that owns the table.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_primarykey_nodejs">
+<a href="#state_primarykey_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#tableprimarykey">Table<wbr>Primary<wbr>Key<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Definitions of primary key constraint to create on table
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_schema_nodejs">
 <a href="#state_schema_nodejs" style="color: inherit; text-decoration: inherit;">schema</a>
 </span>
@@ -1003,7 +1098,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}A list of one of more table columns/expressions to be used as clustering key(s) for the table
+    <dd>{{% md %}}A list of one or more table columns/expressions to be used as clustering key(s) for the table
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_columns_python">
@@ -1051,6 +1146,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Name of the role that owns the table.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_primary_key_python">
+<a href="#state_primary_key_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#tableprimarykey">Table<wbr>Primary<wbr>Key<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Definitions of primary key constraint to create on table
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_schema_python">
 <a href="#state_schema_python" style="color: inherit; text-decoration: inherit;">schema</a>
 </span>
@@ -1091,6 +1195,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Column type, e.g. VARIANT
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="nullable_csharp">
+<a href="#nullable_csharp" style="color: inherit; text-decoration: inherit;">Nullable</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether this column can contain null values. **Note**: Depending on your Snowflake version, the default value will not suffice if this column is used in a primary key constraint.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1113,6 +1226,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Column type, e.g. VARIANT
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="nullable_go">
+<a href="#nullable_go" style="color: inherit; text-decoration: inherit;">Nullable</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether this column can contain null values. **Note**: Depending on your Snowflake version, the default value will not suffice if this column is used in a primary key constraint.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1135,6 +1257,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Column type, e.g. VARIANT
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="nullable_nodejs">
+<a href="#nullable_nodejs" style="color: inherit; text-decoration: inherit;">nullable</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether this column can contain null values. **Note**: Depending on your Snowflake version, the default value will not suffice if this column is used in a primary key constraint.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1157,6 +1288,105 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Column type, e.g. VARIANT
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="nullable_python">
+<a href="#nullable_python" style="color: inherit; text-decoration: inherit;">nullable</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether this column can contain null values. **Note**: Depending on your Snowflake version, the default value will not suffice if this column is used in a primary key constraint.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="tableprimarykey">Table<wbr>Primary<wbr>Key</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="keys_csharp">
+<a href="#keys_csharp" style="color: inherit; text-decoration: inherit;">Keys</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}Columns to use in primary key
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of constraint
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="keys_go">
+<a href="#keys_go" style="color: inherit; text-decoration: inherit;">Keys</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}Columns to use in primary key
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of constraint
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="keys_nodejs">
+<a href="#keys_nodejs" style="color: inherit; text-decoration: inherit;">keys</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}Columns to use in primary key
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of constraint
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="keys_python">
+<a href="#keys_python" style="color: inherit; text-decoration: inherit;">keys</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}Columns to use in primary key
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Name of constraint
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
