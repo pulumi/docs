@@ -403,9 +403,11 @@ This field is immutable.{{% /md %}}</dd><dt class="property-optional"
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Defines if the underlying volume supports changing ownership and permission of the volume before being mounted. Refer to the specific FSGroupPolicy values for additional details. This field is alpha-level, and is only honored by servers that enable the CSIVolumeFSGroupPolicy feature gate.
+    <dd>{{% md %}}Defines if the underlying volume supports changing ownership and permission of the volume before being mounted. Refer to the specific FSGroupPolicy values for additional details. This field is beta, and is only honored by servers that enable the CSIVolumeFSGroupPolicy feature gate.
 
-This field is immutable.{{% /md %}}</dd><dt class="property-optional"
+This field is immutable.
+
+Defaults to ReadWriteOnceWithFSType, which will examine each volume to determine if Kubernetes should modify ownership and permissions of the volume. With the default policy the defined fsGroup will only be applied if a fstype is defined and the volume's access mode contains ReadWriteOnce.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="podinfoonmount_csharp">
 <a href="#podinfoonmount_csharp" style="color: inherit; text-decoration: inherit;">Pod<wbr>Info<wbr>On<wbr>Mount</a>
@@ -428,9 +430,7 @@ This field is immutable.{{% /md %}}</dd><dt class="property-optional"
     </dt>
     <dd>{{% md %}}RequiresRepublish indicates the CSI driver wants `NodePublishVolume` being periodically called to reflect any possible change in the mounted volume. This field defaults to false.
 
-Note: After a successful initial NodePublishVolume call, subsequent calls to NodePublishVolume should only update the contents of the volume. New mount points will not be seen by a running container.
-
-This is a beta feature and only available when the CSIServiceAccountToken feature is enabled.{{% /md %}}</dd><dt class="property-optional"
+Note: After a successful initial NodePublishVolume call, subsequent calls to NodePublishVolume should only update the contents of the volume. New mount points will not be seen by a running container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storagecapacity_csharp">
 <a href="#storagecapacity_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Capacity</a>
@@ -462,9 +462,7 @@ This is a beta field and only available when the CSIStorageCapacity feature is e
   ...
 }
 
-Note: Audience in each TokenRequest should be different and at most one token is empty string. To receive a new token after expiry, RequiresRepublish can be used to trigger NodePublishVolume periodically.
-
-This is a beta feature and only available when the CSIServiceAccountToken feature is enabled.{{% /md %}}</dd><dt class="property-optional"
+Note: Audience in each TokenRequest should be different and at most one token is empty string. To receive a new token after expiry, RequiresRepublish can be used to trigger NodePublishVolume periodically.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volumelifecyclemodes_csharp">
 <a href="#volumelifecyclemodes_csharp" style="color: inherit; text-decoration: inherit;">Volume<wbr>Lifecycle<wbr>Modes</a>
@@ -496,9 +494,11 @@ This field is immutable.{{% /md %}}</dd><dt class="property-optional"
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Defines if the underlying volume supports changing ownership and permission of the volume before being mounted. Refer to the specific FSGroupPolicy values for additional details. This field is alpha-level, and is only honored by servers that enable the CSIVolumeFSGroupPolicy feature gate.
+    <dd>{{% md %}}Defines if the underlying volume supports changing ownership and permission of the volume before being mounted. Refer to the specific FSGroupPolicy values for additional details. This field is beta, and is only honored by servers that enable the CSIVolumeFSGroupPolicy feature gate.
 
-This field is immutable.{{% /md %}}</dd><dt class="property-optional"
+This field is immutable.
+
+Defaults to ReadWriteOnceWithFSType, which will examine each volume to determine if Kubernetes should modify ownership and permissions of the volume. With the default policy the defined fsGroup will only be applied if a fstype is defined and the volume's access mode contains ReadWriteOnce.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="podinfoonmount_go">
 <a href="#podinfoonmount_go" style="color: inherit; text-decoration: inherit;">Pod<wbr>Info<wbr>On<wbr>Mount</a>
@@ -521,9 +521,7 @@ This field is immutable.{{% /md %}}</dd><dt class="property-optional"
     </dt>
     <dd>{{% md %}}RequiresRepublish indicates the CSI driver wants `NodePublishVolume` being periodically called to reflect any possible change in the mounted volume. This field defaults to false.
 
-Note: After a successful initial NodePublishVolume call, subsequent calls to NodePublishVolume should only update the contents of the volume. New mount points will not be seen by a running container.
-
-This is a beta feature and only available when the CSIServiceAccountToken feature is enabled.{{% /md %}}</dd><dt class="property-optional"
+Note: After a successful initial NodePublishVolume call, subsequent calls to NodePublishVolume should only update the contents of the volume. New mount points will not be seen by a running container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storagecapacity_go">
 <a href="#storagecapacity_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Capacity</a>
@@ -555,9 +553,7 @@ This is a beta field and only available when the CSIStorageCapacity feature is e
   ...
 }
 
-Note: Audience in each TokenRequest should be different and at most one token is empty string. To receive a new token after expiry, RequiresRepublish can be used to trigger NodePublishVolume periodically.
-
-This is a beta feature and only available when the CSIServiceAccountToken feature is enabled.{{% /md %}}</dd><dt class="property-optional"
+Note: Audience in each TokenRequest should be different and at most one token is empty string. To receive a new token after expiry, RequiresRepublish can be used to trigger NodePublishVolume periodically.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volumelifecyclemodes_go">
 <a href="#volumelifecyclemodes_go" style="color: inherit; text-decoration: inherit;">Volume<wbr>Lifecycle<wbr>Modes</a>
@@ -589,9 +585,11 @@ This field is immutable.{{% /md %}}</dd><dt class="property-optional"
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Defines if the underlying volume supports changing ownership and permission of the volume before being mounted. Refer to the specific FSGroupPolicy values for additional details. This field is alpha-level, and is only honored by servers that enable the CSIVolumeFSGroupPolicy feature gate.
+    <dd>{{% md %}}Defines if the underlying volume supports changing ownership and permission of the volume before being mounted. Refer to the specific FSGroupPolicy values for additional details. This field is beta, and is only honored by servers that enable the CSIVolumeFSGroupPolicy feature gate.
 
-This field is immutable.{{% /md %}}</dd><dt class="property-optional"
+This field is immutable.
+
+Defaults to ReadWriteOnceWithFSType, which will examine each volume to determine if Kubernetes should modify ownership and permissions of the volume. With the default policy the defined fsGroup will only be applied if a fstype is defined and the volume's access mode contains ReadWriteOnce.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="podinfoonmount_nodejs">
 <a href="#podinfoonmount_nodejs" style="color: inherit; text-decoration: inherit;">pod<wbr>Info<wbr>On<wbr>Mount</a>
@@ -614,9 +612,7 @@ This field is immutable.{{% /md %}}</dd><dt class="property-optional"
     </dt>
     <dd>{{% md %}}RequiresRepublish indicates the CSI driver wants `NodePublishVolume` being periodically called to reflect any possible change in the mounted volume. This field defaults to false.
 
-Note: After a successful initial NodePublishVolume call, subsequent calls to NodePublishVolume should only update the contents of the volume. New mount points will not be seen by a running container.
-
-This is a beta feature and only available when the CSIServiceAccountToken feature is enabled.{{% /md %}}</dd><dt class="property-optional"
+Note: After a successful initial NodePublishVolume call, subsequent calls to NodePublishVolume should only update the contents of the volume. New mount points will not be seen by a running container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storagecapacity_nodejs">
 <a href="#storagecapacity_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Capacity</a>
@@ -648,9 +644,7 @@ This is a beta field and only available when the CSIStorageCapacity feature is e
   ...
 }
 
-Note: Audience in each TokenRequest should be different and at most one token is empty string. To receive a new token after expiry, RequiresRepublish can be used to trigger NodePublishVolume periodically.
-
-This is a beta feature and only available when the CSIServiceAccountToken feature is enabled.{{% /md %}}</dd><dt class="property-optional"
+Note: Audience in each TokenRequest should be different and at most one token is empty string. To receive a new token after expiry, RequiresRepublish can be used to trigger NodePublishVolume periodically.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volumelifecyclemodes_nodejs">
 <a href="#volumelifecyclemodes_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Lifecycle<wbr>Modes</a>
@@ -682,9 +676,11 @@ This field is immutable.{{% /md %}}</dd><dt class="property-optional"
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Defines if the underlying volume supports changing ownership and permission of the volume before being mounted. Refer to the specific FSGroupPolicy values for additional details. This field is alpha-level, and is only honored by servers that enable the CSIVolumeFSGroupPolicy feature gate.
+    <dd>{{% md %}}Defines if the underlying volume supports changing ownership and permission of the volume before being mounted. Refer to the specific FSGroupPolicy values for additional details. This field is beta, and is only honored by servers that enable the CSIVolumeFSGroupPolicy feature gate.
 
-This field is immutable.{{% /md %}}</dd><dt class="property-optional"
+This field is immutable.
+
+Defaults to ReadWriteOnceWithFSType, which will examine each volume to determine if Kubernetes should modify ownership and permissions of the volume. With the default policy the defined fsGroup will only be applied if a fstype is defined and the volume's access mode contains ReadWriteOnce.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pod_info_on_mount_python">
 <a href="#pod_info_on_mount_python" style="color: inherit; text-decoration: inherit;">pod_<wbr>info_<wbr>on_<wbr>mount</a>
@@ -707,9 +703,7 @@ This field is immutable.{{% /md %}}</dd><dt class="property-optional"
     </dt>
     <dd>{{% md %}}RequiresRepublish indicates the CSI driver wants `NodePublishVolume` being periodically called to reflect any possible change in the mounted volume. This field defaults to false.
 
-Note: After a successful initial NodePublishVolume call, subsequent calls to NodePublishVolume should only update the contents of the volume. New mount points will not be seen by a running container.
-
-This is a beta feature and only available when the CSIServiceAccountToken feature is enabled.{{% /md %}}</dd><dt class="property-optional"
+Note: After a successful initial NodePublishVolume call, subsequent calls to NodePublishVolume should only update the contents of the volume. New mount points will not be seen by a running container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storage_capacity_python">
 <a href="#storage_capacity_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>capacity</a>
@@ -741,9 +735,7 @@ This is a beta field and only available when the CSIStorageCapacity feature is e
   ...
 }
 
-Note: Audience in each TokenRequest should be different and at most one token is empty string. To receive a new token after expiry, RequiresRepublish can be used to trigger NodePublishVolume periodically.
-
-This is a beta feature and only available when the CSIServiceAccountToken feature is enabled.{{% /md %}}</dd><dt class="property-optional"
+Note: Audience in each TokenRequest should be different and at most one token is empty string. To receive a new token after expiry, RequiresRepublish can be used to trigger NodePublishVolume periodically.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volume_lifecycle_modes_python">
 <a href="#volume_lifecycle_modes_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>lifecycle_<wbr>modes</a>
@@ -955,6 +947,14 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
     </dt>
     <dd>{{% md %}}Operation is the type of operation which lead to this ManagedFieldsEntry being created. The only valid values for this field are 'Apply' and 'Update'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="subresource_csharp">
+<a href="#subresource_csharp" style="color: inherit; text-decoration: inherit;">Subresource</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Subresource is the name of the subresource used to update that object, or empty string if the object was updated through the main resource. The value of this field is used to distinguish between managers, even if they share the same name. For example, a status update will be distinct from a regular update using the same manager name. Note that the APIVersion field is not related to the Subresource field and it always corresponds to the version of the main resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="time_csharp">
 <a href="#time_csharp" style="color: inherit; text-decoration: inherit;">Time</a>
 </span>
@@ -1006,6 +1006,14 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Operation is the type of operation which lead to this ManagedFieldsEntry being created. The only valid values for this field are 'Apply' and 'Update'.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="subresource_go">
+<a href="#subresource_go" style="color: inherit; text-decoration: inherit;">Subresource</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Subresource is the name of the subresource used to update that object, or empty string if the object was updated through the main resource. The value of this field is used to distinguish between managers, even if they share the same name. For example, a status update will be distinct from a regular update using the same manager name. Note that the APIVersion field is not related to the Subresource field and it always corresponds to the version of the main resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="time_go">
 <a href="#time_go" style="color: inherit; text-decoration: inherit;">Time</a>
@@ -1059,6 +1067,14 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
     </dt>
     <dd>{{% md %}}Operation is the type of operation which lead to this ManagedFieldsEntry being created. The only valid values for this field are 'Apply' and 'Update'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="subresource_nodejs">
+<a href="#subresource_nodejs" style="color: inherit; text-decoration: inherit;">subresource</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Subresource is the name of the subresource used to update that object, or empty string if the object was updated through the main resource. The value of this field is used to distinguish between managers, even if they share the same name. For example, a status update will be distinct from a regular update using the same manager name. Note that the APIVersion field is not related to the Subresource field and it always corresponds to the version of the main resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="time_nodejs">
 <a href="#time_nodejs" style="color: inherit; text-decoration: inherit;">time</a>
 </span>
@@ -1110,6 +1126,14 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Operation is the type of operation which lead to this ManagedFieldsEntry being created. The only valid values for this field are 'Apply' and 'Update'.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="subresource_python">
+<a href="#subresource_python" style="color: inherit; text-decoration: inherit;">subresource</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Subresource is the name of the subresource used to update that object, or empty string if the object was updated through the main resource. The value of this field is used to distinguish between managers, even if they share the same name. For example, a status update will be distinct from a regular update using the same manager name. Note that the APIVersion field is not related to the Subresource field and it always corresponds to the version of the main resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="time_python">
 <a href="#time_python" style="color: inherit; text-decoration: inherit;">time</a>

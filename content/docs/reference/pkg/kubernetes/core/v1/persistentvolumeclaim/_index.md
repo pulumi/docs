@@ -573,6 +573,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Operation is the type of operation which lead to this ManagedFieldsEntry being created. The only valid values for this field are 'Apply' and 'Update'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="subresource_csharp">
+<a href="#subresource_csharp" style="color: inherit; text-decoration: inherit;">Subresource</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Subresource is the name of the subresource used to update that object, or empty string if the object was updated through the main resource. The value of this field is used to distinguish between managers, even if they share the same name. For example, a status update will be distinct from a regular update using the same manager name. Note that the APIVersion field is not related to the Subresource field and it always corresponds to the version of the main resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="time_csharp">
 <a href="#time_csharp" style="color: inherit; text-decoration: inherit;">Time</a>
 </span>
@@ -624,6 +632,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Operation is the type of operation which lead to this ManagedFieldsEntry being created. The only valid values for this field are 'Apply' and 'Update'.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="subresource_go">
+<a href="#subresource_go" style="color: inherit; text-decoration: inherit;">Subresource</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Subresource is the name of the subresource used to update that object, or empty string if the object was updated through the main resource. The value of this field is used to distinguish between managers, even if they share the same name. For example, a status update will be distinct from a regular update using the same manager name. Note that the APIVersion field is not related to the Subresource field and it always corresponds to the version of the main resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="time_go">
 <a href="#time_go" style="color: inherit; text-decoration: inherit;">Time</a>
@@ -677,6 +693,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Operation is the type of operation which lead to this ManagedFieldsEntry being created. The only valid values for this field are 'Apply' and 'Update'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="subresource_nodejs">
+<a href="#subresource_nodejs" style="color: inherit; text-decoration: inherit;">subresource</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Subresource is the name of the subresource used to update that object, or empty string if the object was updated through the main resource. The value of this field is used to distinguish between managers, even if they share the same name. For example, a status update will be distinct from a regular update using the same manager name. Note that the APIVersion field is not related to the Subresource field and it always corresponds to the version of the main resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="time_nodejs">
 <a href="#time_nodejs" style="color: inherit; text-decoration: inherit;">time</a>
 </span>
@@ -728,6 +752,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Operation is the type of operation which lead to this ManagedFieldsEntry being created. The only valid values for this field are 'Apply' and 'Update'.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="subresource_python">
+<a href="#subresource_python" style="color: inherit; text-decoration: inherit;">subresource</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Subresource is the name of the subresource used to update that object, or empty string if the object was updated through the main resource. The value of this field is used to distinguish between managers, even if they share the same name. For example, a status update will be distinct from a regular update using the same manager name. Note that the APIVersion field is not related to the Subresource field and it always corresponds to the version of the main resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="time_python">
 <a href="#time_python" style="color: inherit; text-decoration: inherit;">time</a>
@@ -1771,7 +1803,20 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#typedlocalobjectreference">Typed<wbr>Local<wbr>Object<wbr>Reference</a></span>
     </dt>
-    <dd>{{% md %}}This field can be used to specify either: * An existing VolumeSnapshot object (snapshot.storage.k8s.io/VolumeSnapshot) * An existing PVC (PersistentVolumeClaim) * An existing custom resource that implements data population (Alpha) In order to use custom resource types that implement data population, the AnyVolumeDataSource feature gate must be enabled. If the provisioner or an external controller can support the specified data source, it will create a new volume based on the contents of the specified data source.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}This field can be used to specify either: * An existing VolumeSnapshot object (snapshot.storage.k8s.io/VolumeSnapshot) * An existing PVC (PersistentVolumeClaim) If the provisioner or an external controller can support the specified data source, it will create a new volume based on the contents of the specified data source. If the AnyVolumeDataSource feature gate is enabled, this field will always have the same contents as the DataSourceRef field.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="datasourceref_csharp">
+<a href="#datasourceref_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Source<wbr>Ref</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#typedlocalobjectreference">Typed<wbr>Local<wbr>Object<wbr>Reference</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the object from which to populate the volume with data, if a non-empty volume is desired. This may be any local object from a non-empty API group (non core object) or a PersistentVolumeClaim object. When this field is specified, volume binding will only succeed if the type of the specified object matches some installed volume populator or dynamic provisioner. This field will replace the functionality of the DataSource field and as such if both fields are non-empty, they must have the same value. For backwards compatibility, both fields (DataSource and DataSourceRef) will be set to the same value automatically if one of them is empty and the other is non-empty. There are two important differences between DataSource and DataSourceRef: * While DataSource only allows two specific types of objects, DataSourceRef
+  allows any non-core object, as well as PersistentVolumeClaim objects.
+* While DataSource ignores disallowed values (dropping them), DataSourceRef
+  preserves all values, and generates an error if a disallowed value is
+  specified.
+(Alpha) Using this field requires the AnyVolumeDataSource feature gate to be enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resources_csharp">
 <a href="#resources_csharp" style="color: inherit; text-decoration: inherit;">Resources</a>
@@ -1831,7 +1876,20 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#typedlocalobjectreference">Typed<wbr>Local<wbr>Object<wbr>Reference</a></span>
     </dt>
-    <dd>{{% md %}}This field can be used to specify either: * An existing VolumeSnapshot object (snapshot.storage.k8s.io/VolumeSnapshot) * An existing PVC (PersistentVolumeClaim) * An existing custom resource that implements data population (Alpha) In order to use custom resource types that implement data population, the AnyVolumeDataSource feature gate must be enabled. If the provisioner or an external controller can support the specified data source, it will create a new volume based on the contents of the specified data source.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}This field can be used to specify either: * An existing VolumeSnapshot object (snapshot.storage.k8s.io/VolumeSnapshot) * An existing PVC (PersistentVolumeClaim) If the provisioner or an external controller can support the specified data source, it will create a new volume based on the contents of the specified data source. If the AnyVolumeDataSource feature gate is enabled, this field will always have the same contents as the DataSourceRef field.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="datasourceref_go">
+<a href="#datasourceref_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Source<wbr>Ref</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#typedlocalobjectreference">Typed<wbr>Local<wbr>Object<wbr>Reference</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the object from which to populate the volume with data, if a non-empty volume is desired. This may be any local object from a non-empty API group (non core object) or a PersistentVolumeClaim object. When this field is specified, volume binding will only succeed if the type of the specified object matches some installed volume populator or dynamic provisioner. This field will replace the functionality of the DataSource field and as such if both fields are non-empty, they must have the same value. For backwards compatibility, both fields (DataSource and DataSourceRef) will be set to the same value automatically if one of them is empty and the other is non-empty. There are two important differences between DataSource and DataSourceRef: * While DataSource only allows two specific types of objects, DataSourceRef
+  allows any non-core object, as well as PersistentVolumeClaim objects.
+* While DataSource ignores disallowed values (dropping them), DataSourceRef
+  preserves all values, and generates an error if a disallowed value is
+  specified.
+(Alpha) Using this field requires the AnyVolumeDataSource feature gate to be enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resources_go">
 <a href="#resources_go" style="color: inherit; text-decoration: inherit;">Resources</a>
@@ -1891,7 +1949,20 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#typedlocalobjectreference">Typed<wbr>Local<wbr>Object<wbr>Reference</a></span>
     </dt>
-    <dd>{{% md %}}This field can be used to specify either: * An existing VolumeSnapshot object (snapshot.storage.k8s.io/VolumeSnapshot) * An existing PVC (PersistentVolumeClaim) * An existing custom resource that implements data population (Alpha) In order to use custom resource types that implement data population, the AnyVolumeDataSource feature gate must be enabled. If the provisioner or an external controller can support the specified data source, it will create a new volume based on the contents of the specified data source.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}This field can be used to specify either: * An existing VolumeSnapshot object (snapshot.storage.k8s.io/VolumeSnapshot) * An existing PVC (PersistentVolumeClaim) If the provisioner or an external controller can support the specified data source, it will create a new volume based on the contents of the specified data source. If the AnyVolumeDataSource feature gate is enabled, this field will always have the same contents as the DataSourceRef field.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="datasourceref_nodejs">
+<a href="#datasourceref_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Source<wbr>Ref</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#typedlocalobjectreference">Typed<wbr>Local<wbr>Object<wbr>Reference</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the object from which to populate the volume with data, if a non-empty volume is desired. This may be any local object from a non-empty API group (non core object) or a PersistentVolumeClaim object. When this field is specified, volume binding will only succeed if the type of the specified object matches some installed volume populator or dynamic provisioner. This field will replace the functionality of the DataSource field and as such if both fields are non-empty, they must have the same value. For backwards compatibility, both fields (DataSource and DataSourceRef) will be set to the same value automatically if one of them is empty and the other is non-empty. There are two important differences between DataSource and DataSourceRef: * While DataSource only allows two specific types of objects, DataSourceRef
+  allows any non-core object, as well as PersistentVolumeClaim objects.
+* While DataSource ignores disallowed values (dropping them), DataSourceRef
+  preserves all values, and generates an error if a disallowed value is
+  specified.
+(Alpha) Using this field requires the AnyVolumeDataSource feature gate to be enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resources_nodejs">
 <a href="#resources_nodejs" style="color: inherit; text-decoration: inherit;">resources</a>
@@ -1951,7 +2022,20 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#typedlocalobjectreference">Typed<wbr>Local<wbr>Object<wbr>Reference</a></span>
     </dt>
-    <dd>{{% md %}}This field can be used to specify either: * An existing VolumeSnapshot object (snapshot.storage.k8s.io/VolumeSnapshot) * An existing PVC (PersistentVolumeClaim) * An existing custom resource that implements data population (Alpha) In order to use custom resource types that implement data population, the AnyVolumeDataSource feature gate must be enabled. If the provisioner or an external controller can support the specified data source, it will create a new volume based on the contents of the specified data source.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}This field can be used to specify either: * An existing VolumeSnapshot object (snapshot.storage.k8s.io/VolumeSnapshot) * An existing PVC (PersistentVolumeClaim) If the provisioner or an external controller can support the specified data source, it will create a new volume based on the contents of the specified data source. If the AnyVolumeDataSource feature gate is enabled, this field will always have the same contents as the DataSourceRef field.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="data_source_ref_python">
+<a href="#data_source_ref_python" style="color: inherit; text-decoration: inherit;">data_<wbr>source_<wbr>ref</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#typedlocalobjectreference">Typed<wbr>Local<wbr>Object<wbr>Reference</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the object from which to populate the volume with data, if a non-empty volume is desired. This may be any local object from a non-empty API group (non core object) or a PersistentVolumeClaim object. When this field is specified, volume binding will only succeed if the type of the specified object matches some installed volume populator or dynamic provisioner. This field will replace the functionality of the DataSource field and as such if both fields are non-empty, they must have the same value. For backwards compatibility, both fields (DataSource and DataSourceRef) will be set to the same value automatically if one of them is empty and the other is non-empty. There are two important differences between DataSource and DataSourceRef: * While DataSource only allows two specific types of objects, DataSourceRef
+  allows any non-core object, as well as PersistentVolumeClaim objects.
+* While DataSource ignores disallowed values (dropping them), DataSourceRef
+  preserves all values, and generates an error if a disallowed value is
+  specified.
+(Alpha) Using this field requires the AnyVolumeDataSource feature gate to be enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resources_python">
 <a href="#resources_python" style="color: inherit; text-decoration: inherit;">resources</a>

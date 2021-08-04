@@ -2927,6 +2927,14 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
     </dt>
     <dd>{{% md %}}Operation is the type of operation which lead to this ManagedFieldsEntry being created. The only valid values for this field are 'Apply' and 'Update'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="subresource_csharp">
+<a href="#subresource_csharp" style="color: inherit; text-decoration: inherit;">Subresource</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Subresource is the name of the subresource used to update that object, or empty string if the object was updated through the main resource. The value of this field is used to distinguish between managers, even if they share the same name. For example, a status update will be distinct from a regular update using the same manager name. Note that the APIVersion field is not related to the Subresource field and it always corresponds to the version of the main resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="time_csharp">
 <a href="#time_csharp" style="color: inherit; text-decoration: inherit;">Time</a>
 </span>
@@ -2978,6 +2986,14 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Operation is the type of operation which lead to this ManagedFieldsEntry being created. The only valid values for this field are 'Apply' and 'Update'.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="subresource_go">
+<a href="#subresource_go" style="color: inherit; text-decoration: inherit;">Subresource</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Subresource is the name of the subresource used to update that object, or empty string if the object was updated through the main resource. The value of this field is used to distinguish between managers, even if they share the same name. For example, a status update will be distinct from a regular update using the same manager name. Note that the APIVersion field is not related to the Subresource field and it always corresponds to the version of the main resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="time_go">
 <a href="#time_go" style="color: inherit; text-decoration: inherit;">Time</a>
@@ -3031,6 +3047,14 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
     </dt>
     <dd>{{% md %}}Operation is the type of operation which lead to this ManagedFieldsEntry being created. The only valid values for this field are 'Apply' and 'Update'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="subresource_nodejs">
+<a href="#subresource_nodejs" style="color: inherit; text-decoration: inherit;">subresource</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Subresource is the name of the subresource used to update that object, or empty string if the object was updated through the main resource. The value of this field is used to distinguish between managers, even if they share the same name. For example, a status update will be distinct from a regular update using the same manager name. Note that the APIVersion field is not related to the Subresource field and it always corresponds to the version of the main resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="time_nodejs">
 <a href="#time_nodejs" style="color: inherit; text-decoration: inherit;">time</a>
 </span>
@@ -3082,6 +3106,14 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Operation is the type of operation which lead to this ManagedFieldsEntry being created. The only valid values for this field are 'Apply' and 'Update'.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="subresource_python">
+<a href="#subresource_python" style="color: inherit; text-decoration: inherit;">subresource</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Subresource is the name of the subresource used to update that object, or empty string if the object was updated through the main resource. The value of this field is used to distinguish between managers, even if they share the same name. For example, a status update will be distinct from a regular update using the same manager name. Note that the APIVersion field is not related to the Subresource field and it always corresponds to the version of the main resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="time_python">
 <a href="#time_python" style="color: inherit; text-decoration: inherit;">time</a>
@@ -6879,7 +6911,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#persistentvolumespec">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Persistent<wbr>Volume<wbr>Spec</a></span>
     </dt>
-    <dd>{{% md %}}inlineVolumeSpec contains all the information necessary to attach a persistent volume defined by a pod's inline VolumeSource. This field is populated only for the CSIMigration feature. It contains translated fields from a pod's inline VolumeSource to a PersistentVolumeSpec. This field is beta-level and is only honored by servers that enabled the CSIMigration feature.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}inlineVolumeSpec contains all the information necessary to attach a persistent volume defined by a pod's inline VolumeSource. This field is populated only for the CSIMigration feature. It contains translated fields from a pod's inline VolumeSource to a PersistentVolumeSpec. This field is alpha-level and is only honored by servers that enabled the CSIMigration feature.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="persistentvolumename_csharp">
 <a href="#persistentvolumename_csharp" style="color: inherit; text-decoration: inherit;">Persistent<wbr>Volume<wbr>Name</a>
@@ -6899,7 +6931,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#persistentvolumespec">Persistent<wbr>Volume<wbr>Spec</a></span>
     </dt>
-    <dd>{{% md %}}inlineVolumeSpec contains all the information necessary to attach a persistent volume defined by a pod's inline VolumeSource. This field is populated only for the CSIMigration feature. It contains translated fields from a pod's inline VolumeSource to a PersistentVolumeSpec. This field is beta-level and is only honored by servers that enabled the CSIMigration feature.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}inlineVolumeSpec contains all the information necessary to attach a persistent volume defined by a pod's inline VolumeSource. This field is populated only for the CSIMigration feature. It contains translated fields from a pod's inline VolumeSource to a PersistentVolumeSpec. This field is alpha-level and is only honored by servers that enabled the CSIMigration feature.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="persistentvolumename_go">
 <a href="#persistentvolumename_go" style="color: inherit; text-decoration: inherit;">Persistent<wbr>Volume<wbr>Name</a>
@@ -6919,7 +6951,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#persistentvolumespec">core.v1.<wbr>Persistent<wbr>Volume<wbr>Spec</a></span>
     </dt>
-    <dd>{{% md %}}inlineVolumeSpec contains all the information necessary to attach a persistent volume defined by a pod's inline VolumeSource. This field is populated only for the CSIMigration feature. It contains translated fields from a pod's inline VolumeSource to a PersistentVolumeSpec. This field is beta-level and is only honored by servers that enabled the CSIMigration feature.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}inlineVolumeSpec contains all the information necessary to attach a persistent volume defined by a pod's inline VolumeSource. This field is populated only for the CSIMigration feature. It contains translated fields from a pod's inline VolumeSource to a PersistentVolumeSpec. This field is alpha-level and is only honored by servers that enabled the CSIMigration feature.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="persistentvolumename_nodejs">
 <a href="#persistentvolumename_nodejs" style="color: inherit; text-decoration: inherit;">persistent<wbr>Volume<wbr>Name</a>
@@ -6939,7 +6971,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#persistentvolumespec">Persistent<wbr>Volume<wbr>Spec</a></span>
     </dt>
-    <dd>{{% md %}}inlineVolumeSpec contains all the information necessary to attach a persistent volume defined by a pod's inline VolumeSource. This field is populated only for the CSIMigration feature. It contains translated fields from a pod's inline VolumeSource to a PersistentVolumeSpec. This field is beta-level and is only honored by servers that enabled the CSIMigration feature.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}inlineVolumeSpec contains all the information necessary to attach a persistent volume defined by a pod's inline VolumeSource. This field is populated only for the CSIMigration feature. It contains translated fields from a pod's inline VolumeSource to a PersistentVolumeSpec. This field is alpha-level and is only honored by servers that enabled the CSIMigration feature.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="persistent_volume_name_python">
 <a href="#persistent_volume_name_python" style="color: inherit; text-decoration: inherit;">persistent_<wbr>volume_<wbr>name</a>

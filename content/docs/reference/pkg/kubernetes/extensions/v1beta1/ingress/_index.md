@@ -366,7 +366,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Path is matched against the path of an incoming request. Currently it can contain characters disallowed from the conventional "path" part of a URL as defined by RFC 3986. Paths must begin with a '/'. When unspecified, all paths from incoming requests are matched.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Path is an extended POSIX regex as defined by IEEE Std 1003.1, (i.e this follows the egrep/unix syntax, not the perl syntax) matched against the path of an incoming request. Currently it can contain characters disallowed from the conventional "path" part of a URL as defined by RFC 3986. Paths must begin with a '/'. If unspecified, the path defaults to a catch all sending traffic to the backend.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pathtype_csharp">
 <a href="#pathtype_csharp" style="color: inherit; text-decoration: inherit;">Path<wbr>Type</a>
@@ -404,7 +404,7 @@ Implementations are required to support all path types. Defaults to Implementati
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Path is matched against the path of an incoming request. Currently it can contain characters disallowed from the conventional "path" part of a URL as defined by RFC 3986. Paths must begin with a '/'. When unspecified, all paths from incoming requests are matched.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Path is an extended POSIX regex as defined by IEEE Std 1003.1, (i.e this follows the egrep/unix syntax, not the perl syntax) matched against the path of an incoming request. Currently it can contain characters disallowed from the conventional "path" part of a URL as defined by RFC 3986. Paths must begin with a '/'. If unspecified, the path defaults to a catch all sending traffic to the backend.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pathtype_go">
 <a href="#pathtype_go" style="color: inherit; text-decoration: inherit;">Path<wbr>Type</a>
@@ -442,7 +442,7 @@ Implementations are required to support all path types. Defaults to Implementati
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Path is matched against the path of an incoming request. Currently it can contain characters disallowed from the conventional "path" part of a URL as defined by RFC 3986. Paths must begin with a '/'. When unspecified, all paths from incoming requests are matched.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Path is an extended POSIX regex as defined by IEEE Std 1003.1, (i.e this follows the egrep/unix syntax, not the perl syntax) matched against the path of an incoming request. Currently it can contain characters disallowed from the conventional "path" part of a URL as defined by RFC 3986. Paths must begin with a '/'. If unspecified, the path defaults to a catch all sending traffic to the backend.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pathtype_nodejs">
 <a href="#pathtype_nodejs" style="color: inherit; text-decoration: inherit;">path<wbr>Type</a>
@@ -480,7 +480,7 @@ Implementations are required to support all path types. Defaults to Implementati
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Path is matched against the path of an incoming request. Currently it can contain characters disallowed from the conventional "path" part of a URL as defined by RFC 3986. Paths must begin with a '/'. When unspecified, all paths from incoming requests are matched.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Path is an extended POSIX regex as defined by IEEE Std 1003.1, (i.e this follows the egrep/unix syntax, not the perl syntax) matched against the path of an incoming request. Currently it can contain characters disallowed from the conventional "path" part of a URL as defined by RFC 3986. Paths must begin with a '/'. If unspecified, the path defaults to a catch all sending traffic to the backend.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_type_python">
 <a href="#path_type_python" style="color: inherit; text-decoration: inherit;">path_<wbr>type</a>
@@ -676,14 +676,12 @@ Implementations are required to support all path types. Defaults to Implementati
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Host is the fully qualified domain name of a network host, as defined by RFC 3986. Note the following deviations from the "host" part of the URI as defined in RFC 3986: 1. IPs are not allowed. Currently an IngressRuleValue can only apply to
-   the IP in the Spec of the parent Ingress.
+    <dd>{{% md %}}Host is the fully qualified domain name of a network host, as defined by RFC 3986. Note the following deviations from the "host" part of the URI as defined in the RFC: 1. IPs are not allowed. Currently an IngressRuleValue can only apply to the
+	  IP in the Spec of the parent Ingress.
 2. The `:` delimiter is not respected because ports are not allowed.
 	  Currently the port of an Ingress is implicitly :80 for http and
 	  :443 for https.
-Both these may change in the future. Incoming requests are matched against the host before the IngressRuleValue. If the host is unspecified, the Ingress routes all traffic based on the specified IngressRuleValue.
-
-Host can be "precise" which is a domain name without the terminating dot of a network host (e.g. "foo.bar.com") or "wildcard", which is a domain name prefixed with a single wildcard label (e.g. "*.foo.com"). The wildcard character '*' must appear by itself as the first DNS label and matches only a single label. You cannot have a wildcard label by itself (e.g. Host == "*"). Requests will be matched against the Host field in the following way: 1. If Host is precise, the request matches this rule if the http host header is equal to Host. 2. If Host is a wildcard, then the request matches this rule if the http host header is to equal to the suffix (removing the first label) of the wildcard rule.{{% /md %}}</dd><dt class="property-optional"
+Both these may change in the future. Incoming requests are matched against the host before the IngressRuleValue. If the host is unspecified, the Ingress routes all traffic based on the specified IngressRuleValue.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="http_csharp">
 <a href="#http_csharp" style="color: inherit; text-decoration: inherit;">Http</a>
@@ -703,14 +701,12 @@ Host can be "precise" which is a domain name without the terminating dot of a ne
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Host is the fully qualified domain name of a network host, as defined by RFC 3986. Note the following deviations from the "host" part of the URI as defined in RFC 3986: 1. IPs are not allowed. Currently an IngressRuleValue can only apply to
-   the IP in the Spec of the parent Ingress.
+    <dd>{{% md %}}Host is the fully qualified domain name of a network host, as defined by RFC 3986. Note the following deviations from the "host" part of the URI as defined in the RFC: 1. IPs are not allowed. Currently an IngressRuleValue can only apply to the
+	  IP in the Spec of the parent Ingress.
 2. The `:` delimiter is not respected because ports are not allowed.
 	  Currently the port of an Ingress is implicitly :80 for http and
 	  :443 for https.
-Both these may change in the future. Incoming requests are matched against the host before the IngressRuleValue. If the host is unspecified, the Ingress routes all traffic based on the specified IngressRuleValue.
-
-Host can be "precise" which is a domain name without the terminating dot of a network host (e.g. "foo.bar.com") or "wildcard", which is a domain name prefixed with a single wildcard label (e.g. "*.foo.com"). The wildcard character '*' must appear by itself as the first DNS label and matches only a single label. You cannot have a wildcard label by itself (e.g. Host == "*"). Requests will be matched against the Host field in the following way: 1. If Host is precise, the request matches this rule if the http host header is equal to Host. 2. If Host is a wildcard, then the request matches this rule if the http host header is to equal to the suffix (removing the first label) of the wildcard rule.{{% /md %}}</dd><dt class="property-optional"
+Both these may change in the future. Incoming requests are matched against the host before the IngressRuleValue. If the host is unspecified, the Ingress routes all traffic based on the specified IngressRuleValue.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="http_go">
 <a href="#http_go" style="color: inherit; text-decoration: inherit;">Http</a>
@@ -730,14 +726,12 @@ Host can be "precise" which is a domain name without the terminating dot of a ne
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Host is the fully qualified domain name of a network host, as defined by RFC 3986. Note the following deviations from the "host" part of the URI as defined in RFC 3986: 1. IPs are not allowed. Currently an IngressRuleValue can only apply to
-   the IP in the Spec of the parent Ingress.
+    <dd>{{% md %}}Host is the fully qualified domain name of a network host, as defined by RFC 3986. Note the following deviations from the "host" part of the URI as defined in the RFC: 1. IPs are not allowed. Currently an IngressRuleValue can only apply to the
+	  IP in the Spec of the parent Ingress.
 2. The `:` delimiter is not respected because ports are not allowed.
 	  Currently the port of an Ingress is implicitly :80 for http and
 	  :443 for https.
-Both these may change in the future. Incoming requests are matched against the host before the IngressRuleValue. If the host is unspecified, the Ingress routes all traffic based on the specified IngressRuleValue.
-
-Host can be "precise" which is a domain name without the terminating dot of a network host (e.g. "foo.bar.com") or "wildcard", which is a domain name prefixed with a single wildcard label (e.g. "*.foo.com"). The wildcard character '*' must appear by itself as the first DNS label and matches only a single label. You cannot have a wildcard label by itself (e.g. Host == "*"). Requests will be matched against the Host field in the following way: 1. If Host is precise, the request matches this rule if the http host header is equal to Host. 2. If Host is a wildcard, then the request matches this rule if the http host header is to equal to the suffix (removing the first label) of the wildcard rule.{{% /md %}}</dd><dt class="property-optional"
+Both these may change in the future. Incoming requests are matched against the host before the IngressRuleValue. If the host is unspecified, the Ingress routes all traffic based on the specified IngressRuleValue.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="http_nodejs">
 <a href="#http_nodejs" style="color: inherit; text-decoration: inherit;">http</a>
@@ -757,14 +751,12 @@ Host can be "precise" which is a domain name without the terminating dot of a ne
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Host is the fully qualified domain name of a network host, as defined by RFC 3986. Note the following deviations from the "host" part of the URI as defined in RFC 3986: 1. IPs are not allowed. Currently an IngressRuleValue can only apply to
-   the IP in the Spec of the parent Ingress.
+    <dd>{{% md %}}Host is the fully qualified domain name of a network host, as defined by RFC 3986. Note the following deviations from the "host" part of the URI as defined in the RFC: 1. IPs are not allowed. Currently an IngressRuleValue can only apply to the
+	  IP in the Spec of the parent Ingress.
 2. The `:` delimiter is not respected because ports are not allowed.
 	  Currently the port of an Ingress is implicitly :80 for http and
 	  :443 for https.
-Both these may change in the future. Incoming requests are matched against the host before the IngressRuleValue. If the host is unspecified, the Ingress routes all traffic based on the specified IngressRuleValue.
-
-Host can be "precise" which is a domain name without the terminating dot of a network host (e.g. "foo.bar.com") or "wildcard", which is a domain name prefixed with a single wildcard label (e.g. "*.foo.com"). The wildcard character '*' must appear by itself as the first DNS label and matches only a single label. You cannot have a wildcard label by itself (e.g. Host == "*"). Requests will be matched against the Host field in the following way: 1. If Host is precise, the request matches this rule if the http host header is equal to Host. 2. If Host is a wildcard, then the request matches this rule if the http host header is to equal to the suffix (removing the first label) of the wildcard rule.{{% /md %}}</dd><dt class="property-optional"
+Both these may change in the future. Incoming requests are matched against the host before the IngressRuleValue. If the host is unspecified, the Ingress routes all traffic based on the specified IngressRuleValue.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="http_python">
 <a href="#http_python" style="color: inherit; text-decoration: inherit;">http</a>
@@ -1262,6 +1254,14 @@ Host can be "precise" which is a domain name without the terminating dot of a ne
     </dt>
     <dd>{{% md %}}Operation is the type of operation which lead to this ManagedFieldsEntry being created. The only valid values for this field are 'Apply' and 'Update'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="subresource_csharp">
+<a href="#subresource_csharp" style="color: inherit; text-decoration: inherit;">Subresource</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Subresource is the name of the subresource used to update that object, or empty string if the object was updated through the main resource. The value of this field is used to distinguish between managers, even if they share the same name. For example, a status update will be distinct from a regular update using the same manager name. Note that the APIVersion field is not related to the Subresource field and it always corresponds to the version of the main resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="time_csharp">
 <a href="#time_csharp" style="color: inherit; text-decoration: inherit;">Time</a>
 </span>
@@ -1313,6 +1313,14 @@ Host can be "precise" which is a domain name without the terminating dot of a ne
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Operation is the type of operation which lead to this ManagedFieldsEntry being created. The only valid values for this field are 'Apply' and 'Update'.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="subresource_go">
+<a href="#subresource_go" style="color: inherit; text-decoration: inherit;">Subresource</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Subresource is the name of the subresource used to update that object, or empty string if the object was updated through the main resource. The value of this field is used to distinguish between managers, even if they share the same name. For example, a status update will be distinct from a regular update using the same manager name. Note that the APIVersion field is not related to the Subresource field and it always corresponds to the version of the main resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="time_go">
 <a href="#time_go" style="color: inherit; text-decoration: inherit;">Time</a>
@@ -1366,6 +1374,14 @@ Host can be "precise" which is a domain name without the terminating dot of a ne
     </dt>
     <dd>{{% md %}}Operation is the type of operation which lead to this ManagedFieldsEntry being created. The only valid values for this field are 'Apply' and 'Update'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="subresource_nodejs">
+<a href="#subresource_nodejs" style="color: inherit; text-decoration: inherit;">subresource</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Subresource is the name of the subresource used to update that object, or empty string if the object was updated through the main resource. The value of this field is used to distinguish between managers, even if they share the same name. For example, a status update will be distinct from a regular update using the same manager name. Note that the APIVersion field is not related to the Subresource field and it always corresponds to the version of the main resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="time_nodejs">
 <a href="#time_nodejs" style="color: inherit; text-decoration: inherit;">time</a>
 </span>
@@ -1417,6 +1433,14 @@ Host can be "precise" which is a domain name without the terminating dot of a ne
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Operation is the type of operation which lead to this ManagedFieldsEntry being created. The only valid values for this field are 'Apply' and 'Update'.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="subresource_python">
+<a href="#subresource_python" style="color: inherit; text-decoration: inherit;">subresource</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Subresource is the name of the subresource used to update that object, or empty string if the object was updated through the main resource. The value of this field is used to distinguish between managers, even if they share the same name. For example, a status update will be distinct from a regular update using the same manager name. Note that the APIVersion field is not related to the Subresource field and it always corresponds to the version of the main resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="time_python">
 <a href="#time_python" style="color: inherit; text-decoration: inherit;">time</a>

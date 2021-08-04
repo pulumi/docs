@@ -777,6 +777,14 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
     </dt>
     <dd>{{% md %}}Operation is the type of operation which lead to this ManagedFieldsEntry being created. The only valid values for this field are 'Apply' and 'Update'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="subresource_csharp">
+<a href="#subresource_csharp" style="color: inherit; text-decoration: inherit;">Subresource</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Subresource is the name of the subresource used to update that object, or empty string if the object was updated through the main resource. The value of this field is used to distinguish between managers, even if they share the same name. For example, a status update will be distinct from a regular update using the same manager name. Note that the APIVersion field is not related to the Subresource field and it always corresponds to the version of the main resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="time_csharp">
 <a href="#time_csharp" style="color: inherit; text-decoration: inherit;">Time</a>
 </span>
@@ -828,6 +836,14 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Operation is the type of operation which lead to this ManagedFieldsEntry being created. The only valid values for this field are 'Apply' and 'Update'.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="subresource_go">
+<a href="#subresource_go" style="color: inherit; text-decoration: inherit;">Subresource</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Subresource is the name of the subresource used to update that object, or empty string if the object was updated through the main resource. The value of this field is used to distinguish between managers, even if they share the same name. For example, a status update will be distinct from a regular update using the same manager name. Note that the APIVersion field is not related to the Subresource field and it always corresponds to the version of the main resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="time_go">
 <a href="#time_go" style="color: inherit; text-decoration: inherit;">Time</a>
@@ -881,6 +897,14 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
     </dt>
     <dd>{{% md %}}Operation is the type of operation which lead to this ManagedFieldsEntry being created. The only valid values for this field are 'Apply' and 'Update'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="subresource_nodejs">
+<a href="#subresource_nodejs" style="color: inherit; text-decoration: inherit;">subresource</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Subresource is the name of the subresource used to update that object, or empty string if the object was updated through the main resource. The value of this field is used to distinguish between managers, even if they share the same name. For example, a status update will be distinct from a regular update using the same manager name. Note that the APIVersion field is not related to the Subresource field and it always corresponds to the version of the main resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="time_nodejs">
 <a href="#time_nodejs" style="color: inherit; text-decoration: inherit;">time</a>
 </span>
@@ -932,6 +956,14 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Operation is the type of operation which lead to this ManagedFieldsEntry being created. The only valid values for this field are 'Apply' and 'Update'.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="subresource_python">
+<a href="#subresource_python" style="color: inherit; text-decoration: inherit;">subresource</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Subresource is the name of the subresource used to update that object, or empty string if the object was updated through the main resource. The value of this field is used to distinguish between managers, even if they share the same name. For example, a status update will be distinct from a regular update using the same manager name. Note that the APIVersion field is not related to the Subresource field and it always corresponds to the version of the main resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="time_python">
 <a href="#time_python" style="color: inherit; text-decoration: inherit;">time</a>
@@ -1329,7 +1361,7 @@ If NamespaceSelector is also set, then the NetworkPolicyPeer as a whole selects 
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}If set, indicates that the range of ports from port to endPort, inclusive, should be allowed by the policy. This field cannot be defined if the port field is not defined or if the port field is defined as a named (string) port. The endPort must be equal or greater than port. This feature is in Alpha state and should be enabled using the Feature Gate "NetworkPolicyEndPort".{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}If set, indicates that the range of ports from port to endPort, inclusive, should be allowed by the policy. This field cannot be defined if the port field is not defined or if the port field is defined as a named (string) port. The endPort must be equal or greater than port. This feature is in Beta state and is enabled by default. It can be disabled using the Feature Gate "NetworkPolicyEndPort".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_csharp">
 <a href="#port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -1357,7 +1389,7 @@ If NamespaceSelector is also set, then the NetworkPolicyPeer as a whole selects 
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}If set, indicates that the range of ports from port to endPort, inclusive, should be allowed by the policy. This field cannot be defined if the port field is not defined or if the port field is defined as a named (string) port. The endPort must be equal or greater than port. This feature is in Alpha state and should be enabled using the Feature Gate "NetworkPolicyEndPort".{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}If set, indicates that the range of ports from port to endPort, inclusive, should be allowed by the policy. This field cannot be defined if the port field is not defined or if the port field is defined as a named (string) port. The endPort must be equal or greater than port. This feature is in Beta state and is enabled by default. It can be disabled using the Feature Gate "NetworkPolicyEndPort".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_go">
 <a href="#port_go" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -1385,7 +1417,7 @@ If NamespaceSelector is also set, then the NetworkPolicyPeer as a whole selects 
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}If set, indicates that the range of ports from port to endPort, inclusive, should be allowed by the policy. This field cannot be defined if the port field is not defined or if the port field is defined as a named (string) port. The endPort must be equal or greater than port. This feature is in Alpha state and should be enabled using the Feature Gate "NetworkPolicyEndPort".{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}If set, indicates that the range of ports from port to endPort, inclusive, should be allowed by the policy. This field cannot be defined if the port field is not defined or if the port field is defined as a named (string) port. The endPort must be equal or greater than port. This feature is in Beta state and is enabled by default. It can be disabled using the Feature Gate "NetworkPolicyEndPort".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_nodejs">
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
@@ -1413,7 +1445,7 @@ If NamespaceSelector is also set, then the NetworkPolicyPeer as a whole selects 
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}If set, indicates that the range of ports from port to endPort, inclusive, should be allowed by the policy. This field cannot be defined if the port field is not defined or if the port field is defined as a named (string) port. The endPort must be equal or greater than port. This feature is in Alpha state and should be enabled using the Feature Gate "NetworkPolicyEndPort".{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}If set, indicates that the range of ports from port to endPort, inclusive, should be allowed by the policy. This field cannot be defined if the port field is not defined or if the port field is defined as a named (string) port. The endPort must be equal or greater than port. This feature is in Beta state and is enabled by default. It can be disabled using the Feature Gate "NetworkPolicyEndPort".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_python">
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>

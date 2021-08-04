@@ -311,16 +311,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#ingressbackend">Ingress<wbr>Backend</a></span>
     </dt>
-    <dd>{{% md %}}Backend defines the referenced service endpoint to which the traffic will be forwarded to.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="path_csharp">
-<a href="#path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Path is matched against the path of an incoming request. Currently it can contain characters disallowed from the conventional "path" part of a URL as defined by RFC 3986. Paths must begin with a '/'. When unspecified, all paths from incoming requests are matched.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+    <dd>{{% md %}}Backend defines the referenced service endpoint to which the traffic will be forwarded to.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="pathtype_csharp">
 <a href="#pathtype_csharp" style="color: inherit; text-decoration: inherit;">Path<wbr>Type</a>
 </span>
@@ -337,7 +329,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
 * ImplementationSpecific: Interpretation of the Path matching is up to
   the IngressClass. Implementations can treat this as a separate PathType
   or treat it identically to Prefix or Exact path types.
-Implementations are required to support all path types.{{% /md %}}</dd></dl>
+Implementations are required to support all path types.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="path_csharp">
+<a href="#path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Path is matched against the path of an incoming request. Currently it can contain characters disallowed from the conventional "path" part of a URL as defined by RFC 3986. Paths must begin with a '/' and must be present when using PathType with value "Exact" or "Prefix".{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -349,16 +349,8 @@ Implementations are required to support all path types.{{% /md %}}</dd></dl>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#ingressbackend">Ingress<wbr>Backend</a></span>
     </dt>
-    <dd>{{% md %}}Backend defines the referenced service endpoint to which the traffic will be forwarded to.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="path_go">
-<a href="#path_go" style="color: inherit; text-decoration: inherit;">Path</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Path is matched against the path of an incoming request. Currently it can contain characters disallowed from the conventional "path" part of a URL as defined by RFC 3986. Paths must begin with a '/'. When unspecified, all paths from incoming requests are matched.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+    <dd>{{% md %}}Backend defines the referenced service endpoint to which the traffic will be forwarded to.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="pathtype_go">
 <a href="#pathtype_go" style="color: inherit; text-decoration: inherit;">Path<wbr>Type</a>
 </span>
@@ -375,7 +367,15 @@ Implementations are required to support all path types.{{% /md %}}</dd></dl>
 * ImplementationSpecific: Interpretation of the Path matching is up to
   the IngressClass. Implementations can treat this as a separate PathType
   or treat it identically to Prefix or Exact path types.
-Implementations are required to support all path types.{{% /md %}}</dd></dl>
+Implementations are required to support all path types.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="path_go">
+<a href="#path_go" style="color: inherit; text-decoration: inherit;">Path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Path is matched against the path of an incoming request. Currently it can contain characters disallowed from the conventional "path" part of a URL as defined by RFC 3986. Paths must begin with a '/' and must be present when using PathType with value "Exact" or "Prefix".{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -387,16 +387,8 @@ Implementations are required to support all path types.{{% /md %}}</dd></dl>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#ingressbackend">Ingress<wbr>Backend</a></span>
     </dt>
-    <dd>{{% md %}}Backend defines the referenced service endpoint to which the traffic will be forwarded to.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="path_nodejs">
-<a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Path is matched against the path of an incoming request. Currently it can contain characters disallowed from the conventional "path" part of a URL as defined by RFC 3986. Paths must begin with a '/'. When unspecified, all paths from incoming requests are matched.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+    <dd>{{% md %}}Backend defines the referenced service endpoint to which the traffic will be forwarded to.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="pathtype_nodejs">
 <a href="#pathtype_nodejs" style="color: inherit; text-decoration: inherit;">path<wbr>Type</a>
 </span>
@@ -413,7 +405,15 @@ Implementations are required to support all path types.{{% /md %}}</dd></dl>
 * ImplementationSpecific: Interpretation of the Path matching is up to
   the IngressClass. Implementations can treat this as a separate PathType
   or treat it identically to Prefix or Exact path types.
-Implementations are required to support all path types.{{% /md %}}</dd></dl>
+Implementations are required to support all path types.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="path_nodejs">
+<a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Path is matched against the path of an incoming request. Currently it can contain characters disallowed from the conventional "path" part of a URL as defined by RFC 3986. Paths must begin with a '/' and must be present when using PathType with value "Exact" or "Prefix".{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -425,16 +425,8 @@ Implementations are required to support all path types.{{% /md %}}</dd></dl>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#ingressbackend">Ingress<wbr>Backend</a></span>
     </dt>
-    <dd>{{% md %}}Backend defines the referenced service endpoint to which the traffic will be forwarded to.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="path_python">
-<a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Path is matched against the path of an incoming request. Currently it can contain characters disallowed from the conventional "path" part of a URL as defined by RFC 3986. Paths must begin with a '/'. When unspecified, all paths from incoming requests are matched.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
+    <dd>{{% md %}}Backend defines the referenced service endpoint to which the traffic will be forwarded to.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="path_type_python">
 <a href="#path_type_python" style="color: inherit; text-decoration: inherit;">path_<wbr>type</a>
 </span>
@@ -451,7 +443,15 @@ Implementations are required to support all path types.{{% /md %}}</dd></dl>
 * ImplementationSpecific: Interpretation of the Path matching is up to
   the IngressClass. Implementations can treat this as a separate PathType
   or treat it identically to Prefix or Exact path types.
-Implementations are required to support all path types.{{% /md %}}</dd></dl>
+Implementations are required to support all path types.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="path_python">
+<a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Path is matched against the path of an incoming request. Currently it can contain characters disallowed from the conventional "path" part of a URL as defined by RFC 3986. Paths must begin with a '/' and must be present when using PathType with value "Exact" or "Prefix".{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="httpingressrulevalue">HTTPIngress<wbr>Rule<wbr>Value</h4>
@@ -1533,6 +1533,14 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
     </dt>
     <dd>{{% md %}}Operation is the type of operation which lead to this ManagedFieldsEntry being created. The only valid values for this field are 'Apply' and 'Update'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="subresource_csharp">
+<a href="#subresource_csharp" style="color: inherit; text-decoration: inherit;">Subresource</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Subresource is the name of the subresource used to update that object, or empty string if the object was updated through the main resource. The value of this field is used to distinguish between managers, even if they share the same name. For example, a status update will be distinct from a regular update using the same manager name. Note that the APIVersion field is not related to the Subresource field and it always corresponds to the version of the main resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="time_csharp">
 <a href="#time_csharp" style="color: inherit; text-decoration: inherit;">Time</a>
 </span>
@@ -1584,6 +1592,14 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Operation is the type of operation which lead to this ManagedFieldsEntry being created. The only valid values for this field are 'Apply' and 'Update'.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="subresource_go">
+<a href="#subresource_go" style="color: inherit; text-decoration: inherit;">Subresource</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Subresource is the name of the subresource used to update that object, or empty string if the object was updated through the main resource. The value of this field is used to distinguish between managers, even if they share the same name. For example, a status update will be distinct from a regular update using the same manager name. Note that the APIVersion field is not related to the Subresource field and it always corresponds to the version of the main resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="time_go">
 <a href="#time_go" style="color: inherit; text-decoration: inherit;">Time</a>
@@ -1637,6 +1653,14 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
     </dt>
     <dd>{{% md %}}Operation is the type of operation which lead to this ManagedFieldsEntry being created. The only valid values for this field are 'Apply' and 'Update'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="subresource_nodejs">
+<a href="#subresource_nodejs" style="color: inherit; text-decoration: inherit;">subresource</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Subresource is the name of the subresource used to update that object, or empty string if the object was updated through the main resource. The value of this field is used to distinguish between managers, even if they share the same name. For example, a status update will be distinct from a regular update using the same manager name. Note that the APIVersion field is not related to the Subresource field and it always corresponds to the version of the main resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="time_nodejs">
 <a href="#time_nodejs" style="color: inherit; text-decoration: inherit;">time</a>
 </span>
@@ -1688,6 +1712,14 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Operation is the type of operation which lead to this ManagedFieldsEntry being created. The only valid values for this field are 'Apply' and 'Update'.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="subresource_python">
+<a href="#subresource_python" style="color: inherit; text-decoration: inherit;">subresource</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Subresource is the name of the subresource used to update that object, or empty string if the object was updated through the main resource. The value of this field is used to distinguish between managers, even if they share the same name. For example, a status update will be distinct from a regular update using the same manager name. Note that the APIVersion field is not related to the Subresource field and it always corresponds to the version of the main resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="time_python">
 <a href="#time_python" style="color: inherit; text-decoration: inherit;">time</a>

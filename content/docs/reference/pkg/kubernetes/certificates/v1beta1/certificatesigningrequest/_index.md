@@ -343,7 +343,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}type of the condition. Known conditions include "Approved", "Denied", and "Failed".{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}request approval state, currently Approved or Denied.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lasttransitiontime_csharp">
 <a href="#lasttransitiontime_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Transition<wbr>Time</a>
@@ -395,7 +395,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}type of the condition. Known conditions include "Approved", "Denied", and "Failed".{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}request approval state, currently Approved or Denied.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lasttransitiontime_go">
 <a href="#lasttransitiontime_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Transition<wbr>Time</a>
@@ -447,7 +447,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}type of the condition. Known conditions include "Approved", "Denied", and "Failed".{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}request approval state, currently Approved or Denied.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lasttransitiontime_nodejs">
 <a href="#lasttransitiontime_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Transition<wbr>Time</a>
@@ -499,7 +499,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}type of the condition. Known conditions include "Approved", "Denied", and "Failed".{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}request approval state, currently Approved or Denied.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="last_transition_time_python">
 <a href="#last_transition_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>transition_<wbr>time</a>
@@ -600,31 +600,7 @@ Distribution of trust for signers happens out of band. You can select on this fi
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}allowedUsages specifies a set of usage contexts the key will be valid for. See: https://tools.ietf.org/html/rfc5280#section-4.2.1.3
-     https://tools.ietf.org/html/rfc5280#section-4.2.1.12
-Valid values are:
- "signing",
- "digital signature",
- "content commitment",
- "key encipherment",
- "key agreement",
- "data encipherment",
- "cert sign",
- "crl sign",
- "encipher only",
- "decipher only",
- "any",
- "server auth",
- "client auth",
- "code signing",
- "email protection",
- "s/mime",
- "ipsec end system",
- "ipsec tunnel",
- "ipsec user",
- "timestamping",
- "ocsp signing",
- "microsoft sgc",
- "netscape sgc"{{% /md %}}</dd><dt class="property-optional"
+     https://tools.ietf.org/html/rfc5280#section-4.2.1.12{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="username_csharp">
 <a href="#username_csharp" style="color: inherit; text-decoration: inherit;">Username</a>
@@ -691,31 +667,7 @@ Distribution of trust for signers happens out of band. You can select on this fi
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}allowedUsages specifies a set of usage contexts the key will be valid for. See: https://tools.ietf.org/html/rfc5280#section-4.2.1.3
-     https://tools.ietf.org/html/rfc5280#section-4.2.1.12
-Valid values are:
- "signing",
- "digital signature",
- "content commitment",
- "key encipherment",
- "key agreement",
- "data encipherment",
- "cert sign",
- "crl sign",
- "encipher only",
- "decipher only",
- "any",
- "server auth",
- "client auth",
- "code signing",
- "email protection",
- "s/mime",
- "ipsec end system",
- "ipsec tunnel",
- "ipsec user",
- "timestamping",
- "ocsp signing",
- "microsoft sgc",
- "netscape sgc"{{% /md %}}</dd><dt class="property-optional"
+     https://tools.ietf.org/html/rfc5280#section-4.2.1.12{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="username_go">
 <a href="#username_go" style="color: inherit; text-decoration: inherit;">Username</a>
@@ -782,31 +734,7 @@ Distribution of trust for signers happens out of band. You can select on this fi
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}allowedUsages specifies a set of usage contexts the key will be valid for. See: https://tools.ietf.org/html/rfc5280#section-4.2.1.3
-     https://tools.ietf.org/html/rfc5280#section-4.2.1.12
-Valid values are:
- "signing",
- "digital signature",
- "content commitment",
- "key encipherment",
- "key agreement",
- "data encipherment",
- "cert sign",
- "crl sign",
- "encipher only",
- "decipher only",
- "any",
- "server auth",
- "client auth",
- "code signing",
- "email protection",
- "s/mime",
- "ipsec end system",
- "ipsec tunnel",
- "ipsec user",
- "timestamping",
- "ocsp signing",
- "microsoft sgc",
- "netscape sgc"{{% /md %}}</dd><dt class="property-optional"
+     https://tools.ietf.org/html/rfc5280#section-4.2.1.12{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="username_nodejs">
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
@@ -873,31 +801,7 @@ Distribution of trust for signers happens out of band. You can select on this fi
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}allowedUsages specifies a set of usage contexts the key will be valid for. See: https://tools.ietf.org/html/rfc5280#section-4.2.1.3
-     https://tools.ietf.org/html/rfc5280#section-4.2.1.12
-Valid values are:
- "signing",
- "digital signature",
- "content commitment",
- "key encipherment",
- "key agreement",
- "data encipherment",
- "cert sign",
- "crl sign",
- "encipher only",
- "decipher only",
- "any",
- "server auth",
- "client auth",
- "code signing",
- "email protection",
- "s/mime",
- "ipsec end system",
- "ipsec tunnel",
- "ipsec user",
- "timestamping",
- "ocsp signing",
- "microsoft sgc",
- "netscape sgc"{{% /md %}}</dd><dt class="property-optional"
+     https://tools.ietf.org/html/rfc5280#section-4.2.1.12{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="username_python">
 <a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
@@ -1035,6 +939,14 @@ Valid values are:
     </dt>
     <dd>{{% md %}}Operation is the type of operation which lead to this ManagedFieldsEntry being created. The only valid values for this field are 'Apply' and 'Update'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="subresource_csharp">
+<a href="#subresource_csharp" style="color: inherit; text-decoration: inherit;">Subresource</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Subresource is the name of the subresource used to update that object, or empty string if the object was updated through the main resource. The value of this field is used to distinguish between managers, even if they share the same name. For example, a status update will be distinct from a regular update using the same manager name. Note that the APIVersion field is not related to the Subresource field and it always corresponds to the version of the main resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="time_csharp">
 <a href="#time_csharp" style="color: inherit; text-decoration: inherit;">Time</a>
 </span>
@@ -1086,6 +998,14 @@ Valid values are:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Operation is the type of operation which lead to this ManagedFieldsEntry being created. The only valid values for this field are 'Apply' and 'Update'.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="subresource_go">
+<a href="#subresource_go" style="color: inherit; text-decoration: inherit;">Subresource</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Subresource is the name of the subresource used to update that object, or empty string if the object was updated through the main resource. The value of this field is used to distinguish between managers, even if they share the same name. For example, a status update will be distinct from a regular update using the same manager name. Note that the APIVersion field is not related to the Subresource field and it always corresponds to the version of the main resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="time_go">
 <a href="#time_go" style="color: inherit; text-decoration: inherit;">Time</a>
@@ -1139,6 +1059,14 @@ Valid values are:
     </dt>
     <dd>{{% md %}}Operation is the type of operation which lead to this ManagedFieldsEntry being created. The only valid values for this field are 'Apply' and 'Update'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="subresource_nodejs">
+<a href="#subresource_nodejs" style="color: inherit; text-decoration: inherit;">subresource</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Subresource is the name of the subresource used to update that object, or empty string if the object was updated through the main resource. The value of this field is used to distinguish between managers, even if they share the same name. For example, a status update will be distinct from a regular update using the same manager name. Note that the APIVersion field is not related to the Subresource field and it always corresponds to the version of the main resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="time_nodejs">
 <a href="#time_nodejs" style="color: inherit; text-decoration: inherit;">time</a>
 </span>
@@ -1190,6 +1118,14 @@ Valid values are:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Operation is the type of operation which lead to this ManagedFieldsEntry being created. The only valid values for this field are 'Apply' and 'Update'.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="subresource_python">
+<a href="#subresource_python" style="color: inherit; text-decoration: inherit;">subresource</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Subresource is the name of the subresource used to update that object, or empty string if the object was updated through the main resource. The value of this field is used to distinguish between managers, even if they share the same name. For example, a status update will be distinct from a regular update using the same manager name. Note that the APIVersion field is not related to the Subresource field and it always corresponds to the version of the main resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="time_python">
 <a href="#time_python" style="color: inherit; text-decoration: inherit;">time</a>

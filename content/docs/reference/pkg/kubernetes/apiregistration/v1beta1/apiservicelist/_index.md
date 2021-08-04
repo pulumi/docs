@@ -605,6 +605,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}GroupPriorityMininum is the priority this group should have at least. Higher priority means that the group is preferred by clients over lower priority ones. Note that other versions of this group might specify even higher GroupPriorityMininum values such that the whole group gets a higher priority. The primary sort is based on GroupPriorityMinimum, ordered highest number to lowest (20 before 10). The secondary sort is based on the alphabetical comparison of the name of the object.  (v1.bar before v1.foo) We'd recommend something like: *.k8s.io (except extensions) at 18000 and PaaSes (OpenShift, Deis) are recommended to be in the 2000s{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="service_csharp">
+<a href="#service_csharp" style="color: inherit; text-decoration: inherit;">Service</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#servicereference">Service<wbr>Reference</a></span>
+    </dt>
+    <dd>{{% md %}}Service is a reference to the service for this API server.  It must communicate on port 443 If the Service is nil, that means the handling for the API groupversion is handled locally on this server. The call will simply delegate to the normal handler chain to be fulfilled.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="versionpriority_csharp">
 <a href="#versionpriority_csharp" style="color: inherit; text-decoration: inherit;">Version<wbr>Priority</a>
 </span>
@@ -637,14 +645,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}InsecureSkipTLSVerify disables TLS certificate verification when communicating with this server. This is strongly discouraged.  You should use the CABundle instead.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="service_csharp">
-<a href="#service_csharp" style="color: inherit; text-decoration: inherit;">Service</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicereference">Service<wbr>Reference</a></span>
-    </dt>
-    <dd>{{% md %}}Service is a reference to the service for this API server.  It must communicate on port 443. If the Service is nil, that means the handling for the API groupversion is handled locally on this server. The call will simply delegate to the normal handler chain to be fulfilled.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="version_csharp">
 <a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
 </span>
@@ -664,6 +664,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}GroupPriorityMininum is the priority this group should have at least. Higher priority means that the group is preferred by clients over lower priority ones. Note that other versions of this group might specify even higher GroupPriorityMininum values such that the whole group gets a higher priority. The primary sort is based on GroupPriorityMinimum, ordered highest number to lowest (20 before 10). The secondary sort is based on the alphabetical comparison of the name of the object.  (v1.bar before v1.foo) We'd recommend something like: *.k8s.io (except extensions) at 18000 and PaaSes (OpenShift, Deis) are recommended to be in the 2000s{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="service_go">
+<a href="#service_go" style="color: inherit; text-decoration: inherit;">Service</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#servicereference">Service<wbr>Reference</a></span>
+    </dt>
+    <dd>{{% md %}}Service is a reference to the service for this API server.  It must communicate on port 443 If the Service is nil, that means the handling for the API groupversion is handled locally on this server. The call will simply delegate to the normal handler chain to be fulfilled.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="versionpriority_go">
 <a href="#versionpriority_go" style="color: inherit; text-decoration: inherit;">Version<wbr>Priority</a>
@@ -697,14 +705,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}InsecureSkipTLSVerify disables TLS certificate verification when communicating with this server. This is strongly discouraged.  You should use the CABundle instead.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="service_go">
-<a href="#service_go" style="color: inherit; text-decoration: inherit;">Service</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicereference">Service<wbr>Reference</a></span>
-    </dt>
-    <dd>{{% md %}}Service is a reference to the service for this API server.  It must communicate on port 443. If the Service is nil, that means the handling for the API groupversion is handled locally on this server. The call will simply delegate to the normal handler chain to be fulfilled.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="version_go">
 <a href="#version_go" style="color: inherit; text-decoration: inherit;">Version</a>
 </span>
@@ -724,6 +724,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}GroupPriorityMininum is the priority this group should have at least. Higher priority means that the group is preferred by clients over lower priority ones. Note that other versions of this group might specify even higher GroupPriorityMininum values such that the whole group gets a higher priority. The primary sort is based on GroupPriorityMinimum, ordered highest number to lowest (20 before 10). The secondary sort is based on the alphabetical comparison of the name of the object.  (v1.bar before v1.foo) We'd recommend something like: *.k8s.io (except extensions) at 18000 and PaaSes (OpenShift, Deis) are recommended to be in the 2000s{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="service_nodejs">
+<a href="#service_nodejs" style="color: inherit; text-decoration: inherit;">service</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#servicereference">Service<wbr>Reference</a></span>
+    </dt>
+    <dd>{{% md %}}Service is a reference to the service for this API server.  It must communicate on port 443 If the Service is nil, that means the handling for the API groupversion is handled locally on this server. The call will simply delegate to the normal handler chain to be fulfilled.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="versionpriority_nodejs">
 <a href="#versionpriority_nodejs" style="color: inherit; text-decoration: inherit;">version<wbr>Priority</a>
@@ -757,14 +765,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}InsecureSkipTLSVerify disables TLS certificate verification when communicating with this server. This is strongly discouraged.  You should use the CABundle instead.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="service_nodejs">
-<a href="#service_nodejs" style="color: inherit; text-decoration: inherit;">service</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicereference">Service<wbr>Reference</a></span>
-    </dt>
-    <dd>{{% md %}}Service is a reference to the service for this API server.  It must communicate on port 443. If the Service is nil, that means the handling for the API groupversion is handled locally on this server. The call will simply delegate to the normal handler chain to be fulfilled.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="version_nodejs">
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
@@ -784,6 +784,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}GroupPriorityMininum is the priority this group should have at least. Higher priority means that the group is preferred by clients over lower priority ones. Note that other versions of this group might specify even higher GroupPriorityMininum values such that the whole group gets a higher priority. The primary sort is based on GroupPriorityMinimum, ordered highest number to lowest (20 before 10). The secondary sort is based on the alphabetical comparison of the name of the object.  (v1.bar before v1.foo) We'd recommend something like: *.k8s.io (except extensions) at 18000 and PaaSes (OpenShift, Deis) are recommended to be in the 2000s{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="service_python">
+<a href="#service_python" style="color: inherit; text-decoration: inherit;">service</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#servicereference">Service<wbr>Reference</a></span>
+    </dt>
+    <dd>{{% md %}}Service is a reference to the service for this API server.  It must communicate on port 443 If the Service is nil, that means the handling for the API groupversion is handled locally on this server. The call will simply delegate to the normal handler chain to be fulfilled.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="version_priority_python">
 <a href="#version_priority_python" style="color: inherit; text-decoration: inherit;">version_<wbr>priority</a>
@@ -816,14 +824,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}InsecureSkipTLSVerify disables TLS certificate verification when communicating with this server. This is strongly discouraged.  You should use the CABundle instead.{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="service_python">
-<a href="#service_python" style="color: inherit; text-decoration: inherit;">service</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicereference">Service<wbr>Reference</a></span>
-    </dt>
-    <dd>{{% md %}}Service is a reference to the service for this API server.  It must communicate on port 443. If the Service is nil, that means the handling for the API groupversion is handled locally on this server. The call will simply delegate to the normal handler chain to be fulfilled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="version_python">
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
@@ -1083,6 +1083,14 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
     </dt>
     <dd>{{% md %}}Operation is the type of operation which lead to this ManagedFieldsEntry being created. The only valid values for this field are 'Apply' and 'Update'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="subresource_csharp">
+<a href="#subresource_csharp" style="color: inherit; text-decoration: inherit;">Subresource</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Subresource is the name of the subresource used to update that object, or empty string if the object was updated through the main resource. The value of this field is used to distinguish between managers, even if they share the same name. For example, a status update will be distinct from a regular update using the same manager name. Note that the APIVersion field is not related to the Subresource field and it always corresponds to the version of the main resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="time_csharp">
 <a href="#time_csharp" style="color: inherit; text-decoration: inherit;">Time</a>
 </span>
@@ -1134,6 +1142,14 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Operation is the type of operation which lead to this ManagedFieldsEntry being created. The only valid values for this field are 'Apply' and 'Update'.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="subresource_go">
+<a href="#subresource_go" style="color: inherit; text-decoration: inherit;">Subresource</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Subresource is the name of the subresource used to update that object, or empty string if the object was updated through the main resource. The value of this field is used to distinguish between managers, even if they share the same name. For example, a status update will be distinct from a regular update using the same manager name. Note that the APIVersion field is not related to the Subresource field and it always corresponds to the version of the main resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="time_go">
 <a href="#time_go" style="color: inherit; text-decoration: inherit;">Time</a>
@@ -1187,6 +1203,14 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
     </dt>
     <dd>{{% md %}}Operation is the type of operation which lead to this ManagedFieldsEntry being created. The only valid values for this field are 'Apply' and 'Update'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="subresource_nodejs">
+<a href="#subresource_nodejs" style="color: inherit; text-decoration: inherit;">subresource</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Subresource is the name of the subresource used to update that object, or empty string if the object was updated through the main resource. The value of this field is used to distinguish between managers, even if they share the same name. For example, a status update will be distinct from a regular update using the same manager name. Note that the APIVersion field is not related to the Subresource field and it always corresponds to the version of the main resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="time_nodejs">
 <a href="#time_nodejs" style="color: inherit; text-decoration: inherit;">time</a>
 </span>
@@ -1238,6 +1262,14 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Operation is the type of operation which lead to this ManagedFieldsEntry being created. The only valid values for this field are 'Apply' and 'Update'.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="subresource_python">
+<a href="#subresource_python" style="color: inherit; text-decoration: inherit;">subresource</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Subresource is the name of the subresource used to update that object, or empty string if the object was updated through the main resource. The value of this field is used to distinguish between managers, even if they share the same name. For example, a status update will be distinct from a regular update using the same manager name. Note that the APIVersion field is not related to the Subresource field and it always corresponds to the version of the main resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="time_python">
 <a href="#time_python" style="color: inherit; text-decoration: inherit;">time</a>

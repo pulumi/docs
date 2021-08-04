@@ -16,7 +16,6 @@ Explore the resources and functions of the kubernetes.core/v1 module.
     <li><a href="configmaplist" title="ConfigMapList"><span class="symbol resource"></span>ConfigMapList</a></li>
     <li><a href="endpoints" title="Endpoints"><span class="symbol resource"></span>Endpoints</a></li>
     <li><a href="endpointslist" title="EndpointsList"><span class="symbol resource"></span>EndpointsList</a></li>
-    <li><a href="ephemeralcontainers" title="EphemeralContainers"><span class="symbol resource"></span>EphemeralContainers</a></li>
     <li><a href="event" title="Event"><span class="symbol resource"></span>Event</a></li>
     <li><a href="eventlist" title="EventList"><span class="symbol resource"></span>EventList</a></li>
     <li><a href="limitrange" title="LimitRange"><span class="symbol resource"></span>LimitRange</a></li>
@@ -52,6 +51,6 @@ Explore the resources and functions of the kubernetes.core/v1 module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>3.5.2</dd>
+	<dd>3.6.0</dd>
 </dl>
 

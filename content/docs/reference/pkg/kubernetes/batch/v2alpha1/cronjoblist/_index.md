@@ -1975,7 +1975,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Arguments to the entrypoint. The docker image's CMD is used if this is not provided. Variable references $(VAR_NAME) are expanded using the container's environment. If a variable cannot be resolved, the reference in the input string will be unchanged. The $(VAR_NAME) syntax can be escaped with a double $$, ie: $$(VAR_NAME). Escaped references will never be expanded, regardless of whether the variable exists or not. Cannot be updated. More info: https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Arguments to the entrypoint. The docker image's CMD is used if this is not provided. Variable references $(VAR_NAME) are expanded using the container's environment. If a variable cannot be resolved, the reference in the input string will be unchanged. Double $$ are reduced to a single $, which allows for escaping the $(VAR_NAME) syntax: i.e. "$$(VAR_NAME)" will produce the string literal "$(VAR_NAME)". Escaped references will never be expanded, regardless of whether the variable exists or not. Cannot be updated. More info: https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="command_csharp">
 <a href="#command_csharp" style="color: inherit; text-decoration: inherit;">Command</a>
@@ -1983,7 +1983,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Entrypoint array. Not executed within a shell. The docker image's ENTRYPOINT is used if this is not provided. Variable references $(VAR_NAME) are expanded using the container's environment. If a variable cannot be resolved, the reference in the input string will be unchanged. The $(VAR_NAME) syntax can be escaped with a double $$, ie: $$(VAR_NAME). Escaped references will never be expanded, regardless of whether the variable exists or not. Cannot be updated. More info: https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Entrypoint array. Not executed within a shell. The docker image's ENTRYPOINT is used if this is not provided. Variable references $(VAR_NAME) are expanded using the container's environment. If a variable cannot be resolved, the reference in the input string will be unchanged. Double $$ are reduced to a single $, which allows for escaping the $(VAR_NAME) syntax: i.e. "$$(VAR_NAME)" will produce the string literal "$(VAR_NAME)". Escaped references will never be expanded, regardless of whether the variable exists or not. Cannot be updated. More info: https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="env_csharp">
 <a href="#env_csharp" style="color: inherit; text-decoration: inherit;">Env</a>
@@ -2063,7 +2063,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#securitycontext">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Security<wbr>Context</a></span>
     </dt>
-    <dd>{{% md %}}Security options the pod should run with. More info: https://kubernetes.io/docs/concepts/policy/security-context/ More info: https://kubernetes.io/docs/tasks/configure-pod-container/security-context/{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}SecurityContext defines the security options the container should be run with. If set, the fields of SecurityContext override the equivalent fields of PodSecurityContext. More info: https://kubernetes.io/docs/tasks/configure-pod-container/security-context/{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="startupprobe_csharp">
 <a href="#startupprobe_csharp" style="color: inherit; text-decoration: inherit;">Startup<wbr>Probe</a>
@@ -2155,7 +2155,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Arguments to the entrypoint. The docker image's CMD is used if this is not provided. Variable references $(VAR_NAME) are expanded using the container's environment. If a variable cannot be resolved, the reference in the input string will be unchanged. The $(VAR_NAME) syntax can be escaped with a double $$, ie: $$(VAR_NAME). Escaped references will never be expanded, regardless of whether the variable exists or not. Cannot be updated. More info: https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Arguments to the entrypoint. The docker image's CMD is used if this is not provided. Variable references $(VAR_NAME) are expanded using the container's environment. If a variable cannot be resolved, the reference in the input string will be unchanged. Double $$ are reduced to a single $, which allows for escaping the $(VAR_NAME) syntax: i.e. "$$(VAR_NAME)" will produce the string literal "$(VAR_NAME)". Escaped references will never be expanded, regardless of whether the variable exists or not. Cannot be updated. More info: https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="command_go">
 <a href="#command_go" style="color: inherit; text-decoration: inherit;">Command</a>
@@ -2163,7 +2163,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Entrypoint array. Not executed within a shell. The docker image's ENTRYPOINT is used if this is not provided. Variable references $(VAR_NAME) are expanded using the container's environment. If a variable cannot be resolved, the reference in the input string will be unchanged. The $(VAR_NAME) syntax can be escaped with a double $$, ie: $$(VAR_NAME). Escaped references will never be expanded, regardless of whether the variable exists or not. Cannot be updated. More info: https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Entrypoint array. Not executed within a shell. The docker image's ENTRYPOINT is used if this is not provided. Variable references $(VAR_NAME) are expanded using the container's environment. If a variable cannot be resolved, the reference in the input string will be unchanged. Double $$ are reduced to a single $, which allows for escaping the $(VAR_NAME) syntax: i.e. "$$(VAR_NAME)" will produce the string literal "$(VAR_NAME)". Escaped references will never be expanded, regardless of whether the variable exists or not. Cannot be updated. More info: https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="env_go">
 <a href="#env_go" style="color: inherit; text-decoration: inherit;">Env</a>
@@ -2243,7 +2243,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#securitycontext">Security<wbr>Context</a></span>
     </dt>
-    <dd>{{% md %}}Security options the pod should run with. More info: https://kubernetes.io/docs/concepts/policy/security-context/ More info: https://kubernetes.io/docs/tasks/configure-pod-container/security-context/{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}SecurityContext defines the security options the container should be run with. If set, the fields of SecurityContext override the equivalent fields of PodSecurityContext. More info: https://kubernetes.io/docs/tasks/configure-pod-container/security-context/{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="startupprobe_go">
 <a href="#startupprobe_go" style="color: inherit; text-decoration: inherit;">Startup<wbr>Probe</a>
@@ -2335,7 +2335,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Arguments to the entrypoint. The docker image's CMD is used if this is not provided. Variable references $(VAR_NAME) are expanded using the container's environment. If a variable cannot be resolved, the reference in the input string will be unchanged. The $(VAR_NAME) syntax can be escaped with a double $$, ie: $$(VAR_NAME). Escaped references will never be expanded, regardless of whether the variable exists or not. Cannot be updated. More info: https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Arguments to the entrypoint. The docker image's CMD is used if this is not provided. Variable references $(VAR_NAME) are expanded using the container's environment. If a variable cannot be resolved, the reference in the input string will be unchanged. Double $$ are reduced to a single $, which allows for escaping the $(VAR_NAME) syntax: i.e. "$$(VAR_NAME)" will produce the string literal "$(VAR_NAME)". Escaped references will never be expanded, regardless of whether the variable exists or not. Cannot be updated. More info: https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="command_nodejs">
 <a href="#command_nodejs" style="color: inherit; text-decoration: inherit;">command</a>
@@ -2343,7 +2343,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Entrypoint array. Not executed within a shell. The docker image's ENTRYPOINT is used if this is not provided. Variable references $(VAR_NAME) are expanded using the container's environment. If a variable cannot be resolved, the reference in the input string will be unchanged. The $(VAR_NAME) syntax can be escaped with a double $$, ie: $$(VAR_NAME). Escaped references will never be expanded, regardless of whether the variable exists or not. Cannot be updated. More info: https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Entrypoint array. Not executed within a shell. The docker image's ENTRYPOINT is used if this is not provided. Variable references $(VAR_NAME) are expanded using the container's environment. If a variable cannot be resolved, the reference in the input string will be unchanged. Double $$ are reduced to a single $, which allows for escaping the $(VAR_NAME) syntax: i.e. "$$(VAR_NAME)" will produce the string literal "$(VAR_NAME)". Escaped references will never be expanded, regardless of whether the variable exists or not. Cannot be updated. More info: https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="env_nodejs">
 <a href="#env_nodejs" style="color: inherit; text-decoration: inherit;">env</a>
@@ -2423,7 +2423,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#securitycontext">core.v1.<wbr>Security<wbr>Context</a></span>
     </dt>
-    <dd>{{% md %}}Security options the pod should run with. More info: https://kubernetes.io/docs/concepts/policy/security-context/ More info: https://kubernetes.io/docs/tasks/configure-pod-container/security-context/{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}SecurityContext defines the security options the container should be run with. If set, the fields of SecurityContext override the equivalent fields of PodSecurityContext. More info: https://kubernetes.io/docs/tasks/configure-pod-container/security-context/{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="startupprobe_nodejs">
 <a href="#startupprobe_nodejs" style="color: inherit; text-decoration: inherit;">startup<wbr>Probe</a>
@@ -2515,7 +2515,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Arguments to the entrypoint. The docker image's CMD is used if this is not provided. Variable references $(VAR_NAME) are expanded using the container's environment. If a variable cannot be resolved, the reference in the input string will be unchanged. The $(VAR_NAME) syntax can be escaped with a double $$, ie: $$(VAR_NAME). Escaped references will never be expanded, regardless of whether the variable exists or not. Cannot be updated. More info: https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Arguments to the entrypoint. The docker image's CMD is used if this is not provided. Variable references $(VAR_NAME) are expanded using the container's environment. If a variable cannot be resolved, the reference in the input string will be unchanged. Double $$ are reduced to a single $, which allows for escaping the $(VAR_NAME) syntax: i.e. "$$(VAR_NAME)" will produce the string literal "$(VAR_NAME)". Escaped references will never be expanded, regardless of whether the variable exists or not. Cannot be updated. More info: https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="command_python">
 <a href="#command_python" style="color: inherit; text-decoration: inherit;">command</a>
@@ -2523,7 +2523,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Entrypoint array. Not executed within a shell. The docker image's ENTRYPOINT is used if this is not provided. Variable references $(VAR_NAME) are expanded using the container's environment. If a variable cannot be resolved, the reference in the input string will be unchanged. The $(VAR_NAME) syntax can be escaped with a double $$, ie: $$(VAR_NAME). Escaped references will never be expanded, regardless of whether the variable exists or not. Cannot be updated. More info: https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Entrypoint array. Not executed within a shell. The docker image's ENTRYPOINT is used if this is not provided. Variable references $(VAR_NAME) are expanded using the container's environment. If a variable cannot be resolved, the reference in the input string will be unchanged. Double $$ are reduced to a single $, which allows for escaping the $(VAR_NAME) syntax: i.e. "$$(VAR_NAME)" will produce the string literal "$(VAR_NAME)". Escaped references will never be expanded, regardless of whether the variable exists or not. Cannot be updated. More info: https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="env_python">
 <a href="#env_python" style="color: inherit; text-decoration: inherit;">env</a>
@@ -2603,7 +2603,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#securitycontext">Security<wbr>Context</a></span>
     </dt>
-    <dd>{{% md %}}Security options the pod should run with. More info: https://kubernetes.io/docs/concepts/policy/security-context/ More info: https://kubernetes.io/docs/tasks/configure-pod-container/security-context/{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}SecurityContext defines the security options the container should be run with. If set, the fields of SecurityContext override the equivalent fields of PodSecurityContext. More info: https://kubernetes.io/docs/tasks/configure-pod-container/security-context/{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="startup_probe_python">
 <a href="#startup_probe_python" style="color: inherit; text-decoration: inherit;">startup_<wbr>probe</a>
@@ -3787,7 +3787,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Variable references $(VAR_NAME) are expanded using the previous defined environment variables in the container and any service environment variables. If a variable cannot be resolved, the reference in the input string will be unchanged. The $(VAR_NAME) syntax can be escaped with a double $$, ie: $$(VAR_NAME). Escaped references will never be expanded, regardless of whether the variable exists or not. Defaults to "".{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Variable references $(VAR_NAME) are expanded using the previously defined environment variables in the container and any service environment variables. If a variable cannot be resolved, the reference in the input string will be unchanged. Double $$ are reduced to a single $, which allows for escaping the $(VAR_NAME) syntax: i.e. "$$(VAR_NAME)" will produce the string literal "$(VAR_NAME)". Escaped references will never be expanded, regardless of whether the variable exists or not. Defaults to "".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="valuefrom_csharp">
 <a href="#valuefrom_csharp" style="color: inherit; text-decoration: inherit;">Value<wbr>From</a>
@@ -3815,7 +3815,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Variable references $(VAR_NAME) are expanded using the previous defined environment variables in the container and any service environment variables. If a variable cannot be resolved, the reference in the input string will be unchanged. The $(VAR_NAME) syntax can be escaped with a double $$, ie: $$(VAR_NAME). Escaped references will never be expanded, regardless of whether the variable exists or not. Defaults to "".{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Variable references $(VAR_NAME) are expanded using the previously defined environment variables in the container and any service environment variables. If a variable cannot be resolved, the reference in the input string will be unchanged. Double $$ are reduced to a single $, which allows for escaping the $(VAR_NAME) syntax: i.e. "$$(VAR_NAME)" will produce the string literal "$(VAR_NAME)". Escaped references will never be expanded, regardless of whether the variable exists or not. Defaults to "".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="valuefrom_go">
 <a href="#valuefrom_go" style="color: inherit; text-decoration: inherit;">Value<wbr>From</a>
@@ -3843,7 +3843,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Variable references $(VAR_NAME) are expanded using the previous defined environment variables in the container and any service environment variables. If a variable cannot be resolved, the reference in the input string will be unchanged. The $(VAR_NAME) syntax can be escaped with a double $$, ie: $$(VAR_NAME). Escaped references will never be expanded, regardless of whether the variable exists or not. Defaults to "".{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Variable references $(VAR_NAME) are expanded using the previously defined environment variables in the container and any service environment variables. If a variable cannot be resolved, the reference in the input string will be unchanged. Double $$ are reduced to a single $, which allows for escaping the $(VAR_NAME) syntax: i.e. "$$(VAR_NAME)" will produce the string literal "$(VAR_NAME)". Escaped references will never be expanded, regardless of whether the variable exists or not. Defaults to "".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="valuefrom_nodejs">
 <a href="#valuefrom_nodejs" style="color: inherit; text-decoration: inherit;">value<wbr>From</a>
@@ -3871,7 +3871,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Variable references $(VAR_NAME) are expanded using the previous defined environment variables in the container and any service environment variables. If a variable cannot be resolved, the reference in the input string will be unchanged. The $(VAR_NAME) syntax can be escaped with a double $$, ie: $$(VAR_NAME). Escaped references will never be expanded, regardless of whether the variable exists or not. Defaults to "".{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Variable references $(VAR_NAME) are expanded using the previously defined environment variables in the container and any service environment variables. If a variable cannot be resolved, the reference in the input string will be unchanged. Double $$ are reduced to a single $, which allows for escaping the $(VAR_NAME) syntax: i.e. "$$(VAR_NAME)" will produce the string literal "$(VAR_NAME)". Escaped references will never be expanded, regardless of whether the variable exists or not. Defaults to "".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_from_python">
 <a href="#value_from_python" style="color: inherit; text-decoration: inherit;">value_<wbr>from</a>
@@ -4047,7 +4047,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Arguments to the entrypoint. The docker image's CMD is used if this is not provided. Variable references $(VAR_NAME) are expanded using the container's environment. If a variable cannot be resolved, the reference in the input string will be unchanged. The $(VAR_NAME) syntax can be escaped with a double $$, ie: $$(VAR_NAME). Escaped references will never be expanded, regardless of whether the variable exists or not. Cannot be updated. More info: https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Arguments to the entrypoint. The docker image's CMD is used if this is not provided. Variable references $(VAR_NAME) are expanded using the container's environment. If a variable cannot be resolved, the reference in the input string will be unchanged. Double $$ are reduced to a single $, which allows for escaping the $(VAR_NAME) syntax: i.e. "$$(VAR_NAME)" will produce the string literal "$(VAR_NAME)". Escaped references will never be expanded, regardless of whether the variable exists or not. Cannot be updated. More info: https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="command_csharp">
 <a href="#command_csharp" style="color: inherit; text-decoration: inherit;">Command</a>
@@ -4055,7 +4055,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Entrypoint array. Not executed within a shell. The docker image's ENTRYPOINT is used if this is not provided. Variable references $(VAR_NAME) are expanded using the container's environment. If a variable cannot be resolved, the reference in the input string will be unchanged. The $(VAR_NAME) syntax can be escaped with a double $$, ie: $$(VAR_NAME). Escaped references will never be expanded, regardless of whether the variable exists or not. Cannot be updated. More info: https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Entrypoint array. Not executed within a shell. The docker image's ENTRYPOINT is used if this is not provided. Variable references $(VAR_NAME) are expanded using the container's environment. If a variable cannot be resolved, the reference in the input string will be unchanged. Double $$ are reduced to a single $, which allows for escaping the $(VAR_NAME) syntax: i.e. "$$(VAR_NAME)" will produce the string literal "$(VAR_NAME)". Escaped references will never be expanded, regardless of whether the variable exists or not. Cannot be updated. More info: https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="env_csharp">
 <a href="#env_csharp" style="color: inherit; text-decoration: inherit;">Env</a>
@@ -4135,7 +4135,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#securitycontext">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Security<wbr>Context</a></span>
     </dt>
-    <dd>{{% md %}}SecurityContext is not allowed for ephemeral containers.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Optional: SecurityContext defines the security options the ephemeral container should be run with. If set, the fields of SecurityContext override the equivalent fields of PodSecurityContext.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="startupprobe_csharp">
 <a href="#startupprobe_csharp" style="color: inherit; text-decoration: inherit;">Startup<wbr>Probe</a>
@@ -4235,7 +4235,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Arguments to the entrypoint. The docker image's CMD is used if this is not provided. Variable references $(VAR_NAME) are expanded using the container's environment. If a variable cannot be resolved, the reference in the input string will be unchanged. The $(VAR_NAME) syntax can be escaped with a double $$, ie: $$(VAR_NAME). Escaped references will never be expanded, regardless of whether the variable exists or not. Cannot be updated. More info: https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Arguments to the entrypoint. The docker image's CMD is used if this is not provided. Variable references $(VAR_NAME) are expanded using the container's environment. If a variable cannot be resolved, the reference in the input string will be unchanged. Double $$ are reduced to a single $, which allows for escaping the $(VAR_NAME) syntax: i.e. "$$(VAR_NAME)" will produce the string literal "$(VAR_NAME)". Escaped references will never be expanded, regardless of whether the variable exists or not. Cannot be updated. More info: https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="command_go">
 <a href="#command_go" style="color: inherit; text-decoration: inherit;">Command</a>
@@ -4243,7 +4243,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Entrypoint array. Not executed within a shell. The docker image's ENTRYPOINT is used if this is not provided. Variable references $(VAR_NAME) are expanded using the container's environment. If a variable cannot be resolved, the reference in the input string will be unchanged. The $(VAR_NAME) syntax can be escaped with a double $$, ie: $$(VAR_NAME). Escaped references will never be expanded, regardless of whether the variable exists or not. Cannot be updated. More info: https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Entrypoint array. Not executed within a shell. The docker image's ENTRYPOINT is used if this is not provided. Variable references $(VAR_NAME) are expanded using the container's environment. If a variable cannot be resolved, the reference in the input string will be unchanged. Double $$ are reduced to a single $, which allows for escaping the $(VAR_NAME) syntax: i.e. "$$(VAR_NAME)" will produce the string literal "$(VAR_NAME)". Escaped references will never be expanded, regardless of whether the variable exists or not. Cannot be updated. More info: https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="env_go">
 <a href="#env_go" style="color: inherit; text-decoration: inherit;">Env</a>
@@ -4323,7 +4323,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#securitycontext">Security<wbr>Context</a></span>
     </dt>
-    <dd>{{% md %}}SecurityContext is not allowed for ephemeral containers.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Optional: SecurityContext defines the security options the ephemeral container should be run with. If set, the fields of SecurityContext override the equivalent fields of PodSecurityContext.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="startupprobe_go">
 <a href="#startupprobe_go" style="color: inherit; text-decoration: inherit;">Startup<wbr>Probe</a>
@@ -4423,7 +4423,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Arguments to the entrypoint. The docker image's CMD is used if this is not provided. Variable references $(VAR_NAME) are expanded using the container's environment. If a variable cannot be resolved, the reference in the input string will be unchanged. The $(VAR_NAME) syntax can be escaped with a double $$, ie: $$(VAR_NAME). Escaped references will never be expanded, regardless of whether the variable exists or not. Cannot be updated. More info: https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Arguments to the entrypoint. The docker image's CMD is used if this is not provided. Variable references $(VAR_NAME) are expanded using the container's environment. If a variable cannot be resolved, the reference in the input string will be unchanged. Double $$ are reduced to a single $, which allows for escaping the $(VAR_NAME) syntax: i.e. "$$(VAR_NAME)" will produce the string literal "$(VAR_NAME)". Escaped references will never be expanded, regardless of whether the variable exists or not. Cannot be updated. More info: https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="command_nodejs">
 <a href="#command_nodejs" style="color: inherit; text-decoration: inherit;">command</a>
@@ -4431,7 +4431,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Entrypoint array. Not executed within a shell. The docker image's ENTRYPOINT is used if this is not provided. Variable references $(VAR_NAME) are expanded using the container's environment. If a variable cannot be resolved, the reference in the input string will be unchanged. The $(VAR_NAME) syntax can be escaped with a double $$, ie: $$(VAR_NAME). Escaped references will never be expanded, regardless of whether the variable exists or not. Cannot be updated. More info: https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Entrypoint array. Not executed within a shell. The docker image's ENTRYPOINT is used if this is not provided. Variable references $(VAR_NAME) are expanded using the container's environment. If a variable cannot be resolved, the reference in the input string will be unchanged. Double $$ are reduced to a single $, which allows for escaping the $(VAR_NAME) syntax: i.e. "$$(VAR_NAME)" will produce the string literal "$(VAR_NAME)". Escaped references will never be expanded, regardless of whether the variable exists or not. Cannot be updated. More info: https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="env_nodejs">
 <a href="#env_nodejs" style="color: inherit; text-decoration: inherit;">env</a>
@@ -4511,7 +4511,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#securitycontext">core.v1.<wbr>Security<wbr>Context</a></span>
     </dt>
-    <dd>{{% md %}}SecurityContext is not allowed for ephemeral containers.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Optional: SecurityContext defines the security options the ephemeral container should be run with. If set, the fields of SecurityContext override the equivalent fields of PodSecurityContext.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="startupprobe_nodejs">
 <a href="#startupprobe_nodejs" style="color: inherit; text-decoration: inherit;">startup<wbr>Probe</a>
@@ -4611,7 +4611,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Arguments to the entrypoint. The docker image's CMD is used if this is not provided. Variable references $(VAR_NAME) are expanded using the container's environment. If a variable cannot be resolved, the reference in the input string will be unchanged. The $(VAR_NAME) syntax can be escaped with a double $$, ie: $$(VAR_NAME). Escaped references will never be expanded, regardless of whether the variable exists or not. Cannot be updated. More info: https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Arguments to the entrypoint. The docker image's CMD is used if this is not provided. Variable references $(VAR_NAME) are expanded using the container's environment. If a variable cannot be resolved, the reference in the input string will be unchanged. Double $$ are reduced to a single $, which allows for escaping the $(VAR_NAME) syntax: i.e. "$$(VAR_NAME)" will produce the string literal "$(VAR_NAME)". Escaped references will never be expanded, regardless of whether the variable exists or not. Cannot be updated. More info: https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="command_python">
 <a href="#command_python" style="color: inherit; text-decoration: inherit;">command</a>
@@ -4619,7 +4619,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Entrypoint array. Not executed within a shell. The docker image's ENTRYPOINT is used if this is not provided. Variable references $(VAR_NAME) are expanded using the container's environment. If a variable cannot be resolved, the reference in the input string will be unchanged. The $(VAR_NAME) syntax can be escaped with a double $$, ie: $$(VAR_NAME). Escaped references will never be expanded, regardless of whether the variable exists or not. Cannot be updated. More info: https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Entrypoint array. Not executed within a shell. The docker image's ENTRYPOINT is used if this is not provided. Variable references $(VAR_NAME) are expanded using the container's environment. If a variable cannot be resolved, the reference in the input string will be unchanged. Double $$ are reduced to a single $, which allows for escaping the $(VAR_NAME) syntax: i.e. "$$(VAR_NAME)" will produce the string literal "$(VAR_NAME)". Escaped references will never be expanded, regardless of whether the variable exists or not. Cannot be updated. More info: https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="env_python">
 <a href="#env_python" style="color: inherit; text-decoration: inherit;">env</a>
@@ -4699,7 +4699,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#securitycontext">Security<wbr>Context</a></span>
     </dt>
-    <dd>{{% md %}}SecurityContext is not allowed for ephemeral containers.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Optional: SecurityContext defines the security options the ephemeral container should be run with. If set, the fields of SecurityContext override the equivalent fields of PodSecurityContext.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="startup_probe_python">
 <a href="#startup_probe_python" style="color: inherit; text-decoration: inherit;">startup_<wbr>probe</a>
@@ -4787,6 +4787,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="readonly_csharp">
+<a href="#readonly_csharp" style="color: inherit; text-decoration: inherit;">Read<wbr>Only</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies a read-only configuration for the volume. Defaults to false (read/write).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="volumeclaimtemplate_csharp">
 <a href="#volumeclaimtemplate_csharp" style="color: inherit; text-decoration: inherit;">Volume<wbr>Claim<wbr>Template</a>
 </span>
@@ -4804,6 +4812,14 @@ Required, must not be nil.{{% /md %}}</dd></dl>
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="readonly_go">
+<a href="#readonly_go" style="color: inherit; text-decoration: inherit;">Read<wbr>Only</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies a read-only configuration for the volume. Defaults to false (read/write).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volumeclaimtemplate_go">
 <a href="#volumeclaimtemplate_go" style="color: inherit; text-decoration: inherit;">Volume<wbr>Claim<wbr>Template</a>
@@ -4823,6 +4839,14 @@ Required, must not be nil.{{% /md %}}</dd></dl>
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="readonly_nodejs">
+<a href="#readonly_nodejs" style="color: inherit; text-decoration: inherit;">read<wbr>Only</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Specifies a read-only configuration for the volume. Defaults to false (read/write).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="volumeclaimtemplate_nodejs">
 <a href="#volumeclaimtemplate_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Claim<wbr>Template</a>
 </span>
@@ -4840,6 +4864,14 @@ Required, must not be nil.{{% /md %}}</dd></dl>
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="read_only_python">
+<a href="#read_only_python" style="color: inherit; text-decoration: inherit;">read_<wbr>only</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies a read-only configuration for the volume. Defaults to false (read/write).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volume_claim_template_python">
 <a href="#volume_claim_template_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>claim_<wbr>template</a>
@@ -6665,9 +6697,9 @@ Required, must not be nil.{{% /md %}}</dd></dl>
 
 `NonIndexed` means that the Job is considered complete when there have been .spec.completions successfully completed Pods. Each Pod completion is homologous to each other.
 
-`Indexed` means that the Pods of a Job get an associated completion index from 0 to (.spec.completions - 1), available in the annotation batch.kubernetes.io/job-completion-index. The Job is considered complete when there is one successfully completed Pod for each index. When value is `Indexed`, .spec.completions must be specified and `.spec.parallelism` must be less than or equal to 10^5.
+`Indexed` means that the Pods of a Job get an associated completion index from 0 to (.spec.completions - 1), available in the annotation batch.kubernetes.io/job-completion-index. The Job is considered complete when there is one successfully completed Pod for each index. When value is `Indexed`, .spec.completions must be specified and `.spec.parallelism` must be less than or equal to 10^5. In addition, The Pod name takes the form `$(job-name)-$(index)-$(random-string)`, the Pod hostname takes the form `$(job-name)-$(index)`.
 
-This field is alpha-level and is only honored by servers that enable the IndexedJob feature gate. More completion modes can be added in the future. If the Job controller observes a mode that it doesn't recognize, the controller skips updates for the Job.{{% /md %}}</dd><dt class="property-optional"
+This field is beta-level. More completion modes can be added in the future. If the Job controller observes a mode that it doesn't recognize, the controller skips updates for the Job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="completions_csharp">
 <a href="#completions_csharp" style="color: inherit; text-decoration: inherit;">Completions</a>
@@ -6707,7 +6739,9 @@ This field is alpha-level and is only honored by servers that enable the Indexed
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Suspend specifies whether the Job controller should create Pods or not. If a Job is created with suspend set to true, no Pods are created by the Job controller. If a Job is suspended after creation (i.e. the flag goes from false to true), the Job controller will delete all active Pods associated with this Job. Users must design their workload to gracefully handle this. Suspending a Job will reset the StartTime field of the Job, effectively resetting the ActiveDeadlineSeconds timer too. This is an alpha field and requires the SuspendJob feature gate to be enabled; otherwise this field may not be set to true. Defaults to false.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Suspend specifies whether the Job controller should create Pods or not. If a Job is created with suspend set to true, no Pods are created by the Job controller. If a Job is suspended after creation (i.e. the flag goes from false to true), the Job controller will delete all active Pods associated with this Job. Users must design their workload to gracefully handle this. Suspending a Job will reset the StartTime field of the Job, effectively resetting the ActiveDeadlineSeconds timer too. Defaults to false.
+
+This field is beta-level, gated by SuspendJob feature flag (enabled by default).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ttlsecondsafterfinished_csharp">
 <a href="#ttlsecondsafterfinished_csharp" style="color: inherit; text-decoration: inherit;">Ttl<wbr>Seconds<wbr>After<wbr>Finished</a>
@@ -6755,9 +6789,9 @@ This field is alpha-level and is only honored by servers that enable the Indexed
 
 `NonIndexed` means that the Job is considered complete when there have been .spec.completions successfully completed Pods. Each Pod completion is homologous to each other.
 
-`Indexed` means that the Pods of a Job get an associated completion index from 0 to (.spec.completions - 1), available in the annotation batch.kubernetes.io/job-completion-index. The Job is considered complete when there is one successfully completed Pod for each index. When value is `Indexed`, .spec.completions must be specified and `.spec.parallelism` must be less than or equal to 10^5.
+`Indexed` means that the Pods of a Job get an associated completion index from 0 to (.spec.completions - 1), available in the annotation batch.kubernetes.io/job-completion-index. The Job is considered complete when there is one successfully completed Pod for each index. When value is `Indexed`, .spec.completions must be specified and `.spec.parallelism` must be less than or equal to 10^5. In addition, The Pod name takes the form `$(job-name)-$(index)-$(random-string)`, the Pod hostname takes the form `$(job-name)-$(index)`.
 
-This field is alpha-level and is only honored by servers that enable the IndexedJob feature gate. More completion modes can be added in the future. If the Job controller observes a mode that it doesn't recognize, the controller skips updates for the Job.{{% /md %}}</dd><dt class="property-optional"
+This field is beta-level. More completion modes can be added in the future. If the Job controller observes a mode that it doesn't recognize, the controller skips updates for the Job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="completions_go">
 <a href="#completions_go" style="color: inherit; text-decoration: inherit;">Completions</a>
@@ -6797,7 +6831,9 @@ This field is alpha-level and is only honored by servers that enable the Indexed
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Suspend specifies whether the Job controller should create Pods or not. If a Job is created with suspend set to true, no Pods are created by the Job controller. If a Job is suspended after creation (i.e. the flag goes from false to true), the Job controller will delete all active Pods associated with this Job. Users must design their workload to gracefully handle this. Suspending a Job will reset the StartTime field of the Job, effectively resetting the ActiveDeadlineSeconds timer too. This is an alpha field and requires the SuspendJob feature gate to be enabled; otherwise this field may not be set to true. Defaults to false.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Suspend specifies whether the Job controller should create Pods or not. If a Job is created with suspend set to true, no Pods are created by the Job controller. If a Job is suspended after creation (i.e. the flag goes from false to true), the Job controller will delete all active Pods associated with this Job. Users must design their workload to gracefully handle this. Suspending a Job will reset the StartTime field of the Job, effectively resetting the ActiveDeadlineSeconds timer too. Defaults to false.
+
+This field is beta-level, gated by SuspendJob feature flag (enabled by default).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ttlsecondsafterfinished_go">
 <a href="#ttlsecondsafterfinished_go" style="color: inherit; text-decoration: inherit;">Ttl<wbr>Seconds<wbr>After<wbr>Finished</a>
@@ -6845,9 +6881,9 @@ This field is alpha-level and is only honored by servers that enable the Indexed
 
 `NonIndexed` means that the Job is considered complete when there have been .spec.completions successfully completed Pods. Each Pod completion is homologous to each other.
 
-`Indexed` means that the Pods of a Job get an associated completion index from 0 to (.spec.completions - 1), available in the annotation batch.kubernetes.io/job-completion-index. The Job is considered complete when there is one successfully completed Pod for each index. When value is `Indexed`, .spec.completions must be specified and `.spec.parallelism` must be less than or equal to 10^5.
+`Indexed` means that the Pods of a Job get an associated completion index from 0 to (.spec.completions - 1), available in the annotation batch.kubernetes.io/job-completion-index. The Job is considered complete when there is one successfully completed Pod for each index. When value is `Indexed`, .spec.completions must be specified and `.spec.parallelism` must be less than or equal to 10^5. In addition, The Pod name takes the form `$(job-name)-$(index)-$(random-string)`, the Pod hostname takes the form `$(job-name)-$(index)`.
 
-This field is alpha-level and is only honored by servers that enable the IndexedJob feature gate. More completion modes can be added in the future. If the Job controller observes a mode that it doesn't recognize, the controller skips updates for the Job.{{% /md %}}</dd><dt class="property-optional"
+This field is beta-level. More completion modes can be added in the future. If the Job controller observes a mode that it doesn't recognize, the controller skips updates for the Job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="completions_nodejs">
 <a href="#completions_nodejs" style="color: inherit; text-decoration: inherit;">completions</a>
@@ -6887,7 +6923,9 @@ This field is alpha-level and is only honored by servers that enable the Indexed
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Suspend specifies whether the Job controller should create Pods or not. If a Job is created with suspend set to true, no Pods are created by the Job controller. If a Job is suspended after creation (i.e. the flag goes from false to true), the Job controller will delete all active Pods associated with this Job. Users must design their workload to gracefully handle this. Suspending a Job will reset the StartTime field of the Job, effectively resetting the ActiveDeadlineSeconds timer too. This is an alpha field and requires the SuspendJob feature gate to be enabled; otherwise this field may not be set to true. Defaults to false.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Suspend specifies whether the Job controller should create Pods or not. If a Job is created with suspend set to true, no Pods are created by the Job controller. If a Job is suspended after creation (i.e. the flag goes from false to true), the Job controller will delete all active Pods associated with this Job. Users must design their workload to gracefully handle this. Suspending a Job will reset the StartTime field of the Job, effectively resetting the ActiveDeadlineSeconds timer too. Defaults to false.
+
+This field is beta-level, gated by SuspendJob feature flag (enabled by default).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ttlsecondsafterfinished_nodejs">
 <a href="#ttlsecondsafterfinished_nodejs" style="color: inherit; text-decoration: inherit;">ttl<wbr>Seconds<wbr>After<wbr>Finished</a>
@@ -6935,9 +6973,9 @@ This field is alpha-level and is only honored by servers that enable the Indexed
 
 `NonIndexed` means that the Job is considered complete when there have been .spec.completions successfully completed Pods. Each Pod completion is homologous to each other.
 
-`Indexed` means that the Pods of a Job get an associated completion index from 0 to (.spec.completions - 1), available in the annotation batch.kubernetes.io/job-completion-index. The Job is considered complete when there is one successfully completed Pod for each index. When value is `Indexed`, .spec.completions must be specified and `.spec.parallelism` must be less than or equal to 10^5.
+`Indexed` means that the Pods of a Job get an associated completion index from 0 to (.spec.completions - 1), available in the annotation batch.kubernetes.io/job-completion-index. The Job is considered complete when there is one successfully completed Pod for each index. When value is `Indexed`, .spec.completions must be specified and `.spec.parallelism` must be less than or equal to 10^5. In addition, The Pod name takes the form `$(job-name)-$(index)-$(random-string)`, the Pod hostname takes the form `$(job-name)-$(index)`.
 
-This field is alpha-level and is only honored by servers that enable the IndexedJob feature gate. More completion modes can be added in the future. If the Job controller observes a mode that it doesn't recognize, the controller skips updates for the Job.{{% /md %}}</dd><dt class="property-optional"
+This field is beta-level. More completion modes can be added in the future. If the Job controller observes a mode that it doesn't recognize, the controller skips updates for the Job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="completions_python">
 <a href="#completions_python" style="color: inherit; text-decoration: inherit;">completions</a>
@@ -6977,7 +7015,9 @@ This field is alpha-level and is only honored by servers that enable the Indexed
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Suspend specifies whether the Job controller should create Pods or not. If a Job is created with suspend set to true, no Pods are created by the Job controller. If a Job is suspended after creation (i.e. the flag goes from false to true), the Job controller will delete all active Pods associated with this Job. Users must design their workload to gracefully handle this. Suspending a Job will reset the StartTime field of the Job, effectively resetting the ActiveDeadlineSeconds timer too. This is an alpha field and requires the SuspendJob feature gate to be enabled; otherwise this field may not be set to true. Defaults to false.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Suspend specifies whether the Job controller should create Pods or not. If a Job is created with suspend set to true, no Pods are created by the Job controller. If a Job is suspended after creation (i.e. the flag goes from false to true), the Job controller will delete all active Pods associated with this Job. Users must design their workload to gracefully handle this. Suspending a Job will reset the StartTime field of the Job, effectively resetting the ActiveDeadlineSeconds timer too. Defaults to false.
+
+This field is beta-level, gated by SuspendJob feature flag (enabled by default).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ttl_seconds_after_finished_python">
 <a href="#ttl_seconds_after_finished_python" style="color: inherit; text-decoration: inherit;">ttl_<wbr>seconds_<wbr>after_<wbr>finished</a>
@@ -7711,6 +7751,14 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
     </dt>
     <dd>{{% md %}}Operation is the type of operation which lead to this ManagedFieldsEntry being created. The only valid values for this field are 'Apply' and 'Update'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="subresource_csharp">
+<a href="#subresource_csharp" style="color: inherit; text-decoration: inherit;">Subresource</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Subresource is the name of the subresource used to update that object, or empty string if the object was updated through the main resource. The value of this field is used to distinguish between managers, even if they share the same name. For example, a status update will be distinct from a regular update using the same manager name. Note that the APIVersion field is not related to the Subresource field and it always corresponds to the version of the main resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="time_csharp">
 <a href="#time_csharp" style="color: inherit; text-decoration: inherit;">Time</a>
 </span>
@@ -7762,6 +7810,14 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Operation is the type of operation which lead to this ManagedFieldsEntry being created. The only valid values for this field are 'Apply' and 'Update'.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="subresource_go">
+<a href="#subresource_go" style="color: inherit; text-decoration: inherit;">Subresource</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Subresource is the name of the subresource used to update that object, or empty string if the object was updated through the main resource. The value of this field is used to distinguish between managers, even if they share the same name. For example, a status update will be distinct from a regular update using the same manager name. Note that the APIVersion field is not related to the Subresource field and it always corresponds to the version of the main resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="time_go">
 <a href="#time_go" style="color: inherit; text-decoration: inherit;">Time</a>
@@ -7815,6 +7871,14 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
     </dt>
     <dd>{{% md %}}Operation is the type of operation which lead to this ManagedFieldsEntry being created. The only valid values for this field are 'Apply' and 'Update'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="subresource_nodejs">
+<a href="#subresource_nodejs" style="color: inherit; text-decoration: inherit;">subresource</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Subresource is the name of the subresource used to update that object, or empty string if the object was updated through the main resource. The value of this field is used to distinguish between managers, even if they share the same name. For example, a status update will be distinct from a regular update using the same manager name. Note that the APIVersion field is not related to the Subresource field and it always corresponds to the version of the main resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="time_nodejs">
 <a href="#time_nodejs" style="color: inherit; text-decoration: inherit;">time</a>
 </span>
@@ -7866,6 +7930,14 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Operation is the type of operation which lead to this ManagedFieldsEntry being created. The only valid values for this field are 'Apply' and 'Update'.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="subresource_python">
+<a href="#subresource_python" style="color: inherit; text-decoration: inherit;">subresource</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Subresource is the name of the subresource used to update that object, or empty string if the object was updated through the main resource. The value of this field is used to distinguish between managers, even if they share the same name. For example, a status update will be distinct from a regular update using the same manager name. Note that the APIVersion field is not related to the Subresource field and it always corresponds to the version of the main resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="time_python">
 <a href="#time_python" style="color: inherit; text-decoration: inherit;">time</a>
@@ -9465,7 +9537,20 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#typedlocalobjectreference">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Typed<wbr>Local<wbr>Object<wbr>Reference</a></span>
     </dt>
-    <dd>{{% md %}}This field can be used to specify either: * An existing VolumeSnapshot object (snapshot.storage.k8s.io/VolumeSnapshot) * An existing PVC (PersistentVolumeClaim) * An existing custom resource that implements data population (Alpha) In order to use custom resource types that implement data population, the AnyVolumeDataSource feature gate must be enabled. If the provisioner or an external controller can support the specified data source, it will create a new volume based on the contents of the specified data source.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}This field can be used to specify either: * An existing VolumeSnapshot object (snapshot.storage.k8s.io/VolumeSnapshot) * An existing PVC (PersistentVolumeClaim) If the provisioner or an external controller can support the specified data source, it will create a new volume based on the contents of the specified data source. If the AnyVolumeDataSource feature gate is enabled, this field will always have the same contents as the DataSourceRef field.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="datasourceref_csharp">
+<a href="#datasourceref_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Source<wbr>Ref</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#typedlocalobjectreference">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Typed<wbr>Local<wbr>Object<wbr>Reference</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the object from which to populate the volume with data, if a non-empty volume is desired. This may be any local object from a non-empty API group (non core object) or a PersistentVolumeClaim object. When this field is specified, volume binding will only succeed if the type of the specified object matches some installed volume populator or dynamic provisioner. This field will replace the functionality of the DataSource field and as such if both fields are non-empty, they must have the same value. For backwards compatibility, both fields (DataSource and DataSourceRef) will be set to the same value automatically if one of them is empty and the other is non-empty. There are two important differences between DataSource and DataSourceRef: * While DataSource only allows two specific types of objects, DataSourceRef
+  allows any non-core object, as well as PersistentVolumeClaim objects.
+* While DataSource ignores disallowed values (dropping them), DataSourceRef
+  preserves all values, and generates an error if a disallowed value is
+  specified.
+(Alpha) Using this field requires the AnyVolumeDataSource feature gate to be enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resources_csharp">
 <a href="#resources_csharp" style="color: inherit; text-decoration: inherit;">Resources</a>
@@ -9525,7 +9610,20 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#typedlocalobjectreference">Typed<wbr>Local<wbr>Object<wbr>Reference</a></span>
     </dt>
-    <dd>{{% md %}}This field can be used to specify either: * An existing VolumeSnapshot object (snapshot.storage.k8s.io/VolumeSnapshot) * An existing PVC (PersistentVolumeClaim) * An existing custom resource that implements data population (Alpha) In order to use custom resource types that implement data population, the AnyVolumeDataSource feature gate must be enabled. If the provisioner or an external controller can support the specified data source, it will create a new volume based on the contents of the specified data source.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}This field can be used to specify either: * An existing VolumeSnapshot object (snapshot.storage.k8s.io/VolumeSnapshot) * An existing PVC (PersistentVolumeClaim) If the provisioner or an external controller can support the specified data source, it will create a new volume based on the contents of the specified data source. If the AnyVolumeDataSource feature gate is enabled, this field will always have the same contents as the DataSourceRef field.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="datasourceref_go">
+<a href="#datasourceref_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Source<wbr>Ref</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#typedlocalobjectreference">Typed<wbr>Local<wbr>Object<wbr>Reference</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the object from which to populate the volume with data, if a non-empty volume is desired. This may be any local object from a non-empty API group (non core object) or a PersistentVolumeClaim object. When this field is specified, volume binding will only succeed if the type of the specified object matches some installed volume populator or dynamic provisioner. This field will replace the functionality of the DataSource field and as such if both fields are non-empty, they must have the same value. For backwards compatibility, both fields (DataSource and DataSourceRef) will be set to the same value automatically if one of them is empty and the other is non-empty. There are two important differences between DataSource and DataSourceRef: * While DataSource only allows two specific types of objects, DataSourceRef
+  allows any non-core object, as well as PersistentVolumeClaim objects.
+* While DataSource ignores disallowed values (dropping them), DataSourceRef
+  preserves all values, and generates an error if a disallowed value is
+  specified.
+(Alpha) Using this field requires the AnyVolumeDataSource feature gate to be enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resources_go">
 <a href="#resources_go" style="color: inherit; text-decoration: inherit;">Resources</a>
@@ -9585,7 +9683,20 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#typedlocalobjectreference">core.v1.<wbr>Typed<wbr>Local<wbr>Object<wbr>Reference</a></span>
     </dt>
-    <dd>{{% md %}}This field can be used to specify either: * An existing VolumeSnapshot object (snapshot.storage.k8s.io/VolumeSnapshot) * An existing PVC (PersistentVolumeClaim) * An existing custom resource that implements data population (Alpha) In order to use custom resource types that implement data population, the AnyVolumeDataSource feature gate must be enabled. If the provisioner or an external controller can support the specified data source, it will create a new volume based on the contents of the specified data source.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}This field can be used to specify either: * An existing VolumeSnapshot object (snapshot.storage.k8s.io/VolumeSnapshot) * An existing PVC (PersistentVolumeClaim) If the provisioner or an external controller can support the specified data source, it will create a new volume based on the contents of the specified data source. If the AnyVolumeDataSource feature gate is enabled, this field will always have the same contents as the DataSourceRef field.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="datasourceref_nodejs">
+<a href="#datasourceref_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Source<wbr>Ref</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#typedlocalobjectreference">core.v1.<wbr>Typed<wbr>Local<wbr>Object<wbr>Reference</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the object from which to populate the volume with data, if a non-empty volume is desired. This may be any local object from a non-empty API group (non core object) or a PersistentVolumeClaim object. When this field is specified, volume binding will only succeed if the type of the specified object matches some installed volume populator or dynamic provisioner. This field will replace the functionality of the DataSource field and as such if both fields are non-empty, they must have the same value. For backwards compatibility, both fields (DataSource and DataSourceRef) will be set to the same value automatically if one of them is empty and the other is non-empty. There are two important differences between DataSource and DataSourceRef: * While DataSource only allows two specific types of objects, DataSourceRef
+  allows any non-core object, as well as PersistentVolumeClaim objects.
+* While DataSource ignores disallowed values (dropping them), DataSourceRef
+  preserves all values, and generates an error if a disallowed value is
+  specified.
+(Alpha) Using this field requires the AnyVolumeDataSource feature gate to be enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resources_nodejs">
 <a href="#resources_nodejs" style="color: inherit; text-decoration: inherit;">resources</a>
@@ -9645,7 +9756,20 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#typedlocalobjectreference">Typed<wbr>Local<wbr>Object<wbr>Reference</a></span>
     </dt>
-    <dd>{{% md %}}This field can be used to specify either: * An existing VolumeSnapshot object (snapshot.storage.k8s.io/VolumeSnapshot) * An existing PVC (PersistentVolumeClaim) * An existing custom resource that implements data population (Alpha) In order to use custom resource types that implement data population, the AnyVolumeDataSource feature gate must be enabled. If the provisioner or an external controller can support the specified data source, it will create a new volume based on the contents of the specified data source.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}This field can be used to specify either: * An existing VolumeSnapshot object (snapshot.storage.k8s.io/VolumeSnapshot) * An existing PVC (PersistentVolumeClaim) If the provisioner or an external controller can support the specified data source, it will create a new volume based on the contents of the specified data source. If the AnyVolumeDataSource feature gate is enabled, this field will always have the same contents as the DataSourceRef field.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="data_source_ref_python">
+<a href="#data_source_ref_python" style="color: inherit; text-decoration: inherit;">data_<wbr>source_<wbr>ref</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#typedlocalobjectreference">Typed<wbr>Local<wbr>Object<wbr>Reference</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the object from which to populate the volume with data, if a non-empty volume is desired. This may be any local object from a non-empty API group (non core object) or a PersistentVolumeClaim object. When this field is specified, volume binding will only succeed if the type of the specified object matches some installed volume populator or dynamic provisioner. This field will replace the functionality of the DataSource field and as such if both fields are non-empty, they must have the same value. For backwards compatibility, both fields (DataSource and DataSourceRef) will be set to the same value automatically if one of them is empty and the other is non-empty. There are two important differences between DataSource and DataSourceRef: * While DataSource only allows two specific types of objects, DataSourceRef
+  allows any non-core object, as well as PersistentVolumeClaim objects.
+* While DataSource ignores disallowed values (dropping them), DataSourceRef
+  preserves all values, and generates an error if a disallowed value is
+  specified.
+(Alpha) Using this field requires the AnyVolumeDataSource feature gate to be enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resources_python">
 <a href="#resources_python" style="color: inherit; text-decoration: inherit;">resources</a>
@@ -10043,7 +10167,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#labelselector">Pulumi.<wbr>Kubernetes.<wbr>Meta.<wbr>V1.<wbr>Inputs.<wbr>Label<wbr>Selector</a></span>
     </dt>
-    <dd>{{% md %}}A label query over the set of namespaces that the term applies to. The term is applied to the union of the namespaces selected by this field and the ones listed in the namespaces field. null selector and null or empty namespaces list means "this pod's namespace". An empty selector ({}) matches all namespaces. This field is alpha-level and is only honored when PodAffinityNamespaceSelector feature is enabled.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}A label query over the set of namespaces that the term applies to. The term is applied to the union of the namespaces selected by this field and the ones listed in the namespaces field. null selector and null or empty namespaces list means "this pod's namespace". An empty selector ({}) matches all namespaces. This field is beta-level and is only honored when PodAffinityNamespaceSelector feature is enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="namespaces_csharp">
 <a href="#namespaces_csharp" style="color: inherit; text-decoration: inherit;">Namespaces</a>
@@ -10079,7 +10203,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#labelselector">Label<wbr>Selector</a></span>
     </dt>
-    <dd>{{% md %}}A label query over the set of namespaces that the term applies to. The term is applied to the union of the namespaces selected by this field and the ones listed in the namespaces field. null selector and null or empty namespaces list means "this pod's namespace". An empty selector ({}) matches all namespaces. This field is alpha-level and is only honored when PodAffinityNamespaceSelector feature is enabled.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}A label query over the set of namespaces that the term applies to. The term is applied to the union of the namespaces selected by this field and the ones listed in the namespaces field. null selector and null or empty namespaces list means "this pod's namespace". An empty selector ({}) matches all namespaces. This field is beta-level and is only honored when PodAffinityNamespaceSelector feature is enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="namespaces_go">
 <a href="#namespaces_go" style="color: inherit; text-decoration: inherit;">Namespaces</a>
@@ -10115,7 +10239,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#labelselector">meta.v1.<wbr>Label<wbr>Selector</a></span>
     </dt>
-    <dd>{{% md %}}A label query over the set of namespaces that the term applies to. The term is applied to the union of the namespaces selected by this field and the ones listed in the namespaces field. null selector and null or empty namespaces list means "this pod's namespace". An empty selector ({}) matches all namespaces. This field is alpha-level and is only honored when PodAffinityNamespaceSelector feature is enabled.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}A label query over the set of namespaces that the term applies to. The term is applied to the union of the namespaces selected by this field and the ones listed in the namespaces field. null selector and null or empty namespaces list means "this pod's namespace". An empty selector ({}) matches all namespaces. This field is beta-level and is only honored when PodAffinityNamespaceSelector feature is enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="namespaces_nodejs">
 <a href="#namespaces_nodejs" style="color: inherit; text-decoration: inherit;">namespaces</a>
@@ -10151,7 +10275,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#labelselector">Label<wbr>Selector</a></span>
     </dt>
-    <dd>{{% md %}}A label query over the set of namespaces that the term applies to. The term is applied to the union of the namespaces selected by this field and the ones listed in the namespaces field. null selector and null or empty namespaces list means "this pod's namespace". An empty selector ({}) matches all namespaces. This field is alpha-level and is only honored when PodAffinityNamespaceSelector feature is enabled.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}A label query over the set of namespaces that the term applies to. The term is applied to the union of the namespaces selected by this field and the ones listed in the namespaces field. null selector and null or empty namespaces list means "this pod's namespace". An empty selector ({}) matches all namespaces. This field is beta-level and is only honored when PodAffinityNamespaceSelector feature is enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="namespaces_python">
 <a href="#namespaces_python" style="color: inherit; text-decoration: inherit;">namespaces</a>
@@ -10991,7 +11115,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Overhead represents the resource overhead associated with running a pod for a given RuntimeClass. This field will be autopopulated at admission time by the RuntimeClass admission controller. If the RuntimeClass admission controller is enabled, overhead must not be set in Pod create requests. The RuntimeClass admission controller will reject Pod create requests which have the overhead already set. If RuntimeClass is configured and selected in the PodSpec, Overhead will be set to the value defined in the corresponding RuntimeClass, otherwise it will remain unset and treated as zero. More info: https://git.k8s.io/enhancements/keps/sig-node/20190226-pod-overhead.md This field is alpha-level as of Kubernetes v1.16, and is only honored by servers that enable the PodOverhead feature.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Overhead represents the resource overhead associated with running a pod for a given RuntimeClass. This field will be autopopulated at admission time by the RuntimeClass admission controller. If the RuntimeClass admission controller is enabled, overhead must not be set in Pod create requests. The RuntimeClass admission controller will reject Pod create requests which have the overhead already set. If RuntimeClass is configured and selected in the PodSpec, Overhead will be set to the value defined in the corresponding RuntimeClass, otherwise it will remain unset and treated as zero. More info: https://git.k8s.io/enhancements/keps/sig-node/688-pod-overhead/README.md This field is beta-level as of Kubernetes v1.18, and is only honored by servers that enable the PodOverhead feature.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preemptionpolicy_csharp">
 <a href="#preemptionpolicy_csharp" style="color: inherit; text-decoration: inherit;">Preemption<wbr>Policy</a>
@@ -11023,7 +11147,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#podreadinessgate">List&lt;Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Pod<wbr>Readiness<wbr>Gate&gt;</a></span>
     </dt>
-    <dd>{{% md %}}If specified, all readiness gates will be evaluated for pod readiness. A pod is ready when all its containers are ready AND all conditions specified in the readiness gates have status equal to "True" More info: https://git.k8s.io/enhancements/keps/sig-network/0007-pod-ready%2B%2B.md{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}If specified, all readiness gates will be evaluated for pod readiness. A pod is ready when all its containers are ready AND all conditions specified in the readiness gates have status equal to "True" More info: https://git.k8s.io/enhancements/keps/sig-network/580-pod-readiness-gates{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="restartpolicy_csharp">
 <a href="#restartpolicy_csharp" style="color: inherit; text-decoration: inherit;">Restart<wbr>Policy</a>
@@ -11039,7 +11163,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}RuntimeClassName refers to a RuntimeClass object in the node.k8s.io group, which should be used to run this pod.  If no RuntimeClass resource matches the named class, the pod will not be run. If unset or empty, the "legacy" RuntimeClass will be used, which is an implicit class with an empty definition that uses the default runtime handler. More info: https://git.k8s.io/enhancements/keps/sig-node/runtime-class.md This is a beta feature as of Kubernetes v1.14.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}RuntimeClassName refers to a RuntimeClass object in the node.k8s.io group, which should be used to run this pod.  If no RuntimeClass resource matches the named class, the pod will not be run. If unset or empty, the "legacy" RuntimeClass will be used, which is an implicit class with an empty definition that uses the default runtime handler. More info: https://git.k8s.io/enhancements/keps/sig-node/585-runtime-class This is a beta feature as of Kubernetes v1.14.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="schedulername_csharp">
 <a href="#schedulername_csharp" style="color: inherit; text-decoration: inherit;">Scheduler<wbr>Name</a>
@@ -11275,7 +11399,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Overhead represents the resource overhead associated with running a pod for a given RuntimeClass. This field will be autopopulated at admission time by the RuntimeClass admission controller. If the RuntimeClass admission controller is enabled, overhead must not be set in Pod create requests. The RuntimeClass admission controller will reject Pod create requests which have the overhead already set. If RuntimeClass is configured and selected in the PodSpec, Overhead will be set to the value defined in the corresponding RuntimeClass, otherwise it will remain unset and treated as zero. More info: https://git.k8s.io/enhancements/keps/sig-node/20190226-pod-overhead.md This field is alpha-level as of Kubernetes v1.16, and is only honored by servers that enable the PodOverhead feature.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Overhead represents the resource overhead associated with running a pod for a given RuntimeClass. This field will be autopopulated at admission time by the RuntimeClass admission controller. If the RuntimeClass admission controller is enabled, overhead must not be set in Pod create requests. The RuntimeClass admission controller will reject Pod create requests which have the overhead already set. If RuntimeClass is configured and selected in the PodSpec, Overhead will be set to the value defined in the corresponding RuntimeClass, otherwise it will remain unset and treated as zero. More info: https://git.k8s.io/enhancements/keps/sig-node/688-pod-overhead/README.md This field is beta-level as of Kubernetes v1.18, and is only honored by servers that enable the PodOverhead feature.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preemptionpolicy_go">
 <a href="#preemptionpolicy_go" style="color: inherit; text-decoration: inherit;">Preemption<wbr>Policy</a>
@@ -11307,7 +11431,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#podreadinessgate">Pod<wbr>Readiness<wbr>Gate</a></span>
     </dt>
-    <dd>{{% md %}}If specified, all readiness gates will be evaluated for pod readiness. A pod is ready when all its containers are ready AND all conditions specified in the readiness gates have status equal to "True" More info: https://git.k8s.io/enhancements/keps/sig-network/0007-pod-ready%2B%2B.md{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}If specified, all readiness gates will be evaluated for pod readiness. A pod is ready when all its containers are ready AND all conditions specified in the readiness gates have status equal to "True" More info: https://git.k8s.io/enhancements/keps/sig-network/580-pod-readiness-gates{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="restartpolicy_go">
 <a href="#restartpolicy_go" style="color: inherit; text-decoration: inherit;">Restart<wbr>Policy</a>
@@ -11323,7 +11447,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}RuntimeClassName refers to a RuntimeClass object in the node.k8s.io group, which should be used to run this pod.  If no RuntimeClass resource matches the named class, the pod will not be run. If unset or empty, the "legacy" RuntimeClass will be used, which is an implicit class with an empty definition that uses the default runtime handler. More info: https://git.k8s.io/enhancements/keps/sig-node/runtime-class.md This is a beta feature as of Kubernetes v1.14.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}RuntimeClassName refers to a RuntimeClass object in the node.k8s.io group, which should be used to run this pod.  If no RuntimeClass resource matches the named class, the pod will not be run. If unset or empty, the "legacy" RuntimeClass will be used, which is an implicit class with an empty definition that uses the default runtime handler. More info: https://git.k8s.io/enhancements/keps/sig-node/585-runtime-class This is a beta feature as of Kubernetes v1.14.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="schedulername_go">
 <a href="#schedulername_go" style="color: inherit; text-decoration: inherit;">Scheduler<wbr>Name</a>
@@ -11559,7 +11683,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Overhead represents the resource overhead associated with running a pod for a given RuntimeClass. This field will be autopopulated at admission time by the RuntimeClass admission controller. If the RuntimeClass admission controller is enabled, overhead must not be set in Pod create requests. The RuntimeClass admission controller will reject Pod create requests which have the overhead already set. If RuntimeClass is configured and selected in the PodSpec, Overhead will be set to the value defined in the corresponding RuntimeClass, otherwise it will remain unset and treated as zero. More info: https://git.k8s.io/enhancements/keps/sig-node/20190226-pod-overhead.md This field is alpha-level as of Kubernetes v1.16, and is only honored by servers that enable the PodOverhead feature.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Overhead represents the resource overhead associated with running a pod for a given RuntimeClass. This field will be autopopulated at admission time by the RuntimeClass admission controller. If the RuntimeClass admission controller is enabled, overhead must not be set in Pod create requests. The RuntimeClass admission controller will reject Pod create requests which have the overhead already set. If RuntimeClass is configured and selected in the PodSpec, Overhead will be set to the value defined in the corresponding RuntimeClass, otherwise it will remain unset and treated as zero. More info: https://git.k8s.io/enhancements/keps/sig-node/688-pod-overhead/README.md This field is beta-level as of Kubernetes v1.18, and is only honored by servers that enable the PodOverhead feature.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preemptionpolicy_nodejs">
 <a href="#preemptionpolicy_nodejs" style="color: inherit; text-decoration: inherit;">preemption<wbr>Policy</a>
@@ -11591,7 +11715,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#podreadinessgate">core.v1.<wbr>Pod<wbr>Readiness<wbr>Gate[]</a></span>
     </dt>
-    <dd>{{% md %}}If specified, all readiness gates will be evaluated for pod readiness. A pod is ready when all its containers are ready AND all conditions specified in the readiness gates have status equal to "True" More info: https://git.k8s.io/enhancements/keps/sig-network/0007-pod-ready%2B%2B.md{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}If specified, all readiness gates will be evaluated for pod readiness. A pod is ready when all its containers are ready AND all conditions specified in the readiness gates have status equal to "True" More info: https://git.k8s.io/enhancements/keps/sig-network/580-pod-readiness-gates{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="restartpolicy_nodejs">
 <a href="#restartpolicy_nodejs" style="color: inherit; text-decoration: inherit;">restart<wbr>Policy</a>
@@ -11607,7 +11731,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}RuntimeClassName refers to a RuntimeClass object in the node.k8s.io group, which should be used to run this pod.  If no RuntimeClass resource matches the named class, the pod will not be run. If unset or empty, the "legacy" RuntimeClass will be used, which is an implicit class with an empty definition that uses the default runtime handler. More info: https://git.k8s.io/enhancements/keps/sig-node/runtime-class.md This is a beta feature as of Kubernetes v1.14.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}RuntimeClassName refers to a RuntimeClass object in the node.k8s.io group, which should be used to run this pod.  If no RuntimeClass resource matches the named class, the pod will not be run. If unset or empty, the "legacy" RuntimeClass will be used, which is an implicit class with an empty definition that uses the default runtime handler. More info: https://git.k8s.io/enhancements/keps/sig-node/585-runtime-class This is a beta feature as of Kubernetes v1.14.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="schedulername_nodejs">
 <a href="#schedulername_nodejs" style="color: inherit; text-decoration: inherit;">scheduler<wbr>Name</a>
@@ -11843,7 +11967,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Overhead represents the resource overhead associated with running a pod for a given RuntimeClass. This field will be autopopulated at admission time by the RuntimeClass admission controller. If the RuntimeClass admission controller is enabled, overhead must not be set in Pod create requests. The RuntimeClass admission controller will reject Pod create requests which have the overhead already set. If RuntimeClass is configured and selected in the PodSpec, Overhead will be set to the value defined in the corresponding RuntimeClass, otherwise it will remain unset and treated as zero. More info: https://git.k8s.io/enhancements/keps/sig-node/20190226-pod-overhead.md This field is alpha-level as of Kubernetes v1.16, and is only honored by servers that enable the PodOverhead feature.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Overhead represents the resource overhead associated with running a pod for a given RuntimeClass. This field will be autopopulated at admission time by the RuntimeClass admission controller. If the RuntimeClass admission controller is enabled, overhead must not be set in Pod create requests. The RuntimeClass admission controller will reject Pod create requests which have the overhead already set. If RuntimeClass is configured and selected in the PodSpec, Overhead will be set to the value defined in the corresponding RuntimeClass, otherwise it will remain unset and treated as zero. More info: https://git.k8s.io/enhancements/keps/sig-node/688-pod-overhead/README.md This field is beta-level as of Kubernetes v1.18, and is only honored by servers that enable the PodOverhead feature.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preemption_policy_python">
 <a href="#preemption_policy_python" style="color: inherit; text-decoration: inherit;">preemption_<wbr>policy</a>
@@ -11875,7 +11999,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#podreadinessgate">Pod<wbr>Readiness<wbr>Gate]</a></span>
     </dt>
-    <dd>{{% md %}}If specified, all readiness gates will be evaluated for pod readiness. A pod is ready when all its containers are ready AND all conditions specified in the readiness gates have status equal to "True" More info: https://git.k8s.io/enhancements/keps/sig-network/0007-pod-ready%2B%2B.md{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}If specified, all readiness gates will be evaluated for pod readiness. A pod is ready when all its containers are ready AND all conditions specified in the readiness gates have status equal to "True" More info: https://git.k8s.io/enhancements/keps/sig-network/580-pod-readiness-gates{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="restart_policy_python">
 <a href="#restart_policy_python" style="color: inherit; text-decoration: inherit;">restart_<wbr>policy</a>
@@ -11891,7 +12015,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}RuntimeClassName refers to a RuntimeClass object in the node.k8s.io group, which should be used to run this pod.  If no RuntimeClass resource matches the named class, the pod will not be run. If unset or empty, the "legacy" RuntimeClass will be used, which is an implicit class with an empty definition that uses the default runtime handler. More info: https://git.k8s.io/enhancements/keps/sig-node/runtime-class.md This is a beta feature as of Kubernetes v1.14.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}RuntimeClassName refers to a RuntimeClass object in the node.k8s.io group, which should be used to run this pod.  If no RuntimeClass resource matches the named class, the pod will not be run. If unset or empty, the "legacy" RuntimeClass will be used, which is an implicit class with an empty definition that uses the default runtime handler. More info: https://git.k8s.io/enhancements/keps/sig-node/585-runtime-class This is a beta feature as of Kubernetes v1.14.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scheduler_name_python">
 <a href="#scheduler_name_python" style="color: inherit; text-decoration: inherit;">scheduler_<wbr>name</a>
@@ -12327,7 +12451,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Optional duration in seconds the pod needs to terminate gracefully upon probe failure. The grace period is the duration in seconds after the processes running in the pod are sent a termination signal and the time when the processes are forcibly halted with a kill signal. Set this value longer than the expected cleanup time for your process. If this value is nil, the pod's terminationGracePeriodSeconds will be used. Otherwise, this value overrides the value provided by the pod spec. Value must be non-negative integer. The value zero indicates stop immediately via the kill signal (no opportunity to shut down). This is an alpha field and requires enabling ProbeTerminationGracePeriod feature gate.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Optional duration in seconds the pod needs to terminate gracefully upon probe failure. The grace period is the duration in seconds after the processes running in the pod are sent a termination signal and the time when the processes are forcibly halted with a kill signal. Set this value longer than the expected cleanup time for your process. If this value is nil, the pod's terminationGracePeriodSeconds will be used. Otherwise, this value overrides the value provided by the pod spec. Value must be non-negative integer. The value zero indicates stop immediately via the kill signal (no opportunity to shut down). This is a beta field and requires enabling ProbeTerminationGracePeriod feature gate. Minimum value is 1. spec.terminationGracePeriodSeconds is used if unset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeoutseconds_csharp">
 <a href="#timeoutseconds_csharp" style="color: inherit; text-decoration: inherit;">Timeout<wbr>Seconds</a>
@@ -12403,7 +12527,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Optional duration in seconds the pod needs to terminate gracefully upon probe failure. The grace period is the duration in seconds after the processes running in the pod are sent a termination signal and the time when the processes are forcibly halted with a kill signal. Set this value longer than the expected cleanup time for your process. If this value is nil, the pod's terminationGracePeriodSeconds will be used. Otherwise, this value overrides the value provided by the pod spec. Value must be non-negative integer. The value zero indicates stop immediately via the kill signal (no opportunity to shut down). This is an alpha field and requires enabling ProbeTerminationGracePeriod feature gate.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Optional duration in seconds the pod needs to terminate gracefully upon probe failure. The grace period is the duration in seconds after the processes running in the pod are sent a termination signal and the time when the processes are forcibly halted with a kill signal. Set this value longer than the expected cleanup time for your process. If this value is nil, the pod's terminationGracePeriodSeconds will be used. Otherwise, this value overrides the value provided by the pod spec. Value must be non-negative integer. The value zero indicates stop immediately via the kill signal (no opportunity to shut down). This is a beta field and requires enabling ProbeTerminationGracePeriod feature gate. Minimum value is 1. spec.terminationGracePeriodSeconds is used if unset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeoutseconds_go">
 <a href="#timeoutseconds_go" style="color: inherit; text-decoration: inherit;">Timeout<wbr>Seconds</a>
@@ -12479,7 +12603,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Optional duration in seconds the pod needs to terminate gracefully upon probe failure. The grace period is the duration in seconds after the processes running in the pod are sent a termination signal and the time when the processes are forcibly halted with a kill signal. Set this value longer than the expected cleanup time for your process. If this value is nil, the pod's terminationGracePeriodSeconds will be used. Otherwise, this value overrides the value provided by the pod spec. Value must be non-negative integer. The value zero indicates stop immediately via the kill signal (no opportunity to shut down). This is an alpha field and requires enabling ProbeTerminationGracePeriod feature gate.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Optional duration in seconds the pod needs to terminate gracefully upon probe failure. The grace period is the duration in seconds after the processes running in the pod are sent a termination signal and the time when the processes are forcibly halted with a kill signal. Set this value longer than the expected cleanup time for your process. If this value is nil, the pod's terminationGracePeriodSeconds will be used. Otherwise, this value overrides the value provided by the pod spec. Value must be non-negative integer. The value zero indicates stop immediately via the kill signal (no opportunity to shut down). This is a beta field and requires enabling ProbeTerminationGracePeriod feature gate. Minimum value is 1. spec.terminationGracePeriodSeconds is used if unset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeoutseconds_nodejs">
 <a href="#timeoutseconds_nodejs" style="color: inherit; text-decoration: inherit;">timeout<wbr>Seconds</a>
@@ -12555,7 +12679,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Optional duration in seconds the pod needs to terminate gracefully upon probe failure. The grace period is the duration in seconds after the processes running in the pod are sent a termination signal and the time when the processes are forcibly halted with a kill signal. Set this value longer than the expected cleanup time for your process. If this value is nil, the pod's terminationGracePeriodSeconds will be used. Otherwise, this value overrides the value provided by the pod spec. Value must be non-negative integer. The value zero indicates stop immediately via the kill signal (no opportunity to shut down). This is an alpha field and requires enabling ProbeTerminationGracePeriod feature gate.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Optional duration in seconds the pod needs to terminate gracefully upon probe failure. The grace period is the duration in seconds after the processes running in the pod are sent a termination signal and the time when the processes are forcibly halted with a kill signal. Set this value longer than the expected cleanup time for your process. If this value is nil, the pod's terminationGracePeriodSeconds will be used. Otherwise, this value overrides the value provided by the pod spec. Value must be non-negative integer. The value zero indicates stop immediately via the kill signal (no opportunity to shut down). This is a beta field and requires enabling ProbeTerminationGracePeriod feature gate. Minimum value is 1. spec.terminationGracePeriodSeconds is used if unset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeout_seconds_python">
 <a href="#timeout_seconds_python" style="color: inherit; text-decoration: inherit;">timeout_<wbr>seconds</a>
@@ -17359,6 +17483,14 @@ This is a beta feature and only available when the GenericEphemeralVolume featur
     </dt>
     <dd>{{% md %}}GMSACredentialSpecName is the name of the GMSA credential spec to use.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="hostprocess_csharp">
+<a href="#hostprocess_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Process</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}HostProcess determines if a container should be run as a 'Host Process' container. This field is alpha-level and will only be honored by components that enable the WindowsHostProcessContainers feature flag. Setting this field without the feature flag will result in errors when validating the Pod. All of a Pod's containers must have the same effective HostProcess value (it is not allowed to have a mix of HostProcess containers and non-HostProcess containers).  In addition, if HostProcess is true then HostNetwork must also be set to true.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="runasusername_csharp">
 <a href="#runasusername_csharp" style="color: inherit; text-decoration: inherit;">Run<wbr>As<wbr>User<wbr>Name</a>
 </span>
@@ -17386,6 +17518,14 @@ This is a beta feature and only available when the GenericEphemeralVolume featur
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}GMSACredentialSpecName is the name of the GMSA credential spec to use.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="hostprocess_go">
+<a href="#hostprocess_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Process</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}HostProcess determines if a container should be run as a 'Host Process' container. This field is alpha-level and will only be honored by components that enable the WindowsHostProcessContainers feature flag. Setting this field without the feature flag will result in errors when validating the Pod. All of a Pod's containers must have the same effective HostProcess value (it is not allowed to have a mix of HostProcess containers and non-HostProcess containers).  In addition, if HostProcess is true then HostNetwork must also be set to true.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="runasusername_go">
 <a href="#runasusername_go" style="color: inherit; text-decoration: inherit;">Run<wbr>As<wbr>User<wbr>Name</a>
@@ -17415,6 +17555,14 @@ This is a beta feature and only available when the GenericEphemeralVolume featur
     </dt>
     <dd>{{% md %}}GMSACredentialSpecName is the name of the GMSA credential spec to use.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="hostprocess_nodejs">
+<a href="#hostprocess_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Process</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}HostProcess determines if a container should be run as a 'Host Process' container. This field is alpha-level and will only be honored by components that enable the WindowsHostProcessContainers feature flag. Setting this field without the feature flag will result in errors when validating the Pod. All of a Pod's containers must have the same effective HostProcess value (it is not allowed to have a mix of HostProcess containers and non-HostProcess containers).  In addition, if HostProcess is true then HostNetwork must also be set to true.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="runasusername_nodejs">
 <a href="#runasusername_nodejs" style="color: inherit; text-decoration: inherit;">run<wbr>As<wbr>User<wbr>Name</a>
 </span>
@@ -17442,6 +17590,14 @@ This is a beta feature and only available when the GenericEphemeralVolume featur
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}GMSACredentialSpecName is the name of the GMSA credential spec to use.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="host_process_python">
+<a href="#host_process_python" style="color: inherit; text-decoration: inherit;">host_<wbr>process</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}HostProcess determines if a container should be run as a 'Host Process' container. This field is alpha-level and will only be honored by components that enable the WindowsHostProcessContainers feature flag. Setting this field without the feature flag will result in errors when validating the Pod. All of a Pod's containers must have the same effective HostProcess value (it is not allowed to have a mix of HostProcess containers and non-HostProcess containers).  In addition, if HostProcess is true then HostNetwork must also be set to true.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="run_as_user_name_python">
 <a href="#run_as_user_name_python" style="color: inherit; text-decoration: inherit;">run_<wbr>as_<wbr>user_<wbr>name</a>
