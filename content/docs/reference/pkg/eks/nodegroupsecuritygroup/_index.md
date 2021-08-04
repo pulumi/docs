@@ -38,7 +38,7 @@ NodeGroupSecurityGroup is a component that wraps creating a security group for n
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewNodeGroupSecurityGroup</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">NodeGroupSecurityGroupArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">NodeGroupSecurityGroup</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewNodeGroupSecurityGroup</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">NodeGroupSecurityGroupArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">NodeGroupSecurityGroup</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -99,7 +99,7 @@ NodeGroupSecurityGroup is a component that wraps creating a security group for n
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
@@ -117,7 +117,7 @@ NodeGroupSecurityGroup is a component that wraps creating a security group for n
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
@@ -149,7 +149,7 @@ NodeGroupSecurityGroup is a component that wraps creating a security group for n
 
 ## NodeGroupSecurityGroup Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Architecture and Concepts docs.
 
 ### Inputs
 
@@ -236,7 +236,7 @@ The NodeGroupSecurityGroup resource accepts the following [input]({{< relref "/d
 <a href="#clustersecuritygroup_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Security<wbr>Group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">awsec2Security<wbr>Group</span>
+        <span class="property-type">pulumi<wbr>Awsec2Security<wbr>Group</span>
     </dt>
     <dd>{{% md %}}The security group associated with the EKS cluster.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -244,7 +244,7 @@ The NodeGroupSecurityGroup resource accepts the following [input]({{< relref "/d
 <a href="#ekscluster_nodejs" style="color: inherit; text-decoration: inherit;">eks<wbr>Cluster</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">awseks<wbr>Cluster</span>
+        <span class="property-type">pulumi<wbr>Awseks<wbr>Cluster</span>
     </dt>
     <dd>{{% md %}}The EKS cluster associated with the worker node group{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -379,7 +379,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#securitygroup_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">awsec2Security<wbr>Group</span>
+        <span class="property-type">pulumi<wbr>Awsec2Security<wbr>Group</span>
     </dt>
     <dd>{{% md %}}The security group for node groups with the default ingress & egress rules required to connect and work with the EKS cluster security group.{{% /md %}}</dd><dt class="property-"
             title="">
@@ -387,7 +387,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#securitygrouprule_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Group<wbr>Rule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">awsec2Security<wbr>Group<wbr>Rule</span>
+        <span class="property-type">pulumi<wbr>Awsec2Security<wbr>Group<wbr>Rule</span>
     </dt>
     <dd>{{% md %}}The EKS cluster ingress rule.{{% /md %}}</dd></dl>
 {{% /choosable %}}
