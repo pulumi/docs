@@ -133,7 +133,7 @@ customer_logos:
       - tableau
       - atlassian
       - fauna
-      - ware2go
+      - sans
     - items:
       - mindbody
       - sourcegraph
