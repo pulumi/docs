@@ -311,7 +311,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#certificatesigningrequestspec">Certificate<wbr>Signing<wbr>Request<wbr>Spec</a></span>
     </dt>
-    <dd>{{% md %}}spec contains the certificate request, and is immutable after creation. Only the request, signerName, and usages fields can be set on creation. Other fields are derived by Kubernetes and cannot be modified by users.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}spec contains the certificate request, and is immutable after creation. Only the request, signerName, expirationSeconds, and usages fields can be set on creation. Other fields are derived by Kubernetes and cannot be modified by users.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metadata_csharp">
 <a href="#metadata_csharp" style="color: inherit; text-decoration: inherit;">Metadata</a>
@@ -339,7 +339,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#certificatesigningrequestspec">Certificate<wbr>Signing<wbr>Request<wbr>Spec</a></span>
     </dt>
-    <dd>{{% md %}}spec contains the certificate request, and is immutable after creation. Only the request, signerName, and usages fields can be set on creation. Other fields are derived by Kubernetes and cannot be modified by users.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}spec contains the certificate request, and is immutable after creation. Only the request, signerName, expirationSeconds, and usages fields can be set on creation. Other fields are derived by Kubernetes and cannot be modified by users.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metadata_go">
 <a href="#metadata_go" style="color: inherit; text-decoration: inherit;">Metadata</a>
@@ -367,7 +367,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#certificatesigningrequestspec">Certificate<wbr>Signing<wbr>Request<wbr>Spec</a></span>
     </dt>
-    <dd>{{% md %}}spec contains the certificate request, and is immutable after creation. Only the request, signerName, and usages fields can be set on creation. Other fields are derived by Kubernetes and cannot be modified by users.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}spec contains the certificate request, and is immutable after creation. Only the request, signerName, expirationSeconds, and usages fields can be set on creation. Other fields are derived by Kubernetes and cannot be modified by users.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metadata_nodejs">
 <a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
@@ -395,7 +395,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#certificatesigningrequestspec">Certificate<wbr>Signing<wbr>Request<wbr>Spec</a></span>
     </dt>
-    <dd>{{% md %}}spec contains the certificate request, and is immutable after creation. Only the request, signerName, and usages fields can be set on creation. Other fields are derived by Kubernetes and cannot be modified by users.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}spec contains the certificate request, and is immutable after creation. Only the request, signerName, expirationSeconds, and usages fields can be set on creation. Other fields are derived by Kubernetes and cannot be modified by users.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metadata_python">
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
@@ -705,6 +705,27 @@ Custom signerNames can also be specified. The signer defines:
  5. Expiration/certificate lifetime: whether it is fixed by the signer, configurable by the admin.
  6. Whether or not requests for CA certificates are allowed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="expirationseconds_csharp">
+<a href="#expirationseconds_csharp" style="color: inherit; text-decoration: inherit;">Expiration<wbr>Seconds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}expirationSeconds is the requested duration of validity of the issued certificate. The certificate signer may issue a certificate with a different validity duration so a client must check the delta between the notBefore and and notAfter fields in the issued certificate to determine the actual duration.
+
+The v1.22+ in-tree implementations of the well-known Kubernetes signers will honor this field as long as the requested duration is not greater than the maximum duration they will honor per the --cluster-signing-duration CLI flag to the Kubernetes controller manager.
+
+Certificate signers may not honor this field for various reasons:
+
+  1. Old signer that is unaware of the field (such as the in-tree
+     implementations prior to v1.22)
+  2. Signer whose configured maximum is shorter than the requested duration
+  3. Signer whose configured minimum is longer than the requested duration
+
+The minimum valid value for expirationSeconds is 600, i.e. 10 minutes.
+
+As of v1.22, this field is beta and is controlled via the CSRDuration feature gate.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="extra_csharp">
 <a href="#extra_csharp" style="color: inherit; text-decoration: inherit;">Extra</a>
 </span>
@@ -797,6 +818,27 @@ Custom signerNames can also be specified. The signer defines:
  4. Required, permitted, or forbidden key usages / extended key usages.
  5. Expiration/certificate lifetime: whether it is fixed by the signer, configurable by the admin.
  6. Whether or not requests for CA certificates are allowed.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="expirationseconds_go">
+<a href="#expirationseconds_go" style="color: inherit; text-decoration: inherit;">Expiration<wbr>Seconds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}expirationSeconds is the requested duration of validity of the issued certificate. The certificate signer may issue a certificate with a different validity duration so a client must check the delta between the notBefore and and notAfter fields in the issued certificate to determine the actual duration.
+
+The v1.22+ in-tree implementations of the well-known Kubernetes signers will honor this field as long as the requested duration is not greater than the maximum duration they will honor per the --cluster-signing-duration CLI flag to the Kubernetes controller manager.
+
+Certificate signers may not honor this field for various reasons:
+
+  1. Old signer that is unaware of the field (such as the in-tree
+     implementations prior to v1.22)
+  2. Signer whose configured maximum is shorter than the requested duration
+  3. Signer whose configured minimum is longer than the requested duration
+
+The minimum valid value for expirationSeconds is 600, i.e. 10 minutes.
+
+As of v1.22, this field is beta and is controlled via the CSRDuration feature gate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="extra_go">
 <a href="#extra_go" style="color: inherit; text-decoration: inherit;">Extra</a>
@@ -891,6 +933,27 @@ Custom signerNames can also be specified. The signer defines:
  5. Expiration/certificate lifetime: whether it is fixed by the signer, configurable by the admin.
  6. Whether or not requests for CA certificates are allowed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="expirationseconds_nodejs">
+<a href="#expirationseconds_nodejs" style="color: inherit; text-decoration: inherit;">expiration<wbr>Seconds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}expirationSeconds is the requested duration of validity of the issued certificate. The certificate signer may issue a certificate with a different validity duration so a client must check the delta between the notBefore and and notAfter fields in the issued certificate to determine the actual duration.
+
+The v1.22+ in-tree implementations of the well-known Kubernetes signers will honor this field as long as the requested duration is not greater than the maximum duration they will honor per the --cluster-signing-duration CLI flag to the Kubernetes controller manager.
+
+Certificate signers may not honor this field for various reasons:
+
+  1. Old signer that is unaware of the field (such as the in-tree
+     implementations prior to v1.22)
+  2. Signer whose configured maximum is shorter than the requested duration
+  3. Signer whose configured minimum is longer than the requested duration
+
+The minimum valid value for expirationSeconds is 600, i.e. 10 minutes.
+
+As of v1.22, this field is beta and is controlled via the CSRDuration feature gate.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="extra_nodejs">
 <a href="#extra_nodejs" style="color: inherit; text-decoration: inherit;">extra</a>
 </span>
@@ -983,6 +1046,27 @@ Custom signerNames can also be specified. The signer defines:
  4. Required, permitted, or forbidden key usages / extended key usages.
  5. Expiration/certificate lifetime: whether it is fixed by the signer, configurable by the admin.
  6. Whether or not requests for CA certificates are allowed.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="expiration_seconds_python">
+<a href="#expiration_seconds_python" style="color: inherit; text-decoration: inherit;">expiration_<wbr>seconds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}expirationSeconds is the requested duration of validity of the issued certificate. The certificate signer may issue a certificate with a different validity duration so a client must check the delta between the notBefore and and notAfter fields in the issued certificate to determine the actual duration.
+
+The v1.22+ in-tree implementations of the well-known Kubernetes signers will honor this field as long as the requested duration is not greater than the maximum duration they will honor per the --cluster-signing-duration CLI flag to the Kubernetes controller manager.
+
+Certificate signers may not honor this field for various reasons:
+
+  1. Old signer that is unaware of the field (such as the in-tree
+     implementations prior to v1.22)
+  2. Signer whose configured maximum is shorter than the requested duration
+  3. Signer whose configured minimum is longer than the requested duration
+
+The minimum valid value for expirationSeconds is 600, i.e. 10 minutes.
+
+As of v1.22, this field is beta and is controlled via the CSRDuration feature gate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="extra_python">
 <a href="#extra_python" style="color: inherit; text-decoration: inherit;">extra</a>
@@ -1403,6 +1487,14 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
     </dt>
     <dd>{{% md %}}Operation is the type of operation which lead to this ManagedFieldsEntry being created. The only valid values for this field are 'Apply' and 'Update'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="subresource_csharp">
+<a href="#subresource_csharp" style="color: inherit; text-decoration: inherit;">Subresource</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Subresource is the name of the subresource used to update that object, or empty string if the object was updated through the main resource. The value of this field is used to distinguish between managers, even if they share the same name. For example, a status update will be distinct from a regular update using the same manager name. Note that the APIVersion field is not related to the Subresource field and it always corresponds to the version of the main resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="time_csharp">
 <a href="#time_csharp" style="color: inherit; text-decoration: inherit;">Time</a>
 </span>
@@ -1454,6 +1546,14 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Operation is the type of operation which lead to this ManagedFieldsEntry being created. The only valid values for this field are 'Apply' and 'Update'.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="subresource_go">
+<a href="#subresource_go" style="color: inherit; text-decoration: inherit;">Subresource</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Subresource is the name of the subresource used to update that object, or empty string if the object was updated through the main resource. The value of this field is used to distinguish between managers, even if they share the same name. For example, a status update will be distinct from a regular update using the same manager name. Note that the APIVersion field is not related to the Subresource field and it always corresponds to the version of the main resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="time_go">
 <a href="#time_go" style="color: inherit; text-decoration: inherit;">Time</a>
@@ -1507,6 +1607,14 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
     </dt>
     <dd>{{% md %}}Operation is the type of operation which lead to this ManagedFieldsEntry being created. The only valid values for this field are 'Apply' and 'Update'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="subresource_nodejs">
+<a href="#subresource_nodejs" style="color: inherit; text-decoration: inherit;">subresource</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Subresource is the name of the subresource used to update that object, or empty string if the object was updated through the main resource. The value of this field is used to distinguish between managers, even if they share the same name. For example, a status update will be distinct from a regular update using the same manager name. Note that the APIVersion field is not related to the Subresource field and it always corresponds to the version of the main resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="time_nodejs">
 <a href="#time_nodejs" style="color: inherit; text-decoration: inherit;">time</a>
 </span>
@@ -1558,6 +1666,14 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Operation is the type of operation which lead to this ManagedFieldsEntry being created. The only valid values for this field are 'Apply' and 'Update'.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="subresource_python">
+<a href="#subresource_python" style="color: inherit; text-decoration: inherit;">subresource</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Subresource is the name of the subresource used to update that object, or empty string if the object was updated through the main resource. The value of this field is used to distinguish between managers, even if they share the same name. For example, a status update will be distinct from a regular update using the same manager name. Note that the APIVersion field is not related to the Subresource field and it always corresponds to the version of the main resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="time_python">
 <a href="#time_python" style="color: inherit; text-decoration: inherit;">time</a>
