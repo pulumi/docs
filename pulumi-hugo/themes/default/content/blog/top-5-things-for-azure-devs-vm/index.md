@@ -1,6 +1,6 @@
 ---
 title: "Top 5 Things an Azure Developer Needs to Know: VMs"
-date: 2021-08-03
+date: 2021-08-04
 meta_desc: "Building and deploying virtual machines for Azure developers"
 meta_image: azure-top-5.png
 authors:
