@@ -1,0 +1,11 @@
+id = "laura-santamaria"
+name = "Laura Santamaria"
+title = "Developer Advocate"
+weight = 1
+
+status = "active"
+
+[social]
+github = "nimbinatus"
+twitter = "nimbinatus"
+linkedin = "lauraasantamaria"
