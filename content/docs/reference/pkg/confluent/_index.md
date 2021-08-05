@@ -32,6 +32,6 @@ A Pulumi package for creating and managing confluent cloud resources.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`confluent` Terraform Provider](https://github.com/Mongey/terraform-provider-confluent).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>0.1.1</dd>
+	<dd>0.1.2</dd>
 </dl>
 
