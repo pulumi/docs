@@ -98,7 +98,7 @@ This will return a response as follows:
 
 The `access_token` in the response is the value to use for `venafi:accessToken` or `VENAFI_TOKEN`.
 
-#### Venafi Cloud
+#### Venafi as a Service
 
 Once obtained, there are two ways to communicate your authorization tokens to Pulumi when talking to Venafi TPP:
 
