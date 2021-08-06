@@ -11967,6 +11967,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Linked service description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="isserverversionabove32_csharp">
+<a href="#isserverversionabove32_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Server<wbr>Version<wbr>Above32</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}Whether the CosmosDB (MongoDB API) server version is higher than 3.2. The default value is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="parameters_csharp">
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
 </span>
@@ -12018,6 +12026,14 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Linked service description.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="isserverversionabove32_go">
+<a href="#isserverversionabove32_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Server<wbr>Version<wbr>Above32</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}Whether the CosmosDB (MongoDB API) server version is higher than 3.2. The default value is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parameters_go">
 <a href="#parameters_go" style="color: inherit; text-decoration: inherit;">Parameters</a>
@@ -12071,6 +12087,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Linked service description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="isserverversionabove32_nodejs">
+<a href="#isserverversionabove32_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Server<wbr>Version<wbr>Above32</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}Whether the CosmosDB (MongoDB API) server version is higher than 3.2. The default value is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="parameters_nodejs">
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
 </span>
@@ -12122,6 +12146,14 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Linked service description.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="is_server_version_above32_python">
+<a href="#is_server_version_above32_python" style="color: inherit; text-decoration: inherit;">is_<wbr>server_<wbr>version_<wbr>above32</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}Whether the CosmosDB (MongoDB API) server version is higher than 3.2. The default value is false. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parameters_python">
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>

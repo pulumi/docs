@@ -1,8 +1,8 @@
 
 ---
-title: "IotSensor"
-title_tag: "azure-native.security.IotSensor"
-meta_desc: "Documentation for the azure-native.security.IotSensor resource with examples, input properties, output properties, lookup functions, and supporting types."
+title: "SiteSensor"
+title_tag: "azure-native.iotsecurity.SiteSensor"
+meta_desc: "Documentation for the azure-native.iotsecurity.SiteSensor resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-native.security.IotSensor resource with 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 IoT sensor model
-API Version: 2020-08-06-preview.
+API Version: 2021-09-01-preview.
 
 {{% examples %}}
 
@@ -20,7 +20,7 @@ API Version: 2020-08-06-preview.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
-### Create or update IoT sensor
+### Create or update sensor
 
 
 {{< example csharp >}}
@@ -33,11 +33,12 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var iotSensor = new AzureNative.Security.IotSensor("iotSensor", new AzureNative.Security.IotSensorArgs
+        var siteSensor = new AzureNative.IoTSecurity.SiteSensor("siteSensor", new AzureNative.IoTSecurity.SiteSensorArgs
         {
-            IotSensorName = "mySensor",
-            Scope = "subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23/resourceGroups/myRg/providers/Microsoft.Devices/IotHubs/myHub",
+            IotDefenderLocation = "eastus",
+            SensorName = "mySensor",
             SensorType = "Ot",
+            SiteName = "site",
             TiAutomaticUpdates = true,
             Zone = "Zone Name",
         });
@@ -58,18 +59,19 @@ class MyStack : Stack
 package main
 
 import (
-	security "github.com/pulumi/pulumi-azure-native/sdk/go/azure/security"
+	iotsecurity "github.com/pulumi/pulumi-azure-native/sdk/go/azure/iotsecurity"
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := security.NewIotSensor(ctx, "iotSensor", &security.IotSensorArgs{
-			IotSensorName:      pulumi.String("mySensor"),
-			Scope:              pulumi.String("subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23/resourceGroups/myRg/providers/Microsoft.Devices/IotHubs/myHub"),
-			SensorType:         pulumi.String("Ot"),
-			TiAutomaticUpdates: pulumi.Bool(true),
-			Zone:               pulumi.String("Zone Name"),
+		_, err := iotsecurity.NewSiteSensor(ctx, "siteSensor", &iotsecurity.SiteSensorArgs{
+			IotDefenderLocation: pulumi.String("eastus"),
+			SensorName:          pulumi.String("mySensor"),
+			SensorType:          pulumi.String("Ot"),
+			SiteName:            pulumi.String("site"),
+			TiAutomaticUpdates:  pulumi.Bool(true),
+			Zone:                pulumi.String("Zone Name"),
 		})
 		if err != nil {
 			return err
@@ -91,10 +93,11 @@ func main() {
 import pulumi
 import pulumi_azure_native as azure_native
 
-iot_sensor = azure_native.security.IotSensor("iotSensor",
-    iot_sensor_name="mySensor",
-    scope="subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23/resourceGroups/myRg/providers/Microsoft.Devices/IotHubs/myHub",
+site_sensor = azure_native.iotsecurity.SiteSensor("siteSensor",
+    iot_defender_location="eastus",
+    sensor_name="mySensor",
     sensor_type="Ot",
+    site_name="site",
     ti_automatic_updates=True,
     zone="Zone Name")
 
@@ -111,10 +114,11 @@ iot_sensor = azure_native.security.IotSensor("iotSensor",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_native from "@pulumi/azure-native";
 
-const iotSensor = new azure_native.security.IotSensor("iotSensor", {
-    iotSensorName: "mySensor",
-    scope: "subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23/resourceGroups/myRg/providers/Microsoft.Devices/IotHubs/myHub",
+const siteSensor = new azure_native.iotsecurity.SiteSensor("siteSensor", {
+    iotDefenderLocation: "eastus",
+    sensorName: "mySensor",
     sensorType: "Ot",
+    siteName: "site",
     tiAutomaticUpdates: true,
     zone: "Zone Name",
 });
@@ -133,35 +137,36 @@ const iotSensor = new azure_native.security.IotSensor("iotSensor", {
 
 
 
-## Create a IotSensor Resource {#create}
+## Create a SiteSensor Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">IotSensor</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">IotSensorArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">SiteSensor</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SiteSensorArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">IotSensor</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-              <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-              <span class="nx">iot_sensor_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-              <span class="nx">scope</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-              <span class="nx">sensor_type</span><span class="p">:</span> <span class="nx">Optional[Union[str, SensorType]]</span> = None<span class="p">,</span>
-              <span class="nx">ti_automatic_updates</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
-              <span class="nx">zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+<span class="k">def </span><span class="nx">SiteSensor</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+               <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+               <span class="nx">iot_defender_location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+               <span class="nx">sensor_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+               <span class="nx">sensor_type</span><span class="p">:</span> <span class="nx">Optional[Union[str, SensorType]]</span> = None<span class="p">,</span>
+               <span class="nx">site_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+               <span class="nx">ti_automatic_updates</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+               <span class="nx">zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">IotSensor</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-              <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">IotSensorArgs</a></span><span class="p">,</span>
-              <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<span class="k">def </span><span class="nx">SiteSensor</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+               <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SiteSensorArgs</a></span><span class="p">,</span>
+               <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewIotSensor</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">IotSensorArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">IotSensor</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSiteSensor</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">SiteSensorArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SiteSensor</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">IotSensor</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">IotSensorArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">SiteSensor</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">SiteSensorArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -176,7 +181,7 @@ const iotSensor = new azure_native.security.IotSensor("iotSensor", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">IotSensorArgs</a></span>
+        <span class="property-type"><a href="#inputs">SiteSensorArgs</a></span>
     </dt>
     <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
@@ -200,7 +205,7 @@ const iotSensor = new azure_native.security.IotSensor("iotSensor", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">IotSensorArgs</a></span>
+        <span class="property-type"><a href="#inputs">SiteSensorArgs</a></span>
     </dt>
     <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
@@ -230,7 +235,7 @@ const iotSensor = new azure_native.security.IotSensor("iotSensor", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">IotSensorArgs</a></span>
+        <span class="property-type"><a href="#inputs">SiteSensorArgs</a></span>
     </dt>
     <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
@@ -254,7 +259,7 @@ const iotSensor = new azure_native.security.IotSensor("iotSensor", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">IotSensorArgs</a></span>
+        <span class="property-type"><a href="#inputs">SiteSensorArgs</a></span>
     </dt>
     <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
@@ -266,29 +271,37 @@ const iotSensor = new azure_native.security.IotSensor("iotSensor", {
 
 {{% /choosable %}}
 
-## IotSensor Resource Properties {#properties}
+## SiteSensor Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Architecture and Concepts docs.
 
 ### Inputs
 
-The IotSensor resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
+The SiteSensor resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="scope_csharp">
-<a href="#scope_csharp" style="color: inherit; text-decoration: inherit;">Scope</a>
+        <span id="iotdefenderlocation_csharp">
+<a href="#iotdefenderlocation_csharp" style="color: inherit; text-decoration: inherit;">Iot<wbr>Defender<wbr>Location</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Scope of the query (IoT Hub, /providers/Microsoft.Devices/iotHubs/myHub){{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Defender for IoT location{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="sitename_csharp">
+<a href="#sitename_csharp" style="color: inherit; text-decoration: inherit;">Site<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Site Name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="iotsensorname_csharp">
-<a href="#iotsensorname_csharp" style="color: inherit; text-decoration: inherit;">Iot<wbr>Sensor<wbr>Name</a>
+        <span id="sensorname_csharp">
+<a href="#sensorname_csharp" style="color: inherit; text-decoration: inherit;">Sensor<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -299,7 +312,7 @@ The IotSensor resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#sensortype_csharp" style="color: inherit; text-decoration: inherit;">Sensor<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#sensortype">Pulumi.<wbr>Azure<wbr>Native.<wbr>Security.<wbr>Sensor<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#sensortype">Pulumi.<wbr>Azure<wbr>Native.<wbr>Io<wbr>TSecurity.<wbr>Sensor<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of sensor{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -323,16 +336,24 @@ The IotSensor resource accepts the following [input]({{< relref "/docs/intro/con
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="scope_go">
-<a href="#scope_go" style="color: inherit; text-decoration: inherit;">Scope</a>
+        <span id="iotdefenderlocation_go">
+<a href="#iotdefenderlocation_go" style="color: inherit; text-decoration: inherit;">Iot<wbr>Defender<wbr>Location</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Scope of the query (IoT Hub, /providers/Microsoft.Devices/iotHubs/myHub){{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Defender for IoT location{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="sitename_go">
+<a href="#sitename_go" style="color: inherit; text-decoration: inherit;">Site<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Site Name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="iotsensorname_go">
-<a href="#iotsensorname_go" style="color: inherit; text-decoration: inherit;">Iot<wbr>Sensor<wbr>Name</a>
+        <span id="sensorname_go">
+<a href="#sensorname_go" style="color: inherit; text-decoration: inherit;">Sensor<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -367,16 +388,24 @@ The IotSensor resource accepts the following [input]({{< relref "/docs/intro/con
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="scope_nodejs">
-<a href="#scope_nodejs" style="color: inherit; text-decoration: inherit;">scope</a>
+        <span id="iotdefenderlocation_nodejs">
+<a href="#iotdefenderlocation_nodejs" style="color: inherit; text-decoration: inherit;">iot<wbr>Defender<wbr>Location</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Scope of the query (IoT Hub, /providers/Microsoft.Devices/iotHubs/myHub){{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Defender for IoT location{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="sitename_nodejs">
+<a href="#sitename_nodejs" style="color: inherit; text-decoration: inherit;">site<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Site Name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="iotsensorname_nodejs">
-<a href="#iotsensorname_nodejs" style="color: inherit; text-decoration: inherit;">iot<wbr>Sensor<wbr>Name</a>
+        <span id="sensorname_nodejs">
+<a href="#sensorname_nodejs" style="color: inherit; text-decoration: inherit;">sensor<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -411,16 +440,24 @@ The IotSensor resource accepts the following [input]({{< relref "/docs/intro/con
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="scope_python">
-<a href="#scope_python" style="color: inherit; text-decoration: inherit;">scope</a>
+        <span id="iot_defender_location_python">
+<a href="#iot_defender_location_python" style="color: inherit; text-decoration: inherit;">iot_<wbr>defender_<wbr>location</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Scope of the query (IoT Hub, /providers/Microsoft.Devices/iotHubs/myHub){{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Defender for IoT location{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="site_name_python">
+<a href="#site_name_python" style="color: inherit; text-decoration: inherit;">site_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Site Name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="iot_sensor_name_python">
-<a href="#iot_sensor_name_python" style="color: inherit; text-decoration: inherit;">iot_<wbr>sensor_<wbr>name</a>
+        <span id="sensor_name_python">
+<a href="#sensor_name_python" style="color: inherit; text-decoration: inherit;">sensor_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -455,7 +492,7 @@ The IotSensor resource accepts the following [input]({{< relref "/docs/intro/con
 
 ### Outputs
 
-All [input](#inputs) properties are implicitly available as output properties. Additionally, the IotSensor resource produces the following output properties:
+All [input](#inputs) properties are implicitly available as output properties. Additionally, the SiteSensor resource produces the following output properties:
 
 
 
@@ -469,14 +506,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Last connectivity time of the IoT sensor{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="creationtime_csharp">
-<a href="#creationtime_csharp" style="color: inherit; text-decoration: inherit;">Creation<wbr>Time</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Creation time of the IoT sensor{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dynamiclearning_csharp">
 <a href="#dynamiclearning_csharp" style="color: inherit; text-decoration: inherit;">Dynamic<wbr>Learning</a>
@@ -508,7 +537,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sensorstatus_csharp">
 <a href="#sensorstatus_csharp" style="color: inherit; text-decoration: inherit;">Sensor<wbr>Status</a>
@@ -525,6 +554,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Version of the IoT sensor{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="systemdata_csharp">
+<a href="#systemdata_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Io<wbr>TSecurity.<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Azure Resource Manager metadata containing createdBy and modifiedBy information.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tistatus_csharp">
 <a href="#tistatus_csharp" style="color: inherit; text-decoration: inherit;">Ti<wbr>Status</a>
@@ -548,7 +585,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -561,14 +598,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Last connectivity time of the IoT sensor{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="creationtime_go">
-<a href="#creationtime_go" style="color: inherit; text-decoration: inherit;">Creation<wbr>Time</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Creation time of the IoT sensor{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dynamiclearning_go">
 <a href="#dynamiclearning_go" style="color: inherit; text-decoration: inherit;">Dynamic<wbr>Learning</a>
@@ -600,7 +629,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sensorstatus_go">
 <a href="#sensorstatus_go" style="color: inherit; text-decoration: inherit;">Sensor<wbr>Status</a>
@@ -617,6 +646,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Version of the IoT sensor{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="systemdata_go">
+<a href="#systemdata_go" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#systemdataresponse">System<wbr>Data<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Azure Resource Manager metadata containing createdBy and modifiedBy information.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tistatus_go">
 <a href="#tistatus_go" style="color: inherit; text-decoration: inherit;">Ti<wbr>Status</a>
@@ -640,7 +677,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -653,14 +690,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Last connectivity time of the IoT sensor{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="creationtime_nodejs">
-<a href="#creationtime_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Time</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Creation time of the IoT sensor{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dynamiclearning_nodejs">
 <a href="#dynamiclearning_nodejs" style="color: inherit; text-decoration: inherit;">dynamic<wbr>Learning</a>
@@ -692,7 +721,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sensorstatus_nodejs">
 <a href="#sensorstatus_nodejs" style="color: inherit; text-decoration: inherit;">sensor<wbr>Status</a>
@@ -709,6 +738,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Version of the IoT sensor{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="systemdata_nodejs">
+<a href="#systemdata_nodejs" style="color: inherit; text-decoration: inherit;">system<wbr>Data</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#systemdataresponse">System<wbr>Data<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Azure Resource Manager metadata containing createdBy and modifiedBy information.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tistatus_nodejs">
 <a href="#tistatus_nodejs" style="color: inherit; text-decoration: inherit;">ti<wbr>Status</a>
@@ -732,7 +769,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -745,14 +782,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Last connectivity time of the IoT sensor{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="creation_time_python">
-<a href="#creation_time_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>time</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Creation time of the IoT sensor{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dynamic_learning_python">
 <a href="#dynamic_learning_python" style="color: inherit; text-decoration: inherit;">dynamic_<wbr>learning</a>
@@ -784,7 +813,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource name{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sensor_status_python">
 <a href="#sensor_status_python" style="color: inherit; text-decoration: inherit;">sensor_<wbr>status</a>
@@ -801,6 +830,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Version of the IoT sensor{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="system_data_python">
+<a href="#system_data_python" style="color: inherit; text-decoration: inherit;">system_<wbr>data</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#systemdataresponse">System<wbr>Data<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Azure Resource Manager metadata containing createdBy and modifiedBy information.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ti_status_python">
 <a href="#ti_status_python" style="color: inherit; text-decoration: inherit;">ti_<wbr>status</a>
@@ -824,7 +861,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource type{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -862,13 +899,223 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>Ot</dd><dt>ENTERPRISE</dt>
     <dd>Enterprise</dd></dl>
 {{% /choosable %}}
+
+<h4 id="systemdataresponse">System<wbr>Data<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="createdat_csharp">
+<a href="#createdat_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="createdby_csharp">
+<a href="#createdby_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>By</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="createdbytype_csharp">
+<a href="#createdbytype_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>By<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="lastmodifiedat_csharp">
+<a href="#lastmodifiedat_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>At</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="lastmodifiedby_csharp">
+<a href="#lastmodifiedby_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="lastmodifiedbytype_csharp">
+<a href="#lastmodifiedbytype_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="createdat_go">
+<a href="#createdat_go" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="createdby_go">
+<a href="#createdby_go" style="color: inherit; text-decoration: inherit;">Created<wbr>By</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="createdbytype_go">
+<a href="#createdbytype_go" style="color: inherit; text-decoration: inherit;">Created<wbr>By<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="lastmodifiedat_go">
+<a href="#lastmodifiedat_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>At</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="lastmodifiedby_go">
+<a href="#lastmodifiedby_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="lastmodifiedbytype_go">
+<a href="#lastmodifiedbytype_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="createdat_nodejs">
+<a href="#createdat_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>At</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="createdby_nodejs">
+<a href="#createdby_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="createdbytype_nodejs">
+<a href="#createdbytype_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="lastmodifiedat_nodejs">
+<a href="#lastmodifiedat_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>At</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="lastmodifiedby_nodejs">
+<a href="#lastmodifiedby_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>By</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="lastmodifiedbytype_nodejs">
+<a href="#lastmodifiedbytype_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>By<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="created_at_python">
+<a href="#created_at_python" style="color: inherit; text-decoration: inherit;">created_<wbr>at</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="created_by_python">
+<a href="#created_by_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="created_by_type_python">
+<a href="#created_by_type_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="last_modified_at_python">
+<a href="#last_modified_at_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>at</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="last_modified_by_python">
+<a href="#last_modified_by_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>by</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="last_modified_by_type_python">
+<a href="#last_modified_by_type_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>by_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd></dl>
+{{% /choosable %}}
 ## Import
 
 
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-native:security:IotSensor mySensor /subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23/resourceGroups/myRg/providers/Microsoft.Devices/IotHubs/myHub/providers/Microsoft.Security/iotSensors/mySensor 
+$ pulumi import azure-native:iotsecurity:SiteSensor mySensor /subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23/providers/Microsoft.IoTSecurity/locations/eastus/sites/site/sensors/mySensor 
 ```
 
 

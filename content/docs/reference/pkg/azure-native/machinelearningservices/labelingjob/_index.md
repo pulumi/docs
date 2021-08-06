@@ -135,16 +135,16 @@ import pulumi_azure_native as azure_native
 
 labeling_job = azure_native.machinelearningservices.LabelingJob("labelingJob",
     labeling_job_id="testLabelingJob",
-    properties={
-        "datasetConfiguration": azure_native.machinelearningservices.LabelingDatasetConfigurationArgs(
+    properties=azure_native.machinelearningservices.LabelingJobPropertiesArgs(
+        dataset_configuration=azure_native.machinelearningservices.LabelingDatasetConfigurationArgs(
             asset_name="testdataasset",
             dataset_version="1",
             enable_incremental_dataset_refresh=True,
         ),
-        "jobInstructions": azure_native.machinelearningservices.LabelingJobInstructionsArgs(
+        job_instructions=azure_native.machinelearningservices.LabelingJobInstructionsArgs(
             uri="https://www.testjobInstructions.com/labeling1.txt",
         ),
-        "labelCategories": {
+        label_categories={
             "testCategory": {
                 "allowMultiSelect": False,
                 "classes": {
@@ -163,11 +163,11 @@ labeling_job = azure_native.machinelearningservices.LabelingJob("labelingJob",
                 "displayName": "testCategory",
             },
         },
-        "labelingJobMediaProperties": azure_native.machinelearningservices.LabelingJobImagePropertiesArgs(
+        labeling_job_media_properties=azure_native.machinelearningservices.LabelingJobImagePropertiesArgs(
             annotation_type="BoundingBox",
             media_type="Image",
         ),
-        "mlAssistConfiguration": azure_native.machinelearningservices.MLAssistConfigurationArgs(
+        ml_assist_configuration=azure_native.machinelearningservices.MLAssistConfigurationArgs(
             inferencing_compute_binding=azure_native.machinelearningservices.ComputeBindingArgs(
                 compute_id="inferencingcompute",
             ),
@@ -178,17 +178,17 @@ labeling_job = azure_native.machinelearningservices.LabelingJob("labelingJob",
                 compute_id="trainingcompute",
             ),
         ),
-        "properties": {
+        properties={
             "additionalProp1": "string",
             "additionalProp2": "string",
             "additionalProp3": "string",
         },
-        "tags": {
+        tags={
             "additionalProp1": "string",
             "additionalProp2": "string",
             "additionalProp3": "string",
         },
-    },
+    ),
     resource_group_name="workspace-1234",
     workspace_name="testworkspace")
 
@@ -413,7 +413,7 @@ const labelingJob = new azure_native.machinelearningservices.LabelingJob("labeli
 
 ## LabelingJob Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Architecture and Concepts docs.
 
 ### Inputs
 

@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-native.eventgrid.PartnerNamespace resour
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 EventGrid Partner Namespace.
-API Version: 2020-04-01-preview.
+API Version: 2021-06-01-preview.
 
 {{% examples %}}
 
@@ -158,9 +158,12 @@ const partnerNamespace = new azure_native.eventgrid.PartnerNamespace("partnerNam
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">PartnerNamespace</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                      <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                     <span class="nx">disable_local_auth</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                     <span class="nx">inbound_ip_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[InboundIpRuleArgs]]</span> = None<span class="p">,</span>
                      <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                      <span class="nx">partner_namespace_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                      <span class="nx">partner_registration_fully_qualified_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                     <span class="nx">public_network_access</span><span class="p">:</span> <span class="nx">Optional[Union[str, PublicNetworkAccess]]</span> = None<span class="p">,</span>
                      <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                      <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
@@ -281,7 +284,7 @@ const partnerNamespace = new azure_native.eventgrid.PartnerNamespace("partnerNam
 
 ## PartnerNamespace Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Architecture and Concepts docs.
 
 ### Inputs
 
@@ -299,6 +302,22 @@ The PartnerNamespace resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group within the user's subscription.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disablelocalauth_csharp">
+<a href="#disablelocalauth_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Local<wbr>Auth</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}This boolean is used to enable or disable local auth. Default value is false. When the property is set to true, only AAD token will be used to authenticate if user is allowed to publish to the partner namespace.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="inboundiprules_csharp">
+<a href="#inboundiprules_csharp" style="color: inherit; text-decoration: inherit;">Inbound<wbr>Ip<wbr>Rules</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inboundiprule">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Inbound<wbr>Ip<wbr>Rule<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}This can be used to restrict traffic from specific IPs instead of all IPs. Note: These are considered only if PublicNetworkAccess is enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -325,6 +344,15 @@ The PartnerNamespace resource accepts the following [input]({{< relref "/docs/in
     <dd>{{% md %}}The fully qualified ARM Id of the partner registration that should be associated with this partner namespace. This takes the following format:
 /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EventGrid/partnerRegistrations/{partnerRegistrationName}.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="publicnetworkaccess_csharp">
+<a href="#publicnetworkaccess_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Network<wbr>Access</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#publicnetworkaccess">Pulumi.<wbr>Azure<wbr>Native.<wbr>Event<wbr>Grid.<wbr>Public<wbr>Network<wbr>Access</a></span>
+    </dt>
+    <dd>{{% md %}}This determines if traffic is allowed over public network. By default it is enabled.
+You can further restrict to specific IPs by configuring <seealso cref="P:Microsoft.Azure.Events.ResourceProvider.Common.Contracts.PartnerNamespaceProperties.InboundIpRules" />{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span>
@@ -344,6 +372,22 @@ The PartnerNamespace resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group within the user's subscription.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disablelocalauth_go">
+<a href="#disablelocalauth_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Local<wbr>Auth</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}This boolean is used to enable or disable local auth. Default value is false. When the property is set to true, only AAD token will be used to authenticate if user is allowed to publish to the partner namespace.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="inboundiprules_go">
+<a href="#inboundiprules_go" style="color: inherit; text-decoration: inherit;">Inbound<wbr>Ip<wbr>Rules</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inboundiprule">[]Inbound<wbr>Ip<wbr>Rule<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}This can be used to restrict traffic from specific IPs instead of all IPs. Note: These are considered only if PublicNetworkAccess is enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -370,6 +414,15 @@ The PartnerNamespace resource accepts the following [input]({{< relref "/docs/in
     <dd>{{% md %}}The fully qualified ARM Id of the partner registration that should be associated with this partner namespace. This takes the following format:
 /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EventGrid/partnerRegistrations/{partnerRegistrationName}.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="publicnetworkaccess_go">
+<a href="#publicnetworkaccess_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Network<wbr>Access</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#publicnetworkaccess">Public<wbr>Network<wbr>Access</a></span>
+    </dt>
+    <dd>{{% md %}}This determines if traffic is allowed over public network. By default it is enabled.
+You can further restrict to specific IPs by configuring <seealso cref="P:Microsoft.Azure.Events.ResourceProvider.Common.Contracts.PartnerNamespaceProperties.InboundIpRules" />{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span>
@@ -389,6 +442,22 @@ The PartnerNamespace resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group within the user's subscription.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disablelocalauth_nodejs">
+<a href="#disablelocalauth_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Local<wbr>Auth</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}This boolean is used to enable or disable local auth. Default value is false. When the property is set to true, only AAD token will be used to authenticate if user is allowed to publish to the partner namespace.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="inboundiprules_nodejs">
+<a href="#inboundiprules_nodejs" style="color: inherit; text-decoration: inherit;">inbound<wbr>Ip<wbr>Rules</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inboundiprule">Inbound<wbr>Ip<wbr>Rule<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}This can be used to restrict traffic from specific IPs instead of all IPs. Note: These are considered only if PublicNetworkAccess is enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -415,6 +484,15 @@ The PartnerNamespace resource accepts the following [input]({{< relref "/docs/in
     <dd>{{% md %}}The fully qualified ARM Id of the partner registration that should be associated with this partner namespace. This takes the following format:
 /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EventGrid/partnerRegistrations/{partnerRegistrationName}.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="publicnetworkaccess_nodejs">
+<a href="#publicnetworkaccess_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Network<wbr>Access</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#publicnetworkaccess">Public<wbr>Network<wbr>Access</a></span>
+    </dt>
+    <dd>{{% md %}}This determines if traffic is allowed over public network. By default it is enabled.
+You can further restrict to specific IPs by configuring <seealso cref="P:Microsoft.Azure.Events.ResourceProvider.Common.Contracts.PartnerNamespaceProperties.InboundIpRules" />{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
@@ -434,6 +512,22 @@ The PartnerNamespace resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource group within the user's subscription.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="disable_local_auth_python">
+<a href="#disable_local_auth_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>local_<wbr>auth</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}This boolean is used to enable or disable local auth. Default value is false. When the property is set to true, only AAD token will be used to authenticate if user is allowed to publish to the partner namespace.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="inbound_ip_rules_python">
+<a href="#inbound_ip_rules_python" style="color: inherit; text-decoration: inherit;">inbound_<wbr>ip_<wbr>rules</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#inboundiprule">Sequence[Inbound<wbr>Ip<wbr>Rule<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}This can be used to restrict traffic from specific IPs instead of all IPs. Note: These are considered only if PublicNetworkAccess is enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -459,6 +553,15 @@ The PartnerNamespace resource accepts the following [input]({{< relref "/docs/in
     </dt>
     <dd>{{% md %}}The fully qualified ARM Id of the partner registration that should be associated with this partner namespace. This takes the following format:
 /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EventGrid/partnerRegistrations/{partnerRegistrationName}.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="public_network_access_python">
+<a href="#public_network_access_python" style="color: inherit; text-decoration: inherit;">public_<wbr>network_<wbr>access</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str | <a href="#publicnetworkaccess">Public<wbr>Network<wbr>Access</a></span>
+    </dt>
+    <dd>{{% md %}}This determines if traffic is allowed over public network. By default it is enabled.
+You can further restrict to specific IPs by configuring <seealso cref="P:Microsoft.Azure.Events.ResourceProvider.Common.Contracts.PartnerNamespaceProperties.InboundIpRules" />{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -502,6 +605,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the resource.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="privateendpointconnections_csharp">
+<a href="#privateendpointconnections_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint<wbr>Connections</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#privateendpointconnectionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Event<wbr>Grid.<wbr>Outputs.<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Response&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -555,6 +666,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Name of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="privateendpointconnections_go">
+<a href="#privateendpointconnections_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint<wbr>Connections</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#privateendpointconnectionresponse">[]Private<wbr>Endpoint<wbr>Connection<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="provisioningstate_go">
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
 </span>
@@ -606,6 +725,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the resource.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="privateendpointconnections_nodejs">
+<a href="#privateendpointconnections_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Endpoint<wbr>Connections</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#privateendpointconnectionresponse">Private<wbr>Endpoint<wbr>Connection<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_nodejs">
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
@@ -659,6 +786,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Name of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="private_endpoint_connections_python">
+<a href="#private_endpoint_connections_python" style="color: inherit; text-decoration: inherit;">private_<wbr>endpoint_<wbr>connections</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#privateendpointconnectionresponse">Sequence[Private<wbr>Endpoint<wbr>Connection<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="provisioning_state_python">
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
 </span>
@@ -693,6 +828,624 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Supporting Types
 
 
+
+<h4 id="connectionstateresponse">Connection<wbr>State<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="actionsrequired_csharp">
+<a href="#actionsrequired_csharp" style="color: inherit; text-decoration: inherit;">Actions<wbr>Required</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Actions required (if any).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="description_csharp">
+<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Description of the connection state.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="status_csharp">
+<a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Status of the connection.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="actionsrequired_go">
+<a href="#actionsrequired_go" style="color: inherit; text-decoration: inherit;">Actions<wbr>Required</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Actions required (if any).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="description_go">
+<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Description of the connection state.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="status_go">
+<a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Status of the connection.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="actionsrequired_nodejs">
+<a href="#actionsrequired_nodejs" style="color: inherit; text-decoration: inherit;">actions<wbr>Required</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Actions required (if any).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="description_nodejs">
+<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Description of the connection state.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="status_nodejs">
+<a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Status of the connection.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="actions_required_python">
+<a href="#actions_required_python" style="color: inherit; text-decoration: inherit;">actions_<wbr>required</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Actions required (if any).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="description_python">
+<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Description of the connection state.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="status_python">
+<a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Status of the connection.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="inboundiprule">Inbound<wbr>Ip<wbr>Rule</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="action_csharp">
+<a href="#action_csharp" style="color: inherit; text-decoration: inherit;">Action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#ipactiontype">Pulumi.<wbr>Azure<wbr>Native.<wbr>Event<wbr>Grid.<wbr>Ip<wbr>Action<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}Action to perform based on the match or no match of the IpMask.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ipmask_csharp">
+<a href="#ipmask_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Mask</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}IP Address in CIDR notation e.g., 10.0.0.0/8.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="action_go">
+<a href="#action_go" style="color: inherit; text-decoration: inherit;">Action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#ipactiontype">Ip<wbr>Action<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}Action to perform based on the match or no match of the IpMask.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ipmask_go">
+<a href="#ipmask_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Mask</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}IP Address in CIDR notation e.g., 10.0.0.0/8.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="action_nodejs">
+<a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#ipactiontype">Ip<wbr>Action<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}Action to perform based on the match or no match of the IpMask.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ipmask_nodejs">
+<a href="#ipmask_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Mask</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}IP Address in CIDR notation e.g., 10.0.0.0/8.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="action_python">
+<a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str | <a href="#ipactiontype">Ip<wbr>Action<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}Action to perform based on the match or no match of the IpMask.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ip_mask_python">
+<a href="#ip_mask_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>mask</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}IP Address in CIDR notation e.g., 10.0.0.0/8.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="inboundipruleresponse">Inbound<wbr>Ip<wbr>Rule<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="action_csharp">
+<a href="#action_csharp" style="color: inherit; text-decoration: inherit;">Action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Action to perform based on the match or no match of the IpMask.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ipmask_csharp">
+<a href="#ipmask_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Mask</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}IP Address in CIDR notation e.g., 10.0.0.0/8.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="action_go">
+<a href="#action_go" style="color: inherit; text-decoration: inherit;">Action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Action to perform based on the match or no match of the IpMask.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ipmask_go">
+<a href="#ipmask_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Mask</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}IP Address in CIDR notation e.g., 10.0.0.0/8.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="action_nodejs">
+<a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Action to perform based on the match or no match of the IpMask.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ipmask_nodejs">
+<a href="#ipmask_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Mask</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}IP Address in CIDR notation e.g., 10.0.0.0/8.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="action_python">
+<a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Action to perform based on the match or no match of the IpMask.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ip_mask_python">
+<a href="#ip_mask_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>mask</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}IP Address in CIDR notation e.g., 10.0.0.0/8.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="ipactiontype">Ip<wbr>Action<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Allow</dt>
+    <dd>Allow</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Ip<wbr>Action<wbr>Type<wbr>Allow</dt>
+    <dd>Allow</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Allow</dt>
+    <dd>Allow</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>ALLOW</dt>
+    <dd>Allow</dd></dl>
+{{% /choosable %}}
+
+<h4 id="privateendpointconnectionresponse">Private<wbr>Endpoint<wbr>Connection<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Fully qualified identifier of the resource.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the resource.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Type of the resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="groupids_csharp">
+<a href="#groupids_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}GroupIds from the private link service resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="privateendpoint_csharp">
+<a href="#privateendpoint_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#privateendpointresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The Private Endpoint resource for this Connection.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="privatelinkserviceconnectionstate_csharp">
+<a href="#privatelinkserviceconnectionstate_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#connectionstateresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Connection<wbr>State<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Details about the state of the connection.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="provisioningstate_csharp">
+<a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Provisioning state of the Private Endpoint Connection.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Fully qualified identifier of the resource.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the resource.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Type of the resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="groupids_go">
+<a href="#groupids_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}GroupIds from the private link service resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="privateendpoint_go">
+<a href="#privateendpoint_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#privateendpointresponse">Private<wbr>Endpoint<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The Private Endpoint resource for this Connection.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="privatelinkserviceconnectionstate_go">
+<a href="#privatelinkserviceconnectionstate_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#connectionstateresponse">Connection<wbr>State<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Details about the state of the connection.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="provisioningstate_go">
+<a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Provisioning state of the Private Endpoint Connection.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Fully qualified identifier of the resource.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the resource.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Type of the resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="groupids_nodejs">
+<a href="#groupids_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}GroupIds from the private link service resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="privateendpoint_nodejs">
+<a href="#privateendpoint_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Endpoint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#privateendpointresponse">Private<wbr>Endpoint<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The Private Endpoint resource for this Connection.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="privatelinkserviceconnectionstate_nodejs">
+<a href="#privatelinkserviceconnectionstate_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#connectionstateresponse">Connection<wbr>State<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Details about the state of the connection.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="provisioningstate_nodejs">
+<a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Provisioning state of the Private Endpoint Connection.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Fully qualified identifier of the resource.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Name of the resource.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Type of the resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="group_ids_python">
+<a href="#group_ids_python" style="color: inherit; text-decoration: inherit;">group_<wbr>ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}GroupIds from the private link service resource.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="private_endpoint_python">
+<a href="#private_endpoint_python" style="color: inherit; text-decoration: inherit;">private_<wbr>endpoint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#privateendpointresponse">Private<wbr>Endpoint<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The Private Endpoint resource for this Connection.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="private_link_service_connection_state_python">
+<a href="#private_link_service_connection_state_python" style="color: inherit; text-decoration: inherit;">private_<wbr>link_<wbr>service_<wbr>connection_<wbr>state</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#connectionstateresponse">Connection<wbr>State<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Details about the state of the connection.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="provisioning_state_python">
+<a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Provisioning state of the Private Endpoint Connection.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="privateendpointresponse">Private<wbr>Endpoint<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARM identifier for Private Endpoint.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARM identifier for Private Endpoint.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARM identifier for Private Endpoint.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ARM identifier for Private Endpoint.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="publicnetworkaccess">Public<wbr>Network<wbr>Access</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Enabled</dt>
+    <dd>Enabled</dd><dt>Disabled</dt>
+    <dd>Disabled</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Public<wbr>Network<wbr>Access<wbr>Enabled</dt>
+    <dd>Enabled</dd><dt>Public<wbr>Network<wbr>Access<wbr>Disabled</dt>
+    <dd>Disabled</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Enabled</dt>
+    <dd>Enabled</dd><dt>Disabled</dt>
+    <dd>Disabled</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>ENABLED</dt>
+    <dd>Enabled</dd><dt>DISABLED</dt>
+    <dd>Disabled</dd></dl>
+{{% /choosable %}}
 
 <h4 id="systemdataresponse">System<wbr>Data<wbr>Response</h4>
 

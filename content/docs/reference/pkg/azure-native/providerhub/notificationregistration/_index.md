@@ -349,7 +349,7 @@ const notificationRegistration = new azure_native.providerhub.NotificationRegist
 
 ## NotificationRegistration Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Architecture and Concepts docs.
 
 ### Inputs
 
@@ -853,6 +853,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#notificationmode">Pulumi.<wbr>Azure<wbr>Native.<wbr>Provider<wbr>Hub.<wbr>Notification<wbr>Mode</a></span>
     </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="provisioningstate_csharp">
+<a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#provisioningstate">Pulumi.<wbr>Azure<wbr>Native.<wbr>Provider<wbr>Hub.<wbr>Provisioning<wbr>State</a></span>
+    </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -888,6 +896,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#notificationmode">Notification<wbr>Mode</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="provisioningstate_go">
+<a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#provisioningstate">Provisioning<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -925,6 +941,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#notificationmode">Notification<wbr>Mode</a></span>
     </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="provisioningstate_nodejs">
+<a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#provisioningstate">Provisioning<wbr>State</a></span>
+    </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -961,6 +985,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#notificationmode">Notification<wbr>Mode</a></span>
     </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="provisioning_state_python">
+<a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str | <a href="#provisioningstate">Provisioning<wbr>State</a></span>
+    </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -995,6 +1027,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="notificationmode_csharp">
 <a href="#notificationmode_csharp" style="color: inherit; text-decoration: inherit;">Notification<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="provisioningstate_csharp">
+<a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -1035,6 +1075,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="provisioningstate_go">
+<a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1067,6 +1115,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="notificationmode_nodejs">
 <a href="#notificationmode_nodejs" style="color: inherit; text-decoration: inherit;">notification<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="provisioningstate_nodejs">
+<a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -1107,7 +1163,85 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="provisioning_state_python">
+<a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="provisioningstate">Provisioning<wbr>State</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Not<wbr>Specified</dt>
+    <dd>NotSpecified</dd><dt>Accepted</dt>
+    <dd>Accepted</dd><dt>Running</dt>
+    <dd>Running</dd><dt>Creating</dt>
+    <dd>Creating</dd><dt>Created</dt>
+    <dd>Created</dd><dt>Deleting</dt>
+    <dd>Deleting</dd><dt>Deleted</dt>
+    <dd>Deleted</dd><dt>Canceled</dt>
+    <dd>Canceled</dd><dt>Failed</dt>
+    <dd>Failed</dd><dt>Succeeded</dt>
+    <dd>Succeeded</dd><dt>Moving<wbr>Resources</dt>
+    <dd>MovingResources</dd><dt>Transient<wbr>Failure</dt>
+    <dd>TransientFailure</dd><dt>Rollout<wbr>In<wbr>Progress</dt>
+    <dd>RolloutInProgress</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Provisioning<wbr>State<wbr>Not<wbr>Specified</dt>
+    <dd>NotSpecified</dd><dt>Provisioning<wbr>State<wbr>Accepted</dt>
+    <dd>Accepted</dd><dt>Provisioning<wbr>State<wbr>Running</dt>
+    <dd>Running</dd><dt>Provisioning<wbr>State<wbr>Creating</dt>
+    <dd>Creating</dd><dt>Provisioning<wbr>State<wbr>Created</dt>
+    <dd>Created</dd><dt>Provisioning<wbr>State<wbr>Deleting</dt>
+    <dd>Deleting</dd><dt>Provisioning<wbr>State<wbr>Deleted</dt>
+    <dd>Deleted</dd><dt>Provisioning<wbr>State<wbr>Canceled</dt>
+    <dd>Canceled</dd><dt>Provisioning<wbr>State<wbr>Failed</dt>
+    <dd>Failed</dd><dt>Provisioning<wbr>State<wbr>Succeeded</dt>
+    <dd>Succeeded</dd><dt>Provisioning<wbr>State<wbr>Moving<wbr>Resources</dt>
+    <dd>MovingResources</dd><dt>Provisioning<wbr>State<wbr>Transient<wbr>Failure</dt>
+    <dd>TransientFailure</dd><dt>Provisioning<wbr>State<wbr>Rollout<wbr>In<wbr>Progress</dt>
+    <dd>RolloutInProgress</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Not<wbr>Specified</dt>
+    <dd>NotSpecified</dd><dt>Accepted</dt>
+    <dd>Accepted</dd><dt>Running</dt>
+    <dd>Running</dd><dt>Creating</dt>
+    <dd>Creating</dd><dt>Created</dt>
+    <dd>Created</dd><dt>Deleting</dt>
+    <dd>Deleting</dd><dt>Deleted</dt>
+    <dd>Deleted</dd><dt>Canceled</dt>
+    <dd>Canceled</dd><dt>Failed</dt>
+    <dd>Failed</dd><dt>Succeeded</dt>
+    <dd>Succeeded</dd><dt>Moving<wbr>Resources</dt>
+    <dd>MovingResources</dd><dt>Transient<wbr>Failure</dt>
+    <dd>TransientFailure</dd><dt>Rollout<wbr>In<wbr>Progress</dt>
+    <dd>RolloutInProgress</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>NOT_SPECIFIED</dt>
+    <dd>NotSpecified</dd><dt>ACCEPTED</dt>
+    <dd>Accepted</dd><dt>RUNNING</dt>
+    <dd>Running</dd><dt>CREATING</dt>
+    <dd>Creating</dd><dt>CREATED</dt>
+    <dd>Created</dd><dt>DELETING</dt>
+    <dd>Deleting</dd><dt>DELETED</dt>
+    <dd>Deleted</dd><dt>CANCELED</dt>
+    <dd>Canceled</dd><dt>FAILED</dt>
+    <dd>Failed</dd><dt>SUCCEEDED</dt>
+    <dd>Succeeded</dd><dt>MOVING_RESOURCES</dt>
+    <dd>MovingResources</dd><dt>TRANSIENT_FAILURE</dt>
+    <dd>TransientFailure</dd><dt>ROLLOUT_IN_PROGRESS</dt>
+    <dd>RolloutInProgress</dd></dl>
 {{% /choosable %}}
 ## Import
 

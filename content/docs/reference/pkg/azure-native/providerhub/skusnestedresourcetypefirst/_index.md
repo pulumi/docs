@@ -211,6 +211,7 @@ const skusNestedResourceTypeFirst = new azure_native.providerhub.SkusNestedResou
                                 <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
                                 <span class="nx">nested_resource_type_first</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                                 <span class="nx">provider_namespace</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                <span class="nx">provisioning_state</span><span class="p">:</span> <span class="nx">Optional[Union[str, ProvisioningState]]</span> = None<span class="p">,</span>
                                 <span class="nx">resource_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                                 <span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                                 <span class="nx">sku_settings</span><span class="p">:</span> <span class="nx">Optional[Sequence[SkuSettingArgs]]</span> = None<span class="p">)</span>
@@ -332,7 +333,7 @@ const skusNestedResourceTypeFirst = new azure_native.providerhub.SkusNestedResou
 
 ## SkusNestedResourceTypeFirst Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Architecture and Concepts docs.
 
 ### Inputs
 
@@ -372,6 +373,14 @@ The SkusNestedResourceTypeFirst resource accepts the following [input]({{< relre
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#skusetting">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Provider<wbr>Hub.<wbr>Inputs.<wbr>Sku<wbr>Setting<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="provisioningstate_csharp">
+<a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#provisioningstate">Pulumi.<wbr>Azure<wbr>Native.<wbr>Provider<wbr>Hub.<wbr>Provisioning<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -419,6 +428,14 @@ The SkusNestedResourceTypeFirst resource accepts the following [input]({{< relre
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="provisioningstate_go">
+<a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#provisioningstate">Provisioning<wbr>State</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="sku_go">
 <a href="#sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
@@ -463,6 +480,14 @@ The SkusNestedResourceTypeFirst resource accepts the following [input]({{< relre
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="provisioningstate_nodejs">
+<a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#provisioningstate">Provisioning<wbr>State</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="sku_nodejs">
 <a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
 </span>
@@ -504,6 +529,14 @@ The SkusNestedResourceTypeFirst resource accepts the following [input]({{< relre
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#skusetting">Sequence[Sku<wbr>Setting<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="provisioning_state_python">
+<a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str | <a href="#provisioningstate">Provisioning<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -676,6 +709,76 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Supporting Types
 
 
+
+<h4 id="provisioningstate">Provisioning<wbr>State</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Not<wbr>Specified</dt>
+    <dd>NotSpecified</dd><dt>Accepted</dt>
+    <dd>Accepted</dd><dt>Running</dt>
+    <dd>Running</dd><dt>Creating</dt>
+    <dd>Creating</dd><dt>Created</dt>
+    <dd>Created</dd><dt>Deleting</dt>
+    <dd>Deleting</dd><dt>Deleted</dt>
+    <dd>Deleted</dd><dt>Canceled</dt>
+    <dd>Canceled</dd><dt>Failed</dt>
+    <dd>Failed</dd><dt>Succeeded</dt>
+    <dd>Succeeded</dd><dt>Moving<wbr>Resources</dt>
+    <dd>MovingResources</dd><dt>Transient<wbr>Failure</dt>
+    <dd>TransientFailure</dd><dt>Rollout<wbr>In<wbr>Progress</dt>
+    <dd>RolloutInProgress</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Provisioning<wbr>State<wbr>Not<wbr>Specified</dt>
+    <dd>NotSpecified</dd><dt>Provisioning<wbr>State<wbr>Accepted</dt>
+    <dd>Accepted</dd><dt>Provisioning<wbr>State<wbr>Running</dt>
+    <dd>Running</dd><dt>Provisioning<wbr>State<wbr>Creating</dt>
+    <dd>Creating</dd><dt>Provisioning<wbr>State<wbr>Created</dt>
+    <dd>Created</dd><dt>Provisioning<wbr>State<wbr>Deleting</dt>
+    <dd>Deleting</dd><dt>Provisioning<wbr>State<wbr>Deleted</dt>
+    <dd>Deleted</dd><dt>Provisioning<wbr>State<wbr>Canceled</dt>
+    <dd>Canceled</dd><dt>Provisioning<wbr>State<wbr>Failed</dt>
+    <dd>Failed</dd><dt>Provisioning<wbr>State<wbr>Succeeded</dt>
+    <dd>Succeeded</dd><dt>Provisioning<wbr>State<wbr>Moving<wbr>Resources</dt>
+    <dd>MovingResources</dd><dt>Provisioning<wbr>State<wbr>Transient<wbr>Failure</dt>
+    <dd>TransientFailure</dd><dt>Provisioning<wbr>State<wbr>Rollout<wbr>In<wbr>Progress</dt>
+    <dd>RolloutInProgress</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Not<wbr>Specified</dt>
+    <dd>NotSpecified</dd><dt>Accepted</dt>
+    <dd>Accepted</dd><dt>Running</dt>
+    <dd>Running</dd><dt>Creating</dt>
+    <dd>Creating</dd><dt>Created</dt>
+    <dd>Created</dd><dt>Deleting</dt>
+    <dd>Deleting</dd><dt>Deleted</dt>
+    <dd>Deleted</dd><dt>Canceled</dt>
+    <dd>Canceled</dd><dt>Failed</dt>
+    <dd>Failed</dd><dt>Succeeded</dt>
+    <dd>Succeeded</dd><dt>Moving<wbr>Resources</dt>
+    <dd>MovingResources</dd><dt>Transient<wbr>Failure</dt>
+    <dd>TransientFailure</dd><dt>Rollout<wbr>In<wbr>Progress</dt>
+    <dd>RolloutInProgress</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>NOT_SPECIFIED</dt>
+    <dd>NotSpecified</dd><dt>ACCEPTED</dt>
+    <dd>Accepted</dd><dt>RUNNING</dt>
+    <dd>Running</dd><dt>CREATING</dt>
+    <dd>Creating</dd><dt>CREATED</dt>
+    <dd>Created</dd><dt>DELETING</dt>
+    <dd>Deleting</dd><dt>DELETED</dt>
+    <dd>Deleted</dd><dt>CANCELED</dt>
+    <dd>Canceled</dd><dt>FAILED</dt>
+    <dd>Failed</dd><dt>SUCCEEDED</dt>
+    <dd>Succeeded</dd><dt>MOVING_RESOURCES</dt>
+    <dd>MovingResources</dd><dt>TRANSIENT_FAILURE</dt>
+    <dd>TransientFailure</dd><dt>ROLLOUT_IN_PROGRESS</dt>
+    <dd>RolloutInProgress</dd></dl>
+{{% /choosable %}}
 
 <h4 id="skucapability">Sku<wbr>Capability</h4>
 
@@ -1436,6 +1539,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#skusettingresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Provider<wbr>Hub.<wbr>Inputs.<wbr>Sku<wbr>Setting<wbr>Response&gt;</a></span>
     </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="provisioningstate_csharp">
+<a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1447,6 +1558,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#skusettingresponse">[]Sku<wbr>Setting<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="provisioningstate_go">
+<a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -1460,6 +1579,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#skusettingresponse">Sku<wbr>Setting<wbr>Response[]</a></span>
     </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="provisioningstate_nodejs">
+<a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1471,6 +1598,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#skusettingresponse">Sequence[Sku<wbr>Setting<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="provisioning_state_python">
+<a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}

@@ -264,7 +264,7 @@ const factory = new azure_native.datafactory.Factory("factory", {
 
 ## Factory Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Architecture and Concepts docs.
 
 ### Inputs
 
@@ -1262,6 +1262,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Root folder.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="clientid_csharp">
+<a href="#clientid_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}GitHub bring your own app client id.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="clientsecret_csharp">
+<a href="#clientsecret_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Secret</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#githubclientsecret">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Git<wbr>Hub<wbr>Client<wbr>Secret</a></span>
+    </dt>
+    <dd>{{% md %}}GitHub bring your own app client secret information.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="hostname_csharp">
 <a href="#hostname_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Name</a>
 </span>
@@ -1313,6 +1329,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Root folder.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="clientid_go">
+<a href="#clientid_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}GitHub bring your own app client id.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="clientsecret_go">
+<a href="#clientsecret_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Secret</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#githubclientsecret">Git<wbr>Hub<wbr>Client<wbr>Secret</a></span>
+    </dt>
+    <dd>{{% md %}}GitHub bring your own app client secret information.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hostname_go">
 <a href="#hostname_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Name</a>
@@ -1366,6 +1398,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Root folder.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="clientid_nodejs">
+<a href="#clientid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}GitHub bring your own app client id.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="clientsecret_nodejs">
+<a href="#clientsecret_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Secret</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#githubclientsecret">Git<wbr>Hub<wbr>Client<wbr>Secret</a></span>
+    </dt>
+    <dd>{{% md %}}GitHub bring your own app client secret information.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="hostname_nodejs">
 <a href="#hostname_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Name</a>
 </span>
@@ -1417,6 +1465,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Root folder.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="client_id_python">
+<a href="#client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}GitHub bring your own app client id.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="client_secret_python">
+<a href="#client_secret_python" style="color: inherit; text-decoration: inherit;">client_<wbr>secret</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#githubclientsecret">Git<wbr>Hub<wbr>Client<wbr>Secret</a></span>
+    </dt>
+    <dd>{{% md %}}GitHub bring your own app client secret information.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="host_name_python">
 <a href="#host_name_python" style="color: inherit; text-decoration: inherit;">host_<wbr>name</a>
@@ -1472,6 +1536,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Root folder.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="clientid_csharp">
+<a href="#clientid_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}GitHub bring your own app client id.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="clientsecret_csharp">
+<a href="#clientsecret_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Secret</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#githubclientsecretresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Git<wbr>Hub<wbr>Client<wbr>Secret<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}GitHub bring your own app client secret information.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="hostname_csharp">
 <a href="#hostname_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Name</a>
 </span>
@@ -1523,6 +1603,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Root folder.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="clientid_go">
+<a href="#clientid_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}GitHub bring your own app client id.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="clientsecret_go">
+<a href="#clientsecret_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Secret</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#githubclientsecretresponse">Git<wbr>Hub<wbr>Client<wbr>Secret<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}GitHub bring your own app client secret information.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hostname_go">
 <a href="#hostname_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Name</a>
@@ -1576,6 +1672,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Root folder.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="clientid_nodejs">
+<a href="#clientid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}GitHub bring your own app client id.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="clientsecret_nodejs">
+<a href="#clientsecret_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Secret</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#githubclientsecretresponse">Git<wbr>Hub<wbr>Client<wbr>Secret<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}GitHub bring your own app client secret information.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="hostname_nodejs">
 <a href="#hostname_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Name</a>
 </span>
@@ -1627,6 +1739,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Root folder.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="client_id_python">
+<a href="#client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}GitHub bring your own app client id.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="client_secret_python">
+<a href="#client_secret_python" style="color: inherit; text-decoration: inherit;">client_<wbr>secret</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#githubclientsecretresponse">Git<wbr>Hub<wbr>Client<wbr>Secret<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}GitHub bring your own app client secret information.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="host_name_python">
 <a href="#host_name_python" style="color: inherit; text-decoration: inherit;">host_<wbr>name</a>
@@ -2385,6 +2513,170 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}VSTS tenant id.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="githubclientsecret">Git<wbr>Hub<wbr>Client<wbr>Secret</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="byoasecretakvurl_csharp">
+<a href="#byoasecretakvurl_csharp" style="color: inherit; text-decoration: inherit;">Byoa<wbr>Secret<wbr>Akv<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Bring your own app client secret AKV URL.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="byoasecretname_csharp">
+<a href="#byoasecretname_csharp" style="color: inherit; text-decoration: inherit;">Byoa<wbr>Secret<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Bring your own app client secret name in AKV.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="byoasecretakvurl_go">
+<a href="#byoasecretakvurl_go" style="color: inherit; text-decoration: inherit;">Byoa<wbr>Secret<wbr>Akv<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Bring your own app client secret AKV URL.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="byoasecretname_go">
+<a href="#byoasecretname_go" style="color: inherit; text-decoration: inherit;">Byoa<wbr>Secret<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Bring your own app client secret name in AKV.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="byoasecretakvurl_nodejs">
+<a href="#byoasecretakvurl_nodejs" style="color: inherit; text-decoration: inherit;">byoa<wbr>Secret<wbr>Akv<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Bring your own app client secret AKV URL.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="byoasecretname_nodejs">
+<a href="#byoasecretname_nodejs" style="color: inherit; text-decoration: inherit;">byoa<wbr>Secret<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Bring your own app client secret name in AKV.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="byoa_secret_akv_url_python">
+<a href="#byoa_secret_akv_url_python" style="color: inherit; text-decoration: inherit;">byoa_<wbr>secret_<wbr>akv_<wbr>url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Bring your own app client secret AKV URL.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="byoa_secret_name_python">
+<a href="#byoa_secret_name_python" style="color: inherit; text-decoration: inherit;">byoa_<wbr>secret_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Bring your own app client secret name in AKV.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="githubclientsecretresponse">Git<wbr>Hub<wbr>Client<wbr>Secret<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="byoasecretakvurl_csharp">
+<a href="#byoasecretakvurl_csharp" style="color: inherit; text-decoration: inherit;">Byoa<wbr>Secret<wbr>Akv<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Bring your own app client secret AKV URL.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="byoasecretname_csharp">
+<a href="#byoasecretname_csharp" style="color: inherit; text-decoration: inherit;">Byoa<wbr>Secret<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Bring your own app client secret name in AKV.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="byoasecretakvurl_go">
+<a href="#byoasecretakvurl_go" style="color: inherit; text-decoration: inherit;">Byoa<wbr>Secret<wbr>Akv<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Bring your own app client secret AKV URL.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="byoasecretname_go">
+<a href="#byoasecretname_go" style="color: inherit; text-decoration: inherit;">Byoa<wbr>Secret<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Bring your own app client secret name in AKV.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="byoasecretakvurl_nodejs">
+<a href="#byoasecretakvurl_nodejs" style="color: inherit; text-decoration: inherit;">byoa<wbr>Secret<wbr>Akv<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Bring your own app client secret AKV URL.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="byoasecretname_nodejs">
+<a href="#byoasecretname_nodejs" style="color: inherit; text-decoration: inherit;">byoa<wbr>Secret<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Bring your own app client secret name in AKV.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="byoa_secret_akv_url_python">
+<a href="#byoa_secret_akv_url_python" style="color: inherit; text-decoration: inherit;">byoa_<wbr>secret_<wbr>akv_<wbr>url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Bring your own app client secret AKV URL.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="byoa_secret_name_python">
+<a href="#byoa_secret_name_python" style="color: inherit; text-decoration: inherit;">byoa_<wbr>secret_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Bring your own app client secret name in AKV.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="globalparameterspecification">Global<wbr>Parameter<wbr>Specification</h4>

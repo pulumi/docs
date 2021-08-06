@@ -286,8 +286,8 @@ import pulumi_azure_native as azure_native
 
 web_service = azure_native.machinelearning.WebService("webService",
     location="West US",
-    properties=azure_native.machinelearning.WebServicePropertiesForGraphArgs(
-        assets={
+    properties={
+        "assets": {
             "asset1": azure_native.machinelearning.AssetItemArgs(
                 location_info=azure_native.machinelearning.BlobLocationArgs(
                     credentials="",
@@ -305,14 +305,14 @@ web_service = azure_native.machinelearning.WebService("webService",
                 type="Module",
             ),
         },
-        commitment_plan=azure_native.machinelearning.CommitmentPlanArgs(
+        "commitmentPlan": azure_native.machinelearning.CommitmentPlanArgs(
             id="/subscriptions/subscriptionId/resourceGroups/resourceGroupName/providers/Microsoft.MachineLearning/commitmentPlans/commitmentPlanName",
         ),
-        description="Web Service Description",
-        diagnostics=azure_native.machinelearning.DiagnosticsConfigurationArgs(
+        "description": "Web Service Description",
+        "diagnostics": azure_native.machinelearning.DiagnosticsConfigurationArgs(
             level="None",
         ),
-        example_request=azure_native.machinelearning.ExampleRequestArgs(
+        "exampleRequest": azure_native.machinelearning.ExampleRequestArgs(
             inputs={
                 "input1": [
                     ["age"],
@@ -323,8 +323,8 @@ web_service = azure_native.machinelearning.WebService("webService",
                 ],
             },
         ),
-        expose_sample_data=True,
-        input=azure_native.machinelearning.ServiceInputOutputSpecificationArgs(
+        "exposeSampleData": True,
+        "input": azure_native.machinelearning.ServiceInputOutputSpecificationArgs(
             description="",
             properties={
                 "input1": azure_native.machinelearning.TableSpecificationArgs(
@@ -342,10 +342,10 @@ web_service = azure_native.machinelearning.WebService("webService",
             title="",
             type="object",
         ),
-        machine_learning_workspace=azure_native.machinelearning.MachineLearningWorkspaceArgs(
+        "machineLearningWorkspace": azure_native.machinelearning.MachineLearningWorkspaceArgs(
             id="workspaceId",
         ),
-        output=azure_native.machinelearning.ServiceInputOutputSpecificationArgs(
+        "output": azure_native.machinelearning.ServiceInputOutputSpecificationArgs(
             description="",
             properties={
                 "output1": azure_native.machinelearning.TableSpecificationArgs(
@@ -368,7 +368,7 @@ web_service = azure_native.machinelearning.WebService("webService",
             title="",
             type="object",
         ),
-        package=azure_native.machinelearning.GraphPackageArgs(
+        "package": azure_native.machinelearning.GraphPackageArgs(
             edges=[
                 azure_native.machinelearning.GraphEdgeArgs(
                     source_node_id="node2",
@@ -431,19 +431,19 @@ web_service = azure_native.machinelearning.WebService("webService",
                 ),
             },
         ),
-        package_type="Graph",
-        parameters={},
-        payloads_in_blob_storage=False,
-        read_only=False,
-        realtime_configuration=azure_native.machinelearning.RealtimeConfigurationArgs(
+        "packageType": "Graph",
+        "parameters": {},
+        "payloadsInBlobStorage": False,
+        "readOnly": False,
+        "realtimeConfiguration": azure_native.machinelearning.RealtimeConfigurationArgs(
             max_concurrent_calls=4,
         ),
-        storage_account=azure_native.machinelearning.StorageAccountArgs(
+        "storageAccount": azure_native.machinelearning.StorageAccountArgs(
             key="Storage_Key",
             name="Storage_Name",
         ),
-        title="Web Service Title",
-    ),
+        "title": "Web Service Title",
+    },
     resource_group_name="OneResourceGroupName",
     tags={
         "tag1": "value1",
@@ -781,7 +781,7 @@ const webService = new azure_native.machinelearning.WebService("webService", {
 
 ## WebService Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Architecture and Concepts docs.
 
 ### Inputs
 

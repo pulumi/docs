@@ -171,7 +171,7 @@ $ pulumi import azure-native:web:WebAppInstanceFunctionSlot myresource1 /subscri
 
 ## WebAppInstanceFunctionSlot Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Architecture and Concepts docs.
 
 ### Inputs
 
