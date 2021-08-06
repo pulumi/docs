@@ -1,18 +1,18 @@
 ---
-title: "Top 5 an Azure Developer Needs to Know: Serverless"
-date: 2021-07-30
-meta_desc: "Building and deploying serverless functions for Azure developers"
+title: "Top 5 Things an Azure Dev Needs to Know - Serverless"
+date: 2021-08-06
+meta_desc: "Building and deploying serverless functions with Azure."
 meta_image: azure-top-5.png
-draft: true
 authors:
     - sophia-parafina
 tags:
-    - azure functions
+    - azure
     - serverless
+    - cloud engineering
 
 ---
 
-In the previous article, we did a deep dive into virtual machines, first looking at creating and deploying a virtual machine using the Azure Portal, then repeating the process using infrastructure as code. We further demonstrated how to automate provisioning as part of cloud engineering's build and deploy processes.
+The [previous article]({{< relref "/blog/top-5-things-for-azure-devs-vm">}}) was a deep dive into virtual machines. First, we used the Azure Portal to create and deploy a virtual machine; then, we repeated the process using infrastructure as code. We further demonstrated how to automate provisioning as part of cloud engineering's build and deploy processes.
 
 This article will explore the other end of the cloud infrastructure with serverless, which is an on-demand, fully-managed cloud architecture.
 
