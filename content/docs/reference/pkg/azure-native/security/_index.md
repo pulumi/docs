@@ -19,12 +19,8 @@ Explore the resources and functions of the azure-native.security module.
     <li><a href="connector" title="Connector"><span class="symbol resource"></span>Connector</a></li>
     <li><a href="devicesecuritygroup" title="DeviceSecurityGroup"><span class="symbol resource"></span>DeviceSecurityGroup</a></li>
     <li><a href="ingestionsetting" title="IngestionSetting"><span class="symbol resource"></span>IngestionSetting</a></li>
-    <li><a href="iotdefendersetting" title="IotDefenderSetting"><span class="symbol resource"></span>IotDefenderSetting</a></li>
     <li><a href="iotsecuritysolution" title="IotSecuritySolution"><span class="symbol resource"></span>IotSecuritySolution</a></li>
-    <li><a href="iotsensor" title="IotSensor"><span class="symbol resource"></span>IotSensor</a></li>
-    <li><a href="iotsite" title="IotSite"><span class="symbol resource"></span>IotSite</a></li>
     <li><a href="jitnetworkaccesspolicy" title="JitNetworkAccessPolicy"><span class="symbol resource"></span>JitNetworkAccessPolicy</a></li>
-    <li><a href="onpremiseiotsensor" title="OnPremiseIotSensor"><span class="symbol resource"></span>OnPremiseIotSensor</a></li>
     <li><a href="securitycontact" title="SecurityContact"><span class="symbol resource"></span>SecurityContact</a></li>
     <li><a href="servervulnerabilityassessment" title="ServerVulnerabilityAssessment"><span class="symbol resource"></span>ServerVulnerabilityAssessment</a></li>
     <li><a href="sqlvulnerabilityassessmentbaselinerule" title="SqlVulnerabilityAssessmentBaselineRule"><span class="symbol resource"></span>SqlVulnerabilityAssessmentBaselineRule</a></li>
@@ -41,12 +37,8 @@ Explore the resources and functions of the azure-native.security module.
     <li><a href="getconnector" title="GetConnector"><span class="symbol function"></span>GetConnector</a></li>
     <li><a href="getdevicesecuritygroup" title="GetDeviceSecurityGroup"><span class="symbol function"></span>GetDeviceSecurityGroup</a></li>
     <li><a href="getingestionsetting" title="GetIngestionSetting"><span class="symbol function"></span>GetIngestionSetting</a></li>
-    <li><a href="getiotdefendersetting" title="GetIotDefenderSetting"><span class="symbol function"></span>GetIotDefenderSetting</a></li>
     <li><a href="getiotsecuritysolution" title="GetIotSecuritySolution"><span class="symbol function"></span>GetIotSecuritySolution</a></li>
-    <li><a href="getiotsensor" title="GetIotSensor"><span class="symbol function"></span>GetIotSensor</a></li>
-    <li><a href="getiotsite" title="GetIotSite"><span class="symbol function"></span>GetIotSite</a></li>
     <li><a href="getjitnetworkaccesspolicy" title="GetJitNetworkAccessPolicy"><span class="symbol function"></span>GetJitNetworkAccessPolicy</a></li>
-    <li><a href="getonpremiseiotsensor" title="GetOnPremiseIotSensor"><span class="symbol function"></span>GetOnPremiseIotSensor</a></li>
     <li><a href="getsecuritycontact" title="GetSecurityContact"><span class="symbol function"></span>GetSecurityContact</a></li>
     <li><a href="getservervulnerabilityassessment" title="GetServerVulnerabilityAssessment"><span class="symbol function"></span>GetServerVulnerabilityAssessment</a></li>
     <li><a href="getsqlvulnerabilityassessmentbaselinerule" title="GetSqlVulnerabilityAssessmentBaselineRule"><span class="symbol function"></span>GetSqlVulnerabilityAssessmentBaselineRule</a></li>
@@ -62,6 +54,6 @@ Explore the resources and functions of the azure-native.security module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>1.19.0</dd>
+	<dd>1.20.0</dd>
 </dl>
 

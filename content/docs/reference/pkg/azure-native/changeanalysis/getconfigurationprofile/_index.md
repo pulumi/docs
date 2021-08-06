@@ -151,6 +151,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The identity block returned by ARM resource that supports managed identity.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="location_csharp">
+<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The location where the resource is to be deployed.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="systemdata_csharp">
 <a href="#systemdata_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
 </span>
@@ -202,6 +210,14 @@ The following output properties are available:
         <span class="property-type"><a href="#resourceidentityresponse">Resource<wbr>Identity<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The identity block returned by ARM resource that supports managed identity.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="location_go">
+<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The location where the resource is to be deployed.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="systemdata_go">
 <a href="#systemdata_go" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
@@ -255,6 +271,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The identity block returned by ARM resource that supports managed identity.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="location_nodejs">
+<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The location where the resource is to be deployed.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="systemdata_nodejs">
 <a href="#systemdata_nodejs" style="color: inherit; text-decoration: inherit;">system<wbr>Data</a>
 </span>
@@ -307,6 +331,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The identity block returned by ARM resource that supports managed identity.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="location_python">
+<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The location where the resource is to be deployed.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="system_data_python">
 <a href="#system_data_python" style="color: inherit; text-decoration: inherit;">system_<wbr>data</a>
 </span>
@@ -329,6 +361,14 @@ The following output properties are available:
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="includechangedetails_csharp">
+<a href="#includechangedetails_csharp" style="color: inherit; text-decoration: inherit;">Include<wbr>Change<wbr>Details</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The mode of includeChangeDetails feature. The flag configures whether to include or exclude content of the change before and after values.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="workspaceid_csharp">
 <a href="#workspaceid_csharp" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Id</a>
 </span>
@@ -348,6 +388,14 @@ The following output properties are available:
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="includechangedetails_go">
+<a href="#includechangedetails_go" style="color: inherit; text-decoration: inherit;">Include<wbr>Change<wbr>Details</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The mode of includeChangeDetails feature. The flag configures whether to include or exclude content of the change before and after values.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="workspaceid_go">
 <a href="#workspaceid_go" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Id</a>
@@ -369,6 +417,14 @@ The following output properties are available:
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="includechangedetails_nodejs">
+<a href="#includechangedetails_nodejs" style="color: inherit; text-decoration: inherit;">include<wbr>Change<wbr>Details</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The mode of includeChangeDetails feature. The flag configures whether to include or exclude content of the change before and after values.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="workspaceid_nodejs">
 <a href="#workspaceid_nodejs" style="color: inherit; text-decoration: inherit;">workspace<wbr>Id</a>
 </span>
@@ -388,6 +444,14 @@ The following output properties are available:
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="include_change_details_python">
+<a href="#include_change_details_python" style="color: inherit; text-decoration: inherit;">include_<wbr>change_<wbr>details</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The mode of includeChangeDetails feature. The flag configures whether to include or exclude content of the change before and after values.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="workspace_id_python">
 <a href="#workspace_id_python" style="color: inherit; text-decoration: inherit;">workspace_<wbr>id</a>

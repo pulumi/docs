@@ -125,90 +125,7 @@ class MyStack : Stack
 
 {{< example go >}}
 
-
-```go
-package main
-
-import (
-	network "github.com/pulumi/pulumi-azure-native/sdk/go/azure/network"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := network.NewLoadBalancer(ctx, "loadBalancer", &network.LoadBalancerArgs{
-			BackendAddressPools: network.BackendAddressPoolArray{
-				&network.BackendAddressPoolArgs{
-					Name: pulumi.String("be-lb"),
-				},
-			},
-			FrontendIPConfigurations: network.FrontendIPConfigurationArray{
-				&network.FrontendIPConfigurationArgs{
-					Name: pulumi.String("fe-lb"),
-					Subnet: &network.SubnetArgs{
-						Id: pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnetlb/subnets/subnetlb"),
-					},
-				},
-			},
-			InboundNatPools: network.InboundNatPoolArray{},
-			InboundNatRules: network.InboundNatRuleArray{
-				&network.InboundNatRuleArgs{
-					BackendPort:      pulumi.Int(3389),
-					EnableFloatingIP: pulumi.Bool(true),
-					EnableTcpReset:   pulumi.Bool(false),
-					FrontendIPConfiguration: &network.SubResourceArgs{
-						Id: pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/frontendIPConfigurations/fe-lb"),
-					},
-					FrontendPort:         pulumi.Int(3389),
-					IdleTimeoutInMinutes: pulumi.Int(15),
-					Name:                 pulumi.String("in-nat-rule"),
-					Protocol:             pulumi.String("Tcp"),
-				},
-			},
-			LoadBalancerName: pulumi.String("lb"),
-			LoadBalancingRules: network.LoadBalancingRuleArray{
-				&network.LoadBalancingRuleArgs{
-					BackendAddressPool: &network.SubResourceArgs{
-						Id: pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/backendAddressPools/be-lb"),
-					},
-					BackendPort:      pulumi.Int(80),
-					EnableFloatingIP: pulumi.Bool(true),
-					EnableTcpReset:   pulumi.Bool(false),
-					FrontendIPConfiguration: &network.SubResourceArgs{
-						Id: pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/frontendIPConfigurations/fe-lb"),
-					},
-					FrontendPort:         pulumi.Int(80),
-					IdleTimeoutInMinutes: pulumi.Int(15),
-					LoadDistribution:     pulumi.String("Default"),
-					Name:                 pulumi.String("rulelb"),
-					Probe: &network.SubResourceArgs{
-						Id: pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/probes/probe-lb"),
-					},
-					Protocol: pulumi.String("Tcp"),
-				},
-			},
-			Location: pulumi.String("eastus"),
-			Probes: network.ProbeArray{
-				&network.ProbeArgs{
-					IntervalInSeconds: pulumi.Int(15),
-					Name:              pulumi.String("probe-lb"),
-					NumberOfProbes:    pulumi.Int(2),
-					Port:              pulumi.Int(80),
-					Protocol:          pulumi.String("Http"),
-					RequestPath:       pulumi.String("healthcheck.aspx"),
-				},
-			},
-			ResourceGroupName: pulumi.String("rg1"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
+Coming soon!
 
 {{< /example >}}
 
@@ -462,7 +379,95 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	network "github.com/pulumi/pulumi-azure-native/sdk/go/azure/network"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := network.NewLoadBalancer(ctx, "loadBalancer", &network.LoadBalancerArgs{
+			BackendAddressPools: network.BackendAddressPoolArray{
+				&network.BackendAddressPoolArgs{
+					Name: pulumi.String("be-lb"),
+				},
+			},
+			FrontendIPConfigurations: network.FrontendIPConfigurationArray{
+				&network.FrontendIPConfigurationArgs{
+					Name: pulumi.String("fe-lb"),
+					Subnet: &network.SubnetArgs{
+						Id: pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnetlb/subnets/subnetlb"),
+					},
+					Zones: pulumi.StringArray{
+						pulumi.String("1"),
+					},
+				},
+			},
+			InboundNatPools: network.InboundNatPoolArray{},
+			InboundNatRules: network.InboundNatRuleArray{
+				&network.InboundNatRuleArgs{
+					BackendPort:      pulumi.Int(3389),
+					EnableFloatingIP: pulumi.Bool(true),
+					FrontendIPConfiguration: &network.SubResourceArgs{
+						Id: pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/frontendIPConfigurations/fe-lb"),
+					},
+					FrontendPort:         pulumi.Int(3389),
+					IdleTimeoutInMinutes: pulumi.Int(15),
+					Name:                 pulumi.String("in-nat-rule"),
+					Protocol:             pulumi.String("Tcp"),
+				},
+			},
+			LoadBalancerName: pulumi.String("lb"),
+			LoadBalancingRules: network.LoadBalancingRuleArray{
+				&network.LoadBalancingRuleArgs{
+					BackendAddressPool: &network.SubResourceArgs{
+						Id: pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/backendAddressPools/be-lb"),
+					},
+					BackendPort:      pulumi.Int(80),
+					EnableFloatingIP: pulumi.Bool(true),
+					FrontendIPConfiguration: &network.SubResourceArgs{
+						Id: pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/frontendIPConfigurations/fe-lb"),
+					},
+					FrontendPort:         pulumi.Int(80),
+					IdleTimeoutInMinutes: pulumi.Int(15),
+					LoadDistribution:     pulumi.String("Default"),
+					Name:                 pulumi.String("rulelb"),
+					Probe: &network.SubResourceArgs{
+						Id: pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/probes/probe-lb"),
+					},
+					Protocol: pulumi.String("Tcp"),
+				},
+			},
+			Location:      pulumi.String("eastus"),
+			OutboundRules: network.OutboundRuleArray{},
+			Probes: network.ProbeArray{
+				&network.ProbeArgs{
+					IntervalInSeconds: pulumi.Int(15),
+					Name:              pulumi.String("probe-lb"),
+					NumberOfProbes:    pulumi.Int(2),
+					Port:              pulumi.Int(80),
+					Protocol:          pulumi.String("Http"),
+					RequestPath:       pulumi.String("healthcheck.aspx"),
+				},
+			},
+			ResourceGroupName: pulumi.String("rg1"),
+			Sku: &network.LoadBalancerSkuArgs{
+				Name: pulumi.String("Standard"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
@@ -1629,106 +1634,7 @@ class MyStack : Stack
 
 {{< example go >}}
 
-
-```go
-package main
-
-import (
-	network "github.com/pulumi/pulumi-azure-native/sdk/go/azure/network"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := network.NewLoadBalancer(ctx, "loadBalancer", &network.LoadBalancerArgs{
-			BackendAddressPools: network.BackendAddressPoolArray{
-				&network.BackendAddressPoolArgs{
-					Name: pulumi.String("be-lb"),
-				},
-			},
-			FrontendIPConfigurations: network.FrontendIPConfigurationArray{
-				&network.FrontendIPConfigurationArgs{
-					Name: pulumi.String("fe-lb"),
-					PublicIPAddress: &network.PublicIPAddressArgs{
-						Id: pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/publicIPAddresses/pip"),
-					},
-				},
-			},
-			InboundNatPools: network.InboundNatPoolArray{},
-			InboundNatRules: network.InboundNatRuleArray{
-				&network.InboundNatRuleArgs{
-					BackendPort:      pulumi.Int(3389),
-					EnableFloatingIP: pulumi.Bool(true),
-					FrontendIPConfiguration: &network.SubResourceArgs{
-						Id: pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/frontendIPConfigurations/fe-lb"),
-					},
-					FrontendPort:         pulumi.Int(3389),
-					IdleTimeoutInMinutes: pulumi.Int(15),
-					Name:                 pulumi.String("in-nat-rule"),
-					Protocol:             pulumi.String("Tcp"),
-				},
-			},
-			LoadBalancerName: pulumi.String("lb"),
-			LoadBalancingRules: network.LoadBalancingRuleArray{
-				&network.LoadBalancingRuleArgs{
-					BackendAddressPool: &network.SubResourceArgs{
-						Id: pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/backendAddressPools/be-lb"),
-					},
-					BackendPort:         pulumi.Int(80),
-					DisableOutboundSnat: pulumi.Bool(true),
-					EnableFloatingIP:    pulumi.Bool(true),
-					FrontendIPConfiguration: &network.SubResourceArgs{
-						Id: pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/frontendIPConfigurations/fe-lb"),
-					},
-					FrontendPort:         pulumi.Int(80),
-					IdleTimeoutInMinutes: pulumi.Int(15),
-					LoadDistribution:     pulumi.String("Default"),
-					Name:                 pulumi.String("rulelb"),
-					Probe: &network.SubResourceArgs{
-						Id: pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/probes/probe-lb"),
-					},
-					Protocol: pulumi.String("Tcp"),
-				},
-			},
-			Location: pulumi.String("eastus"),
-			OutboundRules: network.OutboundRuleArray{
-				&network.OutboundRuleArgs{
-					BackendAddressPool: &network.SubResourceArgs{
-						Id: pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/backendAddressPools/be-lb"),
-					},
-					FrontendIPConfigurations: network.SubResourceArray{
-						&network.SubResourceArgs{
-							Id: pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/frontendIPConfigurations/fe-lb"),
-						},
-					},
-					Name:     pulumi.String("rule1"),
-					Protocol: pulumi.String("All"),
-				},
-			},
-			Probes: network.ProbeArray{
-				&network.ProbeArgs{
-					IntervalInSeconds: pulumi.Int(15),
-					Name:              pulumi.String("probe-lb"),
-					NumberOfProbes:    pulumi.Int(2),
-					Port:              pulumi.Int(80),
-					Protocol:          pulumi.String("Http"),
-					RequestPath:       pulumi.String("healthcheck.aspx"),
-				},
-			},
-			ResourceGroupName: pulumi.String("rg1"),
-			Sku: &network.LoadBalancerSkuArgs{
-				Name: pulumi.String("Standard"),
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
+Coming soon!
 
 {{< /example >}}
 
@@ -2044,7 +1950,7 @@ const loadBalancer = new azure_native.network.LoadBalancer("loadBalancer", {
 
 ## LoadBalancer Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Architecture and Concepts docs.
 
 ### Inputs
 

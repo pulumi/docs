@@ -1279,6 +1279,14 @@ The following output properties are available:
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="cleanup_csharp">
+<a href="#cleanup_csharp" style="color: inherit; text-decoration: inherit;">Cleanup</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Cluster will not be recycled and it will be used in next data flow activity run until TTL (time to live) is reached if this is set as false. Default is true.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="computetype_csharp">
 <a href="#computetype_csharp" style="color: inherit; text-decoration: inherit;">Compute<wbr>Type</a>
 </span>
@@ -1306,6 +1314,14 @@ The following output properties are available:
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="cleanup_go">
+<a href="#cleanup_go" style="color: inherit; text-decoration: inherit;">Cleanup</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Cluster will not be recycled and it will be used in next data flow activity run until TTL (time to live) is reached if this is set as false. Default is true.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="computetype_go">
 <a href="#computetype_go" style="color: inherit; text-decoration: inherit;">Compute<wbr>Type</a>
@@ -1335,6 +1351,14 @@ The following output properties are available:
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="cleanup_nodejs">
+<a href="#cleanup_nodejs" style="color: inherit; text-decoration: inherit;">cleanup</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Cluster will not be recycled and it will be used in next data flow activity run until TTL (time to live) is reached if this is set as false. Default is true.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="computetype_nodejs">
 <a href="#computetype_nodejs" style="color: inherit; text-decoration: inherit;">compute<wbr>Type</a>
 </span>
@@ -1362,6 +1386,14 @@ The following output properties are available:
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="cleanup_python">
+<a href="#cleanup_python" style="color: inherit; text-decoration: inherit;">cleanup</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Cluster will not be recycled and it will be used in next data flow activity run until TTL (time to live) is reached if this is set as false. Default is true.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="compute_type_python">
 <a href="#compute_type_python" style="color: inherit; text-decoration: inherit;">compute_<wbr>type</a>
@@ -1983,6 +2015,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The name of the subnet this integration runtime will join.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="subnetid_csharp">
+<a href="#subnetid_csharp" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of subnet, to which this Azure-SSIS integration runtime will be joined.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="vnetid_csharp">
 <a href="#vnetid_csharp" style="color: inherit; text-decoration: inherit;">VNet<wbr>Id</a>
 </span>
@@ -2010,6 +2050,14 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the subnet this integration runtime will join.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="subnetid_go">
+<a href="#subnetid_go" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of subnet, to which this Azure-SSIS integration runtime will be joined.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vnetid_go">
 <a href="#vnetid_go" style="color: inherit; text-decoration: inherit;">VNet<wbr>Id</a>
@@ -2039,6 +2087,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The name of the subnet this integration runtime will join.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="subnetid_nodejs">
+<a href="#subnetid_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of subnet, to which this Azure-SSIS integration runtime will be joined.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="vnetid_nodejs">
 <a href="#vnetid_nodejs" style="color: inherit; text-decoration: inherit;">v<wbr>Net<wbr>Id</a>
 </span>
@@ -2066,6 +2122,14 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the subnet this integration runtime will join.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="subnet_id_python">
+<a href="#subnet_id_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ID of subnet, to which this Azure-SSIS integration runtime will be joined.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="v_net_id_python">
 <a href="#v_net_id_python" style="color: inherit; text-decoration: inherit;">v_<wbr>net_<wbr>id</a>

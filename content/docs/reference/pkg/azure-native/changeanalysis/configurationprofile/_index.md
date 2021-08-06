@@ -215,6 +215,7 @@ const configurationProfile = new azure_native.changeanalysis.ConfigurationProfil
 <span class="k">def </span><span class="nx">ConfigurationProfile</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                          <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
                          <span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[ResourceIdentityArgs]</span> = None<span class="p">,</span>
+                         <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                          <span class="nx">profile_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                          <span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[ConfigurationProfileResourcePropertiesArgs]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
@@ -335,7 +336,7 @@ const configurationProfile = new azure_native.changeanalysis.ConfigurationProfil
 
 ## ConfigurationProfile Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Architecture and Concepts docs.
 
 ### Inputs
 
@@ -353,6 +354,14 @@ The ConfigurationProfile resource accepts the following [input]({{< relref "/doc
         <span class="property-type"><a href="#resourceidentity">Pulumi.<wbr>Azure<wbr>Native.<wbr>Change<wbr>Analysis.<wbr>Inputs.<wbr>Resource<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The identity block returned by ARM resource that supports managed identity.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="location_csharp">
+<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The location where the resource is to be deployed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="profilename_csharp">
 <a href="#profilename_csharp" style="color: inherit; text-decoration: inherit;">Profile<wbr>Name</a>
@@ -382,6 +391,14 @@ The ConfigurationProfile resource accepts the following [input]({{< relref "/doc
     </dt>
     <dd>{{% md %}}The identity block returned by ARM resource that supports managed identity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="location_go">
+<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The location where the resource is to be deployed.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="profilename_go">
 <a href="#profilename_go" style="color: inherit; text-decoration: inherit;">Profile<wbr>Name</a>
 </span>
@@ -410,6 +427,14 @@ The ConfigurationProfile resource accepts the following [input]({{< relref "/doc
     </dt>
     <dd>{{% md %}}The identity block returned by ARM resource that supports managed identity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="location_nodejs">
+<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The location where the resource is to be deployed.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="profilename_nodejs">
 <a href="#profilename_nodejs" style="color: inherit; text-decoration: inherit;">profile<wbr>Name</a>
 </span>
@@ -437,6 +462,14 @@ The ConfigurationProfile resource accepts the following [input]({{< relref "/doc
         <span class="property-type"><a href="#resourceidentity">Resource<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The identity block returned by ARM resource that supports managed identity.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="location_python">
+<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The location where the resource is to be deployed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="profile_name_python">
 <a href="#profile_name_python" style="color: inherit; text-decoration: inherit;">profile_<wbr>name</a>
@@ -621,6 +654,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="includechangedetails_csharp">
+<a href="#includechangedetails_csharp" style="color: inherit; text-decoration: inherit;">Include<wbr>Change<wbr>Details</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#changedetailsmode">Pulumi.<wbr>Azure<wbr>Native.<wbr>Change<wbr>Analysis.<wbr>Change<wbr>Details<wbr>Mode</a></span>
+    </dt>
+    <dd>{{% md %}}The mode of includeChangeDetails feature. The flag configures whether to include or exclude content of the change before and after values.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="workspaceid_csharp">
 <a href="#workspaceid_csharp" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Id</a>
 </span>
@@ -640,6 +681,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="includechangedetails_go">
+<a href="#includechangedetails_go" style="color: inherit; text-decoration: inherit;">Include<wbr>Change<wbr>Details</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#changedetailsmode">Change<wbr>Details<wbr>Mode</a></span>
+    </dt>
+    <dd>{{% md %}}The mode of includeChangeDetails feature. The flag configures whether to include or exclude content of the change before and after values.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="workspaceid_go">
 <a href="#workspaceid_go" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Id</a>
@@ -661,6 +710,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="includechangedetails_nodejs">
+<a href="#includechangedetails_nodejs" style="color: inherit; text-decoration: inherit;">include<wbr>Change<wbr>Details</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#changedetailsmode">Change<wbr>Details<wbr>Mode</a></span>
+    </dt>
+    <dd>{{% md %}}The mode of includeChangeDetails feature. The flag configures whether to include or exclude content of the change before and after values.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="workspaceid_nodejs">
 <a href="#workspaceid_nodejs" style="color: inherit; text-decoration: inherit;">workspace<wbr>Id</a>
 </span>
@@ -680,6 +737,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="include_change_details_python">
+<a href="#include_change_details_python" style="color: inherit; text-decoration: inherit;">include_<wbr>change_<wbr>details</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str | <a href="#changedetailsmode">Change<wbr>Details<wbr>Mode</a></span>
+    </dt>
+    <dd>{{% md %}}The mode of includeChangeDetails feature. The flag configures whether to include or exclude content of the change before and after values.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="workspace_id_python">
 <a href="#workspace_id_python" style="color: inherit; text-decoration: inherit;">workspace_<wbr>id</a>
@@ -703,6 +768,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="includechangedetails_csharp">
+<a href="#includechangedetails_csharp" style="color: inherit; text-decoration: inherit;">Include<wbr>Change<wbr>Details</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The mode of includeChangeDetails feature. The flag configures whether to include or exclude content of the change before and after values.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="workspaceid_csharp">
 <a href="#workspaceid_csharp" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Id</a>
 </span>
@@ -722,6 +795,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="includechangedetails_go">
+<a href="#includechangedetails_go" style="color: inherit; text-decoration: inherit;">Include<wbr>Change<wbr>Details</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The mode of includeChangeDetails feature. The flag configures whether to include or exclude content of the change before and after values.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="workspaceid_go">
 <a href="#workspaceid_go" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Id</a>
@@ -743,6 +824,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="includechangedetails_nodejs">
+<a href="#includechangedetails_nodejs" style="color: inherit; text-decoration: inherit;">include<wbr>Change<wbr>Details</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The mode of includeChangeDetails feature. The flag configures whether to include or exclude content of the change before and after values.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="workspaceid_nodejs">
 <a href="#workspaceid_nodejs" style="color: inherit; text-decoration: inherit;">workspace<wbr>Id</a>
 </span>
@@ -763,6 +852,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="include_change_details_python">
+<a href="#include_change_details_python" style="color: inherit; text-decoration: inherit;">include_<wbr>change_<wbr>details</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The mode of includeChangeDetails feature. The flag configures whether to include or exclude content of the change before and after values.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="workspace_id_python">
 <a href="#workspace_id_python" style="color: inherit; text-decoration: inherit;">workspace_<wbr>id</a>
 </span>
@@ -778,6 +875,36 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Azure Monitor workspace ARM Resource ID. The resource ID should be in the following format: /subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/Microsoft.OperationalInsights/workspaces/{workspaceName}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="changedetailsmode">Change<wbr>Details<wbr>Mode</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>None</dt>
+    <dd>None</dd><dt>Include</dt>
+    <dd>Include</dd><dt>Exclude</dt>
+    <dd>Exclude</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Change<wbr>Details<wbr>Mode<wbr>None</dt>
+    <dd>None</dd><dt>Change<wbr>Details<wbr>Mode<wbr>Include</dt>
+    <dd>Include</dd><dt>Change<wbr>Details<wbr>Mode<wbr>Exclude</dt>
+    <dd>Exclude</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>None</dt>
+    <dd>None</dd><dt>Include</dt>
+    <dd>Include</dd><dt>Exclude</dt>
+    <dd>Exclude</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>NONE</dt>
+    <dd>None</dd><dt>INCLUDE</dt>
+    <dd>Include</dd><dt>EXCLUDE</dt>
+    <dd>Exclude</dd></dl>
 {{% /choosable %}}
 
 <h4 id="configurationprofileresourceproperties">Configuration<wbr>Profile<wbr>Resource<wbr>Properties</h4>

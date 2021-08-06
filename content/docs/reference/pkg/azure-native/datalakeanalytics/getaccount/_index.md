@@ -216,6 +216,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The list of firewall rules associated with this account.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="hierarchicalqueue_csharp">
+<a href="#hierarchicalqueue_csharp" style="color: inherit; text-decoration: inherit;">Hierarchical<wbr>Queue</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datalakeanalyticsaccountpropertiesresponsehierarchicalqueue">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Lake<wbr>Analytics.<wbr>Outputs.<wbr>Data<wbr>Lake<wbr>Analytics<wbr>Account<wbr>Properties<wbr>Response<wbr>Hierarchical<wbr>Queue</a></span>
+    </dt>
+    <dd>{{% md %}}The hierarchical queue associated with this account.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="hierarchicalqueuestate_csharp">
 <a href="#hierarchicalqueuestate_csharp" style="color: inherit; text-decoration: inherit;">Hierarchical<wbr>Queue<wbr>State</a>
 </span>
@@ -255,6 +263,22 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource location.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="maxactivejobcountperuser_csharp">
+<a href="#maxactivejobcountperuser_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Active<wbr>Job<wbr>Count<wbr>Per<wbr>User</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The maximum supported active jobs under the account at the same time.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="maxjobrunningtimeinmin_csharp">
+<a href="#maxjobrunningtimeinmin_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Job<wbr>Running<wbr>Time<wbr>In<wbr>Min</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The maximum supported active jobs under the account at the same time.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="maxqueuedjobcountperuser_csharp">
 <a href="#maxqueuedjobcountperuser_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Queued<wbr>Job<wbr>Count<wbr>Per<wbr>User</a>
@@ -484,6 +508,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The list of firewall rules associated with this account.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="hierarchicalqueue_go">
+<a href="#hierarchicalqueue_go" style="color: inherit; text-decoration: inherit;">Hierarchical<wbr>Queue</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datalakeanalyticsaccountpropertiesresponsehierarchicalqueue">Data<wbr>Lake<wbr>Analytics<wbr>Account<wbr>Properties<wbr>Response<wbr>Hierarchical<wbr>Queue</a></span>
+    </dt>
+    <dd>{{% md %}}The hierarchical queue associated with this account.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="hierarchicalqueuestate_go">
 <a href="#hierarchicalqueuestate_go" style="color: inherit; text-decoration: inherit;">Hierarchical<wbr>Queue<wbr>State</a>
 </span>
@@ -523,6 +555,22 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource location.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="maxactivejobcountperuser_go">
+<a href="#maxactivejobcountperuser_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Active<wbr>Job<wbr>Count<wbr>Per<wbr>User</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The maximum supported active jobs under the account at the same time.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="maxjobrunningtimeinmin_go">
+<a href="#maxjobrunningtimeinmin_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Job<wbr>Running<wbr>Time<wbr>In<wbr>Min</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The maximum supported active jobs under the account at the same time.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="maxqueuedjobcountperuser_go">
 <a href="#maxqueuedjobcountperuser_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Queued<wbr>Job<wbr>Count<wbr>Per<wbr>User</a>
@@ -752,6 +800,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The list of firewall rules associated with this account.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="hierarchicalqueue_nodejs">
+<a href="#hierarchicalqueue_nodejs" style="color: inherit; text-decoration: inherit;">hierarchical<wbr>Queue</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datalakeanalyticsaccountpropertiesresponsehierarchicalqueue">Data<wbr>Lake<wbr>Analytics<wbr>Account<wbr>Properties<wbr>Response<wbr>Hierarchical<wbr>Queue</a></span>
+    </dt>
+    <dd>{{% md %}}The hierarchical queue associated with this account.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="hierarchicalqueuestate_nodejs">
 <a href="#hierarchicalqueuestate_nodejs" style="color: inherit; text-decoration: inherit;">hierarchical<wbr>Queue<wbr>State</a>
 </span>
@@ -791,6 +847,22 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource location.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="maxactivejobcountperuser_nodejs">
+<a href="#maxactivejobcountperuser_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Active<wbr>Job<wbr>Count<wbr>Per<wbr>User</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The maximum supported active jobs under the account at the same time.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="maxjobrunningtimeinmin_nodejs">
+<a href="#maxjobrunningtimeinmin_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Job<wbr>Running<wbr>Time<wbr>In<wbr>Min</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The maximum supported active jobs under the account at the same time.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="maxqueuedjobcountperuser_nodejs">
 <a href="#maxqueuedjobcountperuser_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Queued<wbr>Job<wbr>Count<wbr>Per<wbr>User</a>
@@ -1020,6 +1092,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The list of firewall rules associated with this account.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="hierarchical_queue_python">
+<a href="#hierarchical_queue_python" style="color: inherit; text-decoration: inherit;">hierarchical_<wbr>queue</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datalakeanalyticsaccountpropertiesresponsehierarchicalqueue">Data<wbr>Lake<wbr>Analytics<wbr>Account<wbr>Properties<wbr>Response<wbr>Hierarchical<wbr>Queue</a></span>
+    </dt>
+    <dd>{{% md %}}The hierarchical queue associated with this account.{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="hierarchical_queue_state_python">
 <a href="#hierarchical_queue_state_python" style="color: inherit; text-decoration: inherit;">hierarchical_<wbr>queue_<wbr>state</a>
 </span>
@@ -1059,6 +1139,22 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The resource location.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="max_active_job_count_per_user_python">
+<a href="#max_active_job_count_per_user_python" style="color: inherit; text-decoration: inherit;">max_<wbr>active_<wbr>job_<wbr>count_<wbr>per_<wbr>user</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The maximum supported active jobs under the account at the same time.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="max_job_running_time_in_min_python">
+<a href="#max_job_running_time_in_min_python" style="color: inherit; text-decoration: inherit;">max_<wbr>job_<wbr>running_<wbr>time_<wbr>in_<wbr>min</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The maximum supported active jobs under the account at the same time.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="max_queued_job_count_per_user_python">
 <a href="#max_queued_job_count_per_user_python" style="color: inherit; text-decoration: inherit;">max_<wbr>queued_<wbr>job_<wbr>count_<wbr>per_<wbr>user</a>
@@ -1461,6 +1557,58 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The resource type.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="datalakeanalyticsaccountpropertiesresponsehierarchicalqueue">Data<wbr>Lake<wbr>Analytics<wbr>Account<wbr>Properties<wbr>Response<wbr>Hierarchical<wbr>Queue</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="root_csharp">
+<a href="#root_csharp" style="color: inherit; text-decoration: inherit;">Root</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="root_go">
+<a href="#root_go" style="color: inherit; text-decoration: inherit;">Root</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="root_nodejs">
+<a href="#root_nodejs" style="color: inherit; text-decoration: inherit;">root</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="root_python">
+<a href="#root_python" style="color: inherit; text-decoration: inherit;">root</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="datalakestoreaccountinformationresponse">Data<wbr>Lake<wbr>Store<wbr>Account<wbr>Information<wbr>Response</h4>

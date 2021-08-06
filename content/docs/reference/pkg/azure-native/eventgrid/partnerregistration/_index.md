@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-native.eventgrid.PartnerRegistration res
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Information about a partner registration.
-API Version: 2020-04-01-preview.
+API Version: 2021-06-01-preview.
 
 {{% examples %}}
 
@@ -325,7 +325,7 @@ const partnerRegistration = new azure_native.eventgrid.PartnerRegistration("part
 
 ## PartnerRegistration Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Architecture and Concepts docs.
 
 ### Inputs
 

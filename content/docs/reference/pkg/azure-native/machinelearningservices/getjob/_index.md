@@ -389,7 +389,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Number of intervals by which to delay the first evaluation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="evaluationinterval_csharp">
 <a href="#evaluationinterval_csharp" style="color: inherit; text-decoration: inherit;">Evaluation<wbr>Interval</a>
@@ -397,7 +397,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Interval (number of runs) between policy evaluations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="slackamount_csharp">
 <a href="#slackamount_csharp" style="color: inherit; text-decoration: inherit;">Slack<wbr>Amount</a>
@@ -405,7 +405,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Absolute distance allowed from the best performing run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="slackfactor_csharp">
 <a href="#slackfactor_csharp" style="color: inherit; text-decoration: inherit;">Slack<wbr>Factor</a>
@@ -413,7 +413,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Ratio of the allowed distance from the best performing run.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -425,7 +425,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Number of intervals by which to delay the first evaluation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="evaluationinterval_go">
 <a href="#evaluationinterval_go" style="color: inherit; text-decoration: inherit;">Evaluation<wbr>Interval</a>
@@ -433,7 +433,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Interval (number of runs) between policy evaluations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="slackamount_go">
 <a href="#slackamount_go" style="color: inherit; text-decoration: inherit;">Slack<wbr>Amount</a>
@@ -441,7 +441,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Absolute distance allowed from the best performing run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="slackfactor_go">
 <a href="#slackfactor_go" style="color: inherit; text-decoration: inherit;">Slack<wbr>Factor</a>
@@ -449,7 +449,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Ratio of the allowed distance from the best performing run.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -461,7 +461,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Number of intervals by which to delay the first evaluation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="evaluationinterval_nodejs">
 <a href="#evaluationinterval_nodejs" style="color: inherit; text-decoration: inherit;">evaluation<wbr>Interval</a>
@@ -469,7 +469,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Interval (number of runs) between policy evaluations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="slackamount_nodejs">
 <a href="#slackamount_nodejs" style="color: inherit; text-decoration: inherit;">slack<wbr>Amount</a>
@@ -477,7 +477,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Absolute distance allowed from the best performing run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="slackfactor_nodejs">
 <a href="#slackfactor_nodejs" style="color: inherit; text-decoration: inherit;">slack<wbr>Factor</a>
@@ -485,7 +485,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Ratio of the allowed distance from the best performing run.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -497,7 +497,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Number of intervals by which to delay the first evaluation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="evaluation_interval_python">
 <a href="#evaluation_interval_python" style="color: inherit; text-decoration: inherit;">evaluation_<wbr>interval</a>
@@ -505,7 +505,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Interval (number of runs) between policy evaluations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="slack_amount_python">
 <a href="#slack_amount_python" style="color: inherit; text-decoration: inherit;">slack_<wbr>amount</a>
@@ -513,7 +513,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Absolute distance allowed from the best performing run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="slack_factor_python">
 <a href="#slack_factor_python" style="color: inherit; text-decoration: inherit;">slack_<wbr>factor</a>
@@ -521,7 +521,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Ratio of the allowed distance from the best performing run.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="commandjobresponse">Command<wbr>Job<wbr>Response</h4>
@@ -578,7 +578,7 @@ For local jobs, a job endpoint will have an endpoint value of FileStreamObject.{
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Specifies the job provisioning state.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -745,7 +745,7 @@ For local jobs, a job endpoint will have an endpoint value of FileStreamObject.{
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Specifies the job provisioning state.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -912,7 +912,7 @@ For local jobs, a job endpoint will have an endpoint value of FileStreamObject.{
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Specifies the job provisioning state.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -1079,7 +1079,7 @@ For local jobs, a job endpoint will have an endpoint value of FileStreamObject.{
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Specifies the job provisioning state.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -1561,7 +1561,7 @@ Private preview feature and only available to users on the allow list.{{% /md %}
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Additional properties to set on the endpoint.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1597,7 +1597,7 @@ Private preview feature and only available to users on the allow list.{{% /md %}
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Additional properties to set on the endpoint.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1633,7 +1633,7 @@ Private preview feature and only available to users on the allow list.{{% /md %}
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Additional properties to set on the endpoint.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1669,7 +1669,7 @@ Private preview feature and only available to users on the allow list.{{% /md %}
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Additional properties to set on the endpoint.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="joboutputresponse">Job<wbr>Output<wbr>Response</h4>
@@ -1885,7 +1885,7 @@ Private preview feature and only available to users on the allow list.{{% /md %}
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Number of intervals by which to delay the first evaluation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="evaluationinterval_csharp">
 <a href="#evaluationinterval_csharp" style="color: inherit; text-decoration: inherit;">Evaluation<wbr>Interval</a>
@@ -1893,7 +1893,7 @@ Private preview feature and only available to users on the allow list.{{% /md %}
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Interval (number of runs) between policy evaluations.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1905,7 +1905,7 @@ Private preview feature and only available to users on the allow list.{{% /md %}
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Number of intervals by which to delay the first evaluation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="evaluationinterval_go">
 <a href="#evaluationinterval_go" style="color: inherit; text-decoration: inherit;">Evaluation<wbr>Interval</a>
@@ -1913,7 +1913,7 @@ Private preview feature and only available to users on the allow list.{{% /md %}
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Interval (number of runs) between policy evaluations.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1925,7 +1925,7 @@ Private preview feature and only available to users on the allow list.{{% /md %}
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Number of intervals by which to delay the first evaluation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="evaluationinterval_nodejs">
 <a href="#evaluationinterval_nodejs" style="color: inherit; text-decoration: inherit;">evaluation<wbr>Interval</a>
@@ -1933,7 +1933,7 @@ Private preview feature and only available to users on the allow list.{{% /md %}
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Interval (number of runs) between policy evaluations.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1945,7 +1945,7 @@ Private preview feature and only available to users on the allow list.{{% /md %}
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Number of intervals by which to delay the first evaluation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="evaluation_interval_python">
 <a href="#evaluation_interval_python" style="color: inherit; text-decoration: inherit;">evaluation_<wbr>interval</a>
@@ -1953,7 +1953,7 @@ Private preview feature and only available to users on the allow list.{{% /md %}
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Interval (number of runs) between policy evaluations.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="mpiresponse">Mpi<wbr>Response</h4>
@@ -1969,7 +1969,7 @@ Private preview feature and only available to users on the allow list.{{% /md %}
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Number of processes per MPI node.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1981,7 +1981,7 @@ Private preview feature and only available to users on the allow list.{{% /md %}
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Number of processes per MPI node.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1993,7 +1993,7 @@ Private preview feature and only available to users on the allow list.{{% /md %}
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Number of processes per MPI node.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -2005,7 +2005,7 @@ Private preview feature and only available to users on the allow list.{{% /md %}
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Number of processes per MPI node.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="objectiveresponse">Objective<wbr>Response</h4>
@@ -2029,7 +2029,7 @@ Private preview feature and only available to users on the allow list.{{% /md %}
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Name of the metric to optimize.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -2049,7 +2049,7 @@ Private preview feature and only available to users on the allow list.{{% /md %}
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Name of the metric to optimize.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2069,7 +2069,7 @@ Private preview feature and only available to users on the allow list.{{% /md %}
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Name of the metric to optimize.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -2089,7 +2089,7 @@ Private preview feature and only available to users on the allow list.{{% /md %}
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Name of the metric to optimize.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="outputdatabindingresponse">Output<wbr>Data<wbr>Binding<wbr>Response</h4>
@@ -2330,7 +2330,7 @@ For local jobs, a job endpoint will have an endpoint value of FileStreamObject.{
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#objectiveresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Objective<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Optimization objective.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="output_csharp">
 <a href="#output_csharp" style="color: inherit; text-decoration: inherit;">Output</a>
@@ -2346,7 +2346,7 @@ For local jobs, a job endpoint will have an endpoint value of FileStreamObject.{
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Specifies the job provisioning state.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="searchspace_csharp">
 <a href="#searchspace_csharp" style="color: inherit; text-decoration: inherit;">Search<wbr>Space</a>
@@ -2378,7 +2378,7 @@ For local jobs, a job endpoint will have an endpoint value of FileStreamObject.{
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#banditpolicyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Bandit<wbr>Policy<wbr>Response</a> | <a href="#medianstoppingpolicyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Median<wbr>Stopping<wbr>Policy<wbr>Response</a> | <a href="#truncationselectionpolicyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Truncation<wbr>Selection<wbr>Policy<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Early termination policies enable canceling poor-performing runs before they complete{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Early termination policies enable canceling poor-performing runs before they complete.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="experimentname_csharp">
 <a href="#experimentname_csharp" style="color: inherit; text-decoration: inherit;">Experiment<wbr>Name</a>
@@ -2403,7 +2403,7 @@ Defaults to AmlToken if null.{{% /md %}}</dd><dt class="property-optional"
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}An upper bound on the number of trials performed in parallel.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxtotaltrials_csharp">
 <a href="#maxtotaltrials_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Total<wbr>Trials</a>
@@ -2411,7 +2411,7 @@ Defaults to AmlToken if null.{{% /md %}}</dd><dt class="property-optional"
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}An upper bound on the number of trials to perform.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="priority_csharp">
 <a href="#priority_csharp" style="color: inherit; text-decoration: inherit;">Priority</a>
@@ -2489,7 +2489,7 @@ For local jobs, a job endpoint will have an endpoint value of FileStreamObject.{
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#objectiveresponse">Objective<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Optimization objective.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="output_go">
 <a href="#output_go" style="color: inherit; text-decoration: inherit;">Output</a>
@@ -2505,7 +2505,7 @@ For local jobs, a job endpoint will have an endpoint value of FileStreamObject.{
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Specifies the job provisioning state.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="searchspace_go">
 <a href="#searchspace_go" style="color: inherit; text-decoration: inherit;">Search<wbr>Space</a>
@@ -2537,7 +2537,7 @@ For local jobs, a job endpoint will have an endpoint value of FileStreamObject.{
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#banditpolicyresponse">Bandit<wbr>Policy<wbr>Response</a> | <a href="#medianstoppingpolicyresponse">Median<wbr>Stopping<wbr>Policy<wbr>Response</a> | <a href="#truncationselectionpolicyresponse">Truncation<wbr>Selection<wbr>Policy<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Early termination policies enable canceling poor-performing runs before they complete{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Early termination policies enable canceling poor-performing runs before they complete.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="experimentname_go">
 <a href="#experimentname_go" style="color: inherit; text-decoration: inherit;">Experiment<wbr>Name</a>
@@ -2562,7 +2562,7 @@ Defaults to AmlToken if null.{{% /md %}}</dd><dt class="property-optional"
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}An upper bound on the number of trials performed in parallel.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxtotaltrials_go">
 <a href="#maxtotaltrials_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Total<wbr>Trials</a>
@@ -2570,7 +2570,7 @@ Defaults to AmlToken if null.{{% /md %}}</dd><dt class="property-optional"
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}An upper bound on the number of trials to perform.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="priority_go">
 <a href="#priority_go" style="color: inherit; text-decoration: inherit;">Priority</a>
@@ -2648,7 +2648,7 @@ For local jobs, a job endpoint will have an endpoint value of FileStreamObject.{
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#objectiveresponse">Objective<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Optimization objective.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="output_nodejs">
 <a href="#output_nodejs" style="color: inherit; text-decoration: inherit;">output</a>
@@ -2664,7 +2664,7 @@ For local jobs, a job endpoint will have an endpoint value of FileStreamObject.{
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Specifies the job provisioning state.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="searchspace_nodejs">
 <a href="#searchspace_nodejs" style="color: inherit; text-decoration: inherit;">search<wbr>Space</a>
@@ -2696,7 +2696,7 @@ For local jobs, a job endpoint will have an endpoint value of FileStreamObject.{
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#banditpolicyresponse">Bandit<wbr>Policy<wbr>Response</a> | <a href="#medianstoppingpolicyresponse">Median<wbr>Stopping<wbr>Policy<wbr>Response</a> | <a href="#truncationselectionpolicyresponse">Truncation<wbr>Selection<wbr>Policy<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Early termination policies enable canceling poor-performing runs before they complete{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Early termination policies enable canceling poor-performing runs before they complete.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="experimentname_nodejs">
 <a href="#experimentname_nodejs" style="color: inherit; text-decoration: inherit;">experiment<wbr>Name</a>
@@ -2721,7 +2721,7 @@ Defaults to AmlToken if null.{{% /md %}}</dd><dt class="property-optional"
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}An upper bound on the number of trials performed in parallel.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxtotaltrials_nodejs">
 <a href="#maxtotaltrials_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Total<wbr>Trials</a>
@@ -2729,7 +2729,7 @@ Defaults to AmlToken if null.{{% /md %}}</dd><dt class="property-optional"
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}An upper bound on the number of trials to perform.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="priority_nodejs">
 <a href="#priority_nodejs" style="color: inherit; text-decoration: inherit;">priority</a>
@@ -2807,7 +2807,7 @@ For local jobs, a job endpoint will have an endpoint value of FileStreamObject.{
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#objectiveresponse">Objective<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Optimization objective.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="output_python">
 <a href="#output_python" style="color: inherit; text-decoration: inherit;">output</a>
@@ -2823,7 +2823,7 @@ For local jobs, a job endpoint will have an endpoint value of FileStreamObject.{
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}Specifies the job provisioning state.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="search_space_python">
 <a href="#search_space_python" style="color: inherit; text-decoration: inherit;">search_<wbr>space</a>
@@ -2855,7 +2855,7 @@ For local jobs, a job endpoint will have an endpoint value of FileStreamObject.{
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#banditpolicyresponse">Bandit<wbr>Policy<wbr>Response</a> | <a href="#medianstoppingpolicyresponse">Median<wbr>Stopping<wbr>Policy<wbr>Response</a> | <a href="#truncationselectionpolicyresponse">Truncation<wbr>Selection<wbr>Policy<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Early termination policies enable canceling poor-performing runs before they complete{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Early termination policies enable canceling poor-performing runs before they complete.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="experiment_name_python">
 <a href="#experiment_name_python" style="color: inherit; text-decoration: inherit;">experiment_<wbr>name</a>
@@ -2880,7 +2880,7 @@ Defaults to AmlToken if null.{{% /md %}}</dd><dt class="property-optional"
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}An upper bound on the number of trials performed in parallel.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_total_trials_python">
 <a href="#max_total_trials_python" style="color: inherit; text-decoration: inherit;">max_<wbr>total_<wbr>trials</a>
@@ -2888,7 +2888,7 @@ Defaults to AmlToken if null.{{% /md %}}</dd><dt class="property-optional"
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}An upper bound on the number of trials to perform.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="priority_python">
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
@@ -3157,7 +3157,7 @@ Private preview feature and only available to users on the allow list.{{% /md %}
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Number of parameter server tasks.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="workercount_csharp">
 <a href="#workercount_csharp" style="color: inherit; text-decoration: inherit;">Worker<wbr>Count</a>
@@ -3177,7 +3177,7 @@ Private preview feature and only available to users on the allow list.{{% /md %}
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Number of parameter server tasks.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="workercount_go">
 <a href="#workercount_go" style="color: inherit; text-decoration: inherit;">Worker<wbr>Count</a>
@@ -3197,7 +3197,7 @@ Private preview feature and only available to users on the allow list.{{% /md %}
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Number of parameter server tasks.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="workercount_nodejs">
 <a href="#workercount_nodejs" style="color: inherit; text-decoration: inherit;">worker<wbr>Count</a>
@@ -3217,7 +3217,7 @@ Private preview feature and only available to users on the allow list.{{% /md %}
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Number of parameter server tasks.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="worker_count_python">
 <a href="#worker_count_python" style="color: inherit; text-decoration: inherit;">worker_<wbr>count</a>
@@ -3521,7 +3521,7 @@ Only supports duration with precision as low as Seconds.{{% /md %}}</dd></dl>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Number of intervals by which to delay the first evaluation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="evaluationinterval_csharp">
 <a href="#evaluationinterval_csharp" style="color: inherit; text-decoration: inherit;">Evaluation<wbr>Interval</a>
@@ -3529,7 +3529,7 @@ Only supports duration with precision as low as Seconds.{{% /md %}}</dd></dl>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Interval (number of runs) between policy evaluations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="truncationpercentage_csharp">
 <a href="#truncationpercentage_csharp" style="color: inherit; text-decoration: inherit;">Truncation<wbr>Percentage</a>
@@ -3537,7 +3537,7 @@ Only supports duration with precision as low as Seconds.{{% /md %}}</dd></dl>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The percentage of runs to cancel at each evaluation interval.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -3549,7 +3549,7 @@ Only supports duration with precision as low as Seconds.{{% /md %}}</dd></dl>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Number of intervals by which to delay the first evaluation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="evaluationinterval_go">
 <a href="#evaluationinterval_go" style="color: inherit; text-decoration: inherit;">Evaluation<wbr>Interval</a>
@@ -3557,7 +3557,7 @@ Only supports duration with precision as low as Seconds.{{% /md %}}</dd></dl>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Interval (number of runs) between policy evaluations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="truncationpercentage_go">
 <a href="#truncationpercentage_go" style="color: inherit; text-decoration: inherit;">Truncation<wbr>Percentage</a>
@@ -3565,7 +3565,7 @@ Only supports duration with precision as low as Seconds.{{% /md %}}</dd></dl>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The percentage of runs to cancel at each evaluation interval.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -3577,7 +3577,7 @@ Only supports duration with precision as low as Seconds.{{% /md %}}</dd></dl>
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Number of intervals by which to delay the first evaluation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="evaluationinterval_nodejs">
 <a href="#evaluationinterval_nodejs" style="color: inherit; text-decoration: inherit;">evaluation<wbr>Interval</a>
@@ -3585,7 +3585,7 @@ Only supports duration with precision as low as Seconds.{{% /md %}}</dd></dl>
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Interval (number of runs) between policy evaluations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="truncationpercentage_nodejs">
 <a href="#truncationpercentage_nodejs" style="color: inherit; text-decoration: inherit;">truncation<wbr>Percentage</a>
@@ -3593,7 +3593,7 @@ Only supports duration with precision as low as Seconds.{{% /md %}}</dd></dl>
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The percentage of runs to cancel at each evaluation interval.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -3605,7 +3605,7 @@ Only supports duration with precision as low as Seconds.{{% /md %}}</dd></dl>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Number of intervals by which to delay the first evaluation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="evaluation_interval_python">
 <a href="#evaluation_interval_python" style="color: inherit; text-decoration: inherit;">evaluation_<wbr>interval</a>
@@ -3613,7 +3613,7 @@ Only supports duration with precision as low as Seconds.{{% /md %}}</dd></dl>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Interval (number of runs) between policy evaluations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="truncation_percentage_python">
 <a href="#truncation_percentage_python" style="color: inherit; text-decoration: inherit;">truncation_<wbr>percentage</a>
@@ -3621,7 +3621,7 @@ Only supports duration with precision as low as Seconds.{{% /md %}}</dd></dl>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The percentage of runs to cancel at each evaluation interval.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

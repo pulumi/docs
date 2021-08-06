@@ -876,90 +876,6 @@ The following output properties are available:
     <dd>{{% md %}}Specifies the timeout for the activity to run. The default timeout is 7 days. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
-<h4 id="additionalcolumnsresponse">Additional<wbr>Columns<wbr>Response</h4>
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="name_csharp">
-<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">object</span>
-    </dt>
-    <dd>{{% md %}}Additional column name. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="value_csharp">
-<a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">object</span>
-    </dt>
-    <dd>{{% md %}}Additional column value. Type: string (or Expression with resultType string).{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="name_go">
-<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
-    </dt>
-    <dd>{{% md %}}Additional column name. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="value_go">
-<a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
-    </dt>
-    <dd>{{% md %}}Additional column value. Type: string (or Expression with resultType string).{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="name_nodejs">
-<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">any</span>
-    </dt>
-    <dd>{{% md %}}Additional column name. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="value_nodejs">
-<a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">any</span>
-    </dt>
-    <dd>{{% md %}}Additional column value. Type: string (or Expression with resultType string).{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="name_python">
-<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Any</span>
-    </dt>
-    <dd>{{% md %}}Additional column name. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="value_python">
-<a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Any</span>
-    </dt>
-    <dd>{{% md %}}Additional column value. Type: string (or Expression with resultType string).{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
 <h4 id="amazonmwssourceresponse">Amazon<wbr>MWSSource<wbr>Response</h4>
 
 
@@ -971,9 +887,9 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response&gt;</a></span>
+        <span class="property-type">object</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_csharp">
 <a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
@@ -1031,9 +947,9 @@ The following output properties are available:
 <a href="#additionalcolumns_go" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">[]Additional<wbr>Columns<wbr>Response</a></span>
+        <span class="property-type">interface{}</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_go">
 <a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
@@ -1091,9 +1007,9 @@ The following output properties are available:
 <a href="#additionalcolumns_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Additional<wbr>Columns<wbr>Response[]</a></span>
+        <span class="property-type">any</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_nodejs">
 <a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
@@ -1151,9 +1067,9 @@ The following output properties are available:
 <a href="#additional_columns_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
+        <span class="property-type">Any</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disable_metrics_collection_python">
 <a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
@@ -1215,9 +1131,9 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response&gt;</a></span>
+        <span class="property-type">object</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_csharp">
 <a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
@@ -1283,9 +1199,9 @@ The following output properties are available:
 <a href="#additionalcolumns_go" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">[]Additional<wbr>Columns<wbr>Response</a></span>
+        <span class="property-type">interface{}</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_go">
 <a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
@@ -1351,9 +1267,9 @@ The following output properties are available:
 <a href="#additionalcolumns_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Additional<wbr>Columns<wbr>Response[]</a></span>
+        <span class="property-type">any</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_nodejs">
 <a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
@@ -1419,9 +1335,9 @@ The following output properties are available:
 <a href="#additional_columns_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
+        <span class="property-type">Any</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disable_metrics_collection_python">
 <a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
@@ -2787,9 +2703,9 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response&gt;</a></span>
+        <span class="property-type">object</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_csharp">
 <a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
@@ -2839,9 +2755,9 @@ The following output properties are available:
 <a href="#additionalcolumns_go" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">[]Additional<wbr>Columns<wbr>Response</a></span>
+        <span class="property-type">interface{}</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_go">
 <a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
@@ -2891,9 +2807,9 @@ The following output properties are available:
 <a href="#additionalcolumns_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Additional<wbr>Columns<wbr>Response[]</a></span>
+        <span class="property-type">any</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_nodejs">
 <a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
@@ -2943,9 +2859,9 @@ The following output properties are available:
 <a href="#additional_columns_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
+        <span class="property-type">Any</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disable_metrics_collection_python">
 <a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
@@ -5331,9 +5247,9 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response&gt;</a></span>
+        <span class="property-type">object</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_csharp">
 <a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
@@ -5399,9 +5315,9 @@ The following output properties are available:
 <a href="#additionalcolumns_go" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">[]Additional<wbr>Columns<wbr>Response</a></span>
+        <span class="property-type">interface{}</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_go">
 <a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
@@ -5467,9 +5383,9 @@ The following output properties are available:
 <a href="#additionalcolumns_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Additional<wbr>Columns<wbr>Response[]</a></span>
+        <span class="property-type">any</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_nodejs">
 <a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
@@ -5535,9 +5451,9 @@ The following output properties are available:
 <a href="#additional_columns_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
+        <span class="property-type">Any</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disable_metrics_collection_python">
 <a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
@@ -9439,9 +9355,9 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response&gt;</a></span>
+        <span class="property-type">object</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_csharp">
 <a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
@@ -9499,9 +9415,9 @@ The following output properties are available:
 <a href="#additionalcolumns_go" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">[]Additional<wbr>Columns<wbr>Response</a></span>
+        <span class="property-type">interface{}</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_go">
 <a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
@@ -9559,9 +9475,9 @@ The following output properties are available:
 <a href="#additionalcolumns_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Additional<wbr>Columns<wbr>Response[]</a></span>
+        <span class="property-type">any</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_nodejs">
 <a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
@@ -9619,9 +9535,9 @@ The following output properties are available:
 <a href="#additional_columns_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
+        <span class="property-type">Any</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disable_metrics_collection_python">
 <a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
@@ -9927,9 +9843,9 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response&gt;</a></span>
+        <span class="property-type">object</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_csharp">
 <a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
@@ -9987,9 +9903,9 @@ The following output properties are available:
 <a href="#additionalcolumns_go" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">[]Additional<wbr>Columns<wbr>Response</a></span>
+        <span class="property-type">interface{}</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_go">
 <a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
@@ -10047,9 +9963,9 @@ The following output properties are available:
 <a href="#additionalcolumns_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Additional<wbr>Columns<wbr>Response[]</a></span>
+        <span class="property-type">any</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_nodejs">
 <a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
@@ -10107,9 +10023,9 @@ The following output properties are available:
 <a href="#additional_columns_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
+        <span class="property-type">Any</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disable_metrics_collection_python">
 <a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
@@ -10415,9 +10331,9 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response&gt;</a></span>
+        <span class="property-type">object</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_csharp">
 <a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
@@ -10475,9 +10391,9 @@ The following output properties are available:
 <a href="#additionalcolumns_go" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">[]Additional<wbr>Columns<wbr>Response</a></span>
+        <span class="property-type">interface{}</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_go">
 <a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
@@ -10535,9 +10451,9 @@ The following output properties are available:
 <a href="#additionalcolumns_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Additional<wbr>Columns<wbr>Response[]</a></span>
+        <span class="property-type">any</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_nodejs">
 <a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
@@ -10595,9 +10511,9 @@ The following output properties are available:
 <a href="#additional_columns_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
+        <span class="property-type">Any</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disable_metrics_collection_python">
 <a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
@@ -11167,6 +11083,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}SQL writer table type. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="sqlwriterusetablelock_csharp">
+<a href="#sqlwriterusetablelock_csharp" style="color: inherit; text-decoration: inherit;">Sql<wbr>Writer<wbr>Use<wbr>Table<wbr>Lock</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}Whether to use table lock during bulk copy. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="storedprocedureparameters_csharp">
 <a href="#storedprocedureparameters_csharp" style="color: inherit; text-decoration: inherit;">Stored<wbr>Procedure<wbr>Parameters</a>
 </span>
@@ -11191,6 +11115,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The option to handle sink table, such as autoCreate. For now only 'autoCreate' value is supported. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="upsertsettings_csharp">
+<a href="#upsertsettings_csharp" style="color: inherit; text-decoration: inherit;">Upsert<wbr>Settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sqlupsertsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sql<wbr>Upsert<wbr>Settings<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}SQL upsert settings.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="writebatchsize_csharp">
 <a href="#writebatchsize_csharp" style="color: inherit; text-decoration: inherit;">Write<wbr>Batch<wbr>Size</a>
 </span>
@@ -11205,7 +11137,15 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">object</span>
     </dt>
-    <dd>{{% md %}}Write batch timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Write batch timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="writebehavior_csharp">
+<a href="#writebehavior_csharp" style="color: inherit; text-decoration: inherit;">Write<wbr>Behavior</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}Write behavior when copying data into Azure SQL. Type: SqlWriteBehaviorEnum (or Expression with resultType SqlWriteBehaviorEnum){{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -11267,6 +11207,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}SQL writer table type. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="sqlwriterusetablelock_go">
+<a href="#sqlwriterusetablelock_go" style="color: inherit; text-decoration: inherit;">Sql<wbr>Writer<wbr>Use<wbr>Table<wbr>Lock</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}Whether to use table lock during bulk copy. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="storedprocedureparameters_go">
 <a href="#storedprocedureparameters_go" style="color: inherit; text-decoration: inherit;">Stored<wbr>Procedure<wbr>Parameters</a>
 </span>
@@ -11291,6 +11239,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The option to handle sink table, such as autoCreate. For now only 'autoCreate' value is supported. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="upsertsettings_go">
+<a href="#upsertsettings_go" style="color: inherit; text-decoration: inherit;">Upsert<wbr>Settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sqlupsertsettingsresponse">Sql<wbr>Upsert<wbr>Settings<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}SQL upsert settings.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="writebatchsize_go">
 <a href="#writebatchsize_go" style="color: inherit; text-decoration: inherit;">Write<wbr>Batch<wbr>Size</a>
 </span>
@@ -11305,7 +11261,15 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">interface{}</span>
     </dt>
-    <dd>{{% md %}}Write batch timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Write batch timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="writebehavior_go">
+<a href="#writebehavior_go" style="color: inherit; text-decoration: inherit;">Write<wbr>Behavior</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}Write behavior when copying data into Azure SQL. Type: SqlWriteBehaviorEnum (or Expression with resultType SqlWriteBehaviorEnum){{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -11367,6 +11331,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}SQL writer table type. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="sqlwriterusetablelock_nodejs">
+<a href="#sqlwriterusetablelock_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Writer<wbr>Use<wbr>Table<wbr>Lock</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}Whether to use table lock during bulk copy. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="storedprocedureparameters_nodejs">
 <a href="#storedprocedureparameters_nodejs" style="color: inherit; text-decoration: inherit;">stored<wbr>Procedure<wbr>Parameters</a>
 </span>
@@ -11391,6 +11363,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The option to handle sink table, such as autoCreate. For now only 'autoCreate' value is supported. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="upsertsettings_nodejs">
+<a href="#upsertsettings_nodejs" style="color: inherit; text-decoration: inherit;">upsert<wbr>Settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sqlupsertsettingsresponse">Sql<wbr>Upsert<wbr>Settings<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}SQL upsert settings.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="writebatchsize_nodejs">
 <a href="#writebatchsize_nodejs" style="color: inherit; text-decoration: inherit;">write<wbr>Batch<wbr>Size</a>
 </span>
@@ -11405,7 +11385,15 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">any</span>
     </dt>
-    <dd>{{% md %}}Write batch timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Write batch timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="writebehavior_nodejs">
+<a href="#writebehavior_nodejs" style="color: inherit; text-decoration: inherit;">write<wbr>Behavior</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}Write behavior when copying data into Azure SQL. Type: SqlWriteBehaviorEnum (or Expression with resultType SqlWriteBehaviorEnum){{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -11467,6 +11455,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}SQL writer table type. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="sql_writer_use_table_lock_python">
+<a href="#sql_writer_use_table_lock_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>writer_<wbr>use_<wbr>table_<wbr>lock</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}Whether to use table lock during bulk copy. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="stored_procedure_parameters_python">
 <a href="#stored_procedure_parameters_python" style="color: inherit; text-decoration: inherit;">stored_<wbr>procedure_<wbr>parameters</a>
 </span>
@@ -11491,6 +11487,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The option to handle sink table, such as autoCreate. For now only 'autoCreate' value is supported. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="upsert_settings_python">
+<a href="#upsert_settings_python" style="color: inherit; text-decoration: inherit;">upsert_<wbr>settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sqlupsertsettingsresponse">Sql<wbr>Upsert<wbr>Settings<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}SQL upsert settings.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="write_batch_size_python">
 <a href="#write_batch_size_python" style="color: inherit; text-decoration: inherit;">write_<wbr>batch_<wbr>size</a>
 </span>
@@ -11505,7 +11509,15 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Any</span>
     </dt>
-    <dd>{{% md %}}Write batch timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Write batch timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="write_behavior_python">
+<a href="#write_behavior_python" style="color: inherit; text-decoration: inherit;">write_<wbr>behavior</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}Write behavior when copying data into Azure SQL. Type: SqlWriteBehaviorEnum (or Expression with resultType SqlWriteBehaviorEnum){{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="azuresqlsourceresponse">Azure<wbr>Sql<wbr>Source<wbr>Response</h4>
@@ -11519,9 +11531,9 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response&gt;</a></span>
+        <span class="property-type">object</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_csharp">
 <a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
@@ -11619,9 +11631,9 @@ The following output properties are available:
 <a href="#additionalcolumns_go" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">[]Additional<wbr>Columns<wbr>Response</a></span>
+        <span class="property-type">interface{}</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_go">
 <a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
@@ -11719,9 +11731,9 @@ The following output properties are available:
 <a href="#additionalcolumns_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Additional<wbr>Columns<wbr>Response[]</a></span>
+        <span class="property-type">any</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_nodejs">
 <a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
@@ -11819,9 +11831,9 @@ The following output properties are available:
 <a href="#additional_columns_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
+        <span class="property-type">Any</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disable_metrics_collection_python">
 <a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
@@ -12263,9 +12275,9 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response&gt;</a></span>
+        <span class="property-type">object</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="azuretablesourceignoretablenotfound_csharp">
 <a href="#azuretablesourceignoretablenotfound_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Table<wbr>Source<wbr>Ignore<wbr>Table<wbr>Not<wbr>Found</a>
@@ -12331,9 +12343,9 @@ The following output properties are available:
 <a href="#additionalcolumns_go" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">[]Additional<wbr>Columns<wbr>Response</a></span>
+        <span class="property-type">interface{}</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="azuretablesourceignoretablenotfound_go">
 <a href="#azuretablesourceignoretablenotfound_go" style="color: inherit; text-decoration: inherit;">Azure<wbr>Table<wbr>Source<wbr>Ignore<wbr>Table<wbr>Not<wbr>Found</a>
@@ -12399,9 +12411,9 @@ The following output properties are available:
 <a href="#additionalcolumns_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Additional<wbr>Columns<wbr>Response[]</a></span>
+        <span class="property-type">any</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="azuretablesourceignoretablenotfound_nodejs">
 <a href="#azuretablesourceignoretablenotfound_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Table<wbr>Source<wbr>Ignore<wbr>Table<wbr>Not<wbr>Found</a>
@@ -12467,9 +12479,9 @@ The following output properties are available:
 <a href="#additional_columns_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
+        <span class="property-type">Any</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="azure_table_source_ignore_table_not_found_python">
 <a href="#azure_table_source_ignore_table_not_found_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>table_<wbr>source_<wbr>ignore_<wbr>table_<wbr>not_<wbr>found</a>
@@ -13663,9 +13675,9 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response&gt;</a></span>
+        <span class="property-type">object</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="consistencylevel_csharp">
 <a href="#consistencylevel_csharp" style="color: inherit; text-decoration: inherit;">Consistency<wbr>Level</a>
@@ -13731,9 +13743,9 @@ The following output properties are available:
 <a href="#additionalcolumns_go" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">[]Additional<wbr>Columns<wbr>Response</a></span>
+        <span class="property-type">interface{}</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="consistencylevel_go">
 <a href="#consistencylevel_go" style="color: inherit; text-decoration: inherit;">Consistency<wbr>Level</a>
@@ -13799,9 +13811,9 @@ The following output properties are available:
 <a href="#additionalcolumns_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Additional<wbr>Columns<wbr>Response[]</a></span>
+        <span class="property-type">any</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="consistencylevel_nodejs">
 <a href="#consistencylevel_nodejs" style="color: inherit; text-decoration: inherit;">consistency<wbr>Level</a>
@@ -13867,9 +13879,9 @@ The following output properties are available:
 <a href="#additional_columns_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
+        <span class="property-type">Any</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="consistency_level_python">
 <a href="#consistency_level_python" style="color: inherit; text-decoration: inherit;">consistency_<wbr>level</a>
@@ -14247,9 +14259,9 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response&gt;</a></span>
+        <span class="property-type">object</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_csharp">
 <a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
@@ -14299,9 +14311,9 @@ The following output properties are available:
 <a href="#additionalcolumns_go" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">[]Additional<wbr>Columns<wbr>Response</a></span>
+        <span class="property-type">interface{}</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_go">
 <a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
@@ -14351,9 +14363,9 @@ The following output properties are available:
 <a href="#additionalcolumns_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Additional<wbr>Columns<wbr>Response[]</a></span>
+        <span class="property-type">any</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_nodejs">
 <a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
@@ -14403,9 +14415,9 @@ The following output properties are available:
 <a href="#additional_columns_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
+        <span class="property-type">Any</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disable_metrics_collection_python">
 <a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
@@ -14459,9 +14471,9 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response&gt;</a></span>
+        <span class="property-type">object</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_csharp">
 <a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
@@ -14519,9 +14531,9 @@ The following output properties are available:
 <a href="#additionalcolumns_go" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">[]Additional<wbr>Columns<wbr>Response</a></span>
+        <span class="property-type">interface{}</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_go">
 <a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
@@ -14579,9 +14591,9 @@ The following output properties are available:
 <a href="#additionalcolumns_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Additional<wbr>Columns<wbr>Response[]</a></span>
+        <span class="property-type">any</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_nodejs">
 <a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
@@ -14639,9 +14651,9 @@ The following output properties are available:
 <a href="#additional_columns_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
+        <span class="property-type">Any</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disable_metrics_collection_python">
 <a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
@@ -15935,9 +15947,9 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response&gt;</a></span>
+        <span class="property-type">object</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="batchsize_csharp">
 <a href="#batchsize_csharp" style="color: inherit; text-decoration: inherit;">Batch<wbr>Size</a>
@@ -16011,9 +16023,9 @@ The following output properties are available:
 <a href="#additionalcolumns_go" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">[]Additional<wbr>Columns<wbr>Response</a></span>
+        <span class="property-type">interface{}</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="batchsize_go">
 <a href="#batchsize_go" style="color: inherit; text-decoration: inherit;">Batch<wbr>Size</a>
@@ -16087,9 +16099,9 @@ The following output properties are available:
 <a href="#additionalcolumns_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Additional<wbr>Columns<wbr>Response[]</a></span>
+        <span class="property-type">any</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="batchsize_nodejs">
 <a href="#batchsize_nodejs" style="color: inherit; text-decoration: inherit;">batch<wbr>Size</a>
@@ -16163,9 +16175,9 @@ The following output properties are available:
 <a href="#additional_columns_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
+        <span class="property-type">Any</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="batch_size_python">
 <a href="#batch_size_python" style="color: inherit; text-decoration: inherit;">batch_<wbr>size</a>
@@ -16487,9 +16499,9 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response&gt;</a></span>
+        <span class="property-type">object</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="detectdatetime_csharp">
 <a href="#detectdatetime_csharp" style="color: inherit; text-decoration: inherit;">Detect<wbr>Datetime</a>
@@ -16563,9 +16575,9 @@ The following output properties are available:
 <a href="#additionalcolumns_go" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">[]Additional<wbr>Columns<wbr>Response</a></span>
+        <span class="property-type">interface{}</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="detectdatetime_go">
 <a href="#detectdatetime_go" style="color: inherit; text-decoration: inherit;">Detect<wbr>Datetime</a>
@@ -16639,9 +16651,9 @@ The following output properties are available:
 <a href="#additionalcolumns_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Additional<wbr>Columns<wbr>Response[]</a></span>
+        <span class="property-type">any</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="detectdatetime_nodejs">
 <a href="#detectdatetime_nodejs" style="color: inherit; text-decoration: inherit;">detect<wbr>Datetime</a>
@@ -16715,9 +16727,9 @@ The following output properties are available:
 <a href="#additional_columns_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
+        <span class="property-type">Any</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="detect_datetime_python">
 <a href="#detect_datetime_python" style="color: inherit; text-decoration: inherit;">detect_<wbr>datetime</a>
@@ -16795,9 +16807,9 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response&gt;</a></span>
+        <span class="property-type">object</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_csharp">
 <a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
@@ -16855,9 +16867,9 @@ The following output properties are available:
 <a href="#additionalcolumns_go" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">[]Additional<wbr>Columns<wbr>Response</a></span>
+        <span class="property-type">interface{}</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_go">
 <a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
@@ -16915,9 +16927,9 @@ The following output properties are available:
 <a href="#additionalcolumns_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Additional<wbr>Columns<wbr>Response[]</a></span>
+        <span class="property-type">any</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_nodejs">
 <a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
@@ -16975,9 +16987,9 @@ The following output properties are available:
 <a href="#additional_columns_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
+        <span class="property-type">Any</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disable_metrics_collection_python">
 <a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
@@ -19487,9 +19499,9 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response&gt;</a></span>
+        <span class="property-type">object</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_csharp">
 <a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
@@ -19547,9 +19559,9 @@ The following output properties are available:
 <a href="#additionalcolumns_go" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">[]Additional<wbr>Columns<wbr>Response</a></span>
+        <span class="property-type">interface{}</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_go">
 <a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
@@ -19607,9 +19619,9 @@ The following output properties are available:
 <a href="#additionalcolumns_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Additional<wbr>Columns<wbr>Response[]</a></span>
+        <span class="property-type">any</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_nodejs">
 <a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
@@ -19667,9 +19679,9 @@ The following output properties are available:
 <a href="#additional_columns_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
+        <span class="property-type">Any</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disable_metrics_collection_python">
 <a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
@@ -20495,9 +20507,9 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response&gt;</a></span>
+        <span class="property-type">object</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_csharp">
 <a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
@@ -20555,9 +20567,9 @@ The following output properties are available:
 <a href="#additionalcolumns_go" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">[]Additional<wbr>Columns<wbr>Response</a></span>
+        <span class="property-type">interface{}</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_go">
 <a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
@@ -20615,9 +20627,9 @@ The following output properties are available:
 <a href="#additionalcolumns_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Additional<wbr>Columns<wbr>Response[]</a></span>
+        <span class="property-type">any</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_nodejs">
 <a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
@@ -20675,9 +20687,9 @@ The following output properties are available:
 <a href="#additional_columns_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
+        <span class="property-type">Any</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disable_metrics_collection_python">
 <a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
@@ -21279,9 +21291,9 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response&gt;</a></span>
+        <span class="property-type">object</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_csharp">
 <a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
@@ -21347,9 +21359,9 @@ The following output properties are available:
 <a href="#additionalcolumns_go" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">[]Additional<wbr>Columns<wbr>Response</a></span>
+        <span class="property-type">interface{}</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_go">
 <a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
@@ -21415,9 +21427,9 @@ The following output properties are available:
 <a href="#additionalcolumns_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Additional<wbr>Columns<wbr>Response[]</a></span>
+        <span class="property-type">any</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_nodejs">
 <a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
@@ -21483,9 +21495,9 @@ The following output properties are available:
 <a href="#additional_columns_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
+        <span class="property-type">Any</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disable_metrics_collection_python">
 <a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
@@ -21555,9 +21567,9 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response&gt;</a></span>
+        <span class="property-type">object</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_csharp">
 <a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
@@ -21615,9 +21627,9 @@ The following output properties are available:
 <a href="#additionalcolumns_go" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">[]Additional<wbr>Columns<wbr>Response</a></span>
+        <span class="property-type">interface{}</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_go">
 <a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
@@ -21675,9 +21687,9 @@ The following output properties are available:
 <a href="#additionalcolumns_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Additional<wbr>Columns<wbr>Response[]</a></span>
+        <span class="property-type">any</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_nodejs">
 <a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
@@ -21735,9 +21747,9 @@ The following output properties are available:
 <a href="#additional_columns_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
+        <span class="property-type">Any</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disable_metrics_collection_python">
 <a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
@@ -21799,9 +21811,9 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response&gt;</a></span>
+        <span class="property-type">object</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_csharp">
 <a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
@@ -21867,9 +21879,9 @@ The following output properties are available:
 <a href="#additionalcolumns_go" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">[]Additional<wbr>Columns<wbr>Response</a></span>
+        <span class="property-type">interface{}</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_go">
 <a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
@@ -21935,9 +21947,9 @@ The following output properties are available:
 <a href="#additionalcolumns_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Additional<wbr>Columns<wbr>Response[]</a></span>
+        <span class="property-type">any</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_nodejs">
 <a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
@@ -22003,9 +22015,9 @@ The following output properties are available:
 <a href="#additional_columns_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
+        <span class="property-type">Any</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disable_metrics_collection_python">
 <a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
@@ -22383,9 +22395,9 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response&gt;</a></span>
+        <span class="property-type">object</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_csharp">
 <a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
@@ -22435,9 +22447,9 @@ The following output properties are available:
 <a href="#additionalcolumns_go" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">[]Additional<wbr>Columns<wbr>Response</a></span>
+        <span class="property-type">interface{}</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_go">
 <a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
@@ -22487,9 +22499,9 @@ The following output properties are available:
 <a href="#additionalcolumns_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Additional<wbr>Columns<wbr>Response[]</a></span>
+        <span class="property-type">any</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_nodejs">
 <a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
@@ -22539,9 +22551,9 @@ The following output properties are available:
 <a href="#additional_columns_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
+        <span class="property-type">Any</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disable_metrics_collection_python">
 <a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
@@ -22903,9 +22915,9 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response&gt;</a></span>
+        <span class="property-type">object</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_csharp">
 <a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
@@ -22955,9 +22967,9 @@ The following output properties are available:
 <a href="#additionalcolumns_go" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">[]Additional<wbr>Columns<wbr>Response</a></span>
+        <span class="property-type">interface{}</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_go">
 <a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
@@ -23007,9 +23019,9 @@ The following output properties are available:
 <a href="#additionalcolumns_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Additional<wbr>Columns<wbr>Response[]</a></span>
+        <span class="property-type">any</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_nodejs">
 <a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
@@ -23059,9 +23071,9 @@ The following output properties are available:
 <a href="#additional_columns_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
+        <span class="property-type">Any</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disable_metrics_collection_python">
 <a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
@@ -23115,9 +23127,9 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response&gt;</a></span>
+        <span class="property-type">object</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_csharp">
 <a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
@@ -23175,9 +23187,9 @@ The following output properties are available:
 <a href="#additionalcolumns_go" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">[]Additional<wbr>Columns<wbr>Response</a></span>
+        <span class="property-type">interface{}</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_go">
 <a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
@@ -23235,9 +23247,9 @@ The following output properties are available:
 <a href="#additionalcolumns_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Additional<wbr>Columns<wbr>Response[]</a></span>
+        <span class="property-type">any</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_nodejs">
 <a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
@@ -23295,9 +23307,9 @@ The following output properties are available:
 <a href="#additional_columns_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
+        <span class="property-type">Any</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disable_metrics_collection_python">
 <a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
@@ -23359,9 +23371,9 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response&gt;</a></span>
+        <span class="property-type">object</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_csharp">
 <a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
@@ -23411,9 +23423,9 @@ The following output properties are available:
 <a href="#additionalcolumns_go" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">[]Additional<wbr>Columns<wbr>Response</a></span>
+        <span class="property-type">interface{}</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_go">
 <a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
@@ -23463,9 +23475,9 @@ The following output properties are available:
 <a href="#additionalcolumns_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Additional<wbr>Columns<wbr>Response[]</a></span>
+        <span class="property-type">any</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_nodejs">
 <a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
@@ -23515,9 +23527,9 @@ The following output properties are available:
 <a href="#additional_columns_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
+        <span class="property-type">Any</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disable_metrics_collection_python">
 <a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
@@ -25991,9 +26003,9 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response&gt;</a></span>
+        <span class="property-type">object</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_csharp">
 <a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
@@ -26043,9 +26055,9 @@ The following output properties are available:
 <a href="#additionalcolumns_go" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">[]Additional<wbr>Columns<wbr>Response</a></span>
+        <span class="property-type">interface{}</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_go">
 <a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
@@ -26095,9 +26107,9 @@ The following output properties are available:
 <a href="#additionalcolumns_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Additional<wbr>Columns<wbr>Response[]</a></span>
+        <span class="property-type">any</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_nodejs">
 <a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
@@ -26147,9 +26159,9 @@ The following output properties are available:
 <a href="#additional_columns_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
+        <span class="property-type">Any</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disable_metrics_collection_python">
 <a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
@@ -27371,9 +27383,9 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response&gt;</a></span>
+        <span class="property-type">object</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_csharp">
 <a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
@@ -27431,9 +27443,9 @@ The following output properties are available:
 <a href="#additionalcolumns_go" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">[]Additional<wbr>Columns<wbr>Response</a></span>
+        <span class="property-type">interface{}</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_go">
 <a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
@@ -27491,9 +27503,9 @@ The following output properties are available:
 <a href="#additionalcolumns_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Additional<wbr>Columns<wbr>Response[]</a></span>
+        <span class="property-type">any</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_nodejs">
 <a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
@@ -27551,9 +27563,9 @@ The following output properties are available:
 <a href="#additional_columns_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
+        <span class="property-type">Any</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disable_metrics_collection_python">
 <a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
@@ -27615,9 +27627,9 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response&gt;</a></span>
+        <span class="property-type">object</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_csharp">
 <a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
@@ -27675,9 +27687,9 @@ The following output properties are available:
 <a href="#additionalcolumns_go" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">[]Additional<wbr>Columns<wbr>Response</a></span>
+        <span class="property-type">interface{}</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_go">
 <a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
@@ -27735,9 +27747,9 @@ The following output properties are available:
 <a href="#additionalcolumns_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Additional<wbr>Columns<wbr>Response[]</a></span>
+        <span class="property-type">any</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_nodejs">
 <a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
@@ -27795,9 +27807,9 @@ The following output properties are available:
 <a href="#additional_columns_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
+        <span class="property-type">Any</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disable_metrics_collection_python">
 <a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
@@ -28263,9 +28275,9 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response&gt;</a></span>
+        <span class="property-type">object</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_csharp">
 <a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
@@ -28323,9 +28335,9 @@ The following output properties are available:
 <a href="#additionalcolumns_go" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">[]Additional<wbr>Columns<wbr>Response</a></span>
+        <span class="property-type">interface{}</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_go">
 <a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
@@ -28383,9 +28395,9 @@ The following output properties are available:
 <a href="#additionalcolumns_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Additional<wbr>Columns<wbr>Response[]</a></span>
+        <span class="property-type">any</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_nodejs">
 <a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
@@ -28443,9 +28455,9 @@ The following output properties are available:
 <a href="#additional_columns_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
+        <span class="property-type">Any</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disable_metrics_collection_python">
 <a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
@@ -28507,9 +28519,9 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response&gt;</a></span>
+        <span class="property-type">object</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_csharp">
 <a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
@@ -28567,9 +28579,9 @@ The following output properties are available:
 <a href="#additionalcolumns_go" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">[]Additional<wbr>Columns<wbr>Response</a></span>
+        <span class="property-type">interface{}</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_go">
 <a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
@@ -28627,9 +28639,9 @@ The following output properties are available:
 <a href="#additionalcolumns_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Additional<wbr>Columns<wbr>Response[]</a></span>
+        <span class="property-type">any</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_nodejs">
 <a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
@@ -28687,9 +28699,9 @@ The following output properties are available:
 <a href="#additional_columns_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
+        <span class="property-type">Any</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disable_metrics_collection_python">
 <a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
@@ -31771,9 +31783,9 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response&gt;</a></span>
+        <span class="property-type">object</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_csharp">
 <a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
@@ -31831,9 +31843,9 @@ The following output properties are available:
 <a href="#additionalcolumns_go" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">[]Additional<wbr>Columns<wbr>Response</a></span>
+        <span class="property-type">interface{}</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_go">
 <a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
@@ -31891,9 +31903,9 @@ The following output properties are available:
 <a href="#additionalcolumns_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Additional<wbr>Columns<wbr>Response[]</a></span>
+        <span class="property-type">any</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_nodejs">
 <a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
@@ -31951,9 +31963,9 @@ The following output properties are available:
 <a href="#additional_columns_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
+        <span class="property-type">Any</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disable_metrics_collection_python">
 <a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
@@ -32471,9 +32483,9 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response&gt;</a></span>
+        <span class="property-type">object</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_csharp">
 <a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
@@ -32531,9 +32543,9 @@ The following output properties are available:
 <a href="#additionalcolumns_go" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">[]Additional<wbr>Columns<wbr>Response</a></span>
+        <span class="property-type">interface{}</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_go">
 <a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
@@ -32591,9 +32603,9 @@ The following output properties are available:
 <a href="#additionalcolumns_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Additional<wbr>Columns<wbr>Response[]</a></span>
+        <span class="property-type">any</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_nodejs">
 <a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
@@ -32651,9 +32663,9 @@ The following output properties are available:
 <a href="#additional_columns_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
+        <span class="property-type">Any</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disable_metrics_collection_python">
 <a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
@@ -32959,9 +32971,9 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response&gt;</a></span>
+        <span class="property-type">object</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_csharp">
 <a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
@@ -33019,9 +33031,9 @@ The following output properties are available:
 <a href="#additionalcolumns_go" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">[]Additional<wbr>Columns<wbr>Response</a></span>
+        <span class="property-type">interface{}</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_go">
 <a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
@@ -33079,9 +33091,9 @@ The following output properties are available:
 <a href="#additionalcolumns_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Additional<wbr>Columns<wbr>Response[]</a></span>
+        <span class="property-type">any</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_nodejs">
 <a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
@@ -33139,9 +33151,9 @@ The following output properties are available:
 <a href="#additional_columns_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
+        <span class="property-type">Any</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disable_metrics_collection_python">
 <a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
@@ -33447,9 +33459,9 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response&gt;</a></span>
+        <span class="property-type">object</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_csharp">
 <a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
@@ -33507,9 +33519,9 @@ The following output properties are available:
 <a href="#additionalcolumns_go" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">[]Additional<wbr>Columns<wbr>Response</a></span>
+        <span class="property-type">interface{}</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_go">
 <a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
@@ -33567,9 +33579,9 @@ The following output properties are available:
 <a href="#additionalcolumns_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Additional<wbr>Columns<wbr>Response[]</a></span>
+        <span class="property-type">any</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_nodejs">
 <a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
@@ -33627,9 +33639,9 @@ The following output properties are available:
 <a href="#additional_columns_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
+        <span class="property-type">Any</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disable_metrics_collection_python">
 <a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
@@ -33807,9 +33819,9 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response&gt;</a></span>
+        <span class="property-type">object</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_csharp">
 <a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
@@ -33867,9 +33879,9 @@ The following output properties are available:
 <a href="#additionalcolumns_go" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">[]Additional<wbr>Columns<wbr>Response</a></span>
+        <span class="property-type">interface{}</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_go">
 <a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
@@ -33927,9 +33939,9 @@ The following output properties are available:
 <a href="#additionalcolumns_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Additional<wbr>Columns<wbr>Response[]</a></span>
+        <span class="property-type">any</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_nodejs">
 <a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
@@ -33987,9 +33999,9 @@ The following output properties are available:
 <a href="#additional_columns_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
+        <span class="property-type">Any</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disable_metrics_collection_python">
 <a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
@@ -34379,9 +34391,9 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response&gt;</a></span>
+        <span class="property-type">object</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_csharp">
 <a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
@@ -34439,9 +34451,9 @@ The following output properties are available:
 <a href="#additionalcolumns_go" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">[]Additional<wbr>Columns<wbr>Response</a></span>
+        <span class="property-type">interface{}</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_go">
 <a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
@@ -34499,9 +34511,9 @@ The following output properties are available:
 <a href="#additionalcolumns_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Additional<wbr>Columns<wbr>Response[]</a></span>
+        <span class="property-type">any</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_nodejs">
 <a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
@@ -34559,9 +34571,9 @@ The following output properties are available:
 <a href="#additional_columns_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
+        <span class="property-type">Any</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disable_metrics_collection_python">
 <a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
@@ -35447,9 +35459,9 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response&gt;</a></span>
+        <span class="property-type">object</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_csharp">
 <a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
@@ -35507,9 +35519,9 @@ The following output properties are available:
 <a href="#additionalcolumns_go" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">[]Additional<wbr>Columns<wbr>Response</a></span>
+        <span class="property-type">interface{}</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_go">
 <a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
@@ -35567,9 +35579,9 @@ The following output properties are available:
 <a href="#additionalcolumns_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Additional<wbr>Columns<wbr>Response[]</a></span>
+        <span class="property-type">any</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_nodejs">
 <a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
@@ -35627,9 +35639,9 @@ The following output properties are available:
 <a href="#additional_columns_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
+        <span class="property-type">Any</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disable_metrics_collection_python">
 <a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
@@ -35691,9 +35703,9 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response&gt;</a></span>
+        <span class="property-type">object</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_csharp">
 <a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
@@ -35751,9 +35763,9 @@ The following output properties are available:
 <a href="#additionalcolumns_go" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">[]Additional<wbr>Columns<wbr>Response</a></span>
+        <span class="property-type">interface{}</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_go">
 <a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
@@ -35811,9 +35823,9 @@ The following output properties are available:
 <a href="#additionalcolumns_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Additional<wbr>Columns<wbr>Response[]</a></span>
+        <span class="property-type">any</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_nodejs">
 <a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
@@ -35871,9 +35883,9 @@ The following output properties are available:
 <a href="#additional_columns_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
+        <span class="property-type">Any</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disable_metrics_collection_python">
 <a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
@@ -35935,9 +35947,9 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response&gt;</a></span>
+        <span class="property-type">object</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_csharp">
 <a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
@@ -35995,9 +36007,9 @@ The following output properties are available:
 <a href="#additionalcolumns_go" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">[]Additional<wbr>Columns<wbr>Response</a></span>
+        <span class="property-type">interface{}</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_go">
 <a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
@@ -36055,9 +36067,9 @@ The following output properties are available:
 <a href="#additionalcolumns_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Additional<wbr>Columns<wbr>Response[]</a></span>
+        <span class="property-type">any</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_nodejs">
 <a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
@@ -36115,9 +36127,9 @@ The following output properties are available:
 <a href="#additional_columns_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
+        <span class="property-type">Any</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disable_metrics_collection_python">
 <a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
@@ -36507,9 +36519,9 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response&gt;</a></span>
+        <span class="property-type">object</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_csharp">
 <a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
@@ -36559,9 +36571,9 @@ The following output properties are available:
 <a href="#additionalcolumns_go" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">[]Additional<wbr>Columns<wbr>Response</a></span>
+        <span class="property-type">interface{}</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_go">
 <a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
@@ -36611,9 +36623,9 @@ The following output properties are available:
 <a href="#additionalcolumns_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Additional<wbr>Columns<wbr>Response[]</a></span>
+        <span class="property-type">any</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_nodejs">
 <a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
@@ -36663,9 +36675,9 @@ The following output properties are available:
 <a href="#additional_columns_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
+        <span class="property-type">Any</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disable_metrics_collection_python">
 <a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
@@ -36963,9 +36975,9 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response&gt;</a></span>
+        <span class="property-type">object</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="batchsize_csharp">
 <a href="#batchsize_csharp" style="color: inherit; text-decoration: inherit;">Batch<wbr>Size</a>
@@ -37039,9 +37051,9 @@ The following output properties are available:
 <a href="#additionalcolumns_go" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">[]Additional<wbr>Columns<wbr>Response</a></span>
+        <span class="property-type">interface{}</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="batchsize_go">
 <a href="#batchsize_go" style="color: inherit; text-decoration: inherit;">Batch<wbr>Size</a>
@@ -37115,9 +37127,9 @@ The following output properties are available:
 <a href="#additionalcolumns_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Additional<wbr>Columns<wbr>Response[]</a></span>
+        <span class="property-type">any</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="batchsize_nodejs">
 <a href="#batchsize_nodejs" style="color: inherit; text-decoration: inherit;">batch<wbr>Size</a>
@@ -37191,9 +37203,9 @@ The following output properties are available:
 <a href="#additional_columns_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
+        <span class="property-type">Any</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="batch_size_python">
 <a href="#batch_size_python" style="color: inherit; text-decoration: inherit;">batch_<wbr>size</a>
@@ -37419,9 +37431,9 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response&gt;</a></span>
+        <span class="property-type">object</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_csharp">
 <a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
@@ -37471,9 +37483,9 @@ The following output properties are available:
 <a href="#additionalcolumns_go" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">[]Additional<wbr>Columns<wbr>Response</a></span>
+        <span class="property-type">interface{}</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_go">
 <a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
@@ -37523,9 +37535,9 @@ The following output properties are available:
 <a href="#additionalcolumns_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Additional<wbr>Columns<wbr>Response[]</a></span>
+        <span class="property-type">any</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_nodejs">
 <a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
@@ -37575,9 +37587,9 @@ The following output properties are available:
 <a href="#additional_columns_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
+        <span class="property-type">Any</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disable_metrics_collection_python">
 <a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
@@ -37875,9 +37887,9 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response&gt;</a></span>
+        <span class="property-type">object</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="batchsize_csharp">
 <a href="#batchsize_csharp" style="color: inherit; text-decoration: inherit;">Batch<wbr>Size</a>
@@ -37951,9 +37963,9 @@ The following output properties are available:
 <a href="#additionalcolumns_go" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">[]Additional<wbr>Columns<wbr>Response</a></span>
+        <span class="property-type">interface{}</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="batchsize_go">
 <a href="#batchsize_go" style="color: inherit; text-decoration: inherit;">Batch<wbr>Size</a>
@@ -38027,9 +38039,9 @@ The following output properties are available:
 <a href="#additionalcolumns_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Additional<wbr>Columns<wbr>Response[]</a></span>
+        <span class="property-type">any</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="batchsize_nodejs">
 <a href="#batchsize_nodejs" style="color: inherit; text-decoration: inherit;">batch<wbr>Size</a>
@@ -38103,9 +38115,9 @@ The following output properties are available:
 <a href="#additional_columns_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
+        <span class="property-type">Any</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="batch_size_python">
 <a href="#batch_size_python" style="color: inherit; text-decoration: inherit;">batch_<wbr>size</a>
@@ -38183,9 +38195,9 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response&gt;</a></span>
+        <span class="property-type">object</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_csharp">
 <a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
@@ -38243,9 +38255,9 @@ The following output properties are available:
 <a href="#additionalcolumns_go" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">[]Additional<wbr>Columns<wbr>Response</a></span>
+        <span class="property-type">interface{}</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_go">
 <a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
@@ -38303,9 +38315,9 @@ The following output properties are available:
 <a href="#additionalcolumns_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Additional<wbr>Columns<wbr>Response[]</a></span>
+        <span class="property-type">any</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_nodejs">
 <a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
@@ -38363,9 +38375,9 @@ The following output properties are available:
 <a href="#additional_columns_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
+        <span class="property-type">Any</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disable_metrics_collection_python">
 <a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
@@ -38543,9 +38555,9 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response&gt;</a></span>
+        <span class="property-type">object</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_csharp">
 <a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
@@ -38619,9 +38631,9 @@ The following output properties are available:
 <a href="#additionalcolumns_go" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">[]Additional<wbr>Columns<wbr>Response</a></span>
+        <span class="property-type">interface{}</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_go">
 <a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
@@ -38695,9 +38707,9 @@ The following output properties are available:
 <a href="#additionalcolumns_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Additional<wbr>Columns<wbr>Response[]</a></span>
+        <span class="property-type">any</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_nodejs">
 <a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
@@ -38771,9 +38783,9 @@ The following output properties are available:
 <a href="#additional_columns_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
+        <span class="property-type">Any</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disable_metrics_collection_python">
 <a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
@@ -38851,9 +38863,9 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response&gt;</a></span>
+        <span class="property-type">object</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_csharp">
 <a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
@@ -38911,9 +38923,9 @@ The following output properties are available:
 <a href="#additionalcolumns_go" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">[]Additional<wbr>Columns<wbr>Response</a></span>
+        <span class="property-type">interface{}</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_go">
 <a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
@@ -38971,9 +38983,9 @@ The following output properties are available:
 <a href="#additionalcolumns_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Additional<wbr>Columns<wbr>Response[]</a></span>
+        <span class="property-type">any</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_nodejs">
 <a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
@@ -39031,9 +39043,9 @@ The following output properties are available:
 <a href="#additional_columns_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
+        <span class="property-type">Any</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disable_metrics_collection_python">
 <a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
@@ -39339,9 +39351,9 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response&gt;</a></span>
+        <span class="property-type">object</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_csharp">
 <a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
@@ -39399,9 +39411,9 @@ The following output properties are available:
 <a href="#additionalcolumns_go" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">[]Additional<wbr>Columns<wbr>Response</a></span>
+        <span class="property-type">interface{}</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_go">
 <a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
@@ -39459,9 +39471,9 @@ The following output properties are available:
 <a href="#additionalcolumns_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Additional<wbr>Columns<wbr>Response[]</a></span>
+        <span class="property-type">any</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_nodejs">
 <a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
@@ -39519,9 +39531,9 @@ The following output properties are available:
 <a href="#additional_columns_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
+        <span class="property-type">Any</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disable_metrics_collection_python">
 <a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
@@ -40475,9 +40487,9 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response&gt;</a></span>
+        <span class="property-type">object</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_csharp">
 <a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
@@ -40535,9 +40547,9 @@ The following output properties are available:
 <a href="#additionalcolumns_go" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">[]Additional<wbr>Columns<wbr>Response</a></span>
+        <span class="property-type">interface{}</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_go">
 <a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
@@ -40595,9 +40607,9 @@ The following output properties are available:
 <a href="#additionalcolumns_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Additional<wbr>Columns<wbr>Response[]</a></span>
+        <span class="property-type">any</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_nodejs">
 <a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
@@ -40655,9 +40667,9 @@ The following output properties are available:
 <a href="#additional_columns_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
+        <span class="property-type">Any</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disable_metrics_collection_python">
 <a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
@@ -40963,9 +40975,9 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response&gt;</a></span>
+        <span class="property-type">object</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_csharp">
 <a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
@@ -41039,9 +41051,9 @@ The following output properties are available:
 <a href="#additionalcolumns_go" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">[]Additional<wbr>Columns<wbr>Response</a></span>
+        <span class="property-type">interface{}</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_go">
 <a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
@@ -41115,9 +41127,9 @@ The following output properties are available:
 <a href="#additionalcolumns_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Additional<wbr>Columns<wbr>Response[]</a></span>
+        <span class="property-type">any</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_nodejs">
 <a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
@@ -41191,9 +41203,9 @@ The following output properties are available:
 <a href="#additional_columns_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
+        <span class="property-type">Any</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disable_metrics_collection_python">
 <a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
@@ -41547,9 +41559,9 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response&gt;</a></span>
+        <span class="property-type">object</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_csharp">
 <a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
@@ -41599,9 +41611,9 @@ The following output properties are available:
 <a href="#additionalcolumns_go" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">[]Additional<wbr>Columns<wbr>Response</a></span>
+        <span class="property-type">interface{}</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_go">
 <a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
@@ -41651,9 +41663,9 @@ The following output properties are available:
 <a href="#additionalcolumns_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Additional<wbr>Columns<wbr>Response[]</a></span>
+        <span class="property-type">any</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_nodejs">
 <a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
@@ -41703,9 +41715,9 @@ The following output properties are available:
 <a href="#additional_columns_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
+        <span class="property-type">Any</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disable_metrics_collection_python">
 <a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
@@ -42203,9 +42215,9 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response&gt;</a></span>
+        <span class="property-type">object</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_csharp">
 <a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
@@ -42255,9 +42267,9 @@ The following output properties are available:
 <a href="#additionalcolumns_go" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">[]Additional<wbr>Columns<wbr>Response</a></span>
+        <span class="property-type">interface{}</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_go">
 <a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
@@ -42307,9 +42319,9 @@ The following output properties are available:
 <a href="#additionalcolumns_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Additional<wbr>Columns<wbr>Response[]</a></span>
+        <span class="property-type">any</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_nodejs">
 <a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
@@ -42359,9 +42371,9 @@ The following output properties are available:
 <a href="#additional_columns_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
+        <span class="property-type">Any</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disable_metrics_collection_python">
 <a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
@@ -42499,9 +42511,9 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response&gt;</a></span>
+        <span class="property-type">object</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_csharp">
 <a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
@@ -42559,9 +42571,9 @@ The following output properties are available:
 <a href="#additionalcolumns_go" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">[]Additional<wbr>Columns<wbr>Response</a></span>
+        <span class="property-type">interface{}</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_go">
 <a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
@@ -42619,9 +42631,9 @@ The following output properties are available:
 <a href="#additionalcolumns_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Additional<wbr>Columns<wbr>Response[]</a></span>
+        <span class="property-type">any</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_nodejs">
 <a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
@@ -42679,9 +42691,9 @@ The following output properties are available:
 <a href="#additional_columns_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
+        <span class="property-type">Any</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disable_metrics_collection_python">
 <a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
@@ -42743,9 +42755,9 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response&gt;</a></span>
+        <span class="property-type">object</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_csharp">
 <a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
@@ -42803,9 +42815,9 @@ The following output properties are available:
 <a href="#additionalcolumns_go" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">[]Additional<wbr>Columns<wbr>Response</a></span>
+        <span class="property-type">interface{}</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_go">
 <a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
@@ -42863,9 +42875,9 @@ The following output properties are available:
 <a href="#additionalcolumns_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Additional<wbr>Columns<wbr>Response[]</a></span>
+        <span class="property-type">any</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_nodejs">
 <a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
@@ -42923,9 +42935,9 @@ The following output properties are available:
 <a href="#additional_columns_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
+        <span class="property-type">Any</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disable_metrics_collection_python">
 <a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
@@ -43407,9 +43419,9 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response&gt;</a></span>
+        <span class="property-type">object</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_csharp">
 <a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
@@ -43467,9 +43479,9 @@ The following output properties are available:
 <a href="#additionalcolumns_go" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">[]Additional<wbr>Columns<wbr>Response</a></span>
+        <span class="property-type">interface{}</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_go">
 <a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
@@ -43527,9 +43539,9 @@ The following output properties are available:
 <a href="#additionalcolumns_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Additional<wbr>Columns<wbr>Response[]</a></span>
+        <span class="property-type">any</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_nodejs">
 <a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
@@ -43587,9 +43599,9 @@ The following output properties are available:
 <a href="#additional_columns_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
+        <span class="property-type">Any</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disable_metrics_collection_python">
 <a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
@@ -43651,9 +43663,9 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response&gt;</a></span>
+        <span class="property-type">object</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_csharp">
 <a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
@@ -43711,9 +43723,9 @@ The following output properties are available:
 <a href="#additionalcolumns_go" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">[]Additional<wbr>Columns<wbr>Response</a></span>
+        <span class="property-type">interface{}</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_go">
 <a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
@@ -43771,9 +43783,9 @@ The following output properties are available:
 <a href="#additionalcolumns_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Additional<wbr>Columns<wbr>Response[]</a></span>
+        <span class="property-type">any</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_nodejs">
 <a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
@@ -43831,9 +43843,9 @@ The following output properties are available:
 <a href="#additional_columns_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
+        <span class="property-type">Any</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disable_metrics_collection_python">
 <a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
@@ -43895,9 +43907,9 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response&gt;</a></span>
+        <span class="property-type">object</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_csharp">
 <a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
@@ -43955,9 +43967,9 @@ The following output properties are available:
 <a href="#additionalcolumns_go" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">[]Additional<wbr>Columns<wbr>Response</a></span>
+        <span class="property-type">interface{}</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_go">
 <a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
@@ -44015,9 +44027,9 @@ The following output properties are available:
 <a href="#additionalcolumns_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Additional<wbr>Columns<wbr>Response[]</a></span>
+        <span class="property-type">any</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_nodejs">
 <a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
@@ -44075,9 +44087,9 @@ The following output properties are available:
 <a href="#additional_columns_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
+        <span class="property-type">Any</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disable_metrics_collection_python">
 <a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
@@ -44307,9 +44319,9 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response&gt;</a></span>
+        <span class="property-type">object</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_csharp">
 <a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
@@ -44359,9 +44371,9 @@ The following output properties are available:
 <a href="#additionalcolumns_go" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">[]Additional<wbr>Columns<wbr>Response</a></span>
+        <span class="property-type">interface{}</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_go">
 <a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
@@ -44411,9 +44423,9 @@ The following output properties are available:
 <a href="#additionalcolumns_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Additional<wbr>Columns<wbr>Response[]</a></span>
+        <span class="property-type">any</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_nodejs">
 <a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
@@ -44463,9 +44475,9 @@ The following output properties are available:
 <a href="#additional_columns_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
+        <span class="property-type">Any</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disable_metrics_collection_python">
 <a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
@@ -44519,9 +44531,9 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response&gt;</a></span>
+        <span class="property-type">object</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_csharp">
 <a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
@@ -44579,9 +44591,9 @@ The following output properties are available:
 <a href="#additionalcolumns_go" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">[]Additional<wbr>Columns<wbr>Response</a></span>
+        <span class="property-type">interface{}</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_go">
 <a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
@@ -44639,9 +44651,9 @@ The following output properties are available:
 <a href="#additionalcolumns_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Additional<wbr>Columns<wbr>Response[]</a></span>
+        <span class="property-type">any</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_nodejs">
 <a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
@@ -44699,9 +44711,9 @@ The following output properties are available:
 <a href="#additional_columns_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
+        <span class="property-type">Any</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disable_metrics_collection_python">
 <a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
@@ -45135,9 +45147,9 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response&gt;</a></span>
+        <span class="property-type">object</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="additionalheaders_csharp">
 <a href="#additionalheaders_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Headers</a>
@@ -45227,9 +45239,9 @@ The following output properties are available:
 <a href="#additionalcolumns_go" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">[]Additional<wbr>Columns<wbr>Response</a></span>
+        <span class="property-type">interface{}</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="additionalheaders_go">
 <a href="#additionalheaders_go" style="color: inherit; text-decoration: inherit;">Additional<wbr>Headers</a>
@@ -45319,9 +45331,9 @@ The following output properties are available:
 <a href="#additionalcolumns_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Additional<wbr>Columns<wbr>Response[]</a></span>
+        <span class="property-type">any</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="additionalheaders_nodejs">
 <a href="#additionalheaders_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Headers</a>
@@ -45411,9 +45423,9 @@ The following output properties are available:
 <a href="#additional_columns_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
+        <span class="property-type">Any</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="additional_headers_python">
 <a href="#additional_headers_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>headers</a>
@@ -46511,9 +46523,9 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response&gt;</a></span>
+        <span class="property-type">object</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_csharp">
 <a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
@@ -46571,9 +46583,9 @@ The following output properties are available:
 <a href="#additionalcolumns_go" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">[]Additional<wbr>Columns<wbr>Response</a></span>
+        <span class="property-type">interface{}</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_go">
 <a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
@@ -46631,9 +46643,9 @@ The following output properties are available:
 <a href="#additionalcolumns_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Additional<wbr>Columns<wbr>Response[]</a></span>
+        <span class="property-type">any</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_nodejs">
 <a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
@@ -46691,9 +46703,9 @@ The following output properties are available:
 <a href="#additional_columns_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
+        <span class="property-type">Any</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disable_metrics_collection_python">
 <a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
@@ -47063,9 +47075,9 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response&gt;</a></span>
+        <span class="property-type">object</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_csharp">
 <a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
@@ -47123,9 +47135,9 @@ The following output properties are available:
 <a href="#additionalcolumns_go" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">[]Additional<wbr>Columns<wbr>Response</a></span>
+        <span class="property-type">interface{}</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_go">
 <a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
@@ -47183,9 +47195,9 @@ The following output properties are available:
 <a href="#additionalcolumns_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Additional<wbr>Columns<wbr>Response[]</a></span>
+        <span class="property-type">any</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_nodejs">
 <a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
@@ -47243,9 +47255,9 @@ The following output properties are available:
 <a href="#additional_columns_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
+        <span class="property-type">Any</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disable_metrics_collection_python">
 <a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
@@ -47615,9 +47627,9 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response&gt;</a></span>
+        <span class="property-type">object</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_csharp">
 <a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
@@ -47683,9 +47695,9 @@ The following output properties are available:
 <a href="#additionalcolumns_go" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">[]Additional<wbr>Columns<wbr>Response</a></span>
+        <span class="property-type">interface{}</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_go">
 <a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
@@ -47751,9 +47763,9 @@ The following output properties are available:
 <a href="#additionalcolumns_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Additional<wbr>Columns<wbr>Response[]</a></span>
+        <span class="property-type">any</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_nodejs">
 <a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
@@ -47819,9 +47831,9 @@ The following output properties are available:
 <a href="#additional_columns_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
+        <span class="property-type">Any</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disable_metrics_collection_python">
 <a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
@@ -47891,9 +47903,9 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response&gt;</a></span>
+        <span class="property-type">object</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_csharp">
 <a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
@@ -47951,9 +47963,9 @@ The following output properties are available:
 <a href="#additionalcolumns_go" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">[]Additional<wbr>Columns<wbr>Response</a></span>
+        <span class="property-type">interface{}</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_go">
 <a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
@@ -48011,9 +48023,9 @@ The following output properties are available:
 <a href="#additionalcolumns_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Additional<wbr>Columns<wbr>Response[]</a></span>
+        <span class="property-type">any</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_nodejs">
 <a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
@@ -48071,9 +48083,9 @@ The following output properties are available:
 <a href="#additional_columns_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
+        <span class="property-type">Any</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disable_metrics_collection_python">
 <a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
@@ -48411,9 +48423,9 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response&gt;</a></span>
+        <span class="property-type">object</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_csharp">
 <a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
@@ -48479,9 +48491,9 @@ The following output properties are available:
 <a href="#additionalcolumns_go" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">[]Additional<wbr>Columns<wbr>Response</a></span>
+        <span class="property-type">interface{}</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_go">
 <a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
@@ -48547,9 +48559,9 @@ The following output properties are available:
 <a href="#additionalcolumns_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Additional<wbr>Columns<wbr>Response[]</a></span>
+        <span class="property-type">any</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_nodejs">
 <a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
@@ -48615,9 +48627,9 @@ The following output properties are available:
 <a href="#additional_columns_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
+        <span class="property-type">Any</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disable_metrics_collection_python">
 <a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
@@ -48687,9 +48699,9 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response&gt;</a></span>
+        <span class="property-type">object</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_csharp">
 <a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
@@ -48755,9 +48767,9 @@ The following output properties are available:
 <a href="#additionalcolumns_go" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">[]Additional<wbr>Columns<wbr>Response</a></span>
+        <span class="property-type">interface{}</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_go">
 <a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
@@ -48823,9 +48835,9 @@ The following output properties are available:
 <a href="#additionalcolumns_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Additional<wbr>Columns<wbr>Response[]</a></span>
+        <span class="property-type">any</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_nodejs">
 <a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
@@ -48891,9 +48903,9 @@ The following output properties are available:
 <a href="#additional_columns_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
+        <span class="property-type">Any</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disable_metrics_collection_python">
 <a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
@@ -49015,9 +49027,9 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response&gt;</a></span>
+        <span class="property-type">object</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_csharp">
 <a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
@@ -49099,9 +49111,9 @@ The following output properties are available:
 <a href="#additionalcolumns_go" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">[]Additional<wbr>Columns<wbr>Response</a></span>
+        <span class="property-type">interface{}</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_go">
 <a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
@@ -49183,9 +49195,9 @@ The following output properties are available:
 <a href="#additionalcolumns_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Additional<wbr>Columns<wbr>Response[]</a></span>
+        <span class="property-type">any</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_nodejs">
 <a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
@@ -49267,9 +49279,9 @@ The following output properties are available:
 <a href="#additional_columns_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
+        <span class="property-type">Any</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disable_metrics_collection_python">
 <a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
@@ -49355,9 +49367,9 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response&gt;</a></span>
+        <span class="property-type">object</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="baserequestid_csharp">
 <a href="#baserequestid_csharp" style="color: inherit; text-decoration: inherit;">Base<wbr>Request<wbr>Id</a>
@@ -49439,9 +49451,9 @@ The following output properties are available:
 <a href="#additionalcolumns_go" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">[]Additional<wbr>Columns<wbr>Response</a></span>
+        <span class="property-type">interface{}</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="baserequestid_go">
 <a href="#baserequestid_go" style="color: inherit; text-decoration: inherit;">Base<wbr>Request<wbr>Id</a>
@@ -49523,9 +49535,9 @@ The following output properties are available:
 <a href="#additionalcolumns_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Additional<wbr>Columns<wbr>Response[]</a></span>
+        <span class="property-type">any</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="baserequestid_nodejs">
 <a href="#baserequestid_nodejs" style="color: inherit; text-decoration: inherit;">base<wbr>Request<wbr>Id</a>
@@ -49607,9 +49619,9 @@ The following output properties are available:
 <a href="#additional_columns_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
+        <span class="property-type">Any</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="base_request_id_python">
 <a href="#base_request_id_python" style="color: inherit; text-decoration: inherit;">base_<wbr>request_<wbr>id</a>
@@ -49843,9 +49855,9 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response&gt;</a></span>
+        <span class="property-type">object</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="batchsize_csharp">
 <a href="#batchsize_csharp" style="color: inherit; text-decoration: inherit;">Batch<wbr>Size</a>
@@ -49967,9 +49979,9 @@ The following output properties are available:
 <a href="#additionalcolumns_go" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">[]Additional<wbr>Columns<wbr>Response</a></span>
+        <span class="property-type">interface{}</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="batchsize_go">
 <a href="#batchsize_go" style="color: inherit; text-decoration: inherit;">Batch<wbr>Size</a>
@@ -50091,9 +50103,9 @@ The following output properties are available:
 <a href="#additionalcolumns_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Additional<wbr>Columns<wbr>Response[]</a></span>
+        <span class="property-type">any</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="batchsize_nodejs">
 <a href="#batchsize_nodejs" style="color: inherit; text-decoration: inherit;">batch<wbr>Size</a>
@@ -50215,9 +50227,9 @@ The following output properties are available:
 <a href="#additional_columns_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
+        <span class="property-type">Any</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="batch_size_python">
 <a href="#batch_size_python" style="color: inherit; text-decoration: inherit;">batch_<wbr>size</a>
@@ -50395,9 +50407,9 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response&gt;</a></span>
+        <span class="property-type">object</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_csharp">
 <a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
@@ -50455,9 +50467,9 @@ The following output properties are available:
 <a href="#additionalcolumns_go" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">[]Additional<wbr>Columns<wbr>Response</a></span>
+        <span class="property-type">interface{}</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_go">
 <a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
@@ -50515,9 +50527,9 @@ The following output properties are available:
 <a href="#additionalcolumns_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Additional<wbr>Columns<wbr>Response[]</a></span>
+        <span class="property-type">any</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_nodejs">
 <a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
@@ -50575,9 +50587,9 @@ The following output properties are available:
 <a href="#additional_columns_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
+        <span class="property-type">Any</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disable_metrics_collection_python">
 <a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
@@ -51615,9 +51627,9 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response&gt;</a></span>
+        <span class="property-type">object</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_csharp">
 <a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
@@ -51675,9 +51687,9 @@ The following output properties are available:
 <a href="#additionalcolumns_go" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">[]Additional<wbr>Columns<wbr>Response</a></span>
+        <span class="property-type">interface{}</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_go">
 <a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
@@ -51735,9 +51747,9 @@ The following output properties are available:
 <a href="#additionalcolumns_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Additional<wbr>Columns<wbr>Response[]</a></span>
+        <span class="property-type">any</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_nodejs">
 <a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
@@ -51795,9 +51807,9 @@ The following output properties are available:
 <a href="#additional_columns_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
+        <span class="property-type">Any</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disable_metrics_collection_python">
 <a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
@@ -52599,9 +52611,9 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response&gt;</a></span>
+        <span class="property-type">object</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_csharp">
 <a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
@@ -52659,9 +52671,9 @@ The following output properties are available:
 <a href="#additionalcolumns_go" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">[]Additional<wbr>Columns<wbr>Response</a></span>
+        <span class="property-type">interface{}</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_go">
 <a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
@@ -52719,9 +52731,9 @@ The following output properties are available:
 <a href="#additionalcolumns_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Additional<wbr>Columns<wbr>Response[]</a></span>
+        <span class="property-type">any</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_nodejs">
 <a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
@@ -52779,9 +52791,9 @@ The following output properties are available:
 <a href="#additional_columns_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
+        <span class="property-type">Any</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disable_metrics_collection_python">
 <a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
@@ -52911,6 +52923,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Sink retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="sqlwriterusetablelock_csharp">
+<a href="#sqlwriterusetablelock_csharp" style="color: inherit; text-decoration: inherit;">Sql<wbr>Writer<wbr>Use<wbr>Table<wbr>Lock</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}Whether to use table lock during bulk copy. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="tableoption_csharp">
 <a href="#tableoption_csharp" style="color: inherit; text-decoration: inherit;">Table<wbr>Option</a>
 </span>
@@ -52918,6 +52938,14 @@ The following output properties are available:
         <span class="property-type">object</span>
     </dt>
     <dd>{{% md %}}The option to handle sink table, such as autoCreate. For now only 'autoCreate' value is supported. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="upsertsettings_csharp">
+<a href="#upsertsettings_csharp" style="color: inherit; text-decoration: inherit;">Upsert<wbr>Settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sqldwupsertsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sql<wbr>DWUpsert<wbr>Settings<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}SQL DW upsert settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="writebatchsize_csharp">
 <a href="#writebatchsize_csharp" style="color: inherit; text-decoration: inherit;">Write<wbr>Batch<wbr>Size</a>
@@ -52933,7 +52961,15 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">object</span>
     </dt>
-    <dd>{{% md %}}Write batch timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Write batch timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="writebehavior_csharp">
+<a href="#writebehavior_csharp" style="color: inherit; text-decoration: inherit;">Write<wbr>Behavior</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}Write behavior when copying data into azure SQL DW. Type: SqlDWWriteBehaviorEnum (or Expression with resultType SqlDWWriteBehaviorEnum){{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -53011,6 +53047,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Sink retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="sqlwriterusetablelock_go">
+<a href="#sqlwriterusetablelock_go" style="color: inherit; text-decoration: inherit;">Sql<wbr>Writer<wbr>Use<wbr>Table<wbr>Lock</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}Whether to use table lock during bulk copy. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="tableoption_go">
 <a href="#tableoption_go" style="color: inherit; text-decoration: inherit;">Table<wbr>Option</a>
 </span>
@@ -53018,6 +53062,14 @@ The following output properties are available:
         <span class="property-type">interface{}</span>
     </dt>
     <dd>{{% md %}}The option to handle sink table, such as autoCreate. For now only 'autoCreate' value is supported. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="upsertsettings_go">
+<a href="#upsertsettings_go" style="color: inherit; text-decoration: inherit;">Upsert<wbr>Settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sqldwupsertsettingsresponse">Sql<wbr>DWUpsert<wbr>Settings<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}SQL DW upsert settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="writebatchsize_go">
 <a href="#writebatchsize_go" style="color: inherit; text-decoration: inherit;">Write<wbr>Batch<wbr>Size</a>
@@ -53033,7 +53085,15 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">interface{}</span>
     </dt>
-    <dd>{{% md %}}Write batch timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Write batch timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="writebehavior_go">
+<a href="#writebehavior_go" style="color: inherit; text-decoration: inherit;">Write<wbr>Behavior</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}Write behavior when copying data into azure SQL DW. Type: SqlDWWriteBehaviorEnum (or Expression with resultType SqlDWWriteBehaviorEnum){{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -53111,6 +53171,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Sink retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="sqlwriterusetablelock_nodejs">
+<a href="#sqlwriterusetablelock_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Writer<wbr>Use<wbr>Table<wbr>Lock</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}Whether to use table lock during bulk copy. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="tableoption_nodejs">
 <a href="#tableoption_nodejs" style="color: inherit; text-decoration: inherit;">table<wbr>Option</a>
 </span>
@@ -53118,6 +53186,14 @@ The following output properties are available:
         <span class="property-type">any</span>
     </dt>
     <dd>{{% md %}}The option to handle sink table, such as autoCreate. For now only 'autoCreate' value is supported. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="upsertsettings_nodejs">
+<a href="#upsertsettings_nodejs" style="color: inherit; text-decoration: inherit;">upsert<wbr>Settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sqldwupsertsettingsresponse">Sql<wbr>DWUpsert<wbr>Settings<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}SQL DW upsert settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="writebatchsize_nodejs">
 <a href="#writebatchsize_nodejs" style="color: inherit; text-decoration: inherit;">write<wbr>Batch<wbr>Size</a>
@@ -53133,7 +53209,15 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">any</span>
     </dt>
-    <dd>{{% md %}}Write batch timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Write batch timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="writebehavior_nodejs">
+<a href="#writebehavior_nodejs" style="color: inherit; text-decoration: inherit;">write<wbr>Behavior</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}Write behavior when copying data into azure SQL DW. Type: SqlDWWriteBehaviorEnum (or Expression with resultType SqlDWWriteBehaviorEnum){{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -53211,6 +53295,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Sink retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="sql_writer_use_table_lock_python">
+<a href="#sql_writer_use_table_lock_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>writer_<wbr>use_<wbr>table_<wbr>lock</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}Whether to use table lock during bulk copy. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="table_option_python">
 <a href="#table_option_python" style="color: inherit; text-decoration: inherit;">table_<wbr>option</a>
 </span>
@@ -53218,6 +53310,14 @@ The following output properties are available:
         <span class="property-type">Any</span>
     </dt>
     <dd>{{% md %}}The option to handle sink table, such as autoCreate. For now only 'autoCreate' value is supported. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="upsert_settings_python">
+<a href="#upsert_settings_python" style="color: inherit; text-decoration: inherit;">upsert_<wbr>settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sqldwupsertsettingsresponse">Sql<wbr>DWUpsert<wbr>Settings<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}SQL DW upsert settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="write_batch_size_python">
 <a href="#write_batch_size_python" style="color: inherit; text-decoration: inherit;">write_<wbr>batch_<wbr>size</a>
@@ -53233,7 +53333,15 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Any</span>
     </dt>
-    <dd>{{% md %}}Write batch timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Write batch timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="write_behavior_python">
+<a href="#write_behavior_python" style="color: inherit; text-decoration: inherit;">write_<wbr>behavior</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}Write behavior when copying data into azure SQL DW. Type: SqlDWWriteBehaviorEnum (or Expression with resultType SqlDWWriteBehaviorEnum){{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="sqldwsourceresponse">Sql<wbr>DWSource<wbr>Response</h4>
@@ -53247,9 +53355,9 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response&gt;</a></span>
+        <span class="property-type">object</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_csharp">
 <a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
@@ -53339,9 +53447,9 @@ The following output properties are available:
 <a href="#additionalcolumns_go" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">[]Additional<wbr>Columns<wbr>Response</a></span>
+        <span class="property-type">interface{}</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_go">
 <a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
@@ -53431,9 +53539,9 @@ The following output properties are available:
 <a href="#additionalcolumns_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Additional<wbr>Columns<wbr>Response[]</a></span>
+        <span class="property-type">any</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_nodejs">
 <a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
@@ -53523,9 +53631,9 @@ The following output properties are available:
 <a href="#additional_columns_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
+        <span class="property-type">Any</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disable_metrics_collection_python">
 <a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
@@ -53608,6 +53716,90 @@ The following output properties are available:
     <dd>{{% md %}}Value and type setting for stored procedure parameters. Example: "{Parameter1: {value: "1", type: "int"}}". Type: object (or Expression with resultType object), itemType: StoredProcedureParameter.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="sqldwupsertsettingsresponse">Sql<wbr>DWUpsert<wbr>Settings<wbr>Response</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="interimschemaname_csharp">
+<a href="#interimschemaname_csharp" style="color: inherit; text-decoration: inherit;">Interim<wbr>Schema<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}Schema name for interim table. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="keys_csharp">
+<a href="#keys_csharp" style="color: inherit; text-decoration: inherit;">Keys</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}Key column names for unique row identification. Type: array of strings (or Expression with resultType array of strings).{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="interimschemaname_go">
+<a href="#interimschemaname_go" style="color: inherit; text-decoration: inherit;">Interim<wbr>Schema<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}Schema name for interim table. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="keys_go">
+<a href="#keys_go" style="color: inherit; text-decoration: inherit;">Keys</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}Key column names for unique row identification. Type: array of strings (or Expression with resultType array of strings).{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="interimschemaname_nodejs">
+<a href="#interimschemaname_nodejs" style="color: inherit; text-decoration: inherit;">interim<wbr>Schema<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}Schema name for interim table. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="keys_nodejs">
+<a href="#keys_nodejs" style="color: inherit; text-decoration: inherit;">keys</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}Key column names for unique row identification. Type: array of strings (or Expression with resultType array of strings).{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="interim_schema_name_python">
+<a href="#interim_schema_name_python" style="color: inherit; text-decoration: inherit;">interim_<wbr>schema_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}Schema name for interim table. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="keys_python">
+<a href="#keys_python" style="color: inherit; text-decoration: inherit;">keys</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}Key column names for unique row identification. Type: array of strings (or Expression with resultType array of strings).{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
 <h4 id="sqlmisinkresponse">Sql<wbr>MISink<wbr>Response</h4>
 
 
@@ -53671,6 +53863,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}SQL writer table type. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="sqlwriterusetablelock_csharp">
+<a href="#sqlwriterusetablelock_csharp" style="color: inherit; text-decoration: inherit;">Sql<wbr>Writer<wbr>Use<wbr>Table<wbr>Lock</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}Whether to use table lock during bulk copy. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="storedprocedureparameters_csharp">
 <a href="#storedprocedureparameters_csharp" style="color: inherit; text-decoration: inherit;">Stored<wbr>Procedure<wbr>Parameters</a>
 </span>
@@ -53695,6 +53895,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The option to handle sink table, such as autoCreate. For now only 'autoCreate' value is supported. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="upsertsettings_csharp">
+<a href="#upsertsettings_csharp" style="color: inherit; text-decoration: inherit;">Upsert<wbr>Settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sqlupsertsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sql<wbr>Upsert<wbr>Settings<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}SQL upsert settings.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="writebatchsize_csharp">
 <a href="#writebatchsize_csharp" style="color: inherit; text-decoration: inherit;">Write<wbr>Batch<wbr>Size</a>
 </span>
@@ -53709,7 +53917,15 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">object</span>
     </dt>
-    <dd>{{% md %}}Write batch timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Write batch timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="writebehavior_csharp">
+<a href="#writebehavior_csharp" style="color: inherit; text-decoration: inherit;">Write<wbr>Behavior</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}White behavior when copying data into azure SQL MI. Type: SqlWriteBehaviorEnum (or Expression with resultType SqlWriteBehaviorEnum){{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -53771,6 +53987,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}SQL writer table type. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="sqlwriterusetablelock_go">
+<a href="#sqlwriterusetablelock_go" style="color: inherit; text-decoration: inherit;">Sql<wbr>Writer<wbr>Use<wbr>Table<wbr>Lock</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}Whether to use table lock during bulk copy. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="storedprocedureparameters_go">
 <a href="#storedprocedureparameters_go" style="color: inherit; text-decoration: inherit;">Stored<wbr>Procedure<wbr>Parameters</a>
 </span>
@@ -53795,6 +54019,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The option to handle sink table, such as autoCreate. For now only 'autoCreate' value is supported. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="upsertsettings_go">
+<a href="#upsertsettings_go" style="color: inherit; text-decoration: inherit;">Upsert<wbr>Settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sqlupsertsettingsresponse">Sql<wbr>Upsert<wbr>Settings<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}SQL upsert settings.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="writebatchsize_go">
 <a href="#writebatchsize_go" style="color: inherit; text-decoration: inherit;">Write<wbr>Batch<wbr>Size</a>
 </span>
@@ -53809,7 +54041,15 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">interface{}</span>
     </dt>
-    <dd>{{% md %}}Write batch timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Write batch timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="writebehavior_go">
+<a href="#writebehavior_go" style="color: inherit; text-decoration: inherit;">Write<wbr>Behavior</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}White behavior when copying data into azure SQL MI. Type: SqlWriteBehaviorEnum (or Expression with resultType SqlWriteBehaviorEnum){{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -53871,6 +54111,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}SQL writer table type. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="sqlwriterusetablelock_nodejs">
+<a href="#sqlwriterusetablelock_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Writer<wbr>Use<wbr>Table<wbr>Lock</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}Whether to use table lock during bulk copy. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="storedprocedureparameters_nodejs">
 <a href="#storedprocedureparameters_nodejs" style="color: inherit; text-decoration: inherit;">stored<wbr>Procedure<wbr>Parameters</a>
 </span>
@@ -53895,6 +54143,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The option to handle sink table, such as autoCreate. For now only 'autoCreate' value is supported. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="upsertsettings_nodejs">
+<a href="#upsertsettings_nodejs" style="color: inherit; text-decoration: inherit;">upsert<wbr>Settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sqlupsertsettingsresponse">Sql<wbr>Upsert<wbr>Settings<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}SQL upsert settings.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="writebatchsize_nodejs">
 <a href="#writebatchsize_nodejs" style="color: inherit; text-decoration: inherit;">write<wbr>Batch<wbr>Size</a>
 </span>
@@ -53909,7 +54165,15 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">any</span>
     </dt>
-    <dd>{{% md %}}Write batch timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Write batch timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="writebehavior_nodejs">
+<a href="#writebehavior_nodejs" style="color: inherit; text-decoration: inherit;">write<wbr>Behavior</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}White behavior when copying data into azure SQL MI. Type: SqlWriteBehaviorEnum (or Expression with resultType SqlWriteBehaviorEnum){{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -53971,6 +54235,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}SQL writer table type. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="sql_writer_use_table_lock_python">
+<a href="#sql_writer_use_table_lock_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>writer_<wbr>use_<wbr>table_<wbr>lock</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}Whether to use table lock during bulk copy. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="stored_procedure_parameters_python">
 <a href="#stored_procedure_parameters_python" style="color: inherit; text-decoration: inherit;">stored_<wbr>procedure_<wbr>parameters</a>
 </span>
@@ -53995,6 +54267,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The option to handle sink table, such as autoCreate. For now only 'autoCreate' value is supported. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="upsert_settings_python">
+<a href="#upsert_settings_python" style="color: inherit; text-decoration: inherit;">upsert_<wbr>settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sqlupsertsettingsresponse">Sql<wbr>Upsert<wbr>Settings<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}SQL upsert settings.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="write_batch_size_python">
 <a href="#write_batch_size_python" style="color: inherit; text-decoration: inherit;">write_<wbr>batch_<wbr>size</a>
 </span>
@@ -54009,7 +54289,15 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Any</span>
     </dt>
-    <dd>{{% md %}}Write batch timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Write batch timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="write_behavior_python">
+<a href="#write_behavior_python" style="color: inherit; text-decoration: inherit;">write_<wbr>behavior</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}White behavior when copying data into azure SQL MI. Type: SqlWriteBehaviorEnum (or Expression with resultType SqlWriteBehaviorEnum){{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="sqlmisourceresponse">Sql<wbr>MISource<wbr>Response</h4>
@@ -54023,9 +54311,9 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response&gt;</a></span>
+        <span class="property-type">object</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_csharp">
 <a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
@@ -54123,9 +54411,9 @@ The following output properties are available:
 <a href="#additionalcolumns_go" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">[]Additional<wbr>Columns<wbr>Response</a></span>
+        <span class="property-type">interface{}</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_go">
 <a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
@@ -54223,9 +54511,9 @@ The following output properties are available:
 <a href="#additionalcolumns_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Additional<wbr>Columns<wbr>Response[]</a></span>
+        <span class="property-type">any</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_nodejs">
 <a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
@@ -54323,9 +54611,9 @@ The following output properties are available:
 <a href="#additional_columns_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
+        <span class="property-type">Any</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disable_metrics_collection_python">
 <a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
@@ -54595,6 +54883,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}SQL writer table type. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="sqlwriterusetablelock_csharp">
+<a href="#sqlwriterusetablelock_csharp" style="color: inherit; text-decoration: inherit;">Sql<wbr>Writer<wbr>Use<wbr>Table<wbr>Lock</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}Whether to use table lock during bulk copy. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="storedprocedureparameters_csharp">
 <a href="#storedprocedureparameters_csharp" style="color: inherit; text-decoration: inherit;">Stored<wbr>Procedure<wbr>Parameters</a>
 </span>
@@ -54619,6 +54915,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The option to handle sink table, such as autoCreate. For now only 'autoCreate' value is supported. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="upsertsettings_csharp">
+<a href="#upsertsettings_csharp" style="color: inherit; text-decoration: inherit;">Upsert<wbr>Settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sqlupsertsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sql<wbr>Upsert<wbr>Settings<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}SQL upsert settings.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="writebatchsize_csharp">
 <a href="#writebatchsize_csharp" style="color: inherit; text-decoration: inherit;">Write<wbr>Batch<wbr>Size</a>
 </span>
@@ -54633,7 +54937,15 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">object</span>
     </dt>
-    <dd>{{% md %}}Write batch timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Write batch timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="writebehavior_csharp">
+<a href="#writebehavior_csharp" style="color: inherit; text-decoration: inherit;">Write<wbr>Behavior</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}Write behavior when copying data into sql server. Type: SqlWriteBehaviorEnum (or Expression with resultType SqlWriteBehaviorEnum){{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -54695,6 +55007,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}SQL writer table type. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="sqlwriterusetablelock_go">
+<a href="#sqlwriterusetablelock_go" style="color: inherit; text-decoration: inherit;">Sql<wbr>Writer<wbr>Use<wbr>Table<wbr>Lock</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}Whether to use table lock during bulk copy. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="storedprocedureparameters_go">
 <a href="#storedprocedureparameters_go" style="color: inherit; text-decoration: inherit;">Stored<wbr>Procedure<wbr>Parameters</a>
 </span>
@@ -54719,6 +55039,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The option to handle sink table, such as autoCreate. For now only 'autoCreate' value is supported. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="upsertsettings_go">
+<a href="#upsertsettings_go" style="color: inherit; text-decoration: inherit;">Upsert<wbr>Settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sqlupsertsettingsresponse">Sql<wbr>Upsert<wbr>Settings<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}SQL upsert settings.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="writebatchsize_go">
 <a href="#writebatchsize_go" style="color: inherit; text-decoration: inherit;">Write<wbr>Batch<wbr>Size</a>
 </span>
@@ -54733,7 +55061,15 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">interface{}</span>
     </dt>
-    <dd>{{% md %}}Write batch timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Write batch timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="writebehavior_go">
+<a href="#writebehavior_go" style="color: inherit; text-decoration: inherit;">Write<wbr>Behavior</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}Write behavior when copying data into sql server. Type: SqlWriteBehaviorEnum (or Expression with resultType SqlWriteBehaviorEnum){{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -54795,6 +55131,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}SQL writer table type. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="sqlwriterusetablelock_nodejs">
+<a href="#sqlwriterusetablelock_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Writer<wbr>Use<wbr>Table<wbr>Lock</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}Whether to use table lock during bulk copy. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="storedprocedureparameters_nodejs">
 <a href="#storedprocedureparameters_nodejs" style="color: inherit; text-decoration: inherit;">stored<wbr>Procedure<wbr>Parameters</a>
 </span>
@@ -54819,6 +55163,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The option to handle sink table, such as autoCreate. For now only 'autoCreate' value is supported. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="upsertsettings_nodejs">
+<a href="#upsertsettings_nodejs" style="color: inherit; text-decoration: inherit;">upsert<wbr>Settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sqlupsertsettingsresponse">Sql<wbr>Upsert<wbr>Settings<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}SQL upsert settings.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="writebatchsize_nodejs">
 <a href="#writebatchsize_nodejs" style="color: inherit; text-decoration: inherit;">write<wbr>Batch<wbr>Size</a>
 </span>
@@ -54833,7 +55185,15 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">any</span>
     </dt>
-    <dd>{{% md %}}Write batch timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Write batch timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="writebehavior_nodejs">
+<a href="#writebehavior_nodejs" style="color: inherit; text-decoration: inherit;">write<wbr>Behavior</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}Write behavior when copying data into sql server. Type: SqlWriteBehaviorEnum (or Expression with resultType SqlWriteBehaviorEnum){{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -54895,6 +55255,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}SQL writer table type. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="sql_writer_use_table_lock_python">
+<a href="#sql_writer_use_table_lock_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>writer_<wbr>use_<wbr>table_<wbr>lock</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}Whether to use table lock during bulk copy. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="stored_procedure_parameters_python">
 <a href="#stored_procedure_parameters_python" style="color: inherit; text-decoration: inherit;">stored_<wbr>procedure_<wbr>parameters</a>
 </span>
@@ -54919,6 +55287,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The option to handle sink table, such as autoCreate. For now only 'autoCreate' value is supported. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="upsert_settings_python">
+<a href="#upsert_settings_python" style="color: inherit; text-decoration: inherit;">upsert_<wbr>settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sqlupsertsettingsresponse">Sql<wbr>Upsert<wbr>Settings<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}SQL upsert settings.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="write_batch_size_python">
 <a href="#write_batch_size_python" style="color: inherit; text-decoration: inherit;">write_<wbr>batch_<wbr>size</a>
 </span>
@@ -54933,7 +55309,15 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Any</span>
     </dt>
-    <dd>{{% md %}}Write batch timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Write batch timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="write_behavior_python">
+<a href="#write_behavior_python" style="color: inherit; text-decoration: inherit;">write_<wbr>behavior</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}Write behavior when copying data into sql server. Type: SqlWriteBehaviorEnum (or Expression with resultType SqlWriteBehaviorEnum){{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="sqlserversourceresponse">Sql<wbr>Server<wbr>Source<wbr>Response</h4>
@@ -54947,9 +55331,9 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response&gt;</a></span>
+        <span class="property-type">object</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_csharp">
 <a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
@@ -55047,9 +55431,9 @@ The following output properties are available:
 <a href="#additionalcolumns_go" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">[]Additional<wbr>Columns<wbr>Response</a></span>
+        <span class="property-type">interface{}</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_go">
 <a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
@@ -55147,9 +55531,9 @@ The following output properties are available:
 <a href="#additionalcolumns_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Additional<wbr>Columns<wbr>Response[]</a></span>
+        <span class="property-type">any</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_nodejs">
 <a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
@@ -55247,9 +55631,9 @@ The following output properties are available:
 <a href="#additional_columns_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
+        <span class="property-type">Any</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disable_metrics_collection_python">
 <a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
@@ -55679,6 +56063,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}SQL writer table type. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="sqlwriterusetablelock_csharp">
+<a href="#sqlwriterusetablelock_csharp" style="color: inherit; text-decoration: inherit;">Sql<wbr>Writer<wbr>Use<wbr>Table<wbr>Lock</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}Whether to use table lock during bulk copy. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="storedprocedureparameters_csharp">
 <a href="#storedprocedureparameters_csharp" style="color: inherit; text-decoration: inherit;">Stored<wbr>Procedure<wbr>Parameters</a>
 </span>
@@ -55703,6 +56095,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The option to handle sink table, such as autoCreate. For now only 'autoCreate' value is supported. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="upsertsettings_csharp">
+<a href="#upsertsettings_csharp" style="color: inherit; text-decoration: inherit;">Upsert<wbr>Settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sqlupsertsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Sql<wbr>Upsert<wbr>Settings<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}SQL upsert settings.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="writebatchsize_csharp">
 <a href="#writebatchsize_csharp" style="color: inherit; text-decoration: inherit;">Write<wbr>Batch<wbr>Size</a>
 </span>
@@ -55717,7 +56117,15 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">object</span>
     </dt>
-    <dd>{{% md %}}Write batch timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Write batch timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="writebehavior_csharp">
+<a href="#writebehavior_csharp" style="color: inherit; text-decoration: inherit;">Write<wbr>Behavior</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}Write behavior when copying data into sql. Type: SqlWriteBehaviorEnum (or Expression with resultType SqlWriteBehaviorEnum){{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -55779,6 +56187,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}SQL writer table type. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="sqlwriterusetablelock_go">
+<a href="#sqlwriterusetablelock_go" style="color: inherit; text-decoration: inherit;">Sql<wbr>Writer<wbr>Use<wbr>Table<wbr>Lock</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}Whether to use table lock during bulk copy. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="storedprocedureparameters_go">
 <a href="#storedprocedureparameters_go" style="color: inherit; text-decoration: inherit;">Stored<wbr>Procedure<wbr>Parameters</a>
 </span>
@@ -55803,6 +56219,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The option to handle sink table, such as autoCreate. For now only 'autoCreate' value is supported. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="upsertsettings_go">
+<a href="#upsertsettings_go" style="color: inherit; text-decoration: inherit;">Upsert<wbr>Settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sqlupsertsettingsresponse">Sql<wbr>Upsert<wbr>Settings<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}SQL upsert settings.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="writebatchsize_go">
 <a href="#writebatchsize_go" style="color: inherit; text-decoration: inherit;">Write<wbr>Batch<wbr>Size</a>
 </span>
@@ -55817,7 +56241,15 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">interface{}</span>
     </dt>
-    <dd>{{% md %}}Write batch timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Write batch timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="writebehavior_go">
+<a href="#writebehavior_go" style="color: inherit; text-decoration: inherit;">Write<wbr>Behavior</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}Write behavior when copying data into sql. Type: SqlWriteBehaviorEnum (or Expression with resultType SqlWriteBehaviorEnum){{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -55879,6 +56311,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}SQL writer table type. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="sqlwriterusetablelock_nodejs">
+<a href="#sqlwriterusetablelock_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Writer<wbr>Use<wbr>Table<wbr>Lock</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}Whether to use table lock during bulk copy. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="storedprocedureparameters_nodejs">
 <a href="#storedprocedureparameters_nodejs" style="color: inherit; text-decoration: inherit;">stored<wbr>Procedure<wbr>Parameters</a>
 </span>
@@ -55903,6 +56343,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The option to handle sink table, such as autoCreate. For now only 'autoCreate' value is supported. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="upsertsettings_nodejs">
+<a href="#upsertsettings_nodejs" style="color: inherit; text-decoration: inherit;">upsert<wbr>Settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sqlupsertsettingsresponse">Sql<wbr>Upsert<wbr>Settings<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}SQL upsert settings.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="writebatchsize_nodejs">
 <a href="#writebatchsize_nodejs" style="color: inherit; text-decoration: inherit;">write<wbr>Batch<wbr>Size</a>
 </span>
@@ -55917,7 +56365,15 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">any</span>
     </dt>
-    <dd>{{% md %}}Write batch timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Write batch timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="writebehavior_nodejs">
+<a href="#writebehavior_nodejs" style="color: inherit; text-decoration: inherit;">write<wbr>Behavior</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}Write behavior when copying data into sql. Type: SqlWriteBehaviorEnum (or Expression with resultType SqlWriteBehaviorEnum){{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -55979,6 +56435,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}SQL writer table type. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="sql_writer_use_table_lock_python">
+<a href="#sql_writer_use_table_lock_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>writer_<wbr>use_<wbr>table_<wbr>lock</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}Whether to use table lock during bulk copy. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="stored_procedure_parameters_python">
 <a href="#stored_procedure_parameters_python" style="color: inherit; text-decoration: inherit;">stored_<wbr>procedure_<wbr>parameters</a>
 </span>
@@ -56003,6 +56467,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The option to handle sink table, such as autoCreate. For now only 'autoCreate' value is supported. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="upsert_settings_python">
+<a href="#upsert_settings_python" style="color: inherit; text-decoration: inherit;">upsert_<wbr>settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sqlupsertsettingsresponse">Sql<wbr>Upsert<wbr>Settings<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}SQL upsert settings.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="write_batch_size_python">
 <a href="#write_batch_size_python" style="color: inherit; text-decoration: inherit;">write_<wbr>batch_<wbr>size</a>
 </span>
@@ -56017,7 +56489,15 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Any</span>
     </dt>
-    <dd>{{% md %}}Write batch timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Write batch timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="write_behavior_python">
+<a href="#write_behavior_python" style="color: inherit; text-decoration: inherit;">write_<wbr>behavior</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}Write behavior when copying data into sql. Type: SqlWriteBehaviorEnum (or Expression with resultType SqlWriteBehaviorEnum){{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="sqlsourceresponse">Sql<wbr>Source<wbr>Response</h4>
@@ -56031,9 +56511,9 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response&gt;</a></span>
+        <span class="property-type">object</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_csharp">
 <a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
@@ -56131,9 +56611,9 @@ The following output properties are available:
 <a href="#additionalcolumns_go" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">[]Additional<wbr>Columns<wbr>Response</a></span>
+        <span class="property-type">interface{}</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_go">
 <a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
@@ -56231,9 +56711,9 @@ The following output properties are available:
 <a href="#additionalcolumns_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Additional<wbr>Columns<wbr>Response[]</a></span>
+        <span class="property-type">any</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_nodejs">
 <a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
@@ -56331,9 +56811,9 @@ The following output properties are available:
 <a href="#additional_columns_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
+        <span class="property-type">Any</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disable_metrics_collection_python">
 <a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
@@ -56424,6 +56904,122 @@ The following output properties are available:
     <dd>{{% md %}}Value and type setting for stored procedure parameters. Example: "{Parameter1: {value: "1", type: "int"}}".{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="sqlupsertsettingsresponse">Sql<wbr>Upsert<wbr>Settings<wbr>Response</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="interimschemaname_csharp">
+<a href="#interimschemaname_csharp" style="color: inherit; text-decoration: inherit;">Interim<wbr>Schema<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}Schema name for interim table. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="keys_csharp">
+<a href="#keys_csharp" style="color: inherit; text-decoration: inherit;">Keys</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}Key column names for unique row identification. Type: array of strings (or Expression with resultType array of strings).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="usetempdb_csharp">
+<a href="#usetempdb_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Temp<wbr>DB</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether to use temp db for upsert interim table. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="interimschemaname_go">
+<a href="#interimschemaname_go" style="color: inherit; text-decoration: inherit;">Interim<wbr>Schema<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}Schema name for interim table. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="keys_go">
+<a href="#keys_go" style="color: inherit; text-decoration: inherit;">Keys</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}Key column names for unique row identification. Type: array of strings (or Expression with resultType array of strings).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="usetempdb_go">
+<a href="#usetempdb_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Temp<wbr>DB</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether to use temp db for upsert interim table. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="interimschemaname_nodejs">
+<a href="#interimschemaname_nodejs" style="color: inherit; text-decoration: inherit;">interim<wbr>Schema<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}Schema name for interim table. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="keys_nodejs">
+<a href="#keys_nodejs" style="color: inherit; text-decoration: inherit;">keys</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}Key column names for unique row identification. Type: array of strings (or Expression with resultType array of strings).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="usetempdb_nodejs">
+<a href="#usetempdb_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Temp<wbr>DB</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether to use temp db for upsert interim table. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="interim_schema_name_python">
+<a href="#interim_schema_name_python" style="color: inherit; text-decoration: inherit;">interim_<wbr>schema_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}Schema name for interim table. Type: string (or Expression with resultType string).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="keys_python">
+<a href="#keys_python" style="color: inherit; text-decoration: inherit;">keys</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}Key column names for unique row identification. Type: array of strings (or Expression with resultType array of strings).{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="use_temp_db_python">
+<a href="#use_temp_db_python" style="color: inherit; text-decoration: inherit;">use_<wbr>temp_<wbr>db</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether to use temp db for upsert interim table. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
 <h4 id="squaresourceresponse">Square<wbr>Source<wbr>Response</h4>
 
 
@@ -56435,9 +57031,9 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response&gt;</a></span>
+        <span class="property-type">object</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_csharp">
 <a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
@@ -56495,9 +57091,9 @@ The following output properties are available:
 <a href="#additionalcolumns_go" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">[]Additional<wbr>Columns<wbr>Response</a></span>
+        <span class="property-type">interface{}</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_go">
 <a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
@@ -56555,9 +57151,9 @@ The following output properties are available:
 <a href="#additionalcolumns_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Additional<wbr>Columns<wbr>Response[]</a></span>
+        <span class="property-type">any</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_nodejs">
 <a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
@@ -56615,9 +57211,9 @@ The following output properties are available:
 <a href="#additional_columns_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
+        <span class="property-type">Any</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disable_metrics_collection_python">
 <a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
@@ -57207,9 +57803,9 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response&gt;</a></span>
+        <span class="property-type">object</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_csharp">
 <a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
@@ -57267,9 +57863,9 @@ The following output properties are available:
 <a href="#additionalcolumns_go" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">[]Additional<wbr>Columns<wbr>Response</a></span>
+        <span class="property-type">interface{}</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_go">
 <a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
@@ -57327,9 +57923,9 @@ The following output properties are available:
 <a href="#additionalcolumns_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Additional<wbr>Columns<wbr>Response[]</a></span>
+        <span class="property-type">any</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_nodejs">
 <a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
@@ -57387,9 +57983,9 @@ The following output properties are available:
 <a href="#additional_columns_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
+        <span class="property-type">Any</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disable_metrics_collection_python">
 <a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
@@ -57451,9 +58047,9 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response&gt;</a></span>
+        <span class="property-type">object</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_csharp">
 <a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
@@ -57503,9 +58099,9 @@ The following output properties are available:
 <a href="#additionalcolumns_go" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">[]Additional<wbr>Columns<wbr>Response</a></span>
+        <span class="property-type">interface{}</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_go">
 <a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
@@ -57555,9 +58151,9 @@ The following output properties are available:
 <a href="#additionalcolumns_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Additional<wbr>Columns<wbr>Response[]</a></span>
+        <span class="property-type">any</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_nodejs">
 <a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
@@ -57607,9 +58203,9 @@ The following output properties are available:
 <a href="#additional_columns_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
+        <span class="property-type">Any</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disable_metrics_collection_python">
 <a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
@@ -57883,9 +58479,9 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response&gt;</a></span>
+        <span class="property-type">object</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_csharp">
 <a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
@@ -57959,9 +58555,9 @@ The following output properties are available:
 <a href="#additionalcolumns_go" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">[]Additional<wbr>Columns<wbr>Response</a></span>
+        <span class="property-type">interface{}</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_go">
 <a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
@@ -58035,9 +58631,9 @@ The following output properties are available:
 <a href="#additionalcolumns_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Additional<wbr>Columns<wbr>Response[]</a></span>
+        <span class="property-type">any</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_nodejs">
 <a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
@@ -58111,9 +58707,9 @@ The following output properties are available:
 <a href="#additional_columns_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
+        <span class="property-type">Any</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disable_metrics_collection_python">
 <a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
@@ -58911,9 +59507,9 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response&gt;</a></span>
+        <span class="property-type">object</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_csharp">
 <a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
@@ -58971,9 +59567,9 @@ The following output properties are available:
 <a href="#additionalcolumns_go" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">[]Additional<wbr>Columns<wbr>Response</a></span>
+        <span class="property-type">interface{}</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_go">
 <a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
@@ -59031,9 +59627,9 @@ The following output properties are available:
 <a href="#additionalcolumns_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Additional<wbr>Columns<wbr>Response[]</a></span>
+        <span class="property-type">any</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_nodejs">
 <a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
@@ -59091,9 +59687,9 @@ The following output properties are available:
 <a href="#additional_columns_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
+        <span class="property-type">Any</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disable_metrics_collection_python">
 <a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
@@ -60419,9 +61015,9 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response&gt;</a></span>
+        <span class="property-type">object</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_csharp">
 <a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
@@ -60463,9 +61059,9 @@ The following output properties are available:
 <a href="#additionalcolumns_go" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">[]Additional<wbr>Columns<wbr>Response</a></span>
+        <span class="property-type">interface{}</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_go">
 <a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
@@ -60507,9 +61103,9 @@ The following output properties are available:
 <a href="#additionalcolumns_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Additional<wbr>Columns<wbr>Response[]</a></span>
+        <span class="property-type">any</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_nodejs">
 <a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
@@ -60551,9 +61147,9 @@ The following output properties are available:
 <a href="#additional_columns_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
+        <span class="property-type">Any</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disable_metrics_collection_python">
 <a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
@@ -60599,9 +61195,9 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response&gt;</a></span>
+        <span class="property-type">object</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_csharp">
 <a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
@@ -60659,9 +61255,9 @@ The following output properties are available:
 <a href="#additionalcolumns_go" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">[]Additional<wbr>Columns<wbr>Response</a></span>
+        <span class="property-type">interface{}</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_go">
 <a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
@@ -60719,9 +61315,9 @@ The following output properties are available:
 <a href="#additionalcolumns_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Additional<wbr>Columns<wbr>Response[]</a></span>
+        <span class="property-type">any</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_nodejs">
 <a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
@@ -60779,9 +61375,9 @@ The following output properties are available:
 <a href="#additional_columns_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
+        <span class="property-type">Any</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disable_metrics_collection_python">
 <a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
@@ -61023,9 +61619,9 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response&gt;</a></span>
+        <span class="property-type">object</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_csharp">
 <a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
@@ -61083,9 +61679,9 @@ The following output properties are available:
 <a href="#additionalcolumns_go" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">[]Additional<wbr>Columns<wbr>Response</a></span>
+        <span class="property-type">interface{}</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_go">
 <a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
@@ -61143,9 +61739,9 @@ The following output properties are available:
 <a href="#additionalcolumns_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Additional<wbr>Columns<wbr>Response[]</a></span>
+        <span class="property-type">any</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_nodejs">
 <a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
@@ -61203,9 +61799,9 @@ The following output properties are available:
 <a href="#additional_columns_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
+        <span class="property-type">Any</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disable_metrics_collection_python">
 <a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>
@@ -61319,9 +61915,9 @@ The following output properties are available:
 <a href="#additionalcolumns_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Additional<wbr>Columns<wbr>Response&gt;</a></span>
+        <span class="property-type">object</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_csharp">
 <a href="#disablemetricscollection_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
@@ -61379,9 +61975,9 @@ The following output properties are available:
 <a href="#additionalcolumns_go" style="color: inherit; text-decoration: inherit;">Additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">[]Additional<wbr>Columns<wbr>Response</a></span>
+        <span class="property-type">interface{}</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_go">
 <a href="#disablemetricscollection_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Metrics<wbr>Collection</a>
@@ -61439,9 +62035,9 @@ The following output properties are available:
 <a href="#additionalcolumns_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Additional<wbr>Columns<wbr>Response[]</a></span>
+        <span class="property-type">any</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablemetricscollection_nodejs">
 <a href="#disablemetricscollection_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Metrics<wbr>Collection</a>
@@ -61499,9 +62095,9 @@ The following output properties are available:
 <a href="#additional_columns_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#additionalcolumnsresponse">Sequence[Additional<wbr>Columns<wbr>Response]</a></span>
+        <span class="property-type">Any</span>
     </dt>
-    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disable_metrics_collection_python">
 <a href="#disable_metrics_collection_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>metrics_<wbr>collection</a>

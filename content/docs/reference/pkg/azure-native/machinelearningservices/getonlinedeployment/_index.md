@@ -271,7 +271,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -347,7 +347,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -423,7 +423,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -499,7 +499,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -529,7 +529,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Maximum number of instances for this deployment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mininstances_csharp">
 <a href="#mininstances_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Instances</a>
@@ -537,7 +537,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Minimum number of instances for this deployment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pollinginterval_csharp">
 <a href="#pollinginterval_csharp" style="color: inherit; text-decoration: inherit;">Polling<wbr>Interval</a>
@@ -553,7 +553,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Target CPU usage for the autoscaler.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -565,7 +565,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Maximum number of instances for this deployment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mininstances_go">
 <a href="#mininstances_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Instances</a>
@@ -573,7 +573,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Minimum number of instances for this deployment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pollinginterval_go">
 <a href="#pollinginterval_go" style="color: inherit; text-decoration: inherit;">Polling<wbr>Interval</a>
@@ -589,7 +589,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Target CPU usage for the autoscaler.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -601,7 +601,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Maximum number of instances for this deployment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mininstances_nodejs">
 <a href="#mininstances_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Instances</a>
@@ -609,7 +609,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Minimum number of instances for this deployment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pollinginterval_nodejs">
 <a href="#pollinginterval_nodejs" style="color: inherit; text-decoration: inherit;">polling<wbr>Interval</a>
@@ -625,7 +625,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Target CPU usage for the autoscaler.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -637,7 +637,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Maximum number of instances for this deployment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="min_instances_python">
 <a href="#min_instances_python" style="color: inherit; text-decoration: inherit;">min_<wbr>instances</a>
@@ -645,7 +645,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Minimum number of instances for this deployment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="polling_interval_python">
 <a href="#polling_interval_python" style="color: inherit; text-decoration: inherit;">polling_<wbr>interval</a>
@@ -661,7 +661,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Target CPU usage for the autoscaler.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="codeconfigurationresponse">Code<wbr>Configuration<wbr>Response</h4>
@@ -1149,7 +1149,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerresourcerequirementsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Container<wbr>Resource<wbr>Requirements<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The resource requirements for the container (cpu and memory).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Resource requirements for each container instance within an online deployment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1181,7 +1181,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#probesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Probe<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Deployment container liveness/readiness probe configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="model_csharp">
 <a href="#model_csharp" style="color: inherit; text-decoration: inherit;">Model</a>
@@ -1205,7 +1205,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#onlinerequestsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Online<wbr>Request<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Online deployment scoring requests configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scalesettings_csharp">
 <a href="#scalesettings_csharp" style="color: inherit; text-decoration: inherit;">Scale<wbr>Settings</a>
@@ -1213,7 +1213,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autoscalesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Auto<wbr>Scale<wbr>Settings<wbr>Response</a> | <a href="#manualscalesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Manual<wbr>Scale<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Online deployment scaling configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1249,7 +1249,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerresourcerequirementsresponse">Container<wbr>Resource<wbr>Requirements<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The resource requirements for the container (cpu and memory).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Resource requirements for each container instance within an online deployment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1281,7 +1281,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#probesettingsresponse">Probe<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Deployment container liveness/readiness probe configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="model_go">
 <a href="#model_go" style="color: inherit; text-decoration: inherit;">Model</a>
@@ -1305,7 +1305,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#onlinerequestsettingsresponse">Online<wbr>Request<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Online deployment scoring requests configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scalesettings_go">
 <a href="#scalesettings_go" style="color: inherit; text-decoration: inherit;">Scale<wbr>Settings</a>
@@ -1313,7 +1313,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autoscalesettingsresponse">Auto<wbr>Scale<wbr>Settings<wbr>Response</a> | <a href="#manualscalesettingsresponse">Manual<wbr>Scale<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Online deployment scaling configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1349,7 +1349,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerresourcerequirementsresponse">Container<wbr>Resource<wbr>Requirements<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The resource requirements for the container (cpu and memory).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Resource requirements for each container instance within an online deployment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1381,7 +1381,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#probesettingsresponse">Probe<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Deployment container liveness/readiness probe configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="model_nodejs">
 <a href="#model_nodejs" style="color: inherit; text-decoration: inherit;">model</a>
@@ -1405,7 +1405,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#onlinerequestsettingsresponse">Online<wbr>Request<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Online deployment scoring requests configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scalesettings_nodejs">
 <a href="#scalesettings_nodejs" style="color: inherit; text-decoration: inherit;">scale<wbr>Settings</a>
@@ -1413,7 +1413,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autoscalesettingsresponse">Auto<wbr>Scale<wbr>Settings<wbr>Response</a> | <a href="#manualscalesettingsresponse">Manual<wbr>Scale<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Online deployment scaling configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1449,7 +1449,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerresourcerequirementsresponse">Container<wbr>Resource<wbr>Requirements<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The resource requirements for the container (cpu and memory).{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Resource requirements for each container instance within an online deployment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1481,7 +1481,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#probesettingsresponse">Probe<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Deployment container liveness/readiness probe configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="model_python">
 <a href="#model_python" style="color: inherit; text-decoration: inherit;">model</a>
@@ -1505,7 +1505,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#onlinerequestsettingsresponse">Online<wbr>Request<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Online deployment scoring requests configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scale_settings_python">
 <a href="#scale_settings_python" style="color: inherit; text-decoration: inherit;">scale_<wbr>settings</a>
@@ -1513,7 +1513,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autoscalesettingsresponse">Auto<wbr>Scale<wbr>Settings<wbr>Response</a> | <a href="#manualscalesettingsresponse">Manual<wbr>Scale<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Online deployment scaling configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="managedonlinedeploymentresponse">Managed<wbr>Online<wbr>Deployment<wbr>Response</h4>
@@ -1577,7 +1577,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Compute instance type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="livenessprobe_csharp">
 <a href="#livenessprobe_csharp" style="color: inherit; text-decoration: inherit;">Liveness<wbr>Probe</a>
@@ -1585,7 +1585,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#probesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Probe<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Deployment container liveness/readiness probe configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="model_csharp">
 <a href="#model_csharp" style="color: inherit; text-decoration: inherit;">Model</a>
@@ -1609,7 +1609,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#probesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Probe<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Deployment container liveness/readiness probe configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestsettings_csharp">
 <a href="#requestsettings_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Settings</a>
@@ -1617,7 +1617,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#onlinerequestsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Online<wbr>Request<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Online deployment scoring requests configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scalesettings_csharp">
 <a href="#scalesettings_csharp" style="color: inherit; text-decoration: inherit;">Scale<wbr>Settings</a>
@@ -1625,7 +1625,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autoscalesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Auto<wbr>Scale<wbr>Settings<wbr>Response</a> | <a href="#manualscalesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Manual<wbr>Scale<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Online deployment scaling configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1685,7 +1685,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Compute instance type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="livenessprobe_go">
 <a href="#livenessprobe_go" style="color: inherit; text-decoration: inherit;">Liveness<wbr>Probe</a>
@@ -1693,7 +1693,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#probesettingsresponse">Probe<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Deployment container liveness/readiness probe configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="model_go">
 <a href="#model_go" style="color: inherit; text-decoration: inherit;">Model</a>
@@ -1717,7 +1717,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#probesettingsresponse">Probe<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Deployment container liveness/readiness probe configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestsettings_go">
 <a href="#requestsettings_go" style="color: inherit; text-decoration: inherit;">Request<wbr>Settings</a>
@@ -1725,7 +1725,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#onlinerequestsettingsresponse">Online<wbr>Request<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Online deployment scoring requests configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scalesettings_go">
 <a href="#scalesettings_go" style="color: inherit; text-decoration: inherit;">Scale<wbr>Settings</a>
@@ -1733,7 +1733,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autoscalesettingsresponse">Auto<wbr>Scale<wbr>Settings<wbr>Response</a> | <a href="#manualscalesettingsresponse">Manual<wbr>Scale<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Online deployment scaling configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1793,7 +1793,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Compute instance type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="livenessprobe_nodejs">
 <a href="#livenessprobe_nodejs" style="color: inherit; text-decoration: inherit;">liveness<wbr>Probe</a>
@@ -1801,7 +1801,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#probesettingsresponse">Probe<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Deployment container liveness/readiness probe configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="model_nodejs">
 <a href="#model_nodejs" style="color: inherit; text-decoration: inherit;">model</a>
@@ -1825,7 +1825,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#probesettingsresponse">Probe<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Deployment container liveness/readiness probe configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestsettings_nodejs">
 <a href="#requestsettings_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Settings</a>
@@ -1833,7 +1833,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#onlinerequestsettingsresponse">Online<wbr>Request<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Online deployment scoring requests configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scalesettings_nodejs">
 <a href="#scalesettings_nodejs" style="color: inherit; text-decoration: inherit;">scale<wbr>Settings</a>
@@ -1841,7 +1841,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autoscalesettingsresponse">Auto<wbr>Scale<wbr>Settings<wbr>Response</a> | <a href="#manualscalesettingsresponse">Manual<wbr>Scale<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Online deployment scaling configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1901,7 +1901,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Compute instance type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="liveness_probe_python">
 <a href="#liveness_probe_python" style="color: inherit; text-decoration: inherit;">liveness_<wbr>probe</a>
@@ -1909,7 +1909,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#probesettingsresponse">Probe<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Deployment container liveness/readiness probe configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="model_python">
 <a href="#model_python" style="color: inherit; text-decoration: inherit;">model</a>
@@ -1933,7 +1933,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#probesettingsresponse">Probe<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Deployment container liveness/readiness probe configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="request_settings_python">
 <a href="#request_settings_python" style="color: inherit; text-decoration: inherit;">request_<wbr>settings</a>
@@ -1941,7 +1941,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#onlinerequestsettingsresponse">Online<wbr>Request<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Online deployment scoring requests configuration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scale_settings_python">
 <a href="#scale_settings_python" style="color: inherit; text-decoration: inherit;">scale_<wbr>settings</a>
@@ -1949,7 +1949,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autoscalesettingsresponse">Auto<wbr>Scale<wbr>Settings<wbr>Response</a> | <a href="#manualscalesettingsresponse">Manual<wbr>Scale<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Online deployment scaling configuration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="manualscalesettingsresponse">Manual<wbr>Scale<wbr>Settings<wbr>Response</h4>
@@ -1965,7 +1965,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Fixed number of instances for this deployment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxinstances_csharp">
 <a href="#maxinstances_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Instances</a>
@@ -1973,7 +1973,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Maximum number of instances for this deployment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mininstances_csharp">
 <a href="#mininstances_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Instances</a>
@@ -1981,7 +1981,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Minimum number of instances for this deployment.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1993,7 +1993,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Fixed number of instances for this deployment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxinstances_go">
 <a href="#maxinstances_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Instances</a>
@@ -2001,7 +2001,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Maximum number of instances for this deployment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mininstances_go">
 <a href="#mininstances_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Instances</a>
@@ -2009,7 +2009,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Minimum number of instances for this deployment.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2021,7 +2021,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Fixed number of instances for this deployment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxinstances_nodejs">
 <a href="#maxinstances_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Instances</a>
@@ -2029,7 +2029,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Maximum number of instances for this deployment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mininstances_nodejs">
 <a href="#mininstances_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Instances</a>
@@ -2037,7 +2037,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Minimum number of instances for this deployment.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -2049,7 +2049,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Fixed number of instances for this deployment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_instances_python">
 <a href="#max_instances_python" style="color: inherit; text-decoration: inherit;">max_<wbr>instances</a>
@@ -2057,7 +2057,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Maximum number of instances for this deployment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="min_instances_python">
 <a href="#min_instances_python" style="color: inherit; text-decoration: inherit;">min_<wbr>instances</a>
@@ -2065,7 +2065,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Minimum number of instances for this deployment.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="onlinerequestsettingsresponse">Online<wbr>Request<wbr>Settings<wbr>Response</h4>
@@ -2081,7 +2081,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The number of requests allowed to queue at once for this deployment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxqueuewait_csharp">
 <a href="#maxqueuewait_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Queue<wbr>Wait</a>
@@ -2109,7 +2109,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The number of requests allowed to queue at once for this deployment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxqueuewait_go">
 <a href="#maxqueuewait_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Queue<wbr>Wait</a>
@@ -2137,7 +2137,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The number of requests allowed to queue at once for this deployment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxqueuewait_nodejs">
 <a href="#maxqueuewait_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Queue<wbr>Wait</a>
@@ -2165,7 +2165,7 @@ https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-conta
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The number of requests allowed to queue at once for this deployment.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_queue_wait_python">
 <a href="#max_queue_wait_python" style="color: inherit; text-decoration: inherit;">max_<wbr>queue_<wbr>wait</a>

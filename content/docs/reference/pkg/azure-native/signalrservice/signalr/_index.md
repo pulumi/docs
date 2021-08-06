@@ -498,7 +498,7 @@ const signalR = new azure_native.signalrservice.SignalR("signalR", {
 
 ## SignalR Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Architecture and Concepts docs.
 
 ### Inputs
 
@@ -3133,28 +3133,32 @@ If present, following values are allowed:
 <dl class="tabular"><dt>Client<wbr>Connection</dt>
     <dd>ClientConnection</dd><dt>Server<wbr>Connection</dt>
     <dd>ServerConnection</dd><dt>RESTAPI</dt>
-    <dd>RESTAPI</dd></dl>
+    <dd>RESTAPI</dd><dt>Trace</dt>
+    <dd>Trace</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
 <dl class="tabular"><dt>Signal<wbr>RRequest<wbr>Type<wbr>Client<wbr>Connection</dt>
     <dd>ClientConnection</dd><dt>Signal<wbr>RRequest<wbr>Type<wbr>Server<wbr>Connection</dt>
     <dd>ServerConnection</dd><dt>Signal<wbr>RRequest<wbr>Type<wbr>RESTAPI</dt>
-    <dd>RESTAPI</dd></dl>
+    <dd>RESTAPI</dd><dt>Signal<wbr>RRequest<wbr>Type<wbr>Trace</dt>
+    <dd>Trace</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
 <dl class="tabular"><dt>Client<wbr>Connection</dt>
     <dd>ClientConnection</dd><dt>Server<wbr>Connection</dt>
     <dd>ServerConnection</dd><dt>RESTAPI</dt>
-    <dd>RESTAPI</dd></dl>
+    <dd>RESTAPI</dd><dt>Trace</dt>
+    <dd>Trace</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <dl class="tabular"><dt>CLIENT_CONNECTION</dt>
     <dd>ClientConnection</dd><dt>SERVER_CONNECTION</dt>
     <dd>ServerConnection</dd><dt>RESTAPI</dt>
-    <dd>RESTAPI</dd></dl>
+    <dd>RESTAPI</dd><dt>TRACE</dt>
+    <dd>Trace</dd></dl>
 {{% /choosable %}}
 
 <h4 id="signalrskutier">Signal<wbr>RSku<wbr>Tier</h4>
