@@ -11,6 +11,8 @@ meta_desc: "Documentation for the google-native.dialogflow/v3.TestCase resource 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Creates a test case for the given agent.
+Note - this resource's API doesn't support deletion. When deleted, the resource will persist
+on Google Cloud even though it will be deleted from Pulumi state.
 
 
 
@@ -155,7 +157,7 @@ Creates a test case for the given agent.
 
 ## TestCase Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Architecture and Concepts docs.
 
 ### Inputs
 
