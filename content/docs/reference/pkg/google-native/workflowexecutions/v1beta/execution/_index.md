@@ -12,6 +12,8 @@ meta_desc: "Documentation for the google-native.workflowexecutions/v1beta.Execut
 
 Creates a new execution using the latest revision of the given workflow.
 Auto-naming is currently not supported for this resource.
+Note - this resource's API doesn't support deletion. When deleted, the resource will persist
+on Google Cloud even though it will be deleted from Pulumi state.
 
 
 
@@ -150,7 +152,7 @@ Auto-naming is currently not supported for this resource.
 
 ## Execution Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Architecture and Concepts docs.
 
 ### Inputs
 

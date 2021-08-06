@@ -11,6 +11,8 @@ meta_desc: "Documentation for the google-native.compute/v1.ResourcePolicyIamPoli
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Sets the access control policy on the specified resource. Replaces any existing policy.
+Note - this resource's API doesn't support deletion. When deleted, the resource will persist
+on Google Cloud even though it will be deleted from Pulumi state.
 
 
 
@@ -154,7 +156,7 @@ Sets the access control policy on the specified resource. Replaces any existing 
 
 ## ResourcePolicyIamPolicy Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Architecture and Concepts docs.
 
 ### Inputs
 
