@@ -64,3 +64,6 @@ content/docs/reference/pkg/python
 
 # Ignore vendored Hugo modules.
 _vendor/
+
+# Ignore terraform examples coverage data directory.
+/data/coverage
