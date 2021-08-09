@@ -36,6 +36,7 @@ meta_desc: "Documentation for the spotinst.aws.Ocean resource with examples, inp
           <span class="nx">grace_period</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
           <span class="nx">iam_instance_profile</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
           <span class="nx">image_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+          <span class="nx">instance_metadata_options</span><span class="p">:</span> <span class="nx">Optional[OceanInstanceMetadataOptionsArgs]</span> = None<span class="p">,</span>
           <span class="nx">key_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
           <span class="nx">load_balancers</span><span class="p">:</span> <span class="nx">Optional[Sequence[OceanLoadBalancerArgs]]</span> = None<span class="p">,</span>
           <span class="nx">max_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
@@ -173,7 +174,7 @@ meta_desc: "Documentation for the spotinst.aws.Ocean resource with examples, inp
 
 ## Ocean Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Architecture and Concepts docs.
 
 ### Inputs
 
@@ -299,6 +300,15 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the image used to launch the instances.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="instancemetadataoptions_csharp">
+<a href="#instancemetadataoptions_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Metadata<wbr>Options</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceaninstancemetadataoptions">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Ocean<wbr>Instance<wbr>Metadata<wbr>Options<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Ocean instance metadata options object for IMDSv2.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keyname_csharp">
@@ -573,6 +583,15 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
     <dd>{{% md %}}ID of the image used to launch the instances.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="instancemetadataoptions_go">
+<a href="#instancemetadataoptions_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Metadata<wbr>Options</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceaninstancemetadataoptions">Ocean<wbr>Instance<wbr>Metadata<wbr>Options<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Ocean instance metadata options object for IMDSv2.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="keyname_go">
 <a href="#keyname_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Name</a>
 </span>
@@ -843,6 +862,15 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the image used to launch the instances.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="instancemetadataoptions_nodejs">
+<a href="#instancemetadataoptions_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Metadata<wbr>Options</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceaninstancemetadataoptions">Ocean<wbr>Instance<wbr>Metadata<wbr>Options<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Ocean instance metadata options object for IMDSv2.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keyname_nodejs">
@@ -1117,6 +1145,15 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
     <dd>{{% md %}}ID of the image used to launch the instances.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="instance_metadata_options_python">
+<a href="#instance_metadata_options_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>metadata_<wbr>options</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceaninstancemetadataoptions">Ocean<wbr>Instance<wbr>Metadata<wbr>Options<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Ocean instance metadata options object for IMDSv2.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="key_name_python">
 <a href="#key_name_python" style="color: inherit; text-decoration: inherit;">key_<wbr>name</a>
 </span>
@@ -1351,6 +1388,7 @@ Get an existing Ocean resource's state with the given name, ID, and optional ext
         <span class="nx">grace_period</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
         <span class="nx">iam_instance_profile</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">image_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">instance_metadata_options</span><span class="p">:</span> <span class="nx">Optional[OceanInstanceMetadataOptionsArgs]</span> = None<span class="p">,</span>
         <span class="nx">key_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">load_balancers</span><span class="p">:</span> <span class="nx">Optional[Sequence[OceanLoadBalancerArgs]]</span> = None<span class="p">,</span>
         <span class="nx">max_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
@@ -1579,6 +1617,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the image used to launch the instances.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_instancemetadataoptions_csharp">
+<a href="#state_instancemetadataoptions_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Metadata<wbr>Options</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceaninstancemetadataoptions">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Ocean<wbr>Instance<wbr>Metadata<wbr>Options<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Ocean instance metadata options object for IMDSv2.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_keyname_csharp">
@@ -1853,6 +1900,15 @@ The following state arguments are supported:
     <dd>{{% md %}}ID of the image used to launch the instances.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_instancemetadataoptions_go">
+<a href="#state_instancemetadataoptions_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Metadata<wbr>Options</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceaninstancemetadataoptions">Ocean<wbr>Instance<wbr>Metadata<wbr>Options<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Ocean instance metadata options object for IMDSv2.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_keyname_go">
 <a href="#state_keyname_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Name</a>
 </span>
@@ -2125,6 +2181,15 @@ The following state arguments are supported:
     <dd>{{% md %}}ID of the image used to launch the instances.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_instancemetadataoptions_nodejs">
+<a href="#state_instancemetadataoptions_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Metadata<wbr>Options</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceaninstancemetadataoptions">Ocean<wbr>Instance<wbr>Metadata<wbr>Options<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Ocean instance metadata options object for IMDSv2.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_keyname_nodejs">
 <a href="#state_keyname_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Name</a>
 </span>
@@ -2395,6 +2460,15 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ID of the image used to launch the instances.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_instance_metadata_options_python">
+<a href="#state_instance_metadata_options_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>metadata_<wbr>options</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceaninstancemetadataoptions">Ocean<wbr>Instance<wbr>Metadata<wbr>Options<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Ocean instance metadata options object for IMDSv2.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_key_name_python">
@@ -3181,6 +3255,96 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum cpu in vCPU units that can be allocated to the cluster.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="oceaninstancemetadataoptions">Ocean<wbr>Instance<wbr>Metadata<wbr>Options</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="httptokens_csharp">
+<a href="#httptokens_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Tokens</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Determines if a signed token is required or not. Valid values: `optional` or `required`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="httpputresponsehoplimit_csharp">
+<a href="#httpputresponsehoplimit_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Put<wbr>Response<wbr>Hop<wbr>Limit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}An integer from 1 through 64. The desired HTTP PUT response hop limit for instance metadata requests. The larger the number, the further the instance metadata requests can travel.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="httptokens_go">
+<a href="#httptokens_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Tokens</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Determines if a signed token is required or not. Valid values: `optional` or `required`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="httpputresponsehoplimit_go">
+<a href="#httpputresponsehoplimit_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Put<wbr>Response<wbr>Hop<wbr>Limit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}An integer from 1 through 64. The desired HTTP PUT response hop limit for instance metadata requests. The larger the number, the further the instance metadata requests can travel.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="httptokens_nodejs">
+<a href="#httptokens_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Tokens</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Determines if a signed token is required or not. Valid values: `optional` or `required`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="httpputresponsehoplimit_nodejs">
+<a href="#httpputresponsehoplimit_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Put<wbr>Response<wbr>Hop<wbr>Limit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}An integer from 1 through 64. The desired HTTP PUT response hop limit for instance metadata requests. The larger the number, the further the instance metadata requests can travel.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="http_tokens_python">
+<a href="#http_tokens_python" style="color: inherit; text-decoration: inherit;">http_<wbr>tokens</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Determines if a signed token is required or not. Valid values: `optional` or `required`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="http_put_response_hop_limit_python">
+<a href="#http_put_response_hop_limit_python" style="color: inherit; text-decoration: inherit;">http_<wbr>put_<wbr>response_<wbr>hop_<wbr>limit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}An integer from 1 through 64. The desired HTTP PUT response hop limit for instance metadata requests. The larger the number, the further the instance metadata requests can travel.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

@@ -134,6 +134,12 @@ const default_managed_instance = new spotinst.aws.ManagedInstance("default-manag
     privateIp: "ip",
     product: "Linux/UNIX",
     region: "us-west-2",
+    resourceTagSpecifications: [{
+        shouldTagAmis: true,
+        shouldTagEnis: true,
+        shouldTagSnapshots: true,
+        shouldTagVolumes: true,
+    }],
     revertToSpot: {
         performAt: "always",
     },
@@ -214,6 +220,7 @@ const default_managed_instance = new spotinst.aws.ManagedInstance("default-manag
                     <span class="nx">private_ip</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                     <span class="nx">product</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                     <span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                    <span class="nx">resource_tag_specifications</span><span class="p">:</span> <span class="nx">Optional[Sequence[ManagedInstanceResourceTagSpecificationArgs]]</span> = None<span class="p">,</span>
                     <span class="nx">revert_to_spot</span><span class="p">:</span> <span class="nx">Optional[ManagedInstanceRevertToSpotArgs]</span> = None<span class="p">,</span>
                     <span class="nx">scheduled_tasks</span><span class="p">:</span> <span class="nx">Optional[Sequence[ManagedInstanceScheduledTaskArgs]]</span> = None<span class="p">,</span>
                     <span class="nx">security_group_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
@@ -342,7 +349,7 @@ const default_managed_instance = new spotinst.aws.ManagedInstance("default-manag
 
 ## ManagedInstance Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Architecture and Concepts docs.
 
 ### Inputs
 
@@ -668,6 +675,15 @@ Default: default
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS region your group will be created in.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="resourcetagspecifications_csharp">
+<a href="#resourcetagspecifications_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Tag<wbr>Specifications</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedinstanceresourcetagspecification">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Managed<wbr>Instance<wbr>Resource<wbr>Tag<wbr>Specification<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}User will specify which resources should be tagged with group tags.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="reverttospot_csharp">
@@ -1062,6 +1078,15 @@ Default: default
     <dd>{{% md %}}The AWS region your group will be created in.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="resourcetagspecifications_go">
+<a href="#resourcetagspecifications_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Tag<wbr>Specifications</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedinstanceresourcetagspecification">[]Managed<wbr>Instance<wbr>Resource<wbr>Tag<wbr>Specification<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}User will specify which resources should be tagged with group tags.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="reverttospot_go">
 <a href="#reverttospot_go" style="color: inherit; text-decoration: inherit;">Revert<wbr>To<wbr>Spot</a>
 </span>
@@ -1452,6 +1477,15 @@ Default: default
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS region your group will be created in.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="resourcetagspecifications_nodejs">
+<a href="#resourcetagspecifications_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Tag<wbr>Specifications</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedinstanceresourcetagspecification">Managed<wbr>Instance<wbr>Resource<wbr>Tag<wbr>Specification<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}User will specify which resources should be tagged with group tags.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="reverttospot_nodejs">
@@ -1846,6 +1880,15 @@ Default: default
     <dd>{{% md %}}The AWS region your group will be created in.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="resource_tag_specifications_python">
+<a href="#resource_tag_specifications_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>tag_<wbr>specifications</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedinstanceresourcetagspecification">Sequence[Managed<wbr>Instance<wbr>Resource<wbr>Tag<wbr>Specification<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}User will specify which resources should be tagged with group tags.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="revert_to_spot_python">
 <a href="#revert_to_spot_python" style="color: inherit; text-decoration: inherit;">revert_<wbr>to_<wbr>spot</a>
 </span>
@@ -2022,6 +2065,7 @@ Get an existing ManagedInstance resource's state with the given name, ID, and op
         <span class="nx">private_ip</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">product</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">resource_tag_specifications</span><span class="p">:</span> <span class="nx">Optional[Sequence[ManagedInstanceResourceTagSpecificationArgs]]</span> = None<span class="p">,</span>
         <span class="nx">revert_to_spot</span><span class="p">:</span> <span class="nx">Optional[ManagedInstanceRevertToSpotArgs]</span> = None<span class="p">,</span>
         <span class="nx">scheduled_tasks</span><span class="p">:</span> <span class="nx">Optional[Sequence[ManagedInstanceScheduledTaskArgs]]</span> = None<span class="p">,</span>
         <span class="nx">security_group_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
@@ -2444,6 +2488,15 @@ Default: default
     <dd>{{% md %}}The AWS region your group will be created in.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_resourcetagspecifications_csharp">
+<a href="#state_resourcetagspecifications_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Tag<wbr>Specifications</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedinstanceresourcetagspecification">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Managed<wbr>Instance<wbr>Resource<wbr>Tag<wbr>Specification<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}User will specify which resources should be tagged with group tags.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_reverttospot_csharp">
 <a href="#state_reverttospot_csharp" style="color: inherit; text-decoration: inherit;">Revert<wbr>To<wbr>Spot</a>
 </span>
@@ -2834,6 +2887,15 @@ Default: default
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS region your group will be created in.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_resourcetagspecifications_go">
+<a href="#state_resourcetagspecifications_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Tag<wbr>Specifications</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedinstanceresourcetagspecification">[]Managed<wbr>Instance<wbr>Resource<wbr>Tag<wbr>Specification<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}User will specify which resources should be tagged with group tags.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_reverttospot_go">
@@ -3228,6 +3290,15 @@ Default: default
     <dd>{{% md %}}The AWS region your group will be created in.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_resourcetagspecifications_nodejs">
+<a href="#state_resourcetagspecifications_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Tag<wbr>Specifications</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedinstanceresourcetagspecification">Managed<wbr>Instance<wbr>Resource<wbr>Tag<wbr>Specification<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}User will specify which resources should be tagged with group tags.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_reverttospot_nodejs">
 <a href="#state_reverttospot_nodejs" style="color: inherit; text-decoration: inherit;">revert<wbr>To<wbr>Spot</a>
 </span>
@@ -3618,6 +3689,15 @@ Default: default
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The AWS region your group will be created in.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_resource_tag_specifications_python">
+<a href="#state_resource_tag_specifications_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>tag_<wbr>specifications</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedinstanceresourcetagspecification">Sequence[Managed<wbr>Instance<wbr>Resource<wbr>Tag<wbr>Specification<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}User will specify which resources should be tagged with group tags.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_revert_to_spot_python">
@@ -4799,6 +4879,168 @@ Default: false
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether to assign a public IPv4 address to an instance you launch in a VPC. The public IP address can only be assigned to a network interface for eth0, and can only be assigned to a new network interface, not an existing one. You cannot specify more than one network interface in the request. If launching into a default subnet, the default value is true.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="managedinstanceresourcetagspecification">Managed<wbr>Instance<wbr>Resource<wbr>Tag<wbr>Specification</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="shouldtagamis_csharp">
+<a href="#shouldtagamis_csharp" style="color: inherit; text-decoration: inherit;">Should<wbr>Tag<wbr>Amis</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Tag specification for AMI resources.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="shouldtagenis_csharp">
+<a href="#shouldtagenis_csharp" style="color: inherit; text-decoration: inherit;">Should<wbr>Tag<wbr>Enis</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Tag specification for ENI resources.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="shouldtagsnapshots_csharp">
+<a href="#shouldtagsnapshots_csharp" style="color: inherit; text-decoration: inherit;">Should<wbr>Tag<wbr>Snapshots</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Tag specification for Snapshot resources.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="shouldtagvolumes_csharp">
+<a href="#shouldtagvolumes_csharp" style="color: inherit; text-decoration: inherit;">Should<wbr>Tag<wbr>Volumes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Tag specification for Volume resources.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="shouldtagamis_go">
+<a href="#shouldtagamis_go" style="color: inherit; text-decoration: inherit;">Should<wbr>Tag<wbr>Amis</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Tag specification for AMI resources.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="shouldtagenis_go">
+<a href="#shouldtagenis_go" style="color: inherit; text-decoration: inherit;">Should<wbr>Tag<wbr>Enis</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Tag specification for ENI resources.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="shouldtagsnapshots_go">
+<a href="#shouldtagsnapshots_go" style="color: inherit; text-decoration: inherit;">Should<wbr>Tag<wbr>Snapshots</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Tag specification for Snapshot resources.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="shouldtagvolumes_go">
+<a href="#shouldtagvolumes_go" style="color: inherit; text-decoration: inherit;">Should<wbr>Tag<wbr>Volumes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Tag specification for Volume resources.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="shouldtagamis_nodejs">
+<a href="#shouldtagamis_nodejs" style="color: inherit; text-decoration: inherit;">should<wbr>Tag<wbr>Amis</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Tag specification for AMI resources.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="shouldtagenis_nodejs">
+<a href="#shouldtagenis_nodejs" style="color: inherit; text-decoration: inherit;">should<wbr>Tag<wbr>Enis</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Tag specification for ENI resources.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="shouldtagsnapshots_nodejs">
+<a href="#shouldtagsnapshots_nodejs" style="color: inherit; text-decoration: inherit;">should<wbr>Tag<wbr>Snapshots</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Tag specification for Snapshot resources.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="shouldtagvolumes_nodejs">
+<a href="#shouldtagvolumes_nodejs" style="color: inherit; text-decoration: inherit;">should<wbr>Tag<wbr>Volumes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Tag specification for Volume resources.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="should_tag_amis_python">
+<a href="#should_tag_amis_python" style="color: inherit; text-decoration: inherit;">should_<wbr>tag_<wbr>amis</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Tag specification for AMI resources.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="should_tag_enis_python">
+<a href="#should_tag_enis_python" style="color: inherit; text-decoration: inherit;">should_<wbr>tag_<wbr>enis</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Tag specification for ENI resources.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="should_tag_snapshots_python">
+<a href="#should_tag_snapshots_python" style="color: inherit; text-decoration: inherit;">should_<wbr>tag_<wbr>snapshots</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Tag specification for Snapshot resources.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="should_tag_volumes_python">
+<a href="#should_tag_volumes_python" style="color: inherit; text-decoration: inherit;">should_<wbr>tag_<wbr>volumes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Tag specification for Volume resources.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

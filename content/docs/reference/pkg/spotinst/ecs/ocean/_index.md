@@ -63,6 +63,11 @@ class MyStack : Stack
             EbsOptimized = true,
             IamInstanceProfile = "iam-profile",
             ImageId = "ami-12345",
+            InstanceMetadataOptions = new SpotInst.Ecs.Inputs.OceanInstanceMetadataOptionsArgs
+            {
+                HttpPutResponseHopLimit = 10,
+                HttpTokens = "required",
+            },
             KeyPair = "KeyPair",
             MaxSize = 1,
             MinSize = 0,
@@ -82,6 +87,7 @@ class MyStack : Stack
             {
                 "sg-12345",
             },
+            SpotPercentage = 100,
             SubnetIds = 
             {
                 "subnet-12345",
@@ -147,10 +153,14 @@ func main() {
 			EbsOptimized:       pulumi.Bool(true),
 			IamInstanceProfile: pulumi.String("iam-profile"),
 			ImageId:            pulumi.String("ami-12345"),
-			KeyPair:            pulumi.String("KeyPair"),
-			MaxSize:            pulumi.Int(1),
-			MinSize:            pulumi.Int(0),
-			Monitoring:         pulumi.Bool(true),
+			InstanceMetadataOptions: &ecs.OceanInstanceMetadataOptionsArgs{
+				HttpPutResponseHopLimit: pulumi.Int(10),
+				HttpTokens:              pulumi.String("required"),
+			},
+			KeyPair:    pulumi.String("KeyPair"),
+			MaxSize:    pulumi.Int(1),
+			MinSize:    pulumi.Int(0),
+			Monitoring: pulumi.Bool(true),
 			OptimizeImages: &ecs.OceanOptimizeImagesArgs{
 				PerformAt:            pulumi.String("timeWindow"),
 				ShouldOptimizeEcsAmi: pulumi.Bool(true),
@@ -163,6 +173,7 @@ func main() {
 			SecurityGroupIds: pulumi.StringArray{
 				pulumi.String("sg-12345"),
 			},
+			SpotPercentage: pulumi.Int(100),
 			SubnetIds: pulumi.StringArray{
 				pulumi.String("subnet-12345"),
 			},
@@ -219,6 +230,10 @@ example = spotinst.ecs.Ocean("example",
     ebs_optimized=True,
     iam_instance_profile="iam-profile",
     image_id="ami-12345",
+    instance_metadata_options=spotinst.ecs.OceanInstanceMetadataOptionsArgs(
+        http_put_response_hop_limit=10,
+        http_tokens="required",
+    ),
     key_pair="KeyPair",
     max_size=1,
     min_size=0,
@@ -233,6 +248,7 @@ example = spotinst.ecs.Ocean("example",
     ),
     region="us-west-2",
     security_group_ids=["sg-12345"],
+    spot_percentage=100,
     subnet_ids=["subnet-12345"],
     tags=[spotinst.ecs.OceanTagArgs(
         key="fakeKey",
@@ -277,6 +293,10 @@ const example = new spotinst.ecs.Ocean("example", {
     ebsOptimized: true,
     iamInstanceProfile: "iam-profile",
     imageId: "ami-12345",
+    instanceMetadataOptions: {
+        httpPutResponseHopLimit: 10,
+        httpTokens: "required",
+    },
     keyPair: "KeyPair",
     maxSize: 1,
     minSize: 0,
@@ -291,6 +311,7 @@ const example = new spotinst.ecs.Ocean("example", {
     },
     region: "us-west-2",
     securityGroupIds: ["sg-12345"],
+    spotPercentage: 100,
     subnetIds: ["subnet-12345"],
     tags: [{
         key: "fakeKey",
@@ -335,6 +356,7 @@ const example = new spotinst.ecs.Ocean("example", {
           <span class="nx">ebs_optimized</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
           <span class="nx">iam_instance_profile</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
           <span class="nx">image_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+          <span class="nx">instance_metadata_options</span><span class="p">:</span> <span class="nx">Optional[OceanInstanceMetadataOptionsArgs]</span> = None<span class="p">,</span>
           <span class="nx">key_pair</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
           <span class="nx">max_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
           <span class="nx">min_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
@@ -344,6 +366,7 @@ const example = new spotinst.ecs.Ocean("example", {
           <span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
           <span class="nx">scheduled_tasks</span><span class="p">:</span> <span class="nx">Optional[Sequence[OceanScheduledTaskArgs]]</span> = None<span class="p">,</span>
           <span class="nx">security_group_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+          <span class="nx">spot_percentage</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
           <span class="nx">subnet_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
           <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[OceanTagArgs]]</span> = None<span class="p">,</span>
           <span class="nx">update_policy</span><span class="p">:</span> <span class="nx">Optional[OceanUpdatePolicyArgs]</span> = None<span class="p">,</span>
@@ -469,7 +492,7 @@ const example = new spotinst.ecs.Ocean("example", {
 
 ## Ocean Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Architecture and Concepts docs.
 
 ### Inputs
 
@@ -588,6 +611,15 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
     <dd>{{% md %}}ID of the image used to launch the instances.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="instancemetadataoptions_csharp">
+<a href="#instancemetadataoptions_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Metadata<wbr>Options</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceaninstancemetadataoptions">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Ecs.<wbr>Inputs.<wbr>Ocean<wbr>Instance<wbr>Metadata<wbr>Options<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Ocean instance metadata options object for IMDSv2.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="keypair_csharp">
 <a href="#keypair_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Pair</a>
 </span>
@@ -649,6 +681,15 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type"><a href="#oceanscheduledtask">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Ecs.<wbr>Inputs.<wbr>Ocean<wbr>Scheduled<wbr>Task<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}While used, you can control whether the group should perform a deployment after an update to the configuration.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="spotpercentage_csharp">
+<a href="#spotpercentage_csharp" style="color: inherit; text-decoration: inherit;">Spot<wbr>Percentage</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The percentage of Spot instances that would spin up from the `desired_capacity` number.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
@@ -816,6 +857,15 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
     <dd>{{% md %}}ID of the image used to launch the instances.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="instancemetadataoptions_go">
+<a href="#instancemetadataoptions_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Metadata<wbr>Options</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceaninstancemetadataoptions">Ocean<wbr>Instance<wbr>Metadata<wbr>Options<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Ocean instance metadata options object for IMDSv2.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="keypair_go">
 <a href="#keypair_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Pair</a>
 </span>
@@ -877,6 +927,15 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type"><a href="#oceanscheduledtask">[]Ocean<wbr>Scheduled<wbr>Task<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}While used, you can control whether the group should perform a deployment after an update to the configuration.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="spotpercentage_go">
+<a href="#spotpercentage_go" style="color: inherit; text-decoration: inherit;">Spot<wbr>Percentage</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The percentage of Spot instances that would spin up from the `desired_capacity` number.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
@@ -1044,6 +1103,15 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
     <dd>{{% md %}}ID of the image used to launch the instances.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="instancemetadataoptions_nodejs">
+<a href="#instancemetadataoptions_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Metadata<wbr>Options</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceaninstancemetadataoptions">Ocean<wbr>Instance<wbr>Metadata<wbr>Options<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Ocean instance metadata options object for IMDSv2.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="keypair_nodejs">
 <a href="#keypair_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Pair</a>
 </span>
@@ -1105,6 +1173,15 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type"><a href="#oceanscheduledtask">Ocean<wbr>Scheduled<wbr>Task<wbr>Args[]</a></span>
     </dt>
     <dd>{{% md %}}While used, you can control whether the group should perform a deployment after an update to the configuration.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="spotpercentage_nodejs">
+<a href="#spotpercentage_nodejs" style="color: inherit; text-decoration: inherit;">spot<wbr>Percentage</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The percentage of Spot instances that would spin up from the `desired_capacity` number.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
@@ -1272,6 +1349,15 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
     <dd>{{% md %}}ID of the image used to launch the instances.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="instance_metadata_options_python">
+<a href="#instance_metadata_options_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>metadata_<wbr>options</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceaninstancemetadataoptions">Ocean<wbr>Instance<wbr>Metadata<wbr>Options<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Ocean instance metadata options object for IMDSv2.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="key_pair_python">
 <a href="#key_pair_python" style="color: inherit; text-decoration: inherit;">key_<wbr>pair</a>
 </span>
@@ -1333,6 +1419,15 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type"><a href="#oceanscheduledtask">Sequence[Ocean<wbr>Scheduled<wbr>Task<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}While used, you can control whether the group should perform a deployment after an update to the configuration.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="spot_percentage_python">
+<a href="#spot_percentage_python" style="color: inherit; text-decoration: inherit;">spot_<wbr>percentage</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The percentage of Spot instances that would spin up from the `desired_capacity` number.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
@@ -1469,6 +1564,7 @@ Get an existing Ocean resource's state with the given name, ID, and optional ext
         <span class="nx">ebs_optimized</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">iam_instance_profile</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">image_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">instance_metadata_options</span><span class="p">:</span> <span class="nx">Optional[OceanInstanceMetadataOptionsArgs]</span> = None<span class="p">,</span>
         <span class="nx">key_pair</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">max_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
         <span class="nx">min_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
@@ -1478,6 +1574,7 @@ Get an existing Ocean resource's state with the given name, ID, and optional ext
         <span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">scheduled_tasks</span><span class="p">:</span> <span class="nx">Optional[Sequence[OceanScheduledTaskArgs]]</span> = None<span class="p">,</span>
         <span class="nx">security_group_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+        <span class="nx">spot_percentage</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
         <span class="nx">subnet_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
         <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[OceanTagArgs]]</span> = None<span class="p">,</span>
         <span class="nx">update_policy</span><span class="p">:</span> <span class="nx">Optional[OceanUpdatePolicyArgs]</span> = None<span class="p">,</span>
@@ -1678,6 +1775,15 @@ The following state arguments are supported:
     <dd>{{% md %}}ID of the image used to launch the instances.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_instancemetadataoptions_csharp">
+<a href="#state_instancemetadataoptions_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Metadata<wbr>Options</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceaninstancemetadataoptions">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Ecs.<wbr>Inputs.<wbr>Ocean<wbr>Instance<wbr>Metadata<wbr>Options<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Ocean instance metadata options object for IMDSv2.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_keypair_csharp">
 <a href="#state_keypair_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Pair</a>
 </span>
@@ -1757,6 +1863,15 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}One or more security group ids.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_spotpercentage_csharp">
+<a href="#state_spotpercentage_csharp" style="color: inherit; text-decoration: inherit;">Spot<wbr>Percentage</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The percentage of Spot instances that would spin up from the `desired_capacity` number.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subnetids_csharp">
@@ -1906,6 +2021,15 @@ The following state arguments are supported:
     <dd>{{% md %}}ID of the image used to launch the instances.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_instancemetadataoptions_go">
+<a href="#state_instancemetadataoptions_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Metadata<wbr>Options</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceaninstancemetadataoptions">Ocean<wbr>Instance<wbr>Metadata<wbr>Options<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Ocean instance metadata options object for IMDSv2.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_keypair_go">
 <a href="#state_keypair_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Pair</a>
 </span>
@@ -1985,6 +2109,15 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}One or more security group ids.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_spotpercentage_go">
+<a href="#state_spotpercentage_go" style="color: inherit; text-decoration: inherit;">Spot<wbr>Percentage</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The percentage of Spot instances that would spin up from the `desired_capacity` number.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subnetids_go">
@@ -2134,6 +2267,15 @@ The following state arguments are supported:
     <dd>{{% md %}}ID of the image used to launch the instances.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_instancemetadataoptions_nodejs">
+<a href="#state_instancemetadataoptions_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Metadata<wbr>Options</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceaninstancemetadataoptions">Ocean<wbr>Instance<wbr>Metadata<wbr>Options<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Ocean instance metadata options object for IMDSv2.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_keypair_nodejs">
 <a href="#state_keypair_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Pair</a>
 </span>
@@ -2213,6 +2355,15 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}One or more security group ids.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_spotpercentage_nodejs">
+<a href="#state_spotpercentage_nodejs" style="color: inherit; text-decoration: inherit;">spot<wbr>Percentage</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The percentage of Spot instances that would spin up from the `desired_capacity` number.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subnetids_nodejs">
@@ -2362,6 +2513,15 @@ The following state arguments are supported:
     <dd>{{% md %}}ID of the image used to launch the instances.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_instance_metadata_options_python">
+<a href="#state_instance_metadata_options_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>metadata_<wbr>options</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceaninstancemetadataoptions">Ocean<wbr>Instance<wbr>Metadata<wbr>Options<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Ocean instance metadata options object for IMDSv2.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_key_pair_python">
 <a href="#state_key_pair_python" style="color: inherit; text-decoration: inherit;">key_<wbr>pair</a>
 </span>
@@ -2441,6 +2601,15 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}One or more security group ids.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_spot_percentage_python">
+<a href="#state_spot_percentage_python" style="color: inherit; text-decoration: inherit;">spot_<wbr>percentage</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The percentage of Spot instances that would spin up from the `desired_capacity` number.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subnet_ids_python">
@@ -3642,6 +3811,96 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Int. Additional size (in GB) per resource unit. Example: When the `baseSize=50`, `sizePerResourceUnit=20`, and instance with two CPUs is launched, its total disk size will be: 90GB.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="oceaninstancemetadataoptions">Ocean<wbr>Instance<wbr>Metadata<wbr>Options</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="httptokens_csharp">
+<a href="#httptokens_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Tokens</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Determines if a signed token is required or not. Valid values: `optional` or `required`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="httpputresponsehoplimit_csharp">
+<a href="#httpputresponsehoplimit_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Put<wbr>Response<wbr>Hop<wbr>Limit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}An integer from 1 through 64. The desired HTTP PUT response hop limit for instance metadata requests. The larger the number, the further the instance metadata requests can travel.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="httptokens_go">
+<a href="#httptokens_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Tokens</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Determines if a signed token is required or not. Valid values: `optional` or `required`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="httpputresponsehoplimit_go">
+<a href="#httpputresponsehoplimit_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Put<wbr>Response<wbr>Hop<wbr>Limit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}An integer from 1 through 64. The desired HTTP PUT response hop limit for instance metadata requests. The larger the number, the further the instance metadata requests can travel.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="httptokens_nodejs">
+<a href="#httptokens_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Tokens</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Determines if a signed token is required or not. Valid values: `optional` or `required`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="httpputresponsehoplimit_nodejs">
+<a href="#httpputresponsehoplimit_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Put<wbr>Response<wbr>Hop<wbr>Limit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}An integer from 1 through 64. The desired HTTP PUT response hop limit for instance metadata requests. The larger the number, the further the instance metadata requests can travel.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="http_tokens_python">
+<a href="#http_tokens_python" style="color: inherit; text-decoration: inherit;">http_<wbr>tokens</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Determines if a signed token is required or not. Valid values: `optional` or `required`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="http_put_response_hop_limit_python">
+<a href="#http_put_response_hop_limit_python" style="color: inherit; text-decoration: inherit;">http_<wbr>put_<wbr>response_<wbr>hop_<wbr>limit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}An integer from 1 through 64. The desired HTTP PUT response hop limit for instance metadata requests. The larger the number, the further the instance metadata requests can travel.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

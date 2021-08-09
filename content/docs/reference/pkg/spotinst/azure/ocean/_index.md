@@ -163,7 +163,7 @@ meta_desc: "Documentation for the spotinst.azure.Ocean resource with examples, i
 
 ## Ocean Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Architecture and Concepts docs.
 
 ### Inputs
 
@@ -180,7 +180,7 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The AKS identifier.
+    <dd>{{% md %}}The AKS identifier. A valid identifier should be formatted as `acd-nnnnnnnn` and previously used identifiers cannot be reused.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="aksname_csharp">
@@ -364,7 +364,7 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The AKS identifier.
+    <dd>{{% md %}}The AKS identifier. A valid identifier should be formatted as `acd-nnnnnnnn` and previously used identifiers cannot be reused.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="aksname_go">
@@ -548,7 +548,7 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The AKS identifier.
+    <dd>{{% md %}}The AKS identifier. A valid identifier should be formatted as `acd-nnnnnnnn` and previously used identifiers cannot be reused.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="aksname_nodejs">
@@ -732,7 +732,7 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The AKS identifier.
+    <dd>{{% md %}}The AKS identifier. A valid identifier should be formatted as `acd-nnnnnnnn` and previously used identifiers cannot be reused.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="aks_name_python">
@@ -1116,7 +1116,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The AKS identifier.
+    <dd>{{% md %}}The AKS identifier. A valid identifier should be formatted as `acd-nnnnnnnn` and previously used identifiers cannot be reused.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_aksname_csharp">
@@ -1300,7 +1300,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The AKS identifier.
+    <dd>{{% md %}}The AKS identifier. A valid identifier should be formatted as `acd-nnnnnnnn` and previously used identifiers cannot be reused.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_aksname_go">
@@ -1484,7 +1484,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The AKS identifier.
+    <dd>{{% md %}}The AKS identifier. A valid identifier should be formatted as `acd-nnnnnnnn` and previously used identifiers cannot be reused.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_aksname_nodejs">
@@ -1668,7 +1668,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The AKS identifier.
+    <dd>{{% md %}}The AKS identifier. A valid identifier should be formatted as `acd-nnnnnnnn` and previously used identifiers cannot be reused.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_aks_name_python">

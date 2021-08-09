@@ -35,10 +35,14 @@ Manages a custom Spotinst Ocean GKE Launch Spec resource.
                     <span class="nx">metadatas</span><span class="p">:</span> <span class="nx">Optional[Sequence[OceanLaunchSpecMetadataArgs]]</span> = None<span class="p">,</span>
                     <span class="nx">node_pool_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                     <span class="nx">ocean_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                    <span class="nx">resource_limits</span><span class="p">:</span> <span class="nx">Optional[OceanLaunchSpecResourceLimitsArgs]</span> = None<span class="p">,</span>
                     <span class="nx">restrict_scale_down</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
                     <span class="nx">root_volume_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
                     <span class="nx">root_volume_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                    <span class="nx">service_account</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                    <span class="nx">shielded_instance_config</span><span class="p">:</span> <span class="nx">Optional[OceanLaunchSpecShieldedInstanceConfigArgs]</span> = None<span class="p">,</span>
                     <span class="nx">source_image</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                    <span class="nx">storage</span><span class="p">:</span> <span class="nx">Optional[OceanLaunchSpecStorageArgs]</span> = None<span class="p">,</span>
                     <span class="nx">strategies</span><span class="p">:</span> <span class="nx">Optional[Sequence[OceanLaunchSpecStrategyArgs]]</span> = None<span class="p">,</span>
                     <span class="nx">taints</span><span class="p">:</span> <span class="nx">Optional[Sequence[OceanLaunchSpecTaintArgs]]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
@@ -159,7 +163,7 @@ Manages a custom Spotinst Ocean GKE Launch Spec resource.
 
 ## OceanLaunchSpec Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Architecture and Concepts docs.
 
 ### Inputs
 
@@ -224,6 +228,15 @@ The OceanLaunchSpec resource accepts the following [input]({{< relref "/docs/int
     <dd>{{% md %}}The node pool you wish to use in your Launch Spec.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="resourcelimits_csharp">
+<a href="#resourcelimits_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Limits</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanlaunchspecresourcelimits">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Gke.<wbr>Inputs.<wbr>Ocean<wbr>Launch<wbr>Spec<wbr>Resource<wbr>Limits<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The Ocean virtual node group resource limits object.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="restrictscaledown_csharp">
 <a href="#restrictscaledown_csharp" style="color: inherit; text-decoration: inherit;">Restrict<wbr>Scale<wbr>Down</a>
 </span>
@@ -251,6 +264,24 @@ The OceanLaunchSpec resource accepts the following [input]({{< relref "/docs/int
     <dd>{{% md %}}Root volume disk type. Valid values: `"pd-standard"`, `"pd-ssd"`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="serviceaccount_csharp">
+<a href="#serviceaccount_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Account</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The account used by applications running on the VM to call GCP APIs.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="shieldedinstanceconfig_csharp">
+<a href="#shieldedinstanceconfig_csharp" style="color: inherit; text-decoration: inherit;">Shielded<wbr>Instance<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanlaunchspecshieldedinstanceconfig">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Gke.<wbr>Inputs.<wbr>Ocean<wbr>Launch<wbr>Spec<wbr>Shielded<wbr>Instance<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The Ocean shielded instance configuration object.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="sourceimage_csharp">
 <a href="#sourceimage_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Image</a>
 </span>
@@ -258,6 +289,15 @@ The OceanLaunchSpec resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Image URL.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="storage_csharp">
+<a href="#storage_csharp" style="color: inherit; text-decoration: inherit;">Storage</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanlaunchspecstorage">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Gke.<wbr>Inputs.<wbr>Ocean<wbr>Launch<wbr>Spec<wbr>Storage<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The Ocean virtual node group storage object.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="strategies_csharp">
@@ -336,6 +376,15 @@ The OceanLaunchSpec resource accepts the following [input]({{< relref "/docs/int
     <dd>{{% md %}}The node pool you wish to use in your Launch Spec.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="resourcelimits_go">
+<a href="#resourcelimits_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Limits</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanlaunchspecresourcelimits">Ocean<wbr>Launch<wbr>Spec<wbr>Resource<wbr>Limits<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The Ocean virtual node group resource limits object.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="restrictscaledown_go">
 <a href="#restrictscaledown_go" style="color: inherit; text-decoration: inherit;">Restrict<wbr>Scale<wbr>Down</a>
 </span>
@@ -363,6 +412,24 @@ The OceanLaunchSpec resource accepts the following [input]({{< relref "/docs/int
     <dd>{{% md %}}Root volume disk type. Valid values: `"pd-standard"`, `"pd-ssd"`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="serviceaccount_go">
+<a href="#serviceaccount_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Account</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The account used by applications running on the VM to call GCP APIs.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="shieldedinstanceconfig_go">
+<a href="#shieldedinstanceconfig_go" style="color: inherit; text-decoration: inherit;">Shielded<wbr>Instance<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanlaunchspecshieldedinstanceconfig">Ocean<wbr>Launch<wbr>Spec<wbr>Shielded<wbr>Instance<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The Ocean shielded instance configuration object.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="sourceimage_go">
 <a href="#sourceimage_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Image</a>
 </span>
@@ -370,6 +437,15 @@ The OceanLaunchSpec resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Image URL.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="storage_go">
+<a href="#storage_go" style="color: inherit; text-decoration: inherit;">Storage</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanlaunchspecstorage">Ocean<wbr>Launch<wbr>Spec<wbr>Storage<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The Ocean virtual node group storage object.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="strategies_go">
@@ -448,6 +524,15 @@ The OceanLaunchSpec resource accepts the following [input]({{< relref "/docs/int
     <dd>{{% md %}}The node pool you wish to use in your Launch Spec.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="resourcelimits_nodejs">
+<a href="#resourcelimits_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Limits</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanlaunchspecresourcelimits">Ocean<wbr>Launch<wbr>Spec<wbr>Resource<wbr>Limits<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The Ocean virtual node group resource limits object.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="restrictscaledown_nodejs">
 <a href="#restrictscaledown_nodejs" style="color: inherit; text-decoration: inherit;">restrict<wbr>Scale<wbr>Down</a>
 </span>
@@ -475,6 +560,24 @@ The OceanLaunchSpec resource accepts the following [input]({{< relref "/docs/int
     <dd>{{% md %}}Root volume disk type. Valid values: `"pd-standard"`, `"pd-ssd"`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="serviceaccount_nodejs">
+<a href="#serviceaccount_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Account</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The account used by applications running on the VM to call GCP APIs.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="shieldedinstanceconfig_nodejs">
+<a href="#shieldedinstanceconfig_nodejs" style="color: inherit; text-decoration: inherit;">shielded<wbr>Instance<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanlaunchspecshieldedinstanceconfig">Ocean<wbr>Launch<wbr>Spec<wbr>Shielded<wbr>Instance<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The Ocean shielded instance configuration object.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="sourceimage_nodejs">
 <a href="#sourceimage_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Image</a>
 </span>
@@ -482,6 +585,15 @@ The OceanLaunchSpec resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Image URL.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="storage_nodejs">
+<a href="#storage_nodejs" style="color: inherit; text-decoration: inherit;">storage</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanlaunchspecstorage">Ocean<wbr>Launch<wbr>Spec<wbr>Storage<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The Ocean virtual node group storage object.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="strategies_nodejs">
@@ -560,6 +672,15 @@ The OceanLaunchSpec resource accepts the following [input]({{< relref "/docs/int
     <dd>{{% md %}}The node pool you wish to use in your Launch Spec.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="resource_limits_python">
+<a href="#resource_limits_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>limits</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanlaunchspecresourcelimits">Ocean<wbr>Launch<wbr>Spec<wbr>Resource<wbr>Limits<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The Ocean virtual node group resource limits object.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="restrict_scale_down_python">
 <a href="#restrict_scale_down_python" style="color: inherit; text-decoration: inherit;">restrict_<wbr>scale_<wbr>down</a>
 </span>
@@ -587,6 +708,24 @@ The OceanLaunchSpec resource accepts the following [input]({{< relref "/docs/int
     <dd>{{% md %}}Root volume disk type. Valid values: `"pd-standard"`, `"pd-ssd"`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="service_account_python">
+<a href="#service_account_python" style="color: inherit; text-decoration: inherit;">service_<wbr>account</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The account used by applications running on the VM to call GCP APIs.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="shielded_instance_config_python">
+<a href="#shielded_instance_config_python" style="color: inherit; text-decoration: inherit;">shielded_<wbr>instance_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanlaunchspecshieldedinstanceconfig">Ocean<wbr>Launch<wbr>Spec<wbr>Shielded<wbr>Instance<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The Ocean shielded instance configuration object.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="source_image_python">
 <a href="#source_image_python" style="color: inherit; text-decoration: inherit;">source_<wbr>image</a>
 </span>
@@ -594,6 +733,15 @@ The OceanLaunchSpec resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Image URL.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="storage_python">
+<a href="#storage_python" style="color: inherit; text-decoration: inherit;">storage</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanlaunchspecstorage">Ocean<wbr>Launch<wbr>Spec<wbr>Storage<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The Ocean virtual node group storage object.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="strategies_python">
@@ -692,10 +840,14 @@ Get an existing OceanLaunchSpec resource's state with the given name, ID, and op
         <span class="nx">metadatas</span><span class="p">:</span> <span class="nx">Optional[Sequence[OceanLaunchSpecMetadataArgs]]</span> = None<span class="p">,</span>
         <span class="nx">node_pool_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">ocean_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">resource_limits</span><span class="p">:</span> <span class="nx">Optional[OceanLaunchSpecResourceLimitsArgs]</span> = None<span class="p">,</span>
         <span class="nx">restrict_scale_down</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">root_volume_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
         <span class="nx">root_volume_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">service_account</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">shielded_instance_config</span><span class="p">:</span> <span class="nx">Optional[OceanLaunchSpecShieldedInstanceConfigArgs]</span> = None<span class="p">,</span>
         <span class="nx">source_image</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">storage</span><span class="p">:</span> <span class="nx">Optional[OceanLaunchSpecStorageArgs]</span> = None<span class="p">,</span>
         <span class="nx">strategies</span><span class="p">:</span> <span class="nx">Optional[Sequence[OceanLaunchSpecStrategyArgs]]</span> = None<span class="p">,</span>
         <span class="nx">taints</span><span class="p">:</span> <span class="nx">Optional[Sequence[OceanLaunchSpecTaintArgs]]</span> = None<span class="p">) -&gt;</span> OceanLaunchSpec</code></pre></div>
 {{% /choosable %}}
@@ -864,6 +1016,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The Ocean cluster ID.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_resourcelimits_csharp">
+<a href="#state_resourcelimits_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Limits</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanlaunchspecresourcelimits">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Gke.<wbr>Inputs.<wbr>Ocean<wbr>Launch<wbr>Spec<wbr>Resource<wbr>Limits<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The Ocean virtual node group resource limits object.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_restrictscaledown_csharp">
 <a href="#state_restrictscaledown_csharp" style="color: inherit; text-decoration: inherit;">Restrict<wbr>Scale<wbr>Down</a>
 </span>
@@ -891,6 +1052,24 @@ The following state arguments are supported:
     <dd>{{% md %}}Root volume disk type. Valid values: `"pd-standard"`, `"pd-ssd"`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_serviceaccount_csharp">
+<a href="#state_serviceaccount_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Account</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The account used by applications running on the VM to call GCP APIs.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_shieldedinstanceconfig_csharp">
+<a href="#state_shieldedinstanceconfig_csharp" style="color: inherit; text-decoration: inherit;">Shielded<wbr>Instance<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanlaunchspecshieldedinstanceconfig">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Gke.<wbr>Inputs.<wbr>Ocean<wbr>Launch<wbr>Spec<wbr>Shielded<wbr>Instance<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The Ocean shielded instance configuration object.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_sourceimage_csharp">
 <a href="#state_sourceimage_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Image</a>
 </span>
@@ -898,6 +1077,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Image URL.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_storage_csharp">
+<a href="#state_storage_csharp" style="color: inherit; text-decoration: inherit;">Storage</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanlaunchspecstorage">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Gke.<wbr>Inputs.<wbr>Ocean<wbr>Launch<wbr>Spec<wbr>Storage<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The Ocean virtual node group storage object.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_strategies_csharp">
@@ -976,6 +1164,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The Ocean cluster ID.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_resourcelimits_go">
+<a href="#state_resourcelimits_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Limits</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanlaunchspecresourcelimits">Ocean<wbr>Launch<wbr>Spec<wbr>Resource<wbr>Limits<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The Ocean virtual node group resource limits object.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_restrictscaledown_go">
 <a href="#state_restrictscaledown_go" style="color: inherit; text-decoration: inherit;">Restrict<wbr>Scale<wbr>Down</a>
 </span>
@@ -1003,6 +1200,24 @@ The following state arguments are supported:
     <dd>{{% md %}}Root volume disk type. Valid values: `"pd-standard"`, `"pd-ssd"`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_serviceaccount_go">
+<a href="#state_serviceaccount_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Account</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The account used by applications running on the VM to call GCP APIs.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_shieldedinstanceconfig_go">
+<a href="#state_shieldedinstanceconfig_go" style="color: inherit; text-decoration: inherit;">Shielded<wbr>Instance<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanlaunchspecshieldedinstanceconfig">Ocean<wbr>Launch<wbr>Spec<wbr>Shielded<wbr>Instance<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The Ocean shielded instance configuration object.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_sourceimage_go">
 <a href="#state_sourceimage_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Image</a>
 </span>
@@ -1010,6 +1225,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Image URL.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_storage_go">
+<a href="#state_storage_go" style="color: inherit; text-decoration: inherit;">Storage</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanlaunchspecstorage">Ocean<wbr>Launch<wbr>Spec<wbr>Storage<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The Ocean virtual node group storage object.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_strategies_go">
@@ -1088,6 +1312,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The Ocean cluster ID.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_resourcelimits_nodejs">
+<a href="#state_resourcelimits_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Limits</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanlaunchspecresourcelimits">Ocean<wbr>Launch<wbr>Spec<wbr>Resource<wbr>Limits<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The Ocean virtual node group resource limits object.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_restrictscaledown_nodejs">
 <a href="#state_restrictscaledown_nodejs" style="color: inherit; text-decoration: inherit;">restrict<wbr>Scale<wbr>Down</a>
 </span>
@@ -1115,6 +1348,24 @@ The following state arguments are supported:
     <dd>{{% md %}}Root volume disk type. Valid values: `"pd-standard"`, `"pd-ssd"`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_serviceaccount_nodejs">
+<a href="#state_serviceaccount_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Account</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The account used by applications running on the VM to call GCP APIs.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_shieldedinstanceconfig_nodejs">
+<a href="#state_shieldedinstanceconfig_nodejs" style="color: inherit; text-decoration: inherit;">shielded<wbr>Instance<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanlaunchspecshieldedinstanceconfig">Ocean<wbr>Launch<wbr>Spec<wbr>Shielded<wbr>Instance<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The Ocean shielded instance configuration object.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_sourceimage_nodejs">
 <a href="#state_sourceimage_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Image</a>
 </span>
@@ -1122,6 +1373,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Image URL.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_storage_nodejs">
+<a href="#state_storage_nodejs" style="color: inherit; text-decoration: inherit;">storage</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanlaunchspecstorage">Ocean<wbr>Launch<wbr>Spec<wbr>Storage<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The Ocean virtual node group storage object.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_strategies_nodejs">
@@ -1200,6 +1460,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The Ocean cluster ID.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_resource_limits_python">
+<a href="#state_resource_limits_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>limits</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanlaunchspecresourcelimits">Ocean<wbr>Launch<wbr>Spec<wbr>Resource<wbr>Limits<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The Ocean virtual node group resource limits object.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_restrict_scale_down_python">
 <a href="#state_restrict_scale_down_python" style="color: inherit; text-decoration: inherit;">restrict_<wbr>scale_<wbr>down</a>
 </span>
@@ -1227,6 +1496,24 @@ The following state arguments are supported:
     <dd>{{% md %}}Root volume disk type. Valid values: `"pd-standard"`, `"pd-ssd"`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_service_account_python">
+<a href="#state_service_account_python" style="color: inherit; text-decoration: inherit;">service_<wbr>account</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The account used by applications running on the VM to call GCP APIs.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_shielded_instance_config_python">
+<a href="#state_shielded_instance_config_python" style="color: inherit; text-decoration: inherit;">shielded_<wbr>instance_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanlaunchspecshieldedinstanceconfig">Ocean<wbr>Launch<wbr>Spec<wbr>Shielded<wbr>Instance<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The Ocean shielded instance configuration object.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_source_image_python">
 <a href="#state_source_image_python" style="color: inherit; text-decoration: inherit;">source_<wbr>image</a>
 </span>
@@ -1234,6 +1521,15 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Image URL.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_storage_python">
+<a href="#state_storage_python" style="color: inherit; text-decoration: inherit;">storage</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanlaunchspecstorage">Ocean<wbr>Launch<wbr>Spec<wbr>Storage<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The Ocean virtual node group storage object.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_strategies_python">
@@ -1603,6 +1899,204 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The label value.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="oceanlaunchspecresourcelimits">Ocean<wbr>Launch<wbr>Spec<wbr>Resource<wbr>Limits</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="maxinstancecount_csharp">
+<a href="#maxinstancecount_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Instance<wbr>Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Option to set a maximum number of instances per virtual node group. Can be null. If set, the value must be greater than or equal to 0.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="maxinstancecount_go">
+<a href="#maxinstancecount_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Instance<wbr>Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Option to set a maximum number of instances per virtual node group. Can be null. If set, the value must be greater than or equal to 0.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="maxinstancecount_nodejs">
+<a href="#maxinstancecount_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Instance<wbr>Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Option to set a maximum number of instances per virtual node group. Can be null. If set, the value must be greater than or equal to 0.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="max_instance_count_python">
+<a href="#max_instance_count_python" style="color: inherit; text-decoration: inherit;">max_<wbr>instance_<wbr>count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Option to set a maximum number of instances per virtual node group. Can be null. If set, the value must be greater than or equal to 0.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="oceanlaunchspecshieldedinstanceconfig">Ocean<wbr>Launch<wbr>Spec<wbr>Shielded<wbr>Instance<wbr>Config</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="enableintegritymonitoring_csharp">
+<a href="#enableintegritymonitoring_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Integrity<wbr>Monitoring</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Boolean. Enable the integrity monitoring parameter on the GCP instances.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enablesecureboot_csharp">
+<a href="#enablesecureboot_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Secure<wbr>Boot</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Boolean. Enable the secure boot parameter on the GCP instances.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="enableintegritymonitoring_go">
+<a href="#enableintegritymonitoring_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Integrity<wbr>Monitoring</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Boolean. Enable the integrity monitoring parameter on the GCP instances.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enablesecureboot_go">
+<a href="#enablesecureboot_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Secure<wbr>Boot</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Boolean. Enable the secure boot parameter on the GCP instances.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="enableintegritymonitoring_nodejs">
+<a href="#enableintegritymonitoring_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Integrity<wbr>Monitoring</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Boolean. Enable the integrity monitoring parameter on the GCP instances.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enablesecureboot_nodejs">
+<a href="#enablesecureboot_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Secure<wbr>Boot</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Boolean. Enable the secure boot parameter on the GCP instances.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="enable_integrity_monitoring_python">
+<a href="#enable_integrity_monitoring_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>integrity_<wbr>monitoring</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Boolean. Enable the integrity monitoring parameter on the GCP instances.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enable_secure_boot_python">
+<a href="#enable_secure_boot_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>secure_<wbr>boot</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Boolean. Enable the secure boot parameter on the GCP instances.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="oceanlaunchspecstorage">Ocean<wbr>Launch<wbr>Spec<wbr>Storage</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="localssdcount_csharp">
+<a href="#localssdcount_csharp" style="color: inherit; text-decoration: inherit;">Local<wbr>Ssd<wbr>Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Defines the number of local SSDs to be attached per node for this VNG.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="localssdcount_go">
+<a href="#localssdcount_go" style="color: inherit; text-decoration: inherit;">Local<wbr>Ssd<wbr>Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Defines the number of local SSDs to be attached per node for this VNG.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="localssdcount_nodejs">
+<a href="#localssdcount_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>Ssd<wbr>Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Defines the number of local SSDs to be attached per node for this VNG.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="local_ssd_count_python">
+<a href="#local_ssd_count_python" style="color: inherit; text-decoration: inherit;">local_<wbr>ssd_<wbr>count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Defines the number of local SSDs to be attached per node for this VNG.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
