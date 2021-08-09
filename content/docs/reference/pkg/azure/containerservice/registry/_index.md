@@ -42,10 +42,20 @@ class MyStack : Stack
             Location = rg.Location,
             Sku = "Premium",
             AdminEnabled = false,
-            GeoreplicationLocations = 
+            Georeplications = 
             {
-                "East US",
-                "West Europe",
+                new Azure.ContainerService.Inputs.RegistryGeoreplicationArgs
+                {
+                    Location = "East US",
+                    ZoneRedundancyEnabled = true,
+                    Tags = ,
+                },
+                new Azure.ContainerService.Inputs.RegistryGeoreplicationArgs
+                {
+                    Location = "westeurope",
+                    ZoneRedundancyEnabled = true,
+                    Tags = ,
+                },
             },
         });
     }
@@ -81,9 +91,17 @@ func main() {
 			Location:          rg.Location,
 			Sku:               pulumi.String("Premium"),
 			AdminEnabled:      pulumi.Bool(false),
-			GeoreplicationLocations: pulumi.StringArray{
-				pulumi.String("East US"),
-				pulumi.String("West Europe"),
+			Georeplications: containerservice.RegistryGeoreplicationArray{
+				&containerservice.RegistryGeoreplicationArgs{
+					Location:              pulumi.String("East US"),
+					ZoneRedundancyEnabled: pulumi.Bool(true),
+					Tags:                  nil,
+				},
+				&containerservice.RegistryGeoreplicationArgs{
+					Location:              pulumi.String("westeurope"),
+					ZoneRedundancyEnabled: pulumi.Bool(true),
+					Tags:                  nil,
+				},
 			},
 		})
 		if err != nil {
@@ -110,9 +128,17 @@ acr = azure.containerservice.Registry("acr",
     location=rg.location,
     sku="Premium",
     admin_enabled=False,
-    georeplication_locations=[
-        "East US",
-        "West Europe",
+    georeplications=[
+        azure.containerservice.RegistryGeoreplicationArgs(
+            location="East US",
+            zone_redundancy_enabled=True,
+            tags={},
+        ),
+        azure.containerservice.RegistryGeoreplicationArgs(
+            location="westeurope",
+            zone_redundancy_enabled=True,
+            tags={},
+        ),
     ])
 ```
 
@@ -133,9 +159,17 @@ const acr = new azure.containerservice.Registry("acr", {
     location: rg.location,
     sku: "Premium",
     adminEnabled: false,
-    georeplicationLocations: [
-        "East US",
-        "West Europe",
+    georeplications: [
+        {
+            location: "East US",
+            zoneRedundancyEnabled: true,
+            tags: {},
+        },
+        {
+            location: "westeurope",
+            zoneRedundancyEnabled: true,
+            tags: {},
+        },
     ],
 });
 ```

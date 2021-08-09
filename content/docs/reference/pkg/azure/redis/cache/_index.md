@@ -204,12 +204,15 @@ const exampleCache = new azure.redis.Cache("exampleCache", {
           <span class="nx">private_static_ip_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
           <span class="nx">public_network_access_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
           <span class="nx">redis_configuration</span><span class="p">:</span> <span class="nx">Optional[CacheRedisConfigurationArgs]</span> = None<span class="p">,</span>
+          <span class="nx">redis_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
           <span class="nx">replicas_per_master</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+          <span class="nx">replicas_per_primary</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
           <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
           <span class="nx">shard_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
           <span class="nx">sku_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
           <span class="nx">subnet_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
           <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+          <span class="nx">tenant_settings</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
           <span class="nx">zones</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">Cache</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
@@ -450,6 +453,15 @@ new resource to be created.
     <dd>{{% md %}}A `redis_configuration` as defined below - with some limitations by SKU - defaults/details are shown below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="redisversion_csharp">
+<a href="#redisversion_csharp" style="color: inherit; text-decoration: inherit;">Redis<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Redis version. Only major version needed. Valid values: `4`, `6`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="replicaspermaster_csharp">
 <a href="#replicaspermaster_csharp" style="color: inherit; text-decoration: inherit;">Replicas<wbr>Per<wbr>Master</a>
 </span>
@@ -457,6 +469,15 @@ new resource to be created.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Amount of replicas to create per master for this Redis Cache.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="replicasperprimary_csharp">
+<a href="#replicasperprimary_csharp" style="color: inherit; text-decoration: inherit;">Replicas<wbr>Per<wbr>Primary</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Amount of replicas to create per primary for this Redis Cache. If both `replicas_per_primary` and `replicas_per_master` are set, they need to be equal.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="shardcount_csharp">
@@ -484,6 +505,15 @@ new resource to be created.
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tenantsettings_csharp">
+<a href="#tenantsettings_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A mapping of tenant settings to assign to the resource.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zones_csharp">
@@ -609,6 +639,15 @@ new resource to be created.
     <dd>{{% md %}}A `redis_configuration` as defined below - with some limitations by SKU - defaults/details are shown below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="redisversion_go">
+<a href="#redisversion_go" style="color: inherit; text-decoration: inherit;">Redis<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Redis version. Only major version needed. Valid values: `4`, `6`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="replicaspermaster_go">
 <a href="#replicaspermaster_go" style="color: inherit; text-decoration: inherit;">Replicas<wbr>Per<wbr>Master</a>
 </span>
@@ -616,6 +655,15 @@ new resource to be created.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Amount of replicas to create per master for this Redis Cache.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="replicasperprimary_go">
+<a href="#replicasperprimary_go" style="color: inherit; text-decoration: inherit;">Replicas<wbr>Per<wbr>Primary</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Amount of replicas to create per primary for this Redis Cache. If both `replicas_per_primary` and `replicas_per_master` are set, they need to be equal.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="shardcount_go">
@@ -643,6 +691,15 @@ new resource to be created.
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tenantsettings_go">
+<a href="#tenantsettings_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}A mapping of tenant settings to assign to the resource.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zones_go">
@@ -768,6 +825,15 @@ new resource to be created.
     <dd>{{% md %}}A `redis_configuration` as defined below - with some limitations by SKU - defaults/details are shown below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="redisversion_nodejs">
+<a href="#redisversion_nodejs" style="color: inherit; text-decoration: inherit;">redis<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Redis version. Only major version needed. Valid values: `4`, `6`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="replicaspermaster_nodejs">
 <a href="#replicaspermaster_nodejs" style="color: inherit; text-decoration: inherit;">replicas<wbr>Per<wbr>Master</a>
 </span>
@@ -775,6 +841,15 @@ new resource to be created.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Amount of replicas to create per master for this Redis Cache.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="replicasperprimary_nodejs">
+<a href="#replicasperprimary_nodejs" style="color: inherit; text-decoration: inherit;">replicas<wbr>Per<wbr>Primary</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Amount of replicas to create per primary for this Redis Cache. If both `replicas_per_primary` and `replicas_per_master` are set, they need to be equal.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="shardcount_nodejs">
@@ -802,6 +877,15 @@ new resource to be created.
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tenantsettings_nodejs">
+<a href="#tenantsettings_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}A mapping of tenant settings to assign to the resource.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zones_nodejs">
@@ -927,6 +1011,15 @@ new resource to be created.
     <dd>{{% md %}}A `redis_configuration` as defined below - with some limitations by SKU - defaults/details are shown below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="redis_version_python">
+<a href="#redis_version_python" style="color: inherit; text-decoration: inherit;">redis_<wbr>version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Redis version. Only major version needed. Valid values: `4`, `6`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="replicas_per_master_python">
 <a href="#replicas_per_master_python" style="color: inherit; text-decoration: inherit;">replicas_<wbr>per_<wbr>master</a>
 </span>
@@ -934,6 +1027,15 @@ new resource to be created.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Amount of replicas to create per master for this Redis Cache.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="replicas_per_primary_python">
+<a href="#replicas_per_primary_python" style="color: inherit; text-decoration: inherit;">replicas_<wbr>per_<wbr>primary</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Amount of replicas to create per primary for this Redis Cache. If both `replicas_per_primary` and `replicas_per_master` are set, they need to be equal.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="shard_count_python">
@@ -961,6 +1063,15 @@ new resource to be created.
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tenant_settings_python">
+<a href="#tenant_settings_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, str]</span>
+    </dt>
+    <dd>{{% md %}}A mapping of tenant settings to assign to the resource.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zones_python">
@@ -1310,7 +1421,9 @@ Get an existing Cache resource's state with the given name, ID, and optional ext
         <span class="nx">private_static_ip_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">public_network_access_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">redis_configuration</span><span class="p">:</span> <span class="nx">Optional[CacheRedisConfigurationArgs]</span> = None<span class="p">,</span>
+        <span class="nx">redis_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">replicas_per_master</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+        <span class="nx">replicas_per_primary</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
         <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">secondary_access_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">secondary_connection_string</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -1319,6 +1432,7 @@ Get an existing Cache resource's state with the given name, ID, and optional ext
         <span class="nx">ssl_port</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
         <span class="nx">subnet_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+        <span class="nx">tenant_settings</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
         <span class="nx">zones</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">) -&gt;</span> Cache</code></pre></div>
 {{% /choosable %}}
 
@@ -1559,6 +1673,15 @@ new resource to be created.
     <dd>{{% md %}}A `redis_configuration` as defined below - with some limitations by SKU - defaults/details are shown below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_redisversion_csharp">
+<a href="#state_redisversion_csharp" style="color: inherit; text-decoration: inherit;">Redis<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Redis version. Only major version needed. Valid values: `4`, `6`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_replicaspermaster_csharp">
 <a href="#state_replicaspermaster_csharp" style="color: inherit; text-decoration: inherit;">Replicas<wbr>Per<wbr>Master</a>
 </span>
@@ -1566,6 +1689,15 @@ new resource to be created.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Amount of replicas to create per master for this Redis Cache.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_replicasperprimary_csharp">
+<a href="#state_replicasperprimary_csharp" style="color: inherit; text-decoration: inherit;">Replicas<wbr>Per<wbr>Primary</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Amount of replicas to create per primary for this Redis Cache. If both `replicas_per_primary` and `replicas_per_master` are set, they need to be equal.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_csharp">
@@ -1639,6 +1771,15 @@ create the Redis instance.
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_tenantsettings_csharp">
+<a href="#state_tenantsettings_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A mapping of tenant settings to assign to the resource.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_zones_csharp">
@@ -1781,6 +1922,15 @@ new resource to be created.
     <dd>{{% md %}}A `redis_configuration` as defined below - with some limitations by SKU - defaults/details are shown below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_redisversion_go">
+<a href="#state_redisversion_go" style="color: inherit; text-decoration: inherit;">Redis<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Redis version. Only major version needed. Valid values: `4`, `6`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_replicaspermaster_go">
 <a href="#state_replicaspermaster_go" style="color: inherit; text-decoration: inherit;">Replicas<wbr>Per<wbr>Master</a>
 </span>
@@ -1788,6 +1938,15 @@ new resource to be created.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Amount of replicas to create per master for this Redis Cache.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_replicasperprimary_go">
+<a href="#state_replicasperprimary_go" style="color: inherit; text-decoration: inherit;">Replicas<wbr>Per<wbr>Primary</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Amount of replicas to create per primary for this Redis Cache. If both `replicas_per_primary` and `replicas_per_master` are set, they need to be equal.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_go">
@@ -1861,6 +2020,15 @@ create the Redis instance.
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_tenantsettings_go">
+<a href="#state_tenantsettings_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}A mapping of tenant settings to assign to the resource.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_zones_go">
@@ -2003,6 +2171,15 @@ new resource to be created.
     <dd>{{% md %}}A `redis_configuration` as defined below - with some limitations by SKU - defaults/details are shown below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_redisversion_nodejs">
+<a href="#state_redisversion_nodejs" style="color: inherit; text-decoration: inherit;">redis<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Redis version. Only major version needed. Valid values: `4`, `6`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_replicaspermaster_nodejs">
 <a href="#state_replicaspermaster_nodejs" style="color: inherit; text-decoration: inherit;">replicas<wbr>Per<wbr>Master</a>
 </span>
@@ -2010,6 +2187,15 @@ new resource to be created.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Amount of replicas to create per master for this Redis Cache.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_replicasperprimary_nodejs">
+<a href="#state_replicasperprimary_nodejs" style="color: inherit; text-decoration: inherit;">replicas<wbr>Per<wbr>Primary</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Amount of replicas to create per primary for this Redis Cache. If both `replicas_per_primary` and `replicas_per_master` are set, they need to be equal.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_nodejs">
@@ -2083,6 +2269,15 @@ create the Redis instance.
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_tenantsettings_nodejs">
+<a href="#state_tenantsettings_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}A mapping of tenant settings to assign to the resource.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_zones_nodejs">
@@ -2225,6 +2420,15 @@ new resource to be created.
     <dd>{{% md %}}A `redis_configuration` as defined below - with some limitations by SKU - defaults/details are shown below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_redis_version_python">
+<a href="#state_redis_version_python" style="color: inherit; text-decoration: inherit;">redis_<wbr>version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Redis version. Only major version needed. Valid values: `4`, `6`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_replicas_per_master_python">
 <a href="#state_replicas_per_master_python" style="color: inherit; text-decoration: inherit;">replicas_<wbr>per_<wbr>master</a>
 </span>
@@ -2232,6 +2436,15 @@ new resource to be created.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Amount of replicas to create per master for this Redis Cache.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_replicas_per_primary_python">
+<a href="#state_replicas_per_primary_python" style="color: inherit; text-decoration: inherit;">replicas_<wbr>per_<wbr>primary</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Amount of replicas to create per primary for this Redis Cache. If both `replicas_per_primary` and `replicas_per_master` are set, they need to be equal.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resource_group_name_python">
@@ -2305,6 +2518,15 @@ create the Redis instance.
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_tenant_settings_python">
+<a href="#state_tenant_settings_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, str]</span>
+    </dt>
+    <dd>{{% md %}}A mapping of tenant settings to assign to the resource.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_zones_python">

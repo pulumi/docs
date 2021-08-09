@@ -129,6 +129,6 @@ A Pulumi package based on the azurerm Terraform Provider for creating and managi
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.12.0</dd>
+	<dd>4.13.0</dd>
 </dl>
 

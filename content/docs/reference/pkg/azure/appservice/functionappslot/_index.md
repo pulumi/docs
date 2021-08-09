@@ -3852,6 +3852,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Should the Function App be loaded at all times? Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="appscalelimit_csharp">
+<a href="#appscalelimit_csharp" style="color: inherit; text-decoration: inherit;">App<wbr>Scale<wbr>Limit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of workers this function app can scale out to. Only applicable to apps on the Consumption and Premium plan.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="autoswapslotname_csharp">
 <a href="#autoswapslotname_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Swap<wbr>Slot<wbr>Name</a>
 </span>
@@ -3868,6 +3877,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="#functionappslotsiteconfigcors">Function<wbr>App<wbr>Slot<wbr>Site<wbr>Config<wbr>Cors</a></span>
     </dt>
     <dd>{{% md %}}A `cors` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="elasticinstanceminimum_csharp">
+<a href="#elasticinstanceminimum_csharp" style="color: inherit; text-decoration: inherit;">Elastic<wbr>Instance<wbr>Minimum</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of minimum instances for this function app. Only applicable to apps on the Premium plan.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ftpsstate_csharp">
@@ -3940,6 +3958,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The number of pre-warmed instances for this function app. Only affects apps on the Premium plan.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="runtimescalemonitoringenabled_csharp">
+<a href="#runtimescalemonitoringenabled_csharp" style="color: inherit; text-decoration: inherit;">Runtime<wbr>Scale<wbr>Monitoring<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Should Runtime Scale Monitoring be enabled?. Only applicable to apps on the Premium plan. Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="scmiprestrictions_csharp">
 <a href="#scmiprestrictions_csharp" style="color: inherit; text-decoration: inherit;">Scm<wbr>Ip<wbr>Restrictions</a>
 </span>
@@ -3995,6 +4022,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Should the Function App be loaded at all times? Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="appscalelimit_go">
+<a href="#appscalelimit_go" style="color: inherit; text-decoration: inherit;">App<wbr>Scale<wbr>Limit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of workers this function app can scale out to. Only applicable to apps on the Consumption and Premium plan.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="autoswapslotname_go">
 <a href="#autoswapslotname_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Swap<wbr>Slot<wbr>Name</a>
 </span>
@@ -4011,6 +4047,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="#functionappslotsiteconfigcors">Function<wbr>App<wbr>Slot<wbr>Site<wbr>Config<wbr>Cors</a></span>
     </dt>
     <dd>{{% md %}}A `cors` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="elasticinstanceminimum_go">
+<a href="#elasticinstanceminimum_go" style="color: inherit; text-decoration: inherit;">Elastic<wbr>Instance<wbr>Minimum</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of minimum instances for this function app. Only applicable to apps on the Premium plan.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ftpsstate_go">
@@ -4083,6 +4128,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The number of pre-warmed instances for this function app. Only affects apps on the Premium plan.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="runtimescalemonitoringenabled_go">
+<a href="#runtimescalemonitoringenabled_go" style="color: inherit; text-decoration: inherit;">Runtime<wbr>Scale<wbr>Monitoring<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Should Runtime Scale Monitoring be enabled?. Only applicable to apps on the Premium plan. Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="scmiprestrictions_go">
 <a href="#scmiprestrictions_go" style="color: inherit; text-decoration: inherit;">Scm<wbr>Ip<wbr>Restrictions</a>
 </span>
@@ -4138,6 +4192,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Should the Function App be loaded at all times? Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="appscalelimit_nodejs">
+<a href="#appscalelimit_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Scale<wbr>Limit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The number of workers this function app can scale out to. Only applicable to apps on the Consumption and Premium plan.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="autoswapslotname_nodejs">
 <a href="#autoswapslotname_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Swap<wbr>Slot<wbr>Name</a>
 </span>
@@ -4154,6 +4217,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="#functionappslotsiteconfigcors">Function<wbr>App<wbr>Slot<wbr>Site<wbr>Config<wbr>Cors</a></span>
     </dt>
     <dd>{{% md %}}A `cors` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="elasticinstanceminimum_nodejs">
+<a href="#elasticinstanceminimum_nodejs" style="color: inherit; text-decoration: inherit;">elastic<wbr>Instance<wbr>Minimum</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The number of minimum instances for this function app. Only applicable to apps on the Premium plan.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ftpsstate_nodejs">
@@ -4226,6 +4298,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The number of pre-warmed instances for this function app. Only affects apps on the Premium plan.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="runtimescalemonitoringenabled_nodejs">
+<a href="#runtimescalemonitoringenabled_nodejs" style="color: inherit; text-decoration: inherit;">runtime<wbr>Scale<wbr>Monitoring<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Should Runtime Scale Monitoring be enabled?. Only applicable to apps on the Premium plan. Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="scmiprestrictions_nodejs">
 <a href="#scmiprestrictions_nodejs" style="color: inherit; text-decoration: inherit;">scm<wbr>Ip<wbr>Restrictions</a>
 </span>
@@ -4281,6 +4362,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Should the Function App be loaded at all times? Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="app_scale_limit_python">
+<a href="#app_scale_limit_python" style="color: inherit; text-decoration: inherit;">app_<wbr>scale_<wbr>limit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of workers this function app can scale out to. Only applicable to apps on the Consumption and Premium plan.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="auto_swap_slot_name_python">
 <a href="#auto_swap_slot_name_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>swap_<wbr>slot_<wbr>name</a>
 </span>
@@ -4297,6 +4387,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="#functionappslotsiteconfigcors">Function<wbr>App<wbr>Slot<wbr>Site<wbr>Config<wbr>Cors</a></span>
     </dt>
     <dd>{{% md %}}A `cors` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="elastic_instance_minimum_python">
+<a href="#elastic_instance_minimum_python" style="color: inherit; text-decoration: inherit;">elastic_<wbr>instance_<wbr>minimum</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of minimum instances for this function app. Only applicable to apps on the Premium plan.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ftps_state_python">
@@ -4367,6 +4466,15 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of pre-warmed instances for this function app. Only affects apps on the Premium plan.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="runtime_scale_monitoring_enabled_python">
+<a href="#runtime_scale_monitoring_enabled_python" style="color: inherit; text-decoration: inherit;">runtime_<wbr>scale_<wbr>monitoring_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Should Runtime Scale Monitoring be enabled?. Only applicable to apps on the Premium plan. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scm_ip_restrictions_python">

@@ -217,7 +217,9 @@ export const kubeConfig = exampleKubernetesCluster.kubeConfigRaw;
                       <span class="nx">kubelet_identities</span><span class="p">:</span> <span class="nx">Optional[Sequence[KubernetesClusterKubeletIdentityArgs]]</span> = None<span class="p">,</span>
                       <span class="nx">kubernetes_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                       <span class="nx">linux_profile</span><span class="p">:</span> <span class="nx">Optional[KubernetesClusterLinuxProfileArgs]</span> = None<span class="p">,</span>
+                      <span class="nx">local_account_disabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
                       <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                      <span class="nx">maintenance_window</span><span class="p">:</span> <span class="nx">Optional[KubernetesClusterMaintenanceWindowArgs]</span> = None<span class="p">,</span>
                       <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                       <span class="nx">network_profile</span><span class="p">:</span> <span class="nx">Optional[KubernetesClusterNetworkProfileArgs]</span> = None<span class="p">,</span>
                       <span class="nx">node_resource_group</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -410,7 +412,7 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The upgrade channel for this Kubernetes Cluster. Possible values are `patch`, `rapid`, and `stable`.
+    <dd>{{% md %}}The upgrade channel for this Kubernetes Cluster. Possible values are `patch`, `rapid`, `node-image` and `stable`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="diskencryptionsetid_csharp">
@@ -484,6 +486,15 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
     <dd>{{% md %}}A `linux_profile` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="localaccountdisabled_csharp">
+<a href="#localaccountdisabled_csharp" style="color: inherit; text-decoration: inherit;">Local<wbr>Account<wbr>Disabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Is local account disabled for AAD integrated kubernetes cluster?
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
 </span>
@@ -491,6 +502,15 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location where the Managed Kubernetes Cluster should be created. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="maintenancewindow_csharp">
+<a href="#maintenancewindow_csharp" style="color: inherit; text-decoration: inherit;">Maintenance<wbr>Window</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#kubernetesclustermaintenancewindow">Kubernetes<wbr>Cluster<wbr>Maintenance<wbr>Window<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `maintenance_window` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
@@ -646,7 +666,7 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The upgrade channel for this Kubernetes Cluster. Possible values are `patch`, `rapid`, and `stable`.
+    <dd>{{% md %}}The upgrade channel for this Kubernetes Cluster. Possible values are `patch`, `rapid`, `node-image` and `stable`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="diskencryptionsetid_go">
@@ -720,6 +740,15 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
     <dd>{{% md %}}A `linux_profile` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="localaccountdisabled_go">
+<a href="#localaccountdisabled_go" style="color: inherit; text-decoration: inherit;">Local<wbr>Account<wbr>Disabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Is local account disabled for AAD integrated kubernetes cluster?
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
 </span>
@@ -727,6 +756,15 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location where the Managed Kubernetes Cluster should be created. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="maintenancewindow_go">
+<a href="#maintenancewindow_go" style="color: inherit; text-decoration: inherit;">Maintenance<wbr>Window</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#kubernetesclustermaintenancewindow">Kubernetes<wbr>Cluster<wbr>Maintenance<wbr>Window<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `maintenance_window` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
@@ -882,7 +920,7 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The upgrade channel for this Kubernetes Cluster. Possible values are `patch`, `rapid`, and `stable`.
+    <dd>{{% md %}}The upgrade channel for this Kubernetes Cluster. Possible values are `patch`, `rapid`, `node-image` and `stable`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="diskencryptionsetid_nodejs">
@@ -956,6 +994,15 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
     <dd>{{% md %}}A `linux_profile` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="localaccountdisabled_nodejs">
+<a href="#localaccountdisabled_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>Account<wbr>Disabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Is local account disabled for AAD integrated kubernetes cluster?
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
@@ -963,6 +1010,15 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location where the Managed Kubernetes Cluster should be created. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="maintenancewindow_nodejs">
+<a href="#maintenancewindow_nodejs" style="color: inherit; text-decoration: inherit;">maintenance<wbr>Window</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#kubernetesclustermaintenancewindow">Kubernetes<wbr>Cluster<wbr>Maintenance<wbr>Window<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `maintenance_window` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
@@ -1118,7 +1174,7 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The upgrade channel for this Kubernetes Cluster. Possible values are `patch`, `rapid`, and `stable`.
+    <dd>{{% md %}}The upgrade channel for this Kubernetes Cluster. Possible values are `patch`, `rapid`, `node-image` and `stable`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disk_encryption_set_id_python">
@@ -1192,6 +1248,15 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
     <dd>{{% md %}}A `linux_profile` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="local_account_disabled_python">
+<a href="#local_account_disabled_python" style="color: inherit; text-decoration: inherit;">local_<wbr>account_<wbr>disabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Is local account disabled for AAD integrated kubernetes cluster?
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
@@ -1199,6 +1264,15 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The location where the Managed Kubernetes Cluster should be created. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="maintenance_window_python">
+<a href="#maintenance_window_python" style="color: inherit; text-decoration: inherit;">maintenance_<wbr>window</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#kubernetesclustermaintenancewindow">Kubernetes<wbr>Cluster<wbr>Maintenance<wbr>Window<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `maintenance_window` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
@@ -1605,7 +1679,9 @@ Get an existing KubernetesCluster resource's state with the given name, ID, and 
         <span class="nx">kubelet_identities</span><span class="p">:</span> <span class="nx">Optional[Sequence[KubernetesClusterKubeletIdentityArgs]]</span> = None<span class="p">,</span>
         <span class="nx">kubernetes_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">linux_profile</span><span class="p">:</span> <span class="nx">Optional[KubernetesClusterLinuxProfileArgs]</span> = None<span class="p">,</span>
+        <span class="nx">local_account_disabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">maintenance_window</span><span class="p">:</span> <span class="nx">Optional[KubernetesClusterMaintenanceWindowArgs]</span> = None<span class="p">,</span>
         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">network_profile</span><span class="p">:</span> <span class="nx">Optional[KubernetesClusterNetworkProfileArgs]</span> = None<span class="p">,</span>
         <span class="nx">node_resource_group</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -1764,7 +1840,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The upgrade channel for this Kubernetes Cluster. Possible values are `patch`, `rapid`, and `stable`.
+    <dd>{{% md %}}The upgrade channel for this Kubernetes Cluster. Possible values are `patch`, `rapid`, `node-image` and `stable`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultnodepool_csharp">
@@ -1892,6 +1968,15 @@ The following state arguments are supported:
     <dd>{{% md %}}A `linux_profile` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_localaccountdisabled_csharp">
+<a href="#state_localaccountdisabled_csharp" style="color: inherit; text-decoration: inherit;">Local<wbr>Account<wbr>Disabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Is local account disabled for AAD integrated kubernetes cluster?
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_location_csharp">
 <a href="#state_location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
 </span>
@@ -1899,6 +1984,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location where the Managed Kubernetes Cluster should be created. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_maintenancewindow_csharp">
+<a href="#state_maintenancewindow_csharp" style="color: inherit; text-decoration: inherit;">Maintenance<wbr>Window</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#kubernetesclustermaintenancewindow">Kubernetes<wbr>Cluster<wbr>Maintenance<wbr>Window<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `maintenance_window` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
@@ -2054,7 +2148,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The upgrade channel for this Kubernetes Cluster. Possible values are `patch`, `rapid`, and `stable`.
+    <dd>{{% md %}}The upgrade channel for this Kubernetes Cluster. Possible values are `patch`, `rapid`, `node-image` and `stable`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultnodepool_go">
@@ -2182,6 +2276,15 @@ The following state arguments are supported:
     <dd>{{% md %}}A `linux_profile` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_localaccountdisabled_go">
+<a href="#state_localaccountdisabled_go" style="color: inherit; text-decoration: inherit;">Local<wbr>Account<wbr>Disabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Is local account disabled for AAD integrated kubernetes cluster?
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_location_go">
 <a href="#state_location_go" style="color: inherit; text-decoration: inherit;">Location</a>
 </span>
@@ -2189,6 +2292,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location where the Managed Kubernetes Cluster should be created. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_maintenancewindow_go">
+<a href="#state_maintenancewindow_go" style="color: inherit; text-decoration: inherit;">Maintenance<wbr>Window</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#kubernetesclustermaintenancewindow">Kubernetes<wbr>Cluster<wbr>Maintenance<wbr>Window<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `maintenance_window` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
@@ -2344,7 +2456,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The upgrade channel for this Kubernetes Cluster. Possible values are `patch`, `rapid`, and `stable`.
+    <dd>{{% md %}}The upgrade channel for this Kubernetes Cluster. Possible values are `patch`, `rapid`, `node-image` and `stable`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultnodepool_nodejs">
@@ -2472,6 +2584,15 @@ The following state arguments are supported:
     <dd>{{% md %}}A `linux_profile` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_localaccountdisabled_nodejs">
+<a href="#state_localaccountdisabled_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>Account<wbr>Disabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Is local account disabled for AAD integrated kubernetes cluster?
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_location_nodejs">
 <a href="#state_location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
@@ -2479,6 +2600,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location where the Managed Kubernetes Cluster should be created. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_maintenancewindow_nodejs">
+<a href="#state_maintenancewindow_nodejs" style="color: inherit; text-decoration: inherit;">maintenance<wbr>Window</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#kubernetesclustermaintenancewindow">Kubernetes<wbr>Cluster<wbr>Maintenance<wbr>Window<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `maintenance_window` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
@@ -2634,7 +2764,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The upgrade channel for this Kubernetes Cluster. Possible values are `patch`, `rapid`, and `stable`.
+    <dd>{{% md %}}The upgrade channel for this Kubernetes Cluster. Possible values are `patch`, `rapid`, `node-image` and `stable`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_default_node_pool_python">
@@ -2762,6 +2892,15 @@ The following state arguments are supported:
     <dd>{{% md %}}A `linux_profile` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_local_account_disabled_python">
+<a href="#state_local_account_disabled_python" style="color: inherit; text-decoration: inherit;">local_<wbr>account_<wbr>disabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Is local account disabled for AAD integrated kubernetes cluster?
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_location_python">
 <a href="#state_location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
@@ -2769,6 +2908,15 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The location where the Managed Kubernetes Cluster should be created. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_maintenance_window_python">
+<a href="#state_maintenance_window_python" style="color: inherit; text-decoration: inherit;">maintenance_<wbr>window</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#kubernetesclustermaintenancewindow">Kubernetes<wbr>Cluster<wbr>Maintenance<wbr>Window<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `maintenance_window` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
@@ -8196,6 +8344,276 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Public SSH Key used to access the cluster. Changing this forces a new resource to be created.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="kubernetesclustermaintenancewindow">Kubernetes<wbr>Cluster<wbr>Maintenance<wbr>Window</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="alloweds_csharp">
+<a href="#alloweds_csharp" style="color: inherit; text-decoration: inherit;">Alloweds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#kubernetesclustermaintenancewindowallowed">List&lt;Kubernetes<wbr>Cluster<wbr>Maintenance<wbr>Window<wbr>Allowed&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `allowed` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="notalloweds_csharp">
+<a href="#notalloweds_csharp" style="color: inherit; text-decoration: inherit;">Not<wbr>Alloweds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#kubernetesclustermaintenancewindownotallowed">List&lt;Kubernetes<wbr>Cluster<wbr>Maintenance<wbr>Window<wbr>Not<wbr>Allowed&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `not_allowed` block as defined below.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="alloweds_go">
+<a href="#alloweds_go" style="color: inherit; text-decoration: inherit;">Alloweds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#kubernetesclustermaintenancewindowallowed">[]Kubernetes<wbr>Cluster<wbr>Maintenance<wbr>Window<wbr>Allowed</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `allowed` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="notalloweds_go">
+<a href="#notalloweds_go" style="color: inherit; text-decoration: inherit;">Not<wbr>Alloweds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#kubernetesclustermaintenancewindownotallowed">[]Kubernetes<wbr>Cluster<wbr>Maintenance<wbr>Window<wbr>Not<wbr>Allowed</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `not_allowed` block as defined below.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="alloweds_nodejs">
+<a href="#alloweds_nodejs" style="color: inherit; text-decoration: inherit;">alloweds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#kubernetesclustermaintenancewindowallowed">Kubernetes<wbr>Cluster<wbr>Maintenance<wbr>Window<wbr>Allowed[]</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `allowed` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="notalloweds_nodejs">
+<a href="#notalloweds_nodejs" style="color: inherit; text-decoration: inherit;">not<wbr>Alloweds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#kubernetesclustermaintenancewindownotallowed">Kubernetes<wbr>Cluster<wbr>Maintenance<wbr>Window<wbr>Not<wbr>Allowed[]</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `not_allowed` block as defined below.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="alloweds_python">
+<a href="#alloweds_python" style="color: inherit; text-decoration: inherit;">alloweds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#kubernetesclustermaintenancewindowallowed">Sequence[Kubernetes<wbr>Cluster<wbr>Maintenance<wbr>Window<wbr>Allowed]</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `allowed` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="not_alloweds_python">
+<a href="#not_alloweds_python" style="color: inherit; text-decoration: inherit;">not_<wbr>alloweds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#kubernetesclustermaintenancewindownotallowed">Sequence[Kubernetes<wbr>Cluster<wbr>Maintenance<wbr>Window<wbr>Not<wbr>Allowed]</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `not_allowed` block as defined below.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="kubernetesclustermaintenancewindowallowed">Kubernetes<wbr>Cluster<wbr>Maintenance<wbr>Window<wbr>Allowed</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="day_csharp">
+<a href="#day_csharp" style="color: inherit; text-decoration: inherit;">Day</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A day in a week. Possible values are `Sunday`, `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday` and `Saturday`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="hours_csharp">
+<a href="#hours_csharp" style="color: inherit; text-decoration: inherit;">Hours</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;int&gt;</span>
+    </dt>
+    <dd>{{% md %}}An array of hour slots in a day. Possible values are between `0` and `23`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="day_go">
+<a href="#day_go" style="color: inherit; text-decoration: inherit;">Day</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A day in a week. Possible values are `Sunday`, `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday` and `Saturday`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="hours_go">
+<a href="#hours_go" style="color: inherit; text-decoration: inherit;">Hours</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]int</span>
+    </dt>
+    <dd>{{% md %}}An array of hour slots in a day. Possible values are between `0` and `23`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="day_nodejs">
+<a href="#day_nodejs" style="color: inherit; text-decoration: inherit;">day</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A day in a week. Possible values are `Sunday`, `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday` and `Saturday`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="hours_nodejs">
+<a href="#hours_nodejs" style="color: inherit; text-decoration: inherit;">hours</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number[]</span>
+    </dt>
+    <dd>{{% md %}}An array of hour slots in a day. Possible values are between `0` and `23`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="day_python">
+<a href="#day_python" style="color: inherit; text-decoration: inherit;">day</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}A day in a week. Possible values are `Sunday`, `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday` and `Saturday`.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="hours_python">
+<a href="#hours_python" style="color: inherit; text-decoration: inherit;">hours</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[int]</span>
+    </dt>
+    <dd>{{% md %}}An array of hour slots in a day. Possible values are between `0` and `23`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="kubernetesclustermaintenancewindownotallowed">Kubernetes<wbr>Cluster<wbr>Maintenance<wbr>Window<wbr>Not<wbr>Allowed</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="end_csharp">
+<a href="#end_csharp" style="color: inherit; text-decoration: inherit;">End</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The end of a time span, formatted as an RFC3339 string.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="start_csharp">
+<a href="#start_csharp" style="color: inherit; text-decoration: inherit;">Start</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The start of a time span, formatted as an RFC3339 string.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="end_go">
+<a href="#end_go" style="color: inherit; text-decoration: inherit;">End</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The end of a time span, formatted as an RFC3339 string.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="start_go">
+<a href="#start_go" style="color: inherit; text-decoration: inherit;">Start</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The start of a time span, formatted as an RFC3339 string.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="end_nodejs">
+<a href="#end_nodejs" style="color: inherit; text-decoration: inherit;">end</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The end of a time span, formatted as an RFC3339 string.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="start_nodejs">
+<a href="#start_nodejs" style="color: inherit; text-decoration: inherit;">start</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The start of a time span, formatted as an RFC3339 string.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="end_python">
+<a href="#end_python" style="color: inherit; text-decoration: inherit;">end</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The end of a time span, formatted as an RFC3339 string.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="start_python">
+<a href="#start_python" style="color: inherit; text-decoration: inherit;">start</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The start of a time span, formatted as an RFC3339 string.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

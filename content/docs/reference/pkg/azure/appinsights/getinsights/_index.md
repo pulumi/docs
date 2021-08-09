@@ -342,6 +342,15 @@ The following output properties are available:
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Tags applied to the component.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="workspaceid_csharp">
+<a href="#workspaceid_csharp" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The id of the associated Log Analytics workspace
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -434,6 +443,15 @@ The following output properties are available:
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Tags applied to the component.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="workspaceid_go">
+<a href="#workspaceid_go" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The id of the associated Log Analytics workspace
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -526,6 +544,15 @@ The following output properties are available:
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Tags applied to the component.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="workspaceid_nodejs">
+<a href="#workspaceid_nodejs" style="color: inherit; text-decoration: inherit;">workspace<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The id of the associated Log Analytics workspace
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -618,6 +645,15 @@ The following output properties are available:
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Tags applied to the component.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="workspace_id_python">
+<a href="#workspace_id_python" style="color: inherit; text-decoration: inherit;">workspace_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The id of the associated Log Analytics workspace
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

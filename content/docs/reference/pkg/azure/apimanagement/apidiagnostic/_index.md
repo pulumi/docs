@@ -458,6 +458,7 @@ const exampleApiDiagnostic = new azure.apimanagement.ApiDiagnostic("exampleApiDi
                   <span class="nx">http_correlation_protocol</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                   <span class="nx">identifier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                   <span class="nx">log_client_ip</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                  <span class="nx">operation_name_format</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                   <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                   <span class="nx">sampling_percentage</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">,</span>
                   <span class="nx">verbosity</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
@@ -698,6 +699,15 @@ The ApiDiagnostic resource accepts the following [input]({{< relref "/docs/intro
     <dd>{{% md %}}Log client IP address.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="operationnameformat_csharp">
+<a href="#operationnameformat_csharp" style="color: inherit; text-decoration: inherit;">Operation<wbr>Name<wbr>Format</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The format of the Operation Name for Application Insights telemetries. Possible values are `Name`, and `Url`. Defaults to `Name`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="samplingpercentage_csharp">
 <a href="#samplingpercentage_csharp" style="color: inherit; text-decoration: inherit;">Sampling<wbr>Percentage</a>
 </span>
@@ -826,6 +836,15 @@ The ApiDiagnostic resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Log client IP address.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="operationnameformat_go">
+<a href="#operationnameformat_go" style="color: inherit; text-decoration: inherit;">Operation<wbr>Name<wbr>Format</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The format of the Operation Name for Application Insights telemetries. Possible values are `Name`, and `Url`. Defaults to `Name`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="samplingpercentage_go">
@@ -958,6 +977,15 @@ The ApiDiagnostic resource accepts the following [input]({{< relref "/docs/intro
     <dd>{{% md %}}Log client IP address.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="operationnameformat_nodejs">
+<a href="#operationnameformat_nodejs" style="color: inherit; text-decoration: inherit;">operation<wbr>Name<wbr>Format</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The format of the Operation Name for Application Insights telemetries. Possible values are `Name`, and `Url`. Defaults to `Name`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="samplingpercentage_nodejs">
 <a href="#samplingpercentage_nodejs" style="color: inherit; text-decoration: inherit;">sampling<wbr>Percentage</a>
 </span>
@@ -1088,6 +1116,15 @@ The ApiDiagnostic resource accepts the following [input]({{< relref "/docs/intro
     <dd>{{% md %}}Log client IP address.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="operation_name_format_python">
+<a href="#operation_name_format_python" style="color: inherit; text-decoration: inherit;">operation_<wbr>name_<wbr>format</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The format of the Operation Name for Application Insights telemetries. Possible values are `Name`, and `Url`. Defaults to `Name`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="sampling_percentage_python">
 <a href="#sampling_percentage_python" style="color: inherit; text-decoration: inherit;">sampling_<wbr>percentage</a>
 </span>
@@ -1189,6 +1226,7 @@ Get an existing ApiDiagnostic resource's state with the given name, ID, and opti
         <span class="nx">http_correlation_protocol</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">identifier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">log_client_ip</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">operation_name_format</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">sampling_percentage</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">,</span>
         <span class="nx">verbosity</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> ApiDiagnostic</code></pre></div>
@@ -1403,6 +1441,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Log client IP address.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_operationnameformat_csharp">
+<a href="#state_operationnameformat_csharp" style="color: inherit; text-decoration: inherit;">Operation<wbr>Name<wbr>Format</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The format of the Operation Name for Application Insights telemetries. Possible values are `Name`, and `Url`. Defaults to `Name`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_resourcegroupname_csharp">
 <a href="#state_resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
 </span>
@@ -1531,6 +1578,15 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Log client IP address.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_operationnameformat_go">
+<a href="#state_operationnameformat_go" style="color: inherit; text-decoration: inherit;">Operation<wbr>Name<wbr>Format</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The format of the Operation Name for Application Insights telemetries. Possible values are `Name`, and `Url`. Defaults to `Name`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_go">
@@ -1663,6 +1719,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Log client IP address.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_operationnameformat_nodejs">
+<a href="#state_operationnameformat_nodejs" style="color: inherit; text-decoration: inherit;">operation<wbr>Name<wbr>Format</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The format of the Operation Name for Application Insights telemetries. Possible values are `Name`, and `Url`. Defaults to `Name`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_resourcegroupname_nodejs">
 <a href="#state_resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
@@ -1791,6 +1856,15 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Log client IP address.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_operation_name_format_python">
+<a href="#state_operation_name_format_python" style="color: inherit; text-decoration: inherit;">operation_<wbr>name_<wbr>format</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The format of the Operation Name for Application Insights telemetries. Possible values are `Name`, and `Url`. Defaults to `Name`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resource_group_name_python">
