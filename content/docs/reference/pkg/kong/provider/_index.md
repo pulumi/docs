@@ -35,6 +35,7 @@ construction to achieve fine-grained programmatic control over provider settings
              <span class="nx">kong_admin_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">kong_admin_username</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">kong_api_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">kong_workspace</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">strict_plugins_match</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
              <span class="nx">tls_skip_verify</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
@@ -59,25 +60,19 @@ construction to achieve fine-grained programmatic control over provider settings
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ProviderArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -89,25 +84,19 @@ construction to achieve fine-grained programmatic control over provider settings
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ProviderArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">ResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -119,33 +108,25 @@ construction to achieve fine-grained programmatic control over provider settings
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
-    <dd>
-      Context object for the current deployment.
-    </dd><dt
+    <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ProviderArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
@@ -157,31 +138,25 @@ construction to achieve fine-grained programmatic control over provider settings
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>
-      The unique name of the resource.
-    </dd><dt
+    <dd>The unique name of the resource.</dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">ProviderArgs</a></span>
     </dt>
-    <dd>
-      The arguments to resource properties.
-    </dd><dt
+    <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>
     </dt>
-    <dd>
-      Bag of options to control resource&#39;s behavior.
-    </dd></dl>
+    <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
 {{% /choosable %}}
 
 ## Provider Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Architecture and Concepts docs.
 
 ### Inputs
 
@@ -235,6 +210,15 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}API key for the kong api (if you have locked it down)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="kongworkspace_csharp">
+<a href="#kongworkspace_csharp" style="color: inherit; text-decoration: inherit;">Kong<wbr>Workspace</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Workspace context (Enterprise Edition)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="strictpluginsmatch_csharp">
@@ -304,6 +288,15 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
     <dd>{{% md %}}API key for the kong api (if you have locked it down)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="kongworkspace_go">
+<a href="#kongworkspace_go" style="color: inherit; text-decoration: inherit;">Kong<wbr>Workspace</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Workspace context (Enterprise Edition)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="strictpluginsmatch_go">
 <a href="#strictpluginsmatch_go" style="color: inherit; text-decoration: inherit;">Strict<wbr>Plugins<wbr>Match</a>
 </span>
@@ -371,6 +364,15 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
     <dd>{{% md %}}API key for the kong api (if you have locked it down)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="kongworkspace_nodejs">
+<a href="#kongworkspace_nodejs" style="color: inherit; text-decoration: inherit;">kong<wbr>Workspace</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Workspace context (Enterprise Edition)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="strictpluginsmatch_nodejs">
 <a href="#strictpluginsmatch_nodejs" style="color: inherit; text-decoration: inherit;">strict<wbr>Plugins<wbr>Match</a>
 </span>
@@ -436,6 +438,15 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}API key for the kong api (if you have locked it down)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="kong_workspace_python">
+<a href="#kong_workspace_python" style="color: inherit; text-decoration: inherit;">kong_<wbr>workspace</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Workspace context (Enterprise Edition)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="strict_plugins_match_python">
