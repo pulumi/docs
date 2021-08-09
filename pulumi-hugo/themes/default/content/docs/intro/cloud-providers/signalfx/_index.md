@@ -10,7 +10,7 @@ menu:
 
 <img src="/logos/tech/signalfx.png" align="right" class="h-16 px-8 pb-4">
 
-The SignalFx provider for Pulumi can be used to provision any of the cloud resources available in [SignalFx](https://datadoghq.com/).
+The SignalFx provider for Pulumi can be used to provision any of the cloud resources available in [SignalFx](https://signalfx.com/).
 The SignalFx provider must be configured with credentials to deploy and update resources in SignalFx.
 
 See the [full API documentation]({{< relref "/docs/reference/pkg/signalfx" >}}) for complete details of the available SignalFx provider APIs.
