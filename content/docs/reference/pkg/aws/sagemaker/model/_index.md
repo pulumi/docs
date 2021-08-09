@@ -11,6 +11,9 @@ meta_desc: "Documentation for the aws.sagemaker.Model resource with examples, in
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Provides a SageMaker model resource.
+## Inference Execution Config
+
+* `mode` - (Required) How containers in a multi-container are run. The following values are valid `Serial` and `Direct`.
 
 {{% examples %}}
 
@@ -60,12 +63,16 @@ class MyStack : Stack
         {
             AssumeRolePolicy = assumeRole.Apply(assumeRole => assumeRole.Json),
         });
+        var test = Output.Create(Aws.Sagemaker.GetPrebuiltEcrImage.InvokeAsync(new Aws.Sagemaker.GetPrebuiltEcrImageArgs
+        {
+            RepositoryName = "kmeans",
+        }));
         var exampleModel = new Aws.Sagemaker.Model("exampleModel", new Aws.Sagemaker.ModelArgs
         {
             ExecutionRoleArn = exampleRole.Arn,
             PrimaryContainer = new Aws.Sagemaker.Inputs.ModelPrimaryContainerArgs
             {
-                Image = "174872318107.dkr.ecr.us-west-2.amazonaws.com/kmeans:1",
+                Image = test.Apply(test => test.RegistryPath),
             },
         });
     }
@@ -116,10 +123,16 @@ func main() {
 		if err != nil {
 			return err
 		}
+		test, err := sagemaker.GetPrebuiltEcrImage(ctx, &sagemaker.GetPrebuiltEcrImageArgs{
+			RepositoryName: "kmeans",
+		}, nil)
+		if err != nil {
+			return err
+		}
 		_, err = sagemaker.NewModel(ctx, "exampleModel", &sagemaker.ModelArgs{
 			ExecutionRoleArn: exampleRole.Arn,
 			PrimaryContainer: &sagemaker.ModelPrimaryContainerArgs{
-				Image: pulumi.String("174872318107.dkr.ecr.us-west-2.amazonaws.com/kmeans:1"),
+				Image: pulumi.String(test.RegistryPath),
 			},
 		})
 		if err != nil {
@@ -148,10 +161,11 @@ assume_role = aws.iam.get_policy_document(statements=[aws.iam.GetPolicyDocumentS
     )],
 )])
 example_role = aws.iam.Role("exampleRole", assume_role_policy=assume_role.json)
+test = aws.sagemaker.get_prebuilt_ecr_image(repository_name="kmeans")
 example_model = aws.sagemaker.Model("exampleModel",
     execution_role_arn=example_role.arn,
     primary_container=aws.sagemaker.ModelPrimaryContainerArgs(
-        image="174872318107.dkr.ecr.us-west-2.amazonaws.com/kmeans:1",
+        image=test.registry_path,
     ))
 ```
 
@@ -176,10 +190,13 @@ const assumeRole = aws.iam.getPolicyDocument({
     }],
 });
 const exampleRole = new aws.iam.Role("exampleRole", {assumeRolePolicy: assumeRole.then(assumeRole => assumeRole.json)});
+const test = aws.sagemaker.getPrebuiltEcrImage({
+    repositoryName: "kmeans",
+});
 const exampleModel = new aws.sagemaker.Model("exampleModel", {
     executionRoleArn: exampleRole.arn,
     primaryContainer: {
-        image: "174872318107.dkr.ecr.us-west-2.amazonaws.com/kmeans:1",
+        image: test.then(test => test.registryPath),
     },
 });
 ```
@@ -211,6 +228,7 @@ const exampleModel = new aws.sagemaker.Model("exampleModel", {
           <span class="nx">containers</span><span class="p">:</span> <span class="nx">Optional[Sequence[ModelContainerArgs]]</span> = None<span class="p">,</span>
           <span class="nx">enable_network_isolation</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
           <span class="nx">execution_role_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+          <span class="nx">inference_execution_config</span><span class="p">:</span> <span class="nx">Optional[ModelInferenceExecutionConfigArgs]</span> = None<span class="p">,</span>
           <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
           <span class="nx">primary_container</span><span class="p">:</span> <span class="nx">Optional[ModelPrimaryContainerArgs]</span> = None<span class="p">,</span>
           <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
@@ -334,7 +352,7 @@ const exampleModel = new aws.sagemaker.Model("exampleModel", {
 
 ## Model Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Architecture and Concepts docs.
 
 ### Inputs
 
@@ -370,6 +388,15 @@ The Model resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Isolates the model container. No inbound or outbound network calls can be made to or from the model container.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="inferenceexecutionconfig_csharp">
+<a href="#inferenceexecutionconfig_csharp" style="color: inherit; text-decoration: inherit;">Inference<wbr>Execution<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#modelinferenceexecutionconfig">Model<wbr>Inference<wbr>Execution<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies details of how containers in a multi-container endpoint are called. see Inference Execution Config.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
@@ -448,6 +475,15 @@ The Model resource accepts the following [input]({{< relref "/docs/intro/concept
     <dd>{{% md %}}Isolates the model container. No inbound or outbound network calls can be made to or from the model container.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="inferenceexecutionconfig_go">
+<a href="#inferenceexecutionconfig_go" style="color: inherit; text-decoration: inherit;">Inference<wbr>Execution<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#modelinferenceexecutionconfig">Model<wbr>Inference<wbr>Execution<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies details of how containers in a multi-container endpoint are called. see Inference Execution Config.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
@@ -524,6 +560,15 @@ The Model resource accepts the following [input]({{< relref "/docs/intro/concept
     <dd>{{% md %}}Isolates the model container. No inbound or outbound network calls can be made to or from the model container.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="inferenceexecutionconfig_nodejs">
+<a href="#inferenceexecutionconfig_nodejs" style="color: inherit; text-decoration: inherit;">inference<wbr>Execution<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#modelinferenceexecutionconfig">Model<wbr>Inference<wbr>Execution<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies details of how containers in a multi-container endpoint are called. see Inference Execution Config.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
@@ -598,6 +643,15 @@ The Model resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Isolates the model container. No inbound or outbound network calls can be made to or from the model container.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="inference_execution_config_python">
+<a href="#inference_execution_config_python" style="color: inherit; text-decoration: inherit;">inference_<wbr>execution_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#modelinferenceexecutionconfig">Model<wbr>Inference<wbr>Execution<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies details of how containers in a multi-container endpoint are called. see Inference Execution Config.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
@@ -757,6 +811,7 @@ Get an existing Model resource's state with the given name, ID, and optional ext
         <span class="nx">containers</span><span class="p">:</span> <span class="nx">Optional[Sequence[ModelContainerArgs]]</span> = None<span class="p">,</span>
         <span class="nx">enable_network_isolation</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">execution_role_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">inference_execution_config</span><span class="p">:</span> <span class="nx">Optional[ModelInferenceExecutionConfigArgs]</span> = None<span class="p">,</span>
         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">primary_container</span><span class="p">:</span> <span class="nx">Optional[ModelPrimaryContainerArgs]</span> = None<span class="p">,</span>
         <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
@@ -910,6 +965,15 @@ The following state arguments are supported:
     <dd>{{% md %}}A role that SageMaker can assume to access model artifacts and docker images for deployment.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_inferenceexecutionconfig_csharp">
+<a href="#state_inferenceexecutionconfig_csharp" style="color: inherit; text-decoration: inherit;">Inference<wbr>Execution<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#modelinferenceexecutionconfig">Model<wbr>Inference<wbr>Execution<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies details of how containers in a multi-container endpoint are called. see Inference Execution Config.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
@@ -993,6 +1057,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A role that SageMaker can assume to access model artifacts and docker images for deployment.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_inferenceexecutionconfig_go">
+<a href="#state_inferenceexecutionconfig_go" style="color: inherit; text-decoration: inherit;">Inference<wbr>Execution<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#modelinferenceexecutionconfig">Model<wbr>Inference<wbr>Execution<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies details of how containers in a multi-container endpoint are called. see Inference Execution Config.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
@@ -1080,6 +1153,15 @@ The following state arguments are supported:
     <dd>{{% md %}}A role that SageMaker can assume to access model artifacts and docker images for deployment.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_inferenceexecutionconfig_nodejs">
+<a href="#state_inferenceexecutionconfig_nodejs" style="color: inherit; text-decoration: inherit;">inference<wbr>Execution<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#modelinferenceexecutionconfig">Model<wbr>Inference<wbr>Execution<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies details of how containers in a multi-container endpoint are called. see Inference Execution Config.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
@@ -1163,6 +1245,15 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A role that SageMaker can assume to access model artifacts and docker images for deployment.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_inference_execution_config_python">
+<a href="#state_inference_execution_config_python" style="color: inherit; text-decoration: inherit;">inference_<wbr>execution_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#modelinferenceexecutionconfig">Model<wbr>Inference<wbr>Execution<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies details of how containers in a multi-container endpoint are called. see Inference Execution Config.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
@@ -1509,6 +1600,60 @@ A list of key value pairs.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies whether the model container is in Amazon ECR or a private Docker registry accessible from your Amazon Virtual Private Cloud (VPC). Allowed values are: `Platform` and `Vpc`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="modelinferenceexecutionconfig">Model<wbr>Inference<wbr>Execution<wbr>Config</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="mode_csharp">
+<a href="#mode_csharp" style="color: inherit; text-decoration: inherit;">Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The container hosts value `SingleModel/MultiModel`. The default value is `SingleModel`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="mode_go">
+<a href="#mode_go" style="color: inherit; text-decoration: inherit;">Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The container hosts value `SingleModel/MultiModel`. The default value is `SingleModel`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="mode_nodejs">
+<a href="#mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The container hosts value `SingleModel/MultiModel`. The default value is `SingleModel`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="mode_python">
+<a href="#mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The container hosts value `SingleModel/MultiModel`. The default value is `SingleModel`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

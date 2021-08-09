@@ -136,9 +136,9 @@ import pulumi_aws as aws
 example = aws.apprunner.Service("example",
     service_name="example",
     source_configuration=aws.apprunner.ServiceSourceConfigurationArgs(
-        authentication_configuration={
-            "connection_arn": aws_apprunner_connection["example"]["arn"],
-        },
+        authentication_configuration=aws.apprunner.ServiceSourceConfigurationAuthenticationConfigurationArgs(
+            connection_arn=aws_apprunner_connection["example"]["arn"],
+        ),
         code_repository=aws.apprunner.ServiceSourceConfigurationCodeRepositoryArgs(
             code_configuration=aws.apprunner.ServiceSourceConfigurationCodeRepositoryCodeConfigurationArgs(
                 code_configuration_values=aws.apprunner.ServiceSourceConfigurationCodeRepositoryCodeConfigurationCodeConfigurationValuesArgs(
@@ -488,7 +488,7 @@ const example = new aws.apprunner.Service("example", {
 
 ## Service Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Architecture and Concepts docs.
 
 ### Inputs
 

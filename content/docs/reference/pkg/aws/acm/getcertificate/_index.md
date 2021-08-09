@@ -493,6 +493,15 @@ The following output properties are available:
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="status_csharp">
+<a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Status of the found certificate.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span>
@@ -562,6 +571,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="status_go">
+<a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Status of the found certificate.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_go">
@@ -635,6 +653,15 @@ The following output properties are available:
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="status_nodejs">
+<a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Status of the found certificate.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
@@ -704,6 +731,15 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="status_python">
+<a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Status of the found certificate.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_python">

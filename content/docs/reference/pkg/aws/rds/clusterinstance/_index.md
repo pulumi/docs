@@ -357,7 +357,7 @@ for (const range = {value: 0}; range.value < 2; range.value++) {
 
 ## ClusterInstance Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Architecture and Concepts docs.
 
 ### Inputs
 
@@ -1290,6 +1290,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The DNS address for this instance. May not be writable
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="engineversionactual_csharp">
+<a href="#engineversionactual_csharp" style="color: inherit; text-decoration: inherit;">Engine<wbr>Version<wbr>Actual</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The database engine version
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
 </span>
@@ -1363,6 +1372,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DNS address for this instance. May not be writable
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="engineversionactual_go">
+<a href="#engineversionactual_go" style="color: inherit; text-decoration: inherit;">Engine<wbr>Version<wbr>Actual</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The database engine version
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
@@ -1440,6 +1458,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The DNS address for this instance. May not be writable
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="engineversionactual_nodejs">
+<a href="#engineversionactual_nodejs" style="color: inherit; text-decoration: inherit;">engine<wbr>Version<wbr>Actual</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The database engine version
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
@@ -1513,6 +1540,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The DNS address for this instance. May not be writable
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="engine_version_actual_python">
+<a href="#engine_version_actual_python" style="color: inherit; text-decoration: inherit;">engine_<wbr>version_<wbr>actual</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The database engine version
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
@@ -1589,6 +1625,7 @@ Get an existing ClusterInstance resource's state with the given name, ID, and op
         <span class="nx">endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">engine</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">engine_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">engine_version_actual</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">identifier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">identifier_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">instance_class</span><span class="p">:</span> <span class="nx">Optional[Union[str, InstanceType]]</span> = None<span class="p">,</span>
@@ -1837,6 +1874,15 @@ in the Amazon RDS User Guide.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The database engine version. When managing the engine version in the cluster, it is recommended to add the `ignore_changes` for this argument to prevent the provider from proposing changes to the instance engine version directly.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_engineversionactual_csharp">
+<a href="#state_engineversionactual_csharp" style="color: inherit; text-decoration: inherit;">Engine<wbr>Version<wbr>Actual</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The database engine version
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_identifier_csharp">
@@ -2124,6 +2170,15 @@ in the Amazon RDS User Guide.
     <dd>{{% md %}}The database engine version. When managing the engine version in the cluster, it is recommended to add the `ignore_changes` for this argument to prevent the provider from proposing changes to the instance engine version directly.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_engineversionactual_go">
+<a href="#state_engineversionactual_go" style="color: inherit; text-decoration: inherit;">Engine<wbr>Version<wbr>Actual</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The database engine version
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_identifier_go">
 <a href="#state_identifier_go" style="color: inherit; text-decoration: inherit;">Identifier</a>
 </span>
@@ -2409,6 +2464,15 @@ in the Amazon RDS User Guide.
     <dd>{{% md %}}The database engine version. When managing the engine version in the cluster, it is recommended to add the `ignore_changes` for this argument to prevent the provider from proposing changes to the instance engine version directly.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_engineversionactual_nodejs">
+<a href="#state_engineversionactual_nodejs" style="color: inherit; text-decoration: inherit;">engine<wbr>Version<wbr>Actual</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The database engine version
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_identifier_nodejs">
 <a href="#state_identifier_nodejs" style="color: inherit; text-decoration: inherit;">identifier</a>
 </span>
@@ -2692,6 +2756,15 @@ in the Amazon RDS User Guide.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The database engine version. When managing the engine version in the cluster, it is recommended to add the `ignore_changes` for this argument to prevent the provider from proposing changes to the instance engine version directly.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_engine_version_actual_python">
+<a href="#state_engine_version_actual_python" style="color: inherit; text-decoration: inherit;">engine_<wbr>version_<wbr>actual</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The database engine version
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_identifier_python">

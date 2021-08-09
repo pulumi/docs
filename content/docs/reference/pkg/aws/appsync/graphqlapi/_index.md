@@ -946,11 +946,11 @@ example_web_acl = aws.wafv2.WebAcl("exampleWebAcl",
                 vendor_name="AWS",
             ),
         ),
-        visibility_config={
-            "cloudwatchMetricsEnabled": False,
-            "metric_name": "friendly-rule-metric-name",
-            "sampledRequestsEnabled": False,
-        },
+        visibility_config=aws.wafv2.WebAclRuleVisibilityConfigArgs(
+            cloudwatch_metrics_enabled=False,
+            metric_name="friendly-rule-metric-name",
+            sampled_requests_enabled=False,
+        ),
     )],
     visibility_config=aws.wafv2.WebAclVisibilityConfigArgs(
         cloudwatch_metrics_enabled=False,
@@ -1162,7 +1162,7 @@ const exampleWebAclAssociation = new aws.wafv2.WebAclAssociation("exampleWebAclA
 
 ## GraphQLApi Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Architecture and Concepts docs.
 
 ### Inputs
 

@@ -12,7 +12,7 @@ meta_desc: "Documentation for the aws.storagegateway.Gateway resource with examp
 
 Manages an AWS Storage Gateway file, tape, or volume gateway in the provider region.
 
-> NOTE: The Storage Gateway API requires the gateway to be connected to properly return information after activation. If you are receiving `The specified gateway is not connected` errors during resource creation (gateway activation), ensure your gateway instance meets the [Storage Gateway requirements](https://docs.aws.amazon.com/storagegateway/latest/userguide/Requirements.html).
+> **NOTE:** The Storage Gateway API requires the gateway to be connected to properly return information after activation. If you are receiving `The specified gateway is not connected` errors during resource creation (gateway activation), ensure your gateway instance meets the [Storage Gateway requirements](https://docs.aws.amazon.com/storagegateway/latest/userguide/Requirements.html).
 
 {{% examples %}}
 
@@ -21,7 +21,251 @@ Manages an AWS Storage Gateway file, tape, or volume gateway in the provider reg
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
-### File Gateway
+### Local Cache
+
+
+{{< example csharp >}}
+
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var testVolumeAttachment = new Aws.Ec2.VolumeAttachment("testVolumeAttachment", new Aws.Ec2.VolumeAttachmentArgs
+        {
+            DeviceName = "/dev/xvdb",
+            VolumeId = aws_ebs_volume.Test.Id,
+            InstanceId = aws_instance.Test.Id,
+        });
+        var testLocalDisk = testVolumeAttachment.DeviceName.Apply(deviceName => Aws.StorageGateway.GetLocalDisk.InvokeAsync(new Aws.StorageGateway.GetLocalDiskArgs
+        {
+            DiskNode = deviceName,
+            GatewayArn = aws_storagegateway_gateway.Test.Arn,
+        }));
+        var testCache = new Aws.StorageGateway.Cache("testCache", new Aws.StorageGateway.CacheArgs
+        {
+            DiskId = testLocalDisk.Apply(testLocalDisk => testLocalDisk.DiskId),
+            GatewayArn = aws_storagegateway_gateway.Test.Arn,
+        });
+    }
+
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ec2"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/storagegateway"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		testVolumeAttachment, err := ec2.NewVolumeAttachment(ctx, "testVolumeAttachment", &ec2.VolumeAttachmentArgs{
+			DeviceName: pulumi.String("/dev/xvdb"),
+			VolumeId:   pulumi.Any(aws_ebs_volume.Test.Id),
+			InstanceId: pulumi.Any(aws_instance.Test.Id),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = storagegateway.NewCache(ctx, "testCache", &storagegateway.CacheArgs{
+			DiskId: testLocalDisk.ApplyT(func(testLocalDisk storagegateway.GetLocalDiskResult) (string, error) {
+				return testLocalDisk.DiskId, nil
+			}).(pulumi.StringOutput),
+			GatewayArn: pulumi.Any(aws_storagegateway_gateway.Test.Arn),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+```python
+import pulumi
+import pulumi_aws as aws
+
+test_volume_attachment = aws.ec2.VolumeAttachment("testVolumeAttachment",
+    device_name="/dev/xvdb",
+    volume_id=aws_ebs_volume["test"]["id"],
+    instance_id=aws_instance["test"]["id"])
+test_local_disk = test_volume_attachment.device_name.apply(lambda device_name: aws.storagegateway.get_local_disk(disk_node=device_name,
+    gateway_arn=aws_storagegateway_gateway["test"]["arn"]))
+test_cache = aws.storagegateway.Cache("testCache",
+    disk_id=test_local_disk.disk_id,
+    gateway_arn=aws_storagegateway_gateway["test"]["arn"])
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const testVolumeAttachment = new aws.ec2.VolumeAttachment("testVolumeAttachment", {
+    deviceName: "/dev/xvdb",
+    volumeId: aws_ebs_volume.test.id,
+    instanceId: aws_instance.test.id,
+});
+const testLocalDisk = testVolumeAttachment.deviceName.apply(deviceName => aws.storagegateway.getLocalDisk({
+    diskNode: deviceName,
+    gatewayArn: aws_storagegateway_gateway.test.arn,
+}));
+const testCache = new aws.storagegateway.Cache("testCache", {
+    diskId: testLocalDisk.apply(testLocalDisk => testLocalDisk.diskId),
+    gatewayArn: aws_storagegateway_gateway.test.arn,
+});
+```
+
+
+{{< /example >}}
+
+
+
+
+### FSx File Gateway
+
+
+{{< example csharp >}}
+
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Aws.StorageGateway.Gateway("example", new Aws.StorageGateway.GatewayArgs
+        {
+            GatewayIpAddress = "1.2.3.4",
+            GatewayName = "example",
+            GatewayTimezone = "GMT",
+            GatewayType = "FILE_FSX_SMB",
+            SmbActiveDirectorySettings = new Aws.StorageGateway.Inputs.GatewaySmbActiveDirectorySettingsArgs
+            {
+                DomainName = "corp.example.com",
+                Password = "avoid-plaintext-passwords",
+                Username = "Admin",
+            },
+        });
+    }
+
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/storagegateway"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := storagegateway.NewGateway(ctx, "example", &storagegateway.GatewayArgs{
+			GatewayIpAddress: pulumi.String("1.2.3.4"),
+			GatewayName:      pulumi.String("example"),
+			GatewayTimezone:  pulumi.String("GMT"),
+			GatewayType:      pulumi.String("FILE_FSX_SMB"),
+			SmbActiveDirectorySettings: &storagegateway.GatewaySmbActiveDirectorySettingsArgs{
+				DomainName: pulumi.String("corp.example.com"),
+				Password:   pulumi.String("avoid-plaintext-passwords"),
+				Username:   pulumi.String("Admin"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+```python
+import pulumi
+import pulumi_aws as aws
+
+example = aws.storagegateway.Gateway("example",
+    gateway_ip_address="1.2.3.4",
+    gateway_name="example",
+    gateway_timezone="GMT",
+    gateway_type="FILE_FSX_SMB",
+    smb_active_directory_settings=aws.storagegateway.GatewaySmbActiveDirectorySettingsArgs(
+        domain_name="corp.example.com",
+        password="avoid-plaintext-passwords",
+        username="Admin",
+    ))
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const example = new aws.storagegateway.Gateway("example", {
+    gatewayIpAddress: "1.2.3.4",
+    gatewayName: "example",
+    gatewayTimezone: "GMT",
+    gatewayType: "FILE_FSX_SMB",
+    smbActiveDirectorySettings: {
+        domainName: "corp.example.com",
+        password: "avoid-plaintext-passwords",
+        username: "Admin",
+    },
+});
+```
+
+
+{{< /example >}}
+
+
+
+
+### S3 File Gateway
 
 
 {{< example csharp >}}
@@ -570,7 +814,7 @@ const example = new aws.storagegateway.Gateway("example", {
 
 ## Gateway Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Architecture and Concepts docs.
 
 ### Inputs
 
@@ -650,7 +894,7 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of the gateway. The default value is `STORED`. Valid values: `CACHED`, `FILE_S3`, `STORED`, `VTL`.
+    <dd>{{% md %}}Type of the gateway. The default value is `STORED`. Valid values: `CACHED`, `FILE_FSX_SMB`, `FILE_S3`, `STORED`, `VTL`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gatewayvpcendpoint_csharp">
@@ -659,7 +903,7 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}VPC endpoint address to be used when activating your gateway. This should be used when your instance is in a private subnet. Requires HTTP access from client computer running Pulumi. More info on what ports are required by your VPC Endpoint Security group in [Activating a Gateway in a Virtual Private Cloud](https://docs.aws.amazon.com/storagegateway/latest/userguide/gateway-private-link.html).
+    <dd>{{% md %}}VPC endpoint address to be used when activating your gateway. This should be used when your instance is in a private subnet. Requires HTTP access from client computer running this provider. More info on what ports are required by your VPC Endpoint Security group in [Activating a Gateway in a Virtual Private Cloud](https://docs.aws.amazon.com/storagegateway/latest/userguide/gateway-private-link.html).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mediumchangertype_csharp">
@@ -677,7 +921,7 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gatewaysmbactivedirectorysettings">Gateway<wbr>Smb<wbr>Active<wbr>Directory<wbr>Settings<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Nested argument with Active Directory domain join information for Server Message Block (SMB) file shares. Only valid for `FILE_S3` gateway type. Must be set before creating `ActiveDirectory` authentication SMB file shares. More details below.
+    <dd>{{% md %}}Nested argument with Active Directory domain join information for Server Message Block (SMB) file shares. Only valid for `FILE_S3` and `FILE_FSX_SMB` gateway types. Must be set before creating `ActiveDirectory` authentication SMB file shares. More details below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="smbfilesharevisibility_csharp">
@@ -695,7 +939,7 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Guest password for Server Message Block (SMB) file shares. Only valid for `FILE_S3` gateway type. Must be set before creating `GuestAccess` authentication SMB file shares. This provider can only detect drift of the existence of a guest password, not its actual value from the gateway. This provider can however update the password with changing the argument.
+    <dd>{{% md %}}Guest password for Server Message Block (SMB) file shares. Only valid for `FILE_S3` and `FILE_FSX_SMB` gateway types. Must be set before creating `GuestAccess` authentication SMB file shares. This provider can only detect drift of the existence of a guest password, not its actual value from the gateway. This provider can however update the password with changing the argument.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="smbsecuritystrategy_csharp">
@@ -807,7 +1051,7 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of the gateway. The default value is `STORED`. Valid values: `CACHED`, `FILE_S3`, `STORED`, `VTL`.
+    <dd>{{% md %}}Type of the gateway. The default value is `STORED`. Valid values: `CACHED`, `FILE_FSX_SMB`, `FILE_S3`, `STORED`, `VTL`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gatewayvpcendpoint_go">
@@ -816,7 +1060,7 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}VPC endpoint address to be used when activating your gateway. This should be used when your instance is in a private subnet. Requires HTTP access from client computer running Pulumi. More info on what ports are required by your VPC Endpoint Security group in [Activating a Gateway in a Virtual Private Cloud](https://docs.aws.amazon.com/storagegateway/latest/userguide/gateway-private-link.html).
+    <dd>{{% md %}}VPC endpoint address to be used when activating your gateway. This should be used when your instance is in a private subnet. Requires HTTP access from client computer running this provider. More info on what ports are required by your VPC Endpoint Security group in [Activating a Gateway in a Virtual Private Cloud](https://docs.aws.amazon.com/storagegateway/latest/userguide/gateway-private-link.html).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mediumchangertype_go">
@@ -834,7 +1078,7 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gatewaysmbactivedirectorysettings">Gateway<wbr>Smb<wbr>Active<wbr>Directory<wbr>Settings<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Nested argument with Active Directory domain join information for Server Message Block (SMB) file shares. Only valid for `FILE_S3` gateway type. Must be set before creating `ActiveDirectory` authentication SMB file shares. More details below.
+    <dd>{{% md %}}Nested argument with Active Directory domain join information for Server Message Block (SMB) file shares. Only valid for `FILE_S3` and `FILE_FSX_SMB` gateway types. Must be set before creating `ActiveDirectory` authentication SMB file shares. More details below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="smbfilesharevisibility_go">
@@ -852,7 +1096,7 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Guest password for Server Message Block (SMB) file shares. Only valid for `FILE_S3` gateway type. Must be set before creating `GuestAccess` authentication SMB file shares. This provider can only detect drift of the existence of a guest password, not its actual value from the gateway. This provider can however update the password with changing the argument.
+    <dd>{{% md %}}Guest password for Server Message Block (SMB) file shares. Only valid for `FILE_S3` and `FILE_FSX_SMB` gateway types. Must be set before creating `GuestAccess` authentication SMB file shares. This provider can only detect drift of the existence of a guest password, not its actual value from the gateway. This provider can however update the password with changing the argument.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="smbsecuritystrategy_go">
@@ -964,7 +1208,7 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of the gateway. The default value is `STORED`. Valid values: `CACHED`, `FILE_S3`, `STORED`, `VTL`.
+    <dd>{{% md %}}Type of the gateway. The default value is `STORED`. Valid values: `CACHED`, `FILE_FSX_SMB`, `FILE_S3`, `STORED`, `VTL`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gatewayvpcendpoint_nodejs">
@@ -973,7 +1217,7 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}VPC endpoint address to be used when activating your gateway. This should be used when your instance is in a private subnet. Requires HTTP access from client computer running Pulumi. More info on what ports are required by your VPC Endpoint Security group in [Activating a Gateway in a Virtual Private Cloud](https://docs.aws.amazon.com/storagegateway/latest/userguide/gateway-private-link.html).
+    <dd>{{% md %}}VPC endpoint address to be used when activating your gateway. This should be used when your instance is in a private subnet. Requires HTTP access from client computer running this provider. More info on what ports are required by your VPC Endpoint Security group in [Activating a Gateway in a Virtual Private Cloud](https://docs.aws.amazon.com/storagegateway/latest/userguide/gateway-private-link.html).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mediumchangertype_nodejs">
@@ -991,7 +1235,7 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gatewaysmbactivedirectorysettings">Gateway<wbr>Smb<wbr>Active<wbr>Directory<wbr>Settings<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Nested argument with Active Directory domain join information for Server Message Block (SMB) file shares. Only valid for `FILE_S3` gateway type. Must be set before creating `ActiveDirectory` authentication SMB file shares. More details below.
+    <dd>{{% md %}}Nested argument with Active Directory domain join information for Server Message Block (SMB) file shares. Only valid for `FILE_S3` and `FILE_FSX_SMB` gateway types. Must be set before creating `ActiveDirectory` authentication SMB file shares. More details below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="smbfilesharevisibility_nodejs">
@@ -1009,7 +1253,7 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Guest password for Server Message Block (SMB) file shares. Only valid for `FILE_S3` gateway type. Must be set before creating `GuestAccess` authentication SMB file shares. This provider can only detect drift of the existence of a guest password, not its actual value from the gateway. This provider can however update the password with changing the argument.
+    <dd>{{% md %}}Guest password for Server Message Block (SMB) file shares. Only valid for `FILE_S3` and `FILE_FSX_SMB` gateway types. Must be set before creating `GuestAccess` authentication SMB file shares. This provider can only detect drift of the existence of a guest password, not its actual value from the gateway. This provider can however update the password with changing the argument.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="smbsecuritystrategy_nodejs">
@@ -1121,7 +1365,7 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Type of the gateway. The default value is `STORED`. Valid values: `CACHED`, `FILE_S3`, `STORED`, `VTL`.
+    <dd>{{% md %}}Type of the gateway. The default value is `STORED`. Valid values: `CACHED`, `FILE_FSX_SMB`, `FILE_S3`, `STORED`, `VTL`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gateway_vpc_endpoint_python">
@@ -1130,7 +1374,7 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}VPC endpoint address to be used when activating your gateway. This should be used when your instance is in a private subnet. Requires HTTP access from client computer running Pulumi. More info on what ports are required by your VPC Endpoint Security group in [Activating a Gateway in a Virtual Private Cloud](https://docs.aws.amazon.com/storagegateway/latest/userguide/gateway-private-link.html).
+    <dd>{{% md %}}VPC endpoint address to be used when activating your gateway. This should be used when your instance is in a private subnet. Requires HTTP access from client computer running this provider. More info on what ports are required by your VPC Endpoint Security group in [Activating a Gateway in a Virtual Private Cloud](https://docs.aws.amazon.com/storagegateway/latest/userguide/gateway-private-link.html).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="medium_changer_type_python">
@@ -1148,7 +1392,7 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gatewaysmbactivedirectorysettings">Gateway<wbr>Smb<wbr>Active<wbr>Directory<wbr>Settings<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Nested argument with Active Directory domain join information for Server Message Block (SMB) file shares. Only valid for `FILE_S3` gateway type. Must be set before creating `ActiveDirectory` authentication SMB file shares. More details below.
+    <dd>{{% md %}}Nested argument with Active Directory domain join information for Server Message Block (SMB) file shares. Only valid for `FILE_S3` and `FILE_FSX_SMB` gateway types. Must be set before creating `ActiveDirectory` authentication SMB file shares. More details below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="smb_file_share_visibility_python">
@@ -1166,7 +1410,7 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Guest password for Server Message Block (SMB) file shares. Only valid for `FILE_S3` gateway type. Must be set before creating `GuestAccess` authentication SMB file shares. This provider can only detect drift of the existence of a guest password, not its actual value from the gateway. This provider can however update the password with changing the argument.
+    <dd>{{% md %}}Guest password for Server Message Block (SMB) file shares. Only valid for `FILE_S3` and `FILE_FSX_SMB` gateway types. Must be set before creating `GuestAccess` authentication SMB file shares. This provider can only detect drift of the existence of a guest password, not its actual value from the gateway. This provider can however update the password with changing the argument.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="smb_security_strategy_python">
@@ -1742,7 +1986,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of the gateway. The default value is `STORED`. Valid values: `CACHED`, `FILE_S3`, `STORED`, `VTL`.
+    <dd>{{% md %}}Type of the gateway. The default value is `STORED`. Valid values: `CACHED`, `FILE_FSX_SMB`, `FILE_S3`, `STORED`, `VTL`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_gatewayvpcendpoint_csharp">
@@ -1751,7 +1995,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}VPC endpoint address to be used when activating your gateway. This should be used when your instance is in a private subnet. Requires HTTP access from client computer running Pulumi. More info on what ports are required by your VPC Endpoint Security group in [Activating a Gateway in a Virtual Private Cloud](https://docs.aws.amazon.com/storagegateway/latest/userguide/gateway-private-link.html).
+    <dd>{{% md %}}VPC endpoint address to be used when activating your gateway. This should be used when your instance is in a private subnet. Requires HTTP access from client computer running this provider. More info on what ports are required by your VPC Endpoint Security group in [Activating a Gateway in a Virtual Private Cloud](https://docs.aws.amazon.com/storagegateway/latest/userguide/gateway-private-link.html).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hostenvironment_csharp">
@@ -1778,7 +2022,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gatewaysmbactivedirectorysettings">Gateway<wbr>Smb<wbr>Active<wbr>Directory<wbr>Settings<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Nested argument with Active Directory domain join information for Server Message Block (SMB) file shares. Only valid for `FILE_S3` gateway type. Must be set before creating `ActiveDirectory` authentication SMB file shares. More details below.
+    <dd>{{% md %}}Nested argument with Active Directory domain join information for Server Message Block (SMB) file shares. Only valid for `FILE_S3` and `FILE_FSX_SMB` gateway types. Must be set before creating `ActiveDirectory` authentication SMB file shares. More details below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_smbfilesharevisibility_csharp">
@@ -1796,7 +2040,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Guest password for Server Message Block (SMB) file shares. Only valid for `FILE_S3` gateway type. Must be set before creating `GuestAccess` authentication SMB file shares. This provider can only detect drift of the existence of a guest password, not its actual value from the gateway. This provider can however update the password with changing the argument.
+    <dd>{{% md %}}Guest password for Server Message Block (SMB) file shares. Only valid for `FILE_S3` and `FILE_FSX_SMB` gateway types. Must be set before creating `GuestAccess` authentication SMB file shares. This provider can only detect drift of the existence of a guest password, not its actual value from the gateway. This provider can however update the password with changing the argument.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_smbsecuritystrategy_csharp">
@@ -1953,7 +2197,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of the gateway. The default value is `STORED`. Valid values: `CACHED`, `FILE_S3`, `STORED`, `VTL`.
+    <dd>{{% md %}}Type of the gateway. The default value is `STORED`. Valid values: `CACHED`, `FILE_FSX_SMB`, `FILE_S3`, `STORED`, `VTL`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_gatewayvpcendpoint_go">
@@ -1962,7 +2206,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}VPC endpoint address to be used when activating your gateway. This should be used when your instance is in a private subnet. Requires HTTP access from client computer running Pulumi. More info on what ports are required by your VPC Endpoint Security group in [Activating a Gateway in a Virtual Private Cloud](https://docs.aws.amazon.com/storagegateway/latest/userguide/gateway-private-link.html).
+    <dd>{{% md %}}VPC endpoint address to be used when activating your gateway. This should be used when your instance is in a private subnet. Requires HTTP access from client computer running this provider. More info on what ports are required by your VPC Endpoint Security group in [Activating a Gateway in a Virtual Private Cloud](https://docs.aws.amazon.com/storagegateway/latest/userguide/gateway-private-link.html).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hostenvironment_go">
@@ -1989,7 +2233,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gatewaysmbactivedirectorysettings">Gateway<wbr>Smb<wbr>Active<wbr>Directory<wbr>Settings<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Nested argument with Active Directory domain join information for Server Message Block (SMB) file shares. Only valid for `FILE_S3` gateway type. Must be set before creating `ActiveDirectory` authentication SMB file shares. More details below.
+    <dd>{{% md %}}Nested argument with Active Directory domain join information for Server Message Block (SMB) file shares. Only valid for `FILE_S3` and `FILE_FSX_SMB` gateway types. Must be set before creating `ActiveDirectory` authentication SMB file shares. More details below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_smbfilesharevisibility_go">
@@ -2007,7 +2251,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Guest password for Server Message Block (SMB) file shares. Only valid for `FILE_S3` gateway type. Must be set before creating `GuestAccess` authentication SMB file shares. This provider can only detect drift of the existence of a guest password, not its actual value from the gateway. This provider can however update the password with changing the argument.
+    <dd>{{% md %}}Guest password for Server Message Block (SMB) file shares. Only valid for `FILE_S3` and `FILE_FSX_SMB` gateway types. Must be set before creating `GuestAccess` authentication SMB file shares. This provider can only detect drift of the existence of a guest password, not its actual value from the gateway. This provider can however update the password with changing the argument.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_smbsecuritystrategy_go">
@@ -2164,7 +2408,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of the gateway. The default value is `STORED`. Valid values: `CACHED`, `FILE_S3`, `STORED`, `VTL`.
+    <dd>{{% md %}}Type of the gateway. The default value is `STORED`. Valid values: `CACHED`, `FILE_FSX_SMB`, `FILE_S3`, `STORED`, `VTL`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_gatewayvpcendpoint_nodejs">
@@ -2173,7 +2417,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}VPC endpoint address to be used when activating your gateway. This should be used when your instance is in a private subnet. Requires HTTP access from client computer running Pulumi. More info on what ports are required by your VPC Endpoint Security group in [Activating a Gateway in a Virtual Private Cloud](https://docs.aws.amazon.com/storagegateway/latest/userguide/gateway-private-link.html).
+    <dd>{{% md %}}VPC endpoint address to be used when activating your gateway. This should be used when your instance is in a private subnet. Requires HTTP access from client computer running this provider. More info on what ports are required by your VPC Endpoint Security group in [Activating a Gateway in a Virtual Private Cloud](https://docs.aws.amazon.com/storagegateway/latest/userguide/gateway-private-link.html).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hostenvironment_nodejs">
@@ -2200,7 +2444,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gatewaysmbactivedirectorysettings">Gateway<wbr>Smb<wbr>Active<wbr>Directory<wbr>Settings<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Nested argument with Active Directory domain join information for Server Message Block (SMB) file shares. Only valid for `FILE_S3` gateway type. Must be set before creating `ActiveDirectory` authentication SMB file shares. More details below.
+    <dd>{{% md %}}Nested argument with Active Directory domain join information for Server Message Block (SMB) file shares. Only valid for `FILE_S3` and `FILE_FSX_SMB` gateway types. Must be set before creating `ActiveDirectory` authentication SMB file shares. More details below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_smbfilesharevisibility_nodejs">
@@ -2218,7 +2462,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Guest password for Server Message Block (SMB) file shares. Only valid for `FILE_S3` gateway type. Must be set before creating `GuestAccess` authentication SMB file shares. This provider can only detect drift of the existence of a guest password, not its actual value from the gateway. This provider can however update the password with changing the argument.
+    <dd>{{% md %}}Guest password for Server Message Block (SMB) file shares. Only valid for `FILE_S3` and `FILE_FSX_SMB` gateway types. Must be set before creating `GuestAccess` authentication SMB file shares. This provider can only detect drift of the existence of a guest password, not its actual value from the gateway. This provider can however update the password with changing the argument.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_smbsecuritystrategy_nodejs">
@@ -2375,7 +2619,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Type of the gateway. The default value is `STORED`. Valid values: `CACHED`, `FILE_S3`, `STORED`, `VTL`.
+    <dd>{{% md %}}Type of the gateway. The default value is `STORED`. Valid values: `CACHED`, `FILE_FSX_SMB`, `FILE_S3`, `STORED`, `VTL`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_gateway_vpc_endpoint_python">
@@ -2384,7 +2628,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}VPC endpoint address to be used when activating your gateway. This should be used when your instance is in a private subnet. Requires HTTP access from client computer running Pulumi. More info on what ports are required by your VPC Endpoint Security group in [Activating a Gateway in a Virtual Private Cloud](https://docs.aws.amazon.com/storagegateway/latest/userguide/gateway-private-link.html).
+    <dd>{{% md %}}VPC endpoint address to be used when activating your gateway. This should be used when your instance is in a private subnet. Requires HTTP access from client computer running this provider. More info on what ports are required by your VPC Endpoint Security group in [Activating a Gateway in a Virtual Private Cloud](https://docs.aws.amazon.com/storagegateway/latest/userguide/gateway-private-link.html).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_host_environment_python">
@@ -2411,7 +2655,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gatewaysmbactivedirectorysettings">Gateway<wbr>Smb<wbr>Active<wbr>Directory<wbr>Settings<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Nested argument with Active Directory domain join information for Server Message Block (SMB) file shares. Only valid for `FILE_S3` gateway type. Must be set before creating `ActiveDirectory` authentication SMB file shares. More details below.
+    <dd>{{% md %}}Nested argument with Active Directory domain join information for Server Message Block (SMB) file shares. Only valid for `FILE_S3` and `FILE_FSX_SMB` gateway types. Must be set before creating `ActiveDirectory` authentication SMB file shares. More details below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_smb_file_share_visibility_python">
@@ -2429,7 +2673,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Guest password for Server Message Block (SMB) file shares. Only valid for `FILE_S3` gateway type. Must be set before creating `GuestAccess` authentication SMB file shares. This provider can only detect drift of the existence of a guest password, not its actual value from the gateway. This provider can however update the password with changing the argument.
+    <dd>{{% md %}}Guest password for Server Message Block (SMB) file shares. Only valid for `FILE_S3` and `FILE_FSX_SMB` gateway types. Must be set before creating `GuestAccess` authentication SMB file shares. This provider can only detect drift of the existence of a guest password, not its actual value from the gateway. This provider can however update the password with changing the argument.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_smb_security_strategy_python">

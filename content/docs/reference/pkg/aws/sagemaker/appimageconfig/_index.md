@@ -202,7 +202,7 @@ import pulumi_aws as aws
 test = aws.sagemaker.AppImageConfig("test",
     app_image_config_name="example",
     kernel_gateway_image_config=aws.sagemaker.AppImageConfigKernelGatewayImageConfigArgs(
-        file_system_config={},
+        file_system_config=aws.sagemaker.AppImageConfigKernelGatewayImageConfigFileSystemConfigArgs(),
         kernel_spec=aws.sagemaker.AppImageConfigKernelGatewayImageConfigKernelSpecArgs(
             name="example",
         ),
@@ -375,7 +375,7 @@ const test = new aws.sagemaker.AppImageConfig("test", {
 
 ## AppImageConfig Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Architecture and Concepts docs.
 
 ### Inputs
 

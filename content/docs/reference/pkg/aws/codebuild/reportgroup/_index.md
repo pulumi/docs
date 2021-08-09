@@ -164,13 +164,13 @@ example_report_group = aws.codebuild.ReportGroup("exampleReportGroup",
     type="TEST",
     export_config=aws.codebuild.ReportGroupExportConfigArgs(
         type="S3",
-        s3_destination={
-            "bucket": example_bucket.id,
-            "encryptionDisabled": False,
-            "encryption_key": example_key.arn,
-            "packaging": "NONE",
-            "path": "/some",
-        },
+        s3_destination=aws.codebuild.ReportGroupExportConfigS3DestinationArgs(
+            bucket=example_bucket.id,
+            encryption_disabled=False,
+            encryption_key=example_key.arn,
+            packaging="NONE",
+            path="/some",
+        ),
     ))
 ```
 
@@ -369,7 +369,7 @@ const exampleReportGroup = new aws.codebuild.ReportGroup("exampleReportGroup", {
 
 ## ReportGroup Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Architecture and Concepts docs.
 
 ### Inputs
 

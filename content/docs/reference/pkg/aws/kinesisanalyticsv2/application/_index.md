@@ -986,13 +986,13 @@ example_application = aws.kinesisanalyticsv2.Application("exampleApplication",
             ),
             code_content_type="ZIPFILE",
         ),
-        vpc_configuration={
-            "security_group_ids": [
+        vpc_configuration=aws.kinesisanalyticsv2.ApplicationApplicationConfigurationVpcConfigurationArgs(
+            security_group_ids=[
                 aws_security_group["example"][0]["id"],
                 aws_security_group["example"][1]["id"],
             ],
-            "subnet_ids": [aws_subnet["example"]["id"]],
-        },
+            subnet_ids=[aws_subnet["example"]["id"]],
+        ),
     ))
 ```
 
@@ -1189,7 +1189,7 @@ const exampleApplication = new aws.kinesisanalyticsv2.Application("exampleApplic
 
 ## Application Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Architecture and Concepts docs.
 
 ### Inputs
 

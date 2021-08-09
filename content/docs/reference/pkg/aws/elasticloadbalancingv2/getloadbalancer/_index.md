@@ -210,7 +210,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}A mapping of tags, each pair of which must exactly match a pair on the desired load balancer.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -240,7 +241,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}A mapping of tags, each pair of which must exactly match a pair on the desired load balancer.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -270,7 +272,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}A mapping of tags, each pair of which must exactly match a pair on the desired load balancer.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -300,7 +303,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}A mapping of tags, each pair of which must exactly match a pair on the desired load balancer.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

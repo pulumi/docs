@@ -532,14 +532,14 @@ serviceb1 = aws.appmesh.VirtualNode("serviceb1",
                 port=8080,
                 protocol="http",
             ),
-            health_check={
-                "protocol": "http",
-                "path": "/ping",
-                "healthyThreshold": 2,
-                "unhealthyThreshold": 2,
-                "timeoutMillis": 2000,
-                "intervalMillis": 5000,
-            },
+            health_check=aws.appmesh.VirtualNodeSpecListenerHealthCheckArgs(
+                protocol="http",
+                path="/ping",
+                healthy_threshold=2,
+                unhealthy_threshold=2,
+                timeout_millis=2000,
+                interval_millis=5000,
+            ),
         ),
         service_discovery=aws.appmesh.VirtualNodeSpecServiceDiscoveryArgs(
             dns=aws.appmesh.VirtualNodeSpecServiceDiscoveryDnsArgs(
@@ -939,7 +939,7 @@ const serviceb1 = new aws.appmesh.VirtualNode("serviceb1", {
 
 ## VirtualNode Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Architecture and Concepts docs.
 
 ### Inputs
 

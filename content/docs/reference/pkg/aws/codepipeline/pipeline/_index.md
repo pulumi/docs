@@ -379,10 +379,10 @@ codepipeline = aws.codepipeline.Pipeline("codepipeline",
     artifact_store=aws.codepipeline.PipelineArtifactStoreArgs(
         location=codepipeline_bucket.bucket,
         type="S3",
-        encryption_key={
-            "id": s3kmskey.arn,
-            "type": "KMS",
-        },
+        encryption_key=aws.codepipeline.PipelineArtifactStoreEncryptionKeyArgs(
+            id=s3kmskey.arn,
+            type="KMS",
+        ),
     ),
     stages=[
         aws.codepipeline.PipelineStageArgs(
@@ -753,7 +753,7 @@ const codepipelinePolicy = new aws.iam.RolePolicy("codepipelinePolicy", {
 
 ## Pipeline Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Architecture and Concepts docs.
 
 ### Inputs
 

@@ -202,7 +202,8 @@ const foobarSchedule = new aws.autoscaling.Schedule("foobarSchedule", {
              <span class="nx">min_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
              <span class="nx">recurrence</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">scheduled_action_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-             <span class="nx">start_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+             <span class="nx">start_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">time_zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">Schedule</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
              <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ScheduleArgs</a></span><span class="p">,</span>
@@ -321,7 +322,7 @@ const foobarSchedule = new aws.autoscaling.Schedule("foobarSchedule", {
 
 ## Schedule Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Architecture and Concepts docs.
 
 ### Inputs
 
@@ -406,6 +407,15 @@ Set to -1 if you don't want to change the minimum size at the scheduled time.
     </dt>
     <dd>{{% md %}}The time for this action to start, in "YYYY-MM-DDThh:mm:ssZ" format in UTC/GMT only (for example, 2014-06-01T00:00:00Z ).
 If you try to schedule your action in the past, Auto Scaling returns an error message.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="timezone_csharp">
+<a href="#timezone_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Zone</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The timezone for the cron expression. Valid values are the canonical names of the IANA time zones (such as Etc/GMT+9 or Pacific/Tahiti).
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -486,6 +496,15 @@ Set to -1 if you don't want to change the minimum size at the scheduled time.
     </dt>
     <dd>{{% md %}}The time for this action to start, in "YYYY-MM-DDThh:mm:ssZ" format in UTC/GMT only (for example, 2014-06-01T00:00:00Z ).
 If you try to schedule your action in the past, Auto Scaling returns an error message.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="timezone_go">
+<a href="#timezone_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Zone</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The timezone for the cron expression. Valid values are the canonical names of the IANA time zones (such as Etc/GMT+9 or Pacific/Tahiti).
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -566,6 +585,15 @@ Set to -1 if you don't want to change the minimum size at the scheduled time.
     </dt>
     <dd>{{% md %}}The time for this action to start, in "YYYY-MM-DDThh:mm:ssZ" format in UTC/GMT only (for example, 2014-06-01T00:00:00Z ).
 If you try to schedule your action in the past, Auto Scaling returns an error message.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="timezone_nodejs">
+<a href="#timezone_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Zone</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The timezone for the cron expression. Valid values are the canonical names of the IANA time zones (such as Etc/GMT+9 or Pacific/Tahiti).
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -646,6 +674,15 @@ Set to -1 if you don't want to change the minimum size at the scheduled time.
     </dt>
     <dd>{{% md %}}The time for this action to start, in "YYYY-MM-DDThh:mm:ssZ" format in UTC/GMT only (for example, 2014-06-01T00:00:00Z ).
 If you try to schedule your action in the past, Auto Scaling returns an error message.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="time_zone_python">
+<a href="#time_zone_python" style="color: inherit; text-decoration: inherit;">time_<wbr>zone</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The timezone for the cron expression. Valid values are the canonical names of the IANA time zones (such as Etc/GMT+9 or Pacific/Tahiti).
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -764,7 +801,8 @@ Get an existing Schedule resource's state with the given name, ID, and optional 
         <span class="nx">min_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
         <span class="nx">recurrence</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">scheduled_action_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-        <span class="nx">start_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Schedule</code></pre></div>
+        <span class="nx">start_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">time_zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Schedule</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -960,6 +998,15 @@ Set to -1 if you don't want to change the minimum size at the scheduled time.
     </dt>
     <dd>{{% md %}}The time for this action to start, in "YYYY-MM-DDThh:mm:ssZ" format in UTC/GMT only (for example, 2014-06-01T00:00:00Z ).
 If you try to schedule your action in the past, Auto Scaling returns an error message.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_timezone_csharp">
+<a href="#state_timezone_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Zone</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The timezone for the cron expression. Valid values are the canonical names of the IANA time zones (such as Etc/GMT+9 or Pacific/Tahiti).
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1049,6 +1096,15 @@ Set to -1 if you don't want to change the minimum size at the scheduled time.
     </dt>
     <dd>{{% md %}}The time for this action to start, in "YYYY-MM-DDThh:mm:ssZ" format in UTC/GMT only (for example, 2014-06-01T00:00:00Z ).
 If you try to schedule your action in the past, Auto Scaling returns an error message.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_timezone_go">
+<a href="#state_timezone_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Zone</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The timezone for the cron expression. Valid values are the canonical names of the IANA time zones (such as Etc/GMT+9 or Pacific/Tahiti).
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1138,6 +1194,15 @@ Set to -1 if you don't want to change the minimum size at the scheduled time.
     </dt>
     <dd>{{% md %}}The time for this action to start, in "YYYY-MM-DDThh:mm:ssZ" format in UTC/GMT only (for example, 2014-06-01T00:00:00Z ).
 If you try to schedule your action in the past, Auto Scaling returns an error message.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_timezone_nodejs">
+<a href="#state_timezone_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Zone</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The timezone for the cron expression. Valid values are the canonical names of the IANA time zones (such as Etc/GMT+9 or Pacific/Tahiti).
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1227,6 +1292,15 @@ Set to -1 if you don't want to change the minimum size at the scheduled time.
     </dt>
     <dd>{{% md %}}The time for this action to start, in "YYYY-MM-DDThh:mm:ssZ" format in UTC/GMT only (for example, 2014-06-01T00:00:00Z ).
 If you try to schedule your action in the past, Auto Scaling returns an error message.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_time_zone_python">
+<a href="#state_time_zone_python" style="color: inherit; text-decoration: inherit;">time_<wbr>zone</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The timezone for the cron expression. Valid values are the canonical names of the IANA time zones (such as Etc/GMT+9 or Pacific/Tahiti).
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

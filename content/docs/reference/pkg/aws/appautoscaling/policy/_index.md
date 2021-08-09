@@ -296,10 +296,10 @@ ecs_policy = aws.appautoscaling.Policy("ecsPolicy",
         adjustment_type="ChangeInCapacity",
         cooldown=60,
         metric_aggregation_type="Maximum",
-        step_adjustments=[{
-            "metricIntervalUpperBound": 0,
-            "scaling_adjustment": -1,
-        }],
+        step_adjustments=[aws.appautoscaling.PolicyStepScalingPolicyConfigurationStepAdjustmentArgs(
+            metric_interval_upper_bound="0",
+            scaling_adjustment=-1,
+        )],
     ))
 ```
 
@@ -898,7 +898,7 @@ const targets = new aws.appautoscaling.Policy("targets", {
 
 ## Policy Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Architecture and Concepts docs.
 
 ### Inputs
 

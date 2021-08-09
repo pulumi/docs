@@ -270,7 +270,7 @@ const test = new aws.elasticache.User("test", {
 
 ## User Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Architecture and Concepts docs.
 
 ### Inputs
 
@@ -287,7 +287,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Access permissions string used for this user.
+    <dd>{{% md %}}Access permissions string used for this user. See [Specifying Permissions Using an Access String](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/Clusters.RBAC.html#Access-string) for more details.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="engine_csharp">
@@ -371,7 +371,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Access permissions string used for this user.
+    <dd>{{% md %}}Access permissions string used for this user. See [Specifying Permissions Using an Access String](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/Clusters.RBAC.html#Access-string) for more details.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="engine_go">
@@ -455,7 +455,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Access permissions string used for this user.
+    <dd>{{% md %}}Access permissions string used for this user. See [Specifying Permissions Using an Access String](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/Clusters.RBAC.html#Access-string) for more details.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="engine_nodejs">
@@ -539,7 +539,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Access permissions string used for this user.
+    <dd>{{% md %}}Access permissions string used for this user. See [Specifying Permissions Using an Access String](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/Clusters.RBAC.html#Access-string) for more details.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="engine_python">
@@ -812,7 +812,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Access permissions string used for this user.
+    <dd>{{% md %}}Access permissions string used for this user. See [Specifying Permissions Using an Access String](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/Clusters.RBAC.html#Access-string) for more details.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_arn_csharp">
@@ -896,7 +896,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Access permissions string used for this user.
+    <dd>{{% md %}}Access permissions string used for this user. See [Specifying Permissions Using an Access String](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/Clusters.RBAC.html#Access-string) for more details.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_arn_go">
@@ -980,7 +980,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Access permissions string used for this user.
+    <dd>{{% md %}}Access permissions string used for this user. See [Specifying Permissions Using an Access String](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/Clusters.RBAC.html#Access-string) for more details.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_arn_nodejs">
@@ -1064,7 +1064,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Access permissions string used for this user.
+    <dd>{{% md %}}Access permissions string used for this user. See [Specifying Permissions Using an Access String](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/Clusters.RBAC.html#Access-string) for more details.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_arn_python">

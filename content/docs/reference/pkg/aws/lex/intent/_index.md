@@ -318,7 +318,7 @@ order_flowers_intent = aws.lex.Intent("orderFlowersIntent",
                 max_attempts=2,
                 message=[{
                     "content": "What type of flowers would you like to order?",
-                    "content_type": "PlainText",
+                    "contentType": "PlainText",
                 }],
             ),
         ),
@@ -334,7 +334,7 @@ order_flowers_intent = aws.lex.Intent("orderFlowersIntent",
                 max_attempts=2,
                 message=[{
                     "content": "What day do you want the {FlowerType} to be picked up?",
-                    "content_type": "PlainText",
+                    "contentType": "PlainText",
                 }],
             ),
         ),
@@ -350,7 +350,7 @@ order_flowers_intent = aws.lex.Intent("orderFlowersIntent",
                 max_attempts=2,
                 message=[{
                     "content": "Pick up the {FlowerType} at what time on {PickupDate}?",
-                    "content_type": "PlainText",
+                    "contentType": "PlainText",
                 }],
             ),
         ),
@@ -599,7 +599,7 @@ const orderFlowersIntent = new aws.lex.Intent("order_flowers_intent", {
 
 ## Intent Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Architecture and Concepts docs.
 
 ### Inputs
 

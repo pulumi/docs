@@ -37,7 +37,14 @@ class MyStack : Stack
             BudgetType = "COST",
             CostFilters = 
             {
-                { "Service", "Amazon Elastic Compute Cloud - Compute" },
+                
+                {
+                    { "name", "Service" },
+                    { "values", 
+                    {
+                        "Amazon Elastic Compute Cloud - Compute",
+                    } },
+                },
             },
             LimitAmount = "1200",
             LimitUnit = "USD",
@@ -83,7 +90,12 @@ func main() {
 		_, err := budgets.NewBudget(ctx, "ec2", &budgets.BudgetArgs{
 			BudgetType: pulumi.String("COST"),
 			CostFilters: pulumi.StringMap{
-				"Service": pulumi.String("Amazon Elastic Compute Cloud - Compute"),
+				pulumi.String{
+					Name: "Service",
+					Values: []string{
+						"Amazon Elastic Compute Cloud - Compute",
+					},
+				},
 			},
 			LimitAmount: pulumi.String("1200"),
 			LimitUnit:   pulumi.String("USD"),
@@ -122,9 +134,10 @@ import pulumi_aws as aws
 
 ec2 = aws.budgets.Budget("ec2",
     budget_type="COST",
-    cost_filters={
-        "Service": "Amazon Elastic Compute Cloud - Compute",
-    },
+    cost_filters=[{
+        "name": "Service",
+        "values": ["Amazon Elastic Compute Cloud - Compute"],
+    }],
     limit_amount="1200",
     limit_unit="USD",
     notifications=[aws.budgets.BudgetNotificationArgs(
@@ -152,9 +165,10 @@ import * as aws from "@pulumi/aws";
 
 const ec2 = new aws.budgets.Budget("ec2", {
     budgetType: "COST",
-    costFilters: {
-        Service: "Amazon Elastic Compute Cloud - Compute",
-    },
+    costFilters: [{
+        name: "Service",
+        values: ["Amazon Elastic Compute Cloud - Compute"],
+    }],
     limitAmount: "1200",
     limitUnit: "USD",
     notifications: [{
@@ -324,7 +338,7 @@ const ec2 = new aws.budgets.Budget("ec2", {
 
 ## Budget Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Architecture and Concepts docs.
 
 ### Inputs
 
@@ -362,15 +376,6 @@ The Budget resource accepts the following [input]({{< relref "/docs/intro/concep
     <dd>{{% md %}}The unit of measurement used for the budget forecast, actual spend, or budget threshold, such as dollars or GB. See [Spend](http://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/data-type-spend.html) documentation.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="timeperiodstart_csharp">
-<a href="#timeperiodstart_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Period<wbr>Start</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The start of the time period covered by the budget. The start date must come before the end date. Format: `2017-01-01_12:00`.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="timeunit_csharp">
 <a href="#timeunit_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Unit</a>
 </span>
@@ -395,7 +400,7 @@ The Budget resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Map of Cost Filters key/value pairs to apply to the budget.
+    <dd>{{% md %}}Map of CostFilters key/value pairs to apply to the budget.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="costtypes_csharp">
@@ -404,7 +409,7 @@ The Budget resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#budgetcosttypes">Budget<wbr>Cost<wbr>Types<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Object containing Cost Types The types of cost included in a budget, such as tax and subscriptions..
+    <dd>{{% md %}}Object containing CostTypes The types of cost included in a budget, such as tax and subscriptions.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
@@ -441,6 +446,15 @@ The Budget resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The end of the time period covered by the budget. There are no restrictions on the end date. Format: `2017-01-01_12:00`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="timeperiodstart_csharp">
+<a href="#timeperiodstart_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Period<wbr>Start</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The start of the time period covered by the budget. If you don't specify a start date, AWS defaults to the start of your chosen time period. The start date must come before the end date. Format: `2017-01-01_12:00`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -474,15 +488,6 @@ The Budget resource accepts the following [input]({{< relref "/docs/intro/concep
     <dd>{{% md %}}The unit of measurement used for the budget forecast, actual spend, or budget threshold, such as dollars or GB. See [Spend](http://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/data-type-spend.html) documentation.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="timeperiodstart_go">
-<a href="#timeperiodstart_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Period<wbr>Start</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The start of the time period covered by the budget. The start date must come before the end date. Format: `2017-01-01_12:00`.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="timeunit_go">
 <a href="#timeunit_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Unit</a>
 </span>
@@ -507,7 +512,7 @@ The Budget resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Map of Cost Filters key/value pairs to apply to the budget.
+    <dd>{{% md %}}Map of CostFilters key/value pairs to apply to the budget.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="costtypes_go">
@@ -516,7 +521,7 @@ The Budget resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#budgetcosttypes">Budget<wbr>Cost<wbr>Types<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Object containing Cost Types The types of cost included in a budget, such as tax and subscriptions..
+    <dd>{{% md %}}Object containing CostTypes The types of cost included in a budget, such as tax and subscriptions.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
@@ -553,6 +558,15 @@ The Budget resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The end of the time period covered by the budget. There are no restrictions on the end date. Format: `2017-01-01_12:00`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="timeperiodstart_go">
+<a href="#timeperiodstart_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Period<wbr>Start</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The start of the time period covered by the budget. If you don't specify a start date, AWS defaults to the start of your chosen time period. The start date must come before the end date. Format: `2017-01-01_12:00`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -586,15 +600,6 @@ The Budget resource accepts the following [input]({{< relref "/docs/intro/concep
     <dd>{{% md %}}The unit of measurement used for the budget forecast, actual spend, or budget threshold, such as dollars or GB. See [Spend](http://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/data-type-spend.html) documentation.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="timeperiodstart_nodejs">
-<a href="#timeperiodstart_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Period<wbr>Start</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The start of the time period covered by the budget. The start date must come before the end date. Format: `2017-01-01_12:00`.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="timeunit_nodejs">
 <a href="#timeunit_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Unit</a>
 </span>
@@ -619,7 +624,7 @@ The Budget resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Map of Cost Filters key/value pairs to apply to the budget.
+    <dd>{{% md %}}Map of CostFilters key/value pairs to apply to the budget.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="costtypes_nodejs">
@@ -628,7 +633,7 @@ The Budget resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#budgetcosttypes">Budget<wbr>Cost<wbr>Types<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Object containing Cost Types The types of cost included in a budget, such as tax and subscriptions..
+    <dd>{{% md %}}Object containing CostTypes The types of cost included in a budget, such as tax and subscriptions.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
@@ -665,6 +670,15 @@ The Budget resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The end of the time period covered by the budget. There are no restrictions on the end date. Format: `2017-01-01_12:00`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="timeperiodstart_nodejs">
+<a href="#timeperiodstart_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Period<wbr>Start</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The start of the time period covered by the budget. If you don't specify a start date, AWS defaults to the start of your chosen time period. The start date must come before the end date. Format: `2017-01-01_12:00`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -698,15 +712,6 @@ The Budget resource accepts the following [input]({{< relref "/docs/intro/concep
     <dd>{{% md %}}The unit of measurement used for the budget forecast, actual spend, or budget threshold, such as dollars or GB. See [Spend](http://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/data-type-spend.html) documentation.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="time_period_start_python">
-<a href="#time_period_start_python" style="color: inherit; text-decoration: inherit;">time_<wbr>period_<wbr>start</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The start of the time period covered by the budget. The start date must come before the end date. Format: `2017-01-01_12:00`.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="time_unit_python">
 <a href="#time_unit_python" style="color: inherit; text-decoration: inherit;">time_<wbr>unit</a>
 </span>
@@ -731,7 +736,7 @@ The Budget resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Map of Cost Filters key/value pairs to apply to the budget.
+    <dd>{{% md %}}Map of CostFilters key/value pairs to apply to the budget.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cost_types_python">
@@ -740,7 +745,7 @@ The Budget resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#budgetcosttypes">Budget<wbr>Cost<wbr>Types<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Object containing Cost Types The types of cost included in a budget, such as tax and subscriptions..
+    <dd>{{% md %}}Object containing CostTypes The types of cost included in a budget, such as tax and subscriptions.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
@@ -777,6 +782,15 @@ The Budget resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The end of the time period covered by the budget. There are no restrictions on the end date. Format: `2017-01-01_12:00`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="time_period_start_python">
+<a href="#time_period_start_python" style="color: inherit; text-decoration: inherit;">time_<wbr>period_<wbr>start</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The start of the time period covered by the budget. If you don't specify a start date, AWS defaults to the start of your chosen time period. The start date must come before the end date. Format: `2017-01-01_12:00`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1045,7 +1059,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Map of Cost Filters key/value pairs to apply to the budget.
+    <dd>{{% md %}}Map of CostFilters key/value pairs to apply to the budget.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_costtypes_csharp">
@@ -1054,7 +1068,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#budgetcosttypes">Budget<wbr>Cost<wbr>Types<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Object containing Cost Types The types of cost included in a budget, such as tax and subscriptions..
+    <dd>{{% md %}}Object containing CostTypes The types of cost included in a budget, such as tax and subscriptions.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_limitamount_csharp">
@@ -1117,7 +1131,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The start of the time period covered by the budget. The start date must come before the end date. Format: `2017-01-01_12:00`.
+    <dd>{{% md %}}The start of the time period covered by the budget. If you don't specify a start date, AWS defaults to the start of your chosen time period. The start date must come before the end date. Format: `2017-01-01_12:00`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_timeunit_csharp">
@@ -1166,7 +1180,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Map of Cost Filters key/value pairs to apply to the budget.
+    <dd>{{% md %}}Map of CostFilters key/value pairs to apply to the budget.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_costtypes_go">
@@ -1175,7 +1189,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#budgetcosttypes">Budget<wbr>Cost<wbr>Types<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Object containing Cost Types The types of cost included in a budget, such as tax and subscriptions..
+    <dd>{{% md %}}Object containing CostTypes The types of cost included in a budget, such as tax and subscriptions.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_limitamount_go">
@@ -1238,7 +1252,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The start of the time period covered by the budget. The start date must come before the end date. Format: `2017-01-01_12:00`.
+    <dd>{{% md %}}The start of the time period covered by the budget. If you don't specify a start date, AWS defaults to the start of your chosen time period. The start date must come before the end date. Format: `2017-01-01_12:00`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_timeunit_go">
@@ -1287,7 +1301,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Map of Cost Filters key/value pairs to apply to the budget.
+    <dd>{{% md %}}Map of CostFilters key/value pairs to apply to the budget.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_costtypes_nodejs">
@@ -1296,7 +1310,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#budgetcosttypes">Budget<wbr>Cost<wbr>Types<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Object containing Cost Types The types of cost included in a budget, such as tax and subscriptions..
+    <dd>{{% md %}}Object containing CostTypes The types of cost included in a budget, such as tax and subscriptions.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_limitamount_nodejs">
@@ -1359,7 +1373,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The start of the time period covered by the budget. The start date must come before the end date. Format: `2017-01-01_12:00`.
+    <dd>{{% md %}}The start of the time period covered by the budget. If you don't specify a start date, AWS defaults to the start of your chosen time period. The start date must come before the end date. Format: `2017-01-01_12:00`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_timeunit_nodejs">
@@ -1408,7 +1422,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Map of Cost Filters key/value pairs to apply to the budget.
+    <dd>{{% md %}}Map of CostFilters key/value pairs to apply to the budget.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cost_types_python">
@@ -1417,7 +1431,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#budgetcosttypes">Budget<wbr>Cost<wbr>Types<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Object containing Cost Types The types of cost included in a budget, such as tax and subscriptions..
+    <dd>{{% md %}}Object containing CostTypes The types of cost included in a budget, such as tax and subscriptions.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_limit_amount_python">
@@ -1480,7 +1494,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The start of the time period covered by the budget. The start date must come before the end date. Format: `2017-01-01_12:00`.
+    <dd>{{% md %}}The start of the time period covered by the budget. If you don't specify a start date, AWS defaults to the start of your chosen time period. The start date must come before the end date. Format: `2017-01-01_12:00`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_time_unit_python">

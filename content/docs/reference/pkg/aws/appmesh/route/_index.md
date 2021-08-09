@@ -509,14 +509,14 @@ serviceb = aws.appmesh.Route("serviceb",
             match=aws.appmesh.RouteSpecHttpRouteMatchArgs(
                 prefix="/",
             ),
-            retry_policy={
-                "httpRetryEvents": ["server-error"],
-                "max_retries": 1,
-                "perRetryTimeout": {
-                    "unit": "s",
-                    "value": 15,
-                },
-            },
+            retry_policy=aws.appmesh.RouteSpecHttpRouteRetryPolicyArgs(
+                http_retry_events=["server-error"],
+                max_retries=1,
+                per_retry_timeout=aws.appmesh.RouteSpecHttpRouteRetryPolicyPerRetryTimeoutArgs(
+                    unit="s",
+                    value=15,
+                ),
+            ),
             action=aws.appmesh.RouteSpecHttpRouteActionArgs(
                 weighted_targets=[aws.appmesh.RouteSpecHttpRouteActionWeightedTargetArgs(
                     virtual_node=aws_appmesh_virtual_node["serviceb"]["name"],
@@ -852,7 +852,7 @@ const serviceb = new aws.appmesh.Route("serviceb", {
 
 ## Route Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Architecture and Concepts docs.
 
 ### Inputs
 

@@ -215,8 +215,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Amazon Resource Name (ARN) of the ledger.
-{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="deletionprotection_csharp">
 <a href="#deletionprotection_csharp" style="color: inherit; text-decoration: inherit;">Deletion<wbr>Protection</a>
@@ -224,8 +223,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Deletion protection on the QLDB Ledger instance. Set to `true` by default.
-{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -242,6 +240,14 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="permissionsmode_csharp">
+<a href="#permissionsmode_csharp" style="color: inherit; text-decoration: inherit;">Permissions<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -254,8 +260,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Amazon Resource Name (ARN) of the ledger.
-{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="deletionprotection_go">
 <a href="#deletionprotection_go" style="color: inherit; text-decoration: inherit;">Deletion<wbr>Protection</a>
@@ -263,8 +268,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Deletion protection on the QLDB Ledger instance. Set to `true` by default.
-{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -281,6 +285,14 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="permissionsmode_go">
+<a href="#permissionsmode_go" style="color: inherit; text-decoration: inherit;">Permissions<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -293,8 +305,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Amazon Resource Name (ARN) of the ledger.
-{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="deletionprotection_nodejs">
 <a href="#deletionprotection_nodejs" style="color: inherit; text-decoration: inherit;">deletion<wbr>Protection</a>
@@ -302,8 +313,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Deletion protection on the QLDB Ledger instance. Set to `true` by default.
-{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -320,6 +330,14 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="permissionsmode_nodejs">
+<a href="#permissionsmode_nodejs" style="color: inherit; text-decoration: inherit;">permissions<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -332,8 +350,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Amazon Resource Name (ARN) of the ledger.
-{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="deletion_protection_python">
 <a href="#deletion_protection_python" style="color: inherit; text-decoration: inherit;">deletion_<wbr>protection</a>
@@ -341,8 +358,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Deletion protection on the QLDB Ledger instance. Set to `true` by default.
-{{% /md %}}</dd><dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -355,6 +371,14 @@ The following output properties are available:
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="permissions_mode_python">
+<a href="#permissions_mode_python" style="color: inherit; text-decoration: inherit;">permissions_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>

@@ -951,16 +951,16 @@ example = aws.networkfirewall.RuleGroup("example",
                                 "addressDefinition": "124.1.1.5/32",
                             }],
                             "destinationPort": [{
-                                "from_port": 443,
-                                "to_port": 443,
+                                "fromPort": 443,
+                                "toPort": 443,
                             }],
                             "protocols": [6],
                             "source": [{
                                 "addressDefinition": "1.2.3.4/32",
                             }],
                             "sourcePort": [{
-                                "from_port": 443,
-                                "to_port": 443,
+                                "fromPort": 443,
+                                "toPort": 443,
                             }],
                             "tcpFlag": [{
                                 "flags": ["SYN"],
@@ -1203,7 +1203,7 @@ const example = new aws.networkfirewall.RuleGroup("example", {
 
 ## RuleGroup Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Architecture and Concepts docs.
 
 ### Inputs
 

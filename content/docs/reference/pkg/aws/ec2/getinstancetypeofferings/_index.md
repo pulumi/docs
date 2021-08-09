@@ -323,7 +323,25 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Set of EC2 Instance Types.
+    <dd>{{% md %}}List of EC2 Instance Types.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="locationtypes_csharp">
+<a href="#locationtypes_csharp" style="color: inherit; text-decoration: inherit;">Location<wbr>Types</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}List of location types.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="locations_csharp">
+<a href="#locations_csharp" style="color: inherit; text-decoration: inherit;">Locations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}List of locations.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="filters_csharp">
@@ -361,7 +379,25 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Set of EC2 Instance Types.
+    <dd>{{% md %}}List of EC2 Instance Types.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="locationtypes_go">
+<a href="#locationtypes_go" style="color: inherit; text-decoration: inherit;">Location<wbr>Types</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}List of location types.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="locations_go">
+<a href="#locations_go" style="color: inherit; text-decoration: inherit;">Locations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}List of locations.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="filters_go">
@@ -399,7 +435,25 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Set of EC2 Instance Types.
+    <dd>{{% md %}}List of EC2 Instance Types.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="locationtypes_nodejs">
+<a href="#locationtypes_nodejs" style="color: inherit; text-decoration: inherit;">location<wbr>Types</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}List of location types.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="locations_nodejs">
+<a href="#locations_nodejs" style="color: inherit; text-decoration: inherit;">locations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}List of locations.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="filters_nodejs">
@@ -437,7 +491,25 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Set of EC2 Instance Types.
+    <dd>{{% md %}}List of EC2 Instance Types.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="location_types_python">
+<a href="#location_types_python" style="color: inherit; text-decoration: inherit;">location_<wbr>types</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}List of location types.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="locations_python">
+<a href="#locations_python" style="color: inherit; text-decoration: inherit;">locations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}List of locations.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="filters_python">

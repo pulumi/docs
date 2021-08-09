@@ -349,17 +349,17 @@ import pulumi_aws as aws
 
 example = aws.waf.WebAcl("example", logging_configuration=aws.waf.WebAclLoggingConfigurationArgs(
     log_destination=aws_kinesis_firehose_delivery_stream["example"]["arn"],
-    redacted_fields={
-        "fieldToMatches": [
-            {
-                "type": "URI",
-            },
-            {
-                "data": "referer",
-                "type": "HEADER",
-            },
+    redacted_fields=aws.waf.WebAclLoggingConfigurationRedactedFieldsArgs(
+        field_to_matches=[
+            aws.waf.WebAclLoggingConfigurationRedactedFieldsFieldToMatchArgs(
+                type="URI",
+            ),
+            aws.waf.WebAclLoggingConfigurationRedactedFieldsFieldToMatchArgs(
+                data="referer",
+                type="HEADER",
+            ),
         ],
-    },
+    ),
 ))
 ```
 
@@ -539,7 +539,7 @@ const example = new aws.waf.WebAcl("example", {loggingConfiguration: {
 
 ## WebAcl Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Architecture and Concepts docs.
 
 ### Inputs
 
