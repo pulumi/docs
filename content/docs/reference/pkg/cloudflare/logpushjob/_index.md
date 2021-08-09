@@ -150,7 +150,7 @@ meta_desc: "Documentation for the cloudflare.LogpushJob resource with examples, 
 
 ## LogpushJob Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Architecture and Concepts docs.
 
 ### Inputs
 
@@ -167,7 +167,7 @@ The LogpushJob resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Which type of dataset resource to use. Available values are `"firewall_events"`, `"http_requests"`, and `"spectrum_events"`.
+    <dd>{{% md %}}Which type of dataset resource to use. Available values are `"firewall_events"`, `"http_requests"`, `"spectrum_events"` and `"nel_reports"`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="destinationconf_csharp">
@@ -235,7 +235,7 @@ Microsoft Azure or Sumo Logic. See [Developer documentation](https://developers.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Which type of dataset resource to use. Available values are `"firewall_events"`, `"http_requests"`, and `"spectrum_events"`.
+    <dd>{{% md %}}Which type of dataset resource to use. Available values are `"firewall_events"`, `"http_requests"`, `"spectrum_events"` and `"nel_reports"`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="destinationconf_go">
@@ -303,7 +303,7 @@ Microsoft Azure or Sumo Logic. See [Developer documentation](https://developers.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Which type of dataset resource to use. Available values are `"firewall_events"`, `"http_requests"`, and `"spectrum_events"`.
+    <dd>{{% md %}}Which type of dataset resource to use. Available values are `"firewall_events"`, `"http_requests"`, `"spectrum_events"` and `"nel_reports"`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="destinationconf_nodejs">
@@ -371,7 +371,7 @@ Microsoft Azure or Sumo Logic. See [Developer documentation](https://developers.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Which type of dataset resource to use. Available values are `"firewall_events"`, `"http_requests"`, and `"spectrum_events"`.
+    <dd>{{% md %}}Which type of dataset resource to use. Available values are `"firewall_events"`, `"http_requests"`, `"spectrum_events"` and `"nel_reports"`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="destination_conf_python">
@@ -626,7 +626,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Which type of dataset resource to use. Available values are `"firewall_events"`, `"http_requests"`, and `"spectrum_events"`.
+    <dd>{{% md %}}Which type of dataset resource to use. Available values are `"firewall_events"`, `"http_requests"`, `"spectrum_events"` and `"nel_reports"`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_destinationconf_csharp">
@@ -694,7 +694,7 @@ Microsoft Azure or Sumo Logic. See [Developer documentation](https://developers.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Which type of dataset resource to use. Available values are `"firewall_events"`, `"http_requests"`, and `"spectrum_events"`.
+    <dd>{{% md %}}Which type of dataset resource to use. Available values are `"firewall_events"`, `"http_requests"`, `"spectrum_events"` and `"nel_reports"`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_destinationconf_go">
@@ -762,7 +762,7 @@ Microsoft Azure or Sumo Logic. See [Developer documentation](https://developers.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Which type of dataset resource to use. Available values are `"firewall_events"`, `"http_requests"`, and `"spectrum_events"`.
+    <dd>{{% md %}}Which type of dataset resource to use. Available values are `"firewall_events"`, `"http_requests"`, `"spectrum_events"` and `"nel_reports"`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_destinationconf_nodejs">
@@ -830,7 +830,7 @@ Microsoft Azure or Sumo Logic. See [Developer documentation](https://developers.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Which type of dataset resource to use. Available values are `"firewall_events"`, `"http_requests"`, and `"spectrum_events"`.
+    <dd>{{% md %}}Which type of dataset resource to use. Available values are `"firewall_events"`, `"http_requests"`, `"spectrum_events"` and `"nel_reports"`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_destination_conf_python">

@@ -79,6 +79,22 @@ uTnQyuOqPuHbnN83d/2l1NSYKCbHt24o
             Name = "JumpCloud SAML",
             Type = "saml",
         });
+        // okta
+        var okta = new Cloudflare.AccessIdentityProvider("okta", new Cloudflare.AccessIdentityProviderArgs
+        {
+            AccountId = "1d5fdc9e88c8a8c4518b068cd94331fe",
+            Configs = 
+            {
+                new Cloudflare.Inputs.AccessIdentityProviderConfigArgs
+                {
+                    ApiToken = "okta_api_token",
+                    ClientId = "example",
+                    ClientSecret = "secret_key",
+                },
+            },
+            Name = "Okta",
+            Type = "okta",
+        });
     }
 
 }
@@ -144,6 +160,21 @@ func main() {
 		if err != nil {
 			return err
 		}
+		_, err = cloudflare.NewAccessIdentityProvider(ctx, "okta", &cloudflare.AccessIdentityProviderArgs{
+			AccountId: pulumi.String("1d5fdc9e88c8a8c4518b068cd94331fe"),
+			Configs: cloudflare.AccessIdentityProviderConfigArray{
+				&cloudflare.AccessIdentityProviderConfigArgs{
+					ApiToken:     pulumi.String("okta_api_token"),
+					ClientId:     pulumi.String("example"),
+					ClientSecret: pulumi.String("secret_key"),
+				},
+			},
+			Name: pulumi.String("Okta"),
+			Type: pulumi.String("okta"),
+		})
+		if err != nil {
+			return err
+		}
 		return nil
 	})
 }
@@ -190,6 +221,16 @@ uTnQyuOqPuHbnN83d/2l1NSYKCbHt24o
     )],
     name="JumpCloud SAML",
     type="saml")
+# okta
+okta = cloudflare.AccessIdentityProvider("okta",
+    account_id="1d5fdc9e88c8a8c4518b068cd94331fe",
+    configs=[cloudflare.AccessIdentityProviderConfigArgs(
+        api_token="okta_api_token",
+        client_id="example",
+        client_secret="secret_key",
+    )],
+    name="Okta",
+    type="okta")
 ```
 
 
@@ -235,6 +276,17 @@ uTnQyuOqPuHbnN83d/2l1NSYKCbHt24o`,
     }],
     name: "JumpCloud SAML",
     type: "saml",
+});
+// okta
+const okta = new cloudflare.AccessIdentityProvider("okta", {
+    accountId: "1d5fdc9e88c8a8c4518b068cd94331fe",
+    configs: [{
+        apiToken: "okta_api_token",
+        clientId: "example",
+        clientSecret: "secret_key",
+    }],
+    name: "Okta",
+    type: "okta",
 });
 ```
 
@@ -385,7 +437,7 @@ uTnQyuOqPuHbnN83d/2l1NSYKCbHt24o`,
 
 ## AccessIdentityProvider Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Architecture and Concepts docs.
 
 ### Inputs
 
@@ -1000,6 +1052,14 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="apitoken_csharp">
+<a href="#apitoken_csharp" style="color: inherit; text-decoration: inherit;">Api<wbr>Token</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="appsdomain_csharp">
 <a href="#appsdomain_csharp" style="color: inherit; text-decoration: inherit;">Apps<wbr>Domain</a>
 </span>
@@ -1155,6 +1215,14 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="apitoken_go">
+<a href="#apitoken_go" style="color: inherit; text-decoration: inherit;">Api<wbr>Token</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="appsdomain_go">
 <a href="#appsdomain_go" style="color: inherit; text-decoration: inherit;">Apps<wbr>Domain</a>
@@ -1312,6 +1380,14 @@ The following state arguments are supported:
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="apitoken_nodejs">
+<a href="#apitoken_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Token</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="appsdomain_nodejs">
 <a href="#appsdomain_nodejs" style="color: inherit; text-decoration: inherit;">apps<wbr>Domain</a>
 </span>
@@ -1467,6 +1543,14 @@ The following state arguments are supported:
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="api_token_python">
+<a href="#api_token_python" style="color: inherit; text-decoration: inherit;">api_<wbr>token</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="apps_domain_python">
 <a href="#apps_domain_python" style="color: inherit; text-decoration: inherit;">apps_<wbr>domain</a>
