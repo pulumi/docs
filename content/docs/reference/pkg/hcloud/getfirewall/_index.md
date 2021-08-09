@@ -605,6 +605,15 @@ The following output properties are available:
     <dd>{{% md %}}(Required, string) Direction of the Firewall Rule. `in`, `out`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="description_csharp">
+<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}(Optional, string) Description of the firewall rule
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="destinationips_csharp">
 <a href="#destinationips_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>Ips</a>
 </span>
@@ -652,6 +661,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Required, string) Direction of the Firewall Rule. `in`, `out`
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="description_go">
+<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}(Optional, string) Description of the firewall rule
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="destinationips_go">
@@ -703,6 +721,15 @@ The following output properties are available:
     <dd>{{% md %}}(Required, string) Direction of the Firewall Rule. `in`, `out`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="description_nodejs">
+<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}(Optional, string) Description of the firewall rule
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="destinationips_nodejs">
 <a href="#destinationips_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Ips</a>
 </span>
@@ -750,6 +777,15 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(Required, string) Direction of the Firewall Rule. `in`, `out`
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="description_python">
+<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}(Optional, string) Description of the firewall rule
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="destination_ips_python">
