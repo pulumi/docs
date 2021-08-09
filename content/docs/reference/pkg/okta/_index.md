@@ -32,19 +32,37 @@ A Pulumi package for creating and managing okta resources.
 <h2 id="resources">Resources</h2>
 <ul class="api">
     <li><a href="adminroletargets" title="AdminRoleTargets"><span class="symbol resource"></span>AdminRoleTargets</a></li>
+    <li><a href="appgroupassignments" title="AppGroupAssignments"><span class="symbol resource"></span>AppGroupAssignments</a></li>
     <li><a href="appoauthapiscope" title="AppOauthApiScope"><span class="symbol resource"></span>AppOauthApiScope</a></li>
+    <li><a href="appsharedcredentials" title="AppSharedCredentials"><span class="symbol resource"></span>AppSharedCredentials</a></li>
+    <li><a href="appuserbaseschemaproperty" title="AppUserBaseSchemaProperty"><span class="symbol resource"></span>AppUserBaseSchemaProperty</a></li>
+    <li><a href="appuserschemaproperty" title="AppUserSchemaProperty"><span class="symbol resource"></span>AppUserSchemaProperty</a></li>
     <li><a href="authserverclaimdefault" title="AuthServerClaimDefault"><span class="symbol resource"></span>AuthServerClaimDefault</a></li>
     <li><a href="authserverdefault" title="AuthServerDefault"><span class="symbol resource"></span>AuthServerDefault</a></li>
+    <li><a href="behaviour" title="Behaviour"><span class="symbol resource"></span>Behaviour</a></li>
+    <li><a href="domain" title="Domain"><span class="symbol resource"></span>Domain</a></li>
     <li><a href="eventhook" title="EventHook"><span class="symbol resource"></span>EventHook</a></li>
+    <li><a href="factortotp" title="FactorTotp"><span class="symbol resource"></span>FactorTotp</a></li>
+    <li><a href="groupmemberships" title="GroupMemberships"><span class="symbol resource"></span>GroupMemberships</a></li>
     <li><a href="policymfadefault" title="PolicyMfaDefault"><span class="symbol resource"></span>PolicyMfaDefault</a></li>
     <li><a href="policypassworddefault" title="PolicyPasswordDefault"><span class="symbol resource"></span>PolicyPasswordDefault</a></li>
     <li><a href="provider" title="Provider"><span class="symbol resource"></span>Provider</a></li>
     <li><a href="templatesms" title="TemplateSms"><span class="symbol resource"></span>TemplateSms</a></li>
+    <li><a href="useradminroles" title="UserAdminRoles"><span class="symbol resource"></span>UserAdminRoles</a></li>
+    <li><a href="userbaseschemaproperty" title="UserBaseSchemaProperty"><span class="symbol resource"></span>UserBaseSchemaProperty</a></li>
+    <li><a href="userfactorquestion" title="UserFactorQuestion"><span class="symbol resource"></span>UserFactorQuestion</a></li>
+    <li><a href="usergroupmemberships" title="UserGroupMemberships"><span class="symbol resource"></span>UserGroupMemberships</a></li>
+    <li><a href="userschemaproperty" title="UserSchemaProperty"><span class="symbol resource"></span>UserSchemaProperty</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
+    <li><a href="getappgroupassignments" title="GetAppGroupAssignments"><span class="symbol function"></span>GetAppGroupAssignments</a></li>
+    <li><a href="getappuserassignments" title="GetAppUserAssignments"><span class="symbol function"></span>GetAppUserAssignments</a></li>
+    <li><a href="getbehaviour" title="GetBehaviour"><span class="symbol function"></span>GetBehaviour</a></li>
+    <li><a href="getbehaviours" title="GetBehaviours"><span class="symbol function"></span>GetBehaviours</a></li>
     <li><a href="getgroups" title="GetGroups"><span class="symbol function"></span>GetGroups</a></li>
+    <li><a href="getusersecurityquestions" title="GetUserSecurityQuestions"><span class="symbol function"></span>GetUserSecurityQuestions</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -56,6 +74,6 @@ A Pulumi package for creating and managing okta resources.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`okta` Terraform Provider](https://github.com/okta/terraform-provider-okta).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>3.0.0</dd>
+	<dd>3.1.0</dd>
 </dl>
 
