@@ -19,6 +19,7 @@ A Pulumi package for creating and managing pagerduty cloud resources.
     <li><a href="escalationpolicy" title="EscalationPolicy"><span class="symbol resource"></span>EscalationPolicy</a></li>
     <li><a href="eventrule" title="EventRule"><span class="symbol resource"></span>EventRule</a></li>
     <li><a href="extension" title="Extension"><span class="symbol resource"></span>Extension</a></li>
+    <li><a href="extensionservicenow" title="ExtensionServiceNow"><span class="symbol resource"></span>ExtensionServiceNow</a></li>
     <li><a href="maintenancewindow" title="MaintenanceWindow"><span class="symbol resource"></span>MaintenanceWindow</a></li>
     <li><a href="provider" title="Provider"><span class="symbol resource"></span>Provider</a></li>
     <li><a href="responseplay" title="ResponsePlay"><span class="symbol resource"></span>ResponsePlay</a></li>
@@ -60,6 +61,6 @@ A Pulumi package for creating and managing pagerduty cloud resources.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`pagerduty` Terraform Provider](https://github.com/PagerDuty/terraform-provider-pagerduty).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>2.0.2</dd>
+	<dd>2.1.0</dd>
 </dl>
 
