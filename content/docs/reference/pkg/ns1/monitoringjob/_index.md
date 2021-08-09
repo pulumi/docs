@@ -51,6 +51,7 @@ class MyStack : Stack
             },
             Frequency = 60,
             JobType = "tcp",
+            Mute = true,
             Policy = "quorum",
             RapidRecheck = true,
             Regions = 
@@ -102,6 +103,7 @@ func main() {
 			},
 			Frequency:    pulumi.Int(60),
 			JobType:      pulumi.String("tcp"),
+			Mute:         pulumi.Bool(true),
 			Policy:       pulumi.String("quorum"),
 			RapidRecheck: pulumi.Bool(true),
 			Regions: pulumi.StringArray{
@@ -148,6 +150,7 @@ uswest_monitor = ns1.MonitoringJob("uswestMonitor",
     },
     frequency=60,
     job_type="tcp",
+    mute=True,
     policy="quorum",
     rapid_recheck=True,
     regions=[
@@ -185,6 +188,7 @@ const uswestMonitor = new ns1.MonitoringJob("uswest_monitor", {
     },
     frequency: 60,
     jobType: "tcp",
+    mute: true,
     policy: "quorum",
     rapidRecheck: true,
     regions: [
@@ -228,6 +232,7 @@ const uswestMonitor = new ns1.MonitoringJob("uswest_monitor", {
                   <span class="nx">config</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">,</span>
                   <span class="nx">frequency</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
                   <span class="nx">job_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                  <span class="nx">mute</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
                   <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                   <span class="nx">notes</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                   <span class="nx">notify_delay</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
@@ -246,7 +251,7 @@ const uswestMonitor = new ns1.MonitoringJob("uswest_monitor", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewMonitoringJob</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">MonitoringJobArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">MonitoringJob</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewMonitoringJob</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">MonitoringJobArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">MonitoringJob</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -307,7 +312,7 @@ const uswestMonitor = new ns1.MonitoringJob("uswest_monitor", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
@@ -325,7 +330,7 @@ const uswestMonitor = new ns1.MonitoringJob("uswest_monitor", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
@@ -357,7 +362,7 @@ const uswestMonitor = new ns1.MonitoringJob("uswest_monitor", {
 
 ## MonitoringJob Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Architecture and Concepts docs.
 
 ### Inputs
 
@@ -412,6 +417,15 @@ job. See NS1 API docs for supported values.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates if the job is active or temporarily disabled.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="mute_csharp">
+<a href="#mute_csharp" style="color: inherit; text-decoration: inherit;">Mute</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}turn off the notifications for the monitoring job.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
@@ -554,6 +568,15 @@ job. See NS1 API docs for supported values.
     <dd>{{% md %}}Indicates if the job is active or temporarily disabled.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="mute_go">
+<a href="#mute_go" style="color: inherit; text-decoration: inherit;">Mute</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}turn off the notifications for the monitoring job.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
@@ -694,6 +717,15 @@ job. See NS1 API docs for supported values.
     <dd>{{% md %}}Indicates if the job is active or temporarily disabled.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="mute_nodejs">
+<a href="#mute_nodejs" style="color: inherit; text-decoration: inherit;">mute</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}turn off the notifications for the monitoring job.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
@@ -832,6 +864,15 @@ job. See NS1 API docs for supported values.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates if the job is active or temporarily disabled.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="mute_python">
+<a href="#mute_python" style="color: inherit; text-decoration: inherit;">mute</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}turn off the notifications for the monitoring job.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
@@ -1000,6 +1041,7 @@ Get an existing MonitoringJob resource's state with the given name, ID, and opti
         <span class="nx">config</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">,</span>
         <span class="nx">frequency</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
         <span class="nx">job_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">mute</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">notes</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">notify_delay</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
@@ -1014,7 +1056,7 @@ Get an existing MonitoringJob resource's state with the given name, ID, and opti
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetMonitoringJob<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">MonitoringJobState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">MonitoringJob</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetMonitoringJob<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">MonitoringJobState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">MonitoringJob</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -1159,6 +1201,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The type of monitoring job to be run. Refer to the NS1 API documentation (https://ns1.com/api#monitoring-jobs) for supported values which include ping, tcp, dns, http.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_mute_csharp">
+<a href="#state_mute_csharp" style="color: inherit; text-decoration: inherit;">Mute</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}turn off the notifications for the monitoring job.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
@@ -1297,6 +1348,15 @@ job. See NS1 API docs for supported values.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of monitoring job to be run. Refer to the NS1 API documentation (https://ns1.com/api#monitoring-jobs) for supported values which include ping, tcp, dns, http.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_mute_go">
+<a href="#state_mute_go" style="color: inherit; text-decoration: inherit;">Mute</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}turn off the notifications for the monitoring job.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
@@ -1439,6 +1499,15 @@ job. See NS1 API docs for supported values.
     <dd>{{% md %}}The type of monitoring job to be run. Refer to the NS1 API documentation (https://ns1.com/api#monitoring-jobs) for supported values which include ping, tcp, dns, http.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_mute_nodejs">
+<a href="#state_mute_nodejs" style="color: inherit; text-decoration: inherit;">mute</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}turn off the notifications for the monitoring job.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
@@ -1577,6 +1646,15 @@ job. See NS1 API docs for supported values.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of monitoring job to be run. Refer to the NS1 API documentation (https://ns1.com/api#monitoring-jobs) for supported values which include ping, tcp, dns, http.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_mute_python">
+<a href="#state_mute_python" style="color: inherit; text-decoration: inherit;">mute</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}turn off the notifications for the monitoring job.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">

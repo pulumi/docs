@@ -1,8 +1,8 @@
 
 ---
-title: "APIKey"
-title_tag: "ns1.APIKey"
-meta_desc: "Documentation for the ns1.APIKey resource with examples, input properties, output properties, lookup functions, and supporting types."
+title: "User"
+title_tag: "ns1.User"
+meta_desc: "Documentation for the ns1.User resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -13,60 +13,65 @@ meta_desc: "Documentation for the ns1.APIKey resource with examples, input prope
 
 
 
-## Create a APIKey Resource {#create}
+## Create a User Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">APIKey</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">APIKeyArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">User</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">UserArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">APIKey</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-           <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-           <span class="nx">account_manage_account_settings</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
-           <span class="nx">account_manage_apikeys</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
-           <span class="nx">account_manage_ip_whitelist</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
-           <span class="nx">account_manage_payment_methods</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
-           <span class="nx">account_manage_plan</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
-           <span class="nx">account_manage_teams</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
-           <span class="nx">account_manage_users</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
-           <span class="nx">account_view_activity_log</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
-           <span class="nx">account_view_invoices</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
-           <span class="nx">data_manage_datafeeds</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
-           <span class="nx">data_manage_datasources</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
-           <span class="nx">data_push_to_datafeeds</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
-           <span class="nx">dhcp_manage_dhcp</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
-           <span class="nx">dhcp_view_dhcp</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
-           <span class="nx">dns_manage_zones</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
-           <span class="nx">dns_view_zones</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
-           <span class="nx">dns_zones_allow_by_default</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
-           <span class="nx">dns_zones_allows</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
-           <span class="nx">dns_zones_denies</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
-           <span class="nx">ip_whitelist_strict</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
-           <span class="nx">ip_whitelists</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
-           <span class="nx">ipam_manage_ipam</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
-           <span class="nx">ipam_view_ipam</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
-           <span class="nx">monitoring_manage_jobs</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
-           <span class="nx">monitoring_manage_lists</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
-           <span class="nx">monitoring_view_jobs</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
-           <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-           <span class="nx">security_manage_active_directory</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
-           <span class="nx">security_manage_global2fa</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
-           <span class="nx">teams</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">)</span>
+<span class="k">def </span><span class="nx">User</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+         <span class="nx">account_manage_account_settings</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+         <span class="nx">account_manage_apikeys</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+         <span class="nx">account_manage_ip_whitelist</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+         <span class="nx">account_manage_payment_methods</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+         <span class="nx">account_manage_plan</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+         <span class="nx">account_manage_teams</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+         <span class="nx">account_manage_users</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+         <span class="nx">account_view_activity_log</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+         <span class="nx">account_view_invoices</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+         <span class="nx">data_manage_datafeeds</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+         <span class="nx">data_manage_datasources</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+         <span class="nx">data_push_to_datafeeds</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+         <span class="nx">dhcp_manage_dhcp</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+         <span class="nx">dhcp_view_dhcp</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+         <span class="nx">dns_manage_zones</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+         <span class="nx">dns_records_allows</span><span class="p">:</span> <span class="nx">Optional[Sequence[UserDnsRecordsAllowArgs]]</span> = None<span class="p">,</span>
+         <span class="nx">dns_records_denies</span><span class="p">:</span> <span class="nx">Optional[Sequence[UserDnsRecordsDenyArgs]]</span> = None<span class="p">,</span>
+         <span class="nx">dns_view_zones</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+         <span class="nx">dns_zones_allow_by_default</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+         <span class="nx">dns_zones_allows</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+         <span class="nx">dns_zones_denies</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+         <span class="nx">email</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+         <span class="nx">ip_whitelist_strict</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+         <span class="nx">ip_whitelists</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+         <span class="nx">ipam_manage_ipam</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+         <span class="nx">ipam_view_ipam</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+         <span class="nx">monitoring_manage_jobs</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+         <span class="nx">monitoring_manage_lists</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+         <span class="nx">monitoring_view_jobs</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+         <span class="nx">notify</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">,</span>
+         <span class="nx">security_manage_active_directory</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+         <span class="nx">security_manage_global2fa</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+         <span class="nx">teams</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+         <span class="nx">username</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">APIKey</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-           <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">Optional[APIKeyArgs]</a></span> = None<span class="p">,</span>
-           <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<span class="k">def </span><span class="nx">User</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+         <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">UserArgs</a></span><span class="p">,</span>
+         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAPIKey</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">APIKeyArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">APIKey</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewUser</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">UserArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">User</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">APIKey</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">APIKeyArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">User</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">UserArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -78,10 +83,10 @@ meta_desc: "Documentation for the ns1.APIKey resource with examples, input prope
         <span class="property-type">string</span>
     </dt>
     <dd>The unique name of the resource.</dd><dt
-        class="property-optional" title="Optional">
+        class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">APIKeyArgs</a></span>
+        <span class="property-type"><a href="#inputs">UserArgs</a></span>
     </dt>
     <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
@@ -102,10 +107,10 @@ meta_desc: "Documentation for the ns1.APIKey resource with examples, input prope
         <span class="property-type">str</span>
     </dt>
     <dd>The unique name of the resource.</dd><dt
-        class="property-optional" title="Optional">
+        class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">APIKeyArgs</a></span>
+        <span class="property-type"><a href="#inputs">UserArgs</a></span>
     </dt>
     <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
@@ -123,7 +128,7 @@ meta_desc: "Documentation for the ns1.APIKey resource with examples, input prope
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
@@ -132,16 +137,16 @@ meta_desc: "Documentation for the ns1.APIKey resource with examples, input prope
         <span class="property-type">string</span>
     </dt>
     <dd>The unique name of the resource.</dd><dt
-        class="property-optional" title="Optional">
+        class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">APIKeyArgs</a></span>
+        <span class="property-type"><a href="#inputs">UserArgs</a></span>
     </dt>
     <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
@@ -156,10 +161,10 @@ meta_desc: "Documentation for the ns1.APIKey resource with examples, input prope
         <span class="property-type">string</span>
     </dt>
     <dd>The unique name of the resource.</dd><dt
-        class="property-optional" title="Optional">
+        class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">APIKeyArgs</a></span>
+        <span class="property-type"><a href="#inputs">UserArgs</a></span>
     </dt>
     <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
@@ -171,18 +176,36 @@ meta_desc: "Documentation for the ns1.APIKey resource with examples, input prope
 
 {{% /choosable %}}
 
-## APIKey Resource Properties {#properties}
+## User Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Architecture and Concepts docs.
 
 ### Inputs
 
-The APIKey resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
+The User resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="email_csharp">
+<a href="#email_csharp" style="color: inherit; text-decoration: inherit;">Email</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The email address of the user.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="username_csharp">
+<a href="#username_csharp" style="color: inherit; text-decoration: inherit;">Username</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The users login name.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accountmanageaccountsettings_csharp">
 <a href="#accountmanageaccountsettings_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Manage<wbr>Account<wbr>Settings</a>
@@ -190,7 +213,7 @@ The APIKey resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can modify account settings.
+    <dd>{{% md %}}Whether the user can modify account settings.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accountmanageapikeys_csharp">
@@ -199,7 +222,7 @@ The APIKey resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can modify account apikeys.
+    <dd>{{% md %}}Whether the user can modify account apikeys.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accountmanageipwhitelist_csharp">
@@ -208,7 +231,7 @@ The APIKey resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can manage ip whitelist.
+    <dd>{{% md %}}Whether the user can manage ip whitelist.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accountmanagepaymentmethods_csharp">
@@ -217,7 +240,7 @@ The APIKey resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can modify account payment methods.
+    <dd>{{% md %}}Whether the user can modify account payment methods.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="accountmanageplan_csharp">
@@ -226,7 +249,7 @@ The APIKey resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can modify the account plan.
+    <dd>{{% md %}}**Deprecated** Whether the user can modify the account plan.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}obsolete, should no longer be used{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="accountmanageteams_csharp">
@@ -235,7 +258,7 @@ The APIKey resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can modify other teams in the account.
+    <dd>{{% md %}}Whether the user can modify other teams in the account.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accountmanageusers_csharp">
@@ -244,7 +267,7 @@ The APIKey resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can modify account users.
+    <dd>{{% md %}}Whether the user can modify account users.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accountviewactivitylog_csharp">
@@ -253,7 +276,7 @@ The APIKey resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can view activity logs.
+    <dd>{{% md %}}Whether the user can view activity logs.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accountviewinvoices_csharp">
@@ -262,7 +285,7 @@ The APIKey resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can view invoices.
+    <dd>{{% md %}}Whether the user can view invoices.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datamanagedatafeeds_csharp">
@@ -271,7 +294,7 @@ The APIKey resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can modify data feeds.
+    <dd>{{% md %}}Whether the user can modify data feeds.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datamanagedatasources_csharp">
@@ -280,7 +303,7 @@ The APIKey resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can modify data sources.
+    <dd>{{% md %}}Whether the user can modify data sources.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datapushtodatafeeds_csharp">
@@ -289,7 +312,7 @@ The APIKey resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can publish to data feeds.
+    <dd>{{% md %}}Whether the user can publish to data feeds.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dhcpmanagedhcp_csharp">
@@ -298,7 +321,7 @@ The APIKey resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can manage DHCP.
+    <dd>{{% md %}}Whether the user can manage DHCP.
 Only relevant for the DDI product.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -308,7 +331,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can view DHCP.
+    <dd>{{% md %}}Whether the user can view DHCP.
 Only relevant for the DDI product.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -318,8 +341,24 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can modify the accounts zones.
+    <dd>{{% md %}}Whether the user can modify the accounts zones.
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dnsrecordsallows_csharp">
+<a href="#dnsrecordsallows_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Records<wbr>Allows</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#userdnsrecordsallow">List&lt;User<wbr>Dns<wbr>Records<wbr>Allow<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dnsrecordsdenies_csharp">
+<a href="#dnsrecordsdenies_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Records<wbr>Denies</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#userdnsrecordsdeny">List&lt;User<wbr>Dns<wbr>Records<wbr>Deny<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dnsviewzones_csharp">
 <a href="#dnsviewzones_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>View<wbr>Zones</a>
@@ -327,7 +366,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can view the accounts zones.
+    <dd>{{% md %}}Whether the user can view the accounts zones.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dnszonesallowbydefault_csharp">
@@ -345,7 +384,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}List of zones that the apikey may access.
+    <dd>{{% md %}}List of zones that the user may access.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dnszonesdenies_csharp">
@@ -354,7 +393,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}List of zones that the apikey may not access.
+    <dd>{{% md %}}List of zones that the user may not access.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipwhiteliststrict_csharp">
@@ -381,7 +420,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can manage IPAM.
+    <dd>{{% md %}}Whether the user can manage IPAM.
 Only relevant for the DDI product.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -391,9 +430,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can view IPAM.
-Only relevant for the DDI product.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monitoringmanagejobs_csharp">
 <a href="#monitoringmanagejobs_csharp" style="color: inherit; text-decoration: inherit;">Monitoring<wbr>Manage<wbr>Jobs</a>
@@ -401,7 +438,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can modify monitoring jobs.
+    <dd>{{% md %}}Whether the user can modify monitoring jobs.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monitoringmanagelists_csharp">
@@ -410,7 +447,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can modify notification lists.
+    <dd>{{% md %}}Whether the user can modify notification lists.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monitoringviewjobs_csharp">
@@ -419,7 +456,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can view monitoring jobs.
+    <dd>{{% md %}}Whether the user can view monitoring jobs.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
@@ -428,7 +465,16 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The free form name of the apikey.
+    <dd>{{% md %}}The free form name of the user.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="notify_csharp">
+<a href="#notify_csharp" style="color: inherit; text-decoration: inherit;">Notify</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+    </dt>
+    <dd>{{% md %}}Whether or not to notify the user of specified events. Only `billing` is available currently.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="securitymanageactivedirectory_csharp">
@@ -437,7 +483,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can manage global active directory.
+    <dd>{{% md %}}Whether the user can manage global active directory.
 Only relevant for the DDI product.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -447,7 +493,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can manage global two factor authentication.
+    <dd>{{% md %}}Whether the user can manage global two factor authentication.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="teams_csharp">
@@ -456,12 +502,30 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}The teams that the apikey belongs to.
+    <dd>{{% md %}}The teams that the user belongs to.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="email_go">
+<a href="#email_go" style="color: inherit; text-decoration: inherit;">Email</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The email address of the user.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="username_go">
+<a href="#username_go" style="color: inherit; text-decoration: inherit;">Username</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The users login name.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accountmanageaccountsettings_go">
 <a href="#accountmanageaccountsettings_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Manage<wbr>Account<wbr>Settings</a>
@@ -469,7 +533,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can modify account settings.
+    <dd>{{% md %}}Whether the user can modify account settings.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accountmanageapikeys_go">
@@ -478,7 +542,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can modify account apikeys.
+    <dd>{{% md %}}Whether the user can modify account apikeys.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accountmanageipwhitelist_go">
@@ -487,7 +551,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can manage ip whitelist.
+    <dd>{{% md %}}Whether the user can manage ip whitelist.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accountmanagepaymentmethods_go">
@@ -496,7 +560,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can modify account payment methods.
+    <dd>{{% md %}}Whether the user can modify account payment methods.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="accountmanageplan_go">
@@ -505,7 +569,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can modify the account plan.
+    <dd>{{% md %}}**Deprecated** Whether the user can modify the account plan.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}obsolete, should no longer be used{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="accountmanageteams_go">
@@ -514,7 +578,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can modify other teams in the account.
+    <dd>{{% md %}}Whether the user can modify other teams in the account.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accountmanageusers_go">
@@ -523,7 +587,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can modify account users.
+    <dd>{{% md %}}Whether the user can modify account users.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accountviewactivitylog_go">
@@ -532,7 +596,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can view activity logs.
+    <dd>{{% md %}}Whether the user can view activity logs.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accountviewinvoices_go">
@@ -541,7 +605,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can view invoices.
+    <dd>{{% md %}}Whether the user can view invoices.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datamanagedatafeeds_go">
@@ -550,7 +614,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can modify data feeds.
+    <dd>{{% md %}}Whether the user can modify data feeds.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datamanagedatasources_go">
@@ -559,7 +623,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can modify data sources.
+    <dd>{{% md %}}Whether the user can modify data sources.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datapushtodatafeeds_go">
@@ -568,7 +632,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can publish to data feeds.
+    <dd>{{% md %}}Whether the user can publish to data feeds.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dhcpmanagedhcp_go">
@@ -577,7 +641,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can manage DHCP.
+    <dd>{{% md %}}Whether the user can manage DHCP.
 Only relevant for the DDI product.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -587,7 +651,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can view DHCP.
+    <dd>{{% md %}}Whether the user can view DHCP.
 Only relevant for the DDI product.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -597,8 +661,24 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can modify the accounts zones.
+    <dd>{{% md %}}Whether the user can modify the accounts zones.
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dnsrecordsallows_go">
+<a href="#dnsrecordsallows_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Records<wbr>Allows</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#userdnsrecordsallow">[]User<wbr>Dns<wbr>Records<wbr>Allow<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dnsrecordsdenies_go">
+<a href="#dnsrecordsdenies_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Records<wbr>Denies</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#userdnsrecordsdeny">[]User<wbr>Dns<wbr>Records<wbr>Deny<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dnsviewzones_go">
 <a href="#dnsviewzones_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>View<wbr>Zones</a>
@@ -606,7 +686,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can view the accounts zones.
+    <dd>{{% md %}}Whether the user can view the accounts zones.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dnszonesallowbydefault_go">
@@ -624,7 +704,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}List of zones that the apikey may access.
+    <dd>{{% md %}}List of zones that the user may access.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dnszonesdenies_go">
@@ -633,7 +713,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}List of zones that the apikey may not access.
+    <dd>{{% md %}}List of zones that the user may not access.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipwhiteliststrict_go">
@@ -660,7 +740,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can manage IPAM.
+    <dd>{{% md %}}Whether the user can manage IPAM.
 Only relevant for the DDI product.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -670,9 +750,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can view IPAM.
-Only relevant for the DDI product.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monitoringmanagejobs_go">
 <a href="#monitoringmanagejobs_go" style="color: inherit; text-decoration: inherit;">Monitoring<wbr>Manage<wbr>Jobs</a>
@@ -680,7 +758,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can modify monitoring jobs.
+    <dd>{{% md %}}Whether the user can modify monitoring jobs.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monitoringmanagelists_go">
@@ -689,7 +767,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can modify notification lists.
+    <dd>{{% md %}}Whether the user can modify notification lists.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monitoringviewjobs_go">
@@ -698,7 +776,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can view monitoring jobs.
+    <dd>{{% md %}}Whether the user can view monitoring jobs.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
@@ -707,7 +785,16 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The free form name of the apikey.
+    <dd>{{% md %}}The free form name of the user.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="notify_go">
+<a href="#notify_go" style="color: inherit; text-decoration: inherit;">Notify</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]interface{}</span>
+    </dt>
+    <dd>{{% md %}}Whether or not to notify the user of specified events. Only `billing` is available currently.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="securitymanageactivedirectory_go">
@@ -716,7 +803,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can manage global active directory.
+    <dd>{{% md %}}Whether the user can manage global active directory.
 Only relevant for the DDI product.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -726,7 +813,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can manage global two factor authentication.
+    <dd>{{% md %}}Whether the user can manage global two factor authentication.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="teams_go">
@@ -735,12 +822,30 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}The teams that the apikey belongs to.
+    <dd>{{% md %}}The teams that the user belongs to.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="email_nodejs">
+<a href="#email_nodejs" style="color: inherit; text-decoration: inherit;">email</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The email address of the user.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="username_nodejs">
+<a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The users login name.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accountmanageaccountsettings_nodejs">
 <a href="#accountmanageaccountsettings_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Manage<wbr>Account<wbr>Settings</a>
@@ -748,7 +853,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can modify account settings.
+    <dd>{{% md %}}Whether the user can modify account settings.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accountmanageapikeys_nodejs">
@@ -757,7 +862,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can modify account apikeys.
+    <dd>{{% md %}}Whether the user can modify account apikeys.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accountmanageipwhitelist_nodejs">
@@ -766,7 +871,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can manage ip whitelist.
+    <dd>{{% md %}}Whether the user can manage ip whitelist.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accountmanagepaymentmethods_nodejs">
@@ -775,7 +880,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can modify account payment methods.
+    <dd>{{% md %}}Whether the user can modify account payment methods.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="accountmanageplan_nodejs">
@@ -784,7 +889,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can modify the account plan.
+    <dd>{{% md %}}**Deprecated** Whether the user can modify the account plan.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}obsolete, should no longer be used{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="accountmanageteams_nodejs">
@@ -793,7 +898,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can modify other teams in the account.
+    <dd>{{% md %}}Whether the user can modify other teams in the account.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accountmanageusers_nodejs">
@@ -802,7 +907,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can modify account users.
+    <dd>{{% md %}}Whether the user can modify account users.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accountviewactivitylog_nodejs">
@@ -811,7 +916,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can view activity logs.
+    <dd>{{% md %}}Whether the user can view activity logs.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accountviewinvoices_nodejs">
@@ -820,7 +925,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can view invoices.
+    <dd>{{% md %}}Whether the user can view invoices.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datamanagedatafeeds_nodejs">
@@ -829,7 +934,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can modify data feeds.
+    <dd>{{% md %}}Whether the user can modify data feeds.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datamanagedatasources_nodejs">
@@ -838,7 +943,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can modify data sources.
+    <dd>{{% md %}}Whether the user can modify data sources.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datapushtodatafeeds_nodejs">
@@ -847,7 +952,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can publish to data feeds.
+    <dd>{{% md %}}Whether the user can publish to data feeds.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dhcpmanagedhcp_nodejs">
@@ -856,7 +961,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can manage DHCP.
+    <dd>{{% md %}}Whether the user can manage DHCP.
 Only relevant for the DDI product.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -866,7 +971,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can view DHCP.
+    <dd>{{% md %}}Whether the user can view DHCP.
 Only relevant for the DDI product.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -876,8 +981,24 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can modify the accounts zones.
+    <dd>{{% md %}}Whether the user can modify the accounts zones.
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dnsrecordsallows_nodejs">
+<a href="#dnsrecordsallows_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Records<wbr>Allows</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#userdnsrecordsallow">User<wbr>Dns<wbr>Records<wbr>Allow<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dnsrecordsdenies_nodejs">
+<a href="#dnsrecordsdenies_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Records<wbr>Denies</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#userdnsrecordsdeny">User<wbr>Dns<wbr>Records<wbr>Deny<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dnsviewzones_nodejs">
 <a href="#dnsviewzones_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>View<wbr>Zones</a>
@@ -885,7 +1006,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can view the accounts zones.
+    <dd>{{% md %}}Whether the user can view the accounts zones.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dnszonesallowbydefault_nodejs">
@@ -903,7 +1024,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}List of zones that the apikey may access.
+    <dd>{{% md %}}List of zones that the user may access.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dnszonesdenies_nodejs">
@@ -912,7 +1033,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}List of zones that the apikey may not access.
+    <dd>{{% md %}}List of zones that the user may not access.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipwhiteliststrict_nodejs">
@@ -939,7 +1060,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can manage IPAM.
+    <dd>{{% md %}}Whether the user can manage IPAM.
 Only relevant for the DDI product.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -949,9 +1070,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can view IPAM.
-Only relevant for the DDI product.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monitoringmanagejobs_nodejs">
 <a href="#monitoringmanagejobs_nodejs" style="color: inherit; text-decoration: inherit;">monitoring<wbr>Manage<wbr>Jobs</a>
@@ -959,7 +1078,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can modify monitoring jobs.
+    <dd>{{% md %}}Whether the user can modify monitoring jobs.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monitoringmanagelists_nodejs">
@@ -968,7 +1087,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can modify notification lists.
+    <dd>{{% md %}}Whether the user can modify notification lists.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monitoringviewjobs_nodejs">
@@ -977,7 +1096,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can view monitoring jobs.
+    <dd>{{% md %}}Whether the user can view monitoring jobs.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
@@ -986,7 +1105,16 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The free form name of the apikey.
+    <dd>{{% md %}}The free form name of the user.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="notify_nodejs">
+<a href="#notify_nodejs" style="color: inherit; text-decoration: inherit;">notify</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: any}</span>
+    </dt>
+    <dd>{{% md %}}Whether or not to notify the user of specified events. Only `billing` is available currently.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="securitymanageactivedirectory_nodejs">
@@ -995,7 +1123,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can manage global active directory.
+    <dd>{{% md %}}Whether the user can manage global active directory.
 Only relevant for the DDI product.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1005,7 +1133,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can manage global two factor authentication.
+    <dd>{{% md %}}Whether the user can manage global two factor authentication.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="teams_nodejs">
@@ -1014,12 +1142,30 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}The teams that the apikey belongs to.
+    <dd>{{% md %}}The teams that the user belongs to.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="email_python">
+<a href="#email_python" style="color: inherit; text-decoration: inherit;">email</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The email address of the user.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="username_python">
+<a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The users login name.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="account_manage_account_settings_python">
 <a href="#account_manage_account_settings_python" style="color: inherit; text-decoration: inherit;">account_<wbr>manage_<wbr>account_<wbr>settings</a>
@@ -1027,7 +1173,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can modify account settings.
+    <dd>{{% md %}}Whether the user can modify account settings.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="account_manage_apikeys_python">
@@ -1036,7 +1182,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can modify account apikeys.
+    <dd>{{% md %}}Whether the user can modify account apikeys.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="account_manage_ip_whitelist_python">
@@ -1045,7 +1191,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can manage ip whitelist.
+    <dd>{{% md %}}Whether the user can manage ip whitelist.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="account_manage_payment_methods_python">
@@ -1054,7 +1200,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can modify account payment methods.
+    <dd>{{% md %}}Whether the user can modify account payment methods.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="account_manage_plan_python">
@@ -1063,7 +1209,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can modify the account plan.
+    <dd>{{% md %}}**Deprecated** Whether the user can modify the account plan.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}obsolete, should no longer be used{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="account_manage_teams_python">
@@ -1072,7 +1218,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can modify other teams in the account.
+    <dd>{{% md %}}Whether the user can modify other teams in the account.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="account_manage_users_python">
@@ -1081,7 +1227,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can modify account users.
+    <dd>{{% md %}}Whether the user can modify account users.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="account_view_activity_log_python">
@@ -1090,7 +1236,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can view activity logs.
+    <dd>{{% md %}}Whether the user can view activity logs.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="account_view_invoices_python">
@@ -1099,7 +1245,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can view invoices.
+    <dd>{{% md %}}Whether the user can view invoices.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="data_manage_datafeeds_python">
@@ -1108,7 +1254,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can modify data feeds.
+    <dd>{{% md %}}Whether the user can modify data feeds.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="data_manage_datasources_python">
@@ -1117,7 +1263,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can modify data sources.
+    <dd>{{% md %}}Whether the user can modify data sources.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="data_push_to_datafeeds_python">
@@ -1126,7 +1272,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can publish to data feeds.
+    <dd>{{% md %}}Whether the user can publish to data feeds.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dhcp_manage_dhcp_python">
@@ -1135,7 +1281,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can manage DHCP.
+    <dd>{{% md %}}Whether the user can manage DHCP.
 Only relevant for the DDI product.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1145,7 +1291,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can view DHCP.
+    <dd>{{% md %}}Whether the user can view DHCP.
 Only relevant for the DDI product.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1155,8 +1301,24 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can modify the accounts zones.
+    <dd>{{% md %}}Whether the user can modify the accounts zones.
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dns_records_allows_python">
+<a href="#dns_records_allows_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>records_<wbr>allows</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#userdnsrecordsallow">Sequence[User<wbr>Dns<wbr>Records<wbr>Allow<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dns_records_denies_python">
+<a href="#dns_records_denies_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>records_<wbr>denies</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#userdnsrecordsdeny">Sequence[User<wbr>Dns<wbr>Records<wbr>Deny<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dns_view_zones_python">
 <a href="#dns_view_zones_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>view_<wbr>zones</a>
@@ -1164,7 +1326,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can view the accounts zones.
+    <dd>{{% md %}}Whether the user can view the accounts zones.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dns_zones_allow_by_default_python">
@@ -1182,7 +1344,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}List of zones that the apikey may access.
+    <dd>{{% md %}}List of zones that the user may access.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dns_zones_denies_python">
@@ -1191,7 +1353,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}List of zones that the apikey may not access.
+    <dd>{{% md %}}List of zones that the user may not access.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ip_whitelist_strict_python">
@@ -1218,7 +1380,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can manage IPAM.
+    <dd>{{% md %}}Whether the user can manage IPAM.
 Only relevant for the DDI product.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1228,9 +1390,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can view IPAM.
-Only relevant for the DDI product.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monitoring_manage_jobs_python">
 <a href="#monitoring_manage_jobs_python" style="color: inherit; text-decoration: inherit;">monitoring_<wbr>manage_<wbr>jobs</a>
@@ -1238,7 +1398,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can modify monitoring jobs.
+    <dd>{{% md %}}Whether the user can modify monitoring jobs.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monitoring_manage_lists_python">
@@ -1247,7 +1407,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can modify notification lists.
+    <dd>{{% md %}}Whether the user can modify notification lists.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monitoring_view_jobs_python">
@@ -1256,7 +1416,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can view monitoring jobs.
+    <dd>{{% md %}}Whether the user can view monitoring jobs.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
@@ -1265,7 +1425,16 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The free form name of the apikey.
+    <dd>{{% md %}}The free form name of the user.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="notify_python">
+<a href="#notify_python" style="color: inherit; text-decoration: inherit;">notify</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, Any]</span>
+    </dt>
+    <dd>{{% md %}}Whether or not to notify the user of specified events. Only `billing` is available currently.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="security_manage_active_directory_python">
@@ -1274,7 +1443,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can manage global active directory.
+    <dd>{{% md %}}Whether the user can manage global active directory.
 Only relevant for the DDI product.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1284,7 +1453,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can manage global two factor authentication.
+    <dd>{{% md %}}Whether the user can manage global two factor authentication.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="teams_python">
@@ -1293,14 +1462,14 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}The teams that the apikey belongs to.
+    <dd>{{% md %}}The teams that the user belongs to.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
 ### Outputs
 
-All [input](#inputs) properties are implicitly available as output properties. Additionally, the APIKey resource produces the following output properties:
+All [input](#inputs) properties are implicitly available as output properties. Additionally, the User resource produces the following output properties:
 
 
 
@@ -1313,16 +1482,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="key_csharp">
-<a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}(Computed) The apikeys authentication token.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1334,16 +1494,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="key_go">
-<a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}(Computed) The apikeys authentication token.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1355,16 +1506,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="key_nodejs">
-<a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}(Computed) The apikeys authentication token.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1376,27 +1518,18 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="key_python">
-<a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}(Computed) The apikeys authentication token.
-{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
 
-## Look up an Existing APIKey Resource {#look-up}
+## Look up an Existing User Resource {#look-up}
 
-Get an existing APIKey resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
+Get an existing User resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">APIKeyState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">APIKey</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">UserState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">User</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1419,30 +1552,34 @@ Get an existing APIKey resource's state with the given name, ID, and optional ex
         <span class="nx">dhcp_manage_dhcp</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">dhcp_view_dhcp</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">dns_manage_zones</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">dns_records_allows</span><span class="p">:</span> <span class="nx">Optional[Sequence[UserDnsRecordsAllowArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">dns_records_denies</span><span class="p">:</span> <span class="nx">Optional[Sequence[UserDnsRecordsDenyArgs]]</span> = None<span class="p">,</span>
         <span class="nx">dns_view_zones</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">dns_zones_allow_by_default</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">dns_zones_allows</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
         <span class="nx">dns_zones_denies</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+        <span class="nx">email</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">ip_whitelist_strict</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">ip_whitelists</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
         <span class="nx">ipam_manage_ipam</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">ipam_view_ipam</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
-        <span class="nx">key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">monitoring_manage_jobs</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">monitoring_manage_lists</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">monitoring_view_jobs</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">notify</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">,</span>
         <span class="nx">security_manage_active_directory</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">security_manage_global2fa</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
-        <span class="nx">teams</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">) -&gt;</span> APIKey</code></pre></div>
+        <span class="nx">teams</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+        <span class="nx">username</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> User</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetAPIKey<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">APIKeyState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">APIKey</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetUser<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">UserState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">User</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">APIKey</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">APIKeyState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">User</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">UserState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1553,7 +1690,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can modify account settings.
+    <dd>{{% md %}}Whether the user can modify account settings.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_accountmanageapikeys_csharp">
@@ -1562,7 +1699,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can modify account apikeys.
+    <dd>{{% md %}}Whether the user can modify account apikeys.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_accountmanageipwhitelist_csharp">
@@ -1571,7 +1708,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can manage ip whitelist.
+    <dd>{{% md %}}Whether the user can manage ip whitelist.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_accountmanagepaymentmethods_csharp">
@@ -1580,7 +1717,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can modify account payment methods.
+    <dd>{{% md %}}Whether the user can modify account payment methods.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_accountmanageplan_csharp">
@@ -1589,7 +1726,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can modify the account plan.
+    <dd>{{% md %}}**Deprecated** Whether the user can modify the account plan.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}obsolete, should no longer be used{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_accountmanageteams_csharp">
@@ -1598,7 +1735,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can modify other teams in the account.
+    <dd>{{% md %}}Whether the user can modify other teams in the account.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_accountmanageusers_csharp">
@@ -1607,7 +1744,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can modify account users.
+    <dd>{{% md %}}Whether the user can modify account users.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_accountviewactivitylog_csharp">
@@ -1616,7 +1753,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can view activity logs.
+    <dd>{{% md %}}Whether the user can view activity logs.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_accountviewinvoices_csharp">
@@ -1625,7 +1762,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can view invoices.
+    <dd>{{% md %}}Whether the user can view invoices.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_datamanagedatafeeds_csharp">
@@ -1634,7 +1771,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can modify data feeds.
+    <dd>{{% md %}}Whether the user can modify data feeds.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_datamanagedatasources_csharp">
@@ -1643,7 +1780,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can modify data sources.
+    <dd>{{% md %}}Whether the user can modify data sources.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_datapushtodatafeeds_csharp">
@@ -1652,7 +1789,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can publish to data feeds.
+    <dd>{{% md %}}Whether the user can publish to data feeds.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dhcpmanagedhcp_csharp">
@@ -1661,7 +1798,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can manage DHCP.
+    <dd>{{% md %}}Whether the user can manage DHCP.
 Only relevant for the DDI product.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1671,7 +1808,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can view DHCP.
+    <dd>{{% md %}}Whether the user can view DHCP.
 Only relevant for the DDI product.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1681,8 +1818,24 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can modify the accounts zones.
+    <dd>{{% md %}}Whether the user can modify the accounts zones.
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_dnsrecordsallows_csharp">
+<a href="#state_dnsrecordsallows_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Records<wbr>Allows</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#userdnsrecordsallow">List&lt;User<wbr>Dns<wbr>Records<wbr>Allow<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_dnsrecordsdenies_csharp">
+<a href="#state_dnsrecordsdenies_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Records<wbr>Denies</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#userdnsrecordsdeny">List&lt;User<wbr>Dns<wbr>Records<wbr>Deny<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dnsviewzones_csharp">
 <a href="#state_dnsviewzones_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>View<wbr>Zones</a>
@@ -1690,7 +1843,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can view the accounts zones.
+    <dd>{{% md %}}Whether the user can view the accounts zones.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dnszonesallowbydefault_csharp">
@@ -1708,7 +1861,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}List of zones that the apikey may access.
+    <dd>{{% md %}}List of zones that the user may access.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dnszonesdenies_csharp">
@@ -1717,7 +1870,16 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}List of zones that the apikey may not access.
+    <dd>{{% md %}}List of zones that the user may not access.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_email_csharp">
+<a href="#state_email_csharp" style="color: inherit; text-decoration: inherit;">Email</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The email address of the user.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipwhiteliststrict_csharp">
@@ -1744,7 +1906,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can manage IPAM.
+    <dd>{{% md %}}Whether the user can manage IPAM.
 Only relevant for the DDI product.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1754,18 +1916,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can view IPAM.
-Only relevant for the DDI product.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="state_key_csharp">
-<a href="#state_key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}(Computed) The apikeys authentication token.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_monitoringmanagejobs_csharp">
 <a href="#state_monitoringmanagejobs_csharp" style="color: inherit; text-decoration: inherit;">Monitoring<wbr>Manage<wbr>Jobs</a>
@@ -1773,7 +1924,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can modify monitoring jobs.
+    <dd>{{% md %}}Whether the user can modify monitoring jobs.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_monitoringmanagelists_csharp">
@@ -1782,7 +1933,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can modify notification lists.
+    <dd>{{% md %}}Whether the user can modify notification lists.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_monitoringviewjobs_csharp">
@@ -1791,7 +1942,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can view monitoring jobs.
+    <dd>{{% md %}}Whether the user can view monitoring jobs.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
@@ -1800,7 +1951,16 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The free form name of the apikey.
+    <dd>{{% md %}}The free form name of the user.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_notify_csharp">
+<a href="#state_notify_csharp" style="color: inherit; text-decoration: inherit;">Notify</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+    </dt>
+    <dd>{{% md %}}Whether or not to notify the user of specified events. Only `billing` is available currently.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_securitymanageactivedirectory_csharp">
@@ -1809,7 +1969,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can manage global active directory.
+    <dd>{{% md %}}Whether the user can manage global active directory.
 Only relevant for the DDI product.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1819,7 +1979,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can manage global two factor authentication.
+    <dd>{{% md %}}Whether the user can manage global two factor authentication.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_teams_csharp">
@@ -1828,7 +1988,16 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}The teams that the apikey belongs to.
+    <dd>{{% md %}}The teams that the user belongs to.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_username_csharp">
+<a href="#state_username_csharp" style="color: inherit; text-decoration: inherit;">Username</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The users login name.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1841,7 +2010,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can modify account settings.
+    <dd>{{% md %}}Whether the user can modify account settings.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_accountmanageapikeys_go">
@@ -1850,7 +2019,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can modify account apikeys.
+    <dd>{{% md %}}Whether the user can modify account apikeys.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_accountmanageipwhitelist_go">
@@ -1859,7 +2028,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can manage ip whitelist.
+    <dd>{{% md %}}Whether the user can manage ip whitelist.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_accountmanagepaymentmethods_go">
@@ -1868,7 +2037,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can modify account payment methods.
+    <dd>{{% md %}}Whether the user can modify account payment methods.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_accountmanageplan_go">
@@ -1877,7 +2046,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can modify the account plan.
+    <dd>{{% md %}}**Deprecated** Whether the user can modify the account plan.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}obsolete, should no longer be used{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_accountmanageteams_go">
@@ -1886,7 +2055,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can modify other teams in the account.
+    <dd>{{% md %}}Whether the user can modify other teams in the account.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_accountmanageusers_go">
@@ -1895,7 +2064,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can modify account users.
+    <dd>{{% md %}}Whether the user can modify account users.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_accountviewactivitylog_go">
@@ -1904,7 +2073,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can view activity logs.
+    <dd>{{% md %}}Whether the user can view activity logs.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_accountviewinvoices_go">
@@ -1913,7 +2082,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can view invoices.
+    <dd>{{% md %}}Whether the user can view invoices.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_datamanagedatafeeds_go">
@@ -1922,7 +2091,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can modify data feeds.
+    <dd>{{% md %}}Whether the user can modify data feeds.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_datamanagedatasources_go">
@@ -1931,7 +2100,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can modify data sources.
+    <dd>{{% md %}}Whether the user can modify data sources.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_datapushtodatafeeds_go">
@@ -1940,7 +2109,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can publish to data feeds.
+    <dd>{{% md %}}Whether the user can publish to data feeds.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dhcpmanagedhcp_go">
@@ -1949,7 +2118,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can manage DHCP.
+    <dd>{{% md %}}Whether the user can manage DHCP.
 Only relevant for the DDI product.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1959,7 +2128,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can view DHCP.
+    <dd>{{% md %}}Whether the user can view DHCP.
 Only relevant for the DDI product.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1969,8 +2138,24 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can modify the accounts zones.
+    <dd>{{% md %}}Whether the user can modify the accounts zones.
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_dnsrecordsallows_go">
+<a href="#state_dnsrecordsallows_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Records<wbr>Allows</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#userdnsrecordsallow">[]User<wbr>Dns<wbr>Records<wbr>Allow<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_dnsrecordsdenies_go">
+<a href="#state_dnsrecordsdenies_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Records<wbr>Denies</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#userdnsrecordsdeny">[]User<wbr>Dns<wbr>Records<wbr>Deny<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dnsviewzones_go">
 <a href="#state_dnsviewzones_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>View<wbr>Zones</a>
@@ -1978,7 +2163,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can view the accounts zones.
+    <dd>{{% md %}}Whether the user can view the accounts zones.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dnszonesallowbydefault_go">
@@ -1996,7 +2181,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}List of zones that the apikey may access.
+    <dd>{{% md %}}List of zones that the user may access.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dnszonesdenies_go">
@@ -2005,7 +2190,16 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}List of zones that the apikey may not access.
+    <dd>{{% md %}}List of zones that the user may not access.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_email_go">
+<a href="#state_email_go" style="color: inherit; text-decoration: inherit;">Email</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The email address of the user.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipwhiteliststrict_go">
@@ -2032,7 +2226,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can manage IPAM.
+    <dd>{{% md %}}Whether the user can manage IPAM.
 Only relevant for the DDI product.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2042,18 +2236,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can view IPAM.
-Only relevant for the DDI product.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="state_key_go">
-<a href="#state_key_go" style="color: inherit; text-decoration: inherit;">Key</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}(Computed) The apikeys authentication token.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_monitoringmanagejobs_go">
 <a href="#state_monitoringmanagejobs_go" style="color: inherit; text-decoration: inherit;">Monitoring<wbr>Manage<wbr>Jobs</a>
@@ -2061,7 +2244,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can modify monitoring jobs.
+    <dd>{{% md %}}Whether the user can modify monitoring jobs.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_monitoringmanagelists_go">
@@ -2070,7 +2253,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can modify notification lists.
+    <dd>{{% md %}}Whether the user can modify notification lists.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_monitoringviewjobs_go">
@@ -2079,7 +2262,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can view monitoring jobs.
+    <dd>{{% md %}}Whether the user can view monitoring jobs.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
@@ -2088,7 +2271,16 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The free form name of the apikey.
+    <dd>{{% md %}}The free form name of the user.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_notify_go">
+<a href="#state_notify_go" style="color: inherit; text-decoration: inherit;">Notify</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]interface{}</span>
+    </dt>
+    <dd>{{% md %}}Whether or not to notify the user of specified events. Only `billing` is available currently.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_securitymanageactivedirectory_go">
@@ -2097,7 +2289,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can manage global active directory.
+    <dd>{{% md %}}Whether the user can manage global active directory.
 Only relevant for the DDI product.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2107,7 +2299,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can manage global two factor authentication.
+    <dd>{{% md %}}Whether the user can manage global two factor authentication.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_teams_go">
@@ -2116,7 +2308,16 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}The teams that the apikey belongs to.
+    <dd>{{% md %}}The teams that the user belongs to.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_username_go">
+<a href="#state_username_go" style="color: inherit; text-decoration: inherit;">Username</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The users login name.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2129,7 +2330,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can modify account settings.
+    <dd>{{% md %}}Whether the user can modify account settings.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_accountmanageapikeys_nodejs">
@@ -2138,7 +2339,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can modify account apikeys.
+    <dd>{{% md %}}Whether the user can modify account apikeys.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_accountmanageipwhitelist_nodejs">
@@ -2147,7 +2348,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can manage ip whitelist.
+    <dd>{{% md %}}Whether the user can manage ip whitelist.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_accountmanagepaymentmethods_nodejs">
@@ -2156,7 +2357,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can modify account payment methods.
+    <dd>{{% md %}}Whether the user can modify account payment methods.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_accountmanageplan_nodejs">
@@ -2165,7 +2366,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can modify the account plan.
+    <dd>{{% md %}}**Deprecated** Whether the user can modify the account plan.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}obsolete, should no longer be used{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_accountmanageteams_nodejs">
@@ -2174,7 +2375,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can modify other teams in the account.
+    <dd>{{% md %}}Whether the user can modify other teams in the account.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_accountmanageusers_nodejs">
@@ -2183,7 +2384,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can modify account users.
+    <dd>{{% md %}}Whether the user can modify account users.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_accountviewactivitylog_nodejs">
@@ -2192,7 +2393,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can view activity logs.
+    <dd>{{% md %}}Whether the user can view activity logs.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_accountviewinvoices_nodejs">
@@ -2201,7 +2402,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can view invoices.
+    <dd>{{% md %}}Whether the user can view invoices.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_datamanagedatafeeds_nodejs">
@@ -2210,7 +2411,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can modify data feeds.
+    <dd>{{% md %}}Whether the user can modify data feeds.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_datamanagedatasources_nodejs">
@@ -2219,7 +2420,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can modify data sources.
+    <dd>{{% md %}}Whether the user can modify data sources.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_datapushtodatafeeds_nodejs">
@@ -2228,7 +2429,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can publish to data feeds.
+    <dd>{{% md %}}Whether the user can publish to data feeds.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dhcpmanagedhcp_nodejs">
@@ -2237,7 +2438,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can manage DHCP.
+    <dd>{{% md %}}Whether the user can manage DHCP.
 Only relevant for the DDI product.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2247,7 +2448,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can view DHCP.
+    <dd>{{% md %}}Whether the user can view DHCP.
 Only relevant for the DDI product.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2257,8 +2458,24 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can modify the accounts zones.
+    <dd>{{% md %}}Whether the user can modify the accounts zones.
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_dnsrecordsallows_nodejs">
+<a href="#state_dnsrecordsallows_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Records<wbr>Allows</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#userdnsrecordsallow">User<wbr>Dns<wbr>Records<wbr>Allow<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_dnsrecordsdenies_nodejs">
+<a href="#state_dnsrecordsdenies_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Records<wbr>Denies</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#userdnsrecordsdeny">User<wbr>Dns<wbr>Records<wbr>Deny<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dnsviewzones_nodejs">
 <a href="#state_dnsviewzones_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>View<wbr>Zones</a>
@@ -2266,7 +2483,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can view the accounts zones.
+    <dd>{{% md %}}Whether the user can view the accounts zones.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dnszonesallowbydefault_nodejs">
@@ -2284,7 +2501,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}List of zones that the apikey may access.
+    <dd>{{% md %}}List of zones that the user may access.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dnszonesdenies_nodejs">
@@ -2293,7 +2510,16 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}List of zones that the apikey may not access.
+    <dd>{{% md %}}List of zones that the user may not access.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_email_nodejs">
+<a href="#state_email_nodejs" style="color: inherit; text-decoration: inherit;">email</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The email address of the user.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipwhiteliststrict_nodejs">
@@ -2320,7 +2546,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can manage IPAM.
+    <dd>{{% md %}}Whether the user can manage IPAM.
 Only relevant for the DDI product.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2330,18 +2556,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can view IPAM.
-Only relevant for the DDI product.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="state_key_nodejs">
-<a href="#state_key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}(Computed) The apikeys authentication token.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_monitoringmanagejobs_nodejs">
 <a href="#state_monitoringmanagejobs_nodejs" style="color: inherit; text-decoration: inherit;">monitoring<wbr>Manage<wbr>Jobs</a>
@@ -2349,7 +2564,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can modify monitoring jobs.
+    <dd>{{% md %}}Whether the user can modify monitoring jobs.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_monitoringmanagelists_nodejs">
@@ -2358,7 +2573,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can modify notification lists.
+    <dd>{{% md %}}Whether the user can modify notification lists.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_monitoringviewjobs_nodejs">
@@ -2367,7 +2582,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can view monitoring jobs.
+    <dd>{{% md %}}Whether the user can view monitoring jobs.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
@@ -2376,7 +2591,16 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The free form name of the apikey.
+    <dd>{{% md %}}The free form name of the user.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_notify_nodejs">
+<a href="#state_notify_nodejs" style="color: inherit; text-decoration: inherit;">notify</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: any}</span>
+    </dt>
+    <dd>{{% md %}}Whether or not to notify the user of specified events. Only `billing` is available currently.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_securitymanageactivedirectory_nodejs">
@@ -2385,7 +2609,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can manage global active directory.
+    <dd>{{% md %}}Whether the user can manage global active directory.
 Only relevant for the DDI product.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2395,7 +2619,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can manage global two factor authentication.
+    <dd>{{% md %}}Whether the user can manage global two factor authentication.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_teams_nodejs">
@@ -2404,7 +2628,16 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}The teams that the apikey belongs to.
+    <dd>{{% md %}}The teams that the user belongs to.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_username_nodejs">
+<a href="#state_username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The users login name.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2417,7 +2650,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can modify account settings.
+    <dd>{{% md %}}Whether the user can modify account settings.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_account_manage_apikeys_python">
@@ -2426,7 +2659,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can modify account apikeys.
+    <dd>{{% md %}}Whether the user can modify account apikeys.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_account_manage_ip_whitelist_python">
@@ -2435,7 +2668,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can manage ip whitelist.
+    <dd>{{% md %}}Whether the user can manage ip whitelist.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_account_manage_payment_methods_python">
@@ -2444,7 +2677,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can modify account payment methods.
+    <dd>{{% md %}}Whether the user can modify account payment methods.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_account_manage_plan_python">
@@ -2453,7 +2686,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can modify the account plan.
+    <dd>{{% md %}}**Deprecated** Whether the user can modify the account plan.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}obsolete, should no longer be used{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_account_manage_teams_python">
@@ -2462,7 +2695,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can modify other teams in the account.
+    <dd>{{% md %}}Whether the user can modify other teams in the account.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_account_manage_users_python">
@@ -2471,7 +2704,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can modify account users.
+    <dd>{{% md %}}Whether the user can modify account users.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_account_view_activity_log_python">
@@ -2480,7 +2713,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can view activity logs.
+    <dd>{{% md %}}Whether the user can view activity logs.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_account_view_invoices_python">
@@ -2489,7 +2722,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can view invoices.
+    <dd>{{% md %}}Whether the user can view invoices.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_data_manage_datafeeds_python">
@@ -2498,7 +2731,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can modify data feeds.
+    <dd>{{% md %}}Whether the user can modify data feeds.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_data_manage_datasources_python">
@@ -2507,7 +2740,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can modify data sources.
+    <dd>{{% md %}}Whether the user can modify data sources.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_data_push_to_datafeeds_python">
@@ -2516,7 +2749,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can publish to data feeds.
+    <dd>{{% md %}}Whether the user can publish to data feeds.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dhcp_manage_dhcp_python">
@@ -2525,7 +2758,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can manage DHCP.
+    <dd>{{% md %}}Whether the user can manage DHCP.
 Only relevant for the DDI product.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2535,7 +2768,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can view DHCP.
+    <dd>{{% md %}}Whether the user can view DHCP.
 Only relevant for the DDI product.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2545,8 +2778,24 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can modify the accounts zones.
+    <dd>{{% md %}}Whether the user can modify the accounts zones.
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_dns_records_allows_python">
+<a href="#state_dns_records_allows_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>records_<wbr>allows</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#userdnsrecordsallow">Sequence[User<wbr>Dns<wbr>Records<wbr>Allow<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_dns_records_denies_python">
+<a href="#state_dns_records_denies_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>records_<wbr>denies</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#userdnsrecordsdeny">Sequence[User<wbr>Dns<wbr>Records<wbr>Deny<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dns_view_zones_python">
 <a href="#state_dns_view_zones_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>view_<wbr>zones</a>
@@ -2554,7 +2803,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can view the accounts zones.
+    <dd>{{% md %}}Whether the user can view the accounts zones.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dns_zones_allow_by_default_python">
@@ -2572,7 +2821,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}List of zones that the apikey may access.
+    <dd>{{% md %}}List of zones that the user may access.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dns_zones_denies_python">
@@ -2581,7 +2830,16 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}List of zones that the apikey may not access.
+    <dd>{{% md %}}List of zones that the user may not access.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_email_python">
+<a href="#state_email_python" style="color: inherit; text-decoration: inherit;">email</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The email address of the user.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ip_whitelist_strict_python">
@@ -2608,7 +2866,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can manage IPAM.
+    <dd>{{% md %}}Whether the user can manage IPAM.
 Only relevant for the DDI product.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2618,18 +2876,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can view IPAM.
-Only relevant for the DDI product.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="state_key_python">
-<a href="#state_key_python" style="color: inherit; text-decoration: inherit;">key</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}(Computed) The apikeys authentication token.
-{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_monitoring_manage_jobs_python">
 <a href="#state_monitoring_manage_jobs_python" style="color: inherit; text-decoration: inherit;">monitoring_<wbr>manage_<wbr>jobs</a>
@@ -2637,7 +2884,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can modify monitoring jobs.
+    <dd>{{% md %}}Whether the user can modify monitoring jobs.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_monitoring_manage_lists_python">
@@ -2646,7 +2893,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can modify notification lists.
+    <dd>{{% md %}}Whether the user can modify notification lists.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_monitoring_view_jobs_python">
@@ -2655,7 +2902,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can view monitoring jobs.
+    <dd>{{% md %}}Whether the user can view monitoring jobs.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
@@ -2664,7 +2911,16 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The free form name of the apikey.
+    <dd>{{% md %}}The free form name of the user.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_notify_python">
+<a href="#state_notify_python" style="color: inherit; text-decoration: inherit;">notify</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, Any]</span>
+    </dt>
+    <dd>{{% md %}}Whether or not to notify the user of specified events. Only `billing` is available currently.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_security_manage_active_directory_python">
@@ -2673,7 +2929,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can manage global active directory.
+    <dd>{{% md %}}Whether the user can manage global active directory.
 Only relevant for the DDI product.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2683,7 +2939,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the apikey can manage global two factor authentication.
+    <dd>{{% md %}}Whether the user can manage global two factor authentication.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_teams_python">
@@ -2692,7 +2948,16 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}The teams that the apikey belongs to.
+    <dd>{{% md %}}The teams that the user belongs to.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_username_python">
+<a href="#state_username_python" style="color: inherit; text-decoration: inherit;">username</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The users login name.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2700,6 +2965,302 @@ Only relevant for the DDI product.
 
 
 
+
+## Supporting Types
+
+
+
+<h4 id="userdnsrecordsallow">User<wbr>Dns<wbr>Records<wbr>Allow</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="domain_csharp">
+<a href="#domain_csharp" style="color: inherit; text-decoration: inherit;">Domain</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="includesubdomains_csharp">
+<a href="#includesubdomains_csharp" style="color: inherit; text-decoration: inherit;">Include<wbr>Subdomains</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="zone_csharp">
+<a href="#zone_csharp" style="color: inherit; text-decoration: inherit;">Zone</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="domain_go">
+<a href="#domain_go" style="color: inherit; text-decoration: inherit;">Domain</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="includesubdomains_go">
+<a href="#includesubdomains_go" style="color: inherit; text-decoration: inherit;">Include<wbr>Subdomains</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="zone_go">
+<a href="#zone_go" style="color: inherit; text-decoration: inherit;">Zone</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="domain_nodejs">
+<a href="#domain_nodejs" style="color: inherit; text-decoration: inherit;">domain</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="includesubdomains_nodejs">
+<a href="#includesubdomains_nodejs" style="color: inherit; text-decoration: inherit;">include<wbr>Subdomains</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="zone_nodejs">
+<a href="#zone_nodejs" style="color: inherit; text-decoration: inherit;">zone</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="domain_python">
+<a href="#domain_python" style="color: inherit; text-decoration: inherit;">domain</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="include_subdomains_python">
+<a href="#include_subdomains_python" style="color: inherit; text-decoration: inherit;">include_<wbr>subdomains</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="zone_python">
+<a href="#zone_python" style="color: inherit; text-decoration: inherit;">zone</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="userdnsrecordsdeny">User<wbr>Dns<wbr>Records<wbr>Deny</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="domain_csharp">
+<a href="#domain_csharp" style="color: inherit; text-decoration: inherit;">Domain</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="includesubdomains_csharp">
+<a href="#includesubdomains_csharp" style="color: inherit; text-decoration: inherit;">Include<wbr>Subdomains</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="zone_csharp">
+<a href="#zone_csharp" style="color: inherit; text-decoration: inherit;">Zone</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="domain_go">
+<a href="#domain_go" style="color: inherit; text-decoration: inherit;">Domain</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="includesubdomains_go">
+<a href="#includesubdomains_go" style="color: inherit; text-decoration: inherit;">Include<wbr>Subdomains</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="zone_go">
+<a href="#zone_go" style="color: inherit; text-decoration: inherit;">Zone</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="domain_nodejs">
+<a href="#domain_nodejs" style="color: inherit; text-decoration: inherit;">domain</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="includesubdomains_nodejs">
+<a href="#includesubdomains_nodejs" style="color: inherit; text-decoration: inherit;">include<wbr>Subdomains</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="zone_nodejs">
+<a href="#zone_nodejs" style="color: inherit; text-decoration: inherit;">zone</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="domain_python">
+<a href="#domain_python" style="color: inherit; text-decoration: inherit;">domain</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="include_subdomains_python">
+<a href="#include_subdomains_python" style="color: inherit; text-decoration: inherit;">include_<wbr>subdomains</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="zone_python">
+<a href="#zone_python" style="color: inherit; text-decoration: inherit;">zone</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
 
 
 <h2 id="package-details">Package Details</h2>
