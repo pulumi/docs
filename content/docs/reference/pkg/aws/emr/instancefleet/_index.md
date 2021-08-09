@@ -174,21 +174,21 @@ task = aws.emr.InstanceFleet("task",
     instance_type_configs=[
         aws.emr.InstanceFleetInstanceTypeConfigArgs(
             bid_price_as_percentage_of_on_demand_price=100,
-            ebs_configs=[{
-                "size": 100,
-                "type": "gp2",
-                "volumesPerInstance": 1,
-            }],
+            ebs_configs=[aws.emr.InstanceFleetInstanceTypeConfigEbsConfigArgs(
+                size=100,
+                type="gp2",
+                volumes_per_instance=1,
+            )],
             instance_type="m4.xlarge",
             weighted_capacity=1,
         ),
         aws.emr.InstanceFleetInstanceTypeConfigArgs(
             bid_price_as_percentage_of_on_demand_price=100,
-            ebs_configs=[{
-                "size": 100,
-                "type": "gp2",
-                "volumesPerInstance": 1,
-            }],
+            ebs_configs=[aws.emr.InstanceFleetInstanceTypeConfigEbsConfigArgs(
+                size=100,
+                type="gp2",
+                volumes_per_instance=1,
+            )],
             instance_type="m4.2xlarge",
             weighted_capacity=2,
         ),
@@ -401,7 +401,7 @@ const task = new aws.emr.InstanceFleet("task", {
 
 ## InstanceFleet Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Architecture and Concepts docs.
 
 ### Inputs
 

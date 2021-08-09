@@ -98,10 +98,10 @@ import pulumi_aws as aws
 
 test = aws.cloudwatch.EventConnection("test",
     auth_parameters=aws.cloudwatch.EventConnectionAuthParametersArgs(
-        api_key={
-            "key": "x-signature",
-            "value": "1234",
-        },
+        api_key=aws.cloudwatch.EventConnectionAuthParametersApiKeyArgs(
+            key="x-signature",
+            value="1234",
+        ),
     ),
     authorization_type="API_KEY",
     description="A connection description")
@@ -837,7 +837,7 @@ const test = new aws.cloudwatch.EventConnection("test", {
 
 ## EventConnection Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Architecture and Concepts docs.
 
 ### Inputs
 

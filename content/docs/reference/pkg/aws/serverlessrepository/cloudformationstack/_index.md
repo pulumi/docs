@@ -124,7 +124,7 @@ postgres_rotator = aws.serverlessrepository.CloudFormationStack("postgres-rotato
     ],
     parameters={
         "endpoint": f"secretsmanager.{current_region.name}.{current_partition.dns_suffix}",
-        "function_name": "func-postgres-rotator",
+        "functionName": "func-postgres-rotator",
     })
 ```
 
@@ -303,7 +303,7 @@ const postgres_rotator = new aws.serverlessrepository.CloudFormationStack("postg
 
 ## CloudFormationStack Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Architecture and Concepts docs.
 
 ### Inputs
 

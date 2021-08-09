@@ -1135,14 +1135,14 @@ test = aws.kinesis.FirehoseDeliveryStream("test",
         role_arn=aws_iam_role["firehose"]["arn"],
         index_name="test",
         type_name="test",
-        vpc_config={
-            "subnet_ids": [
+        vpc_config=aws.kinesis.FirehoseDeliveryStreamElasticsearchConfigurationVpcConfigArgs(
+            subnet_ids=[
                 aws_subnet["first"]["id"],
                 aws_subnet["second"]["id"],
             ],
-            "security_group_ids": [aws_security_group["first"]["id"]],
-            "role_arn": aws_iam_role["firehose"]["arn"],
-        },
+            security_group_ids=[aws_security_group["first"]["id"]],
+            role_arn=aws_iam_role["firehose"]["arn"],
+        ),
     ),
     opts=pulumi.ResourceOptions(depends_on=[firehose_elasticsearch]))
 ```
@@ -1743,7 +1743,7 @@ const testStream = new aws.kinesis.FirehoseDeliveryStream("testStream", {
 
 ## FirehoseDeliveryStream Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Architecture and Concepts docs.
 
 ### Inputs
 

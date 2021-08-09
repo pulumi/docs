@@ -502,15 +502,15 @@ example_project = aws.codebuild.Project("exampleProject",
         type="LINUX_CONTAINER",
         image_pull_credentials_type="CODEBUILD",
         environment_variables=[
-            {
-                "name": "SOME_KEY1",
-                "value": "SOME_VALUE1",
-            },
-            {
-                "name": "SOME_KEY2",
-                "value": "SOME_VALUE2",
-                "type": "PARAMETER_STORE",
-            },
+            aws.codebuild.ProjectEnvironmentEnvironmentVariableArgs(
+                name="SOME_KEY1",
+                value="SOME_VALUE1",
+            ),
+            aws.codebuild.ProjectEnvironmentEnvironmentVariableArgs(
+                name="SOME_KEY2",
+                value="SOME_VALUE2",
+                type="PARAMETER_STORE",
+            ),
         ],
     ),
     logs_config=aws.codebuild.ProjectLogsConfigArgs(
@@ -566,10 +566,10 @@ project_with_cache = aws.codebuild.Project("project-with-cache",
         image="aws/codebuild/standard:1.0",
         type="LINUX_CONTAINER",
         image_pull_credentials_type="CODEBUILD",
-        environment_variables=[{
-            "name": "SOME_KEY1",
-            "value": "SOME_VALUE1",
-        }],
+        environment_variables=[aws.codebuild.ProjectEnvironmentEnvironmentVariableArgs(
+            name="SOME_KEY1",
+            value="SOME_VALUE1",
+        )],
     ),
     source=aws.codebuild.ProjectSourceArgs(
         type="GITHUB",
@@ -928,7 +928,7 @@ const project_with_cache = new aws.codebuild.Project("project-with-cache", {
 
 ## Project Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Architecture and Concepts docs.
 
 ### Inputs
 

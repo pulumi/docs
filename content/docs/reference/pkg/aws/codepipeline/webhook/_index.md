@@ -265,10 +265,10 @@ bar_pipeline = aws.codepipeline.Pipeline("barPipeline",
     artifact_store=aws.codepipeline.PipelineArtifactStoreArgs(
         location=aws_s3_bucket["bar"]["bucket"],
         type="S3",
-        encryption_key={
-            "id": data["aws_kms_alias"]["s3kmskey"]["arn"],
-            "type": "KMS",
-        },
+        encryption_key=aws.codepipeline.PipelineArtifactStoreEncryptionKeyArgs(
+            id=data["aws_kms_alias"]["s3kmskey"]["arn"],
+            type="KMS",
+        ),
     ),
     stages=[
         aws.codepipeline.PipelineStageArgs(
@@ -557,7 +557,7 @@ const barRepositoryWebhook = new github.RepositoryWebhook("barRepositoryWebhook"
 
 ## Webhook Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Architecture and Concepts docs.
 
 ### Inputs
 

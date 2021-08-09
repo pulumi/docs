@@ -100,9 +100,9 @@ import pulumi_aws as aws
 example = aws.lambda_.FunctionEventInvokeConfig("example",
     function_name=aws_lambda_alias["example"]["function_name"],
     destination_config=aws.lambda..FunctionEventInvokeConfigDestinationConfigArgs(
-        on_failure={
-            "destination": aws_sqs_queue["example"]["arn"],
-        },
+        on_failure=aws.lambda..FunctionEventInvokeConfigDestinationConfigOnFailureArgs(
+            destination=aws_sqs_queue["example"]["arn"],
+        ),
         on_success=aws.lambda..FunctionEventInvokeConfigDestinationConfigOnSuccessArgs(
             destination=aws_sns_topic["example"]["arn"],
         ),
@@ -651,7 +651,7 @@ const example = new aws.lambda.FunctionEventInvokeConfig("example", {
 
 ## FunctionEventInvokeConfig Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Architecture and Concepts docs.
 
 ### Inputs
 

@@ -11,125 +11,6 @@ meta_desc: "Documentation for the aws.ecs.Cluster resource with examples, input 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Provides an ECS cluster.
-## Example W/Log Configuration
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-const exampleKey = new aws.kms.Key("exampleKey", {
-    description: "example",
-    deletionWindowInDays: 7,
-});
-const exampleLogGroup = new aws.cloudwatch.LogGroup("exampleLogGroup", {});
-const test = new aws.ecs.Cluster("test", {configuration: {
-    executeCommandConfiguration: {
-        kmsKeyId: exampleKey.arn,
-        logging: "OVERRIDE",
-        logConfiguration: {
-            cloudWatchEncryptionEnabled: true,
-            cloudWatchLogGroupName: exampleLogGroup.name,
-        },
-    },
-}});
-```
-```python
-import pulumi
-import pulumi_aws as aws
-
-example_key = aws.kms.Key("exampleKey",
-    description="example",
-    deletion_window_in_days=7)
-example_log_group = aws.cloudwatch.LogGroup("exampleLogGroup")
-test = aws.ecs.Cluster("test", configuration=aws.ecs.ClusterConfigurationArgs(
-    execute_command_configuration=aws.ecs.ClusterConfigurationExecuteCommandConfigurationArgs(
-        kms_key_id=example_key.arn,
-        logging="OVERRIDE",
-        log_configuration=aws.ecs.ClusterConfigurationExecuteCommandConfigurationLogConfigurationArgs(
-            cloud_watch_encryption_enabled=True,
-            cloud_watch_log_group_name=example_log_group.name,
-        ),
-    ),
-))
-```
-```csharp
-using Pulumi;
-using Aws = Pulumi.Aws;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var exampleKey = new Aws.Kms.Key("exampleKey", new Aws.Kms.KeyArgs
-        {
-            Description = "example",
-            DeletionWindowInDays = 7,
-        });
-        var exampleLogGroup = new Aws.CloudWatch.LogGroup("exampleLogGroup", new Aws.CloudWatch.LogGroupArgs
-        {
-        });
-        var test = new Aws.Ecs.Cluster("test", new Aws.Ecs.ClusterArgs
-        {
-            Configuration = new Aws.Ecs.Inputs.ClusterConfigurationArgs
-            {
-                ExecuteCommandConfiguration = new Aws.Ecs.Inputs.ClusterConfigurationExecuteCommandConfigurationArgs
-                {
-                    KmsKeyId = exampleKey.Arn,
-                    Logging = "OVERRIDE",
-                    LogConfiguration = new Aws.Ecs.Inputs.ClusterConfigurationExecuteCommandConfigurationLogConfigurationArgs
-                    {
-                        CloudWatchEncryptionEnabled = true,
-                        CloudWatchLogGroupName = exampleLogGroup.Name,
-                    },
-                },
-            },
-        });
-    }
-
-}
-```
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/cloudwatch"
-	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ecs"
-	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/kms"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		exampleKey, err := kms.NewKey(ctx, "exampleKey", &kms.KeyArgs{
-			Description:          pulumi.String("example"),
-			DeletionWindowInDays: pulumi.Int(7),
-		})
-		if err != nil {
-			return err
-		}
-		exampleLogGroup, err := cloudwatch.NewLogGroup(ctx, "exampleLogGroup", nil)
-		if err != nil {
-			return err
-		}
-		_, err = ecs.NewCluster(ctx, "test", &ecs.ClusterArgs{
-			Configuration: &ecs.ClusterConfigurationArgs{
-				ExecuteCommandConfiguration: &ecs.ClusterConfigurationExecuteCommandConfigurationArgs{
-					KmsKeyId: exampleKey.Arn,
-					Logging:  pulumi.String("OVERRIDE"),
-					LogConfiguration: &ecs.ClusterConfigurationExecuteCommandConfigurationLogConfigurationArgs{
-						CloudWatchEncryptionEnabled: pulumi.Bool(true),
-						CloudWatchLogGroupName:      exampleLogGroup.Name,
-					},
-				},
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
 
 {{% examples %}}
 
@@ -138,7 +19,7 @@ func main() {
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
-
+### Basic Example
 
 
 {{< example csharp >}}
@@ -232,6 +113,157 @@ const foo = new aws.ecs.Cluster("foo", {
         value: "enabled",
     }],
 });
+```
+
+
+{{< /example >}}
+
+
+
+
+### Example W/Log Configuration
+
+
+{{< example csharp >}}
+
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleKey = new Aws.Kms.Key("exampleKey", new Aws.Kms.KeyArgs
+        {
+            Description = "example",
+            DeletionWindowInDays = 7,
+        });
+        var exampleLogGroup = new Aws.CloudWatch.LogGroup("exampleLogGroup", new Aws.CloudWatch.LogGroupArgs
+        {
+        });
+        var test = new Aws.Ecs.Cluster("test", new Aws.Ecs.ClusterArgs
+        {
+            Configuration = new Aws.Ecs.Inputs.ClusterConfigurationArgs
+            {
+                ExecuteCommandConfiguration = new Aws.Ecs.Inputs.ClusterConfigurationExecuteCommandConfigurationArgs
+                {
+                    KmsKeyId = exampleKey.Arn,
+                    Logging = "OVERRIDE",
+                    LogConfiguration = new Aws.Ecs.Inputs.ClusterConfigurationExecuteCommandConfigurationLogConfigurationArgs
+                    {
+                        CloudWatchEncryptionEnabled = true,
+                        CloudWatchLogGroupName = exampleLogGroup.Name,
+                    },
+                },
+            },
+        });
+    }
+
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/cloudwatch"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ecs"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/kms"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleKey, err := kms.NewKey(ctx, "exampleKey", &kms.KeyArgs{
+			Description:          pulumi.String("example"),
+			DeletionWindowInDays: pulumi.Int(7),
+		})
+		if err != nil {
+			return err
+		}
+		exampleLogGroup, err := cloudwatch.NewLogGroup(ctx, "exampleLogGroup", nil)
+		if err != nil {
+			return err
+		}
+		_, err = ecs.NewCluster(ctx, "test", &ecs.ClusterArgs{
+			Configuration: &ecs.ClusterConfigurationArgs{
+				ExecuteCommandConfiguration: &ecs.ClusterConfigurationExecuteCommandConfigurationArgs{
+					KmsKeyId: exampleKey.Arn,
+					Logging:  pulumi.String("OVERRIDE"),
+					LogConfiguration: &ecs.ClusterConfigurationExecuteCommandConfigurationLogConfigurationArgs{
+						CloudWatchEncryptionEnabled: pulumi.Bool(true),
+						CloudWatchLogGroupName:      exampleLogGroup.Name,
+					},
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+```python
+import pulumi
+import pulumi_aws as aws
+
+example_key = aws.kms.Key("exampleKey",
+    description="example",
+    deletion_window_in_days=7)
+example_log_group = aws.cloudwatch.LogGroup("exampleLogGroup")
+test = aws.ecs.Cluster("test", configuration=aws.ecs.ClusterConfigurationArgs(
+    execute_command_configuration=aws.ecs.ClusterConfigurationExecuteCommandConfigurationArgs(
+        kms_key_id=example_key.arn,
+        logging="OVERRIDE",
+        log_configuration=aws.ecs.ClusterConfigurationExecuteCommandConfigurationLogConfigurationArgs(
+            cloud_watch_encryption_enabled=True,
+            cloud_watch_log_group_name=example_log_group.name,
+        ),
+    ),
+))
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const exampleKey = new aws.kms.Key("exampleKey", {
+    description: "example",
+    deletionWindowInDays: 7,
+});
+const exampleLogGroup = new aws.cloudwatch.LogGroup("exampleLogGroup", {});
+const test = new aws.ecs.Cluster("test", {configuration: {
+    executeCommandConfiguration: {
+        kmsKeyId: exampleKey.arn,
+        logging: "OVERRIDE",
+        logConfiguration: {
+            cloudWatchEncryptionEnabled: true,
+            cloudWatchLogGroupName: exampleLogGroup.name,
+        },
+    },
+}});
 ```
 
 
@@ -383,7 +415,7 @@ const foo = new aws.ecs.Cluster("foo", {
 
 ## Cluster Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Architecture and Concepts docs.
 
 ### Inputs
 

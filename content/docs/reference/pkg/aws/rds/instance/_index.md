@@ -274,6 +274,7 @@ const example = new aws.rds.Instance("example", {
              <span class="nx">ca_cert_identifier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">character_set_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">copy_tags_to_snapshot</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+             <span class="nx">customer_owned_ip_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
              <span class="nx">db_subnet_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">delete_automated_backups</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
              <span class="nx">deletion_protection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
@@ -296,6 +297,7 @@ const example = new aws.rds.Instance("example", {
              <span class="nx">monitoring_role_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">multi_az</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
              <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">nchar_character_set_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">option_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">parameter_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -435,7 +437,7 @@ const example = new aws.rds.Instance("example", {
 
 ## Instance Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Architecture and Concepts docs.
 
 ### Inputs
 
@@ -556,6 +558,15 @@ or [Server-Level Collation for Microsoft SQL Server](https://docs.aws.amazon.com
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Copy all Instance `tags` to snapshots. Default is `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="customerownedipenabled_csharp">
+<a href="#customerownedipenabled_csharp" style="color: inherit; text-decoration: inherit;">Customer<wbr>Owned<wbr>Ip<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether to enable a customer-owned IP address (CoIP) for an RDS on Outposts DB instance. See [CoIP for RDS on Outposts](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/rds-on-outposts.html#rds-on-outposts.coip) for more information.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dbsubnetgroupname_csharp">
@@ -780,6 +791,16 @@ what IAM permissions are needed to allow Enhanced Monitoring for RDS Instances.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the database to create when the DB instance is created. If this parameter is not specified, no database is created in the DB instance. Note that this does not apply for Oracle or SQL Server engines. See the [AWS documentation](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/create-db-instance.html) for more details on what applies for those engines. If you are providing an Oracle db name, it needs to be in all upper case.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ncharcharactersetname_csharp">
+<a href="#ncharcharactersetname_csharp" style="color: inherit; text-decoration: inherit;">Nchar<wbr>Character<wbr>Set<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The national character set is used in the NCHAR, NVARCHAR2, and NCLOB data types for Oracle instances. This can't be changed. See [Oracle Character Sets
+Supported in Amazon RDS](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Appendix.OracleCharacterSets.html).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="optiongroupname_csharp">
@@ -1118,6 +1139,15 @@ or [Server-Level Collation for Microsoft SQL Server](https://docs.aws.amazon.com
     <dd>{{% md %}}Copy all Instance `tags` to snapshots. Default is `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="customerownedipenabled_go">
+<a href="#customerownedipenabled_go" style="color: inherit; text-decoration: inherit;">Customer<wbr>Owned<wbr>Ip<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether to enable a customer-owned IP address (CoIP) for an RDS on Outposts DB instance. See [CoIP for RDS on Outposts](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/rds-on-outposts.html#rds-on-outposts.coip) for more information.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="dbsubnetgroupname_go">
 <a href="#dbsubnetgroupname_go" style="color: inherit; text-decoration: inherit;">Db<wbr>Subnet<wbr>Group<wbr>Name</a>
 </span>
@@ -1340,6 +1370,16 @@ what IAM permissions are needed to allow Enhanced Monitoring for RDS Instances.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the database to create when the DB instance is created. If this parameter is not specified, no database is created in the DB instance. Note that this does not apply for Oracle or SQL Server engines. See the [AWS documentation](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/create-db-instance.html) for more details on what applies for those engines. If you are providing an Oracle db name, it needs to be in all upper case.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ncharcharactersetname_go">
+<a href="#ncharcharactersetname_go" style="color: inherit; text-decoration: inherit;">Nchar<wbr>Character<wbr>Set<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The national character set is used in the NCHAR, NVARCHAR2, and NCLOB data types for Oracle instances. This can't be changed. See [Oracle Character Sets
+Supported in Amazon RDS](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Appendix.OracleCharacterSets.html).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="optiongroupname_go">
@@ -1678,6 +1718,15 @@ or [Server-Level Collation for Microsoft SQL Server](https://docs.aws.amazon.com
     <dd>{{% md %}}Copy all Instance `tags` to snapshots. Default is `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="customerownedipenabled_nodejs">
+<a href="#customerownedipenabled_nodejs" style="color: inherit; text-decoration: inherit;">customer<wbr>Owned<wbr>Ip<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether to enable a customer-owned IP address (CoIP) for an RDS on Outposts DB instance. See [CoIP for RDS on Outposts](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/rds-on-outposts.html#rds-on-outposts.coip) for more information.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="dbsubnetgroupname_nodejs">
 <a href="#dbsubnetgroupname_nodejs" style="color: inherit; text-decoration: inherit;">db<wbr>Subnet<wbr>Group<wbr>Name</a>
 </span>
@@ -1900,6 +1949,16 @@ what IAM permissions are needed to allow Enhanced Monitoring for RDS Instances.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the database to create when the DB instance is created. If this parameter is not specified, no database is created in the DB instance. Note that this does not apply for Oracle or SQL Server engines. See the [AWS documentation](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/create-db-instance.html) for more details on what applies for those engines. If you are providing an Oracle db name, it needs to be in all upper case.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ncharcharactersetname_nodejs">
+<a href="#ncharcharactersetname_nodejs" style="color: inherit; text-decoration: inherit;">nchar<wbr>Character<wbr>Set<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The national character set is used in the NCHAR, NVARCHAR2, and NCLOB data types for Oracle instances. This can't be changed. See [Oracle Character Sets
+Supported in Amazon RDS](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Appendix.OracleCharacterSets.html).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="optiongroupname_nodejs">
@@ -2238,6 +2297,15 @@ or [Server-Level Collation for Microsoft SQL Server](https://docs.aws.amazon.com
     <dd>{{% md %}}Copy all Instance `tags` to snapshots. Default is `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="customer_owned_ip_enabled_python">
+<a href="#customer_owned_ip_enabled_python" style="color: inherit; text-decoration: inherit;">customer_<wbr>owned_<wbr>ip_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether to enable a customer-owned IP address (CoIP) for an RDS on Outposts DB instance. See [CoIP for RDS on Outposts](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/rds-on-outposts.html#rds-on-outposts.coip) for more information.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="db_subnet_group_name_python">
 <a href="#db_subnet_group_name_python" style="color: inherit; text-decoration: inherit;">db_<wbr>subnet_<wbr>group_<wbr>name</a>
 </span>
@@ -2460,6 +2528,16 @@ what IAM permissions are needed to allow Enhanced Monitoring for RDS Instances.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the database to create when the DB instance is created. If this parameter is not specified, no database is created in the DB instance. Note that this does not apply for Oracle or SQL Server engines. See the [AWS documentation](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/create-db-instance.html) for more details on what applies for those engines. If you are providing an Oracle db name, it needs to be in all upper case.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="nchar_character_set_name_python">
+<a href="#nchar_character_set_name_python" style="color: inherit; text-decoration: inherit;">nchar_<wbr>character_<wbr>set_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The national character set is used in the NCHAR, NVARCHAR2, and NCLOB data types for Oracle instances. This can't be changed. See [Oracle Character Sets
+Supported in Amazon RDS](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Appendix.OracleCharacterSets.html).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="option_group_name_python">
@@ -3054,6 +3132,7 @@ Get an existing Instance resource's state with the given name, ID, and optional 
         <span class="nx">ca_cert_identifier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">character_set_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">copy_tags_to_snapshot</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">customer_owned_ip_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">db_subnet_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">delete_automated_backups</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">deletion_protection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
@@ -3079,6 +3158,7 @@ Get an existing Instance resource's state with the given name, ID, and optional 
         <span class="nx">monitoring_role_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">multi_az</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">nchar_character_set_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">option_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">parameter_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -3334,6 +3414,15 @@ or [Server-Level Collation for Microsoft SQL Server](https://docs.aws.amazon.com
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Copy all Instance `tags` to snapshots. Default is `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_customerownedipenabled_csharp">
+<a href="#state_customerownedipenabled_csharp" style="color: inherit; text-decoration: inherit;">Customer<wbr>Owned<wbr>Ip<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether to enable a customer-owned IP address (CoIP) for an RDS on Outposts DB instance. See [CoIP for RDS on Outposts](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/rds-on-outposts.html#rds-on-outposts.coip) for more information.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dbsubnetgroupname_csharp">
@@ -3595,6 +3684,16 @@ what IAM permissions are needed to allow Enhanced Monitoring for RDS Instances.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the database to create when the DB instance is created. If this parameter is not specified, no database is created in the DB instance. Note that this does not apply for Oracle or SQL Server engines. See the [AWS documentation](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/create-db-instance.html) for more details on what applies for those engines. If you are providing an Oracle db name, it needs to be in all upper case.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_ncharcharactersetname_csharp">
+<a href="#state_ncharcharactersetname_csharp" style="color: inherit; text-decoration: inherit;">Nchar<wbr>Character<wbr>Set<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The national character set is used in the NCHAR, NVARCHAR2, and NCLOB data types for Oracle instances. This can't be changed. See [Oracle Character Sets
+Supported in Amazon RDS](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Appendix.OracleCharacterSets.html).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_optiongroupname_csharp">
@@ -3968,6 +4067,15 @@ or [Server-Level Collation for Microsoft SQL Server](https://docs.aws.amazon.com
     <dd>{{% md %}}Copy all Instance `tags` to snapshots. Default is `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_customerownedipenabled_go">
+<a href="#state_customerownedipenabled_go" style="color: inherit; text-decoration: inherit;">Customer<wbr>Owned<wbr>Ip<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether to enable a customer-owned IP address (CoIP) for an RDS on Outposts DB instance. See [CoIP for RDS on Outposts](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/rds-on-outposts.html#rds-on-outposts.coip) for more information.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_dbsubnetgroupname_go">
 <a href="#state_dbsubnetgroupname_go" style="color: inherit; text-decoration: inherit;">Db<wbr>Subnet<wbr>Group<wbr>Name</a>
 </span>
@@ -4227,6 +4335,16 @@ what IAM permissions are needed to allow Enhanced Monitoring for RDS Instances.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the database to create when the DB instance is created. If this parameter is not specified, no database is created in the DB instance. Note that this does not apply for Oracle or SQL Server engines. See the [AWS documentation](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/create-db-instance.html) for more details on what applies for those engines. If you are providing an Oracle db name, it needs to be in all upper case.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_ncharcharactersetname_go">
+<a href="#state_ncharcharactersetname_go" style="color: inherit; text-decoration: inherit;">Nchar<wbr>Character<wbr>Set<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The national character set is used in the NCHAR, NVARCHAR2, and NCLOB data types for Oracle instances. This can't be changed. See [Oracle Character Sets
+Supported in Amazon RDS](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Appendix.OracleCharacterSets.html).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_optiongroupname_go">
@@ -4600,6 +4718,15 @@ or [Server-Level Collation for Microsoft SQL Server](https://docs.aws.amazon.com
     <dd>{{% md %}}Copy all Instance `tags` to snapshots. Default is `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_customerownedipenabled_nodejs">
+<a href="#state_customerownedipenabled_nodejs" style="color: inherit; text-decoration: inherit;">customer<wbr>Owned<wbr>Ip<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether to enable a customer-owned IP address (CoIP) for an RDS on Outposts DB instance. See [CoIP for RDS on Outposts](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/rds-on-outposts.html#rds-on-outposts.coip) for more information.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_dbsubnetgroupname_nodejs">
 <a href="#state_dbsubnetgroupname_nodejs" style="color: inherit; text-decoration: inherit;">db<wbr>Subnet<wbr>Group<wbr>Name</a>
 </span>
@@ -4859,6 +4986,16 @@ what IAM permissions are needed to allow Enhanced Monitoring for RDS Instances.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the database to create when the DB instance is created. If this parameter is not specified, no database is created in the DB instance. Note that this does not apply for Oracle or SQL Server engines. See the [AWS documentation](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/create-db-instance.html) for more details on what applies for those engines. If you are providing an Oracle db name, it needs to be in all upper case.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_ncharcharactersetname_nodejs">
+<a href="#state_ncharcharactersetname_nodejs" style="color: inherit; text-decoration: inherit;">nchar<wbr>Character<wbr>Set<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The national character set is used in the NCHAR, NVARCHAR2, and NCLOB data types for Oracle instances. This can't be changed. See [Oracle Character Sets
+Supported in Amazon RDS](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Appendix.OracleCharacterSets.html).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_optiongroupname_nodejs">
@@ -5232,6 +5369,15 @@ or [Server-Level Collation for Microsoft SQL Server](https://docs.aws.amazon.com
     <dd>{{% md %}}Copy all Instance `tags` to snapshots. Default is `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_customer_owned_ip_enabled_python">
+<a href="#state_customer_owned_ip_enabled_python" style="color: inherit; text-decoration: inherit;">customer_<wbr>owned_<wbr>ip_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether to enable a customer-owned IP address (CoIP) for an RDS on Outposts DB instance. See [CoIP for RDS on Outposts](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/rds-on-outposts.html#rds-on-outposts.coip) for more information.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_db_subnet_group_name_python">
 <a href="#state_db_subnet_group_name_python" style="color: inherit; text-decoration: inherit;">db_<wbr>subnet_<wbr>group_<wbr>name</a>
 </span>
@@ -5491,6 +5637,16 @@ what IAM permissions are needed to allow Enhanced Monitoring for RDS Instances.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the database to create when the DB instance is created. If this parameter is not specified, no database is created in the DB instance. Note that this does not apply for Oracle or SQL Server engines. See the [AWS documentation](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/create-db-instance.html) for more details on what applies for those engines. If you are providing an Oracle db name, it needs to be in all upper case.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_nchar_character_set_name_python">
+<a href="#state_nchar_character_set_name_python" style="color: inherit; text-decoration: inherit;">nchar_<wbr>character_<wbr>set_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The national character set is used in the NCHAR, NVARCHAR2, and NCLOB data types for Oracle instances. This can't be changed. See [Oracle Character Sets
+Supported in Amazon RDS](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Appendix.OracleCharacterSets.html).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_option_group_name_python">

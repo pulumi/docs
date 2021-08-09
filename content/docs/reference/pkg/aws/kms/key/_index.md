@@ -126,6 +126,7 @@ const key = new aws.kms.Key("a", {
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">Key</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">bypass_policy_lockout_safety_check</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">customer_master_key_spec</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">deletion_window_in_days</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
         <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -253,7 +254,7 @@ const key = new aws.kms.Key("a", {
 
 ## Key Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Architecture and Concepts docs.
 
 ### Inputs
 
@@ -263,6 +264,15 @@ The Key resource accepts the following [input]({{< relref "/docs/intro/concepts/
 
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="bypasspolicylockoutsafetycheck_csharp">
+<a href="#bypasspolicylockoutsafetycheck_csharp" style="color: inherit; text-decoration: inherit;">Bypass<wbr>Policy<wbr>Lockout<wbr>Safety<wbr>Check</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether to disable the policy lockout check performed when creating or updating the key's policy. Setting this value to `true` increases the risk that the CMK becomes unmanageable. For more information, refer to the scenario in the [Default Key Policy](https://docs.aws.amazon.com/kms/latest/developerguide/key-policies.html#key-policy-default-allow-root-enable-iam) section in the AWS Key Management Service Developer Guide. Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customermasterkeyspec_csharp">
 <a href="#customermasterkeyspec_csharp" style="color: inherit; text-decoration: inherit;">Customer<wbr>Master<wbr>Key<wbr>Spec</a>
@@ -349,6 +359,15 @@ Defaults to `ENCRYPT_DECRYPT`.
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="bypasspolicylockoutsafetycheck_go">
+<a href="#bypasspolicylockoutsafetycheck_go" style="color: inherit; text-decoration: inherit;">Bypass<wbr>Policy<wbr>Lockout<wbr>Safety<wbr>Check</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether to disable the policy lockout check performed when creating or updating the key's policy. Setting this value to `true` increases the risk that the CMK becomes unmanageable. For more information, refer to the scenario in the [Default Key Policy](https://docs.aws.amazon.com/kms/latest/developerguide/key-policies.html#key-policy-default-allow-root-enable-iam) section in the AWS Key Management Service Developer Guide. Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="customermasterkeyspec_go">
 <a href="#customermasterkeyspec_go" style="color: inherit; text-decoration: inherit;">Customer<wbr>Master<wbr>Key<wbr>Spec</a>
 </span>
@@ -434,6 +453,15 @@ Defaults to `ENCRYPT_DECRYPT`.
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="bypasspolicylockoutsafetycheck_nodejs">
+<a href="#bypasspolicylockoutsafetycheck_nodejs" style="color: inherit; text-decoration: inherit;">bypass<wbr>Policy<wbr>Lockout<wbr>Safety<wbr>Check</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether to disable the policy lockout check performed when creating or updating the key's policy. Setting this value to `true` increases the risk that the CMK becomes unmanageable. For more information, refer to the scenario in the [Default Key Policy](https://docs.aws.amazon.com/kms/latest/developerguide/key-policies.html#key-policy-default-allow-root-enable-iam) section in the AWS Key Management Service Developer Guide. Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="customermasterkeyspec_nodejs">
 <a href="#customermasterkeyspec_nodejs" style="color: inherit; text-decoration: inherit;">customer<wbr>Master<wbr>Key<wbr>Spec</a>
 </span>
@@ -518,6 +546,15 @@ Defaults to `ENCRYPT_DECRYPT`.
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="bypass_policy_lockout_safety_check_python">
+<a href="#bypass_policy_lockout_safety_check_python" style="color: inherit; text-decoration: inherit;">bypass_<wbr>policy_<wbr>lockout_<wbr>safety_<wbr>check</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether to disable the policy lockout check performed when creating or updating the key's policy. Setting this value to `true` increases the risk that the CMK becomes unmanageable. For more information, refer to the scenario in the [Default Key Policy](https://docs.aws.amazon.com/kms/latest/developerguide/key-policies.html#key-policy-default-allow-root-enable-iam) section in the AWS Key Management Service Developer Guide. Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customer_master_key_spec_python">
 <a href="#customer_master_key_spec_python" style="color: inherit; text-decoration: inherit;">customer_<wbr>master_<wbr>key_<wbr>spec</a>
@@ -745,6 +782,7 @@ Get an existing Key resource's state with the given name, ID, and optional extra
         <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
         <span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">bypass_policy_lockout_safety_check</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">customer_master_key_spec</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">deletion_window_in_days</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
         <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -876,6 +914,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the key.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_bypasspolicylockoutsafetycheck_csharp">
+<a href="#state_bypasspolicylockoutsafetycheck_csharp" style="color: inherit; text-decoration: inherit;">Bypass<wbr>Policy<wbr>Lockout<wbr>Safety<wbr>Check</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether to disable the policy lockout check performed when creating or updating the key's policy. Setting this value to `true` increases the risk that the CMK becomes unmanageable. For more information, refer to the scenario in the [Default Key Policy](https://docs.aws.amazon.com/kms/latest/developerguide/key-policies.html#key-policy-default-allow-root-enable-iam) section in the AWS Key Management Service Developer Guide. Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_customermasterkeyspec_csharp">
 <a href="#state_customermasterkeyspec_csharp" style="color: inherit; text-decoration: inherit;">Customer<wbr>Master<wbr>Key<wbr>Spec</a>
 </span>
@@ -977,6 +1024,15 @@ Defaults to `ENCRYPT_DECRYPT`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the key.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_bypasspolicylockoutsafetycheck_go">
+<a href="#state_bypasspolicylockoutsafetycheck_go" style="color: inherit; text-decoration: inherit;">Bypass<wbr>Policy<wbr>Lockout<wbr>Safety<wbr>Check</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether to disable the policy lockout check performed when creating or updating the key's policy. Setting this value to `true` increases the risk that the CMK becomes unmanageable. For more information, refer to the scenario in the [Default Key Policy](https://docs.aws.amazon.com/kms/latest/developerguide/key-policies.html#key-policy-default-allow-root-enable-iam) section in the AWS Key Management Service Developer Guide. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_customermasterkeyspec_go">
@@ -1082,6 +1138,15 @@ Defaults to `ENCRYPT_DECRYPT`.
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the key.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_bypasspolicylockoutsafetycheck_nodejs">
+<a href="#state_bypasspolicylockoutsafetycheck_nodejs" style="color: inherit; text-decoration: inherit;">bypass<wbr>Policy<wbr>Lockout<wbr>Safety<wbr>Check</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether to disable the policy lockout check performed when creating or updating the key's policy. Setting this value to `true` increases the risk that the CMK becomes unmanageable. For more information, refer to the scenario in the [Default Key Policy](https://docs.aws.amazon.com/kms/latest/developerguide/key-policies.html#key-policy-default-allow-root-enable-iam) section in the AWS Key Management Service Developer Guide. Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_customermasterkeyspec_nodejs">
 <a href="#state_customermasterkeyspec_nodejs" style="color: inherit; text-decoration: inherit;">customer<wbr>Master<wbr>Key<wbr>Spec</a>
 </span>
@@ -1183,6 +1248,15 @@ Defaults to `ENCRYPT_DECRYPT`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the key.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_bypass_policy_lockout_safety_check_python">
+<a href="#state_bypass_policy_lockout_safety_check_python" style="color: inherit; text-decoration: inherit;">bypass_<wbr>policy_<wbr>lockout_<wbr>safety_<wbr>check</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether to disable the policy lockout check performed when creating or updating the key's policy. Setting this value to `true` increases the risk that the CMK becomes unmanageable. For more information, refer to the scenario in the [Default Key Policy](https://docs.aws.amazon.com/kms/latest/developerguide/key-policies.html#key-policy-default-allow-root-enable-iam) section in the AWS Key Management Service Developer Guide. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_customer_master_key_spec_python">

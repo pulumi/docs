@@ -152,10 +152,10 @@ test_key = aws.kms.Key("testKey",
     description="Athena KMS Key")
 test_workgroup = aws.athena.Workgroup("testWorkgroup", configuration=aws.athena.WorkgroupConfigurationArgs(
     result_configuration=aws.athena.WorkgroupConfigurationResultConfigurationArgs(
-        encryption_configuration={
-            "encryptionOption": "SSE_KMS",
-            "kms_key_arn": test_key.arn,
-        },
+        encryption_configuration=aws.athena.WorkgroupConfigurationResultConfigurationEncryptionConfigurationArgs(
+            encryption_option="SSE_KMS",
+            kms_key_arn=test_key.arn,
+        ),
     ),
 ))
 hoge_database = aws.athena.Database("hogeDatabase",
@@ -349,7 +349,7 @@ const foo = new aws.athena.NamedQuery("foo", {
 
 ## NamedQuery Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Architecture and Concepts docs.
 
 ### Inputs
 

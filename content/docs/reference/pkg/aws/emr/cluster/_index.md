@@ -116,52 +116,52 @@ import pulumi_aws as aws
 
 example = aws.emr.Cluster("example",
     master_instance_fleet=aws.emr.ClusterMasterInstanceFleetArgs(
-        instance_type_configs=[{
-            "instance_type": "m4.xlarge",
-        }],
+        instance_type_configs=[aws.emr.ClusterMasterInstanceFleetInstanceTypeConfigArgs(
+            instance_type="m4.xlarge",
+        )],
         target_on_demand_capacity=1,
     ),
     core_instance_fleet=aws.emr.ClusterCoreInstanceFleetArgs(
         instance_type_configs=[
-            {
-                "bidPriceAsPercentageOfOnDemandPrice": 80,
-                "ebs_configs": [{
-                    "size": 100,
-                    "type": "gp2",
-                    "volumesPerInstance": 1,
-                }],
-                "instance_type": "m3.xlarge",
-                "weightedCapacity": 1,
-            },
-            {
-                "bidPriceAsPercentageOfOnDemandPrice": 100,
-                "ebs_configs": [{
-                    "size": 100,
-                    "type": "gp2",
-                    "volumesPerInstance": 1,
-                }],
-                "instance_type": "m4.xlarge",
-                "weightedCapacity": 1,
-            },
-            {
-                "bidPriceAsPercentageOfOnDemandPrice": 100,
-                "ebs_configs": [{
-                    "size": 100,
-                    "type": "gp2",
-                    "volumesPerInstance": 1,
-                }],
-                "instance_type": "m4.2xlarge",
-                "weightedCapacity": 2,
-            },
+            aws.emr.ClusterCoreInstanceFleetInstanceTypeConfigArgs(
+                bid_price_as_percentage_of_on_demand_price=80,
+                ebs_configs=[aws.emr.ClusterCoreInstanceFleetInstanceTypeConfigEbsConfigArgs(
+                    size=100,
+                    type="gp2",
+                    volumes_per_instance=1,
+                )],
+                instance_type="m3.xlarge",
+                weighted_capacity=1,
+            ),
+            aws.emr.ClusterCoreInstanceFleetInstanceTypeConfigArgs(
+                bid_price_as_percentage_of_on_demand_price=100,
+                ebs_configs=[aws.emr.ClusterCoreInstanceFleetInstanceTypeConfigEbsConfigArgs(
+                    size=100,
+                    type="gp2",
+                    volumes_per_instance=1,
+                )],
+                instance_type="m4.xlarge",
+                weighted_capacity=1,
+            ),
+            aws.emr.ClusterCoreInstanceFleetInstanceTypeConfigArgs(
+                bid_price_as_percentage_of_on_demand_price=100,
+                ebs_configs=[aws.emr.ClusterCoreInstanceFleetInstanceTypeConfigEbsConfigArgs(
+                    size=100,
+                    type="gp2",
+                    volumes_per_instance=1,
+                )],
+                instance_type="m4.2xlarge",
+                weighted_capacity=2,
+            ),
         ],
-        launch_specifications={
-            "spotSpecifications": [{
-                "allocation_strategy": "capacity-optimized",
-                "block_duration_minutes": 0,
-                "timeoutAction": "SWITCH_TO_ON_DEMAND",
-                "timeoutDurationMinutes": 10,
-            }],
-        },
+        launch_specifications=aws.emr.ClusterCoreInstanceFleetLaunchSpecificationsArgs(
+            spot_specifications=[aws.emr.ClusterCoreInstanceFleetLaunchSpecificationsSpotSpecificationArgs(
+                allocation_strategy="capacity-optimized",
+                block_duration_minutes=0,
+                timeout_action="SWITCH_TO_ON_DEMAND",
+                timeout_duration_minutes=10,
+            )],
+        ),
         name="core fleet",
         target_on_demand_capacity=2,
         target_spot_capacity=2,
@@ -171,21 +171,21 @@ task = aws.emr.InstanceFleet("task",
     instance_type_configs=[
         aws.emr.InstanceFleetInstanceTypeConfigArgs(
             bid_price_as_percentage_of_on_demand_price=100,
-            ebs_configs=[{
-                "size": 100,
-                "type": "gp2",
-                "volumesPerInstance": 1,
-            }],
+            ebs_configs=[aws.emr.InstanceFleetInstanceTypeConfigEbsConfigArgs(
+                size=100,
+                type="gp2",
+                volumes_per_instance=1,
+            )],
             instance_type="m4.xlarge",
             weighted_capacity=1,
         ),
         aws.emr.InstanceFleetInstanceTypeConfigArgs(
             bid_price_as_percentage_of_on_demand_price=100,
-            ebs_configs=[{
-                "size": 100,
-                "type": "gp2",
-                "volumesPerInstance": 1,
-            }],
+            ebs_configs=[aws.emr.InstanceFleetInstanceTypeConfigEbsConfigArgs(
+                size=100,
+                type="gp2",
+                volumes_per_instance=1,
+            )],
             instance_type="m4.2xlarge",
             weighted_capacity=2,
         ),
@@ -485,10 +485,10 @@ import * as aws from "@pulumi/aws";
 const example = new aws.emr.Cluster("example", {steps: [{
     actionOnFailure: "TERMINATE_CLUSTER",
     name: "Setup Hadoop Debugging",
-    hadoopJarStep: {
+    hadoopJarStep: [{
         jar: "command-runner.jar",
         args: ["state-pusher-script"],
-    },
+    }],
 }]});
 ```
 ```python
@@ -499,10 +499,10 @@ import pulumi_aws as aws
 example = aws.emr.Cluster("example", steps=[aws.emr.ClusterStepArgs(
     action_on_failure="TERMINATE_CLUSTER",
     name="Setup Hadoop Debugging",
-    hadoop_jar_step=aws.emr.ClusterStepHadoopJarStepArgs(
-        jar="command-runner.jar",
-        args=["state-pusher-script"],
-    ),
+    hadoop_jar_step=[{
+        "jar": "command-runner.jar",
+        "args": ["state-pusher-script"],
+    }],
 )])
 ```
 ```csharp
@@ -522,12 +522,15 @@ class MyStack : Stack
                 {
                     ActionOnFailure = "TERMINATE_CLUSTER",
                     Name = "Setup Hadoop Debugging",
-                    HadoopJarStep = new Aws.Emr.Inputs.ClusterStepHadoopJarStepArgs
+                    HadoopJarStep = 
                     {
-                        Jar = "command-runner.jar",
-                        Args = 
+                        
                         {
-                            "state-pusher-script",
+                            { "jar", "command-runner.jar" },
+                            { "args", 
+                            {
+                                "state-pusher-script",
+                            } },
                         },
                     },
                 },
@@ -552,10 +555,12 @@ func main() {
 				&emr.ClusterStepArgs{
 					ActionOnFailure: pulumi.String("TERMINATE_CLUSTER"),
 					Name:            pulumi.String("Setup Hadoop Debugging"),
-					HadoopJarStep: &emr.ClusterStepHadoopJarStepArgs{
-						Jar: pulumi.String("command-runner.jar"),
-						Args: pulumi.StringArray{
-							pulumi.String("state-pusher-script"),
+					HadoopJarStep: emr.ClusterStepHadoopJarStepArgs{
+						map[string]interface{}{
+							"jar": "command-runner.jar",
+							"args": []string{
+								"state-pusher-script",
+							},
 						},
 					},
 				},
@@ -1898,11 +1903,11 @@ cluster = aws.emr.Cluster("cluster",
     core_instance_group=aws.emr.ClusterCoreInstanceGroupArgs(
         instance_type="c4.large",
         instance_count=1,
-        ebs_configs=[{
-            "size": "40",
-            "type": "gp2",
-            "volumesPerInstance": 1,
-        }],
+        ebs_configs=[aws.emr.ClusterCoreInstanceGroupEbsConfigArgs(
+            size=40,
+            type="gp2",
+            volumes_per_instance=1,
+        )],
         bid_price="0.30",
         autoscaling_policy="""{
 "Constraints": {
@@ -2267,7 +2272,7 @@ const cluster = new aws.emr.Cluster("cluster", {
 
 ## Cluster Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Architecture and Concepts docs.
 
 ### Inputs
 

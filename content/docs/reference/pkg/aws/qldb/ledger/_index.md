@@ -36,6 +36,7 @@ class MyStack : Stack
     {
         var sample_ledger = new Aws.Qldb.Ledger("sample-ledger", new Aws.Qldb.LedgerArgs
         {
+            PermissionsMode = "STANDARD",
         });
     }
 
@@ -58,7 +59,9 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := qldb.NewLedger(ctx, "sample_ledger", nil)
+		_, err := qldb.NewLedger(ctx, "sample_ledger", &qldb.LedgerArgs{
+			PermissionsMode: pulumi.String("STANDARD"),
+		})
 		if err != nil {
 			return err
 		}
@@ -77,7 +80,7 @@ func main() {
 import pulumi
 import pulumi_aws as aws
 
-sample_ledger = aws.qldb.Ledger("sample-ledger")
+sample_ledger = aws.qldb.Ledger("sample-ledger", permissions_mode="STANDARD")
 ```
 
 
@@ -91,7 +94,9 @@ sample_ledger = aws.qldb.Ledger("sample-ledger")
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const sample_ledger = new aws.qldb.Ledger("sample-ledger", {});
+const sample_ledger = new aws.qldb.Ledger("sample-ledger", {
+    permissionsMode: "STANDARD",
+});
 ```
 
 
@@ -111,7 +116,7 @@ const sample_ledger = new aws.qldb.Ledger("sample-ledger", {});
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Ledger</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">LedgerArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Ledger</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">LedgerArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -120,20 +125,21 @@ const sample_ledger = new aws.qldb.Ledger("sample-ledger", {});
            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
            <span class="nx">deletion_protection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
            <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+           <span class="nx">permissions_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
            <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
            <span class="nx">tags_all</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">Ledger</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-           <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">Optional[LedgerArgs]</a></span> = None<span class="p">,</span>
+           <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">LedgerArgs</a></span><span class="p">,</span>
            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewLedger</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">LedgerArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Ledger</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewLedger</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">LedgerArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Ledger</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Ledger</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">LedgerArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Ledger</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">LedgerArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -145,7 +151,7 @@ const sample_ledger = new aws.qldb.Ledger("sample-ledger", {});
         <span class="property-type">string</span>
     </dt>
     <dd>The unique name of the resource.</dd><dt
-        class="property-optional" title="Optional">
+        class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">LedgerArgs</a></span>
@@ -169,7 +175,7 @@ const sample_ledger = new aws.qldb.Ledger("sample-ledger", {});
         <span class="property-type">str</span>
     </dt>
     <dd>The unique name of the resource.</dd><dt
-        class="property-optional" title="Optional">
+        class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">LedgerArgs</a></span>
@@ -199,7 +205,7 @@ const sample_ledger = new aws.qldb.Ledger("sample-ledger", {});
         <span class="property-type">string</span>
     </dt>
     <dd>The unique name of the resource.</dd><dt
-        class="property-optional" title="Optional">
+        class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">LedgerArgs</a></span>
@@ -223,7 +229,7 @@ const sample_ledger = new aws.qldb.Ledger("sample-ledger", {});
         <span class="property-type">string</span>
     </dt>
     <dd>The unique name of the resource.</dd><dt
-        class="property-optional" title="Optional">
+        class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inputs">LedgerArgs</a></span>
@@ -240,7 +246,7 @@ const sample_ledger = new aws.qldb.Ledger("sample-ledger", {});
 
 ## Ledger Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Architecture and Concepts docs.
 
 ### Inputs
 
@@ -249,7 +255,16 @@ The Ledger resource accepts the following [input]({{< relref "/docs/intro/concep
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="permissionsmode_csharp">
+<a href="#permissionsmode_csharp" style="color: inherit; text-decoration: inherit;">Permissions<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The permissions mode for the QLDB ledger instance. Specify either `ALLOW_ALL` or `STANDARD`.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deletionprotection_csharp">
 <a href="#deletionprotection_csharp" style="color: inherit; text-decoration: inherit;">Deletion<wbr>Protection</a>
@@ -266,7 +281,7 @@ The Ledger resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The friendly name for the QLDB Ledger instance. This is atuo generated by default.
+    <dd>{{% md %}}The friendly name for the QLDB Ledger instance. By default generated by this provider.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
@@ -275,7 +290,7 @@ The Ledger resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Key-value mapping of resource tags
+    <dd>{{% md %}}Key-value map of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tagsall_csharp">
@@ -289,7 +304,16 @@ The Ledger resource accepts the following [input]({{< relref "/docs/intro/concep
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="permissionsmode_go">
+<a href="#permissionsmode_go" style="color: inherit; text-decoration: inherit;">Permissions<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The permissions mode for the QLDB ledger instance. Specify either `ALLOW_ALL` or `STANDARD`.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deletionprotection_go">
 <a href="#deletionprotection_go" style="color: inherit; text-decoration: inherit;">Deletion<wbr>Protection</a>
@@ -306,7 +330,7 @@ The Ledger resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The friendly name for the QLDB Ledger instance. This is atuo generated by default.
+    <dd>{{% md %}}The friendly name for the QLDB Ledger instance. By default generated by this provider.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
@@ -315,7 +339,7 @@ The Ledger resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Key-value mapping of resource tags
+    <dd>{{% md %}}Key-value map of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tagsall_go">
@@ -329,7 +353,16 @@ The Ledger resource accepts the following [input]({{< relref "/docs/intro/concep
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="permissionsmode_nodejs">
+<a href="#permissionsmode_nodejs" style="color: inherit; text-decoration: inherit;">permissions<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The permissions mode for the QLDB ledger instance. Specify either `ALLOW_ALL` or `STANDARD`.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deletionprotection_nodejs">
 <a href="#deletionprotection_nodejs" style="color: inherit; text-decoration: inherit;">deletion<wbr>Protection</a>
@@ -346,7 +379,7 @@ The Ledger resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The friendly name for the QLDB Ledger instance. This is atuo generated by default.
+    <dd>{{% md %}}The friendly name for the QLDB Ledger instance. By default generated by this provider.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
@@ -355,7 +388,7 @@ The Ledger resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Key-value mapping of resource tags
+    <dd>{{% md %}}Key-value map of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tagsall_nodejs">
@@ -369,7 +402,16 @@ The Ledger resource accepts the following [input]({{< relref "/docs/intro/concep
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="permissions_mode_python">
+<a href="#permissions_mode_python" style="color: inherit; text-decoration: inherit;">permissions_<wbr>mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The permissions mode for the QLDB ledger instance. Specify either `ALLOW_ALL` or `STANDARD`.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deletion_protection_python">
 <a href="#deletion_protection_python" style="color: inherit; text-decoration: inherit;">deletion_<wbr>protection</a>
@@ -386,7 +428,7 @@ The Ledger resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The friendly name for the QLDB Ledger instance. This is atuo generated by default.
+    <dd>{{% md %}}The friendly name for the QLDB Ledger instance. By default generated by this provider.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
@@ -395,7 +437,7 @@ The Ledger resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Key-value mapping of resource tags
+    <dd>{{% md %}}Key-value map of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_all_python">
@@ -518,6 +560,7 @@ Get an existing Ledger resource's state with the given name, ID, and optional ex
         <span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">deletion_protection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">permissions_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
         <span class="nx">tags_all</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">) -&gt;</span> Ledger</code></pre></div>
 {{% /choosable %}}
@@ -656,7 +699,16 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The friendly name for the QLDB Ledger instance. This is atuo generated by default.
+    <dd>{{% md %}}The friendly name for the QLDB Ledger instance. By default generated by this provider.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_permissionsmode_csharp">
+<a href="#state_permissionsmode_csharp" style="color: inherit; text-decoration: inherit;">Permissions<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The permissions mode for the QLDB ledger instance. Specify either `ALLOW_ALL` or `STANDARD`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_csharp">
@@ -665,7 +717,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Key-value mapping of resource tags
+    <dd>{{% md %}}Key-value map of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tagsall_csharp">
@@ -705,7 +757,16 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The friendly name for the QLDB Ledger instance. This is atuo generated by default.
+    <dd>{{% md %}}The friendly name for the QLDB Ledger instance. By default generated by this provider.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_permissionsmode_go">
+<a href="#state_permissionsmode_go" style="color: inherit; text-decoration: inherit;">Permissions<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The permissions mode for the QLDB ledger instance. Specify either `ALLOW_ALL` or `STANDARD`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
@@ -714,7 +775,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Key-value mapping of resource tags
+    <dd>{{% md %}}Key-value map of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tagsall_go">
@@ -754,7 +815,16 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The friendly name for the QLDB Ledger instance. This is atuo generated by default.
+    <dd>{{% md %}}The friendly name for the QLDB Ledger instance. By default generated by this provider.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_permissionsmode_nodejs">
+<a href="#state_permissionsmode_nodejs" style="color: inherit; text-decoration: inherit;">permissions<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The permissions mode for the QLDB ledger instance. Specify either `ALLOW_ALL` or `STANDARD`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_nodejs">
@@ -763,7 +833,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Key-value mapping of resource tags
+    <dd>{{% md %}}Key-value map of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tagsall_nodejs">
@@ -803,7 +873,16 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The friendly name for the QLDB Ledger instance. This is atuo generated by default.
+    <dd>{{% md %}}The friendly name for the QLDB Ledger instance. By default generated by this provider.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_permissions_mode_python">
+<a href="#state_permissions_mode_python" style="color: inherit; text-decoration: inherit;">permissions_<wbr>mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The permissions mode for the QLDB ledger instance. Specify either `ALLOW_ALL` or `STANDARD`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">
@@ -812,7 +891,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Key-value mapping of resource tags
+    <dd>{{% md %}}Key-value map of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_all_python">

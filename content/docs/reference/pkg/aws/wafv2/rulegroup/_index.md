@@ -158,11 +158,11 @@ example = aws.wafv2.RuleGroup("example",
                 ],
             ),
         ),
-        visibility_config={
-            "cloudwatchMetricsEnabled": False,
-            "metric_name": "friendly-rule-metric-name",
-            "sampledRequestsEnabled": False,
-        },
+        visibility_config=aws.wafv2.RuleGroupRuleVisibilityConfigArgs(
+            cloudwatch_metrics_enabled=False,
+            metric_name="friendly-rule-metric-name",
+            sampled_requests_enabled=False,
+        ),
     )],
     scope="REGIONAL",
     visibility_config=aws.wafv2.RuleGroupVisibilityConfigArgs(
@@ -807,11 +807,11 @@ example = aws.wafv2.RuleGroup("example",
                     )],
                 ),
             ),
-            visibility_config={
-                "cloudwatchMetricsEnabled": False,
-                "metric_name": "rule-1",
-                "sampledRequestsEnabled": False,
-            },
+            visibility_config=aws.wafv2.RuleGroupRuleVisibilityConfigArgs(
+                cloudwatch_metrics_enabled=False,
+                metric_name="rule-1",
+                sampled_requests_enabled=False,
+            ),
         ),
         aws.wafv2.RuleGroupRuleArgs(
             name="rule-2",
@@ -857,11 +857,11 @@ example = aws.wafv2.RuleGroup("example",
                     ],
                 ),
             ),
-            visibility_config={
-                "cloudwatchMetricsEnabled": False,
-                "metric_name": "rule-2",
-                "sampledRequestsEnabled": False,
-            },
+            visibility_config=aws.wafv2.RuleGroupRuleVisibilityConfigArgs(
+                cloudwatch_metrics_enabled=False,
+                metric_name="rule-2",
+                sampled_requests_enabled=False,
+            ),
         ),
         aws.wafv2.RuleGroupRuleArgs(
             name="rule-3",
@@ -884,11 +884,11 @@ example = aws.wafv2.RuleGroup("example",
                     )],
                 ),
             ),
-            visibility_config={
-                "cloudwatchMetricsEnabled": False,
-                "metric_name": "rule-3",
-                "sampledRequestsEnabled": False,
-            },
+            visibility_config=aws.wafv2.RuleGroupRuleVisibilityConfigArgs(
+                cloudwatch_metrics_enabled=False,
+                metric_name="rule-3",
+                sampled_requests_enabled=False,
+            ),
         ),
         aws.wafv2.RuleGroupRuleArgs(
             name="rule-4",
@@ -921,11 +921,11 @@ example = aws.wafv2.RuleGroup("example",
                     ],
                 ),
             ),
-            visibility_config={
-                "cloudwatchMetricsEnabled": False,
-                "metric_name": "rule-4",
-                "sampledRequestsEnabled": False,
-            },
+            visibility_config=aws.wafv2.RuleGroupRuleVisibilityConfigArgs(
+                cloudwatch_metrics_enabled=False,
+                metric_name="rule-4",
+                sampled_requests_enabled=False,
+            ),
         ),
     ],
     visibility_config=aws.wafv2.RuleGroupVisibilityConfigArgs(
@@ -1292,7 +1292,7 @@ const example = new aws.wafv2.RuleGroup("example", {
 
 ## RuleGroup Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Architecture and Concepts docs.
 
 ### Inputs
 

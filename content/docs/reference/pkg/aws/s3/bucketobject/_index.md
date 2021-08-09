@@ -12,7 +12,6 @@ meta_desc: "Documentation for the aws.s3.BucketObject resource with examples, in
 
 Provides a S3 bucket object resource.
 
-
 {{% examples %}}
 
 ## Example Usage
@@ -678,7 +677,7 @@ const examplebucketObject = new aws.s3.BucketObject("examplebucketObject", {
 
 ## BucketObject Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Architecture and Concepts docs.
 
 ### Inputs
 
@@ -2798,6 +2797,22 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Objects can be imported using the `id`. The `id` is the bucket name and the key together e.g.
+
+```sh
+ $ pulumi import aws:s3/bucketObject:BucketObject object some-bucket-name/some/key.txt
+```
+
+ Additionally, s3 url syntax can be used, e.g.
+
+```sh
+ $ pulumi import aws:s3/bucketObject:BucketObject object s3://some-bucket-name/some/key.txt
+```
 
 
 

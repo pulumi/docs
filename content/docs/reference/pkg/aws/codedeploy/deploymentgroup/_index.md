@@ -249,16 +249,16 @@ example_deployment_group = aws.codedeploy.DeploymentGroup("exampleDeploymentGrou
     service_role_arn=example_role.arn,
     ec2_tag_sets=[aws.codedeploy.DeploymentGroupEc2TagSetArgs(
         ec2_tag_filters=[
-            {
-                "key": "filterkey1",
-                "type": "KEY_AND_VALUE",
-                "value": "filtervalue",
-            },
-            {
-                "key": "filterkey2",
-                "type": "KEY_AND_VALUE",
-                "value": "filtervalue",
-            },
+            aws.codedeploy.DeploymentGroupEc2TagSetEc2TagFilterArgs(
+                key="filterkey1",
+                type="KEY_AND_VALUE",
+                value="filtervalue",
+            ),
+            aws.codedeploy.DeploymentGroupEc2TagSetEc2TagFilterArgs(
+                key="filterkey2",
+                type="KEY_AND_VALUE",
+                value="filtervalue",
+            ),
         ],
     )],
     trigger_configurations=[aws.codedeploy.DeploymentGroupTriggerConfigurationArgs(
@@ -973,7 +973,7 @@ const exampleDeploymentGroup = new aws.codedeploy.DeploymentGroup("exampleDeploy
 
 ## DeploymentGroup Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Architecture and Concepts docs.
 
 ### Inputs
 

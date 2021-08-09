@@ -215,11 +215,13 @@ const rotation_example = new aws.secretsmanager.Secret("rotation-example", {
 <span class="k">def </span><span class="nx">Secret</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
            <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+           <span class="nx">force_overwrite_replica_secret</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
            <span class="nx">kms_key_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
            <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
            <span class="nx">name_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
            <span class="nx">policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
            <span class="nx">recovery_window_in_days</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+           <span class="nx">replicas</span><span class="p">:</span> <span class="nx">Optional[Sequence[SecretReplicaArgs]]</span> = None<span class="p">,</span>
            <span class="nx">rotation_lambda_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
            <span class="nx">rotation_rules</span><span class="p">:</span> <span class="nx">Optional[SecretRotationRulesArgs]</span> = None<span class="p">,</span>
            <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
@@ -342,7 +344,7 @@ const rotation_example = new aws.secretsmanager.Secret("rotation-example", {
 
 ## Secret Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Architecture and Concepts docs.
 
 ### Inputs
 
@@ -359,8 +361,16 @@ The Secret resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A description of the secret.
+    <dd>{{% md %}}Description of the secret.
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="forceoverwritereplicasecret_csharp">
+<a href="#forceoverwritereplicasecret_csharp" style="color: inherit; text-decoration: inherit;">Force<wbr>Overwrite<wbr>Replica<wbr>Secret</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kmskeyid_csharp">
 <a href="#kmskeyid_csharp" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Id</a>
@@ -368,7 +378,7 @@ The Secret resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the ARN or Id of the AWS KMS customer master key (CMK) to be used to encrypt the secret values in the versions stored in this secret. If you don't specify this value, then Secrets Manager defaults to using the AWS account's default CMK (the one named `aws/secretsmanager`). If the default KMS CMK with that name doesn't yet exist, then AWS Secrets Manager creates it for you automatically the first time.
+    <dd>{{% md %}}ARN, Key ID, or Alias.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
@@ -377,7 +387,7 @@ The Secret resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the friendly name of the new secret. The secret name can consist of uppercase letters, lowercase letters, digits, and any of the following characters: `/_+=.@-` Conflicts with `name_prefix`.
+    <dd>{{% md %}}Friendly name of the new secret. The secret name can consist of uppercase letters, lowercase letters, digits, and any of the following characters: `/_+=.@-` Conflicts with `name_prefix`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nameprefix_csharp">
@@ -395,7 +405,7 @@ The Secret resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A valid JSON document representing a [resource policy](https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access_resource-based-policies.html).
+    <dd>{{% md %}}Valid JSON document representing a [resource policy](https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access_resource-based-policies.html).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recoverywindowindays_csharp">
@@ -404,7 +414,16 @@ The Secret resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Specifies the number of days that AWS Secrets Manager waits before it can delete the secret. This value can be `0` to force deletion without recovery or range from `7` to `30` days. The default value is `30`.
+    <dd>{{% md %}}Number of days that AWS Secrets Manager waits before it can delete the secret. This value can be `0` to force deletion without recovery or range from `7` to `30` days. The default value is `30`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="replicas_csharp">
+<a href="#replicas_csharp" style="color: inherit; text-decoration: inherit;">Replicas</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#secretreplica">List&lt;Secret<wbr>Replica<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration block to support secret replication. See details below.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="rotationlambdaarn_csharp">
@@ -413,7 +432,7 @@ The Secret resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the ARN of the Lambda function that can rotate the secret. Use the `aws.secretsmanager.SecretRotation` resource to manage this configuration instead. As of version 2.67.0, removal of this configuration will no longer remove rotation due to supporting the new resource. Either import the new resource and remove the configuration or manually remove rotation.
+    <dd>{{% md %}}ARN of the Lambda function that can rotate the secret. Use the `aws.secretsmanager.SecretRotation` resource to manage this configuration instead. As of version 2.67.0, removal of this configuration will no longer remove rotation due to supporting the new resource. Either import the new resource and remove the configuration or manually remove rotation.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the aws_secretsmanager_secret_rotation resource instead{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="rotationrules_csharp">
@@ -422,7 +441,7 @@ The Secret resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretrotationrules">Secret<wbr>Rotation<wbr>Rules<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A structure that defines the rotation configuration for this secret. Defined below. Use the `aws.secretsmanager.SecretRotation` resource to manage this configuration instead. As of version 2.67.0, removal of this configuration will no longer remove rotation due to supporting the new resource. Either import the new resource and remove the configuration or manually remove rotation.
+    <dd>{{% md %}}Configuration block for the rotation configuration of this secret. Defined below. Use the `aws.secretsmanager.SecretRotation` resource to manage this configuration instead. As of version 2.67.0, removal of this configuration will no longer remove rotation due to supporting the new resource. Either import the new resource and remove the configuration or manually remove rotation.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the aws_secretsmanager_secret_rotation resource instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
@@ -431,7 +450,7 @@ The Secret resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Specifies a key-value map of user-defined tags that are attached to the secret. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+    <dd>{{% md %}}Key-value map of user-defined tags that are attached to the secret. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tagsall_csharp">
@@ -440,7 +459,7 @@ The Secret resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider .
+    <dd>{{% md %}}Map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -453,8 +472,16 @@ The Secret resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A description of the secret.
+    <dd>{{% md %}}Description of the secret.
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="forceoverwritereplicasecret_go">
+<a href="#forceoverwritereplicasecret_go" style="color: inherit; text-decoration: inherit;">Force<wbr>Overwrite<wbr>Replica<wbr>Secret</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kmskeyid_go">
 <a href="#kmskeyid_go" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Id</a>
@@ -462,7 +489,7 @@ The Secret resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the ARN or Id of the AWS KMS customer master key (CMK) to be used to encrypt the secret values in the versions stored in this secret. If you don't specify this value, then Secrets Manager defaults to using the AWS account's default CMK (the one named `aws/secretsmanager`). If the default KMS CMK with that name doesn't yet exist, then AWS Secrets Manager creates it for you automatically the first time.
+    <dd>{{% md %}}ARN, Key ID, or Alias.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
@@ -471,7 +498,7 @@ The Secret resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the friendly name of the new secret. The secret name can consist of uppercase letters, lowercase letters, digits, and any of the following characters: `/_+=.@-` Conflicts with `name_prefix`.
+    <dd>{{% md %}}Friendly name of the new secret. The secret name can consist of uppercase letters, lowercase letters, digits, and any of the following characters: `/_+=.@-` Conflicts with `name_prefix`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nameprefix_go">
@@ -489,7 +516,7 @@ The Secret resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A valid JSON document representing a [resource policy](https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access_resource-based-policies.html).
+    <dd>{{% md %}}Valid JSON document representing a [resource policy](https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access_resource-based-policies.html).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recoverywindowindays_go">
@@ -498,7 +525,16 @@ The Secret resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Specifies the number of days that AWS Secrets Manager waits before it can delete the secret. This value can be `0` to force deletion without recovery or range from `7` to `30` days. The default value is `30`.
+    <dd>{{% md %}}Number of days that AWS Secrets Manager waits before it can delete the secret. This value can be `0` to force deletion without recovery or range from `7` to `30` days. The default value is `30`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="replicas_go">
+<a href="#replicas_go" style="color: inherit; text-decoration: inherit;">Replicas</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#secretreplica">[]Secret<wbr>Replica<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration block to support secret replication. See details below.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="rotationlambdaarn_go">
@@ -507,7 +543,7 @@ The Secret resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the ARN of the Lambda function that can rotate the secret. Use the `aws.secretsmanager.SecretRotation` resource to manage this configuration instead. As of version 2.67.0, removal of this configuration will no longer remove rotation due to supporting the new resource. Either import the new resource and remove the configuration or manually remove rotation.
+    <dd>{{% md %}}ARN of the Lambda function that can rotate the secret. Use the `aws.secretsmanager.SecretRotation` resource to manage this configuration instead. As of version 2.67.0, removal of this configuration will no longer remove rotation due to supporting the new resource. Either import the new resource and remove the configuration or manually remove rotation.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the aws_secretsmanager_secret_rotation resource instead{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="rotationrules_go">
@@ -516,7 +552,7 @@ The Secret resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretrotationrules">Secret<wbr>Rotation<wbr>Rules<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A structure that defines the rotation configuration for this secret. Defined below. Use the `aws.secretsmanager.SecretRotation` resource to manage this configuration instead. As of version 2.67.0, removal of this configuration will no longer remove rotation due to supporting the new resource. Either import the new resource and remove the configuration or manually remove rotation.
+    <dd>{{% md %}}Configuration block for the rotation configuration of this secret. Defined below. Use the `aws.secretsmanager.SecretRotation` resource to manage this configuration instead. As of version 2.67.0, removal of this configuration will no longer remove rotation due to supporting the new resource. Either import the new resource and remove the configuration or manually remove rotation.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the aws_secretsmanager_secret_rotation resource instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
@@ -525,7 +561,7 @@ The Secret resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Specifies a key-value map of user-defined tags that are attached to the secret. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+    <dd>{{% md %}}Key-value map of user-defined tags that are attached to the secret. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tagsall_go">
@@ -534,7 +570,7 @@ The Secret resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider .
+    <dd>{{% md %}}Map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -547,8 +583,16 @@ The Secret resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A description of the secret.
+    <dd>{{% md %}}Description of the secret.
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="forceoverwritereplicasecret_nodejs">
+<a href="#forceoverwritereplicasecret_nodejs" style="color: inherit; text-decoration: inherit;">force<wbr>Overwrite<wbr>Replica<wbr>Secret</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kmskeyid_nodejs">
 <a href="#kmskeyid_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Id</a>
@@ -556,7 +600,7 @@ The Secret resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the ARN or Id of the AWS KMS customer master key (CMK) to be used to encrypt the secret values in the versions stored in this secret. If you don't specify this value, then Secrets Manager defaults to using the AWS account's default CMK (the one named `aws/secretsmanager`). If the default KMS CMK with that name doesn't yet exist, then AWS Secrets Manager creates it for you automatically the first time.
+    <dd>{{% md %}}ARN, Key ID, or Alias.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
@@ -565,7 +609,7 @@ The Secret resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the friendly name of the new secret. The secret name can consist of uppercase letters, lowercase letters, digits, and any of the following characters: `/_+=.@-` Conflicts with `name_prefix`.
+    <dd>{{% md %}}Friendly name of the new secret. The secret name can consist of uppercase letters, lowercase letters, digits, and any of the following characters: `/_+=.@-` Conflicts with `name_prefix`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nameprefix_nodejs">
@@ -583,7 +627,7 @@ The Secret resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A valid JSON document representing a [resource policy](https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access_resource-based-policies.html).
+    <dd>{{% md %}}Valid JSON document representing a [resource policy](https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access_resource-based-policies.html).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recoverywindowindays_nodejs">
@@ -592,7 +636,16 @@ The Secret resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Specifies the number of days that AWS Secrets Manager waits before it can delete the secret. This value can be `0` to force deletion without recovery or range from `7` to `30` days. The default value is `30`.
+    <dd>{{% md %}}Number of days that AWS Secrets Manager waits before it can delete the secret. This value can be `0` to force deletion without recovery or range from `7` to `30` days. The default value is `30`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="replicas_nodejs">
+<a href="#replicas_nodejs" style="color: inherit; text-decoration: inherit;">replicas</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#secretreplica">Secret<wbr>Replica<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration block to support secret replication. See details below.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="rotationlambdaarn_nodejs">
@@ -601,7 +654,7 @@ The Secret resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the ARN of the Lambda function that can rotate the secret. Use the `aws.secretsmanager.SecretRotation` resource to manage this configuration instead. As of version 2.67.0, removal of this configuration will no longer remove rotation due to supporting the new resource. Either import the new resource and remove the configuration or manually remove rotation.
+    <dd>{{% md %}}ARN of the Lambda function that can rotate the secret. Use the `aws.secretsmanager.SecretRotation` resource to manage this configuration instead. As of version 2.67.0, removal of this configuration will no longer remove rotation due to supporting the new resource. Either import the new resource and remove the configuration or manually remove rotation.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the aws_secretsmanager_secret_rotation resource instead{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="rotationrules_nodejs">
@@ -610,7 +663,7 @@ The Secret resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretrotationrules">Secret<wbr>Rotation<wbr>Rules<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A structure that defines the rotation configuration for this secret. Defined below. Use the `aws.secretsmanager.SecretRotation` resource to manage this configuration instead. As of version 2.67.0, removal of this configuration will no longer remove rotation due to supporting the new resource. Either import the new resource and remove the configuration or manually remove rotation.
+    <dd>{{% md %}}Configuration block for the rotation configuration of this secret. Defined below. Use the `aws.secretsmanager.SecretRotation` resource to manage this configuration instead. As of version 2.67.0, removal of this configuration will no longer remove rotation due to supporting the new resource. Either import the new resource and remove the configuration or manually remove rotation.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the aws_secretsmanager_secret_rotation resource instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
@@ -619,7 +672,7 @@ The Secret resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Specifies a key-value map of user-defined tags that are attached to the secret. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+    <dd>{{% md %}}Key-value map of user-defined tags that are attached to the secret. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tagsall_nodejs">
@@ -628,7 +681,7 @@ The Secret resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider .
+    <dd>{{% md %}}Map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -641,8 +694,16 @@ The Secret resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A description of the secret.
+    <dd>{{% md %}}Description of the secret.
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="force_overwrite_replica_secret_python">
+<a href="#force_overwrite_replica_secret_python" style="color: inherit; text-decoration: inherit;">force_<wbr>overwrite_<wbr>replica_<wbr>secret</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kms_key_id_python">
 <a href="#kms_key_id_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>id</a>
@@ -650,7 +711,7 @@ The Secret resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies the ARN or Id of the AWS KMS customer master key (CMK) to be used to encrypt the secret values in the versions stored in this secret. If you don't specify this value, then Secrets Manager defaults to using the AWS account's default CMK (the one named `aws/secretsmanager`). If the default KMS CMK with that name doesn't yet exist, then AWS Secrets Manager creates it for you automatically the first time.
+    <dd>{{% md %}}ARN, Key ID, or Alias.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
@@ -659,7 +720,7 @@ The Secret resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies the friendly name of the new secret. The secret name can consist of uppercase letters, lowercase letters, digits, and any of the following characters: `/_+=.@-` Conflicts with `name_prefix`.
+    <dd>{{% md %}}Friendly name of the new secret. The secret name can consist of uppercase letters, lowercase letters, digits, and any of the following characters: `/_+=.@-` Conflicts with `name_prefix`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_prefix_python">
@@ -677,7 +738,7 @@ The Secret resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A valid JSON document representing a [resource policy](https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access_resource-based-policies.html).
+    <dd>{{% md %}}Valid JSON document representing a [resource policy](https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access_resource-based-policies.html).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recovery_window_in_days_python">
@@ -686,7 +747,16 @@ The Secret resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Specifies the number of days that AWS Secrets Manager waits before it can delete the secret. This value can be `0` to force deletion without recovery or range from `7` to `30` days. The default value is `30`.
+    <dd>{{% md %}}Number of days that AWS Secrets Manager waits before it can delete the secret. This value can be `0` to force deletion without recovery or range from `7` to `30` days. The default value is `30`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="replicas_python">
+<a href="#replicas_python" style="color: inherit; text-decoration: inherit;">replicas</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#secretreplica">Sequence[Secret<wbr>Replica<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration block to support secret replication. See details below.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="rotation_lambda_arn_python">
@@ -695,7 +765,7 @@ The Secret resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies the ARN of the Lambda function that can rotate the secret. Use the `aws.secretsmanager.SecretRotation` resource to manage this configuration instead. As of version 2.67.0, removal of this configuration will no longer remove rotation due to supporting the new resource. Either import the new resource and remove the configuration or manually remove rotation.
+    <dd>{{% md %}}ARN of the Lambda function that can rotate the secret. Use the `aws.secretsmanager.SecretRotation` resource to manage this configuration instead. As of version 2.67.0, removal of this configuration will no longer remove rotation due to supporting the new resource. Either import the new resource and remove the configuration or manually remove rotation.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the aws_secretsmanager_secret_rotation resource instead{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="rotation_rules_python">
@@ -704,7 +774,7 @@ The Secret resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretrotationrules">Secret<wbr>Rotation<wbr>Rules<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A structure that defines the rotation configuration for this secret. Defined below. Use the `aws.secretsmanager.SecretRotation` resource to manage this configuration instead. As of version 2.67.0, removal of this configuration will no longer remove rotation due to supporting the new resource. Either import the new resource and remove the configuration or manually remove rotation.
+    <dd>{{% md %}}Configuration block for the rotation configuration of this secret. Defined below. Use the `aws.secretsmanager.SecretRotation` resource to manage this configuration instead. As of version 2.67.0, removal of this configuration will no longer remove rotation due to supporting the new resource. Either import the new resource and remove the configuration or manually remove rotation.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the aws_secretsmanager_secret_rotation resource instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
@@ -713,7 +783,7 @@ The Secret resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Specifies a key-value map of user-defined tags that are attached to the secret. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+    <dd>{{% md %}}Key-value map of user-defined tags that are attached to the secret. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_all_python">
@@ -722,7 +792,7 @@ The Secret resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider .
+    <dd>{{% md %}}Map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -742,7 +812,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Amazon Resource Name (ARN) of the secret.
+    <dd>{{% md %}}ARN of the secret.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
@@ -759,7 +829,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Specifies whether automatic rotation is enabled for this secret.
+    <dd>{{% md %}}Whether automatic rotation is enabled for this secret.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the aws_secretsmanager_secret_rotation resource instead{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
@@ -772,7 +842,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Amazon Resource Name (ARN) of the secret.
+    <dd>{{% md %}}ARN of the secret.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
@@ -789,7 +859,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Specifies whether automatic rotation is enabled for this secret.
+    <dd>{{% md %}}Whether automatic rotation is enabled for this secret.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the aws_secretsmanager_secret_rotation resource instead{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
@@ -802,7 +872,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Amazon Resource Name (ARN) of the secret.
+    <dd>{{% md %}}ARN of the secret.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
@@ -819,7 +889,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Specifies whether automatic rotation is enabled for this secret.
+    <dd>{{% md %}}Whether automatic rotation is enabled for this secret.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the aws_secretsmanager_secret_rotation resource instead{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
@@ -832,7 +902,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Amazon Resource Name (ARN) of the secret.
+    <dd>{{% md %}}ARN of the secret.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
@@ -849,7 +919,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Specifies whether automatic rotation is enabled for this secret.
+    <dd>{{% md %}}Whether automatic rotation is enabled for this secret.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the aws_secretsmanager_secret_rotation resource instead{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
@@ -871,11 +941,13 @@ Get an existing Secret resource's state with the given name, ID, and optional ex
         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
         <span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">force_overwrite_replica_secret</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">kms_key_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">name_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">recovery_window_in_days</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+        <span class="nx">replicas</span><span class="p">:</span> <span class="nx">Optional[Sequence[SecretReplicaArgs]]</span> = None<span class="p">,</span>
         <span class="nx">rotation_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">rotation_lambda_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">rotation_rules</span><span class="p">:</span> <span class="nx">Optional[SecretRotationRulesArgs]</span> = None<span class="p">,</span>
@@ -999,7 +1071,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Amazon Resource Name (ARN) of the secret.
+    <dd>{{% md %}}ARN of the secret.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
@@ -1008,8 +1080,16 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A description of the secret.
+    <dd>{{% md %}}Description of the secret.
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_forceoverwritereplicasecret_csharp">
+<a href="#state_forceoverwritereplicasecret_csharp" style="color: inherit; text-decoration: inherit;">Force<wbr>Overwrite<wbr>Replica<wbr>Secret</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_kmskeyid_csharp">
 <a href="#state_kmskeyid_csharp" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Id</a>
@@ -1017,7 +1097,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the ARN or Id of the AWS KMS customer master key (CMK) to be used to encrypt the secret values in the versions stored in this secret. If you don't specify this value, then Secrets Manager defaults to using the AWS account's default CMK (the one named `aws/secretsmanager`). If the default KMS CMK with that name doesn't yet exist, then AWS Secrets Manager creates it for you automatically the first time.
+    <dd>{{% md %}}ARN, Key ID, or Alias.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
@@ -1026,7 +1106,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the friendly name of the new secret. The secret name can consist of uppercase letters, lowercase letters, digits, and any of the following characters: `/_+=.@-` Conflicts with `name_prefix`.
+    <dd>{{% md %}}Friendly name of the new secret. The secret name can consist of uppercase letters, lowercase letters, digits, and any of the following characters: `/_+=.@-` Conflicts with `name_prefix`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nameprefix_csharp">
@@ -1044,7 +1124,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A valid JSON document representing a [resource policy](https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access_resource-based-policies.html).
+    <dd>{{% md %}}Valid JSON document representing a [resource policy](https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access_resource-based-policies.html).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_recoverywindowindays_csharp">
@@ -1053,7 +1133,16 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Specifies the number of days that AWS Secrets Manager waits before it can delete the secret. This value can be `0` to force deletion without recovery or range from `7` to `30` days. The default value is `30`.
+    <dd>{{% md %}}Number of days that AWS Secrets Manager waits before it can delete the secret. This value can be `0` to force deletion without recovery or range from `7` to `30` days. The default value is `30`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_replicas_csharp">
+<a href="#state_replicas_csharp" style="color: inherit; text-decoration: inherit;">Replicas</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#secretreplica">List&lt;Secret<wbr>Replica<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration block to support secret replication. See details below.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_rotationenabled_csharp">
@@ -1062,7 +1151,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Specifies whether automatic rotation is enabled for this secret.
+    <dd>{{% md %}}Whether automatic rotation is enabled for this secret.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the aws_secretsmanager_secret_rotation resource instead{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_rotationlambdaarn_csharp">
@@ -1071,7 +1160,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the ARN of the Lambda function that can rotate the secret. Use the `aws.secretsmanager.SecretRotation` resource to manage this configuration instead. As of version 2.67.0, removal of this configuration will no longer remove rotation due to supporting the new resource. Either import the new resource and remove the configuration or manually remove rotation.
+    <dd>{{% md %}}ARN of the Lambda function that can rotate the secret. Use the `aws.secretsmanager.SecretRotation` resource to manage this configuration instead. As of version 2.67.0, removal of this configuration will no longer remove rotation due to supporting the new resource. Either import the new resource and remove the configuration or manually remove rotation.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the aws_secretsmanager_secret_rotation resource instead{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_rotationrules_csharp">
@@ -1080,7 +1169,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretrotationrules">Secret<wbr>Rotation<wbr>Rules<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A structure that defines the rotation configuration for this secret. Defined below. Use the `aws.secretsmanager.SecretRotation` resource to manage this configuration instead. As of version 2.67.0, removal of this configuration will no longer remove rotation due to supporting the new resource. Either import the new resource and remove the configuration or manually remove rotation.
+    <dd>{{% md %}}Configuration block for the rotation configuration of this secret. Defined below. Use the `aws.secretsmanager.SecretRotation` resource to manage this configuration instead. As of version 2.67.0, removal of this configuration will no longer remove rotation due to supporting the new resource. Either import the new resource and remove the configuration or manually remove rotation.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the aws_secretsmanager_secret_rotation resource instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_csharp">
@@ -1089,7 +1178,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Specifies a key-value map of user-defined tags that are attached to the secret. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+    <dd>{{% md %}}Key-value map of user-defined tags that are attached to the secret. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tagsall_csharp">
@@ -1098,7 +1187,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider .
+    <dd>{{% md %}}Map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1111,7 +1200,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Amazon Resource Name (ARN) of the secret.
+    <dd>{{% md %}}ARN of the secret.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
@@ -1120,8 +1209,16 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A description of the secret.
+    <dd>{{% md %}}Description of the secret.
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_forceoverwritereplicasecret_go">
+<a href="#state_forceoverwritereplicasecret_go" style="color: inherit; text-decoration: inherit;">Force<wbr>Overwrite<wbr>Replica<wbr>Secret</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_kmskeyid_go">
 <a href="#state_kmskeyid_go" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Id</a>
@@ -1129,7 +1226,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the ARN or Id of the AWS KMS customer master key (CMK) to be used to encrypt the secret values in the versions stored in this secret. If you don't specify this value, then Secrets Manager defaults to using the AWS account's default CMK (the one named `aws/secretsmanager`). If the default KMS CMK with that name doesn't yet exist, then AWS Secrets Manager creates it for you automatically the first time.
+    <dd>{{% md %}}ARN, Key ID, or Alias.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
@@ -1138,7 +1235,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the friendly name of the new secret. The secret name can consist of uppercase letters, lowercase letters, digits, and any of the following characters: `/_+=.@-` Conflicts with `name_prefix`.
+    <dd>{{% md %}}Friendly name of the new secret. The secret name can consist of uppercase letters, lowercase letters, digits, and any of the following characters: `/_+=.@-` Conflicts with `name_prefix`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nameprefix_go">
@@ -1156,7 +1253,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A valid JSON document representing a [resource policy](https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access_resource-based-policies.html).
+    <dd>{{% md %}}Valid JSON document representing a [resource policy](https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access_resource-based-policies.html).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_recoverywindowindays_go">
@@ -1165,7 +1262,16 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Specifies the number of days that AWS Secrets Manager waits before it can delete the secret. This value can be `0` to force deletion without recovery or range from `7` to `30` days. The default value is `30`.
+    <dd>{{% md %}}Number of days that AWS Secrets Manager waits before it can delete the secret. This value can be `0` to force deletion without recovery or range from `7` to `30` days. The default value is `30`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_replicas_go">
+<a href="#state_replicas_go" style="color: inherit; text-decoration: inherit;">Replicas</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#secretreplica">[]Secret<wbr>Replica<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration block to support secret replication. See details below.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_rotationenabled_go">
@@ -1174,7 +1280,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Specifies whether automatic rotation is enabled for this secret.
+    <dd>{{% md %}}Whether automatic rotation is enabled for this secret.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the aws_secretsmanager_secret_rotation resource instead{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_rotationlambdaarn_go">
@@ -1183,7 +1289,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the ARN of the Lambda function that can rotate the secret. Use the `aws.secretsmanager.SecretRotation` resource to manage this configuration instead. As of version 2.67.0, removal of this configuration will no longer remove rotation due to supporting the new resource. Either import the new resource and remove the configuration or manually remove rotation.
+    <dd>{{% md %}}ARN of the Lambda function that can rotate the secret. Use the `aws.secretsmanager.SecretRotation` resource to manage this configuration instead. As of version 2.67.0, removal of this configuration will no longer remove rotation due to supporting the new resource. Either import the new resource and remove the configuration or manually remove rotation.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the aws_secretsmanager_secret_rotation resource instead{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_rotationrules_go">
@@ -1192,7 +1298,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretrotationrules">Secret<wbr>Rotation<wbr>Rules<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A structure that defines the rotation configuration for this secret. Defined below. Use the `aws.secretsmanager.SecretRotation` resource to manage this configuration instead. As of version 2.67.0, removal of this configuration will no longer remove rotation due to supporting the new resource. Either import the new resource and remove the configuration or manually remove rotation.
+    <dd>{{% md %}}Configuration block for the rotation configuration of this secret. Defined below. Use the `aws.secretsmanager.SecretRotation` resource to manage this configuration instead. As of version 2.67.0, removal of this configuration will no longer remove rotation due to supporting the new resource. Either import the new resource and remove the configuration or manually remove rotation.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the aws_secretsmanager_secret_rotation resource instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
@@ -1201,7 +1307,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Specifies a key-value map of user-defined tags that are attached to the secret. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+    <dd>{{% md %}}Key-value map of user-defined tags that are attached to the secret. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tagsall_go">
@@ -1210,7 +1316,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider .
+    <dd>{{% md %}}Map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1223,7 +1329,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Amazon Resource Name (ARN) of the secret.
+    <dd>{{% md %}}ARN of the secret.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
@@ -1232,8 +1338,16 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A description of the secret.
+    <dd>{{% md %}}Description of the secret.
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_forceoverwritereplicasecret_nodejs">
+<a href="#state_forceoverwritereplicasecret_nodejs" style="color: inherit; text-decoration: inherit;">force<wbr>Overwrite<wbr>Replica<wbr>Secret</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_kmskeyid_nodejs">
 <a href="#state_kmskeyid_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Id</a>
@@ -1241,7 +1355,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the ARN or Id of the AWS KMS customer master key (CMK) to be used to encrypt the secret values in the versions stored in this secret. If you don't specify this value, then Secrets Manager defaults to using the AWS account's default CMK (the one named `aws/secretsmanager`). If the default KMS CMK with that name doesn't yet exist, then AWS Secrets Manager creates it for you automatically the first time.
+    <dd>{{% md %}}ARN, Key ID, or Alias.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
@@ -1250,7 +1364,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the friendly name of the new secret. The secret name can consist of uppercase letters, lowercase letters, digits, and any of the following characters: `/_+=.@-` Conflicts with `name_prefix`.
+    <dd>{{% md %}}Friendly name of the new secret. The secret name can consist of uppercase letters, lowercase letters, digits, and any of the following characters: `/_+=.@-` Conflicts with `name_prefix`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nameprefix_nodejs">
@@ -1268,7 +1382,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A valid JSON document representing a [resource policy](https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access_resource-based-policies.html).
+    <dd>{{% md %}}Valid JSON document representing a [resource policy](https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access_resource-based-policies.html).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_recoverywindowindays_nodejs">
@@ -1277,7 +1391,16 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Specifies the number of days that AWS Secrets Manager waits before it can delete the secret. This value can be `0` to force deletion without recovery or range from `7` to `30` days. The default value is `30`.
+    <dd>{{% md %}}Number of days that AWS Secrets Manager waits before it can delete the secret. This value can be `0` to force deletion without recovery or range from `7` to `30` days. The default value is `30`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_replicas_nodejs">
+<a href="#state_replicas_nodejs" style="color: inherit; text-decoration: inherit;">replicas</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#secretreplica">Secret<wbr>Replica<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration block to support secret replication. See details below.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_rotationenabled_nodejs">
@@ -1286,7 +1409,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Specifies whether automatic rotation is enabled for this secret.
+    <dd>{{% md %}}Whether automatic rotation is enabled for this secret.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the aws_secretsmanager_secret_rotation resource instead{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_rotationlambdaarn_nodejs">
@@ -1295,7 +1418,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the ARN of the Lambda function that can rotate the secret. Use the `aws.secretsmanager.SecretRotation` resource to manage this configuration instead. As of version 2.67.0, removal of this configuration will no longer remove rotation due to supporting the new resource. Either import the new resource and remove the configuration or manually remove rotation.
+    <dd>{{% md %}}ARN of the Lambda function that can rotate the secret. Use the `aws.secretsmanager.SecretRotation` resource to manage this configuration instead. As of version 2.67.0, removal of this configuration will no longer remove rotation due to supporting the new resource. Either import the new resource and remove the configuration or manually remove rotation.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the aws_secretsmanager_secret_rotation resource instead{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_rotationrules_nodejs">
@@ -1304,7 +1427,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretrotationrules">Secret<wbr>Rotation<wbr>Rules<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A structure that defines the rotation configuration for this secret. Defined below. Use the `aws.secretsmanager.SecretRotation` resource to manage this configuration instead. As of version 2.67.0, removal of this configuration will no longer remove rotation due to supporting the new resource. Either import the new resource and remove the configuration or manually remove rotation.
+    <dd>{{% md %}}Configuration block for the rotation configuration of this secret. Defined below. Use the `aws.secretsmanager.SecretRotation` resource to manage this configuration instead. As of version 2.67.0, removal of this configuration will no longer remove rotation due to supporting the new resource. Either import the new resource and remove the configuration or manually remove rotation.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the aws_secretsmanager_secret_rotation resource instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_nodejs">
@@ -1313,7 +1436,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Specifies a key-value map of user-defined tags that are attached to the secret. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+    <dd>{{% md %}}Key-value map of user-defined tags that are attached to the secret. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tagsall_nodejs">
@@ -1322,7 +1445,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider .
+    <dd>{{% md %}}Map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1335,7 +1458,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Amazon Resource Name (ARN) of the secret.
+    <dd>{{% md %}}ARN of the secret.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
@@ -1344,8 +1467,16 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A description of the secret.
+    <dd>{{% md %}}Description of the secret.
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_force_overwrite_replica_secret_python">
+<a href="#state_force_overwrite_replica_secret_python" style="color: inherit; text-decoration: inherit;">force_<wbr>overwrite_<wbr>replica_<wbr>secret</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_kms_key_id_python">
 <a href="#state_kms_key_id_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>id</a>
@@ -1353,7 +1484,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies the ARN or Id of the AWS KMS customer master key (CMK) to be used to encrypt the secret values in the versions stored in this secret. If you don't specify this value, then Secrets Manager defaults to using the AWS account's default CMK (the one named `aws/secretsmanager`). If the default KMS CMK with that name doesn't yet exist, then AWS Secrets Manager creates it for you automatically the first time.
+    <dd>{{% md %}}ARN, Key ID, or Alias.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
@@ -1362,7 +1493,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies the friendly name of the new secret. The secret name can consist of uppercase letters, lowercase letters, digits, and any of the following characters: `/_+=.@-` Conflicts with `name_prefix`.
+    <dd>{{% md %}}Friendly name of the new secret. The secret name can consist of uppercase letters, lowercase letters, digits, and any of the following characters: `/_+=.@-` Conflicts with `name_prefix`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_prefix_python">
@@ -1380,7 +1511,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A valid JSON document representing a [resource policy](https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access_resource-based-policies.html).
+    <dd>{{% md %}}Valid JSON document representing a [resource policy](https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access_resource-based-policies.html).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_recovery_window_in_days_python">
@@ -1389,7 +1520,16 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Specifies the number of days that AWS Secrets Manager waits before it can delete the secret. This value can be `0` to force deletion without recovery or range from `7` to `30` days. The default value is `30`.
+    <dd>{{% md %}}Number of days that AWS Secrets Manager waits before it can delete the secret. This value can be `0` to force deletion without recovery or range from `7` to `30` days. The default value is `30`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_replicas_python">
+<a href="#state_replicas_python" style="color: inherit; text-decoration: inherit;">replicas</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#secretreplica">Sequence[Secret<wbr>Replica<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration block to support secret replication. See details below.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_rotation_enabled_python">
@@ -1398,7 +1538,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Specifies whether automatic rotation is enabled for this secret.
+    <dd>{{% md %}}Whether automatic rotation is enabled for this secret.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the aws_secretsmanager_secret_rotation resource instead{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_rotation_lambda_arn_python">
@@ -1407,7 +1547,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies the ARN of the Lambda function that can rotate the secret. Use the `aws.secretsmanager.SecretRotation` resource to manage this configuration instead. As of version 2.67.0, removal of this configuration will no longer remove rotation due to supporting the new resource. Either import the new resource and remove the configuration or manually remove rotation.
+    <dd>{{% md %}}ARN of the Lambda function that can rotate the secret. Use the `aws.secretsmanager.SecretRotation` resource to manage this configuration instead. As of version 2.67.0, removal of this configuration will no longer remove rotation due to supporting the new resource. Either import the new resource and remove the configuration or manually remove rotation.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the aws_secretsmanager_secret_rotation resource instead{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_rotation_rules_python">
@@ -1416,7 +1556,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretrotationrules">Secret<wbr>Rotation<wbr>Rules<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A structure that defines the rotation configuration for this secret. Defined below. Use the `aws.secretsmanager.SecretRotation` resource to manage this configuration instead. As of version 2.67.0, removal of this configuration will no longer remove rotation due to supporting the new resource. Either import the new resource and remove the configuration or manually remove rotation.
+    <dd>{{% md %}}Configuration block for the rotation configuration of this secret. Defined below. Use the `aws.secretsmanager.SecretRotation` resource to manage this configuration instead. As of version 2.67.0, removal of this configuration will no longer remove rotation due to supporting the new resource. Either import the new resource and remove the configuration or manually remove rotation.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the aws_secretsmanager_secret_rotation resource instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">
@@ -1425,7 +1565,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Specifies a key-value map of user-defined tags that are attached to the secret. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
+    <dd>{{% md %}}Key-value map of user-defined tags that are attached to the secret. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_all_python">
@@ -1434,7 +1574,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider .
+    <dd>{{% md %}}Map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1446,6 +1586,204 @@ The following state arguments are supported:
 ## Supporting Types
 
 
+
+<h4 id="secretreplica">Secret<wbr>Replica</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="region_csharp">
+<a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Region for replicating the secret.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="kmskeyid_csharp">
+<a href="#kmskeyid_csharp" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ARN, Key ID, or Alias.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="lastaccesseddate_csharp">
+<a href="#lastaccesseddate_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Accessed<wbr>Date</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Date that you last accessed the secret in the Region.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="status_csharp">
+<a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Status can be `InProgress`, `Failed`, or `InSync`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="statusmessage_csharp">
+<a href="#statusmessage_csharp" style="color: inherit; text-decoration: inherit;">Status<wbr>Message</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Message such as `Replication succeeded` or `Secret with this name already exists in this region`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="region_go">
+<a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Region for replicating the secret.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="kmskeyid_go">
+<a href="#kmskeyid_go" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ARN, Key ID, or Alias.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="lastaccesseddate_go">
+<a href="#lastaccesseddate_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Accessed<wbr>Date</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Date that you last accessed the secret in the Region.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="status_go">
+<a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Status can be `InProgress`, `Failed`, or `InSync`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="statusmessage_go">
+<a href="#statusmessage_go" style="color: inherit; text-decoration: inherit;">Status<wbr>Message</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Message such as `Replication succeeded` or `Secret with this name already exists in this region`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="region_nodejs">
+<a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Region for replicating the secret.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="kmskeyid_nodejs">
+<a href="#kmskeyid_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ARN, Key ID, or Alias.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="lastaccesseddate_nodejs">
+<a href="#lastaccesseddate_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Accessed<wbr>Date</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Date that you last accessed the secret in the Region.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="status_nodejs">
+<a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Status can be `InProgress`, `Failed`, or `InSync`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="statusmessage_nodejs">
+<a href="#statusmessage_nodejs" style="color: inherit; text-decoration: inherit;">status<wbr>Message</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Message such as `Replication succeeded` or `Secret with this name already exists in this region`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="region_python">
+<a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Region for replicating the secret.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="kms_key_id_python">
+<a href="#kms_key_id_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}ARN, Key ID, or Alias.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="last_accessed_date_python">
+<a href="#last_accessed_date_python" style="color: inherit; text-decoration: inherit;">last_<wbr>accessed_<wbr>date</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Date that you last accessed the secret in the Region.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="status_python">
+<a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Status can be `InProgress`, `Failed`, or `InSync`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="status_message_python">
+<a href="#status_message_python" style="color: inherit; text-decoration: inherit;">status_<wbr>message</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Message such as `Replication succeeded` or `Secret with this name already exists in this region`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
 
 <h4 id="secretrotationrules">Secret<wbr>Rotation<wbr>Rules</h4>
 

@@ -13,6 +13,7 @@ Explore the resources and functions of the aws.storagegateway module.
 <ul class="api">
     <li><a href="cache" title="Cache"><span class="symbol resource"></span>Cache</a></li>
     <li><a href="cachesiscsivolume" title="CachesIscsiVolume"><span class="symbol resource"></span>CachesIscsiVolume</a></li>
+    <li><a href="filesystemassociation" title="FileSystemAssociation"><span class="symbol resource"></span>FileSystemAssociation</a></li>
     <li><a href="gateway" title="Gateway"><span class="symbol resource"></span>Gateway</a></li>
     <li><a href="nfsfileshare" title="NfsFileShare"><span class="symbol resource"></span>NfsFileShare</a></li>
     <li><a href="smbfileshare" title="SmbFileShare"><span class="symbol resource"></span>SmbFileShare</a></li>
@@ -36,6 +37,6 @@ Explore the resources and functions of the aws.storagegateway module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.14.0</dd>
+	<dd>4.15.0</dd>
 </dl>
 

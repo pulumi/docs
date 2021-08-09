@@ -475,13 +475,13 @@ example = aws.apigatewayv2.Integration("example",
     },
     response_parameters=[
         aws.apigatewayv2.IntegrationResponseParameterArgs(
-            status_code=403,
+            status_code="403",
             mappings={
                 "append:header.auth": "$context.authorizer.authorizerResponse",
             },
         ),
         aws.apigatewayv2.IntegrationResponseParameterArgs(
-            status_code=200,
+            status_code="200",
             mappings={
                 "overwrite:statuscode": "204",
             },
@@ -693,7 +693,7 @@ const example = new aws.apigatewayv2.Integration("example", {
 
 ## Integration Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Architecture and Concepts docs.
 
 ### Inputs
 

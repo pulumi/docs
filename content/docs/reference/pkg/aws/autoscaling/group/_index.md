@@ -370,21 +370,21 @@ example_group = aws.autoscaling.Group("exampleGroup",
     max_size=1,
     min_size=1,
     mixed_instances_policy=aws.autoscaling.GroupMixedInstancesPolicyArgs(
-        launch_template={
-            "launchTemplateSpecification": {
-                "launchTemplateId": example_launch_template.id,
-            },
-            "overrides": [
-                {
-                    "instance_type": "c4.large",
-                    "weightedCapacity": "3",
-                },
-                {
-                    "instance_type": "c3.large",
-                    "weightedCapacity": "2",
-                },
+        launch_template=aws.autoscaling.GroupMixedInstancesPolicyLaunchTemplateArgs(
+            launch_template_specification=aws.autoscaling.GroupMixedInstancesPolicyLaunchTemplateLaunchTemplateSpecificationArgs(
+                launch_template_id=example_launch_template.id,
+            ),
+            overrides=[
+                aws.autoscaling.GroupMixedInstancesPolicyLaunchTemplateOverrideArgs(
+                    instance_type="c4.large",
+                    weighted_capacity="3",
+                ),
+                aws.autoscaling.GroupMixedInstancesPolicyLaunchTemplateOverrideArgs(
+                    instance_type="c3.large",
+                    weighted_capacity="2",
+                ),
             ],
-        },
+        ),
     ))
 ```
 
@@ -594,21 +594,21 @@ example_group = aws.autoscaling.Group("exampleGroup",
             on_demand_percentage_above_base_capacity=25,
             spot_allocation_strategy="capacity-optimized",
         ),
-        launch_template={
-            "launchTemplateSpecification": {
-                "launchTemplateId": example_launch_template.id,
-            },
-            "overrides": [
-                {
-                    "instance_type": "c4.large",
-                    "weightedCapacity": "3",
-                },
-                {
-                    "instance_type": "c3.large",
-                    "weightedCapacity": "2",
-                },
+        launch_template=aws.autoscaling.GroupMixedInstancesPolicyLaunchTemplateArgs(
+            launch_template_specification=aws.autoscaling.GroupMixedInstancesPolicyLaunchTemplateLaunchTemplateSpecificationArgs(
+                launch_template_id=example_launch_template.id,
+            ),
+            overrides=[
+                aws.autoscaling.GroupMixedInstancesPolicyLaunchTemplateOverrideArgs(
+                    instance_type="c4.large",
+                    weighted_capacity="3",
+                ),
+                aws.autoscaling.GroupMixedInstancesPolicyLaunchTemplateOverrideArgs(
+                    instance_type="c3.large",
+                    weighted_capacity="2",
+                ),
             ],
-        },
+        ),
     ))
 ```
 
@@ -825,24 +825,24 @@ example_group = aws.autoscaling.Group("exampleGroup",
     max_size=1,
     min_size=1,
     mixed_instances_policy=aws.autoscaling.GroupMixedInstancesPolicyArgs(
-        launch_template={
-            "launchTemplateSpecification": {
-                "launchTemplateId": example_launch_template.id,
-            },
-            "overrides": [
-                {
-                    "instance_type": "c4.large",
-                    "weightedCapacity": "3",
-                },
-                {
-                    "instance_type": "c6g.large",
-                    "launchTemplateSpecification": {
-                        "launchTemplateId": example2.id,
-                    },
-                    "weightedCapacity": "2",
-                },
+        launch_template=aws.autoscaling.GroupMixedInstancesPolicyLaunchTemplateArgs(
+            launch_template_specification=aws.autoscaling.GroupMixedInstancesPolicyLaunchTemplateLaunchTemplateSpecificationArgs(
+                launch_template_id=example_launch_template.id,
+            ),
+            overrides=[
+                aws.autoscaling.GroupMixedInstancesPolicyLaunchTemplateOverrideArgs(
+                    instance_type="c4.large",
+                    weighted_capacity="3",
+                ),
+                aws.autoscaling.GroupMixedInstancesPolicyLaunchTemplateOverrideArgs(
+                    instance_type="c6g.large",
+                    launch_template_specification=aws.autoscaling.GroupMixedInstancesPolicyLaunchTemplateOverrideLaunchTemplateSpecificationArgs(
+                        launch_template_id=example2.id,
+                    ),
+                    weighted_capacity="2",
+                ),
             ],
-        },
+        ),
     ))
 ```
 
@@ -1468,7 +1468,7 @@ const exampleGroup = new aws.autoscaling.Group("exampleGroup", {
 
 ## Group Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Architecture and Concepts docs.
 
 ### Inputs
 
@@ -1740,7 +1740,7 @@ Note that if you suspend either the `Launch` or `Terminate` process types, it ca
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#grouptag">List&lt;Group<wbr>Tag<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Configuration block(s) containing resource tags. Conflicts with `tags`. Documented below.
+    <dd>{{% md %}}Configuration block(s) containing resource tags. Conflicts with `tags_collection`. Documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tagscollection_csharp">
@@ -2080,7 +2080,7 @@ Note that if you suspend either the `Launch` or `Terminate` process types, it ca
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#grouptag">[]Group<wbr>Tag<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Configuration block(s) containing resource tags. Conflicts with `tags`. Documented below.
+    <dd>{{% md %}}Configuration block(s) containing resource tags. Conflicts with `tags_collection`. Documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tagscollection_go">
@@ -2420,7 +2420,7 @@ Note that if you suspend either the `Launch` or `Terminate` process types, it ca
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#grouptag">Group<wbr>Tag<wbr>Args[]</a></span>
     </dt>
-    <dd>{{% md %}}Configuration block(s) containing resource tags. Conflicts with `tags`. Documented below.
+    <dd>{{% md %}}Configuration block(s) containing resource tags. Conflicts with `tags_collection`. Documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tagscollection_nodejs">
@@ -2760,7 +2760,7 @@ Note that if you suspend either the `Launch` or `Terminate` process types, it ca
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#grouptag">Sequence[Group<wbr>Tag<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Configuration block(s) containing resource tags. Conflicts with `tags`. Documented below.
+    <dd>{{% md %}}Configuration block(s) containing resource tags. Conflicts with `tags_collection`. Documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_collection_python">
@@ -3360,7 +3360,7 @@ Note that if you suspend either the `Launch` or `Terminate` process types, it ca
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#grouptag">List&lt;Group<wbr>Tag<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Configuration block(s) containing resource tags. Conflicts with `tags`. Documented below.
+    <dd>{{% md %}}Configuration block(s) containing resource tags. Conflicts with `tags_collection`. Documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tagscollection_csharp">
@@ -3709,7 +3709,7 @@ Note that if you suspend either the `Launch` or `Terminate` process types, it ca
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#grouptag">[]Group<wbr>Tag<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Configuration block(s) containing resource tags. Conflicts with `tags`. Documented below.
+    <dd>{{% md %}}Configuration block(s) containing resource tags. Conflicts with `tags_collection`. Documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tagscollection_go">
@@ -4058,7 +4058,7 @@ Note that if you suspend either the `Launch` or `Terminate` process types, it ca
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#grouptag">Group<wbr>Tag<wbr>Args[]</a></span>
     </dt>
-    <dd>{{% md %}}Configuration block(s) containing resource tags. Conflicts with `tags`. Documented below.
+    <dd>{{% md %}}Configuration block(s) containing resource tags. Conflicts with `tags_collection`. Documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tagscollection_nodejs">
@@ -4407,7 +4407,7 @@ Note that if you suspend either the `Launch` or `Terminate` process types, it ca
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#grouptag">Sequence[Group<wbr>Tag<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Configuration block(s) containing resource tags. Conflicts with `tags`. Documented below.
+    <dd>{{% md %}}Configuration block(s) containing resource tags. Conflicts with `tags_collection`. Documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_collection_python">

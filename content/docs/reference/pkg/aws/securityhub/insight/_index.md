@@ -683,11 +683,11 @@ import pulumi_aws as aws
 example_account = aws.securityhub.Account("exampleAccount")
 example_insight = aws.securityhub.Insight("exampleInsight",
     filters=aws.securityhub.InsightFiltersArgs(
-        resource_tags=[{
-            "comparison": "EQUALS",
-            "key": "Environment",
-            "value": "Production",
-        }],
+        resource_tags=[aws.securityhub.InsightFiltersResourceTagArgs(
+            comparison="EQUALS",
+            key="Environment",
+            value="Production",
+        )],
     ),
     group_by_attribute="ResourceTags",
     opts=pulumi.ResourceOptions(depends_on=[example_account]))
@@ -864,7 +864,7 @@ const exampleInsight = new aws.securityhub.Insight("exampleInsight", {
 
 ## Insight Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Architecture and Concepts docs.
 
 ### Inputs
 

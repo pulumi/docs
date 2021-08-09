@@ -109,14 +109,14 @@ import pulumi_aws as aws
 example = aws.networkfirewall.LoggingConfiguration("example",
     firewall_arn=aws_networkfirewall_firewall["example"]["arn"],
     logging_configuration=aws.networkfirewall.LoggingConfigurationLoggingConfigurationArgs(
-        log_destination_configs=[{
-            "log_destination": {
-                "bucket_name": aws_s3_bucket["example"]["bucket"],
+        log_destination_configs=[aws.networkfirewall.LoggingConfigurationLoggingConfigurationLogDestinationConfigArgs(
+            log_destination={
+                "bucketName": aws_s3_bucket["example"]["bucket"],
                 "prefix": "/example",
             },
-            "log_destination_type": "S3",
-            "logType": "FLOW",
-        }],
+            log_destination_type="S3",
+            log_type="FLOW",
+        )],
     ))
 ```
 
@@ -240,13 +240,13 @@ import pulumi_aws as aws
 example = aws.networkfirewall.LoggingConfiguration("example",
     firewall_arn=aws_networkfirewall_firewall["example"]["arn"],
     logging_configuration=aws.networkfirewall.LoggingConfigurationLoggingConfigurationArgs(
-        log_destination_configs=[{
-            "log_destination": {
-                "log_group": aws_cloudwatch_log_group["example"]["name"],
+        log_destination_configs=[aws.networkfirewall.LoggingConfigurationLoggingConfigurationLogDestinationConfigArgs(
+            log_destination={
+                "logGroup": aws_cloudwatch_log_group["example"]["name"],
             },
-            "log_destination_type": "CloudWatchLogs",
-            "logType": "ALERT",
-        }],
+            log_destination_type="CloudWatchLogs",
+            log_type="ALERT",
+        )],
     ))
 ```
 
@@ -369,13 +369,13 @@ import pulumi_aws as aws
 example = aws.networkfirewall.LoggingConfiguration("example",
     firewall_arn=aws_networkfirewall_firewall["example"]["arn"],
     logging_configuration=aws.networkfirewall.LoggingConfigurationLoggingConfigurationArgs(
-        log_destination_configs=[{
-            "log_destination": {
+        log_destination_configs=[aws.networkfirewall.LoggingConfigurationLoggingConfigurationLogDestinationConfigArgs(
+            log_destination={
                 "deliveryStream": aws_kinesis_firehose_delivery_stream["example"]["name"],
             },
-            "log_destination_type": "KinesisDataFirehose",
-            "logType": "ALERT",
-        }],
+            log_destination_type="KinesisDataFirehose",
+            log_type="ALERT",
+        )],
     ))
 ```
 
@@ -548,7 +548,7 @@ const example = new aws.networkfirewall.LoggingConfiguration("example", {
 
 ## LoggingConfiguration Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Architecture and Concepts docs.
 
 ### Inputs
 

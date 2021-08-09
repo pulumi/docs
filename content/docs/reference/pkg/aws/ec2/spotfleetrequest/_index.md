@@ -174,10 +174,10 @@ cheap_compute = aws.ec2.SpotFleetRequest("cheapCompute",
             availability_zone="us-west-1a",
             subnet_id="subnet-1234",
             weighted_capacity="35",
-            root_block_devices=[{
-                "volume_size": "300",
-                "volume_type": "gp2",
-            }],
+            root_block_devices=[aws.ec2.SpotFleetRequestLaunchSpecificationRootBlockDeviceArgs(
+                volume_size=300,
+                volume_type="gp2",
+            )],
             tags={
                 "Name": "spot-fleet-example",
             },
@@ -939,7 +939,7 @@ const fooSpotFleetRequest = new aws.ec2.SpotFleetRequest("fooSpotFleetRequest", 
 
 ## SpotFleetRequest Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Architecture and Concepts docs.
 
 ### Inputs
 

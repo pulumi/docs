@@ -704,7 +704,7 @@ const example = new aws.rds.Cluster("example", {
 
 ## Cluster Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Architecture and Concepts docs.
 
 ### Inputs
 
@@ -874,7 +874,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The database engine version. Updating this argument results in an outage. See the [Aurora MySQL](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Updates.html) and [Aurora Postgres](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraPostgreSQL.Updates.html) documentation for your configured engine to determine this value. For example with Aurora MySQL 2, a potential value for this argument is `5.7.mysql_aurora.2.03.2`.
+    <dd>{{% md %}}The database engine version. Updating this argument results in an outage. See the [Aurora MySQL](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Updates.html) and [Aurora Postgres](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraPostgreSQL.Updates.html) documentation for your configured engine to determine this value. For example with Aurora MySQL 2, a potential value for this argument is `5.7.mysql_aurora.2.03.2`. The value can contain a partial version where supported by the API. The actual engine version used is returned in the attribute `engine_version_actual`, defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="finalsnapshotidentifier_csharp">
@@ -1228,7 +1228,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The database engine version. Updating this argument results in an outage. See the [Aurora MySQL](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Updates.html) and [Aurora Postgres](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraPostgreSQL.Updates.html) documentation for your configured engine to determine this value. For example with Aurora MySQL 2, a potential value for this argument is `5.7.mysql_aurora.2.03.2`.
+    <dd>{{% md %}}The database engine version. Updating this argument results in an outage. See the [Aurora MySQL](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Updates.html) and [Aurora Postgres](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraPostgreSQL.Updates.html) documentation for your configured engine to determine this value. For example with Aurora MySQL 2, a potential value for this argument is `5.7.mysql_aurora.2.03.2`. The value can contain a partial version where supported by the API. The actual engine version used is returned in the attribute `engine_version_actual`, defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="finalsnapshotidentifier_go">
@@ -1582,7 +1582,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The database engine version. Updating this argument results in an outage. See the [Aurora MySQL](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Updates.html) and [Aurora Postgres](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraPostgreSQL.Updates.html) documentation for your configured engine to determine this value. For example with Aurora MySQL 2, a potential value for this argument is `5.7.mysql_aurora.2.03.2`.
+    <dd>{{% md %}}The database engine version. Updating this argument results in an outage. See the [Aurora MySQL](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Updates.html) and [Aurora Postgres](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraPostgreSQL.Updates.html) documentation for your configured engine to determine this value. For example with Aurora MySQL 2, a potential value for this argument is `5.7.mysql_aurora.2.03.2`. The value can contain a partial version where supported by the API. The actual engine version used is returned in the attribute `engine_version_actual`, defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="finalsnapshotidentifier_nodejs">
@@ -1936,7 +1936,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The database engine version. Updating this argument results in an outage. See the [Aurora MySQL](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Updates.html) and [Aurora Postgres](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraPostgreSQL.Updates.html) documentation for your configured engine to determine this value. For example with Aurora MySQL 2, a potential value for this argument is `5.7.mysql_aurora.2.03.2`.
+    <dd>{{% md %}}The database engine version. Updating this argument results in an outage. See the [Aurora MySQL](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Updates.html) and [Aurora Postgres](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraPostgreSQL.Updates.html) documentation for your configured engine to determine this value. For example with Aurora MySQL 2, a potential value for this argument is `5.7.mysql_aurora.2.03.2`. The value can contain a partial version where supported by the API. The actual engine version used is returned in the attribute `engine_version_actual`, defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="final_snapshot_identifier_python">
@@ -2165,6 +2165,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The DNS address of the RDS instance
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="engineversionactual_csharp">
+<a href="#engineversionactual_csharp" style="color: inherit; text-decoration: inherit;">Engine<wbr>Version<wbr>Actual</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The running version of the database.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="hostedzoneid_csharp">
 <a href="#hostedzoneid_csharp" style="color: inherit; text-decoration: inherit;">Hosted<wbr>Zone<wbr>Id</a>
 </span>
@@ -2221,6 +2230,15 @@ load-balanced across replicas
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DNS address of the RDS instance
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="engineversionactual_go">
+<a href="#engineversionactual_go" style="color: inherit; text-decoration: inherit;">Engine<wbr>Version<wbr>Actual</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The running version of the database.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="hostedzoneid_go">
@@ -2281,6 +2299,15 @@ load-balanced across replicas
     <dd>{{% md %}}The DNS address of the RDS instance
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="engineversionactual_nodejs">
+<a href="#engineversionactual_nodejs" style="color: inherit; text-decoration: inherit;">engine<wbr>Version<wbr>Actual</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The running version of the database.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="hostedzoneid_nodejs">
 <a href="#hostedzoneid_nodejs" style="color: inherit; text-decoration: inherit;">hosted<wbr>Zone<wbr>Id</a>
 </span>
@@ -2337,6 +2364,15 @@ load-balanced across replicas
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The DNS address of the RDS instance
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="engine_version_actual_python">
+<a href="#engine_version_actual_python" style="color: inherit; text-decoration: inherit;">engine_<wbr>version_<wbr>actual</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The running version of the database.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="hosted_zone_id_python">
@@ -2404,6 +2440,7 @@ Get an existing Cluster resource's state with the given name, ID, and optional e
         <span class="nx">engine</span><span class="p">:</span> <span class="nx">Optional[Union[str, EngineType]]</span> = None<span class="p">,</span>
         <span class="nx">engine_mode</span><span class="p">:</span> <span class="nx">Optional[Union[str, EngineMode]]</span> = None<span class="p">,</span>
         <span class="nx">engine_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">engine_version_actual</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">final_snapshot_identifier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">global_cluster_identifier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">hosted_zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -2725,7 +2762,16 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The database engine version. Updating this argument results in an outage. See the [Aurora MySQL](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Updates.html) and [Aurora Postgres](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraPostgreSQL.Updates.html) documentation for your configured engine to determine this value. For example with Aurora MySQL 2, a potential value for this argument is `5.7.mysql_aurora.2.03.2`.
+    <dd>{{% md %}}The database engine version. Updating this argument results in an outage. See the [Aurora MySQL](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Updates.html) and [Aurora Postgres](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraPostgreSQL.Updates.html) documentation for your configured engine to determine this value. For example with Aurora MySQL 2, a potential value for this argument is `5.7.mysql_aurora.2.03.2`. The value can contain a partial version where supported by the API. The actual engine version used is returned in the attribute `engine_version_actual`, defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_engineversionactual_csharp">
+<a href="#state_engineversionactual_csharp" style="color: inherit; text-decoration: inherit;">Engine<wbr>Version<wbr>Actual</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The running version of the database.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_finalsnapshotidentifier_csharp">
@@ -3125,7 +3171,16 @@ load-balanced across replicas
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The database engine version. Updating this argument results in an outage. See the [Aurora MySQL](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Updates.html) and [Aurora Postgres](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraPostgreSQL.Updates.html) documentation for your configured engine to determine this value. For example with Aurora MySQL 2, a potential value for this argument is `5.7.mysql_aurora.2.03.2`.
+    <dd>{{% md %}}The database engine version. Updating this argument results in an outage. See the [Aurora MySQL](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Updates.html) and [Aurora Postgres](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraPostgreSQL.Updates.html) documentation for your configured engine to determine this value. For example with Aurora MySQL 2, a potential value for this argument is `5.7.mysql_aurora.2.03.2`. The value can contain a partial version where supported by the API. The actual engine version used is returned in the attribute `engine_version_actual`, defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_engineversionactual_go">
+<a href="#state_engineversionactual_go" style="color: inherit; text-decoration: inherit;">Engine<wbr>Version<wbr>Actual</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The running version of the database.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_finalsnapshotidentifier_go">
@@ -3525,7 +3580,16 @@ load-balanced across replicas
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The database engine version. Updating this argument results in an outage. See the [Aurora MySQL](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Updates.html) and [Aurora Postgres](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraPostgreSQL.Updates.html) documentation for your configured engine to determine this value. For example with Aurora MySQL 2, a potential value for this argument is `5.7.mysql_aurora.2.03.2`.
+    <dd>{{% md %}}The database engine version. Updating this argument results in an outage. See the [Aurora MySQL](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Updates.html) and [Aurora Postgres](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraPostgreSQL.Updates.html) documentation for your configured engine to determine this value. For example with Aurora MySQL 2, a potential value for this argument is `5.7.mysql_aurora.2.03.2`. The value can contain a partial version where supported by the API. The actual engine version used is returned in the attribute `engine_version_actual`, defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_engineversionactual_nodejs">
+<a href="#state_engineversionactual_nodejs" style="color: inherit; text-decoration: inherit;">engine<wbr>Version<wbr>Actual</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The running version of the database.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_finalsnapshotidentifier_nodejs">
@@ -3925,7 +3989,16 @@ load-balanced across replicas
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The database engine version. Updating this argument results in an outage. See the [Aurora MySQL](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Updates.html) and [Aurora Postgres](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraPostgreSQL.Updates.html) documentation for your configured engine to determine this value. For example with Aurora MySQL 2, a potential value for this argument is `5.7.mysql_aurora.2.03.2`.
+    <dd>{{% md %}}The database engine version. Updating this argument results in an outage. See the [Aurora MySQL](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Updates.html) and [Aurora Postgres](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraPostgreSQL.Updates.html) documentation for your configured engine to determine this value. For example with Aurora MySQL 2, a potential value for this argument is `5.7.mysql_aurora.2.03.2`. The value can contain a partial version where supported by the API. The actual engine version used is returned in the attribute `engine_version_actual`, defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_engine_version_actual_python">
+<a href="#state_engine_version_actual_python" style="color: inherit; text-decoration: inherit;">engine_<wbr>version_<wbr>actual</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The running version of the database.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_final_snapshot_identifier_python">

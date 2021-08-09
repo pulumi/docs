@@ -15,6 +15,7 @@ Explore the resources and functions of the aws.ebs module.
     <li><a href="encryptionbydefault" title="EncryptionByDefault"><span class="symbol resource"></span>EncryptionByDefault</a></li>
     <li><a href="snapshot" title="Snapshot"><span class="symbol resource"></span>Snapshot</a></li>
     <li><a href="snapshotcopy" title="SnapshotCopy"><span class="symbol resource"></span>SnapshotCopy</a></li>
+    <li><a href="snapshotimport" title="SnapshotImport"><span class="symbol resource"></span>SnapshotImport</a></li>
     <li><a href="volume" title="Volume"><span class="symbol resource"></span>Volume</a></li>
 </ul>
 
@@ -37,6 +38,6 @@ Explore the resources and functions of the aws.ebs module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.14.0</dd>
+	<dd>4.15.0</dd>
 </dl>
 

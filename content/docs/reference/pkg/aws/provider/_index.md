@@ -168,7 +168,7 @@ construction to achieve fine-grained programmatic control over provider settings
 
 ## Provider Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Architecture and Concepts docs.
 
 ### Inputs
 
@@ -2294,6 +2294,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="route53recoverycontrolconfig_csharp">
+<a href="#route53recoverycontrolconfig_csharp" style="color: inherit; text-decoration: inherit;">Route53recoverycontrolconfig</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="route53recoveryreadiness_csharp">
+<a href="#route53recoveryreadiness_csharp" style="color: inherit; text-decoration: inherit;">Route53recoveryreadiness</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="route53resolver_csharp">
 <a href="#route53resolver_csharp" style="color: inherit; text-decoration: inherit;">Route53resolver</a>
 </span>
@@ -3556,6 +3572,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="route53domains_go">
 <a href="#route53domains_go" style="color: inherit; text-decoration: inherit;">Route53domains</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="route53recoverycontrolconfig_go">
+<a href="#route53recoverycontrolconfig_go" style="color: inherit; text-decoration: inherit;">Route53recoverycontrolconfig</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="route53recoveryreadiness_go">
+<a href="#route53recoveryreadiness_go" style="color: inherit; text-decoration: inherit;">Route53recoveryreadiness</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -4830,6 +4862,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="route53recoverycontrolconfig_nodejs">
+<a href="#route53recoverycontrolconfig_nodejs" style="color: inherit; text-decoration: inherit;">route53recoverycontrolconfig</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="route53recoveryreadiness_nodejs">
+<a href="#route53recoveryreadiness_nodejs" style="color: inherit; text-decoration: inherit;">route53recoveryreadiness</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="route53resolver_nodejs">
 <a href="#route53resolver_nodejs" style="color: inherit; text-decoration: inherit;">route53resolver</a>
 </span>
@@ -6092,6 +6140,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="route53domains_python">
 <a href="#route53domains_python" style="color: inherit; text-decoration: inherit;">route53domains</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="route53recoverycontrolconfig_python">
+<a href="#route53recoverycontrolconfig_python" style="color: inherit; text-decoration: inherit;">route53recoverycontrolconfig</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="route53recoveryreadiness_python">
+<a href="#route53recoveryreadiness_python" style="color: inherit; text-decoration: inherit;">route53recoveryreadiness</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>

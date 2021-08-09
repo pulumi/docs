@@ -108,10 +108,10 @@ example = aws.athena.Workgroup("example", configuration=aws.athena.WorkgroupConf
     publish_cloudwatch_metrics_enabled=True,
     result_configuration=aws.athena.WorkgroupConfigurationResultConfigurationArgs(
         output_location=f"s3://{aws_s3_bucket['example']['bucket']}/output/",
-        encryption_configuration={
-            "encryptionOption": "SSE_KMS",
-            "kms_key_arn": aws_kms_key["example"]["arn"],
-        },
+        encryption_configuration=aws.athena.WorkgroupConfigurationResultConfigurationEncryptionConfigurationArgs(
+            encryption_option="SSE_KMS",
+            kms_key_arn=aws_kms_key["example"]["arn"],
+        ),
     ),
 ))
 ```
@@ -289,7 +289,7 @@ const example = new aws.athena.Workgroup("example", {configuration: {
 
 ## Workgroup Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Architecture and Concepts docs.
 
 ### Inputs
 
