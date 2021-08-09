@@ -490,15 +490,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The base URL of the API server on the Kubernetes master node.
 {{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="builtat_csharp">
-<a href="#builtat_csharp" style="color: inherit; text-decoration: inherit;">Built<wbr>At</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The date where the Kubernetes cluster was build.
-{{% /md %}}</dd><dt class="property-"
-            title="">
         <span id="createdat_csharp">
 <a href="#createdat_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
 </span>
@@ -599,15 +590,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The base URL of the API server on the Kubernetes master node.
-{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="builtat_go">
-<a href="#builtat_go" style="color: inherit; text-decoration: inherit;">Built<wbr>At</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The date where the Kubernetes cluster was build.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="createdat_go">
@@ -712,15 +694,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The base URL of the API server on the Kubernetes master node.
 {{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="builtat_nodejs">
-<a href="#builtat_nodejs" style="color: inherit; text-decoration: inherit;">built<wbr>At</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The date where the Kubernetes cluster was build.
-{{% /md %}}</dd><dt class="property-"
-            title="">
         <span id="createdat_nodejs">
 <a href="#createdat_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>At</a>
 </span>
@@ -821,15 +794,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The base URL of the API server on the Kubernetes master node.
-{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="built_at_python">
-<a href="#built_at_python" style="color: inherit; text-decoration: inherit;">built_<wbr>at</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The date where the Kubernetes cluster was build.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="created_at_python">
@@ -940,7 +904,6 @@ Get an existing KubernetesCluster resource's state with the given name, ID, and 
         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
         <span class="nx">api_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">applications</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-        <span class="nx">built_at</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">created_at</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">dns_entry</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">installed_applications</span><span class="p">:</span> <span class="nx">Optional[Sequence[KubernetesClusterInstalledApplicationArgs]]</span> = None<span class="p">,</span>
@@ -1085,15 +1048,6 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This field is a case-sensitive, a comma separated list of applications to install. Spaces within application names are fine, but shouldn't be either side of the comma. Application names are case-sensitive; the available applications can be listed with the civo CLI: 'civo kubernetes applications ls'. If you want to remove a default installed application, prefix it with a '-', e.g. -Traefik
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="state_builtat_csharp">
-<a href="#state_builtat_csharp" style="color: inherit; text-decoration: inherit;">Built<wbr>At</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The date where the Kubernetes cluster was build.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_createdat_csharp">
@@ -1262,15 +1216,6 @@ The following state arguments are supported:
     <dd>{{% md %}}This field is a case-sensitive, a comma separated list of applications to install. Spaces within application names are fine, but shouldn't be either side of the comma. Application names are case-sensitive; the available applications can be listed with the civo CLI: 'civo kubernetes applications ls'. If you want to remove a default installed application, prefix it with a '-', e.g. -Traefik
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="state_builtat_go">
-<a href="#state_builtat_go" style="color: inherit; text-decoration: inherit;">Built<wbr>At</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The date where the Kubernetes cluster was build.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="state_createdat_go">
 <a href="#state_createdat_go" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
 </span>
@@ -1437,15 +1382,6 @@ The following state arguments are supported:
     <dd>{{% md %}}This field is a case-sensitive, a comma separated list of applications to install. Spaces within application names are fine, but shouldn't be either side of the comma. Application names are case-sensitive; the available applications can be listed with the civo CLI: 'civo kubernetes applications ls'. If you want to remove a default installed application, prefix it with a '-', e.g. -Traefik
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="state_builtat_nodejs">
-<a href="#state_builtat_nodejs" style="color: inherit; text-decoration: inherit;">built<wbr>At</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The date where the Kubernetes cluster was build.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="state_createdat_nodejs">
 <a href="#state_createdat_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>At</a>
 </span>
@@ -1610,15 +1546,6 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}This field is a case-sensitive, a comma separated list of applications to install. Spaces within application names are fine, but shouldn't be either side of the comma. Application names are case-sensitive; the available applications can be listed with the civo CLI: 'civo kubernetes applications ls'. If you want to remove a default installed application, prefix it with a '-', e.g. -Traefik
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="state_built_at_python">
-<a href="#state_built_at_python" style="color: inherit; text-decoration: inherit;">built_<wbr>at</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The date where the Kubernetes cluster was build.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_created_at_python">

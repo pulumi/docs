@@ -307,15 +307,6 @@ The following output properties are available:
     <dd>{{% md %}}A list of application installed.
 {{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="builtat_csharp">
-<a href="#builtat_csharp" style="color: inherit; text-decoration: inherit;">Built<wbr>At</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The date where the Kubernetes cluster was build.
-{{% /md %}}</dd><dt class="property-"
-            title="">
         <span id="createdat_csharp">
 <a href="#createdat_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
 </span>
@@ -479,15 +470,6 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A list of application installed.
-{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="builtat_go">
-<a href="#builtat_go" style="color: inherit; text-decoration: inherit;">Built<wbr>At</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The date where the Kubernetes cluster was build.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="createdat_go">
@@ -655,15 +637,6 @@ The following output properties are available:
     <dd>{{% md %}}A list of application installed.
 {{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="builtat_nodejs">
-<a href="#builtat_nodejs" style="color: inherit; text-decoration: inherit;">built<wbr>At</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The date where the Kubernetes cluster was build.
-{{% /md %}}</dd><dt class="property-"
-            title="">
         <span id="createdat_nodejs">
 <a href="#createdat_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>At</a>
 </span>
@@ -827,15 +800,6 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A list of application installed.
-{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="built_at_python">
-<a href="#built_at_python" style="color: inherit; text-decoration: inherit;">built_<wbr>at</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The date where the Kubernetes cluster was build.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="created_at_python">

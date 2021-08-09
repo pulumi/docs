@@ -68,7 +68,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}If is used, them all instances will be from that region.
+    <dd>{{% md %}}If is used, them all template will be from that region, has to be declared here if is not declared in the provider
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sorts_csharp">
@@ -99,7 +99,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}If is used, them all instances will be from that region.
+    <dd>{{% md %}}If is used, them all template will be from that region, has to be declared here if is not declared in the provider
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sorts_go">
@@ -130,7 +130,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}If is used, them all instances will be from that region.
+    <dd>{{% md %}}If is used, them all template will be from that region, has to be declared here if is not declared in the provider
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sorts_nodejs">
@@ -161,7 +161,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}If is used, them all instances will be from that region.
+    <dd>{{% md %}}If is used, them all template will be from that region, has to be declared here if is not declared in the provider
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sorts_python">
