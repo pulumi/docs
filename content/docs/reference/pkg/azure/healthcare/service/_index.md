@@ -441,7 +441,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The provisioned throughput for the backing database. Range of `400`-`1000`. Defaults to `400`.
+    <dd>{{% md %}}The provisioned throughput for the backing database. Range of `400`-`10000`. Defaults to `400`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kind_csharp">
@@ -543,7 +543,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The provisioned throughput for the backing database. Range of `400`-`1000`. Defaults to `400`.
+    <dd>{{% md %}}The provisioned throughput for the backing database. Range of `400`-`10000`. Defaults to `400`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kind_go">
@@ -645,7 +645,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The provisioned throughput for the backing database. Range of `400`-`1000`. Defaults to `400`.
+    <dd>{{% md %}}The provisioned throughput for the backing database. Range of `400`-`10000`. Defaults to `400`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kind_nodejs">
@@ -747,7 +747,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The provisioned throughput for the backing database. Range of `400`-`1000`. Defaults to `400`.
+    <dd>{{% md %}}The provisioned throughput for the backing database. Range of `400`-`10000`. Defaults to `400`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kind_python">
@@ -1031,7 +1031,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The provisioned throughput for the backing database. Range of `400`-`1000`. Defaults to `400`.
+    <dd>{{% md %}}The provisioned throughput for the backing database. Range of `400`-`10000`. Defaults to `400`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_kind_csharp">
@@ -1133,7 +1133,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The provisioned throughput for the backing database. Range of `400`-`1000`. Defaults to `400`.
+    <dd>{{% md %}}The provisioned throughput for the backing database. Range of `400`-`10000`. Defaults to `400`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_kind_go">
@@ -1235,7 +1235,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The provisioned throughput for the backing database. Range of `400`-`1000`. Defaults to `400`.
+    <dd>{{% md %}}The provisioned throughput for the backing database. Range of `400`-`10000`. Defaults to `400`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_kind_nodejs">
@@ -1337,7 +1337,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The provisioned throughput for the backing database. Range of `400`-`1000`. Defaults to `400`.
+    <dd>{{% md %}}The provisioned throughput for the backing database. Range of `400`-`10000`. Defaults to `400`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_kind_python">

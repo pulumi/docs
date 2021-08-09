@@ -1158,6 +1158,24 @@ The following output properties are available:
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
+        <span id="acrusemanagedidentitycredentials_csharp">
+<a href="#acrusemanagedidentitycredentials_csharp" style="color: inherit; text-decoration: inherit;">Acr<wbr>Use<wbr>Managed<wbr>Identity<wbr>Credentials</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Are Managed Identity Credentials used for Azure Container Registry pull.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="acrusermanagedidentityclientid_csharp">
+<a href="#acrusermanagedidentityclientid_csharp" style="color: inherit; text-decoration: inherit;">Acr<wbr>User<wbr>Managed<wbr>Identity<wbr>Client<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The User Managed Identity Client Id.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="alwayson_csharp">
 <a href="#alwayson_csharp" style="color: inherit; text-decoration: inherit;">Always<wbr>On</a>
 </span>
@@ -1404,6 +1422,24 @@ The following output properties are available:
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="acrusemanagedidentitycredentials_go">
+<a href="#acrusemanagedidentitycredentials_go" style="color: inherit; text-decoration: inherit;">Acr<wbr>Use<wbr>Managed<wbr>Identity<wbr>Credentials</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Are Managed Identity Credentials used for Azure Container Registry pull.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="acrusermanagedidentityclientid_go">
+<a href="#acrusermanagedidentityclientid_go" style="color: inherit; text-decoration: inherit;">Acr<wbr>User<wbr>Managed<wbr>Identity<wbr>Client<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The User Managed Identity Client Id.
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="alwayson_go">
 <a href="#alwayson_go" style="color: inherit; text-decoration: inherit;">Always<wbr>On</a>
@@ -1652,6 +1688,24 @@ The following output properties are available:
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
+        <span id="acrusemanagedidentitycredentials_nodejs">
+<a href="#acrusemanagedidentitycredentials_nodejs" style="color: inherit; text-decoration: inherit;">acr<wbr>Use<wbr>Managed<wbr>Identity<wbr>Credentials</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Are Managed Identity Credentials used for Azure Container Registry pull.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="acrusermanagedidentityclientid_nodejs">
+<a href="#acrusermanagedidentityclientid_nodejs" style="color: inherit; text-decoration: inherit;">acr<wbr>User<wbr>Managed<wbr>Identity<wbr>Client<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The User Managed Identity Client Id.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="alwayson_nodejs">
 <a href="#alwayson_nodejs" style="color: inherit; text-decoration: inherit;">always<wbr>On</a>
 </span>
@@ -1898,6 +1952,24 @@ The following output properties are available:
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="acr_use_managed_identity_credentials_python">
+<a href="#acr_use_managed_identity_credentials_python" style="color: inherit; text-decoration: inherit;">acr_<wbr>use_<wbr>managed_<wbr>identity_<wbr>credentials</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Are Managed Identity Credentials used for Azure Container Registry pull.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="acr_user_managed_identity_client_id_python">
+<a href="#acr_user_managed_identity_client_id_python" style="color: inherit; text-decoration: inherit;">acr_<wbr>user_<wbr>managed_<wbr>identity_<wbr>client_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The User Managed Identity Client Id.
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="always_on_python">
 <a href="#always_on_python" style="color: inherit; text-decoration: inherit;">always_<wbr>on</a>

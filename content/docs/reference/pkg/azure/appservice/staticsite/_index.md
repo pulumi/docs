@@ -296,7 +296,8 @@ The StaticSite resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the sku tier of the Static Web App. Possible values are "Free" or "Standard". Defaults to "Free".
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="skutier_csharp">
 <a href="#skutier_csharp" style="color: inherit; text-decoration: inherit;">Sku<wbr>Tier</a>
@@ -304,7 +305,8 @@ The StaticSite resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the sku tier of the Static Web App. Possible values are "Free" or "Standard". Defaults to "Free".
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -352,7 +354,8 @@ The StaticSite resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the sku tier of the Static Web App. Possible values are "Free" or "Standard". Defaults to "Free".
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="skutier_go">
 <a href="#skutier_go" style="color: inherit; text-decoration: inherit;">Sku<wbr>Tier</a>
@@ -360,7 +363,8 @@ The StaticSite resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the sku tier of the Static Web App. Possible values are "Free" or "Standard". Defaults to "Free".
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -408,7 +412,8 @@ The StaticSite resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the sku tier of the Static Web App. Possible values are "Free" or "Standard". Defaults to "Free".
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="skutier_nodejs">
 <a href="#skutier_nodejs" style="color: inherit; text-decoration: inherit;">sku<wbr>Tier</a>
@@ -416,7 +421,8 @@ The StaticSite resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the sku tier of the Static Web App. Possible values are "Free" or "Standard". Defaults to "Free".
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -464,7 +470,8 @@ The StaticSite resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the sku tier of the Static Web App. Possible values are "Free" or "Standard". Defaults to "Free".
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sku_tier_python">
 <a href="#sku_tier_python" style="color: inherit; text-decoration: inherit;">sku_<wbr>tier</a>
@@ -472,7 +479,8 @@ The StaticSite resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the sku tier of the Static Web App. Possible values are "Free" or "Standard". Defaults to "Free".
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -798,7 +806,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the sku tier of the Static Web App. Possible values are "Free" or "Standard". Defaults to "Free".
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_skutier_csharp">
 <a href="#state_skutier_csharp" style="color: inherit; text-decoration: inherit;">Sku<wbr>Tier</a>
@@ -806,7 +815,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the sku tier of the Static Web App. Possible values are "Free" or "Standard". Defaults to "Free".
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_csharp">
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -872,7 +882,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the sku tier of the Static Web App. Possible values are "Free" or "Standard". Defaults to "Free".
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_skutier_go">
 <a href="#state_skutier_go" style="color: inherit; text-decoration: inherit;">Sku<wbr>Tier</a>
@@ -880,7 +891,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the sku tier of the Static Web App. Possible values are "Free" or "Standard". Defaults to "Free".
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -946,7 +958,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the sku tier of the Static Web App. Possible values are "Free" or "Standard". Defaults to "Free".
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_skutier_nodejs">
 <a href="#state_skutier_nodejs" style="color: inherit; text-decoration: inherit;">sku<wbr>Tier</a>
@@ -954,7 +967,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the sku tier of the Static Web App. Possible values are "Free" or "Standard". Defaults to "Free".
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_nodejs">
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1020,7 +1034,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the sku tier of the Static Web App. Possible values are "Free" or "Standard". Defaults to "Free".
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sku_tier_python">
 <a href="#state_sku_tier_python" style="color: inherit; text-decoration: inherit;">sku_<wbr>tier</a>
@@ -1028,7 +1043,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the sku tier of the Static Web App. Possible values are "Free" or "Standard". Defaults to "Free".
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>

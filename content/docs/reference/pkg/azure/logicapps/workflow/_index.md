@@ -146,6 +146,7 @@ const exampleWorkflow = new azure.logicapps.Workflow("exampleWorkflow", {
              <span class="nx">parameters</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
              <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+             <span class="nx">workflow_parameters</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
              <span class="nx">workflow_schema</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">workflow_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
@@ -340,6 +341,15 @@ The Workflow resource accepts the following [input]({{< relref "/docs/intro/conc
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="workflowparameters_csharp">
+<a href="#workflowparameters_csharp" style="color: inherit; text-decoration: inherit;">Workflow<wbr>Parameters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}Specifies a map of Key-Value pairs of the Parameter Definitions to use for this Logic App Workflow. The key is the parameter name, and the value is a json encoded string of the parameter definition (see: https://docs.microsoft.com/en-us/azure/logic-apps/logic-apps-workflow-definition-language#parameters).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="workflowschema_csharp">
 <a href="#workflowschema_csharp" style="color: inherit; text-decoration: inherit;">Workflow<wbr>Schema</a>
 </span>
@@ -423,6 +433,15 @@ The Workflow resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="workflowparameters_go">
+<a href="#workflowparameters_go" style="color: inherit; text-decoration: inherit;">Workflow<wbr>Parameters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}Specifies a map of Key-Value pairs of the Parameter Definitions to use for this Logic App Workflow. The key is the parameter name, and the value is a json encoded string of the parameter definition (see: https://docs.microsoft.com/en-us/azure/logic-apps/logic-apps-workflow-definition-language#parameters).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="workflowschema_go">
@@ -510,6 +529,15 @@ The Workflow resource accepts the following [input]({{< relref "/docs/intro/conc
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="workflowparameters_nodejs">
+<a href="#workflowparameters_nodejs" style="color: inherit; text-decoration: inherit;">workflow<wbr>Parameters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}Specifies a map of Key-Value pairs of the Parameter Definitions to use for this Logic App Workflow. The key is the parameter name, and the value is a json encoded string of the parameter definition (see: https://docs.microsoft.com/en-us/azure/logic-apps/logic-apps-workflow-definition-language#parameters).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="workflowschema_nodejs">
 <a href="#workflowschema_nodejs" style="color: inherit; text-decoration: inherit;">workflow<wbr>Schema</a>
 </span>
@@ -593,6 +621,15 @@ The Workflow resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="workflow_parameters_python">
+<a href="#workflow_parameters_python" style="color: inherit; text-decoration: inherit;">workflow_<wbr>parameters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, str]</span>
+    </dt>
+    <dd>{{% md %}}Specifies a map of Key-Value pairs of the Parameter Definitions to use for this Logic App Workflow. The key is the parameter name, and the value is a json encoded string of the parameter definition (see: https://docs.microsoft.com/en-us/azure/logic-apps/logic-apps-workflow-definition-language#parameters).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="workflow_schema_python">
@@ -877,6 +914,7 @@ Get an existing Workflow resource's state with the given name, ID, and optional 
         <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
         <span class="nx">workflow_endpoint_ip_addresses</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
         <span class="nx">workflow_outbound_ip_addresses</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+        <span class="nx">workflow_parameters</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
         <span class="nx">workflow_schema</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">workflow_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Workflow</code></pre></div>
 {{% /choosable %}}
@@ -1099,6 +1137,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The list of outgoing ip addresses of workflow.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_workflowparameters_csharp">
+<a href="#state_workflowparameters_csharp" style="color: inherit; text-decoration: inherit;">Workflow<wbr>Parameters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}Specifies a map of Key-Value pairs of the Parameter Definitions to use for this Logic App Workflow. The key is the parameter name, and the value is a json encoded string of the parameter definition (see: https://docs.microsoft.com/en-us/azure/logic-apps/logic-apps-workflow-definition-language#parameters).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_workflowschema_csharp">
 <a href="#state_workflowschema_csharp" style="color: inherit; text-decoration: inherit;">Workflow<wbr>Schema</a>
 </span>
@@ -1227,6 +1274,15 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The list of outgoing ip addresses of workflow.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_workflowparameters_go">
+<a href="#state_workflowparameters_go" style="color: inherit; text-decoration: inherit;">Workflow<wbr>Parameters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}Specifies a map of Key-Value pairs of the Parameter Definitions to use for this Logic App Workflow. The key is the parameter name, and the value is a json encoded string of the parameter definition (see: https://docs.microsoft.com/en-us/azure/logic-apps/logic-apps-workflow-definition-language#parameters).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_workflowschema_go">
@@ -1359,6 +1415,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The list of outgoing ip addresses of workflow.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_workflowparameters_nodejs">
+<a href="#state_workflowparameters_nodejs" style="color: inherit; text-decoration: inherit;">workflow<wbr>Parameters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}Specifies a map of Key-Value pairs of the Parameter Definitions to use for this Logic App Workflow. The key is the parameter name, and the value is a json encoded string of the parameter definition (see: https://docs.microsoft.com/en-us/azure/logic-apps/logic-apps-workflow-definition-language#parameters).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_workflowschema_nodejs">
 <a href="#state_workflowschema_nodejs" style="color: inherit; text-decoration: inherit;">workflow<wbr>Schema</a>
 </span>
@@ -1487,6 +1552,15 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The list of outgoing ip addresses of workflow.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_workflow_parameters_python">
+<a href="#state_workflow_parameters_python" style="color: inherit; text-decoration: inherit;">workflow_<wbr>parameters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, str]</span>
+    </dt>
+    <dd>{{% md %}}Specifies a map of Key-Value pairs of the Parameter Definitions to use for this Logic App Workflow. The key is the parameter name, and the value is a json encoded string of the parameter definition (see: https://docs.microsoft.com/en-us/azure/logic-apps/logic-apps-workflow-definition-language#parameters).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_workflow_schema_python">

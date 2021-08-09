@@ -624,8 +624,7 @@ The Extension resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The publisher of the extension, available publishers
-can be found by using the Azure CLI.
+    <dd>{{% md %}}The publisher of the extension, available publishers can be found by using the Azure CLI. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_csharp">
@@ -716,8 +715,7 @@ specified as a JSON object in a string.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The publisher of the extension, available publishers
-can be found by using the Azure CLI.
+    <dd>{{% md %}}The publisher of the extension, available publishers can be found by using the Azure CLI. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_go">
@@ -808,8 +806,7 @@ specified as a JSON object in a string.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The publisher of the extension, available publishers
-can be found by using the Azure CLI.
+    <dd>{{% md %}}The publisher of the extension, available publishers can be found by using the Azure CLI. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_nodejs">
@@ -900,8 +897,7 @@ specified as a JSON object in a string.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The publisher of the extension, available publishers
-can be found by using the Azure CLI.
+    <dd>{{% md %}}The publisher of the extension, available publishers can be found by using the Azure CLI. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_python">
@@ -1211,8 +1207,7 @@ extension, like settings, these are specified as a JSON object in a string.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The publisher of the extension, available publishers
-can be found by using the Azure CLI.
+    <dd>{{% md %}}The publisher of the extension, available publishers can be found by using the Azure CLI. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_settings_csharp">
@@ -1303,8 +1298,7 @@ extension, like settings, these are specified as a JSON object in a string.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The publisher of the extension, available publishers
-can be found by using the Azure CLI.
+    <dd>{{% md %}}The publisher of the extension, available publishers can be found by using the Azure CLI. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_settings_go">
@@ -1395,8 +1389,7 @@ extension, like settings, these are specified as a JSON object in a string.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The publisher of the extension, available publishers
-can be found by using the Azure CLI.
+    <dd>{{% md %}}The publisher of the extension, available publishers can be found by using the Azure CLI. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_settings_nodejs">
@@ -1487,8 +1480,7 @@ extension, like settings, these are specified as a JSON object in a string.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The publisher of the extension, available publishers
-can be found by using the Azure CLI.
+    <dd>{{% md %}}The publisher of the extension, available publishers can be found by using the Azure CLI. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_settings_python">

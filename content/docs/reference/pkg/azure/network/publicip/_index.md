@@ -168,6 +168,7 @@ const examplePublicIp = new azure.network.PublicIp("examplePublicIp", {
              <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">reverse_fqdn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">sku_tier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
              <span class="nx">zones</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
@@ -409,6 +410,15 @@ new resource to be created.
     <dd>{{% md %}}The SKU of the Public IP. Accepted values are `Basic` and `Standard`. Defaults to `Basic`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="skutier_csharp">
+<a href="#skutier_csharp" style="color: inherit; text-decoration: inherit;">Sku<wbr>Tier</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The SKU Tier that should be used for the Public IP. Possible values are `Regional` and `Global`. Defaults to `Regional`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span>
@@ -538,6 +548,15 @@ new resource to be created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SKU of the Public IP. Accepted values are `Basic` and `Standard`. Defaults to `Basic`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="skutier_go">
+<a href="#skutier_go" style="color: inherit; text-decoration: inherit;">Sku<wbr>Tier</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The SKU Tier that should be used for the Public IP. Possible values are `Regional` and `Global`. Defaults to `Regional`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
@@ -671,6 +690,15 @@ new resource to be created.
     <dd>{{% md %}}The SKU of the Public IP. Accepted values are `Basic` and `Standard`. Defaults to `Basic`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="skutier_nodejs">
+<a href="#skutier_nodejs" style="color: inherit; text-decoration: inherit;">sku<wbr>Tier</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The SKU Tier that should be used for the Public IP. Possible values are `Regional` and `Global`. Defaults to `Regional`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
@@ -800,6 +828,15 @@ new resource to be created.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The SKU of the Public IP. Accepted values are `Basic` and `Standard`. Defaults to `Basic`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sku_tier_python">
+<a href="#sku_tier_python" style="color: inherit; text-decoration: inherit;">sku_<wbr>tier</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The SKU Tier that should be used for the Public IP. Possible values are `Regional` and `Global`. Defaults to `Regional`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
@@ -977,6 +1014,7 @@ Get an existing PublicIp resource's state with the given name, ID, and optional 
         <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">reverse_fqdn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">sku_tier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
         <span class="nx">zones</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> PublicIp</code></pre></div>
 {{% /choosable %}}
@@ -1219,6 +1257,15 @@ create the public ip.
     <dd>{{% md %}}The SKU of the Public IP. Accepted values are `Basic` and `Standard`. Defaults to `Basic`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_skutier_csharp">
+<a href="#state_skutier_csharp" style="color: inherit; text-decoration: inherit;">Sku<wbr>Tier</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The SKU Tier that should be used for the Public IP. Possible values are `Regional` and `Global`. Defaults to `Regional`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_tags_csharp">
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span>
@@ -1366,6 +1413,15 @@ create the public ip.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SKU of the Public IP. Accepted values are `Basic` and `Standard`. Defaults to `Basic`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_skutier_go">
+<a href="#state_skutier_go" style="color: inherit; text-decoration: inherit;">Sku<wbr>Tier</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The SKU Tier that should be used for the Public IP. Possible values are `Regional` and `Global`. Defaults to `Regional`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
@@ -1517,6 +1573,15 @@ create the public ip.
     <dd>{{% md %}}The SKU of the Public IP. Accepted values are `Basic` and `Standard`. Defaults to `Basic`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_skutier_nodejs">
+<a href="#state_skutier_nodejs" style="color: inherit; text-decoration: inherit;">sku<wbr>Tier</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The SKU Tier that should be used for the Public IP. Possible values are `Regional` and `Global`. Defaults to `Regional`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_tags_nodejs">
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
@@ -1664,6 +1729,15 @@ create the public ip.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The SKU of the Public IP. Accepted values are `Basic` and `Standard`. Defaults to `Basic`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_sku_tier_python">
+<a href="#state_sku_tier_python" style="color: inherit; text-decoration: inherit;">sku_<wbr>tier</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The SKU Tier that should be used for the Public IP. Possible values are `Regional` and `Global`. Defaults to `Regional`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">
