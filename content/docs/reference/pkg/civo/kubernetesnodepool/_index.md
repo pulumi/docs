@@ -28,6 +28,7 @@ Provides a Civo Kubernetes node pool resource. While the default node pool must 
                        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
                        <span class="nx">cluster_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                        <span class="nx">num_target_nodes</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+                       <span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                        <span class="nx">target_nodes_size</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">KubernetesNodePool</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
@@ -165,6 +166,15 @@ The KubernetesNodePool resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Kubernetes cluster to which the node pool is associated.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="region_csharp">
+<a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The region of the node pool, has to match that of the cluster.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="numtargetnodes_csharp">
@@ -196,6 +206,15 @@ The KubernetesNodePool resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Kubernetes cluster to which the node pool is associated.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="region_go">
+<a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The region of the node pool, has to match that of the cluster.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="numtargetnodes_go">
@@ -227,6 +246,15 @@ The KubernetesNodePool resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Kubernetes cluster to which the node pool is associated.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="region_nodejs">
+<a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The region of the node pool, has to match that of the cluster.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="numtargetnodes_nodejs">
@@ -258,6 +286,15 @@ The KubernetesNodePool resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Kubernetes cluster to which the node pool is associated.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="region_python">
+<a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The region of the node pool, has to match that of the cluster.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="num_target_nodes_python">
@@ -352,6 +389,7 @@ Get an existing KubernetesNodePool resource's state with the given name, ID, and
         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
         <span class="nx">cluster_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">num_target_nodes</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+        <span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">target_nodes_size</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> KubernetesNodePool</code></pre></div>
 {{% /choosable %}}
 
@@ -483,6 +521,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The number of instances to create (The default at the time of writing is 3).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_region_csharp">
+<a href="#state_region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The region of the node pool, has to match that of the cluster.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_targetnodessize_csharp">
 <a href="#state_targetnodessize_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Nodes<wbr>Size</a>
 </span>
@@ -512,6 +559,15 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of instances to create (The default at the time of writing is 3).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_region_go">
+<a href="#state_region_go" style="color: inherit; text-decoration: inherit;">Region</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The region of the node pool, has to match that of the cluster.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_targetnodessize_go">
@@ -545,6 +601,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The number of instances to create (The default at the time of writing is 3).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_region_nodejs">
+<a href="#state_region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The region of the node pool, has to match that of the cluster.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_targetnodessize_nodejs">
 <a href="#state_targetnodessize_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Nodes<wbr>Size</a>
 </span>
@@ -574,6 +639,15 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of instances to create (The default at the time of writing is 3).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_region_python">
+<a href="#state_region_python" style="color: inherit; text-decoration: inherit;">region</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The region of the node pool, has to match that of the cluster.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_target_nodes_size_python">
