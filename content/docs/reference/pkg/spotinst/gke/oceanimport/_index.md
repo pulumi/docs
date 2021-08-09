@@ -33,6 +33,7 @@ meta_desc: "Documentation for the spotinst.gke.OceanImport resource with example
                 <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                 <span class="nx">max_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
                 <span class="nx">min_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+                <span class="nx">root_volume_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                 <span class="nx">scheduled_tasks</span><span class="p">:</span> <span class="nx">Optional[Sequence[OceanImportScheduledTaskArgs]]</span> = None<span class="p">,</span>
                 <span class="nx">whitelists</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
@@ -153,7 +154,7 @@ meta_desc: "Documentation for the spotinst.gke.OceanImport resource with example
 
 ## OceanImport Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Architecture and Concepts docs.
 
 ### Inputs
 
@@ -233,6 +234,15 @@ The OceanImport resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The lower limit of instances the cluster can scale down to.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="rootvolumetype_csharp">
+<a href="#rootvolumetype_csharp" style="color: inherit; text-decoration: inherit;">Root<wbr>Volume<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The root volume disk type.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scheduledtasks_csharp">
@@ -328,6 +338,15 @@ The OceanImport resource accepts the following [input]({{< relref "/docs/intro/c
     <dd>{{% md %}}The lower limit of instances the cluster can scale down to.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="rootvolumetype_go">
+<a href="#rootvolumetype_go" style="color: inherit; text-decoration: inherit;">Root<wbr>Volume<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The root volume disk type.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="scheduledtasks_go">
 <a href="#scheduledtasks_go" style="color: inherit; text-decoration: inherit;">Scheduled<wbr>Tasks</a>
 </span>
@@ -421,6 +440,15 @@ The OceanImport resource accepts the following [input]({{< relref "/docs/intro/c
     <dd>{{% md %}}The lower limit of instances the cluster can scale down to.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="rootvolumetype_nodejs">
+<a href="#rootvolumetype_nodejs" style="color: inherit; text-decoration: inherit;">root<wbr>Volume<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The root volume disk type.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="scheduledtasks_nodejs">
 <a href="#scheduledtasks_nodejs" style="color: inherit; text-decoration: inherit;">scheduled<wbr>Tasks</a>
 </span>
@@ -512,6 +540,15 @@ The OceanImport resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The lower limit of instances the cluster can scale down to.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="root_volume_type_python">
+<a href="#root_volume_type_python" style="color: inherit; text-decoration: inherit;">root_<wbr>volume_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The root volume disk type.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scheduled_tasks_python">
@@ -645,6 +682,7 @@ Get an existing OceanImport resource's state with the given name, ID, and option
         <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">max_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
         <span class="nx">min_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+        <span class="nx">root_volume_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">scheduled_tasks</span><span class="p">:</span> <span class="nx">Optional[Sequence[OceanImportScheduledTaskArgs]]</span> = None<span class="p">,</span>
         <span class="nx">whitelists</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">) -&gt;</span> OceanImport</code></pre></div>
 {{% /choosable %}}
@@ -838,6 +876,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The lower limit of instances the cluster can scale down to.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_rootvolumetype_csharp">
+<a href="#state_rootvolumetype_csharp" style="color: inherit; text-decoration: inherit;">Root<wbr>Volume<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The root volume disk type.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_scheduledtasks_csharp">
 <a href="#state_scheduledtasks_csharp" style="color: inherit; text-decoration: inherit;">Scheduled<wbr>Tasks</a>
 </span>
@@ -937,6 +984,15 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The lower limit of instances the cluster can scale down to.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_rootvolumetype_go">
+<a href="#state_rootvolumetype_go" style="color: inherit; text-decoration: inherit;">Root<wbr>Volume<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The root volume disk type.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_scheduledtasks_go">
@@ -1040,6 +1096,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The lower limit of instances the cluster can scale down to.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_rootvolumetype_nodejs">
+<a href="#state_rootvolumetype_nodejs" style="color: inherit; text-decoration: inherit;">root<wbr>Volume<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The root volume disk type.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_scheduledtasks_nodejs">
 <a href="#state_scheduledtasks_nodejs" style="color: inherit; text-decoration: inherit;">scheduled<wbr>Tasks</a>
 </span>
@@ -1139,6 +1204,15 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The lower limit of instances the cluster can scale down to.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_root_volume_type_python">
+<a href="#state_root_volume_type_python" style="color: inherit; text-decoration: inherit;">root_<wbr>volume_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The root volume disk type.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_scheduled_tasks_python">

@@ -93,6 +93,12 @@ const default_elastigroup = new spotinst.aws.Elastigroup("default-elastigroup", 
     placementTenancy: "default",
     product: "Linux/UNIX",
     region: "us-west-2",
+    resourceTagSpecifications: [{
+        shouldTagAmis: true,
+        shouldTagEnis: true,
+        shouldTagSnapshots: true,
+        shouldTagVolumes: true,
+    }],
     scalingDownPolicies: [{
         adjustment: "1",
         cooldown: 300,
@@ -224,6 +230,7 @@ const default_elastigroup = new spotinst.aws.Elastigroup("default-elastigroup", 
                 <span class="nx">private_ips</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
                 <span class="nx">product</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                 <span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">resource_tag_specifications</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupResourceTagSpecificationArgs]]</span> = None<span class="p">,</span>
                 <span class="nx">revert_to_spot</span><span class="p">:</span> <span class="nx">Optional[ElastigroupRevertToSpotArgs]</span> = None<span class="p">,</span>
                 <span class="nx">scaling_down_policies</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupScalingDownPolicyArgs]]</span> = None<span class="p">,</span>
                 <span class="nx">scaling_strategies</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupScalingStrategyArgs]]</span> = None<span class="p">,</span>
@@ -363,7 +370,7 @@ const default_elastigroup = new spotinst.aws.Elastigroup("default-elastigroup", 
 
 ## Elastigroup Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Architecture and Concepts docs.
 
 ### Inputs
 
@@ -416,7 +423,7 @@ The Elastigroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Operation system type. Valid values: `"Linux/UNIX"`, `"SUSE Linux"`, `"Windows"`. 
+    <dd>{{% md %}}Operation system type. Valid values: `"Linux/UNIX"`, `"SUSE Linux"`, `"Windows"`.
 For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VPC)"`, `"Windows (Amazon VPC)"`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -846,7 +853,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}The AZs to prioritize when launching Spot instances. If no markets are available in the Preferred AZs, Spot instances are launched in the non-preferred AZs. 
+    <dd>{{% md %}}The AZs to prioritize when launching Spot instances. If no markets are available in the Preferred AZs, Spot instances are launched in the non-preferred AZs.
 Note: Must be a sublist of `availability_zones` and `orientation` value must not be `"equalAzDistribution"`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -867,6 +874,15 @@ Note: Must be a sublist of `availability_zones` and `orientation` value must not
     </dt>
     <dd>{{% md %}}The AWS region your group will be created in.
 Note: This parameter is required if you specify subnets (through subnet_ids). This parameter is optional if you specify Availability Zones (through availability_zones).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="resourcetagspecifications_csharp">
+<a href="#resourcetagspecifications_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Tag<wbr>Specifications</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#elastigroupresourcetagspecification">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Elastigroup<wbr>Resource<wbr>Tag<wbr>Specification<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}User will specify which resources should be tagged with group tags.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="reverttospot_csharp">
@@ -1087,7 +1103,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Operation system type. Valid values: `"Linux/UNIX"`, `"SUSE Linux"`, `"Windows"`. 
+    <dd>{{% md %}}Operation system type. Valid values: `"Linux/UNIX"`, `"SUSE Linux"`, `"Windows"`.
 For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VPC)"`, `"Windows (Amazon VPC)"`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -1517,7 +1533,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}The AZs to prioritize when launching Spot instances. If no markets are available in the Preferred AZs, Spot instances are launched in the non-preferred AZs. 
+    <dd>{{% md %}}The AZs to prioritize when launching Spot instances. If no markets are available in the Preferred AZs, Spot instances are launched in the non-preferred AZs.
 Note: Must be a sublist of `availability_zones` and `orientation` value must not be `"equalAzDistribution"`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1538,6 +1554,15 @@ Note: Must be a sublist of `availability_zones` and `orientation` value must not
     </dt>
     <dd>{{% md %}}The AWS region your group will be created in.
 Note: This parameter is required if you specify subnets (through subnet_ids). This parameter is optional if you specify Availability Zones (through availability_zones).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="resourcetagspecifications_go">
+<a href="#resourcetagspecifications_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Tag<wbr>Specifications</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#elastigroupresourcetagspecification">[]Elastigroup<wbr>Resource<wbr>Tag<wbr>Specification<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}User will specify which resources should be tagged with group tags.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="reverttospot_go">
@@ -1758,7 +1783,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Operation system type. Valid values: `"Linux/UNIX"`, `"SUSE Linux"`, `"Windows"`. 
+    <dd>{{% md %}}Operation system type. Valid values: `"Linux/UNIX"`, `"SUSE Linux"`, `"Windows"`.
 For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VPC)"`, `"Windows (Amazon VPC)"`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2188,7 +2213,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}The AZs to prioritize when launching Spot instances. If no markets are available in the Preferred AZs, Spot instances are launched in the non-preferred AZs. 
+    <dd>{{% md %}}The AZs to prioritize when launching Spot instances. If no markets are available in the Preferred AZs, Spot instances are launched in the non-preferred AZs.
 Note: Must be a sublist of `availability_zones` and `orientation` value must not be `"equalAzDistribution"`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2209,6 +2234,15 @@ Note: Must be a sublist of `availability_zones` and `orientation` value must not
     </dt>
     <dd>{{% md %}}The AWS region your group will be created in.
 Note: This parameter is required if you specify subnets (through subnet_ids). This parameter is optional if you specify Availability Zones (through availability_zones).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="resourcetagspecifications_nodejs">
+<a href="#resourcetagspecifications_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Tag<wbr>Specifications</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#elastigroupresourcetagspecification">Elastigroup<wbr>Resource<wbr>Tag<wbr>Specification<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}User will specify which resources should be tagged with group tags.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="reverttospot_nodejs">
@@ -2429,7 +2463,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Operation system type. Valid values: `"Linux/UNIX"`, `"SUSE Linux"`, `"Windows"`. 
+    <dd>{{% md %}}Operation system type. Valid values: `"Linux/UNIX"`, `"SUSE Linux"`, `"Windows"`.
 For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VPC)"`, `"Windows (Amazon VPC)"`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2859,7 +2893,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}The AZs to prioritize when launching Spot instances. If no markets are available in the Preferred AZs, Spot instances are launched in the non-preferred AZs. 
+    <dd>{{% md %}}The AZs to prioritize when launching Spot instances. If no markets are available in the Preferred AZs, Spot instances are launched in the non-preferred AZs.
 Note: Must be a sublist of `availability_zones` and `orientation` value must not be `"equalAzDistribution"`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2880,6 +2914,15 @@ Note: Must be a sublist of `availability_zones` and `orientation` value must not
     </dt>
     <dd>{{% md %}}The AWS region your group will be created in.
 Note: This parameter is required if you specify subnets (through subnet_ids). This parameter is optional if you specify Availability Zones (through availability_zones).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="resource_tag_specifications_python">
+<a href="#resource_tag_specifications_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>tag_<wbr>specifications</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#elastigroupresourcetagspecification">Sequence[Elastigroup<wbr>Resource<wbr>Tag<wbr>Specification<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}User will specify which resources should be tagged with group tags.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="revert_to_spot_python">
@@ -3180,6 +3223,7 @@ Get an existing Elastigroup resource's state with the given name, ID, and option
         <span class="nx">private_ips</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
         <span class="nx">product</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">resource_tag_specifications</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupResourceTagSpecificationArgs]]</span> = None<span class="p">,</span>
         <span class="nx">revert_to_spot</span><span class="p">:</span> <span class="nx">Optional[ElastigroupRevertToSpotArgs]</span> = None<span class="p">,</span>
         <span class="nx">scaling_down_policies</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupScalingDownPolicyArgs]]</span> = None<span class="p">,</span>
         <span class="nx">scaling_strategies</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupScalingStrategyArgs]]</span> = None<span class="p">,</span>
@@ -3766,7 +3810,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}The AZs to prioritize when launching Spot instances. If no markets are available in the Preferred AZs, Spot instances are launched in the non-preferred AZs. 
+    <dd>{{% md %}}The AZs to prioritize when launching Spot instances. If no markets are available in the Preferred AZs, Spot instances are launched in the non-preferred AZs.
 Note: Must be a sublist of `availability_zones` and `orientation` value must not be `"equalAzDistribution"`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3785,7 +3829,7 @@ Note: Must be a sublist of `availability_zones` and `orientation` value must not
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Operation system type. Valid values: `"Linux/UNIX"`, `"SUSE Linux"`, `"Windows"`. 
+    <dd>{{% md %}}Operation system type. Valid values: `"Linux/UNIX"`, `"SUSE Linux"`, `"Windows"`.
 For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VPC)"`, `"Windows (Amazon VPC)"`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -3797,6 +3841,15 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
     </dt>
     <dd>{{% md %}}The AWS region your group will be created in.
 Note: This parameter is required if you specify subnets (through subnet_ids). This parameter is optional if you specify Availability Zones (through availability_zones).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_resourcetagspecifications_csharp">
+<a href="#state_resourcetagspecifications_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Tag<wbr>Specifications</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#elastigroupresourcetagspecification">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Elastigroup<wbr>Resource<wbr>Tag<wbr>Specification<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}User will specify which resources should be tagged with group tags.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_reverttospot_csharp">
@@ -4437,7 +4490,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}The AZs to prioritize when launching Spot instances. If no markets are available in the Preferred AZs, Spot instances are launched in the non-preferred AZs. 
+    <dd>{{% md %}}The AZs to prioritize when launching Spot instances. If no markets are available in the Preferred AZs, Spot instances are launched in the non-preferred AZs.
 Note: Must be a sublist of `availability_zones` and `orientation` value must not be `"equalAzDistribution"`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4456,7 +4509,7 @@ Note: Must be a sublist of `availability_zones` and `orientation` value must not
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Operation system type. Valid values: `"Linux/UNIX"`, `"SUSE Linux"`, `"Windows"`. 
+    <dd>{{% md %}}Operation system type. Valid values: `"Linux/UNIX"`, `"SUSE Linux"`, `"Windows"`.
 For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VPC)"`, `"Windows (Amazon VPC)"`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -4468,6 +4521,15 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
     </dt>
     <dd>{{% md %}}The AWS region your group will be created in.
 Note: This parameter is required if you specify subnets (through subnet_ids). This parameter is optional if you specify Availability Zones (through availability_zones).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_resourcetagspecifications_go">
+<a href="#state_resourcetagspecifications_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Tag<wbr>Specifications</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#elastigroupresourcetagspecification">[]Elastigroup<wbr>Resource<wbr>Tag<wbr>Specification<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}User will specify which resources should be tagged with group tags.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_reverttospot_go">
@@ -5108,7 +5170,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}The AZs to prioritize when launching Spot instances. If no markets are available in the Preferred AZs, Spot instances are launched in the non-preferred AZs. 
+    <dd>{{% md %}}The AZs to prioritize when launching Spot instances. If no markets are available in the Preferred AZs, Spot instances are launched in the non-preferred AZs.
 Note: Must be a sublist of `availability_zones` and `orientation` value must not be `"equalAzDistribution"`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5127,7 +5189,7 @@ Note: Must be a sublist of `availability_zones` and `orientation` value must not
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Operation system type. Valid values: `"Linux/UNIX"`, `"SUSE Linux"`, `"Windows"`. 
+    <dd>{{% md %}}Operation system type. Valid values: `"Linux/UNIX"`, `"SUSE Linux"`, `"Windows"`.
 For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VPC)"`, `"Windows (Amazon VPC)"`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5139,6 +5201,15 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
     </dt>
     <dd>{{% md %}}The AWS region your group will be created in.
 Note: This parameter is required if you specify subnets (through subnet_ids). This parameter is optional if you specify Availability Zones (through availability_zones).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_resourcetagspecifications_nodejs">
+<a href="#state_resourcetagspecifications_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Tag<wbr>Specifications</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#elastigroupresourcetagspecification">Elastigroup<wbr>Resource<wbr>Tag<wbr>Specification<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}User will specify which resources should be tagged with group tags.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_reverttospot_nodejs">
@@ -5779,7 +5850,7 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}The AZs to prioritize when launching Spot instances. If no markets are available in the Preferred AZs, Spot instances are launched in the non-preferred AZs. 
+    <dd>{{% md %}}The AZs to prioritize when launching Spot instances. If no markets are available in the Preferred AZs, Spot instances are launched in the non-preferred AZs.
 Note: Must be a sublist of `availability_zones` and `orientation` value must not be `"equalAzDistribution"`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5798,7 +5869,7 @@ Note: Must be a sublist of `availability_zones` and `orientation` value must not
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Operation system type. Valid values: `"Linux/UNIX"`, `"SUSE Linux"`, `"Windows"`. 
+    <dd>{{% md %}}Operation system type. Valid values: `"Linux/UNIX"`, `"SUSE Linux"`, `"Windows"`.
 For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VPC)"`, `"Windows (Amazon VPC)"`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -5810,6 +5881,15 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
     </dt>
     <dd>{{% md %}}The AWS region your group will be created in.
 Note: This parameter is required if you specify subnets (through subnet_ids). This parameter is optional if you specify Availability Zones (through availability_zones).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_resource_tag_specifications_python">
+<a href="#state_resource_tag_specifications_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>tag_<wbr>specifications</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#elastigroupresourcetagspecification">Sequence[Elastigroup<wbr>Resource<wbr>Tag<wbr>Specification<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}User will specify which resources should be tagged with group tags.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_revert_to_spot_python">
@@ -10928,6 +11008,168 @@ Usage:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The number of secondary private IP addresses.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="elastigroupresourcetagspecification">Elastigroup<wbr>Resource<wbr>Tag<wbr>Specification</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="shouldtagamis_csharp">
+<a href="#shouldtagamis_csharp" style="color: inherit; text-decoration: inherit;">Should<wbr>Tag<wbr>Amis</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Tag specification for AMI resources.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="shouldtagenis_csharp">
+<a href="#shouldtagenis_csharp" style="color: inherit; text-decoration: inherit;">Should<wbr>Tag<wbr>Enis</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Tag specification for ENI resources.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="shouldtagsnapshots_csharp">
+<a href="#shouldtagsnapshots_csharp" style="color: inherit; text-decoration: inherit;">Should<wbr>Tag<wbr>Snapshots</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Tag specification for Snapshot resources.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="shouldtagvolumes_csharp">
+<a href="#shouldtagvolumes_csharp" style="color: inherit; text-decoration: inherit;">Should<wbr>Tag<wbr>Volumes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Tag specification for Volume resources.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="shouldtagamis_go">
+<a href="#shouldtagamis_go" style="color: inherit; text-decoration: inherit;">Should<wbr>Tag<wbr>Amis</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Tag specification for AMI resources.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="shouldtagenis_go">
+<a href="#shouldtagenis_go" style="color: inherit; text-decoration: inherit;">Should<wbr>Tag<wbr>Enis</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Tag specification for ENI resources.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="shouldtagsnapshots_go">
+<a href="#shouldtagsnapshots_go" style="color: inherit; text-decoration: inherit;">Should<wbr>Tag<wbr>Snapshots</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Tag specification for Snapshot resources.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="shouldtagvolumes_go">
+<a href="#shouldtagvolumes_go" style="color: inherit; text-decoration: inherit;">Should<wbr>Tag<wbr>Volumes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Tag specification for Volume resources.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="shouldtagamis_nodejs">
+<a href="#shouldtagamis_nodejs" style="color: inherit; text-decoration: inherit;">should<wbr>Tag<wbr>Amis</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Tag specification for AMI resources.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="shouldtagenis_nodejs">
+<a href="#shouldtagenis_nodejs" style="color: inherit; text-decoration: inherit;">should<wbr>Tag<wbr>Enis</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Tag specification for ENI resources.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="shouldtagsnapshots_nodejs">
+<a href="#shouldtagsnapshots_nodejs" style="color: inherit; text-decoration: inherit;">should<wbr>Tag<wbr>Snapshots</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Tag specification for Snapshot resources.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="shouldtagvolumes_nodejs">
+<a href="#shouldtagvolumes_nodejs" style="color: inherit; text-decoration: inherit;">should<wbr>Tag<wbr>Volumes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Tag specification for Volume resources.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="should_tag_amis_python">
+<a href="#should_tag_amis_python" style="color: inherit; text-decoration: inherit;">should_<wbr>tag_<wbr>amis</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Tag specification for AMI resources.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="should_tag_enis_python">
+<a href="#should_tag_enis_python" style="color: inherit; text-decoration: inherit;">should_<wbr>tag_<wbr>enis</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Tag specification for ENI resources.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="should_tag_snapshots_python">
+<a href="#should_tag_snapshots_python" style="color: inherit; text-decoration: inherit;">should_<wbr>tag_<wbr>snapshots</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Tag specification for Snapshot resources.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="should_tag_volumes_python">
+<a href="#should_tag_volumes_python" style="color: inherit; text-decoration: inherit;">should_<wbr>tag_<wbr>volumes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Tag specification for Volume resources.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
