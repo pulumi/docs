@@ -266,7 +266,7 @@ const exampleHostname = new cloudflare.CustomHostname("example_hostname", {
 
 ## CustomHostname Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Architecture and Concepts docs.
 
 ### Inputs
 
@@ -286,15 +286,6 @@ The CustomHostname resource accepts the following [input]({{< relref "/docs/intr
     <dd>{{% md %}}Hostname you intend to request a certificate for.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="ssls_csharp">
-<a href="#ssls_csharp" style="color: inherit; text-decoration: inherit;">Ssls</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customhostnamessl">List&lt;Custom<wbr>Hostname<wbr>Ssl<wbr>Args&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}SSL configuration of the certificate. See further notes below.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="zoneid_csharp">
 <a href="#zoneid_csharp" style="color: inherit; text-decoration: inherit;">Zone<wbr>Id</a>
 </span>
@@ -311,6 +302,15 @@ The CustomHostname resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The custom origin server used for certificates.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ssls_csharp">
+<a href="#ssls_csharp" style="color: inherit; text-decoration: inherit;">Ssls</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#customhostnamessl">List&lt;Custom<wbr>Hostname<wbr>Ssl<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}SSL configuration of the certificate. See further notes below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -324,15 +324,6 @@ The CustomHostname resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Hostname you intend to request a certificate for.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="ssls_go">
-<a href="#ssls_go" style="color: inherit; text-decoration: inherit;">Ssls</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customhostnamessl">[]Custom<wbr>Hostname<wbr>Ssl<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}SSL configuration of the certificate. See further notes below.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="zoneid_go">
@@ -351,6 +342,15 @@ The CustomHostname resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The custom origin server used for certificates.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ssls_go">
+<a href="#ssls_go" style="color: inherit; text-decoration: inherit;">Ssls</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#customhostnamessl">[]Custom<wbr>Hostname<wbr>Ssl<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}SSL configuration of the certificate. See further notes below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -364,15 +364,6 @@ The CustomHostname resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Hostname you intend to request a certificate for.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="ssls_nodejs">
-<a href="#ssls_nodejs" style="color: inherit; text-decoration: inherit;">ssls</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customhostnamessl">Custom<wbr>Hostname<wbr>Ssl<wbr>Args[]</a></span>
-    </dt>
-    <dd>{{% md %}}SSL configuration of the certificate. See further notes below.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="zoneid_nodejs">
@@ -391,6 +382,15 @@ The CustomHostname resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The custom origin server used for certificates.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ssls_nodejs">
+<a href="#ssls_nodejs" style="color: inherit; text-decoration: inherit;">ssls</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#customhostnamessl">Custom<wbr>Hostname<wbr>Ssl<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}SSL configuration of the certificate. See further notes below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -404,15 +404,6 @@ The CustomHostname resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Hostname you intend to request a certificate for.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="ssls_python">
-<a href="#ssls_python" style="color: inherit; text-decoration: inherit;">ssls</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customhostnamessl">Sequence[Custom<wbr>Hostname<wbr>Ssl<wbr>Args]</a></span>
-    </dt>
-    <dd>{{% md %}}SSL configuration of the certificate. See further notes below.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="zone_id_python">
@@ -431,6 +422,15 @@ The CustomHostname resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The custom origin server used for certificates.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ssls_python">
+<a href="#ssls_python" style="color: inherit; text-decoration: inherit;">ssls</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#customhostnamessl">Sequence[Custom<wbr>Hostname<wbr>Ssl<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}SSL configuration of the certificate. See further notes below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

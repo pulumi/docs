@@ -204,6 +204,7 @@ const _sipTls = new cloudflare.Record("_sipTls", {
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">Record</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+           <span class="nx">allow_overwrite</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
            <span class="nx">data</span><span class="p">:</span> <span class="nx">Optional[RecordDataArgs]</span> = None<span class="p">,</span>
            <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
            <span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
@@ -330,7 +331,7 @@ const _sipTls = new cloudflare.Record("_sipTls", {
 
 ## Record Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Architecture and Concepts docs.
 
 ### Inputs
 
@@ -367,6 +368,14 @@ The Record resource accepts the following [input]({{< relref "/docs/intro/concep
     </dt>
     <dd>{{% md %}}The DNS zone ID to add the record to
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="allowoverwrite_csharp">
+<a href="#allowoverwrite_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Overwrite</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="data_csharp">
 <a href="#data_csharp" style="color: inherit; text-decoration: inherit;">Data</a>
@@ -444,6 +453,14 @@ The Record resource accepts the following [input]({{< relref "/docs/intro/concep
     <dd>{{% md %}}The DNS zone ID to add the record to
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="allowoverwrite_go">
+<a href="#allowoverwrite_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Overwrite</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="data_go">
 <a href="#data_go" style="color: inherit; text-decoration: inherit;">Data</a>
 </span>
@@ -520,6 +537,14 @@ The Record resource accepts the following [input]({{< relref "/docs/intro/concep
     <dd>{{% md %}}The DNS zone ID to add the record to
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="allowoverwrite_nodejs">
+<a href="#allowoverwrite_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Overwrite</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="data_nodejs">
 <a href="#data_nodejs" style="color: inherit; text-decoration: inherit;">data</a>
 </span>
@@ -595,6 +620,14 @@ The Record resource accepts the following [input]({{< relref "/docs/intro/concep
     </dt>
     <dd>{{% md %}}The DNS zone ID to add the record to
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="allow_overwrite_python">
+<a href="#allow_overwrite_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>overwrite</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="data_python">
 <a href="#data_python" style="color: inherit; text-decoration: inherit;">data</a>
@@ -893,6 +926,7 @@ Get an existing Record resource's state with the given name, ID, and optional ex
 <span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
         <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">allow_overwrite</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">created_on</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">data</span><span class="p">:</span> <span class="nx">Optional[RecordDataArgs]</span> = None<span class="p">,</span>
         <span class="nx">hostname</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -1018,6 +1052,14 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="state_allowoverwrite_csharp">
+<a href="#state_allowoverwrite_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Overwrite</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_createdon_csharp">
 <a href="#state_createdon_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>On</a>
 </span>
@@ -1138,6 +1180,14 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="state_allowoverwrite_go">
+<a href="#state_allowoverwrite_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Overwrite</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_createdon_go">
 <a href="#state_createdon_go" style="color: inherit; text-decoration: inherit;">Created<wbr>On</a>
@@ -1260,6 +1310,14 @@ The following state arguments are supported:
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="state_allowoverwrite_nodejs">
+<a href="#state_allowoverwrite_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Overwrite</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_createdon_nodejs">
 <a href="#state_createdon_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>On</a>
 </span>
@@ -1380,6 +1438,14 @@ The following state arguments are supported:
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="state_allow_overwrite_python">
+<a href="#state_allow_overwrite_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>overwrite</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_created_on_python">
 <a href="#state_created_on_python" style="color: inherit; text-decoration: inherit;">created_<wbr>on</a>

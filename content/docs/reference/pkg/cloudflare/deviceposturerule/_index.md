@@ -299,7 +299,7 @@ const corporateDevicesPostureRule = new cloudflare.DevicePostureRule("corporateD
 
 ## DevicePostureRule Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Architecture and Concepts docs.
 
 ### Inputs
 
@@ -319,16 +319,6 @@ The DevicePostureRule resource accepts the following [input]({{< relref "/docs/i
     <dd>{{% md %}}The account to which the device posture rule should be added.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="inputs_csharp">
-<a href="#inputs_csharp" style="color: inherit; text-decoration: inherit;">Inputs</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#devicepostureruleinput">List&lt;Device<wbr>Posture<wbr>Rule<wbr>Input<wbr>Args&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}The value to be checked against. See below for reference
-structure.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
@@ -345,6 +335,16 @@ structure.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the device posture rule.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="inputs_csharp">
+<a href="#inputs_csharp" style="color: inherit; text-decoration: inherit;">Inputs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#devicepostureruleinput">List&lt;Device<wbr>Posture<wbr>Rule<wbr>Input<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The value to be checked against. See below for reference
+structure.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="matches_csharp">
@@ -388,16 +388,6 @@ Must be in the format `"1h"` or `"30m"`. Valid units are `h` and `m`.
     <dd>{{% md %}}The account to which the device posture rule should be added.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="inputs_go">
-<a href="#inputs_go" style="color: inherit; text-decoration: inherit;">Inputs</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#devicepostureruleinput">[]Device<wbr>Posture<wbr>Rule<wbr>Input<wbr>Type<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}The value to be checked against. See below for reference
-structure.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
@@ -414,6 +404,16 @@ structure.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the device posture rule.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="inputs_go">
+<a href="#inputs_go" style="color: inherit; text-decoration: inherit;">Inputs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#devicepostureruleinput">[]Device<wbr>Posture<wbr>Rule<wbr>Input<wbr>Type<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The value to be checked against. See below for reference
+structure.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="matches_go">
@@ -457,16 +457,6 @@ Must be in the format `"1h"` or `"30m"`. Valid units are `h` and `m`.
     <dd>{{% md %}}The account to which the device posture rule should be added.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="inputs_nodejs">
-<a href="#inputs_nodejs" style="color: inherit; text-decoration: inherit;">inputs</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#devicepostureruleinput">Device<wbr>Posture<wbr>Rule<wbr>Input<wbr>Args[]</a></span>
-    </dt>
-    <dd>{{% md %}}The value to be checked against. See below for reference
-structure.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
@@ -483,6 +473,16 @@ structure.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the device posture rule.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="inputs_nodejs">
+<a href="#inputs_nodejs" style="color: inherit; text-decoration: inherit;">inputs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#devicepostureruleinput">Device<wbr>Posture<wbr>Rule<wbr>Input<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}The value to be checked against. See below for reference
+structure.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="matches_nodejs">
@@ -526,16 +526,6 @@ Must be in the format `"1h"` or `"30m"`. Valid units are `h` and `m`.
     <dd>{{% md %}}The account to which the device posture rule should be added.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
-        <span id="inputs_python">
-<a href="#inputs_python" style="color: inherit; text-decoration: inherit;">inputs</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#devicepostureruleinput">Sequence[Device<wbr>Posture<wbr>Rule<wbr>Input<wbr>Args]</a></span>
-    </dt>
-    <dd>{{% md %}}The value to be checked against. See below for reference
-structure.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
@@ -552,6 +542,16 @@ structure.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The description of the device posture rule.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="inputs_python">
+<a href="#inputs_python" style="color: inherit; text-decoration: inherit;">inputs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#devicepostureruleinput">Sequence[Device<wbr>Posture<wbr>Rule<wbr>Input<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}The value to be checked against. See below for reference
+structure.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="matches_python">
@@ -1060,6 +1060,24 @@ Must be in the format `"1h"` or `"30m"`. Valid units are `h` and `m`.
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="domain_csharp">
+<a href="#domain_csharp" style="color: inherit; text-decoration: inherit;">Domain</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}= (Required) The domain that the client must join.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enabled_csharp">
+<a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}= (Required) True if the firewall must be enabled.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="exists_csharp">
 <a href="#exists_csharp" style="color: inherit; text-decoration: inherit;">Exists</a>
 </span>
@@ -1078,6 +1096,15 @@ Must be in the format `"1h"` or `"30m"`. Valid units are `h` and `m`.
     <dd>{{% md %}}The Teams List id.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="operator_csharp">
+<a href="#operator_csharp" style="color: inherit; text-decoration: inherit;">Operator</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}= (Required) The version comparison operator in (>,>=,<,<=,==)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="path_csharp">
 <a href="#path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
 </span>
@@ -1085,6 +1112,15 @@ Must be in the format `"1h"` or `"30m"`. Valid units are `h` and `m`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path to the application.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="requireall_csharp">
+<a href="#requireall_csharp" style="color: inherit; text-decoration: inherit;">Require<wbr>All</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}= (Required) True if all drives must be encrypted.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="running_csharp">
@@ -1112,11 +1148,38 @@ Must be in the format `"1h"` or `"30m"`. Valid units are `h` and `m`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The thumbprint of the application certificate.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="version_csharp">
+<a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}= (Required) The operating system semantic version.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="domain_go">
+<a href="#domain_go" style="color: inherit; text-decoration: inherit;">Domain</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}= (Required) The domain that the client must join.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enabled_go">
+<a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}= (Required) True if the firewall must be enabled.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="exists_go">
 <a href="#exists_go" style="color: inherit; text-decoration: inherit;">Exists</a>
@@ -1136,6 +1199,15 @@ Must be in the format `"1h"` or `"30m"`. Valid units are `h` and `m`.
     <dd>{{% md %}}The Teams List id.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="operator_go">
+<a href="#operator_go" style="color: inherit; text-decoration: inherit;">Operator</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}= (Required) The version comparison operator in (>,>=,<,<=,==)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="path_go">
 <a href="#path_go" style="color: inherit; text-decoration: inherit;">Path</a>
 </span>
@@ -1143,6 +1215,15 @@ Must be in the format `"1h"` or `"30m"`. Valid units are `h` and `m`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path to the application.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="requireall_go">
+<a href="#requireall_go" style="color: inherit; text-decoration: inherit;">Require<wbr>All</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}= (Required) True if all drives must be encrypted.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="running_go">
@@ -1170,11 +1251,38 @@ Must be in the format `"1h"` or `"30m"`. Valid units are `h` and `m`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The thumbprint of the application certificate.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="version_go">
+<a href="#version_go" style="color: inherit; text-decoration: inherit;">Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}= (Required) The operating system semantic version.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="domain_nodejs">
+<a href="#domain_nodejs" style="color: inherit; text-decoration: inherit;">domain</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}= (Required) The domain that the client must join.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enabled_nodejs">
+<a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}= (Required) True if the firewall must be enabled.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="exists_nodejs">
 <a href="#exists_nodejs" style="color: inherit; text-decoration: inherit;">exists</a>
@@ -1194,6 +1302,15 @@ Must be in the format `"1h"` or `"30m"`. Valid units are `h` and `m`.
     <dd>{{% md %}}The Teams List id.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="operator_nodejs">
+<a href="#operator_nodejs" style="color: inherit; text-decoration: inherit;">operator</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}= (Required) The version comparison operator in (>,>=,<,<=,==)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="path_nodejs">
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
@@ -1201,6 +1318,15 @@ Must be in the format `"1h"` or `"30m"`. Valid units are `h` and `m`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path to the application.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="requireall_nodejs">
+<a href="#requireall_nodejs" style="color: inherit; text-decoration: inherit;">require<wbr>All</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}= (Required) True if all drives must be encrypted.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="running_nodejs">
@@ -1228,11 +1354,38 @@ Must be in the format `"1h"` or `"30m"`. Valid units are `h` and `m`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The thumbprint of the application certificate.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="version_nodejs">
+<a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}= (Required) The operating system semantic version.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="domain_python">
+<a href="#domain_python" style="color: inherit; text-decoration: inherit;">domain</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}= (Required) The domain that the client must join.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enabled_python">
+<a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}= (Required) True if the firewall must be enabled.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="exists_python">
 <a href="#exists_python" style="color: inherit; text-decoration: inherit;">exists</a>
@@ -1252,6 +1405,15 @@ Must be in the format `"1h"` or `"30m"`. Valid units are `h` and `m`.
     <dd>{{% md %}}The Teams List id.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="operator_python">
+<a href="#operator_python" style="color: inherit; text-decoration: inherit;">operator</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}= (Required) The version comparison operator in (>,>=,<,<=,==)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="path_python">
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
@@ -1259,6 +1421,15 @@ Must be in the format `"1h"` or `"30m"`. Valid units are `h` and `m`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The path to the application.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="require_all_python">
+<a href="#require_all_python" style="color: inherit; text-decoration: inherit;">require_<wbr>all</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}= (Required) True if all drives must be encrypted.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="running_python">
@@ -1286,6 +1457,15 @@ Must be in the format `"1h"` or `"30m"`. Valid units are `h` and `m`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The thumbprint of the application certificate.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="version_python">
+<a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}= (Required) The operating system semantic version.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

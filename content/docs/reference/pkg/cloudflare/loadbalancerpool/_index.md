@@ -37,6 +37,18 @@ class MyStack : Stack
         {
             Description = "example load balancer pool",
             Enabled = false,
+            Latitude = 55,
+            LoadSheddings = 
+            {
+                new Cloudflare.Inputs.LoadBalancerPoolLoadSheddingArgs
+                {
+                    DefaultPercent = 55,
+                    DefaultPolicy = "random",
+                    SessionPercent = 12,
+                    SessionPolicy = "hash",
+                },
+            },
+            Longitude = -12,
             MinimumOrigins = 1,
             Name = "example-pool",
             NotificationEmail = "someone@example.com",
@@ -99,8 +111,18 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := cloudflare.NewLoadBalancerPool(ctx, "foo", &cloudflare.LoadBalancerPoolArgs{
-			Description:       pulumi.String("example load balancer pool"),
-			Enabled:           pulumi.Bool(false),
+			Description: pulumi.String("example load balancer pool"),
+			Enabled:     pulumi.Bool(false),
+			Latitude:    pulumi.Float64(55),
+			LoadSheddings: cloudflare.LoadBalancerPoolLoadSheddingArray{
+				&cloudflare.LoadBalancerPoolLoadSheddingArgs{
+					DefaultPercent: pulumi.Float64(55),
+					DefaultPolicy:  pulumi.String("random"),
+					SessionPercent: pulumi.Float64(12),
+					SessionPolicy:  pulumi.String("hash"),
+				},
+			},
+			Longitude:         -12,
 			MinimumOrigins:    pulumi.Int(1),
 			Name:              pulumi.String("example-pool"),
 			NotificationEmail: pulumi.String("someone@example.com"),
@@ -153,6 +175,14 @@ import pulumi_cloudflare as cloudflare
 foo = cloudflare.LoadBalancerPool("foo",
     description="example load balancer pool",
     enabled=False,
+    latitude=55,
+    load_sheddings=[cloudflare.LoadBalancerPoolLoadSheddingArgs(
+        default_percent=55,
+        default_policy="random",
+        session_percent=12,
+        session_policy="hash",
+    )],
+    longitude=-12,
     minimum_origins=1,
     name="example-pool",
     notification_email="someone@example.com",
@@ -191,6 +221,14 @@ import * as cloudflare from "@pulumi/cloudflare";
 const foo = new cloudflare.LoadBalancerPool("foo", {
     description: "example load balancer pool",
     enabled: false,
+    latitude: 55,
+    loadSheddings: [{
+        defaultPercent: 55,
+        defaultPolicy: "random",
+        sessionPercent: 12,
+        sessionPolicy: "hash",
+    }],
+    longitude: -12,
     minimumOrigins: 1,
     name: "example-pool",
     notificationEmail: "someone@example.com",
@@ -243,6 +281,9 @@ const foo = new cloudflare.LoadBalancerPool("foo", {
                      <span class="nx">check_regions</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
                      <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                      <span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                     <span class="nx">latitude</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">,</span>
+                     <span class="nx">load_sheddings</span><span class="p">:</span> <span class="nx">Optional[Sequence[LoadBalancerPoolLoadSheddingArgs]]</span> = None<span class="p">,</span>
+                     <span class="nx">longitude</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">,</span>
                      <span class="nx">minimum_origins</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
                      <span class="nx">monitor</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                      <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -366,7 +407,7 @@ const foo = new cloudflare.LoadBalancerPool("foo", {
 
 ## LoadBalancerPool Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Architecture and Concepts docs.
 
 ### Inputs
 
@@ -420,6 +461,33 @@ The LoadBalancerPool resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to enable (the default) this origin within the Pool. Disabled origins will not receive traffic and are excluded from health checks. The origin will only be disabled for the current pool.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="latitude_csharp">
+<a href="#latitude_csharp" style="color: inherit; text-decoration: inherit;">Latitude</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">double</span>
+    </dt>
+    <dd>{{% md %}}The latitude this pool is physically located at; used for proximity steering. Values should be between -90 and 90.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="loadsheddings_csharp">
+<a href="#loadsheddings_csharp" style="color: inherit; text-decoration: inherit;">Load<wbr>Sheddings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#loadbalancerpoolloadshedding">List&lt;Load<wbr>Balancer<wbr>Pool<wbr>Load<wbr>Shedding<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Setting for controlling load shedding for this pool.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="longitude_csharp">
+<a href="#longitude_csharp" style="color: inherit; text-decoration: inherit;">Longitude</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">double</span>
+    </dt>
+    <dd>{{% md %}}The longitude this pool is physically located at; used for proximity steering. Values should be between -180 and 180.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minimumorigins_csharp">
@@ -498,6 +566,33 @@ The LoadBalancerPool resource accepts the following [input]({{< relref "/docs/in
     <dd>{{% md %}}Whether to enable (the default) this origin within the Pool. Disabled origins will not receive traffic and are excluded from health checks. The origin will only be disabled for the current pool.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="latitude_go">
+<a href="#latitude_go" style="color: inherit; text-decoration: inherit;">Latitude</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float64</span>
+    </dt>
+    <dd>{{% md %}}The latitude this pool is physically located at; used for proximity steering. Values should be between -90 and 90.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="loadsheddings_go">
+<a href="#loadsheddings_go" style="color: inherit; text-decoration: inherit;">Load<wbr>Sheddings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#loadbalancerpoolloadshedding">[]Load<wbr>Balancer<wbr>Pool<wbr>Load<wbr>Shedding<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Setting for controlling load shedding for this pool.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="longitude_go">
+<a href="#longitude_go" style="color: inherit; text-decoration: inherit;">Longitude</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float64</span>
+    </dt>
+    <dd>{{% md %}}The longitude this pool is physically located at; used for proximity steering. Values should be between -180 and 180.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="minimumorigins_go">
 <a href="#minimumorigins_go" style="color: inherit; text-decoration: inherit;">Minimum<wbr>Origins</a>
 </span>
@@ -574,6 +669,33 @@ The LoadBalancerPool resource accepts the following [input]({{< relref "/docs/in
     <dd>{{% md %}}Whether to enable (the default) this origin within the Pool. Disabled origins will not receive traffic and are excluded from health checks. The origin will only be disabled for the current pool.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="latitude_nodejs">
+<a href="#latitude_nodejs" style="color: inherit; text-decoration: inherit;">latitude</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The latitude this pool is physically located at; used for proximity steering. Values should be between -90 and 90.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="loadsheddings_nodejs">
+<a href="#loadsheddings_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Sheddings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#loadbalancerpoolloadshedding">Load<wbr>Balancer<wbr>Pool<wbr>Load<wbr>Shedding<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}Setting for controlling load shedding for this pool.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="longitude_nodejs">
+<a href="#longitude_nodejs" style="color: inherit; text-decoration: inherit;">longitude</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The longitude this pool is physically located at; used for proximity steering. Values should be between -180 and 180.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="minimumorigins_nodejs">
 <a href="#minimumorigins_nodejs" style="color: inherit; text-decoration: inherit;">minimum<wbr>Origins</a>
 </span>
@@ -648,6 +770,33 @@ The LoadBalancerPool resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to enable (the default) this origin within the Pool. Disabled origins will not receive traffic and are excluded from health checks. The origin will only be disabled for the current pool.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="latitude_python">
+<a href="#latitude_python" style="color: inherit; text-decoration: inherit;">latitude</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}The latitude this pool is physically located at; used for proximity steering. Values should be between -90 and 90.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="load_sheddings_python">
+<a href="#load_sheddings_python" style="color: inherit; text-decoration: inherit;">load_<wbr>sheddings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#loadbalancerpoolloadshedding">Sequence[Load<wbr>Balancer<wbr>Pool<wbr>Load<wbr>Shedding<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}Setting for controlling load shedding for this pool.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="longitude_python">
+<a href="#longitude_python" style="color: inherit; text-decoration: inherit;">longitude</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}The longitude this pool is physically located at; used for proximity steering. Values should be between -180 and 180.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minimum_origins_python">
@@ -825,6 +974,9 @@ Get an existing LoadBalancerPool resource's state with the given name, ID, and o
         <span class="nx">created_on</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">latitude</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">,</span>
+        <span class="nx">load_sheddings</span><span class="p">:</span> <span class="nx">Optional[Sequence[LoadBalancerPoolLoadSheddingArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">longitude</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">,</span>
         <span class="nx">minimum_origins</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
         <span class="nx">modified_on</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">monitor</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -979,6 +1131,33 @@ The following state arguments are supported:
     <dd>{{% md %}}Whether to enable (the default) this origin within the Pool. Disabled origins will not receive traffic and are excluded from health checks. The origin will only be disabled for the current pool.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_latitude_csharp">
+<a href="#state_latitude_csharp" style="color: inherit; text-decoration: inherit;">Latitude</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">double</span>
+    </dt>
+    <dd>{{% md %}}The latitude this pool is physically located at; used for proximity steering. Values should be between -90 and 90.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_loadsheddings_csharp">
+<a href="#state_loadsheddings_csharp" style="color: inherit; text-decoration: inherit;">Load<wbr>Sheddings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#loadbalancerpoolloadshedding">List&lt;Load<wbr>Balancer<wbr>Pool<wbr>Load<wbr>Shedding<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Setting for controlling load shedding for this pool.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_longitude_csharp">
+<a href="#state_longitude_csharp" style="color: inherit; text-decoration: inherit;">Longitude</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">double</span>
+    </dt>
+    <dd>{{% md %}}The longitude this pool is physically located at; used for proximity steering. Values should be between -180 and 180.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_minimumorigins_csharp">
 <a href="#state_minimumorigins_csharp" style="color: inherit; text-decoration: inherit;">Minimum<wbr>Origins</a>
 </span>
@@ -1071,6 +1250,33 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to enable (the default) this origin within the Pool. Disabled origins will not receive traffic and are excluded from health checks. The origin will only be disabled for the current pool.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_latitude_go">
+<a href="#state_latitude_go" style="color: inherit; text-decoration: inherit;">Latitude</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float64</span>
+    </dt>
+    <dd>{{% md %}}The latitude this pool is physically located at; used for proximity steering. Values should be between -90 and 90.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_loadsheddings_go">
+<a href="#state_loadsheddings_go" style="color: inherit; text-decoration: inherit;">Load<wbr>Sheddings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#loadbalancerpoolloadshedding">[]Load<wbr>Balancer<wbr>Pool<wbr>Load<wbr>Shedding<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Setting for controlling load shedding for this pool.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_longitude_go">
+<a href="#state_longitude_go" style="color: inherit; text-decoration: inherit;">Longitude</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float64</span>
+    </dt>
+    <dd>{{% md %}}The longitude this pool is physically located at; used for proximity steering. Values should be between -180 and 180.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_minimumorigins_go">
@@ -1167,6 +1373,33 @@ The following state arguments are supported:
     <dd>{{% md %}}Whether to enable (the default) this origin within the Pool. Disabled origins will not receive traffic and are excluded from health checks. The origin will only be disabled for the current pool.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_latitude_nodejs">
+<a href="#state_latitude_nodejs" style="color: inherit; text-decoration: inherit;">latitude</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The latitude this pool is physically located at; used for proximity steering. Values should be between -90 and 90.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_loadsheddings_nodejs">
+<a href="#state_loadsheddings_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Sheddings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#loadbalancerpoolloadshedding">Load<wbr>Balancer<wbr>Pool<wbr>Load<wbr>Shedding<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}Setting for controlling load shedding for this pool.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_longitude_nodejs">
+<a href="#state_longitude_nodejs" style="color: inherit; text-decoration: inherit;">longitude</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The longitude this pool is physically located at; used for proximity steering. Values should be between -180 and 180.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_minimumorigins_nodejs">
 <a href="#state_minimumorigins_nodejs" style="color: inherit; text-decoration: inherit;">minimum<wbr>Origins</a>
 </span>
@@ -1261,6 +1494,33 @@ The following state arguments are supported:
     <dd>{{% md %}}Whether to enable (the default) this origin within the Pool. Disabled origins will not receive traffic and are excluded from health checks. The origin will only be disabled for the current pool.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_latitude_python">
+<a href="#state_latitude_python" style="color: inherit; text-decoration: inherit;">latitude</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}The latitude this pool is physically located at; used for proximity steering. Values should be between -90 and 90.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_load_sheddings_python">
+<a href="#state_load_sheddings_python" style="color: inherit; text-decoration: inherit;">load_<wbr>sheddings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#loadbalancerpoolloadshedding">Sequence[Load<wbr>Balancer<wbr>Pool<wbr>Load<wbr>Shedding<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}Setting for controlling load shedding for this pool.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_longitude_python">
+<a href="#state_longitude_python" style="color: inherit; text-decoration: inherit;">longitude</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}The longitude this pool is physically located at; used for proximity steering. Values should be between -180 and 180.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_minimum_origins_python">
 <a href="#state_minimum_origins_python" style="color: inherit; text-decoration: inherit;">minimum_<wbr>origins</a>
 </span>
@@ -1324,6 +1584,168 @@ The following state arguments are supported:
 ## Supporting Types
 
 
+
+<h4 id="loadbalancerpoolloadshedding">Load<wbr>Balancer<wbr>Pool<wbr>Load<wbr>Shedding</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="defaultpercent_csharp">
+<a href="#defaultpercent_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Percent</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">double</span>
+    </dt>
+    <dd>{{% md %}}Percent of traffic to shed 0 - 100.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="defaultpolicy_csharp">
+<a href="#defaultpolicy_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Method of shedding traffic "", "hash" or "random".
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sessionpercent_csharp">
+<a href="#sessionpercent_csharp" style="color: inherit; text-decoration: inherit;">Session<wbr>Percent</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">double</span>
+    </dt>
+    <dd>{{% md %}}Percent of session traffic to shed 0 - 100.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sessionpolicy_csharp">
+<a href="#sessionpolicy_csharp" style="color: inherit; text-decoration: inherit;">Session<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Method of shedding session traffic "" or "hash".
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="defaultpercent_go">
+<a href="#defaultpercent_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Percent</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float64</span>
+    </dt>
+    <dd>{{% md %}}Percent of traffic to shed 0 - 100.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="defaultpolicy_go">
+<a href="#defaultpolicy_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Method of shedding traffic "", "hash" or "random".
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sessionpercent_go">
+<a href="#sessionpercent_go" style="color: inherit; text-decoration: inherit;">Session<wbr>Percent</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float64</span>
+    </dt>
+    <dd>{{% md %}}Percent of session traffic to shed 0 - 100.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sessionpolicy_go">
+<a href="#sessionpolicy_go" style="color: inherit; text-decoration: inherit;">Session<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Method of shedding session traffic "" or "hash".
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="defaultpercent_nodejs">
+<a href="#defaultpercent_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Percent</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Percent of traffic to shed 0 - 100.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="defaultpolicy_nodejs">
+<a href="#defaultpolicy_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Method of shedding traffic "", "hash" or "random".
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sessionpercent_nodejs">
+<a href="#sessionpercent_nodejs" style="color: inherit; text-decoration: inherit;">session<wbr>Percent</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Percent of session traffic to shed 0 - 100.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sessionpolicy_nodejs">
+<a href="#sessionpolicy_nodejs" style="color: inherit; text-decoration: inherit;">session<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Method of shedding session traffic "" or "hash".
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="default_percent_python">
+<a href="#default_percent_python" style="color: inherit; text-decoration: inherit;">default_<wbr>percent</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}Percent of traffic to shed 0 - 100.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="default_policy_python">
+<a href="#default_policy_python" style="color: inherit; text-decoration: inherit;">default_<wbr>policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Method of shedding traffic "", "hash" or "random".
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="session_percent_python">
+<a href="#session_percent_python" style="color: inherit; text-decoration: inherit;">session_<wbr>percent</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}Percent of session traffic to shed 0 - 100.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="session_policy_python">
+<a href="#session_policy_python" style="color: inherit; text-decoration: inherit;">session_<wbr>policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Method of shedding session traffic "" or "hash".
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
 
 <h4 id="loadbalancerpoolorigin">Load<wbr>Balancer<wbr>Pool<wbr>Origin</h4>
 
