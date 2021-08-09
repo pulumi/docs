@@ -16,12 +16,12 @@ A Pulumi package for creating and managing Kong resources.
 <ul class="api">
     <li><a href="certificate" title="Certificate"><span class="symbol resource"></span>Certificate</a></li>
     <li><a href="consumer" title="Consumer"><span class="symbol resource"></span>Consumer</a></li>
-    <li><a href="consumerpluginconfig" title="ConsumerPluginConfig"><span class="symbol resource"></span>ConsumerPluginConfig</a></li>
+    <li><a href="consumeracl" title="ConsumerAcl"><span class="symbol resource"></span>ConsumerAcl</a></li>
+    <li><a href="consumerbasicauth" title="ConsumerBasicAuth"><span class="symbol resource"></span>ConsumerBasicAuth</a></li>
     <li><a href="plugin" title="Plugin"><span class="symbol resource"></span>Plugin</a></li>
     <li><a href="provider" title="Provider"><span class="symbol resource"></span>Provider</a></li>
     <li><a href="route" title="Route"><span class="symbol resource"></span>Route</a></li>
     <li><a href="service" title="Service"><span class="symbol resource"></span>Service</a></li>
-    <li><a href="sni" title="Sni"><span class="symbol resource"></span>Sni</a></li>
     <li><a href="target" title="Target"><span class="symbol resource"></span>Target</a></li>
     <li><a href="upstream" title="Upstream"><span class="symbol resource"></span>Upstream</a></li>
 </ul>
@@ -35,6 +35,6 @@ A Pulumi package for creating and managing Kong resources.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`kong` Terraform Provider](https://github.com/kevholditch/terraform-provider-kong).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>3.0.0</dd>
+	<dd>4.0.0</dd>
 </dl>
 
