@@ -1,0 +1,55 @@
+{{ define "hero" }}
+    {{ partial "hero" (dict "title" "Developer Advocates") }}
+{{ end }}
+
+{{ define "main" }}
+    <section class="max-w-4xl container mx-auto py-8 px-4 text-center text-lg">
+        <p>
+            The Pulumi Developer Advocate team wants to help you build, manage, and deploy
+            all the things and learn something new along the way. Here's a list of the team
+            and their social media. Need help? We would love to help you accomplish your goals!
+        </p>
+    </section>
+
+    <section id="team" class="px-4">
+        <div class="container md:mx-auto max-w-5xl text-center">
+            <!-- Hide the list initially, in order to avoid any visual flicker when shuffled. -->
+            <ul class="invisible inline-flex flex-wrap list-none justify-center p-0" data-shuffle="true">
+                {{ range $.Site.Data.team.team }}
+                    {{ if (and (eq .status "active") (eq .role "developer-advocate")) }}
+                        <li class="text-center w-48 mx-4 mb-8">
+                            <img class="rounded mb-4 shadow-md mx-auto" src="/images/team/{{ .id }}.jpg" alt="{{ .name }}" >
+                            <h4 class="{{ if .bio }}cursor-pointer{{ end }} mb-0 text-gray-900" {{ if .bio }}data-toggle="modal" data-target="#{{ .id }}"{{ end }}>{{ .name }}</h4>
+                            <div>{{ .title }}</div>
+                            <div class="text-center">
+                                {{ partial "widgets/social-icons.html" (dict "social" .social)}}
+                            </div>
+                        </li>
+                    {{ end }}
+                {{ end }}
+            </ul>
+        </div>
+    </section>
+    <section id="contact" class="pt-16 px-4">
+      <div class="container mx-auto text-center ">
+          <h2 class="text-4xl my-6">Contact the Developer Advocates!</h2>
+          <div class="w-full md:max-w-2xl md:mx-auto">
+  
+              <div class="mt-4 mx-auto md:w-full md:mt-0 p-10 bg-white rounded rounded-lg shadow-lg border border-gray-300">
+                  <div class="mx-auto flex justify-center">
+                      <div class="hs-form hs-form-fg-dark font-normal">
+                        <pulumi-hubspot-form form-id="{{ .Params.form.hubspot_form_id }}"></pulumi-hubspot-form>
+                      </div>
+                  </div>
+              </div>
+  
+          </div>
+      </div>
+      <div class="text-center mb-16 mt-8">
+        <p class="mt-8">
+            <img class="mx-auto" src="/images/developer-advocates/backpack-hat-handsup-blue-waterbottle.png" alt="A platypus" />
+        </p>
+    </div>
+  </section>
+
+{{ end }}

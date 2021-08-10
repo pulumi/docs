@@ -4,6 +4,7 @@ title = "Staff Developer Advocate"
 weight = 1
 
 status = "active"
+role = "developer-advocate"
 
 [social]
 github = "katcosgrove"

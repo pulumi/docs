@@ -5,6 +5,7 @@ company = "Pulumi"
 weight = 1
 
 status = "active"
+role = "developer-advocate"
 
 [social]
 github = "spara"
