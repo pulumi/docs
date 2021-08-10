@@ -515,4 +515,60 @@
             left: -1.5rem;
         }
     }
+
+    &.automation-scenarios {
+        height: 48rem;
+
+        .circle-right {
+            @apply rounded-full absolute bg-blue-600;
+            width: 19rem;
+            height: 19rem;
+            right: -8.5rem;
+            bottom: 30%;
+        }
+
+        .circle-left {
+            @apply rounded-full absolute bg-purple-600;
+            width: 12.75rem;
+            height: 12.75rem;
+            left: -6.375rem;
+            bottom: 0;
+        }
+    }
+
+    &.automation-benefits-section {
+        .circle-left {
+            @apply rounded-full absolute bg-yellow-600;
+            width: 13.25rem;
+            height: 13.25rem;
+            left: 5.5rem;
+            top: 1rem;
+        }
+
+        .circle-right {
+            @apply rounded-full absolute bg-salmon-600;
+            width: 20.625rem;
+            height: 20.625rem;
+            right: 2.5rem;
+            bottom: 30%;
+        }
+    }
+
+    &.automation-video {
+        .circle-left {
+            @apply rounded-full absolute bg-violet-600;
+            width: 5rem;
+            height: 5rem;
+            left: -2.5rem;
+            bottom: -2.5rem;
+        }
+
+        .circle-right {
+            @apply rounded-full absolute bg-fuchsia-600;
+            width: 8rem;
+            height: 8rem;
+            right: -4rem;
+            top: -4rem;
+        }
+    }
 }

@@ -79,7 +79,7 @@ deploy:
       description: Validate every change with testing and built-in policies.
 
     - title: Automate worldwide delivery
-      description: Scale up your delivery with advanced automation as you grow.
+      description: Scale up your delivery with [advanced automation](/automation/) as you grow.
 
 manage:
   title: Manage

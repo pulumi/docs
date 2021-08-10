@@ -140,7 +140,7 @@
 
                 {{ range $item := .Params.deploy.items }}
                     <h6>{{ $item.title }}</h6>
-                    <p>{{ $item.description }}</p>
+                    <p>{{ $item.description | markdownify }}</p>
                 {{ end }}
 
                 <div class="mt-16">

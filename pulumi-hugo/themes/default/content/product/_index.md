@@ -45,13 +45,13 @@ key_features:
               icon_color: salmon
               description: |
                 Deploy infrastructure interactively with a CLI, programmatically with Pulumi’s
-                Automation API, or through your [CI/CD process](/docs/guides/continuous-delivery/).
+                [Automation API](/automation/), or through your [CI/CD process](/docs/guides/continuous-delivery/).
 
             - title: Deployments as Code
               icon: gear
               icon_color: salmon
               description: |
-                Run deployments from your application code at runtime with [Automation API](/docs/guides/automation-api/). Create infrastructure APIs, custom platforms, and CLIs.
+                Run deployments from your application code at runtime with [Automation API](/automation/). Create infrastructure APIs, custom platforms, and CLIs.
 
             - title: Preview and test changes
               icon: eye
