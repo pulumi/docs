@@ -119,7 +119,9 @@ class MyStack : Stack
     {
         var vpcNetwork = new Gcp.Compute.Network("vpcNetwork", new Gcp.Compute.NetworkArgs
         {
-            Mtu = 1500,
+            AutoCreateSubnetworks = true,
+            Mtu = 1460,
+            Project = "my-project-name",
         });
     }
 
@@ -143,7 +145,9 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := compute.NewNetwork(ctx, "vpcNetwork", &compute.NetworkArgs{
-			Mtu: pulumi.Int(1500),
+			AutoCreateSubnetworks: pulumi.Bool(true),
+			Mtu:                   pulumi.Int(1460),
+			Project:               pulumi.String("my-project-name"),
 		})
 		if err != nil {
 			return err
@@ -163,7 +167,10 @@ func main() {
 import pulumi
 import pulumi_gcp as gcp
 
-vpc_network = gcp.compute.Network("vpcNetwork", mtu=1500)
+vpc_network = gcp.compute.Network("vpcNetwork",
+    auto_create_subnetworks=True,
+    mtu=1460,
+    project="my-project-name")
 ```
 
 
@@ -178,7 +185,9 @@ import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
 const vpcNetwork = new gcp.compute.Network("vpc_network", {
-    mtu: 1500,
+    autoCreateSubnetworks: true,
+    mtu: 1460,
+    project: "my-project-name",
 });
 ```
 

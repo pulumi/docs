@@ -318,6 +318,14 @@ directive to specify caching behavior of object data. If omitted and object is a
     <dd>{{% md %}}(Computed) Base 64 CRC32 hash of the uploaded data.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="customerencryptions_csharp">
+<a href="#customerencryptions_csharp" style="color: inherit; text-decoration: inherit;">Customer<wbr>Encryptions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getbucketobjectcustomerencryption">List&lt;Get<wbr>Bucket<wbr>Object<wbr>Customer<wbr>Encryption&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="detectmd5hash_csharp">
 <a href="#detectmd5hash_csharp" style="color: inherit; text-decoration: inherit;">Detect<wbr>Md5hash</a>
 </span>
@@ -503,6 +511,14 @@ directive to specify caching behavior of object data. If omitted and object is a
     </dt>
     <dd>{{% md %}}(Computed) Base 64 CRC32 hash of the uploaded data.
 {{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="customerencryptions_go">
+<a href="#customerencryptions_go" style="color: inherit; text-decoration: inherit;">Customer<wbr>Encryptions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getbucketobjectcustomerencryption">[]Get<wbr>Bucket<wbr>Object<wbr>Customer<wbr>Encryption</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="detectmd5hash_go">
 <a href="#detectmd5hash_go" style="color: inherit; text-decoration: inherit;">Detect<wbr>Md5hash</a>
@@ -690,6 +706,14 @@ directive to specify caching behavior of object data. If omitted and object is a
     <dd>{{% md %}}(Computed) Base 64 CRC32 hash of the uploaded data.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="customerencryptions_nodejs">
+<a href="#customerencryptions_nodejs" style="color: inherit; text-decoration: inherit;">customer<wbr>Encryptions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getbucketobjectcustomerencryption">Get<wbr>Bucket<wbr>Object<wbr>Customer<wbr>Encryption[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="detectmd5hash_nodejs">
 <a href="#detectmd5hash_nodejs" style="color: inherit; text-decoration: inherit;">detect<wbr>Md5hash</a>
 </span>
@@ -876,6 +900,14 @@ directive to specify caching behavior of object data. If omitted and object is a
     <dd>{{% md %}}(Computed) Base 64 CRC32 hash of the uploaded data.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="customer_encryptions_python">
+<a href="#customer_encryptions_python" style="color: inherit; text-decoration: inherit;">customer_<wbr>encryptions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getbucketobjectcustomerencryption">Sequence[Get<wbr>Bucket<wbr>Object<wbr>Customer<wbr>Encryption]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="detect_md5hash_python">
 <a href="#detect_md5hash_python" style="color: inherit; text-decoration: inherit;">detect_<wbr>md5hash</a>
 </span>
@@ -989,6 +1021,96 @@ storage class or to a [standard](https://cloud.google.com/storage/docs/storage-c
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+
+
+
+## Supporting Types
+
+
+<h4 id="getbucketobjectcustomerencryption">Get<wbr>Bucket<wbr>Object<wbr>Customer<wbr>Encryption</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="encryptionalgorithm_csharp">
+<a href="#encryptionalgorithm_csharp" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Algorithm</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="encryptionkey_csharp">
+<a href="#encryptionkey_csharp" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="encryptionalgorithm_go">
+<a href="#encryptionalgorithm_go" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Algorithm</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="encryptionkey_go">
+<a href="#encryptionkey_go" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="encryptionalgorithm_nodejs">
+<a href="#encryptionalgorithm_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>Algorithm</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="encryptionkey_nodejs">
+<a href="#encryptionkey_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="encryption_algorithm_python">
+<a href="#encryption_algorithm_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>algorithm</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="encryption_key_python">
+<a href="#encryption_key_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>

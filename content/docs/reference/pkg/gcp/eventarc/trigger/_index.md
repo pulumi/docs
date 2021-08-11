@@ -27,6 +27,245 @@ Trigger can be imported using any of these accepted formats
 ```
 
 
+{{% examples %}}
+
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+
+### Basic_trigger
+
+
+{{< example csharp >}}
+
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var @default = new Gcp.CloudRun.Service("default", new Gcp.CloudRun.ServiceArgs
+        {
+            Location = "us-west1",
+            Metadata = new Gcp.CloudRun.Inputs.ServiceMetadataArgs
+            {
+                Namespace = "my-project-name",
+            },
+            Template = new Gcp.CloudRun.Inputs.ServiceTemplateArgs
+            {
+                Spec = new Gcp.CloudRun.Inputs.ServiceTemplateSpecArgs
+                {
+                    Containers = 
+                    {
+                        new Gcp.CloudRun.Inputs.ServiceTemplateSpecContainerArgs
+                        {
+                            Args = 
+                            {
+                                "arrgs",
+                            },
+                            Image = "gcr.io/cloudrun/hello",
+                        },
+                    },
+                },
+            },
+            Traffics = 
+            {
+                new Gcp.CloudRun.Inputs.ServiceTrafficArgs
+                {
+                    LatestRevision = true,
+                    Percent = 100,
+                },
+            },
+        });
+        var primary = new Gcp.Eventarc.Trigger("primary", new Gcp.Eventarc.TriggerArgs
+        {
+            Destination = new Gcp.Eventarc.Inputs.TriggerDestinationArgs
+            {
+                CloudRunService = new Gcp.Eventarc.Inputs.TriggerDestinationCloudRunServiceArgs
+                {
+                    Service = @default.Name,
+                    Region = "us-west1",
+                },
+            },
+            Location = "us-west1",
+            MatchingCriterias = 
+            {
+                new Gcp.Eventarc.Inputs.TriggerMatchingCriteriaArgs
+                {
+                    Attribute = "type",
+                    Value = "google.cloud.pubsub.topic.v1.messagePublished",
+                },
+            },
+        });
+    }
+
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/cloudrun"
+	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/eventarc"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := cloudrun.NewService(ctx, "_default", &cloudrun.ServiceArgs{
+			Location: pulumi.String("us-west1"),
+			Metadata: &cloudrun.ServiceMetadataArgs{
+				Namespace: pulumi.String("my-project-name"),
+			},
+			Template: &cloudrun.ServiceTemplateArgs{
+				Spec: &cloudrun.ServiceTemplateSpecArgs{
+					Containers: cloudrun.ServiceTemplateSpecContainerArray{
+						&cloudrun.ServiceTemplateSpecContainerArgs{
+							Args: pulumi.StringArray{
+								pulumi.String("arrgs"),
+							},
+							Image: pulumi.String("gcr.io/cloudrun/hello"),
+						},
+					},
+				},
+			},
+			Traffics: cloudrun.ServiceTrafficArray{
+				&cloudrun.ServiceTrafficArgs{
+					LatestRevision: pulumi.Bool(true),
+					Percent:        pulumi.Int(100),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		_, err = eventarc.NewTrigger(ctx, "primary", &eventarc.TriggerArgs{
+			Destination: &eventarc.TriggerDestinationArgs{
+				CloudRunService: &eventarc.TriggerDestinationCloudRunServiceArgs{
+					Service: _default.Name,
+					Region:  pulumi.String("us-west1"),
+				},
+			},
+			Location: pulumi.String("us-west1"),
+			MatchingCriterias: eventarc.TriggerMatchingCriteriaArray{
+				&eventarc.TriggerMatchingCriteriaArgs{
+					Attribute: pulumi.String("type"),
+					Value:     pulumi.String("google.cloud.pubsub.topic.v1.messagePublished"),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+default = gcp.cloudrun.Service("default",
+    location="us-west1",
+    metadata=gcp.cloudrun.ServiceMetadataArgs(
+        namespace="my-project-name",
+    ),
+    template=gcp.cloudrun.ServiceTemplateArgs(
+        spec=gcp.cloudrun.ServiceTemplateSpecArgs(
+            containers=[gcp.cloudrun.ServiceTemplateSpecContainerArgs(
+                args=["arrgs"],
+                image="gcr.io/cloudrun/hello",
+            )],
+        ),
+    ),
+    traffics=[gcp.cloudrun.ServiceTrafficArgs(
+        latest_revision=True,
+        percent=100,
+    )])
+primary = gcp.eventarc.Trigger("primary",
+    destination=gcp.eventarc.TriggerDestinationArgs(
+        cloud_run_service=gcp.eventarc.TriggerDestinationCloudRunServiceArgs(
+            service=default.name,
+            region="us-west1",
+        ),
+    ),
+    location="us-west1",
+    matching_criterias=[gcp.eventarc.TriggerMatchingCriteriaArgs(
+        attribute="type",
+        value="google.cloud.pubsub.topic.v1.messagePublished",
+    )])
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const _default = new gcp.cloudrun.Service("default", {
+    location: "us-west1",
+    metadata: {
+        namespace: "my-project-name",
+    },
+    template: {
+        spec: {
+            containers: [{
+                args: ["arrgs"],
+                image: "gcr.io/cloudrun/hello",
+            }],
+        },
+    },
+    traffics: [{
+        latestRevision: true,
+        percent: 100,
+    }],
+});
+const primary = new gcp.eventarc.Trigger("primary", {
+    destination: {
+        cloudRunService: {
+            service: _default.name,
+            region: "us-west1",
+        },
+    },
+    location: "us-west1",
+    matchingCriterias: [{
+        attribute: "type",
+        value: "google.cloud.pubsub.topic.v1.messagePublished",
+    }],
+});
+```
+
+
+{{< /example >}}
+
+
+
+
+
+{{% /examples %}}
+
+
 
 
 ## Create a Trigger Resource {#create}

@@ -10479,6 +10479,16 @@ location.
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="networkconfig_csharp">
+<a href="#networkconfig_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusternodepoolnetworkconfig">Cluster<wbr>Node<wbr>Pool<wbr>Network<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}) Configuration for
+[Adding Pod IP address ranges](https://cloud.google.com/kubernetes-engine/docs/how-to/multi-pod-cidr)) to the node pool.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="nodeconfig_csharp">
 <a href="#nodeconfig_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Config</a>
 </span>
@@ -10597,6 +10607,16 @@ location.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="networkconfig_go">
+<a href="#networkconfig_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusternodepoolnetworkconfig">Cluster<wbr>Node<wbr>Pool<wbr>Network<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}) Configuration for
+[Adding Pod IP address ranges](https://cloud.google.com/kubernetes-engine/docs/how-to/multi-pod-cidr)) to the node pool.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodeconfig_go">
 <a href="#nodeconfig_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Config</a>
@@ -10717,6 +10737,16 @@ location.
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="networkconfig_nodejs">
+<a href="#networkconfig_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusternodepoolnetworkconfig">Cluster<wbr>Node<wbr>Pool<wbr>Network<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}) Configuration for
+[Adding Pod IP address ranges](https://cloud.google.com/kubernetes-engine/docs/how-to/multi-pod-cidr)) to the node pool.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="nodeconfig_nodejs">
 <a href="#nodeconfig_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Config</a>
 </span>
@@ -10835,6 +10865,16 @@ location.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="network_config_python">
+<a href="#network_config_python" style="color: inherit; text-decoration: inherit;">network_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusternodepoolnetworkconfig">Cluster<wbr>Node<wbr>Pool<wbr>Network<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}) Configuration for
+[Adding Pod IP address ranges](https://cloud.google.com/kubernetes-engine/docs/how-to/multi-pod-cidr)) to the node pool.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="node_config_python">
 <a href="#node_config_python" style="color: inherit; text-decoration: inherit;">node_<wbr>config</a>
@@ -11048,6 +11088,132 @@ a zonal cluster, omit the cluster's zone.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="clusternodepoolnetworkconfig">Cluster<wbr>Node<wbr>Pool<wbr>Network<wbr>Config</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="podrange_csharp">
+<a href="#podrange_csharp" style="color: inherit; text-decoration: inherit;">Pod<wbr>Range</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}) The ID of the secondary range for pod IPs. If `create_pod_range` is true, this ID is used for the new range. If `create_pod_range` is false, uses an existing secondary range with this ID.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="createpodrange_csharp">
+<a href="#createpodrange_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Pod<wbr>Range</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}) Whether to create a new range for pod IPs in this node pool. Defaults are provided for `pod_range` and `pod_ipv4_cidr_block` if they are not specified.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="podipv4cidrblock_csharp">
+<a href="#podipv4cidrblock_csharp" style="color: inherit; text-decoration: inherit;">Pod<wbr>Ipv4Cidr<wbr>Block</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}) The IP address range for pod IPs in this node pool. Only applicable if createPodRange is true. Set to blank to have a range chosen with the default size. Set to /netmask (e.g. /14) to have a range chosen with a specific netmask. Set to a CIDR notation (e.g. 10.96.0.0/14) to pick a specific range to use.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="podrange_go">
+<a href="#podrange_go" style="color: inherit; text-decoration: inherit;">Pod<wbr>Range</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}) The ID of the secondary range for pod IPs. If `create_pod_range` is true, this ID is used for the new range. If `create_pod_range` is false, uses an existing secondary range with this ID.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="createpodrange_go">
+<a href="#createpodrange_go" style="color: inherit; text-decoration: inherit;">Create<wbr>Pod<wbr>Range</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}) Whether to create a new range for pod IPs in this node pool. Defaults are provided for `pod_range` and `pod_ipv4_cidr_block` if they are not specified.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="podipv4cidrblock_go">
+<a href="#podipv4cidrblock_go" style="color: inherit; text-decoration: inherit;">Pod<wbr>Ipv4Cidr<wbr>Block</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}) The IP address range for pod IPs in this node pool. Only applicable if createPodRange is true. Set to blank to have a range chosen with the default size. Set to /netmask (e.g. /14) to have a range chosen with a specific netmask. Set to a CIDR notation (e.g. 10.96.0.0/14) to pick a specific range to use.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="podrange_nodejs">
+<a href="#podrange_nodejs" style="color: inherit; text-decoration: inherit;">pod<wbr>Range</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}) The ID of the secondary range for pod IPs. If `create_pod_range` is true, this ID is used for the new range. If `create_pod_range` is false, uses an existing secondary range with this ID.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="createpodrange_nodejs">
+<a href="#createpodrange_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Pod<wbr>Range</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}) Whether to create a new range for pod IPs in this node pool. Defaults are provided for `pod_range` and `pod_ipv4_cidr_block` if they are not specified.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="podipv4cidrblock_nodejs">
+<a href="#podipv4cidrblock_nodejs" style="color: inherit; text-decoration: inherit;">pod<wbr>Ipv4Cidr<wbr>Block</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}) The IP address range for pod IPs in this node pool. Only applicable if createPodRange is true. Set to blank to have a range chosen with the default size. Set to /netmask (e.g. /14) to have a range chosen with a specific netmask. Set to a CIDR notation (e.g. 10.96.0.0/14) to pick a specific range to use.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="pod_range_python">
+<a href="#pod_range_python" style="color: inherit; text-decoration: inherit;">pod_<wbr>range</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}) The ID of the secondary range for pod IPs. If `create_pod_range` is true, this ID is used for the new range. If `create_pod_range` is false, uses an existing secondary range with this ID.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="create_pod_range_python">
+<a href="#create_pod_range_python" style="color: inherit; text-decoration: inherit;">create_<wbr>pod_<wbr>range</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}) Whether to create a new range for pod IPs in this node pool. Defaults are provided for `pod_range` and `pod_ipv4_cidr_block` if they are not specified.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="pod_ipv4_cidr_block_python">
+<a href="#pod_ipv4_cidr_block_python" style="color: inherit; text-decoration: inherit;">pod_<wbr>ipv4_<wbr>cidr_<wbr>block</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}) The IP address range for pod IPs in this node pool. Only applicable if createPodRange is true. Set to blank to have a range chosen with the default size. Set to /netmask (e.g. /14) to have a range chosen with a specific netmask. Set to a CIDR notation (e.g. 10.96.0.0/14) to pick a specific range to use.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="clusternodepoolnodeconfig">Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config</h4>
@@ -12998,7 +13164,7 @@ not modify the previously-set value. Structure is documented below.
 the hosted master network. This range will be used for assigning private IP
 addresses to the cluster master(s) and the ILB VIP. This range must not overlap
 with any other ranges in use within the cluster's network, and it must be a /28
-subnet. See [Private Cluster Limitations](https://cloud.google.com/kubernetes-engine/docs/how-to/private-clusters#limitations)
+subnet. See [Private Cluster Limitations](https://cloud.google.com/kubernetes-engine/docs/how-to/private-clusters#req_res_lim)
 for more details. This field only applies to private clusters, when
 `enable_private_nodes` is `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -13079,7 +13245,7 @@ not modify the previously-set value. Structure is documented below.
 the hosted master network. This range will be used for assigning private IP
 addresses to the cluster master(s) and the ILB VIP. This range must not overlap
 with any other ranges in use within the cluster's network, and it must be a /28
-subnet. See [Private Cluster Limitations](https://cloud.google.com/kubernetes-engine/docs/how-to/private-clusters#limitations)
+subnet. See [Private Cluster Limitations](https://cloud.google.com/kubernetes-engine/docs/how-to/private-clusters#req_res_lim)
 for more details. This field only applies to private clusters, when
 `enable_private_nodes` is `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -13160,7 +13326,7 @@ not modify the previously-set value. Structure is documented below.
 the hosted master network. This range will be used for assigning private IP
 addresses to the cluster master(s) and the ILB VIP. This range must not overlap
 with any other ranges in use within the cluster's network, and it must be a /28
-subnet. See [Private Cluster Limitations](https://cloud.google.com/kubernetes-engine/docs/how-to/private-clusters#limitations)
+subnet. See [Private Cluster Limitations](https://cloud.google.com/kubernetes-engine/docs/how-to/private-clusters#req_res_lim)
 for more details. This field only applies to private clusters, when
 `enable_private_nodes` is `true`.
 {{% /md %}}</dd><dt class="property-optional"
@@ -13241,7 +13407,7 @@ not modify the previously-set value. Structure is documented below.
 the hosted master network. This range will be used for assigning private IP
 addresses to the cluster master(s) and the ILB VIP. This range must not overlap
 with any other ranges in use within the cluster's network, and it must be a /28
-subnet. See [Private Cluster Limitations](https://cloud.google.com/kubernetes-engine/docs/how-to/private-clusters#limitations)
+subnet. See [Private Cluster Limitations](https://cloud.google.com/kubernetes-engine/docs/how-to/private-clusters#req_res_lim)
 for more details. This field only applies to private clusters, when
 `enable_private_nodes` is `true`.
 {{% /md %}}</dd><dt class="property-optional"

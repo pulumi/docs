@@ -132,6 +132,112 @@ const example = new gcp.spanner.Instance("example", {
 
 
 
+### Spanner Instance Processing Units
+
+
+{{< example csharp >}}
+
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Gcp.Spanner.Instance("example", new Gcp.Spanner.InstanceArgs
+        {
+            Config = "regional-us-central1",
+            DisplayName = "Test Spanner Instance",
+            Labels = 
+            {
+                { "foo", "bar" },
+            },
+            ProcessingUnits = 200,
+        });
+    }
+
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/spanner"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := spanner.NewInstance(ctx, "example", &spanner.InstanceArgs{
+			Config:      pulumi.String("regional-us-central1"),
+			DisplayName: pulumi.String("Test Spanner Instance"),
+			Labels: pulumi.StringMap{
+				"foo": pulumi.String("bar"),
+			},
+			ProcessingUnits: pulumi.Int(200),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+example = gcp.spanner.Instance("example",
+    config="regional-us-central1",
+    display_name="Test Spanner Instance",
+    labels={
+        "foo": "bar",
+    },
+    processing_units=200)
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const example = new gcp.spanner.Instance("example", {
+    config: "regional-us-central1",
+    displayName: "Test Spanner Instance",
+    labels: {
+        foo: "bar",
+    },
+    processingUnits: 200,
+});
+```
+
+
+{{< /example >}}
+
+
+
+
 ### Spanner Instance Multi Regional
 
 
@@ -262,6 +368,7 @@ const example = new gcp.spanner.Instance("example", {
              <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
              <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">num_nodes</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+             <span class="nx">processing_units</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
              <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">Instance</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
@@ -453,7 +560,18 @@ in length.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The number of nodes allocated to this instance.
+    <dd>{{% md %}}The number of nodes allocated to this instance. At most one of either node_count or processing_units can be present in
+terraform.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="processingunits_csharp">
+<a href="#processingunits_csharp" style="color: inherit; text-decoration: inherit;">Processing<wbr>Units</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of processing units allocated to this instance. At most one of processing_units or node_count can be present
+in terraform.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_csharp">
@@ -531,7 +649,18 @@ in length.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The number of nodes allocated to this instance.
+    <dd>{{% md %}}The number of nodes allocated to this instance. At most one of either node_count or processing_units can be present in
+terraform.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="processingunits_go">
+<a href="#processingunits_go" style="color: inherit; text-decoration: inherit;">Processing<wbr>Units</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of processing units allocated to this instance. At most one of processing_units or node_count can be present
+in terraform.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_go">
@@ -609,7 +738,18 @@ in length.
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The number of nodes allocated to this instance.
+    <dd>{{% md %}}The number of nodes allocated to this instance. At most one of either node_count or processing_units can be present in
+terraform.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="processingunits_nodejs">
+<a href="#processingunits_nodejs" style="color: inherit; text-decoration: inherit;">processing<wbr>Units</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The number of processing units allocated to this instance. At most one of processing_units or node_count can be present
+in terraform.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_nodejs">
@@ -687,7 +827,18 @@ in length.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The number of nodes allocated to this instance.
+    <dd>{{% md %}}The number of nodes allocated to this instance. At most one of either node_count or processing_units can be present in
+terraform.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="processing_units_python">
+<a href="#processing_units_python" style="color: inherit; text-decoration: inherit;">processing_<wbr>units</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of processing units allocated to this instance. At most one of processing_units or node_count can be present
+in terraform.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_python">
@@ -814,6 +965,7 @@ Get an existing Instance resource's state with the given name, ID, and optional 
         <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">num_nodes</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+        <span class="nx">processing_units</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
         <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Instance</code></pre></div>
 {{% /choosable %}}
@@ -989,7 +1141,18 @@ in length.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The number of nodes allocated to this instance.
+    <dd>{{% md %}}The number of nodes allocated to this instance. At most one of either node_count or processing_units can be present in
+terraform.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_processingunits_csharp">
+<a href="#state_processingunits_csharp" style="color: inherit; text-decoration: inherit;">Processing<wbr>Units</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of processing units allocated to this instance. At most one of processing_units or node_count can be present
+in terraform.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_csharp">
@@ -1076,7 +1239,18 @@ in length.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The number of nodes allocated to this instance.
+    <dd>{{% md %}}The number of nodes allocated to this instance. At most one of either node_count or processing_units can be present in
+terraform.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_processingunits_go">
+<a href="#state_processingunits_go" style="color: inherit; text-decoration: inherit;">Processing<wbr>Units</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of processing units allocated to this instance. At most one of processing_units or node_count can be present
+in terraform.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_go">
@@ -1163,7 +1337,18 @@ in length.
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The number of nodes allocated to this instance.
+    <dd>{{% md %}}The number of nodes allocated to this instance. At most one of either node_count or processing_units can be present in
+terraform.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_processingunits_nodejs">
+<a href="#state_processingunits_nodejs" style="color: inherit; text-decoration: inherit;">processing<wbr>Units</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The number of processing units allocated to this instance. At most one of processing_units or node_count can be present
+in terraform.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_nodejs">
@@ -1250,7 +1435,18 @@ in length.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The number of nodes allocated to this instance.
+    <dd>{{% md %}}The number of nodes allocated to this instance. At most one of either node_count or processing_units can be present in
+terraform.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_processing_units_python">
+<a href="#state_processing_units_python" style="color: inherit; text-decoration: inherit;">processing_<wbr>units</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of processing units allocated to this instance. At most one of processing_units or node_count can be present
+in terraform.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_python">

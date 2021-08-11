@@ -354,6 +354,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="customerencryptions_csharp">
+<a href="#customerencryptions_csharp" style="color: inherit; text-decoration: inherit;">Customer<wbr>Encryptions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getbucketobjectcontentcustomerencryption">List&lt;Get<wbr>Bucket<wbr>Object<wbr>Content<wbr>Customer<wbr>Encryption&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="detectmd5hash_csharp">
 <a href="#detectmd5hash_csharp" style="color: inherit; text-decoration: inherit;">Detect<wbr>Md5hash</a>
 </span>
@@ -525,6 +533,14 @@ The following output properties are available:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="customerencryptions_go">
+<a href="#customerencryptions_go" style="color: inherit; text-decoration: inherit;">Customer<wbr>Encryptions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getbucketobjectcontentcustomerencryption">[]Get<wbr>Bucket<wbr>Object<wbr>Content<wbr>Customer<wbr>Encryption</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
@@ -702,6 +718,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="customerencryptions_nodejs">
+<a href="#customerencryptions_nodejs" style="color: inherit; text-decoration: inherit;">customer<wbr>Encryptions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getbucketobjectcontentcustomerencryption">Get<wbr>Bucket<wbr>Object<wbr>Content<wbr>Customer<wbr>Encryption[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="detectmd5hash_nodejs">
 <a href="#detectmd5hash_nodejs" style="color: inherit; text-decoration: inherit;">detect<wbr>Md5hash</a>
 </span>
@@ -876,6 +900,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="customer_encryptions_python">
+<a href="#customer_encryptions_python" style="color: inherit; text-decoration: inherit;">customer_<wbr>encryptions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getbucketobjectcontentcustomerencryption">Sequence[Get<wbr>Bucket<wbr>Object<wbr>Content<wbr>Customer<wbr>Encryption]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="detect_md5hash_python">
 <a href="#detect_md5hash_python" style="color: inherit; text-decoration: inherit;">detect_<wbr>md5hash</a>
 </span>
@@ -989,6 +1021,96 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}(Computed) [Content-Language](https://tools.ietf.org/html/rfc7231#section-3.1.3.2) of the object content.
 {{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+
+
+
+## Supporting Types
+
+
+<h4 id="getbucketobjectcontentcustomerencryption">Get<wbr>Bucket<wbr>Object<wbr>Content<wbr>Customer<wbr>Encryption</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="encryptionalgorithm_csharp">
+<a href="#encryptionalgorithm_csharp" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Algorithm</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="encryptionkey_csharp">
+<a href="#encryptionkey_csharp" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="encryptionalgorithm_go">
+<a href="#encryptionalgorithm_go" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Algorithm</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="encryptionkey_go">
+<a href="#encryptionkey_go" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="encryptionalgorithm_nodejs">
+<a href="#encryptionalgorithm_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>Algorithm</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="encryptionkey_nodejs">
+<a href="#encryptionkey_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="encryption_algorithm_python">
+<a href="#encryption_algorithm_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>algorithm</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="encryption_key_python">
+<a href="#encryption_key_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
