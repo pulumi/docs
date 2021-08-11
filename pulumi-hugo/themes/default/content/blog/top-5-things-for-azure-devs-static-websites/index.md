@@ -1,6 +1,7 @@
 ---
-title: "Top 5 an Azure Developer Needs to Know: Static Websites"
+title: "Top 5 Things an Azure Developer Needs to Know: Static Websites"
 date: 2021-08-09
+allow_long_title: True
 meta_desc: "Two ways to build and deploy static websites with Azure"
 meta_image: azure-top-5.png
 authors:
