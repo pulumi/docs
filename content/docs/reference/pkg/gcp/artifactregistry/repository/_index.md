@@ -561,7 +561,14 @@ The Repository resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The format of packages that are stored in the repository.
+    <dd>{{% md %}}The format of packages that are stored in the repository. You can only create
+alpha formats if you are a member of the [alpha user group](https://cloud.google.com/artifact-registry/docs/supported-formats#alpha-access).
+- DOCKER
+- MAVEN ([Preview](https://cloud.google.com/products#product-launch-stages))
+- NPM ([Preview](https://cloud.google.com/products#product-launch-stages))
+- PYTHON ([Preview](https://cloud.google.com/products#product-launch-stages))
+- APT ([alpha](https://cloud.google.com/products#product-launch-stages))
+- YUM ([alpha](https://cloud.google.com/products#product-launch-stages))
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="repositoryid_csharp">
@@ -637,7 +644,14 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The format of packages that are stored in the repository.
+    <dd>{{% md %}}The format of packages that are stored in the repository. You can only create
+alpha formats if you are a member of the [alpha user group](https://cloud.google.com/artifact-registry/docs/supported-formats#alpha-access).
+- DOCKER
+- MAVEN ([Preview](https://cloud.google.com/products#product-launch-stages))
+- NPM ([Preview](https://cloud.google.com/products#product-launch-stages))
+- PYTHON ([Preview](https://cloud.google.com/products#product-launch-stages))
+- APT ([alpha](https://cloud.google.com/products#product-launch-stages))
+- YUM ([alpha](https://cloud.google.com/products#product-launch-stages))
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="repositoryid_go">
@@ -713,7 +727,14 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The format of packages that are stored in the repository.
+    <dd>{{% md %}}The format of packages that are stored in the repository. You can only create
+alpha formats if you are a member of the [alpha user group](https://cloud.google.com/artifact-registry/docs/supported-formats#alpha-access).
+- DOCKER
+- MAVEN ([Preview](https://cloud.google.com/products#product-launch-stages))
+- NPM ([Preview](https://cloud.google.com/products#product-launch-stages))
+- PYTHON ([Preview](https://cloud.google.com/products#product-launch-stages))
+- APT ([alpha](https://cloud.google.com/products#product-launch-stages))
+- YUM ([alpha](https://cloud.google.com/products#product-launch-stages))
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="repositoryid_nodejs">
@@ -789,7 +810,14 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The format of packages that are stored in the repository.
+    <dd>{{% md %}}The format of packages that are stored in the repository. You can only create
+alpha formats if you are a member of the [alpha user group](https://cloud.google.com/artifact-registry/docs/supported-formats#alpha-access).
+- DOCKER
+- MAVEN ([Preview](https://cloud.google.com/products#product-launch-stages))
+- NPM ([Preview](https://cloud.google.com/products#product-launch-stages))
+- PYTHON ([Preview](https://cloud.google.com/products#product-launch-stages))
+- APT ([alpha](https://cloud.google.com/products#product-launch-stages))
+- YUM ([alpha](https://cloud.google.com/products#product-launch-stages))
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="repository_id_python">
@@ -1181,7 +1209,14 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The format of packages that are stored in the repository.
+    <dd>{{% md %}}The format of packages that are stored in the repository. You can only create
+alpha formats if you are a member of the [alpha user group](https://cloud.google.com/artifact-registry/docs/supported-formats#alpha-access).
+- DOCKER
+- MAVEN ([Preview](https://cloud.google.com/products#product-launch-stages))
+- NPM ([Preview](https://cloud.google.com/products#product-launch-stages))
+- PYTHON ([Preview](https://cloud.google.com/products#product-launch-stages))
+- APT ([alpha](https://cloud.google.com/products#product-launch-stages))
+- YUM ([alpha](https://cloud.google.com/products#product-launch-stages))
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_kmskeyname_csharp">
@@ -1284,7 +1319,14 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The format of packages that are stored in the repository.
+    <dd>{{% md %}}The format of packages that are stored in the repository. You can only create
+alpha formats if you are a member of the [alpha user group](https://cloud.google.com/artifact-registry/docs/supported-formats#alpha-access).
+- DOCKER
+- MAVEN ([Preview](https://cloud.google.com/products#product-launch-stages))
+- NPM ([Preview](https://cloud.google.com/products#product-launch-stages))
+- PYTHON ([Preview](https://cloud.google.com/products#product-launch-stages))
+- APT ([alpha](https://cloud.google.com/products#product-launch-stages))
+- YUM ([alpha](https://cloud.google.com/products#product-launch-stages))
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_kmskeyname_go">
@@ -1387,7 +1429,14 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The format of packages that are stored in the repository.
+    <dd>{{% md %}}The format of packages that are stored in the repository. You can only create
+alpha formats if you are a member of the [alpha user group](https://cloud.google.com/artifact-registry/docs/supported-formats#alpha-access).
+- DOCKER
+- MAVEN ([Preview](https://cloud.google.com/products#product-launch-stages))
+- NPM ([Preview](https://cloud.google.com/products#product-launch-stages))
+- PYTHON ([Preview](https://cloud.google.com/products#product-launch-stages))
+- APT ([alpha](https://cloud.google.com/products#product-launch-stages))
+- YUM ([alpha](https://cloud.google.com/products#product-launch-stages))
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_kmskeyname_nodejs">
@@ -1490,7 +1539,14 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The format of packages that are stored in the repository.
+    <dd>{{% md %}}The format of packages that are stored in the repository. You can only create
+alpha formats if you are a member of the [alpha user group](https://cloud.google.com/artifact-registry/docs/supported-formats#alpha-access).
+- DOCKER
+- MAVEN ([Preview](https://cloud.google.com/products#product-launch-stages))
+- NPM ([Preview](https://cloud.google.com/products#product-launch-stages))
+- PYTHON ([Preview](https://cloud.google.com/products#product-launch-stages))
+- APT ([alpha](https://cloud.google.com/products#product-launch-stages))
+- YUM ([alpha](https://cloud.google.com/products#product-launch-stages))
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_kms_key_name_python">

@@ -138,6 +138,7 @@ const picture = new gcp.storage.BucketObject("picture", {
                  <span class="nx">content_encoding</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                  <span class="nx">content_language</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                  <span class="nx">content_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                 <span class="nx">customer_encryption</span><span class="p">:</span> <span class="nx">Optional[BucketObjectCustomerEncryptionArgs]</span> = None<span class="p">,</span>
                  <span class="nx">detect_md5hash</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                  <span class="nx">event_based_hold</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
                  <span class="nx">kms_key_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -339,6 +340,16 @@ directive to specify caching behavior of object data. If omitted and object is a
     <dd>{{% md %}}[Content-Type](https://tools.ietf.org/html/rfc7231#section-3.1.1.5) of the object data. Defaults to "application/octet-stream" or "text/plain; charset=utf-8".
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="customerencryption_csharp">
+<a href="#customerencryption_csharp" style="color: inherit; text-decoration: inherit;">Customer<wbr>Encryption</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#bucketobjectcustomerencryption">Bucket<wbr>Object<wbr>Customer<wbr>Encryption<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Enables object encryption with Customer-Supplied Encryption Key (CSEK). [Google documentation about CSEK.](https://cloud.google.com/storage/docs/encryption/customer-supplied-keys)
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="detectmd5hash_csharp">
 <a href="#detectmd5hash_csharp" style="color: inherit; text-decoration: inherit;">Detect<wbr>Md5hash</a>
 </span>
@@ -482,6 +493,16 @@ directive to specify caching behavior of object data. If omitted and object is a
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Content-Type](https://tools.ietf.org/html/rfc7231#section-3.1.1.5) of the object data. Defaults to "application/octet-stream" or "text/plain; charset=utf-8".
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="customerencryption_go">
+<a href="#customerencryption_go" style="color: inherit; text-decoration: inherit;">Customer<wbr>Encryption</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#bucketobjectcustomerencryption">Bucket<wbr>Object<wbr>Customer<wbr>Encryption<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Enables object encryption with Customer-Supplied Encryption Key (CSEK). [Google documentation about CSEK.](https://cloud.google.com/storage/docs/encryption/customer-supplied-keys)
+Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="detectmd5hash_go">
@@ -629,6 +650,16 @@ directive to specify caching behavior of object data. If omitted and object is a
     <dd>{{% md %}}[Content-Type](https://tools.ietf.org/html/rfc7231#section-3.1.1.5) of the object data. Defaults to "application/octet-stream" or "text/plain; charset=utf-8".
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="customerencryption_nodejs">
+<a href="#customerencryption_nodejs" style="color: inherit; text-decoration: inherit;">customer<wbr>Encryption</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#bucketobjectcustomerencryption">Bucket<wbr>Object<wbr>Customer<wbr>Encryption<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Enables object encryption with Customer-Supplied Encryption Key (CSEK). [Google documentation about CSEK.](https://cloud.google.com/storage/docs/encryption/customer-supplied-keys)
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="detectmd5hash_nodejs">
 <a href="#detectmd5hash_nodejs" style="color: inherit; text-decoration: inherit;">detect<wbr>Md5hash</a>
 </span>
@@ -772,6 +803,16 @@ directive to specify caching behavior of object data. If omitted and object is a
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Content-Type](https://tools.ietf.org/html/rfc7231#section-3.1.1.5) of the object data. Defaults to "application/octet-stream" or "text/plain; charset=utf-8".
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="customer_encryption_python">
+<a href="#customer_encryption_python" style="color: inherit; text-decoration: inherit;">customer_<wbr>encryption</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#bucketobjectcustomerencryption">Bucket<wbr>Object<wbr>Customer<wbr>Encryption<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Enables object encryption with Customer-Supplied Encryption Key (CSEK). [Google documentation about CSEK.](https://cloud.google.com/storage/docs/encryption/customer-supplied-keys)
+Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="detect_md5hash_python">
@@ -1115,6 +1156,7 @@ Get an existing BucketObject resource's state with the given name, ID, and optio
         <span class="nx">content_language</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">content_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">crc32c</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">customer_encryption</span><span class="p">:</span> <span class="nx">Optional[BucketObjectCustomerEncryptionArgs]</span> = None<span class="p">,</span>
         <span class="nx">detect_md5hash</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">event_based_hold</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">kms_key_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -1312,6 +1354,16 @@ directive to specify caching behavior of object data. If omitted and object is a
     <dd>{{% md %}}(Computed) Base 64 CRC32 hash of the uploaded data.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_customerencryption_csharp">
+<a href="#state_customerencryption_csharp" style="color: inherit; text-decoration: inherit;">Customer<wbr>Encryption</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#bucketobjectcustomerencryption">Bucket<wbr>Object<wbr>Customer<wbr>Encryption<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Enables object encryption with Customer-Supplied Encryption Key (CSEK). [Google documentation about CSEK.](https://cloud.google.com/storage/docs/encryption/customer-supplied-keys)
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_detectmd5hash_csharp">
 <a href="#state_detectmd5hash_csharp" style="color: inherit; text-decoration: inherit;">Detect<wbr>Md5hash</a>
 </span>
@@ -1501,6 +1553,16 @@ directive to specify caching behavior of object data. If omitted and object is a
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) Base 64 CRC32 hash of the uploaded data.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_customerencryption_go">
+<a href="#state_customerencryption_go" style="color: inherit; text-decoration: inherit;">Customer<wbr>Encryption</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#bucketobjectcustomerencryption">Bucket<wbr>Object<wbr>Customer<wbr>Encryption<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Enables object encryption with Customer-Supplied Encryption Key (CSEK). [Google documentation about CSEK.](https://cloud.google.com/storage/docs/encryption/customer-supplied-keys)
+Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_detectmd5hash_go">
@@ -1694,6 +1756,16 @@ directive to specify caching behavior of object data. If omitted and object is a
     <dd>{{% md %}}(Computed) Base 64 CRC32 hash of the uploaded data.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_customerencryption_nodejs">
+<a href="#state_customerencryption_nodejs" style="color: inherit; text-decoration: inherit;">customer<wbr>Encryption</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#bucketobjectcustomerencryption">Bucket<wbr>Object<wbr>Customer<wbr>Encryption<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Enables object encryption with Customer-Supplied Encryption Key (CSEK). [Google documentation about CSEK.](https://cloud.google.com/storage/docs/encryption/customer-supplied-keys)
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_detectmd5hash_nodejs">
 <a href="#state_detectmd5hash_nodejs" style="color: inherit; text-decoration: inherit;">detect<wbr>Md5hash</a>
 </span>
@@ -1885,6 +1957,16 @@ directive to specify caching behavior of object data. If omitted and object is a
     <dd>{{% md %}}(Computed) Base 64 CRC32 hash of the uploaded data.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_customer_encryption_python">
+<a href="#state_customer_encryption_python" style="color: inherit; text-decoration: inherit;">customer_<wbr>encryption</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#bucketobjectcustomerencryption">Bucket<wbr>Object<wbr>Customer<wbr>Encryption<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Enables object encryption with Customer-Supplied Encryption Key (CSEK). [Google documentation about CSEK.](https://cloud.google.com/storage/docs/encryption/customer-supplied-keys)
+Structure is documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_detect_md5hash_python">
 <a href="#state_detect_md5hash_python" style="color: inherit; text-decoration: inherit;">detect_<wbr>md5hash</a>
 </span>
@@ -2004,6 +2086,100 @@ overwrites.
 
 
 
+
+## Supporting Types
+
+
+
+<h4 id="bucketobjectcustomerencryption">Bucket<wbr>Object<wbr>Customer<wbr>Encryption</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="encryptionkey_csharp">
+<a href="#encryptionkey_csharp" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Base64 encoded Customer-Supplied Encryption Key.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="encryptionalgorithm_csharp">
+<a href="#encryptionalgorithm_csharp" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Algorithm</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Encryption algorithm. Default: AES256
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="encryptionkey_go">
+<a href="#encryptionkey_go" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Base64 encoded Customer-Supplied Encryption Key.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="encryptionalgorithm_go">
+<a href="#encryptionalgorithm_go" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Algorithm</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Encryption algorithm. Default: AES256
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="encryptionkey_nodejs">
+<a href="#encryptionkey_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Base64 encoded Customer-Supplied Encryption Key.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="encryptionalgorithm_nodejs">
+<a href="#encryptionalgorithm_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>Algorithm</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Encryption algorithm. Default: AES256
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="encryption_key_python">
+<a href="#encryption_key_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Base64 encoded Customer-Supplied Encryption Key.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="encryption_algorithm_python">
+<a href="#encryption_algorithm_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>algorithm</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Encryption algorithm. Default: AES256
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
 ## Import
 
 

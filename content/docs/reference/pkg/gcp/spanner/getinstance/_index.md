@@ -127,6 +127,7 @@ const foo = pulumi.output(gcp.spanner.getInstance({
                  <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
                  <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                  <span class="nx">num_nodes</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+                 <span class="nx">processing_units</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
                  <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                  <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetInstanceResult</code></pre></div>
 {{% /choosable %}}
@@ -203,6 +204,14 @@ The following arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="processingunits_csharp">
+<a href="#processingunits_csharp" style="color: inherit; text-decoration: inherit;">Processing<wbr>Units</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
 </span>
@@ -260,6 +269,14 @@ is not provided, the provider project is used.
             title="Optional">
         <span id="numnodes_go">
 <a href="#numnodes_go" style="color: inherit; text-decoration: inherit;">Num<wbr>Nodes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="processingunits_go">
+<a href="#processingunits_go" style="color: inherit; text-decoration: inherit;">Processing<wbr>Units</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
@@ -329,6 +346,14 @@ is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="processingunits_nodejs">
+<a href="#processingunits_nodejs" style="color: inherit; text-decoration: inherit;">processing<wbr>Units</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
@@ -386,6 +411,14 @@ is not provided, the provider project is used.
             title="Optional">
         <span id="num_nodes_python">
 <a href="#num_nodes_python" style="color: inherit; text-decoration: inherit;">num_<wbr>nodes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="processing_units_python">
+<a href="#processing_units_python" style="color: inherit; text-decoration: inherit;">processing_<wbr>units</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
@@ -432,6 +465,22 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="numnodes_csharp">
+<a href="#numnodes_csharp" style="color: inherit; text-decoration: inherit;">Num<wbr>Nodes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="processingunits_csharp">
+<a href="#processingunits_csharp" style="color: inherit; text-decoration: inherit;">Processing<wbr>Units</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="state_csharp">
 <a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
 </span>
@@ -472,14 +521,6 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="numnodes_csharp">
-<a href="#numnodes_csharp" style="color: inherit; text-decoration: inherit;">Num<wbr>Nodes</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
-            title="">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
 </span>
@@ -506,6 +547,22 @@ The following output properties are available:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="numnodes_go">
+<a href="#numnodes_go" style="color: inherit; text-decoration: inherit;">Num<wbr>Nodes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="processingunits_go">
+<a href="#processingunits_go" style="color: inherit; text-decoration: inherit;">Processing<wbr>Units</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
@@ -549,14 +606,6 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="numnodes_go">
-<a href="#numnodes_go" style="color: inherit; text-decoration: inherit;">Num<wbr>Nodes</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
-            title="">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
 </span>
@@ -583,6 +632,22 @@ The following output properties are available:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="numnodes_nodejs">
+<a href="#numnodes_nodejs" style="color: inherit; text-decoration: inherit;">num<wbr>Nodes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="processingunits_nodejs">
+<a href="#processingunits_nodejs" style="color: inherit; text-decoration: inherit;">processing<wbr>Units</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
@@ -626,14 +691,6 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="numnodes_nodejs">
-<a href="#numnodes_nodejs" style="color: inherit; text-decoration: inherit;">num<wbr>Nodes</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
-            title="">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
@@ -660,6 +717,22 @@ The following output properties are available:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="num_nodes_python">
+<a href="#num_nodes_python" style="color: inherit; text-decoration: inherit;">num_<wbr>nodes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="processing_units_python">
+<a href="#processing_units_python" style="color: inherit; text-decoration: inherit;">processing_<wbr>units</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
@@ -700,14 +773,6 @@ The following output properties are available:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="num_nodes_python">
-<a href="#num_nodes_python" style="color: inherit; text-decoration: inherit;">num_<wbr>nodes</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">

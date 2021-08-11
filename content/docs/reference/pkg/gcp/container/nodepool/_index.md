@@ -277,6 +277,7 @@ const np = new gcp.container.NodePool("np", {
              <span class="nx">max_pods_per_node</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
              <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">name_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">network_config</span><span class="p">:</span> <span class="nx">Optional[NodePoolNetworkConfigArgs]</span> = None<span class="p">,</span>
              <span class="nx">node_config</span><span class="p">:</span> <span class="nx">Optional[NodePoolNodeConfigArgs]</span> = None<span class="p">,</span>
              <span class="nx">node_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
              <span class="nx">node_locations</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
@@ -498,13 +499,23 @@ auto-generate a unique name.
 with the specified prefix. Conflicts with `name`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="networkconfig_csharp">
+<a href="#networkconfig_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#nodepoolnetworkconfig">Node<wbr>Pool<wbr>Network<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The network configuration of the pool. See
+gcp.container.Cluster for schema.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="nodeconfig_csharp">
 <a href="#nodeconfig_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nodepoolnodeconfig">Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The node configuration of the pool. See
+    <dd>{{% md %}}The network configuration of the pool. See
 gcp.container.Cluster for schema.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -655,13 +666,23 @@ auto-generate a unique name.
 with the specified prefix. Conflicts with `name`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="networkconfig_go">
+<a href="#networkconfig_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#nodepoolnetworkconfig">Node<wbr>Pool<wbr>Network<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The network configuration of the pool. See
+gcp.container.Cluster for schema.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="nodeconfig_go">
 <a href="#nodeconfig_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nodepoolnodeconfig">Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The node configuration of the pool. See
+    <dd>{{% md %}}The network configuration of the pool. See
 gcp.container.Cluster for schema.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -812,13 +833,23 @@ auto-generate a unique name.
 with the specified prefix. Conflicts with `name`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="networkconfig_nodejs">
+<a href="#networkconfig_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#nodepoolnetworkconfig">Node<wbr>Pool<wbr>Network<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The network configuration of the pool. See
+gcp.container.Cluster for schema.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="nodeconfig_nodejs">
 <a href="#nodeconfig_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nodepoolnodeconfig">Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The node configuration of the pool. See
+    <dd>{{% md %}}The network configuration of the pool. See
 gcp.container.Cluster for schema.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -969,13 +1000,23 @@ auto-generate a unique name.
 with the specified prefix. Conflicts with `name`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="network_config_python">
+<a href="#network_config_python" style="color: inherit; text-decoration: inherit;">network_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#nodepoolnetworkconfig">Node<wbr>Pool<wbr>Network<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The network configuration of the pool. See
+gcp.container.Cluster for schema.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="node_config_python">
 <a href="#node_config_python" style="color: inherit; text-decoration: inherit;">node_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nodepoolnodeconfig">Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The node configuration of the pool. See
+    <dd>{{% md %}}The network configuration of the pool. See
 gcp.container.Cluster for schema.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1185,6 +1226,7 @@ Get an existing NodePool resource's state with the given name, ID, and optional 
         <span class="nx">max_pods_per_node</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">name_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">network_config</span><span class="p">:</span> <span class="nx">Optional[NodePoolNetworkConfigArgs]</span> = None<span class="p">,</span>
         <span class="nx">node_config</span><span class="p">:</span> <span class="nx">Optional[NodePoolNodeConfigArgs]</span> = None<span class="p">,</span>
         <span class="nx">node_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
         <span class="nx">node_locations</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
@@ -1399,13 +1441,23 @@ auto-generate a unique name.
 with the specified prefix. Conflicts with `name`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_networkconfig_csharp">
+<a href="#state_networkconfig_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#nodepoolnetworkconfig">Node<wbr>Pool<wbr>Network<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The network configuration of the pool. See
+gcp.container.Cluster for schema.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_nodeconfig_csharp">
 <a href="#state_nodeconfig_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nodepoolnodeconfig">Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The node configuration of the pool. See
+    <dd>{{% md %}}The network configuration of the pool. See
 gcp.container.Cluster for schema.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1573,13 +1625,23 @@ auto-generate a unique name.
 with the specified prefix. Conflicts with `name`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_networkconfig_go">
+<a href="#state_networkconfig_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#nodepoolnetworkconfig">Node<wbr>Pool<wbr>Network<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The network configuration of the pool. See
+gcp.container.Cluster for schema.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_nodeconfig_go">
 <a href="#state_nodeconfig_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nodepoolnodeconfig">Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The node configuration of the pool. See
+    <dd>{{% md %}}The network configuration of the pool. See
 gcp.container.Cluster for schema.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1747,13 +1809,23 @@ auto-generate a unique name.
 with the specified prefix. Conflicts with `name`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_networkconfig_nodejs">
+<a href="#state_networkconfig_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#nodepoolnetworkconfig">Node<wbr>Pool<wbr>Network<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The network configuration of the pool. See
+gcp.container.Cluster for schema.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_nodeconfig_nodejs">
 <a href="#state_nodeconfig_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Config</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nodepoolnodeconfig">Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The node configuration of the pool. See
+    <dd>{{% md %}}The network configuration of the pool. See
 gcp.container.Cluster for schema.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1921,13 +1993,23 @@ auto-generate a unique name.
 with the specified prefix. Conflicts with `name`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_network_config_python">
+<a href="#state_network_config_python" style="color: inherit; text-decoration: inherit;">network_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#nodepoolnetworkconfig">Node<wbr>Pool<wbr>Network<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The network configuration of the pool. See
+gcp.container.Cluster for schema.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_node_config_python">
 <a href="#state_node_config_python" style="color: inherit; text-decoration: inherit;">node_<wbr>config</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nodepoolnodeconfig">Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The node configuration of the pool. See
+    <dd>{{% md %}}The network configuration of the pool. See
 gcp.container.Cluster for schema.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2188,6 +2270,120 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
     </dt>
     <dd>{{% md %}}Whether the nodes will be automatically upgraded.
 {{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="nodepoolnetworkconfig">Node<wbr>Pool<wbr>Network<wbr>Config</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="podrange_csharp">
+<a href="#podrange_csharp" style="color: inherit; text-decoration: inherit;">Pod<wbr>Range</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="createpodrange_csharp">
+<a href="#createpodrange_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Pod<wbr>Range</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="podipv4cidrblock_csharp">
+<a href="#podipv4cidrblock_csharp" style="color: inherit; text-decoration: inherit;">Pod<wbr>Ipv4Cidr<wbr>Block</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="podrange_go">
+<a href="#podrange_go" style="color: inherit; text-decoration: inherit;">Pod<wbr>Range</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="createpodrange_go">
+<a href="#createpodrange_go" style="color: inherit; text-decoration: inherit;">Create<wbr>Pod<wbr>Range</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="podipv4cidrblock_go">
+<a href="#podipv4cidrblock_go" style="color: inherit; text-decoration: inherit;">Pod<wbr>Ipv4Cidr<wbr>Block</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="podrange_nodejs">
+<a href="#podrange_nodejs" style="color: inherit; text-decoration: inherit;">pod<wbr>Range</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="createpodrange_nodejs">
+<a href="#createpodrange_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Pod<wbr>Range</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="podipv4cidrblock_nodejs">
+<a href="#podipv4cidrblock_nodejs" style="color: inherit; text-decoration: inherit;">pod<wbr>Ipv4Cidr<wbr>Block</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="pod_range_python">
+<a href="#pod_range_python" style="color: inherit; text-decoration: inherit;">pod_<wbr>range</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="create_pod_range_python">
+<a href="#create_pod_range_python" style="color: inherit; text-decoration: inherit;">create_<wbr>pod_<wbr>range</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="pod_ipv4_cidr_block_python">
+<a href="#pod_ipv4_cidr_block_python" style="color: inherit; text-decoration: inherit;">pod_<wbr>ipv4_<wbr>cidr_<wbr>block</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="nodepoolnodeconfig">Node<wbr>Pool<wbr>Node<wbr>Config</h4>

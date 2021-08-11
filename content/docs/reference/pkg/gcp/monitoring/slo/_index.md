@@ -2255,10 +2255,10 @@ MetricKind = DELTA or MetricKind = CUMULATIVE.
     </dt>
     <dd>{{% md %}}Range of numerical values. The computed good_service
 will be the count of values x in the Distribution such
-that range.min <= x < range.max. inclusive of min and
-exclusive of max. Open ranges can be defined by setting
+that range.min <= x <= range.max. inclusive of min and
+max. Open ranges can be defined by setting
 just one of min or max. Summed value `X` should satisfy
-`range.min <= X < range.max` for a good window.
+`range.min <= X <= range.max` for a good window.
 Structure is documented below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2286,10 +2286,10 @@ MetricKind = DELTA or MetricKind = CUMULATIVE.
     </dt>
     <dd>{{% md %}}Range of numerical values. The computed good_service
 will be the count of values x in the Distribution such
-that range.min <= x < range.max. inclusive of min and
-exclusive of max. Open ranges can be defined by setting
+that range.min <= x <= range.max. inclusive of min and
+max. Open ranges can be defined by setting
 just one of min or max. Summed value `X` should satisfy
-`range.min <= X < range.max` for a good window.
+`range.min <= X <= range.max` for a good window.
 Structure is documented below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2317,10 +2317,10 @@ MetricKind = DELTA or MetricKind = CUMULATIVE.
     </dt>
     <dd>{{% md %}}Range of numerical values. The computed good_service
 will be the count of values x in the Distribution such
-that range.min <= x < range.max. inclusive of min and
-exclusive of max. Open ranges can be defined by setting
+that range.min <= x <= range.max. inclusive of min and
+max. Open ranges can be defined by setting
 just one of min or max. Summed value `X` should satisfy
-`range.min <= X < range.max` for a good window.
+`range.min <= X <= range.max` for a good window.
 Structure is documented below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2348,10 +2348,10 @@ MetricKind = DELTA or MetricKind = CUMULATIVE.
     </dt>
     <dd>{{% md %}}Range of numerical values. The computed good_service
 will be the count of values x in the Distribution such
-that range.min <= x < range.max. inclusive of min and
-exclusive of max. Open ranges can be defined by setting
+that range.min <= x <= range.max. inclusive of min and
+max. Open ranges can be defined by setting
 just one of min or max. Summed value `X` should satisfy
-`range.min <= X < range.max` for a good window.
+`range.min <= X <= range.max` for a good window.
 Structure is documented below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -2699,7 +2699,7 @@ One of `good_bad_metric_filter`,
 `good_total_ratio_threshold`, `metric_mean_in_range`,
 `metric_sum_in_range` must be set for `windows_based_sli`.
 Average value X of `time_series` should satisfy
-`range.min <= X < range.max` for a good window.
+`range.min <= X <= range.max` for a good window.
 Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2712,7 +2712,7 @@ Structure is documented below.
     <dd>{{% md %}}Criterion that describes a window as good if the metric's value
 is in a good range, *summed* across returned streams.
 Summed value `X` of `time_series` should satisfy
-`range.min <= X < range.max` for a good window.
+`range.min <= X <= range.max` for a good window.
 One of `good_bad_metric_filter`,
 `good_total_ratio_threshold`, `metric_mean_in_range`,
 `metric_sum_in_range` must be set for `windows_based_sli`.
@@ -2772,7 +2772,7 @@ One of `good_bad_metric_filter`,
 `good_total_ratio_threshold`, `metric_mean_in_range`,
 `metric_sum_in_range` must be set for `windows_based_sli`.
 Average value X of `time_series` should satisfy
-`range.min <= X < range.max` for a good window.
+`range.min <= X <= range.max` for a good window.
 Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2785,7 +2785,7 @@ Structure is documented below.
     <dd>{{% md %}}Criterion that describes a window as good if the metric's value
 is in a good range, *summed* across returned streams.
 Summed value `X` of `time_series` should satisfy
-`range.min <= X < range.max` for a good window.
+`range.min <= X <= range.max` for a good window.
 One of `good_bad_metric_filter`,
 `good_total_ratio_threshold`, `metric_mean_in_range`,
 `metric_sum_in_range` must be set for `windows_based_sli`.
@@ -2845,7 +2845,7 @@ One of `good_bad_metric_filter`,
 `good_total_ratio_threshold`, `metric_mean_in_range`,
 `metric_sum_in_range` must be set for `windows_based_sli`.
 Average value X of `time_series` should satisfy
-`range.min <= X < range.max` for a good window.
+`range.min <= X <= range.max` for a good window.
 Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2858,7 +2858,7 @@ Structure is documented below.
     <dd>{{% md %}}Criterion that describes a window as good if the metric's value
 is in a good range, *summed* across returned streams.
 Summed value `X` of `time_series` should satisfy
-`range.min <= X < range.max` for a good window.
+`range.min <= X <= range.max` for a good window.
 One of `good_bad_metric_filter`,
 `good_total_ratio_threshold`, `metric_mean_in_range`,
 `metric_sum_in_range` must be set for `windows_based_sli`.
@@ -2918,7 +2918,7 @@ One of `good_bad_metric_filter`,
 `good_total_ratio_threshold`, `metric_mean_in_range`,
 `metric_sum_in_range` must be set for `windows_based_sli`.
 Average value X of `time_series` should satisfy
-`range.min <= X < range.max` for a good window.
+`range.min <= X <= range.max` for a good window.
 Structure is documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -2931,7 +2931,7 @@ Structure is documented below.
     <dd>{{% md %}}Criterion that describes a window as good if the metric's value
 is in a good range, *summed* across returned streams.
 Summed value `X` of `time_series` should satisfy
-`range.min <= X < range.max` for a good window.
+`range.min <= X <= range.max` for a good window.
 One of `good_bad_metric_filter`,
 `good_total_ratio_threshold`, `metric_mean_in_range`,
 `metric_sum_in_range` must be set for `windows_based_sli`.
@@ -3629,10 +3629,10 @@ MetricKind = DELTA or MetricKind = CUMULATIVE.
     </dt>
     <dd>{{% md %}}Range of numerical values. The computed good_service
 will be the count of values x in the Distribution such
-that range.min <= x < range.max. inclusive of min and
-exclusive of max. Open ranges can be defined by setting
+that range.min <= x <= range.max. inclusive of min and
+max. Open ranges can be defined by setting
 just one of min or max. Summed value `X` should satisfy
-`range.min <= X < range.max` for a good window.
+`range.min <= X <= range.max` for a good window.
 Structure is documented below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3660,10 +3660,10 @@ MetricKind = DELTA or MetricKind = CUMULATIVE.
     </dt>
     <dd>{{% md %}}Range of numerical values. The computed good_service
 will be the count of values x in the Distribution such
-that range.min <= x < range.max. inclusive of min and
-exclusive of max. Open ranges can be defined by setting
+that range.min <= x <= range.max. inclusive of min and
+max. Open ranges can be defined by setting
 just one of min or max. Summed value `X` should satisfy
-`range.min <= X < range.max` for a good window.
+`range.min <= X <= range.max` for a good window.
 Structure is documented below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3691,10 +3691,10 @@ MetricKind = DELTA or MetricKind = CUMULATIVE.
     </dt>
     <dd>{{% md %}}Range of numerical values. The computed good_service
 will be the count of values x in the Distribution such
-that range.min <= x < range.max. inclusive of min and
-exclusive of max. Open ranges can be defined by setting
+that range.min <= x <= range.max. inclusive of min and
+max. Open ranges can be defined by setting
 just one of min or max. Summed value `X` should satisfy
-`range.min <= X < range.max` for a good window.
+`range.min <= X <= range.max` for a good window.
 Structure is documented below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -3722,10 +3722,10 @@ MetricKind = DELTA or MetricKind = CUMULATIVE.
     </dt>
     <dd>{{% md %}}Range of numerical values. The computed good_service
 will be the count of values x in the Distribution such
-that range.min <= x < range.max. inclusive of min and
-exclusive of max. Open ranges can be defined by setting
+that range.min <= x <= range.max. inclusive of min and
+max. Open ranges can be defined by setting
 just one of min or max. Summed value `X` should satisfy
-`range.min <= X < range.max` for a good window.
+`range.min <= X <= range.max` for a good window.
 Structure is documented below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
@@ -4043,10 +4043,10 @@ must have MetricKind = DELTA or MetricKind = CUMULATIVE.
     </dt>
     <dd>{{% md %}}Range of numerical values. The computed good_service
 will be the count of values x in the Distribution such
-that range.min <= x < range.max. inclusive of min and
-exclusive of max. Open ranges can be defined by setting
+that range.min <= x <= range.max. inclusive of min and
+max. Open ranges can be defined by setting
 just one of min or max. Summed value `X` should satisfy
-`range.min <= X < range.max` for a good window.
+`range.min <= X <= range.max` for a good window.
 Structure is documented below.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4062,7 +4062,7 @@ quality. The provided TimeSeries must have
 ValueType = INT64 or ValueType = DOUBLE and
 MetricKind = GAUGE.
 Summed value `X` should satisfy
-`range.min <= X < range.max` for a good window.
+`range.min <= X <= range.max` for a good window.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -4077,10 +4077,10 @@ Summed value `X` should satisfy
     </dt>
     <dd>{{% md %}}Range of numerical values. The computed good_service
 will be the count of values x in the Distribution such
-that range.min <= x < range.max. inclusive of min and
-exclusive of max. Open ranges can be defined by setting
+that range.min <= x <= range.max. inclusive of min and
+max. Open ranges can be defined by setting
 just one of min or max. Summed value `X` should satisfy
-`range.min <= X < range.max` for a good window.
+`range.min <= X <= range.max` for a good window.
 Structure is documented below.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4096,7 +4096,7 @@ quality. The provided TimeSeries must have
 ValueType = INT64 or ValueType = DOUBLE and
 MetricKind = GAUGE.
 Summed value `X` should satisfy
-`range.min <= X < range.max` for a good window.
+`range.min <= X <= range.max` for a good window.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -4111,10 +4111,10 @@ Summed value `X` should satisfy
     </dt>
     <dd>{{% md %}}Range of numerical values. The computed good_service
 will be the count of values x in the Distribution such
-that range.min <= x < range.max. inclusive of min and
-exclusive of max. Open ranges can be defined by setting
+that range.min <= x <= range.max. inclusive of min and
+max. Open ranges can be defined by setting
 just one of min or max. Summed value `X` should satisfy
-`range.min <= X < range.max` for a good window.
+`range.min <= X <= range.max` for a good window.
 Structure is documented below.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4130,7 +4130,7 @@ quality. The provided TimeSeries must have
 ValueType = INT64 or ValueType = DOUBLE and
 MetricKind = GAUGE.
 Summed value `X` should satisfy
-`range.min <= X < range.max` for a good window.
+`range.min <= X <= range.max` for a good window.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -4145,10 +4145,10 @@ Summed value `X` should satisfy
     </dt>
     <dd>{{% md %}}Range of numerical values. The computed good_service
 will be the count of values x in the Distribution such
-that range.min <= x < range.max. inclusive of min and
-exclusive of max. Open ranges can be defined by setting
+that range.min <= x <= range.max. inclusive of min and
+max. Open ranges can be defined by setting
 just one of min or max. Summed value `X` should satisfy
-`range.min <= X < range.max` for a good window.
+`range.min <= X <= range.max` for a good window.
 Structure is documented below.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4164,7 +4164,7 @@ quality. The provided TimeSeries must have
 ValueType = INT64 or ValueType = DOUBLE and
 MetricKind = GAUGE.
 Summed value `X` should satisfy
-`range.min <= X < range.max` for a good window.
+`range.min <= X <= range.max` for a good window.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -4287,10 +4287,10 @@ will be set to "-infinity", defining an open range
     </dt>
     <dd>{{% md %}}Range of numerical values. The computed good_service
 will be the count of values x in the Distribution such
-that range.min <= x < range.max. inclusive of min and
-exclusive of max. Open ranges can be defined by setting
+that range.min <= x <= range.max. inclusive of min and
+max. Open ranges can be defined by setting
 just one of min or max. Summed value `X` should satisfy
-`range.min <= X < range.max` for a good window.
+`range.min <= X <= range.max` for a good window.
 Structure is documented below.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4306,7 +4306,7 @@ quality. The provided TimeSeries must have
 ValueType = INT64 or ValueType = DOUBLE and
 MetricKind = GAUGE.
 Summed value `X` should satisfy
-`range.min <= X < range.max` for a good window.
+`range.min <= X <= range.max` for a good window.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -4321,10 +4321,10 @@ Summed value `X` should satisfy
     </dt>
     <dd>{{% md %}}Range of numerical values. The computed good_service
 will be the count of values x in the Distribution such
-that range.min <= x < range.max. inclusive of min and
-exclusive of max. Open ranges can be defined by setting
+that range.min <= x <= range.max. inclusive of min and
+max. Open ranges can be defined by setting
 just one of min or max. Summed value `X` should satisfy
-`range.min <= X < range.max` for a good window.
+`range.min <= X <= range.max` for a good window.
 Structure is documented below.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4340,7 +4340,7 @@ quality. The provided TimeSeries must have
 ValueType = INT64 or ValueType = DOUBLE and
 MetricKind = GAUGE.
 Summed value `X` should satisfy
-`range.min <= X < range.max` for a good window.
+`range.min <= X <= range.max` for a good window.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -4355,10 +4355,10 @@ Summed value `X` should satisfy
     </dt>
     <dd>{{% md %}}Range of numerical values. The computed good_service
 will be the count of values x in the Distribution such
-that range.min <= x < range.max. inclusive of min and
-exclusive of max. Open ranges can be defined by setting
+that range.min <= x <= range.max. inclusive of min and
+max. Open ranges can be defined by setting
 just one of min or max. Summed value `X` should satisfy
-`range.min <= X < range.max` for a good window.
+`range.min <= X <= range.max` for a good window.
 Structure is documented below.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4374,7 +4374,7 @@ quality. The provided TimeSeries must have
 ValueType = INT64 or ValueType = DOUBLE and
 MetricKind = GAUGE.
 Summed value `X` should satisfy
-`range.min <= X < range.max` for a good window.
+`range.min <= X <= range.max` for a good window.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -4389,10 +4389,10 @@ Summed value `X` should satisfy
     </dt>
     <dd>{{% md %}}Range of numerical values. The computed good_service
 will be the count of values x in the Distribution such
-that range.min <= x < range.max. inclusive of min and
-exclusive of max. Open ranges can be defined by setting
+that range.min <= x <= range.max. inclusive of min and
+max. Open ranges can be defined by setting
 just one of min or max. Summed value `X` should satisfy
-`range.min <= X < range.max` for a good window.
+`range.min <= X <= range.max` for a good window.
 Structure is documented below.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -4408,7 +4408,7 @@ quality. The provided TimeSeries must have
 ValueType = INT64 or ValueType = DOUBLE and
 MetricKind = GAUGE.
 Summed value `X` should satisfy
-`range.min <= X < range.max` for a good window.
+`range.min <= X <= range.max` for a good window.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

@@ -6123,6 +6123,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="networkconfigs_csharp">
+<a href="#networkconfigs_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Configs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getclusternodepoolnetworkconfig">List&lt;Get<wbr>Cluster<wbr>Node<wbr>Pool<wbr>Network<wbr>Config&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="nodeconfigs_csharp">
 <a href="#nodeconfigs_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Configs</a>
 </span>
@@ -6221,6 +6229,14 @@ The following output properties are available:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="networkconfigs_go">
+<a href="#networkconfigs_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Configs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getclusternodepoolnetworkconfig">[]Get<wbr>Cluster<wbr>Node<wbr>Pool<wbr>Network<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6325,6 +6341,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="networkconfigs_nodejs">
+<a href="#networkconfigs_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Configs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getclusternodepoolnetworkconfig">Get<wbr>Cluster<wbr>Node<wbr>Pool<wbr>Network<wbr>Config[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="nodeconfigs_nodejs">
 <a href="#nodeconfigs_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Configs</a>
 </span>
@@ -6423,6 +6447,14 @@ The following output properties are available:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="network_configs_python">
+<a href="#network_configs_python" style="color: inherit; text-decoration: inherit;">network_<wbr>configs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getclusternodepoolnetworkconfig">Sequence[Get<wbr>Cluster<wbr>Node<wbr>Pool<wbr>Network<wbr>Config]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -6631,6 +6663,122 @@ The following output properties are available:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="getclusternodepoolnetworkconfig">Get<wbr>Cluster<wbr>Node<wbr>Pool<wbr>Network<wbr>Config</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="createpodrange_csharp">
+<a href="#createpodrange_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Pod<wbr>Range</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="podipv4cidrblock_csharp">
+<a href="#podipv4cidrblock_csharp" style="color: inherit; text-decoration: inherit;">Pod<wbr>Ipv4Cidr<wbr>Block</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="podrange_csharp">
+<a href="#podrange_csharp" style="color: inherit; text-decoration: inherit;">Pod<wbr>Range</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="createpodrange_go">
+<a href="#createpodrange_go" style="color: inherit; text-decoration: inherit;">Create<wbr>Pod<wbr>Range</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="podipv4cidrblock_go">
+<a href="#podipv4cidrblock_go" style="color: inherit; text-decoration: inherit;">Pod<wbr>Ipv4Cidr<wbr>Block</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="podrange_go">
+<a href="#podrange_go" style="color: inherit; text-decoration: inherit;">Pod<wbr>Range</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="createpodrange_nodejs">
+<a href="#createpodrange_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Pod<wbr>Range</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="podipv4cidrblock_nodejs">
+<a href="#podipv4cidrblock_nodejs" style="color: inherit; text-decoration: inherit;">pod<wbr>Ipv4Cidr<wbr>Block</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="podrange_nodejs">
+<a href="#podrange_nodejs" style="color: inherit; text-decoration: inherit;">pod<wbr>Range</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="create_pod_range_python">
+<a href="#create_pod_range_python" style="color: inherit; text-decoration: inherit;">create_<wbr>pod_<wbr>range</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="pod_ipv4_cidr_block_python">
+<a href="#pod_ipv4_cidr_block_python" style="color: inherit; text-decoration: inherit;">pod_<wbr>ipv4_<wbr>cidr_<wbr>block</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="pod_range_python">
+<a href="#pod_range_python" style="color: inherit; text-decoration: inherit;">pod_<wbr>range</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}

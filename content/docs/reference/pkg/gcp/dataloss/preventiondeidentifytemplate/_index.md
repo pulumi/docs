@@ -70,7 +70,7 @@ class MyStack : Stack
                                 },
                                 new Gcp.DataLoss.Inputs.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationInfoTypeArgs
                                 {
-                                    Name = "CREDIT_CARD_NUMBER",
+                                    Name = "AGE",
                                 },
                             },
                             PrimitiveTransformation = new Gcp.DataLoss.Inputs.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationArgs
@@ -218,7 +218,7 @@ func main() {
 									Name: pulumi.String("PHONE_NUMBER"),
 								},
 								&dataloss.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationInfoTypeArgs{
-									Name: pulumi.String("CREDIT_CARD_NUMBER"),
+									Name: pulumi.String("AGE"),
 								},
 							},
 							PrimitiveTransformation: &dataloss.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationArgs{
@@ -334,7 +334,7 @@ basic = gcp.dataloss.PreventionDeidentifyTemplate("basic",
                             name="PHONE_NUMBER",
                         ),
                         gcp.dataloss.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationInfoTypeArgs(
-                            name="CREDIT_CARD_NUMBER",
+                            name="AGE",
                         ),
                     ],
                     primitive_transformation=gcp.dataloss.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationArgs(
@@ -438,7 +438,7 @@ const basic = new gcp.dataloss.PreventionDeidentifyTemplate("basic", {
                             name: "PHONE_NUMBER",
                         },
                         {
-                            name: "CREDIT_CARD_NUMBER",
+                            name: "AGE",
                         },
                     ],
                     primitiveTransformation: {
