@@ -50,12 +50,12 @@ including all the required frontmatter parameters.
 
    **Important**
 
-   The `title` will populate the `<title>` tag of the page, the `<h1>`, and the display value if it is linked to internally. This field has a strict 60 character limit because of SEO related limitations. If you would like to have a longer display title (i.e. the `<h1>` tag) then you will need to specify it by adding `h1: Whatever title you would like` to the front matter. If you would like to display different text on internal links than what the `title` value is, you can also specify a `linktitle` value. Both the `h1` and `linktitle` values can be of any length. Below is an example of this:
+   The `title` will populate the `<title>` tag of the page, the `<h1>`, and the display value if it is linked to internally. This field has a strict 60 character limit because of SEO related limitations. If you would like to have a longer display title (i.e. the `<h1>` tag) then you will need to specify it by adding `allow_long_title: True` to the front matter. If you would like to display different text on internal links than what the `title` value is, you can also specify a `linktitle` value. Both the `allow_long_title` and `linktitle` values can be of any length. Below is an example of this:
 
    ```
    ---
    title: This a Page Title
-   h1: This is the H1 for the page
+   allow_long_title: True
    linktitle: This is the link text
    ...
    ---
