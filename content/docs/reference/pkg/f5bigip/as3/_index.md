@@ -14,7 +14,6 @@ meta_desc: "Documentation for the f5bigip.As3 resource with examples, input prop
 
 This resource is helpful to configure as3 declarative JSON on BIG-IP.
 
-
 {{% examples %}}
 
 ## Example Usage
@@ -246,7 +245,7 @@ const as3_example1Index_as3As3 = new f5bigip.As3("as3-example1Index/as3As3", {
 
 ## As3 Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Architecture and Concepts docs.
 
 ### Inputs
 
@@ -290,7 +289,7 @@ The As3 resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}If there are muntiple tenants in a json this attribute helps the user to set a particular tenant to which he want to reflect the changes. Other tenants will neither be created nor be modified
+    <dd>{{% md %}}If there are multiple tenants on a BIG-IP, this attribute helps the user to set a particular tenant to which he want to reflect the changes. Other tenants will neither be created nor be modified.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenantlist_csharp">
@@ -348,7 +347,7 @@ The As3 resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}If there are muntiple tenants in a json this attribute helps the user to set a particular tenant to which he want to reflect the changes. Other tenants will neither be created nor be modified
+    <dd>{{% md %}}If there are multiple tenants on a BIG-IP, this attribute helps the user to set a particular tenant to which he want to reflect the changes. Other tenants will neither be created nor be modified.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenantlist_go">
@@ -406,7 +405,7 @@ The As3 resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}If there are muntiple tenants in a json this attribute helps the user to set a particular tenant to which he want to reflect the changes. Other tenants will neither be created nor be modified
+    <dd>{{% md %}}If there are multiple tenants on a BIG-IP, this attribute helps the user to set a particular tenant to which he want to reflect the changes. Other tenants will neither be created nor be modified.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenantlist_nodejs">
@@ -464,7 +463,7 @@ The As3 resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}If there are muntiple tenants in a json this attribute helps the user to set a particular tenant to which he want to reflect the changes. Other tenants will neither be created nor be modified
+    <dd>{{% md %}}If there are multiple tenants on a BIG-IP, this attribute helps the user to set a particular tenant to which he want to reflect the changes. Other tenants will neither be created nor be modified.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenant_list_python">
@@ -708,7 +707,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}If there are muntiple tenants in a json this attribute helps the user to set a particular tenant to which he want to reflect the changes. Other tenants will neither be created nor be modified
+    <dd>{{% md %}}If there are multiple tenants on a BIG-IP, this attribute helps the user to set a particular tenant to which he want to reflect the changes. Other tenants will neither be created nor be modified.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tenantlist_csharp">
@@ -766,7 +765,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}If there are muntiple tenants in a json this attribute helps the user to set a particular tenant to which he want to reflect the changes. Other tenants will neither be created nor be modified
+    <dd>{{% md %}}If there are multiple tenants on a BIG-IP, this attribute helps the user to set a particular tenant to which he want to reflect the changes. Other tenants will neither be created nor be modified.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tenantlist_go">
@@ -824,7 +823,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}If there are muntiple tenants in a json this attribute helps the user to set a particular tenant to which he want to reflect the changes. Other tenants will neither be created nor be modified
+    <dd>{{% md %}}If there are multiple tenants on a BIG-IP, this attribute helps the user to set a particular tenant to which he want to reflect the changes. Other tenants will neither be created nor be modified.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tenantlist_nodejs">
@@ -882,7 +881,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}If there are muntiple tenants in a json this attribute helps the user to set a particular tenant to which he want to reflect the changes. Other tenants will neither be created nor be modified
+    <dd>{{% md %}}If there are multiple tenants on a BIG-IP, this attribute helps the user to set a particular tenant to which he want to reflect the changes. Other tenants will neither be created nor be modified.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tenant_list_python">
@@ -906,6 +905,448 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+As3 resources can be imported using the partition name, e.g., ( use comma separated partition names if there are multiple partitions in as3 deployments )
+
+```sh
+ $ pulumi import f5bigip:index/as3:As3 bigip_as3.test Sample_http_01
+```
+
+```sh
+ $ pulumi import f5bigip:index/as3:As3 bigip_as3.test Sample_http_01,Sample_non_http_01
+```
+
+#### Import examples ( single and multiple partitions )
+
+```sh
+ $ pulumi import f5bigip:index/as3:As3 test Sample_http_01
+```
+
+ bigip_as3.testImporting from ID "Sample_http_01"... bigip_as3.testImport prepared!
+
+ Prepared bigip_as3 for import bigip_as3.testRefreshing state... [id=Sample_http_01] Import successful! The resources that were imported are shown above. These resources are now in your Terraform state and will henceforth be managed by Terraform. $ terraform show # bigip_as3.testresource "bigip_as3" "test" {
+
+ as3_json
+
+= jsonencode(
+
+ {
+
+ action
+
+= "deploy"
+
+ class
+
+ = "AS3"
+
+ declaration = {
+
+ Sample_http_01 = {
+
+ A1
+
+= {
+
+ class
+
+= "Application"
+
+ jsessionid = {
+
+ class
+
+ = "Persist"
+
+ cookieMethod
+
+= "hash"
+
+ cookieName
+
+= "JSESSIONID"
+
+ persistenceMethod = "cookie"
+
+ }
+
+ service
+
+= {
+
+ class
+
+= "Service_HTTP"
+
+ persistenceMethods = [
+
+ {
+
+ use = "jsessionid"
+
+ },
+
+ ]
+
+ pool
+
+ = "web_pool"
+
+ virtualAddresses
+
+ = [
+
+ "10.0.2.10",
+
+ ]
+
+ }
+
+ web_pool
+
+ = {
+
+ class
+
+= "Pool"
+
+ members
+
+= [
+
+ {
+
+ serverAddresses = [
+
+ "192.0.2.10",
+
+ "192.0.2.11",
+
+ ]
+
+ servicePort
+
+ = 80
+
+ },
+
+ ]
+
+ monitors = [
+
+ "http",
+
+ ]
+
+ }
+
+ }
+
+ class = "Tenant"
+
+ }
+
+ class
+
+= "ADC"
+
+ id
+
+ = "UDP_DNS_Sample"
+
+ label
+
+= "UDP_DNS_Sample"
+
+ remark
+
+ = "Sample of a UDP DNS Load Balancer Service"
+
+ schemaVersion
+
+= "3.0.0"
+
+ }
+
+ persist
+
+ = true
+
+ }
+
+ )
+
+ id
+
+= "Sample_http_01"
+
+ tenant_filter = "Sample_http_01"
+
+ tenant_list
+
+ = "Sample_http_01" }
+
+```sh
+ $ pulumi import f5bigip:index/as3:As3 test Sample_http_01,Sample_non_http_01
+```
+
+ bigip_as3.testImporting from ID "Sample_http_01,Sample_non_http_01"... bigip_as3.testImport prepared!
+
+ Prepared bigip_as3 for import bigip_as3.testRefreshing state... [id=Sample_http_01,Sample_non_http_01] Import successful! The resources that were imported are shown above. These resources are now in your Terraform state and will henceforth be managed by Terraform. $ terraform show # bigip_as3.testresource "bigip_as3" "test" {
+
+ as3_json
+
+= jsonencode(
+
+ {
+
+ action
+
+= "deploy"
+
+ class
+
+ = "AS3"
+
+ declaration = {
+
+ Sample_http_01
+
+ = {
+
+ A1
+
+= {
+
+ class
+
+= "Application"
+
+ jsessionid = {
+
+ class
+
+ = "Persist"
+
+ cookieMethod
+
+= "hash"
+
+ cookieName
+
+= "JSESSIONID"
+
+ persistenceMethod = "cookie"
+
+ }
+
+ service
+
+= {
+
+ class
+
+= "Service_HTTP"
+
+ persistenceMethods = [
+
+ {
+
+ use = "jsessionid"
+
+ },
+
+ ]
+
+ pool
+
+ = "web_pool"
+
+ virtualAddresses
+
+ = [
+
+ "10.0.2.10",
+
+ ]
+
+ }
+
+ web_pool
+
+ = {
+
+ class
+
+= "Pool"
+
+ members
+
+= [
+
+ {
+
+ serverAddresses = [
+
+ "192.0.2.10",
+
+ "192.0.2.11",
+
+ ]
+
+ servicePort
+
+ = 80
+
+ },
+
+ ]
+
+ monitors = [
+
+ "http",
+
+ ]
+
+ }
+
+ }
+
+ class = "Tenant"
+
+ }
+
+ Sample_non_http_01 = {
+
+ DNS_Service = {
+
+ Pool1
+
+ = {
+
+ class
+
+= "Pool"
+
+ members
+
+= [
+
+ {
+
+ serverAddresses = [
+
+ "10.1.10.100",
+
+ ]
+
+ servicePort
+
+ = 53
+
+ },
+
+ {
+
+ serverAddresses = [
+
+ "10.1.10.101",
+
+ ]
+
+ servicePort
+
+ = 53
+
+ },
+
+ ]
+
+ monitors = [
+
+ "icmp",
+
+ ]
+
+ }
+
+ class
+
+ = "Application"
+
+ service = {
+
+ class
+
+= "Service_UDP"
+
+ pool
+
+ = "Pool1"
+
+ virtualAddresses = [
+
+ "10.1.20.121",
+
+ ]
+
+ virtualPort
+
+= 53
+
+ }
+
+ }
+
+ class
+
+ = "Tenant"
+
+ }
+
+ class
+
+= "ADC"
+
+ id
+
+ = "UDP_DNS_Sample"
+
+ label
+
+= "UDP_DNS_Sample"
+
+ remark
+
+ = "Sample of a UDP DNS Load Balancer Service"
+
+ schemaVersion
+
+= "3.0.0"
+
+ }
+
+ persist
+
+ = true
+
+ }
+
+ )
+
+ id
+
+= "Sample_http_01,Sample_non_http_01"
+
+ tenant_filter = "Sample_http_01,Sample_non_http_01"
+
+ tenant_list
+
+ = "Sample_http_01,Sample_non_http_01" } * `AS3 documentation` - https://clouddocs.f5.com/products/extensions/f5-appsvcs-extension/latest/userguide/composing-a-declaration.html
 
 
 

@@ -12,7 +12,7 @@ meta_desc: "Documentation for the f5bigip.ltm.Node resource with examples, input
 
 `f5bigip.ltm.Node` Manages a node configuration
 
-For resources should be named with their "full path". The full path is the combination of the partition + name of the resource. For example /Common/my-pool.
+For resources should be named with their "full path".The full path is the combination of the partition + name of the resource( example: /Common/my-node ) or partition + Direcroty + nameof the resource ( example: /Common/test/my-node ).When including directory in fullpath we have to make sure it is created in the given partition before using it.
 
 
 {{% examples %}}
@@ -295,7 +295,7 @@ const node = new f5bigip.ltm.Node("node", {
 
 ## Node Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Architecture and Concepts docs.
 
 ### Inputs
 
@@ -392,7 +392,7 @@ The Node resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Enables or disables the node for new sessions. Can be set to `user-enabled` or `user-disabled`. (Default: `user-enabled`).
+    <dd>{{% md %}}Enables or disables the node for new sessions. The default value is user-enabled.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_csharp">
@@ -494,7 +494,7 @@ The Node resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Enables or disables the node for new sessions. Can be set to `user-enabled` or `user-disabled`. (Default: `user-enabled`).
+    <dd>{{% md %}}Enables or disables the node for new sessions. The default value is user-enabled.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_go">
@@ -596,7 +596,7 @@ The Node resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Enables or disables the node for new sessions. Can be set to `user-enabled` or `user-disabled`. (Default: `user-enabled`).
+    <dd>{{% md %}}Enables or disables the node for new sessions. The default value is user-enabled.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nodejs">
@@ -698,7 +698,7 @@ The Node resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Enables or disables the node for new sessions. Can be set to `user-enabled` or `user-disabled`. (Default: `user-enabled`).
+    <dd>{{% md %}}Enables or disables the node for new sessions. The default value is user-enabled.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_python">
@@ -991,7 +991,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Enables or disables the node for new sessions. Can be set to `user-enabled` or `user-disabled`. (Default: `user-enabled`).
+    <dd>{{% md %}}Enables or disables the node for new sessions. The default value is user-enabled.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_state_csharp">
@@ -1093,7 +1093,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Enables or disables the node for new sessions. Can be set to `user-enabled` or `user-disabled`. (Default: `user-enabled`).
+    <dd>{{% md %}}Enables or disables the node for new sessions. The default value is user-enabled.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_state_go">
@@ -1195,7 +1195,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Enables or disables the node for new sessions. Can be set to `user-enabled` or `user-disabled`. (Default: `user-enabled`).
+    <dd>{{% md %}}Enables or disables the node for new sessions. The default value is user-enabled.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_state_nodejs">
@@ -1297,7 +1297,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Enables or disables the node for new sessions. Can be set to `user-enabled` or `user-disabled`. (Default: `user-enabled`).
+    <dd>{{% md %}}Enables or disables the node for new sessions. The default value is user-enabled.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_state_python">

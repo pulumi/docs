@@ -25,6 +25,7 @@ Explore the resources and functions of the f5bigip.ltm module.
     <li><a href="profileclientssl" title="ProfileClientSsl"><span class="symbol resource"></span>ProfileClientSsl</a></li>
     <li><a href="profilefasthttp" title="ProfileFastHttp"><span class="symbol resource"></span>ProfileFastHttp</a></li>
     <li><a href="profilefastl4" title="ProfileFastL4"><span class="symbol resource"></span>ProfileFastL4</a></li>
+    <li><a href="profileftp" title="ProfileFtp"><span class="symbol resource"></span>ProfileFtp</a></li>
     <li><a href="profilehttp" title="ProfileHttp"><span class="symbol resource"></span>ProfileHttp</a></li>
     <li><a href="profilehttp2" title="ProfileHttp2"><span class="symbol resource"></span>ProfileHttp2</a></li>
     <li><a href="profilehttpcompress" title="ProfileHttpCompress"><span class="symbol resource"></span>ProfileHttpCompress</a></li>
@@ -55,6 +56,6 @@ Explore the resources and functions of the f5bigip.ltm module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`bigip` Terraform Provider](https://github.com/F5Networks/terraform-provider-bigip).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>3.3.0</dd>
+	<dd>3.4.0</dd>
 </dl>
 

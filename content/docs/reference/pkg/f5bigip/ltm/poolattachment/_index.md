@@ -57,11 +57,6 @@ class MyStack : Stack
         {
             Pool = pool.Name,
             Node = "1.1.1.1:80",
-            Ratio = 2,
-            ConnectionLimit = 2,
-            ConnectionRateLimit = "2",
-            PriorityGroup = 2,
-            DynamicRatio = 3,
         });
     }
 
@@ -107,13 +102,8 @@ func main() {
 			return err
 		}
 		_, err = ltm.NewPoolAttachment(ctx, "attachNode", &ltm.PoolAttachmentArgs{
-			Pool:                pool.Name,
-			Node:                pulumi.String("1.1.1.1:80"),
-			Ratio:               pulumi.Int(2),
-			ConnectionLimit:     pulumi.Int(2),
-			ConnectionRateLimit: pulumi.String("2"),
-			PriorityGroup:       pulumi.Int(2),
-			DynamicRatio:        pulumi.Int(3),
+			Pool: pool.Name,
+			Node: pulumi.String("1.1.1.1:80"),
 		})
 		if err != nil {
 			return err
@@ -147,12 +137,7 @@ pool = f5bigip.ltm.Pool("pool",
     allow_nat="yes")
 attach_node = f5bigip.ltm.PoolAttachment("attachNode",
     pool=pool.name,
-    node="1.1.1.1:80",
-    ratio=2,
-    connection_limit=2,
-    connection_rate_limit="2",
-    priority_group=2,
-    dynamic_ratio=3)
+    node="1.1.1.1:80")
 ```
 
 
@@ -183,11 +168,6 @@ const pool = new f5bigip.ltm.Pool("pool", {
 const attachNode = new f5bigip.ltm.PoolAttachment("attachNode", {
     pool: pool.name,
     node: "1.1.1.1:80",
-    ratio: 2,
-    connectionLimit: 2,
-    connectionRateLimit: 2,
-    priorityGroup: 2,
-    dynamicRatio: 3,
 });
 ```
 
@@ -341,7 +321,7 @@ const attachNode = new f5bigip.ltm.PoolAttachment("attachNode", {
 
 ## PoolAttachment Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Architecture and Concepts docs.
 
 ### Inputs
 
@@ -367,7 +347,7 @@ The PoolAttachment resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the pool to which members should be attached,it should be "full path".The full path is the combination of the partition + name of the pool.(For example `/Common/my-pool`)
+    <dd>{{% md %}}Name of the pool to which members should be attached,it should be "full path".The full path is the combination of the partition + name of the pool.(For example `/Common/my-pool`) or partition + directory + name of the pool (For example `/Common/test/my-pool`).When including directory in fullpath we have to make sure it is created in the given partition before using it.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connectionlimit_csharp">
@@ -443,7 +423,7 @@ The PoolAttachment resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the pool to which members should be attached,it should be "full path".The full path is the combination of the partition + name of the pool.(For example `/Common/my-pool`)
+    <dd>{{% md %}}Name of the pool to which members should be attached,it should be "full path".The full path is the combination of the partition + name of the pool.(For example `/Common/my-pool`) or partition + directory + name of the pool (For example `/Common/test/my-pool`).When including directory in fullpath we have to make sure it is created in the given partition before using it.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connectionlimit_go">
@@ -519,7 +499,7 @@ The PoolAttachment resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the pool to which members should be attached,it should be "full path".The full path is the combination of the partition + name of the pool.(For example `/Common/my-pool`)
+    <dd>{{% md %}}Name of the pool to which members should be attached,it should be "full path".The full path is the combination of the partition + name of the pool.(For example `/Common/my-pool`) or partition + directory + name of the pool (For example `/Common/test/my-pool`).When including directory in fullpath we have to make sure it is created in the given partition before using it.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connectionlimit_nodejs">
@@ -595,7 +575,7 @@ The PoolAttachment resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the pool to which members should be attached,it should be "full path".The full path is the combination of the partition + name of the pool.(For example `/Common/my-pool`)
+    <dd>{{% md %}}Name of the pool to which members should be attached,it should be "full path".The full path is the combination of the partition + name of the pool.(For example `/Common/my-pool`) or partition + directory + name of the pool (For example `/Common/test/my-pool`).When including directory in fullpath we have to make sure it is created in the given partition before using it.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connection_limit_python">
@@ -895,7 +875,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the pool to which members should be attached,it should be "full path".The full path is the combination of the partition + name of the pool.(For example `/Common/my-pool`)
+    <dd>{{% md %}}Name of the pool to which members should be attached,it should be "full path".The full path is the combination of the partition + name of the pool.(For example `/Common/my-pool`) or partition + directory + name of the pool (For example `/Common/test/my-pool`).When including directory in fullpath we have to make sure it is created in the given partition before using it.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_prioritygroup_csharp">
@@ -971,7 +951,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the pool to which members should be attached,it should be "full path".The full path is the combination of the partition + name of the pool.(For example `/Common/my-pool`)
+    <dd>{{% md %}}Name of the pool to which members should be attached,it should be "full path".The full path is the combination of the partition + name of the pool.(For example `/Common/my-pool`) or partition + directory + name of the pool (For example `/Common/test/my-pool`).When including directory in fullpath we have to make sure it is created in the given partition before using it.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_prioritygroup_go">
@@ -1047,7 +1027,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the pool to which members should be attached,it should be "full path".The full path is the combination of the partition + name of the pool.(For example `/Common/my-pool`)
+    <dd>{{% md %}}Name of the pool to which members should be attached,it should be "full path".The full path is the combination of the partition + name of the pool.(For example `/Common/my-pool`) or partition + directory + name of the pool (For example `/Common/test/my-pool`).When including directory in fullpath we have to make sure it is created in the given partition before using it.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_prioritygroup_nodejs">
@@ -1123,7 +1103,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the pool to which members should be attached,it should be "full path".The full path is the combination of the partition + name of the pool.(For example `/Common/my-pool`)
+    <dd>{{% md %}}Name of the pool to which members should be attached,it should be "full path".The full path is the combination of the partition + name of the pool.(For example `/Common/my-pool`) or partition + directory + name of the pool (For example `/Common/test/my-pool`).When including directory in fullpath we have to make sure it is created in the given partition before using it.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_priority_group_python">

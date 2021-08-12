@@ -267,7 +267,7 @@ const test_provision = new f5bigip.sys.Provision("test-provision", {
 
 ## Provision Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Architecture and Concepts docs.
 
 ### Inputs
 
@@ -311,7 +311,7 @@ The Provision resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the module being enabled. It can be one among the list [afm, am, apm, asm, avr, cgnat, fps, gtm, ilx, lc, ltm, pem, swg, urldb, sslo, vcmp]
+    <dd>{{% md %}}path
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="level_csharp">
@@ -320,7 +320,7 @@ The Provision resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the level of resources that you want to provision for a module. The list of allowed values are [minimum, nominal, dedicated, custom, none]
+    <dd>{{% md %}}what level nominal or dedicated
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="memoryratio_csharp">
@@ -369,7 +369,7 @@ The Provision resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the module being enabled. It can be one among the list [afm, am, apm, asm, avr, cgnat, fps, gtm, ilx, lc, ltm, pem, swg, urldb, sslo, vcmp]
+    <dd>{{% md %}}path
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="level_go">
@@ -378,7 +378,7 @@ The Provision resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the level of resources that you want to provision for a module. The list of allowed values are [minimum, nominal, dedicated, custom, none]
+    <dd>{{% md %}}what level nominal or dedicated
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="memoryratio_go">
@@ -427,7 +427,7 @@ The Provision resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the module being enabled. It can be one among the list [afm, am, apm, asm, avr, cgnat, fps, gtm, ilx, lc, ltm, pem, swg, urldb, sslo, vcmp]
+    <dd>{{% md %}}path
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="level_nodejs">
@@ -436,7 +436,7 @@ The Provision resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the level of resources that you want to provision for a module. The list of allowed values are [minimum, nominal, dedicated, custom, none]
+    <dd>{{% md %}}what level nominal or dedicated
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="memoryratio_nodejs">
@@ -485,7 +485,7 @@ The Provision resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies the module being enabled. It can be one among the list [afm, am, apm, asm, avr, cgnat, fps, gtm, ilx, lc, ltm, pem, swg, urldb, sslo, vcmp]
+    <dd>{{% md %}}path
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="level_python">
@@ -494,7 +494,7 @@ The Provision resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies the level of resources that you want to provision for a module. The list of allowed values are [minimum, nominal, dedicated, custom, none]
+    <dd>{{% md %}}what level nominal or dedicated
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="memory_ratio_python">
@@ -720,7 +720,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the module being enabled. It can be one among the list [afm, am, apm, asm, avr, cgnat, fps, gtm, ilx, lc, ltm, pem, swg, urldb, sslo, vcmp]
+    <dd>{{% md %}}path
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_level_csharp">
@@ -729,7 +729,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the level of resources that you want to provision for a module. The list of allowed values are [minimum, nominal, dedicated, custom, none]
+    <dd>{{% md %}}what level nominal or dedicated
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_memoryratio_csharp">
@@ -778,7 +778,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the module being enabled. It can be one among the list [afm, am, apm, asm, avr, cgnat, fps, gtm, ilx, lc, ltm, pem, swg, urldb, sslo, vcmp]
+    <dd>{{% md %}}path
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_level_go">
@@ -787,7 +787,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the level of resources that you want to provision for a module. The list of allowed values are [minimum, nominal, dedicated, custom, none]
+    <dd>{{% md %}}what level nominal or dedicated
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_memoryratio_go">
@@ -836,7 +836,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the module being enabled. It can be one among the list [afm, am, apm, asm, avr, cgnat, fps, gtm, ilx, lc, ltm, pem, swg, urldb, sslo, vcmp]
+    <dd>{{% md %}}path
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_level_nodejs">
@@ -845,7 +845,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the level of resources that you want to provision for a module. The list of allowed values are [minimum, nominal, dedicated, custom, none]
+    <dd>{{% md %}}what level nominal or dedicated
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_memoryratio_nodejs">
@@ -894,7 +894,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies the module being enabled. It can be one among the list [afm, am, apm, asm, avr, cgnat, fps, gtm, ilx, lc, ltm, pem, swg, urldb, sslo, vcmp]
+    <dd>{{% md %}}path
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_level_python">
@@ -903,7 +903,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies the level of resources that you want to provision for a module. The list of allowed values are [minimum, nominal, dedicated, custom, none]
+    <dd>{{% md %}}what level nominal or dedicated
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_memory_ratio_python">

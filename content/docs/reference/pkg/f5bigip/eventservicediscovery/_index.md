@@ -145,7 +145,7 @@ meta_desc: "Documentation for the f5bigip.EventServiceDiscovery resource with ex
 
 ## EventServiceDiscovery Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Architecture and Concepts docs.
 
 ### Inputs
 
@@ -162,7 +162,7 @@ The EventServiceDiscovery resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the partition/tenant
+    <dd>{{% md %}}servicediscovery endpoint ( Below example shows how to create endpoing using AS3 )
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodes_csharp">
@@ -171,7 +171,8 @@ The EventServiceDiscovery resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#eventservicediscoverynode">List&lt;Pulumi.<wbr>F5Big<wbr>IP.<wbr>Inputs.<wbr>Event<wbr>Service<wbr>Discovery<wbr>Node<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Map of node which will be added to pool which will be having node name(id),node address(ip) and node port(port)
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -183,7 +184,7 @@ The EventServiceDiscovery resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the partition/tenant
+    <dd>{{% md %}}servicediscovery endpoint ( Below example shows how to create endpoing using AS3 )
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodes_go">
@@ -192,7 +193,8 @@ The EventServiceDiscovery resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#eventservicediscoverynode">[]Event<wbr>Service<wbr>Discovery<wbr>Node<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Map of node which will be added to pool which will be having node name(id),node address(ip) and node port(port)
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -204,7 +206,7 @@ The EventServiceDiscovery resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the partition/tenant
+    <dd>{{% md %}}servicediscovery endpoint ( Below example shows how to create endpoing using AS3 )
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodes_nodejs">
@@ -213,7 +215,8 @@ The EventServiceDiscovery resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#eventservicediscoverynode">Event<wbr>Service<wbr>Discovery<wbr>Node<wbr>Args[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Map of node which will be added to pool which will be having node name(id),node address(ip) and node port(port)
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -225,7 +228,7 @@ The EventServiceDiscovery resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the partition/tenant
+    <dd>{{% md %}}servicediscovery endpoint ( Below example shows how to create endpoing using AS3 )
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodes_python">
@@ -234,7 +237,8 @@ The EventServiceDiscovery resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#eventservicediscoverynode">Sequence[Event<wbr>Service<wbr>Discovery<wbr>Node<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Map of node which will be added to pool which will be having node name(id),node address(ip) and node port(port)
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -428,7 +432,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#eventservicediscoverynode">List&lt;Pulumi.<wbr>F5Big<wbr>IP.<wbr>Inputs.<wbr>Event<wbr>Service<wbr>Discovery<wbr>Node<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Map of node which will be added to pool which will be having node name(id),node address(ip) and node port(port)
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_taskid_csharp">
 <a href="#state_taskid_csharp" style="color: inherit; text-decoration: inherit;">Taskid</a>
@@ -436,7 +441,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the partition/tenant
+    <dd>{{% md %}}servicediscovery endpoint ( Below example shows how to create endpoing using AS3 )
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -449,7 +454,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#eventservicediscoverynode">[]Event<wbr>Service<wbr>Discovery<wbr>Node<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Map of node which will be added to pool which will be having node name(id),node address(ip) and node port(port)
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_taskid_go">
 <a href="#state_taskid_go" style="color: inherit; text-decoration: inherit;">Taskid</a>
@@ -457,7 +463,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the partition/tenant
+    <dd>{{% md %}}servicediscovery endpoint ( Below example shows how to create endpoing using AS3 )
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -470,7 +476,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#eventservicediscoverynode">Event<wbr>Service<wbr>Discovery<wbr>Node<wbr>Args[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Map of node which will be added to pool which will be having node name(id),node address(ip) and node port(port)
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_taskid_nodejs">
 <a href="#state_taskid_nodejs" style="color: inherit; text-decoration: inherit;">taskid</a>
@@ -478,7 +485,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the partition/tenant
+    <dd>{{% md %}}servicediscovery endpoint ( Below example shows how to create endpoing using AS3 )
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -491,7 +498,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#eventservicediscoverynode">Sequence[Event<wbr>Service<wbr>Discovery<wbr>Node<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Map of node which will be added to pool which will be having node name(id),node address(ip) and node port(port)
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_taskid_python">
 <a href="#state_taskid_python" style="color: inherit; text-decoration: inherit;">taskid</a>
@@ -499,7 +507,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the partition/tenant
+    <dd>{{% md %}}servicediscovery endpoint ( Below example shows how to create endpoing using AS3 )
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
