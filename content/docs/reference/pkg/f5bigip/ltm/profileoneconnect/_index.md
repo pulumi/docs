@@ -12,7 +12,7 @@ meta_desc: "Documentation for the f5bigip.ltm.ProfileOneConnect resource with ex
 
 `f5bigip.ltm.ProfileOneConnect` Configures a custom profile_oneconnect for use by health checks.
 
-For resources should be named with their "full path". The full path is the combination of the partition + name of the resource. For example /Common/my-pool.
+Resources should be named with their "full path". The full path is the combination of the partition + name (example: /Common/my-pool ) or  partition + directory + name of the resource  (example: /Common/test/my-pool )
 
 {{% examples %}}
 
@@ -251,7 +251,7 @@ const test_oneconnect = new f5bigip.ltm.ProfileOneConnect("test-oneconnect", {
 
 ## ProfileOneConnect Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Architecture and Concepts docs.
 
 ### Inputs
 

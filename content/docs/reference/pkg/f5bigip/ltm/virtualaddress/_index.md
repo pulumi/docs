@@ -12,7 +12,7 @@ meta_desc: "Documentation for the f5bigip.ltm.VirtualAddress resource with examp
 
 `f5bigip.ltm.VirtualAddress` Configures Virtual Server
 
-For resources should be named with their "full path". The full path is the combination of the partition + name of the resource. For example /Common/my-pool.
+For resources should be named with their "full path". The full path is the combination of the partition + name of the resource. For example /Common/virtual_server.
 
 
 {{% examples %}}
@@ -37,8 +37,8 @@ class MyStack : Stack
     {
         var vsVa = new F5BigIP.Ltm.VirtualAddress("vsVa", new F5BigIP.Ltm.VirtualAddressArgs
         {
-            AdvertizeRoute = "true",
-            Name = "/Common/vs_va",
+            AdvertizeRoute = "enabled",
+            Name = "/Common/xxxxx",
         });
     }
 
@@ -62,8 +62,8 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := ltm.NewVirtualAddress(ctx, "vsVa", &ltm.VirtualAddressArgs{
-			AdvertizeRoute: pulumi.String("true"),
-			Name:           pulumi.String("/Common/vs_va"),
+			AdvertizeRoute: pulumi.String("enabled"),
+			Name:           pulumi.String("/Common/xxxxx"),
 		})
 		if err != nil {
 			return err
@@ -84,8 +84,8 @@ import pulumi
 import pulumi_f5bigip as f5bigip
 
 vs_va = f5bigip.ltm.VirtualAddress("vsVa",
-    advertize_route="true",
-    name="/Common/vs_va")
+    advertize_route="enabled",
+    name="/Common/xxxxx")
 ```
 
 
@@ -100,8 +100,8 @@ import * as pulumi from "@pulumi/pulumi";
 import * as f5bigip from "@pulumi/f5bigip";
 
 const vsVa = new f5bigip.ltm.VirtualAddress("vs_va", {
-    advertizeRoute: "true",
-    name: "/Common/vs_va",
+    advertizeRoute: "enabled",
+    name: "/Common/xxxxx",
 });
 ```
 
@@ -255,7 +255,7 @@ const vsVa = new f5bigip.ltm.VirtualAddress("vs_va", {
 
 ## VirtualAddress Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Architecture and Concepts docs.
 
 ### Inputs
 
@@ -281,7 +281,7 @@ The VirtualAddress resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Enabled dynamic routing of the address
+    <dd>{{% md %}}Enabled dynamic routing of the address ( In versions prior to BIG-IP 13.0.0 HF1, you can configure the Route Advertisement option for a virtual address to be either Enabled or Disabled only. Beginning with BIG-IP 13.0.0 HF1, F5 added more settings for the Route Advertisement option. In addition, the Enabled setting is deprecated and replaced by the Selective setting. For more information, please look into KB article https://support.f5.com/csp/article/K85543242 )
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="arp_csharp">
@@ -326,7 +326,7 @@ The VirtualAddress resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Enable/Disable ICMP response to the virtual address
+    <dd>{{% md %}}Specifies how the system sends responses to ICMP echo requests on a per-virtual address basis.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="trafficgroup_csharp">
@@ -357,7 +357,7 @@ The VirtualAddress resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Enabled dynamic routing of the address
+    <dd>{{% md %}}Enabled dynamic routing of the address ( In versions prior to BIG-IP 13.0.0 HF1, you can configure the Route Advertisement option for a virtual address to be either Enabled or Disabled only. Beginning with BIG-IP 13.0.0 HF1, F5 added more settings for the Route Advertisement option. In addition, the Enabled setting is deprecated and replaced by the Selective setting. For more information, please look into KB article https://support.f5.com/csp/article/K85543242 )
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="arp_go">
@@ -402,7 +402,7 @@ The VirtualAddress resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Enable/Disable ICMP response to the virtual address
+    <dd>{{% md %}}Specifies how the system sends responses to ICMP echo requests on a per-virtual address basis.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="trafficgroup_go">
@@ -433,7 +433,7 @@ The VirtualAddress resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Enabled dynamic routing of the address
+    <dd>{{% md %}}Enabled dynamic routing of the address ( In versions prior to BIG-IP 13.0.0 HF1, you can configure the Route Advertisement option for a virtual address to be either Enabled or Disabled only. Beginning with BIG-IP 13.0.0 HF1, F5 added more settings for the Route Advertisement option. In addition, the Enabled setting is deprecated and replaced by the Selective setting. For more information, please look into KB article https://support.f5.com/csp/article/K85543242 )
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="arp_nodejs">
@@ -478,7 +478,7 @@ The VirtualAddress resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Enable/Disable ICMP response to the virtual address
+    <dd>{{% md %}}Specifies how the system sends responses to ICMP echo requests on a per-virtual address basis.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="trafficgroup_nodejs">
@@ -509,7 +509,7 @@ The VirtualAddress resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Enabled dynamic routing of the address
+    <dd>{{% md %}}Enabled dynamic routing of the address ( In versions prior to BIG-IP 13.0.0 HF1, you can configure the Route Advertisement option for a virtual address to be either Enabled or Disabled only. Beginning with BIG-IP 13.0.0 HF1, F5 added more settings for the Route Advertisement option. In addition, the Enabled setting is deprecated and replaced by the Selective setting. For more information, please look into KB article https://support.f5.com/csp/article/K85543242 )
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="arp_python">
@@ -554,7 +554,7 @@ The VirtualAddress resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Enable/Disable ICMP response to the virtual address
+    <dd>{{% md %}}Specifies how the system sends responses to ICMP echo requests on a per-virtual address basis.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="traffic_group_python">
@@ -764,7 +764,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Enabled dynamic routing of the address
+    <dd>{{% md %}}Enabled dynamic routing of the address ( In versions prior to BIG-IP 13.0.0 HF1, you can configure the Route Advertisement option for a virtual address to be either Enabled or Disabled only. Beginning with BIG-IP 13.0.0 HF1, F5 added more settings for the Route Advertisement option. In addition, the Enabled setting is deprecated and replaced by the Selective setting. For more information, please look into KB article https://support.f5.com/csp/article/K85543242 )
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_arp_csharp">
@@ -809,7 +809,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Enable/Disable ICMP response to the virtual address
+    <dd>{{% md %}}Specifies how the system sends responses to ICMP echo requests on a per-virtual address basis.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
@@ -840,7 +840,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Enabled dynamic routing of the address
+    <dd>{{% md %}}Enabled dynamic routing of the address ( In versions prior to BIG-IP 13.0.0 HF1, you can configure the Route Advertisement option for a virtual address to be either Enabled or Disabled only. Beginning with BIG-IP 13.0.0 HF1, F5 added more settings for the Route Advertisement option. In addition, the Enabled setting is deprecated and replaced by the Selective setting. For more information, please look into KB article https://support.f5.com/csp/article/K85543242 )
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_arp_go">
@@ -885,7 +885,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Enable/Disable ICMP response to the virtual address
+    <dd>{{% md %}}Specifies how the system sends responses to ICMP echo requests on a per-virtual address basis.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
@@ -916,7 +916,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Enabled dynamic routing of the address
+    <dd>{{% md %}}Enabled dynamic routing of the address ( In versions prior to BIG-IP 13.0.0 HF1, you can configure the Route Advertisement option for a virtual address to be either Enabled or Disabled only. Beginning with BIG-IP 13.0.0 HF1, F5 added more settings for the Route Advertisement option. In addition, the Enabled setting is deprecated and replaced by the Selective setting. For more information, please look into KB article https://support.f5.com/csp/article/K85543242 )
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_arp_nodejs">
@@ -961,7 +961,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Enable/Disable ICMP response to the virtual address
+    <dd>{{% md %}}Specifies how the system sends responses to ICMP echo requests on a per-virtual address basis.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
@@ -992,7 +992,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Enabled dynamic routing of the address
+    <dd>{{% md %}}Enabled dynamic routing of the address ( In versions prior to BIG-IP 13.0.0 HF1, you can configure the Route Advertisement option for a virtual address to be either Enabled or Disabled only. Beginning with BIG-IP 13.0.0 HF1, F5 added more settings for the Route Advertisement option. In addition, the Enabled setting is deprecated and replaced by the Selective setting. For more information, please look into KB article https://support.f5.com/csp/article/K85543242 )
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_arp_python">
@@ -1037,7 +1037,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Enable/Disable ICMP response to the virtual address
+    <dd>{{% md %}}Specifies how the system sends responses to ICMP echo requests on a per-virtual address basis.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">

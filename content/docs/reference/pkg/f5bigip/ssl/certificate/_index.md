@@ -113,6 +113,7 @@ const test_cert = new f5bigip.ssl.Certificate("test-cert", {
 <span class="k">def </span><span class="nx">Certificate</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                 <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
                 <span class="nx">content</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">full_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                 <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                 <span class="nx">partition</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
@@ -233,7 +234,7 @@ const test_cert = new f5bigip.ssl.Certificate("test-cert", {
 
 ## Certificate Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Architecture and Concepts docs.
 
 ### Inputs
 
@@ -260,6 +261,15 @@ The Certificate resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the SSL Certificate to be Imported on to BIGIP
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="fullpath_csharp">
+<a href="#fullpath_csharp" style="color: inherit; text-decoration: inherit;">Full<wbr>Path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Full Path Name of ssl certificate
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="partition_csharp">
@@ -293,6 +303,15 @@ The Certificate resource accepts the following [input]({{< relref "/docs/intro/c
     <dd>{{% md %}}Name of the SSL Certificate to be Imported on to BIGIP
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="fullpath_go">
+<a href="#fullpath_go" style="color: inherit; text-decoration: inherit;">Full<wbr>Path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Full Path Name of ssl certificate
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="partition_go">
 <a href="#partition_go" style="color: inherit; text-decoration: inherit;">Partition</a>
 </span>
@@ -324,6 +343,15 @@ The Certificate resource accepts the following [input]({{< relref "/docs/intro/c
     <dd>{{% md %}}Name of the SSL Certificate to be Imported on to BIGIP
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="fullpath_nodejs">
+<a href="#fullpath_nodejs" style="color: inherit; text-decoration: inherit;">full<wbr>Path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Full Path Name of ssl certificate
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="partition_nodejs">
 <a href="#partition_nodejs" style="color: inherit; text-decoration: inherit;">partition</a>
 </span>
@@ -353,6 +381,15 @@ The Certificate resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the SSL Certificate to be Imported on to BIGIP
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="full_path_python">
+<a href="#full_path_python" style="color: inherit; text-decoration: inherit;">full_<wbr>path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Full Path Name of ssl certificate
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="partition_python">
@@ -437,6 +474,7 @@ Get an existing Certificate resource's state with the given name, ID, and option
         <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
         <span class="nx">content</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">full_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">partition</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Certificate</code></pre></div>
 {{% /choosable %}}
@@ -560,6 +598,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Content of certificate on Disk
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_fullpath_csharp">
+<a href="#state_fullpath_csharp" style="color: inherit; text-decoration: inherit;">Full<wbr>Path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Full Path Name of ssl certificate
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
@@ -589,6 +636,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Content of certificate on Disk
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_fullpath_go">
+<a href="#state_fullpath_go" style="color: inherit; text-decoration: inherit;">Full<wbr>Path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Full Path Name of ssl certificate
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
@@ -622,6 +678,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Content of certificate on Disk
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_fullpath_nodejs">
+<a href="#state_fullpath_nodejs" style="color: inherit; text-decoration: inherit;">full<wbr>Path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Full Path Name of ssl certificate
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
@@ -651,6 +716,15 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Content of certificate on Disk
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_full_path_python">
+<a href="#state_full_path_python" style="color: inherit; text-decoration: inherit;">full_<wbr>path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Full Path Name of ssl certificate
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">

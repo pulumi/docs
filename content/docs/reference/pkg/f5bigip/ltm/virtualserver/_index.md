@@ -12,7 +12,7 @@ meta_desc: "Documentation for the f5bigip.ltm.VirtualServer resource with exampl
 
 `f5bigip.ltm.VirtualServer` Configures Virtual Server
 
-For resources should be named with their "full path". The full path is the combination of the partition + name of the resource. For example /Common/my-pool.
+For resources should be named with their "full path". The full path is the combination of the partition + name of the resource (example: /Common/my-pool ) or partition + directory + name of the resource (example: /Common/test/my-pool ).When including directory in fullpath we have to make sure it is created in the given partition before using it.
 
 
 {{% examples %}}
@@ -75,6 +75,10 @@ class MyStack : Stack
             {
                 "/Common/serverssl",
             },
+            SecurityLogProfiles = 
+            {
+                "/Common/global-network",
+            },
             SourceAddressTranslation = "automap",
         });
     }
@@ -136,6 +140,9 @@ func main() {
 			ServerProfiles: pulumi.StringArray{
 				pulumi.String("/Common/serverssl"),
 			},
+			SecurityLogProfiles: pulumi.StringArray{
+				pulumi.String("/Common/global-network"),
+			},
 			SourceAddressTranslation: pulumi.String("automap"),
 		})
 		if err != nil {
@@ -184,6 +191,7 @@ https_ltm_virtual_server_virtual_server = f5bigip.ltm.VirtualServer("httpsLtm/vi
     port=443,
     client_profiles=["/Common/clientssl"],
     server_profiles=["/Common/serverssl"],
+    security_log_profiles=["/Common/global-network"],
     source_address_translation="automap")
 ```
 
@@ -228,6 +236,7 @@ const httpsLtm_virtualServerVirtualServer = new f5bigip.ltm.VirtualServer("https
     port: 443,
     clientProfiles: ["/Common/clientssl"],
     serverProfiles: ["/Common/serverssl"],
+    securityLogProfiles: ["/Common/global-network"],
     sourceAddressTranslation: "automap",
 });
 ```
@@ -399,7 +408,7 @@ const httpsLtm_virtualServerVirtualServer = new f5bigip.ltm.VirtualServer("https
 
 ## VirtualServer Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Architecture and Concepts docs.
 
 ### Inputs
 
@@ -548,7 +557,8 @@ The VirtualServer resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the log profile applied to the virtual server.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serverprofiles_csharp">
 <a href="#serverprofiles_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>Profiles</a>
@@ -773,7 +783,8 @@ The VirtualServer resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the log profile applied to the virtual server.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serverprofiles_go">
 <a href="#serverprofiles_go" style="color: inherit; text-decoration: inherit;">Server<wbr>Profiles</a>
@@ -998,7 +1009,8 @@ The VirtualServer resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the log profile applied to the virtual server.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serverprofiles_nodejs">
 <a href="#serverprofiles_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Profiles</a>
@@ -1223,7 +1235,8 @@ The VirtualServer resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the log profile applied to the virtual server.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="server_profiles_python">
 <a href="#server_profiles_python" style="color: inherit; text-decoration: inherit;">server_<wbr>profiles</a>
@@ -1653,7 +1666,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the log profile applied to the virtual server.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serverprofiles_csharp">
 <a href="#state_serverprofiles_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>Profiles</a>
@@ -1878,7 +1892,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the log profile applied to the virtual server.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serverprofiles_go">
 <a href="#state_serverprofiles_go" style="color: inherit; text-decoration: inherit;">Server<wbr>Profiles</a>
@@ -2103,7 +2118,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the log profile applied to the virtual server.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serverprofiles_nodejs">
 <a href="#state_serverprofiles_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Profiles</a>
@@ -2328,7 +2344,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Specifies the log profile applied to the virtual server.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_server_profiles_python">
 <a href="#state_server_profiles_python" style="color: inherit; text-decoration: inherit;">server_<wbr>profiles</a>

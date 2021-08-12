@@ -37,7 +37,6 @@ class MyStack : Stack
         var sanjose_http = new F5BigIP.Ltm.ProfileHttp("sanjose-http", new F5BigIP.Ltm.ProfileHttpArgs
         {
             DefaultsFrom = "/Common/http",
-            Description = "some http",
             FallbackHost = "titanic",
             FallbackStatusCodes = 
             {
@@ -70,7 +69,6 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := ltm.NewProfileHttp(ctx, "sanjose_http", &ltm.ProfileHttpArgs{
 			DefaultsFrom: pulumi.String("/Common/http"),
-			Description:  pulumi.String("some http"),
 			FallbackHost: pulumi.String("titanic"),
 			FallbackStatusCodes: pulumi.StringArray{
 				pulumi.String("400"),
@@ -99,7 +97,6 @@ import pulumi_f5bigip as f5bigip
 
 sanjose_http = f5bigip.ltm.ProfileHttp("sanjose-http",
     defaults_from="/Common/http",
-    description="some http",
     fallback_host="titanic",
     fallback_status_codes=[
         "400",
@@ -122,7 +119,6 @@ import * as f5bigip from "@pulumi/f5bigip";
 
 const sanjose_http = new f5bigip.ltm.ProfileHttp("sanjose-http", {
     defaultsFrom: "/Common/http",
-    description: "some http",
     fallbackHost: "titanic",
     fallbackStatusCodes: [
         "400",
@@ -170,6 +166,7 @@ const sanjose_http = new f5bigip.ltm.ProfileHttp("sanjose-http", {
                 <span class="nx">head_insert</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                 <span class="nx">insert_xforwarded_for</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                 <span class="nx">lws_separator</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                <span class="nx">lws_width</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
                 <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                 <span class="nx">oneconnect_transformations</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                 <span class="nx">proxy_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -301,7 +298,7 @@ const sanjose_http = new f5bigip.ltm.ProfileHttp("sanjose-http", {
 
 ## ProfileHttp Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Architecture and Concepts docs.
 
 ### Inputs
 
@@ -318,7 +315,7 @@ The ProfileHttp resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the profile_http
+    <dd>{{% md %}}Specifies the name of the http profile,name of Profile should be full path. Full path is the combination of the `partition + profile name`,For example `/Common/test-http-profile`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="acceptxff_csharp">
@@ -327,8 +324,7 @@ The ProfileHttp resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Enables or disables trusting the client IP address, and statistics from the client IP address, based on the request's
-XFF (X-forwarded-for) headers, if they exist.
+    <dd>{{% md %}}Enables or disables trusting the client IP address, and statistics from the client IP address, based on the request's XFF (X-forwarded-for) headers, if they exist.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="appservice_csharp">
@@ -346,7 +342,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies a quoted string for the basic authentication realm. The system sends this string to a client whenever authorization fails. The default value is none
+    <dd>{{% md %}}Specifies a quoted string for the basic authentication realm. The system sends this string to a client whenever authorization fails. The default value is `none`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultsfrom_csharp">
@@ -364,7 +360,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}User defined description
+    <dd>{{% md %}}Specifies user-defined description.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encryptcookiesecret_csharp">
@@ -373,7 +369,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies a passphrase for the cookie encryption
+    <dd>{{% md %}}Type a passphrase for cookie encryption.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encryptcookies_csharp">
@@ -382,7 +378,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Encrypts specified cookies that the BIG-IP system sends to a client system
+    <dd>{{% md %}}Type the cookie names for the system to encrypt.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fallbackhost_csharp">
@@ -400,7 +396,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Specifies one or more three-digit status codes that can be returned by an HTTP server.
+    <dd>{{% md %}}Specifies one or more three-digit status codes that can be returned by an HTTP server,that should trigger a redirection to the fallback host.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="headerase_csharp">
@@ -409,7 +405,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the header string that you want to erase from an HTTP request. You can also specify none
+    <dd>{{% md %}}Specifies the header string that you want to erase from an HTTP request. Default is `none`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="headinsert_csharp">
@@ -418,7 +414,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies a quoted header string that you want to insert into an HTTP request
+    <dd>{{% md %}}Specifies a quoted header string that you want to insert into an HTTP request.Default is `none`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="insertxforwardedfor_csharp">
@@ -427,7 +423,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}When using connection pooling, which allows clients to make use of other client requests' server-side connections, you can insert the X-Forwarded-For header and specify a client IP address
+    <dd>{{% md %}}Specifies, when enabled, that the system inserts an X-Forwarded-For header in an HTTP request with the client IP address, to use with connection pooling. The default is `Disabled`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lwsseparator_csharp">
@@ -436,7 +432,17 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies a quoted header string that you want to insert into an HTTP request. You can also specify none.
+    <dd>{{% md %}}Specifies the linear white space (LWS) separator that the system inserts when a header exceeds the maximum width you
+specify in the LWS Maximum Columns setting.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="lwswidth_csharp">
+<a href="#lwswidth_csharp" style="color: inherit; text-decoration: inherit;">Lws<wbr>Width</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Specifies the linear white space (LWS) separator that the system inserts when a header exceeds the maximum width you specify in the LWS Maximum Columns setting.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="oneconnecttransformations_csharp">
@@ -454,7 +460,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the type of HTTP proxy.
+    <dd>{{% md %}}Specifies the proxy mode for this profile: reverse, explicit, or transparent. The default is `reverse`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="redirectrewrite_csharp">
@@ -463,7 +469,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies which of the application HTTP redirects the system rewrites to HTTPS.
+    <dd>{{% md %}}Specifies whether the system rewrites the URIs that are part of HTTP redirect (3XX) responses. The default is `none`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestchunking_csharp">
@@ -472,7 +478,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies how to handle chunked and unchunked requests.
+    <dd>{{% md %}}Specifies how the system handles HTTP content that is chunked by a client. The default is `preserve`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="responsechunking_csharp">
@@ -481,7 +487,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies how to handle chunked and unchunked responses.
+    <dd>{{% md %}}Specifies how the system handles HTTP content that is chunked by a server. The default is `selective`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="responseheaderspermitteds_csharp">
@@ -490,7 +496,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Specifies headers that the BIG-IP system allows in an HTTP response.
+    <dd>{{% md %}}Specifies headers that the BIG-IP system allows in an HTTP response.If you are specifying more than one header, separate the headers with a blank space.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serveragentname_csharp">
@@ -545,7 +551,7 @@ string is specified, then no Server header will be added to such responses
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Specifies alternative XFF headers instead of the default X-forwarded-for header
+    <dd>{{% md %}}Specifies alternative XFF headers instead of the default X-forwarded-for header.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -558,7 +564,7 @@ string is specified, then no Server header will be added to such responses
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the profile_http
+    <dd>{{% md %}}Specifies the name of the http profile,name of Profile should be full path. Full path is the combination of the `partition + profile name`,For example `/Common/test-http-profile`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="acceptxff_go">
@@ -567,8 +573,7 @@ string is specified, then no Server header will be added to such responses
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Enables or disables trusting the client IP address, and statistics from the client IP address, based on the request's
-XFF (X-forwarded-for) headers, if they exist.
+    <dd>{{% md %}}Enables or disables trusting the client IP address, and statistics from the client IP address, based on the request's XFF (X-forwarded-for) headers, if they exist.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="appservice_go">
@@ -586,7 +591,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies a quoted string for the basic authentication realm. The system sends this string to a client whenever authorization fails. The default value is none
+    <dd>{{% md %}}Specifies a quoted string for the basic authentication realm. The system sends this string to a client whenever authorization fails. The default value is `none`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultsfrom_go">
@@ -604,7 +609,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}User defined description
+    <dd>{{% md %}}Specifies user-defined description.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encryptcookiesecret_go">
@@ -613,7 +618,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies a passphrase for the cookie encryption
+    <dd>{{% md %}}Type a passphrase for cookie encryption.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encryptcookies_go">
@@ -622,7 +627,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Encrypts specified cookies that the BIG-IP system sends to a client system
+    <dd>{{% md %}}Type the cookie names for the system to encrypt.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fallbackhost_go">
@@ -640,7 +645,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Specifies one or more three-digit status codes that can be returned by an HTTP server.
+    <dd>{{% md %}}Specifies one or more three-digit status codes that can be returned by an HTTP server,that should trigger a redirection to the fallback host.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="headerase_go">
@@ -649,7 +654,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the header string that you want to erase from an HTTP request. You can also specify none
+    <dd>{{% md %}}Specifies the header string that you want to erase from an HTTP request. Default is `none`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="headinsert_go">
@@ -658,7 +663,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies a quoted header string that you want to insert into an HTTP request
+    <dd>{{% md %}}Specifies a quoted header string that you want to insert into an HTTP request.Default is `none`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="insertxforwardedfor_go">
@@ -667,7 +672,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}When using connection pooling, which allows clients to make use of other client requests' server-side connections, you can insert the X-Forwarded-For header and specify a client IP address
+    <dd>{{% md %}}Specifies, when enabled, that the system inserts an X-Forwarded-For header in an HTTP request with the client IP address, to use with connection pooling. The default is `Disabled`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lwsseparator_go">
@@ -676,7 +681,17 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies a quoted header string that you want to insert into an HTTP request. You can also specify none.
+    <dd>{{% md %}}Specifies the linear white space (LWS) separator that the system inserts when a header exceeds the maximum width you
+specify in the LWS Maximum Columns setting.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="lwswidth_go">
+<a href="#lwswidth_go" style="color: inherit; text-decoration: inherit;">Lws<wbr>Width</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Specifies the linear white space (LWS) separator that the system inserts when a header exceeds the maximum width you specify in the LWS Maximum Columns setting.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="oneconnecttransformations_go">
@@ -694,7 +709,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the type of HTTP proxy.
+    <dd>{{% md %}}Specifies the proxy mode for this profile: reverse, explicit, or transparent. The default is `reverse`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="redirectrewrite_go">
@@ -703,7 +718,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies which of the application HTTP redirects the system rewrites to HTTPS.
+    <dd>{{% md %}}Specifies whether the system rewrites the URIs that are part of HTTP redirect (3XX) responses. The default is `none`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestchunking_go">
@@ -712,7 +727,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies how to handle chunked and unchunked requests.
+    <dd>{{% md %}}Specifies how the system handles HTTP content that is chunked by a client. The default is `preserve`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="responsechunking_go">
@@ -721,7 +736,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies how to handle chunked and unchunked responses.
+    <dd>{{% md %}}Specifies how the system handles HTTP content that is chunked by a server. The default is `selective`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="responseheaderspermitteds_go">
@@ -730,7 +745,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Specifies headers that the BIG-IP system allows in an HTTP response.
+    <dd>{{% md %}}Specifies headers that the BIG-IP system allows in an HTTP response.If you are specifying more than one header, separate the headers with a blank space.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serveragentname_go">
@@ -785,7 +800,7 @@ string is specified, then no Server header will be added to such responses
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Specifies alternative XFF headers instead of the default X-forwarded-for header
+    <dd>{{% md %}}Specifies alternative XFF headers instead of the default X-forwarded-for header.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -798,7 +813,7 @@ string is specified, then no Server header will be added to such responses
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the profile_http
+    <dd>{{% md %}}Specifies the name of the http profile,name of Profile should be full path. Full path is the combination of the `partition + profile name`,For example `/Common/test-http-profile`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="acceptxff_nodejs">
@@ -807,8 +822,7 @@ string is specified, then no Server header will be added to such responses
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Enables or disables trusting the client IP address, and statistics from the client IP address, based on the request's
-XFF (X-forwarded-for) headers, if they exist.
+    <dd>{{% md %}}Enables or disables trusting the client IP address, and statistics from the client IP address, based on the request's XFF (X-forwarded-for) headers, if they exist.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="appservice_nodejs">
@@ -826,7 +840,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies a quoted string for the basic authentication realm. The system sends this string to a client whenever authorization fails. The default value is none
+    <dd>{{% md %}}Specifies a quoted string for the basic authentication realm. The system sends this string to a client whenever authorization fails. The default value is `none`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultsfrom_nodejs">
@@ -844,7 +858,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}User defined description
+    <dd>{{% md %}}Specifies user-defined description.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encryptcookiesecret_nodejs">
@@ -853,7 +867,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies a passphrase for the cookie encryption
+    <dd>{{% md %}}Type a passphrase for cookie encryption.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encryptcookies_nodejs">
@@ -862,7 +876,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Encrypts specified cookies that the BIG-IP system sends to a client system
+    <dd>{{% md %}}Type the cookie names for the system to encrypt.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fallbackhost_nodejs">
@@ -880,7 +894,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Specifies one or more three-digit status codes that can be returned by an HTTP server.
+    <dd>{{% md %}}Specifies one or more three-digit status codes that can be returned by an HTTP server,that should trigger a redirection to the fallback host.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="headerase_nodejs">
@@ -889,7 +903,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the header string that you want to erase from an HTTP request. You can also specify none
+    <dd>{{% md %}}Specifies the header string that you want to erase from an HTTP request. Default is `none`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="headinsert_nodejs">
@@ -898,7 +912,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies a quoted header string that you want to insert into an HTTP request
+    <dd>{{% md %}}Specifies a quoted header string that you want to insert into an HTTP request.Default is `none`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="insertxforwardedfor_nodejs">
@@ -907,7 +921,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}When using connection pooling, which allows clients to make use of other client requests' server-side connections, you can insert the X-Forwarded-For header and specify a client IP address
+    <dd>{{% md %}}Specifies, when enabled, that the system inserts an X-Forwarded-For header in an HTTP request with the client IP address, to use with connection pooling. The default is `Disabled`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lwsseparator_nodejs">
@@ -916,7 +930,17 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies a quoted header string that you want to insert into an HTTP request. You can also specify none.
+    <dd>{{% md %}}Specifies the linear white space (LWS) separator that the system inserts when a header exceeds the maximum width you
+specify in the LWS Maximum Columns setting.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="lwswidth_nodejs">
+<a href="#lwswidth_nodejs" style="color: inherit; text-decoration: inherit;">lws<wbr>Width</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Specifies the linear white space (LWS) separator that the system inserts when a header exceeds the maximum width you specify in the LWS Maximum Columns setting.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="oneconnecttransformations_nodejs">
@@ -934,7 +958,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the type of HTTP proxy.
+    <dd>{{% md %}}Specifies the proxy mode for this profile: reverse, explicit, or transparent. The default is `reverse`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="redirectrewrite_nodejs">
@@ -943,7 +967,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies which of the application HTTP redirects the system rewrites to HTTPS.
+    <dd>{{% md %}}Specifies whether the system rewrites the URIs that are part of HTTP redirect (3XX) responses. The default is `none`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestchunking_nodejs">
@@ -952,7 +976,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies how to handle chunked and unchunked requests.
+    <dd>{{% md %}}Specifies how the system handles HTTP content that is chunked by a client. The default is `preserve`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="responsechunking_nodejs">
@@ -961,7 +985,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies how to handle chunked and unchunked responses.
+    <dd>{{% md %}}Specifies how the system handles HTTP content that is chunked by a server. The default is `selective`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="responseheaderspermitteds_nodejs">
@@ -970,7 +994,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Specifies headers that the BIG-IP system allows in an HTTP response.
+    <dd>{{% md %}}Specifies headers that the BIG-IP system allows in an HTTP response.If you are specifying more than one header, separate the headers with a blank space.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serveragentname_nodejs">
@@ -1025,7 +1049,7 @@ string is specified, then no Server header will be added to such responses
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Specifies alternative XFF headers instead of the default X-forwarded-for header
+    <dd>{{% md %}}Specifies alternative XFF headers instead of the default X-forwarded-for header.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1038,7 +1062,7 @@ string is specified, then no Server header will be added to such responses
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the profile_http
+    <dd>{{% md %}}Specifies the name of the http profile,name of Profile should be full path. Full path is the combination of the `partition + profile name`,For example `/Common/test-http-profile`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accept_xff_python">
@@ -1047,8 +1071,7 @@ string is specified, then no Server header will be added to such responses
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Enables or disables trusting the client IP address, and statistics from the client IP address, based on the request's
-XFF (X-forwarded-for) headers, if they exist.
+    <dd>{{% md %}}Enables or disables trusting the client IP address, and statistics from the client IP address, based on the request's XFF (X-forwarded-for) headers, if they exist.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="app_service_python">
@@ -1066,7 +1089,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies a quoted string for the basic authentication realm. The system sends this string to a client whenever authorization fails. The default value is none
+    <dd>{{% md %}}Specifies a quoted string for the basic authentication realm. The system sends this string to a client whenever authorization fails. The default value is `none`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaults_from_python">
@@ -1084,7 +1107,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}User defined description
+    <dd>{{% md %}}Specifies user-defined description.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encrypt_cookie_secret_python">
@@ -1093,7 +1116,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies a passphrase for the cookie encryption
+    <dd>{{% md %}}Type a passphrase for cookie encryption.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encrypt_cookies_python">
@@ -1102,7 +1125,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Encrypts specified cookies that the BIG-IP system sends to a client system
+    <dd>{{% md %}}Type the cookie names for the system to encrypt.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fallback_host_python">
@@ -1120,7 +1143,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Specifies one or more three-digit status codes that can be returned by an HTTP server.
+    <dd>{{% md %}}Specifies one or more three-digit status codes that can be returned by an HTTP server,that should trigger a redirection to the fallback host.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="head_erase_python">
@@ -1129,7 +1152,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies the header string that you want to erase from an HTTP request. You can also specify none
+    <dd>{{% md %}}Specifies the header string that you want to erase from an HTTP request. Default is `none`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="head_insert_python">
@@ -1138,7 +1161,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies a quoted header string that you want to insert into an HTTP request
+    <dd>{{% md %}}Specifies a quoted header string that you want to insert into an HTTP request.Default is `none`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="insert_xforwarded_for_python">
@@ -1147,7 +1170,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}When using connection pooling, which allows clients to make use of other client requests' server-side connections, you can insert the X-Forwarded-For header and specify a client IP address
+    <dd>{{% md %}}Specifies, when enabled, that the system inserts an X-Forwarded-For header in an HTTP request with the client IP address, to use with connection pooling. The default is `Disabled`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lws_separator_python">
@@ -1156,7 +1179,17 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies a quoted header string that you want to insert into an HTTP request. You can also specify none.
+    <dd>{{% md %}}Specifies the linear white space (LWS) separator that the system inserts when a header exceeds the maximum width you
+specify in the LWS Maximum Columns setting.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="lws_width_python">
+<a href="#lws_width_python" style="color: inherit; text-decoration: inherit;">lws_<wbr>width</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Specifies the linear white space (LWS) separator that the system inserts when a header exceeds the maximum width you specify in the LWS Maximum Columns setting.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="oneconnect_transformations_python">
@@ -1174,7 +1207,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies the type of HTTP proxy.
+    <dd>{{% md %}}Specifies the proxy mode for this profile: reverse, explicit, or transparent. The default is `reverse`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="redirect_rewrite_python">
@@ -1183,7 +1216,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies which of the application HTTP redirects the system rewrites to HTTPS.
+    <dd>{{% md %}}Specifies whether the system rewrites the URIs that are part of HTTP redirect (3XX) responses. The default is `none`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="request_chunking_python">
@@ -1192,7 +1225,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies how to handle chunked and unchunked requests.
+    <dd>{{% md %}}Specifies how the system handles HTTP content that is chunked by a client. The default is `preserve`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="response_chunking_python">
@@ -1201,7 +1234,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies how to handle chunked and unchunked responses.
+    <dd>{{% md %}}Specifies how the system handles HTTP content that is chunked by a server. The default is `selective`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="response_headers_permitteds_python">
@@ -1210,7 +1243,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Specifies headers that the BIG-IP system allows in an HTTP response.
+    <dd>{{% md %}}Specifies headers that the BIG-IP system allows in an HTTP response.If you are specifying more than one header, separate the headers with a blank space.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="server_agent_name_python">
@@ -1265,7 +1298,7 @@ string is specified, then no Server header will be added to such responses
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Specifies alternative XFF headers instead of the default X-forwarded-for header
+    <dd>{{% md %}}Specifies alternative XFF headers instead of the default X-forwarded-for header.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1353,6 +1386,7 @@ Get an existing ProfileHttp resource's state with the given name, ID, and option
         <span class="nx">head_insert</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">insert_xforwarded_for</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">lws_separator</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">lws_width</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">oneconnect_transformations</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">proxy_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -1484,8 +1518,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Enables or disables trusting the client IP address, and statistics from the client IP address, based on the request's
-XFF (X-forwarded-for) headers, if they exist.
+    <dd>{{% md %}}Enables or disables trusting the client IP address, and statistics from the client IP address, based on the request's XFF (X-forwarded-for) headers, if they exist.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_appservice_csharp">
@@ -1503,7 +1536,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies a quoted string for the basic authentication realm. The system sends this string to a client whenever authorization fails. The default value is none
+    <dd>{{% md %}}Specifies a quoted string for the basic authentication realm. The system sends this string to a client whenever authorization fails. The default value is `none`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultsfrom_csharp">
@@ -1521,7 +1554,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}User defined description
+    <dd>{{% md %}}Specifies user-defined description.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_encryptcookiesecret_csharp">
@@ -1530,7 +1563,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies a passphrase for the cookie encryption
+    <dd>{{% md %}}Type a passphrase for cookie encryption.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_encryptcookies_csharp">
@@ -1539,7 +1572,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Encrypts specified cookies that the BIG-IP system sends to a client system
+    <dd>{{% md %}}Type the cookie names for the system to encrypt.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_fallbackhost_csharp">
@@ -1557,7 +1590,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Specifies one or more three-digit status codes that can be returned by an HTTP server.
+    <dd>{{% md %}}Specifies one or more three-digit status codes that can be returned by an HTTP server,that should trigger a redirection to the fallback host.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_headerase_csharp">
@@ -1566,7 +1599,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the header string that you want to erase from an HTTP request. You can also specify none
+    <dd>{{% md %}}Specifies the header string that you want to erase from an HTTP request. Default is `none`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_headinsert_csharp">
@@ -1575,7 +1608,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies a quoted header string that you want to insert into an HTTP request
+    <dd>{{% md %}}Specifies a quoted header string that you want to insert into an HTTP request.Default is `none`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_insertxforwardedfor_csharp">
@@ -1584,7 +1617,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}When using connection pooling, which allows clients to make use of other client requests' server-side connections, you can insert the X-Forwarded-For header and specify a client IP address
+    <dd>{{% md %}}Specifies, when enabled, that the system inserts an X-Forwarded-For header in an HTTP request with the client IP address, to use with connection pooling. The default is `Disabled`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lwsseparator_csharp">
@@ -1593,7 +1626,17 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies a quoted header string that you want to insert into an HTTP request. You can also specify none.
+    <dd>{{% md %}}Specifies the linear white space (LWS) separator that the system inserts when a header exceeds the maximum width you
+specify in the LWS Maximum Columns setting.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_lwswidth_csharp">
+<a href="#state_lwswidth_csharp" style="color: inherit; text-decoration: inherit;">Lws<wbr>Width</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Specifies the linear white space (LWS) separator that the system inserts when a header exceeds the maximum width you specify in the LWS Maximum Columns setting.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
@@ -1602,7 +1645,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the profile_http
+    <dd>{{% md %}}Specifies the name of the http profile,name of Profile should be full path. Full path is the combination of the `partition + profile name`,For example `/Common/test-http-profile`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_oneconnecttransformations_csharp">
@@ -1620,7 +1663,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the type of HTTP proxy.
+    <dd>{{% md %}}Specifies the proxy mode for this profile: reverse, explicit, or transparent. The default is `reverse`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_redirectrewrite_csharp">
@@ -1629,7 +1672,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies which of the application HTTP redirects the system rewrites to HTTPS.
+    <dd>{{% md %}}Specifies whether the system rewrites the URIs that are part of HTTP redirect (3XX) responses. The default is `none`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_requestchunking_csharp">
@@ -1638,7 +1681,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies how to handle chunked and unchunked requests.
+    <dd>{{% md %}}Specifies how the system handles HTTP content that is chunked by a client. The default is `preserve`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_responsechunking_csharp">
@@ -1647,7 +1690,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies how to handle chunked and unchunked responses.
+    <dd>{{% md %}}Specifies how the system handles HTTP content that is chunked by a server. The default is `selective`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_responseheaderspermitteds_csharp">
@@ -1656,7 +1699,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Specifies headers that the BIG-IP system allows in an HTTP response.
+    <dd>{{% md %}}Specifies headers that the BIG-IP system allows in an HTTP response.If you are specifying more than one header, separate the headers with a blank space.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serveragentname_csharp">
@@ -1711,7 +1754,7 @@ string is specified, then no Server header will be added to such responses
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Specifies alternative XFF headers instead of the default X-forwarded-for header
+    <dd>{{% md %}}Specifies alternative XFF headers instead of the default X-forwarded-for header.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1724,8 +1767,7 @@ string is specified, then no Server header will be added to such responses
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Enables or disables trusting the client IP address, and statistics from the client IP address, based on the request's
-XFF (X-forwarded-for) headers, if they exist.
+    <dd>{{% md %}}Enables or disables trusting the client IP address, and statistics from the client IP address, based on the request's XFF (X-forwarded-for) headers, if they exist.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_appservice_go">
@@ -1743,7 +1785,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies a quoted string for the basic authentication realm. The system sends this string to a client whenever authorization fails. The default value is none
+    <dd>{{% md %}}Specifies a quoted string for the basic authentication realm. The system sends this string to a client whenever authorization fails. The default value is `none`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultsfrom_go">
@@ -1761,7 +1803,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}User defined description
+    <dd>{{% md %}}Specifies user-defined description.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_encryptcookiesecret_go">
@@ -1770,7 +1812,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies a passphrase for the cookie encryption
+    <dd>{{% md %}}Type a passphrase for cookie encryption.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_encryptcookies_go">
@@ -1779,7 +1821,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Encrypts specified cookies that the BIG-IP system sends to a client system
+    <dd>{{% md %}}Type the cookie names for the system to encrypt.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_fallbackhost_go">
@@ -1797,7 +1839,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Specifies one or more three-digit status codes that can be returned by an HTTP server.
+    <dd>{{% md %}}Specifies one or more three-digit status codes that can be returned by an HTTP server,that should trigger a redirection to the fallback host.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_headerase_go">
@@ -1806,7 +1848,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the header string that you want to erase from an HTTP request. You can also specify none
+    <dd>{{% md %}}Specifies the header string that you want to erase from an HTTP request. Default is `none`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_headinsert_go">
@@ -1815,7 +1857,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies a quoted header string that you want to insert into an HTTP request
+    <dd>{{% md %}}Specifies a quoted header string that you want to insert into an HTTP request.Default is `none`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_insertxforwardedfor_go">
@@ -1824,7 +1866,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}When using connection pooling, which allows clients to make use of other client requests' server-side connections, you can insert the X-Forwarded-For header and specify a client IP address
+    <dd>{{% md %}}Specifies, when enabled, that the system inserts an X-Forwarded-For header in an HTTP request with the client IP address, to use with connection pooling. The default is `Disabled`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lwsseparator_go">
@@ -1833,7 +1875,17 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies a quoted header string that you want to insert into an HTTP request. You can also specify none.
+    <dd>{{% md %}}Specifies the linear white space (LWS) separator that the system inserts when a header exceeds the maximum width you
+specify in the LWS Maximum Columns setting.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_lwswidth_go">
+<a href="#state_lwswidth_go" style="color: inherit; text-decoration: inherit;">Lws<wbr>Width</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Specifies the linear white space (LWS) separator that the system inserts when a header exceeds the maximum width you specify in the LWS Maximum Columns setting.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
@@ -1842,7 +1894,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the profile_http
+    <dd>{{% md %}}Specifies the name of the http profile,name of Profile should be full path. Full path is the combination of the `partition + profile name`,For example `/Common/test-http-profile`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_oneconnecttransformations_go">
@@ -1860,7 +1912,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the type of HTTP proxy.
+    <dd>{{% md %}}Specifies the proxy mode for this profile: reverse, explicit, or transparent. The default is `reverse`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_redirectrewrite_go">
@@ -1869,7 +1921,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies which of the application HTTP redirects the system rewrites to HTTPS.
+    <dd>{{% md %}}Specifies whether the system rewrites the URIs that are part of HTTP redirect (3XX) responses. The default is `none`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_requestchunking_go">
@@ -1878,7 +1930,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies how to handle chunked and unchunked requests.
+    <dd>{{% md %}}Specifies how the system handles HTTP content that is chunked by a client. The default is `preserve`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_responsechunking_go">
@@ -1887,7 +1939,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies how to handle chunked and unchunked responses.
+    <dd>{{% md %}}Specifies how the system handles HTTP content that is chunked by a server. The default is `selective`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_responseheaderspermitteds_go">
@@ -1896,7 +1948,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Specifies headers that the BIG-IP system allows in an HTTP response.
+    <dd>{{% md %}}Specifies headers that the BIG-IP system allows in an HTTP response.If you are specifying more than one header, separate the headers with a blank space.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serveragentname_go">
@@ -1951,7 +2003,7 @@ string is specified, then no Server header will be added to such responses
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Specifies alternative XFF headers instead of the default X-forwarded-for header
+    <dd>{{% md %}}Specifies alternative XFF headers instead of the default X-forwarded-for header.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1964,8 +2016,7 @@ string is specified, then no Server header will be added to such responses
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Enables or disables trusting the client IP address, and statistics from the client IP address, based on the request's
-XFF (X-forwarded-for) headers, if they exist.
+    <dd>{{% md %}}Enables or disables trusting the client IP address, and statistics from the client IP address, based on the request's XFF (X-forwarded-for) headers, if they exist.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_appservice_nodejs">
@@ -1983,7 +2034,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies a quoted string for the basic authentication realm. The system sends this string to a client whenever authorization fails. The default value is none
+    <dd>{{% md %}}Specifies a quoted string for the basic authentication realm. The system sends this string to a client whenever authorization fails. The default value is `none`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultsfrom_nodejs">
@@ -2001,7 +2052,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}User defined description
+    <dd>{{% md %}}Specifies user-defined description.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_encryptcookiesecret_nodejs">
@@ -2010,7 +2061,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies a passphrase for the cookie encryption
+    <dd>{{% md %}}Type a passphrase for cookie encryption.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_encryptcookies_nodejs">
@@ -2019,7 +2070,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Encrypts specified cookies that the BIG-IP system sends to a client system
+    <dd>{{% md %}}Type the cookie names for the system to encrypt.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_fallbackhost_nodejs">
@@ -2037,7 +2088,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Specifies one or more three-digit status codes that can be returned by an HTTP server.
+    <dd>{{% md %}}Specifies one or more three-digit status codes that can be returned by an HTTP server,that should trigger a redirection to the fallback host.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_headerase_nodejs">
@@ -2046,7 +2097,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the header string that you want to erase from an HTTP request. You can also specify none
+    <dd>{{% md %}}Specifies the header string that you want to erase from an HTTP request. Default is `none`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_headinsert_nodejs">
@@ -2055,7 +2106,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies a quoted header string that you want to insert into an HTTP request
+    <dd>{{% md %}}Specifies a quoted header string that you want to insert into an HTTP request.Default is `none`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_insertxforwardedfor_nodejs">
@@ -2064,7 +2115,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}When using connection pooling, which allows clients to make use of other client requests' server-side connections, you can insert the X-Forwarded-For header and specify a client IP address
+    <dd>{{% md %}}Specifies, when enabled, that the system inserts an X-Forwarded-For header in an HTTP request with the client IP address, to use with connection pooling. The default is `Disabled`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lwsseparator_nodejs">
@@ -2073,7 +2124,17 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies a quoted header string that you want to insert into an HTTP request. You can also specify none.
+    <dd>{{% md %}}Specifies the linear white space (LWS) separator that the system inserts when a header exceeds the maximum width you
+specify in the LWS Maximum Columns setting.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_lwswidth_nodejs">
+<a href="#state_lwswidth_nodejs" style="color: inherit; text-decoration: inherit;">lws<wbr>Width</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Specifies the linear white space (LWS) separator that the system inserts when a header exceeds the maximum width you specify in the LWS Maximum Columns setting.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
@@ -2082,7 +2143,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the profile_http
+    <dd>{{% md %}}Specifies the name of the http profile,name of Profile should be full path. Full path is the combination of the `partition + profile name`,For example `/Common/test-http-profile`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_oneconnecttransformations_nodejs">
@@ -2100,7 +2161,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the type of HTTP proxy.
+    <dd>{{% md %}}Specifies the proxy mode for this profile: reverse, explicit, or transparent. The default is `reverse`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_redirectrewrite_nodejs">
@@ -2109,7 +2170,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies which of the application HTTP redirects the system rewrites to HTTPS.
+    <dd>{{% md %}}Specifies whether the system rewrites the URIs that are part of HTTP redirect (3XX) responses. The default is `none`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_requestchunking_nodejs">
@@ -2118,7 +2179,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies how to handle chunked and unchunked requests.
+    <dd>{{% md %}}Specifies how the system handles HTTP content that is chunked by a client. The default is `preserve`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_responsechunking_nodejs">
@@ -2127,7 +2188,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies how to handle chunked and unchunked responses.
+    <dd>{{% md %}}Specifies how the system handles HTTP content that is chunked by a server. The default is `selective`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_responseheaderspermitteds_nodejs">
@@ -2136,7 +2197,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Specifies headers that the BIG-IP system allows in an HTTP response.
+    <dd>{{% md %}}Specifies headers that the BIG-IP system allows in an HTTP response.If you are specifying more than one header, separate the headers with a blank space.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serveragentname_nodejs">
@@ -2191,7 +2252,7 @@ string is specified, then no Server header will be added to such responses
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Specifies alternative XFF headers instead of the default X-forwarded-for header
+    <dd>{{% md %}}Specifies alternative XFF headers instead of the default X-forwarded-for header.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2204,8 +2265,7 @@ string is specified, then no Server header will be added to such responses
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Enables or disables trusting the client IP address, and statistics from the client IP address, based on the request's
-XFF (X-forwarded-for) headers, if they exist.
+    <dd>{{% md %}}Enables or disables trusting the client IP address, and statistics from the client IP address, based on the request's XFF (X-forwarded-for) headers, if they exist.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_app_service_python">
@@ -2223,7 +2283,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies a quoted string for the basic authentication realm. The system sends this string to a client whenever authorization fails. The default value is none
+    <dd>{{% md %}}Specifies a quoted string for the basic authentication realm. The system sends this string to a client whenever authorization fails. The default value is `none`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaults_from_python">
@@ -2241,7 +2301,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}User defined description
+    <dd>{{% md %}}Specifies user-defined description.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_encrypt_cookie_secret_python">
@@ -2250,7 +2310,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies a passphrase for the cookie encryption
+    <dd>{{% md %}}Type a passphrase for cookie encryption.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_encrypt_cookies_python">
@@ -2259,7 +2319,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Encrypts specified cookies that the BIG-IP system sends to a client system
+    <dd>{{% md %}}Type the cookie names for the system to encrypt.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_fallback_host_python">
@@ -2277,7 +2337,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Specifies one or more three-digit status codes that can be returned by an HTTP server.
+    <dd>{{% md %}}Specifies one or more three-digit status codes that can be returned by an HTTP server,that should trigger a redirection to the fallback host.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_head_erase_python">
@@ -2286,7 +2346,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies the header string that you want to erase from an HTTP request. You can also specify none
+    <dd>{{% md %}}Specifies the header string that you want to erase from an HTTP request. Default is `none`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_head_insert_python">
@@ -2295,7 +2355,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies a quoted header string that you want to insert into an HTTP request
+    <dd>{{% md %}}Specifies a quoted header string that you want to insert into an HTTP request.Default is `none`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_insert_xforwarded_for_python">
@@ -2304,7 +2364,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}When using connection pooling, which allows clients to make use of other client requests' server-side connections, you can insert the X-Forwarded-For header and specify a client IP address
+    <dd>{{% md %}}Specifies, when enabled, that the system inserts an X-Forwarded-For header in an HTTP request with the client IP address, to use with connection pooling. The default is `Disabled`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lws_separator_python">
@@ -2313,7 +2373,17 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies a quoted header string that you want to insert into an HTTP request. You can also specify none.
+    <dd>{{% md %}}Specifies the linear white space (LWS) separator that the system inserts when a header exceeds the maximum width you
+specify in the LWS Maximum Columns setting.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_lws_width_python">
+<a href="#state_lws_width_python" style="color: inherit; text-decoration: inherit;">lws_<wbr>width</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Specifies the linear white space (LWS) separator that the system inserts when a header exceeds the maximum width you specify in the LWS Maximum Columns setting.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
@@ -2322,7 +2392,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the profile_http
+    <dd>{{% md %}}Specifies the name of the http profile,name of Profile should be full path. Full path is the combination of the `partition + profile name`,For example `/Common/test-http-profile`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_oneconnect_transformations_python">
@@ -2340,7 +2410,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies the type of HTTP proxy.
+    <dd>{{% md %}}Specifies the proxy mode for this profile: reverse, explicit, or transparent. The default is `reverse`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_redirect_rewrite_python">
@@ -2349,7 +2419,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies which of the application HTTP redirects the system rewrites to HTTPS.
+    <dd>{{% md %}}Specifies whether the system rewrites the URIs that are part of HTTP redirect (3XX) responses. The default is `none`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_request_chunking_python">
@@ -2358,7 +2428,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies how to handle chunked and unchunked requests.
+    <dd>{{% md %}}Specifies how the system handles HTTP content that is chunked by a client. The default is `preserve`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_response_chunking_python">
@@ -2367,7 +2437,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies how to handle chunked and unchunked responses.
+    <dd>{{% md %}}Specifies how the system handles HTTP content that is chunked by a server. The default is `selective`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_response_headers_permitteds_python">
@@ -2376,7 +2446,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Specifies headers that the BIG-IP system allows in an HTTP response.
+    <dd>{{% md %}}Specifies headers that the BIG-IP system allows in an HTTP response.If you are specifying more than one header, separate the headers with a blank space.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_server_agent_name_python">
@@ -2431,7 +2501,7 @@ string is specified, then no Server header will be added to such responses
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Specifies alternative XFF headers instead of the default X-forwarded-for header
+    <dd>{{% md %}}Specifies alternative XFF headers instead of the default X-forwarded-for header.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2442,7 +2512,7 @@ string is specified, then no Server header will be added to such responses
 ## Import
 
 
-BIG-IP LTM http profiles can be imported using the `name`, e.g.
+BIG-IP LTM http profiles can be imported using the `name`, e.g. bash
 
 ```sh
  $ pulumi import f5bigip:ltm/profileHttp:ProfileHttp test-http /Common/test-http
