@@ -390,7 +390,7 @@ Follow the instructions to authorize Visual Studio Code to access your GitHub ac
 
 **Step 2**: Create a web application
 
-For convenience, we can use the Azure template for generating web applications. Open this [link](https://github.com/staticwebdev/vanilla-basic/generate) to generate a basic React application.
+For convenience, we can use the Azure template for generating web applications. [Open this link](https://github.com/staticwebdev/vanilla-basic) and click the **Use this template** button to generate a basic React application.
 
 ![Generate app from template](./react-basic.png)
 
