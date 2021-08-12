@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-native.keyvault.ManagedHsm resource with
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Resource information with extended details.
-API Version: 2021-04-01-preview.
+API Version: 2021-06-01-preview.
 
 {{% examples %}}
 

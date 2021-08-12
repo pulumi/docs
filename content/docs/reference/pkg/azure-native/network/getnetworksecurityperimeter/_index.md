@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-native.network.getNetworkSecurityPerimet
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The Network Security Perimeter resource
-API Version: 2021-03-01-preview.
+API Version: 2021-02-01-preview.
 
 
 

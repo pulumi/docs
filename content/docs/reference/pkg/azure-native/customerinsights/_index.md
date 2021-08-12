@@ -50,6 +50,6 @@ Explore the resources and functions of the azure-native.customerinsights module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>1.20.0</dd>
+	<dd>1.21.0</dd>
 </dl>
 
