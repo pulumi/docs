@@ -197,6 +197,7 @@ const openidClient = new keycloak.openid.Client("openidClient", {
            <span class="nx">root_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
            <span class="nx">service_accounts_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
            <span class="nx">standard_flow_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+           <span class="nx">use_refresh_tokens</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
            <span class="nx">valid_redirect_uris</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
            <span class="nx">web_origins</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
@@ -562,6 +563,15 @@ The Client resource accepts the following [input]({{< relref "/docs/intro/concep
     <dd>{{% md %}}When `true`, the OAuth2 Authorization Code Grant will be enabled for this client. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="userefreshtokens_csharp">
+<a href="#userefreshtokens_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Refresh<wbr>Tokens</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If this is `true`, a refresh_token will be created and added to the token response. If this is `false` then no refresh_token will be generated.  Defaults to `true`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="validredirecturis_csharp">
 <a href="#validredirecturis_csharp" style="color: inherit; text-decoration: inherit;">Valid<wbr>Redirect<wbr>Uris</a>
 </span>
@@ -818,6 +828,15 @@ is set to `true`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, the OAuth2 Authorization Code Grant will be enabled for this client. Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="userefreshtokens_go">
+<a href="#userefreshtokens_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Refresh<wbr>Tokens</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If this is `true`, a refresh_token will be created and added to the token response. If this is `false` then no refresh_token will be generated.  Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="validredirecturis_go">
@@ -1078,6 +1097,15 @@ is set to `true`.
     <dd>{{% md %}}When `true`, the OAuth2 Authorization Code Grant will be enabled for this client. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="userefreshtokens_nodejs">
+<a href="#userefreshtokens_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Refresh<wbr>Tokens</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}If this is `true`, a refresh_token will be created and added to the token response. If this is `false` then no refresh_token will be generated.  Defaults to `true`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="validredirecturis_nodejs">
 <a href="#validredirecturis_nodejs" style="color: inherit; text-decoration: inherit;">valid<wbr>Redirect<wbr>Uris</a>
 </span>
@@ -1336,6 +1364,15 @@ is set to `true`.
     <dd>{{% md %}}When `true`, the OAuth2 Authorization Code Grant will be enabled for this client. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="use_refresh_tokens_python">
+<a href="#use_refresh_tokens_python" style="color: inherit; text-decoration: inherit;">use_<wbr>refresh_<wbr>tokens</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If this is `true`, a refresh_token will be created and added to the token response. If this is `false` then no refresh_token will be generated.  Defaults to `true`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="valid_redirect_uris_python">
 <a href="#valid_redirect_uris_python" style="color: inherit; text-decoration: inherit;">valid_<wbr>redirect_<wbr>uris</a>
 </span>
@@ -1528,6 +1565,7 @@ Get an existing Client resource's state with the given name, ID, and optional ex
         <span class="nx">service_account_user_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">service_accounts_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">standard_flow_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">use_refresh_tokens</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">valid_redirect_uris</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
         <span class="nx">web_origins</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">) -&gt;</span> Client</code></pre></div>
 {{% /choosable %}}
@@ -1894,6 +1932,15 @@ The following state arguments are supported:
     <dd>{{% md %}}When `true`, the OAuth2 Authorization Code Grant will be enabled for this client. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_userefreshtokens_csharp">
+<a href="#state_userefreshtokens_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Refresh<wbr>Tokens</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If this is `true`, a refresh_token will be created and added to the token response. If this is `false` then no refresh_token will be generated.  Defaults to `true`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_validredirecturis_csharp">
 <a href="#state_validredirecturis_csharp" style="color: inherit; text-decoration: inherit;">Valid<wbr>Redirect<wbr>Uris</a>
 </span>
@@ -2168,6 +2215,15 @@ is set to `true`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, the OAuth2 Authorization Code Grant will be enabled for this client. Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_userefreshtokens_go">
+<a href="#state_userefreshtokens_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Refresh<wbr>Tokens</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If this is `true`, a refresh_token will be created and added to the token response. If this is `false` then no refresh_token will be generated.  Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_validredirecturis_go">
@@ -2446,6 +2502,15 @@ is set to `true`.
     <dd>{{% md %}}When `true`, the OAuth2 Authorization Code Grant will be enabled for this client. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_userefreshtokens_nodejs">
+<a href="#state_userefreshtokens_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Refresh<wbr>Tokens</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}If this is `true`, a refresh_token will be created and added to the token response. If this is `false` then no refresh_token will be generated.  Defaults to `true`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_validredirecturis_nodejs">
 <a href="#state_validredirecturis_nodejs" style="color: inherit; text-decoration: inherit;">valid<wbr>Redirect<wbr>Uris</a>
 </span>
@@ -2720,6 +2785,15 @@ is set to `true`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, the OAuth2 Authorization Code Grant will be enabled for this client. Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_use_refresh_tokens_python">
+<a href="#state_use_refresh_tokens_python" style="color: inherit; text-decoration: inherit;">use_<wbr>refresh_<wbr>tokens</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If this is `true`, a refresh_token will be created and added to the token response. If this is `false` then no refresh_token will be generated.  Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_valid_redirect_uris_python">
