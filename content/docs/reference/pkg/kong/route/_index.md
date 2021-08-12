@@ -60,6 +60,18 @@ class MyStack : Stack
             PreserveHost = true,
             RegexPriority = 1,
             ServiceId = kong_service.Service.Id,
+            Headers = 
+            {
+                new Kong.Inputs.RouteHeaderArgs
+                {
+                    Name = "x-test-1",
+                    Values = 
+                    {
+                        "a",
+                        "b",
+                    },
+                },
+            },
         });
     }
 
@@ -101,6 +113,15 @@ func main() {
 			PreserveHost:  pulumi.Bool(true),
 			RegexPriority: pulumi.Int(1),
 			ServiceId:     pulumi.Any(kong_service.Service.Id),
+			Headers: kong.RouteHeaderArray{
+				&kong.RouteHeaderArgs{
+					Name: pulumi.String("x-test-1"),
+					Values: pulumi.StringArray{
+						pulumi.String("a"),
+						pulumi.String("b"),
+					},
+				},
+			},
 		})
 		if err != nil {
 			return err
@@ -134,7 +155,14 @@ route = kong.Route("route",
     strip_path=False,
     preserve_host=True,
     regex_priority=1,
-    service_id=kong_service["service"]["id"])
+    service_id=kong_service["service"]["id"],
+    headers=[kong.RouteHeaderArgs(
+        name="x-test-1",
+        values=[
+            "a",
+            "b",
+        ],
+    )])
 ```
 
 
@@ -163,6 +191,13 @@ const route = new kong.Route("route", {
     preserveHost: true,
     regexPriority: 1,
     serviceId: kong_service.service.id,
+    headers: [{
+        name: "x-test-1",
+        values: [
+            "a",
+            "b",
+        ],
+    }],
 });
 ```
 
@@ -191,17 +226,23 @@ const route = new kong.Route("route", {
 <span class="k">def </span><span class="nx">Route</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
           <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
           <span class="nx">destinations</span><span class="p">:</span> <span class="nx">Optional[Sequence[RouteDestinationArgs]]</span> = None<span class="p">,</span>
+          <span class="nx">headers</span><span class="p">:</span> <span class="nx">Optional[Sequence[RouteHeaderArgs]]</span> = None<span class="p">,</span>
           <span class="nx">hosts</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+          <span class="nx">https_redirect_status_code</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
           <span class="nx">methods</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
           <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+          <span class="nx">path_handling</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
           <span class="nx">paths</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
           <span class="nx">preserve_host</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
           <span class="nx">protocols</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
           <span class="nx">regex_priority</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+          <span class="nx">request_buffering</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+          <span class="nx">response_buffering</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
           <span class="nx">service_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
           <span class="nx">snis</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
           <span class="nx">sources</span><span class="p">:</span> <span class="nx">Optional[Sequence[RouteSourceArgs]]</span> = None<span class="p">,</span>
-          <span class="nx">strip_path</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span>
+          <span class="nx">strip_path</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+          <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">Route</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
           <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">RouteArgs</a></span><span class="p">,</span>
@@ -358,6 +399,15 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
     <dd>{{% md %}}A list of destination `ip` and `port`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="headers_csharp">
+<a href="#headers_csharp" style="color: inherit; text-decoration: inherit;">Headers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routeheader">List&lt;Route<wbr>Header<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}One or more blocks of `name` to set name of header and `values` which is a list of `string` for the header values to match on.  See above example of how to set.  These headers will cause this Route to match if present in the request. The Host header cannot be used with this attribute: hosts should be specified using the hosts attribute.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="hosts_csharp">
 <a href="#hosts_csharp" style="color: inherit; text-decoration: inherit;">Hosts</a>
 </span>
@@ -365,6 +415,15 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of domain names that match this Route
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="httpsredirectstatuscode_csharp">
+<a href="#httpsredirectstatuscode_csharp" style="color: inherit; text-decoration: inherit;">Https<wbr>Redirect<wbr>Status<wbr>Code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The status code Kong responds with when all properties of a Route match except the protocol i.e. if the protocol of the request is HTTP instead of HTTPS. Location header is injected by Kong if the field is set to `301`, `302`, `307` or `308`. Accepted values are: `426`, `301`, `302`, `307`, `308`. Default: `426`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="methods_csharp">
@@ -383,6 +442,15 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the route
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="pathhandling_csharp">
+<a href="#pathhandling_csharp" style="color: inherit; text-decoration: inherit;">Path<wbr>Handling</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Controls how the Service path, Route path and requested path are combined when sending a request to the upstream.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="paths_csharp">
@@ -412,6 +480,24 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
     <dd>{{% md %}}A number used to choose which route resolves a given request when several routes match it using regexes simultaneously.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="requestbuffering_csharp">
+<a href="#requestbuffering_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Buffering</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether to enable request body buffering or not. With HTTP 1.1, it may make sense to turn this off on services that receive data with chunked transfer encoding. Default: true.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="responsebuffering_csharp">
+<a href="#responsebuffering_csharp" style="color: inherit; text-decoration: inherit;">Response<wbr>Buffering</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether to enable response body buffering or not. With HTTP 1.1, it may make sense to turn this off on services that send data with chunked transfer encoding. Default: true.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="snis_csharp">
 <a href="#snis_csharp" style="color: inherit; text-decoration: inherit;">Snis</a>
 </span>
@@ -437,6 +523,15 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When matching a Route via one of the paths, strip the matching prefix from the upstream request URL. Default: true.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tags_csharp">
+<a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A list of strings associated with the Route for grouping and filtering.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -470,6 +565,15 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
     <dd>{{% md %}}A list of destination `ip` and `port`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="headers_go">
+<a href="#headers_go" style="color: inherit; text-decoration: inherit;">Headers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routeheader">[]Route<wbr>Header<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}One or more blocks of `name` to set name of header and `values` which is a list of `string` for the header values to match on.  See above example of how to set.  These headers will cause this Route to match if present in the request. The Host header cannot be used with this attribute: hosts should be specified using the hosts attribute.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="hosts_go">
 <a href="#hosts_go" style="color: inherit; text-decoration: inherit;">Hosts</a>
 </span>
@@ -477,6 +581,15 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of domain names that match this Route
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="httpsredirectstatuscode_go">
+<a href="#httpsredirectstatuscode_go" style="color: inherit; text-decoration: inherit;">Https<wbr>Redirect<wbr>Status<wbr>Code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The status code Kong responds with when all properties of a Route match except the protocol i.e. if the protocol of the request is HTTP instead of HTTPS. Location header is injected by Kong if the field is set to `301`, `302`, `307` or `308`. Accepted values are: `426`, `301`, `302`, `307`, `308`. Default: `426`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="methods_go">
@@ -495,6 +608,15 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the route
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="pathhandling_go">
+<a href="#pathhandling_go" style="color: inherit; text-decoration: inherit;">Path<wbr>Handling</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Controls how the Service path, Route path and requested path are combined when sending a request to the upstream.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="paths_go">
@@ -524,6 +646,24 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
     <dd>{{% md %}}A number used to choose which route resolves a given request when several routes match it using regexes simultaneously.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="requestbuffering_go">
+<a href="#requestbuffering_go" style="color: inherit; text-decoration: inherit;">Request<wbr>Buffering</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether to enable request body buffering or not. With HTTP 1.1, it may make sense to turn this off on services that receive data with chunked transfer encoding. Default: true.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="responsebuffering_go">
+<a href="#responsebuffering_go" style="color: inherit; text-decoration: inherit;">Response<wbr>Buffering</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether to enable response body buffering or not. With HTTP 1.1, it may make sense to turn this off on services that send data with chunked transfer encoding. Default: true.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="snis_go">
 <a href="#snis_go" style="color: inherit; text-decoration: inherit;">Snis</a>
 </span>
@@ -549,6 +689,15 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When matching a Route via one of the paths, strip the matching prefix from the upstream request URL. Default: true.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tags_go">
+<a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}A list of strings associated with the Route for grouping and filtering.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -582,6 +731,15 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
     <dd>{{% md %}}A list of destination `ip` and `port`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="headers_nodejs">
+<a href="#headers_nodejs" style="color: inherit; text-decoration: inherit;">headers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routeheader">Route<wbr>Header<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}One or more blocks of `name` to set name of header and `values` which is a list of `string` for the header values to match on.  See above example of how to set.  These headers will cause this Route to match if present in the request. The Host header cannot be used with this attribute: hosts should be specified using the hosts attribute.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="hosts_nodejs">
 <a href="#hosts_nodejs" style="color: inherit; text-decoration: inherit;">hosts</a>
 </span>
@@ -589,6 +747,15 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of domain names that match this Route
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="httpsredirectstatuscode_nodejs">
+<a href="#httpsredirectstatuscode_nodejs" style="color: inherit; text-decoration: inherit;">https<wbr>Redirect<wbr>Status<wbr>Code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The status code Kong responds with when all properties of a Route match except the protocol i.e. if the protocol of the request is HTTP instead of HTTPS. Location header is injected by Kong if the field is set to `301`, `302`, `307` or `308`. Accepted values are: `426`, `301`, `302`, `307`, `308`. Default: `426`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="methods_nodejs">
@@ -607,6 +774,15 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the route
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="pathhandling_nodejs">
+<a href="#pathhandling_nodejs" style="color: inherit; text-decoration: inherit;">path<wbr>Handling</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Controls how the Service path, Route path and requested path are combined when sending a request to the upstream.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="paths_nodejs">
@@ -636,6 +812,24 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
     <dd>{{% md %}}A number used to choose which route resolves a given request when several routes match it using regexes simultaneously.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="requestbuffering_nodejs">
+<a href="#requestbuffering_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Buffering</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether to enable request body buffering or not. With HTTP 1.1, it may make sense to turn this off on services that receive data with chunked transfer encoding. Default: true.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="responsebuffering_nodejs">
+<a href="#responsebuffering_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Buffering</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether to enable response body buffering or not. With HTTP 1.1, it may make sense to turn this off on services that send data with chunked transfer encoding. Default: true.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="snis_nodejs">
 <a href="#snis_nodejs" style="color: inherit; text-decoration: inherit;">snis</a>
 </span>
@@ -661,6 +855,15 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}When matching a Route via one of the paths, strip the matching prefix from the upstream request URL. Default: true.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tags_nodejs">
+<a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}A list of strings associated with the Route for grouping and filtering.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -694,6 +897,15 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
     <dd>{{% md %}}A list of destination `ip` and `port`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="headers_python">
+<a href="#headers_python" style="color: inherit; text-decoration: inherit;">headers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routeheader">Sequence[Route<wbr>Header<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}One or more blocks of `name` to set name of header and `values` which is a list of `string` for the header values to match on.  See above example of how to set.  These headers will cause this Route to match if present in the request. The Host header cannot be used with this attribute: hosts should be specified using the hosts attribute.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="hosts_python">
 <a href="#hosts_python" style="color: inherit; text-decoration: inherit;">hosts</a>
 </span>
@@ -701,6 +913,15 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of domain names that match this Route
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="https_redirect_status_code_python">
+<a href="#https_redirect_status_code_python" style="color: inherit; text-decoration: inherit;">https_<wbr>redirect_<wbr>status_<wbr>code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The status code Kong responds with when all properties of a Route match except the protocol i.e. if the protocol of the request is HTTP instead of HTTPS. Location header is injected by Kong if the field is set to `301`, `302`, `307` or `308`. Accepted values are: `426`, `301`, `302`, `307`, `308`. Default: `426`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="methods_python">
@@ -719,6 +940,15 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the route
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="path_handling_python">
+<a href="#path_handling_python" style="color: inherit; text-decoration: inherit;">path_<wbr>handling</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Controls how the Service path, Route path and requested path are combined when sending a request to the upstream.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="paths_python">
@@ -748,6 +978,24 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
     <dd>{{% md %}}A number used to choose which route resolves a given request when several routes match it using regexes simultaneously.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="request_buffering_python">
+<a href="#request_buffering_python" style="color: inherit; text-decoration: inherit;">request_<wbr>buffering</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether to enable request body buffering or not. With HTTP 1.1, it may make sense to turn this off on services that receive data with chunked transfer encoding. Default: true.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="response_buffering_python">
+<a href="#response_buffering_python" style="color: inherit; text-decoration: inherit;">response_<wbr>buffering</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether to enable response body buffering or not. With HTTP 1.1, it may make sense to turn this off on services that send data with chunked transfer encoding. Default: true.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="snis_python">
 <a href="#snis_python" style="color: inherit; text-decoration: inherit;">snis</a>
 </span>
@@ -773,6 +1021,15 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When matching a Route via one of the paths, strip the matching prefix from the upstream request URL. Default: true.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tags_python">
+<a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}A list of strings associated with the Route for grouping and filtering.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -848,17 +1105,23 @@ Get an existing Route resource's state with the given name, ID, and optional ext
         <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
         <span class="nx">destinations</span><span class="p">:</span> <span class="nx">Optional[Sequence[RouteDestinationArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">headers</span><span class="p">:</span> <span class="nx">Optional[Sequence[RouteHeaderArgs]]</span> = None<span class="p">,</span>
         <span class="nx">hosts</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+        <span class="nx">https_redirect_status_code</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
         <span class="nx">methods</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">path_handling</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">paths</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
         <span class="nx">preserve_host</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">protocols</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
         <span class="nx">regex_priority</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+        <span class="nx">request_buffering</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">response_buffering</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">service_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">snis</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
         <span class="nx">sources</span><span class="p">:</span> <span class="nx">Optional[Sequence[RouteSourceArgs]]</span> = None<span class="p">,</span>
-        <span class="nx">strip_path</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">) -&gt;</span> Route</code></pre></div>
+        <span class="nx">strip_path</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">) -&gt;</span> Route</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -980,6 +1243,15 @@ The following state arguments are supported:
     <dd>{{% md %}}A list of destination `ip` and `port`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_headers_csharp">
+<a href="#state_headers_csharp" style="color: inherit; text-decoration: inherit;">Headers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routeheader">List&lt;Route<wbr>Header<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}One or more blocks of `name` to set name of header and `values` which is a list of `string` for the header values to match on.  See above example of how to set.  These headers will cause this Route to match if present in the request. The Host header cannot be used with this attribute: hosts should be specified using the hosts attribute.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_hosts_csharp">
 <a href="#state_hosts_csharp" style="color: inherit; text-decoration: inherit;">Hosts</a>
 </span>
@@ -987,6 +1259,15 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of domain names that match this Route
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_httpsredirectstatuscode_csharp">
+<a href="#state_httpsredirectstatuscode_csharp" style="color: inherit; text-decoration: inherit;">Https<wbr>Redirect<wbr>Status<wbr>Code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The status code Kong responds with when all properties of a Route match except the protocol i.e. if the protocol of the request is HTTP instead of HTTPS. Location header is injected by Kong if the field is set to `301`, `302`, `307` or `308`. Accepted values are: `426`, `301`, `302`, `307`, `308`. Default: `426`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_methods_csharp">
@@ -1005,6 +1286,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the route
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_pathhandling_csharp">
+<a href="#state_pathhandling_csharp" style="color: inherit; text-decoration: inherit;">Path<wbr>Handling</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Controls how the Service path, Route path and requested path are combined when sending a request to the upstream.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_paths_csharp">
@@ -1043,6 +1333,24 @@ The following state arguments are supported:
     <dd>{{% md %}}A number used to choose which route resolves a given request when several routes match it using regexes simultaneously.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_requestbuffering_csharp">
+<a href="#state_requestbuffering_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Buffering</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether to enable request body buffering or not. With HTTP 1.1, it may make sense to turn this off on services that receive data with chunked transfer encoding. Default: true.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_responsebuffering_csharp">
+<a href="#state_responsebuffering_csharp" style="color: inherit; text-decoration: inherit;">Response<wbr>Buffering</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether to enable response body buffering or not. With HTTP 1.1, it may make sense to turn this off on services that send data with chunked transfer encoding. Default: true.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_serviceid_csharp">
 <a href="#state_serviceid_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Id</a>
 </span>
@@ -1077,6 +1385,15 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When matching a Route via one of the paths, strip the matching prefix from the upstream request URL. Default: true.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_tags_csharp">
+<a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A list of strings associated with the Route for grouping and filtering.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1092,6 +1409,15 @@ The following state arguments are supported:
     <dd>{{% md %}}A list of destination `ip` and `port`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_headers_go">
+<a href="#state_headers_go" style="color: inherit; text-decoration: inherit;">Headers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routeheader">[]Route<wbr>Header<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}One or more blocks of `name` to set name of header and `values` which is a list of `string` for the header values to match on.  See above example of how to set.  These headers will cause this Route to match if present in the request. The Host header cannot be used with this attribute: hosts should be specified using the hosts attribute.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_hosts_go">
 <a href="#state_hosts_go" style="color: inherit; text-decoration: inherit;">Hosts</a>
 </span>
@@ -1099,6 +1425,15 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of domain names that match this Route
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_httpsredirectstatuscode_go">
+<a href="#state_httpsredirectstatuscode_go" style="color: inherit; text-decoration: inherit;">Https<wbr>Redirect<wbr>Status<wbr>Code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The status code Kong responds with when all properties of a Route match except the protocol i.e. if the protocol of the request is HTTP instead of HTTPS. Location header is injected by Kong if the field is set to `301`, `302`, `307` or `308`. Accepted values are: `426`, `301`, `302`, `307`, `308`. Default: `426`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_methods_go">
@@ -1117,6 +1452,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the route
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_pathhandling_go">
+<a href="#state_pathhandling_go" style="color: inherit; text-decoration: inherit;">Path<wbr>Handling</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Controls how the Service path, Route path and requested path are combined when sending a request to the upstream.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_paths_go">
@@ -1155,6 +1499,24 @@ The following state arguments are supported:
     <dd>{{% md %}}A number used to choose which route resolves a given request when several routes match it using regexes simultaneously.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_requestbuffering_go">
+<a href="#state_requestbuffering_go" style="color: inherit; text-decoration: inherit;">Request<wbr>Buffering</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether to enable request body buffering or not. With HTTP 1.1, it may make sense to turn this off on services that receive data with chunked transfer encoding. Default: true.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_responsebuffering_go">
+<a href="#state_responsebuffering_go" style="color: inherit; text-decoration: inherit;">Response<wbr>Buffering</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether to enable response body buffering or not. With HTTP 1.1, it may make sense to turn this off on services that send data with chunked transfer encoding. Default: true.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_serviceid_go">
 <a href="#state_serviceid_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Id</a>
 </span>
@@ -1189,6 +1551,15 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When matching a Route via one of the paths, strip the matching prefix from the upstream request URL. Default: true.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_tags_go">
+<a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}A list of strings associated with the Route for grouping and filtering.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1204,6 +1575,15 @@ The following state arguments are supported:
     <dd>{{% md %}}A list of destination `ip` and `port`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_headers_nodejs">
+<a href="#state_headers_nodejs" style="color: inherit; text-decoration: inherit;">headers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routeheader">Route<wbr>Header<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}One or more blocks of `name` to set name of header and `values` which is a list of `string` for the header values to match on.  See above example of how to set.  These headers will cause this Route to match if present in the request. The Host header cannot be used with this attribute: hosts should be specified using the hosts attribute.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_hosts_nodejs">
 <a href="#state_hosts_nodejs" style="color: inherit; text-decoration: inherit;">hosts</a>
 </span>
@@ -1211,6 +1591,15 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of domain names that match this Route
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_httpsredirectstatuscode_nodejs">
+<a href="#state_httpsredirectstatuscode_nodejs" style="color: inherit; text-decoration: inherit;">https<wbr>Redirect<wbr>Status<wbr>Code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The status code Kong responds with when all properties of a Route match except the protocol i.e. if the protocol of the request is HTTP instead of HTTPS. Location header is injected by Kong if the field is set to `301`, `302`, `307` or `308`. Accepted values are: `426`, `301`, `302`, `307`, `308`. Default: `426`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_methods_nodejs">
@@ -1229,6 +1618,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the route
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_pathhandling_nodejs">
+<a href="#state_pathhandling_nodejs" style="color: inherit; text-decoration: inherit;">path<wbr>Handling</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Controls how the Service path, Route path and requested path are combined when sending a request to the upstream.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_paths_nodejs">
@@ -1267,6 +1665,24 @@ The following state arguments are supported:
     <dd>{{% md %}}A number used to choose which route resolves a given request when several routes match it using regexes simultaneously.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_requestbuffering_nodejs">
+<a href="#state_requestbuffering_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Buffering</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether to enable request body buffering or not. With HTTP 1.1, it may make sense to turn this off on services that receive data with chunked transfer encoding. Default: true.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_responsebuffering_nodejs">
+<a href="#state_responsebuffering_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Buffering</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether to enable response body buffering or not. With HTTP 1.1, it may make sense to turn this off on services that send data with chunked transfer encoding. Default: true.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_serviceid_nodejs">
 <a href="#state_serviceid_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Id</a>
 </span>
@@ -1301,6 +1717,15 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}When matching a Route via one of the paths, strip the matching prefix from the upstream request URL. Default: true.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_tags_nodejs">
+<a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}A list of strings associated with the Route for grouping and filtering.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1316,6 +1741,15 @@ The following state arguments are supported:
     <dd>{{% md %}}A list of destination `ip` and `port`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_headers_python">
+<a href="#state_headers_python" style="color: inherit; text-decoration: inherit;">headers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routeheader">Sequence[Route<wbr>Header<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}One or more blocks of `name` to set name of header and `values` which is a list of `string` for the header values to match on.  See above example of how to set.  These headers will cause this Route to match if present in the request. The Host header cannot be used with this attribute: hosts should be specified using the hosts attribute.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_hosts_python">
 <a href="#state_hosts_python" style="color: inherit; text-decoration: inherit;">hosts</a>
 </span>
@@ -1323,6 +1757,15 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of domain names that match this Route
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_https_redirect_status_code_python">
+<a href="#state_https_redirect_status_code_python" style="color: inherit; text-decoration: inherit;">https_<wbr>redirect_<wbr>status_<wbr>code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The status code Kong responds with when all properties of a Route match except the protocol i.e. if the protocol of the request is HTTP instead of HTTPS. Location header is injected by Kong if the field is set to `301`, `302`, `307` or `308`. Accepted values are: `426`, `301`, `302`, `307`, `308`. Default: `426`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_methods_python">
@@ -1341,6 +1784,15 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the route
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_path_handling_python">
+<a href="#state_path_handling_python" style="color: inherit; text-decoration: inherit;">path_<wbr>handling</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Controls how the Service path, Route path and requested path are combined when sending a request to the upstream.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_paths_python">
@@ -1379,6 +1831,24 @@ The following state arguments are supported:
     <dd>{{% md %}}A number used to choose which route resolves a given request when several routes match it using regexes simultaneously.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_request_buffering_python">
+<a href="#state_request_buffering_python" style="color: inherit; text-decoration: inherit;">request_<wbr>buffering</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether to enable request body buffering or not. With HTTP 1.1, it may make sense to turn this off on services that receive data with chunked transfer encoding. Default: true.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_response_buffering_python">
+<a href="#state_response_buffering_python" style="color: inherit; text-decoration: inherit;">response_<wbr>buffering</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether to enable response body buffering or not. With HTTP 1.1, it may make sense to turn this off on services that send data with chunked transfer encoding. Default: true.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_service_id_python">
 <a href="#state_service_id_python" style="color: inherit; text-decoration: inherit;">service_<wbr>id</a>
 </span>
@@ -1413,6 +1883,15 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When matching a Route via one of the paths, strip the matching prefix from the upstream request URL. Default: true.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_tags_python">
+<a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}A list of strings associated with the Route for grouping and filtering.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1503,6 +1982,92 @@ The following state arguments are supported:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="routeheader">Route<wbr>Header</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the route
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="values_csharp">
+<a href="#values_csharp" style="color: inherit; text-decoration: inherit;">Values</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the route
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="values_go">
+<a href="#values_go" style="color: inherit; text-decoration: inherit;">Values</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the route
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="values_nodejs">
+<a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the route
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="values_python">
+<a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}

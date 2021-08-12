@@ -18,6 +18,7 @@ A Pulumi package for creating and managing Kong resources.
     <li><a href="consumer" title="Consumer"><span class="symbol resource"></span>Consumer</a></li>
     <li><a href="consumeracl" title="ConsumerAcl"><span class="symbol resource"></span>ConsumerAcl</a></li>
     <li><a href="consumerbasicauth" title="ConsumerBasicAuth"><span class="symbol resource"></span>ConsumerBasicAuth</a></li>
+    <li><a href="consumerjwtauth" title="ConsumerJwtAuth"><span class="symbol resource"></span>ConsumerJwtAuth</a></li>
     <li><a href="plugin" title="Plugin"><span class="symbol resource"></span>Plugin</a></li>
     <li><a href="provider" title="Provider"><span class="symbol resource"></span>Provider</a></li>
     <li><a href="route" title="Route"><span class="symbol resource"></span>Route</a></li>
@@ -35,6 +36,6 @@ A Pulumi package for creating and managing Kong resources.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`kong` Terraform Provider](https://github.com/kevholditch/terraform-provider-kong).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.0.0</dd>
+	<dd>4.0.1</dd>
 </dl>
 

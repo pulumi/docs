@@ -39,62 +39,87 @@ class MyStack : Stack
 {
     public MyStack()
     {
+        var certificate = new Kong.Certificate("certificate", new Kong.CertificateArgs
+        {
+            Certificate = @"    -----BEGIN CERTIFICATE-----
+    ......
+    -----END CERTIFICATE-----
+",
+            PrivateKey = @"    -----BEGIN PRIVATE KEY-----
+    .....
+    -----END PRIVATE KEY-----
+",
+            Snis = 
+            {
+                "foo.com",
+            },
+        });
         var upstream = new Kong.Upstream("upstream", new Kong.UpstreamArgs
         {
-            HashFallback = "cookie",
-            HashFallbackHeader = "FallbackHeaderName",
+            Slots = 10,
             HashOn = "header",
+            HashFallback = "cookie",
+            HashOnHeader = "HeaderName",
+            HashFallbackHeader = "FallbackHeaderName",
             HashOnCookie = "CookieName",
             HashOnCookiePath = "/path",
-            HashOnHeader = "HeaderName",
+            HostHeader = "x-host",
+            Tags = 
+            {
+                "a",
+                "b",
+            },
+            ClientCertificateId = certificate.Id,
             Healthchecks = new Kong.Inputs.UpstreamHealthchecksArgs
             {
                 Active = new Kong.Inputs.UpstreamHealthchecksActiveArgs
                 {
+                    Type = "https",
+                    HttpPath = "/status",
+                    Timeout = 10,
                     Concurrency = 20,
+                    HttpsVerifyCertificate = false,
+                    HttpsSni = "some.domain.com",
                     Healthy = new Kong.Inputs.UpstreamHealthchecksActiveHealthyArgs
                     {
+                        Successes = 1,
+                        Interval = 5,
                         HttpStatuses = 
                         {
                             200,
                             201,
                         },
-                        Interval = 5,
-                        Successes = 1,
                     },
-                    HttpPath = "/status",
-                    HttpsSni = "some.domain.com",
-                    HttpsVerifyCertificate = false,
-                    Timeout = 10,
-                    Type = "https",
                     Unhealthy = new Kong.Inputs.UpstreamHealthchecksActiveUnhealthyArgs
                     {
+                        Timeouts = 7,
+                        Interval = 3,
+                        TcpFailures = 1,
                         HttpFailures = 2,
                         HttpStatuses = 
                         {
                             500,
                             501,
                         },
-                        Interval = 3,
-                        TcpFailures = 1,
-                        Timeouts = 7,
                     },
                 },
                 Passive = new Kong.Inputs.UpstreamHealthchecksPassiveArgs
                 {
+                    Type = "https",
                     Healthy = new Kong.Inputs.UpstreamHealthchecksPassiveHealthyArgs
                     {
+                        Successes = 1,
                         HttpStatuses = 
                         {
                             200,
                             201,
                             202,
                         },
-                        Successes = 1,
                     },
-                    Type = "https",
                     Unhealthy = new Kong.Inputs.UpstreamHealthchecksPassiveUnhealthyArgs
                     {
+                        Timeouts = 3,
+                        TcpFailures = 5,
                         HttpFailures = 6,
                         HttpStatuses = 
                         {
@@ -102,12 +127,9 @@ class MyStack : Stack
                             501,
                             502,
                         },
-                        TcpFailures = 5,
-                        Timeouts = 3,
                     },
                 },
             },
-            Slots = 10,
         });
     }
 
@@ -131,63 +153,79 @@ Coming soon!
 import pulumi
 import pulumi_kong as kong
 
+certificate = kong.Certificate("certificate",
+    certificate="""    -----BEGIN CERTIFICATE-----
+    ......
+    -----END CERTIFICATE-----
+""",
+    private_key="""    -----BEGIN PRIVATE KEY-----
+    .....
+    -----END PRIVATE KEY-----
+""",
+    snis=["foo.com"])
 upstream = kong.Upstream("upstream",
-    hash_fallback="cookie",
-    hash_fallback_header="FallbackHeaderName",
+    slots=10,
     hash_on="header",
+    hash_fallback="cookie",
+    hash_on_header="HeaderName",
+    hash_fallback_header="FallbackHeaderName",
     hash_on_cookie="CookieName",
     hash_on_cookie_path="/path",
-    hash_on_header="HeaderName",
+    host_header="x-host",
+    tags=[
+        "a",
+        "b",
+    ],
+    client_certificate_id=certificate.id,
     healthchecks=kong.UpstreamHealthchecksArgs(
         active=kong.UpstreamHealthchecksActiveArgs(
+            type="https",
+            http_path="/status",
+            timeout=10,
             concurrency=20,
+            https_verify_certificate=False,
+            https_sni="some.domain.com",
             healthy=kong.UpstreamHealthchecksActiveHealthyArgs(
+                successes=1,
+                interval=5,
                 http_statuses=[
                     200,
                     201,
                 ],
-                interval=5,
-                successes=1,
             ),
-            http_path="/status",
-            https_sni="some.domain.com",
-            https_verify_certificate=False,
-            timeout=10,
-            type="https",
             unhealthy=kong.UpstreamHealthchecksActiveUnhealthyArgs(
+                timeouts=7,
+                interval=3,
+                tcp_failures=1,
                 http_failures=2,
                 http_statuses=[
                     500,
                     501,
                 ],
-                interval=3,
-                tcp_failures=1,
-                timeouts=7,
             ),
         ),
         passive=kong.UpstreamHealthchecksPassiveArgs(
+            type="https",
             healthy=kong.UpstreamHealthchecksPassiveHealthyArgs(
+                successes=1,
                 http_statuses=[
                     200,
                     201,
                     202,
                 ],
-                successes=1,
             ),
-            type="https",
             unhealthy=kong.UpstreamHealthchecksPassiveUnhealthyArgs(
+                timeouts=3,
+                tcp_failures=5,
                 http_failures=6,
                 http_statuses=[
                     500,
                     501,
                     502,
                 ],
-                tcp_failures=5,
-                timeouts=3,
             ),
         ),
-    ),
-    slots=10)
+    ))
 ```
 
 
@@ -201,63 +239,80 @@ upstream = kong.Upstream("upstream",
 import * as pulumi from "@pulumi/pulumi";
 import * as kong from "@pulumi/kong";
 
+const certificate = new kong.Certificate("certificate", {
+    certificate: `    -----BEGIN CERTIFICATE-----
+    ......
+    -----END CERTIFICATE-----
+`,
+    privateKey: `    -----BEGIN PRIVATE KEY-----
+    .....
+    -----END PRIVATE KEY-----
+`,
+    snis: ["foo.com"],
+});
 const upstream = new kong.Upstream("upstream", {
-    hashFallback: "cookie",
-    hashFallbackHeader: "FallbackHeaderName",
+    slots: 10,
     hashOn: "header",
+    hashFallback: "cookie",
+    hashOnHeader: "HeaderName",
+    hashFallbackHeader: "FallbackHeaderName",
     hashOnCookie: "CookieName",
     hashOnCookiePath: "/path",
-    hashOnHeader: "HeaderName",
+    hostHeader: "x-host",
+    tags: [
+        "a",
+        "b",
+    ],
+    clientCertificateId: certificate.id,
     healthchecks: {
         active: {
+            type: "https",
+            httpPath: "/status",
+            timeout: 10,
             concurrency: 20,
+            httpsVerifyCertificate: false,
+            httpsSni: "some.domain.com",
             healthy: {
+                successes: 1,
+                interval: 5,
                 httpStatuses: [
                     200,
                     201,
                 ],
-                interval: 5,
-                successes: 1,
             },
-            httpPath: "/status",
-            httpsSni: "some.domain.com",
-            httpsVerifyCertificate: false,
-            timeout: 10,
-            type: "https",
             unhealthy: {
+                timeouts: 7,
+                interval: 3,
+                tcpFailures: 1,
                 httpFailures: 2,
                 httpStatuses: [
                     500,
                     501,
                 ],
-                interval: 3,
-                tcpFailures: 1,
-                timeouts: 7,
             },
         },
         passive: {
+            type: "https",
             healthy: {
+                successes: 1,
                 httpStatuses: [
                     200,
                     201,
                     202,
                 ],
-                successes: 1,
             },
-            type: "https",
             unhealthy: {
+                timeouts: 3,
+                tcpFailures: 5,
                 httpFailures: 6,
                 httpStatuses: [
                     500,
                     501,
                     502,
                 ],
-                tcpFailures: 5,
-                timeouts: 3,
             },
         },
     },
-    slots: 10,
 });
 ```
 
@@ -285,6 +340,7 @@ const upstream = new kong.Upstream("upstream", {
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">Upstream</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
              <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+             <span class="nx">client_certificate_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">hash_fallback</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">hash_fallback_header</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">hash_on</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -292,8 +348,10 @@ const upstream = new kong.Upstream("upstream", {
              <span class="nx">hash_on_cookie_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">hash_on_header</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">healthchecks</span><span class="p">:</span> <span class="nx">Optional[UpstreamHealthchecksArgs]</span> = None<span class="p">,</span>
+             <span class="nx">host_header</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-             <span class="nx">slots</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">)</span>
+             <span class="nx">slots</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+             <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">Upstream</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
              <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">Optional[UpstreamArgs]</a></span> = None<span class="p">,</span>
@@ -423,6 +481,15 @@ The Upstream resource accepts the following [input]({{< relref "/docs/intro/conc
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="clientcertificateid_csharp">
+<a href="#clientcertificateid_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Certificate<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the client certificate to use (from certificate resource) while TLS handshaking to the upstream server.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="hashfallback_csharp">
 <a href="#hashfallback_csharp" style="color: inherit; text-decoration: inherit;">Hash<wbr>Fallback</a>
 </span>
@@ -506,6 +573,15 @@ The Upstream resource accepts the following [input]({{< relref "/docs/intro/conc
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="hostheader_csharp">
+<a href="#hostheader_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Header</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The hostname to be used as Host header when proxying requests through Kong.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
@@ -522,11 +598,29 @@ The Upstream resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}is the number of slots in the load balancer algorithm (10*65536, defaults to 10000).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tags_csharp">
+<a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A list of strings associated with the Upstream for grouping and filtering.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="clientcertificateid_go">
+<a href="#clientcertificateid_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Certificate<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the client certificate to use (from certificate resource) while TLS handshaking to the upstream server.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hashfallback_go">
 <a href="#hashfallback_go" style="color: inherit; text-decoration: inherit;">Hash<wbr>Fallback</a>
@@ -611,6 +705,15 @@ The Upstream resource accepts the following [input]({{< relref "/docs/intro/conc
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="hostheader_go">
+<a href="#hostheader_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Header</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The hostname to be used as Host header when proxying requests through Kong.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
@@ -627,11 +730,29 @@ The Upstream resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}is the number of slots in the load balancer algorithm (10*65536, defaults to 10000).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tags_go">
+<a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}A list of strings associated with the Upstream for grouping and filtering.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="clientcertificateid_nodejs">
+<a href="#clientcertificateid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Certificate<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the client certificate to use (from certificate resource) while TLS handshaking to the upstream server.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hashfallback_nodejs">
 <a href="#hashfallback_nodejs" style="color: inherit; text-decoration: inherit;">hash<wbr>Fallback</a>
@@ -716,6 +837,15 @@ The Upstream resource accepts the following [input]({{< relref "/docs/intro/conc
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="hostheader_nodejs">
+<a href="#hostheader_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Header</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The hostname to be used as Host header when proxying requests through Kong.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
@@ -732,11 +862,29 @@ The Upstream resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}is the number of slots in the load balancer algorithm (10*65536, defaults to 10000).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tags_nodejs">
+<a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}A list of strings associated with the Upstream for grouping and filtering.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="client_certificate_id_python">
+<a href="#client_certificate_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>certificate_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ID of the client certificate to use (from certificate resource) while TLS handshaking to the upstream server.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hash_fallback_python">
 <a href="#hash_fallback_python" style="color: inherit; text-decoration: inherit;">hash_<wbr>fallback</a>
@@ -821,6 +969,15 @@ The Upstream resource accepts the following [input]({{< relref "/docs/intro/conc
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="host_header_python">
+<a href="#host_header_python" style="color: inherit; text-decoration: inherit;">host_<wbr>header</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The hostname to be used as Host header when proxying requests through Kong.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
@@ -837,6 +994,15 @@ The Upstream resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}is the number of slots in the load balancer algorithm (10*65536, defaults to 10000).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tags_python">
+<a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}A list of strings associated with the Upstream for grouping and filtering.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -911,6 +1077,7 @@ Get an existing Upstream resource's state with the given name, ID, and optional 
 <span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
         <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">client_certificate_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">hash_fallback</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">hash_fallback_header</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">hash_on</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -918,8 +1085,10 @@ Get an existing Upstream resource's state with the given name, ID, and optional 
         <span class="nx">hash_on_cookie_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">hash_on_header</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">healthchecks</span><span class="p">:</span> <span class="nx">Optional[UpstreamHealthchecksArgs]</span> = None<span class="p">,</span>
+        <span class="nx">host_header</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-        <span class="nx">slots</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">) -&gt;</span> Upstream</code></pre></div>
+        <span class="nx">slots</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">) -&gt;</span> Upstream</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1032,6 +1201,15 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="state_clientcertificateid_csharp">
+<a href="#state_clientcertificateid_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Certificate<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the client certificate to use (from certificate resource) while TLS handshaking to the upstream server.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_hashfallback_csharp">
 <a href="#state_hashfallback_csharp" style="color: inherit; text-decoration: inherit;">Hash<wbr>Fallback</a>
 </span>
@@ -1115,6 +1293,15 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_hostheader_csharp">
+<a href="#state_hostheader_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Header</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The hostname to be used as Host header when proxying requests through Kong.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
@@ -1131,11 +1318,29 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}is the number of slots in the load balancer algorithm (10*65536, defaults to 10000).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_tags_csharp">
+<a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A list of strings associated with the Upstream for grouping and filtering.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="state_clientcertificateid_go">
+<a href="#state_clientcertificateid_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Certificate<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the client certificate to use (from certificate resource) while TLS handshaking to the upstream server.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hashfallback_go">
 <a href="#state_hashfallback_go" style="color: inherit; text-decoration: inherit;">Hash<wbr>Fallback</a>
@@ -1220,6 +1425,15 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_hostheader_go">
+<a href="#state_hostheader_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Header</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The hostname to be used as Host header when proxying requests through Kong.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
@@ -1236,11 +1450,29 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}is the number of slots in the load balancer algorithm (10*65536, defaults to 10000).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_tags_go">
+<a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}A list of strings associated with the Upstream for grouping and filtering.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="state_clientcertificateid_nodejs">
+<a href="#state_clientcertificateid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Certificate<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the client certificate to use (from certificate resource) while TLS handshaking to the upstream server.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hashfallback_nodejs">
 <a href="#state_hashfallback_nodejs" style="color: inherit; text-decoration: inherit;">hash<wbr>Fallback</a>
@@ -1325,6 +1557,15 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_hostheader_nodejs">
+<a href="#state_hostheader_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Header</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The hostname to be used as Host header when proxying requests through Kong.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
@@ -1341,11 +1582,29 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}is the number of slots in the load balancer algorithm (10*65536, defaults to 10000).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_tags_nodejs">
+<a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}A list of strings associated with the Upstream for grouping and filtering.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="state_client_certificate_id_python">
+<a href="#state_client_certificate_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>certificate_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ID of the client certificate to use (from certificate resource) while TLS handshaking to the upstream server.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hash_fallback_python">
 <a href="#state_hash_fallback_python" style="color: inherit; text-decoration: inherit;">hash_<wbr>fallback</a>
@@ -1430,6 +1689,15 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_host_header_python">
+<a href="#state_host_header_python" style="color: inherit; text-decoration: inherit;">host_<wbr>header</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The hostname to be used as Host header when proxying requests through Kong.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
@@ -1446,6 +1714,15 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}is the number of slots in the load balancer algorithm (10*65536, defaults to 10000).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_tags_python">
+<a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}A list of strings associated with the Upstream for grouping and filtering.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
