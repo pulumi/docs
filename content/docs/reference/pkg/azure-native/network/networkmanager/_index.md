@@ -844,30 +844,30 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <h4 id="configurationtype">Configuration<wbr>Type</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular"><dt>Admin<wbr>Security</dt>
-    <dd>AdminSecurity</dd><dt>User<wbr>Security</dt>
-    <dd>UserSecurity</dd><dt>Connectivity</dt>
+<dl class="tabular"><dt>Security<wbr>Admin</dt>
+    <dd>SecurityAdmin</dd><dt>Security<wbr>User</dt>
+    <dd>SecurityUser</dd><dt>Connectivity</dt>
     <dd>Connectivity</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular"><dt>Configuration<wbr>Type<wbr>Admin<wbr>Security</dt>
-    <dd>AdminSecurity</dd><dt>Configuration<wbr>Type<wbr>User<wbr>Security</dt>
-    <dd>UserSecurity</dd><dt>Configuration<wbr>Type<wbr>Connectivity</dt>
+<dl class="tabular"><dt>Configuration<wbr>Type<wbr>Security<wbr>Admin</dt>
+    <dd>SecurityAdmin</dd><dt>Configuration<wbr>Type<wbr>Security<wbr>User</dt>
+    <dd>SecurityUser</dd><dt>Configuration<wbr>Type<wbr>Connectivity</dt>
     <dd>Connectivity</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular"><dt>Admin<wbr>Security</dt>
-    <dd>AdminSecurity</dd><dt>User<wbr>Security</dt>
-    <dd>UserSecurity</dd><dt>Connectivity</dt>
+<dl class="tabular"><dt>Security<wbr>Admin</dt>
+    <dd>SecurityAdmin</dd><dt>Security<wbr>User</dt>
+    <dd>SecurityUser</dd><dt>Connectivity</dt>
     <dd>Connectivity</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular"><dt>ADMIN_SECURITY</dt>
-    <dd>AdminSecurity</dd><dt>USER_SECURITY</dt>
-    <dd>UserSecurity</dd><dt>CONNECTIVITY</dt>
+<dl class="tabular"><dt>SECURITY_ADMIN</dt>
+    <dd>SecurityAdmin</dd><dt>SECURITY_USER</dt>
+    <dd>SecurityUser</dd><dt>CONNECTIVITY</dt>
     <dd>Connectivity</dd></dl>
 {{% /choosable %}}
 

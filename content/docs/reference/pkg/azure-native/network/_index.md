@@ -226,12 +226,15 @@ Explore the resources and functions of the azure-native.network module.
     <li><a href="getvpnsite" title="GetVpnSite"><span class="symbol function"></span>GetVpnSite</a></li>
     <li><a href="getwebapplicationfirewallpolicy" title="GetWebApplicationFirewallPolicy"><span class="symbol function"></span>GetWebApplicationFirewallPolicy</a></li>
     <li><a href="getzone" title="GetZone"><span class="symbol function"></span>GetZone</a></li>
-    <li><a href="listactiveconfiguration" title="ListActiveConfiguration"><span class="symbol function"></span>ListActiveConfiguration</a></li>
-    <li><a href="listeffectiveconfiguration" title="ListEffectiveConfiguration"><span class="symbol function"></span>ListEffectiveConfiguration</a></li>
-    <li><a href="listeffectiveconfigurationbysubnet" title="ListEffectiveConfigurationBySubnet"><span class="symbol function"></span>ListEffectiveConfigurationBySubnet</a></li>
+    <li><a href="listactiveconnectivityconfiguration" title="ListActiveConnectivityConfiguration"><span class="symbol function"></span>ListActiveConnectivityConfiguration</a></li>
+    <li><a href="listactivesecurityadminrule" title="ListActiveSecurityAdminRule"><span class="symbol function"></span>ListActiveSecurityAdminRule</a></li>
+    <li><a href="listactivesecurityuserrule" title="ListActiveSecurityUserRule"><span class="symbol function"></span>ListActiveSecurityUserRule</a></li>
+    <li><a href="listeffectiveconnectivityconfiguration" title="ListEffectiveConnectivityConfiguration"><span class="symbol function"></span>ListEffectiveConnectivityConfiguration</a></li>
+    <li><a href="listeffectivesecurityuserrulebysubnet" title="ListEffectiveSecurityUserRuleBySubnet"><span class="symbol function"></span>ListEffectiveSecurityUserRuleBySubnet</a></li>
     <li><a href="listeffectivevirtualnetworkbynetworkgroup" title="ListEffectiveVirtualNetworkByNetworkGroup"><span class="symbol function"></span>ListEffectiveVirtualNetworkByNetworkGroup</a></li>
     <li><a href="listeffectivevirtualnetworkbynetworkmanager" title="ListEffectiveVirtualNetworkByNetworkManager"><span class="symbol function"></span>ListEffectiveVirtualNetworkByNetworkManager</a></li>
     <li><a href="listnetworkmanagerdeploymentstatus" title="ListNetworkManagerDeploymentStatus"><span class="symbol function"></span>ListNetworkManagerDeploymentStatus</a></li>
+    <li><a href="listnetworkmanagereffectivesecurityadminrule" title="ListNetworkManagerEffectiveSecurityAdminRule"><span class="symbol function"></span>ListNetworkManagerEffectiveSecurityAdminRule</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -241,6 +244,6 @@ Explore the resources and functions of the azure-native.network module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>1.20.0</dd>
+	<dd>1.21.0</dd>
 </dl>
 
