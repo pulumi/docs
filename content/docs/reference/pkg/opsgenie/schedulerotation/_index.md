@@ -50,7 +50,7 @@ class MyStack : Stack
             {
                 new Opsgenie.Inputs.ScheduleRotationTimeRestrictionArgs
                 {
-                    Restrictions = 
+                    Restriction = 
                     {
                         new Opsgenie.Inputs.ScheduleRotationTimeRestrictionRestrictionArgs
                         {
@@ -99,7 +99,7 @@ func main() {
 			StartDate:  pulumi.String("2019-06-18T17:00:00Z"),
 			TimeRestrictions: opsgenie.ScheduleRotationTimeRestrictionArray{
 				&opsgenie.ScheduleRotationTimeRestrictionArgs{
-					Restrictions: opsgenie.ScheduleRotationTimeRestrictionRestrictionArray{
+					Restriction: opsgenie.ScheduleRotationTimeRestrictionRestrictionArray{
 						&opsgenie.ScheduleRotationTimeRestrictionRestrictionArgs{
 							EndHour:   pulumi.Int(10),
 							EndMin:    pulumi.Int(1),
@@ -140,7 +140,7 @@ test = opsgenie.ScheduleRotation("test",
     schedule_id=opsgenie_schedule["test"]["id"],
     start_date="2019-06-18T17:00:00Z",
     time_restrictions=[opsgenie.ScheduleRotationTimeRestrictionArgs(
-        restrictions=[opsgenie.ScheduleRotationTimeRestrictionRestrictionArgs(
+        restriction=[opsgenie.ScheduleRotationTimeRestrictionRestrictionArgs(
             end_hour=10,
             end_min=1,
             start_hour=1,
@@ -172,7 +172,7 @@ const test = new opsgenie.ScheduleRotation("test", {
     scheduleId: opsgenie_schedule_test.id,
     startDate: "2019-06-18T17:00:00Z",
     timeRestrictions: [{
-        restrictions: [{
+        restriction: [{
             endHour: 10,
             endMin: 1,
             startHour: 1,
@@ -223,7 +223,7 @@ const test = new opsgenie.ScheduleRotation("test", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewScheduleRotation</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ScheduleRotationArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ScheduleRotation</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewScheduleRotation</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ScheduleRotationArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ScheduleRotation</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -284,7 +284,7 @@ const test = new opsgenie.ScheduleRotation("test", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>Context object for the current deployment.</dd><dt
         class="property-required" title="Required">
@@ -302,7 +302,7 @@ const test = new opsgenie.ScheduleRotation("test", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>Bag of options to control resource&#39;s behavior.</dd></dl>
 
@@ -334,7 +334,7 @@ const test = new opsgenie.ScheduleRotation("test", {
 
 ## ScheduleRotation Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Architecture and Concepts docs.
 
 ### Inputs
 
@@ -724,7 +724,7 @@ Get an existing ScheduleRotation resource's state with the given name, ID, and o
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetScheduleRotation<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">ScheduleRotationState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ScheduleRotation</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetScheduleRotation<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">ScheduleRotationState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ScheduleRotation</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -1243,6 +1243,15 @@ The following state arguments are supported:
     <dd>{{% md %}}This parameter should be set to `time-of-day` or `weekday-and-time-of-day`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="restriction_csharp">
+<a href="#restriction_csharp" style="color: inherit; text-decoration: inherit;">Restriction</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#schedulerotationtimerestrictionrestriction">List&lt;Schedule<wbr>Rotation<wbr>Time<wbr>Restriction<wbr>Restriction&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}It is a restriction object which is described below. In this case startDay/endDay fields are not supported. This can be used only if time restriction type is `time-of-day`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="restrictions_csharp">
 <a href="#restrictions_csharp" style="color: inherit; text-decoration: inherit;">Restrictions</a>
 </span>
@@ -1263,6 +1272,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This parameter should be set to `time-of-day` or `weekday-and-time-of-day`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="restriction_go">
+<a href="#restriction_go" style="color: inherit; text-decoration: inherit;">Restriction</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#schedulerotationtimerestrictionrestriction">[]Schedule<wbr>Rotation<wbr>Time<wbr>Restriction<wbr>Restriction</a></span>
+    </dt>
+    <dd>{{% md %}}It is a restriction object which is described below. In this case startDay/endDay fields are not supported. This can be used only if time restriction type is `time-of-day`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="restrictions_go">
@@ -1287,6 +1305,15 @@ The following state arguments are supported:
     <dd>{{% md %}}This parameter should be set to `time-of-day` or `weekday-and-time-of-day`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="restriction_nodejs">
+<a href="#restriction_nodejs" style="color: inherit; text-decoration: inherit;">restriction</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#schedulerotationtimerestrictionrestriction">Schedule<wbr>Rotation<wbr>Time<wbr>Restriction<wbr>Restriction[]</a></span>
+    </dt>
+    <dd>{{% md %}}It is a restriction object which is described below. In this case startDay/endDay fields are not supported. This can be used only if time restriction type is `time-of-day`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="restrictions_nodejs">
 <a href="#restrictions_nodejs" style="color: inherit; text-decoration: inherit;">restrictions</a>
 </span>
@@ -1307,6 +1334,15 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}This parameter should be set to `time-of-day` or `weekday-and-time-of-day`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="restriction_python">
+<a href="#restriction_python" style="color: inherit; text-decoration: inherit;">restriction</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#schedulerotationtimerestrictionrestriction">Sequence[Schedule<wbr>Rotation<wbr>Time<wbr>Restriction<wbr>Restriction]</a></span>
+    </dt>
+    <dd>{{% md %}}It is a restriction object which is described below. In this case startDay/endDay fields are not supported. This can be used only if time restriction type is `time-of-day`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="restrictions_python">
