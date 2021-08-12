@@ -77,7 +77,7 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		opt0 := "available"
-		available, err := aws.GetAvailabilityZones(ctx, &GetAvailabilityZonesArgs{
+		available, err := aws.GetAvailabilityZones(ctx, &aws.GetAvailabilityZonesArgs{
 			State: &opt0,
 		}, nil)
 		if err != nil {
