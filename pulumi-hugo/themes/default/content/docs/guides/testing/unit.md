@@ -94,52 +94,52 @@ main.go:
 package main
 
 import (
-    "github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ec2"
-    "github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ec2"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 type infrastructure struct {
-    group  *ec2.SecurityGroup
-    server *ec2.Instance
+	group  *ec2.SecurityGroup
+	server *ec2.Instance
 }
 
 func createInfrastructure(ctx *pulumi.Context) (*infrastructure, error) {
-    group, err := ec2.NewSecurityGroup(ctx, "web-secgrp", &ec2.SecurityGroupArgs{
-        Ingress: ec2.SecurityGroupIngressArray{
-            ec2.SecurityGroupIngressArgs{
-                Protocol:   pulumi.String("tcp"),
-                FromPort:   pulumi.Int(22),
-                ToPort:     pulumi.Int(22),
-                CidrBlocks: pulumi.StringArray{pulumi.String("0.0.0.0/0")},
-            },
-            ec2.SecurityGroupIngressArgs{
-                Protocol:   pulumi.String("tcp"),
-                FromPort:   pulumi.Int(80),
-                ToPort:     pulumi.Int(80),
-                CidrBlocks: pulumi.StringArray{pulumi.String("0.0.0.0/0")},
-            },
-        },
-    })
-    if err != nil {
-        return nil, err
-    }
+	group, err := ec2.NewSecurityGroup(ctx, "web-secgrp", &ec2.SecurityGroupArgs{
+		Ingress: ec2.SecurityGroupIngressArray{
+			ec2.SecurityGroupIngressArgs{
+				Protocol:   pulumi.String("tcp"),
+				FromPort:   pulumi.Int(22),
+				ToPort:     pulumi.Int(22),
+				CidrBlocks: pulumi.StringArray{pulumi.String("0.0.0.0/0")},
+			},
+			ec2.SecurityGroupIngressArgs{
+				Protocol:   pulumi.String("tcp"),
+				FromPort:   pulumi.Int(80),
+				ToPort:     pulumi.Int(80),
+				CidrBlocks: pulumi.StringArray{pulumi.String("0.0.0.0/0")},
+			},
+		},
+	})
+	if err != nil {
+		return nil, err
+	}
 
-    const userData = `#!/bin/bash echo "Hello, World!" > index.html nohup python -m SimpleHTTPServer 80 &`
+	const userData = `#!/bin/bash echo "Hello, World!" > index.html nohup python -m SimpleHTTPServer 80 &`
 
-    server, err := ec2.NewInstance(ctx, "web-server-www", &ec2.InstanceArgs{
-        InstanceType:   pulumi.String("t2-micro"),
-        SecurityGroups: pulumi.StringArray{group.ID()}, // reference the group object above
-        Ami:            pulumi.String("ami-c55673a0"),  // AMI for us-east-2 (Ohio)
-        UserData:       pulumi.String(userData),        // start a simple web server
-    })
-    if err != nil {
-        return nil, err
-    }
+	server, err := ec2.NewInstance(ctx, "web-server-www", &ec2.InstanceArgs{
+		InstanceType:   pulumi.String("t2-micro"),
+		SecurityGroups: pulumi.StringArray{group.ID()}, // reference the group object above
+		Ami:            pulumi.String("ami-c55673a0"),  // AMI for us-east-2 (Ohio)
+		UserData:       pulumi.String(userData),        // start a simple web server
+	})
+	if err != nil {
+		return nil, err
+	}
 
-    return &infrastructure{
-        group:  group,
-        server: server,
-    }, nil
+	return &infrastructure{
+		group:  group,
+		server: server,
+	}, nil
 }
 ```
 
@@ -276,16 +276,17 @@ main_test.go:
 
 ```go
 import (
-   "github.com/pulumi/pulumi/sdk/v3/go/common/resource"
+	"github.com/pulumi/pulumi/sdk/v3/go/common/resource"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 type mocks int
 
-func (mocks) NewResource(args MockResourceArgs) (string, resource.PropertyMap, error) {
+func (mocks) NewResource(args pulumi.MockResourceArgs) (string, resource.PropertyMap, error) {
 	return args.Name + "_id", args.Inputs, nil
 }
 
-func (mocks) Call(args MockCallArgs) (resource.PropertyMap, error) {
+func (mocks) Call(args pulumi.MockCallArgs) (resource.PropertyMap, error) {
 	return args.Args, nil
 }
 ```
@@ -394,21 +395,21 @@ import (
 // ... mocks as shown above
 
 func TestInfrastructure(t *testing.T) {
-    err := pulumi.RunErr(func(ctx *pulumi.Context) error {
-        infra, err := createInfrastructure(ctx)
-        assert.NoError(t, err)
+	err := pulumi.RunErr(func(ctx *pulumi.Context) error {
+		infra, err := createInfrastructure(ctx)
+		assert.NoError(t, err)
 
-        var wg sync.WaitGroup
-        wg.Add(3)
+		var wg sync.WaitGroup
+		wg.Add(3)
 
-        // TODO(check 1): Instances have a Name tag.
-        // TODO(check 2): Instances must not use an inline userData script.
-        // TODO(check 3): Instances must not have SSH open to the Internet.
+		// TODO(check 1): Instances have a Name tag.
+		// TODO(check 2): Instances must not use an inline userData script.
+		// TODO(check 3): Instances must not have SSH open to the Internet.
 
-        wg.Wait()
-        return nil
-    }, pulumi.WithMocks("project", "stack", mocks(0)))
-    assert.NoError(t, err)
+		wg.Wait()
+		return nil
+	}, pulumi.WithMocks("project", "stack", mocks(0)))
+	assert.NoError(t, err)
 }
 ```
 
@@ -474,12 +475,12 @@ def test_server_tags(self):
 ```go
 // check 1: Instances have a Name tag.
 pulumi.All(infra.server.URN(), infra.server.Tags).ApplyT(func(all []interface{}) error {
-    urn := all[0].(pulumi.URN)
-    tags := all[1].(map[string]interface{})
+	urn := all[0].(pulumi.URN)
+	tags := all[1].(map[string]interface{})
 
-    assert.Containsf(t, tags, "Name", "missing a Name tag on server %v", urn)
-    wg.Done()
-    return nil
+	assert.Containsf(t, tags, "Name", "missing a Name tag on server %v", urn)
+	wg.Done()
+	return nil
 })
 ```
 
@@ -549,12 +550,12 @@ def test_server_userdata(self):
 ```go
 // check 2: Instances must not use an inline userData script.
 pulumi.All(infra.server.URN(), infra.server.UserData).ApplyT(func(all []interface{}) error {
-    urn := all[0].(pulumi.URN)
-    userData := all[1].(*string)
+	urn := all[0].(pulumi.URN)
+	userData := all[1].(*string)
 
-    assert.Nilf(t, userData, "illegal use of userData on server %v", urn)
-    wg.Done()
-    return nil
+	assert.Nilf(t, userData, "illegal use of userData on server %v", urn)
+	wg.Done()
+	return nil
 })
 ```
 
@@ -617,23 +618,23 @@ def test_security_group_rules(self):
 ```go
 // check 3: Test if port 22 for ssh is exposed.
 pulumi.All(infra.group.URN(), infra.group.Ingress).ApplyT(func(all []interface{}) error {
-    urn := all[0].(pulumi.URN)
-    ingress := all[1].([]ec2.SecurityGroupIngress)
+	urn := all[0].(pulumi.URN)
+	ingress := all[1].([]ec2.SecurityGroupIngress)
 
-    for _, i := range ingress {
-        openToInternet := false
-        for _, b := range i.CidrBlocks {
-            if b == "0.0.0.0/0" {
-                openToInternet = true
-                break
-            }
-        }
+	for _, i := range ingress {
+		openToInternet := false
+		for _, b := range i.CidrBlocks {
+			if b == "0.0.0.0/0" {
+				openToInternet = true
+				break
+			}
+		}
 
-        assert.Falsef(t, i.FromPort == 22 && openToInternet, "illegal SSH port 22 open to the Internet (CIDR 0.0.0.0/0) on group %v", urn)
-    }
+		assert.Falsef(t, i.FromPort == 22 && openToInternet, "illegal SSH port 22 open to the Internet (CIDR 0.0.0.0/0) on group %v", urn)
+	}
 
-    wg.Done()
-    return nil
+	wg.Done()
+	return nil
 })
 ```
 
@@ -834,44 +835,44 @@ main.go:
 package main
 
 import (
-    "github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ec2"
-    "github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ec2"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 type infrastructure struct {
-    group  *ec2.SecurityGroup
-    server *ec2.Instance
+	group  *ec2.SecurityGroup
+	server *ec2.Instance
 }
 
 func createInfrastructure(ctx *pulumi.Context) (*infrastructure, error) {
-    group, err := ec2.NewSecurityGroup(ctx, "web-secgrp", &ec2.SecurityGroupArgs{
-        Ingress: ec2.SecurityGroupIngressArray{
-            ec2.SecurityGroupIngressArgs{
-                Protocol:   pulumi.String("tcp"),
-                FromPort:   pulumi.Int(80),
-                ToPort:     pulumi.Int(80),
-                CidrBlocks: pulumi.StringArray{pulumi.String("0.0.0.0/0")},
-            },
-        },
-    })
-    if err != nil {
-        return nil, err
-    }
+	group, err := ec2.NewSecurityGroup(ctx, "web-secgrp", &ec2.SecurityGroupArgs{
+		Ingress: ec2.SecurityGroupIngressArray{
+			ec2.SecurityGroupIngressArgs{
+				Protocol:   pulumi.String("tcp"),
+				FromPort:   pulumi.Int(80),
+				ToPort:     pulumi.Int(80),
+				CidrBlocks: pulumi.StringArray{pulumi.String("0.0.0.0/0")},
+			},
+		},
+	})
+	if err != nil {
+		return nil, err
+	}
 
-    server, err := ec2.NewInstance(ctx, "web-server-www", &ec2.InstanceArgs{
-        InstanceType:   pulumi.String("t2-micro"),
-        SecurityGroups: pulumi.StringArray{group.ID()}, // reference the group object above
-        Ami:            pulumi.String("ami-c55673a0"),  // AMI for us-east-2 (Ohio)
-        Tags:           pulumi.Map{ "Name": pulumi.String("webserver") },
-    })
-    if err != nil {
-        return nil, err
-    }
+	server, err := ec2.NewInstance(ctx, "web-server-www", &ec2.InstanceArgs{
+		InstanceType:   pulumi.String("t2-micro"),
+		SecurityGroups: pulumi.StringArray{group.ID()}, // reference the group object above
+		Ami:            pulumi.String("ami-c55673a0"),  // AMI for us-east-2 (Ohio)
+		Tags:           pulumi.Map{"Name": pulumi.String("webserver")},
+	})
+	if err != nil {
+		return nil, err
+	}
 
-    return &infrastructure{
-        group:  group,
-        server: server,
-    }, nil
+	return &infrastructure{
+		group:  group,
+		server: server,
+	}, nil
 }
 ```
 
