@@ -19,13 +19,13 @@
                                 {{ end }}
                             </div>
                             <div class="md:w-2/3 p-4 text-left">
-                                <h4 class="leading-tight">
+                                <h5 class="leading-tight">
                                     {{ if .url }}
                                         <a data-track="{{ .title | urlize }}" class="text-gray-700" href="{{ .url }}">{{ .title }}</a>
                                     {{ else }}
                                         {{ .title }}
                                     {{ end }}
-                                </h4>
+                                </h5>
                                 {{ if .url }}
                                     <a data-track="{{ .title | urlize }}-read-more" href="{{ .url }}" class="text-blue-500 text-base">Read more &rarr;</a>
                                 {{ end }}
