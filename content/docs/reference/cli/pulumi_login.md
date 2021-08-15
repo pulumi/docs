@@ -20,9 +20,9 @@ easily obtain one. You can script by using `PULUMI_ACCESS_TOKEN` environment var
 By default, this will log in to the managed Pulumi service backend.
 If you prefer to log in to a self-hosted Pulumi service backend, specify a URL. For example, run
 
-    $ pulumi login https://api.pulumi.acmecorp.com
+    $ pulumi login https://api.pulumi.com
 
-to log in to a self-hosted Pulumi service running at the api.pulumi.acmecorp.com domain.
+to log in to a self-hosted Pulumi service running at the api.pulumi.com domain.
 
 For `https://` URLs, the CLI will speak REST to a service that manages state and concurrency control.
 [PREVIEW] If you prefer to operate Pulumi independently of a service, and entirely local to your computer,
