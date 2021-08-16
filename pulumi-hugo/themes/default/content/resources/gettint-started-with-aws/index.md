@@ -1,7 +1,7 @@
 ---
 # Name of the webinar.
-title: "Getting Started with Azure and Infrastructure as Code"
-meta_desc: "In this workshop, you’ll use the Azure native provider to build infrastructure using TypeScript SDK and examine some of the features not previously possible."
+title: "Getting Started with Infrastructure as Code on AWS"
+meta_desc: "In this workshop, you will learn the fundamentals of Infrastructure as Code on AWS through a series of exercises using Pulumi’s Cloud Engineering platform."
 
 # A featured webinar will display first in the list.
 featured: false
@@ -34,51 +34,54 @@ block_external_search_index: false
 
 # The url slug for the webinar landing page. If this is an external
 # webinar, use the external URL as the value here.
-url_slug: "getting-started-with-azure-native"
-
-# Webinar pages support multiple session via the 'multiple' property.
-multiple:
-    - datetime: 2021-08-12T09:00:00-07:00
-      hubspot_form_id: d69a09b6-9f49-4d07-a4fd-98668b1fac26
+url_slug: "gettint-started-with-aws"
 
 # The content of the hero section.
 hero:
     # The title text in the hero. This also serves as the pages H1.
-    title: "Getting Started with Azure and Infrastructure as Code"
+    title: "Getting Started with Infrastructure as Code on AWS"
     # The image the appears on the right hand side of the hero.
     image: "/icons/containers.svg"
+
+# Webinar pages support multiple session via the 'multiple' property.
+multiple:
+    - datetime: 2021-09-16T04:00:00-07:00
+      hubspot_form_id: 63ed4da6-2388-4c13-b089-25088b2d0845
+
+    - datetime: 2021-09-22T16:00:00-07:00
+      hubspot_form_id: 2b26c05e-4deb-414f-bd3e-365491d3d905
+
+    - datetime: 2021-09-28T08:00:00-07:00
+      hubspot_form_id: 1bb45b7f-b1ad-44ac-9e0a-fb045cb8fd06
 
 # Content for the left hand side section of the page.
 main:
     # Webinar title.
-    title: "Getting Started with Azure and Infrastructure as Code"
+    title: "Getting Started with Infrastructure as Code on AWS"
     # URL for embedding a URL for ungated webinars.
     youtube_url: ""
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
-    sortable_date: 2021-04-28T09:00:00-07:00
+    sortable_date: 2020-02-05T10:00:00-07:00
     # Duration of the webinar.
     duration: "1 hour"
     # Datetime of the webinar.
-    datetime: "April 28th, 2021"
+    datetime: ""
     # Description of the webinar.
     description: |
-        Microsoft Azure’s product offering is continuously evolving, and infrastructure tools often can’t keep up with the speed of innovation. Pulumi’s Azure Native provider is built directly from the Azure API, bringing power of familiar programming languages to Azure without sacrificing on latest features.
+        In this workshop, you will learn the fundamentals of Infrastructure as Code through a series of guided exercises using Pulumi’s Cloud Engineering platform. You will be introduced to Pulumi, an infrastructure as code platform, where you can use familiar programming languages to provision modern cloud infrastructure.
 
-        In this workshop, you’ll use the Azure native provider to build infrastructure using Pulumi’s TypeScript SDK and examine some of the features not previously possible.
+        This workshop is designed to help users completely new to Pulumi to become familiar with the core concepts to be effective with the Pulumi Infrastructure as Code platform. We will guide you through the Pulumi platform with diagrams and a series of hands on exercises to help you understand the building blocks available in Pulumi.
+
 
     # The webinar presenters
     presenters:
-        - name: Sophia Parafina
-          role: Developer Advocate, Pulumi
-
-        - name: Matt Stratton
-          role: Developer Advocate, Pulumi
-
-        - name: Mikhail Shilkov
-          role: Software Engineer, Pulumi
+        - name: "Kat Cosgrove"
+          role: "Staff Developer Advocate, Pulumi"
+        - name: "Sophia Parafina"
+          role: "Technical Marketing Manager"
 
     # A bullet point list containing what the user will learn during the webinar.
     learn:
         - The basics of the Pulumi Programming Model.
-        - How to provision, update, and destroy Azure resources.
+        - How to provision, update, and destroy AWS resources.
 ---
