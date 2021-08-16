@@ -4773,7 +4773,7 @@ your origin.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The specific event to trigger this function.
-Valid values: `viewer-request` or `viewer-response`
+Valid values: `viewer-request`, `viewer-response`, `origin-request` or `origin-response`
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="functionarn_csharp">
@@ -4796,7 +4796,7 @@ Valid values: `viewer-request` or `viewer-response`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The specific event to trigger this function.
-Valid values: `viewer-request` or `viewer-response`
+Valid values: `viewer-request`, `viewer-response`, `origin-request` or `origin-response`
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="functionarn_go">
@@ -4819,7 +4819,7 @@ Valid values: `viewer-request` or `viewer-response`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The specific event to trigger this function.
-Valid values: `viewer-request` or `viewer-response`
+Valid values: `viewer-request`, `viewer-response`, `origin-request` or `origin-response`
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="functionarn_nodejs">
@@ -4842,7 +4842,7 @@ Valid values: `viewer-request` or `viewer-response`
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The specific event to trigger this function.
-Valid values: `viewer-request` or `viewer-response`
+Valid values: `viewer-request`, `viewer-response`, `origin-request` or `origin-response`
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="function_arn_python">
@@ -4867,7 +4867,7 @@ Valid values: `viewer-request` or `viewer-response`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The specific event to trigger this function.
-Valid values: `viewer-request` or `viewer-response`
+Valid values: `viewer-request`, `viewer-response`, `origin-request` or `origin-response`
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="lambdaarn_csharp">
@@ -4899,7 +4899,7 @@ Valid values: `viewer-request` or `viewer-response`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The specific event to trigger this function.
-Valid values: `viewer-request` or `viewer-response`
+Valid values: `viewer-request`, `viewer-response`, `origin-request` or `origin-response`
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="lambdaarn_go">
@@ -4931,7 +4931,7 @@ Valid values: `viewer-request` or `viewer-response`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The specific event to trigger this function.
-Valid values: `viewer-request` or `viewer-response`
+Valid values: `viewer-request`, `viewer-response`, `origin-request` or `origin-response`
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="lambdaarn_nodejs">
@@ -4963,7 +4963,7 @@ Valid values: `viewer-request` or `viewer-response`
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The specific event to trigger this function.
-Valid values: `viewer-request` or `viewer-response`
+Valid values: `viewer-request`, `viewer-response`, `origin-request` or `origin-response`
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="lambda_arn_python">
@@ -6249,7 +6249,7 @@ your origin.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The specific event to trigger this function.
-Valid values: `viewer-request` or `viewer-response`
+Valid values: `viewer-request`, `viewer-response`, `origin-request` or `origin-response`
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="functionarn_csharp">
@@ -6272,7 +6272,7 @@ Valid values: `viewer-request` or `viewer-response`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The specific event to trigger this function.
-Valid values: `viewer-request` or `viewer-response`
+Valid values: `viewer-request`, `viewer-response`, `origin-request` or `origin-response`
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="functionarn_go">
@@ -6295,7 +6295,7 @@ Valid values: `viewer-request` or `viewer-response`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The specific event to trigger this function.
-Valid values: `viewer-request` or `viewer-response`
+Valid values: `viewer-request`, `viewer-response`, `origin-request` or `origin-response`
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="functionarn_nodejs">
@@ -6318,7 +6318,7 @@ Valid values: `viewer-request` or `viewer-response`
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The specific event to trigger this function.
-Valid values: `viewer-request` or `viewer-response`
+Valid values: `viewer-request`, `viewer-response`, `origin-request` or `origin-response`
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="function_arn_python">
@@ -6343,7 +6343,7 @@ Valid values: `viewer-request` or `viewer-response`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The specific event to trigger this function.
-Valid values: `viewer-request` or `viewer-response`
+Valid values: `viewer-request`, `viewer-response`, `origin-request` or `origin-response`
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="lambdaarn_csharp">
@@ -6375,7 +6375,7 @@ Valid values: `viewer-request` or `viewer-response`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The specific event to trigger this function.
-Valid values: `viewer-request` or `viewer-response`
+Valid values: `viewer-request`, `viewer-response`, `origin-request` or `origin-response`
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="lambdaarn_go">
@@ -6407,7 +6407,7 @@ Valid values: `viewer-request` or `viewer-response`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The specific event to trigger this function.
-Valid values: `viewer-request` or `viewer-response`
+Valid values: `viewer-request`, `viewer-response`, `origin-request` or `origin-response`
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="lambdaarn_nodejs">
@@ -6439,7 +6439,7 @@ Valid values: `viewer-request` or `viewer-response`
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The specific event to trigger this function.
-Valid values: `viewer-request` or `viewer-response`
+Valid values: `viewer-request`, `viewer-response`, `origin-request` or `origin-response`
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="lambda_arn_python">
