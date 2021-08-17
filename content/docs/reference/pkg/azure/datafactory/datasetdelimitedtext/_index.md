@@ -458,7 +458,7 @@ The DatasetDelimitedText resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The column delimiter.
+    <dd>{{% md %}}The column delimiter. Defaults to `,`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="compressioncodec_csharp">
@@ -503,7 +503,7 @@ The DatasetDelimitedText resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The escape character.
+    <dd>{{% md %}}The escape character. Defaults to `\`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="firstrowasheader_csharp">
@@ -512,7 +512,7 @@ The DatasetDelimitedText resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}When used as input, treat the first row of data as headers. When used as output, write the headers into the output as the first row of data.
+    <dd>{{% md %}}When used as input, treat the first row of data as headers. When used as output, write the headers into the output as the first row of data. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="folder_csharp">
@@ -548,7 +548,7 @@ The DatasetDelimitedText resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The null value string.
+    <dd>{{% md %}}The null value string. Defaults to an empty string.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parameters_csharp">
@@ -566,7 +566,7 @@ The DatasetDelimitedText resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The quote character.
+    <dd>{{% md %}}The quote character. Defaults to `"`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rowdelimiter_csharp">
@@ -575,7 +575,7 @@ The DatasetDelimitedText resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The row delimiter.
+    <dd>{{% md %}}The row delimiter. Defaults to any of the following values on read: `\r\n`, `\r`, `\n`, and `\n` or `\r\n` on write by mapping data flow and Copy activity respectively.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="schemacolumns_csharp">
@@ -660,7 +660,7 @@ The DatasetDelimitedText resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The column delimiter.
+    <dd>{{% md %}}The column delimiter. Defaults to `,`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="compressioncodec_go">
@@ -705,7 +705,7 @@ The DatasetDelimitedText resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The escape character.
+    <dd>{{% md %}}The escape character. Defaults to `\`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="firstrowasheader_go">
@@ -714,7 +714,7 @@ The DatasetDelimitedText resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}When used as input, treat the first row of data as headers. When used as output, write the headers into the output as the first row of data.
+    <dd>{{% md %}}When used as input, treat the first row of data as headers. When used as output, write the headers into the output as the first row of data. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="folder_go">
@@ -750,7 +750,7 @@ The DatasetDelimitedText resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The null value string.
+    <dd>{{% md %}}The null value string. Defaults to an empty string.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parameters_go">
@@ -768,7 +768,7 @@ The DatasetDelimitedText resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The quote character.
+    <dd>{{% md %}}The quote character. Defaults to `"`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rowdelimiter_go">
@@ -777,7 +777,7 @@ The DatasetDelimitedText resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The row delimiter.
+    <dd>{{% md %}}The row delimiter. Defaults to any of the following values on read: `\r\n`, `\r`, `\n`, and `\n` or `\r\n` on write by mapping data flow and Copy activity respectively.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="schemacolumns_go">
@@ -862,7 +862,7 @@ The DatasetDelimitedText resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The column delimiter.
+    <dd>{{% md %}}The column delimiter. Defaults to `,`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="compressioncodec_nodejs">
@@ -907,7 +907,7 @@ The DatasetDelimitedText resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The escape character.
+    <dd>{{% md %}}The escape character. Defaults to `\`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="firstrowasheader_nodejs">
@@ -916,7 +916,7 @@ The DatasetDelimitedText resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}When used as input, treat the first row of data as headers. When used as output, write the headers into the output as the first row of data.
+    <dd>{{% md %}}When used as input, treat the first row of data as headers. When used as output, write the headers into the output as the first row of data. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="folder_nodejs">
@@ -952,7 +952,7 @@ The DatasetDelimitedText resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The null value string.
+    <dd>{{% md %}}The null value string. Defaults to an empty string.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parameters_nodejs">
@@ -970,7 +970,7 @@ The DatasetDelimitedText resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The quote character.
+    <dd>{{% md %}}The quote character. Defaults to `"`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rowdelimiter_nodejs">
@@ -979,7 +979,7 @@ The DatasetDelimitedText resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The row delimiter.
+    <dd>{{% md %}}The row delimiter. Defaults to any of the following values on read: `\r\n`, `\r`, `\n`, and `\n` or `\r\n` on write by mapping data flow and Copy activity respectively.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="schemacolumns_nodejs">
@@ -1064,7 +1064,7 @@ The DatasetDelimitedText resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The column delimiter.
+    <dd>{{% md %}}The column delimiter. Defaults to `,`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="compression_codec_python">
@@ -1109,7 +1109,7 @@ The DatasetDelimitedText resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The escape character.
+    <dd>{{% md %}}The escape character. Defaults to `\`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="first_row_as_header_python">
@@ -1118,7 +1118,7 @@ The DatasetDelimitedText resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}When used as input, treat the first row of data as headers. When used as output, write the headers into the output as the first row of data.
+    <dd>{{% md %}}When used as input, treat the first row of data as headers. When used as output, write the headers into the output as the first row of data. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="folder_python">
@@ -1154,7 +1154,7 @@ The DatasetDelimitedText resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The null value string.
+    <dd>{{% md %}}The null value string. Defaults to an empty string.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parameters_python">
@@ -1172,7 +1172,7 @@ The DatasetDelimitedText resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The quote character.
+    <dd>{{% md %}}The quote character. Defaults to `"`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="row_delimiter_python">
@@ -1181,7 +1181,7 @@ The DatasetDelimitedText resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The row delimiter.
+    <dd>{{% md %}}The row delimiter. Defaults to any of the following values on read: `\r\n`, `\r`, `\n`, and `\n` or `\r\n` on write by mapping data flow and Copy activity respectively.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="schema_columns_python">
@@ -1441,7 +1441,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The column delimiter.
+    <dd>{{% md %}}The column delimiter. Defaults to `,`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_compressioncodec_csharp">
@@ -1495,7 +1495,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The escape character.
+    <dd>{{% md %}}The escape character. Defaults to `\`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_firstrowasheader_csharp">
@@ -1504,7 +1504,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}When used as input, treat the first row of data as headers. When used as output, write the headers into the output as the first row of data.
+    <dd>{{% md %}}When used as input, treat the first row of data as headers. When used as output, write the headers into the output as the first row of data. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_folder_csharp">
@@ -1549,7 +1549,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The null value string.
+    <dd>{{% md %}}The null value string. Defaults to an empty string.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_parameters_csharp">
@@ -1567,7 +1567,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The quote character.
+    <dd>{{% md %}}The quote character. Defaults to `"`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_csharp">
@@ -1585,7 +1585,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The row delimiter.
+    <dd>{{% md %}}The row delimiter. Defaults to any of the following values on read: `\r\n`, `\r`, `\n`, and `\n` or `\r\n` on write by mapping data flow and Copy activity respectively.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_schemacolumns_csharp">
@@ -1643,7 +1643,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The column delimiter.
+    <dd>{{% md %}}The column delimiter. Defaults to `,`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_compressioncodec_go">
@@ -1697,7 +1697,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The escape character.
+    <dd>{{% md %}}The escape character. Defaults to `\`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_firstrowasheader_go">
@@ -1706,7 +1706,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}When used as input, treat the first row of data as headers. When used as output, write the headers into the output as the first row of data.
+    <dd>{{% md %}}When used as input, treat the first row of data as headers. When used as output, write the headers into the output as the first row of data. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_folder_go">
@@ -1751,7 +1751,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The null value string.
+    <dd>{{% md %}}The null value string. Defaults to an empty string.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_parameters_go">
@@ -1769,7 +1769,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The quote character.
+    <dd>{{% md %}}The quote character. Defaults to `"`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_go">
@@ -1787,7 +1787,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The row delimiter.
+    <dd>{{% md %}}The row delimiter. Defaults to any of the following values on read: `\r\n`, `\r`, `\n`, and `\n` or `\r\n` on write by mapping data flow and Copy activity respectively.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_schemacolumns_go">
@@ -1845,7 +1845,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The column delimiter.
+    <dd>{{% md %}}The column delimiter. Defaults to `,`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_compressioncodec_nodejs">
@@ -1899,7 +1899,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The escape character.
+    <dd>{{% md %}}The escape character. Defaults to `\`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_firstrowasheader_nodejs">
@@ -1908,7 +1908,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}When used as input, treat the first row of data as headers. When used as output, write the headers into the output as the first row of data.
+    <dd>{{% md %}}When used as input, treat the first row of data as headers. When used as output, write the headers into the output as the first row of data. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_folder_nodejs">
@@ -1953,7 +1953,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The null value string.
+    <dd>{{% md %}}The null value string. Defaults to an empty string.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_parameters_nodejs">
@@ -1971,7 +1971,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The quote character.
+    <dd>{{% md %}}The quote character. Defaults to `"`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_nodejs">
@@ -1989,7 +1989,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The row delimiter.
+    <dd>{{% md %}}The row delimiter. Defaults to any of the following values on read: `\r\n`, `\r`, `\n`, and `\n` or `\r\n` on write by mapping data flow and Copy activity respectively.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_schemacolumns_nodejs">
@@ -2047,7 +2047,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The column delimiter.
+    <dd>{{% md %}}The column delimiter. Defaults to `,`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_compression_codec_python">
@@ -2101,7 +2101,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The escape character.
+    <dd>{{% md %}}The escape character. Defaults to `\`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_first_row_as_header_python">
@@ -2110,7 +2110,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}When used as input, treat the first row of data as headers. When used as output, write the headers into the output as the first row of data.
+    <dd>{{% md %}}When used as input, treat the first row of data as headers. When used as output, write the headers into the output as the first row of data. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_folder_python">
@@ -2155,7 +2155,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The null value string.
+    <dd>{{% md %}}The null value string. Defaults to an empty string.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_parameters_python">
@@ -2173,7 +2173,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The quote character.
+    <dd>{{% md %}}The quote character. Defaults to `"`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resource_group_name_python">
@@ -2191,7 +2191,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The row delimiter.
+    <dd>{{% md %}}The row delimiter. Defaults to any of the following values on read: `\r\n`, `\r`, `\n`, and `\n` or `\r\n` on write by mapping data flow and Copy activity respectively.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_schema_columns_python">
@@ -2351,8 +2351,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The container on the Azure Blob Storage Account hosting the file.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="filename_csharp">
 <a href="#filename_csharp" style="color: inherit; text-decoration: inherit;">Filename</a>
 </span>
@@ -2360,8 +2360,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The filename of the file.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="path_csharp">
 <a href="#path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
 </span>
@@ -2382,8 +2382,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The container on the Azure Blob Storage Account hosting the file.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="filename_go">
 <a href="#filename_go" style="color: inherit; text-decoration: inherit;">Filename</a>
 </span>
@@ -2391,8 +2391,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The filename of the file.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="path_go">
 <a href="#path_go" style="color: inherit; text-decoration: inherit;">Path</a>
 </span>
@@ -2413,8 +2413,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The container on the Azure Blob Storage Account hosting the file.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="filename_nodejs">
 <a href="#filename_nodejs" style="color: inherit; text-decoration: inherit;">filename</a>
 </span>
@@ -2422,8 +2422,8 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The filename of the file.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="path_nodejs">
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
@@ -2444,8 +2444,8 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The container on the Azure Blob Storage Account hosting the file.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="filename_python">
 <a href="#filename_python" style="color: inherit; text-decoration: inherit;">filename</a>
 </span>
@@ -2453,8 +2453,8 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The filename of the file.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="path_python">
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
@@ -2735,6 +2735,6 @@ Data Factory Datasets can be imported using the `resource id`, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/hashicorp/terraform-provider-azurerm).{{% /md %}}</dd>
 </dl>
 

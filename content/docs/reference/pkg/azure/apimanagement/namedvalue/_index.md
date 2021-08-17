@@ -1122,15 +1122,6 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="identityclientid_csharp">
-<a href="#identityclientid_csharp" style="color: inherit; text-decoration: inherit;">Identity<wbr>Client<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The client ID of the System Assigned Identity, or User Assigned Identity, for the API Management Service, which will be used to access the key vault secret.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="secretid_csharp">
 <a href="#secretid_csharp" style="color: inherit; text-decoration: inherit;">Secret<wbr>Id</a>
 </span>
@@ -1138,20 +1129,20 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource ID of the Key Vault Secret.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="identityclientid_csharp">
+<a href="#identityclientid_csharp" style="color: inherit; text-decoration: inherit;">Identity<wbr>Client<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The client ID of User Assigned Identity, for the API Management Service, which will be used to access the key vault secret. The System Assigned Identity will be used in absence.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="identityclientid_go">
-<a href="#identityclientid_go" style="color: inherit; text-decoration: inherit;">Identity<wbr>Client<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The client ID of the System Assigned Identity, or User Assigned Identity, for the API Management Service, which will be used to access the key vault secret.
-{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="secretid_go">
 <a href="#secretid_go" style="color: inherit; text-decoration: inherit;">Secret<wbr>Id</a>
@@ -1160,20 +1151,20 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource ID of the Key Vault Secret.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="identityclientid_go">
+<a href="#identityclientid_go" style="color: inherit; text-decoration: inherit;">Identity<wbr>Client<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The client ID of User Assigned Identity, for the API Management Service, which will be used to access the key vault secret. The System Assigned Identity will be used in absence.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="identityclientid_nodejs">
-<a href="#identityclientid_nodejs" style="color: inherit; text-decoration: inherit;">identity<wbr>Client<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The client ID of the System Assigned Identity, or User Assigned Identity, for the API Management Service, which will be used to access the key vault secret.
-{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="secretid_nodejs">
 <a href="#secretid_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Id</a>
@@ -1182,20 +1173,20 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource ID of the Key Vault Secret.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="identityclientid_nodejs">
+<a href="#identityclientid_nodejs" style="color: inherit; text-decoration: inherit;">identity<wbr>Client<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The client ID of User Assigned Identity, for the API Management Service, which will be used to access the key vault secret. The System Assigned Identity will be used in absence.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="identity_client_id_python">
-<a href="#identity_client_id_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>client_<wbr>id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The client ID of the System Assigned Identity, or User Assigned Identity, for the API Management Service, which will be used to access the key vault secret.
-{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="secret_id_python">
 <a href="#secret_id_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>id</a>
@@ -1204,6 +1195,15 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The resource ID of the Key Vault Secret.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="identity_client_id_python">
+<a href="#identity_client_id_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>client_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The client ID of User Assigned Identity, for the API Management Service, which will be used to access the key vault secret. The System Assigned Identity will be used in absence.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
@@ -1225,6 +1225,6 @@ API Management Properties can be imported using the `resource id`, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/hashicorp/terraform-provider-azurerm).{{% /md %}}</dd>
 </dl>
 

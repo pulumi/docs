@@ -377,7 +377,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Disable the gateway in master region? This is only supported when `additional_location` is set.
+    <dd>{{% md %}}Disable the gateway in main region? This is only supported when `additional_location` is set.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hostnameconfiguration_csharp">
@@ -598,7 +598,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Disable the gateway in master region? This is only supported when `additional_location` is set.
+    <dd>{{% md %}}Disable the gateway in main region? This is only supported when `additional_location` is set.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hostnameconfiguration_go">
@@ -819,7 +819,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Disable the gateway in master region? This is only supported when `additional_location` is set.
+    <dd>{{% md %}}Disable the gateway in main region? This is only supported when `additional_location` is set.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hostnameconfiguration_nodejs">
@@ -1040,7 +1040,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Disable the gateway in master region? This is only supported when `additional_location` is set.
+    <dd>{{% md %}}Disable the gateway in main region? This is only supported when `additional_location` is set.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hostname_configuration_python">
@@ -1734,7 +1734,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Disable the gateway in master region? This is only supported when `additional_location` is set.
+    <dd>{{% md %}}Disable the gateway in main region? This is only supported when `additional_location` is set.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_gatewayregionalurl_csharp">
@@ -2027,7 +2027,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Disable the gateway in master region? This is only supported when `additional_location` is set.
+    <dd>{{% md %}}Disable the gateway in main region? This is only supported when `additional_location` is set.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_gatewayregionalurl_go">
@@ -2320,7 +2320,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Disable the gateway in master region? This is only supported when `additional_location` is set.
+    <dd>{{% md %}}Disable the gateway in main region? This is only supported when `additional_location` is set.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_gatewayregionalurl_nodejs">
@@ -2613,7 +2613,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Disable the gateway in master region? This is only supported when `additional_location` is set.
+    <dd>{{% md %}}Disable the gateway in main region? This is only supported when `additional_location` is set.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_gateway_regional_url_python">
@@ -5904,6 +5904,6 @@ API Management Services can be imported using the `resource id`, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/hashicorp/terraform-provider-azurerm).{{% /md %}}</dd>
 </dl>
 

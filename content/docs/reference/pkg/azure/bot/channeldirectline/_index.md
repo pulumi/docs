@@ -12,6 +12,179 @@ meta_desc: "Documentation for the azure.bot.ChannelDirectLine resource with exam
 
 Manages a Directline integration for a Bot Channel
 
+{{% examples %}}
+
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+
+
+
+
+{{< example csharp >}}
+
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var current = Output.Create(Azure.Core.GetClientConfig.InvokeAsync());
+        var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "West Europe",
+        });
+        var exampleChannelsRegistration = new Azure.Bot.ChannelsRegistration("exampleChannelsRegistration", new Azure.Bot.ChannelsRegistrationArgs
+        {
+            Location = "global",
+            ResourceGroupName = exampleResourceGroup.Name,
+            Sku = "F0",
+            MicrosoftAppId = current.Apply(current => current.ClientId),
+        });
+        var exampleChannelDirectLine = new Azure.Bot.ChannelDirectLine("exampleChannelDirectLine", new Azure.Bot.ChannelDirectLineArgs
+        {
+            BotName = exampleChannelsRegistration.Name,
+            Location = exampleChannelsRegistration.Location,
+            ResourceGroupName = exampleResourceGroup.Name,
+            Sites = 
+            {
+                new Azure.Bot.Inputs.ChannelDirectLineSiteArgs
+                {
+                    Name = "default",
+                    Enabled = true,
+                },
+            },
+        });
+    }
+
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/bot"
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/core"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		current, err := core.GetClientConfig(ctx, nil, nil)
+		if err != nil {
+			return err
+		}
+		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
+			Location: pulumi.String("West Europe"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleChannelsRegistration, err := bot.NewChannelsRegistration(ctx, "exampleChannelsRegistration", &bot.ChannelsRegistrationArgs{
+			Location:          pulumi.String("global"),
+			ResourceGroupName: exampleResourceGroup.Name,
+			Sku:               pulumi.String("F0"),
+			MicrosoftAppId:    pulumi.String(current.ClientId),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = bot.NewChannelDirectLine(ctx, "exampleChannelDirectLine", &bot.ChannelDirectLineArgs{
+			BotName:           exampleChannelsRegistration.Name,
+			Location:          exampleChannelsRegistration.Location,
+			ResourceGroupName: exampleResourceGroup.Name,
+			Sites: bot.ChannelDirectLineSiteArray{
+				&bot.ChannelDirectLineSiteArgs{
+					Name:    pulumi.String("default"),
+					Enabled: pulumi.Bool(true),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+```python
+import pulumi
+import pulumi_azure as azure
+
+current = azure.core.get_client_config()
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
+example_channels_registration = azure.bot.ChannelsRegistration("exampleChannelsRegistration",
+    location="global",
+    resource_group_name=example_resource_group.name,
+    sku="F0",
+    microsoft_app_id=current.client_id)
+example_channel_direct_line = azure.bot.ChannelDirectLine("exampleChannelDirectLine",
+    bot_name=example_channels_registration.name,
+    location=example_channels_registration.location,
+    resource_group_name=example_resource_group.name,
+    sites=[azure.bot.ChannelDirectLineSiteArgs(
+        name="default",
+        enabled=True,
+    )])
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const current = azure.core.getClientConfig({});
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
+const exampleChannelsRegistration = new azure.bot.ChannelsRegistration("exampleChannelsRegistration", {
+    location: "global",
+    resourceGroupName: exampleResourceGroup.name,
+    sku: "F0",
+    microsoftAppId: current.then(current => current.clientId),
+});
+const exampleChannelDirectLine = new azure.bot.ChannelDirectLine("exampleChannelDirectLine", {
+    botName: exampleChannelsRegistration.name,
+    location: exampleChannelsRegistration.location,
+    resourceGroupName: exampleResourceGroup.name,
+    sites: [{
+        name: "default",
+        enabled: true,
+    }],
+});
+```
+
+
+{{< /example >}}
+
+
+
+
+
+{{% /examples %}}
+
+
 
 
 ## Create a ChannelDirectLine Resource {#create}
@@ -1029,6 +1202,6 @@ The Directline Channel for a Bot can be imported using the `resource id`, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/hashicorp/terraform-provider-azurerm).{{% /md %}}</dd>
 </dl>
 
