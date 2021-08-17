@@ -223,6 +223,7 @@ const defaultCluster = new alicloud.polardb.Cluster("defaultCluster", {
             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
             <span class="nx">auto_renew_period</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
             <span class="nx">collector_status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">db_cluster_ip_arrays</span><span class="p">:</span> <span class="nx">Optional[Sequence[ClusterDbClusterIpArrayArgs]]</span> = None<span class="p">,</span>
             <span class="nx">db_node_class</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">db_node_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
             <span class="nx">db_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -415,6 +416,15 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies whether to enable or disable SQL data collector. Valid values are `Enable`, `Disabled`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dbclusteriparrays_csharp">
+<a href="#dbclusteriparrays_csharp" style="color: inherit; text-decoration: inherit;">Db<wbr>Cluster<wbr>Ip<wbr>Arrays</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusterdbclusteriparray">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Polar<wbr>DB.<wbr>Inputs.<wbr>Cluster<wbr>Db<wbr>Cluster<wbr>Ip<wbr>Array<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}db_cluster_ip_array defines how users can send requests to your API.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dbnodecount_csharp">
@@ -617,6 +627,15 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
     <dd>{{% md %}}Specifies whether to enable or disable SQL data collector. Valid values are `Enable`, `Disabled`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="dbclusteriparrays_go">
+<a href="#dbclusteriparrays_go" style="color: inherit; text-decoration: inherit;">Db<wbr>Cluster<wbr>Ip<wbr>Arrays</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusterdbclusteriparray">[]Cluster<wbr>Db<wbr>Cluster<wbr>Ip<wbr>Array<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}db_cluster_ip_array defines how users can send requests to your API.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="dbnodecount_go">
 <a href="#dbnodecount_go" style="color: inherit; text-decoration: inherit;">Db<wbr>Node<wbr>Count</a>
 </span>
@@ -817,6 +836,15 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
     <dd>{{% md %}}Specifies whether to enable or disable SQL data collector. Valid values are `Enable`, `Disabled`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="dbclusteriparrays_nodejs">
+<a href="#dbclusteriparrays_nodejs" style="color: inherit; text-decoration: inherit;">db<wbr>Cluster<wbr>Ip<wbr>Arrays</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusterdbclusteriparray">Cluster<wbr>Db<wbr>Cluster<wbr>Ip<wbr>Array<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}db_cluster_ip_array defines how users can send requests to your API.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="dbnodecount_nodejs">
 <a href="#dbnodecount_nodejs" style="color: inherit; text-decoration: inherit;">db<wbr>Node<wbr>Count</a>
 </span>
@@ -1015,6 +1043,15 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies whether to enable or disable SQL data collector. Valid values are `Enable`, `Disabled`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="db_cluster_ip_arrays_python">
+<a href="#db_cluster_ip_arrays_python" style="color: inherit; text-decoration: inherit;">db_<wbr>cluster_<wbr>ip_<wbr>arrays</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusterdbclusteriparray">Sequence[Cluster<wbr>Db<wbr>Cluster<wbr>Ip<wbr>Array<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}db_cluster_ip_array defines how users can send requests to your API.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="db_node_count_python">
@@ -1278,6 +1315,7 @@ Get an existing Cluster resource's state with the given name, ID, and optional e
         <span class="nx">auto_renew_period</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
         <span class="nx">collector_status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">connection_string</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">db_cluster_ip_arrays</span><span class="p">:</span> <span class="nx">Optional[Sequence[ClusterDbClusterIpArrayArgs]]</span> = None<span class="p">,</span>
         <span class="nx">db_node_class</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">db_node_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
         <span class="nx">db_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -1434,6 +1472,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Available in 1.81.0+) PolarDB cluster connection string. When security_ips is configured, the address of cluster type endpoint will be returned, and if only "127.0.0.1" is configured, it will also be an empty string.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_dbclusteriparrays_csharp">
+<a href="#state_dbclusteriparrays_csharp" style="color: inherit; text-decoration: inherit;">Db<wbr>Cluster<wbr>Ip<wbr>Arrays</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusterdbclusteriparray">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Polar<wbr>DB.<wbr>Inputs.<wbr>Cluster<wbr>Db<wbr>Cluster<wbr>Ip<wbr>Array<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}db_cluster_ip_array defines how users can send requests to your API.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dbnodeclass_csharp">
@@ -1645,6 +1692,15 @@ The following state arguments are supported:
     <dd>{{% md %}}(Available in 1.81.0+) PolarDB cluster connection string. When security_ips is configured, the address of cluster type endpoint will be returned, and if only "127.0.0.1" is configured, it will also be an empty string.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_dbclusteriparrays_go">
+<a href="#state_dbclusteriparrays_go" style="color: inherit; text-decoration: inherit;">Db<wbr>Cluster<wbr>Ip<wbr>Arrays</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusterdbclusteriparray">[]Cluster<wbr>Db<wbr>Cluster<wbr>Ip<wbr>Array<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}db_cluster_ip_array defines how users can send requests to your API.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_dbnodeclass_go">
 <a href="#state_dbnodeclass_go" style="color: inherit; text-decoration: inherit;">Db<wbr>Node<wbr>Class</a>
 </span>
@@ -1852,6 +1908,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Available in 1.81.0+) PolarDB cluster connection string. When security_ips is configured, the address of cluster type endpoint will be returned, and if only "127.0.0.1" is configured, it will also be an empty string.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_dbclusteriparrays_nodejs">
+<a href="#state_dbclusteriparrays_nodejs" style="color: inherit; text-decoration: inherit;">db<wbr>Cluster<wbr>Ip<wbr>Arrays</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusterdbclusteriparray">Cluster<wbr>Db<wbr>Cluster<wbr>Ip<wbr>Array<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}db_cluster_ip_array defines how users can send requests to your API.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dbnodeclass_nodejs">
@@ -2063,6 +2128,15 @@ The following state arguments are supported:
     <dd>{{% md %}}(Available in 1.81.0+) PolarDB cluster connection string. When security_ips is configured, the address of cluster type endpoint will be returned, and if only "127.0.0.1" is configured, it will also be an empty string.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_db_cluster_ip_arrays_python">
+<a href="#state_db_cluster_ip_arrays_python" style="color: inherit; text-decoration: inherit;">db_<wbr>cluster_<wbr>ip_<wbr>arrays</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusterdbclusteriparray">Sequence[Cluster<wbr>Db<wbr>Cluster<wbr>Ip<wbr>Array<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}db_cluster_ip_array defines how users can send requests to your API.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_db_node_class_python">
 <a href="#state_db_node_class_python" style="color: inherit; text-decoration: inherit;">db_<wbr>node_<wbr>class</a>
 </span>
@@ -2250,6 +2324,136 @@ The following state arguments are supported:
 ## Supporting Types
 
 
+
+<h4 id="clusterdbclusteriparray">Cluster<wbr>Db<wbr>Cluster<wbr>Ip<wbr>Array</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="dbclusteriparrayname_csharp">
+<a href="#dbclusteriparrayname_csharp" style="color: inherit; text-decoration: inherit;">Db<wbr>Cluster<wbr>Ip<wbr>Array<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the IP whitelist group. The group name must be 2 to 120 characters in length and consists of lowercase letters and digits. It must start with a letter, and end with a letter or a digit. 
+> **NOTE:** If the specified whitelist group name does not exist, the whitelist group is created. If the specified whitelist group name exists, the whitelist group is modified. If you do not specify this parameter, the default group is modified. You can create a maximum of 50 IP whitelist groups for a cluster.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="modifymode_csharp">
+<a href="#modifymode_csharp" style="color: inherit; text-decoration: inherit;">Modify<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The method for modifying the IP whitelist. Valid values are `Cover`, `Append`, `Delete`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="securityips_csharp">
+<a href="#securityips_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Ips</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}List of IP addresses allowed to access all databases of an cluster. The list contains up to 1,000 IP addresses, separated by commas. Supported formats include 0.0.0.0/0, 10.23.12.24 (IP), and 10.23.12.24/24 (Classless Inter-Domain Routing (CIDR) mode. /24 represents the length of the prefix in an IP address. The range of the prefix length is [1,32]).
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="dbclusteriparrayname_go">
+<a href="#dbclusteriparrayname_go" style="color: inherit; text-decoration: inherit;">Db<wbr>Cluster<wbr>Ip<wbr>Array<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the IP whitelist group. The group name must be 2 to 120 characters in length and consists of lowercase letters and digits. It must start with a letter, and end with a letter or a digit. 
+> **NOTE:** If the specified whitelist group name does not exist, the whitelist group is created. If the specified whitelist group name exists, the whitelist group is modified. If you do not specify this parameter, the default group is modified. You can create a maximum of 50 IP whitelist groups for a cluster.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="modifymode_go">
+<a href="#modifymode_go" style="color: inherit; text-decoration: inherit;">Modify<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The method for modifying the IP whitelist. Valid values are `Cover`, `Append`, `Delete`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="securityips_go">
+<a href="#securityips_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Ips</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}List of IP addresses allowed to access all databases of an cluster. The list contains up to 1,000 IP addresses, separated by commas. Supported formats include 0.0.0.0/0, 10.23.12.24 (IP), and 10.23.12.24/24 (Classless Inter-Domain Routing (CIDR) mode. /24 represents the length of the prefix in an IP address. The range of the prefix length is [1,32]).
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="dbclusteriparrayname_nodejs">
+<a href="#dbclusteriparrayname_nodejs" style="color: inherit; text-decoration: inherit;">db<wbr>Cluster<wbr>Ip<wbr>Array<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the IP whitelist group. The group name must be 2 to 120 characters in length and consists of lowercase letters and digits. It must start with a letter, and end with a letter or a digit. 
+> **NOTE:** If the specified whitelist group name does not exist, the whitelist group is created. If the specified whitelist group name exists, the whitelist group is modified. If you do not specify this parameter, the default group is modified. You can create a maximum of 50 IP whitelist groups for a cluster.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="modifymode_nodejs">
+<a href="#modifymode_nodejs" style="color: inherit; text-decoration: inherit;">modify<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The method for modifying the IP whitelist. Valid values are `Cover`, `Append`, `Delete`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="securityips_nodejs">
+<a href="#securityips_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Ips</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}List of IP addresses allowed to access all databases of an cluster. The list contains up to 1,000 IP addresses, separated by commas. Supported formats include 0.0.0.0/0, 10.23.12.24 (IP), and 10.23.12.24/24 (Classless Inter-Domain Routing (CIDR) mode. /24 represents the length of the prefix in an IP address. The range of the prefix length is [1,32]).
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="db_cluster_ip_array_name_python">
+<a href="#db_cluster_ip_array_name_python" style="color: inherit; text-decoration: inherit;">db_<wbr>cluster_<wbr>ip_<wbr>array_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the IP whitelist group. The group name must be 2 to 120 characters in length and consists of lowercase letters and digits. It must start with a letter, and end with a letter or a digit. 
+> **NOTE:** If the specified whitelist group name does not exist, the whitelist group is created. If the specified whitelist group name exists, the whitelist group is modified. If you do not specify this parameter, the default group is modified. You can create a maximum of 50 IP whitelist groups for a cluster.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="modify_mode_python">
+<a href="#modify_mode_python" style="color: inherit; text-decoration: inherit;">modify_<wbr>mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The method for modifying the IP whitelist. Valid values are `Cover`, `Append`, `Delete`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="security_ips_python">
+<a href="#security_ips_python" style="color: inherit; text-decoration: inherit;">security_<wbr>ips</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}List of IP addresses allowed to access all databases of an cluster. The list contains up to 1,000 IP addresses, separated by commas. Supported formats include 0.0.0.0/0, 10.23.12.24 (IP), and 10.23.12.24/24 (Classless Inter-Domain Routing (CIDR) mode. /24 represents the length of the prefix in an IP address. The range of the prefix length is [1,32]).
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
 
 <h4 id="clusterparameter">Cluster<wbr>Parameter</h4>
 

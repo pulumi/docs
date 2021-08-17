@@ -11,11 +11,13 @@ Explore the resources and functions of the alicloud.hbr module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
+    <li><a href="ossbackupplan" title="OssBackupPlan"><span class="symbol resource"></span>OssBackupPlan</a></li>
     <li><a href="vault" title="Vault"><span class="symbol resource"></span>Vault</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
+    <li><a href="getossbackupplans" title="GetOssBackupPlans"><span class="symbol function"></span>GetOssBackupPlans</a></li>
     <li><a href="getvaults" title="GetVaults"><span class="symbol function"></span>GetVaults</a></li>
 </ul>
 
@@ -28,6 +30,6 @@ Explore the resources and functions of the alicloud.hbr module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>3.5.0</dd>
+	<dd>3.6.0</dd>
 </dl>
 

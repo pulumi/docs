@@ -39,11 +39,11 @@ class MyStack : Stack
         {
             NameRegex = "^my-Namespace",
         }));
-        this.SaeNamespaceId2 = nameRegex.Apply(nameRegex => nameRegex.Namespaces[0].Id);
+        this.SaeNamespaceId = nameRegex.Apply(nameRegex => nameRegex.Namespaces[0].Id);
     }
 
-    [Output("saeNamespaceId2")]
-    public Output<string> SaeNamespaceId2 { get; set; }
+    [Output("saeNamespaceId")]
+    public Output<string> SaeNamespaceId { get; set; }
 }
 ```
 
@@ -70,7 +70,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		ctx.Export("saeNamespaceId2", nameRegex.Namespaces[0].Id)
+		ctx.Export("saeNamespaceId", nameRegex.Namespaces[0].Id)
 		return nil
 	})
 }
@@ -87,7 +87,7 @@ import pulumi
 import pulumi_alicloud as alicloud
 
 name_regex = alicloud.sae.get_namespaces(name_regex="^my-Namespace")
-pulumi.export("saeNamespaceId2", name_regex.namespaces[0].id)
+pulumi.export("saeNamespaceId", name_regex.namespaces[0].id)
 ```
 
 
@@ -104,7 +104,7 @@ import * as alicloud from "@pulumi/alicloud";
 const nameRegex = alicloud.sae.getNamespaces({
     nameRegex: "^my-Namespace",
 });
-export const saeNamespaceId2 = nameRegex.then(nameRegex => nameRegex.namespaces[0].id);
+export const saeNamespaceId = nameRegex.then(nameRegex => nameRegex.namespaces[0].id);
 ```
 
 

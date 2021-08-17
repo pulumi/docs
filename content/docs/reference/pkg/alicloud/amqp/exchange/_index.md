@@ -331,6 +331,10 @@ The Exchange resource accepts the following [input]({{< relref "/docs/intro/conc
 * FANOUT: An exchange of this type routes all the received messages to all the queues bound to this exchange. You can use a fanout exchange to broadcast messages.
 * DIRECT: An exchange of this type routes a message to the queue whose binding key is exactly the same as the routing key of the message.
 * TOPIC: This type is similar to the direct exchange type. An exchange of this type routes a message to one or more queues based on the fuzzy match or multi-condition match result between the routing key of the message and the binding keys of the current exchange.
+* HEADERS: Headers Exchange uses the Headers property instead of Routing Key for routing matching.
+When binding Headers Exchange and Queue, set the key-value pair of the binding property;
+when sending a message to the Headers Exchange, set the message's Headers property key-value pair and use the message Headers
+The message is routed to the bound Queue by comparing the attribute key-value pair and the bound attribute key-value pair.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="instanceid_csharp">
@@ -405,6 +409,10 @@ The Exchange resource accepts the following [input]({{< relref "/docs/intro/conc
 * FANOUT: An exchange of this type routes all the received messages to all the queues bound to this exchange. You can use a fanout exchange to broadcast messages.
 * DIRECT: An exchange of this type routes a message to the queue whose binding key is exactly the same as the routing key of the message.
 * TOPIC: This type is similar to the direct exchange type. An exchange of this type routes a message to one or more queues based on the fuzzy match or multi-condition match result between the routing key of the message and the binding keys of the current exchange.
+* HEADERS: Headers Exchange uses the Headers property instead of Routing Key for routing matching.
+When binding Headers Exchange and Queue, set the key-value pair of the binding property;
+when sending a message to the Headers Exchange, set the message's Headers property key-value pair and use the message Headers
+The message is routed to the bound Queue by comparing the attribute key-value pair and the bound attribute key-value pair.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="instanceid_go">
@@ -479,6 +487,10 @@ The Exchange resource accepts the following [input]({{< relref "/docs/intro/conc
 * FANOUT: An exchange of this type routes all the received messages to all the queues bound to this exchange. You can use a fanout exchange to broadcast messages.
 * DIRECT: An exchange of this type routes a message to the queue whose binding key is exactly the same as the routing key of the message.
 * TOPIC: This type is similar to the direct exchange type. An exchange of this type routes a message to one or more queues based on the fuzzy match or multi-condition match result between the routing key of the message and the binding keys of the current exchange.
+* HEADERS: Headers Exchange uses the Headers property instead of Routing Key for routing matching.
+When binding Headers Exchange and Queue, set the key-value pair of the binding property;
+when sending a message to the Headers Exchange, set the message's Headers property key-value pair and use the message Headers
+The message is routed to the bound Queue by comparing the attribute key-value pair and the bound attribute key-value pair.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="instanceid_nodejs">
@@ -553,6 +565,10 @@ The Exchange resource accepts the following [input]({{< relref "/docs/intro/conc
 * FANOUT: An exchange of this type routes all the received messages to all the queues bound to this exchange. You can use a fanout exchange to broadcast messages.
 * DIRECT: An exchange of this type routes a message to the queue whose binding key is exactly the same as the routing key of the message.
 * TOPIC: This type is similar to the direct exchange type. An exchange of this type routes a message to one or more queues based on the fuzzy match or multi-condition match result between the routing key of the message and the binding keys of the current exchange.
+* HEADERS: Headers Exchange uses the Headers property instead of Routing Key for routing matching.
+When binding Headers Exchange and Queue, set the key-value pair of the binding property;
+when sending a message to the Headers Exchange, set the message's Headers property key-value pair and use the message Headers
+The message is routed to the bound Queue by comparing the attribute key-value pair and the bound attribute key-value pair.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="instance_id_python">
@@ -823,6 +839,10 @@ The following state arguments are supported:
 * FANOUT: An exchange of this type routes all the received messages to all the queues bound to this exchange. You can use a fanout exchange to broadcast messages.
 * DIRECT: An exchange of this type routes a message to the queue whose binding key is exactly the same as the routing key of the message.
 * TOPIC: This type is similar to the direct exchange type. An exchange of this type routes a message to one or more queues based on the fuzzy match or multi-condition match result between the routing key of the message and the binding keys of the current exchange.
+* HEADERS: Headers Exchange uses the Headers property instead of Routing Key for routing matching.
+When binding Headers Exchange and Queue, set the key-value pair of the binding property;
+when sending a message to the Headers Exchange, set the message's Headers property key-value pair and use the message Headers
+The message is routed to the bound Queue by comparing the attribute key-value pair and the bound attribute key-value pair.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instanceid_csharp">
@@ -897,6 +917,10 @@ The following state arguments are supported:
 * FANOUT: An exchange of this type routes all the received messages to all the queues bound to this exchange. You can use a fanout exchange to broadcast messages.
 * DIRECT: An exchange of this type routes a message to the queue whose binding key is exactly the same as the routing key of the message.
 * TOPIC: This type is similar to the direct exchange type. An exchange of this type routes a message to one or more queues based on the fuzzy match or multi-condition match result between the routing key of the message and the binding keys of the current exchange.
+* HEADERS: Headers Exchange uses the Headers property instead of Routing Key for routing matching.
+When binding Headers Exchange and Queue, set the key-value pair of the binding property;
+when sending a message to the Headers Exchange, set the message's Headers property key-value pair and use the message Headers
+The message is routed to the bound Queue by comparing the attribute key-value pair and the bound attribute key-value pair.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instanceid_go">
@@ -971,6 +995,10 @@ The following state arguments are supported:
 * FANOUT: An exchange of this type routes all the received messages to all the queues bound to this exchange. You can use a fanout exchange to broadcast messages.
 * DIRECT: An exchange of this type routes a message to the queue whose binding key is exactly the same as the routing key of the message.
 * TOPIC: This type is similar to the direct exchange type. An exchange of this type routes a message to one or more queues based on the fuzzy match or multi-condition match result between the routing key of the message and the binding keys of the current exchange.
+* HEADERS: Headers Exchange uses the Headers property instead of Routing Key for routing matching.
+When binding Headers Exchange and Queue, set the key-value pair of the binding property;
+when sending a message to the Headers Exchange, set the message's Headers property key-value pair and use the message Headers
+The message is routed to the bound Queue by comparing the attribute key-value pair and the bound attribute key-value pair.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instanceid_nodejs">
@@ -1045,6 +1073,10 @@ The following state arguments are supported:
 * FANOUT: An exchange of this type routes all the received messages to all the queues bound to this exchange. You can use a fanout exchange to broadcast messages.
 * DIRECT: An exchange of this type routes a message to the queue whose binding key is exactly the same as the routing key of the message.
 * TOPIC: This type is similar to the direct exchange type. An exchange of this type routes a message to one or more queues based on the fuzzy match or multi-condition match result between the routing key of the message and the binding keys of the current exchange.
+* HEADERS: Headers Exchange uses the Headers property instead of Routing Key for routing matching.
+When binding Headers Exchange and Queue, set the key-value pair of the binding property;
+when sending a message to the Headers Exchange, set the message's Headers property key-value pair and use the message Headers
+The message is routed to the bound Queue by comparing the attribute key-value pair and the bound attribute key-value pair.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instance_id_python">

@@ -16,6 +16,7 @@ A Pulumi package for creating and managing AliCloud resources.
 <ul class="api">
     <li><a href="actiontrail/" title="actiontrail"><span class="symbol module"></span>actiontrail</a></li>
     <li><a href="adb/" title="adb"><span class="symbol module"></span>adb</a></li>
+    <li><a href="alb/" title="alb"><span class="symbol module"></span>alb</a></li>
     <li><a href="alikafka/" title="alikafka"><span class="symbol module"></span>alikafka</a></li>
     <li><a href="amqp/" title="amqp"><span class="symbol module"></span>amqp</a></li>
     <li><a href="apigateway/" title="apigateway"><span class="symbol module"></span>apigateway</a></li>
@@ -42,8 +43,10 @@ A Pulumi package for creating and managing AliCloud resources.
     <li><a href="dns/" title="dns"><span class="symbol module"></span>dns</a></li>
     <li><a href="drds/" title="drds"><span class="symbol module"></span>drds</a></li>
     <li><a href="eci/" title="eci"><span class="symbol module"></span>eci</a></li>
+    <li><a href="ecp/" title="ecp"><span class="symbol module"></span>ecp</a></li>
     <li><a href="ecs/" title="ecs"><span class="symbol module"></span>ecs</a></li>
     <li><a href="edas/" title="edas"><span class="symbol module"></span>edas</a></li>
+    <li><a href="eds/" title="eds"><span class="symbol module"></span>eds</a></li>
     <li><a href="eipanycast/" title="eipanycast"><span class="symbol module"></span>eipanycast</a></li>
     <li><a href="elasticsearch/" title="elasticsearch"><span class="symbol module"></span>elasticsearch</a></li>
     <li><a href="emr/" title="emr"><span class="symbol module"></span>emr</a></li>
@@ -79,6 +82,7 @@ A Pulumi package for creating and managing AliCloud resources.
     <li><a href="ros/" title="ros"><span class="symbol module"></span>ros</a></li>
     <li><a href="sae/" title="sae"><span class="symbol module"></span>sae</a></li>
     <li><a href="sag/" title="sag"><span class="symbol module"></span>sag</a></li>
+    <li><a href="scdn/" title="scdn"><span class="symbol module"></span>scdn</a></li>
     <li><a href="slb/" title="slb"><span class="symbol module"></span>slb</a></li>
     <li><a href="tsdb/" title="tsdb"><span class="symbol module"></span>tsdb</a></li>
     <li><a href="videosurveillance/" title="videosurveillance"><span class="symbol module"></span>videosurveillance</a></li>
@@ -111,6 +115,6 @@ A Pulumi package for creating and managing AliCloud resources.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>3.5.0</dd>
+	<dd>3.6.0</dd>
 </dl>
 
