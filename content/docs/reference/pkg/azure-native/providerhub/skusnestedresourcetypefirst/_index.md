@@ -35,31 +35,34 @@ class MyStack : Stack
         var skusNestedResourceTypeFirst = new AzureNative.ProviderHub.SkusNestedResourceTypeFirst("skusNestedResourceTypeFirst", new AzureNative.ProviderHub.SkusNestedResourceTypeFirstArgs
         {
             NestedResourceTypeFirst = "nestedResourceTypeFirst",
+            Properties = new AzureNative.ProviderHub.Inputs.SkuResourcePropertiesArgs
+            {
+                SkuSettings = 
+                {
+                    new AzureNative.ProviderHub.Inputs.SkuSettingArgs
+                    {
+                        Kind = "Standard",
+                        Name = "freeSku",
+                        Tier = "Tier1",
+                    },
+                    new AzureNative.ProviderHub.Inputs.SkuSettingArgs
+                    {
+                        Costs = 
+                        {
+                            new AzureNative.ProviderHub.Inputs.SkuCostArgs
+                            {
+                                MeterId = "xxx",
+                            },
+                        },
+                        Kind = "Premium",
+                        Name = "premiumSku",
+                        Tier = "Tier2",
+                    },
+                },
+            },
             ProviderNamespace = "Microsoft.Contoso",
             ResourceType = "testResourceType",
             Sku = "testSku",
-            SkuSettings = 
-            {
-                new AzureNative.ProviderHub.Inputs.SkuSettingArgs
-                {
-                    Kind = "Standard",
-                    Name = "freeSku",
-                    Tier = "Tier1",
-                },
-                new AzureNative.ProviderHub.Inputs.SkuSettingArgs
-                {
-                    Costs = 
-                    {
-                        new AzureNative.ProviderHub.Inputs.SkuCostArgs
-                        {
-                            MeterId = "xxx",
-                        },
-                    },
-                    Kind = "Premium",
-                    Name = "premiumSku",
-                    Tier = "Tier2",
-                },
-            },
         });
     }
 
@@ -86,26 +89,28 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := providerhub.NewSkusNestedResourceTypeFirst(ctx, "skusNestedResourceTypeFirst", &providerhub.SkusNestedResourceTypeFirstArgs{
 			NestedResourceTypeFirst: pulumi.String("nestedResourceTypeFirst"),
-			ProviderNamespace:       pulumi.String("Microsoft.Contoso"),
-			ResourceType:            pulumi.String("testResourceType"),
-			Sku:                     pulumi.String("testSku"),
-			SkuSettings: providerhub.SkuSettingArray{
-				&providerhub.SkuSettingArgs{
-					Kind: pulumi.String("Standard"),
-					Name: pulumi.String("freeSku"),
-					Tier: pulumi.String("Tier1"),
-				},
-				&providerhub.SkuSettingArgs{
-					Costs: providerhub.SkuCostArray{
-						&providerhub.SkuCostArgs{
-							MeterId: pulumi.String("xxx"),
-						},
+			Properties: &providerhub.SkuResourcePropertiesArgs{
+				SkuSettings: providerhub.SkuSettingArray{
+					&providerhub.SkuSettingArgs{
+						Kind: pulumi.String("Standard"),
+						Name: pulumi.String("freeSku"),
+						Tier: pulumi.String("Tier1"),
 					},
-					Kind: pulumi.String("Premium"),
-					Name: pulumi.String("premiumSku"),
-					Tier: pulumi.String("Tier2"),
+					&providerhub.SkuSettingArgs{
+						Costs: providerhub.SkuCostArray{
+							&providerhub.SkuCostArgs{
+								MeterId: pulumi.String("xxx"),
+							},
+						},
+						Kind: pulumi.String("Premium"),
+						Name: pulumi.String("premiumSku"),
+						Tier: pulumi.String("Tier2"),
+					},
 				},
 			},
+			ProviderNamespace: pulumi.String("Microsoft.Contoso"),
+			ResourceType:      pulumi.String("testResourceType"),
+			Sku:               pulumi.String("testSku"),
 		})
 		if err != nil {
 			return err
@@ -129,24 +134,26 @@ import pulumi_azure_native as azure_native
 
 skus_nested_resource_type_first = azure_native.providerhub.SkusNestedResourceTypeFirst("skusNestedResourceTypeFirst",
     nested_resource_type_first="nestedResourceTypeFirst",
+    properties=azure_native.providerhub.SkuResourcePropertiesArgs(
+        sku_settings=[
+            azure_native.providerhub.SkuSettingArgs(
+                kind="Standard",
+                name="freeSku",
+                tier="Tier1",
+            ),
+            azure_native.providerhub.SkuSettingArgs(
+                costs=[azure_native.providerhub.SkuCostArgs(
+                    meter_id="xxx",
+                )],
+                kind="Premium",
+                name="premiumSku",
+                tier="Tier2",
+            ),
+        ],
+    ),
     provider_namespace="Microsoft.Contoso",
     resource_type="testResourceType",
-    sku="testSku",
-    sku_settings=[
-        azure_native.providerhub.SkuSettingArgs(
-            kind="Standard",
-            name="freeSku",
-            tier="Tier1",
-        ),
-        azure_native.providerhub.SkuSettingArgs(
-            costs=[azure_native.providerhub.SkuCostArgs(
-                meter_id="xxx",
-            )],
-            kind="Premium",
-            name="premiumSku",
-            tier="Tier2",
-        ),
-    ])
+    sku="testSku")
 
 ```
 
@@ -163,24 +170,26 @@ import * as azure_native from "@pulumi/azure-native";
 
 const skusNestedResourceTypeFirst = new azure_native.providerhub.SkusNestedResourceTypeFirst("skusNestedResourceTypeFirst", {
     nestedResourceTypeFirst: "nestedResourceTypeFirst",
+    properties: {
+        skuSettings: [
+            {
+                kind: "Standard",
+                name: "freeSku",
+                tier: "Tier1",
+            },
+            {
+                costs: [{
+                    meterId: "xxx",
+                }],
+                kind: "Premium",
+                name: "premiumSku",
+                tier: "Tier2",
+            },
+        ],
+    },
     providerNamespace: "Microsoft.Contoso",
     resourceType: "testResourceType",
     sku: "testSku",
-    skuSettings: [
-        {
-            kind: "Standard",
-            name: "freeSku",
-            tier: "Tier1",
-        },
-        {
-            costs: [{
-                meterId: "xxx",
-            }],
-            kind: "Premium",
-            name: "premiumSku",
-            tier: "Tier2",
-        },
-    ],
 });
 
 ```
@@ -210,11 +219,10 @@ const skusNestedResourceTypeFirst = new azure_native.providerhub.SkusNestedResou
 <span class="k">def </span><span class="nx">SkusNestedResourceTypeFirst</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                                 <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
                                 <span class="nx">nested_resource_type_first</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                                <span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[SkuResourcePropertiesArgs]</span> = None<span class="p">,</span>
                                 <span class="nx">provider_namespace</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                                <span class="nx">provisioning_state</span><span class="p">:</span> <span class="nx">Optional[Union[str, ProvisioningState]]</span> = None<span class="p">,</span>
                                 <span class="nx">resource_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                                <span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                                <span class="nx">sku_settings</span><span class="p">:</span> <span class="nx">Optional[Sequence[SkuSettingArgs]]</span> = None<span class="p">)</span>
+                                <span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">SkusNestedResourceTypeFirst</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                                 <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SkusNestedResourceTypeFirstArgs</a></span><span class="p">,</span>
@@ -366,21 +374,13 @@ The SkusNestedResourceTypeFirst resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource type.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="skusettings_csharp">
-<a href="#skusettings_csharp" style="color: inherit; text-decoration: inherit;">Sku<wbr>Settings</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skusetting">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Provider<wbr>Hub.<wbr>Inputs.<wbr>Sku<wbr>Setting<wbr>Args&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The resource type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="provisioningstate_csharp">
-<a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
+        <span id="properties_csharp">
+<a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#provisioningstate">Pulumi.<wbr>Azure<wbr>Native.<wbr>Provider<wbr>Hub.<wbr>Provisioning<wbr>State</a></span>
+        <span class="property-type"><a href="#skuresourceproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Provider<wbr>Hub.<wbr>Inputs.<wbr>Sku<wbr>Resource<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -418,21 +418,13 @@ The SkusNestedResourceTypeFirst resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource type.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="skusettings_go">
-<a href="#skusettings_go" style="color: inherit; text-decoration: inherit;">Sku<wbr>Settings</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skusetting">[]Sku<wbr>Setting<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The resource type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="provisioningstate_go">
-<a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
+        <span id="properties_go">
+<a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#provisioningstate">Provisioning<wbr>State</a></span>
+        <span class="property-type"><a href="#skuresourceproperties">Sku<wbr>Resource<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -470,21 +462,13 @@ The SkusNestedResourceTypeFirst resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource type.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="skusettings_nodejs">
-<a href="#skusettings_nodejs" style="color: inherit; text-decoration: inherit;">sku<wbr>Settings</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skusetting">Sku<wbr>Setting<wbr>Args[]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The resource type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="provisioningstate_nodejs">
-<a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
+        <span id="properties_nodejs">
+<a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#provisioningstate">Provisioning<wbr>State</a></span>
+        <span class="property-type"><a href="#skuresourceproperties">Sku<wbr>Resource<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -522,21 +506,13 @@ The SkusNestedResourceTypeFirst resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource type.{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="sku_settings_python">
-<a href="#sku_settings_python" style="color: inherit; text-decoration: inherit;">sku_<wbr>settings</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skusetting">Sequence[Sku<wbr>Setting<wbr>Args]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The resource type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="provisioning_state_python">
-<a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
+        <span id="properties_python">
+<a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#provisioningstate">Provisioning<wbr>State</a></span>
+        <span class="property-type"><a href="#skuresourceproperties">Sku<wbr>Resource<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -575,14 +551,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="properties_csharp">
-<a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skuresourceresponseproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Provider<wbr>Hub.<wbr>Outputs.<wbr>Sku<wbr>Resource<wbr>Response<wbr>Properties</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
-            title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
@@ -610,14 +578,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="properties_go">
-<a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skuresourceresponseproperties">Sku<wbr>Resource<wbr>Response<wbr>Properties</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -647,14 +607,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="properties_nodejs">
-<a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skuresourceresponseproperties">Sku<wbr>Resource<wbr>Response<wbr>Properties</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
-            title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
@@ -682,14 +634,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="properties_python">
-<a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skuresourceresponseproperties">Sku<wbr>Resource<wbr>Response<wbr>Properties</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1524,6 +1468,88 @@ All [input](#inputs) properties are implicitly available as output properties. A
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="skuresourceproperties">Sku<wbr>Resource<wbr>Properties</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="skusettings_csharp">
+<a href="#skusettings_csharp" style="color: inherit; text-decoration: inherit;">Sku<wbr>Settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#skusetting">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Provider<wbr>Hub.<wbr>Inputs.<wbr>Sku<wbr>Setting&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="provisioningstate_csharp">
+<a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#provisioningstate">Pulumi.<wbr>Azure<wbr>Native.<wbr>Provider<wbr>Hub.<wbr>Provisioning<wbr>State</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="skusettings_go">
+<a href="#skusettings_go" style="color: inherit; text-decoration: inherit;">Sku<wbr>Settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#skusetting">[]Sku<wbr>Setting</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="provisioningstate_go">
+<a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#provisioningstate">Provisioning<wbr>State</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="skusettings_nodejs">
+<a href="#skusettings_nodejs" style="color: inherit; text-decoration: inherit;">sku<wbr>Settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#skusetting">Sku<wbr>Setting[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="provisioningstate_nodejs">
+<a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#provisioningstate">Provisioning<wbr>State</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="sku_settings_python">
+<a href="#sku_settings_python" style="color: inherit; text-decoration: inherit;">sku_<wbr>settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#skusetting">Sequence[Sku<wbr>Setting]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="provisioning_state_python">
+<a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str | <a href="#provisioningstate">Provisioning<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}

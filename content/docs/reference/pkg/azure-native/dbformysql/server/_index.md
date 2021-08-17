@@ -2300,7 +2300,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The administrator's login name of a server. Can only be specified when the server is being created (and is required for creation).{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The administrator's login name of a server. Can only be specified when the server is being created (and is required for creation). The login name is required when updating password.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="administratorloginpassword_csharp">
 <a href="#administratorloginpassword_csharp" style="color: inherit; text-decoration: inherit;">Administrator<wbr>Login<wbr>Password</a>
@@ -2368,7 +2368,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The administrator's login name of a server. Can only be specified when the server is being created (and is required for creation).{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The administrator's login name of a server. Can only be specified when the server is being created (and is required for creation). The login name is required when updating password.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="administratorloginpassword_go">
 <a href="#administratorloginpassword_go" style="color: inherit; text-decoration: inherit;">Administrator<wbr>Login<wbr>Password</a>
@@ -2436,7 +2436,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The administrator's login name of a server. Can only be specified when the server is being created (and is required for creation).{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The administrator's login name of a server. Can only be specified when the server is being created (and is required for creation). The login name is required when updating password.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="administratorloginpassword_nodejs">
 <a href="#administratorloginpassword_nodejs" style="color: inherit; text-decoration: inherit;">administrator<wbr>Login<wbr>Password</a>
@@ -2504,7 +2504,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The administrator's login name of a server. Can only be specified when the server is being created (and is required for creation).{{% /md %}}</dd><dt class="property-required"
+    <dd>{{% md %}}The administrator's login name of a server. Can only be specified when the server is being created (and is required for creation). The login name is required when updating password.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="administrator_login_password_python">
 <a href="#administrator_login_password_python" style="color: inherit; text-decoration: inherit;">administrator_<wbr>login_<wbr>password</a>

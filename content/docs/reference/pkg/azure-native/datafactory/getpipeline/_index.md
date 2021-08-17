@@ -429,7 +429,7 @@ The following output properties are available:
 <a href="#activities_nodejs" style="color: inherit; text-decoration: inherit;">activities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Append<wbr>Variable<wbr>Activity<wbr>Response | Azure<wbr>Data<wbr>Explorer<wbr>Command<wbr>Activity<wbr>Response | Azure<wbr>Function<wbr>Activity<wbr>Response | Azure<wbr>MLBatch<wbr>Execution<wbr>Activity<wbr>Response | Azure<wbr>MLExecute<wbr>Pipeline<wbr>Activity<wbr>Response | Azure<wbr>MLUpdate<wbr>Resource<wbr>Activity<wbr>Response | Control<wbr>Activity<wbr>Response | Copy<wbr>Activity<wbr>Response | Custom<wbr>Activity<wbr>Response | Data<wbr>Lake<wbr>Analytics<wbr>USQLActivity<wbr>Response | Databricks<wbr>Notebook<wbr>Activity<wbr>Response | Databricks<wbr>Spark<wbr>Jar<wbr>Activity<wbr>Response | Databricks<wbr>Spark<wbr>Python<wbr>Activity<wbr>Response | Delete<wbr>Activity<wbr>Response | Execute<wbr>Data<wbr>Flow<wbr>Activity<wbr>Response | Execute<wbr>Pipeline<wbr>Activity<wbr>Response | Execute<wbr>SSISPackage<wbr>Activity<wbr>Response | Execution<wbr>Activity<wbr>Response | Filter<wbr>Activity<wbr>Response | For<wbr>Each<wbr>Activity<wbr>Response | Get<wbr>Metadata<wbr>Activity<wbr>Response | HDInsight<wbr>Hive<wbr>Activity<wbr>Response | HDInsight<wbr>Map<wbr>Reduce<wbr>Activity<wbr>Response | HDInsight<wbr>Pig<wbr>Activity<wbr>Response | HDInsight<wbr>Spark<wbr>Activity<wbr>Response | HDInsight<wbr>Streaming<wbr>Activity<wbr>Response | If<wbr>Condition<wbr>Activity<wbr>Response | Lookup<wbr>Activity<wbr>Response | Set<wbr>Variable<wbr>Activity<wbr>Response | Sql<wbr>Server<wbr>Stored<wbr>Procedure<wbr>Activity<wbr>Response | Switch<wbr>Activity<wbr>Response | Until<wbr>Activity<wbr>Response | Validation<wbr>Activity<wbr>Response | Wait<wbr>Activity<wbr>Response | Web<wbr>Activity<wbr>Response | Web<wbr>Hook<wbr>Activity<wbr>Response[]</span>
+        <span class="property-type">Append<wbr>Variable<wbr>Activity<wbr>Response | Azure<wbr>Data<wbr>Explorer<wbr>Command<wbr>Activity<wbr>Response | Azure<wbr>Function<wbr>Activity<wbr>Response | Azure<wbr>MLBatch<wbr>Execution<wbr>Activity<wbr>Response | Azure<wbr>MLExecute<wbr>Pipeline<wbr>Activity<wbr>Response | Azure<wbr>MLUpdate<wbr>Resource<wbr>Activity<wbr>Response | Control<wbr>Activity<wbr>Response | Copy<wbr>Activity<wbr>Response | Custom<wbr>Activity<wbr>Response | Data<wbr>Lake<wbr>Analytics<wbr>USQLActivity<wbr>Response | Databricks<wbr>Notebook<wbr>Activity<wbr>Response | Databricks<wbr>Spark<wbr>Jar<wbr>Activity<wbr>Response | Databricks<wbr>Spark<wbr>Python<wbr>Activity<wbr>Response | Delete<wbr>Activity<wbr>Response | Execute<wbr>Data<wbr>Flow<wbr>Activity<wbr>Response | Execute<wbr>Pipeline<wbr>Activity<wbr>Response | Execute<wbr>SSISPackage<wbr>Activity<wbr>Response | Execute<wbr>Wrangling<wbr>Dataflow<wbr>Activity<wbr>Response | Execution<wbr>Activity<wbr>Response | Filter<wbr>Activity<wbr>Response | For<wbr>Each<wbr>Activity<wbr>Response | Get<wbr>Metadata<wbr>Activity<wbr>Response | HDInsight<wbr>Hive<wbr>Activity<wbr>Response | HDInsight<wbr>Map<wbr>Reduce<wbr>Activity<wbr>Response | HDInsight<wbr>Pig<wbr>Activity<wbr>Response | HDInsight<wbr>Spark<wbr>Activity<wbr>Response | HDInsight<wbr>Streaming<wbr>Activity<wbr>Response | If<wbr>Condition<wbr>Activity<wbr>Response | Lookup<wbr>Activity<wbr>Response | Set<wbr>Variable<wbr>Activity<wbr>Response | Sql<wbr>Server<wbr>Stored<wbr>Procedure<wbr>Activity<wbr>Response | Switch<wbr>Activity<wbr>Response | Until<wbr>Activity<wbr>Response | Validation<wbr>Activity<wbr>Response | Wait<wbr>Activity<wbr>Response | Web<wbr>Activity<wbr>Response | Web<wbr>Hook<wbr>Activity<wbr>Response[]</span>
     </dt>
     <dd>{{% md %}}List of activities in pipeline.{{% /md %}}</dd><dt class="property-"
             title="">
@@ -24932,6 +24932,442 @@ The following output properties are available:
     <dd>{{% md %}}Activity user properties.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="executewranglingdataflowactivityresponse">Execute<wbr>Wrangling<wbr>Dataflow<wbr>Activity<wbr>Response</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="dataflow_csharp">
+<a href="#dataflow_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Flow</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dataflowreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Data<wbr>Flow<wbr>Reference<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Data flow reference.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Activity name.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="compute_csharp">
+<a href="#compute_csharp" style="color: inherit; text-decoration: inherit;">Compute</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#executedataflowactivitytypepropertiesresponsecompute">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Execute<wbr>Data<wbr>Flow<wbr>Activity<wbr>Type<wbr>Properties<wbr>Response<wbr>Compute</a></span>
+    </dt>
+    <dd>{{% md %}}Compute properties for data flow activity.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="continueonerror_csharp">
+<a href="#continueonerror_csharp" style="color: inherit; text-decoration: inherit;">Continue<wbr>On<wbr>Error</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}Continue on error setting used for data flow execution. Enables processing to continue if a sink fails. Type: boolean (or Expression with resultType boolean){{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dependson_csharp">
+<a href="#dependson_csharp" style="color: inherit; text-decoration: inherit;">Depends<wbr>On</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#activitydependencyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Dependency<wbr>Response&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Activity depends on condition.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="description_csharp">
+<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Activity description.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="integrationruntime_csharp">
+<a href="#integrationruntime_csharp" style="color: inherit; text-decoration: inherit;">Integration<wbr>Runtime</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="policy_csharp">
+<a href="#policy_csharp" style="color: inherit; text-decoration: inherit;">Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#activitypolicyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Activity<wbr>Policy<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Activity policy.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="runconcurrently_csharp">
+<a href="#runconcurrently_csharp" style="color: inherit; text-decoration: inherit;">Run<wbr>Concurrently</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}Concurrent run setting used for data flow execution. Allows sinks with the same save order to be processed concurrently. Type: boolean (or Expression with resultType boolean){{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sinks_csharp">
+<a href="#sinks_csharp" style="color: inherit; text-decoration: inherit;">Sinks</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Power<wbr>Query<wbr>Sink<wbr>Response&gt;</span>
+    </dt>
+    <dd>{{% md %}}List of Power Query activity sinks mapped to a queryName.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="staging_csharp">
+<a href="#staging_csharp" style="color: inherit; text-decoration: inherit;">Staging</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dataflowstaginginforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Data<wbr>Flow<wbr>Staging<wbr>Info<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Staging info for execute data flow activity.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tracelevel_csharp">
+<a href="#tracelevel_csharp" style="color: inherit; text-decoration: inherit;">Trace<wbr>Level</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}Trace level setting used for data flow monitoring output. Supported values are: 'coarse', 'fine', and 'none'. Type: string (or Expression with resultType string){{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="userproperties_csharp">
+<a href="#userproperties_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Properties</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#userpropertyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>User<wbr>Property<wbr>Response&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Activity user properties.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="dataflow_go">
+<a href="#dataflow_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Flow</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dataflowreferenceresponse">Data<wbr>Flow<wbr>Reference<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Data flow reference.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Activity name.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="compute_go">
+<a href="#compute_go" style="color: inherit; text-decoration: inherit;">Compute</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#executedataflowactivitytypepropertiesresponsecompute">Execute<wbr>Data<wbr>Flow<wbr>Activity<wbr>Type<wbr>Properties<wbr>Response<wbr>Compute</a></span>
+    </dt>
+    <dd>{{% md %}}Compute properties for data flow activity.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="continueonerror_go">
+<a href="#continueonerror_go" style="color: inherit; text-decoration: inherit;">Continue<wbr>On<wbr>Error</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}Continue on error setting used for data flow execution. Enables processing to continue if a sink fails. Type: boolean (or Expression with resultType boolean){{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dependson_go">
+<a href="#dependson_go" style="color: inherit; text-decoration: inherit;">Depends<wbr>On</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#activitydependencyresponse">[]Activity<wbr>Dependency<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Activity depends on condition.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="description_go">
+<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Activity description.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="integrationruntime_go">
+<a href="#integrationruntime_go" style="color: inherit; text-decoration: inherit;">Integration<wbr>Runtime</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="policy_go">
+<a href="#policy_go" style="color: inherit; text-decoration: inherit;">Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#activitypolicyresponse">Activity<wbr>Policy<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Activity policy.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="runconcurrently_go">
+<a href="#runconcurrently_go" style="color: inherit; text-decoration: inherit;">Run<wbr>Concurrently</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}Concurrent run setting used for data flow execution. Allows sinks with the same save order to be processed concurrently. Type: boolean (or Expression with resultType boolean){{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sinks_go">
+<a href="#sinks_go" style="color: inherit; text-decoration: inherit;">Sinks</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]Power<wbr>Query<wbr>Sink<wbr>Response</span>
+    </dt>
+    <dd>{{% md %}}List of Power Query activity sinks mapped to a queryName.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="staging_go">
+<a href="#staging_go" style="color: inherit; text-decoration: inherit;">Staging</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dataflowstaginginforesponse">Data<wbr>Flow<wbr>Staging<wbr>Info<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Staging info for execute data flow activity.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tracelevel_go">
+<a href="#tracelevel_go" style="color: inherit; text-decoration: inherit;">Trace<wbr>Level</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}Trace level setting used for data flow monitoring output. Supported values are: 'coarse', 'fine', and 'none'. Type: string (or Expression with resultType string){{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="userproperties_go">
+<a href="#userproperties_go" style="color: inherit; text-decoration: inherit;">User<wbr>Properties</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#userpropertyresponse">[]User<wbr>Property<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Activity user properties.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="dataflow_nodejs">
+<a href="#dataflow_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Flow</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dataflowreferenceresponse">Data<wbr>Flow<wbr>Reference<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Data flow reference.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Activity name.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="compute_nodejs">
+<a href="#compute_nodejs" style="color: inherit; text-decoration: inherit;">compute</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#executedataflowactivitytypepropertiesresponsecompute">Execute<wbr>Data<wbr>Flow<wbr>Activity<wbr>Type<wbr>Properties<wbr>Response<wbr>Compute</a></span>
+    </dt>
+    <dd>{{% md %}}Compute properties for data flow activity.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="continueonerror_nodejs">
+<a href="#continueonerror_nodejs" style="color: inherit; text-decoration: inherit;">continue<wbr>On<wbr>Error</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}Continue on error setting used for data flow execution. Enables processing to continue if a sink fails. Type: boolean (or Expression with resultType boolean){{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dependson_nodejs">
+<a href="#dependson_nodejs" style="color: inherit; text-decoration: inherit;">depends<wbr>On</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#activitydependencyresponse">Activity<wbr>Dependency<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}Activity depends on condition.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="description_nodejs">
+<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Activity description.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="integrationruntime_nodejs">
+<a href="#integrationruntime_nodejs" style="color: inherit; text-decoration: inherit;">integration<wbr>Runtime</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="policy_nodejs">
+<a href="#policy_nodejs" style="color: inherit; text-decoration: inherit;">policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#activitypolicyresponse">Activity<wbr>Policy<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Activity policy.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="runconcurrently_nodejs">
+<a href="#runconcurrently_nodejs" style="color: inherit; text-decoration: inherit;">run<wbr>Concurrently</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}Concurrent run setting used for data flow execution. Allows sinks with the same save order to be processed concurrently. Type: boolean (or Expression with resultType boolean){{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sinks_nodejs">
+<a href="#sinks_nodejs" style="color: inherit; text-decoration: inherit;">sinks</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: Power<wbr>Query<wbr>Sink<wbr>Response}</span>
+    </dt>
+    <dd>{{% md %}}List of Power Query activity sinks mapped to a queryName.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="staging_nodejs">
+<a href="#staging_nodejs" style="color: inherit; text-decoration: inherit;">staging</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dataflowstaginginforesponse">Data<wbr>Flow<wbr>Staging<wbr>Info<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Staging info for execute data flow activity.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tracelevel_nodejs">
+<a href="#tracelevel_nodejs" style="color: inherit; text-decoration: inherit;">trace<wbr>Level</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}Trace level setting used for data flow monitoring output. Supported values are: 'coarse', 'fine', and 'none'. Type: string (or Expression with resultType string){{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="userproperties_nodejs">
+<a href="#userproperties_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Properties</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#userpropertyresponse">User<wbr>Property<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}Activity user properties.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="data_flow_python">
+<a href="#data_flow_python" style="color: inherit; text-decoration: inherit;">data_<wbr>flow</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dataflowreferenceresponse">Data<wbr>Flow<wbr>Reference<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Data flow reference.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Activity name.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="compute_python">
+<a href="#compute_python" style="color: inherit; text-decoration: inherit;">compute</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#executedataflowactivitytypepropertiesresponsecompute">Execute<wbr>Data<wbr>Flow<wbr>Activity<wbr>Type<wbr>Properties<wbr>Response<wbr>Compute</a></span>
+    </dt>
+    <dd>{{% md %}}Compute properties for data flow activity.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="continue_on_error_python">
+<a href="#continue_on_error_python" style="color: inherit; text-decoration: inherit;">continue_<wbr>on_<wbr>error</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}Continue on error setting used for data flow execution. Enables processing to continue if a sink fails. Type: boolean (or Expression with resultType boolean){{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="depends_on_python">
+<a href="#depends_on_python" style="color: inherit; text-decoration: inherit;">depends_<wbr>on</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#activitydependencyresponse">Sequence[Activity<wbr>Dependency<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}Activity depends on condition.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="description_python">
+<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Activity description.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="integration_runtime_python">
+<a href="#integration_runtime_python" style="color: inherit; text-decoration: inherit;">integration_<wbr>runtime</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#integrationruntimereferenceresponse">Integration<wbr>Runtime<wbr>Reference<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The integration runtime reference.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="policy_python">
+<a href="#policy_python" style="color: inherit; text-decoration: inherit;">policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#activitypolicyresponse">Activity<wbr>Policy<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Activity policy.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="run_concurrently_python">
+<a href="#run_concurrently_python" style="color: inherit; text-decoration: inherit;">run_<wbr>concurrently</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}Concurrent run setting used for data flow execution. Allows sinks with the same save order to be processed concurrently. Type: boolean (or Expression with resultType boolean){{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sinks_python">
+<a href="#sinks_python" style="color: inherit; text-decoration: inherit;">sinks</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, Power<wbr>Query<wbr>Sink<wbr>Response]</span>
+    </dt>
+    <dd>{{% md %}}List of Power Query activity sinks mapped to a queryName.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="staging_python">
+<a href="#staging_python" style="color: inherit; text-decoration: inherit;">staging</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dataflowstaginginforesponse">Data<wbr>Flow<wbr>Staging<wbr>Info<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Staging info for execute data flow activity.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="trace_level_python">
+<a href="#trace_level_python" style="color: inherit; text-decoration: inherit;">trace_<wbr>level</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}Trace level setting used for data flow monitoring output. Supported values are: 'coarse', 'fine', and 'none'. Type: string (or Expression with resultType string){{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="user_properties_python">
+<a href="#user_properties_python" style="color: inherit; text-decoration: inherit;">user_<wbr>properties</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#userpropertyresponse">Sequence[User<wbr>Property<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}Activity user properties.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
 <h4 id="executionactivityresponse">Execution<wbr>Activity<wbr>Response</h4>
 
 
@@ -26563,7 +26999,7 @@ The following output properties are available:
 <a href="#activities_nodejs" style="color: inherit; text-decoration: inherit;">activities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Append<wbr>Variable<wbr>Activity<wbr>Response | Azure<wbr>Data<wbr>Explorer<wbr>Command<wbr>Activity<wbr>Response | Azure<wbr>Function<wbr>Activity<wbr>Response | Azure<wbr>MLBatch<wbr>Execution<wbr>Activity<wbr>Response | Azure<wbr>MLExecute<wbr>Pipeline<wbr>Activity<wbr>Response | Azure<wbr>MLUpdate<wbr>Resource<wbr>Activity<wbr>Response | Control<wbr>Activity<wbr>Response | Copy<wbr>Activity<wbr>Response | Custom<wbr>Activity<wbr>Response | Data<wbr>Lake<wbr>Analytics<wbr>USQLActivity<wbr>Response | Databricks<wbr>Notebook<wbr>Activity<wbr>Response | Databricks<wbr>Spark<wbr>Jar<wbr>Activity<wbr>Response | Databricks<wbr>Spark<wbr>Python<wbr>Activity<wbr>Response | Delete<wbr>Activity<wbr>Response | Execute<wbr>Data<wbr>Flow<wbr>Activity<wbr>Response | Execute<wbr>Pipeline<wbr>Activity<wbr>Response | Execute<wbr>SSISPackage<wbr>Activity<wbr>Response | Execution<wbr>Activity<wbr>Response | Filter<wbr>Activity<wbr>Response | For<wbr>Each<wbr>Activity<wbr>Response | Get<wbr>Metadata<wbr>Activity<wbr>Response | HDInsight<wbr>Hive<wbr>Activity<wbr>Response | HDInsight<wbr>Map<wbr>Reduce<wbr>Activity<wbr>Response | HDInsight<wbr>Pig<wbr>Activity<wbr>Response | HDInsight<wbr>Spark<wbr>Activity<wbr>Response | HDInsight<wbr>Streaming<wbr>Activity<wbr>Response | If<wbr>Condition<wbr>Activity<wbr>Response | Lookup<wbr>Activity<wbr>Response | Set<wbr>Variable<wbr>Activity<wbr>Response | Sql<wbr>Server<wbr>Stored<wbr>Procedure<wbr>Activity<wbr>Response | Switch<wbr>Activity<wbr>Response | Until<wbr>Activity<wbr>Response | Validation<wbr>Activity<wbr>Response | Wait<wbr>Activity<wbr>Response | Web<wbr>Activity<wbr>Response | Web<wbr>Hook<wbr>Activity<wbr>Response[]</span>
+        <span class="property-type">Append<wbr>Variable<wbr>Activity<wbr>Response | Azure<wbr>Data<wbr>Explorer<wbr>Command<wbr>Activity<wbr>Response | Azure<wbr>Function<wbr>Activity<wbr>Response | Azure<wbr>MLBatch<wbr>Execution<wbr>Activity<wbr>Response | Azure<wbr>MLExecute<wbr>Pipeline<wbr>Activity<wbr>Response | Azure<wbr>MLUpdate<wbr>Resource<wbr>Activity<wbr>Response | Control<wbr>Activity<wbr>Response | Copy<wbr>Activity<wbr>Response | Custom<wbr>Activity<wbr>Response | Data<wbr>Lake<wbr>Analytics<wbr>USQLActivity<wbr>Response | Databricks<wbr>Notebook<wbr>Activity<wbr>Response | Databricks<wbr>Spark<wbr>Jar<wbr>Activity<wbr>Response | Databricks<wbr>Spark<wbr>Python<wbr>Activity<wbr>Response | Delete<wbr>Activity<wbr>Response | Execute<wbr>Data<wbr>Flow<wbr>Activity<wbr>Response | Execute<wbr>Pipeline<wbr>Activity<wbr>Response | Execute<wbr>SSISPackage<wbr>Activity<wbr>Response | Execute<wbr>Wrangling<wbr>Dataflow<wbr>Activity<wbr>Response | Execution<wbr>Activity<wbr>Response | Filter<wbr>Activity<wbr>Response | For<wbr>Each<wbr>Activity<wbr>Response | Get<wbr>Metadata<wbr>Activity<wbr>Response | HDInsight<wbr>Hive<wbr>Activity<wbr>Response | HDInsight<wbr>Map<wbr>Reduce<wbr>Activity<wbr>Response | HDInsight<wbr>Pig<wbr>Activity<wbr>Response | HDInsight<wbr>Spark<wbr>Activity<wbr>Response | HDInsight<wbr>Streaming<wbr>Activity<wbr>Response | If<wbr>Condition<wbr>Activity<wbr>Response | Lookup<wbr>Activity<wbr>Response | Set<wbr>Variable<wbr>Activity<wbr>Response | Sql<wbr>Server<wbr>Stored<wbr>Procedure<wbr>Activity<wbr>Response | Switch<wbr>Activity<wbr>Response | Until<wbr>Activity<wbr>Response | Validation<wbr>Activity<wbr>Response | Wait<wbr>Activity<wbr>Response | Web<wbr>Activity<wbr>Response | Web<wbr>Hook<wbr>Activity<wbr>Response[]</span>
     </dt>
     <dd>{{% md %}}List of activities to execute .{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -26631,7 +27067,7 @@ The following output properties are available:
 <a href="#activities_python" style="color: inherit; text-decoration: inherit;">activities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[Union[Append<wbr>Variable<wbr>Activity<wbr>Response, Azure<wbr>Data<wbr>Explorer<wbr>Command<wbr>Activity<wbr>Response, Azure<wbr>Function<wbr>Activity<wbr>Response, Azure<wbr>MLBatch<wbr>Execution<wbr>Activity<wbr>Response, Azure<wbr>MLExecute<wbr>Pipeline<wbr>Activity<wbr>Response, Azure<wbr>MLUpdate<wbr>Resource<wbr>Activity<wbr>Response, Control<wbr>Activity<wbr>Response, Copy<wbr>Activity<wbr>Response, Custom<wbr>Activity<wbr>Response, Data<wbr>Lake<wbr>Analytics<wbr>USQLActivity<wbr>Response, Databricks<wbr>Notebook<wbr>Activity<wbr>Response, Databricks<wbr>Spark<wbr>Jar<wbr>Activity<wbr>Response, Databricks<wbr>Spark<wbr>Python<wbr>Activity<wbr>Response, Delete<wbr>Activity<wbr>Response, Execute<wbr>Data<wbr>Flow<wbr>Activity<wbr>Response, Execute<wbr>Pipeline<wbr>Activity<wbr>Response, Execute<wbr>SSISPackage<wbr>Activity<wbr>Response, Execution<wbr>Activity<wbr>Response, Filter<wbr>Activity<wbr>Response, For<wbr>Each<wbr>Activity<wbr>Response, Get<wbr>Metadata<wbr>Activity<wbr>Response, HDInsight<wbr>Hive<wbr>Activity<wbr>Response, HDInsight<wbr>Map<wbr>Reduce<wbr>Activity<wbr>Response, HDInsight<wbr>Pig<wbr>Activity<wbr>Response, HDInsight<wbr>Spark<wbr>Activity<wbr>Response, HDInsight<wbr>Streaming<wbr>Activity<wbr>Response, If<wbr>Condition<wbr>Activity<wbr>Response, Lookup<wbr>Activity<wbr>Response, Set<wbr>Variable<wbr>Activity<wbr>Response, Sql<wbr>Server<wbr>Stored<wbr>Procedure<wbr>Activity<wbr>Response, Switch<wbr>Activity<wbr>Response, Until<wbr>Activity<wbr>Response, Validation<wbr>Activity<wbr>Response, Wait<wbr>Activity<wbr>Response, Web<wbr>Activity<wbr>Response, Web<wbr>Hook<wbr>Activity<wbr>Response]]</span>
+        <span class="property-type">Sequence[Union[Append<wbr>Variable<wbr>Activity<wbr>Response, Azure<wbr>Data<wbr>Explorer<wbr>Command<wbr>Activity<wbr>Response, Azure<wbr>Function<wbr>Activity<wbr>Response, Azure<wbr>MLBatch<wbr>Execution<wbr>Activity<wbr>Response, Azure<wbr>MLExecute<wbr>Pipeline<wbr>Activity<wbr>Response, Azure<wbr>MLUpdate<wbr>Resource<wbr>Activity<wbr>Response, Control<wbr>Activity<wbr>Response, Copy<wbr>Activity<wbr>Response, Custom<wbr>Activity<wbr>Response, Data<wbr>Lake<wbr>Analytics<wbr>USQLActivity<wbr>Response, Databricks<wbr>Notebook<wbr>Activity<wbr>Response, Databricks<wbr>Spark<wbr>Jar<wbr>Activity<wbr>Response, Databricks<wbr>Spark<wbr>Python<wbr>Activity<wbr>Response, Delete<wbr>Activity<wbr>Response, Execute<wbr>Data<wbr>Flow<wbr>Activity<wbr>Response, Execute<wbr>Pipeline<wbr>Activity<wbr>Response, Execute<wbr>SSISPackage<wbr>Activity<wbr>Response, Execute<wbr>Wrangling<wbr>Dataflow<wbr>Activity<wbr>Response, Execution<wbr>Activity<wbr>Response, Filter<wbr>Activity<wbr>Response, For<wbr>Each<wbr>Activity<wbr>Response, Get<wbr>Metadata<wbr>Activity<wbr>Response, HDInsight<wbr>Hive<wbr>Activity<wbr>Response, HDInsight<wbr>Map<wbr>Reduce<wbr>Activity<wbr>Response, HDInsight<wbr>Pig<wbr>Activity<wbr>Response, HDInsight<wbr>Spark<wbr>Activity<wbr>Response, HDInsight<wbr>Streaming<wbr>Activity<wbr>Response, If<wbr>Condition<wbr>Activity<wbr>Response, Lookup<wbr>Activity<wbr>Response, Set<wbr>Variable<wbr>Activity<wbr>Response, Sql<wbr>Server<wbr>Stored<wbr>Procedure<wbr>Activity<wbr>Response, Switch<wbr>Activity<wbr>Response, Until<wbr>Activity<wbr>Response, Validation<wbr>Activity<wbr>Response, Wait<wbr>Activity<wbr>Response, Web<wbr>Activity<wbr>Response, Web<wbr>Hook<wbr>Activity<wbr>Response]]</span>
     </dt>
     <dd>{{% md %}}List of activities to execute .{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -32879,7 +33315,7 @@ The following output properties are available:
 <a href="#iffalseactivities_nodejs" style="color: inherit; text-decoration: inherit;">if<wbr>False<wbr>Activities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Append<wbr>Variable<wbr>Activity<wbr>Response | Azure<wbr>Data<wbr>Explorer<wbr>Command<wbr>Activity<wbr>Response | Azure<wbr>Function<wbr>Activity<wbr>Response | Azure<wbr>MLBatch<wbr>Execution<wbr>Activity<wbr>Response | Azure<wbr>MLExecute<wbr>Pipeline<wbr>Activity<wbr>Response | Azure<wbr>MLUpdate<wbr>Resource<wbr>Activity<wbr>Response | Control<wbr>Activity<wbr>Response | Copy<wbr>Activity<wbr>Response | Custom<wbr>Activity<wbr>Response | Data<wbr>Lake<wbr>Analytics<wbr>USQLActivity<wbr>Response | Databricks<wbr>Notebook<wbr>Activity<wbr>Response | Databricks<wbr>Spark<wbr>Jar<wbr>Activity<wbr>Response | Databricks<wbr>Spark<wbr>Python<wbr>Activity<wbr>Response | Delete<wbr>Activity<wbr>Response | Execute<wbr>Data<wbr>Flow<wbr>Activity<wbr>Response | Execute<wbr>Pipeline<wbr>Activity<wbr>Response | Execute<wbr>SSISPackage<wbr>Activity<wbr>Response | Execution<wbr>Activity<wbr>Response | Filter<wbr>Activity<wbr>Response | For<wbr>Each<wbr>Activity<wbr>Response | Get<wbr>Metadata<wbr>Activity<wbr>Response | HDInsight<wbr>Hive<wbr>Activity<wbr>Response | HDInsight<wbr>Map<wbr>Reduce<wbr>Activity<wbr>Response | HDInsight<wbr>Pig<wbr>Activity<wbr>Response | HDInsight<wbr>Spark<wbr>Activity<wbr>Response | HDInsight<wbr>Streaming<wbr>Activity<wbr>Response | If<wbr>Condition<wbr>Activity<wbr>Response | Lookup<wbr>Activity<wbr>Response | Set<wbr>Variable<wbr>Activity<wbr>Response | Sql<wbr>Server<wbr>Stored<wbr>Procedure<wbr>Activity<wbr>Response | Switch<wbr>Activity<wbr>Response | Until<wbr>Activity<wbr>Response | Validation<wbr>Activity<wbr>Response | Wait<wbr>Activity<wbr>Response | Web<wbr>Activity<wbr>Response | Web<wbr>Hook<wbr>Activity<wbr>Response[]</span>
+        <span class="property-type">Append<wbr>Variable<wbr>Activity<wbr>Response | Azure<wbr>Data<wbr>Explorer<wbr>Command<wbr>Activity<wbr>Response | Azure<wbr>Function<wbr>Activity<wbr>Response | Azure<wbr>MLBatch<wbr>Execution<wbr>Activity<wbr>Response | Azure<wbr>MLExecute<wbr>Pipeline<wbr>Activity<wbr>Response | Azure<wbr>MLUpdate<wbr>Resource<wbr>Activity<wbr>Response | Control<wbr>Activity<wbr>Response | Copy<wbr>Activity<wbr>Response | Custom<wbr>Activity<wbr>Response | Data<wbr>Lake<wbr>Analytics<wbr>USQLActivity<wbr>Response | Databricks<wbr>Notebook<wbr>Activity<wbr>Response | Databricks<wbr>Spark<wbr>Jar<wbr>Activity<wbr>Response | Databricks<wbr>Spark<wbr>Python<wbr>Activity<wbr>Response | Delete<wbr>Activity<wbr>Response | Execute<wbr>Data<wbr>Flow<wbr>Activity<wbr>Response | Execute<wbr>Pipeline<wbr>Activity<wbr>Response | Execute<wbr>SSISPackage<wbr>Activity<wbr>Response | Execute<wbr>Wrangling<wbr>Dataflow<wbr>Activity<wbr>Response | Execution<wbr>Activity<wbr>Response | Filter<wbr>Activity<wbr>Response | For<wbr>Each<wbr>Activity<wbr>Response | Get<wbr>Metadata<wbr>Activity<wbr>Response | HDInsight<wbr>Hive<wbr>Activity<wbr>Response | HDInsight<wbr>Map<wbr>Reduce<wbr>Activity<wbr>Response | HDInsight<wbr>Pig<wbr>Activity<wbr>Response | HDInsight<wbr>Spark<wbr>Activity<wbr>Response | HDInsight<wbr>Streaming<wbr>Activity<wbr>Response | If<wbr>Condition<wbr>Activity<wbr>Response | Lookup<wbr>Activity<wbr>Response | Set<wbr>Variable<wbr>Activity<wbr>Response | Sql<wbr>Server<wbr>Stored<wbr>Procedure<wbr>Activity<wbr>Response | Switch<wbr>Activity<wbr>Response | Until<wbr>Activity<wbr>Response | Validation<wbr>Activity<wbr>Response | Wait<wbr>Activity<wbr>Response | Web<wbr>Activity<wbr>Response | Web<wbr>Hook<wbr>Activity<wbr>Response[]</span>
     </dt>
     <dd>{{% md %}}List of activities to execute if expression is evaluated to false. This is an optional property and if not provided, the activity will exit without any action.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -32887,7 +33323,7 @@ The following output properties are available:
 <a href="#iftrueactivities_nodejs" style="color: inherit; text-decoration: inherit;">if<wbr>True<wbr>Activities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Append<wbr>Variable<wbr>Activity<wbr>Response | Azure<wbr>Data<wbr>Explorer<wbr>Command<wbr>Activity<wbr>Response | Azure<wbr>Function<wbr>Activity<wbr>Response | Azure<wbr>MLBatch<wbr>Execution<wbr>Activity<wbr>Response | Azure<wbr>MLExecute<wbr>Pipeline<wbr>Activity<wbr>Response | Azure<wbr>MLUpdate<wbr>Resource<wbr>Activity<wbr>Response | Control<wbr>Activity<wbr>Response | Copy<wbr>Activity<wbr>Response | Custom<wbr>Activity<wbr>Response | Data<wbr>Lake<wbr>Analytics<wbr>USQLActivity<wbr>Response | Databricks<wbr>Notebook<wbr>Activity<wbr>Response | Databricks<wbr>Spark<wbr>Jar<wbr>Activity<wbr>Response | Databricks<wbr>Spark<wbr>Python<wbr>Activity<wbr>Response | Delete<wbr>Activity<wbr>Response | Execute<wbr>Data<wbr>Flow<wbr>Activity<wbr>Response | Execute<wbr>Pipeline<wbr>Activity<wbr>Response | Execute<wbr>SSISPackage<wbr>Activity<wbr>Response | Execution<wbr>Activity<wbr>Response | Filter<wbr>Activity<wbr>Response | For<wbr>Each<wbr>Activity<wbr>Response | Get<wbr>Metadata<wbr>Activity<wbr>Response | HDInsight<wbr>Hive<wbr>Activity<wbr>Response | HDInsight<wbr>Map<wbr>Reduce<wbr>Activity<wbr>Response | HDInsight<wbr>Pig<wbr>Activity<wbr>Response | HDInsight<wbr>Spark<wbr>Activity<wbr>Response | HDInsight<wbr>Streaming<wbr>Activity<wbr>Response | If<wbr>Condition<wbr>Activity<wbr>Response | Lookup<wbr>Activity<wbr>Response | Set<wbr>Variable<wbr>Activity<wbr>Response | Sql<wbr>Server<wbr>Stored<wbr>Procedure<wbr>Activity<wbr>Response | Switch<wbr>Activity<wbr>Response | Until<wbr>Activity<wbr>Response | Validation<wbr>Activity<wbr>Response | Wait<wbr>Activity<wbr>Response | Web<wbr>Activity<wbr>Response | Web<wbr>Hook<wbr>Activity<wbr>Response[]</span>
+        <span class="property-type">Append<wbr>Variable<wbr>Activity<wbr>Response | Azure<wbr>Data<wbr>Explorer<wbr>Command<wbr>Activity<wbr>Response | Azure<wbr>Function<wbr>Activity<wbr>Response | Azure<wbr>MLBatch<wbr>Execution<wbr>Activity<wbr>Response | Azure<wbr>MLExecute<wbr>Pipeline<wbr>Activity<wbr>Response | Azure<wbr>MLUpdate<wbr>Resource<wbr>Activity<wbr>Response | Control<wbr>Activity<wbr>Response | Copy<wbr>Activity<wbr>Response | Custom<wbr>Activity<wbr>Response | Data<wbr>Lake<wbr>Analytics<wbr>USQLActivity<wbr>Response | Databricks<wbr>Notebook<wbr>Activity<wbr>Response | Databricks<wbr>Spark<wbr>Jar<wbr>Activity<wbr>Response | Databricks<wbr>Spark<wbr>Python<wbr>Activity<wbr>Response | Delete<wbr>Activity<wbr>Response | Execute<wbr>Data<wbr>Flow<wbr>Activity<wbr>Response | Execute<wbr>Pipeline<wbr>Activity<wbr>Response | Execute<wbr>SSISPackage<wbr>Activity<wbr>Response | Execute<wbr>Wrangling<wbr>Dataflow<wbr>Activity<wbr>Response | Execution<wbr>Activity<wbr>Response | Filter<wbr>Activity<wbr>Response | For<wbr>Each<wbr>Activity<wbr>Response | Get<wbr>Metadata<wbr>Activity<wbr>Response | HDInsight<wbr>Hive<wbr>Activity<wbr>Response | HDInsight<wbr>Map<wbr>Reduce<wbr>Activity<wbr>Response | HDInsight<wbr>Pig<wbr>Activity<wbr>Response | HDInsight<wbr>Spark<wbr>Activity<wbr>Response | HDInsight<wbr>Streaming<wbr>Activity<wbr>Response | If<wbr>Condition<wbr>Activity<wbr>Response | Lookup<wbr>Activity<wbr>Response | Set<wbr>Variable<wbr>Activity<wbr>Response | Sql<wbr>Server<wbr>Stored<wbr>Procedure<wbr>Activity<wbr>Response | Switch<wbr>Activity<wbr>Response | Until<wbr>Activity<wbr>Response | Validation<wbr>Activity<wbr>Response | Wait<wbr>Activity<wbr>Response | Web<wbr>Activity<wbr>Response | Web<wbr>Hook<wbr>Activity<wbr>Response[]</span>
     </dt>
     <dd>{{% md %}}List of activities to execute if expression is evaluated to true. This is an optional property and if not provided, the activity will exit without any action.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -32939,7 +33375,7 @@ The following output properties are available:
 <a href="#if_false_activities_python" style="color: inherit; text-decoration: inherit;">if_<wbr>false_<wbr>activities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[Union[Append<wbr>Variable<wbr>Activity<wbr>Response, Azure<wbr>Data<wbr>Explorer<wbr>Command<wbr>Activity<wbr>Response, Azure<wbr>Function<wbr>Activity<wbr>Response, Azure<wbr>MLBatch<wbr>Execution<wbr>Activity<wbr>Response, Azure<wbr>MLExecute<wbr>Pipeline<wbr>Activity<wbr>Response, Azure<wbr>MLUpdate<wbr>Resource<wbr>Activity<wbr>Response, Control<wbr>Activity<wbr>Response, Copy<wbr>Activity<wbr>Response, Custom<wbr>Activity<wbr>Response, Data<wbr>Lake<wbr>Analytics<wbr>USQLActivity<wbr>Response, Databricks<wbr>Notebook<wbr>Activity<wbr>Response, Databricks<wbr>Spark<wbr>Jar<wbr>Activity<wbr>Response, Databricks<wbr>Spark<wbr>Python<wbr>Activity<wbr>Response, Delete<wbr>Activity<wbr>Response, Execute<wbr>Data<wbr>Flow<wbr>Activity<wbr>Response, Execute<wbr>Pipeline<wbr>Activity<wbr>Response, Execute<wbr>SSISPackage<wbr>Activity<wbr>Response, Execution<wbr>Activity<wbr>Response, Filter<wbr>Activity<wbr>Response, For<wbr>Each<wbr>Activity<wbr>Response, Get<wbr>Metadata<wbr>Activity<wbr>Response, HDInsight<wbr>Hive<wbr>Activity<wbr>Response, HDInsight<wbr>Map<wbr>Reduce<wbr>Activity<wbr>Response, HDInsight<wbr>Pig<wbr>Activity<wbr>Response, HDInsight<wbr>Spark<wbr>Activity<wbr>Response, HDInsight<wbr>Streaming<wbr>Activity<wbr>Response, If<wbr>Condition<wbr>Activity<wbr>Response, Lookup<wbr>Activity<wbr>Response, Set<wbr>Variable<wbr>Activity<wbr>Response, Sql<wbr>Server<wbr>Stored<wbr>Procedure<wbr>Activity<wbr>Response, Switch<wbr>Activity<wbr>Response, Until<wbr>Activity<wbr>Response, Validation<wbr>Activity<wbr>Response, Wait<wbr>Activity<wbr>Response, Web<wbr>Activity<wbr>Response, Web<wbr>Hook<wbr>Activity<wbr>Response]]</span>
+        <span class="property-type">Sequence[Union[Append<wbr>Variable<wbr>Activity<wbr>Response, Azure<wbr>Data<wbr>Explorer<wbr>Command<wbr>Activity<wbr>Response, Azure<wbr>Function<wbr>Activity<wbr>Response, Azure<wbr>MLBatch<wbr>Execution<wbr>Activity<wbr>Response, Azure<wbr>MLExecute<wbr>Pipeline<wbr>Activity<wbr>Response, Azure<wbr>MLUpdate<wbr>Resource<wbr>Activity<wbr>Response, Control<wbr>Activity<wbr>Response, Copy<wbr>Activity<wbr>Response, Custom<wbr>Activity<wbr>Response, Data<wbr>Lake<wbr>Analytics<wbr>USQLActivity<wbr>Response, Databricks<wbr>Notebook<wbr>Activity<wbr>Response, Databricks<wbr>Spark<wbr>Jar<wbr>Activity<wbr>Response, Databricks<wbr>Spark<wbr>Python<wbr>Activity<wbr>Response, Delete<wbr>Activity<wbr>Response, Execute<wbr>Data<wbr>Flow<wbr>Activity<wbr>Response, Execute<wbr>Pipeline<wbr>Activity<wbr>Response, Execute<wbr>SSISPackage<wbr>Activity<wbr>Response, Execute<wbr>Wrangling<wbr>Dataflow<wbr>Activity<wbr>Response, Execution<wbr>Activity<wbr>Response, Filter<wbr>Activity<wbr>Response, For<wbr>Each<wbr>Activity<wbr>Response, Get<wbr>Metadata<wbr>Activity<wbr>Response, HDInsight<wbr>Hive<wbr>Activity<wbr>Response, HDInsight<wbr>Map<wbr>Reduce<wbr>Activity<wbr>Response, HDInsight<wbr>Pig<wbr>Activity<wbr>Response, HDInsight<wbr>Spark<wbr>Activity<wbr>Response, HDInsight<wbr>Streaming<wbr>Activity<wbr>Response, If<wbr>Condition<wbr>Activity<wbr>Response, Lookup<wbr>Activity<wbr>Response, Set<wbr>Variable<wbr>Activity<wbr>Response, Sql<wbr>Server<wbr>Stored<wbr>Procedure<wbr>Activity<wbr>Response, Switch<wbr>Activity<wbr>Response, Until<wbr>Activity<wbr>Response, Validation<wbr>Activity<wbr>Response, Wait<wbr>Activity<wbr>Response, Web<wbr>Activity<wbr>Response, Web<wbr>Hook<wbr>Activity<wbr>Response]]</span>
     </dt>
     <dd>{{% md %}}List of activities to execute if expression is evaluated to false. This is an optional property and if not provided, the activity will exit without any action.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -32947,7 +33383,7 @@ The following output properties are available:
 <a href="#if_true_activities_python" style="color: inherit; text-decoration: inherit;">if_<wbr>true_<wbr>activities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[Union[Append<wbr>Variable<wbr>Activity<wbr>Response, Azure<wbr>Data<wbr>Explorer<wbr>Command<wbr>Activity<wbr>Response, Azure<wbr>Function<wbr>Activity<wbr>Response, Azure<wbr>MLBatch<wbr>Execution<wbr>Activity<wbr>Response, Azure<wbr>MLExecute<wbr>Pipeline<wbr>Activity<wbr>Response, Azure<wbr>MLUpdate<wbr>Resource<wbr>Activity<wbr>Response, Control<wbr>Activity<wbr>Response, Copy<wbr>Activity<wbr>Response, Custom<wbr>Activity<wbr>Response, Data<wbr>Lake<wbr>Analytics<wbr>USQLActivity<wbr>Response, Databricks<wbr>Notebook<wbr>Activity<wbr>Response, Databricks<wbr>Spark<wbr>Jar<wbr>Activity<wbr>Response, Databricks<wbr>Spark<wbr>Python<wbr>Activity<wbr>Response, Delete<wbr>Activity<wbr>Response, Execute<wbr>Data<wbr>Flow<wbr>Activity<wbr>Response, Execute<wbr>Pipeline<wbr>Activity<wbr>Response, Execute<wbr>SSISPackage<wbr>Activity<wbr>Response, Execution<wbr>Activity<wbr>Response, Filter<wbr>Activity<wbr>Response, For<wbr>Each<wbr>Activity<wbr>Response, Get<wbr>Metadata<wbr>Activity<wbr>Response, HDInsight<wbr>Hive<wbr>Activity<wbr>Response, HDInsight<wbr>Map<wbr>Reduce<wbr>Activity<wbr>Response, HDInsight<wbr>Pig<wbr>Activity<wbr>Response, HDInsight<wbr>Spark<wbr>Activity<wbr>Response, HDInsight<wbr>Streaming<wbr>Activity<wbr>Response, If<wbr>Condition<wbr>Activity<wbr>Response, Lookup<wbr>Activity<wbr>Response, Set<wbr>Variable<wbr>Activity<wbr>Response, Sql<wbr>Server<wbr>Stored<wbr>Procedure<wbr>Activity<wbr>Response, Switch<wbr>Activity<wbr>Response, Until<wbr>Activity<wbr>Response, Validation<wbr>Activity<wbr>Response, Wait<wbr>Activity<wbr>Response, Web<wbr>Activity<wbr>Response, Web<wbr>Hook<wbr>Activity<wbr>Response]]</span>
+        <span class="property-type">Sequence[Union[Append<wbr>Variable<wbr>Activity<wbr>Response, Azure<wbr>Data<wbr>Explorer<wbr>Command<wbr>Activity<wbr>Response, Azure<wbr>Function<wbr>Activity<wbr>Response, Azure<wbr>MLBatch<wbr>Execution<wbr>Activity<wbr>Response, Azure<wbr>MLExecute<wbr>Pipeline<wbr>Activity<wbr>Response, Azure<wbr>MLUpdate<wbr>Resource<wbr>Activity<wbr>Response, Control<wbr>Activity<wbr>Response, Copy<wbr>Activity<wbr>Response, Custom<wbr>Activity<wbr>Response, Data<wbr>Lake<wbr>Analytics<wbr>USQLActivity<wbr>Response, Databricks<wbr>Notebook<wbr>Activity<wbr>Response, Databricks<wbr>Spark<wbr>Jar<wbr>Activity<wbr>Response, Databricks<wbr>Spark<wbr>Python<wbr>Activity<wbr>Response, Delete<wbr>Activity<wbr>Response, Execute<wbr>Data<wbr>Flow<wbr>Activity<wbr>Response, Execute<wbr>Pipeline<wbr>Activity<wbr>Response, Execute<wbr>SSISPackage<wbr>Activity<wbr>Response, Execute<wbr>Wrangling<wbr>Dataflow<wbr>Activity<wbr>Response, Execution<wbr>Activity<wbr>Response, Filter<wbr>Activity<wbr>Response, For<wbr>Each<wbr>Activity<wbr>Response, Get<wbr>Metadata<wbr>Activity<wbr>Response, HDInsight<wbr>Hive<wbr>Activity<wbr>Response, HDInsight<wbr>Map<wbr>Reduce<wbr>Activity<wbr>Response, HDInsight<wbr>Pig<wbr>Activity<wbr>Response, HDInsight<wbr>Spark<wbr>Activity<wbr>Response, HDInsight<wbr>Streaming<wbr>Activity<wbr>Response, If<wbr>Condition<wbr>Activity<wbr>Response, Lookup<wbr>Activity<wbr>Response, Set<wbr>Variable<wbr>Activity<wbr>Response, Sql<wbr>Server<wbr>Stored<wbr>Procedure<wbr>Activity<wbr>Response, Switch<wbr>Activity<wbr>Response, Until<wbr>Activity<wbr>Response, Validation<wbr>Activity<wbr>Response, Wait<wbr>Activity<wbr>Response, Web<wbr>Activity<wbr>Response, Web<wbr>Hook<wbr>Activity<wbr>Response]]</span>
     </dt>
     <dd>{{% md %}}List of activities to execute if expression is evaluated to true. This is an optional property and if not provided, the activity will exit without any action.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -43650,6 +44086,218 @@ The following output properties are available:
         <span class="property-type">Any</span>
     </dt>
     <dd>{{% md %}}Source retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="powerquerysinkresponse">Power<wbr>Query<wbr>Sink<wbr>Response</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Transformation name.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dataset_csharp">
+<a href="#dataset_csharp" style="color: inherit; text-decoration: inherit;">Dataset</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datasetreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Reference<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Dataset reference.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="description_csharp">
+<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Transformation description.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="linkedservice_csharp">
+<a href="#linkedservice_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="schemalinkedservice_csharp">
+<a href="#schemalinkedservice_csharp" style="color: inherit; text-decoration: inherit;">Schema<wbr>Linked<wbr>Service</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Schema linked service reference.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="script_csharp">
+<a href="#script_csharp" style="color: inherit; text-decoration: inherit;">Script</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}sink script.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Transformation name.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dataset_go">
+<a href="#dataset_go" style="color: inherit; text-decoration: inherit;">Dataset</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datasetreferenceresponse">Dataset<wbr>Reference<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Dataset reference.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="description_go">
+<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Transformation description.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="linkedservice_go">
+<a href="#linkedservice_go" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="schemalinkedservice_go">
+<a href="#schemalinkedservice_go" style="color: inherit; text-decoration: inherit;">Schema<wbr>Linked<wbr>Service</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Schema linked service reference.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="script_go">
+<a href="#script_go" style="color: inherit; text-decoration: inherit;">Script</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}sink script.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Transformation name.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dataset_nodejs">
+<a href="#dataset_nodejs" style="color: inherit; text-decoration: inherit;">dataset</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datasetreferenceresponse">Dataset<wbr>Reference<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Dataset reference.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="description_nodejs">
+<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Transformation description.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="linkedservice_nodejs">
+<a href="#linkedservice_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="schemalinkedservice_nodejs">
+<a href="#schemalinkedservice_nodejs" style="color: inherit; text-decoration: inherit;">schema<wbr>Linked<wbr>Service</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Schema linked service reference.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="script_nodejs">
+<a href="#script_nodejs" style="color: inherit; text-decoration: inherit;">script</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}sink script.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Transformation name.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dataset_python">
+<a href="#dataset_python" style="color: inherit; text-decoration: inherit;">dataset</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datasetreferenceresponse">Dataset<wbr>Reference<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Dataset reference.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="description_python">
+<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Transformation description.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="linked_service_python">
+<a href="#linked_service_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="schema_linked_service_python">
+<a href="#schema_linked_service_python" style="color: inherit; text-decoration: inherit;">schema_<wbr>linked_<wbr>service</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Schema linked service reference.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="script_python">
+<a href="#script_python" style="color: inherit; text-decoration: inherit;">script</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}sink script.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="prestosourceresponse">Presto<wbr>Source<wbr>Response</h4>
@@ -57619,7 +58267,7 @@ The following output properties are available:
 <a href="#defaultactivities_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Activities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Append<wbr>Variable<wbr>Activity<wbr>Response | Azure<wbr>Data<wbr>Explorer<wbr>Command<wbr>Activity<wbr>Response | Azure<wbr>Function<wbr>Activity<wbr>Response | Azure<wbr>MLBatch<wbr>Execution<wbr>Activity<wbr>Response | Azure<wbr>MLExecute<wbr>Pipeline<wbr>Activity<wbr>Response | Azure<wbr>MLUpdate<wbr>Resource<wbr>Activity<wbr>Response | Control<wbr>Activity<wbr>Response | Copy<wbr>Activity<wbr>Response | Custom<wbr>Activity<wbr>Response | Data<wbr>Lake<wbr>Analytics<wbr>USQLActivity<wbr>Response | Databricks<wbr>Notebook<wbr>Activity<wbr>Response | Databricks<wbr>Spark<wbr>Jar<wbr>Activity<wbr>Response | Databricks<wbr>Spark<wbr>Python<wbr>Activity<wbr>Response | Delete<wbr>Activity<wbr>Response | Execute<wbr>Data<wbr>Flow<wbr>Activity<wbr>Response | Execute<wbr>Pipeline<wbr>Activity<wbr>Response | Execute<wbr>SSISPackage<wbr>Activity<wbr>Response | Execution<wbr>Activity<wbr>Response | Filter<wbr>Activity<wbr>Response | For<wbr>Each<wbr>Activity<wbr>Response | Get<wbr>Metadata<wbr>Activity<wbr>Response | HDInsight<wbr>Hive<wbr>Activity<wbr>Response | HDInsight<wbr>Map<wbr>Reduce<wbr>Activity<wbr>Response | HDInsight<wbr>Pig<wbr>Activity<wbr>Response | HDInsight<wbr>Spark<wbr>Activity<wbr>Response | HDInsight<wbr>Streaming<wbr>Activity<wbr>Response | If<wbr>Condition<wbr>Activity<wbr>Response | Lookup<wbr>Activity<wbr>Response | Set<wbr>Variable<wbr>Activity<wbr>Response | Sql<wbr>Server<wbr>Stored<wbr>Procedure<wbr>Activity<wbr>Response | Switch<wbr>Activity<wbr>Response | Until<wbr>Activity<wbr>Response | Validation<wbr>Activity<wbr>Response | Wait<wbr>Activity<wbr>Response | Web<wbr>Activity<wbr>Response | Web<wbr>Hook<wbr>Activity<wbr>Response[]</span>
+        <span class="property-type">Append<wbr>Variable<wbr>Activity<wbr>Response | Azure<wbr>Data<wbr>Explorer<wbr>Command<wbr>Activity<wbr>Response | Azure<wbr>Function<wbr>Activity<wbr>Response | Azure<wbr>MLBatch<wbr>Execution<wbr>Activity<wbr>Response | Azure<wbr>MLExecute<wbr>Pipeline<wbr>Activity<wbr>Response | Azure<wbr>MLUpdate<wbr>Resource<wbr>Activity<wbr>Response | Control<wbr>Activity<wbr>Response | Copy<wbr>Activity<wbr>Response | Custom<wbr>Activity<wbr>Response | Data<wbr>Lake<wbr>Analytics<wbr>USQLActivity<wbr>Response | Databricks<wbr>Notebook<wbr>Activity<wbr>Response | Databricks<wbr>Spark<wbr>Jar<wbr>Activity<wbr>Response | Databricks<wbr>Spark<wbr>Python<wbr>Activity<wbr>Response | Delete<wbr>Activity<wbr>Response | Execute<wbr>Data<wbr>Flow<wbr>Activity<wbr>Response | Execute<wbr>Pipeline<wbr>Activity<wbr>Response | Execute<wbr>SSISPackage<wbr>Activity<wbr>Response | Execute<wbr>Wrangling<wbr>Dataflow<wbr>Activity<wbr>Response | Execution<wbr>Activity<wbr>Response | Filter<wbr>Activity<wbr>Response | For<wbr>Each<wbr>Activity<wbr>Response | Get<wbr>Metadata<wbr>Activity<wbr>Response | HDInsight<wbr>Hive<wbr>Activity<wbr>Response | HDInsight<wbr>Map<wbr>Reduce<wbr>Activity<wbr>Response | HDInsight<wbr>Pig<wbr>Activity<wbr>Response | HDInsight<wbr>Spark<wbr>Activity<wbr>Response | HDInsight<wbr>Streaming<wbr>Activity<wbr>Response | If<wbr>Condition<wbr>Activity<wbr>Response | Lookup<wbr>Activity<wbr>Response | Set<wbr>Variable<wbr>Activity<wbr>Response | Sql<wbr>Server<wbr>Stored<wbr>Procedure<wbr>Activity<wbr>Response | Switch<wbr>Activity<wbr>Response | Until<wbr>Activity<wbr>Response | Validation<wbr>Activity<wbr>Response | Wait<wbr>Activity<wbr>Response | Web<wbr>Activity<wbr>Response | Web<wbr>Hook<wbr>Activity<wbr>Response[]</span>
     </dt>
     <dd>{{% md %}}List of activities to execute if no case condition is satisfied. This is an optional property and if not provided, the activity will exit without any action.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -57679,7 +58327,7 @@ The following output properties are available:
 <a href="#default_activities_python" style="color: inherit; text-decoration: inherit;">default_<wbr>activities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[Union[Append<wbr>Variable<wbr>Activity<wbr>Response, Azure<wbr>Data<wbr>Explorer<wbr>Command<wbr>Activity<wbr>Response, Azure<wbr>Function<wbr>Activity<wbr>Response, Azure<wbr>MLBatch<wbr>Execution<wbr>Activity<wbr>Response, Azure<wbr>MLExecute<wbr>Pipeline<wbr>Activity<wbr>Response, Azure<wbr>MLUpdate<wbr>Resource<wbr>Activity<wbr>Response, Control<wbr>Activity<wbr>Response, Copy<wbr>Activity<wbr>Response, Custom<wbr>Activity<wbr>Response, Data<wbr>Lake<wbr>Analytics<wbr>USQLActivity<wbr>Response, Databricks<wbr>Notebook<wbr>Activity<wbr>Response, Databricks<wbr>Spark<wbr>Jar<wbr>Activity<wbr>Response, Databricks<wbr>Spark<wbr>Python<wbr>Activity<wbr>Response, Delete<wbr>Activity<wbr>Response, Execute<wbr>Data<wbr>Flow<wbr>Activity<wbr>Response, Execute<wbr>Pipeline<wbr>Activity<wbr>Response, Execute<wbr>SSISPackage<wbr>Activity<wbr>Response, Execution<wbr>Activity<wbr>Response, Filter<wbr>Activity<wbr>Response, For<wbr>Each<wbr>Activity<wbr>Response, Get<wbr>Metadata<wbr>Activity<wbr>Response, HDInsight<wbr>Hive<wbr>Activity<wbr>Response, HDInsight<wbr>Map<wbr>Reduce<wbr>Activity<wbr>Response, HDInsight<wbr>Pig<wbr>Activity<wbr>Response, HDInsight<wbr>Spark<wbr>Activity<wbr>Response, HDInsight<wbr>Streaming<wbr>Activity<wbr>Response, If<wbr>Condition<wbr>Activity<wbr>Response, Lookup<wbr>Activity<wbr>Response, Set<wbr>Variable<wbr>Activity<wbr>Response, Sql<wbr>Server<wbr>Stored<wbr>Procedure<wbr>Activity<wbr>Response, Switch<wbr>Activity<wbr>Response, Until<wbr>Activity<wbr>Response, Validation<wbr>Activity<wbr>Response, Wait<wbr>Activity<wbr>Response, Web<wbr>Activity<wbr>Response, Web<wbr>Hook<wbr>Activity<wbr>Response]]</span>
+        <span class="property-type">Sequence[Union[Append<wbr>Variable<wbr>Activity<wbr>Response, Azure<wbr>Data<wbr>Explorer<wbr>Command<wbr>Activity<wbr>Response, Azure<wbr>Function<wbr>Activity<wbr>Response, Azure<wbr>MLBatch<wbr>Execution<wbr>Activity<wbr>Response, Azure<wbr>MLExecute<wbr>Pipeline<wbr>Activity<wbr>Response, Azure<wbr>MLUpdate<wbr>Resource<wbr>Activity<wbr>Response, Control<wbr>Activity<wbr>Response, Copy<wbr>Activity<wbr>Response, Custom<wbr>Activity<wbr>Response, Data<wbr>Lake<wbr>Analytics<wbr>USQLActivity<wbr>Response, Databricks<wbr>Notebook<wbr>Activity<wbr>Response, Databricks<wbr>Spark<wbr>Jar<wbr>Activity<wbr>Response, Databricks<wbr>Spark<wbr>Python<wbr>Activity<wbr>Response, Delete<wbr>Activity<wbr>Response, Execute<wbr>Data<wbr>Flow<wbr>Activity<wbr>Response, Execute<wbr>Pipeline<wbr>Activity<wbr>Response, Execute<wbr>SSISPackage<wbr>Activity<wbr>Response, Execute<wbr>Wrangling<wbr>Dataflow<wbr>Activity<wbr>Response, Execution<wbr>Activity<wbr>Response, Filter<wbr>Activity<wbr>Response, For<wbr>Each<wbr>Activity<wbr>Response, Get<wbr>Metadata<wbr>Activity<wbr>Response, HDInsight<wbr>Hive<wbr>Activity<wbr>Response, HDInsight<wbr>Map<wbr>Reduce<wbr>Activity<wbr>Response, HDInsight<wbr>Pig<wbr>Activity<wbr>Response, HDInsight<wbr>Spark<wbr>Activity<wbr>Response, HDInsight<wbr>Streaming<wbr>Activity<wbr>Response, If<wbr>Condition<wbr>Activity<wbr>Response, Lookup<wbr>Activity<wbr>Response, Set<wbr>Variable<wbr>Activity<wbr>Response, Sql<wbr>Server<wbr>Stored<wbr>Procedure<wbr>Activity<wbr>Response, Switch<wbr>Activity<wbr>Response, Until<wbr>Activity<wbr>Response, Validation<wbr>Activity<wbr>Response, Wait<wbr>Activity<wbr>Response, Web<wbr>Activity<wbr>Response, Web<wbr>Hook<wbr>Activity<wbr>Response]]</span>
     </dt>
     <dd>{{% md %}}List of activities to execute if no case condition is satisfied. This is an optional property and if not provided, the activity will exit without any action.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -57759,7 +58407,7 @@ The following output properties are available:
 <a href="#activities_nodejs" style="color: inherit; text-decoration: inherit;">activities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Append<wbr>Variable<wbr>Activity<wbr>Response | Azure<wbr>Data<wbr>Explorer<wbr>Command<wbr>Activity<wbr>Response | Azure<wbr>Function<wbr>Activity<wbr>Response | Azure<wbr>MLBatch<wbr>Execution<wbr>Activity<wbr>Response | Azure<wbr>MLExecute<wbr>Pipeline<wbr>Activity<wbr>Response | Azure<wbr>MLUpdate<wbr>Resource<wbr>Activity<wbr>Response | Control<wbr>Activity<wbr>Response | Copy<wbr>Activity<wbr>Response | Custom<wbr>Activity<wbr>Response | Data<wbr>Lake<wbr>Analytics<wbr>USQLActivity<wbr>Response | Databricks<wbr>Notebook<wbr>Activity<wbr>Response | Databricks<wbr>Spark<wbr>Jar<wbr>Activity<wbr>Response | Databricks<wbr>Spark<wbr>Python<wbr>Activity<wbr>Response | Delete<wbr>Activity<wbr>Response | Execute<wbr>Data<wbr>Flow<wbr>Activity<wbr>Response | Execute<wbr>Pipeline<wbr>Activity<wbr>Response | Execute<wbr>SSISPackage<wbr>Activity<wbr>Response | Execution<wbr>Activity<wbr>Response | Filter<wbr>Activity<wbr>Response | For<wbr>Each<wbr>Activity<wbr>Response | Get<wbr>Metadata<wbr>Activity<wbr>Response | HDInsight<wbr>Hive<wbr>Activity<wbr>Response | HDInsight<wbr>Map<wbr>Reduce<wbr>Activity<wbr>Response | HDInsight<wbr>Pig<wbr>Activity<wbr>Response | HDInsight<wbr>Spark<wbr>Activity<wbr>Response | HDInsight<wbr>Streaming<wbr>Activity<wbr>Response | If<wbr>Condition<wbr>Activity<wbr>Response | Lookup<wbr>Activity<wbr>Response | Set<wbr>Variable<wbr>Activity<wbr>Response | Sql<wbr>Server<wbr>Stored<wbr>Procedure<wbr>Activity<wbr>Response | Switch<wbr>Activity<wbr>Response | Until<wbr>Activity<wbr>Response | Validation<wbr>Activity<wbr>Response | Wait<wbr>Activity<wbr>Response | Web<wbr>Activity<wbr>Response | Web<wbr>Hook<wbr>Activity<wbr>Response[]</span>
+        <span class="property-type">Append<wbr>Variable<wbr>Activity<wbr>Response | Azure<wbr>Data<wbr>Explorer<wbr>Command<wbr>Activity<wbr>Response | Azure<wbr>Function<wbr>Activity<wbr>Response | Azure<wbr>MLBatch<wbr>Execution<wbr>Activity<wbr>Response | Azure<wbr>MLExecute<wbr>Pipeline<wbr>Activity<wbr>Response | Azure<wbr>MLUpdate<wbr>Resource<wbr>Activity<wbr>Response | Control<wbr>Activity<wbr>Response | Copy<wbr>Activity<wbr>Response | Custom<wbr>Activity<wbr>Response | Data<wbr>Lake<wbr>Analytics<wbr>USQLActivity<wbr>Response | Databricks<wbr>Notebook<wbr>Activity<wbr>Response | Databricks<wbr>Spark<wbr>Jar<wbr>Activity<wbr>Response | Databricks<wbr>Spark<wbr>Python<wbr>Activity<wbr>Response | Delete<wbr>Activity<wbr>Response | Execute<wbr>Data<wbr>Flow<wbr>Activity<wbr>Response | Execute<wbr>Pipeline<wbr>Activity<wbr>Response | Execute<wbr>SSISPackage<wbr>Activity<wbr>Response | Execute<wbr>Wrangling<wbr>Dataflow<wbr>Activity<wbr>Response | Execution<wbr>Activity<wbr>Response | Filter<wbr>Activity<wbr>Response | For<wbr>Each<wbr>Activity<wbr>Response | Get<wbr>Metadata<wbr>Activity<wbr>Response | HDInsight<wbr>Hive<wbr>Activity<wbr>Response | HDInsight<wbr>Map<wbr>Reduce<wbr>Activity<wbr>Response | HDInsight<wbr>Pig<wbr>Activity<wbr>Response | HDInsight<wbr>Spark<wbr>Activity<wbr>Response | HDInsight<wbr>Streaming<wbr>Activity<wbr>Response | If<wbr>Condition<wbr>Activity<wbr>Response | Lookup<wbr>Activity<wbr>Response | Set<wbr>Variable<wbr>Activity<wbr>Response | Sql<wbr>Server<wbr>Stored<wbr>Procedure<wbr>Activity<wbr>Response | Switch<wbr>Activity<wbr>Response | Until<wbr>Activity<wbr>Response | Validation<wbr>Activity<wbr>Response | Wait<wbr>Activity<wbr>Response | Web<wbr>Activity<wbr>Response | Web<wbr>Hook<wbr>Activity<wbr>Response[]</span>
     </dt>
     <dd>{{% md %}}List of activities to execute for satisfied case condition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -57779,7 +58427,7 @@ The following output properties are available:
 <a href="#activities_python" style="color: inherit; text-decoration: inherit;">activities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[Union[Append<wbr>Variable<wbr>Activity<wbr>Response, Azure<wbr>Data<wbr>Explorer<wbr>Command<wbr>Activity<wbr>Response, Azure<wbr>Function<wbr>Activity<wbr>Response, Azure<wbr>MLBatch<wbr>Execution<wbr>Activity<wbr>Response, Azure<wbr>MLExecute<wbr>Pipeline<wbr>Activity<wbr>Response, Azure<wbr>MLUpdate<wbr>Resource<wbr>Activity<wbr>Response, Control<wbr>Activity<wbr>Response, Copy<wbr>Activity<wbr>Response, Custom<wbr>Activity<wbr>Response, Data<wbr>Lake<wbr>Analytics<wbr>USQLActivity<wbr>Response, Databricks<wbr>Notebook<wbr>Activity<wbr>Response, Databricks<wbr>Spark<wbr>Jar<wbr>Activity<wbr>Response, Databricks<wbr>Spark<wbr>Python<wbr>Activity<wbr>Response, Delete<wbr>Activity<wbr>Response, Execute<wbr>Data<wbr>Flow<wbr>Activity<wbr>Response, Execute<wbr>Pipeline<wbr>Activity<wbr>Response, Execute<wbr>SSISPackage<wbr>Activity<wbr>Response, Execution<wbr>Activity<wbr>Response, Filter<wbr>Activity<wbr>Response, For<wbr>Each<wbr>Activity<wbr>Response, Get<wbr>Metadata<wbr>Activity<wbr>Response, HDInsight<wbr>Hive<wbr>Activity<wbr>Response, HDInsight<wbr>Map<wbr>Reduce<wbr>Activity<wbr>Response, HDInsight<wbr>Pig<wbr>Activity<wbr>Response, HDInsight<wbr>Spark<wbr>Activity<wbr>Response, HDInsight<wbr>Streaming<wbr>Activity<wbr>Response, If<wbr>Condition<wbr>Activity<wbr>Response, Lookup<wbr>Activity<wbr>Response, Set<wbr>Variable<wbr>Activity<wbr>Response, Sql<wbr>Server<wbr>Stored<wbr>Procedure<wbr>Activity<wbr>Response, Switch<wbr>Activity<wbr>Response, Until<wbr>Activity<wbr>Response, Validation<wbr>Activity<wbr>Response, Wait<wbr>Activity<wbr>Response, Web<wbr>Activity<wbr>Response, Web<wbr>Hook<wbr>Activity<wbr>Response]]</span>
+        <span class="property-type">Sequence[Union[Append<wbr>Variable<wbr>Activity<wbr>Response, Azure<wbr>Data<wbr>Explorer<wbr>Command<wbr>Activity<wbr>Response, Azure<wbr>Function<wbr>Activity<wbr>Response, Azure<wbr>MLBatch<wbr>Execution<wbr>Activity<wbr>Response, Azure<wbr>MLExecute<wbr>Pipeline<wbr>Activity<wbr>Response, Azure<wbr>MLUpdate<wbr>Resource<wbr>Activity<wbr>Response, Control<wbr>Activity<wbr>Response, Copy<wbr>Activity<wbr>Response, Custom<wbr>Activity<wbr>Response, Data<wbr>Lake<wbr>Analytics<wbr>USQLActivity<wbr>Response, Databricks<wbr>Notebook<wbr>Activity<wbr>Response, Databricks<wbr>Spark<wbr>Jar<wbr>Activity<wbr>Response, Databricks<wbr>Spark<wbr>Python<wbr>Activity<wbr>Response, Delete<wbr>Activity<wbr>Response, Execute<wbr>Data<wbr>Flow<wbr>Activity<wbr>Response, Execute<wbr>Pipeline<wbr>Activity<wbr>Response, Execute<wbr>SSISPackage<wbr>Activity<wbr>Response, Execute<wbr>Wrangling<wbr>Dataflow<wbr>Activity<wbr>Response, Execution<wbr>Activity<wbr>Response, Filter<wbr>Activity<wbr>Response, For<wbr>Each<wbr>Activity<wbr>Response, Get<wbr>Metadata<wbr>Activity<wbr>Response, HDInsight<wbr>Hive<wbr>Activity<wbr>Response, HDInsight<wbr>Map<wbr>Reduce<wbr>Activity<wbr>Response, HDInsight<wbr>Pig<wbr>Activity<wbr>Response, HDInsight<wbr>Spark<wbr>Activity<wbr>Response, HDInsight<wbr>Streaming<wbr>Activity<wbr>Response, If<wbr>Condition<wbr>Activity<wbr>Response, Lookup<wbr>Activity<wbr>Response, Set<wbr>Variable<wbr>Activity<wbr>Response, Sql<wbr>Server<wbr>Stored<wbr>Procedure<wbr>Activity<wbr>Response, Switch<wbr>Activity<wbr>Response, Until<wbr>Activity<wbr>Response, Validation<wbr>Activity<wbr>Response, Wait<wbr>Activity<wbr>Response, Web<wbr>Activity<wbr>Response, Web<wbr>Hook<wbr>Activity<wbr>Response]]</span>
     </dt>
     <dd>{{% md %}}List of activities to execute for satisfied case condition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -58907,7 +59555,7 @@ The following output properties are available:
 <a href="#activities_nodejs" style="color: inherit; text-decoration: inherit;">activities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Append<wbr>Variable<wbr>Activity<wbr>Response | Azure<wbr>Data<wbr>Explorer<wbr>Command<wbr>Activity<wbr>Response | Azure<wbr>Function<wbr>Activity<wbr>Response | Azure<wbr>MLBatch<wbr>Execution<wbr>Activity<wbr>Response | Azure<wbr>MLExecute<wbr>Pipeline<wbr>Activity<wbr>Response | Azure<wbr>MLUpdate<wbr>Resource<wbr>Activity<wbr>Response | Control<wbr>Activity<wbr>Response | Copy<wbr>Activity<wbr>Response | Custom<wbr>Activity<wbr>Response | Data<wbr>Lake<wbr>Analytics<wbr>USQLActivity<wbr>Response | Databricks<wbr>Notebook<wbr>Activity<wbr>Response | Databricks<wbr>Spark<wbr>Jar<wbr>Activity<wbr>Response | Databricks<wbr>Spark<wbr>Python<wbr>Activity<wbr>Response | Delete<wbr>Activity<wbr>Response | Execute<wbr>Data<wbr>Flow<wbr>Activity<wbr>Response | Execute<wbr>Pipeline<wbr>Activity<wbr>Response | Execute<wbr>SSISPackage<wbr>Activity<wbr>Response | Execution<wbr>Activity<wbr>Response | Filter<wbr>Activity<wbr>Response | For<wbr>Each<wbr>Activity<wbr>Response | Get<wbr>Metadata<wbr>Activity<wbr>Response | HDInsight<wbr>Hive<wbr>Activity<wbr>Response | HDInsight<wbr>Map<wbr>Reduce<wbr>Activity<wbr>Response | HDInsight<wbr>Pig<wbr>Activity<wbr>Response | HDInsight<wbr>Spark<wbr>Activity<wbr>Response | HDInsight<wbr>Streaming<wbr>Activity<wbr>Response | If<wbr>Condition<wbr>Activity<wbr>Response | Lookup<wbr>Activity<wbr>Response | Set<wbr>Variable<wbr>Activity<wbr>Response | Sql<wbr>Server<wbr>Stored<wbr>Procedure<wbr>Activity<wbr>Response | Switch<wbr>Activity<wbr>Response | Until<wbr>Activity<wbr>Response | Validation<wbr>Activity<wbr>Response | Wait<wbr>Activity<wbr>Response | Web<wbr>Activity<wbr>Response | Web<wbr>Hook<wbr>Activity<wbr>Response[]</span>
+        <span class="property-type">Append<wbr>Variable<wbr>Activity<wbr>Response | Azure<wbr>Data<wbr>Explorer<wbr>Command<wbr>Activity<wbr>Response | Azure<wbr>Function<wbr>Activity<wbr>Response | Azure<wbr>MLBatch<wbr>Execution<wbr>Activity<wbr>Response | Azure<wbr>MLExecute<wbr>Pipeline<wbr>Activity<wbr>Response | Azure<wbr>MLUpdate<wbr>Resource<wbr>Activity<wbr>Response | Control<wbr>Activity<wbr>Response | Copy<wbr>Activity<wbr>Response | Custom<wbr>Activity<wbr>Response | Data<wbr>Lake<wbr>Analytics<wbr>USQLActivity<wbr>Response | Databricks<wbr>Notebook<wbr>Activity<wbr>Response | Databricks<wbr>Spark<wbr>Jar<wbr>Activity<wbr>Response | Databricks<wbr>Spark<wbr>Python<wbr>Activity<wbr>Response | Delete<wbr>Activity<wbr>Response | Execute<wbr>Data<wbr>Flow<wbr>Activity<wbr>Response | Execute<wbr>Pipeline<wbr>Activity<wbr>Response | Execute<wbr>SSISPackage<wbr>Activity<wbr>Response | Execute<wbr>Wrangling<wbr>Dataflow<wbr>Activity<wbr>Response | Execution<wbr>Activity<wbr>Response | Filter<wbr>Activity<wbr>Response | For<wbr>Each<wbr>Activity<wbr>Response | Get<wbr>Metadata<wbr>Activity<wbr>Response | HDInsight<wbr>Hive<wbr>Activity<wbr>Response | HDInsight<wbr>Map<wbr>Reduce<wbr>Activity<wbr>Response | HDInsight<wbr>Pig<wbr>Activity<wbr>Response | HDInsight<wbr>Spark<wbr>Activity<wbr>Response | HDInsight<wbr>Streaming<wbr>Activity<wbr>Response | If<wbr>Condition<wbr>Activity<wbr>Response | Lookup<wbr>Activity<wbr>Response | Set<wbr>Variable<wbr>Activity<wbr>Response | Sql<wbr>Server<wbr>Stored<wbr>Procedure<wbr>Activity<wbr>Response | Switch<wbr>Activity<wbr>Response | Until<wbr>Activity<wbr>Response | Validation<wbr>Activity<wbr>Response | Wait<wbr>Activity<wbr>Response | Web<wbr>Activity<wbr>Response | Web<wbr>Hook<wbr>Activity<wbr>Response[]</span>
     </dt>
     <dd>{{% md %}}List of activities to execute.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -58967,7 +59615,7 @@ The following output properties are available:
 <a href="#activities_python" style="color: inherit; text-decoration: inherit;">activities</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[Union[Append<wbr>Variable<wbr>Activity<wbr>Response, Azure<wbr>Data<wbr>Explorer<wbr>Command<wbr>Activity<wbr>Response, Azure<wbr>Function<wbr>Activity<wbr>Response, Azure<wbr>MLBatch<wbr>Execution<wbr>Activity<wbr>Response, Azure<wbr>MLExecute<wbr>Pipeline<wbr>Activity<wbr>Response, Azure<wbr>MLUpdate<wbr>Resource<wbr>Activity<wbr>Response, Control<wbr>Activity<wbr>Response, Copy<wbr>Activity<wbr>Response, Custom<wbr>Activity<wbr>Response, Data<wbr>Lake<wbr>Analytics<wbr>USQLActivity<wbr>Response, Databricks<wbr>Notebook<wbr>Activity<wbr>Response, Databricks<wbr>Spark<wbr>Jar<wbr>Activity<wbr>Response, Databricks<wbr>Spark<wbr>Python<wbr>Activity<wbr>Response, Delete<wbr>Activity<wbr>Response, Execute<wbr>Data<wbr>Flow<wbr>Activity<wbr>Response, Execute<wbr>Pipeline<wbr>Activity<wbr>Response, Execute<wbr>SSISPackage<wbr>Activity<wbr>Response, Execution<wbr>Activity<wbr>Response, Filter<wbr>Activity<wbr>Response, For<wbr>Each<wbr>Activity<wbr>Response, Get<wbr>Metadata<wbr>Activity<wbr>Response, HDInsight<wbr>Hive<wbr>Activity<wbr>Response, HDInsight<wbr>Map<wbr>Reduce<wbr>Activity<wbr>Response, HDInsight<wbr>Pig<wbr>Activity<wbr>Response, HDInsight<wbr>Spark<wbr>Activity<wbr>Response, HDInsight<wbr>Streaming<wbr>Activity<wbr>Response, If<wbr>Condition<wbr>Activity<wbr>Response, Lookup<wbr>Activity<wbr>Response, Set<wbr>Variable<wbr>Activity<wbr>Response, Sql<wbr>Server<wbr>Stored<wbr>Procedure<wbr>Activity<wbr>Response, Switch<wbr>Activity<wbr>Response, Until<wbr>Activity<wbr>Response, Validation<wbr>Activity<wbr>Response, Wait<wbr>Activity<wbr>Response, Web<wbr>Activity<wbr>Response, Web<wbr>Hook<wbr>Activity<wbr>Response]]</span>
+        <span class="property-type">Sequence[Union[Append<wbr>Variable<wbr>Activity<wbr>Response, Azure<wbr>Data<wbr>Explorer<wbr>Command<wbr>Activity<wbr>Response, Azure<wbr>Function<wbr>Activity<wbr>Response, Azure<wbr>MLBatch<wbr>Execution<wbr>Activity<wbr>Response, Azure<wbr>MLExecute<wbr>Pipeline<wbr>Activity<wbr>Response, Azure<wbr>MLUpdate<wbr>Resource<wbr>Activity<wbr>Response, Control<wbr>Activity<wbr>Response, Copy<wbr>Activity<wbr>Response, Custom<wbr>Activity<wbr>Response, Data<wbr>Lake<wbr>Analytics<wbr>USQLActivity<wbr>Response, Databricks<wbr>Notebook<wbr>Activity<wbr>Response, Databricks<wbr>Spark<wbr>Jar<wbr>Activity<wbr>Response, Databricks<wbr>Spark<wbr>Python<wbr>Activity<wbr>Response, Delete<wbr>Activity<wbr>Response, Execute<wbr>Data<wbr>Flow<wbr>Activity<wbr>Response, Execute<wbr>Pipeline<wbr>Activity<wbr>Response, Execute<wbr>SSISPackage<wbr>Activity<wbr>Response, Execute<wbr>Wrangling<wbr>Dataflow<wbr>Activity<wbr>Response, Execution<wbr>Activity<wbr>Response, Filter<wbr>Activity<wbr>Response, For<wbr>Each<wbr>Activity<wbr>Response, Get<wbr>Metadata<wbr>Activity<wbr>Response, HDInsight<wbr>Hive<wbr>Activity<wbr>Response, HDInsight<wbr>Map<wbr>Reduce<wbr>Activity<wbr>Response, HDInsight<wbr>Pig<wbr>Activity<wbr>Response, HDInsight<wbr>Spark<wbr>Activity<wbr>Response, HDInsight<wbr>Streaming<wbr>Activity<wbr>Response, If<wbr>Condition<wbr>Activity<wbr>Response, Lookup<wbr>Activity<wbr>Response, Set<wbr>Variable<wbr>Activity<wbr>Response, Sql<wbr>Server<wbr>Stored<wbr>Procedure<wbr>Activity<wbr>Response, Switch<wbr>Activity<wbr>Response, Until<wbr>Activity<wbr>Response, Validation<wbr>Activity<wbr>Response, Wait<wbr>Activity<wbr>Response, Web<wbr>Activity<wbr>Response, Web<wbr>Hook<wbr>Activity<wbr>Response]]</span>
     </dt>
     <dd>{{% md %}}List of activities to execute.{{% /md %}}</dd><dt class="property-required"
             title="Required">

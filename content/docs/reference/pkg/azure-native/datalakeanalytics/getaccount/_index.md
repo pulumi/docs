@@ -216,22 +216,6 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The list of firewall rules associated with this account.{{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="hierarchicalqueue_csharp">
-<a href="#hierarchicalqueue_csharp" style="color: inherit; text-decoration: inherit;">Hierarchical<wbr>Queue</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datalakeanalyticsaccountpropertiesresponsehierarchicalqueue">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Lake<wbr>Analytics.<wbr>Outputs.<wbr>Data<wbr>Lake<wbr>Analytics<wbr>Account<wbr>Properties<wbr>Response<wbr>Hierarchical<wbr>Queue</a></span>
-    </dt>
-    <dd>{{% md %}}The hierarchical queue associated with this account.{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="hierarchicalqueuestate_csharp">
-<a href="#hierarchicalqueuestate_csharp" style="color: inherit; text-decoration: inherit;">Hierarchical<wbr>Queue<wbr>State</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The hierarchical queue state associated with this account.{{% /md %}}</dd><dt class="property-"
-            title="">
         <span id="hivemetastores_csharp">
 <a href="#hivemetastores_csharp" style="color: inherit; text-decoration: inherit;">Hive<wbr>Metastores</a>
 </span>
@@ -507,22 +491,6 @@ The following output properties are available:
         <span class="property-type"><a href="#firewallruleresponse">[]Firewall<wbr>Rule<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The list of firewall rules associated with this account.{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="hierarchicalqueue_go">
-<a href="#hierarchicalqueue_go" style="color: inherit; text-decoration: inherit;">Hierarchical<wbr>Queue</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datalakeanalyticsaccountpropertiesresponsehierarchicalqueue">Data<wbr>Lake<wbr>Analytics<wbr>Account<wbr>Properties<wbr>Response<wbr>Hierarchical<wbr>Queue</a></span>
-    </dt>
-    <dd>{{% md %}}The hierarchical queue associated with this account.{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="hierarchicalqueuestate_go">
-<a href="#hierarchicalqueuestate_go" style="color: inherit; text-decoration: inherit;">Hierarchical<wbr>Queue<wbr>State</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The hierarchical queue state associated with this account.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="hivemetastores_go">
 <a href="#hivemetastores_go" style="color: inherit; text-decoration: inherit;">Hive<wbr>Metastores</a>
@@ -800,22 +768,6 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The list of firewall rules associated with this account.{{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="hierarchicalqueue_nodejs">
-<a href="#hierarchicalqueue_nodejs" style="color: inherit; text-decoration: inherit;">hierarchical<wbr>Queue</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datalakeanalyticsaccountpropertiesresponsehierarchicalqueue">Data<wbr>Lake<wbr>Analytics<wbr>Account<wbr>Properties<wbr>Response<wbr>Hierarchical<wbr>Queue</a></span>
-    </dt>
-    <dd>{{% md %}}The hierarchical queue associated with this account.{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="hierarchicalqueuestate_nodejs">
-<a href="#hierarchicalqueuestate_nodejs" style="color: inherit; text-decoration: inherit;">hierarchical<wbr>Queue<wbr>State</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The hierarchical queue state associated with this account.{{% /md %}}</dd><dt class="property-"
-            title="">
         <span id="hivemetastores_nodejs">
 <a href="#hivemetastores_nodejs" style="color: inherit; text-decoration: inherit;">hive<wbr>Metastores</a>
 </span>
@@ -1091,22 +1043,6 @@ The following output properties are available:
         <span class="property-type"><a href="#firewallruleresponse">Sequence[Firewall<wbr>Rule<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The list of firewall rules associated with this account.{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="hierarchical_queue_python">
-<a href="#hierarchical_queue_python" style="color: inherit; text-decoration: inherit;">hierarchical_<wbr>queue</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datalakeanalyticsaccountpropertiesresponsehierarchicalqueue">Data<wbr>Lake<wbr>Analytics<wbr>Account<wbr>Properties<wbr>Response<wbr>Hierarchical<wbr>Queue</a></span>
-    </dt>
-    <dd>{{% md %}}The hierarchical queue associated with this account.{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="hierarchical_queue_state_python">
-<a href="#hierarchical_queue_state_python" style="color: inherit; text-decoration: inherit;">hierarchical_<wbr>queue_<wbr>state</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The hierarchical queue state associated with this account.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="hive_metastores_python">
 <a href="#hive_metastores_python" style="color: inherit; text-decoration: inherit;">hive_<wbr>metastores</a>
@@ -1557,58 +1493,6 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The resource type.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-<h4 id="datalakeanalyticsaccountpropertiesresponsehierarchicalqueue">Data<wbr>Lake<wbr>Analytics<wbr>Account<wbr>Properties<wbr>Response<wbr>Hierarchical<wbr>Queue</h4>
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="root_csharp">
-<a href="#root_csharp" style="color: inherit; text-decoration: inherit;">Root</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">object</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="root_go">
-<a href="#root_go" style="color: inherit; text-decoration: inherit;">Root</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="root_nodejs">
-<a href="#root_nodejs" style="color: inherit; text-decoration: inherit;">root</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">any</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="root_python">
-<a href="#root_python" style="color: inherit; text-decoration: inherit;">root</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Any</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="datalakestoreaccountinformationresponse">Data<wbr>Lake<wbr>Store<wbr>Account<wbr>Information<wbr>Response</h4>
