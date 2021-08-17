@@ -55,7 +55,7 @@ class MyStack : Stack
         var exampleNamespaceDisasterRecoveryConfig = new Azure.ServiceBus.NamespaceDisasterRecoveryConfig("exampleNamespaceDisasterRecoveryConfig", new Azure.ServiceBus.NamespaceDisasterRecoveryConfigArgs
         {
             PrimaryNamespaceId = primary.Id,
-            PartnerNamespaceId = azurerm_resource_group.Secondary.Id,
+            PartnerNamespaceId = secondary.Id,
         });
     }
 
@@ -94,7 +94,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		_, err = servicebus.NewNamespace(ctx, "secondary", &servicebus.NamespaceArgs{
+		secondary, err := servicebus.NewNamespace(ctx, "secondary", &servicebus.NamespaceArgs{
 			Location:          pulumi.String("West US"),
 			ResourceGroupName: exampleResourceGroup.Name,
 			Sku:               pulumi.String("Premium"),
@@ -105,7 +105,7 @@ func main() {
 		}
 		_, err = servicebus.NewNamespaceDisasterRecoveryConfig(ctx, "exampleNamespaceDisasterRecoveryConfig", &servicebus.NamespaceDisasterRecoveryConfigArgs{
 			PrimaryNamespaceId: primary.ID(),
-			PartnerNamespaceId: pulumi.Any(azurerm_resource_group.Secondary.Id),
+			PartnerNamespaceId: secondary.ID(),
 		})
 		if err != nil {
 			return err
@@ -138,7 +138,7 @@ secondary = azure.servicebus.Namespace("secondary",
     capacity=1)
 example_namespace_disaster_recovery_config = azure.servicebus.NamespaceDisasterRecoveryConfig("exampleNamespaceDisasterRecoveryConfig",
     primary_namespace_id=primary.id,
-    partner_namespace_id=azurerm_resource_group["secondary"]["id"])
+    partner_namespace_id=secondary.id)
 ```
 
 
@@ -167,7 +167,7 @@ const secondary = new azure.servicebus.Namespace("secondary", {
 });
 const exampleNamespaceDisasterRecoveryConfig = new azure.servicebus.NamespaceDisasterRecoveryConfig("exampleNamespaceDisasterRecoveryConfig", {
     primaryNamespaceId: primary.id,
-    partnerNamespaceId: azurerm_resource_group.secondary.id,
+    partnerNamespaceId: secondary.id,
 });
 ```
 
@@ -1070,6 +1070,6 @@ Service Bus DR configs can be imported using the `resource id`, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/hashicorp/terraform-provider-azurerm).{{% /md %}}</dd>
 </dl>
 

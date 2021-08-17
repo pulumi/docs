@@ -12,6 +12,166 @@ meta_desc: "Documentation for the azure.bot.ChannelWebChat resource with example
 
 Manages a Web Chat integration for a Bot Channel
 
+{{% examples %}}
+
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+
+
+
+
+{{< example csharp >}}
+
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var current = Output.Create(Azure.Core.GetClientConfig.InvokeAsync());
+        var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "West Europe",
+        });
+        var exampleChannelsRegistration = new Azure.Bot.ChannelsRegistration("exampleChannelsRegistration", new Azure.Bot.ChannelsRegistrationArgs
+        {
+            Location = "global",
+            ResourceGroupName = exampleResourceGroup.Name,
+            Sku = "F0",
+            MicrosoftAppId = current.Apply(current => current.ClientId),
+        });
+        var exampleChannelWebChat = new Azure.Bot.ChannelWebChat("exampleChannelWebChat", new Azure.Bot.ChannelWebChatArgs
+        {
+            BotName = exampleChannelsRegistration.Name,
+            Location = exampleChannelsRegistration.Location,
+            ResourceGroupName = exampleResourceGroup.Name,
+            SiteNames = 
+            {
+                "TestSite",
+            },
+        });
+    }
+
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/bot"
+	"github.com/pulumi/pulumi-azure/sdk/v4/go/azure/core"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		current, err := core.GetClientConfig(ctx, nil, nil)
+		if err != nil {
+			return err
+		}
+		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
+			Location: pulumi.String("West Europe"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleChannelsRegistration, err := bot.NewChannelsRegistration(ctx, "exampleChannelsRegistration", &bot.ChannelsRegistrationArgs{
+			Location:          pulumi.String("global"),
+			ResourceGroupName: exampleResourceGroup.Name,
+			Sku:               pulumi.String("F0"),
+			MicrosoftAppId:    pulumi.String(current.ClientId),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = bot.NewChannelWebChat(ctx, "exampleChannelWebChat", &bot.ChannelWebChatArgs{
+			BotName:           exampleChannelsRegistration.Name,
+			Location:          exampleChannelsRegistration.Location,
+			ResourceGroupName: exampleResourceGroup.Name,
+			SiteNames: pulumi.StringArray{
+				pulumi.String("TestSite"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+```python
+import pulumi
+import pulumi_azure as azure
+
+current = azure.core.get_client_config()
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
+example_channels_registration = azure.bot.ChannelsRegistration("exampleChannelsRegistration",
+    location="global",
+    resource_group_name=example_resource_group.name,
+    sku="F0",
+    microsoft_app_id=current.client_id)
+example_channel_web_chat = azure.bot.ChannelWebChat("exampleChannelWebChat",
+    bot_name=example_channels_registration.name,
+    location=example_channels_registration.location,
+    resource_group_name=example_resource_group.name,
+    site_names=["TestSite"])
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const current = azure.core.getClientConfig({});
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
+const exampleChannelsRegistration = new azure.bot.ChannelsRegistration("exampleChannelsRegistration", {
+    location: "global",
+    resourceGroupName: exampleResourceGroup.name,
+    sku: "F0",
+    microsoftAppId: current.then(current => current.clientId),
+});
+const exampleChannelWebChat = new azure.bot.ChannelWebChat("exampleChannelWebChat", {
+    botName: exampleChannelsRegistration.name,
+    location: exampleChannelsRegistration.location,
+    resourceGroupName: exampleResourceGroup.name,
+    siteNames: ["TestSite"],
+});
+```
+
+
+{{< /example >}}
+
+
+
+
+
+{{% /examples %}}
+
+
 
 
 ## Create a ChannelWebChat Resource {#create}
@@ -683,6 +843,6 @@ Web Chat Channels can be imported using the `resource id`, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/hashicorp/terraform-provider-azurerm).{{% /md %}}</dd>
 </dl>
 

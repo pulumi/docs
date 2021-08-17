@@ -1268,6 +1268,15 @@ The following output properties are available:
     <dd>{{% md %}}A `cors` block as defined above.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="dotnetframeworkversion_csharp">
+<a href="#dotnetframeworkversion_csharp" style="color: inherit; text-decoration: inherit;">Dotnet<wbr>Framework<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The version of the .net framework's CLR used in this App Service.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="elasticinstanceminimum_csharp">
 <a href="#elasticinstanceminimum_csharp" style="color: inherit; text-decoration: inherit;">Elastic<wbr>Instance<wbr>Minimum</a>
 </span>
@@ -1439,6 +1448,15 @@ The following output properties are available:
         <span class="property-type"><a href="#getfunctionappsiteconfigcors">Get<wbr>Function<wbr>App<wbr>Site<wbr>Config<wbr>Cors</a></span>
     </dt>
     <dd>{{% md %}}A `cors` block as defined above.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="dotnetframeworkversion_go">
+<a href="#dotnetframeworkversion_go" style="color: inherit; text-decoration: inherit;">Dotnet<wbr>Framework<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The version of the .net framework's CLR used in this App Service.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="elasticinstanceminimum_go">
@@ -1614,6 +1632,15 @@ The following output properties are available:
     <dd>{{% md %}}A `cors` block as defined above.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="dotnetframeworkversion_nodejs">
+<a href="#dotnetframeworkversion_nodejs" style="color: inherit; text-decoration: inherit;">dotnet<wbr>Framework<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The version of the .net framework's CLR used in this App Service.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="elasticinstanceminimum_nodejs">
 <a href="#elasticinstanceminimum_nodejs" style="color: inherit; text-decoration: inherit;">elastic<wbr>Instance<wbr>Minimum</a>
 </span>
@@ -1785,6 +1812,15 @@ The following output properties are available:
         <span class="property-type"><a href="#getfunctionappsiteconfigcors">Get<wbr>Function<wbr>App<wbr>Site<wbr>Config<wbr>Cors</a></span>
     </dt>
     <dd>{{% md %}}A `cors` block as defined above.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="dotnet_framework_version_python">
+<a href="#dotnet_framework_version_python" style="color: inherit; text-decoration: inherit;">dotnet_<wbr>framework_<wbr>version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The version of the .net framework's CLR used in this App Service.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="elastic_instance_minimum_python">
@@ -3141,6 +3177,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/hashicorp/terraform-provider-azurerm).{{% /md %}}</dd>
 </dl>
 

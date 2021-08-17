@@ -297,7 +297,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If multi-master is enabled for this Cosmos DB account.
+    <dd>{{% md %}}If multiple write locations are enabled for this Cosmos DB account.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="endpoint_csharp">
@@ -394,7 +394,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Primary master key for the CosmosDB Account.
+    <dd>{{% md %}}The Primary key for the CosmosDB Account.
 {{% /md %}}</dd><dt class="property- property-deprecated"
             title=", Deprecated">
         <span id="primarymasterkey_csharp">
@@ -411,7 +411,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Primary read-only master Key for the CosmosDB Account.
+    <dd>{{% md %}}The Primary read-only Key for the CosmosDB Account.
 {{% /md %}}</dd><dt class="property- property-deprecated"
             title=", Deprecated">
         <span id="primaryreadonlymasterkey_csharp">
@@ -445,7 +445,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Secondary master key for the CosmosDB Account.
+    <dd>{{% md %}}The Secondary key for the CosmosDB Account.
 {{% /md %}}</dd><dt class="property- property-deprecated"
             title=", Deprecated">
         <span id="secondarymasterkey_csharp">
@@ -462,7 +462,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Secondary read-only master key for the CosmosDB Account.
+    <dd>{{% md %}}The Secondary read-only key for the CosmosDB Account.
 {{% /md %}}</dd><dt class="property- property-deprecated"
             title=", Deprecated">
         <span id="secondaryreadonlymasterkey_csharp">
@@ -545,7 +545,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If multi-master is enabled for this Cosmos DB account.
+    <dd>{{% md %}}If multiple write locations are enabled for this Cosmos DB account.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="endpoint_go">
@@ -642,7 +642,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Primary master key for the CosmosDB Account.
+    <dd>{{% md %}}The Primary key for the CosmosDB Account.
 {{% /md %}}</dd><dt class="property- property-deprecated"
             title=", Deprecated">
         <span id="primarymasterkey_go">
@@ -659,7 +659,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Primary read-only master Key for the CosmosDB Account.
+    <dd>{{% md %}}The Primary read-only Key for the CosmosDB Account.
 {{% /md %}}</dd><dt class="property- property-deprecated"
             title=", Deprecated">
         <span id="primaryreadonlymasterkey_go">
@@ -693,7 +693,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Secondary master key for the CosmosDB Account.
+    <dd>{{% md %}}The Secondary key for the CosmosDB Account.
 {{% /md %}}</dd><dt class="property- property-deprecated"
             title=", Deprecated">
         <span id="secondarymasterkey_go">
@@ -710,7 +710,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Secondary read-only master key for the CosmosDB Account.
+    <dd>{{% md %}}The Secondary read-only key for the CosmosDB Account.
 {{% /md %}}</dd><dt class="property- property-deprecated"
             title=", Deprecated">
         <span id="secondaryreadonlymasterkey_go">
@@ -793,7 +793,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}If multi-master is enabled for this Cosmos DB account.
+    <dd>{{% md %}}If multiple write locations are enabled for this Cosmos DB account.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="endpoint_nodejs">
@@ -890,7 +890,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Primary master key for the CosmosDB Account.
+    <dd>{{% md %}}The Primary key for the CosmosDB Account.
 {{% /md %}}</dd><dt class="property- property-deprecated"
             title=", Deprecated">
         <span id="primarymasterkey_nodejs">
@@ -907,7 +907,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Primary read-only master Key for the CosmosDB Account.
+    <dd>{{% md %}}The Primary read-only Key for the CosmosDB Account.
 {{% /md %}}</dd><dt class="property- property-deprecated"
             title=", Deprecated">
         <span id="primaryreadonlymasterkey_nodejs">
@@ -941,7 +941,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Secondary master key for the CosmosDB Account.
+    <dd>{{% md %}}The Secondary key for the CosmosDB Account.
 {{% /md %}}</dd><dt class="property- property-deprecated"
             title=", Deprecated">
         <span id="secondarymasterkey_nodejs">
@@ -958,7 +958,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Secondary read-only master key for the CosmosDB Account.
+    <dd>{{% md %}}The Secondary read-only key for the CosmosDB Account.
 {{% /md %}}</dd><dt class="property- property-deprecated"
             title=", Deprecated">
         <span id="secondaryreadonlymasterkey_nodejs">
@@ -1041,7 +1041,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If multi-master is enabled for this Cosmos DB account.
+    <dd>{{% md %}}If multiple write locations are enabled for this Cosmos DB account.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="endpoint_python">
@@ -1138,7 +1138,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Primary master key for the CosmosDB Account.
+    <dd>{{% md %}}The Primary key for the CosmosDB Account.
 {{% /md %}}</dd><dt class="property- property-deprecated"
             title=", Deprecated">
         <span id="primary_master_key_python">
@@ -1155,7 +1155,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Primary read-only master Key for the CosmosDB Account.
+    <dd>{{% md %}}The Primary read-only Key for the CosmosDB Account.
 {{% /md %}}</dd><dt class="property- property-deprecated"
             title=", Deprecated">
         <span id="primary_readonly_master_key_python">
@@ -1189,7 +1189,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Secondary master key for the CosmosDB Account.
+    <dd>{{% md %}}The Secondary key for the CosmosDB Account.
 {{% /md %}}</dd><dt class="property- property-deprecated"
             title=", Deprecated">
         <span id="secondary_master_key_python">
@@ -1206,7 +1206,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Secondary read-only master key for the CosmosDB Account.
+    <dd>{{% md %}}The Secondary read-only key for the CosmosDB Account.
 {{% /md %}}</dd><dt class="property- property-deprecated"
             title=", Deprecated">
         <span id="secondary_readonly_master_key_python">
@@ -1626,6 +1626,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/hashicorp/terraform-provider-azurerm).{{% /md %}}</dd>
 </dl>
 

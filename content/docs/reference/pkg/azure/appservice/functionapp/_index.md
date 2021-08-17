@@ -4431,6 +4431,15 @@ The following state arguments are supported:
     <dd>{{% md %}}A `cors` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="dotnetframeworkversion_csharp">
+<a href="#dotnetframeworkversion_csharp" style="color: inherit; text-decoration: inherit;">Dotnet<wbr>Framework<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The version of the .net framework's CLR used in this function app. Possible values are `v4.0` (including .NET Core 2.1 and 3.1), `v5.0` and `v6.0`. [For more information on which .net Framework version to use based on the runtime version you're targeting - please see this table](https://docs.microsoft.com/en-us/azure/azure-functions/functions-dotnet-class-library#supported-versions). Defaults to `v4.0`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="elasticinstanceminimum_csharp">
 <a href="#elasticinstanceminimum_csharp" style="color: inherit; text-decoration: inherit;">Elastic<wbr>Instance<wbr>Minimum</a>
 </span>
@@ -4603,6 +4612,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="#functionappsiteconfigcors">Function<wbr>App<wbr>Site<wbr>Config<wbr>Cors</a></span>
     </dt>
     <dd>{{% md %}}A `cors` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dotnetframeworkversion_go">
+<a href="#dotnetframeworkversion_go" style="color: inherit; text-decoration: inherit;">Dotnet<wbr>Framework<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The version of the .net framework's CLR used in this function app. Possible values are `v4.0` (including .NET Core 2.1 and 3.1), `v5.0` and `v6.0`. [For more information on which .net Framework version to use based on the runtime version you're targeting - please see this table](https://docs.microsoft.com/en-us/azure/azure-functions/functions-dotnet-class-library#supported-versions). Defaults to `v4.0`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="elasticinstanceminimum_go">
@@ -4779,6 +4797,15 @@ The following state arguments are supported:
     <dd>{{% md %}}A `cors` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="dotnetframeworkversion_nodejs">
+<a href="#dotnetframeworkversion_nodejs" style="color: inherit; text-decoration: inherit;">dotnet<wbr>Framework<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The version of the .net framework's CLR used in this function app. Possible values are `v4.0` (including .NET Core 2.1 and 3.1), `v5.0` and `v6.0`. [For more information on which .net Framework version to use based on the runtime version you're targeting - please see this table](https://docs.microsoft.com/en-us/azure/azure-functions/functions-dotnet-class-library#supported-versions). Defaults to `v4.0`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="elasticinstanceminimum_nodejs">
 <a href="#elasticinstanceminimum_nodejs" style="color: inherit; text-decoration: inherit;">elastic<wbr>Instance<wbr>Minimum</a>
 </span>
@@ -4951,6 +4978,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="#functionappsiteconfigcors">Function<wbr>App<wbr>Site<wbr>Config<wbr>Cors</a></span>
     </dt>
     <dd>{{% md %}}A `cors` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dotnet_framework_version_python">
+<a href="#dotnet_framework_version_python" style="color: inherit; text-decoration: inherit;">dotnet_<wbr>framework_<wbr>version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The version of the .net framework's CLR used in this function app. Possible values are `v4.0` (including .NET Core 2.1 and 3.1), `v5.0` and `v6.0`. [For more information on which .net Framework version to use based on the runtime version you're targeting - please see this table](https://docs.microsoft.com/en-us/azure/azure-functions/functions-dotnet-class-library#supported-versions). Defaults to `v4.0`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="elastic_instance_minimum_python">
@@ -6349,6 +6385,6 @@ Function Apps can be imported using the `resource id`, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/hashicorp/terraform-provider-azurerm).{{% /md %}}</dd>
 </dl>
 

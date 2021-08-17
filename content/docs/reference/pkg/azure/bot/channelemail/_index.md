@@ -14,6 +14,72 @@ Manages a Email integration for a Bot Channel
 
 > **Note** A bot can only have a single Email Channel associated with it.
 
+{{% examples %}}
+
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+
+
+
+
+{{< example csharp >}}
+
+Coming soon!
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+Coming soon!
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+Coming soon!
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const current = azure.core.getClientConfig({});
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
+const exampleChannelsRegistration = new azure.bot.ChannelsRegistration("exampleChannelsRegistration", {
+    location: "global",
+    resourceGroupName: exampleResourceGroup.name,
+    sku: "F0",
+    microsoftAppId: current.then(current => current.clientId),
+});
+const exampleChannelEmail = new azure.bot.ChannelEmail("exampleChannelEmail", {
+    botName: exampleChannelsRegistration.name,
+    location: exampleChannelsRegistration.location,
+    resourceGroupName: exampleResourceGroup.name,
+    clientId: "exampleId",
+    clientSecret: "exampleSecret",
+    verificationToken: "exampleVerificationToken",
+});
+```
+
+
+{{< /example >}}
+
+
+
+
+
+{{% /examples %}}
+
+
 
 
 ## Create a ChannelEmail Resource {#create}
@@ -759,6 +825,6 @@ The Email Integration for a Bot Channel can be imported using the `resource id`,
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/hashicorp/terraform-provider-azurerm).{{% /md %}}</dd>
 </dl>
 

@@ -989,6 +989,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="resourcegroup_csharp">
+<a href="#resourcegroup_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#providerfeaturesresourcegroup">Provider<wbr>Features<wbr>Resource<wbr>Group</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="templatedeployment_csharp">
 <a href="#templatedeployment_csharp" style="color: inherit; text-decoration: inherit;">Template<wbr>Deployment</a>
 </span>
@@ -1046,6 +1054,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#providerfeaturesnetwork">Provider<wbr>Features<wbr>Network</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="resourcegroup_go">
+<a href="#resourcegroup_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#providerfeaturesresourcegroup">Provider<wbr>Features<wbr>Resource<wbr>Group</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1109,6 +1125,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="resourcegroup_nodejs">
+<a href="#resourcegroup_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#providerfeaturesresourcegroup">Provider<wbr>Features<wbr>Resource<wbr>Group</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="templatedeployment_nodejs">
 <a href="#templatedeployment_nodejs" style="color: inherit; text-decoration: inherit;">template<wbr>Deployment</a>
 </span>
@@ -1166,6 +1190,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#providerfeaturesnetwork">Provider<wbr>Features<wbr>Network</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="resource_group_python">
+<a href="#resource_group_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#providerfeaturesresourcegroup">Provider<wbr>Features<wbr>Resource<wbr>Group</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1419,6 +1451,56 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="relaxed_locking_python">
 <a href="#relaxed_locking_python" style="color: inherit; text-decoration: inherit;">relaxed_<wbr>locking</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="providerfeaturesresourcegroup">Provider<wbr>Features<wbr>Resource<wbr>Group</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="preventdeletionifcontainsresources_csharp">
+<a href="#preventdeletionifcontainsresources_csharp" style="color: inherit; text-decoration: inherit;">Prevent<wbr>Deletion<wbr>If<wbr>Contains<wbr>Resources</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="preventdeletionifcontainsresources_go">
+<a href="#preventdeletionifcontainsresources_go" style="color: inherit; text-decoration: inherit;">Prevent<wbr>Deletion<wbr>If<wbr>Contains<wbr>Resources</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="preventdeletionifcontainsresources_nodejs">
+<a href="#preventdeletionifcontainsresources_nodejs" style="color: inherit; text-decoration: inherit;">prevent<wbr>Deletion<wbr>If<wbr>Contains<wbr>Resources</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="prevent_deletion_if_contains_resources_python">
+<a href="#prevent_deletion_if_contains_resources_python" style="color: inherit; text-decoration: inherit;">prevent_<wbr>deletion_<wbr>if_<wbr>contains_<wbr>resources</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
@@ -1680,6 +1762,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/hashicorp/terraform-provider-azurerm).{{% /md %}}</dd>
 </dl>
 

@@ -394,7 +394,7 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}The IP ranges to whitelist for incoming traffic to the masters.
+    <dd>{{% md %}}The IP ranges to allow for incoming traffic to the server nodes.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoscalerprofile_csharp">
@@ -648,7 +648,7 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}The IP ranges to whitelist for incoming traffic to the masters.
+    <dd>{{% md %}}The IP ranges to allow for incoming traffic to the server nodes.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoscalerprofile_go">
@@ -902,7 +902,7 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}The IP ranges to whitelist for incoming traffic to the masters.
+    <dd>{{% md %}}The IP ranges to allow for incoming traffic to the server nodes.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoscalerprofile_nodejs">
@@ -1156,7 +1156,7 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}The IP ranges to whitelist for incoming traffic to the masters.
+    <dd>{{% md %}}The IP ranges to allow for incoming traffic to the server nodes.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="auto_scaler_profile_python">
@@ -1822,7 +1822,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}The IP ranges to whitelist for incoming traffic to the masters.
+    <dd>{{% md %}}The IP ranges to allow for incoming traffic to the server nodes.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_autoscalerprofile_csharp">
@@ -2130,7 +2130,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}The IP ranges to whitelist for incoming traffic to the masters.
+    <dd>{{% md %}}The IP ranges to allow for incoming traffic to the server nodes.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_autoscalerprofile_go">
@@ -2438,7 +2438,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}The IP ranges to whitelist for incoming traffic to the masters.
+    <dd>{{% md %}}The IP ranges to allow for incoming traffic to the server nodes.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_autoscalerprofile_nodejs">
@@ -2746,7 +2746,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}The IP ranges to whitelist for incoming traffic to the masters.
+    <dd>{{% md %}}The IP ranges to allow for incoming traffic to the server nodes.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_auto_scaler_profile_python">
@@ -7467,7 +7467,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The principal id of the system assigned identity which is used by master components.
+    <dd>{{% md %}}The principal id of the system assigned identity which is used by main components.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenantid_csharp">
@@ -7507,7 +7507,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The principal id of the system assigned identity which is used by master components.
+    <dd>{{% md %}}The principal id of the system assigned identity which is used by main components.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenantid_go">
@@ -7547,7 +7547,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The principal id of the system assigned identity which is used by master components.
+    <dd>{{% md %}}The principal id of the system assigned identity which is used by main components.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenantid_nodejs">
@@ -7587,7 +7587,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The principal id of the system assigned identity which is used by master components.
+    <dd>{{% md %}}The principal id of the system assigned identity which is used by main components.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenant_id_python">
@@ -9823,6 +9823,6 @@ Managed Kubernetes Clusters can be imported using the `resource id`, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/hashicorp/terraform-provider-azurerm).{{% /md %}}</dd>
 </dl>
 

@@ -362,7 +362,7 @@ The ServerExtendedAuditingPolicy resource accepts the following [input]({{< relr
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Enable audit events to Azure Monitor? To enable server audit events to Azure Monitor, please enable its master database audit events to Azure Monitor.
+    <dd>{{% md %}}Enable audit events to Azure Monitor? To enable server audit events to Azure Monitor, please enable its main database audit events to Azure Monitor.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retentionindays_csharp">
@@ -420,7 +420,7 @@ The ServerExtendedAuditingPolicy resource accepts the following [input]({{< relr
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Enable audit events to Azure Monitor? To enable server audit events to Azure Monitor, please enable its master database audit events to Azure Monitor.
+    <dd>{{% md %}}Enable audit events to Azure Monitor? To enable server audit events to Azure Monitor, please enable its main database audit events to Azure Monitor.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retentionindays_go">
@@ -478,7 +478,7 @@ The ServerExtendedAuditingPolicy resource accepts the following [input]({{< relr
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Enable audit events to Azure Monitor? To enable server audit events to Azure Monitor, please enable its master database audit events to Azure Monitor.
+    <dd>{{% md %}}Enable audit events to Azure Monitor? To enable server audit events to Azure Monitor, please enable its main database audit events to Azure Monitor.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retentionindays_nodejs">
@@ -536,7 +536,7 @@ The ServerExtendedAuditingPolicy resource accepts the following [input]({{< relr
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Enable audit events to Azure Monitor? To enable server audit events to Azure Monitor, please enable its master database audit events to Azure Monitor.
+    <dd>{{% md %}}Enable audit events to Azure Monitor? To enable server audit events to Azure Monitor, please enable its main database audit events to Azure Monitor.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retention_in_days_python">
@@ -771,7 +771,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Enable audit events to Azure Monitor? To enable server audit events to Azure Monitor, please enable its master database audit events to Azure Monitor.
+    <dd>{{% md %}}Enable audit events to Azure Monitor? To enable server audit events to Azure Monitor, please enable its main database audit events to Azure Monitor.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_retentionindays_csharp">
@@ -829,7 +829,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Enable audit events to Azure Monitor? To enable server audit events to Azure Monitor, please enable its master database audit events to Azure Monitor.
+    <dd>{{% md %}}Enable audit events to Azure Monitor? To enable server audit events to Azure Monitor, please enable its main database audit events to Azure Monitor.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_retentionindays_go">
@@ -887,7 +887,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Enable audit events to Azure Monitor? To enable server audit events to Azure Monitor, please enable its master database audit events to Azure Monitor.
+    <dd>{{% md %}}Enable audit events to Azure Monitor? To enable server audit events to Azure Monitor, please enable its main database audit events to Azure Monitor.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_retentionindays_nodejs">
@@ -945,7 +945,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Enable audit events to Azure Monitor? To enable server audit events to Azure Monitor, please enable its master database audit events to Azure Monitor.
+    <dd>{{% md %}}Enable audit events to Azure Monitor? To enable server audit events to Azure Monitor, please enable its main database audit events to Azure Monitor.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_retention_in_days_python">
@@ -1017,6 +1017,6 @@ Ms Sql Server Extended Auditing Policys can be imported using the `resource id`,
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/hashicorp/terraform-provider-azurerm).{{% /md %}}</dd>
 </dl>
 

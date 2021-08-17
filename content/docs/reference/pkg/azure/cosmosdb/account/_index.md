@@ -545,7 +545,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Enable multi-master support for this Cosmos DB account.
+    <dd>{{% md %}}Enable multiple write locations for this Cosmos DB account.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="identity_csharp">
@@ -774,7 +774,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Enable multi-master support for this Cosmos DB account.
+    <dd>{{% md %}}Enable multiple write locations for this Cosmos DB account.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="identity_go">
@@ -1003,7 +1003,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Enable multi-master support for this Cosmos DB account.
+    <dd>{{% md %}}Enable multiple write locations for this Cosmos DB account.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="identity_nodejs">
@@ -1232,7 +1232,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Enable multi-master support for this Cosmos DB account.
+    <dd>{{% md %}}Enable multiple write locations for this Cosmos DB account.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="identity_python">
@@ -1395,7 +1395,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Primary master key for the CosmosDB Account.
+    <dd>{{% md %}}The Primary key for the CosmosDB Account.
 {{% /md %}}</dd><dt class="property- property-deprecated"
             title=", Deprecated">
         <span id="primarymasterkey_csharp">
@@ -1412,7 +1412,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Primary read-only master Key for the CosmosDB Account.
+    <dd>{{% md %}}The Primary read-only Key for the CosmosDB Account.
 {{% /md %}}</dd><dt class="property- property-deprecated"
             title=", Deprecated">
         <span id="primaryreadonlymasterkey_csharp">
@@ -1438,7 +1438,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Secondary master key for the CosmosDB Account.
+    <dd>{{% md %}}The Secondary key for the CosmosDB Account.
 {{% /md %}}</dd><dt class="property- property-deprecated"
             title=", Deprecated">
         <span id="secondarymasterkey_csharp">
@@ -1455,7 +1455,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Secondary read-only master key for the CosmosDB Account.
+    <dd>{{% md %}}The Secondary read-only key for the CosmosDB Account.
 {{% /md %}}</dd><dt class="property- property-deprecated"
             title=", Deprecated">
         <span id="secondaryreadonlymasterkey_csharp">
@@ -1511,7 +1511,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Primary master key for the CosmosDB Account.
+    <dd>{{% md %}}The Primary key for the CosmosDB Account.
 {{% /md %}}</dd><dt class="property- property-deprecated"
             title=", Deprecated">
         <span id="primarymasterkey_go">
@@ -1528,7 +1528,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Primary read-only master Key for the CosmosDB Account.
+    <dd>{{% md %}}The Primary read-only Key for the CosmosDB Account.
 {{% /md %}}</dd><dt class="property- property-deprecated"
             title=", Deprecated">
         <span id="primaryreadonlymasterkey_go">
@@ -1554,7 +1554,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Secondary master key for the CosmosDB Account.
+    <dd>{{% md %}}The Secondary key for the CosmosDB Account.
 {{% /md %}}</dd><dt class="property- property-deprecated"
             title=", Deprecated">
         <span id="secondarymasterkey_go">
@@ -1571,7 +1571,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Secondary read-only master key for the CosmosDB Account.
+    <dd>{{% md %}}The Secondary read-only key for the CosmosDB Account.
 {{% /md %}}</dd><dt class="property- property-deprecated"
             title=", Deprecated">
         <span id="secondaryreadonlymasterkey_go">
@@ -1627,7 +1627,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Primary master key for the CosmosDB Account.
+    <dd>{{% md %}}The Primary key for the CosmosDB Account.
 {{% /md %}}</dd><dt class="property- property-deprecated"
             title=", Deprecated">
         <span id="primarymasterkey_nodejs">
@@ -1644,7 +1644,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Primary read-only master Key for the CosmosDB Account.
+    <dd>{{% md %}}The Primary read-only Key for the CosmosDB Account.
 {{% /md %}}</dd><dt class="property- property-deprecated"
             title=", Deprecated">
         <span id="primaryreadonlymasterkey_nodejs">
@@ -1670,7 +1670,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Secondary master key for the CosmosDB Account.
+    <dd>{{% md %}}The Secondary key for the CosmosDB Account.
 {{% /md %}}</dd><dt class="property- property-deprecated"
             title=", Deprecated">
         <span id="secondarymasterkey_nodejs">
@@ -1687,7 +1687,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Secondary read-only master key for the CosmosDB Account.
+    <dd>{{% md %}}The Secondary read-only key for the CosmosDB Account.
 {{% /md %}}</dd><dt class="property- property-deprecated"
             title=", Deprecated">
         <span id="secondaryreadonlymasterkey_nodejs">
@@ -1743,7 +1743,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Primary master key for the CosmosDB Account.
+    <dd>{{% md %}}The Primary key for the CosmosDB Account.
 {{% /md %}}</dd><dt class="property- property-deprecated"
             title=", Deprecated">
         <span id="primary_master_key_python">
@@ -1760,7 +1760,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Primary read-only master Key for the CosmosDB Account.
+    <dd>{{% md %}}The Primary read-only Key for the CosmosDB Account.
 {{% /md %}}</dd><dt class="property- property-deprecated"
             title=", Deprecated">
         <span id="primary_readonly_master_key_python">
@@ -1786,7 +1786,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Secondary master key for the CosmosDB Account.
+    <dd>{{% md %}}The Secondary key for the CosmosDB Account.
 {{% /md %}}</dd><dt class="property- property-deprecated"
             title=", Deprecated">
         <span id="secondary_master_key_python">
@@ -1803,7 +1803,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Secondary read-only master key for the CosmosDB Account.
+    <dd>{{% md %}}The Secondary read-only key for the CosmosDB Account.
 {{% /md %}}</dd><dt class="property- property-deprecated"
             title=", Deprecated">
         <span id="secondary_readonly_master_key_python">
@@ -2076,7 +2076,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Enable multi-master support for this Cosmos DB account.
+    <dd>{{% md %}}Enable multiple write locations for this Cosmos DB account.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_endpoint_csharp">
@@ -2202,7 +2202,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Primary master key for the CosmosDB Account.
+    <dd>{{% md %}}The Primary key for the CosmosDB Account.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_primarymasterkey_csharp">
@@ -2219,7 +2219,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Primary read-only master Key for the CosmosDB Account.
+    <dd>{{% md %}}The Primary read-only Key for the CosmosDB Account.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_primaryreadonlymasterkey_csharp">
@@ -2263,7 +2263,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Secondary master key for the CosmosDB Account.
+    <dd>{{% md %}}The Secondary key for the CosmosDB Account.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_secondarymasterkey_csharp">
@@ -2280,7 +2280,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Secondary read-only master key for the CosmosDB Account.
+    <dd>{{% md %}}The Secondary read-only key for the CosmosDB Account.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_secondaryreadonlymasterkey_csharp">
@@ -2409,7 +2409,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Enable multi-master support for this Cosmos DB account.
+    <dd>{{% md %}}Enable multiple write locations for this Cosmos DB account.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_endpoint_go">
@@ -2535,7 +2535,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Primary master key for the CosmosDB Account.
+    <dd>{{% md %}}The Primary key for the CosmosDB Account.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_primarymasterkey_go">
@@ -2552,7 +2552,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Primary read-only master Key for the CosmosDB Account.
+    <dd>{{% md %}}The Primary read-only Key for the CosmosDB Account.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_primaryreadonlymasterkey_go">
@@ -2596,7 +2596,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Secondary master key for the CosmosDB Account.
+    <dd>{{% md %}}The Secondary key for the CosmosDB Account.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_secondarymasterkey_go">
@@ -2613,7 +2613,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Secondary read-only master key for the CosmosDB Account.
+    <dd>{{% md %}}The Secondary read-only key for the CosmosDB Account.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_secondaryreadonlymasterkey_go">
@@ -2742,7 +2742,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Enable multi-master support for this Cosmos DB account.
+    <dd>{{% md %}}Enable multiple write locations for this Cosmos DB account.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_endpoint_nodejs">
@@ -2868,7 +2868,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Primary master key for the CosmosDB Account.
+    <dd>{{% md %}}The Primary key for the CosmosDB Account.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_primarymasterkey_nodejs">
@@ -2885,7 +2885,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Primary read-only master Key for the CosmosDB Account.
+    <dd>{{% md %}}The Primary read-only Key for the CosmosDB Account.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_primaryreadonlymasterkey_nodejs">
@@ -2929,7 +2929,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Secondary master key for the CosmosDB Account.
+    <dd>{{% md %}}The Secondary key for the CosmosDB Account.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_secondarymasterkey_nodejs">
@@ -2946,7 +2946,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Secondary read-only master key for the CosmosDB Account.
+    <dd>{{% md %}}The Secondary read-only key for the CosmosDB Account.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_secondaryreadonlymasterkey_nodejs">
@@ -3075,7 +3075,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Enable multi-master support for this Cosmos DB account.
+    <dd>{{% md %}}Enable multiple write locations for this Cosmos DB account.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_endpoint_python">
@@ -3201,7 +3201,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Primary master key for the CosmosDB Account.
+    <dd>{{% md %}}The Primary key for the CosmosDB Account.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_primary_master_key_python">
@@ -3218,7 +3218,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Primary read-only master Key for the CosmosDB Account.
+    <dd>{{% md %}}The Primary read-only Key for the CosmosDB Account.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_primary_readonly_master_key_python">
@@ -3262,7 +3262,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Secondary master key for the CosmosDB Account.
+    <dd>{{% md %}}The Secondary key for the CosmosDB Account.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_secondary_master_key_python">
@@ -3279,7 +3279,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Secondary read-only master key for the CosmosDB Account.
+    <dd>{{% md %}}The Secondary read-only key for the CosmosDB Account.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_secondary_readonly_master_key_python">
@@ -4263,6 +4263,6 @@ CosmosDB Accounts can be imported using the `resource id`, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/hashicorp/terraform-provider-azurerm).{{% /md %}}</dd>
 </dl>
 

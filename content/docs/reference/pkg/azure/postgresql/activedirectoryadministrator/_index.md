@@ -338,7 +338,7 @@ The ActiveDirectoryAdministrator resource accepts the following [input]({{< relr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the principal to set as the server administrator
+    <dd>{{% md %}}The ID of the principal to set as the server administrator. For a managed identity this should be the Client ID of the identity.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
@@ -387,7 +387,7 @@ The ActiveDirectoryAdministrator resource accepts the following [input]({{< relr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the principal to set as the server administrator
+    <dd>{{% md %}}The ID of the principal to set as the server administrator. For a managed identity this should be the Client ID of the identity.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
@@ -436,7 +436,7 @@ The ActiveDirectoryAdministrator resource accepts the following [input]({{< relr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the principal to set as the server administrator
+    <dd>{{% md %}}The ID of the principal to set as the server administrator. For a managed identity this should be the Client ID of the identity.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
@@ -485,7 +485,7 @@ The ActiveDirectoryAdministrator resource accepts the following [input]({{< relr
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ID of the principal to set as the server administrator
+    <dd>{{% md %}}The ID of the principal to set as the server administrator. For a managed identity this should be the Client ID of the identity.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
@@ -719,7 +719,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the principal to set as the server administrator
+    <dd>{{% md %}}The ID of the principal to set as the server administrator. For a managed identity this should be the Client ID of the identity.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_csharp">
@@ -768,7 +768,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the principal to set as the server administrator
+    <dd>{{% md %}}The ID of the principal to set as the server administrator. For a managed identity this should be the Client ID of the identity.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_go">
@@ -817,7 +817,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the principal to set as the server administrator
+    <dd>{{% md %}}The ID of the principal to set as the server administrator. For a managed identity this should be the Client ID of the identity.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_nodejs">
@@ -866,7 +866,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ID of the principal to set as the server administrator
+    <dd>{{% md %}}The ID of the principal to set as the server administrator. For a managed identity this should be the Client ID of the identity.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resource_group_name_python">
@@ -920,6 +920,6 @@ A PostgreSQL Active Directory Administrator can be imported using the `resource 
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/hashicorp/terraform-provider-azurerm).{{% /md %}}</dd>
 </dl>
 

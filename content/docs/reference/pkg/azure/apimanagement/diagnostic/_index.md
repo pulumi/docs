@@ -68,7 +68,7 @@ class MyStack : Stack
             SamplingPercentage = 5,
             AlwaysLogErrors = true,
             LogClientIp = true,
-            Verbosity = "Verbose",
+            Verbosity = "verbose",
             HttpCorrelationProtocol = "W3C",
             FrontendRequest = new Azure.ApiManagement.Inputs.DiagnosticFrontendRequestArgs
             {
@@ -176,7 +176,7 @@ func main() {
 			SamplingPercentage:      pulumi.Float64(5),
 			AlwaysLogErrors:         pulumi.Bool(true),
 			LogClientIp:             pulumi.Bool(true),
-			Verbosity:               pulumi.String("Verbose"),
+			Verbosity:               pulumi.String("verbose"),
 			HttpCorrelationProtocol: pulumi.String("W3C"),
 			FrontendRequest: &apimanagement.DiagnosticFrontendRequestArgs{
 				BodyBytes: pulumi.Int(32),
@@ -254,7 +254,7 @@ example_diagnostic = azure.apimanagement.Diagnostic("exampleDiagnostic",
     sampling_percentage=5,
     always_log_errors=True,
     log_client_ip=True,
-    verbosity="Verbose",
+    verbosity="verbose",
     http_correlation_protocol="W3C",
     frontend_request=azure.apimanagement.DiagnosticFrontendRequestArgs(
         body_bytes=32,
@@ -329,7 +329,7 @@ const exampleDiagnostic = new azure.apimanagement.Diagnostic("exampleDiagnostic"
     samplingPercentage: 5,
     alwaysLogErrors: true,
     logClientIp: true,
-    verbosity: "Verbose",
+    verbosity: "verbose",
     httpCorrelationProtocol: "W3C",
     frontendRequest: {
         bodyBytes: 32,
@@ -3329,6 +3329,6 @@ API Management Diagnostics can be imported using the `resource id`, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>{{% md %}}This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).{{% /md %}}</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/hashicorp/terraform-provider-azurerm).{{% /md %}}</dd>
 </dl>
 
