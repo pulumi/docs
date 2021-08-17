@@ -650,8 +650,8 @@ in the Amazon RDS User Guide.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The engine version to use. If `auto_minor_version_upgrade`
-is enabled, you can provide a prefix of the version such as `5.7` (for `5.7.10`) and
-this attribute will ignore differences in the patch version automatically (e.g. `5.7.17`).
+is enabled, you can provide a prefix of the version such as `5.7` (for `5.7.10`).
+The actual engine version used is returned in the attribute `engine_version_actual`, defined below.
 For supported values, see the EngineVersion parameter in [API action CreateDBInstance](https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_CreateDBInstance.html).
 Note that for Amazon Aurora instances the engine version must match the `DB cluster`'s engine version'.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1229,8 +1229,8 @@ in the Amazon RDS User Guide.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The engine version to use. If `auto_minor_version_upgrade`
-is enabled, you can provide a prefix of the version such as `5.7` (for `5.7.10`) and
-this attribute will ignore differences in the patch version automatically (e.g. `5.7.17`).
+is enabled, you can provide a prefix of the version such as `5.7` (for `5.7.10`).
+The actual engine version used is returned in the attribute `engine_version_actual`, defined below.
 For supported values, see the EngineVersion parameter in [API action CreateDBInstance](https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_CreateDBInstance.html).
 Note that for Amazon Aurora instances the engine version must match the `DB cluster`'s engine version'.
 {{% /md %}}</dd><dt class="property-optional"
@@ -1808,8 +1808,8 @@ in the Amazon RDS User Guide.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The engine version to use. If `auto_minor_version_upgrade`
-is enabled, you can provide a prefix of the version such as `5.7` (for `5.7.10`) and
-this attribute will ignore differences in the patch version automatically (e.g. `5.7.17`).
+is enabled, you can provide a prefix of the version such as `5.7` (for `5.7.10`).
+The actual engine version used is returned in the attribute `engine_version_actual`, defined below.
 For supported values, see the EngineVersion parameter in [API action CreateDBInstance](https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_CreateDBInstance.html).
 Note that for Amazon Aurora instances the engine version must match the `DB cluster`'s engine version'.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2387,8 +2387,8 @@ in the Amazon RDS User Guide.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The engine version to use. If `auto_minor_version_upgrade`
-is enabled, you can provide a prefix of the version such as `5.7` (for `5.7.10`) and
-this attribute will ignore differences in the patch version automatically (e.g. `5.7.17`).
+is enabled, you can provide a prefix of the version such as `5.7` (for `5.7.10`).
+The actual engine version used is returned in the attribute `engine_version_actual`, defined below.
 For supported values, see the EngineVersion parameter in [API action CreateDBInstance](https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_CreateDBInstance.html).
 Note that for Amazon Aurora instances the engine version must match the `DB cluster`'s engine version'.
 {{% /md %}}</dd><dt class="property-optional"
@@ -2798,6 +2798,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The connection endpoint in `address:port` format.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="engineversionactual_csharp">
+<a href="#engineversionactual_csharp" style="color: inherit; text-decoration: inherit;">Engine<wbr>Version<wbr>Actual</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The running version of the database.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="hostedzoneid_csharp">
 <a href="#hostedzoneid_csharp" style="color: inherit; text-decoration: inherit;">Hosted<wbr>Zone<wbr>Id</a>
 </span>
@@ -2880,6 +2889,15 @@ in a Route 53 Alias record).
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The connection endpoint in `address:port` format.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="engineversionactual_go">
+<a href="#engineversionactual_go" style="color: inherit; text-decoration: inherit;">Engine<wbr>Version<wbr>Actual</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The running version of the database.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="hostedzoneid_go">
@@ -2966,6 +2984,15 @@ in a Route 53 Alias record).
     <dd>{{% md %}}The connection endpoint in `address:port` format.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="engineversionactual_nodejs">
+<a href="#engineversionactual_nodejs" style="color: inherit; text-decoration: inherit;">engine<wbr>Version<wbr>Actual</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The running version of the database.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="hostedzoneid_nodejs">
 <a href="#hostedzoneid_nodejs" style="color: inherit; text-decoration: inherit;">hosted<wbr>Zone<wbr>Id</a>
 </span>
@@ -3048,6 +3075,15 @@ in a Route 53 Alias record).
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The connection endpoint in `address:port` format.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="engine_version_actual_python">
+<a href="#engine_version_actual_python" style="color: inherit; text-decoration: inherit;">engine_<wbr>version_<wbr>actual</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The running version of the database.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="hosted_zone_id_python">
@@ -3142,6 +3178,7 @@ Get an existing Instance resource's state with the given name, ID, and optional 
         <span class="nx">endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">engine</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">engine_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">engine_version_actual</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">final_snapshot_identifier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">hosted_zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">iam_database_authentication_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
@@ -3515,10 +3552,19 @@ in the Amazon RDS User Guide.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The engine version to use. If `auto_minor_version_upgrade`
-is enabled, you can provide a prefix of the version such as `5.7` (for `5.7.10`) and
-this attribute will ignore differences in the patch version automatically (e.g. `5.7.17`).
+is enabled, you can provide a prefix of the version such as `5.7` (for `5.7.10`).
+The actual engine version used is returned in the attribute `engine_version_actual`, defined below.
 For supported values, see the EngineVersion parameter in [API action CreateDBInstance](https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_CreateDBInstance.html).
 Note that for Amazon Aurora instances the engine version must match the `DB cluster`'s engine version'.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_engineversionactual_csharp">
+<a href="#state_engineversionactual_csharp" style="color: inherit; text-decoration: inherit;">Engine<wbr>Version<wbr>Actual</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The running version of the database.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_finalsnapshotidentifier_csharp">
@@ -4166,10 +4212,19 @@ in the Amazon RDS User Guide.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The engine version to use. If `auto_minor_version_upgrade`
-is enabled, you can provide a prefix of the version such as `5.7` (for `5.7.10`) and
-this attribute will ignore differences in the patch version automatically (e.g. `5.7.17`).
+is enabled, you can provide a prefix of the version such as `5.7` (for `5.7.10`).
+The actual engine version used is returned in the attribute `engine_version_actual`, defined below.
 For supported values, see the EngineVersion parameter in [API action CreateDBInstance](https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_CreateDBInstance.html).
 Note that for Amazon Aurora instances the engine version must match the `DB cluster`'s engine version'.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_engineversionactual_go">
+<a href="#state_engineversionactual_go" style="color: inherit; text-decoration: inherit;">Engine<wbr>Version<wbr>Actual</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The running version of the database.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_finalsnapshotidentifier_go">
@@ -4817,10 +4872,19 @@ in the Amazon RDS User Guide.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The engine version to use. If `auto_minor_version_upgrade`
-is enabled, you can provide a prefix of the version such as `5.7` (for `5.7.10`) and
-this attribute will ignore differences in the patch version automatically (e.g. `5.7.17`).
+is enabled, you can provide a prefix of the version such as `5.7` (for `5.7.10`).
+The actual engine version used is returned in the attribute `engine_version_actual`, defined below.
 For supported values, see the EngineVersion parameter in [API action CreateDBInstance](https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_CreateDBInstance.html).
 Note that for Amazon Aurora instances the engine version must match the `DB cluster`'s engine version'.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_engineversionactual_nodejs">
+<a href="#state_engineversionactual_nodejs" style="color: inherit; text-decoration: inherit;">engine<wbr>Version<wbr>Actual</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The running version of the database.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_finalsnapshotidentifier_nodejs">
@@ -5468,10 +5532,19 @@ in the Amazon RDS User Guide.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The engine version to use. If `auto_minor_version_upgrade`
-is enabled, you can provide a prefix of the version such as `5.7` (for `5.7.10`) and
-this attribute will ignore differences in the patch version automatically (e.g. `5.7.17`).
+is enabled, you can provide a prefix of the version such as `5.7` (for `5.7.10`).
+The actual engine version used is returned in the attribute `engine_version_actual`, defined below.
 For supported values, see the EngineVersion parameter in [API action CreateDBInstance](https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_CreateDBInstance.html).
 Note that for Amazon Aurora instances the engine version must match the `DB cluster`'s engine version'.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_engine_version_actual_python">
+<a href="#state_engine_version_actual_python" style="color: inherit; text-decoration: inherit;">engine_<wbr>version_<wbr>actual</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The running version of the database.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_final_snapshot_identifier_python">

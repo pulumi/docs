@@ -1134,6 +1134,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Boolean whether Amazon CloudWatch metrics are enabled for the workgroup. Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="requesterpaysenabled_csharp">
+<a href="#requesterpaysenabled_csharp" style="color: inherit; text-decoration: inherit;">Requester<wbr>Pays<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If set to true , allows members assigned to a workgroup to reference Amazon S3 Requester Pays buckets in queries. If set to false , workgroup members cannot query data from Requester Pays buckets, and queries that retrieve data from Requester Pays buckets cause an error. The default is false . For more information about Requester Pays buckets, see [Requester Pays Buckets](https://docs.aws.amazon.com/AmazonS3/latest/dev/RequesterPaysBuckets.html) in the Amazon Simple Storage Service Developer Guide.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="resultconfiguration_csharp">
 <a href="#resultconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Result<wbr>Configuration</a>
 </span>
@@ -1172,6 +1181,15 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean whether Amazon CloudWatch metrics are enabled for the workgroup. Defaults to `true`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="requesterpaysenabled_go">
+<a href="#requesterpaysenabled_go" style="color: inherit; text-decoration: inherit;">Requester<wbr>Pays<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If set to true , allows members assigned to a workgroup to reference Amazon S3 Requester Pays buckets in queries. If set to false , workgroup members cannot query data from Requester Pays buckets, and queries that retrieve data from Requester Pays buckets cause an error. The default is false . For more information about Requester Pays buckets, see [Requester Pays Buckets](https://docs.aws.amazon.com/AmazonS3/latest/dev/RequesterPaysBuckets.html) in the Amazon Simple Storage Service Developer Guide.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resultconfiguration_go">
@@ -1214,6 +1232,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Boolean whether Amazon CloudWatch metrics are enabled for the workgroup. Defaults to `true`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="requesterpaysenabled_nodejs">
+<a href="#requesterpaysenabled_nodejs" style="color: inherit; text-decoration: inherit;">requester<wbr>Pays<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}If set to true , allows members assigned to a workgroup to reference Amazon S3 Requester Pays buckets in queries. If set to false , workgroup members cannot query data from Requester Pays buckets, and queries that retrieve data from Requester Pays buckets cause an error. The default is false . For more information about Requester Pays buckets, see [Requester Pays Buckets](https://docs.aws.amazon.com/AmazonS3/latest/dev/RequesterPaysBuckets.html) in the Amazon Simple Storage Service Developer Guide.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="resultconfiguration_nodejs">
 <a href="#resultconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">result<wbr>Configuration</a>
 </span>
@@ -1252,6 +1279,15 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean whether Amazon CloudWatch metrics are enabled for the workgroup. Defaults to `true`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="requester_pays_enabled_python">
+<a href="#requester_pays_enabled_python" style="color: inherit; text-decoration: inherit;">requester_<wbr>pays_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If set to true , allows members assigned to a workgroup to reference Amazon S3 Requester Pays buckets in queries. If set to false , workgroup members cannot query data from Requester Pays buckets, and queries that retrieve data from Requester Pays buckets cause an error. The default is false . For more information about Requester Pays buckets, see [Requester Pays Buckets](https://docs.aws.amazon.com/AmazonS3/latest/dev/RequesterPaysBuckets.html) in the Amazon Simple Storage Service Developer Guide.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="result_configuration_python">
