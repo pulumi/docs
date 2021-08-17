@@ -1071,6 +1071,15 @@ The following output properties are available:
     <dd>{{% md %}}(Optional) Indicates whether users can use iOS devices to access their WorkSpaces.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="devicetypelinux_csharp">
+<a href="#devicetypelinux_csharp" style="color: inherit; text-decoration: inherit;">Device<wbr>Type<wbr>Linux</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}(Optional) Indicates whether users can use Linux clients to access their WorkSpaces.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="devicetypeosx_csharp">
 <a href="#devicetypeosx_csharp" style="color: inherit; text-decoration: inherit;">Device<wbr>Type<wbr>Osx</a>
 </span>
@@ -1136,6 +1145,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Optional) Indicates whether users can use iOS devices to access their WorkSpaces.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="devicetypelinux_go">
+<a href="#devicetypelinux_go" style="color: inherit; text-decoration: inherit;">Device<wbr>Type<wbr>Linux</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}(Optional) Indicates whether users can use Linux clients to access their WorkSpaces.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="devicetypeosx_go">
@@ -1205,6 +1223,15 @@ The following output properties are available:
     <dd>{{% md %}}(Optional) Indicates whether users can use iOS devices to access their WorkSpaces.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="devicetypelinux_nodejs">
+<a href="#devicetypelinux_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Type<wbr>Linux</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}(Optional) Indicates whether users can use Linux clients to access their WorkSpaces.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="devicetypeosx_nodejs">
 <a href="#devicetypeosx_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Type<wbr>Osx</a>
 </span>
@@ -1270,6 +1297,15 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(Optional) Indicates whether users can use iOS devices to access their WorkSpaces.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="device_type_linux_python">
+<a href="#device_type_linux_python" style="color: inherit; text-decoration: inherit;">device_<wbr>type_<wbr>linux</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}(Optional) Indicates whether users can use Linux clients to access their WorkSpaces.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="device_type_osx_python">

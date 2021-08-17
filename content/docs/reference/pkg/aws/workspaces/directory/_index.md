@@ -113,6 +113,7 @@ class MyStack : Stack
                 DeviceTypeAndroid = "ALLOW",
                 DeviceTypeChromeos = "ALLOW",
                 DeviceTypeIos = "ALLOW",
+                DeviceTypeLinux = "DENY",
                 DeviceTypeOsx = "ALLOW",
                 DeviceTypeWeb = "DENY",
                 DeviceTypeWindows = "DENY",
@@ -268,6 +269,7 @@ func main() {
 				DeviceTypeAndroid:    pulumi.String("ALLOW"),
 				DeviceTypeChromeos:   pulumi.String("ALLOW"),
 				DeviceTypeIos:        pulumi.String("ALLOW"),
+				DeviceTypeLinux:      pulumi.String("DENY"),
 				DeviceTypeOsx:        pulumi.String("ALLOW"),
 				DeviceTypeWeb:        pulumi.String("DENY"),
 				DeviceTypeWindows:    pulumi.String("DENY"),
@@ -376,6 +378,7 @@ example_directory = aws.workspaces.Directory("exampleDirectory",
         device_type_android="ALLOW",
         device_type_chromeos="ALLOW",
         device_type_ios="ALLOW",
+        device_type_linux="DENY",
         device_type_osx="ALLOW",
         device_type_web="DENY",
         device_type_windows="DENY",
@@ -473,6 +476,7 @@ const exampleDirectory = new aws.workspaces.Directory("exampleDirectory", {
         deviceTypeAndroid: "ALLOW",
         deviceTypeChromeos: "ALLOW",
         deviceTypeIos: "ALLOW",
+        deviceTypeLinux: "DENY",
         deviceTypeOsx: "ALLOW",
         deviceTypeWeb: "DENY",
         deviceTypeWindows: "DENY",
@@ -2395,6 +2399,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Indicates whether users can use iOS devices to access their WorkSpaces.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="devicetypelinux_csharp">
+<a href="#devicetypelinux_csharp" style="color: inherit; text-decoration: inherit;">Device<wbr>Type<wbr>Linux</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether users can use Linux clients to access their WorkSpaces.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="devicetypeosx_csharp">
 <a href="#devicetypeosx_csharp" style="color: inherit; text-decoration: inherit;">Device<wbr>Type<wbr>Osx</a>
 </span>
@@ -2460,6 +2473,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates whether users can use iOS devices to access their WorkSpaces.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="devicetypelinux_go">
+<a href="#devicetypelinux_go" style="color: inherit; text-decoration: inherit;">Device<wbr>Type<wbr>Linux</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether users can use Linux clients to access their WorkSpaces.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="devicetypeosx_go">
@@ -2529,6 +2551,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Indicates whether users can use iOS devices to access their WorkSpaces.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="devicetypelinux_nodejs">
+<a href="#devicetypelinux_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Type<wbr>Linux</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether users can use Linux clients to access their WorkSpaces.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="devicetypeosx_nodejs">
 <a href="#devicetypeosx_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Type<wbr>Osx</a>
 </span>
@@ -2594,6 +2625,15 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Indicates whether users can use iOS devices to access their WorkSpaces.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="device_type_linux_python">
+<a href="#device_type_linux_python" style="color: inherit; text-decoration: inherit;">device_<wbr>type_<wbr>linux</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether users can use Linux clients to access their WorkSpaces.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="device_type_osx_python">

@@ -552,7 +552,7 @@ The NodeGroup resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}List of instance types associated with the EKS Node Group. Defaults to `["t3.medium"]`. This provider will only perform drift detection if a configuration value is provided.
+    <dd>{{% md %}}Set of instance types associated with the EKS Node Group. Defaults to `["t3.medium"]`. This provider will only perform drift detection if a configuration value is provided.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_csharp">
@@ -727,7 +727,7 @@ The NodeGroup resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}List of instance types associated with the EKS Node Group. Defaults to `["t3.medium"]`. This provider will only perform drift detection if a configuration value is provided.
+    <dd>{{% md %}}Set of instance types associated with the EKS Node Group. Defaults to `["t3.medium"]`. This provider will only perform drift detection if a configuration value is provided.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_go">
@@ -902,7 +902,7 @@ The NodeGroup resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}List of instance types associated with the EKS Node Group. Defaults to `["t3.medium"]`. This provider will only perform drift detection if a configuration value is provided.
+    <dd>{{% md %}}Set of instance types associated with the EKS Node Group. Defaults to `["t3.medium"]`. This provider will only perform drift detection if a configuration value is provided.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_nodejs">
@@ -1077,7 +1077,7 @@ The NodeGroup resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}List of instance types associated with the EKS Node Group. Defaults to `["t3.medium"]`. This provider will only perform drift detection if a configuration value is provided.
+    <dd>{{% md %}}Set of instance types associated with the EKS Node Group. Defaults to `["t3.medium"]`. This provider will only perform drift detection if a configuration value is provided.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_python">
@@ -1544,7 +1544,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}List of instance types associated with the EKS Node Group. Defaults to `["t3.medium"]`. This provider will only perform drift detection if a configuration value is provided.
+    <dd>{{% md %}}Set of instance types associated with the EKS Node Group. Defaults to `["t3.medium"]`. This provider will only perform drift detection if a configuration value is provided.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_csharp">
@@ -1746,7 +1746,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}List of instance types associated with the EKS Node Group. Defaults to `["t3.medium"]`. This provider will only perform drift detection if a configuration value is provided.
+    <dd>{{% md %}}Set of instance types associated with the EKS Node Group. Defaults to `["t3.medium"]`. This provider will only perform drift detection if a configuration value is provided.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_go">
@@ -1948,7 +1948,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}List of instance types associated with the EKS Node Group. Defaults to `["t3.medium"]`. This provider will only perform drift detection if a configuration value is provided.
+    <dd>{{% md %}}Set of instance types associated with the EKS Node Group. Defaults to `["t3.medium"]`. This provider will only perform drift detection if a configuration value is provided.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_nodejs">
@@ -2150,7 +2150,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}List of instance types associated with the EKS Node Group. Defaults to `["t3.medium"]`. This provider will only perform drift detection if a configuration value is provided.
+    <dd>{{% md %}}Set of instance types associated with the EKS Node Group. Defaults to `["t3.medium"]`. This provider will only perform drift detection if a configuration value is provided.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_python">

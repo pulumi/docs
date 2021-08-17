@@ -35,6 +35,7 @@ class MyStack : Stack
         var example = new Aws.CodeBuild.Webhook("example", new Aws.CodeBuild.WebhookArgs
         {
             ProjectName = aws_codebuild_project.Example.Name,
+            BuildType = "BUILD",
             FilterGroups = 
             {
                 new Aws.CodeBuild.Inputs.WebhookFilterGroupArgs
@@ -78,6 +79,7 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := codebuild.NewWebhook(ctx, "example", &codebuild.WebhookArgs{
 			ProjectName: pulumi.Any(aws_codebuild_project.Example.Name),
+			BuildType:   pulumi.String("BUILD"),
 			FilterGroups: codebuild.WebhookFilterGroupArray{
 				&codebuild.WebhookFilterGroupArgs{
 					Filters: codebuild.WebhookFilterGroupFilterArray{
@@ -113,6 +115,7 @@ import pulumi_aws as aws
 
 example = aws.codebuild.Webhook("example",
     project_name=aws_codebuild_project["example"]["name"],
+    build_type="BUILD",
     filter_groups=[aws.codebuild.WebhookFilterGroupArgs(
         filters=[
             aws.codebuild.WebhookFilterGroupFilterArgs(
@@ -140,6 +143,7 @@ import * as aws from "@pulumi/aws";
 
 const example = new aws.codebuild.Webhook("example", {
     projectName: aws_codebuild_project.example.name,
+    buildType: "BUILD",
     filterGroups: [{
         filters: [
             {
@@ -319,6 +323,7 @@ const exampleRepositoryWebhook = new github.RepositoryWebhook("exampleRepository
 <span class="k">def </span><span class="nx">Webhook</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
             <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
             <span class="nx">branch_filter</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">build_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">filter_groups</span><span class="p">:</span> <span class="nx">Optional[Sequence[WebhookFilterGroupArgs]]</span> = None<span class="p">,</span>
             <span class="nx">project_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
@@ -468,6 +473,15 @@ The Webhook resource accepts the following [input]({{< relref "/docs/intro/conce
     <dd>{{% md %}}A regular expression used to determine which branches get built. Default is all branches are built. It is recommended to use `filter_group` over `branch_filter`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="buildtype_csharp">
+<a href="#buildtype_csharp" style="color: inherit; text-decoration: inherit;">Build<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of build this webhook will trigger. Valid values for this parameter are: `BUILD`, `BUILD_BATCH`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="filtergroups_csharp">
 <a href="#filtergroups_csharp" style="color: inherit; text-decoration: inherit;">Filter<wbr>Groups</a>
 </span>
@@ -497,6 +511,15 @@ The Webhook resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A regular expression used to determine which branches get built. Default is all branches are built. It is recommended to use `filter_group` over `branch_filter`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="buildtype_go">
+<a href="#buildtype_go" style="color: inherit; text-decoration: inherit;">Build<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of build this webhook will trigger. Valid values for this parameter are: `BUILD`, `BUILD_BATCH`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filtergroups_go">
@@ -530,6 +553,15 @@ The Webhook resource accepts the following [input]({{< relref "/docs/intro/conce
     <dd>{{% md %}}A regular expression used to determine which branches get built. Default is all branches are built. It is recommended to use `filter_group` over `branch_filter`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="buildtype_nodejs">
+<a href="#buildtype_nodejs" style="color: inherit; text-decoration: inherit;">build<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of build this webhook will trigger. Valid values for this parameter are: `BUILD`, `BUILD_BATCH`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="filtergroups_nodejs">
 <a href="#filtergroups_nodejs" style="color: inherit; text-decoration: inherit;">filter<wbr>Groups</a>
 </span>
@@ -559,6 +591,15 @@ The Webhook resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A regular expression used to determine which branches get built. Default is all branches are built. It is recommended to use `filter_group` over `branch_filter`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="build_type_python">
+<a href="#build_type_python" style="color: inherit; text-decoration: inherit;">build_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The type of build this webhook will trigger. Valid values for this parameter are: `BUILD`, `BUILD_BATCH`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filter_groups_python">
@@ -751,6 +792,7 @@ Get an existing Webhook resource's state with the given name, ID, and optional e
         <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
         <span class="nx">branch_filter</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">build_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">filter_groups</span><span class="p">:</span> <span class="nx">Optional[Sequence[WebhookFilterGroupArgs]]</span> = None<span class="p">,</span>
         <span class="nx">payload_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">project_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -877,6 +919,15 @@ The following state arguments are supported:
     <dd>{{% md %}}A regular expression used to determine which branches get built. Default is all branches are built. It is recommended to use `filter_group` over `branch_filter`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_buildtype_csharp">
+<a href="#state_buildtype_csharp" style="color: inherit; text-decoration: inherit;">Build<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of build this webhook will trigger. Valid values for this parameter are: `BUILD`, `BUILD_BATCH`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_filtergroups_csharp">
 <a href="#state_filtergroups_csharp" style="color: inherit; text-decoration: inherit;">Filter<wbr>Groups</a>
 </span>
@@ -933,6 +984,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A regular expression used to determine which branches get built. Default is all branches are built. It is recommended to use `filter_group` over `branch_filter`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_buildtype_go">
+<a href="#state_buildtype_go" style="color: inherit; text-decoration: inherit;">Build<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of build this webhook will trigger. Valid values for this parameter are: `BUILD`, `BUILD_BATCH`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_filtergroups_go">
@@ -993,6 +1053,15 @@ The following state arguments are supported:
     <dd>{{% md %}}A regular expression used to determine which branches get built. Default is all branches are built. It is recommended to use `filter_group` over `branch_filter`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_buildtype_nodejs">
+<a href="#state_buildtype_nodejs" style="color: inherit; text-decoration: inherit;">build<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of build this webhook will trigger. Valid values for this parameter are: `BUILD`, `BUILD_BATCH`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_filtergroups_nodejs">
 <a href="#state_filtergroups_nodejs" style="color: inherit; text-decoration: inherit;">filter<wbr>Groups</a>
 </span>
@@ -1049,6 +1118,15 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A regular expression used to determine which branches get built. Default is all branches are built. It is recommended to use `filter_group` over `branch_filter`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_build_type_python">
+<a href="#state_build_type_python" style="color: inherit; text-decoration: inherit;">build_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The type of build this webhook will trigger. Valid values for this parameter are: `BUILD`, `BUILD_BATCH`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_filter_groups_python">

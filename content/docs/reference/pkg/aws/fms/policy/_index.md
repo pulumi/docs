@@ -408,7 +408,7 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policyexcludemap">Policy<wbr>Exclude<wbr>Map<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A map of lists, with a single key named 'account' with a list of AWS Account IDs to exclude from this policy.
+    <dd>{{% md %}}A map of lists of accounts and OU's to exclude from the policy.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="includemap_csharp">
@@ -417,7 +417,7 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policyincludemap">Policy<wbr>Include<wbr>Map<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A map of lists, with a single key named 'account' with a list of AWS Account IDs to include for this policy.
+    <dd>{{% md %}}A map of lists of accounts and OU's to include in the policy.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
@@ -502,7 +502,7 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policyexcludemap">Policy<wbr>Exclude<wbr>Map<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A map of lists, with a single key named 'account' with a list of AWS Account IDs to exclude from this policy.
+    <dd>{{% md %}}A map of lists of accounts and OU's to exclude from the policy.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="includemap_go">
@@ -511,7 +511,7 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policyincludemap">Policy<wbr>Include<wbr>Map<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A map of lists, with a single key named 'account' with a list of AWS Account IDs to include for this policy.
+    <dd>{{% md %}}A map of lists of accounts and OU's to include in the policy.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
@@ -596,7 +596,7 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policyexcludemap">Policy<wbr>Exclude<wbr>Map<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A map of lists, with a single key named 'account' with a list of AWS Account IDs to exclude from this policy.
+    <dd>{{% md %}}A map of lists of accounts and OU's to exclude from the policy.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="includemap_nodejs">
@@ -605,7 +605,7 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policyincludemap">Policy<wbr>Include<wbr>Map<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A map of lists, with a single key named 'account' with a list of AWS Account IDs to include for this policy.
+    <dd>{{% md %}}A map of lists of accounts and OU's to include in the policy.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
@@ -690,7 +690,7 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policyexcludemap">Policy<wbr>Exclude<wbr>Map<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A map of lists, with a single key named 'account' with a list of AWS Account IDs to exclude from this policy.
+    <dd>{{% md %}}A map of lists of accounts and OU's to exclude from the policy.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="include_map_python">
@@ -699,7 +699,7 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policyincludemap">Policy<wbr>Include<wbr>Map<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A map of lists, with a single key named 'account' with a list of AWS Account IDs to include for this policy.
+    <dd>{{% md %}}A map of lists of accounts and OU's to include in the policy.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
@@ -1034,7 +1034,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policyexcludemap">Policy<wbr>Exclude<wbr>Map<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A map of lists, with a single key named 'account' with a list of AWS Account IDs to exclude from this policy.
+    <dd>{{% md %}}A map of lists of accounts and OU's to exclude from the policy.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_excluderesourcetags_csharp">
@@ -1052,7 +1052,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policyincludemap">Policy<wbr>Include<wbr>Map<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A map of lists, with a single key named 'account' with a list of AWS Account IDs to include for this policy.
+    <dd>{{% md %}}A map of lists of accounts and OU's to include in the policy.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
@@ -1145,7 +1145,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policyexcludemap">Policy<wbr>Exclude<wbr>Map<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A map of lists, with a single key named 'account' with a list of AWS Account IDs to exclude from this policy.
+    <dd>{{% md %}}A map of lists of accounts and OU's to exclude from the policy.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_excluderesourcetags_go">
@@ -1163,7 +1163,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policyincludemap">Policy<wbr>Include<wbr>Map<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A map of lists, with a single key named 'account' with a list of AWS Account IDs to include for this policy.
+    <dd>{{% md %}}A map of lists of accounts and OU's to include in the policy.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
@@ -1256,7 +1256,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policyexcludemap">Policy<wbr>Exclude<wbr>Map<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A map of lists, with a single key named 'account' with a list of AWS Account IDs to exclude from this policy.
+    <dd>{{% md %}}A map of lists of accounts and OU's to exclude from the policy.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_excluderesourcetags_nodejs">
@@ -1274,7 +1274,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policyincludemap">Policy<wbr>Include<wbr>Map<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A map of lists, with a single key named 'account' with a list of AWS Account IDs to include for this policy.
+    <dd>{{% md %}}A map of lists of accounts and OU's to include in the policy.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
@@ -1367,7 +1367,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policyexcludemap">Policy<wbr>Exclude<wbr>Map<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A map of lists, with a single key named 'account' with a list of AWS Account IDs to exclude from this policy.
+    <dd>{{% md %}}A map of lists of accounts and OU's to exclude from the policy.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_exclude_resource_tags_python">
@@ -1385,7 +1385,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policyincludemap">Policy<wbr>Include<wbr>Map<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A map of lists, with a single key named 'account' with a list of AWS Account IDs to include for this policy.
+    <dd>{{% md %}}A map of lists of accounts and OU's to include in the policy.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
@@ -1481,7 +1481,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}A list of AWS Organizational Units that you want to include for this AWS FMS Policy. Specifying an OU is the equivalent of specifying all accounts in the OU and in any of its child OUs, including any child OUs and accounts that are added at a later time.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1502,7 +1503,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}A list of AWS Organizational Units that you want to include for this AWS FMS Policy. Specifying an OU is the equivalent of specifying all accounts in the OU and in any of its child OUs, including any child OUs and accounts that are added at a later time.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1523,7 +1525,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}A list of AWS Organizational Units that you want to include for this AWS FMS Policy. Specifying an OU is the equivalent of specifying all accounts in the OU and in any of its child OUs, including any child OUs and accounts that are added at a later time.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1544,7 +1547,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}A list of AWS Organizational Units that you want to include for this AWS FMS Policy. Specifying an OU is the equivalent of specifying all accounts in the OU and in any of its child OUs, including any child OUs and accounts that are added at a later time.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="policyincludemap">Policy<wbr>Include<wbr>Map</h4>
@@ -1567,7 +1571,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}A list of AWS Organizational Units that you want to include for this AWS FMS Policy. Specifying an OU is the equivalent of specifying all accounts in the OU and in any of its child OUs, including any child OUs and accounts that are added at a later time.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1588,7 +1593,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}A list of AWS Organizational Units that you want to include for this AWS FMS Policy. Specifying an OU is the equivalent of specifying all accounts in the OU and in any of its child OUs, including any child OUs and accounts that are added at a later time.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1609,7 +1615,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}A list of AWS Organizational Units that you want to include for this AWS FMS Policy. Specifying an OU is the equivalent of specifying all accounts in the OU and in any of its child OUs, including any child OUs and accounts that are added at a later time.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1630,7 +1637,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}A list of AWS Organizational Units that you want to include for this AWS FMS Policy. Specifying an OU is the equivalent of specifying all accounts in the OU and in any of its child OUs, including any child OUs and accounts that are added at a later time.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="policysecurityservicepolicydata">Policy<wbr>Security<wbr>Service<wbr>Policy<wbr>Data</h4>
