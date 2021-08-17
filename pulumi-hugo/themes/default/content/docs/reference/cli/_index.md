@@ -119,7 +119,7 @@ pulumi gen-completion fish | source
 To load the completions for each session, you need to save the completion to a file:
 
 ```bash
-pulumi gen-completion fish > ~/.config/fish/completions/yourprogram.fish
+pulumi gen-completion fish > ~/.config/fish/completions/pulumi.fish
 ```
 
 Finally, after saving the `pulumi` fish completion script, you need to reopen your terminal for the scripts to take effect.
