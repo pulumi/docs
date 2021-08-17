@@ -45,10 +45,7 @@ hero:
 
 # Webinar pages support multiple session via the 'multiple' property.
 multiple:
-    - datetime: 2021-08-17T09:00:00-07:00
-      hubspot_form_id: 18955e07-057b-4147-acb0-22ce92f13720
-
-    - datetime: 2021-08-25T06:00:00-07:00
+    - datetime: 2021-08-25T18:00:00-07:00
       hubspot_form_id: 25c90b21-1f57-49be-a171-b63ce46e7b57
 
     - datetime: 2021-09-09T04:00:00-07:00

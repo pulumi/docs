@@ -7,7 +7,7 @@ meta_desc: "In this workshop, you’ll use the Azure native provider to build in
 featured: false
 
 # If the video is pre-recorded or live.
-pre_recorded: false
+pre_recorded: true
 
 # If the video is part of the PulumiTV series. Setting this value to true will list the video in the "PulumiTV" section.
 pulumi_tv: false
@@ -20,7 +20,7 @@ unlisted: false
 
 # Gated webinars will have a registration form and the user will need
 # to fill out the form before viewing.
-gated: true
+gated: false
 
 # The layout of the landing page.
 type: webinars
@@ -37,9 +37,9 @@ block_external_search_index: false
 url_slug: "getting-started-with-azure-native"
 
 # Webinar pages support multiple session via the 'multiple' property.
-multiple:
-    - datetime: 2021-08-12T09:00:00-07:00
-      hubspot_form_id: d69a09b6-9f49-4d07-a4fd-98668b1fac26
+# multiple:
+#     - datetime: 2021-08-12T09:00:00-07:00
+#       hubspot_form_id: d69a09b6-9f49-4d07-a4fd-98668b1fac26
 
 # The content of the hero section.
 hero:
@@ -53,7 +53,7 @@ main:
     # Webinar title.
     title: "Getting Started with Azure and Infrastructure as Code"
     # URL for embedding a URL for ungated webinars.
-    youtube_url: ""
+    youtube_url: "https://www.youtube.com/embed/yzTSUDp2KXU"
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
     sortable_date: 2021-04-28T09:00:00-07:00
     # Duration of the webinar.
@@ -68,14 +68,8 @@ main:
 
     # The webinar presenters
     presenters:
-        - name: Sophia Parafina
-          role: Developer Advocate, Pulumi
-
-        - name: Matt Stratton
-          role: Developer Advocate, Pulumi
-
-        - name: Mikhail Shilkov
-          role: Software Engineer, Pulumi
+        - name: Lee Briggs
+          role: Sales Engineer, Pulumi
 
     # A bullet point list containing what the user will learn during the webinar.
     learn:
