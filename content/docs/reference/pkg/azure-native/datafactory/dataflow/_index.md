@@ -119,42 +119,42 @@ func main() {
 		_, err := datafactory.NewDataFlow(ctx, "dataFlow", &datafactory.DataFlowArgs{
 			DataFlowName: pulumi.String("exampleDataFlow"),
 			FactoryName:  pulumi.String("exampleFactoryName"),
-			Properties: &datafactory.MappingDataFlowArgs{
-				Description: pulumi.String("Sample demo data flow to convert currencies showing usage of union, derive and conditional split transformation."),
-				Script:      pulumi.String("source(output(PreviousConversionRate as double,Country as string,DateTime1 as string,CurrentConversionRate as double),allowSchemaDrift: false,validateSchema: false) ~> USDCurrency\nsource(output(PreviousConversionRate as double,Country as string,DateTime1 as string,CurrentConversionRate as double),allowSchemaDrift: true,validateSchema: false) ~> CADSource\nUSDCurrency, CADSource union(byName: true)~> Union\nUnion derive(NewCurrencyRate = round(CurrentConversionRate*1.25)) ~> NewCurrencyColumn\nNewCurrencyColumn split(Country == 'USD',Country == 'CAD',disjoint: false) ~> ConditionalSplit1@(USD, CAD)\nConditionalSplit1@USD sink(saveMode:'overwrite' ) ~> USDSink\nConditionalSplit1@CAD sink(saveMode:'overwrite' ) ~> CADSink"),
-				Sinks: datafactory.DataFlowSinkArray{
-					&datafactory.DataFlowSinkArgs{
-						Dataset: &datafactory.DatasetReferenceArgs{
-							ReferenceName: pulumi.String("USDOutput"),
-							Type:          pulumi.String("DatasetReference"),
+			Properties: datafactory.MappingDataFlow{
+				Description: "Sample demo data flow to convert currencies showing usage of union, derive and conditional split transformation.",
+				Script:      "source(output(PreviousConversionRate as double,Country as string,DateTime1 as string,CurrentConversionRate as double),allowSchemaDrift: false,validateSchema: false) ~> USDCurrency\nsource(output(PreviousConversionRate as double,Country as string,DateTime1 as string,CurrentConversionRate as double),allowSchemaDrift: true,validateSchema: false) ~> CADSource\nUSDCurrency, CADSource union(byName: true)~> Union\nUnion derive(NewCurrencyRate = round(CurrentConversionRate*1.25)) ~> NewCurrencyColumn\nNewCurrencyColumn split(Country == 'USD',Country == 'CAD',disjoint: false) ~> ConditionalSplit1@(USD, CAD)\nConditionalSplit1@USD sink(saveMode:'overwrite' ) ~> USDSink\nConditionalSplit1@CAD sink(saveMode:'overwrite' ) ~> CADSink",
+				Sinks: []datafactory.DataFlowSink{
+					datafactory.DataFlowSink{
+						Dataset: datafactory.DatasetReference{
+							ReferenceName: "USDOutput",
+							Type:          "DatasetReference",
 						},
-						Name: pulumi.String("USDSink"),
+						Name: "USDSink",
 					},
-					&datafactory.DataFlowSinkArgs{
-						Dataset: &datafactory.DatasetReferenceArgs{
-							ReferenceName: pulumi.String("CADOutput"),
-							Type:          pulumi.String("DatasetReference"),
+					datafactory.DataFlowSink{
+						Dataset: datafactory.DatasetReference{
+							ReferenceName: "CADOutput",
+							Type:          "DatasetReference",
 						},
-						Name: pulumi.String("CADSink"),
-					},
-				},
-				Sources: datafactory.DataFlowSourceArray{
-					&datafactory.DataFlowSourceArgs{
-						Dataset: &datafactory.DatasetReferenceArgs{
-							ReferenceName: pulumi.String("CurrencyDatasetUSD"),
-							Type:          pulumi.String("DatasetReference"),
-						},
-						Name: pulumi.String("USDCurrency"),
-					},
-					&datafactory.DataFlowSourceArgs{
-						Dataset: &datafactory.DatasetReferenceArgs{
-							ReferenceName: pulumi.String("CurrencyDatasetCAD"),
-							Type:          pulumi.String("DatasetReference"),
-						},
-						Name: pulumi.String("CADSource"),
+						Name: "CADSink",
 					},
 				},
-				Type: pulumi.String("MappingDataFlow"),
+				Sources: []datafactory.DataFlowSource{
+					datafactory.DataFlowSource{
+						Dataset: datafactory.DatasetReference{
+							ReferenceName: "CurrencyDatasetUSD",
+							Type:          "DatasetReference",
+						},
+						Name: "USDCurrency",
+					},
+					datafactory.DataFlowSource{
+						Dataset: datafactory.DatasetReference{
+							ReferenceName: "CurrencyDatasetCAD",
+							Type:          "DatasetReference",
+						},
+						Name: "CADSource",
+					},
+				},
+				Type: "MappingDataFlow",
 			},
 			ResourceGroupName: pulumi.String("exampleResourceGroup"),
 		})
@@ -395,42 +395,42 @@ func main() {
 		_, err := datafactory.NewDataFlow(ctx, "dataFlow", &datafactory.DataFlowArgs{
 			DataFlowName: pulumi.String("exampleDataFlow"),
 			FactoryName:  pulumi.String("exampleFactoryName"),
-			Properties: &datafactory.MappingDataFlowArgs{
-				Description: pulumi.String("Sample demo data flow to convert currencies showing usage of union, derive and conditional split transformation."),
-				Script:      pulumi.String("source(output(PreviousConversionRate as double,Country as string,DateTime1 as string,CurrentConversionRate as double),allowSchemaDrift: false,validateSchema: false) ~> USDCurrency\nsource(output(PreviousConversionRate as double,Country as string,DateTime1 as string,CurrentConversionRate as double),allowSchemaDrift: true,validateSchema: false) ~> CADSource\nUSDCurrency, CADSource union(byName: true)~> Union\nUnion derive(NewCurrencyRate = round(CurrentConversionRate*1.25)) ~> NewCurrencyColumn\nNewCurrencyColumn split(Country == 'USD',Country == 'CAD',disjoint: false) ~> ConditionalSplit1@(USD, CAD)\nConditionalSplit1@USD sink(saveMode:'overwrite' ) ~> USDSink\nConditionalSplit1@CAD sink(saveMode:'overwrite' ) ~> CADSink"),
-				Sinks: datafactory.DataFlowSinkArray{
-					&datafactory.DataFlowSinkArgs{
-						Dataset: &datafactory.DatasetReferenceArgs{
-							ReferenceName: pulumi.String("USDOutput"),
-							Type:          pulumi.String("DatasetReference"),
+			Properties: datafactory.MappingDataFlow{
+				Description: "Sample demo data flow to convert currencies showing usage of union, derive and conditional split transformation.",
+				Script:      "source(output(PreviousConversionRate as double,Country as string,DateTime1 as string,CurrentConversionRate as double),allowSchemaDrift: false,validateSchema: false) ~> USDCurrency\nsource(output(PreviousConversionRate as double,Country as string,DateTime1 as string,CurrentConversionRate as double),allowSchemaDrift: true,validateSchema: false) ~> CADSource\nUSDCurrency, CADSource union(byName: true)~> Union\nUnion derive(NewCurrencyRate = round(CurrentConversionRate*1.25)) ~> NewCurrencyColumn\nNewCurrencyColumn split(Country == 'USD',Country == 'CAD',disjoint: false) ~> ConditionalSplit1@(USD, CAD)\nConditionalSplit1@USD sink(saveMode:'overwrite' ) ~> USDSink\nConditionalSplit1@CAD sink(saveMode:'overwrite' ) ~> CADSink",
+				Sinks: []datafactory.DataFlowSink{
+					datafactory.DataFlowSink{
+						Dataset: datafactory.DatasetReference{
+							ReferenceName: "USDOutput",
+							Type:          "DatasetReference",
 						},
-						Name: pulumi.String("USDSink"),
+						Name: "USDSink",
 					},
-					&datafactory.DataFlowSinkArgs{
-						Dataset: &datafactory.DatasetReferenceArgs{
-							ReferenceName: pulumi.String("CADOutput"),
-							Type:          pulumi.String("DatasetReference"),
+					datafactory.DataFlowSink{
+						Dataset: datafactory.DatasetReference{
+							ReferenceName: "CADOutput",
+							Type:          "DatasetReference",
 						},
-						Name: pulumi.String("CADSink"),
-					},
-				},
-				Sources: datafactory.DataFlowSourceArray{
-					&datafactory.DataFlowSourceArgs{
-						Dataset: &datafactory.DatasetReferenceArgs{
-							ReferenceName: pulumi.String("CurrencyDatasetUSD"),
-							Type:          pulumi.String("DatasetReference"),
-						},
-						Name: pulumi.String("USDCurrency"),
-					},
-					&datafactory.DataFlowSourceArgs{
-						Dataset: &datafactory.DatasetReferenceArgs{
-							ReferenceName: pulumi.String("CurrencyDatasetCAD"),
-							Type:          pulumi.String("DatasetReference"),
-						},
-						Name: pulumi.String("CADSource"),
+						Name: "CADSink",
 					},
 				},
-				Type: pulumi.String("MappingDataFlow"),
+				Sources: []datafactory.DataFlowSource{
+					datafactory.DataFlowSource{
+						Dataset: datafactory.DatasetReference{
+							ReferenceName: "CurrencyDatasetUSD",
+							Type:          "DatasetReference",
+						},
+						Name: "USDCurrency",
+					},
+					datafactory.DataFlowSource{
+						Dataset: datafactory.DatasetReference{
+							ReferenceName: "CurrencyDatasetCAD",
+							Type:          "DatasetReference",
+						},
+						Name: "CADSource",
+					},
+				},
+				Type: "MappingDataFlow",
 			},
 			ResourceGroupName: pulumi.String("exampleResourceGroup"),
 		})
@@ -592,7 +592,7 @@ ConditionalSplit1@CAD sink(saveMode:'overwrite' ) ~> CADSink`,
              <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
              <span class="nx">data_flow_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">factory_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-             <span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[MappingDataFlowArgs]</span> = None<span class="p">,</span>
+             <span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[Union[MappingDataFlowArgs, WranglingDataFlowArgs]]</span> = None<span class="p">,</span>
              <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">DataFlow</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
@@ -735,7 +735,7 @@ The DataFlow resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mappingdataflow">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Mapping<wbr>Data<wbr>Flow<wbr>Args</a></span>
+        <span class="property-type"><a href="#mappingdataflow">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Mapping<wbr>Data<wbr>Flow<wbr>Args</a> | <a href="#wranglingdataflow">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Wrangling<wbr>Data<wbr>Flow<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Data flow properties.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -771,7 +771,7 @@ The DataFlow resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mappingdataflow">Mapping<wbr>Data<wbr>Flow<wbr>Args</a></span>
+        <span class="property-type"><a href="#mappingdataflow">Mapping<wbr>Data<wbr>Flow<wbr>Args</a> | <a href="#wranglingdataflow">Wrangling<wbr>Data<wbr>Flow<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Data flow properties.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -807,7 +807,7 @@ The DataFlow resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mappingdataflow">Mapping<wbr>Data<wbr>Flow<wbr>Args</a></span>
+        <span class="property-type"><a href="#mappingdataflow">Mapping<wbr>Data<wbr>Flow<wbr>Args</a> | <a href="#wranglingdataflow">Wrangling<wbr>Data<wbr>Flow<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Data flow properties.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -843,7 +843,7 @@ The DataFlow resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mappingdataflow">Mapping<wbr>Data<wbr>Flow<wbr>Args</a></span>
+        <span class="property-type"><a href="#mappingdataflow">Mapping<wbr>Data<wbr>Flow<wbr>Args</a> | <a href="#wranglingdataflow">Wrangling<wbr>Data<wbr>Flow<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Data flow properties.{{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -2777,6 +2777,426 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}List of transformations in data flow.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
+<h4 id="powerquerysource">Power<wbr>Query<wbr>Source</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Transformation name.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dataset_csharp">
+<a href="#dataset_csharp" style="color: inherit; text-decoration: inherit;">Dataset</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datasetreference">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Reference</a></span>
+    </dt>
+    <dd>{{% md %}}Dataset reference.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="description_csharp">
+<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Transformation description.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="linkedservice_csharp">
+<a href="#linkedservice_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#linkedservicereference">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference</a></span>
+    </dt>
+    <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="schemalinkedservice_csharp">
+<a href="#schemalinkedservice_csharp" style="color: inherit; text-decoration: inherit;">Schema<wbr>Linked<wbr>Service</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#linkedservicereference">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference</a></span>
+    </dt>
+    <dd>{{% md %}}Schema linked service reference.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="script_csharp">
+<a href="#script_csharp" style="color: inherit; text-decoration: inherit;">Script</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}source script.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Transformation name.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dataset_go">
+<a href="#dataset_go" style="color: inherit; text-decoration: inherit;">Dataset</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datasetreference">Dataset<wbr>Reference</a></span>
+    </dt>
+    <dd>{{% md %}}Dataset reference.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="description_go">
+<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Transformation description.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="linkedservice_go">
+<a href="#linkedservice_go" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference</a></span>
+    </dt>
+    <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="schemalinkedservice_go">
+<a href="#schemalinkedservice_go" style="color: inherit; text-decoration: inherit;">Schema<wbr>Linked<wbr>Service</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference</a></span>
+    </dt>
+    <dd>{{% md %}}Schema linked service reference.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="script_go">
+<a href="#script_go" style="color: inherit; text-decoration: inherit;">Script</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}source script.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Transformation name.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dataset_nodejs">
+<a href="#dataset_nodejs" style="color: inherit; text-decoration: inherit;">dataset</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datasetreference">Dataset<wbr>Reference</a></span>
+    </dt>
+    <dd>{{% md %}}Dataset reference.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="description_nodejs">
+<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Transformation description.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="linkedservice_nodejs">
+<a href="#linkedservice_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference</a></span>
+    </dt>
+    <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="schemalinkedservice_nodejs">
+<a href="#schemalinkedservice_nodejs" style="color: inherit; text-decoration: inherit;">schema<wbr>Linked<wbr>Service</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference</a></span>
+    </dt>
+    <dd>{{% md %}}Schema linked service reference.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="script_nodejs">
+<a href="#script_nodejs" style="color: inherit; text-decoration: inherit;">script</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}source script.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Transformation name.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dataset_python">
+<a href="#dataset_python" style="color: inherit; text-decoration: inherit;">dataset</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datasetreference">Dataset<wbr>Reference</a></span>
+    </dt>
+    <dd>{{% md %}}Dataset reference.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="description_python">
+<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Transformation description.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="linked_service_python">
+<a href="#linked_service_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference</a></span>
+    </dt>
+    <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="schema_linked_service_python">
+<a href="#schema_linked_service_python" style="color: inherit; text-decoration: inherit;">schema_<wbr>linked_<wbr>service</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference</a></span>
+    </dt>
+    <dd>{{% md %}}Schema linked service reference.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="script_python">
+<a href="#script_python" style="color: inherit; text-decoration: inherit;">script</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}source script.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="powerquerysourceresponse">Power<wbr>Query<wbr>Source<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Transformation name.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dataset_csharp">
+<a href="#dataset_csharp" style="color: inherit; text-decoration: inherit;">Dataset</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datasetreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Dataset<wbr>Reference<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Dataset reference.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="description_csharp">
+<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Transformation description.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="linkedservice_csharp">
+<a href="#linkedservice_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="schemalinkedservice_csharp">
+<a href="#schemalinkedservice_csharp" style="color: inherit; text-decoration: inherit;">Schema<wbr>Linked<wbr>Service</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Schema linked service reference.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="script_csharp">
+<a href="#script_csharp" style="color: inherit; text-decoration: inherit;">Script</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}source script.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Transformation name.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dataset_go">
+<a href="#dataset_go" style="color: inherit; text-decoration: inherit;">Dataset</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datasetreferenceresponse">Dataset<wbr>Reference<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Dataset reference.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="description_go">
+<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Transformation description.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="linkedservice_go">
+<a href="#linkedservice_go" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="schemalinkedservice_go">
+<a href="#schemalinkedservice_go" style="color: inherit; text-decoration: inherit;">Schema<wbr>Linked<wbr>Service</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Schema linked service reference.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="script_go">
+<a href="#script_go" style="color: inherit; text-decoration: inherit;">Script</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}source script.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Transformation name.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dataset_nodejs">
+<a href="#dataset_nodejs" style="color: inherit; text-decoration: inherit;">dataset</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datasetreferenceresponse">Dataset<wbr>Reference<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Dataset reference.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="description_nodejs">
+<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Transformation description.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="linkedservice_nodejs">
+<a href="#linkedservice_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="schemalinkedservice_nodejs">
+<a href="#schemalinkedservice_nodejs" style="color: inherit; text-decoration: inherit;">schema<wbr>Linked<wbr>Service</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Schema linked service reference.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="script_nodejs">
+<a href="#script_nodejs" style="color: inherit; text-decoration: inherit;">script</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}source script.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Transformation name.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dataset_python">
+<a href="#dataset_python" style="color: inherit; text-decoration: inherit;">dataset</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datasetreferenceresponse">Dataset<wbr>Reference<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Dataset reference.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="description_python">
+<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Transformation description.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="linked_service_python">
+<a href="#linked_service_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Linked service reference.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="schema_linked_service_python">
+<a href="#schema_linked_service_python" style="color: inherit; text-decoration: inherit;">schema_<wbr>linked_<wbr>service</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Schema linked service reference.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="script_python">
+<a href="#script_python" style="color: inherit; text-decoration: inherit;">script</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}source script.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
 <h4 id="transformation">Transformation</h4>
 
 {{% choosable language csharp %}}
@@ -2939,6 +3359,362 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Transformation description.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="wranglingdataflow">Wrangling<wbr>Data<wbr>Flow</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="annotations_csharp">
+<a href="#annotations_csharp" style="color: inherit; text-decoration: inherit;">Annotations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;object&gt;</span>
+    </dt>
+    <dd>{{% md %}}List of tags that can be used for describing the data flow.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="description_csharp">
+<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The description of the data flow.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="folder_csharp">
+<a href="#folder_csharp" style="color: inherit; text-decoration: inherit;">Folder</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dataflowfolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Data<wbr>Flow<wbr>Folder</a></span>
+    </dt>
+    <dd>{{% md %}}The folder that this data flow is in. If not specified, Data flow will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="script_csharp">
+<a href="#script_csharp" style="color: inherit; text-decoration: inherit;">Script</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Power query mashup script.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sources_csharp">
+<a href="#sources_csharp" style="color: inherit; text-decoration: inherit;">Sources</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#powerquerysource">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Power<wbr>Query<wbr>Source&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}List of sources in Power Query.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="annotations_go">
+<a href="#annotations_go" style="color: inherit; text-decoration: inherit;">Annotations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]interface{}</span>
+    </dt>
+    <dd>{{% md %}}List of tags that can be used for describing the data flow.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="description_go">
+<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The description of the data flow.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="folder_go">
+<a href="#folder_go" style="color: inherit; text-decoration: inherit;">Folder</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dataflowfolder">Data<wbr>Flow<wbr>Folder</a></span>
+    </dt>
+    <dd>{{% md %}}The folder that this data flow is in. If not specified, Data flow will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="script_go">
+<a href="#script_go" style="color: inherit; text-decoration: inherit;">Script</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Power query mashup script.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sources_go">
+<a href="#sources_go" style="color: inherit; text-decoration: inherit;">Sources</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#powerquerysource">[]Power<wbr>Query<wbr>Source</a></span>
+    </dt>
+    <dd>{{% md %}}List of sources in Power Query.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="annotations_nodejs">
+<a href="#annotations_nodejs" style="color: inherit; text-decoration: inherit;">annotations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any[]</span>
+    </dt>
+    <dd>{{% md %}}List of tags that can be used for describing the data flow.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="description_nodejs">
+<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The description of the data flow.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="folder_nodejs">
+<a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dataflowfolder">Data<wbr>Flow<wbr>Folder</a></span>
+    </dt>
+    <dd>{{% md %}}The folder that this data flow is in. If not specified, Data flow will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="script_nodejs">
+<a href="#script_nodejs" style="color: inherit; text-decoration: inherit;">script</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Power query mashup script.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sources_nodejs">
+<a href="#sources_nodejs" style="color: inherit; text-decoration: inherit;">sources</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#powerquerysource">Power<wbr>Query<wbr>Source[]</a></span>
+    </dt>
+    <dd>{{% md %}}List of sources in Power Query.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="annotations_python">
+<a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[Any]</span>
+    </dt>
+    <dd>{{% md %}}List of tags that can be used for describing the data flow.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="description_python">
+<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The description of the data flow.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="folder_python">
+<a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dataflowfolder">Data<wbr>Flow<wbr>Folder</a></span>
+    </dt>
+    <dd>{{% md %}}The folder that this data flow is in. If not specified, Data flow will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="script_python">
+<a href="#script_python" style="color: inherit; text-decoration: inherit;">script</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Power query mashup script.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sources_python">
+<a href="#sources_python" style="color: inherit; text-decoration: inherit;">sources</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#powerquerysource">Sequence[Power<wbr>Query<wbr>Source]</a></span>
+    </dt>
+    <dd>{{% md %}}List of sources in Power Query.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="wranglingdataflowresponse">Wrangling<wbr>Data<wbr>Flow<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="annotations_csharp">
+<a href="#annotations_csharp" style="color: inherit; text-decoration: inherit;">Annotations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;object&gt;</span>
+    </dt>
+    <dd>{{% md %}}List of tags that can be used for describing the data flow.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="description_csharp">
+<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The description of the data flow.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="folder_csharp">
+<a href="#folder_csharp" style="color: inherit; text-decoration: inherit;">Folder</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dataflowresponsefolder">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Data<wbr>Flow<wbr>Response<wbr>Folder</a></span>
+    </dt>
+    <dd>{{% md %}}The folder that this data flow is in. If not specified, Data flow will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="script_csharp">
+<a href="#script_csharp" style="color: inherit; text-decoration: inherit;">Script</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Power query mashup script.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sources_csharp">
+<a href="#sources_csharp" style="color: inherit; text-decoration: inherit;">Sources</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#powerquerysourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Power<wbr>Query<wbr>Source<wbr>Response&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}List of sources in Power Query.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="annotations_go">
+<a href="#annotations_go" style="color: inherit; text-decoration: inherit;">Annotations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]interface{}</span>
+    </dt>
+    <dd>{{% md %}}List of tags that can be used for describing the data flow.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="description_go">
+<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The description of the data flow.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="folder_go">
+<a href="#folder_go" style="color: inherit; text-decoration: inherit;">Folder</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dataflowresponsefolder">Data<wbr>Flow<wbr>Response<wbr>Folder</a></span>
+    </dt>
+    <dd>{{% md %}}The folder that this data flow is in. If not specified, Data flow will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="script_go">
+<a href="#script_go" style="color: inherit; text-decoration: inherit;">Script</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Power query mashup script.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sources_go">
+<a href="#sources_go" style="color: inherit; text-decoration: inherit;">Sources</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#powerquerysourceresponse">[]Power<wbr>Query<wbr>Source<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}List of sources in Power Query.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="annotations_nodejs">
+<a href="#annotations_nodejs" style="color: inherit; text-decoration: inherit;">annotations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any[]</span>
+    </dt>
+    <dd>{{% md %}}List of tags that can be used for describing the data flow.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="description_nodejs">
+<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The description of the data flow.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="folder_nodejs">
+<a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dataflowresponsefolder">Data<wbr>Flow<wbr>Response<wbr>Folder</a></span>
+    </dt>
+    <dd>{{% md %}}The folder that this data flow is in. If not specified, Data flow will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="script_nodejs">
+<a href="#script_nodejs" style="color: inherit; text-decoration: inherit;">script</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Power query mashup script.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sources_nodejs">
+<a href="#sources_nodejs" style="color: inherit; text-decoration: inherit;">sources</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#powerquerysourceresponse">Power<wbr>Query<wbr>Source<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}List of sources in Power Query.{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="annotations_python">
+<a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[Any]</span>
+    </dt>
+    <dd>{{% md %}}List of tags that can be used for describing the data flow.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="description_python">
+<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The description of the data flow.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="folder_python">
+<a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dataflowresponsefolder">Data<wbr>Flow<wbr>Response<wbr>Folder</a></span>
+    </dt>
+    <dd>{{% md %}}The folder that this data flow is in. If not specified, Data flow will appear at the root level.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="script_python">
+<a href="#script_python" style="color: inherit; text-decoration: inherit;">script</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Power query mashup script.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sources_python">
+<a href="#sources_python" style="color: inherit; text-decoration: inherit;">sources</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#powerquerysourceresponse">Sequence[Power<wbr>Query<wbr>Source<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}List of sources in Power Query.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 
