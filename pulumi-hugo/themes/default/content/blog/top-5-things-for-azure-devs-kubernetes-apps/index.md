@@ -23,7 +23,7 @@ This article reviews the different methods for deploying applications on Azure K
 
 If you're not familiar with deploying applications on Kubernetes, these articles cover the basic and advance cases:
 
-- [Getting Started With Kubernetes: Application Basics]({{< relref "/blog/getting-started-with-k8s-part2/" >}})
+- [Getting Started With Kubernetes: Application Basics]({{< relref "/blog/getting-started-with-k8s-part2" >}})
 - [Getting Started With Kubernetes: Advanced Deployment]({{< relref "/blog/getting-started-with-k8s-part3" >}})
 - [Getting Started with Kubernetes: Stateful Applications]({{< relref "/blog/getting-started-with-k8s-part4" >}})
 
