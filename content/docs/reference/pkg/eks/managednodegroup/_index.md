@@ -31,6 +31,7 @@ https://docs.aws.amazon.com/eks/latest/userguide/managed-node-groups.html
 <span class="k">def </span><span class="nx">ManagedNodeGroup</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                      <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
                      <span class="nx">ami_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                     <span class="nx">capacity_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                      <span class="nx">cluster</span><span class="p">:</span> <span class="nx">Optional[CoreDataArgs]</span> = None<span class="p">,</span>
                      <span class="nx">cluster_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                      <span class="nx">disk_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
@@ -39,6 +40,7 @@ https://docs.aws.amazon.com/eks/latest/userguide/managed-node-groups.html
                      <span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
                      <span class="nx">launch_template</span><span class="p">:</span> <span class="nx">Optional[pulumi_aws.eks.NodeGroupLaunchTemplateArgs]</span> = None<span class="p">,</span>
                      <span class="nx">node_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                     <span class="nx">node_group_name_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                      <span class="nx">node_role</span><span class="p">:</span> <span class="nx">Optional[pulumi_aws.iam.Role]</span> = None<span class="p">,</span>
                      <span class="nx">node_role_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                      <span class="nx">release_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -46,6 +48,7 @@ https://docs.aws.amazon.com/eks/latest/userguide/managed-node-groups.html
                      <span class="nx">scaling_config</span><span class="p">:</span> <span class="nx">Optional[pulumi_aws.eks.NodeGroupScalingConfigArgs]</span> = None<span class="p">,</span>
                      <span class="nx">subnet_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
                      <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+                     <span class="nx">taints</span><span class="p">:</span> <span class="nx">Optional[Sequence[pulumi_aws.eks.NodeGroupTaintArgs]]</span> = None<span class="p">,</span>
                      <span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">ManagedNodeGroup</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
@@ -192,6 +195,14 @@ The ManagedNodeGroup resource accepts the following [input]({{< relref "/docs/in
     </dt>
     <dd>{{% md %}}Type of Amazon Machine Image (AMI) associated with the EKS Node Group. Defaults to `AL2_x86_64`. Valid values: `AL2_x86_64`, `AL2_x86_64_GPU`, `AL2_ARM_64`. This provider will only perform drift detection if a configuration value is provided.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="capacitytype_csharp">
+<a href="#capacitytype_csharp" style="color: inherit; text-decoration: inherit;">Capacity<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Type of capacity associated with the EKS Node Group. Valid values: `ON_DEMAND`, `SPOT`. This provider will only perform drift detection if a configuration value is provided.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="clustername_csharp">
 <a href="#clustername_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Name</a>
 </span>
@@ -246,7 +257,15 @@ The ManagedNodeGroup resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the EKS Node Group.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Name of the EKS Node Group. If omitted, this provider will assign a random, unique name. Conflicts with `nodeGroupNamePrefix`.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="nodegroupnameprefix_csharp">
+<a href="#nodegroupnameprefix_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Group<wbr>Name<wbr>Prefix</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Creates a unique name beginning with the specified prefix. Conflicts with `nodeGroupName`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="noderole_csharp">
 <a href="#noderole_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Role</a>
@@ -320,6 +339,14 @@ This default logic is based on the existing subnet IDs logic of this package: ht
     </dt>
     <dd>{{% md %}}Key-value mapping of resource tags.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="taints_csharp">
+<a href="#taints_csharp" style="color: inherit; text-decoration: inherit;">Taints</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#nodegrouptaint">List&lt;Pulumi.<wbr>Aws.<wbr>Eks.<wbr>Inputs.<wbr>Node<wbr>Group<wbr>Taint<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The Kubernetes taints to be applied to the nodes in the node group. Maximum of 50 taints per node group.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="version_csharp">
 <a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
 </span>
@@ -347,6 +374,14 @@ This default logic is based on the existing subnet IDs logic of this package: ht
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of Amazon Machine Image (AMI) associated with the EKS Node Group. Defaults to `AL2_x86_64`. Valid values: `AL2_x86_64`, `AL2_x86_64_GPU`, `AL2_ARM_64`. This provider will only perform drift detection if a configuration value is provided.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="capacitytype_go">
+<a href="#capacitytype_go" style="color: inherit; text-decoration: inherit;">Capacity<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Type of capacity associated with the EKS Node Group. Valid values: `ON_DEMAND`, `SPOT`. This provider will only perform drift detection if a configuration value is provided.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clustername_go">
 <a href="#clustername_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Name</a>
@@ -402,7 +437,15 @@ This default logic is based on the existing subnet IDs logic of this package: ht
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the EKS Node Group.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Name of the EKS Node Group. If omitted, this provider will assign a random, unique name. Conflicts with `nodeGroupNamePrefix`.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="nodegroupnameprefix_go">
+<a href="#nodegroupnameprefix_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Group<wbr>Name<wbr>Prefix</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Creates a unique name beginning with the specified prefix. Conflicts with `nodeGroupName`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="noderole_go">
 <a href="#noderole_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Role</a>
@@ -476,6 +519,14 @@ This default logic is based on the existing subnet IDs logic of this package: ht
     </dt>
     <dd>{{% md %}}Key-value mapping of resource tags.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="taints_go">
+<a href="#taints_go" style="color: inherit; text-decoration: inherit;">Taints</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#nodegrouptaint">Node<wbr>Group<wbr>Taint<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The Kubernetes taints to be applied to the nodes in the node group. Maximum of 50 taints per node group.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="version_go">
 <a href="#version_go" style="color: inherit; text-decoration: inherit;">Version</a>
 </span>
@@ -503,6 +554,14 @@ This default logic is based on the existing subnet IDs logic of this package: ht
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of Amazon Machine Image (AMI) associated with the EKS Node Group. Defaults to `AL2_x86_64`. Valid values: `AL2_x86_64`, `AL2_x86_64_GPU`, `AL2_ARM_64`. This provider will only perform drift detection if a configuration value is provided.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="capacitytype_nodejs">
+<a href="#capacitytype_nodejs" style="color: inherit; text-decoration: inherit;">capacity<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Type of capacity associated with the EKS Node Group. Valid values: `ON_DEMAND`, `SPOT`. This provider will only perform drift detection if a configuration value is provided.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clustername_nodejs">
 <a href="#clustername_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Name</a>
@@ -558,7 +617,15 @@ This default logic is based on the existing subnet IDs logic of this package: ht
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the EKS Node Group.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Name of the EKS Node Group. If omitted, this provider will assign a random, unique name. Conflicts with `nodeGroupNamePrefix`.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="nodegroupnameprefix_nodejs">
+<a href="#nodegroupnameprefix_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Group<wbr>Name<wbr>Prefix</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Creates a unique name beginning with the specified prefix. Conflicts with `nodeGroupName`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="noderole_nodejs">
 <a href="#noderole_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Role</a>
@@ -632,6 +699,14 @@ This default logic is based on the existing subnet IDs logic of this package: ht
     </dt>
     <dd>{{% md %}}Key-value mapping of resource tags.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="taints_nodejs">
+<a href="#taints_nodejs" style="color: inherit; text-decoration: inherit;">taints</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#nodegrouptaint">pulumi<wbr>Awstypesinputeks<wbr>Node<wbr>Group<wbr>Taint<wbr>Args[]</a></span>
+    </dt>
+    <dd>{{% md %}}The Kubernetes taints to be applied to the nodes in the node group. Maximum of 50 taints per node group.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="version_nodejs">
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
@@ -659,6 +734,14 @@ This default logic is based on the existing subnet IDs logic of this package: ht
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of Amazon Machine Image (AMI) associated with the EKS Node Group. Defaults to `AL2_x86_64`. Valid values: `AL2_x86_64`, `AL2_x86_64_GPU`, `AL2_ARM_64`. This provider will only perform drift detection if a configuration value is provided.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="capacity_type_python">
+<a href="#capacity_type_python" style="color: inherit; text-decoration: inherit;">capacity_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Type of capacity associated with the EKS Node Group. Valid values: `ON_DEMAND`, `SPOT`. This provider will only perform drift detection if a configuration value is provided.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cluster_name_python">
 <a href="#cluster_name_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>name</a>
@@ -714,7 +797,15 @@ This default logic is based on the existing subnet IDs logic of this package: ht
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the EKS Node Group.{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Name of the EKS Node Group. If omitted, this provider will assign a random, unique name. Conflicts with `nodeGroupNamePrefix`.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="node_group_name_prefix_python">
+<a href="#node_group_name_prefix_python" style="color: inherit; text-decoration: inherit;">node_<wbr>group_<wbr>name_<wbr>prefix</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Creates a unique name beginning with the specified prefix. Conflicts with `nodeGroupName`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="node_role_python">
 <a href="#node_role_python" style="color: inherit; text-decoration: inherit;">node_<wbr>role</a>
@@ -787,6 +878,14 @@ This default logic is based on the existing subnet IDs logic of this package: ht
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key-value mapping of resource tags.{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="taints_python">
+<a href="#taints_python" style="color: inherit; text-decoration: inherit;">taints</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#nodegrouptaint">Node<wbr>Group<wbr>Taint<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}The Kubernetes taints to be applied to the nodes in the node group. Maximum of 50 taints per node group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="version_python">
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
