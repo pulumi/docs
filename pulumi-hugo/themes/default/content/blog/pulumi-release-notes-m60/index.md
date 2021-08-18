@@ -14,7 +14,7 @@ Summer is quickly flying by, and we've been hard at work with more new features 
 
 - New and updated cloud providers
   - [EKS Pulumi Package supports more options for managed node groups]({{< relref "/blog/pulumi-release-notes-m60#eks-pulumi-package-supports-more-options-for-managed-node-groups" >}})
-  - [12 new resources in the Azure Native provider]({{< relref "/blog/pulumi-release-notes-m60#12-new-resources-in-the-azure-native-provider" >}})
+  - [New resources in the Azure Native provider]({{< relref "/blog/pulumi-release-notes-m60#new-resources-in-the-azure-native-provider" >}})
 - Pulumi CLI and core technologies
   - [Methods for Pulumi Component Packages]({{< relref "/blog/pulumi-release-notes-m60#methods-for-pulumi-component-packages" >}})
   - [`dependsOn` now works for Pulumi Component Packages, and more]({{< relref "/blog/pulumi-release-notes-m60#dependson-now-works-for-pulumi-component-packages-and-more" >}})
@@ -32,7 +32,7 @@ As the AWS team has improved the Elastic Kubernetes Service (EKS), they've added
 
 Learn more in these GitHub issues [1](https://github.com/pulumi/pulumi-eks/issues/612), [2](https://github.com/pulumi/pulumi-eks/issues/565), [3](https://github.com/pulumi/pulumi-eks/issues/583)
 
-### 12 new resources in the Azure Native provider
+### New resources in the Azure Native provider
 
 We shipped 2 new versions of the Azure Native provider (1.20.0 through 1.21.0) that collectively added 8 new resources that you can manage with the Azure Native provider, including core networking and IoT security resources.
 
