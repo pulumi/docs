@@ -175,6 +175,7 @@ export const firstKvstoreInstanceClass = resourcesInstanceClasses.instanceClasse
                          <span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                          <span class="nx">package_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                          <span class="nx">performance_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                         <span class="nx">product_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                          <span class="nx">series_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                          <span class="nx">shard_number</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
                          <span class="nx">sorted_by</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -295,6 +296,14 @@ The following arguments are supported:
     <dd>{{% md %}}It has been deprecated from 1.68.0.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}The parameter &#39;performance_type&#39; has been deprecated from 1.68.0.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
+        <span id="producttype_csharp">
+<a href="#producttype_csharp" style="color: inherit; text-decoration: inherit;">Product<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="seriestype_csharp">
 <a href="#seriestype_csharp" style="color: inherit; text-decoration: inherit;">Series<wbr>Type</a>
 </span>
@@ -311,6 +320,9 @@ The following arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of shard.Valid values: `1`, `2`, `4`, `8`, `16`, `32`, `64`, `128`, `256`.
+* product_type - (Optional, Available in v1.130.0+) The type of the service. Valid values:
+* Local: an ApsaraDB for Redis instance with a local disk.
+* OnECS: an ApsaraDB for Redis instance with a standard disk. This type is available only on the Alibaba Cloud China site.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sortedby_csharp">
@@ -423,6 +435,14 @@ The following arguments are supported:
     <dd>{{% md %}}It has been deprecated from 1.68.0.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}The parameter &#39;performance_type&#39; has been deprecated from 1.68.0.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
+        <span id="producttype_go">
+<a href="#producttype_go" style="color: inherit; text-decoration: inherit;">Product<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="seriestype_go">
 <a href="#seriestype_go" style="color: inherit; text-decoration: inherit;">Series<wbr>Type</a>
 </span>
@@ -439,6 +459,9 @@ The following arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of shard.Valid values: `1`, `2`, `4`, `8`, `16`, `32`, `64`, `128`, `256`.
+* product_type - (Optional, Available in v1.130.0+) The type of the service. Valid values:
+* Local: an ApsaraDB for Redis instance with a local disk.
+* OnECS: an ApsaraDB for Redis instance with a standard disk. This type is available only on the Alibaba Cloud China site.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sortedby_go">
@@ -551,6 +574,14 @@ The following arguments are supported:
     <dd>{{% md %}}It has been deprecated from 1.68.0.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}The parameter &#39;performance_type&#39; has been deprecated from 1.68.0.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
+        <span id="producttype_nodejs">
+<a href="#producttype_nodejs" style="color: inherit; text-decoration: inherit;">product<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="seriestype_nodejs">
 <a href="#seriestype_nodejs" style="color: inherit; text-decoration: inherit;">series<wbr>Type</a>
 </span>
@@ -567,6 +598,9 @@ The following arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of shard.Valid values: `1`, `2`, `4`, `8`, `16`, `32`, `64`, `128`, `256`.
+* product_type - (Optional, Available in v1.130.0+) The type of the service. Valid values:
+* Local: an ApsaraDB for Redis instance with a local disk.
+* OnECS: an ApsaraDB for Redis instance with a standard disk. This type is available only on the Alibaba Cloud China site.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sortedby_nodejs">
@@ -679,6 +713,14 @@ The following arguments are supported:
     <dd>{{% md %}}It has been deprecated from 1.68.0.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}The parameter &#39;performance_type&#39; has been deprecated from 1.68.0.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
+        <span id="product_type_python">
+<a href="#product_type_python" style="color: inherit; text-decoration: inherit;">product_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="series_type_python">
 <a href="#series_type_python" style="color: inherit; text-decoration: inherit;">series_<wbr>type</a>
 </span>
@@ -695,6 +737,9 @@ The following arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of shard.Valid values: `1`, `2`, `4`, `8`, `16`, `32`, `64`, `128`, `256`.
+* product_type - (Optional, Available in v1.130.0+) The type of the service. Valid values:
+* Local: an ApsaraDB for Redis instance with a local disk.
+* OnECS: an ApsaraDB for Redis instance with a standard disk. This type is available only on the Alibaba Cloud China site.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sorted_by_python">
@@ -833,6 +878,14 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The parameter &#39;performance_type&#39; has been deprecated from 1.68.0.{{% /md %}}</p></dd><dt class="property-"
+            title="">
+        <span id="producttype_csharp">
+<a href="#producttype_csharp" style="color: inherit; text-decoration: inherit;">Product<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="seriestype_csharp">
 <a href="#seriestype_csharp" style="color: inherit; text-decoration: inherit;">Series<wbr>Type</a>
@@ -977,6 +1030,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The parameter &#39;performance_type&#39; has been deprecated from 1.68.0.{{% /md %}}</p></dd><dt class="property-"
             title="">
+        <span id="producttype_go">
+<a href="#producttype_go" style="color: inherit; text-decoration: inherit;">Product<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="seriestype_go">
 <a href="#seriestype_go" style="color: inherit; text-decoration: inherit;">Series<wbr>Type</a>
 </span>
@@ -1120,6 +1181,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The parameter &#39;performance_type&#39; has been deprecated from 1.68.0.{{% /md %}}</p></dd><dt class="property-"
             title="">
+        <span id="producttype_nodejs">
+<a href="#producttype_nodejs" style="color: inherit; text-decoration: inherit;">product<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="seriestype_nodejs">
 <a href="#seriestype_nodejs" style="color: inherit; text-decoration: inherit;">series<wbr>Type</a>
 </span>
@@ -1262,6 +1331,14 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The parameter &#39;performance_type&#39; has been deprecated from 1.68.0.{{% /md %}}</p></dd><dt class="property-"
+            title="">
+        <span id="product_type_python">
+<a href="#product_type_python" style="color: inherit; text-decoration: inherit;">product_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="series_type_python">
 <a href="#series_type_python" style="color: inherit; text-decoration: inherit;">series_<wbr>type</a>

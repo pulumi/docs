@@ -188,7 +188,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The nat type of NAT gateway. Valid values `Enhanced` and `Normal`. Default value `Normal`.
+    <dd>{{% md %}}The nat type of NAT gateway. Valid values `Enhanced` and `Normal`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="outputfile_csharp">
@@ -308,7 +308,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The nat type of NAT gateway. Valid values `Enhanced` and `Normal`. Default value `Normal`.
+    <dd>{{% md %}}The nat type of NAT gateway. Valid values `Enhanced` and `Normal`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="outputfile_go">
@@ -428,7 +428,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The nat type of NAT gateway. Valid values `Enhanced` and `Normal`. Default value `Normal`.
+    <dd>{{% md %}}The nat type of NAT gateway. Valid values `Enhanced` and `Normal`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="outputfile_nodejs">
@@ -548,7 +548,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The nat type of NAT gateway. Valid values `Enhanced` and `Normal`. Default value `Normal`.
+    <dd>{{% md %}}The nat type of NAT gateway. Valid values `Enhanced` and `Normal`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="output_file_python">
@@ -1326,7 +1326,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The nat type of NAT gateway. Valid values `Enhanced` and `Normal`. Default value `Normal`.
+    <dd>{{% md %}}The nat type of NAT gateway. Valid values `Enhanced` and `Normal`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="paymenttype_csharp">
@@ -1528,7 +1528,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The nat type of NAT gateway. Valid values `Enhanced` and `Normal`. Default value `Normal`.
+    <dd>{{% md %}}The nat type of NAT gateway. Valid values `Enhanced` and `Normal`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="paymenttype_go">
@@ -1730,7 +1730,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The nat type of NAT gateway. Valid values `Enhanced` and `Normal`. Default value `Normal`.
+    <dd>{{% md %}}The nat type of NAT gateway. Valid values `Enhanced` and `Normal`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="paymenttype_nodejs">
@@ -1932,7 +1932,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The nat type of NAT gateway. Valid values `Enhanced` and `Normal`. Default value `Normal`.
+    <dd>{{% md %}}The nat type of NAT gateway. Valid values `Enhanced` and `Normal`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="payment_type_python">

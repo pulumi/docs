@@ -162,7 +162,7 @@ The KubernetesPermission resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the RAM user.
+    <dd>{{% md %}}The ID of the Ram user, and it can also be the id of the Ram Role. If you use Ram Role id, you need to set `is_ram_role` to `true` during authorization.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="permissions_csharp">
@@ -184,7 +184,7 @@ The KubernetesPermission resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the RAM user.
+    <dd>{{% md %}}The ID of the Ram user, and it can also be the id of the Ram Role. If you use Ram Role id, you need to set `is_ram_role` to `true` during authorization.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="permissions_go">
@@ -206,7 +206,7 @@ The KubernetesPermission resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the RAM user.
+    <dd>{{% md %}}The ID of the Ram user, and it can also be the id of the Ram Role. If you use Ram Role id, you need to set `is_ram_role` to `true` during authorization.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="permissions_nodejs">
@@ -228,7 +228,7 @@ The KubernetesPermission resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ID of the RAM user.
+    <dd>{{% md %}}The ID of the Ram user, and it can also be the id of the Ram Role. If you use Ram Role id, you need to set `is_ram_role` to `true` during authorization.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="permissions_python">
@@ -441,7 +441,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the RAM user.
+    <dd>{{% md %}}The ID of the Ram user, and it can also be the id of the Ram Role. If you use Ram Role id, you need to set `is_ram_role` to `true` during authorization.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -463,7 +463,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the RAM user.
+    <dd>{{% md %}}The ID of the Ram user, and it can also be the id of the Ram Role. If you use Ram Role id, you need to set `is_ram_role` to `true` during authorization.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -485,7 +485,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the RAM user.
+    <dd>{{% md %}}The ID of the Ram user, and it can also be the id of the Ram Role. If you use Ram Role id, you need to set `is_ram_role` to `true` during authorization.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -507,7 +507,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ID of the RAM user.
+    <dd>{{% md %}}The ID of the Ram user, and it can also be the id of the Ram Role. If you use Ram Role id, you need to set `is_ram_role` to `true` during authorization.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -567,7 +567,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Specifies whether the permissions are granted to a RAM role.
+    <dd>{{% md %}}Specifies whether the permissions are granted to a RAM role. When `uid` is ram role id, the value of `is_ram_role` must be `true`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="namespace_csharp">
@@ -625,7 +625,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Specifies whether the permissions are granted to a RAM role.
+    <dd>{{% md %}}Specifies whether the permissions are granted to a RAM role. When `uid` is ram role id, the value of `is_ram_role` must be `true`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="namespace_go">
@@ -683,7 +683,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Specifies whether the permissions are granted to a RAM role.
+    <dd>{{% md %}}Specifies whether the permissions are granted to a RAM role. When `uid` is ram role id, the value of `is_ram_role` must be `true`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="namespace_nodejs">
@@ -741,7 +741,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Specifies whether the permissions are granted to a RAM role.
+    <dd>{{% md %}}Specifies whether the permissions are granted to a RAM role. When `uid` is ram role id, the value of `is_ram_role` must be `true`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="namespace_python">

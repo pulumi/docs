@@ -65,7 +65,6 @@ class MyStack : Stack
                         {
                             ResourceKey = "Body",
                             Form = "ORIGINAL",
-                            Value = "tf-testAcc",
                         },
                     },
                 },
@@ -117,7 +116,6 @@ func main() {
 						&eventbridge.RuleTargetParamListArgs{
 							ResourceKey: pulumi.String("Body"),
 							Form:        pulumi.String("ORIGINAL"),
-							Value:       pulumi.String("tf-testAcc"),
 						},
 					},
 				},
@@ -160,7 +158,6 @@ example_rule = alicloud.eventbridge.Rule("exampleRule",
             alicloud.eventbridge.RuleTargetParamListArgs(
                 resource_key="Body",
                 form="ORIGINAL",
-                value="tf-testAcc",
             ),
         ],
     )])
@@ -196,7 +193,6 @@ const exampleRule = new alicloud.eventbridge.Rule("exampleRule", {
             {
                 resourceKey: "Body",
                 form: "ORIGINAL",
-                value: "tf-testAcc",
             },
         ],
     }],
@@ -1191,7 +1187,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The format of param.
+    <dd>{{% md %}}The format of param.  Valid values: `ORIGINAL`, `TEMPLATE`, `JSONPATH`, `CONSTANT`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcekey_csharp">
@@ -1200,16 +1196,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource key of param. For more information, see [Event target parameters](https://help.aliyun.com/document_detail/185887.htm)
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="value_csharp">
-<a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The value of param.
+    <dd>{{% md %}}The resource key of param.  For more information, see [Event target parameters](https://help.aliyun.com/document_detail/185887.htm)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="template_csharp">
@@ -1219,6 +1206,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The template of param.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="value_csharp">
+<a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The value of param.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1231,7 +1227,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The format of param.
+    <dd>{{% md %}}The format of param.  Valid values: `ORIGINAL`, `TEMPLATE`, `JSONPATH`, `CONSTANT`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcekey_go">
@@ -1240,16 +1236,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource key of param. For more information, see [Event target parameters](https://help.aliyun.com/document_detail/185887.htm)
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="value_go">
-<a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The value of param.
+    <dd>{{% md %}}The resource key of param.  For more information, see [Event target parameters](https://help.aliyun.com/document_detail/185887.htm)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="template_go">
@@ -1259,6 +1246,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The template of param.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="value_go">
+<a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The value of param.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1271,7 +1267,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The format of param.
+    <dd>{{% md %}}The format of param.  Valid values: `ORIGINAL`, `TEMPLATE`, `JSONPATH`, `CONSTANT`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcekey_nodejs">
@@ -1280,16 +1276,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource key of param. For more information, see [Event target parameters](https://help.aliyun.com/document_detail/185887.htm)
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="value_nodejs">
-<a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The value of param.
+    <dd>{{% md %}}The resource key of param.  For more information, see [Event target parameters](https://help.aliyun.com/document_detail/185887.htm)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="template_nodejs">
@@ -1299,6 +1286,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The template of param.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="value_nodejs">
+<a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The value of param.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1311,7 +1307,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The format of param.
+    <dd>{{% md %}}The format of param.  Valid values: `ORIGINAL`, `TEMPLATE`, `JSONPATH`, `CONSTANT`.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_key_python">
@@ -1320,16 +1316,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource key of param. For more information, see [Event target parameters](https://help.aliyun.com/document_detail/185887.htm)
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
-        <span id="value_python">
-<a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The value of param.
+    <dd>{{% md %}}The resource key of param.  For more information, see [Event target parameters](https://help.aliyun.com/document_detail/185887.htm)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="template_python">
@@ -1339,6 +1326,15 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The template of param.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="value_python">
+<a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The value of param.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import

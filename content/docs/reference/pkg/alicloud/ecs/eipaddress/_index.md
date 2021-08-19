@@ -301,7 +301,7 @@ The EipAddress resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the EIP.
+    <dd>{{% md %}}The name of the EIP instance. This name can have a string of 2 to 128 characters, must contain only alphanumeric characters or hyphens, such as "-",".","_", and must not begin or end with a hyphen, and must not begin with http:// or https://.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bandwidth_csharp">
@@ -345,7 +345,8 @@ The EipAddress resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The metering method of the EIP. Valid values: `PayByBandwidth` This is the default value. `PayByTraffic`. If `payment_type` is set to `Subscription`, `internet_charge_type` must be set to `PayByBandwidth`. If `payment_type` is set to `PayAsYouGo`, `internet_charge_type` can be set to `PayByBandwidth` or `PayByTraffic`.
+    <dd>{{% md %}}The metering method of the EIP. 
+Valid values: `PayByBandwidth` and `PayByTraffic`. Default to `PayByBandwidth`. **NOTE:** It must be set to "PayByBandwidth" when `payment_type` is "Subscription".
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isp_csharp">
@@ -429,7 +430,7 @@ The EipAddress resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the EIP.
+    <dd>{{% md %}}The name of the EIP instance. This name can have a string of 2 to 128 characters, must contain only alphanumeric characters or hyphens, such as "-",".","_", and must not begin or end with a hyphen, and must not begin with http:// or https://.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bandwidth_go">
@@ -473,7 +474,8 @@ The EipAddress resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The metering method of the EIP. Valid values: `PayByBandwidth` This is the default value. `PayByTraffic`. If `payment_type` is set to `Subscription`, `internet_charge_type` must be set to `PayByBandwidth`. If `payment_type` is set to `PayAsYouGo`, `internet_charge_type` can be set to `PayByBandwidth` or `PayByTraffic`.
+    <dd>{{% md %}}The metering method of the EIP. 
+Valid values: `PayByBandwidth` and `PayByTraffic`. Default to `PayByBandwidth`. **NOTE:** It must be set to "PayByBandwidth" when `payment_type` is "Subscription".
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isp_go">
@@ -557,7 +559,7 @@ The EipAddress resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the EIP.
+    <dd>{{% md %}}The name of the EIP instance. This name can have a string of 2 to 128 characters, must contain only alphanumeric characters or hyphens, such as "-",".","_", and must not begin or end with a hyphen, and must not begin with http:// or https://.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bandwidth_nodejs">
@@ -601,7 +603,8 @@ The EipAddress resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The metering method of the EIP. Valid values: `PayByBandwidth` This is the default value. `PayByTraffic`. If `payment_type` is set to `Subscription`, `internet_charge_type` must be set to `PayByBandwidth`. If `payment_type` is set to `PayAsYouGo`, `internet_charge_type` can be set to `PayByBandwidth` or `PayByTraffic`.
+    <dd>{{% md %}}The metering method of the EIP. 
+Valid values: `PayByBandwidth` and `PayByTraffic`. Default to `PayByBandwidth`. **NOTE:** It must be set to "PayByBandwidth" when `payment_type` is "Subscription".
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isp_nodejs">
@@ -685,7 +688,7 @@ The EipAddress resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the EIP.
+    <dd>{{% md %}}The name of the EIP instance. This name can have a string of 2 to 128 characters, must contain only alphanumeric characters or hyphens, such as "-",".","_", and must not begin or end with a hyphen, and must not begin with http:// or https://.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bandwidth_python">
@@ -729,7 +732,8 @@ The EipAddress resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The metering method of the EIP. Valid values: `PayByBandwidth` This is the default value. `PayByTraffic`. If `payment_type` is set to `Subscription`, `internet_charge_type` must be set to `PayByBandwidth`. If `payment_type` is set to `PayAsYouGo`, `internet_charge_type` can be set to `PayByBandwidth` or `PayByTraffic`.
+    <dd>{{% md %}}The metering method of the EIP. 
+Valid values: `PayByBandwidth` and `PayByTraffic`. Default to `PayByBandwidth`. **NOTE:** It must be set to "PayByBandwidth" when `payment_type` is "Subscription".
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isp_python">
@@ -1081,7 +1085,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the EIP.
+    <dd>{{% md %}}The name of the EIP instance. This name can have a string of 2 to 128 characters, must contain only alphanumeric characters or hyphens, such as "-",".","_", and must not begin or end with a hyphen, and must not begin with http:// or https://.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_bandwidth_csharp">
@@ -1125,7 +1129,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The metering method of the EIP. Valid values: `PayByBandwidth` This is the default value. `PayByTraffic`. If `payment_type` is set to `Subscription`, `internet_charge_type` must be set to `PayByBandwidth`. If `payment_type` is set to `PayAsYouGo`, `internet_charge_type` can be set to `PayByBandwidth` or `PayByTraffic`.
+    <dd>{{% md %}}The metering method of the EIP. 
+Valid values: `PayByBandwidth` and `PayByTraffic`. Default to `PayByBandwidth`. **NOTE:** It must be set to "PayByBandwidth" when `payment_type` is "Subscription".
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipaddress_csharp">
@@ -1227,7 +1232,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the EIP.
+    <dd>{{% md %}}The name of the EIP instance. This name can have a string of 2 to 128 characters, must contain only alphanumeric characters or hyphens, such as "-",".","_", and must not begin or end with a hyphen, and must not begin with http:// or https://.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_bandwidth_go">
@@ -1271,7 +1276,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The metering method of the EIP. Valid values: `PayByBandwidth` This is the default value. `PayByTraffic`. If `payment_type` is set to `Subscription`, `internet_charge_type` must be set to `PayByBandwidth`. If `payment_type` is set to `PayAsYouGo`, `internet_charge_type` can be set to `PayByBandwidth` or `PayByTraffic`.
+    <dd>{{% md %}}The metering method of the EIP. 
+Valid values: `PayByBandwidth` and `PayByTraffic`. Default to `PayByBandwidth`. **NOTE:** It must be set to "PayByBandwidth" when `payment_type` is "Subscription".
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipaddress_go">
@@ -1373,7 +1379,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the EIP.
+    <dd>{{% md %}}The name of the EIP instance. This name can have a string of 2 to 128 characters, must contain only alphanumeric characters or hyphens, such as "-",".","_", and must not begin or end with a hyphen, and must not begin with http:// or https://.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_bandwidth_nodejs">
@@ -1417,7 +1423,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The metering method of the EIP. Valid values: `PayByBandwidth` This is the default value. `PayByTraffic`. If `payment_type` is set to `Subscription`, `internet_charge_type` must be set to `PayByBandwidth`. If `payment_type` is set to `PayAsYouGo`, `internet_charge_type` can be set to `PayByBandwidth` or `PayByTraffic`.
+    <dd>{{% md %}}The metering method of the EIP. 
+Valid values: `PayByBandwidth` and `PayByTraffic`. Default to `PayByBandwidth`. **NOTE:** It must be set to "PayByBandwidth" when `payment_type` is "Subscription".
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipaddress_nodejs">
@@ -1519,7 +1526,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the EIP.
+    <dd>{{% md %}}The name of the EIP instance. This name can have a string of 2 to 128 characters, must contain only alphanumeric characters or hyphens, such as "-",".","_", and must not begin or end with a hyphen, and must not begin with http:// or https://.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_bandwidth_python">
@@ -1563,7 +1570,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The metering method of the EIP. Valid values: `PayByBandwidth` This is the default value. `PayByTraffic`. If `payment_type` is set to `Subscription`, `internet_charge_type` must be set to `PayByBandwidth`. If `payment_type` is set to `PayAsYouGo`, `internet_charge_type` can be set to `PayByBandwidth` or `PayByTraffic`.
+    <dd>{{% md %}}The metering method of the EIP. 
+Valid values: `PayByBandwidth` and `PayByTraffic`. Default to `PayByBandwidth`. **NOTE:** It must be set to "PayByBandwidth" when `payment_type` is "Subscription".
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ip_address_python">

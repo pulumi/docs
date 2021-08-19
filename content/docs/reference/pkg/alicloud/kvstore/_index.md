@@ -12,6 +12,7 @@ Explore the resources and functions of the alicloud.kvstore module.
 <h2 id="resources">Resources</h2>
 <ul class="api">
     <li><a href="account" title="Account"><span class="symbol resource"></span>Account</a></li>
+    <li><a href="auditlogconfig" title="AuditLogConfig"><span class="symbol resource"></span>AuditLogConfig</a></li>
     <li><a href="backuppolicy" title="BackupPolicy"><span class="symbol resource"></span>BackupPolicy</a></li>
     <li><a href="connection" title="Connection"><span class="symbol resource"></span>Connection</a></li>
     <li><a href="instance" title="Instance"><span class="symbol resource"></span>Instance</a></li>
@@ -37,6 +38,6 @@ Explore the resources and functions of the alicloud.kvstore module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>3.5.0</dd>
+	<dd>3.6.0</dd>
 </dl>
 

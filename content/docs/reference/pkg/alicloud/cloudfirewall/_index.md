@@ -12,6 +12,7 @@ Explore the resources and functions of the alicloud.cloudfirewall module.
 <h2 id="resources">Resources</h2>
 <ul class="api">
     <li><a href="controlpolicy" title="ControlPolicy"><span class="symbol resource"></span>ControlPolicy</a></li>
+    <li><a href="controlpolicyorder" title="ControlPolicyOrder"><span class="symbol resource"></span>ControlPolicyOrder</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
@@ -28,6 +29,6 @@ Explore the resources and functions of the alicloud.cloudfirewall module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>3.5.0</dd>
+	<dd>3.6.0</dd>
 </dl>
 

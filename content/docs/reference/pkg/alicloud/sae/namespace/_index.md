@@ -38,7 +38,8 @@ class MyStack : Stack
     {
         var example = new AliCloud.Sae.Namespace("example", new AliCloud.Sae.NamespaceArgs
         {
-            NamespaceId = "cn-hangzhou:NamespaceName",
+            NamespaceDescription = "your_description",
+            NamespaceId = "cn-hangzhou:yourname",
             NamespaceName = "example_value",
         });
     }
@@ -63,8 +64,9 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := sae.NewNamespace(ctx, "example", &sae.NamespaceArgs{
-			NamespaceId:   pulumi.String("cn-hangzhou:NamespaceName"),
-			NamespaceName: pulumi.String("example_value"),
+			NamespaceDescription: pulumi.String("your_description"),
+			NamespaceId:          pulumi.String("cn-hangzhou:yourname"),
+			NamespaceName:        pulumi.String("example_value"),
 		})
 		if err != nil {
 			return err
@@ -85,7 +87,8 @@ import pulumi
 import pulumi_alicloud as alicloud
 
 example = alicloud.sae.Namespace("example",
-    namespace_id="cn-hangzhou:NamespaceName",
+    namespace_description="your_description",
+    namespace_id="cn-hangzhou:yourname",
     namespace_name="example_value")
 ```
 
@@ -101,7 +104,8 @@ import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
 const example = new alicloud.sae.Namespace("example", {
-    namespaceId: "cn-hangzhou:NamespaceName",
+    namespaceDescription: "your_description",
+    namespaceId: "cn-hangzhou:yourname",
     namespaceName: "example_value",
 });
 ```
@@ -268,7 +272,7 @@ The Namespace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Id of Namespace.It can contain 2 to 32 characters.The value is in format `{RegionId}:{namespace}`
+    <dd>{{% md %}}The Id of Namespace.It can contain 2 to 32 lowercase characters.The value is in format `{RegionId}:{namespace}`
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="namespacename_csharp">
@@ -299,7 +303,7 @@ The Namespace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Id of Namespace.It can contain 2 to 32 characters.The value is in format `{RegionId}:{namespace}`
+    <dd>{{% md %}}The Id of Namespace.It can contain 2 to 32 lowercase characters.The value is in format `{RegionId}:{namespace}`
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="namespacename_go">
@@ -330,7 +334,7 @@ The Namespace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Id of Namespace.It can contain 2 to 32 characters.The value is in format `{RegionId}:{namespace}`
+    <dd>{{% md %}}The Id of Namespace.It can contain 2 to 32 lowercase characters.The value is in format `{RegionId}:{namespace}`
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="namespacename_nodejs">
@@ -361,7 +365,7 @@ The Namespace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Id of Namespace.It can contain 2 to 32 characters.The value is in format `{RegionId}:{namespace}`
+    <dd>{{% md %}}The Id of Namespace.It can contain 2 to 32 lowercase characters.The value is in format `{RegionId}:{namespace}`
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="namespace_name_python">
@@ -584,7 +588,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Id of Namespace.It can contain 2 to 32 characters.The value is in format `{RegionId}:{namespace}`
+    <dd>{{% md %}}The Id of Namespace.It can contain 2 to 32 lowercase characters.The value is in format `{RegionId}:{namespace}`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_namespacename_csharp">
@@ -615,7 +619,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Id of Namespace.It can contain 2 to 32 characters.The value is in format `{RegionId}:{namespace}`
+    <dd>{{% md %}}The Id of Namespace.It can contain 2 to 32 lowercase characters.The value is in format `{RegionId}:{namespace}`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_namespacename_go">
@@ -646,7 +650,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Id of Namespace.It can contain 2 to 32 characters.The value is in format `{RegionId}:{namespace}`
+    <dd>{{% md %}}The Id of Namespace.It can contain 2 to 32 lowercase characters.The value is in format `{RegionId}:{namespace}`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_namespacename_nodejs">
@@ -677,7 +681,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Id of Namespace.It can contain 2 to 32 characters.The value is in format `{RegionId}:{namespace}`
+    <dd>{{% md %}}The Id of Namespace.It can contain 2 to 32 lowercase characters.The value is in format `{RegionId}:{namespace}`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_namespace_name_python">

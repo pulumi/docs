@@ -12,10 +12,12 @@ Explore the resources and functions of the alicloud.arms module.
 <h2 id="resources">Resources</h2>
 <ul class="api">
     <li><a href="alertcontact" title="AlertContact"><span class="symbol resource"></span>AlertContact</a></li>
+    <li><a href="alertcontactgroup" title="AlertContactGroup"><span class="symbol resource"></span>AlertContactGroup</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
+    <li><a href="getalertcontactgroups" title="GetAlertContactGroups"><span class="symbol function"></span>GetAlertContactGroups</a></li>
     <li><a href="getalertcontacts" title="GetAlertContacts"><span class="symbol function"></span>GetAlertContacts</a></li>
 </ul>
 
@@ -28,6 +30,6 @@ Explore the resources and functions of the alicloud.arms module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>3.5.0</dd>
+	<dd>3.6.0</dd>
 </dl>
 

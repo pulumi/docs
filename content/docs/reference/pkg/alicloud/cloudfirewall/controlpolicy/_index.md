@@ -28,21 +28,88 @@ For information about Cloud Firewall Control Policy and how to use it, see [What
 
 {{< example csharp >}}
 
-Coming soon!
+```csharp
+using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new AliCloud.CloudFirewall.ControlPolicy("example", new AliCloud.CloudFirewall.ControlPolicyArgs
+        {
+            AclAction = "accept",
+            ApplicationName = "ANY",
+            Description = "example",
+            Destination = "100.1.1.0/24",
+            DestinationType = "net",
+            Direction = "out",
+            Proto = "ANY",
+            Source = "1.2.3.0/24",
+            SourceType = "net",
+        });
+    }
+
+}
+```
+
 
 {{< /example >}}
 
 
 {{< example go >}}
 
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-alicloud/sdk/v3/go/alicloud/cloudfirewall"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := cloudfirewall.NewControlPolicy(ctx, "example", &cloudfirewall.ControlPolicyArgs{
+			AclAction:       pulumi.String("accept"),
+			ApplicationName: pulumi.String("ANY"),
+			Description:     pulumi.String("example"),
+			Destination:     pulumi.String("100.1.1.0/24"),
+			DestinationType: pulumi.String("net"),
+			Direction:       pulumi.String("out"),
+			Proto:           pulumi.String("ANY"),
+			Source:          pulumi.String("1.2.3.0/24"),
+			SourceType:      pulumi.String("net"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 
 {{< /example >}}
 
 
 {{< example python >}}
 
-Coming soon!
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+example = alicloud.cloudfirewall.ControlPolicy("example",
+    acl_action="accept",
+    application_name="ANY",
+    description="example",
+    destination="100.1.1.0/24",
+    destination_type="net",
+    direction="out",
+    proto="ANY",
+    source="1.2.3.0/24",
+    source_type="net")
+```
+
 
 {{< /example >}}
 
@@ -57,14 +124,13 @@ import * as alicloud from "@pulumi/alicloud";
 const example = new alicloud.cloudfirewall.ControlPolicy("example", {
     aclAction: "accept",
     applicationName: "ANY",
-    description: "example_value",
-    destination: "example_value",
-    destinationType: " group",
-    direction: "in",
-    order: 1,
-    proto: " TCP",
-    source: "example_value",
-    sourceType: " group",
+    description: "example",
+    destination: "100.1.1.0/24",
+    destinationType: "net",
+    direction: "out",
+    proto: "ANY",
+    source: "1.2.3.0/24",
+    sourceType: "net",
 });
 ```
 

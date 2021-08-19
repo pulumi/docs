@@ -191,7 +191,8 @@ The Eip resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The name of the EIP instance. This name can have a string of 2 to 128 characters, must contain only alphanumeric characters or hyphens, such as "-",".","_", and must not begin or end with a hyphen, and must not begin with http:// or https://.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bandwidth_csharp">
 <a href="#bandwidth_csharp" style="color: inherit; text-decoration: inherit;">Bandwidth</a>
@@ -228,7 +229,7 @@ The Eip resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Elastic IP instance charge type. Valid values are "PrePaid" and "PostPaid". Default to "PostPaid".
+    <dd>{{% md %}}(It has been deprecated from version 1.126.0 and using new attribute `payment_type` instead) Elastic IP instance charge type. Valid values are "PrePaid" and "PostPaid". Default to "PostPaid".
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;instance_charge_type&#39; has been deprecated from provider version 1.126.0 and it will be remove in the future version. Please use the new attribute &#39;payment_type&#39; instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="internetchargetype_csharp">
@@ -237,7 +238,7 @@ The Eip resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Internet charge type of the EIP, Valid values are `PayByBandwidth`, `PayByTraffic`. Default to `PayByBandwidth`. From version `1.7.1`, default to `PayByTraffic`. It is only PayByBandwidth when `instance_charge_type` is PrePaid.
+    <dd>{{% md %}}Internet charge type of the EIP, Valid values are `PayByBandwidth`, `PayByTraffic`. Default to `PayByBandwidth`. **NOTE:** From version `1.7.1` to `1.125.0`, it defaults to `PayByTraffic`. It is only "PayByBandwidth" when `instance_charge_type` is PrePaid.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isp_csharp">
@@ -255,7 +256,7 @@ The Eip resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the EIP instance. This name can have a string of 2 to 128 characters, must contain only alphanumeric characters or hyphens, such as "-",".","_", and must not begin or end with a hyphen, and must not begin with http:// or https://.
+    <dd>{{% md %}}It has been deprecated from version 1.126.0 and using new attribute `address_name` instead.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;name&#39; has been deprecated from provider version 1.126.0 and it will be remove in the future version. Please use the new attribute &#39;address_name&#39; instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="netmode_csharp">
@@ -272,7 +273,8 @@ The Eip resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The billing method of the EIP. Valid values: `Subscription` and `PayAsYouGo`. Default value is `PayAsYouGo`.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="period_csharp">
 <a href="#period_csharp" style="color: inherit; text-decoration: inherit;">Period</a>
@@ -318,7 +320,8 @@ The Eip resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The name of the EIP instance. This name can have a string of 2 to 128 characters, must contain only alphanumeric characters or hyphens, such as "-",".","_", and must not begin or end with a hyphen, and must not begin with http:// or https://.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bandwidth_go">
 <a href="#bandwidth_go" style="color: inherit; text-decoration: inherit;">Bandwidth</a>
@@ -355,7 +358,7 @@ The Eip resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Elastic IP instance charge type. Valid values are "PrePaid" and "PostPaid". Default to "PostPaid".
+    <dd>{{% md %}}(It has been deprecated from version 1.126.0 and using new attribute `payment_type` instead) Elastic IP instance charge type. Valid values are "PrePaid" and "PostPaid". Default to "PostPaid".
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;instance_charge_type&#39; has been deprecated from provider version 1.126.0 and it will be remove in the future version. Please use the new attribute &#39;payment_type&#39; instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="internetchargetype_go">
@@ -364,7 +367,7 @@ The Eip resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Internet charge type of the EIP, Valid values are `PayByBandwidth`, `PayByTraffic`. Default to `PayByBandwidth`. From version `1.7.1`, default to `PayByTraffic`. It is only PayByBandwidth when `instance_charge_type` is PrePaid.
+    <dd>{{% md %}}Internet charge type of the EIP, Valid values are `PayByBandwidth`, `PayByTraffic`. Default to `PayByBandwidth`. **NOTE:** From version `1.7.1` to `1.125.0`, it defaults to `PayByTraffic`. It is only "PayByBandwidth" when `instance_charge_type` is PrePaid.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isp_go">
@@ -382,7 +385,7 @@ The Eip resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the EIP instance. This name can have a string of 2 to 128 characters, must contain only alphanumeric characters or hyphens, such as "-",".","_", and must not begin or end with a hyphen, and must not begin with http:// or https://.
+    <dd>{{% md %}}It has been deprecated from version 1.126.0 and using new attribute `address_name` instead.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;name&#39; has been deprecated from provider version 1.126.0 and it will be remove in the future version. Please use the new attribute &#39;address_name&#39; instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="netmode_go">
@@ -399,7 +402,8 @@ The Eip resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The billing method of the EIP. Valid values: `Subscription` and `PayAsYouGo`. Default value is `PayAsYouGo`.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="period_go">
 <a href="#period_go" style="color: inherit; text-decoration: inherit;">Period</a>
@@ -445,7 +449,8 @@ The Eip resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The name of the EIP instance. This name can have a string of 2 to 128 characters, must contain only alphanumeric characters or hyphens, such as "-",".","_", and must not begin or end with a hyphen, and must not begin with http:// or https://.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bandwidth_nodejs">
 <a href="#bandwidth_nodejs" style="color: inherit; text-decoration: inherit;">bandwidth</a>
@@ -482,7 +487,7 @@ The Eip resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Elastic IP instance charge type. Valid values are "PrePaid" and "PostPaid". Default to "PostPaid".
+    <dd>{{% md %}}(It has been deprecated from version 1.126.0 and using new attribute `payment_type` instead) Elastic IP instance charge type. Valid values are "PrePaid" and "PostPaid". Default to "PostPaid".
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;instance_charge_type&#39; has been deprecated from provider version 1.126.0 and it will be remove in the future version. Please use the new attribute &#39;payment_type&#39; instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="internetchargetype_nodejs">
@@ -491,7 +496,7 @@ The Eip resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Internet charge type of the EIP, Valid values are `PayByBandwidth`, `PayByTraffic`. Default to `PayByBandwidth`. From version `1.7.1`, default to `PayByTraffic`. It is only PayByBandwidth when `instance_charge_type` is PrePaid.
+    <dd>{{% md %}}Internet charge type of the EIP, Valid values are `PayByBandwidth`, `PayByTraffic`. Default to `PayByBandwidth`. **NOTE:** From version `1.7.1` to `1.125.0`, it defaults to `PayByTraffic`. It is only "PayByBandwidth" when `instance_charge_type` is PrePaid.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isp_nodejs">
@@ -509,7 +514,7 @@ The Eip resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the EIP instance. This name can have a string of 2 to 128 characters, must contain only alphanumeric characters or hyphens, such as "-",".","_", and must not begin or end with a hyphen, and must not begin with http:// or https://.
+    <dd>{{% md %}}It has been deprecated from version 1.126.0 and using new attribute `address_name` instead.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;name&#39; has been deprecated from provider version 1.126.0 and it will be remove in the future version. Please use the new attribute &#39;address_name&#39; instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="netmode_nodejs">
@@ -526,7 +531,8 @@ The Eip resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The billing method of the EIP. Valid values: `Subscription` and `PayAsYouGo`. Default value is `PayAsYouGo`.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="period_nodejs">
 <a href="#period_nodejs" style="color: inherit; text-decoration: inherit;">period</a>
@@ -572,7 +578,8 @@ The Eip resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The name of the EIP instance. This name can have a string of 2 to 128 characters, must contain only alphanumeric characters or hyphens, such as "-",".","_", and must not begin or end with a hyphen, and must not begin with http:// or https://.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bandwidth_python">
 <a href="#bandwidth_python" style="color: inherit; text-decoration: inherit;">bandwidth</a>
@@ -609,7 +616,7 @@ The Eip resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Elastic IP instance charge type. Valid values are "PrePaid" and "PostPaid". Default to "PostPaid".
+    <dd>{{% md %}}(It has been deprecated from version 1.126.0 and using new attribute `payment_type` instead) Elastic IP instance charge type. Valid values are "PrePaid" and "PostPaid". Default to "PostPaid".
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;instance_charge_type&#39; has been deprecated from provider version 1.126.0 and it will be remove in the future version. Please use the new attribute &#39;payment_type&#39; instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="internet_charge_type_python">
@@ -618,7 +625,7 @@ The Eip resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Internet charge type of the EIP, Valid values are `PayByBandwidth`, `PayByTraffic`. Default to `PayByBandwidth`. From version `1.7.1`, default to `PayByTraffic`. It is only PayByBandwidth when `instance_charge_type` is PrePaid.
+    <dd>{{% md %}}Internet charge type of the EIP, Valid values are `PayByBandwidth`, `PayByTraffic`. Default to `PayByBandwidth`. **NOTE:** From version `1.7.1` to `1.125.0`, it defaults to `PayByTraffic`. It is only "PayByBandwidth" when `instance_charge_type` is PrePaid.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isp_python">
@@ -636,7 +643,7 @@ The Eip resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the EIP instance. This name can have a string of 2 to 128 characters, must contain only alphanumeric characters or hyphens, such as "-",".","_", and must not begin or end with a hyphen, and must not begin with http:// or https://.
+    <dd>{{% md %}}It has been deprecated from version 1.126.0 and using new attribute `address_name` instead.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;name&#39; has been deprecated from provider version 1.126.0 and it will be remove in the future version. Please use the new attribute &#39;address_name&#39; instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="netmode_python">
@@ -653,7 +660,8 @@ The Eip resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The billing method of the EIP. Valid values: `Subscription` and `PayAsYouGo`. Default value is `PayAsYouGo`.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="period_python">
 <a href="#period_python" style="color: inherit; text-decoration: inherit;">period</a>
@@ -967,7 +975,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The name of the EIP instance. This name can have a string of 2 to 128 characters, must contain only alphanumeric characters or hyphens, such as "-",".","_", and must not begin or end with a hyphen, and must not begin with http:// or https://.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_bandwidth_csharp">
 <a href="#state_bandwidth_csharp" style="color: inherit; text-decoration: inherit;">Bandwidth</a>
@@ -1004,7 +1013,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Elastic IP instance charge type. Valid values are "PrePaid" and "PostPaid". Default to "PostPaid".
+    <dd>{{% md %}}(It has been deprecated from version 1.126.0 and using new attribute `payment_type` instead) Elastic IP instance charge type. Valid values are "PrePaid" and "PostPaid". Default to "PostPaid".
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;instance_charge_type&#39; has been deprecated from provider version 1.126.0 and it will be remove in the future version. Please use the new attribute &#39;payment_type&#39; instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_internetchargetype_csharp">
@@ -1013,7 +1022,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Internet charge type of the EIP, Valid values are `PayByBandwidth`, `PayByTraffic`. Default to `PayByBandwidth`. From version `1.7.1`, default to `PayByTraffic`. It is only PayByBandwidth when `instance_charge_type` is PrePaid.
+    <dd>{{% md %}}Internet charge type of the EIP, Valid values are `PayByBandwidth`, `PayByTraffic`. Default to `PayByBandwidth`. **NOTE:** From version `1.7.1` to `1.125.0`, it defaults to `PayByTraffic`. It is only "PayByBandwidth" when `instance_charge_type` is PrePaid.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipaddress_csharp">
@@ -1040,7 +1049,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the EIP instance. This name can have a string of 2 to 128 characters, must contain only alphanumeric characters or hyphens, such as "-",".","_", and must not begin or end with a hyphen, and must not begin with http:// or https://.
+    <dd>{{% md %}}It has been deprecated from version 1.126.0 and using new attribute `address_name` instead.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;name&#39; has been deprecated from provider version 1.126.0 and it will be remove in the future version. Please use the new attribute &#39;address_name&#39; instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_netmode_csharp">
@@ -1057,7 +1066,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The billing method of the EIP. Valid values: `Subscription` and `PayAsYouGo`. Default value is `PayAsYouGo`.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_period_csharp">
 <a href="#state_period_csharp" style="color: inherit; text-decoration: inherit;">Period</a>
@@ -1112,7 +1122,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The name of the EIP instance. This name can have a string of 2 to 128 characters, must contain only alphanumeric characters or hyphens, such as "-",".","_", and must not begin or end with a hyphen, and must not begin with http:// or https://.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_bandwidth_go">
 <a href="#state_bandwidth_go" style="color: inherit; text-decoration: inherit;">Bandwidth</a>
@@ -1149,7 +1160,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Elastic IP instance charge type. Valid values are "PrePaid" and "PostPaid". Default to "PostPaid".
+    <dd>{{% md %}}(It has been deprecated from version 1.126.0 and using new attribute `payment_type` instead) Elastic IP instance charge type. Valid values are "PrePaid" and "PostPaid". Default to "PostPaid".
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;instance_charge_type&#39; has been deprecated from provider version 1.126.0 and it will be remove in the future version. Please use the new attribute &#39;payment_type&#39; instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_internetchargetype_go">
@@ -1158,7 +1169,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Internet charge type of the EIP, Valid values are `PayByBandwidth`, `PayByTraffic`. Default to `PayByBandwidth`. From version `1.7.1`, default to `PayByTraffic`. It is only PayByBandwidth when `instance_charge_type` is PrePaid.
+    <dd>{{% md %}}Internet charge type of the EIP, Valid values are `PayByBandwidth`, `PayByTraffic`. Default to `PayByBandwidth`. **NOTE:** From version `1.7.1` to `1.125.0`, it defaults to `PayByTraffic`. It is only "PayByBandwidth" when `instance_charge_type` is PrePaid.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipaddress_go">
@@ -1185,7 +1196,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the EIP instance. This name can have a string of 2 to 128 characters, must contain only alphanumeric characters or hyphens, such as "-",".","_", and must not begin or end with a hyphen, and must not begin with http:// or https://.
+    <dd>{{% md %}}It has been deprecated from version 1.126.0 and using new attribute `address_name` instead.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;name&#39; has been deprecated from provider version 1.126.0 and it will be remove in the future version. Please use the new attribute &#39;address_name&#39; instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_netmode_go">
@@ -1202,7 +1213,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The billing method of the EIP. Valid values: `Subscription` and `PayAsYouGo`. Default value is `PayAsYouGo`.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_period_go">
 <a href="#state_period_go" style="color: inherit; text-decoration: inherit;">Period</a>
@@ -1257,7 +1269,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The name of the EIP instance. This name can have a string of 2 to 128 characters, must contain only alphanumeric characters or hyphens, such as "-",".","_", and must not begin or end with a hyphen, and must not begin with http:// or https://.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_bandwidth_nodejs">
 <a href="#state_bandwidth_nodejs" style="color: inherit; text-decoration: inherit;">bandwidth</a>
@@ -1294,7 +1307,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Elastic IP instance charge type. Valid values are "PrePaid" and "PostPaid". Default to "PostPaid".
+    <dd>{{% md %}}(It has been deprecated from version 1.126.0 and using new attribute `payment_type` instead) Elastic IP instance charge type. Valid values are "PrePaid" and "PostPaid". Default to "PostPaid".
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;instance_charge_type&#39; has been deprecated from provider version 1.126.0 and it will be remove in the future version. Please use the new attribute &#39;payment_type&#39; instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_internetchargetype_nodejs">
@@ -1303,7 +1316,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Internet charge type of the EIP, Valid values are `PayByBandwidth`, `PayByTraffic`. Default to `PayByBandwidth`. From version `1.7.1`, default to `PayByTraffic`. It is only PayByBandwidth when `instance_charge_type` is PrePaid.
+    <dd>{{% md %}}Internet charge type of the EIP, Valid values are `PayByBandwidth`, `PayByTraffic`. Default to `PayByBandwidth`. **NOTE:** From version `1.7.1` to `1.125.0`, it defaults to `PayByTraffic`. It is only "PayByBandwidth" when `instance_charge_type` is PrePaid.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipaddress_nodejs">
@@ -1330,7 +1343,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the EIP instance. This name can have a string of 2 to 128 characters, must contain only alphanumeric characters or hyphens, such as "-",".","_", and must not begin or end with a hyphen, and must not begin with http:// or https://.
+    <dd>{{% md %}}It has been deprecated from version 1.126.0 and using new attribute `address_name` instead.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;name&#39; has been deprecated from provider version 1.126.0 and it will be remove in the future version. Please use the new attribute &#39;address_name&#39; instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_netmode_nodejs">
@@ -1347,7 +1360,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The billing method of the EIP. Valid values: `Subscription` and `PayAsYouGo`. Default value is `PayAsYouGo`.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_period_nodejs">
 <a href="#state_period_nodejs" style="color: inherit; text-decoration: inherit;">period</a>
@@ -1402,7 +1416,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The name of the EIP instance. This name can have a string of 2 to 128 characters, must contain only alphanumeric characters or hyphens, such as "-",".","_", and must not begin or end with a hyphen, and must not begin with http:// or https://.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_bandwidth_python">
 <a href="#state_bandwidth_python" style="color: inherit; text-decoration: inherit;">bandwidth</a>
@@ -1439,7 +1454,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Elastic IP instance charge type. Valid values are "PrePaid" and "PostPaid". Default to "PostPaid".
+    <dd>{{% md %}}(It has been deprecated from version 1.126.0 and using new attribute `payment_type` instead) Elastic IP instance charge type. Valid values are "PrePaid" and "PostPaid". Default to "PostPaid".
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;instance_charge_type&#39; has been deprecated from provider version 1.126.0 and it will be remove in the future version. Please use the new attribute &#39;payment_type&#39; instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_internet_charge_type_python">
@@ -1448,7 +1463,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Internet charge type of the EIP, Valid values are `PayByBandwidth`, `PayByTraffic`. Default to `PayByBandwidth`. From version `1.7.1`, default to `PayByTraffic`. It is only PayByBandwidth when `instance_charge_type` is PrePaid.
+    <dd>{{% md %}}Internet charge type of the EIP, Valid values are `PayByBandwidth`, `PayByTraffic`. Default to `PayByBandwidth`. **NOTE:** From version `1.7.1` to `1.125.0`, it defaults to `PayByTraffic`. It is only "PayByBandwidth" when `instance_charge_type` is PrePaid.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ip_address_python">
@@ -1475,7 +1490,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the EIP instance. This name can have a string of 2 to 128 characters, must contain only alphanumeric characters or hyphens, such as "-",".","_", and must not begin or end with a hyphen, and must not begin with http:// or https://.
+    <dd>{{% md %}}It has been deprecated from version 1.126.0 and using new attribute `address_name` instead.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;name&#39; has been deprecated from provider version 1.126.0 and it will be remove in the future version. Please use the new attribute &#39;address_name&#39; instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_netmode_python">
@@ -1492,7 +1507,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The billing method of the EIP. Valid values: `Subscription` and `PayAsYouGo`. Default value is `PayAsYouGo`.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_period_python">
 <a href="#state_period_python" style="color: inherit; text-decoration: inherit;">period</a>

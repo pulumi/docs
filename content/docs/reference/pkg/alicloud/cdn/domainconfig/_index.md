@@ -39,7 +39,7 @@ class MyStack : Stack
         // Create a new Domain config.
         var domain = new AliCloud.Cdn.DomainNew("domain", new AliCloud.Cdn.DomainNewArgs
         {
-            DomainName = "tf-testacc%d.xiaozhu.com",
+            DomainName = "mycdndomain.xiaozhu.com",
             CdnType = "web",
             Scope = "overseas",
             Sources = 
@@ -82,8 +82,6 @@ class MyStack : Stack
 package main
 
 import (
-	"fmt"
-
 	"github.com/pulumi/pulumi-alicloud/sdk/v3/go/alicloud/cdn"
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
@@ -91,7 +89,7 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		domain, err := cdn.NewDomainNew(ctx, "domain", &cdn.DomainNewArgs{
-			DomainName: pulumi.String(fmt.Sprintf("%v%v%v", "tf-testacc", "%", "d.xiaozhu.com")),
+			DomainName: pulumi.String("mycdndomain.xiaozhu.com"),
 			CdnType:    pulumi.String("web"),
 			Scope:      pulumi.String("overseas"),
 			Sources: cdn.DomainNewSourceArray{
@@ -137,7 +135,7 @@ import pulumi_alicloud as alicloud
 
 # Create a new Domain config.
 domain = alicloud.cdn.DomainNew("domain",
-    domain_name="tf-testacc%d.xiaozhu.com",
+    domain_name="mycdndomain.xiaozhu.com",
     cdn_type="web",
     scope="overseas",
     sources=[alicloud.cdn.DomainNewSourceArgs(
@@ -169,7 +167,7 @@ import * as alicloud from "@pulumi/alicloud";
 
 // Create a new Domain config.
 const domain = new alicloud.cdn.DomainNew("domain", {
-    domainName: `tf-testacc%d.xiaozhu.com`,
+    domainName: "mycdndomain.xiaozhu.com",
     cdnType: "web",
     scope: "overseas",
     sources: [{
