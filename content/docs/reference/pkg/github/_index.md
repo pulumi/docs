@@ -14,6 +14,7 @@ A Pulumi package for creating and managing github cloud resources.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
+    <li><a href="actionsenvironmentsecret" title="ActionsEnvironmentSecret"><span class="symbol resource"></span>ActionsEnvironmentSecret</a></li>
     <li><a href="actionsorganizationsecret" title="ActionsOrganizationSecret"><span class="symbol resource"></span>ActionsOrganizationSecret</a></li>
     <li><a href="actionssecret" title="ActionsSecret"><span class="symbol resource"></span>ActionsSecret</a></li>
     <li><a href="appinstallationrepository" title="AppInstallationRepository"><span class="symbol resource"></span>AppInstallationRepository</a></li>
@@ -32,6 +33,7 @@ A Pulumi package for creating and managing github cloud resources.
     <li><a href="repository" title="Repository"><span class="symbol resource"></span>Repository</a></li>
     <li><a href="repositorycollaborator" title="RepositoryCollaborator"><span class="symbol resource"></span>RepositoryCollaborator</a></li>
     <li><a href="repositorydeploykey" title="RepositoryDeployKey"><span class="symbol resource"></span>RepositoryDeployKey</a></li>
+    <li><a href="repositoryenvironment" title="RepositoryEnvironment"><span class="symbol resource"></span>RepositoryEnvironment</a></li>
     <li><a href="repositoryfile" title="RepositoryFile"><span class="symbol resource"></span>RepositoryFile</a></li>
     <li><a href="repositorymilestone" title="RepositoryMilestone"><span class="symbol resource"></span>RepositoryMilestone</a></li>
     <li><a href="repositoryproject" title="RepositoryProject"><span class="symbol resource"></span>RepositoryProject</a></li>
@@ -75,6 +77,6 @@ A Pulumi package for creating and managing github cloud resources.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`github` Terraform Provider](https://github.com/terraform-providers/terraform-provider-github).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.2.0</dd>
+	<dd>4.3.0</dd>
 </dl>
 
