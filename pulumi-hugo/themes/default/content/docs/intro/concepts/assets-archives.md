@@ -16,7 +16,7 @@ There are three types of `Asset` objects:
 
 - `FileAsset`:  The contents of the asset are read from a file on disk.
 - `StringAsset`: The contents of the asset are read from a string in memory.
-- `RemoteAsset`: The contents of the asset are read from an `http`, `https` of `file` URI.
+- `RemoteAsset`: The contents of the asset are read from an `http`, `https` or `file` URI.
 
 {{< chooser language "javascript,typescript,python,go,csharp" >}}
 
@@ -137,7 +137,7 @@ var obj = new Aws.S3.BucketObject("obj", new Aws.S3.BucketObjectArgs
 There are three types of `Archive` objects:
 
 - `FileArchive`: The contents of the archive are read from either a folder on disk or a file on disk in one of the supported formats: `.tar`, `.tgz`, `.tar.gz`, `.zip` or `.jar`.
-- `RemoteArchive`: The contents of the asset are read from an `http`, `https` of `file` URI, which must produce an archive of one of the same supported types as `FileArchive`.
+- `RemoteArchive`: The contents of the asset are read from an `http`, `https` or `file` URI, which must produce an archive of one of the same supported types as `FileArchive`.
 - `AssetArchive`:  The contents of the archive are read from a map of either [`Asset`](#asset) or [`Archive`](#archive) objects, one file or folder respectively per entry in the map.
 
 {{< chooser language "javascript,typescript,python,go,csharp" >}}
