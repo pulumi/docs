@@ -23,24 +23,23 @@ A Pulumi package for creating and managing akamai cloud resources.
 <ul class="api">
     <li><a href="appsecactivations" title="AppSecActivations"><span class="symbol resource"></span>AppSecActivations</a></li>
     <li><a href="appsecadvancedsettingslogging" title="AppSecAdvancedSettingsLogging"><span class="symbol resource"></span>AppSecAdvancedSettingsLogging</a></li>
+    <li><a href="appsecadvancedsettingspragmaheader" title="AppSecAdvancedSettingsPragmaHeader"><span class="symbol resource"></span>AppSecAdvancedSettingsPragmaHeader</a></li>
     <li><a href="appsecadvancedsettingsprefetch" title="AppSecAdvancedSettingsPrefetch"><span class="symbol resource"></span>AppSecAdvancedSettingsPrefetch</a></li>
+    <li><a href="appsecapiconstraintsprotection" title="AppSecApiConstraintsProtection"><span class="symbol resource"></span>AppSecApiConstraintsProtection</a></li>
     <li><a href="appsecapirequestconstraints" title="AppSecApiRequestConstraints"><span class="symbol resource"></span>AppSecApiRequestConstraints</a></li>
-    <li><a href="appsecattackgroupaction" title="AppSecAttackGroupAction"><span class="symbol resource"></span>AppSecAttackGroupAction</a></li>
-    <li><a href="appsecattackgroupactionconditionexception" title="AppSecAttackGroupActionConditionException"><span class="symbol resource"></span>AppSecAttackGroupActionConditionException</a></li>
+    <li><a href="appsecattackgroup" title="AppSecAttackGroup"><span class="symbol resource"></span>AppSecAttackGroup</a></li>
     <li><a href="appsecbypassnetworklist" title="AppSecByPassNetworkList"><span class="symbol resource"></span>AppSecByPassNetworkList</a></li>
     <li><a href="appsecconfiguration" title="AppSecConfiguration"><span class="symbol resource"></span>AppSecConfiguration</a></li>
-    <li><a href="appsecconfigurationclone" title="AppSecConfigurationClone"><span class="symbol resource"></span>AppSecConfigurationClone</a></li>
     <li><a href="appsecconfigurationrename" title="AppSecConfigurationRename"><span class="symbol resource"></span>AppSecConfigurationRename</a></li>
-    <li><a href="appsecconfigurationversionclone" title="AppSecConfigurationVersionClone"><span class="symbol resource"></span>AppSecConfigurationVersionClone</a></li>
     <li><a href="appseccustomdeny" title="AppSecCustomDeny"><span class="symbol resource"></span>AppSecCustomDeny</a></li>
     <li><a href="appseccustomrule" title="AppSecCustomRule"><span class="symbol resource"></span>AppSecCustomRule</a></li>
     <li><a href="appseccustomruleaction" title="AppSecCustomRuleAction"><span class="symbol resource"></span>AppSecCustomRuleAction</a></li>
     <li><a href="appseceval" title="AppSecEval"><span class="symbol resource"></span>AppSecEval</a></li>
     <li><a href="appsecevalhostnames" title="AppSecEvalHostnames"><span class="symbol resource"></span>AppSecEvalHostnames</a></li>
     <li><a href="appsecevalprotecthost" title="AppSecEvalProtectHost"><span class="symbol resource"></span>AppSecEvalProtectHost</a></li>
-    <li><a href="appsecevalruleaction" title="AppSecEvalRuleAction"><span class="symbol resource"></span>AppSecEvalRuleAction</a></li>
-    <li><a href="appsecevalruleconditionexception" title="AppSecEvalRuleConditionException"><span class="symbol resource"></span>AppSecEvalRuleConditionException</a></li>
+    <li><a href="appsecevalrule" title="AppSecEvalRule"><span class="symbol resource"></span>AppSecEvalRule</a></li>
     <li><a href="appsecipgeo" title="AppSecIPGeo"><span class="symbol resource"></span>AppSecIPGeo</a></li>
+    <li><a href="appsecipgeoprotection" title="AppSecIPGeoProtection"><span class="symbol resource"></span>AppSecIPGeoProtection</a></li>
     <li><a href="appsecmatchtarget" title="AppSecMatchTarget"><span class="symbol resource"></span>AppSecMatchTarget</a></li>
     <li><a href="appsecmatchtargetsequence" title="AppSecMatchTargetSequence"><span class="symbol resource"></span>AppSecMatchTargetSequence</a></li>
     <li><a href="appsecpenaltybox" title="AppSecPenaltyBox"><span class="symbol resource"></span>AppSecPenaltyBox</a></li>
@@ -51,12 +50,9 @@ A Pulumi package for creating and managing akamai cloud resources.
     <li><a href="appsecreputationprofileaction" title="AppSecReputationProfileAction"><span class="symbol resource"></span>AppSecReputationProfileAction</a></li>
     <li><a href="appsecreputationprofileanalysis" title="AppSecReputationProfileAnalysis"><span class="symbol resource"></span>AppSecReputationProfileAnalysis</a></li>
     <li><a href="appsecreputationprotection" title="AppSecReputationProtection"><span class="symbol resource"></span>AppSecReputationProtection</a></li>
-    <li><a href="appsecruleaction" title="AppSecRuleAction"><span class="symbol resource"></span>AppSecRuleAction</a></li>
-    <li><a href="appsecruleconditionexception" title="AppSecRuleConditionException"><span class="symbol resource"></span>AppSecRuleConditionException</a></li>
+    <li><a href="appsecrule" title="AppSecRule"><span class="symbol resource"></span>AppSecRule</a></li>
     <li><a href="appsecruleupgrade" title="AppSecRuleUpgrade"><span class="symbol resource"></span>AppSecRuleUpgrade</a></li>
     <li><a href="appsecsecuritypolicy" title="AppSecSecurityPolicy"><span class="symbol resource"></span>AppSecSecurityPolicy</a></li>
-    <li><a href="appsecsecuritypolicyclone" title="AppSecSecurityPolicyClone"><span class="symbol resource"></span>AppSecSecurityPolicyClone</a></li>
-    <li><a href="appsecsecuritypolicyprotections" title="AppSecSecurityPolicyProtections"><span class="symbol resource"></span>AppSecSecurityPolicyProtections</a></li>
     <li><a href="appsecsecuritypolicyrename" title="AppSecSecurityPolicyRename"><span class="symbol resource"></span>AppSecSecurityPolicyRename</a></li>
     <li><a href="appsecselectedhostnames" title="AppSecSelectedHostnames"><span class="symbol resource"></span>AppSecSelectedHostnames</a></li>
     <li><a href="appsecsiemsettings" title="AppSecSiemSettings"><span class="symbol resource"></span>AppSecSiemSettings</a></li>
@@ -66,6 +62,8 @@ A Pulumi package for creating and managing akamai cloud resources.
     <li><a href="appsecwafmode" title="AppSecWafMode"><span class="symbol resource"></span>AppSecWafMode</a></li>
     <li><a href="appsecwafprotection" title="AppSecWafProtection"><span class="symbol resource"></span>AppSecWafProtection</a></li>
     <li><a href="cpcode" title="CpCode"><span class="symbol resource"></span>CpCode</a></li>
+    <li><a href="cpsdvenrollment" title="CpsDvEnrollment"><span class="symbol resource"></span>CpsDvEnrollment</a></li>
+    <li><a href="cpsdvvalidation" title="CpsDvValidation"><span class="symbol resource"></span>CpsDvValidation</a></li>
     <li><a href="dnsrecord" title="DnsRecord"><span class="symbol resource"></span>DnsRecord</a></li>
     <li><a href="dnszone" title="DnsZone"><span class="symbol resource"></span>DnsZone</a></li>
     <li><a href="edgehostname" title="EdgeHostName"><span class="symbol resource"></span>EdgeHostName</a></li>
@@ -76,6 +74,10 @@ A Pulumi package for creating and managing akamai cloud resources.
     <li><a href="gtmgeomap" title="GtmGeomap"><span class="symbol resource"></span>GtmGeomap</a></li>
     <li><a href="gtmproperty" title="GtmProperty"><span class="symbol resource"></span>GtmProperty</a></li>
     <li><a href="gtmresource" title="GtmResource"><span class="symbol resource"></span>GtmResource</a></li>
+    <li><a href="networklist" title="NetworkList"><span class="symbol resource"></span>NetworkList</a></li>
+    <li><a href="networklistactivations" title="NetworkListActivations"><span class="symbol resource"></span>NetworkListActivations</a></li>
+    <li><a href="networklistdescription" title="NetworkListDescription"><span class="symbol resource"></span>NetworkListDescription</a></li>
+    <li><a href="networklistsubscription" title="NetworkListSubscription"><span class="symbol resource"></span>NetworkListSubscription</a></li>
     <li><a href="property" title="Property"><span class="symbol resource"></span>Property</a></li>
     <li><a href="propertyactivation" title="PropertyActivation"><span class="symbol resource"></span>PropertyActivation</a></li>
     <li><a href="propertyvariables" title="PropertyVariables"><span class="symbol resource"></span>PropertyVariables</a></li>
@@ -85,11 +87,11 @@ A Pulumi package for creating and managing akamai cloud resources.
 <h2 id="functions">Functions</h2>
 <ul class="api">
     <li><a href="getappsecadvancedsettingslogging" title="GetAppSecAdvancedSettingsLogging"><span class="symbol function"></span>GetAppSecAdvancedSettingsLogging</a></li>
+    <li><a href="getappsecadvancedsettingspragmaheader" title="GetAppSecAdvancedSettingsPragmaHeader"><span class="symbol function"></span>GetAppSecAdvancedSettingsPragmaHeader</a></li>
     <li><a href="getappsecadvancedsettingsprefetch" title="GetAppSecAdvancedSettingsPrefetch"><span class="symbol function"></span>GetAppSecAdvancedSettingsPrefetch</a></li>
     <li><a href="getappsecapiendpoints" title="GetAppSecApiEndpoints"><span class="symbol function"></span>GetAppSecApiEndpoints</a></li>
     <li><a href="getappsecapirequestconstraints" title="GetAppSecApiRequestConstraints"><span class="symbol function"></span>GetAppSecApiRequestConstraints</a></li>
-    <li><a href="getappsecattackgroupactions" title="GetAppSecAttackGroupActions"><span class="symbol function"></span>GetAppSecAttackGroupActions</a></li>
-    <li><a href="getappsecattackgroupconditionexception" title="GetAppSecAttackGroupConditionException"><span class="symbol function"></span>GetAppSecAttackGroupConditionException</a></li>
+    <li><a href="getappsecattackgroups" title="GetAppSecAttackGroups"><span class="symbol function"></span>GetAppSecAttackGroups</a></li>
     <li><a href="getappsecbypassnetworklists" title="GetAppSecBypassNetworkLists"><span class="symbol function"></span>GetAppSecBypassNetworkLists</a></li>
     <li><a href="getappsecconfiguration" title="GetAppSecConfiguration"><span class="symbol function"></span>GetAppSecConfiguration</a></li>
     <li><a href="getappsecconfigurationversion" title="GetAppSecConfigurationVersion"><span class="symbol function"></span>GetAppSecConfigurationVersion</a></li>
@@ -99,8 +101,7 @@ A Pulumi package for creating and managing akamai cloud resources.
     <li><a href="getappseccustomrules" title="GetAppSecCustomRules"><span class="symbol function"></span>GetAppSecCustomRules</a></li>
     <li><a href="getappseceval" title="GetAppSecEval"><span class="symbol function"></span>GetAppSecEval</a></li>
     <li><a href="getappsecevalhostnames" title="GetAppSecEvalHostnames"><span class="symbol function"></span>GetAppSecEvalHostnames</a></li>
-    <li><a href="getappsecevalruleactions" title="GetAppSecEvalRuleActions"><span class="symbol function"></span>GetAppSecEvalRuleActions</a></li>
-    <li><a href="getappsecevalruleconditionexception" title="GetAppSecEvalRuleConditionException"><span class="symbol function"></span>GetAppSecEvalRuleConditionException</a></li>
+    <li><a href="getappsecevalrules" title="GetAppSecEvalRules"><span class="symbol function"></span>GetAppSecEvalRules</a></li>
     <li><a href="getappsecexportconfiguration" title="GetAppSecExportConfiguration"><span class="symbol function"></span>GetAppSecExportConfiguration</a></li>
     <li><a href="getappsecfailoverhostnames" title="GetAppSecFailoverHostnames"><span class="symbol function"></span>GetAppSecFailoverHostnames</a></li>
     <li><a href="getappsechostnamecoverage" title="GetAppSecHostnameCoverage"><span class="symbol function"></span>GetAppSecHostnameCoverage</a></li>
@@ -114,9 +115,8 @@ A Pulumi package for creating and managing akamai cloud resources.
     <li><a href="getappsecreputationprofileactions" title="GetAppSecReputationProfileActions"><span class="symbol function"></span>GetAppSecReputationProfileActions</a></li>
     <li><a href="getappsecreputationprofileanalysis" title="GetAppSecReputationProfileAnalysis"><span class="symbol function"></span>GetAppSecReputationProfileAnalysis</a></li>
     <li><a href="getappsecreputationprofiles" title="GetAppSecReputationProfiles"><span class="symbol function"></span>GetAppSecReputationProfiles</a></li>
-    <li><a href="getappsecruleactions" title="GetAppSecRuleActions"><span class="symbol function"></span>GetAppSecRuleActions</a></li>
-    <li><a href="getappsecruleconditionexception" title="GetAppSecRuleConditionException"><span class="symbol function"></span>GetAppSecRuleConditionException</a></li>
     <li><a href="getappsecruleupgradedetails" title="GetAppSecRuleUpgradeDetails"><span class="symbol function"></span>GetAppSecRuleUpgradeDetails</a></li>
+    <li><a href="getappsecrules" title="GetAppSecRules"><span class="symbol function"></span>GetAppSecRules</a></li>
     <li><a href="getappsecsecuritypolicy" title="GetAppSecSecurityPolicy"><span class="symbol function"></span>GetAppSecSecurityPolicy</a></li>
     <li><a href="getappsecsecuritypolicyprotections" title="GetAppSecSecurityPolicyProtections"><span class="symbol function"></span>GetAppSecSecurityPolicyProtections</a></li>
     <li><a href="getappsecselectablehostnames" title="GetAppSecSelectableHostnames"><span class="symbol function"></span>GetAppSecSelectableHostnames</a></li>
@@ -134,6 +134,7 @@ A Pulumi package for creating and managing akamai cloud resources.
     <li><a href="getgroup" title="GetGroup"><span class="symbol function"></span>GetGroup</a></li>
     <li><a href="getgroups" title="GetGroups"><span class="symbol function"></span>GetGroups</a></li>
     <li><a href="getgtmdefaultdatacenter" title="GetGtmDefaultDatacenter"><span class="symbol function"></span>GetGtmDefaultDatacenter</a></li>
+    <li><a href="getnetworklists" title="GetNetworkLists"><span class="symbol function"></span>GetNetworkLists</a></li>
     <li><a href="getproperties" title="GetProperties"><span class="symbol function"></span>GetProperties</a></li>
     <li><a href="getproperty" title="GetProperty"><span class="symbol function"></span>GetProperty</a></li>
     <li><a href="getpropertyhostnames" title="GetPropertyHostnames"><span class="symbol function"></span>GetPropertyHostnames</a></li>
@@ -152,6 +153,6 @@ A Pulumi package for creating and managing akamai cloud resources.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`akamai` Terraform Provider](https://github.com/akamai/terraform-provider-akamai).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>2.2.0</dd>
+	<dd>2.3.0</dd>
 </dl>
 
