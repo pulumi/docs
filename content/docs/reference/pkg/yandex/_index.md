@@ -16,7 +16,9 @@ A Pulumi package for creating and managing yandex cloud resources.
 <ul class="api">
     <li><a href="albbackendgroup" title="AlbBackendGroup"><span class="symbol resource"></span>AlbBackendGroup</a></li>
     <li><a href="albhttprouter" title="AlbHttpRouter"><span class="symbol resource"></span>AlbHttpRouter</a></li>
+    <li><a href="albloadbalancer" title="AlbLoadBalancer"><span class="symbol resource"></span>AlbLoadBalancer</a></li>
     <li><a href="albtargetgroup" title="AlbTargetGroup"><span class="symbol resource"></span>AlbTargetGroup</a></li>
+    <li><a href="albvirtualhost" title="AlbVirtualHost"><span class="symbol resource"></span>AlbVirtualHost</a></li>
     <li><a href="apigateway" title="ApiGateway"><span class="symbol resource"></span>ApiGateway</a></li>
     <li><a href="computedisk" title="ComputeDisk"><span class="symbol resource"></span>ComputeDisk</a></li>
     <li><a href="computediskplacementgroup" title="ComputeDiskPlacementGroup"><span class="symbol resource"></span>ComputeDiskPlacementGroup</a></li>
@@ -34,6 +36,7 @@ A Pulumi package for creating and managing yandex cloud resources.
     <li><a href="dnszone" title="DnsZone"><span class="symbol resource"></span>DnsZone</a></li>
     <li><a href="function" title="Function"><span class="symbol resource"></span>Function</a></li>
     <li><a href="functioniambinding" title="FunctionIamBinding"><span class="symbol resource"></span>FunctionIamBinding</a></li>
+    <li><a href="functionscalingpolicy" title="FunctionScalingPolicy"><span class="symbol resource"></span>FunctionScalingPolicy</a></li>
     <li><a href="functiontrigger" title="FunctionTrigger"><span class="symbol resource"></span>FunctionTrigger</a></li>
     <li><a href="iamserviceaccount" title="IamServiceAccount"><span class="symbol resource"></span>IamServiceAccount</a></li>
     <li><a href="iamserviceaccountapikey" title="IamServiceAccountApiKey"><span class="symbol resource"></span>IamServiceAccountApiKey</a></li>
@@ -51,6 +54,7 @@ A Pulumi package for creating and managing yandex cloud resources.
     <li><a href="lbnetworkloadbalancer" title="LbNetworkLoadBalancer"><span class="symbol resource"></span>LbNetworkLoadBalancer</a></li>
     <li><a href="lbtargetgroup" title="LbTargetGroup"><span class="symbol resource"></span>LbTargetGroup</a></li>
     <li><a href="mdbclickhousecluster" title="MdbClickhouseCluster"><span class="symbol resource"></span>MdbClickhouseCluster</a></li>
+    <li><a href="mdbelasticsearchcluster" title="MdbElasticSearchCluster"><span class="symbol resource"></span>MdbElasticSearchCluster</a></li>
     <li><a href="mdbkafkacluster" title="MdbKafkaCluster"><span class="symbol resource"></span>MdbKafkaCluster</a></li>
     <li><a href="mdbmongodbcluster" title="MdbMongodbCluster"><span class="symbol resource"></span>MdbMongodbCluster</a></li>
     <li><a href="mdbmysqlcluster" title="MdbMysqlCluster"><span class="symbol resource"></span>MdbMysqlCluster</a></li>
@@ -60,6 +64,7 @@ A Pulumi package for creating and managing yandex cloud resources.
     <li><a href="provider" title="Provider"><span class="symbol resource"></span>Provider</a></li>
     <li><a href="resourcemanagercloudiambinding" title="ResourcemanagerCloudIamBinding"><span class="symbol resource"></span>ResourcemanagerCloudIamBinding</a></li>
     <li><a href="resourcemanagercloudiammember" title="ResourcemanagerCloudIamMember"><span class="symbol resource"></span>ResourcemanagerCloudIamMember</a></li>
+    <li><a href="resourcemanagerfolder" title="ResourcemanagerFolder"><span class="symbol resource"></span>ResourcemanagerFolder</a></li>
     <li><a href="resourcemanagerfolderiambinding" title="ResourcemanagerFolderIamBinding"><span class="symbol resource"></span>ResourcemanagerFolderIamBinding</a></li>
     <li><a href="resourcemanagerfolderiammember" title="ResourcemanagerFolderIamMember"><span class="symbol resource"></span>ResourcemanagerFolderIamMember</a></li>
     <li><a href="resourcemanagerfolderiampolicy" title="ResourcemanagerFolderIamPolicy"><span class="symbol resource"></span>ResourcemanagerFolderIamPolicy</a></li>
@@ -70,6 +75,7 @@ A Pulumi package for creating and managing yandex cloud resources.
     <li><a href="vpcnetwork" title="VpcNetwork"><span class="symbol resource"></span>VpcNetwork</a></li>
     <li><a href="vpcroutetable" title="VpcRouteTable"><span class="symbol resource"></span>VpcRouteTable</a></li>
     <li><a href="vpcsecuritygroup" title="VpcSecurityGroup"><span class="symbol resource"></span>VpcSecurityGroup</a></li>
+    <li><a href="vpcsecuritygrouprule" title="VpcSecurityGroupRule"><span class="symbol resource"></span>VpcSecurityGroupRule</a></li>
     <li><a href="vpcsubnet" title="VpcSubnet"><span class="symbol resource"></span>VpcSubnet</a></li>
     <li><a href="ydbdatabasededicated" title="YdbDatabaseDedicated"><span class="symbol resource"></span>YdbDatabaseDedicated</a></li>
     <li><a href="ydbdatabaseserverless" title="YdbDatabaseServerless"><span class="symbol resource"></span>YdbDatabaseServerless</a></li>
@@ -79,7 +85,9 @@ A Pulumi package for creating and managing yandex cloud resources.
 <ul class="api">
     <li><a href="getalbbackendgroup" title="GetAlbBackendGroup"><span class="symbol function"></span>GetAlbBackendGroup</a></li>
     <li><a href="getalbhttprouter" title="GetAlbHttpRouter"><span class="symbol function"></span>GetAlbHttpRouter</a></li>
+    <li><a href="getalbloadbalancer" title="GetAlbLoadBalancer"><span class="symbol function"></span>GetAlbLoadBalancer</a></li>
     <li><a href="getalbtargetgroup" title="GetAlbTargetGroup"><span class="symbol function"></span>GetAlbTargetGroup</a></li>
+    <li><a href="getalbvirtualhost" title="GetAlbVirtualHost"><span class="symbol function"></span>GetAlbVirtualHost</a></li>
     <li><a href="getapigateway" title="GetApiGateway"><span class="symbol function"></span>GetApiGateway</a></li>
     <li><a href="getclientconfig" title="GetClientConfig"><span class="symbol function"></span>GetClientConfig</a></li>
     <li><a href="getcomputedisk" title="GetComputeDisk"><span class="symbol function"></span>GetComputeDisk</a></li>
@@ -94,6 +102,7 @@ A Pulumi package for creating and managing yandex cloud resources.
     <li><a href="getdataproccluster" title="GetDataprocCluster"><span class="symbol function"></span>GetDataprocCluster</a></li>
     <li><a href="getdnszone" title="GetDnsZone"><span class="symbol function"></span>GetDnsZone</a></li>
     <li><a href="getfunction" title="GetFunction"><span class="symbol function"></span>GetFunction</a></li>
+    <li><a href="getfunctionscalingpolicy" title="GetFunctionScalingPolicy"><span class="symbol function"></span>GetFunctionScalingPolicy</a></li>
     <li><a href="getfunctiontrigger" title="GetFunctionTrigger"><span class="symbol function"></span>GetFunctionTrigger</a></li>
     <li><a href="getiampolicy" title="GetIamPolicy"><span class="symbol function"></span>GetIamPolicy</a></li>
     <li><a href="getiamrole" title="GetIamRole"><span class="symbol function"></span>GetIamRole</a></li>
@@ -106,6 +115,7 @@ A Pulumi package for creating and managing yandex cloud resources.
     <li><a href="getlbnetworkloadbalancer" title="GetLbNetworkLoadBalancer"><span class="symbol function"></span>GetLbNetworkLoadBalancer</a></li>
     <li><a href="getlbtargetgroup" title="GetLbTargetGroup"><span class="symbol function"></span>GetLbTargetGroup</a></li>
     <li><a href="getmdbclickhousecluster" title="GetMdbClickhouseCluster"><span class="symbol function"></span>GetMdbClickhouseCluster</a></li>
+    <li><a href="getmdbelasticsearchcluster" title="GetMdbElasticSearchCluster"><span class="symbol function"></span>GetMdbElasticSearchCluster</a></li>
     <li><a href="getmdbkafkacluster" title="GetMdbKafkaCluster"><span class="symbol function"></span>GetMdbKafkaCluster</a></li>
     <li><a href="getmdbmongodbcluster" title="GetMdbMongodbCluster"><span class="symbol function"></span>GetMdbMongodbCluster</a></li>
     <li><a href="getmdbmysqlcluster" title="GetMdbMysqlCluster"><span class="symbol function"></span>GetMdbMysqlCluster</a></li>
@@ -119,6 +129,7 @@ A Pulumi package for creating and managing yandex cloud resources.
     <li><a href="getvpcnetwork" title="GetVpcNetwork"><span class="symbol function"></span>GetVpcNetwork</a></li>
     <li><a href="getvpcroutetable" title="GetVpcRouteTable"><span class="symbol function"></span>GetVpcRouteTable</a></li>
     <li><a href="getvpcsecuritygroup" title="GetVpcSecurityGroup"><span class="symbol function"></span>GetVpcSecurityGroup</a></li>
+    <li><a href="getvpcsecuritygrouprule" title="GetVpcSecurityGroupRule"><span class="symbol function"></span>GetVpcSecurityGroupRule</a></li>
     <li><a href="getvpcsubnet" title="GetVpcSubnet"><span class="symbol function"></span>GetVpcSubnet</a></li>
     <li><a href="getydbdatabasededicated" title="GetYdbDatabaseDedicated"><span class="symbol function"></span>GetYdbDatabaseDedicated</a></li>
     <li><a href="getydbdatabaseserverless" title="GetYdbDatabaseServerless"><span class="symbol function"></span>GetYdbDatabaseServerless</a></li>
@@ -133,6 +144,6 @@ A Pulumi package for creating and managing yandex cloud resources.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`yandex` Terraform Provider](https://github.com/yandex-cloud/terraform-provider-yandex).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>0.4.0</dd>
+	<dd>0.5.0</dd>
 </dl>
 
