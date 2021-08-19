@@ -46,6 +46,7 @@ A Pulumi package for creating and managing pagerduty cloud resources.
     <li><a href="getruleset" title="GetRuleset"><span class="symbol function"></span>GetRuleset</a></li>
     <li><a href="getschedule" title="GetSchedule"><span class="symbol function"></span>GetSchedule</a></li>
     <li><a href="getservice" title="GetService"><span class="symbol function"></span>GetService</a></li>
+    <li><a href="getserviceintegration" title="GetServiceIntegration"><span class="symbol function"></span>GetServiceIntegration</a></li>
     <li><a href="getteam" title="GetTeam"><span class="symbol function"></span>GetTeam</a></li>
     <li><a href="getuser" title="GetUser"><span class="symbol function"></span>GetUser</a></li>
     <li><a href="getusercontactmethod" title="GetUserContactMethod"><span class="symbol function"></span>GetUserContactMethod</a></li>
@@ -61,6 +62,6 @@ A Pulumi package for creating and managing pagerduty cloud resources.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`pagerduty` Terraform Provider](https://github.com/PagerDuty/terraform-provider-pagerduty).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>2.1.0</dd>
+	<dd>2.1.1</dd>
 </dl>
 
