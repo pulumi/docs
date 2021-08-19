@@ -26,6 +26,7 @@ A Pulumi package for creating and managing hcloud cloud resources.
     <li><a href="network" title="Network"><span class="symbol resource"></span>Network</a></li>
     <li><a href="networkroute" title="NetworkRoute"><span class="symbol resource"></span>NetworkRoute</a></li>
     <li><a href="networksubnet" title="NetworkSubnet"><span class="symbol resource"></span>NetworkSubnet</a></li>
+    <li><a href="placementgroup" title="PlacementGroup"><span class="symbol resource"></span>PlacementGroup</a></li>
     <li><a href="provider" title="Provider"><span class="symbol resource"></span>Provider</a></li>
     <li><a href="rdns" title="Rdns"><span class="symbol resource"></span>Rdns</a></li>
     <li><a href="server" title="Server"><span class="symbol resource"></span>Server</a></li>
@@ -49,6 +50,7 @@ A Pulumi package for creating and managing hcloud cloud resources.
     <li><a href="getlocation" title="GetLocation"><span class="symbol function"></span>GetLocation</a></li>
     <li><a href="getlocations" title="GetLocations"><span class="symbol function"></span>GetLocations</a></li>
     <li><a href="getnetwork" title="GetNetwork"><span class="symbol function"></span>GetNetwork</a></li>
+    <li><a href="getplacementgroup" title="GetPlacementGroup"><span class="symbol function"></span>GetPlacementGroup</a></li>
     <li><a href="getserver" title="GetServer"><span class="symbol function"></span>GetServer</a></li>
     <li><a href="getservertype" title="GetServerType"><span class="symbol function"></span>GetServerType</a></li>
     <li><a href="getservertypes" title="GetServerTypes"><span class="symbol function"></span>GetServerTypes</a></li>
@@ -66,6 +68,6 @@ A Pulumi package for creating and managing hcloud cloud resources.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`hcloud` Terraform Provider](https://github.com/hetznercloud/terraform-provider-hcloud).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>1.2.0</dd>
+	<dd>1.3.0</dd>
 </dl>
 

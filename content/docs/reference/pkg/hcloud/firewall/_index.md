@@ -46,6 +46,17 @@ class MyStack : Stack
                         "::/0",
                     },
                 },
+                new HCloud.Inputs.FirewallRuleArgs
+                {
+                    Direction = "in",
+                    Protocol = "tcp",
+                    Port = "80-85",
+                    SourceIps = 
+                    {
+                        "0.0.0.0/0",
+                        "::/0",
+                    },
+                },
             },
         });
         var node1 = new HCloud.Server("node1", new HCloud.ServerArgs
@@ -79,14 +90,25 @@ Coming soon!
 import pulumi
 import pulumi_hcloud as hcloud
 
-myfirewall = hcloud.Firewall("myfirewall", rules=[hcloud.FirewallRuleArgs(
-    direction="in",
-    protocol="icmp",
-    source_ips=[
-        "0.0.0.0/0",
-        "::/0",
-    ],
-)])
+myfirewall = hcloud.Firewall("myfirewall", rules=[
+    hcloud.FirewallRuleArgs(
+        direction="in",
+        protocol="icmp",
+        source_ips=[
+            "0.0.0.0/0",
+            "::/0",
+        ],
+    ),
+    hcloud.FirewallRuleArgs(
+        direction="in",
+        protocol="tcp",
+        port="80-85",
+        source_ips=[
+            "0.0.0.0/0",
+            "::/0",
+        ],
+    ),
+])
 node1 = hcloud.Server("node1",
     image="debian-9",
     server_type="cx11",
@@ -104,14 +126,25 @@ node1 = hcloud.Server("node1",
 import * as pulumi from "@pulumi/pulumi";
 import * as hcloud from "@pulumi/hcloud";
 
-const myfirewall = new hcloud.Firewall("myfirewall", {rules: [{
-    direction: "in",
-    protocol: "icmp",
-    sourceIps: [
-        "0.0.0.0/0",
-        "::/0",
-    ],
-}]});
+const myfirewall = new hcloud.Firewall("myfirewall", {rules: [
+    {
+        direction: "in",
+        protocol: "icmp",
+        sourceIps: [
+            "0.0.0.0/0",
+            "::/0",
+        ],
+    },
+    {
+        direction: "in",
+        protocol: "tcp",
+        port: "80-85",
+        sourceIps: [
+            "0.0.0.0/0",
+            "::/0",
+        ],
+    },
+]});
 const node1 = new hcloud.Server("node1", {
     image: "debian-9",
     serverType: "cx11",
@@ -759,7 +792,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Port of the Firewall Rule. Required when `protocol` is `tcp` or `udp`. You can use `any` to allow all ports for the specific protocol. Port ranges are also possible: `80:85` allows all ports between 80 and 85.
+    <dd>{{% md %}}Port of the Firewall Rule. Required when `protocol` is `tcp` or `udp`. You can use `any` to allow all ports for the specific protocol. Port ranges are also possible: `80-85` allows all ports between 80 and 85.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourceips_csharp">
@@ -817,7 +850,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Port of the Firewall Rule. Required when `protocol` is `tcp` or `udp`. You can use `any` to allow all ports for the specific protocol. Port ranges are also possible: `80:85` allows all ports between 80 and 85.
+    <dd>{{% md %}}Port of the Firewall Rule. Required when `protocol` is `tcp` or `udp`. You can use `any` to allow all ports for the specific protocol. Port ranges are also possible: `80-85` allows all ports between 80 and 85.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourceips_go">
@@ -875,7 +908,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Port of the Firewall Rule. Required when `protocol` is `tcp` or `udp`. You can use `any` to allow all ports for the specific protocol. Port ranges are also possible: `80:85` allows all ports between 80 and 85.
+    <dd>{{% md %}}Port of the Firewall Rule. Required when `protocol` is `tcp` or `udp`. You can use `any` to allow all ports for the specific protocol. Port ranges are also possible: `80-85` allows all ports between 80 and 85.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourceips_nodejs">
@@ -933,7 +966,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Port of the Firewall Rule. Required when `protocol` is `tcp` or `udp`. You can use `any` to allow all ports for the specific protocol. Port ranges are also possible: `80:85` allows all ports between 80 and 85.
+    <dd>{{% md %}}Port of the Firewall Rule. Required when `protocol` is `tcp` or `udp`. You can use `any` to allow all ports for the specific protocol. Port ranges are also possible: `80-85` allows all ports between 80 and 85.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_ips_python">
@@ -951,7 +984,7 @@ The following state arguments are supported:
 Firewalls can be imported using its `id`
 
 ```sh
- $ pulumi import hcloud:index/firewall:Firewall myfw <id>
+ $ pulumi import hcloud:index/firewall:Firewall myfirewall <id>
 ```
 
 

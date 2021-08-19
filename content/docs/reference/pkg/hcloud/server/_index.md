@@ -43,6 +43,7 @@ Servers can be imported using the server `id`
            <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
            <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
            <span class="nx">networks</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServerNetworkArgs]]</span> = None<span class="p">,</span>
+           <span class="nx">placement_group_id</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
            <span class="nx">rescue</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
            <span class="nx">server_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
            <span class="nx">ssh_keys</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
@@ -275,6 +276,15 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
     <dd>{{% md %}}Network the server should be attached to on creation. (Can be specified multiple times)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="placementgroupid_csharp">
+<a href="#placementgroupid_csharp" style="color: inherit; text-decoration: inherit;">Placement<wbr>Group<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Placement Group ID the server added to on creation.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="rescue_csharp">
 <a href="#rescue_csharp" style="color: inherit; text-decoration: inherit;">Rescue</a>
 </span>
@@ -403,6 +413,15 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type"><a href="#servernetwork">[]Server<wbr>Network<wbr>Type<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Network the server should be attached to on creation. (Can be specified multiple times)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="placementgroupid_go">
+<a href="#placementgroupid_go" style="color: inherit; text-decoration: inherit;">Placement<wbr>Group<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Placement Group ID the server added to on creation.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rescue_go">
@@ -535,6 +554,15 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
     <dd>{{% md %}}Network the server should be attached to on creation. (Can be specified multiple times)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="placementgroupid_nodejs">
+<a href="#placementgroupid_nodejs" style="color: inherit; text-decoration: inherit;">placement<wbr>Group<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Placement Group ID the server added to on creation.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="rescue_nodejs">
 <a href="#rescue_nodejs" style="color: inherit; text-decoration: inherit;">rescue</a>
 </span>
@@ -663,6 +691,15 @@ The Server resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type"><a href="#servernetwork">Sequence[Server<wbr>Network<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Network the server should be attached to on creation. (Can be specified multiple times)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="placement_group_id_python">
+<a href="#placement_group_id_python" style="color: inherit; text-decoration: inherit;">placement_<wbr>group_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Placement Group ID the server added to on creation.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rescue_python">
@@ -958,6 +995,7 @@ Get an existing Server resource's state with the given name, ID, and optional ex
         <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">networks</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServerNetworkArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">placement_group_id</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
         <span class="nx">rescue</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">server_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">ssh_keys</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
@@ -1201,6 +1239,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Network the server should be attached to on creation. (Can be specified multiple times)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_placementgroupid_csharp">
+<a href="#state_placementgroupid_csharp" style="color: inherit; text-decoration: inherit;">Placement<wbr>Group<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Placement Group ID the server added to on creation.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_rescue_csharp">
 <a href="#state_rescue_csharp" style="color: inherit; text-decoration: inherit;">Rescue</a>
 </span>
@@ -1374,6 +1421,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="#servernetwork">[]Server<wbr>Network<wbr>Type<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Network the server should be attached to on creation. (Can be specified multiple times)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_placementgroupid_go">
+<a href="#state_placementgroupid_go" style="color: inherit; text-decoration: inherit;">Placement<wbr>Group<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Placement Group ID the server added to on creation.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rescue_go">
@@ -1551,6 +1607,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Network the server should be attached to on creation. (Can be specified multiple times)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_placementgroupid_nodejs">
+<a href="#state_placementgroupid_nodejs" style="color: inherit; text-decoration: inherit;">placement<wbr>Group<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Placement Group ID the server added to on creation.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_rescue_nodejs">
 <a href="#state_rescue_nodejs" style="color: inherit; text-decoration: inherit;">rescue</a>
 </span>
@@ -1724,6 +1789,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="#servernetwork">Sequence[Server<wbr>Network<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Network the server should be attached to on creation. (Can be specified multiple times)
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_placement_group_id_python">
+<a href="#state_placement_group_id_python" style="color: inherit; text-decoration: inherit;">placement_<wbr>group_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Placement Group ID the server added to on creation.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rescue_python">
