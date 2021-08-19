@@ -27,8 +27,10 @@ meta_desc: "Documentation for the okta.deprecated.SecurePasswordStoreApp resourc
                            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
                            <span class="nx">accessibility_error_redirect_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                            <span class="nx">accessibility_self_service</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                           <span class="nx">admin_note</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                            <span class="nx">auto_submit_toolbar</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
                            <span class="nx">credentials_scheme</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                           <span class="nx">enduser_note</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                            <span class="nx">groups</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
                            <span class="nx">hide_ios</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
                            <span class="nx">hide_web</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
@@ -234,6 +236,15 @@ The SecurePasswordStoreApp resource accepts the following [input]({{< relref "/d
     <dd>{{% md %}}Enable self service
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="adminnote_csharp">
+<a href="#adminnote_csharp" style="color: inherit; text-decoration: inherit;">Admin<wbr>Note</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Application notes for admins.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="autosubmittoolbar_csharp">
 <a href="#autosubmittoolbar_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Submit<wbr>Toolbar</a>
 </span>
@@ -250,6 +261,15 @@ The SecurePasswordStoreApp resource accepts the following [input]({{< relref "/d
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Application credentials scheme
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="endusernote_csharp">
+<a href="#endusernote_csharp" style="color: inherit; text-decoration: inherit;">Enduser<wbr>Note</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Application notes for end users.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="groups_csharp">
@@ -472,6 +492,15 @@ The SecurePasswordStoreApp resource accepts the following [input]({{< relref "/d
     <dd>{{% md %}}Enable self service
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="adminnote_go">
+<a href="#adminnote_go" style="color: inherit; text-decoration: inherit;">Admin<wbr>Note</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Application notes for admins.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="autosubmittoolbar_go">
 <a href="#autosubmittoolbar_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Submit<wbr>Toolbar</a>
 </span>
@@ -488,6 +517,15 @@ The SecurePasswordStoreApp resource accepts the following [input]({{< relref "/d
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Application credentials scheme
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="endusernote_go">
+<a href="#endusernote_go" style="color: inherit; text-decoration: inherit;">Enduser<wbr>Note</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Application notes for end users.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="groups_go">
@@ -710,6 +748,15 @@ The SecurePasswordStoreApp resource accepts the following [input]({{< relref "/d
     <dd>{{% md %}}Enable self service
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="adminnote_nodejs">
+<a href="#adminnote_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>Note</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Application notes for admins.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="autosubmittoolbar_nodejs">
 <a href="#autosubmittoolbar_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Submit<wbr>Toolbar</a>
 </span>
@@ -726,6 +773,15 @@ The SecurePasswordStoreApp resource accepts the following [input]({{< relref "/d
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Application credentials scheme
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="endusernote_nodejs">
+<a href="#endusernote_nodejs" style="color: inherit; text-decoration: inherit;">enduser<wbr>Note</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Application notes for end users.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="groups_nodejs">
@@ -948,6 +1004,15 @@ The SecurePasswordStoreApp resource accepts the following [input]({{< relref "/d
     <dd>{{% md %}}Enable self service
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="admin_note_python">
+<a href="#admin_note_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>note</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Application notes for admins.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="auto_submit_toolbar_python">
 <a href="#auto_submit_toolbar_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>submit_<wbr>toolbar</a>
 </span>
@@ -964,6 +1029,15 @@ The SecurePasswordStoreApp resource accepts the following [input]({{< relref "/d
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Application credentials scheme
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enduser_note_python">
+<a href="#enduser_note_python" style="color: inherit; text-decoration: inherit;">enduser_<wbr>note</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Application notes for end users.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="groups_python">
@@ -1310,8 +1384,10 @@ Get an existing SecurePasswordStoreApp resource's state with the given name, ID,
         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
         <span class="nx">accessibility_error_redirect_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">accessibility_self_service</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">admin_note</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">auto_submit_toolbar</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">credentials_scheme</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">enduser_note</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">groups</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
         <span class="nx">hide_ios</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">hide_web</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
@@ -1467,6 +1543,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Enable self service
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_adminnote_csharp">
+<a href="#state_adminnote_csharp" style="color: inherit; text-decoration: inherit;">Admin<wbr>Note</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Application notes for admins.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_autosubmittoolbar_csharp">
 <a href="#state_autosubmittoolbar_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Submit<wbr>Toolbar</a>
 </span>
@@ -1483,6 +1568,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Application credentials scheme
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_endusernote_csharp">
+<a href="#state_endusernote_csharp" style="color: inherit; text-decoration: inherit;">Enduser<wbr>Note</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Application notes for end users.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_groups_csharp">
@@ -1732,6 +1826,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Enable self service
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_adminnote_go">
+<a href="#state_adminnote_go" style="color: inherit; text-decoration: inherit;">Admin<wbr>Note</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Application notes for admins.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_autosubmittoolbar_go">
 <a href="#state_autosubmittoolbar_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Submit<wbr>Toolbar</a>
 </span>
@@ -1748,6 +1851,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Application credentials scheme
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_endusernote_go">
+<a href="#state_endusernote_go" style="color: inherit; text-decoration: inherit;">Enduser<wbr>Note</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Application notes for end users.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_groups_go">
@@ -1997,6 +2109,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Enable self service
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_adminnote_nodejs">
+<a href="#state_adminnote_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>Note</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Application notes for admins.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_autosubmittoolbar_nodejs">
 <a href="#state_autosubmittoolbar_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Submit<wbr>Toolbar</a>
 </span>
@@ -2013,6 +2134,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Application credentials scheme
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_endusernote_nodejs">
+<a href="#state_endusernote_nodejs" style="color: inherit; text-decoration: inherit;">enduser<wbr>Note</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Application notes for end users.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_groups_nodejs">
@@ -2262,6 +2392,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Enable self service
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_admin_note_python">
+<a href="#state_admin_note_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>note</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Application notes for admins.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_auto_submit_toolbar_python">
 <a href="#state_auto_submit_toolbar_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>submit_<wbr>toolbar</a>
 </span>
@@ -2278,6 +2417,15 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Application credentials scheme
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_enduser_note_python">
+<a href="#state_enduser_note_python" style="color: inherit; text-decoration: inherit;">enduser_<wbr>note</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Application notes for end users.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_groups_python">

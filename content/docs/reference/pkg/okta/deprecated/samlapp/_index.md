@@ -29,6 +29,7 @@ meta_desc: "Documentation for the okta.deprecated.SamlApp resource with examples
             <span class="nx">accessibility_login_redirect_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">accessibility_self_service</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
             <span class="nx">acs_endpoints</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+            <span class="nx">admin_note</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">app_settings_json</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">assertion_signed</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
             <span class="nx">attribute_statements</span><span class="p">:</span> <span class="nx">Optional[Sequence[SamlAppAttributeStatementArgs]]</span> = None<span class="p">,</span>
@@ -38,6 +39,7 @@ meta_desc: "Documentation for the okta.deprecated.SamlApp resource with examples
             <span class="nx">default_relay_state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">destination</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">digest_algorithm</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+            <span class="nx">enduser_note</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">features</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
             <span class="nx">groups</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
             <span class="nx">hide_ios</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
@@ -240,6 +242,15 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
     <dd>{{% md %}}List of ACS endpoints for this SAML application
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="adminnote_csharp">
+<a href="#adminnote_csharp" style="color: inherit; text-decoration: inherit;">Admin<wbr>Note</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Application notes for admins.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="appsettingsjson_csharp">
 <a href="#appsettingsjson_csharp" style="color: inherit; text-decoration: inherit;">App<wbr>Settings<wbr>Json</a>
 </span>
@@ -318,6 +329,15 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Determines the digest algorithm used to digitally sign the SAML assertion and response
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="endusernote_csharp">
+<a href="#endusernote_csharp" style="color: inherit; text-decoration: inherit;">Enduser<wbr>Note</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Application notes for end users.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="features_csharp">
@@ -612,6 +632,15 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
     <dd>{{% md %}}List of ACS endpoints for this SAML application
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="adminnote_go">
+<a href="#adminnote_go" style="color: inherit; text-decoration: inherit;">Admin<wbr>Note</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Application notes for admins.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="appsettingsjson_go">
 <a href="#appsettingsjson_go" style="color: inherit; text-decoration: inherit;">App<wbr>Settings<wbr>Json</a>
 </span>
@@ -690,6 +719,15 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Determines the digest algorithm used to digitally sign the SAML assertion and response
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="endusernote_go">
+<a href="#endusernote_go" style="color: inherit; text-decoration: inherit;">Enduser<wbr>Note</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Application notes for end users.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="features_go">
@@ -984,6 +1022,15 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
     <dd>{{% md %}}List of ACS endpoints for this SAML application
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="adminnote_nodejs">
+<a href="#adminnote_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>Note</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Application notes for admins.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="appsettingsjson_nodejs">
 <a href="#appsettingsjson_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Settings<wbr>Json</a>
 </span>
@@ -1062,6 +1109,15 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Determines the digest algorithm used to digitally sign the SAML assertion and response
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="endusernote_nodejs">
+<a href="#endusernote_nodejs" style="color: inherit; text-decoration: inherit;">enduser<wbr>Note</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Application notes for end users.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="features_nodejs">
@@ -1356,6 +1412,15 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
     <dd>{{% md %}}List of ACS endpoints for this SAML application
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="admin_note_python">
+<a href="#admin_note_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>note</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Application notes for admins.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="app_settings_json_python">
 <a href="#app_settings_json_python" style="color: inherit; text-decoration: inherit;">app_<wbr>settings_<wbr>json</a>
 </span>
@@ -1434,6 +1499,15 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Determines the digest algorithm used to digitally sign the SAML assertion and response
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enduser_note_python">
+<a href="#enduser_note_python" style="color: inherit; text-decoration: inherit;">enduser_<wbr>note</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Application notes for end users.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="features_python">
@@ -2151,6 +2225,7 @@ Get an existing SamlApp resource's state with the given name, ID, and optional e
         <span class="nx">accessibility_login_redirect_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">accessibility_self_service</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">acs_endpoints</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+        <span class="nx">admin_note</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">app_settings_json</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">assertion_signed</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">attribute_statements</span><span class="p">:</span> <span class="nx">Optional[Sequence[SamlAppAttributeStatementArgs]]</span> = None<span class="p">,</span>
@@ -2161,6 +2236,7 @@ Get an existing SamlApp resource's state with the given name, ID, and optional e
         <span class="nx">default_relay_state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">destination</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">digest_algorithm</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">enduser_note</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">entity_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">entity_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">features</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
@@ -2347,6 +2423,15 @@ The following state arguments are supported:
     <dd>{{% md %}}List of ACS endpoints for this SAML application
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_adminnote_csharp">
+<a href="#state_adminnote_csharp" style="color: inherit; text-decoration: inherit;">Admin<wbr>Note</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Application notes for admins.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_appsettingsjson_csharp">
 <a href="#state_appsettingsjson_csharp" style="color: inherit; text-decoration: inherit;">App<wbr>Settings<wbr>Json</a>
 </span>
@@ -2434,6 +2519,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Determines the digest algorithm used to digitally sign the SAML assertion and response
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_endusernote_csharp">
+<a href="#state_endusernote_csharp" style="color: inherit; text-decoration: inherit;">Enduser<wbr>Note</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Application notes for end users.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_entitykey_csharp">
@@ -2818,6 +2912,15 @@ The following state arguments are supported:
     <dd>{{% md %}}List of ACS endpoints for this SAML application
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_adminnote_go">
+<a href="#state_adminnote_go" style="color: inherit; text-decoration: inherit;">Admin<wbr>Note</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Application notes for admins.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_appsettingsjson_go">
 <a href="#state_appsettingsjson_go" style="color: inherit; text-decoration: inherit;">App<wbr>Settings<wbr>Json</a>
 </span>
@@ -2905,6 +3008,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Determines the digest algorithm used to digitally sign the SAML assertion and response
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_endusernote_go">
+<a href="#state_endusernote_go" style="color: inherit; text-decoration: inherit;">Enduser<wbr>Note</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Application notes for end users.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_entitykey_go">
@@ -3289,6 +3401,15 @@ The following state arguments are supported:
     <dd>{{% md %}}List of ACS endpoints for this SAML application
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_adminnote_nodejs">
+<a href="#state_adminnote_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>Note</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Application notes for admins.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_appsettingsjson_nodejs">
 <a href="#state_appsettingsjson_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Settings<wbr>Json</a>
 </span>
@@ -3376,6 +3497,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Determines the digest algorithm used to digitally sign the SAML assertion and response
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_endusernote_nodejs">
+<a href="#state_endusernote_nodejs" style="color: inherit; text-decoration: inherit;">enduser<wbr>Note</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Application notes for end users.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_entitykey_nodejs">
@@ -3760,6 +3890,15 @@ The following state arguments are supported:
     <dd>{{% md %}}List of ACS endpoints for this SAML application
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_admin_note_python">
+<a href="#state_admin_note_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>note</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Application notes for admins.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_app_settings_json_python">
 <a href="#state_app_settings_json_python" style="color: inherit; text-decoration: inherit;">app_<wbr>settings_<wbr>json</a>
 </span>
@@ -3847,6 +3986,15 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Determines the digest algorithm used to digitally sign the SAML assertion and response
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_enduser_note_python">
+<a href="#state_enduser_note_python" style="color: inherit; text-decoration: inherit;">enduser_<wbr>note</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Application notes for end users.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_entity_key_python">
