@@ -137,6 +137,7 @@ const target = new kong.Target("target", {
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">Target</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
            <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+           <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
            <span class="nx">target</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
            <span class="nx">upstream_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
            <span class="nx">weight</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">)</span>
@@ -294,6 +295,15 @@ The Target resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}is the weight this target gets within the upstream load balancer (0-1000, defaults to 100).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tags_csharp">
+<a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A list set of strings associated with the Plugin for grouping and filtering
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -325,6 +335,15 @@ The Target resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}is the weight this target gets within the upstream load balancer (0-1000, defaults to 100).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tags_go">
+<a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}A list set of strings associated with the Plugin for grouping and filtering
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -356,6 +375,15 @@ The Target resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}is the weight this target gets within the upstream load balancer (0-1000, defaults to 100).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tags_nodejs">
+<a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}A list set of strings associated with the Plugin for grouping and filtering
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -387,6 +415,15 @@ The Target resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}is the weight this target gets within the upstream load balancer (0-1000, defaults to 100).
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tags_python">
+<a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}A list set of strings associated with the Plugin for grouping and filtering
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -461,6 +498,7 @@ Get an existing Target resource's state with the given name, ID, and optional ex
 <span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
         <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
         <span class="nx">target</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">upstream_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">weight</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">) -&gt;</span> Target</code></pre></div>
@@ -576,6 +614,15 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="state_tags_csharp">
+<a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A list set of strings associated with the Plugin for grouping and filtering
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_targetaddress_csharp">
 <a href="#state_targetaddress_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Address</a>
 </span>
@@ -606,6 +653,15 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="state_tags_go">
+<a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}A list set of strings associated with the Plugin for grouping and filtering
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_target_go">
 <a href="#state_target_go" style="color: inherit; text-decoration: inherit;">Target</a>
@@ -638,6 +694,15 @@ The following state arguments are supported:
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="state_tags_nodejs">
+<a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}A list set of strings associated with the Plugin for grouping and filtering
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_target_nodejs">
 <a href="#state_target_nodejs" style="color: inherit; text-decoration: inherit;">target</a>
 </span>
@@ -668,6 +733,15 @@ The following state arguments are supported:
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="state_tags_python">
+<a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}A list set of strings associated with the Plugin for grouping and filtering
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_target_python">
 <a href="#state_target_python" style="color: inherit; text-decoration: inherit;">target</a>

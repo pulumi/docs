@@ -348,7 +348,7 @@ The ConsumerAcl resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}A list of strings associated with the consumer acl for grouping and filtering.
+    <dd>{{% md %}}A list of strings associated with the consumer acl for grouping and filtering
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -379,7 +379,7 @@ The ConsumerAcl resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}A list of strings associated with the consumer acl for grouping and filtering.
+    <dd>{{% md %}}A list of strings associated with the consumer acl for grouping and filtering
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -410,7 +410,7 @@ The ConsumerAcl resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}A list of strings associated with the consumer acl for grouping and filtering.
+    <dd>{{% md %}}A list of strings associated with the consumer acl for grouping and filtering
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -441,7 +441,7 @@ The ConsumerAcl resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}A list of strings associated with the consumer acl for grouping and filtering.
+    <dd>{{% md %}}A list of strings associated with the consumer acl for grouping and filtering
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -655,7 +655,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}A list of strings associated with the consumer acl for grouping and filtering.
+    <dd>{{% md %}}A list of strings associated with the consumer acl for grouping and filtering
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -686,7 +686,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}A list of strings associated with the consumer acl for grouping and filtering.
+    <dd>{{% md %}}A list of strings associated with the consumer acl for grouping and filtering
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -717,7 +717,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}A list of strings associated with the consumer acl for grouping and filtering.
+    <dd>{{% md %}}A list of strings associated with the consumer acl for grouping and filtering
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -748,7 +748,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}A list of strings associated with the consumer acl for grouping and filtering.
+    <dd>{{% md %}}A list of strings associated with the consumer acl for grouping and filtering
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
