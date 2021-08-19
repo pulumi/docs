@@ -14,6 +14,14 @@ Manages a User Base Schema property.
 
 This resource allows you to configure a base user schema property.
 
+IMPORTANT NOTE:
+
+Based on the [official documentation](https://developer.okta.com/docs/reference/api/schemas/#user-profile-base-subschema)
+base properties can not be modified, except to update permissions, to change the nullability of `firstName` and
+`lastName` (`required` property) or to specify a `pattern` for `login`. Currently, `title` and `type` are required, so
+they should be set to the current values of the base property. This will be fixed in the future releases, as this is
+a breaking change.
+
 {{% examples %}}
 
 ## Example Usage
@@ -36,9 +44,10 @@ class MyStack : Stack
     {
         var example = new Okta.UserBaseSchemaProperty("example", new Okta.UserBaseSchemaPropertyArgs
         {
-            Index = "customPropertyName",
+            Index = "firstName",
             Master = "OKTA",
-            Title = "customPropertyName",
+            Required = true,
+            Title = "First name",
             Type = "string",
             UserType = data.Okta_user_type.Example.Id,
         });
@@ -64,9 +73,10 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := okta.NewUserBaseSchemaProperty(ctx, "example", &okta.UserBaseSchemaPropertyArgs{
-			Index:    pulumi.String("customPropertyName"),
+			Index:    pulumi.String("firstName"),
 			Master:   pulumi.String("OKTA"),
-			Title:    pulumi.String("customPropertyName"),
+			Required: pulumi.Bool(true),
+			Title:    pulumi.String("First name"),
 			Type:     pulumi.String("string"),
 			UserType: pulumi.Any(data.Okta_user_type.Example.Id),
 		})
@@ -89,9 +99,10 @@ import pulumi
 import pulumi_okta as okta
 
 example = okta.UserBaseSchemaProperty("example",
-    index="customPropertyName",
+    index="firstName",
     master="OKTA",
-    title="customPropertyName",
+    required=True,
+    title="First name",
     type="string",
     user_type=data["okta_user_type"]["example"]["id"])
 ```
@@ -108,9 +119,10 @@ import * as pulumi from "@pulumi/pulumi";
 import * as okta from "@pulumi/okta";
 
 const example = new okta.UserBaseSchemaProperty("example", {
-    index: "customPropertyName",
+    index: "firstName",
     master: "OKTA",
-    title: "customPropertyName",
+    required: true,
+    title: "First name",
     type: "string",
     userType: okta_user_type_example.id,
 });
@@ -346,7 +358,7 @@ The UserBaseSchemaProperty resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}User type ID
+    <dd>{{% md %}}User type ID.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -422,7 +434,7 @@ The UserBaseSchemaProperty resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}User type ID
+    <dd>{{% md %}}User type ID.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -498,7 +510,7 @@ The UserBaseSchemaProperty resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}User type ID
+    <dd>{{% md %}}User type ID.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -574,7 +586,7 @@ The UserBaseSchemaProperty resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}User type ID
+    <dd>{{% md %}}User type ID.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -838,7 +850,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}User type ID
+    <dd>{{% md %}}User type ID.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -914,7 +926,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}User type ID
+    <dd>{{% md %}}User type ID.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -990,7 +1002,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}User type ID
+    <dd>{{% md %}}User type ID.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1066,7 +1078,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}User type ID
+    <dd>{{% md %}}User type ID.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
