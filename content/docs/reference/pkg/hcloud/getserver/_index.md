@@ -26,6 +26,7 @@ meta_desc: "Documentation for the hcloud.getServer function with examples, input
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_server(</span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
                <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+               <span class="nx">placement_group</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                <span class="nx">selector</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                <span class="nx">with_selector</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                <span class="nx">with_statuses</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
@@ -71,7 +72,15 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the server.
-{{% /md %}}</dd><dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="placementgroup_csharp">
+<a href="#placementgroup_csharp" style="color: inherit; text-decoration: inherit;">Placement<wbr>Group</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="selector_csharp">
 <a href="#selector_csharp" style="color: inherit; text-decoration: inherit;">Selector</a>
@@ -119,7 +128,15 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the server.
-{{% /md %}}</dd><dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="placementgroup_go">
+<a href="#placementgroup_go" style="color: inherit; text-decoration: inherit;">Placement<wbr>Group</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="selector_go">
 <a href="#selector_go" style="color: inherit; text-decoration: inherit;">Selector</a>
@@ -167,7 +184,15 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the server.
-{{% /md %}}</dd><dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="placementgroup_nodejs">
+<a href="#placementgroup_nodejs" style="color: inherit; text-decoration: inherit;">placement<wbr>Group</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="selector_nodejs">
 <a href="#selector_nodejs" style="color: inherit; text-decoration: inherit;">selector</a>
@@ -215,7 +240,15 @@ The following arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the server.
-{{% /md %}}</dd><dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="placement_group_python">
+<a href="#placement_group_python" style="color: inherit; text-decoration: inherit;">placement_<wbr>group</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="selector_python">
 <a href="#selector_python" style="color: inherit; text-decoration: inherit;">selector</a>
@@ -397,7 +430,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(string) The status of the server.
-{{% /md %}}</dd><dt class="property- property-deprecated"
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="placementgroup_csharp">
+<a href="#placementgroup_csharp" style="color: inherit; text-decoration: inherit;">Placement<wbr>Group</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property- property-deprecated"
             title=", Deprecated">
         <span id="selector_csharp">
 <a href="#selector_csharp" style="color: inherit; text-decoration: inherit;">Selector</a>
@@ -568,7 +609,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(string) The status of the server.
-{{% /md %}}</dd><dt class="property- property-deprecated"
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="placementgroup_go">
+<a href="#placementgroup_go" style="color: inherit; text-decoration: inherit;">Placement<wbr>Group</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property- property-deprecated"
             title=", Deprecated">
         <span id="selector_go">
 <a href="#selector_go" style="color: inherit; text-decoration: inherit;">Selector</a>
@@ -739,7 +788,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(string) The status of the server.
-{{% /md %}}</dd><dt class="property- property-deprecated"
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="placementgroup_nodejs">
+<a href="#placementgroup_nodejs" style="color: inherit; text-decoration: inherit;">placement<wbr>Group</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property- property-deprecated"
             title=", Deprecated">
         <span id="selector_nodejs">
 <a href="#selector_nodejs" style="color: inherit; text-decoration: inherit;">selector</a>
@@ -910,7 +967,15 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(string) The status of the server.
-{{% /md %}}</dd><dt class="property- property-deprecated"
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="placement_group_python">
+<a href="#placement_group_python" style="color: inherit; text-decoration: inherit;">placement_<wbr>group</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property- property-deprecated"
             title=", Deprecated">
         <span id="selector_python">
 <a href="#selector_python" style="color: inherit; text-decoration: inherit;">selector</a>
