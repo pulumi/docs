@@ -174,6 +174,7 @@ A resource description.
 | `deprecationMessage`                                    | `string`                                     | No       | DeprecationMessage indicates whether or not the resource is deprecated.                                                                                              |
 | `language`                                              | [`map[ResourceLanguage]`](#resourcelanguage) | No       | Language specifies additional language-specific data about the resource.                                                                                             |
 | `isComponent`                                           | `boolean`                                    | No       | IsComponent indicates whether the resource is a ComponentResource.                                                                                                   |
+| `methods`                                               | `map[string]string`                          | No       | Methods maps method names to functions in this schema.                                                                                                               |
 
 ### Function
 
