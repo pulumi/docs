@@ -474,7 +474,6 @@ const fooInstance = new aws.ec2.Instance("fooInstance", {
              <span class="nx">source_dest_check</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
              <span class="nx">subnet_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
-             <span class="nx">tags_all</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
              <span class="nx">tenancy</span><span class="p">:</span> <span class="nx">Optional[Union[str, Tenancy]]</span> = None<span class="p">,</span>
              <span class="nx">user_data</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">user_data_base64</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -907,15 +906,6 @@ See Launch Template Specification below for more details.
     <dd>{{% md %}}A map of tags to assign to the resource. Note that these tags apply to the instance and not block storage devices. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="tagsall_csharp">
-<a href="#tagsall_csharp" style="color: inherit; text-decoration: inherit;">Tags<wbr>All</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, string&gt;</span>
-    </dt>
-    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="tenancy_csharp">
 <a href="#tenancy_csharp" style="color: inherit; text-decoration: inherit;">Tenancy</a>
 </span>
@@ -1261,15 +1251,6 @@ See Launch Template Specification below for more details.
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource. Note that these tags apply to the instance and not block storage devices. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="tagsall_go">
-<a href="#tagsall_go" style="color: inherit; text-decoration: inherit;">Tags<wbr>All</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]string</span>
-    </dt>
-    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenancy_go">
@@ -1619,15 +1600,6 @@ See Launch Template Specification below for more details.
     <dd>{{% md %}}A map of tags to assign to the resource. Note that these tags apply to the instance and not block storage devices. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="tagsall_nodejs">
-<a href="#tagsall_nodejs" style="color: inherit; text-decoration: inherit;">tags<wbr>All</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
-    </dt>
-    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="tenancy_nodejs">
 <a href="#tenancy_nodejs" style="color: inherit; text-decoration: inherit;">tenancy</a>
 </span>
@@ -1975,15 +1947,6 @@ See Launch Template Specification below for more details.
     <dd>{{% md %}}A map of tags to assign to the resource. Note that these tags apply to the instance and not block storage devices. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="tags_all_python">
-<a href="#tags_all_python" style="color: inherit; text-decoration: inherit;">tags_<wbr>all</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
-    </dt>
-    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="tenancy_python">
 <a href="#tenancy_python" style="color: inherit; text-decoration: inherit;">tenancy</a>
 </span>
@@ -2118,6 +2081,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The state of the instance. One of: `pending`, `running`, `shutting-down`, `terminated`, `stopping`, `stopped`. See [Instance Lifecycle](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-lifecycle.html) for more information.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="tagsall_csharp">
+<a href="#tagsall_csharp" style="color: inherit; text-decoration: inherit;">Tags<wbr>All</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2202,6 +2174,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The public IP address assigned to the instance, if applicable. **NOTE**: If you are using an `aws.ec2.Eip` with your instance, you should refer to the EIP's address directly and not use `public_ip` as this field will change after the EIP is attached.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="tagsall_go">
+<a href="#tagsall_go" style="color: inherit; text-decoration: inherit;">Tags<wbr>All</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2286,6 +2267,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The public IP address assigned to the instance, if applicable. **NOTE**: If you are using an `aws.ec2.Eip` with your instance, you should refer to the EIP's address directly and not use `public_ip` as this field will change after the EIP is attached.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="tagsall_nodejs">
+<a href="#tagsall_nodejs" style="color: inherit; text-decoration: inherit;">tags<wbr>All</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2370,6 +2360,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The public IP address assigned to the instance, if applicable. **NOTE**: If you are using an `aws.ec2.Eip` with your instance, you should refer to the EIP's address directly and not use `public_ip` as this field will change after the EIP is attached.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="tags_all_python">
+<a href="#tags_all_python" style="color: inherit; text-decoration: inherit;">tags_<wbr>all</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, str]</span>
+    </dt>
+    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

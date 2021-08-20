@@ -29,7 +29,6 @@ Provides an RDS DB proxy endpoint resource. For additional information, see the 
                   <span class="nx">db_proxy_endpoint_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                   <span class="nx">db_proxy_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                   <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
-                  <span class="nx">tags_all</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
                   <span class="nx">target_role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                   <span class="nx">vpc_security_group_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
                   <span class="nx">vpc_subnet_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">)</span>
@@ -198,14 +197,6 @@ The ProxyEndpoint resource accepts the following [input]({{< relref "/docs/intro
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="tagsall_csharp">
-<a href="#tagsall_csharp" style="color: inherit; text-decoration: inherit;">Tags<wbr>All</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, string&gt;</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="targetrole_csharp">
 <a href="#targetrole_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Role</a>
 </span>
@@ -263,14 +254,6 @@ The ProxyEndpoint resource accepts the following [input]({{< relref "/docs/intro
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="tagsall_go">
-<a href="#tagsall_go" style="color: inherit; text-decoration: inherit;">Tags<wbr>All</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetrole_go">
 <a href="#targetrole_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Role</a>
@@ -330,14 +313,6 @@ The ProxyEndpoint resource accepts the following [input]({{< relref "/docs/intro
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="tagsall_nodejs">
-<a href="#tagsall_nodejs" style="color: inherit; text-decoration: inherit;">tags<wbr>All</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="targetrole_nodejs">
 <a href="#targetrole_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Role</a>
 </span>
@@ -395,14 +370,6 @@ The ProxyEndpoint resource accepts the following [input]({{< relref "/docs/intro
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="tags_all_python">
-<a href="#tags_all_python" style="color: inherit; text-decoration: inherit;">tags_<wbr>all</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="target_role_python">
 <a href="#target_role_python" style="color: inherit; text-decoration: inherit;">target_<wbr>role</a>
@@ -468,6 +435,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Indicates whether this endpoint is the default endpoint for the associated DB proxy.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="tagsall_csharp">
+<a href="#tagsall_csharp" style="color: inherit; text-decoration: inherit;">Tags<wbr>All</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="vpcid_csharp">
 <a href="#vpcid_csharp" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Id</a>
 </span>
@@ -515,6 +490,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Indicates whether this endpoint is the default endpoint for the associated DB proxy.
 {{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="tagsall_go">
+<a href="#tagsall_go" style="color: inherit; text-decoration: inherit;">Tags<wbr>All</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vpcid_go">
 <a href="#vpcid_go" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Id</a>
@@ -564,6 +547,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Indicates whether this endpoint is the default endpoint for the associated DB proxy.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="tagsall_nodejs">
+<a href="#tagsall_nodejs" style="color: inherit; text-decoration: inherit;">tags<wbr>All</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="vpcid_nodejs">
 <a href="#vpcid_nodejs" style="color: inherit; text-decoration: inherit;">vpc<wbr>Id</a>
 </span>
@@ -611,6 +602,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Indicates whether this endpoint is the default endpoint for the associated DB proxy.
 {{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="tags_all_python">
+<a href="#tags_all_python" style="color: inherit; text-decoration: inherit;">tags_<wbr>all</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, str]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vpc_id_python">
 <a href="#vpc_id_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>id</a>

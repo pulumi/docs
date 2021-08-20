@@ -284,7 +284,6 @@ const tfenvtest = new aws.elasticbeanstalk.Environment("tfenvtest", {
                 <span class="nx">settings</span><span class="p">:</span> <span class="nx">Optional[Sequence[EnvironmentSettingArgs]]</span> = None<span class="p">,</span>
                 <span class="nx">solution_stack_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                 <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
-                <span class="nx">tags_all</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
                 <span class="nx">template_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                 <span class="nx">tier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                 <span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -508,14 +507,6 @@ off of. Example stacks can be found in the [Amazon API documentation](https://do
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="tagsall_csharp">
-<a href="#tagsall_csharp" style="color: inherit; text-decoration: inherit;">Tags<wbr>All</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, string&gt;</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="templatename_csharp">
 <a href="#templatename_csharp" style="color: inherit; text-decoration: inherit;">Template<wbr>Name</a>
 </span>
@@ -646,14 +637,6 @@ off of. Example stacks can be found in the [Amazon API documentation](https://do
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="tagsall_go">
-<a href="#tagsall_go" style="color: inherit; text-decoration: inherit;">Tags<wbr>All</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
@@ -796,14 +779,6 @@ off of. Example stacks can be found in the [Amazon API documentation](https://do
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="tagsall_nodejs">
-<a href="#tagsall_nodejs" style="color: inherit; text-decoration: inherit;">tags<wbr>All</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="templatename_nodejs">
 <a href="#templatename_nodejs" style="color: inherit; text-decoration: inherit;">template<wbr>Name</a>
 </span>
@@ -934,14 +909,6 @@ off of. Example stacks can be found in the [Amazon API documentation](https://do
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="tags_all_python">
-<a href="#tags_all_python" style="color: inherit; text-decoration: inherit;">tags_<wbr>all</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
@@ -1091,6 +1058,14 @@ the configuration.
     <dd>{{% md %}}SQS queues in use by this Environment.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="tagsall_csharp">
+<a href="#tagsall_csharp" style="color: inherit; text-decoration: inherit;">Tags<wbr>All</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="triggers_csharp">
 <a href="#triggers_csharp" style="color: inherit; text-decoration: inherit;">Triggers</a>
 </span>
@@ -1193,6 +1168,14 @@ the configuration.
     </dt>
     <dd>{{% md %}}SQS queues in use by this Environment.
 {{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="tagsall_go">
+<a href="#tagsall_go" style="color: inherit; text-decoration: inherit;">Tags<wbr>All</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="triggers_go">
 <a href="#triggers_go" style="color: inherit; text-decoration: inherit;">Triggers</a>
@@ -1297,6 +1280,14 @@ the configuration.
     <dd>{{% md %}}SQS queues in use by this Environment.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="tagsall_nodejs">
+<a href="#tagsall_nodejs" style="color: inherit; text-decoration: inherit;">tags<wbr>All</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="triggers_nodejs">
 <a href="#triggers_nodejs" style="color: inherit; text-decoration: inherit;">triggers</a>
 </span>
@@ -1399,6 +1390,14 @@ the configuration.
     </dt>
     <dd>{{% md %}}SQS queues in use by this Environment.
 {{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="tags_all_python">
+<a href="#tags_all_python" style="color: inherit; text-decoration: inherit;">tags_<wbr>all</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, str]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="triggers_python">
 <a href="#triggers_python" style="color: inherit; text-decoration: inherit;">triggers</a>

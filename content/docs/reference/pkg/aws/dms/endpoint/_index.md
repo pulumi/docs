@@ -200,7 +200,6 @@ const test = new aws.dms.Endpoint("test", {
              <span class="nx">service_access_role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">ssl_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
-             <span class="nx">tags_all</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
              <span class="nx">username</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">Endpoint</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
@@ -493,15 +492,6 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
     <dd>{{% md %}}A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="tagsall_csharp">
-<a href="#tagsall_csharp" style="color: inherit; text-decoration: inherit;">Tags<wbr>All</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, string&gt;</span>
-    </dt>
-    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider .
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="username_csharp">
 <a href="#username_csharp" style="color: inherit; text-decoration: inherit;">Username</a>
 </span>
@@ -675,15 +665,6 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="tagsall_go">
-<a href="#tagsall_go" style="color: inherit; text-decoration: inherit;">Tags<wbr>All</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]string</span>
-    </dt>
-    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider .
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="username_go">
@@ -861,15 +842,6 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
     <dd>{{% md %}}A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="tagsall_nodejs">
-<a href="#tagsall_nodejs" style="color: inherit; text-decoration: inherit;">tags<wbr>All</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
-    </dt>
-    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider .
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="username_nodejs">
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
 </span>
@@ -1045,15 +1017,6 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
     <dd>{{% md %}}A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="tags_all_python">
-<a href="#tags_all_python" style="color: inherit; text-decoration: inherit;">tags_<wbr>all</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
-    </dt>
-    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider .
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="username_python">
 <a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
 </span>
@@ -1089,7 +1052,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="tagsall_csharp">
+<a href="#tagsall_csharp" style="color: inherit; text-decoration: inherit;">Tags<wbr>All</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider .
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1110,7 +1082,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="tagsall_go">
+<a href="#tagsall_go" style="color: inherit; text-decoration: inherit;">Tags<wbr>All</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider .
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1131,7 +1112,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="tagsall_nodejs">
+<a href="#tagsall_nodejs" style="color: inherit; text-decoration: inherit;">tags<wbr>All</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider .
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1152,7 +1142,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="tags_all_python">
+<a href="#tags_all_python" style="color: inherit; text-decoration: inherit;">tags_<wbr>all</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, str]</span>
+    </dt>
+    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider .
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -2744,6 +2743,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Delimiter used to separate rows in the source files. Defaults to `\n`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="dataformat_csharp">
+<a href="#dataformat_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Format</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The output format for the files that AWS DMS uses to create S3 objects. Defaults to `csv`. Valid values are `csv` and `parquet`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="datepartitionenabled_csharp">
 <a href="#datepartitionenabled_csharp" style="color: inherit; text-decoration: inherit;">Date<wbr>Partition<wbr>Enabled</a>
 </span>
@@ -2753,6 +2761,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Partition S3 bucket folders based on transaction commit dates. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="encryptionmode_csharp">
+<a href="#encryptionmode_csharp" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The server-side encryption mode that you want to encrypt your .csv or .parquet object files copied to S3. Defaults to `SSE_S3`. Valid values are `SSE_S3` and `SSE_KMS`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="externaltabledefinition_csharp">
 <a href="#externaltabledefinition_csharp" style="color: inherit; text-decoration: inherit;">External<wbr>Table<wbr>Definition</a>
 </span>
@@ -2760,6 +2777,33 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}JSON document that describes how AWS DMS should interpret the data.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="parquettimestampinmillisecond_csharp">
+<a href="#parquettimestampinmillisecond_csharp" style="color: inherit; text-decoration: inherit;">Parquet<wbr>Timestamp<wbr>In<wbr>Millisecond</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}- Specifies the precision of any TIMESTAMP column values written to an S3 object file in .parquet format. Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="parquetversion_csharp">
+<a href="#parquetversion_csharp" style="color: inherit; text-decoration: inherit;">Parquet<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The version of the .parquet file format. Defaults to `parquet-1-0`. Valid values are `parquet-1-0` and `parquet-2-0`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="serversideencryptionkmskeyid_csharp">
+<a href="#serversideencryptionkmskeyid_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>Side<wbr>Encryption<wbr>Kms<wbr>Key<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}If you set encryptionMode to `SSE_KMS`, set this parameter to the Amazon Resource Name (ARN) for the AWS KMS key.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serviceaccessrolearn_csharp">
@@ -2820,6 +2864,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Delimiter used to separate rows in the source files. Defaults to `\n`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="dataformat_go">
+<a href="#dataformat_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Format</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The output format for the files that AWS DMS uses to create S3 objects. Defaults to `csv`. Valid values are `csv` and `parquet`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="datepartitionenabled_go">
 <a href="#datepartitionenabled_go" style="color: inherit; text-decoration: inherit;">Date<wbr>Partition<wbr>Enabled</a>
 </span>
@@ -2829,6 +2882,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Partition S3 bucket folders based on transaction commit dates. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="encryptionmode_go">
+<a href="#encryptionmode_go" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The server-side encryption mode that you want to encrypt your .csv or .parquet object files copied to S3. Defaults to `SSE_S3`. Valid values are `SSE_S3` and `SSE_KMS`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="externaltabledefinition_go">
 <a href="#externaltabledefinition_go" style="color: inherit; text-decoration: inherit;">External<wbr>Table<wbr>Definition</a>
 </span>
@@ -2836,6 +2898,33 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}JSON document that describes how AWS DMS should interpret the data.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="parquettimestampinmillisecond_go">
+<a href="#parquettimestampinmillisecond_go" style="color: inherit; text-decoration: inherit;">Parquet<wbr>Timestamp<wbr>In<wbr>Millisecond</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}- Specifies the precision of any TIMESTAMP column values written to an S3 object file in .parquet format. Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="parquetversion_go">
+<a href="#parquetversion_go" style="color: inherit; text-decoration: inherit;">Parquet<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The version of the .parquet file format. Defaults to `parquet-1-0`. Valid values are `parquet-1-0` and `parquet-2-0`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="serversideencryptionkmskeyid_go">
+<a href="#serversideencryptionkmskeyid_go" style="color: inherit; text-decoration: inherit;">Server<wbr>Side<wbr>Encryption<wbr>Kms<wbr>Key<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}If you set encryptionMode to `SSE_KMS`, set this parameter to the Amazon Resource Name (ARN) for the AWS KMS key.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serviceaccessrolearn_go">
@@ -2896,6 +2985,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Delimiter used to separate rows in the source files. Defaults to `\n`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="dataformat_nodejs">
+<a href="#dataformat_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Format</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The output format for the files that AWS DMS uses to create S3 objects. Defaults to `csv`. Valid values are `csv` and `parquet`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="datepartitionenabled_nodejs">
 <a href="#datepartitionenabled_nodejs" style="color: inherit; text-decoration: inherit;">date<wbr>Partition<wbr>Enabled</a>
 </span>
@@ -2905,6 +3003,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Partition S3 bucket folders based on transaction commit dates. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="encryptionmode_nodejs">
+<a href="#encryptionmode_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The server-side encryption mode that you want to encrypt your .csv or .parquet object files copied to S3. Defaults to `SSE_S3`. Valid values are `SSE_S3` and `SSE_KMS`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="externaltabledefinition_nodejs">
 <a href="#externaltabledefinition_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Table<wbr>Definition</a>
 </span>
@@ -2912,6 +3019,33 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}JSON document that describes how AWS DMS should interpret the data.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="parquettimestampinmillisecond_nodejs">
+<a href="#parquettimestampinmillisecond_nodejs" style="color: inherit; text-decoration: inherit;">parquet<wbr>Timestamp<wbr>In<wbr>Millisecond</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}- Specifies the precision of any TIMESTAMP column values written to an S3 object file in .parquet format. Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="parquetversion_nodejs">
+<a href="#parquetversion_nodejs" style="color: inherit; text-decoration: inherit;">parquet<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The version of the .parquet file format. Defaults to `parquet-1-0`. Valid values are `parquet-1-0` and `parquet-2-0`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="serversideencryptionkmskeyid_nodejs">
+<a href="#serversideencryptionkmskeyid_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Side<wbr>Encryption<wbr>Kms<wbr>Key<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}If you set encryptionMode to `SSE_KMS`, set this parameter to the Amazon Resource Name (ARN) for the AWS KMS key.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serviceaccessrolearn_nodejs">
@@ -2972,6 +3106,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Delimiter used to separate rows in the source files. Defaults to `\n`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="data_format_python">
+<a href="#data_format_python" style="color: inherit; text-decoration: inherit;">data_<wbr>format</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The output format for the files that AWS DMS uses to create S3 objects. Defaults to `csv`. Valid values are `csv` and `parquet`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="date_partition_enabled_python">
 <a href="#date_partition_enabled_python" style="color: inherit; text-decoration: inherit;">date_<wbr>partition_<wbr>enabled</a>
 </span>
@@ -2981,6 +3124,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Partition S3 bucket folders based on transaction commit dates. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="encryption_mode_python">
+<a href="#encryption_mode_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The server-side encryption mode that you want to encrypt your .csv or .parquet object files copied to S3. Defaults to `SSE_S3`. Valid values are `SSE_S3` and `SSE_KMS`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="external_table_definition_python">
 <a href="#external_table_definition_python" style="color: inherit; text-decoration: inherit;">external_<wbr>table_<wbr>definition</a>
 </span>
@@ -2988,6 +3140,33 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}JSON document that describes how AWS DMS should interpret the data.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="parquet_timestamp_in_millisecond_python">
+<a href="#parquet_timestamp_in_millisecond_python" style="color: inherit; text-decoration: inherit;">parquet_<wbr>timestamp_<wbr>in_<wbr>millisecond</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}- Specifies the precision of any TIMESTAMP column values written to an S3 object file in .parquet format. Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="parquet_version_python">
+<a href="#parquet_version_python" style="color: inherit; text-decoration: inherit;">parquet_<wbr>version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The version of the .parquet file format. Defaults to `parquet-1-0`. Valid values are `parquet-1-0` and `parquet-2-0`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="server_side_encryption_kms_key_id_python">
+<a href="#server_side_encryption_kms_key_id_python" style="color: inherit; text-decoration: inherit;">server_<wbr>side_<wbr>encryption_<wbr>kms_<wbr>key_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}If you set encryptionMode to `SSE_KMS`, set this parameter to the Amazon Resource Name (ARN) for the AWS KMS key.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="service_access_role_arn_python">

@@ -14,10 +14,12 @@ Explore the resources and functions of the aws.sagemaker module.
     <li><a href="app" title="App"><span class="symbol resource"></span>App</a></li>
     <li><a href="appimageconfig" title="AppImageConfig"><span class="symbol resource"></span>AppImageConfig</a></li>
     <li><a href="coderepository" title="CodeRepository"><span class="symbol resource"></span>CodeRepository</a></li>
+    <li><a href="devicefleet" title="DeviceFleet"><span class="symbol resource"></span>DeviceFleet</a></li>
     <li><a href="domain" title="Domain"><span class="symbol resource"></span>Domain</a></li>
     <li><a href="endpoint" title="Endpoint"><span class="symbol resource"></span>Endpoint</a></li>
     <li><a href="endpointconfiguration" title="EndpointConfiguration"><span class="symbol resource"></span>EndpointConfiguration</a></li>
     <li><a href="featuregroup" title="FeatureGroup"><span class="symbol resource"></span>FeatureGroup</a></li>
+    <li><a href="humantaskui" title="HumanTaskUI"><span class="symbol resource"></span>HumanTaskUI</a></li>
     <li><a href="image" title="Image"><span class="symbol resource"></span>Image</a></li>
     <li><a href="imageversion" title="ImageVersion"><span class="symbol resource"></span>ImageVersion</a></li>
     <li><a href="model" title="Model"><span class="symbol resource"></span>Model</a></li>
@@ -43,6 +45,6 @@ Explore the resources and functions of the aws.sagemaker module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.16.0</dd>
+	<dd>4.17.0</dd>
 </dl>
 

@@ -185,7 +185,6 @@ const exampleStage = new aws.apigateway.Stage("exampleStage", {stageName: stageN
           <span class="nx">rest_api</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
           <span class="nx">stage_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
           <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
-          <span class="nx">tags_all</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
           <span class="nx">variables</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
           <span class="nx">xray_tracing_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
@@ -407,15 +406,6 @@ The Stage resource accepts the following [input]({{< relref "/docs/intro/concept
     <dd>{{% md %}}A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="tagsall_csharp">
-<a href="#tagsall_csharp" style="color: inherit; text-decoration: inherit;">Tags<wbr>All</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, string&gt;</span>
-    </dt>
-    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider .
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="variables_csharp">
 <a href="#variables_csharp" style="color: inherit; text-decoration: inherit;">Variables</a>
 </span>
@@ -526,15 +516,6 @@ The Stage resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="tagsall_go">
-<a href="#tagsall_go" style="color: inherit; text-decoration: inherit;">Tags<wbr>All</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]string</span>
-    </dt>
-    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider .
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="variables_go">
@@ -649,15 +630,6 @@ The Stage resource accepts the following [input]({{< relref "/docs/intro/concept
     <dd>{{% md %}}A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="tagsall_nodejs">
-<a href="#tagsall_nodejs" style="color: inherit; text-decoration: inherit;">tags<wbr>All</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
-    </dt>
-    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider .
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="variables_nodejs">
 <a href="#variables_nodejs" style="color: inherit; text-decoration: inherit;">variables</a>
 </span>
@@ -770,15 +742,6 @@ The Stage resource accepts the following [input]({{< relref "/docs/intro/concept
     <dd>{{% md %}}A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="tags_all_python">
-<a href="#tags_all_python" style="color: inherit; text-decoration: inherit;">tags_<wbr>all</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
-    </dt>
-    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider .
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="variables_python">
 <a href="#variables_python" style="color: inherit; text-decoration: inherit;">variables</a>
 </span>
@@ -844,6 +807,15 @@ e.g. `arn:aws:execute-api:eu-west-2:123456789012:z4675bid1j/prod`
     </dt>
     <dd>{{% md %}}The URL to invoke the API pointing to the stage,
 e.g. `https://z4675bid1j.execute-api.eu-west-2.amazonaws.com/prod`
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="tagsall_csharp">
+<a href="#tagsall_csharp" style="color: inherit; text-decoration: inherit;">Tags<wbr>All</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider .
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -886,6 +858,15 @@ e.g. `arn:aws:execute-api:eu-west-2:123456789012:z4675bid1j/prod`
     </dt>
     <dd>{{% md %}}The URL to invoke the API pointing to the stage,
 e.g. `https://z4675bid1j.execute-api.eu-west-2.amazonaws.com/prod`
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="tagsall_go">
+<a href="#tagsall_go" style="color: inherit; text-decoration: inherit;">Tags<wbr>All</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider .
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -928,6 +909,15 @@ e.g. `arn:aws:execute-api:eu-west-2:123456789012:z4675bid1j/prod`
     </dt>
     <dd>{{% md %}}The URL to invoke the API pointing to the stage,
 e.g. `https://z4675bid1j.execute-api.eu-west-2.amazonaws.com/prod`
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="tagsall_nodejs">
+<a href="#tagsall_nodejs" style="color: inherit; text-decoration: inherit;">tags<wbr>All</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider .
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -970,6 +960,15 @@ e.g. `arn:aws:execute-api:eu-west-2:123456789012:z4675bid1j/prod`
     </dt>
     <dd>{{% md %}}The URL to invoke the API pointing to the stage,
 e.g. `https://z4675bid1j.execute-api.eu-west-2.amazonaws.com/prod`
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="tags_all_python">
+<a href="#tags_all_python" style="color: inherit; text-decoration: inherit;">tags_<wbr>all</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, str]</span>
+    </dt>
+    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider .
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

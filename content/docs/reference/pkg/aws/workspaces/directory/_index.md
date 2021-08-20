@@ -651,7 +651,6 @@ const exampleDirectory = new aws.workspaces.Directory("exampleDirectory", {
               <span class="nx">self_service_permissions</span><span class="p">:</span> <span class="nx">Optional[DirectorySelfServicePermissionsArgs]</span> = None<span class="p">,</span>
               <span class="nx">subnet_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
               <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
-              <span class="nx">tags_all</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
               <span class="nx">workspace_access_properties</span><span class="p">:</span> <span class="nx">Optional[DirectoryWorkspaceAccessPropertiesArgs]</span> = None<span class="p">,</span>
               <span class="nx">workspace_creation_properties</span><span class="p">:</span> <span class="nx">Optional[DirectoryWorkspaceCreationPropertiesArgs]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
@@ -828,15 +827,6 @@ The Directory resource accepts the following [input]({{< relref "/docs/intro/con
     <dd>{{% md %}}A map of tags assigned to the WorkSpaces directory. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="tagsall_csharp">
-<a href="#tagsall_csharp" style="color: inherit; text-decoration: inherit;">Tags<wbr>All</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, string&gt;</span>
-    </dt>
-    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider .
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="workspaceaccessproperties_csharp">
 <a href="#workspaceaccessproperties_csharp" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Access<wbr>Properties</a>
 </span>
@@ -902,15 +892,6 @@ The Directory resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of tags assigned to the WorkSpaces directory. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="tagsall_go">
-<a href="#tagsall_go" style="color: inherit; text-decoration: inherit;">Tags<wbr>All</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]string</span>
-    </dt>
-    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider .
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="workspaceaccessproperties_go">
@@ -980,15 +961,6 @@ The Directory resource accepts the following [input]({{< relref "/docs/intro/con
     <dd>{{% md %}}A map of tags assigned to the WorkSpaces directory. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="tagsall_nodejs">
-<a href="#tagsall_nodejs" style="color: inherit; text-decoration: inherit;">tags<wbr>All</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
-    </dt>
-    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider .
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="workspaceaccessproperties_nodejs">
 <a href="#workspaceaccessproperties_nodejs" style="color: inherit; text-decoration: inherit;">workspace<wbr>Access<wbr>Properties</a>
 </span>
@@ -1054,15 +1026,6 @@ The Directory resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags assigned to the WorkSpaces directory. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="tags_all_python">
-<a href="#tags_all_python" style="color: inherit; text-decoration: inherit;">tags_<wbr>all</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
-    </dt>
-    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider .
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="workspace_access_properties_python">
@@ -1165,6 +1128,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The registration code for the directory. This is the code that users enter in their Amazon WorkSpaces client application to connect to the directory.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="tagsall_csharp">
+<a href="#tagsall_csharp" style="color: inherit; text-decoration: inherit;">Tags<wbr>All</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider .
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="workspacesecuritygroupid_csharp">
 <a href="#workspacesecuritygroupid_csharp" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Security<wbr>Group<wbr>Id</a>
 </span>
@@ -1247,6 +1219,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The registration code for the directory. This is the code that users enter in their Amazon WorkSpaces client application to connect to the directory.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="tagsall_go">
+<a href="#tagsall_go" style="color: inherit; text-decoration: inherit;">Tags<wbr>All</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider .
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="workspacesecuritygroupid_go">
@@ -1333,6 +1314,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The registration code for the directory. This is the code that users enter in their Amazon WorkSpaces client application to connect to the directory.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="tagsall_nodejs">
+<a href="#tagsall_nodejs" style="color: inherit; text-decoration: inherit;">tags<wbr>All</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider .
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="workspacesecuritygroupid_nodejs">
 <a href="#workspacesecuritygroupid_nodejs" style="color: inherit; text-decoration: inherit;">workspace<wbr>Security<wbr>Group<wbr>Id</a>
 </span>
@@ -1415,6 +1405,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The registration code for the directory. This is the code that users enter in their Amazon WorkSpaces client application to connect to the directory.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="tags_all_python">
+<a href="#tags_all_python" style="color: inherit; text-decoration: inherit;">tags_<wbr>all</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, str]</span>
+    </dt>
+    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider .
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="workspace_security_group_id_python">

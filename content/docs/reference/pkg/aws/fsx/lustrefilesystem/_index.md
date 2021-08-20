@@ -154,7 +154,6 @@ const example = new aws.fsx.LustreFileSystem("example", {
                      <span class="nx">storage_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                      <span class="nx">subnet_ids</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                      <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
-                     <span class="nx">tags_all</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
                      <span class="nx">weekly_maintenance_start_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">LustreFileSystem</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
@@ -438,15 +437,6 @@ The LustreFileSystem resource accepts the following [input]({{< relref "/docs/in
     <dd>{{% md %}}A map of tags to assign to the file system. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="tagsall_csharp">
-<a href="#tagsall_csharp" style="color: inherit; text-decoration: inherit;">Tags<wbr>All</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, string&gt;</span>
-    </dt>
-    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider .
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="weeklymaintenancestarttime_csharp">
 <a href="#weeklymaintenancestarttime_csharp" style="color: inherit; text-decoration: inherit;">Weekly<wbr>Maintenance<wbr>Start<wbr>Time</a>
 </span>
@@ -611,15 +601,6 @@ The LustreFileSystem resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the file system. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="tagsall_go">
-<a href="#tagsall_go" style="color: inherit; text-decoration: inherit;">Tags<wbr>All</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]string</span>
-    </dt>
-    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider .
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="weeklymaintenancestarttime_go">
@@ -788,15 +769,6 @@ The LustreFileSystem resource accepts the following [input]({{< relref "/docs/in
     <dd>{{% md %}}A map of tags to assign to the file system. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="tagsall_nodejs">
-<a href="#tagsall_nodejs" style="color: inherit; text-decoration: inherit;">tags<wbr>All</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
-    </dt>
-    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider .
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="weeklymaintenancestarttime_nodejs">
 <a href="#weeklymaintenancestarttime_nodejs" style="color: inherit; text-decoration: inherit;">weekly<wbr>Maintenance<wbr>Start<wbr>Time</a>
 </span>
@@ -963,15 +935,6 @@ The LustreFileSystem resource accepts the following [input]({{< relref "/docs/in
     <dd>{{% md %}}A map of tags to assign to the file system. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="tags_all_python">
-<a href="#tags_all_python" style="color: inherit; text-decoration: inherit;">tags_<wbr>all</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
-    </dt>
-    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider .
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="weekly_maintenance_start_time_python">
 <a href="#weekly_maintenance_start_time_python" style="color: inherit; text-decoration: inherit;">weekly_<wbr>maintenance_<wbr>start_<wbr>time</a>
 </span>
@@ -1045,6 +1008,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}AWS account identifier that created the file system.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="tagsall_csharp">
+<a href="#tagsall_csharp" style="color: inherit; text-decoration: inherit;">Tags<wbr>All</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider .
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="vpcid_csharp">
 <a href="#vpcid_csharp" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Id</a>
 </span>
@@ -1109,6 +1081,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}AWS account identifier that created the file system.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="tagsall_go">
+<a href="#tagsall_go" style="color: inherit; text-decoration: inherit;">Tags<wbr>All</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider .
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vpcid_go">
@@ -1177,6 +1158,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}AWS account identifier that created the file system.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="tagsall_nodejs">
+<a href="#tagsall_nodejs" style="color: inherit; text-decoration: inherit;">tags<wbr>All</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider .
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="vpcid_nodejs">
 <a href="#vpcid_nodejs" style="color: inherit; text-decoration: inherit;">vpc<wbr>Id</a>
 </span>
@@ -1241,6 +1231,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}AWS account identifier that created the file system.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="tags_all_python">
+<a href="#tags_all_python" style="color: inherit; text-decoration: inherit;">tags_<wbr>all</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, str]</span>
+    </dt>
+    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider .
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vpc_id_python">

@@ -347,7 +347,6 @@ const exampleCluster = new aws.eks.Cluster("exampleCluster", {enabledClusterLogT
             <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">role_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
-            <span class="nx">tags_all</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
             <span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">vpc_config</span><span class="p">:</span> <span class="nx">Optional[ClusterVpcConfigArgs]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
@@ -542,15 +541,6 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
     <dd>{{% md %}}Key-value map of resource tags.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="tagsall_csharp">
-<a href="#tagsall_csharp" style="color: inherit; text-decoration: inherit;">Tags<wbr>All</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, string&gt;</span>
-    </dt>
-    <dd>{{% md %}}Map of tags assigned to the resource, including those inherited from the provider.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="version_csharp">
 <a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
 </span>
@@ -625,15 +615,6 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="tagsall_go">
-<a href="#tagsall_go" style="color: inherit; text-decoration: inherit;">Tags<wbr>All</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]string</span>
-    </dt>
-    <dd>{{% md %}}Map of tags assigned to the resource, including those inherited from the provider.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="version_go">
@@ -712,15 +693,6 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
     <dd>{{% md %}}Key-value map of resource tags.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="tagsall_nodejs">
-<a href="#tagsall_nodejs" style="color: inherit; text-decoration: inherit;">tags<wbr>All</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
-    </dt>
-    <dd>{{% md %}}Map of tags assigned to the resource, including those inherited from the provider.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="version_nodejs">
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
@@ -795,15 +767,6 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="tags_all_python">
-<a href="#tags_all_python" style="color: inherit; text-decoration: inherit;">tags_<wbr>all</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
-    </dt>
-    <dd>{{% md %}}Map of tags assigned to the resource, including those inherited from the provider.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="version_python">
@@ -895,6 +858,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Status of the EKS cluster. One of `CREATING`, `ACTIVE`, `DELETING`, `FAILED`.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="tagsall_csharp">
+<a href="#tagsall_csharp" style="color: inherit; text-decoration: inherit;">Tags<wbr>All</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}Map of tags assigned to the resource, including those inherited from the provider.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -970,6 +942,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Status of the EKS cluster. One of `CREATING`, `ACTIVE`, `DELETING`, `FAILED`.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="tagsall_go">
+<a href="#tagsall_go" style="color: inherit; text-decoration: inherit;">Tags<wbr>All</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}Map of tags assigned to the resource, including those inherited from the provider.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1045,6 +1026,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Status of the EKS cluster. One of `CREATING`, `ACTIVE`, `DELETING`, `FAILED`.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="tagsall_nodejs">
+<a href="#tagsall_nodejs" style="color: inherit; text-decoration: inherit;">tags<wbr>All</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}Map of tags assigned to the resource, including those inherited from the provider.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1120,6 +1110,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Status of the EKS cluster. One of `CREATING`, `ACTIVE`, `DELETING`, `FAILED`.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="tags_all_python">
+<a href="#tags_all_python" style="color: inherit; text-decoration: inherit;">tags_<wbr>all</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, str]</span>
+    </dt>
+    <dd>{{% md %}}Map of tags assigned to the resource, including those inherited from the provider.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

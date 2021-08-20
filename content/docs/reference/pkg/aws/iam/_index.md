@@ -44,6 +44,7 @@ Explore the resources and functions of the aws.iam module.
     <li><a href="getpolicy" title="GetPolicy"><span class="symbol function"></span>GetPolicy</a></li>
     <li><a href="getpolicydocument" title="GetPolicyDocument"><span class="symbol function"></span>GetPolicyDocument</a></li>
     <li><a href="getrole" title="GetRole"><span class="symbol function"></span>GetRole</a></li>
+    <li><a href="getroles" title="GetRoles"><span class="symbol function"></span>GetRoles</a></li>
     <li><a href="getservercertificate" title="GetServerCertificate"><span class="symbol function"></span>GetServerCertificate</a></li>
     <li><a href="getsessioncontext" title="GetSessionContext"><span class="symbol function"></span>GetSessionContext</a></li>
     <li><a href="getuser" title="GetUser"><span class="symbol function"></span>GetUser</a></li>
@@ -58,6 +59,6 @@ Explore the resources and functions of the aws.iam module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.16.0</dd>
+	<dd>4.17.0</dd>
 </dl>
 

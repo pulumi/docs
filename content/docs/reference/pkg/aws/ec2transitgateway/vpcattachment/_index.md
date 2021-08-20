@@ -140,7 +140,6 @@ const example = new aws.ec2transitgateway.VpcAttachment("example", {
                   <span class="nx">ipv6_support</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                   <span class="nx">subnet_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
                   <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
-                  <span class="nx">tags_all</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
                   <span class="nx">transit_gateway_default_route_table_association</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
                   <span class="nx">transit_gateway_default_route_table_propagation</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
                   <span class="nx">transit_gateway_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -336,14 +335,6 @@ The VpcAttachment resource accepts the following [input]({{< relref "/docs/intro
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="tagsall_csharp">
-<a href="#tagsall_csharp" style="color: inherit; text-decoration: inherit;">Tags<wbr>All</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, string&gt;</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="transitgatewaydefaultroutetableassociation_csharp">
 <a href="#transitgatewaydefaultroutetableassociation_csharp" style="color: inherit; text-decoration: inherit;">Transit<wbr>Gateway<wbr>Default<wbr>Route<wbr>Table<wbr>Association</a>
 </span>
@@ -422,14 +413,6 @@ The VpcAttachment resource accepts the following [input]({{< relref "/docs/intro
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="tagsall_go">
-<a href="#tagsall_go" style="color: inherit; text-decoration: inherit;">Tags<wbr>All</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
@@ -520,14 +503,6 @@ The VpcAttachment resource accepts the following [input]({{< relref "/docs/intro
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="tagsall_nodejs">
-<a href="#tagsall_nodejs" style="color: inherit; text-decoration: inherit;">tags<wbr>All</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="transitgatewaydefaultroutetableassociation_nodejs">
 <a href="#transitgatewaydefaultroutetableassociation_nodejs" style="color: inherit; text-decoration: inherit;">transit<wbr>Gateway<wbr>Default<wbr>Route<wbr>Table<wbr>Association</a>
 </span>
@@ -612,14 +587,6 @@ The VpcAttachment resource accepts the following [input]({{< relref "/docs/intro
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="tags_all_python">
-<a href="#tags_all_python" style="color: inherit; text-decoration: inherit;">tags_<wbr>all</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="transit_gateway_default_route_table_association_python">
 <a href="#transit_gateway_default_route_table_association_python" style="color: inherit; text-decoration: inherit;">transit_<wbr>gateway_<wbr>default_<wbr>route_<wbr>table_<wbr>association</a>
 </span>
@@ -657,6 +624,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="tagsall_csharp">
+<a href="#tagsall_csharp" style="color: inherit; text-decoration: inherit;">Tags<wbr>All</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="vpcownerid_csharp">
 <a href="#vpcownerid_csharp" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Owner<wbr>Id</a>
 </span>
@@ -677,6 +652,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="tagsall_go">
+<a href="#tagsall_go" style="color: inherit; text-decoration: inherit;">Tags<wbr>All</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vpcownerid_go">
 <a href="#vpcownerid_go" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Owner<wbr>Id</a>
@@ -699,6 +682,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="tagsall_nodejs">
+<a href="#tagsall_nodejs" style="color: inherit; text-decoration: inherit;">tags<wbr>All</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="vpcownerid_nodejs">
 <a href="#vpcownerid_nodejs" style="color: inherit; text-decoration: inherit;">vpc<wbr>Owner<wbr>Id</a>
 </span>
@@ -719,6 +710,14 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="tags_all_python">
+<a href="#tags_all_python" style="color: inherit; text-decoration: inherit;">tags_<wbr>all</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, str]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vpc_owner_id_python">
 <a href="#vpc_owner_id_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>owner_<wbr>id</a>
