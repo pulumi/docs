@@ -434,15 +434,15 @@ const helloWorld = new k8s.kustomize.Directory("helloWorldRemote", {
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">Directory</span><span class="p">(</span><span class="nx">directory</span><span class="p">:</span> <span class="nx"></span><span class="p">,</span>
-              <span class="nx">opts</span><span class="p">:</span> <span class="nx"></span>=None<span class="p">,</span>
-              <span class="nx">transformations</span><span class="p">:</span> <span class="nx"></span>=None<span class="p">,</span>
-              <span class="nx">resource_prefix</span><span class="p">:</span> <span class="nx"></span>=None<span class="p">)</span>
+<span class="k">def </span><span class="nx">Directory</span><span class="p">(</span><span class="nx">directory</span><span class="p">,</span>
+              <span class="nx">opts</span>=None<span class="p">,</span>
+              <span class="nx">transformations</span>=None<span class="p">,</span>
+              <span class="nx">resource_prefix</span>=None<span class="p">)</span>
 <span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">Directory</span><span class="p">(</span><span class="nx">directory</span><span class="p">:</span> <span class="nx"></span><span class="p">,</span>
-              <span class="nx">opts</span><span class="p">:</span> <span class="nx"></span>=None<span class="p">,</span>
-              <span class="nx">transformations</span><span class="p">:</span> <span class="nx"></span>=None<span class="p">,</span>
-              <span class="nx">resource_prefix</span><span class="p">:</span> <span class="nx"></span>=None<span class="p">)</span></code></pre></div>
+<span class="k">def </span><span class="nx">Directory</span><span class="p">(</span><span class="nx">directory</span><span class="p">,</span>
+              <span class="nx">opts</span>=None<span class="p">,</span>
+              <span class="nx">transformations</span>=None<span class="p">,</span>
+              <span class="nx">resource_prefix</span>=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

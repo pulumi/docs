@@ -724,15 +724,15 @@ const example = new k8s.yaml.ConfigGroup("example", {
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">ConfigGroup</span><span class="p">(</span><span class="nx">file</span><span class="p">:</span> <span class="nx"></span><span class="p">,</span>
-                <span class="nx">opts</span><span class="p">:</span> <span class="nx"></span>=None<span class="p">,</span>
-                <span class="nx">transformations</span><span class="p">:</span> <span class="nx"></span>=None<span class="p">,</span>
-                <span class="nx">resource_prefix</span><span class="p">:</span> <span class="nx"></span>=None<span class="p">)</span>
+<span class="k">def </span><span class="nx">ConfigGroup</span><span class="p">(</span><span class="nx">file</span><span class="p">,</span>
+                <span class="nx">opts</span>=None<span class="p">,</span>
+                <span class="nx">transformations</span>=None<span class="p">,</span>
+                <span class="nx">resource_prefix</span>=None<span class="p">)</span>
 <span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">ConfigGroup</span><span class="p">(</span><span class="nx">file</span><span class="p">:</span> <span class="nx"></span><span class="p">,</span>
-                <span class="nx">opts</span><span class="p">:</span> <span class="nx"></span>=None<span class="p">,</span>
-                <span class="nx">transformations</span><span class="p">:</span> <span class="nx"></span>=None<span class="p">,</span>
-                <span class="nx">resource_prefix</span><span class="p">:</span> <span class="nx"></span>=None<span class="p">)</span></code></pre></div>
+<span class="k">def </span><span class="nx">ConfigGroup</span><span class="p">(</span><span class="nx">file</span><span class="p">,</span>
+                <span class="nx">opts</span>=None<span class="p">,</span>
+                <span class="nx">transformations</span>=None<span class="p">,</span>
+                <span class="nx">resource_prefix</span>=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}

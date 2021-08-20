@@ -33,7 +33,8 @@ The provider type for the kubernetes package.
              <span class="nx">kubeconfig</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">namespace</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">render_yaml_to_directory</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-             <span class="nx">suppress_deprecation_warnings</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span>
+             <span class="nx">suppress_deprecation_warnings</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+             <span class="nx">suppress_helm_hook_warnings</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">Provider</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
              <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">Optional[ProviderArgs]</a></span> = None<span class="p">,</span>
@@ -230,7 +231,19 @@ used in these resources will be rendered in plaintext to the resulting YAML.{{% 
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If present and set to true, suppress apiVersion deprecation warnings from the CLI. It can also be sourced from the following environment variable: `PULUMI_K8S_SUPPRESS_DEPRECATION_WARNINGS`{{% /md %}}</dd></dl>
+    <dd>{{% md %}}If present and set to true, suppress apiVersion deprecation warnings from the CLI. It can also be sourced from the following environment variable: `PULUMI_K8S_SUPPRESS_DEPRECATION_WARNINGS`{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="suppresshelmhookwarnings_csharp">
+<a href="#suppresshelmhookwarnings_csharp" style="color: inherit; text-decoration: inherit;">Suppress<wbr>Helm<wbr>Hook<wbr>Warnings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If present and set to true, suppress unsupported Helm hook warnings from the CLI.
+
+This config can be specified in the following ways, using this precedence:
+1. This `suppressHelmHookWarnings` parameter.
+2. The `PULUMI_K8S_SUPPRESS_HELM_HOOK_WARNING` environment variable. It can also be sourced from the following environment variable: `PULUMI_K8S_SUPPRESS_HELM_HOOK_WARNINGS`{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -303,7 +316,19 @@ used in these resources will be rendered in plaintext to the resulting YAML.{{% 
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If present and set to true, suppress apiVersion deprecation warnings from the CLI. It can also be sourced from the following environment variable: `PULUMI_K8S_SUPPRESS_DEPRECATION_WARNINGS`{{% /md %}}</dd></dl>
+    <dd>{{% md %}}If present and set to true, suppress apiVersion deprecation warnings from the CLI. It can also be sourced from the following environment variable: `PULUMI_K8S_SUPPRESS_DEPRECATION_WARNINGS`{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="suppresshelmhookwarnings_go">
+<a href="#suppresshelmhookwarnings_go" style="color: inherit; text-decoration: inherit;">Suppress<wbr>Helm<wbr>Hook<wbr>Warnings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If present and set to true, suppress unsupported Helm hook warnings from the CLI.
+
+This config can be specified in the following ways, using this precedence:
+1. This `suppressHelmHookWarnings` parameter.
+2. The `PULUMI_K8S_SUPPRESS_HELM_HOOK_WARNING` environment variable. It can also be sourced from the following environment variable: `PULUMI_K8S_SUPPRESS_HELM_HOOK_WARNINGS`{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -376,7 +401,19 @@ used in these resources will be rendered in plaintext to the resulting YAML.{{% 
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}If present and set to true, suppress apiVersion deprecation warnings from the CLI. It can also be sourced from the following environment variable: `PULUMI_K8S_SUPPRESS_DEPRECATION_WARNINGS`{{% /md %}}</dd></dl>
+    <dd>{{% md %}}If present and set to true, suppress apiVersion deprecation warnings from the CLI. It can also be sourced from the following environment variable: `PULUMI_K8S_SUPPRESS_DEPRECATION_WARNINGS`{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="suppresshelmhookwarnings_nodejs">
+<a href="#suppresshelmhookwarnings_nodejs" style="color: inherit; text-decoration: inherit;">suppress<wbr>Helm<wbr>Hook<wbr>Warnings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}If present and set to true, suppress unsupported Helm hook warnings from the CLI.
+
+This config can be specified in the following ways, using this precedence:
+1. This `suppressHelmHookWarnings` parameter.
+2. The `PULUMI_K8S_SUPPRESS_HELM_HOOK_WARNING` environment variable. It can also be sourced from the following environment variable: `PULUMI_K8S_SUPPRESS_HELM_HOOK_WARNINGS`{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -449,7 +486,19 @@ used in these resources will be rendered in plaintext to the resulting YAML.{{% 
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If present and set to true, suppress apiVersion deprecation warnings from the CLI. It can also be sourced from the following environment variable: `PULUMI_K8S_SUPPRESS_DEPRECATION_WARNINGS`{{% /md %}}</dd></dl>
+    <dd>{{% md %}}If present and set to true, suppress apiVersion deprecation warnings from the CLI. It can also be sourced from the following environment variable: `PULUMI_K8S_SUPPRESS_DEPRECATION_WARNINGS`{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="suppress_helm_hook_warnings_python">
+<a href="#suppress_helm_hook_warnings_python" style="color: inherit; text-decoration: inherit;">suppress_<wbr>helm_<wbr>hook_<wbr>warnings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If present and set to true, suppress unsupported Helm hook warnings from the CLI.
+
+This config can be specified in the following ways, using this precedence:
+1. This `suppressHelmHookWarnings` parameter.
+2. The `PULUMI_K8S_SUPPRESS_HELM_HOOK_WARNING` environment variable. It can also be sourced from the following environment variable: `PULUMI_K8S_SUPPRESS_HELM_HOOK_WARNINGS`{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
