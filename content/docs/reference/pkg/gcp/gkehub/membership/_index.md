@@ -171,8 +171,8 @@ class MyStack : Stack
     {
         var primary = new Gcp.Container.Cluster("primary", new Gcp.Container.ClusterArgs
         {
-            InitialNodeCount = 1,
             Location = "us-central1-a",
+            InitialNodeCount = 1,
             WorkloadIdentityConfig = new Gcp.Container.Inputs.ClusterWorkloadIdentityConfigArgs
             {
                 IdentityNamespace = "my-project-name.svc.id.goog",
@@ -180,18 +180,18 @@ class MyStack : Stack
         });
         var membership = new Gcp.GkeHub.Membership("membership", new Gcp.GkeHub.MembershipArgs
         {
-            Authority = new Gcp.GkeHub.Inputs.MembershipAuthorityArgs
-            {
-                Issuer = primary.Id.Apply(id => $"https://container.googleapis.com/v1/{id}"),
-            },
+            MembershipId = "basic",
             Endpoint = new Gcp.GkeHub.Inputs.MembershipEndpointArgs
             {
                 GkeCluster = new Gcp.GkeHub.Inputs.MembershipEndpointGkeClusterArgs
                 {
-                    ResourceLink = primary.Id.Apply(id => $"//container.googleapis.com/{id}"),
+                    ResourceLink = primary.Id,
                 },
             },
-            MembershipId = "basic",
+            Authority = new Gcp.GkeHub.Inputs.MembershipAuthorityArgs
+            {
+                Issuer = primary.Id.Apply(id => $"https://container.googleapis.com/v1/{id}"),
+            },
         });
     }
 
@@ -218,8 +218,8 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		primary, err := container.NewCluster(ctx, "primary", &container.ClusterArgs{
-			InitialNodeCount: pulumi.Int(1),
 			Location:         pulumi.String("us-central1-a"),
+			InitialNodeCount: pulumi.Int(1),
 			WorkloadIdentityConfig: &container.ClusterWorkloadIdentityConfigArgs{
 				IdentityNamespace: pulumi.String("my-project-name.svc.id.goog"),
 			},
@@ -228,19 +228,17 @@ func main() {
 			return err
 		}
 		_, err = gkehub.NewMembership(ctx, "membership", &gkehub.MembershipArgs{
+			MembershipId: pulumi.String("basic"),
+			Endpoint: &gkehub.MembershipEndpointArgs{
+				GkeCluster: &gkehub.MembershipEndpointGkeClusterArgs{
+					ResourceLink: primary.ID(),
+				},
+			},
 			Authority: &gkehub.MembershipAuthorityArgs{
 				Issuer: primary.ID().ApplyT(func(id string) (string, error) {
 					return fmt.Sprintf("%v%v", "https://container.googleapis.com/v1/", id), nil
 				}).(pulumi.StringOutput),
 			},
-			Endpoint: &gkehub.MembershipEndpointArgs{
-				GkeCluster: &gkehub.MembershipEndpointGkeClusterArgs{
-					ResourceLink: primary.ID().ApplyT(func(id string) (string, error) {
-						return fmt.Sprintf("%v%v", "//container.googleapis.com/", id), nil
-					}).(pulumi.StringOutput),
-				},
-			},
-			MembershipId: pulumi.String("basic"),
 		})
 		if err != nil {
 			return err
@@ -261,21 +259,21 @@ import pulumi
 import pulumi_gcp as gcp
 
 primary = gcp.container.Cluster("primary",
-    initial_node_count=1,
     location="us-central1-a",
+    initial_node_count=1,
     workload_identity_config=gcp.container.ClusterWorkloadIdentityConfigArgs(
         identity_namespace="my-project-name.svc.id.goog",
     ))
 membership = gcp.gkehub.Membership("membership",
-    authority=gcp.gkehub.MembershipAuthorityArgs(
-        issuer=primary.id.apply(lambda id: f"https://container.googleapis.com/v1/{id}"),
-    ),
+    membership_id="basic",
     endpoint=gcp.gkehub.MembershipEndpointArgs(
         gke_cluster=gcp.gkehub.MembershipEndpointGkeClusterArgs(
-            resource_link=primary.id.apply(lambda id: f"//container.googleapis.com/{id}"),
+            resource_link=primary.id,
         ),
     ),
-    membership_id="basic")
+    authority=gcp.gkehub.MembershipAuthorityArgs(
+        issuer=primary.id.apply(lambda id: f"https://container.googleapis.com/v1/{id}"),
+    ))
 ```
 
 
@@ -290,22 +288,22 @@ import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
 const primary = new gcp.container.Cluster("primary", {
-    initialNodeCount: 1,
     location: "us-central1-a",
+    initialNodeCount: 1,
     workloadIdentityConfig: {
         identityNamespace: "my-project-name.svc.id.goog",
     },
 });
 const membership = new gcp.gkehub.Membership("membership", {
+    membershipId: "basic",
+    endpoint: {
+        gkeCluster: {
+            resourceLink: primary.id,
+        },
+    },
     authority: {
         issuer: pulumi.interpolate`https://container.googleapis.com/v1/${primary.id}`,
     },
-    endpoint: {
-        gkeCluster: {
-            resourceLink: pulumi.interpolate`//container.googleapis.com/${primary.id}`,
-        },
-    },
-    membershipId: "basic",
 });
 ```
 
