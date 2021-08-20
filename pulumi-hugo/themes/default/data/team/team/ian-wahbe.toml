@@ -1,0 +1,11 @@
+id = "ian-wahbe"
+name = "Ian Wahbe"
+title = "Software Engineer"
+weight = 1
+
+status = "active"
+
+[social]
+github = "iwahbe"
+linkedin = "iwahbe"
+twitter = "iwahbe"
