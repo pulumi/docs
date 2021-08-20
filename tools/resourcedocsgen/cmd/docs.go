@@ -21,10 +21,10 @@ import (
 	"github.com/pulumi/pulumi/sdk/v3/go/common/util/contract"
 )
 
-var docsOutDir string
-var overlaysSchemaFile string
-
 func resourceDocsCmd() *cobra.Command {
+	var docsOutDir string
+	var overlaysSchemaFile string
+
 	cmd := &cobra.Command{
 		Use:   "docs",
 		Short: "Generate resource docs from a Pulumi schema file",
@@ -57,8 +57,8 @@ func resourceDocsCmd() *cobra.Command {
 		},
 	}
 
-	cmd.LocalFlags().StringVar(&docsOutDir, "docsOutDir", "", "The directory path to where the docs will be written to")
-	cmd.LocalFlags().StringVar(&overlaysSchemaFile, "overlaysSchemaFile", "", "The optional overlays that should be merged with the main schema")
+	cmd.Flags().StringVar(&docsOutDir, "docsOutDir", "", "The directory path to where the docs will be written to")
+	cmd.Flags().StringVar(&overlaysSchemaFile, "overlaysSchemaFile", "", "The optional overlays that should be merged with the main schema")
 
 	cmd.MarkFlagRequired("docsOutDir")
 

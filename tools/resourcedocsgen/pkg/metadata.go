@@ -7,10 +7,11 @@ const (
 	PackageStatusGA            PackageStatus = "ga"
 	PackageStatusPublicPreview PackageStatus = "public_preview"
 
-	PackageCategoryCloud     PackageCategory = "Cloud"
-	PackageCategoryNetwork   PackageCategory = "Network"
-	PackageCategoryUtilities PackageCategory = "Utilities"
-	PackageCategoryDatabase  PackageCategory = "Database"
+	PackageCategoryCloud    PackageCategory = "Cloud"
+	PackageCategoryDatabase PackageCategory = "Database"
+	PackageCategoryNetwork  PackageCategory = "Network"
+	PackageCategoryUtility  PackageCategory = "Utility"
+	PackageCategoryVCS      PackageCategory = "Version Control System"
 )
 
 type PackageMeta struct {

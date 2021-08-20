@@ -14,19 +14,19 @@ import (
 	"github.com/pulumi/docs/tools/resourcedocsgen/pkg"
 )
 
-var metadataOutDir string
-var featured bool
-
 func packageMetadataCmd() *cobra.Command {
+	var metadataOutDir string
+	var featured bool
+
 	cmd := &cobra.Command{
-		Use:   "metadata",
+		Use:   "metadata <metadataOutDir> [featured]",
 		Short: "Generate package metadata only",
 		RunE: func(cmd *cobra.Command, args []string) error {
 			status := pkg.PackageStatusGA
-			if strings.Contains(mainSpec.Description, "preview") {
+			if strings.HasPrefix(mainSpec.Description, "v0.") {
 				status = pkg.PackageStatusPublicPreview
 			}
-			// TODO: use the mainspec to generate data files containing the package metadata
+
 			pm := pkg.PackageMeta{
 				Name:          mainSpec.Name,
 				UpdatedOn:     time.Now().Unix(),
@@ -52,8 +52,8 @@ func packageMetadataCmd() *cobra.Command {
 		},
 	}
 
-	cmd.LocalFlags().StringVar(&metadataOutDir, "metadataOutDir", "", "The directory path to where the docs will be written to")
-	cmd.LocalFlags().BoolVar(&featured, "featured", false, "Whether or not this package should be marked as featured in its metadata")
+	cmd.Flags().StringVar(&metadataOutDir, "metadataOutDir", "", "The directory path to where the docs will be written to")
+	cmd.Flags().BoolVar(&featured, "featured", false, "Whether or not this package should be marked as featured in its metadata")
 
 	cmd.MarkFlagRequired("metadataOutDir")
 
