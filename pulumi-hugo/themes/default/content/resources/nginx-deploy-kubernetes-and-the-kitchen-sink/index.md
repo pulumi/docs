@@ -1,7 +1,7 @@
 ---
 # Name of the webinar.
-title: "Building Communication Workflows with Twilio and AWS"
-meta_desc: "In this session, the Twilio team will show you how they use Pulumi and how you can create powerful scheduling tools for your customer communications."
+title: "Deploy Kubernetes and the Kitchen Sink with NGINX and Pulumi"
+meta_desc: "In this Live Cast, Elijah Zupancic (NGINX) and Lee Briggs (Pulumi) will introduce a push-button Kubernetes deployment on AWS EKS using Pulumi."
 
 # A featured webinar will display first in the list.
 featured: false
@@ -34,12 +34,12 @@ block_external_search_index: false
 
 # The url slug for the webinar landing page. If this is an external
 # webinar, use the external URL as the value here.
-url_slug: "building-event-driven-communications-with-twilio-and-aws"
+url_slug: "nginx-deploy-kubernetes-and-the-kitchen-sink"
 
 # The content of the hero section.
 hero:
     # The title text in the hero. This also serves as the pages H1.
-    title: "Building Communication Workflows with Twilio, Pulumi, and AWS"
+    title: "Deploy Kubernetes and the Kitchen Sink with NGINX and Pulumi"
     # The image the appears on the right hand side of the hero.
     image: "/icons/containers.svg"
 
@@ -52,34 +52,36 @@ hero:
 # Content for the left hand side section of the page.
 main:
     # Webinar title.
-    title: "Building Communication Workflows with Twilio, Pulumi, and AWS"
+    title: "Deploy Kubernetes and the Kitchen Sink with NGINX and Pulumi"
     # URL for embedding a URL for ungated webinars.
     youtube_url: ""
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
-    sortable_date: 2021-09-28T10:00:00-07:00
+    sortable_date: 2021-10-04T10:00:00-07:00
     # Duration of the webinar.
     duration: "1 hour"
     # Datetime of the webinar.
-    datetime: "TUE SEPT 28, 2021"
+    datetime: ""
     # Description of the webinar.
     description: |
-        With Twilio,  you can build powerful customer engagement workflows, but what if you want to persist your data? In this session, the Twilio team will show you how to create simple to powerful communication workflows using Pulumi for infrastructure management and AWS for persisting data.
+        In this Live Cast, Elijah Zupancic (NGINX) and Lee Briggs (Pulumi) will introduce a push-button Kubernetes deployment on AWS EKS using Pulumi for infrastructure definition. We will delve into some advanced topics such as chaining multiple Pulumi projects together, creating Kubernetes infrastructure as code, building / deploying NGINX Kubernetes Ingress Controller, and application deployments. All topics covered will have corresponding open-source examples that can be borrowed from freely.
+
+        This Live Cast should give you what you need to get started with a production ready Kubernetes cluster with NGINX and Pulumi.
 
     # The webinar presenters
     presenters:
-        - name: Lee Zen
-          role: VP Engineering, Pulumi
-        - name: Giuseppe Verni
-          role: Principal Solutions Engineer,, Twilio
+        - name: Lee Briggs
+          role: Software Engineer, Pulumi
+        - name: Elijah Zupancic
+          role: Solution Architect, NGINX
 
     # A bullet point list containing what the user will learn during the webinar.
     learn:
-        - How to set up services like AWS DynamoDB using Pulumi and your favorite programming languages.
-        - Managing Twilio with Pulumi using TypeScript.
-        - Designing a vote system using a phone number.
+        - Kubernetes Infrastructure as code
+        - Push-button Kubernetes deployments
+        - Application deployments
 
 # The right hand side form section.
 form:
     # HubSpot form id.
-    hubspot_form_id: "aaebfbfa-9d86-4258-9332-94ae99c44ead"
+    hubspot_form_id: "ab9fb33f-1859-4386-ac28-69438606b9fb"
 ---

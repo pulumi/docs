@@ -1,7 +1,7 @@
 ---
 # Name of the webinar.
-title: "Building Communication Workflows with Twilio and AWS"
-meta_desc: "In this session, the Twilio team will show you how they use Pulumi and how you can create powerful scheduling tools for your customer communications."
+title: "The Docker Show: Multi-language components with Pulumi"
+meta_desc: "In this episode Lee Zen will show you how Pulumi's multi-language components feature makes it easy to share infrastructure code across programming languages."
 
 # A featured webinar will display first in the list.
 featured: false
@@ -34,12 +34,12 @@ block_external_search_index: false
 
 # The url slug for the webinar landing page. If this is an external
 # webinar, use the external URL as the value here.
-url_slug: "building-event-driven-communications-with-twilio-and-aws"
+url_slug: "docker-show-multi-language-components"
 
 # The content of the hero section.
 hero:
     # The title text in the hero. This also serves as the pages H1.
-    title: "Building Communication Workflows with Twilio, Pulumi, and AWS"
+    title: "The Docker Show: Multi-language / Multi-cloud container components with Pulumi and Docker"
     # The image the appears on the right hand side of the hero.
     image: "/icons/containers.svg"
 
@@ -52,34 +52,38 @@ hero:
 # Content for the left hand side section of the page.
 main:
     # Webinar title.
-    title: "Building Communication Workflows with Twilio, Pulumi, and AWS"
+    title: "The Docker Show: Multi-language / Multi-cloud container components with Pulumi and Docker"
     # URL for embedding a URL for ungated webinars.
     youtube_url: ""
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
-    sortable_date: 2021-09-28T10:00:00-07:00
+    sortable_date: 2021-09-23T10:00:00-07:00
     # Duration of the webinar.
     duration: "1 hour"
     # Datetime of the webinar.
-    datetime: "TUE SEPT 28, 2021"
+    datetime: ""
     # Description of the webinar.
     description: |
-        With Twilio,  you can build powerful customer engagement workflows, but what if you want to persist your data? In this session, the Twilio team will show you how to create simple to powerful communication workflows using Pulumi for infrastructure management and AWS for persisting data.
+        In this episode, Pulumi VP of Engineering, Lee Zen will show you how Pulumi's new multi-language components feature makes it easy to share infrastructure code across programming languages. We'll also show you how to deploy containerized apps across multiple clouds using Google Cloud Run and AWS App Runner.
 
     # The webinar presenters
     presenters:
         - name: Lee Zen
           role: VP Engineering, Pulumi
-        - name: Giuseppe Verni
-          role: Principal Solutions Engineer,, Twilio
+        - name: Peter Mckee
+          role: Head of Developer Relations, Docker
 
     # A bullet point list containing what the user will learn during the webinar.
     learn:
-        - How to set up services like AWS DynamoDB using Pulumi and your favorite programming languages.
-        - Managing Twilio with Pulumi using TypeScript.
-        - Designing a vote system using a phone number.
+        - How to Get Started with Pulumi and Docker
+        - Automate Building and Deploying your Containers using Pulumi
+        - Deploying your Containers to AWS using Docker and Pulumi
+
+# This section contains the transcript for a video. It is optional.
+transcript: |
+    Here is where you would put the transcript for a recorded video.
 
 # The right hand side form section.
 form:
     # HubSpot form id.
-    hubspot_form_id: "aaebfbfa-9d86-4258-9332-94ae99c44ead"
+    hubspot_form_id: 65c0e27b-7f95-4277-930b-ee4d09122a20
 ---

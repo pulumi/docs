@@ -1,7 +1,7 @@
 ---
 # Name of the webinar.
-title: "Building Communication Workflows with Twilio and AWS"
-meta_desc: "In this session, the Twilio team will show you how they use Pulumi and how you can create powerful scheduling tools for your customer communications."
+title: "DeveloperWeek Global: Cloud"
+meta_desc: "Visit the Pulumi team booth for demos and discussion on Cloud Engineering practices and examples of how to manage AWS with Python, TypeScript, Go and .NET."
 
 # A featured webinar will display first in the list.
 featured: false
@@ -20,7 +20,7 @@ unlisted: false
 
 # Gated webinars will have a registration form and the user will need
 # to fill out the form before viewing.
-gated: true
+gated: false
 
 # The layout of the landing page.
 type: webinars
@@ -29,17 +29,17 @@ type: webinars
 # landing/registration page. If the webinar is external you will need
 # set the 'block_external_search_index' flag to true so Google does not index
 # the webinar page created.
-external: false
-block_external_search_index: false
+external: true
+block_external_search_index: true
 
 # The url slug for the webinar landing page. If this is an external
 # webinar, use the external URL as the value here.
-url_slug: "building-event-driven-communications-with-twilio-and-aws"
+url_slug: "https://www.developerweek.com/global/conference/cloud/"
 
 # The content of the hero section.
 hero:
     # The title text in the hero. This also serves as the pages H1.
-    title: "Building Communication Workflows with Twilio, Pulumi, and AWS"
+    title: ""
     # The image the appears on the right hand side of the hero.
     image: "/icons/containers.svg"
 
@@ -52,34 +52,37 @@ hero:
 # Content for the left hand side section of the page.
 main:
     # Webinar title.
-    title: "Building Communication Workflows with Twilio, Pulumi, and AWS"
+    title: ""
     # URL for embedding a URL for ungated webinars.
     youtube_url: ""
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
-    sortable_date: 2021-09-28T10:00:00-07:00
+    sortable_date: 2021-09-13T07:00:00-07:00
     # Duration of the webinar.
-    duration: "1 hour"
+    duration: "2 hours"
     # Datetime of the webinar.
-    datetime: "TUE SEPT 28, 2021"
+    datetime: ""
     # Description of the webinar.
-    description: |
-        With Twilio,  you can build powerful customer engagement workflows, but what if you want to persist your data? In this session, the Twilio team will show you how to create simple to powerful communication workflows using Pulumi for infrastructure management and AWS for persisting data.
+    description: ""
 
     # The webinar presenters
     presenters:
-        - name: Lee Zen
-          role: VP Engineering, Pulumi
-        - name: Giuseppe Verni
-          role: Principal Solutions Engineer,, Twilio
+        - name: ""
+          role: ""
 
     # A bullet point list containing what the user will learn during the webinar.
     learn:
-        - How to set up services like AWS DynamoDB using Pulumi and your favorite programming languages.
-        - Managing Twilio with Pulumi using TypeScript.
-        - Designing a vote system using a phone number.
+        - ""
+
+# This section contains the transcript for a video. It is optional.
+transcript: |
+    Here is where you would put the transcript for a recorded video.
 
 # The right hand side form section.
 form:
+    # GoToWebinar webinar key. This key allows us to register people for webinars via the
+    # HubSpot form.
+    gotowebinar_key: ""
+
     # HubSpot form id.
-    hubspot_form_id: "aaebfbfa-9d86-4258-9332-94ae99c44ead"
+    hubspot_form_id: ""
 ---
