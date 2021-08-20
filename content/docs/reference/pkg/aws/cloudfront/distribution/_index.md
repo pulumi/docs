@@ -676,7 +676,6 @@ const s3Distribution = new aws.cloudfront.Distribution("s3Distribution", {
                  <span class="nx">restrictions</span><span class="p">:</span> <span class="nx">Optional[DistributionRestrictionsArgs]</span> = None<span class="p">,</span>
                  <span class="nx">retain_on_delete</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
                  <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
-                 <span class="nx">tags_all</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
                  <span class="nx">viewer_certificate</span><span class="p">:</span> <span class="nx">Optional[DistributionViewerCertificateArgs]</span> = None<span class="p">,</span>
                  <span class="nx">wait_for_deployment</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
                  <span class="nx">web_acl_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
@@ -980,15 +979,6 @@ the distribution needs to be deleted manually afterwards. Default: `false`.
     <dd>{{% md %}}A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="tagsall_csharp">
-<a href="#tagsall_csharp" style="color: inherit; text-decoration: inherit;">Tags<wbr>All</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, string&gt;</span>
-    </dt>
-    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider .
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="waitfordeployment_csharp">
 <a href="#waitfordeployment_csharp" style="color: inherit; text-decoration: inherit;">Wait<wbr>For<wbr>Deployment</a>
 </span>
@@ -1188,15 +1178,6 @@ the distribution needs to be deleted manually afterwards. Default: `false`.
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="tagsall_go">
-<a href="#tagsall_go" style="color: inherit; text-decoration: inherit;">Tags<wbr>All</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]string</span>
-    </dt>
-    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider .
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="waitfordeployment_go">
@@ -1400,15 +1381,6 @@ the distribution needs to be deleted manually afterwards. Default: `false`.
     <dd>{{% md %}}A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="tagsall_nodejs">
-<a href="#tagsall_nodejs" style="color: inherit; text-decoration: inherit;">tags<wbr>All</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
-    </dt>
-    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider .
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="waitfordeployment_nodejs">
 <a href="#waitfordeployment_nodejs" style="color: inherit; text-decoration: inherit;">wait<wbr>For<wbr>Deployment</a>
 </span>
@@ -1610,15 +1582,6 @@ the distribution needs to be deleted manually afterwards. Default: `false`.
     <dd>{{% md %}}A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="tags_all_python">
-<a href="#tags_all_python" style="color: inherit; text-decoration: inherit;">tags_<wbr>all</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
-    </dt>
-    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider .
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="wait_for_deployment_python">
 <a href="#wait_for_deployment_python" style="color: inherit; text-decoration: inherit;">wait_<wbr>for_<wbr>deployment</a>
 </span>
@@ -1744,6 +1707,15 @@ distribution's information is fully propagated throughout the Amazon
 CloudFront system.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="tagsall_csharp">
+<a href="#tagsall_csharp" style="color: inherit; text-decoration: inherit;">Tags<wbr>All</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider .
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="trustedkeygroups_csharp">
 <a href="#trustedkeygroups_csharp" style="color: inherit; text-decoration: inherit;">Trusted<wbr>Key<wbr>Groups</a>
 </span>
@@ -1854,6 +1826,15 @@ currently in progress.
     <dd>{{% md %}}The current status of the distribution. `Deployed` if the
 distribution's information is fully propagated throughout the Amazon
 CloudFront system.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="tagsall_go">
+<a href="#tagsall_go" style="color: inherit; text-decoration: inherit;">Tags<wbr>All</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider .
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="trustedkeygroups_go">
@@ -1968,6 +1949,15 @@ distribution's information is fully propagated throughout the Amazon
 CloudFront system.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="tagsall_nodejs">
+<a href="#tagsall_nodejs" style="color: inherit; text-decoration: inherit;">tags<wbr>All</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider .
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="trustedkeygroups_nodejs">
 <a href="#trustedkeygroups_nodejs" style="color: inherit; text-decoration: inherit;">trusted<wbr>Key<wbr>Groups</a>
 </span>
@@ -2078,6 +2068,15 @@ currently in progress.
     <dd>{{% md %}}The current status of the distribution. `Deployed` if the
 distribution's information is fully propagated throughout the Amazon
 CloudFront system.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="tags_all_python">
+<a href="#tags_all_python" style="color: inherit; text-decoration: inherit;">tags_<wbr>all</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, str]</span>
+    </dt>
+    <dd>{{% md %}}A map of tags assigned to the resource, including those inherited from the provider .
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="trusted_key_groups_python">
@@ -5154,7 +5153,7 @@ response to requests using the specified HTTP methods.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The pattern (for example, `images/*.jpg)` that
+    <dd>{{% md %}}The pattern (for example, `images/*.jpg`) that
 specifies which requests you want this cache behavior to apply to.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5357,7 +5356,7 @@ response to requests using the specified HTTP methods.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The pattern (for example, `images/*.jpg)` that
+    <dd>{{% md %}}The pattern (for example, `images/*.jpg`) that
 specifies which requests you want this cache behavior to apply to.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5560,7 +5559,7 @@ response to requests using the specified HTTP methods.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The pattern (for example, `images/*.jpg)` that
+    <dd>{{% md %}}The pattern (for example, `images/*.jpg`) that
 specifies which requests you want this cache behavior to apply to.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
@@ -5763,7 +5762,7 @@ response to requests using the specified HTTP methods.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The pattern (for example, `images/*.jpg)` that
+    <dd>{{% md %}}The pattern (for example, `images/*.jpg`) that
 specifies which requests you want this cache behavior to apply to.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
