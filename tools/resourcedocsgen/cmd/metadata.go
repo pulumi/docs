@@ -2,7 +2,6 @@ package cmd
 
 import (
 	"fmt"
-
 	"strings"
 	"time"
 
@@ -53,7 +52,7 @@ func packageMetadataCmd() *cobra.Command {
 		},
 	}
 
-	cmd.LocalFlags().StringVarP(&metadataOutDir, "metadataOutDir", "m", "", "The directory path to where the docs will be written to")
+	cmd.LocalFlags().StringVar(&metadataOutDir, "metadataOutDir", "", "The directory path to where the docs will be written to")
 	cmd.LocalFlags().BoolVar(&featured, "featured", false, "Whether or not this package should be marked as featured in its metadata")
 
 	cmd.MarkFlagRequired("metadataOutDir")

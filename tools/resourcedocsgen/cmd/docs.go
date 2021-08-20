@@ -29,8 +29,6 @@ func resourceDocsCmd() *cobra.Command {
 		Use:   "docs",
 		Short: "Generate resource docs from a Pulumi schema file",
 		RunE: func(cmd *cobra.Command, args []string) error {
-			defer glog.Flush()
-
 			if overlaysSchemaFile != "" {
 				overlaySpec := &pschema.PackageSpec{}
 				overlaysSchema, err := ioutil.ReadFile(overlaysSchemaFile)
@@ -59,8 +57,8 @@ func resourceDocsCmd() *cobra.Command {
 		},
 	}
 
-	cmd.LocalFlags().StringVarP(&docsOutDir, "docsOutDir", "d", "", "The directory path to where the docs will be written to")
-	cmd.LocalFlags().StringVarP(&overlaysSchemaFile, "overlaysSchemaFile", "o", "", "The optional overlays that should be merged with the main schema")
+	cmd.LocalFlags().StringVar(&docsOutDir, "docsOutDir", "", "The directory path to where the docs will be written to")
+	cmd.LocalFlags().StringVar(&overlaysSchemaFile, "overlaysSchemaFile", "", "The optional overlays that should be merged with the main schema")
 
 	cmd.MarkFlagRequired("docsOutDir")
 

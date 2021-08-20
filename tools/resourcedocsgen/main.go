@@ -26,6 +26,8 @@ import (
 func main() {
 	flag.Parse()
 
+	defer glog.Flush()
+
 	if err := cmd.RootCmd().Execute(); err != nil {
 		glog.Errorf("Failed to execute command: %v", err)
 		os.Exit(1)
