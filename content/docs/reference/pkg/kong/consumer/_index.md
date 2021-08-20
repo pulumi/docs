@@ -37,6 +37,10 @@ class MyStack : Stack
         var consumer = new Kong.Consumer("consumer", new Kong.ConsumerArgs
         {
             CustomId = "123",
+            Tags = 
+            {
+                "mySuperTag",
+            },
             Username = "User1",
         });
     }
@@ -62,6 +66,9 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := kong.NewConsumer(ctx, "consumer", &kong.ConsumerArgs{
 			CustomId: pulumi.String("123"),
+			Tags: pulumi.StringArray{
+				pulumi.String("mySuperTag"),
+			},
 			Username: pulumi.String("User1"),
 		})
 		if err != nil {
@@ -84,6 +91,7 @@ import pulumi_kong as kong
 
 consumer = kong.Consumer("consumer",
     custom_id="123",
+    tags=["mySuperTag"],
     username="User1")
 ```
 
@@ -100,6 +108,7 @@ import * as kong from "@pulumi/kong";
 
 const consumer = new kong.Consumer("consumer", {
     customId: "123",
+    tags: ["mySuperTag"],
     username: "User1",
 });
 ```
@@ -129,6 +138,7 @@ const consumer = new kong.Consumer("consumer", {
 <span class="k">def </span><span class="nx">Consumer</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
              <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
              <span class="nx">custom_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
              <span class="nx">username</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">Consumer</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
@@ -268,6 +278,15 @@ The Consumer resource accepts the following [input]({{< relref "/docs/intro/conc
     <dd>{{% md %}}A custom id for the consumer, you must set either the username or custom_id
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="tags_csharp">
+<a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A list of strings associated with the Consumer for grouping and filtering
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="username_csharp">
 <a href="#username_csharp" style="color: inherit; text-decoration: inherit;">Username</a>
 </span>
@@ -288,6 +307,15 @@ The Consumer resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A custom id for the consumer, you must set either the username or custom_id
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tags_go">
+<a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}A list of strings associated with the Consumer for grouping and filtering
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="username_go">
@@ -312,6 +340,15 @@ The Consumer resource accepts the following [input]({{< relref "/docs/intro/conc
     <dd>{{% md %}}A custom id for the consumer, you must set either the username or custom_id
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="tags_nodejs">
+<a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}A list of strings associated with the Consumer for grouping and filtering
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="username_nodejs">
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
 </span>
@@ -332,6 +369,15 @@ The Consumer resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A custom id for the consumer, you must set either the username or custom_id
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tags_python">
+<a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}A list of strings associated with the Consumer for grouping and filtering
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="username_python">
@@ -416,6 +462,7 @@ Get an existing Consumer resource's state with the given name, ID, and optional 
         <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
         <span class="nx">custom_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
         <span class="nx">username</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Consumer</code></pre></div>
 {{% /choosable %}}
 
@@ -538,6 +585,15 @@ The following state arguments are supported:
     <dd>{{% md %}}A custom id for the consumer, you must set either the username or custom_id
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_tags_csharp">
+<a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A list of strings associated with the Consumer for grouping and filtering
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_username_csharp">
 <a href="#state_username_csharp" style="color: inherit; text-decoration: inherit;">Username</a>
 </span>
@@ -558,6 +614,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A custom id for the consumer, you must set either the username or custom_id
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_tags_go">
+<a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}A list of strings associated with the Consumer for grouping and filtering
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_username_go">
@@ -582,6 +647,15 @@ The following state arguments are supported:
     <dd>{{% md %}}A custom id for the consumer, you must set either the username or custom_id
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_tags_nodejs">
+<a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}A list of strings associated with the Consumer for grouping and filtering
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_username_nodejs">
 <a href="#state_username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
 </span>
@@ -602,6 +676,15 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A custom id for the consumer, you must set either the username or custom_id
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_tags_python">
+<a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}A list of strings associated with the Consumer for grouping and filtering
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_username_python">

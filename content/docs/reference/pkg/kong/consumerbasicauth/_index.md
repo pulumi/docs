@@ -344,7 +344,7 @@ The ConsumerBasicAuth resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}A list of strings associated with the consumer basic auth for grouping and filtering.
+    <dd>{{% md %}}A list of strings associated with the consumer basic auth for grouping and filtering
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -384,7 +384,7 @@ The ConsumerBasicAuth resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}A list of strings associated with the consumer basic auth for grouping and filtering.
+    <dd>{{% md %}}A list of strings associated with the consumer basic auth for grouping and filtering
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -424,7 +424,7 @@ The ConsumerBasicAuth resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}A list of strings associated with the consumer basic auth for grouping and filtering.
+    <dd>{{% md %}}A list of strings associated with the consumer basic auth for grouping and filtering
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -464,7 +464,7 @@ The ConsumerBasicAuth resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}A list of strings associated with the consumer basic auth for grouping and filtering.
+    <dd>{{% md %}}A list of strings associated with the consumer basic auth for grouping and filtering
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -679,7 +679,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}A list of strings associated with the consumer basic auth for grouping and filtering.
+    <dd>{{% md %}}A list of strings associated with the consumer basic auth for grouping and filtering
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_username_csharp">
@@ -719,7 +719,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}A list of strings associated with the consumer basic auth for grouping and filtering.
+    <dd>{{% md %}}A list of strings associated with the consumer basic auth for grouping and filtering
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_username_go">
@@ -759,7 +759,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}A list of strings associated with the consumer basic auth for grouping and filtering.
+    <dd>{{% md %}}A list of strings associated with the consumer basic auth for grouping and filtering
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_username_nodejs">
@@ -799,7 +799,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}A list of strings associated with the consumer basic auth for grouping and filtering.
+    <dd>{{% md %}}A list of strings associated with the consumer basic auth for grouping and filtering
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_username_python">

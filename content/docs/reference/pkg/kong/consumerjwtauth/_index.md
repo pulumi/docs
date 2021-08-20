@@ -191,7 +191,8 @@ const consumerJwtConfig = new kong.ConsumerJwtAuth("consumer_jwt_config", {
                     <span class="nx">consumer_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                     <span class="nx">key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                     <span class="nx">rsa_public_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                    <span class="nx">secret</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
+                    <span class="nx">secret</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                    <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">ConsumerJwtAuth</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                     <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ConsumerJwtAuthArgs</a></span><span class="p">,</span>
@@ -336,7 +337,7 @@ The ConsumerJwtAuth resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}If algorithm is `RS256` or `ES256`, the public key (in PEM format) to use to verify the token’s signature.
+    <dd>{{% md %}}If algorithm is `RS256` or `ES256`, the public key (in PEM format) to use to verify the token’s signature
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="algorithm_csharp">
@@ -345,7 +346,7 @@ The ConsumerJwtAuth resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The algorithm used to verify the token’s signature. Can be HS256, HS384, HS512, RS256, or ES256, Default is `HS256`.
+    <dd>{{% md %}}The algorithm used to verify the token’s signature. Can be HS256, HS384, HS512, RS256, or ES256, Default is `HS256`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="key_csharp">
@@ -363,7 +364,16 @@ The ConsumerJwtAuth resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}If algorithm is `HS256` or `ES256`, the secret used to sign JWTs for this credential. If left out, will be auto-generated.
+    <dd>{{% md %}}If algorithm is `HS256` or `ES256`, the secret used to sign JWTs for this credential. If left out, will be auto-generated
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tags_csharp">
+<a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A list of strings associated with the consumer JWT auth for grouping and filtering
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -385,7 +395,7 @@ The ConsumerJwtAuth resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}If algorithm is `RS256` or `ES256`, the public key (in PEM format) to use to verify the token’s signature.
+    <dd>{{% md %}}If algorithm is `RS256` or `ES256`, the public key (in PEM format) to use to verify the token’s signature
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="algorithm_go">
@@ -394,7 +404,7 @@ The ConsumerJwtAuth resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The algorithm used to verify the token’s signature. Can be HS256, HS384, HS512, RS256, or ES256, Default is `HS256`.
+    <dd>{{% md %}}The algorithm used to verify the token’s signature. Can be HS256, HS384, HS512, RS256, or ES256, Default is `HS256`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="key_go">
@@ -412,7 +422,16 @@ The ConsumerJwtAuth resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}If algorithm is `HS256` or `ES256`, the secret used to sign JWTs for this credential. If left out, will be auto-generated.
+    <dd>{{% md %}}If algorithm is `HS256` or `ES256`, the secret used to sign JWTs for this credential. If left out, will be auto-generated
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tags_go">
+<a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}A list of strings associated with the consumer JWT auth for grouping and filtering
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -434,7 +453,7 @@ The ConsumerJwtAuth resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}If algorithm is `RS256` or `ES256`, the public key (in PEM format) to use to verify the token’s signature.
+    <dd>{{% md %}}If algorithm is `RS256` or `ES256`, the public key (in PEM format) to use to verify the token’s signature
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="algorithm_nodejs">
@@ -443,7 +462,7 @@ The ConsumerJwtAuth resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The algorithm used to verify the token’s signature. Can be HS256, HS384, HS512, RS256, or ES256, Default is `HS256`.
+    <dd>{{% md %}}The algorithm used to verify the token’s signature. Can be HS256, HS384, HS512, RS256, or ES256, Default is `HS256`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="key_nodejs">
@@ -461,7 +480,16 @@ The ConsumerJwtAuth resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}If algorithm is `HS256` or `ES256`, the secret used to sign JWTs for this credential. If left out, will be auto-generated.
+    <dd>{{% md %}}If algorithm is `HS256` or `ES256`, the secret used to sign JWTs for this credential. If left out, will be auto-generated
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tags_nodejs">
+<a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}A list of strings associated with the consumer JWT auth for grouping and filtering
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -483,7 +511,7 @@ The ConsumerJwtAuth resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}If algorithm is `RS256` or `ES256`, the public key (in PEM format) to use to verify the token’s signature.
+    <dd>{{% md %}}If algorithm is `RS256` or `ES256`, the public key (in PEM format) to use to verify the token’s signature
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="algorithm_python">
@@ -492,7 +520,7 @@ The ConsumerJwtAuth resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The algorithm used to verify the token’s signature. Can be HS256, HS384, HS512, RS256, or ES256, Default is `HS256`.
+    <dd>{{% md %}}The algorithm used to verify the token’s signature. Can be HS256, HS384, HS512, RS256, or ES256, Default is `HS256`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="key_python">
@@ -510,7 +538,16 @@ The ConsumerJwtAuth resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}If algorithm is `HS256` or `ES256`, the secret used to sign JWTs for this credential. If left out, will be auto-generated.
+    <dd>{{% md %}}If algorithm is `HS256` or `ES256`, the secret used to sign JWTs for this credential. If left out, will be auto-generated
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="tags_python">
+<a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}A list of strings associated with the consumer JWT auth for grouping and filtering
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -589,7 +626,8 @@ Get an existing ConsumerJwtAuth resource's state with the given name, ID, and op
         <span class="nx">consumer_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">rsa_public_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-        <span class="nx">secret</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> ConsumerJwtAuth</code></pre></div>
+        <span class="nx">secret</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">) -&gt;</span> ConsumerJwtAuth</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -708,7 +746,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The algorithm used to verify the token’s signature. Can be HS256, HS384, HS512, RS256, or ES256, Default is `HS256`.
+    <dd>{{% md %}}The algorithm used to verify the token’s signature. Can be HS256, HS384, HS512, RS256, or ES256, Default is `HS256`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_consumerid_csharp">
@@ -735,7 +773,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}If algorithm is `RS256` or `ES256`, the public key (in PEM format) to use to verify the token’s signature.
+    <dd>{{% md %}}If algorithm is `RS256` or `ES256`, the public key (in PEM format) to use to verify the token’s signature
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_secret_csharp">
@@ -744,7 +782,16 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}If algorithm is `HS256` or `ES256`, the secret used to sign JWTs for this credential. If left out, will be auto-generated.
+    <dd>{{% md %}}If algorithm is `HS256` or `ES256`, the secret used to sign JWTs for this credential. If left out, will be auto-generated
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_tags_csharp">
+<a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A list of strings associated with the consumer JWT auth for grouping and filtering
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -757,7 +804,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The algorithm used to verify the token’s signature. Can be HS256, HS384, HS512, RS256, or ES256, Default is `HS256`.
+    <dd>{{% md %}}The algorithm used to verify the token’s signature. Can be HS256, HS384, HS512, RS256, or ES256, Default is `HS256`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_consumerid_go">
@@ -784,7 +831,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}If algorithm is `RS256` or `ES256`, the public key (in PEM format) to use to verify the token’s signature.
+    <dd>{{% md %}}If algorithm is `RS256` or `ES256`, the public key (in PEM format) to use to verify the token’s signature
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_secret_go">
@@ -793,7 +840,16 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}If algorithm is `HS256` or `ES256`, the secret used to sign JWTs for this credential. If left out, will be auto-generated.
+    <dd>{{% md %}}If algorithm is `HS256` or `ES256`, the secret used to sign JWTs for this credential. If left out, will be auto-generated
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_tags_go">
+<a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}A list of strings associated with the consumer JWT auth for grouping and filtering
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -806,7 +862,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The algorithm used to verify the token’s signature. Can be HS256, HS384, HS512, RS256, or ES256, Default is `HS256`.
+    <dd>{{% md %}}The algorithm used to verify the token’s signature. Can be HS256, HS384, HS512, RS256, or ES256, Default is `HS256`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_consumerid_nodejs">
@@ -833,7 +889,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}If algorithm is `RS256` or `ES256`, the public key (in PEM format) to use to verify the token’s signature.
+    <dd>{{% md %}}If algorithm is `RS256` or `ES256`, the public key (in PEM format) to use to verify the token’s signature
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_secret_nodejs">
@@ -842,7 +898,16 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}If algorithm is `HS256` or `ES256`, the secret used to sign JWTs for this credential. If left out, will be auto-generated.
+    <dd>{{% md %}}If algorithm is `HS256` or `ES256`, the secret used to sign JWTs for this credential. If left out, will be auto-generated
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_tags_nodejs">
+<a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}A list of strings associated with the consumer JWT auth for grouping and filtering
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -855,7 +920,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The algorithm used to verify the token’s signature. Can be HS256, HS384, HS512, RS256, or ES256, Default is `HS256`.
+    <dd>{{% md %}}The algorithm used to verify the token’s signature. Can be HS256, HS384, HS512, RS256, or ES256, Default is `HS256`
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_consumer_id_python">
@@ -882,7 +947,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}If algorithm is `RS256` or `ES256`, the public key (in PEM format) to use to verify the token’s signature.
+    <dd>{{% md %}}If algorithm is `RS256` or `ES256`, the public key (in PEM format) to use to verify the token’s signature
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_secret_python">
@@ -891,7 +956,16 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}If algorithm is `HS256` or `ES256`, the secret used to sign JWTs for this credential. If left out, will be auto-generated.
+    <dd>{{% md %}}If algorithm is `HS256` or `ES256`, the secret used to sign JWTs for this credential. If left out, will be auto-generated
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_tags_python">
+<a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}A list of strings associated with the consumer JWT auth for grouping and filtering
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
