@@ -243,7 +243,7 @@ used in these resources will be rendered in plaintext to the resulting YAML.{{% 
 
 This config can be specified in the following ways, using this precedence:
 1. This `suppressHelmHookWarnings` parameter.
-2. The `PULUMI_K8S_SUPPRESS_HELM_HOOK_WARNING` environment variable. It can also be sourced from the following environment variable: `PULUMI_K8S_SUPPRESS_HELM_HOOK_WARNINGS`{{% /md %}}</dd></dl>
+2. The `PULUMI_K8S_SUPPRESS_HELM_HOOK_WARNINGS` environment variable. It can also be sourced from the following environment variable: `PULUMI_K8S_SUPPRESS_HELM_HOOK_WARNINGS`{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -328,7 +328,7 @@ used in these resources will be rendered in plaintext to the resulting YAML.{{% 
 
 This config can be specified in the following ways, using this precedence:
 1. This `suppressHelmHookWarnings` parameter.
-2. The `PULUMI_K8S_SUPPRESS_HELM_HOOK_WARNING` environment variable. It can also be sourced from the following environment variable: `PULUMI_K8S_SUPPRESS_HELM_HOOK_WARNINGS`{{% /md %}}</dd></dl>
+2. The `PULUMI_K8S_SUPPRESS_HELM_HOOK_WARNINGS` environment variable. It can also be sourced from the following environment variable: `PULUMI_K8S_SUPPRESS_HELM_HOOK_WARNINGS`{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -413,7 +413,7 @@ used in these resources will be rendered in plaintext to the resulting YAML.{{% 
 
 This config can be specified in the following ways, using this precedence:
 1. This `suppressHelmHookWarnings` parameter.
-2. The `PULUMI_K8S_SUPPRESS_HELM_HOOK_WARNING` environment variable. It can also be sourced from the following environment variable: `PULUMI_K8S_SUPPRESS_HELM_HOOK_WARNINGS`{{% /md %}}</dd></dl>
+2. The `PULUMI_K8S_SUPPRESS_HELM_HOOK_WARNINGS` environment variable. It can also be sourced from the following environment variable: `PULUMI_K8S_SUPPRESS_HELM_HOOK_WARNINGS`{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -498,7 +498,7 @@ used in these resources will be rendered in plaintext to the resulting YAML.{{% 
 
 This config can be specified in the following ways, using this precedence:
 1. This `suppressHelmHookWarnings` parameter.
-2. The `PULUMI_K8S_SUPPRESS_HELM_HOOK_WARNING` environment variable. It can also be sourced from the following environment variable: `PULUMI_K8S_SUPPRESS_HELM_HOOK_WARNINGS`{{% /md %}}</dd></dl>
+2. The `PULUMI_K8S_SUPPRESS_HELM_HOOK_WARNINGS` environment variable. It can also be sourced from the following environment variable: `PULUMI_K8S_SUPPRESS_HELM_HOOK_WARNINGS`{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
