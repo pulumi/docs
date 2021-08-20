@@ -77,7 +77,7 @@ func main() {
 			AccountName:       pulumi.String("contoso"),
 			EnableDiagnostics: pulumi.Bool(false),
 			InstanceName:      pulumi.String("blue"),
-			IotHubs: deviceupdate.IotHubSettingsArray{
+			IotHubs: []deviceupdate.IotHubSettingsArgs{
 				&deviceupdate.IotHubSettingsArgs{
 					EventHubConnectionString: pulumi.String("string"),
 					IoTHubConnectionString:   pulumi.String("string"),

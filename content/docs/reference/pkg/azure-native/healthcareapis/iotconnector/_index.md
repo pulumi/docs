@@ -113,26 +113,26 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := healthcareapis.NewIotConnector(ctx, "iotConnector", &healthcareapis.IotConnectorArgs{
 			DeviceMapping: &healthcareapis.IotMappingPropertiesArgs{
-				Content: pulumi.Map{
-					"template": pulumi.MapArray{
-						pulumi.Map{
-							"template": pulumi.Map{
-								"deviceIdExpression":  pulumi.String(fmt.Sprintf("%v%v", "$", ".deviceid")),
-								"timestampExpression": pulumi.String(fmt.Sprintf("%v%v", "$", ".measurementdatetime")),
-								"typeMatchExpression": pulumi.String(fmt.Sprintf("%v%v", "$", "..[?(@heartrate)]")),
-								"typeName":            pulumi.String("heartrate"),
-								"values": pulumi.StringMapArray{
-									pulumi.StringMap{
-										"required":        pulumi.String("true"),
-										"valueExpression": pulumi.String(fmt.Sprintf("%v%v", "$", ".heartrate")),
-										"valueName":       pulumi.String("hr"),
+				Content: pulumi.Any{
+					Template: []map[string]interface{}{
+						map[string]interface{}{
+							"template": map[string]interface{}{
+								"deviceIdExpression":  fmt.Sprintf("%v%v", "$", ".deviceid"),
+								"timestampExpression": fmt.Sprintf("%v%v", "$", ".measurementdatetime"),
+								"typeMatchExpression": fmt.Sprintf("%v%v", "$", "..[?(@heartrate)]"),
+								"typeName":            "heartrate",
+								"values": []map[string]interface{}{
+									map[string]interface{}{
+										"required":        "true",
+										"valueExpression": fmt.Sprintf("%v%v", "$", ".heartrate"),
+										"valueName":       "hr",
 									},
 								},
 							},
-							"templateType": pulumi.String("JsonPathContent"),
+							"templateType": "JsonPathContent",
 						},
 					},
-					"templateType": pulumi.String("CollectionContent"),
+					TemplateType: "CollectionContent",
 				},
 			},
 			Identity: &healthcareapis.ServiceManagedIdentityIdentityArgs{

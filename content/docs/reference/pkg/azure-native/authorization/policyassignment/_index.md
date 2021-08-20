@@ -75,7 +75,49 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	authorization "github.com/pulumi/pulumi-azure-native/sdk/go/azure/authorization"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := authorization.NewPolicyAssignment(ctx, "policyAssignment", &authorization.PolicyAssignmentArgs{
+			Description: pulumi.String("Force resource names to begin with given DeptA and end with -LC"),
+			DisplayName: pulumi.String("Enforce resource naming rules"),
+			Metadata: pulumi.Any{
+				AssignedBy: "Special Someone",
+			},
+			NonComplianceMessages: []authorization.NonComplianceMessageArgs{
+				&authorization.NonComplianceMessageArgs{
+					Message: pulumi.String("Resource names must start with 'DeptA' and end with '-LC'."),
+				},
+			},
+			Parameters: authorization.ParameterValuesValueMap{
+				"prefix": &authorization.ParameterValuesValueArgs{
+					Value: pulumi.Any("DeptA"),
+				},
+				"suffix": &authorization.ParameterValuesValueArgs{
+					Value: pulumi.Any("-LC"),
+				},
+			},
+			PolicyAssignmentName: pulumi.String("EnforceNaming"),
+			PolicyDefinitionId:   pulumi.String("/subscriptions/ae640e6b-ba3e-4256-9d62-2993eecfa6f2/providers/Microsoft.Authorization/policyDefinitions/ResourceNaming"),
+			Scope:                pulumi.String("subscriptions/ae640e6b-ba3e-4256-9d62-2993eecfa6f2"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
@@ -205,7 +247,49 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	authorization "github.com/pulumi/pulumi-azure-native/sdk/go/azure/authorization"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := authorization.NewPolicyAssignment(ctx, "policyAssignment", &authorization.PolicyAssignmentArgs{
+			Description:     pulumi.String("Force resource names to begin with given DeptA and end with -LC"),
+			DisplayName:     pulumi.String("Enforce resource naming rules"),
+			EnforcementMode: pulumi.String("Default"),
+			Identity: &authorization.IdentityArgs{
+				Type: "SystemAssigned",
+			},
+			Location: pulumi.String("eastus"),
+			Metadata: pulumi.Any{
+				AssignedBy: "Foo Bar",
+			},
+			Parameters: authorization.ParameterValuesValueMap{
+				"prefix": &authorization.ParameterValuesValueArgs{
+					Value: pulumi.Any("DeptA"),
+				},
+				"suffix": &authorization.ParameterValuesValueArgs{
+					Value: pulumi.Any("-LC"),
+				},
+			},
+			PolicyAssignmentName: pulumi.String("EnforceNaming"),
+			PolicyDefinitionId:   pulumi.String("/subscriptions/ae640e6b-ba3e-4256-9d62-2993eecfa6f2/providers/Microsoft.Authorization/policyDefinitions/ResourceNaming"),
+			Scope:                pulumi.String("subscriptions/ae640e6b-ba3e-4256-9d62-2993eecfa6f2"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
@@ -347,7 +431,7 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := authorization.NewPolicyAssignment(ctx, "policyAssignment", &authorization.PolicyAssignmentArgs{
 			DisplayName: pulumi.String("Enforce security policies"),
-			NonComplianceMessages: authorization.NonComplianceMessageArray{
+			NonComplianceMessages: []authorization.NonComplianceMessageArgs{
 				&authorization.NonComplianceMessageArgs{
 					Message: pulumi.String("Resources must comply with all internal security policies. See <internal site URL> for more info."),
 				},
@@ -493,7 +577,45 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	authorization "github.com/pulumi/pulumi-azure-native/sdk/go/azure/authorization"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := authorization.NewPolicyAssignment(ctx, "policyAssignment", &authorization.PolicyAssignmentArgs{
+			Description:     pulumi.String("Force resource names to begin with given DeptA and end with -LC"),
+			DisplayName:     pulumi.String("Enforce resource naming rules"),
+			EnforcementMode: pulumi.String("DoNotEnforce"),
+			Metadata: pulumi.Any{
+				AssignedBy: "Special Someone",
+			},
+			Parameters: authorization.ParameterValuesValueMap{
+				"prefix": &authorization.ParameterValuesValueArgs{
+					Value: pulumi.Any("DeptA"),
+				},
+				"suffix": &authorization.ParameterValuesValueArgs{
+					Value: pulumi.Any("-LC"),
+				},
+			},
+			PolicyAssignmentName: pulumi.String("EnforceNaming"),
+			PolicyDefinitionId:   pulumi.String("/subscriptions/ae640e6b-ba3e-4256-9d62-2993eecfa6f2/providers/Microsoft.Authorization/policyDefinitions/ResourceNaming"),
+			Scope:                pulumi.String("subscriptions/ae640e6b-ba3e-4256-9d62-2993eecfa6f2"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 

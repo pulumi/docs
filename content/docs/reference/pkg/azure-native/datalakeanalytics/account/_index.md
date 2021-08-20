@@ -114,7 +114,7 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := datalakeanalytics.NewAccount(ctx, "account", &datalakeanalytics.AccountArgs{
 			AccountName: pulumi.String("contosoadla"),
-			ComputePolicies: datalakeanalytics.CreateComputePolicyWithAccountParametersArray{
+			ComputePolicies: []datalakeanalytics.CreateComputePolicyWithAccountParametersArgs{
 				&datalakeanalytics.CreateComputePolicyWithAccountParametersArgs{
 					MaxDegreeOfParallelismPerJob: pulumi.Int(1),
 					MinPriorityPerJob:            pulumi.Int(1),
@@ -131,7 +131,7 @@ func main() {
 			},
 			DefaultDataLakeStoreAccount: pulumi.String("test_adls"),
 			FirewallAllowAzureIps:       "Enabled",
-			FirewallRules: datalakeanalytics.CreateFirewallRuleWithAccountParametersArray{
+			FirewallRules: []datalakeanalytics.CreateFirewallRuleWithAccountParametersArgs{
 				&datalakeanalytics.CreateFirewallRuleWithAccountParametersArgs{
 					EndIpAddress:   pulumi.String("2.2.2.2"),
 					Name:           pulumi.String("test_rule"),
@@ -147,7 +147,7 @@ func main() {
 			NewTier:                      "Consumption",
 			QueryStoreRetention:          pulumi.Int(30),
 			ResourceGroupName:            pulumi.String("contosorg"),
-			StorageAccounts: datalakeanalytics.AddStorageAccountWithAccountParametersArray{
+			StorageAccounts: []datalakeanalytics.AddStorageAccountWithAccountParametersArgs{
 				&datalakeanalytics.AddStorageAccountWithAccountParametersArgs{
 					AccessKey: pulumi.String("34adfa4f-cedf-4dc0-ba29-b6d1a69ab346"),
 					Name:      pulumi.String("test_storage"),

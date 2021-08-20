@@ -144,16 +144,16 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := network.NewWebApplicationFirewallPolicy(ctx, "webApplicationFirewallPolicy", &network.WebApplicationFirewallPolicyArgs{
-			CustomRules: network.WebApplicationFirewallCustomRuleArray{
+			CustomRules: []network.WebApplicationFirewallCustomRuleArgs{
 				&network.WebApplicationFirewallCustomRuleArgs{
 					Action: pulumi.String("Block"),
-					MatchConditions: network.MatchConditionArray{
+					MatchConditions: []network.MatchConditionArgs{
 						&network.MatchConditionArgs{
 							MatchValues: pulumi.StringArray{
 								pulumi.String("192.168.1.0/24"),
 								pulumi.String("10.0.0.0/24"),
 							},
-							MatchVariables: network.MatchVariableArray{
+							MatchVariables: []network.MatchVariableArgs{
 								&network.MatchVariableArgs{
 									VariableName: pulumi.String("RemoteAddr"),
 								},
@@ -167,12 +167,12 @@ func main() {
 				},
 				&network.WebApplicationFirewallCustomRuleArgs{
 					Action: pulumi.String("Block"),
-					MatchConditions: network.MatchConditionArray{
+					MatchConditions: []network.MatchConditionArgs{
 						&network.MatchConditionArgs{
 							MatchValues: pulumi.StringArray{
 								pulumi.String("192.168.1.0/24"),
 							},
-							MatchVariables: network.MatchVariableArray{
+							MatchVariables: []network.MatchVariableArgs{
 								&network.MatchVariableArgs{
 									VariableName: pulumi.String("RemoteAddr"),
 								},
@@ -183,7 +183,7 @@ func main() {
 							MatchValues: pulumi.StringArray{
 								pulumi.String("Windows"),
 							},
-							MatchVariables: network.MatchVariableArray{
+							MatchVariables: []network.MatchVariableArgs{
 								&network.MatchVariableArgs{
 									Selector:     pulumi.String("UserAgent"),
 									VariableName: pulumi.String("RequestHeaders"),

@@ -102,7 +102,7 @@ func main() {
 			},
 			ResourceGroupName: pulumi.String("rg1"),
 			RouteTableName:    pulumi.String("virtualHubRouteTable1a"),
-			Routes: network.VirtualHubRouteV2Array{
+			Routes: []network.VirtualHubRouteV2Args{
 				&network.VirtualHubRouteV2Args{
 					DestinationType: pulumi.String("CIDR"),
 					Destinations: pulumi.StringArray{

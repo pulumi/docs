@@ -75,7 +75,7 @@ func main() {
 		_, err := insights.NewSubscriptionDiagnosticSetting(ctx, "subscriptionDiagnosticSetting", &insights.SubscriptionDiagnosticSettingArgs{
 			EventHubAuthorizationRuleId: pulumi.String("/subscriptions/fb9f25f9-5785-4510-a38f-a62f188eb9f8/resourceGroups/montest/providers/microsoft.eventhub/namespaces/mynamespace/eventhubs/myeventhub/authorizationrules/myrule"),
 			EventHubName:                pulumi.String("myeventhub"),
-			Logs: insights.SubscriptionLogSettingsArray{
+			Logs: []insights.SubscriptionLogSettingsArgs{
 				&insights.SubscriptionLogSettingsArgs{
 					Category: pulumi.String("Security"),
 					Enabled:  pulumi.Bool(true),

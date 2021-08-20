@@ -94,7 +94,7 @@ func main() {
 			NestedResourceTypeSecond: pulumi.String("nestedResourceTypeSecond"),
 			NestedResourceTypeThird:  pulumi.String("nestedResourceTypeThird"),
 			Properties: &providerhub.SkuResourcePropertiesArgs{
-				SkuSettings: providerhub.SkuSettingArray{
+				SkuSettings: []providerhub.SkuSettingArgs{
 					&providerhub.SkuSettingArgs{
 						Kind: pulumi.String("Standard"),
 						Name: pulumi.String("freeSku"),

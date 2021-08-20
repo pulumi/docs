@@ -230,7 +230,6 @@ Explore the resources and functions of the azure-native.network module.
     <li><a href="listactivesecurityadminrule" title="ListActiveSecurityAdminRule"><span class="symbol function"></span>ListActiveSecurityAdminRule</a></li>
     <li><a href="listactivesecurityuserrule" title="ListActiveSecurityUserRule"><span class="symbol function"></span>ListActiveSecurityUserRule</a></li>
     <li><a href="listeffectiveconnectivityconfiguration" title="ListEffectiveConnectivityConfiguration"><span class="symbol function"></span>ListEffectiveConnectivityConfiguration</a></li>
-    <li><a href="listeffectivesecurityuserrulebysubnet" title="ListEffectiveSecurityUserRuleBySubnet"><span class="symbol function"></span>ListEffectiveSecurityUserRuleBySubnet</a></li>
     <li><a href="listeffectivevirtualnetworkbynetworkgroup" title="ListEffectiveVirtualNetworkByNetworkGroup"><span class="symbol function"></span>ListEffectiveVirtualNetworkByNetworkGroup</a></li>
     <li><a href="listeffectivevirtualnetworkbynetworkmanager" title="ListEffectiveVirtualNetworkByNetworkManager"><span class="symbol function"></span>ListEffectiveVirtualNetworkByNetworkManager</a></li>
     <li><a href="listnetworkmanagerdeploymentstatus" title="ListNetworkManagerDeploymentStatus"><span class="symbol function"></span>ListNetworkManagerDeploymentStatus</a></li>
@@ -244,6 +243,6 @@ Explore the resources and functions of the azure-native.network module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>1.22.0</dd>
+	<dd>1.23.0</dd>
 </dl>
 

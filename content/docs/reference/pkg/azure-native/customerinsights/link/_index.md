@@ -100,7 +100,7 @@ func main() {
 			},
 			HubName:  pulumi.String("sdkTestHub"),
 			LinkName: pulumi.String("linkTest4806"),
-			Mappings: customerinsights.TypePropertiesMappingArray{
+			Mappings: []customerinsights.TypePropertiesMappingArgs{
 				&customerinsights.TypePropertiesMappingArgs{
 					LinkType:           "UpdateAlways",
 					SourcePropertyName: pulumi.String("testInteraction1949"),

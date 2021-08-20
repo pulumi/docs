@@ -92,7 +92,65 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	machinelearningservices "github.com/pulumi/pulumi-azure-native/sdk/go/azure/machinelearningservices"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := machinelearningservices.NewOnlineEndpoint(ctx, "onlineEndpoint", &machinelearningservices.OnlineEndpointArgs{
+			EndpointName: pulumi.String("testEndpoint"),
+			Identity: &machinelearningservices.ResourceIdentityArgs{
+				Type: pulumi.String("UserAssigned"),
+				UserAssignedIdentities: machinelearningservices.UserAssignedIdentityMetaMap{
+					"/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1234/providers/Microsoft.ManagedIdentity/userAssignedIdentities/myuseridentity": &machinelearningservices.UserAssignedIdentityMetaArgs{
+						ClientId:    pulumi.String("string"),
+						PrincipalId: pulumi.String("string"),
+					},
+				},
+			},
+			Kind:     pulumi.String("string"),
+			Location: pulumi.String("string"),
+			Properties: &machinelearningservices.OnlineEndpointArgs{
+				AuthMode:    pulumi.String("AMLToken"),
+				Description: pulumi.String("string"),
+				Keys: &machinelearningservices.EndpointAuthKeysArgs{
+					PrimaryKey:   pulumi.String("string"),
+					SecondaryKey: pulumi.String("string"),
+				},
+				Properties: pulumi.StringMap{
+					"additionalProp1": pulumi.String("string"),
+					"additionalProp2": pulumi.String("string"),
+					"additionalProp3": pulumi.String("string"),
+				},
+				Target: pulumi.String("/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1234/providers/Microsoft.MachineLearningServices/workspaces/testworkspace/computes/compute123"),
+				Traffic: pulumi.IntMap{
+					"myDeployment1": pulumi.Int(0),
+					"myDeployment2": pulumi.Int(1),
+				},
+			},
+			ResourceGroupName: pulumi.String("testrg123"),
+			Tags: pulumi.StringMap{
+				"additionalProp1": pulumi.String("string"),
+				"additionalProp2": pulumi.String("string"),
+				"additionalProp3": pulumi.String("string"),
+			},
+			WorkspaceName: pulumi.String("workspace123"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 

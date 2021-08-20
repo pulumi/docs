@@ -82,7 +82,7 @@ func main() {
 			EnvironmentName:   pulumi.String("env1"),
 			Kind:              pulumi.String("Gen1"),
 			Location:          pulumi.String("West US"),
-			PartitionKeyProperties: timeseriesinsights.TimeSeriesIdPropertyArray{
+			PartitionKeyProperties: []timeseriesinsights.TimeSeriesIdPropertyArgs{
 				&timeseriesinsights.TimeSeriesIdPropertyArgs{
 					Name: pulumi.String("DeviceId1"),
 					Type: pulumi.String("String"),

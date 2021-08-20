@@ -69,7 +69,47 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	storsimple "github.com/pulumi/pulumi-azure-native/sdk/go/azure/storsimple"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := storsimple.NewBackupSchedule(ctx, "backupSchedule", &storsimple.BackupScheduleArgs{
+			BackupPolicyName:   pulumi.String("BkUpPolicy01ForSDKTest"),
+			BackupScheduleName: pulumi.String("schedule2"),
+			BackupType:         "CloudSnapshot",
+			DeviceName:         pulumi.String("Device05ForSDKTest"),
+			Kind:               "Series8000",
+			ManagerName:        pulumi.String("ManagerForSDKTest1"),
+			ResourceGroupName:  pulumi.String("ResourceGroupForSDKTest"),
+			RetentionCount:     pulumi.Float64(1),
+			ScheduleRecurrence: &storsimple.ScheduleRecurrenceArgs{
+				RecurrenceType:  "Weekly",
+				RecurrenceValue: pulumi.Int(1),
+				WeeklyDaysList: storsimple.DayOfWeekArray{
+					"Friday",
+					"Thursday",
+					"Monday",
+				},
+			},
+			ScheduleStatus: "Enabled",
+			StartTime:      pulumi.String("2017-06-24T01:00:00Z"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 

@@ -85,7 +85,7 @@ func main() {
 			DestinationAccount:        pulumi.String("dst112"),
 			ObjectReplicationPolicyId: pulumi.String("default"),
 			ResourceGroupName:         pulumi.String("res7687"),
-			Rules: storage.ObjectReplicationPolicyRuleArray{
+			Rules: []storage.ObjectReplicationPolicyRuleArgs{
 				&storage.ObjectReplicationPolicyRuleArgs{
 					DestinationContainer: pulumi.String("dcont139"),
 					Filters: &storage.ObjectReplicationPolicyFilterArgs{
@@ -242,7 +242,7 @@ func main() {
 			DestinationAccount:        pulumi.String("dst112"),
 			ObjectReplicationPolicyId: pulumi.String("2a20bb73-5717-4635-985a-5d4cf777438f"),
 			ResourceGroupName:         pulumi.String("res7687"),
-			Rules: storage.ObjectReplicationPolicyRuleArray{
+			Rules: []storage.ObjectReplicationPolicyRuleArgs{
 				&storage.ObjectReplicationPolicyRuleArgs{
 					DestinationContainer: pulumi.String("dcont139"),
 					Filters: &storage.ObjectReplicationPolicyFilterArgs{
@@ -409,7 +409,7 @@ func main() {
 			DestinationAccount:        pulumi.String("dst112"),
 			ObjectReplicationPolicyId: pulumi.String("2a20bb73-5717-4635-985a-5d4cf777438f"),
 			ResourceGroupName:         pulumi.String("res7687"),
-			Rules: storage.ObjectReplicationPolicyRuleArray{
+			Rules: []storage.ObjectReplicationPolicyRuleArgs{
 				&storage.ObjectReplicationPolicyRuleArgs{
 					DestinationContainer: pulumi.String("dcont139"),
 					Filters: &storage.ObjectReplicationPolicyFilterArgs{
@@ -590,7 +590,7 @@ func main() {
 			DestinationAccount:        pulumi.String("dst112"),
 			ObjectReplicationPolicyId: pulumi.String("2a20bb73-5717-4635-985a-5d4cf777438f"),
 			ResourceGroupName:         pulumi.String("res7687"),
-			Rules: storage.ObjectReplicationPolicyRuleArray{
+			Rules: []storage.ObjectReplicationPolicyRuleArgs{
 				&storage.ObjectReplicationPolicyRuleArgs{
 					DestinationContainer: pulumi.String("dcont139"),
 					Filters: &storage.ObjectReplicationPolicyFilterArgs{

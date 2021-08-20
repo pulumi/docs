@@ -116,7 +116,7 @@ func main() {
 			},
 			EncryptionState:       "Enabled",
 			FirewallAllowAzureIps: "Enabled",
-			FirewallRules: datalakestore.CreateFirewallRuleWithAccountParametersArray{
+			FirewallRules: []datalakestore.CreateFirewallRuleWithAccountParametersArgs{
 				&datalakestore.CreateFirewallRuleWithAccountParametersArgs{
 					EndIpAddress:   pulumi.String("2.2.2.2"),
 					Name:           pulumi.String("test_rule"),
@@ -134,7 +134,7 @@ func main() {
 				"test_key": pulumi.String("test_value"),
 			},
 			TrustedIdProviderState: "Enabled",
-			TrustedIdProviders: datalakestore.CreateTrustedIdProviderWithAccountParametersArray{
+			TrustedIdProviders: []datalakestore.CreateTrustedIdProviderWithAccountParametersArgs{
 				&datalakestore.CreateTrustedIdProviderWithAccountParametersArgs{
 					IdProvider: pulumi.String("https://sts.windows.net/ea9ec534-a3e3-4e45-ad36-3afc5bb291c1"),
 					Name:       pulumi.String("test_trusted_id_provider_name"),

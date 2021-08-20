@@ -571,7 +571,7 @@ func main() {
 			},
 			Identity: &storage.IdentityArgs{
 				Type: pulumi.String("UserAssigned"),
-				UserAssignedIdentities: pulumi.MapMap{
+				UserAssignedIdentities: pulumi.AnyMap{
 					"/subscriptions/{subscription-id}/resourceGroups/res9101/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{managed-identity-name}": nil,
 				},
 			},

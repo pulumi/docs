@@ -76,7 +76,7 @@ func main() {
 				pulumi.String("1.1.1.1"),
 			},
 			DnsZoneId:         pulumi.String("dnsZone1"),
-			Domain:            []interface{}{},
+			Domain:            pulumi.StringArray{},
 			PrivateCloudName:  pulumi.String("cloud1"),
 			ResourceGroupName: pulumi.String("group1"),
 			Revision:          pulumi.Float64(1),

@@ -84,7 +84,7 @@ func main() {
 			Location:          pulumi.String("West US"),
 			ResourceGroupName: pulumi.String("rg1"),
 			RouteFilterName:   pulumi.String("filterName"),
-			Rules: network.RouteFilterRuleArray{
+			Rules: []network.RouteFilterRuleArgs{
 				&network.RouteFilterRuleArgs{
 					Access: pulumi.String("Allow"),
 					Communities: pulumi.StringArray{

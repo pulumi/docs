@@ -78,7 +78,7 @@ func main() {
 			ConditionalMembership: pulumi.String(""),
 			Description:           pulumi.String("A sample group"),
 			DisplayName:           pulumi.String("My Network Group"),
-			GroupMembers: network.GroupMembersItemArray{
+			GroupMembers: []network.GroupMembersItemArgs{
 				&network.GroupMembersItemArgs{
 					SubnetId: pulumi.String(""),
 					VnetId:   pulumi.String("/subscriptions/subscriptionC/resourceGroup/rg1/providers/Microsoft.Network/virtualnetworks/vnet1"),

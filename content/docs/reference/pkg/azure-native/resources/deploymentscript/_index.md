@@ -75,7 +75,7 @@ func main() {
 		_, err := resources.NewDeploymentScript(ctx, "deploymentScript", &resources.DeploymentScriptArgs{
 			Identity: &resources.ManagedServiceIdentityArgs{
 				Type: pulumi.String("UserAssigned"),
-				UserAssignedIdentities: pulumi.MapMap{
+				UserAssignedIdentities: pulumi.AnyMap{
 					"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/scriptRG/providers/Microsoft.ManagedIdentity/userAssignedIdentities/uai": nil,
 				},
 			},
@@ -307,7 +307,7 @@ func main() {
 		_, err := resources.NewDeploymentScript(ctx, "deploymentScript", &resources.DeploymentScriptArgs{
 			Identity: &resources.ManagedServiceIdentityArgs{
 				Type: pulumi.String("UserAssigned"),
-				UserAssignedIdentities: pulumi.MapMap{
+				UserAssignedIdentities: pulumi.AnyMap{
 					"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/scriptRG/providers/Microsoft.ManagedIdentity/userAssignedIdentities/uai": nil,
 				},
 			},
@@ -436,7 +436,7 @@ func main() {
 		_, err := resources.NewDeploymentScript(ctx, "deploymentScript", &resources.DeploymentScriptArgs{
 			Identity: &resources.ManagedServiceIdentityArgs{
 				Type: pulumi.String("UserAssigned"),
-				UserAssignedIdentities: pulumi.MapMap{
+				UserAssignedIdentities: pulumi.AnyMap{
 					"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/scriptRG/providers/Microsoft.ManagedIdentity/userAssignedIdentities/uai": nil,
 				},
 			},
@@ -565,7 +565,7 @@ func main() {
 		_, err := resources.NewDeploymentScript(ctx, "deploymentScript", &resources.DeploymentScriptArgs{
 			Identity: &resources.ManagedServiceIdentityArgs{
 				Type: pulumi.String("UserAssigned"),
-				UserAssignedIdentities: pulumi.MapMap{
+				UserAssignedIdentities: pulumi.AnyMap{
 					"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/scriptRG/providers/Microsoft.ManagedIdentity/userAssignedIdentities/uai": nil,
 				},
 			},

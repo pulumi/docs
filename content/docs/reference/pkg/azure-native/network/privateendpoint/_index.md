@@ -81,7 +81,7 @@ func main() {
 		_, err := network.NewPrivateEndpoint(ctx, "privateEndpoint", &network.PrivateEndpointArgs{
 			Location:            pulumi.String("eastus2euap"),
 			PrivateEndpointName: pulumi.String("testPe"),
-			PrivateLinkServiceConnections: network.PrivateLinkServiceConnectionArray{
+			PrivateLinkServiceConnections: []network.PrivateLinkServiceConnectionArgs{
 				&network.PrivateLinkServiceConnectionArgs{
 					GroupIds: pulumi.StringArray{
 						pulumi.String("groupIdFromResource"),
@@ -223,7 +223,7 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := network.NewPrivateEndpoint(ctx, "privateEndpoint", &network.PrivateEndpointArgs{
 			Location: pulumi.String("eastus"),
-			ManualPrivateLinkServiceConnections: network.PrivateLinkServiceConnectionArray{
+			ManualPrivateLinkServiceConnections: []network.PrivateLinkServiceConnectionArgs{
 				&network.PrivateLinkServiceConnectionArgs{
 					GroupIds: pulumi.StringArray{
 						pulumi.String("groupIdFromResource"),

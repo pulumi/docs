@@ -76,7 +76,7 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := network.NewPrivateRecordSet(ctx, "privateRecordSet", &network.PrivateRecordSetArgs{
-			ARecords: network.ARecordArray{
+			ARecords: []network.ARecordArgs{
 				&network.ARecordArgs{
 					Ipv4Address: pulumi.String("1.2.3.4"),
 				},
@@ -214,7 +214,7 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := network.NewPrivateRecordSet(ctx, "privateRecordSet", &network.PrivateRecordSetArgs{
-			AaaaRecords: network.AaaaRecordArray{
+			AaaaRecords: []network.AaaaRecordArgs{
 				&network.AaaaRecordArgs{
 					Ipv6Address: pulumi.String("::1"),
 				},
@@ -489,7 +489,7 @@ func main() {
 			Metadata: pulumi.StringMap{
 				"key1": pulumi.String("value1"),
 			},
-			MxRecords: network.MxRecordArray{
+			MxRecords: []network.MxRecordArgs{
 				&network.MxRecordArgs{
 					Exchange:   pulumi.String("mail.privatezone1.com"),
 					Preference: pulumi.Int(0),
@@ -631,7 +631,7 @@ func main() {
 				"key1": pulumi.String("value1"),
 			},
 			PrivateZoneName: pulumi.String("0.0.127.in-addr.arpa"),
-			PtrRecords: network.PtrRecordArray{
+			PtrRecords: []network.PtrRecordArgs{
 				&network.PtrRecordArgs{
 					Ptrdname: pulumi.String("localhost"),
 				},
@@ -932,7 +932,7 @@ func main() {
 			RecordType:            pulumi.String("SRV"),
 			RelativeRecordSetName: pulumi.String("recordSRV"),
 			ResourceGroupName:     pulumi.String("resourceGroup1"),
-			SrvRecords: network.SrvRecordArray{
+			SrvRecords: []network.SrvRecordArgs{
 				&network.SrvRecordArgs{
 					Port:     pulumi.Int(80),
 					Priority: pulumi.Int(0),
@@ -1084,7 +1084,7 @@ func main() {
 			RelativeRecordSetName: pulumi.String("recordTXT"),
 			ResourceGroupName:     pulumi.String("resourceGroup1"),
 			Ttl:                   pulumi.Float64(3600),
-			TxtRecords: network.TxtRecordArray{
+			TxtRecords: []network.TxtRecordArgs{
 				&network.TxtRecordArgs{
 					Value: pulumi.StringArray{
 						pulumi.String("string1"),

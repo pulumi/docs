@@ -174,7 +174,7 @@ func main() {
 		_, err := network.NewRulesEngine(ctx, "rulesEngine", &network.RulesEngineArgs{
 			FrontDoorName:     pulumi.String("frontDoor1"),
 			ResourceGroupName: pulumi.String("rg1"),
-			Rules: network.RulesEngineRuleArray{
+			Rules: []network.RulesEngineRuleArgs{
 				&network.RulesEngineRuleArgs{
 					Action: &network.RulesEngineActionArgs{
 						RouteConfigurationOverride: network.RedirectConfiguration{

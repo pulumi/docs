@@ -109,7 +109,76 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	network "github.com/pulumi/pulumi-azure-native/sdk/go/azure/network"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := network.NewDscpConfiguration(ctx, "dscpConfiguration", &network.DscpConfigurationArgs{
+			DestinationIpRanges: []network.QosIpRangeArgs{
+				&network.QosIpRangeArgs{
+					EndIP:   pulumi.String("127.0.10.2"),
+					StartIP: pulumi.String("127.0.10.1"),
+				},
+				&network.QosIpRangeArgs{
+					EndIP:   pulumi.String("127.0.11.2"),
+					StartIP: pulumi.String("127.0.11.1"),
+				},
+			},
+			DestinationPortRanges: []network.QosPortRangeArgs{
+				&network.QosPortRangeArgs{
+					End:   pulumi.Int(15),
+					Start: pulumi.Int(15),
+				},
+				&network.QosPortRangeArgs{
+					End:   pulumi.Int(27),
+					Start: pulumi.Int(26),
+				},
+			},
+			DscpConfigurationName: pulumi.String("mydscpconfig"),
+			Location:              pulumi.String("eastus"),
+			Markings: pulumi.IntArray{
+				pulumi.Int(46),
+				pulumi.Int(10),
+			},
+			Protocol:          pulumi.String("Tcp"),
+			ResourceGroupName: pulumi.String("rg1"),
+			SourceIpRanges: []network.QosIpRangeArgs{
+				&network.QosIpRangeArgs{
+					EndIP:   pulumi.String("127.0.0.2"),
+					StartIP: pulumi.String("127.0.0.1"),
+				},
+				&network.QosIpRangeArgs{
+					EndIP:   pulumi.String("127.0.1.2"),
+					StartIP: pulumi.String("127.0.1.1"),
+				},
+			},
+			SourcePortRanges: []network.QosPortRangeArgs{
+				&network.QosPortRangeArgs{
+					End:   pulumi.Int(11),
+					Start: pulumi.Int(10),
+				},
+				&network.QosPortRangeArgs{
+					End:   pulumi.Int(21),
+					Start: pulumi.Int(20),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 

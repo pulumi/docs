@@ -63,42 +63,7 @@ class MyStack : Stack
 
 {{< example go >}}
 
-
-```go
-package main
-
-import (
-	securityinsights "github.com/pulumi/pulumi-azure-native/sdk/go/azure/securityinsights"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := securityinsights.NewWatchlistItem(ctx, "watchlistItem", &securityinsights.WatchlistItemArgs{
-			Etag: pulumi.String("0300bf09-0000-0000-0000-5c37296e0000"),
-			ItemsKeyValue: pulumi.StringMap{
-				"Business tier":  pulumi.String("10.0.2.0/24"),
-				"Data tier":      pulumi.String("10.0.2.0/24"),
-				"Gateway subnet": pulumi.String("10.0.255.224/27"),
-				"Private DMZ in": pulumi.String("10.0.0.0/27"),
-				"Public DMZ out": pulumi.String("10.0.0.96/27"),
-				"Web Tier":       pulumi.String("10.0.1.0/24"),
-			},
-			OperationalInsightsResourceProvider: pulumi.String("Microsoft.OperationalInsights"),
-			ResourceGroupName:                   pulumi.String("myRg"),
-			WatchlistAlias:                      pulumi.String("highValueAsset"),
-			WatchlistItemId:                     pulumi.String("82ba292c-dc97-4dfc-969d-d4dd9e666842"),
-			WorkspaceName:                       pulumi.String("myWorkspace"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
+Coming soon!
 
 {{< /example >}}
 

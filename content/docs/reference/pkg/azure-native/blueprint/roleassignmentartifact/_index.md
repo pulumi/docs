@@ -269,7 +269,7 @@ func main() {
 			BlueprintName:    pulumi.String("simpleBlueprint"),
 			DisplayName:      pulumi.String("enforce owners of given subscription"),
 			Kind:             pulumi.String("roleAssignment"),
-			PrincipalIds:     pulumi.String("[parameters('owners')]"),
+			PrincipalIds:     pulumi.Any("[parameters('owners')]"),
 			ResourceScope:    pulumi.String("providers/Microsoft.Management/managementGroups/ContosoOnlineGroup"),
 			RoleDefinitionId: pulumi.String("/providers/Microsoft.Authorization/roleDefinitions/acdd72a7-3385-48ef-bd42-f606fba81ae7"),
 		})
@@ -582,7 +582,7 @@ func main() {
 			BlueprintName:    pulumi.String("simpleBlueprint"),
 			DisplayName:      pulumi.String("enforce owners of given subscription"),
 			Kind:             pulumi.String("roleAssignment"),
-			PrincipalIds:     pulumi.String("[parameters('owners')]"),
+			PrincipalIds:     pulumi.Any("[parameters('owners')]"),
 			ResourceScope:    pulumi.String("subscriptions/00000000-0000-0000-0000-000000000000"),
 			RoleDefinitionId: pulumi.String("/providers/Microsoft.Authorization/roleDefinitions/acdd72a7-3385-48ef-bd42-f606fba81ae7"),
 		})

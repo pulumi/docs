@@ -14,6 +14,7 @@ Explore the resources and functions of the azure-native.dataprotection module.
     <li><a href="backupinstance" title="BackupInstance"><span class="symbol resource"></span>BackupInstance</a></li>
     <li><a href="backuppolicy" title="BackupPolicy"><span class="symbol resource"></span>BackupPolicy</a></li>
     <li><a href="backupvault" title="BackupVault"><span class="symbol resource"></span>BackupVault</a></li>
+    <li><a href="resourceguard" title="ResourceGuard"><span class="symbol resource"></span>ResourceGuard</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
@@ -21,6 +22,7 @@ Explore the resources and functions of the azure-native.dataprotection module.
     <li><a href="getbackupinstance" title="GetBackupInstance"><span class="symbol function"></span>GetBackupInstance</a></li>
     <li><a href="getbackuppolicy" title="GetBackupPolicy"><span class="symbol function"></span>GetBackupPolicy</a></li>
     <li><a href="getbackupvault" title="GetBackupVault"><span class="symbol function"></span>GetBackupVault</a></li>
+    <li><a href="getresourceguard" title="GetResourceGuard"><span class="symbol function"></span>GetResourceGuard</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -30,6 +32,6 @@ Explore the resources and functions of the azure-native.dataprotection module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>1.22.0</dd>
+	<dd>1.23.0</dd>
 </dl>
 

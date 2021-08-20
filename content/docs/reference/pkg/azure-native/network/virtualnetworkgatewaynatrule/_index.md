@@ -80,12 +80,12 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := network.NewVirtualNetworkGatewayNatRule(ctx, "virtualNetworkGatewayNatRule", &network.VirtualNetworkGatewayNatRuleArgs{
-			ExternalMappings: network.VpnNatRuleMappingArray{
+			ExternalMappings: []network.VpnNatRuleMappingArgs{
 				&network.VpnNatRuleMappingArgs{
 					AddressSpace: pulumi.String("192.168.21.0/24"),
 				},
 			},
-			InternalMappings: network.VpnNatRuleMappingArray{
+			InternalMappings: []network.VpnNatRuleMappingArgs{
 				&network.VpnNatRuleMappingArgs{
 					AddressSpace: pulumi.String("10.4.0.0/24"),
 				},

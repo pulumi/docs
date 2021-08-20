@@ -79,7 +79,7 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := network.NewConnectivityConfiguration(ctx, "connectivityConfiguration", &network.ConnectivityConfigurationArgs{
-			AppliesToGroups: network.ConnectivityGroupItemArray{
+			AppliesToGroups: []network.ConnectivityGroupItemArgs{
 				&network.ConnectivityGroupItemArgs{
 					GroupConnectivity: pulumi.String("None"),
 					IsGlobal:          pulumi.String("False"),

@@ -147,11 +147,11 @@ workflow = azure_native.logic.Workflow("workflow",
                 "type": "ApiConnection",
             },
         },
-        "content_version": "1.0.0.0",
+        "contentVersion": "1.0.0.0",
         "outputs": {},
         "parameters": {
             "$connections": {
-                "default_value": {},
+                "defaultValue": {},
                 "type": "Object",
             },
         },

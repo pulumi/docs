@@ -75,7 +75,7 @@ func main() {
 			Description:           pulumi.String("my description of schedule goes here"),
 			ExpiryTime:            pulumi.String("2017-04-01T17:28:57.2494819Z"),
 			Frequency:             pulumi.String("Hour"),
-			Interval:              pulumi.Float64(1),
+			Interval:              pulumi.Any(1),
 			Name:                  pulumi.String("mySchedule"),
 			ResourceGroupName:     pulumi.String("rg"),
 			ScheduleName:          pulumi.String("mySchedule"),

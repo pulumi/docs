@@ -88,7 +88,7 @@ func main() {
 				pulumi.String("1"),
 			},
 			DiskPoolName: pulumi.String("myDiskPool"),
-			Disks: storagepool.DiskArray{
+			Disks: []storagepool.DiskArgs{
 				&storagepool.DiskArgs{
 					Id: pulumi.String("/subscriptions/11111111-1111-1111-1111-111111111111/resourceGroups/myResourceGroup/providers/Microsoft.Compute/disks/vm-name_DataDisk_0"),
 				},

@@ -134,7 +134,7 @@ func main() {
 			EnableBgp:           pulumi.Bool(false),
 			EnableDnsForwarding: pulumi.Bool(true),
 			GatewayType:         pulumi.String("Vpn"),
-			IpConfigurations: network.VirtualNetworkGatewayIPConfigurationArray{
+			IpConfigurations: []network.VirtualNetworkGatewayIPConfigurationArgs{
 				&network.VirtualNetworkGatewayIPConfigurationArgs{
 					Name:                      pulumi.String("gwipconfig1"),
 					PrivateIPAllocationMethod: pulumi.String("Dynamic"),

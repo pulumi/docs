@@ -122,7 +122,7 @@ func main() {
 				},
 			},
 			ResourceGroupName: pulumi.String("rg1"),
-			Responses: apimanagement.ResponseContractArray{
+			Responses: []apimanagement.ResponseContractArgs{
 				&apimanagement.ResponseContractArgs{
 					Description: pulumi.String("successful operation"),
 					Headers:     apimanagement.ParameterContractArray{},

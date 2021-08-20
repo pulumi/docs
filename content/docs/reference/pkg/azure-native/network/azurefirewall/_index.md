@@ -247,7 +247,7 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := network.NewAzureFirewall(ctx, "azureFirewall", &network.AzureFirewallArgs{
-			ApplicationRuleCollections: network.AzureFirewallApplicationRuleCollectionArray{
+			ApplicationRuleCollections: []network.AzureFirewallApplicationRuleCollectionArgs{
 				&network.AzureFirewallApplicationRuleCollectionArgs{
 					Action: &network.AzureFirewallRCActionArgs{
 						Type: pulumi.String("Deny"),
@@ -276,7 +276,7 @@ func main() {
 				},
 			},
 			AzureFirewallName: pulumi.String("azurefirewall"),
-			IpConfigurations: network.AzureFirewallIPConfigurationArray{
+			IpConfigurations: []network.AzureFirewallIPConfigurationArgs{
 				&network.AzureFirewallIPConfigurationArgs{
 					Name: pulumi.String("azureFirewallIpConfiguration"),
 					PublicIPAddress: &network.SubResourceArgs{
@@ -288,7 +288,7 @@ func main() {
 				},
 			},
 			Location: pulumi.String("West US"),
-			NatRuleCollections: network.AzureFirewallNatRuleCollectionArray{
+			NatRuleCollections: []network.AzureFirewallNatRuleCollectionArgs{
 				&network.AzureFirewallNatRuleCollectionArgs{
 					Action: &network.AzureFirewallNatRCActionArgs{
 						Type: pulumi.String("Dnat"),
@@ -335,7 +335,7 @@ func main() {
 					},
 				},
 			},
-			NetworkRuleCollections: network.AzureFirewallNetworkRuleCollectionArray{
+			NetworkRuleCollections: []network.AzureFirewallNetworkRuleCollectionArgs{
 				&network.AzureFirewallNetworkRuleCollectionArgs{
 					Action: &network.AzureFirewallRCActionArgs{
 						Type: pulumi.String("Deny"),
@@ -390,7 +390,7 @@ func main() {
 				"key1": pulumi.String("value1"),
 			},
 			ThreatIntelMode: pulumi.String("Alert"),
-			Zones:           []interface{}{},
+			Zones:           pulumi.StringArray{},
 		})
 		if err != nil {
 			return err
@@ -882,7 +882,7 @@ func main() {
 				"key1": pulumi.String("value1"),
 				"key2": pulumi.String("value2"),
 			},
-			ApplicationRuleCollections: network.AzureFirewallApplicationRuleCollectionArray{
+			ApplicationRuleCollections: []network.AzureFirewallApplicationRuleCollectionArgs{
 				&network.AzureFirewallApplicationRuleCollectionArgs{
 					Action: &network.AzureFirewallRCActionArgs{
 						Type: pulumi.String("Deny"),
@@ -911,7 +911,7 @@ func main() {
 				},
 			},
 			AzureFirewallName: pulumi.String("azurefirewall"),
-			IpConfigurations: network.AzureFirewallIPConfigurationArray{
+			IpConfigurations: []network.AzureFirewallIPConfigurationArgs{
 				&network.AzureFirewallIPConfigurationArgs{
 					Name: pulumi.String("azureFirewallIpConfiguration"),
 					PublicIPAddress: &network.SubResourceArgs{
@@ -923,7 +923,7 @@ func main() {
 				},
 			},
 			Location: pulumi.String("West US"),
-			NatRuleCollections: network.AzureFirewallNatRuleCollectionArray{
+			NatRuleCollections: []network.AzureFirewallNatRuleCollectionArgs{
 				&network.AzureFirewallNatRuleCollectionArgs{
 					Action: &network.AzureFirewallNatRCActionArgs{
 						Type: pulumi.String("Dnat"),
@@ -970,7 +970,7 @@ func main() {
 					},
 				},
 			},
-			NetworkRuleCollections: network.AzureFirewallNetworkRuleCollectionArray{
+			NetworkRuleCollections: []network.AzureFirewallNetworkRuleCollectionArgs{
 				&network.AzureFirewallNetworkRuleCollectionArgs{
 					Action: &network.AzureFirewallRCActionArgs{
 						Type: pulumi.String("Deny"),
@@ -1025,7 +1025,7 @@ func main() {
 				"key1": pulumi.String("value1"),
 			},
 			ThreatIntelMode: pulumi.String("Alert"),
-			Zones:           []interface{}{},
+			Zones:           pulumi.StringArray{},
 		})
 		if err != nil {
 			return err
@@ -1516,7 +1516,7 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := network.NewAzureFirewall(ctx, "azureFirewall", &network.AzureFirewallArgs{
-			ApplicationRuleCollections: network.AzureFirewallApplicationRuleCollectionArray{
+			ApplicationRuleCollections: []network.AzureFirewallApplicationRuleCollectionArgs{
 				&network.AzureFirewallApplicationRuleCollectionArgs{
 					Action: &network.AzureFirewallRCActionArgs{
 						Type: pulumi.String("Deny"),
@@ -1545,7 +1545,7 @@ func main() {
 				},
 			},
 			AzureFirewallName: pulumi.String("azurefirewall"),
-			IpConfigurations: network.AzureFirewallIPConfigurationArray{
+			IpConfigurations: []network.AzureFirewallIPConfigurationArgs{
 				&network.AzureFirewallIPConfigurationArgs{
 					Name: pulumi.String("azureFirewallIpConfiguration"),
 					PublicIPAddress: &network.SubResourceArgs{
@@ -1557,7 +1557,7 @@ func main() {
 				},
 			},
 			Location: pulumi.String("West US"),
-			NatRuleCollections: network.AzureFirewallNatRuleCollectionArray{
+			NatRuleCollections: []network.AzureFirewallNatRuleCollectionArgs{
 				&network.AzureFirewallNatRuleCollectionArgs{
 					Action: &network.AzureFirewallNatRCActionArgs{
 						Type: pulumi.String("Dnat"),
@@ -1604,7 +1604,7 @@ func main() {
 					},
 				},
 			},
-			NetworkRuleCollections: network.AzureFirewallNetworkRuleCollectionArray{
+			NetworkRuleCollections: []network.AzureFirewallNetworkRuleCollectionArgs{
 				&network.AzureFirewallNetworkRuleCollectionArgs{
 					Action: &network.AzureFirewallRCActionArgs{
 						Type: pulumi.String("Deny"),
@@ -1659,7 +1659,7 @@ func main() {
 				"key1": pulumi.String("value1"),
 			},
 			ThreatIntelMode: pulumi.String("Alert"),
-			Zones:           []interface{}{},
+			Zones:           pulumi.StringArray{},
 		})
 		if err != nil {
 			return err
@@ -2147,7 +2147,7 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := network.NewAzureFirewall(ctx, "azureFirewall", &network.AzureFirewallArgs{
-			ApplicationRuleCollections: network.AzureFirewallApplicationRuleCollectionArray{
+			ApplicationRuleCollections: []network.AzureFirewallApplicationRuleCollectionArgs{
 				&network.AzureFirewallApplicationRuleCollectionArgs{
 					Action: &network.AzureFirewallRCActionArgs{
 						Type: pulumi.String("Deny"),
@@ -2176,7 +2176,7 @@ func main() {
 				},
 			},
 			AzureFirewallName: pulumi.String("azurefirewall"),
-			IpConfigurations: network.AzureFirewallIPConfigurationArray{
+			IpConfigurations: []network.AzureFirewallIPConfigurationArgs{
 				&network.AzureFirewallIPConfigurationArgs{
 					Name: pulumi.String("azureFirewallIpConfiguration"),
 					PublicIPAddress: &network.SubResourceArgs{
@@ -2188,7 +2188,7 @@ func main() {
 				},
 			},
 			Location: pulumi.String("West US 2"),
-			NatRuleCollections: network.AzureFirewallNatRuleCollectionArray{
+			NatRuleCollections: []network.AzureFirewallNatRuleCollectionArgs{
 				&network.AzureFirewallNatRuleCollectionArgs{
 					Action: &network.AzureFirewallNatRCActionArgs{
 						Type: pulumi.String("Dnat"),
@@ -2235,7 +2235,7 @@ func main() {
 					},
 				},
 			},
-			NetworkRuleCollections: network.AzureFirewallNetworkRuleCollectionArray{
+			NetworkRuleCollections: []network.AzureFirewallNetworkRuleCollectionArgs{
 				&network.AzureFirewallNetworkRuleCollectionArgs{
 					Action: &network.AzureFirewallRCActionArgs{
 						Type: pulumi.String("Deny"),
@@ -2797,7 +2797,7 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := network.NewAzureFirewall(ctx, "azureFirewall", &network.AzureFirewallArgs{
-			ApplicationRuleCollections: network.AzureFirewallApplicationRuleCollectionArray{
+			ApplicationRuleCollections: []network.AzureFirewallApplicationRuleCollectionArgs{
 				&network.AzureFirewallApplicationRuleCollectionArgs{
 					Action: &network.AzureFirewallRCActionArgs{
 						Type: pulumi.String("Deny"),
@@ -2826,7 +2826,7 @@ func main() {
 				},
 			},
 			AzureFirewallName: pulumi.String("azurefirewall"),
-			IpConfigurations: network.AzureFirewallIPConfigurationArray{
+			IpConfigurations: []network.AzureFirewallIPConfigurationArgs{
 				&network.AzureFirewallIPConfigurationArgs{
 					Name: pulumi.String("azureFirewallIpConfiguration"),
 					PublicIPAddress: &network.SubResourceArgs{
@@ -2847,7 +2847,7 @@ func main() {
 					Id: pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnet2/subnets/AzureFirewallManagementSubnet"),
 				},
 			},
-			NatRuleCollections: network.AzureFirewallNatRuleCollectionArray{
+			NatRuleCollections: []network.AzureFirewallNatRuleCollectionArgs{
 				&network.AzureFirewallNatRuleCollectionArgs{
 					Action: &network.AzureFirewallNatRCActionArgs{
 						Type: pulumi.String("Dnat"),
@@ -2894,7 +2894,7 @@ func main() {
 					},
 				},
 			},
-			NetworkRuleCollections: network.AzureFirewallNetworkRuleCollectionArray{
+			NetworkRuleCollections: []network.AzureFirewallNetworkRuleCollectionArgs{
 				&network.AzureFirewallNetworkRuleCollectionArgs{
 					Action: &network.AzureFirewallRCActionArgs{
 						Type: pulumi.String("Deny"),
@@ -2949,7 +2949,7 @@ func main() {
 				"key1": pulumi.String("value1"),
 			},
 			ThreatIntelMode: pulumi.String("Alert"),
-			Zones:           []interface{}{},
+			Zones:           pulumi.StringArray{},
 		})
 		if err != nil {
 			return err
@@ -3316,7 +3316,7 @@ func main() {
 			VirtualHub: &network.SubResourceArgs{
 				Id: pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualHubs/hub1"),
 			},
-			Zones: []interface{}{},
+			Zones: pulumi.StringArray{},
 		})
 		if err != nil {
 			return err

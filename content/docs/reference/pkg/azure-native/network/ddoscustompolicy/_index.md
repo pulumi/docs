@@ -72,7 +72,7 @@ func main() {
 		_, err := network.NewDdosCustomPolicy(ctx, "ddosCustomPolicy", &network.DdosCustomPolicyArgs{
 			DdosCustomPolicyName: pulumi.String("test-ddos-custom-policy"),
 			Location:             pulumi.String("centraluseuap"),
-			ProtocolCustomSettings: network.ProtocolCustomSettingsFormatArray{
+			ProtocolCustomSettings: []network.ProtocolCustomSettingsFormatArgs{
 				&network.ProtocolCustomSettingsFormatArgs{
 					Protocol: pulumi.String("Tcp"),
 				},

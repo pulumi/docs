@@ -70,7 +70,7 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := network.NewPrivateDnsZoneGroup(ctx, "privateDnsZoneGroup", &network.PrivateDnsZoneGroupArgs{
-			PrivateDnsZoneConfigs: network.PrivateDnsZoneConfigArray{
+			PrivateDnsZoneConfigs: []network.PrivateDnsZoneConfigArgs{
 				&network.PrivateDnsZoneConfigArgs{
 					PrivateDnsZoneId: pulumi.String("/subscriptions/subId/resourceGroups/rg1/providers/Microsoft.Network/privateDnsZones/zone1.com"),
 				},

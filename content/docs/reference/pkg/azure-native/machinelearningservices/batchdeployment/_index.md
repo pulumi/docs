@@ -129,7 +129,96 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	machinelearningservices "github.com/pulumi/pulumi-azure-native/sdk/go/azure/machinelearningservices"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := machinelearningservices.NewBatchDeployment(ctx, "batchDeployment", &machinelearningservices.BatchDeploymentArgs{
+			DeploymentName: pulumi.String("testBatchDeployment"),
+			EndpointName:   pulumi.String("testBatchEndpoint"),
+			Identity: &machinelearningservices.ResourceIdentityArgs{
+				Type: pulumi.String("UserAssigned"),
+				UserAssignedIdentities: machinelearningservices.UserAssignedIdentityMetaMap{
+					"/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1234/providers/Microsoft.ManagedIdentity/userAssignedIdentities/myuseridentity": &machinelearningservices.UserAssignedIdentityMetaArgs{
+						ClientId:    pulumi.String("string"),
+						PrincipalId: pulumi.String("string"),
+					},
+				},
+			},
+			Kind:     pulumi.String("string"),
+			Location: pulumi.String("string"),
+			Properties: &machinelearningservices.BatchDeploymentArgs{
+				CodeConfiguration: &machinelearningservices.CodeConfigurationArgs{
+					CodeId:        pulumi.String("/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1234/providers/Microsoft.MachineLearningServices/workspaces/testworkspace/codes/testcode/versions/1"),
+					ScoringScript: pulumi.String("score.py"),
+				},
+				Compute: &machinelearningservices.ComputeConfigurationArgs{
+					InstanceCount: pulumi.Int(0),
+					InstanceType:  pulumi.String("string"),
+					IsLocal:       pulumi.Bool(false),
+					Location:      pulumi.String("string"),
+					Properties: pulumi.StringMap{
+						"additionalProp1": pulumi.String("string"),
+						"additionalProp2": pulumi.String("string"),
+						"additionalProp3": pulumi.String("string"),
+					},
+					Target: pulumi.String("/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1234/providers/Microsoft.MachineLearningServices/workspaces/testworkspace/computes/testcompute"),
+				},
+				Description:   pulumi.String("string"),
+				EnvironmentId: pulumi.String("/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1234/providers/Microsoft.MachineLearningServices/workspaces/testworkspace/environments/myenv"),
+				EnvironmentVariables: pulumi.StringMap{
+					"additionalProp1": pulumi.String("string"),
+					"additionalProp2": pulumi.String("string"),
+					"additionalProp3": pulumi.String("string"),
+				},
+				ErrorThreshold: pulumi.Int(0),
+				LoggingLevel:   pulumi.String("Info"),
+				MiniBatchSize:  pulumi.Float64(0),
+				Model: machinelearningservices.IdAssetReference{
+					AssetId:       "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1234/providers/Microsoft.MachineLearningServices/workspaces/testworkspace/models/testmodel/versions/1",
+					ReferenceType: "Id",
+				},
+				OutputConfiguration: &machinelearningservices.BatchOutputConfigurationArgs{
+					AppendRowFileName: pulumi.String("string"),
+					OutputAction:      pulumi.String("SummaryOnly"),
+				},
+				PartitionKeys: pulumi.StringArray{
+					pulumi.String("string"),
+				},
+				Properties: pulumi.StringMap{
+					"additionalProp1": pulumi.String("string"),
+					"additionalProp2": pulumi.String("string"),
+					"additionalProp3": pulumi.String("string"),
+				},
+				RetrySettings: &machinelearningservices.BatchRetrySettingsArgs{
+					MaxRetries: pulumi.Int(0),
+					Timeout:    pulumi.String("string"),
+				},
+			},
+			ResourceGroupName: pulumi.String("resourceGroup-1234"),
+			Tags: pulumi.StringMap{
+				"additionalProp1": pulumi.String("string"),
+				"additionalProp2": pulumi.String("string"),
+				"additionalProp3": pulumi.String("string"),
+			},
+			WorkspaceName: pulumi.String("testworkspace"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 

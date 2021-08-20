@@ -204,7 +204,7 @@ func main() {
 								MatchVariable:   pulumi.String("RemoteAddr"),
 								NegateCondition: pulumi.Bool(false),
 								Operator:        pulumi.String("GeoMatch"),
-								Transforms:      []interface{}{},
+								Transforms:      pulumi.StringArray{},
 							},
 							&cdn.MatchConditionArgs{
 								MatchValue: pulumi.StringArray{
@@ -214,7 +214,7 @@ func main() {
 								NegateCondition: pulumi.Bool(false),
 								Operator:        pulumi.String("Contains"),
 								Selector:        pulumi.String("UserAgent"),
-								Transforms:      []interface{}{},
+								Transforms:      pulumi.StringArray{},
 							},
 							&cdn.MatchConditionArgs{
 								MatchValue: pulumi.StringArray{
@@ -281,7 +281,7 @@ func main() {
 								MatchVariable:   pulumi.String("RemoteAddr"),
 								NegateCondition: pulumi.Bool(false),
 								Operator:        pulumi.String("IPMatch"),
-								Transforms:      []interface{}{},
+								Transforms:      pulumi.StringArray{},
 							},
 						},
 						Name:                       pulumi.String("RateLimitRule1"),

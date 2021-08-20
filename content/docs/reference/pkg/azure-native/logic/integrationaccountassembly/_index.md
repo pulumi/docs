@@ -75,7 +75,7 @@ func main() {
 			Location:               pulumi.String("westus"),
 			Properties: &logic.AssemblyPropertiesArgs{
 				AssemblyName: pulumi.String("System.IdentityModel.Tokens.Jwt"),
-				Content:      pulumi.String("Base64 encoded Assembly Content"),
+				Content:      pulumi.Any("Base64 encoded Assembly Content"),
 				Metadata:     nil,
 			},
 			ResourceGroupName: pulumi.String("testResourceGroup"),

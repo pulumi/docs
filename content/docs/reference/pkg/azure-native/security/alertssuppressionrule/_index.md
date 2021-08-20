@@ -87,7 +87,7 @@ func main() {
 			Reason:                    pulumi.String("FalsePositive"),
 			State:                     pulumi.String("Enabled"),
 			SuppressionAlertsScope: &security.SuppressionAlertsScopeArgs{
-				AllOf: security.ScopeElementArray{
+				AllOf: []security.ScopeElementArgs{
 					&security.ScopeElementArgs{
 						Field: pulumi.String("entities.ip.address"),
 					},

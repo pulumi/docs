@@ -36,6 +36,10 @@ class MyStack : Stack
         var defenderSetting = new AzureNative.IoTSecurity.DefenderSetting("defenderSetting", new AzureNative.IoTSecurity.DefenderSettingArgs
         {
             DeviceQuota = 2000,
+            MdeIntegration = new AzureNative.IoTSecurity.Inputs.DefenderSettingsPropertiesMdeIntegrationArgs
+            {
+                Status = "Enabled",
+            },
             OnboardingKind = "Default",
             SentinelWorkspaceResourceIds = 
             {
@@ -66,7 +70,10 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := iotsecurity.NewDefenderSetting(ctx, "defenderSetting", &iotsecurity.DefenderSettingArgs{
-			DeviceQuota:    pulumi.Int(2000),
+			DeviceQuota: pulumi.Int(2000),
+			MdeIntegration: &iotsecurity.DefenderSettingsPropertiesMdeIntegrationArgs{
+				Status: pulumi.String("Enabled"),
+			},
 			OnboardingKind: pulumi.String("Default"),
 			SentinelWorkspaceResourceIds: pulumi.StringArray{
 				pulumi.String("/subscriptions/c4930e90-cd72-4aa5-93e9-2d081d129569/resourceGroups/myRg/providers/Microsoft.OperationalInsights/workspaces/myWorkspace1"),
@@ -94,6 +101,9 @@ import pulumi_azure_native as azure_native
 
 defender_setting = azure_native.iotsecurity.DefenderSetting("defenderSetting",
     device_quota=2000,
+    mde_integration=azure_native.iotsecurity.DefenderSettingsPropertiesMdeIntegrationArgs(
+        status="Enabled",
+    ),
     onboarding_kind="Default",
     sentinel_workspace_resource_ids=["/subscriptions/c4930e90-cd72-4aa5-93e9-2d081d129569/resourceGroups/myRg/providers/Microsoft.OperationalInsights/workspaces/myWorkspace1"])
 
@@ -112,6 +122,9 @@ import * as azure_native from "@pulumi/azure-native";
 
 const defenderSetting = new azure_native.iotsecurity.DefenderSetting("defenderSetting", {
     deviceQuota: 2000,
+    mdeIntegration: {
+        status: "Enabled",
+    },
     onboardingKind: "Default",
     sentinelWorkspaceResourceIds: ["/subscriptions/c4930e90-cd72-4aa5-93e9-2d081d129569/resourceGroups/myRg/providers/Microsoft.OperationalInsights/workspaces/myWorkspace1"],
 });
@@ -143,6 +156,7 @@ const defenderSetting = new azure_native.iotsecurity.DefenderSetting("defenderSe
 <span class="k">def </span><span class="nx">DefenderSetting</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
                     <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
                     <span class="nx">device_quota</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+                    <span class="nx">mde_integration</span><span class="p">:</span> <span class="nx">Optional[DefenderSettingsPropertiesMdeIntegrationArgs]</span> = None<span class="p">,</span>
                     <span class="nx">onboarding_kind</span><span class="p">:</span> <span class="nx">Optional[Union[str, OnboardingKind]]</span> = None<span class="p">,</span>
                     <span class="nx">sentinel_workspace_resource_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
@@ -282,6 +296,14 @@ The DefenderSetting resource accepts the following [input]({{< relref "/docs/int
     </dt>
     <dd>{{% md %}}Size of the device quota (as a opposed to a Pay as You Go billing model). Value is required to be in multiples of 1000.{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="mdeintegration_csharp">
+<a href="#mdeintegration_csharp" style="color: inherit; text-decoration: inherit;">Mde<wbr>Integration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#defendersettingspropertiesmdeintegration">Pulumi.<wbr>Azure<wbr>Native.<wbr>Io<wbr>TSecurity.<wbr>Inputs.<wbr>Defender<wbr>Settings<wbr>Properties<wbr>Mde<wbr>Integration<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}MDE integration configuration{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="onboardingkind_csharp">
 <a href="#onboardingkind_csharp" style="color: inherit; text-decoration: inherit;">Onboarding<wbr>Kind</a>
 </span>
@@ -309,6 +331,14 @@ The DefenderSetting resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Size of the device quota (as a opposed to a Pay as You Go billing model). Value is required to be in multiples of 1000.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="mdeintegration_go">
+<a href="#mdeintegration_go" style="color: inherit; text-decoration: inherit;">Mde<wbr>Integration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#defendersettingspropertiesmdeintegration">Defender<wbr>Settings<wbr>Properties<wbr>Mde<wbr>Integration<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}MDE integration configuration{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="onboardingkind_go">
 <a href="#onboardingkind_go" style="color: inherit; text-decoration: inherit;">Onboarding<wbr>Kind</a>
@@ -338,6 +368,14 @@ The DefenderSetting resource accepts the following [input]({{< relref "/docs/int
     </dt>
     <dd>{{% md %}}Size of the device quota (as a opposed to a Pay as You Go billing model). Value is required to be in multiples of 1000.{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="mdeintegration_nodejs">
+<a href="#mdeintegration_nodejs" style="color: inherit; text-decoration: inherit;">mde<wbr>Integration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#defendersettingspropertiesmdeintegration">Defender<wbr>Settings<wbr>Properties<wbr>Mde<wbr>Integration<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}MDE integration configuration{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="onboardingkind_nodejs">
 <a href="#onboardingkind_nodejs" style="color: inherit; text-decoration: inherit;">onboarding<wbr>Kind</a>
 </span>
@@ -365,6 +403,14 @@ The DefenderSetting resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Size of the device quota (as a opposed to a Pay as You Go billing model). Value is required to be in multiples of 1000.{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="mde_integration_python">
+<a href="#mde_integration_python" style="color: inherit; text-decoration: inherit;">mde_<wbr>integration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#defendersettingspropertiesmdeintegration">Defender<wbr>Settings<wbr>Properties<wbr>Mde<wbr>Integration<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}MDE integration configuration{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="onboarding_kind_python">
 <a href="#onboarding_kind_python" style="color: inherit; text-decoration: inherit;">onboarding_<wbr>kind</a>
@@ -543,6 +589,132 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Supporting Types
 
 
+
+<h4 id="defendersettingspropertiesmdeintegration">Defender<wbr>Settings<wbr>Properties<wbr>Mde<wbr>Integration</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="status_csharp">
+<a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#mdeintegration">Pulumi.<wbr>Azure<wbr>Native.<wbr>Io<wbr>TSecurity.<wbr>Mde<wbr>Integration</a></span>
+    </dt>
+    <dd>{{% md %}}Integration status{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="status_go">
+<a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#mdeintegration">Mde<wbr>Integration</a></span>
+    </dt>
+    <dd>{{% md %}}Integration status{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="status_nodejs">
+<a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#mdeintegration">Mde<wbr>Integration</a></span>
+    </dt>
+    <dd>{{% md %}}Integration status{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="status_python">
+<a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str | <a href="#mdeintegration">Mde<wbr>Integration</a></span>
+    </dt>
+    <dd>{{% md %}}Integration status{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="defendersettingspropertiesresponsemdeintegration">Defender<wbr>Settings<wbr>Properties<wbr>Response<wbr>Mde<wbr>Integration</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="status_csharp">
+<a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Integration status{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="status_go">
+<a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Integration status{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="status_nodejs">
+<a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Integration status{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="status_python">
+<a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Integration status{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="mdeintegration">Mde<wbr>Integration</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>Disabled</dt>
+    <dd>Disabled</dd><dt>Enabled</dt>
+    <dd>Enabled</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Mde<wbr>Integration<wbr>Disabled</dt>
+    <dd>Disabled</dd><dt>Mde<wbr>Integration<wbr>Enabled</dt>
+    <dd>Enabled</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>Disabled</dt>
+    <dd>Disabled</dd><dt>Enabled</dt>
+    <dd>Enabled</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>DISABLED</dt>
+    <dd>Disabled</dd><dt>ENABLED</dt>
+    <dd>Enabled</dd></dl>
+{{% /choosable %}}
 
 <h4 id="onboardingkind">Onboarding<wbr>Kind</h4>
 

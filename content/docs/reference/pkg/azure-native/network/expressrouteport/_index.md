@@ -188,7 +188,7 @@ func main() {
 			BandwidthInGbps:      pulumi.Int(100),
 			Encapsulation:        pulumi.String("QinQ"),
 			ExpressRoutePortName: pulumi.String("portName"),
-			Links: network.ExpressRouteLinkArray{
+			Links: []network.ExpressRouteLinkArgs{
 				&network.ExpressRouteLinkArgs{
 					AdminState: pulumi.String("Enabled"),
 					Name:       pulumi.String("link1"),

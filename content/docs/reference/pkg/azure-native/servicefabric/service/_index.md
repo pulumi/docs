@@ -93,7 +93,7 @@ func main() {
 		_, err := servicefabric.NewService(ctx, "service", &servicefabric.ServiceArgs{
 			ApplicationName: pulumi.String("myApp"),
 			ClusterName:     pulumi.String("myCluster"),
-			CorrelationScheme: servicefabric.ServiceCorrelationDescriptionArray{
+			CorrelationScheme: []servicefabric.ServiceCorrelationDescriptionArgs{
 				&servicefabric.ServiceCorrelationDescriptionArgs{
 					Scheme:      pulumi.String("Affinity"),
 					ServiceName: pulumi.String("fabric:/app1/app1~svc1"),
@@ -107,7 +107,7 @@ func main() {
 			ResourceGroupName:    pulumi.String("resRg"),
 			ServiceDnsName:       pulumi.String("my.service.dns"),
 			ServiceKind:          pulumi.String("Stateless"),
-			ServiceLoadMetrics: servicefabric.ServiceLoadMetricDescriptionArray{
+			ServiceLoadMetrics: []servicefabric.ServiceLoadMetricDescriptionArgs{
 				&servicefabric.ServiceLoadMetricDescriptionArgs{
 					Name:   pulumi.String("metric1"),
 					Weight: pulumi.String("Low"),

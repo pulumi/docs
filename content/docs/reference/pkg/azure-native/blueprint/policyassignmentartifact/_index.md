@@ -180,12 +180,12 @@ func main() {
 			BlueprintName: pulumi.String("simpleBlueprint"),
 			DisplayName:   pulumi.String("force costCenter tag on all resources"),
 			Kind:          pulumi.String("policyAssignment"),
-			Parameters: blueprint.ParameterValueArgsMap{
-				"tag_name": &blueprint.ParameterValueArgs{
-					Value: pulumi.String("costCenter"),
+			Parameters: blueprint.ParameterValueMap{
+				"tagName": &blueprint.ParameterValueArgs{
+					Value: pulumi.Any("costCenter"),
 				},
-				"tag_value": &blueprint.ParameterValueArgs{
-					Value: pulumi.String("[parameter('costCenter')]"),
+				"tagValue": &blueprint.ParameterValueArgs{
+					Value: pulumi.Any("[parameter('costCenter')]"),
 				},
 			},
 			PolicyDefinitionId: pulumi.String("/providers/Microsoft.Authorization/policyDefinitions/1e30110a-5ceb-460c-a204-c1c3969c6d62"),
@@ -217,10 +217,10 @@ policy_assignment_artifact = azure_native.blueprint.PolicyAssignmentArtifact("po
     display_name="force costCenter tag on all resources",
     kind="policyAssignment",
     parameters={
-        "tag_name": azure_native.blueprint.ParameterValueArgs(
+        "tagName": azure_native.blueprint.ParameterValueArgs(
             value="costCenter",
         ),
-        "tag_value": azure_native.blueprint.ParameterValueArgs(
+        "tagValue": azure_native.blueprint.ParameterValueArgs(
             value="[parameter('costCenter')]",
         ),
     },
@@ -524,12 +524,12 @@ func main() {
 			BlueprintName: pulumi.String("simpleBlueprint"),
 			DisplayName:   pulumi.String("force costCenter tag on all resources"),
 			Kind:          pulumi.String("policyAssignment"),
-			Parameters: blueprint.ParameterValueArgsMap{
-				"tag_name": &blueprint.ParameterValueArgs{
-					Value: pulumi.String("costCenter"),
+			Parameters: blueprint.ParameterValueMap{
+				"tagName": &blueprint.ParameterValueArgs{
+					Value: pulumi.Any("costCenter"),
 				},
-				"tag_value": &blueprint.ParameterValueArgs{
-					Value: pulumi.String("[parameter('costCenter')]"),
+				"tagValue": &blueprint.ParameterValueArgs{
+					Value: pulumi.Any("[parameter('costCenter')]"),
 				},
 			},
 			PolicyDefinitionId: pulumi.String("/providers/Microsoft.Authorization/policyDefinitions/1e30110a-5ceb-460c-a204-c1c3969c6d62"),
@@ -561,10 +561,10 @@ policy_assignment_artifact = azure_native.blueprint.PolicyAssignmentArtifact("po
     display_name="force costCenter tag on all resources",
     kind="policyAssignment",
     parameters={
-        "tag_name": azure_native.blueprint.ParameterValueArgs(
+        "tagName": azure_native.blueprint.ParameterValueArgs(
             value="costCenter",
         ),
-        "tag_value": azure_native.blueprint.ParameterValueArgs(
+        "tagValue": azure_native.blueprint.ParameterValueArgs(
             value="[parameter('costCenter')]",
         ),
     },

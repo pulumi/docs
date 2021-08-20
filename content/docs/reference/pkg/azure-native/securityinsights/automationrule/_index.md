@@ -137,8 +137,8 @@ automation_rule = azure_native.securityinsights.AutomationRule("automationRule",
     order=1,
     resource_group_name="myRg",
     triggering_logic=azure_native.securityinsights.AutomationRuleTriggeringLogicArgs(
-        conditions=[azure_native.securityinsights.AutomationRulePropertyValuesConditionArgs(
-            condition_properties=azure_native.securityinsights.AutomationRulePropertyValuesConditionConditionPropertiesArgs(
+        conditions=[{
+            "conditionProperties": azure_native.securityinsights.AutomationRulePropertyValuesConditionConditionPropertiesArgs(
                 operator="Contains",
                 property_name="IncidentRelatedAnalyticRuleIds",
                 property_values=[
@@ -146,8 +146,8 @@ automation_rule = azure_native.securityinsights.AutomationRule("automationRule",
                     "/subscriptions/d0cfe6b2-9ac0-4464-9919-dccaee2e48c0/resourceGroups/myRg/providers/Microsoft.OperationalInsights/workspaces/myWorkspace/providers/Microsoft.SecurityInsights/alertRules/8deb8303-e94d-46ff-96e0-5fd94b33df1a",
                 ],
             ),
-            condition_type="Property",
-        )],
+            "conditionType": "Property",
+        }],
         is_enabled=True,
         triggers_on="Incidents",
         triggers_when="Created",

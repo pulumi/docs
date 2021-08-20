@@ -51,10 +51,10 @@ class MyStack : Stack
                 {
                     new AzureNative.DataBox.Inputs.DataImportDetailsArgs
                     {
-                        AccountDetails = 
+                        AccountDetails = new AzureNative.DataBox.Inputs.StorageAccountDetailsArgs
                         {
-                            { "dataAccountType", "StorageAccount" },
-                            { "storageAccountId", "/subscriptions/fa68082f-8ff7-4a25-95c7-ce9da541242f/resourcegroups/databoxbvt/providers/Microsoft.Storage/storageAccounts/databoxbvttestaccount" },
+                            DataAccountType = "StorageAccount",
+                            StorageAccountId = "/subscriptions/fa68082f-8ff7-4a25-95c7-ce9da541242f/resourcegroups/databoxbvt/providers/Microsoft.Storage/storageAccounts/databoxbvttestaccount",
                         },
                     },
                 },
@@ -92,7 +92,64 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	databox "github.com/pulumi/pulumi-azure-native/sdk/go/azure/databox"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := databox.NewJob(ctx, "job", &databox.JobArgs{
+			Details: databox.DataBoxJobDetails{
+				ContactDetails: databox.ContactDetails{
+					ContactName: "Public SDK Test",
+					EmailList: []string{
+						"testing@microsoft.com",
+					},
+					Phone:          "1234567890",
+					PhoneExtension: "1234",
+				},
+				DataImportDetails: []databox.DataImportDetails{
+					databox.DataImportDetails{
+						AccountDetails: databox.StorageAccountDetails{
+							DataAccountType:  "StorageAccount",
+							StorageAccountId: "/subscriptions/fa68082f-8ff7-4a25-95c7-ce9da541242f/resourcegroups/databoxbvt/providers/Microsoft.Storage/storageAccounts/databoxbvttestaccount",
+						},
+					},
+				},
+				JobDetailsType: "DataBox",
+				ShippingAddress: databox.ShippingAddress{
+					AddressType:     "Commercial",
+					City:            "San Francisco",
+					CompanyName:     "Microsoft",
+					Country:         "US",
+					PostalCode:      "94107",
+					StateOrProvince: "CA",
+					StreetAddress1:  "16 TOWNSEND ST",
+					StreetAddress2:  "Unit 1",
+				},
+			},
+			JobName:           pulumi.String("SdkJob952"),
+			Location:          pulumi.String("westus"),
+			ResourceGroupName: pulumi.String("SdkRg5154"),
+			Sku: &databox.SkuArgs{
+				Name: pulumi.String("DataBox"),
+			},
+			TransferType: pulumi.String("ImportToAzure"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
@@ -113,10 +170,10 @@ job = azure_native.databox.Job("job",
             phone_extension="1234",
         ),
         data_import_details=[azure_native.databox.DataImportDetailsArgs(
-            account_details={
-                "dataAccountType": "StorageAccount",
-                "storageAccountId": "/subscriptions/fa68082f-8ff7-4a25-95c7-ce9da541242f/resourcegroups/databoxbvt/providers/Microsoft.Storage/storageAccounts/databoxbvttestaccount",
-            },
+            account_details=azure_native.databox.StorageAccountDetailsArgs(
+                data_account_type="StorageAccount",
+                storage_account_id="/subscriptions/fa68082f-8ff7-4a25-95c7-ce9da541242f/resourcegroups/databoxbvt/providers/Microsoft.Storage/storageAccounts/databoxbvttestaccount",
+            ),
         )],
         job_details_type="DataBox",
         shipping_address=azure_native.databox.ShippingAddressArgs(
@@ -225,11 +282,11 @@ class MyStack : Stack
                 {
                     new AzureNative.DataBox.Inputs.DataImportDetailsArgs
                     {
-                        AccountDetails = 
+                        AccountDetails = new AzureNative.DataBox.Inputs.StorageAccountDetailsArgs
                         {
-                            { "dataAccountType", "StorageAccount" },
-                            { "sharePassword", "<sharePassword>" },
-                            { "storageAccountId", "/subscriptions/fa68082f-8ff7-4a25-95c7-ce9da541242f/resourceGroups/databoxbvt1/providers/Microsoft.Storage/storageAccounts/databoxbvttestaccount2" },
+                            DataAccountType = "StorageAccount",
+                            SharePassword = "<sharePassword>",
+                            StorageAccountId = "/subscriptions/fa68082f-8ff7-4a25-95c7-ce9da541242f/resourceGroups/databoxbvt1/providers/Microsoft.Storage/storageAccounts/databoxbvttestaccount2",
                         },
                     },
                 },
@@ -268,7 +325,66 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	databox "github.com/pulumi/pulumi-azure-native/sdk/go/azure/databox"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := databox.NewJob(ctx, "job", &databox.JobArgs{
+			Details: databox.DataBoxJobDetails{
+				ContactDetails: databox.ContactDetails{
+					ContactName: "Public SDK Test",
+					EmailList: []string{
+						"testing@microsoft.com",
+					},
+					Phone:          "1234567890",
+					PhoneExtension: "1234",
+				},
+				DataImportDetails: []databox.DataImportDetails{
+					databox.DataImportDetails{
+						AccountDetails: databox.StorageAccountDetails{
+							DataAccountType:  "StorageAccount",
+							SharePassword:    "<sharePassword>",
+							StorageAccountId: "/subscriptions/fa68082f-8ff7-4a25-95c7-ce9da541242f/resourceGroups/databoxbvt1/providers/Microsoft.Storage/storageAccounts/databoxbvttestaccount2",
+						},
+					},
+				},
+				DevicePassword: "<devicePassword>",
+				JobDetailsType: "DataBox",
+				ShippingAddress: databox.ShippingAddress{
+					AddressType:     "Commercial",
+					City:            "San Francisco",
+					CompanyName:     "Microsoft",
+					Country:         "US",
+					PostalCode:      "94107",
+					StateOrProvince: "CA",
+					StreetAddress1:  "16 TOWNSEND ST",
+					StreetAddress2:  "Unit 1",
+				},
+			},
+			JobName:           pulumi.String("SdkJob9640"),
+			Location:          pulumi.String("westus"),
+			ResourceGroupName: pulumi.String("SdkRg7478"),
+			Sku: &databox.SkuArgs{
+				Name: pulumi.String("DataBox"),
+			},
+			TransferType: pulumi.String("ImportToAzure"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
@@ -289,11 +405,11 @@ job = azure_native.databox.Job("job",
             phone_extension="1234",
         ),
         data_import_details=[azure_native.databox.DataImportDetailsArgs(
-            account_details={
-                "dataAccountType": "StorageAccount",
-                "sharePassword": "<sharePassword>",
-                "storageAccountId": "/subscriptions/fa68082f-8ff7-4a25-95c7-ce9da541242f/resourceGroups/databoxbvt1/providers/Microsoft.Storage/storageAccounts/databoxbvttestaccount2",
-            },
+            account_details=azure_native.databox.StorageAccountDetailsArgs(
+                data_account_type="StorageAccount",
+                share_password="<sharePassword>",
+                storage_account_id="/subscriptions/fa68082f-8ff7-4a25-95c7-ce9da541242f/resourceGroups/databoxbvt1/providers/Microsoft.Storage/storageAccounts/databoxbvttestaccount2",
+            ),
         )],
         device_password="<devicePassword>",
         job_details_type="DataBox",
@@ -405,10 +521,10 @@ class MyStack : Stack
                 {
                     new AzureNative.DataBox.Inputs.DataImportDetailsArgs
                     {
-                        AccountDetails = 
+                        AccountDetails = new AzureNative.DataBox.Inputs.StorageAccountDetailsArgs
                         {
-                            { "dataAccountType", "StorageAccount" },
-                            { "storageAccountId", "/subscriptions/fa68082f-8ff7-4a25-95c7-ce9da541242f/resourcegroups/databoxbvt/providers/Microsoft.Storage/storageAccounts/databoxbvttestaccount" },
+                            DataAccountType = "StorageAccount",
+                            StorageAccountId = "/subscriptions/fa68082f-8ff7-4a25-95c7-ce9da541242f/resourcegroups/databoxbvt/providers/Microsoft.Storage/storageAccounts/databoxbvttestaccount",
                         },
                     },
                 },
@@ -453,7 +569,69 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	databox "github.com/pulumi/pulumi-azure-native/sdk/go/azure/databox"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := databox.NewJob(ctx, "job", &databox.JobArgs{
+			Details: databox.DataBoxJobDetails{
+				ContactDetails: databox.ContactDetails{
+					ContactName: "Public SDK Test",
+					EmailList: []string{
+						"testing@microsoft.com",
+					},
+					Phone:          "1234567890",
+					PhoneExtension: "1234",
+				},
+				DataImportDetails: []databox.DataImportDetails{
+					databox.DataImportDetails{
+						AccountDetails: databox.StorageAccountDetails{
+							DataAccountType:  "StorageAccount",
+							StorageAccountId: "/subscriptions/fa68082f-8ff7-4a25-95c7-ce9da541242f/resourcegroups/databoxbvt/providers/Microsoft.Storage/storageAccounts/databoxbvttestaccount",
+						},
+					},
+				},
+				JobDetailsType: "DataBox",
+				Preferences: databox.Preferences{
+					EncryptionPreferences: databox.EncryptionPreferences{
+						DoubleEncryption: "Enabled",
+					},
+				},
+				ShippingAddress: databox.ShippingAddress{
+					AddressType:     "Commercial",
+					City:            "San Francisco",
+					CompanyName:     "Microsoft",
+					Country:         "US",
+					PostalCode:      "94107",
+					StateOrProvince: "CA",
+					StreetAddress1:  "16 TOWNSEND ST",
+					StreetAddress2:  "Unit 1",
+				},
+			},
+			JobName:           pulumi.String("SdkJob6599"),
+			Location:          pulumi.String("westus"),
+			ResourceGroupName: pulumi.String("SdkRg608"),
+			Sku: &databox.SkuArgs{
+				Name: pulumi.String("DataBox"),
+			},
+			TransferType: pulumi.String("ImportToAzure"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
@@ -474,10 +652,10 @@ job = azure_native.databox.Job("job",
             phone_extension="1234",
         ),
         data_import_details=[azure_native.databox.DataImportDetailsArgs(
-            account_details={
-                "dataAccountType": "StorageAccount",
-                "storageAccountId": "/subscriptions/fa68082f-8ff7-4a25-95c7-ce9da541242f/resourcegroups/databoxbvt/providers/Microsoft.Storage/storageAccounts/databoxbvttestaccount",
-            },
+            account_details=azure_native.databox.StorageAccountDetailsArgs(
+                data_account_type="StorageAccount",
+                storage_account_id="/subscriptions/fa68082f-8ff7-4a25-95c7-ce9da541242f/resourcegroups/databoxbvt/providers/Microsoft.Storage/storageAccounts/databoxbvttestaccount",
+            ),
         )],
         job_details_type="DataBox",
         preferences=azure_native.databox.PreferencesArgs(
@@ -596,10 +774,10 @@ class MyStack : Stack
                 {
                     new AzureNative.DataBox.Inputs.DataExportDetailsArgs
                     {
-                        AccountDetails = 
+                        AccountDetails = new AzureNative.DataBox.Inputs.StorageAccountDetailsArgs
                         {
-                            { "dataAccountType", "StorageAccount" },
-                            { "storageAccountId", "/subscriptions/fa68082f-8ff7-4a25-95c7-ce9da541242f/resourceGroups/akvenkat/providers/Microsoft.Storage/storageAccounts/aaaaaa2" },
+                            DataAccountType = "StorageAccount",
+                            StorageAccountId = "/subscriptions/fa68082f-8ff7-4a25-95c7-ce9da541242f/resourceGroups/akvenkat/providers/Microsoft.Storage/storageAccounts/aaaaaa2",
                         },
                         TransferConfiguration = new AzureNative.DataBox.Inputs.TransferConfigurationArgs
                         {
@@ -650,7 +828,74 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	databox "github.com/pulumi/pulumi-azure-native/sdk/go/azure/databox"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := databox.NewJob(ctx, "job", &databox.JobArgs{
+			Details: databox.DataBoxJobDetails{
+				ContactDetails: databox.ContactDetails{
+					ContactName: "Public SDK Test",
+					EmailList: []string{
+						"testing@microsoft.com",
+					},
+					Phone:          "1234567890",
+					PhoneExtension: "1234",
+				},
+				DataExportDetails: []databox.DataExportDetails{
+					databox.DataExportDetails{
+						AccountDetails: databox.StorageAccountDetails{
+							DataAccountType:  "StorageAccount",
+							StorageAccountId: "/subscriptions/fa68082f-8ff7-4a25-95c7-ce9da541242f/resourceGroups/akvenkat/providers/Microsoft.Storage/storageAccounts/aaaaaa2",
+						},
+						TransferConfiguration: databox.TransferConfiguration{
+							TransferAllDetails: databox.TransferConfigurationTransferAllDetails{
+								Include: databox.TransferAllDetails{
+									DataAccountType:  "StorageAccount",
+									TransferAllBlobs: true,
+									TransferAllFiles: true,
+								},
+							},
+							TransferConfigurationType: "TransferAll",
+						},
+					},
+				},
+				JobDetailsType: "DataBox",
+				ShippingAddress: databox.ShippingAddress{
+					AddressType:     "Commercial",
+					City:            "San Francisco",
+					CompanyName:     "Microsoft",
+					Country:         "US",
+					PostalCode:      "94107",
+					StateOrProvince: "CA",
+					StreetAddress1:  "16 TOWNSEND ST",
+					StreetAddress2:  "Unit 1",
+				},
+			},
+			JobName:           pulumi.String("SdkJob6429"),
+			Location:          pulumi.String("westus"),
+			ResourceGroupName: pulumi.String("SdkRg8091"),
+			Sku: &databox.SkuArgs{
+				Name: pulumi.String("DataBox"),
+			},
+			TransferType: pulumi.String("ExportFromAzure"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
@@ -671,10 +916,10 @@ job = azure_native.databox.Job("job",
             phone_extension="1234",
         ),
         data_export_details=[azure_native.databox.DataExportDetailsArgs(
-            account_details={
-                "dataAccountType": "StorageAccount",
-                "storageAccountId": "/subscriptions/fa68082f-8ff7-4a25-95c7-ce9da541242f/resourceGroups/akvenkat/providers/Microsoft.Storage/storageAccounts/aaaaaa2",
-            },
+            account_details=azure_native.databox.StorageAccountDetailsArgs(
+                data_account_type="StorageAccount",
+                storage_account_id="/subscriptions/fa68082f-8ff7-4a25-95c7-ce9da541242f/resourceGroups/akvenkat/providers/Microsoft.Storage/storageAccounts/aaaaaa2",
+            ),
             transfer_configuration=azure_native.databox.TransferConfigurationArgs(
                 transfer_all_details=azure_native.databox.TransferConfigurationTransferAllDetailsArgs(
                     include=azure_native.databox.TransferAllDetailsArgs(
@@ -803,10 +1048,10 @@ class MyStack : Stack
                 {
                     new AzureNative.DataBox.Inputs.DataImportDetailsArgs
                     {
-                        AccountDetails = 
+                        AccountDetails = new AzureNative.DataBox.Inputs.StorageAccountDetailsArgs
                         {
-                            { "dataAccountType", "StorageAccount" },
-                            { "storageAccountId", "/subscriptions/fa68082f-8ff7-4a25-95c7-ce9da541242f/resourceGroups/databoxbvt1/providers/Microsoft.Storage/storageAccounts/databoxbvttestaccount2" },
+                            DataAccountType = "StorageAccount",
+                            StorageAccountId = "/subscriptions/fa68082f-8ff7-4a25-95c7-ce9da541242f/resourceGroups/databoxbvt1/providers/Microsoft.Storage/storageAccounts/databoxbvttestaccount2",
                         },
                     },
                 },
@@ -852,7 +1097,70 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	databox "github.com/pulumi/pulumi-azure-native/sdk/go/azure/databox"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := databox.NewJob(ctx, "job", &databox.JobArgs{
+			Details: databox.DataBoxJobDetails{
+				ContactDetails: databox.ContactDetails{
+					ContactName: "Public SDK Test",
+					EmailList: []string{
+						"testing@microsoft.com",
+					},
+					Phone:          "1234567890",
+					PhoneExtension: "1234",
+				},
+				DataImportDetails: []databox.DataImportDetails{
+					databox.DataImportDetails{
+						AccountDetails: databox.StorageAccountDetails{
+							DataAccountType:  "StorageAccount",
+							StorageAccountId: "/subscriptions/fa68082f-8ff7-4a25-95c7-ce9da541242f/resourceGroups/databoxbvt1/providers/Microsoft.Storage/storageAccounts/databoxbvttestaccount2",
+						},
+					},
+				},
+				JobDetailsType: "DataBox",
+				ShippingAddress: databox.ShippingAddress{
+					AddressType:     "Commercial",
+					City:            "San Francisco",
+					CompanyName:     "Microsoft",
+					Country:         "US",
+					PostalCode:      "94107",
+					StateOrProvince: "CA",
+					StreetAddress1:  "16 TOWNSEND ST",
+					StreetAddress2:  "Unit 1",
+				},
+			},
+			Identity: &databox.ResourceIdentityArgs{
+				Type: pulumi.String("UserAssigned"),
+				UserAssignedIdentities: pulumi.AnyMap{
+					"/subscriptions/fa68082f-8ff7-4a25-95c7-ce9da541242f/resourceGroups/akvenkat/providers/Microsoft.ManagedIdentity/userAssignedIdentities/sdkIdentity": nil,
+				},
+			},
+			JobName:           pulumi.String("SdkJob5337"),
+			Location:          pulumi.String("westus"),
+			ResourceGroupName: pulumi.String("SdkRg7552"),
+			Sku: &databox.SkuArgs{
+				Name: pulumi.String("DataBox"),
+			},
+			TransferType: pulumi.String("ImportToAzure"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
@@ -873,10 +1181,10 @@ job = azure_native.databox.Job("job",
             phone_extension="1234",
         ),
         data_import_details=[azure_native.databox.DataImportDetailsArgs(
-            account_details={
-                "dataAccountType": "StorageAccount",
-                "storageAccountId": "/subscriptions/fa68082f-8ff7-4a25-95c7-ce9da541242f/resourceGroups/databoxbvt1/providers/Microsoft.Storage/storageAccounts/databoxbvttestaccount2",
-            },
+            account_details=azure_native.databox.StorageAccountDetailsArgs(
+                data_account_type="StorageAccount",
+                storage_account_id="/subscriptions/fa68082f-8ff7-4a25-95c7-ce9da541242f/resourceGroups/databoxbvt1/providers/Microsoft.Storage/storageAccounts/databoxbvttestaccount2",
+            ),
         )],
         job_details_type="DataBox",
         shipping_address=azure_native.databox.ShippingAddressArgs(

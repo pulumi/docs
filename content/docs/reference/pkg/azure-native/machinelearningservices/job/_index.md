@@ -46,10 +46,10 @@ class MyStack : Stack
                     Target = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1234/providers/Microsoft.MachineLearningServices/workspaces/testworkspace/computes/mycompute",
                 },
                 Description = "string",
-                Distribution = 
+                Distribution = new AzureNative.MachineLearningServices.Inputs.PyTorchArgs
                 {
-                    { "distributionType", "PyTorch" },
-                    { "processCount", 2 },
+                    DistributionType = "PyTorch",
+                    ProcessCount = 2,
                 },
                 EnvironmentId = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1234/providers/Microsoft.MachineLearningServices/workspaces/testworkspace/environments/AzureML-Tutorial/versions/1",
                 EnvironmentVariables = 
@@ -58,9 +58,9 @@ class MyStack : Stack
                     { "MY_ENV_VAR2", "string" },
                 },
                 ExperimentName = "myExperiment",
-                Identity = 
+                Identity = new AzureNative.MachineLearningServices.Inputs.AmlTokenArgs
                 {
-                    { "identityType", "AMLToken" },
+                    IdentityType = "AMLToken",
                 },
                 InputDataBindings = 
                 {
@@ -130,19 +130,19 @@ job = azure_native.machinelearningservices.Job("job",
             target="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1234/providers/Microsoft.MachineLearningServices/workspaces/testworkspace/computes/mycompute",
         ),
         description="string",
-        distribution={
-            "distributionType": "PyTorch",
-            "processCount": 2,
-        },
+        distribution=azure_native.machinelearningservices.PyTorchArgs(
+            distribution_type="PyTorch",
+            process_count=2,
+        ),
         environment_id="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1234/providers/Microsoft.MachineLearningServices/workspaces/testworkspace/environments/AzureML-Tutorial/versions/1",
         environment_variables={
             "MY_ENV_VAR1": "string",
             "MY_ENV_VAR2": "string",
         },
         experiment_name="myExperiment",
-        identity={
-            "identityType": "AMLToken",
-        },
+        identity=azure_native.machinelearningservices.AmlTokenArgs(
+            identity_type="AMLToken",
+        ),
         input_data_bindings={
             "test": azure_native.machinelearningservices.InputDataBindingArgs(
                 data_id="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1234/providers/Microsoft.MachineLearningServices/workspaces/testworkspace/data/mydataset/versions/1",
@@ -269,9 +269,9 @@ class MyStack : Stack
                     Target = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1234/providers/Microsoft.MachineLearningServices/workspaces/testworkspace/computes/mycompute",
                 },
                 Description = "string",
-                Identity = 
+                Identity = new AzureNative.MachineLearningServices.Inputs.AmlTokenArgs
                 {
-                    { "identityType", "AMLToken" },
+                    IdentityType = "AMLToken",
                 },
                 JobType = "Sweep",
                 MaxConcurrentTrials = 1,
@@ -302,10 +302,10 @@ class MyStack : Stack
                 {
                     CodeId = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1234/providers/Microsoft.MachineLearningServices/workspaces/testworkspace/codes/mycode/versions/1",
                     Command = "python file.py test",
-                    Distribution = 
+                    Distribution = new AzureNative.MachineLearningServices.Inputs.PyTorchArgs
                     {
-                        { "distributionType", "PyTorch" },
-                        { "processCount", 2 },
+                        DistributionType = "PyTorch",
+                        ProcessCount = 2,
                     },
                     EnvironmentId = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1234/providers/Microsoft.MachineLearningServices/workspaces/testworkspace/environments/AzureML-Tutorial/versions/1",
                     EnvironmentVariables = 
@@ -368,9 +368,9 @@ job = azure_native.machinelearningservices.Job("job",
             target="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1234/providers/Microsoft.MachineLearningServices/workspaces/testworkspace/computes/mycompute",
         ),
         description="string",
-        identity={
-            "identityType": "AMLToken",
-        },
+        identity=azure_native.machinelearningservices.AmlTokenArgs(
+            identity_type="AMLToken",
+        ),
         job_type="Sweep",
         max_concurrent_trials=1,
         max_total_trials=1,
@@ -395,10 +395,10 @@ job = azure_native.machinelearningservices.Job("job",
         trial=azure_native.machinelearningservices.TrialComponentArgs(
             code_id="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1234/providers/Microsoft.MachineLearningServices/workspaces/testworkspace/codes/mycode/versions/1",
             command="python file.py test",
-            distribution={
-                "distributionType": "PyTorch",
-                "processCount": 2,
-            },
+            distribution=azure_native.machinelearningservices.PyTorchArgs(
+                distribution_type="PyTorch",
+                process_count=2,
+            ),
             environment_id="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1234/providers/Microsoft.MachineLearningServices/workspaces/testworkspace/environments/AzureML-Tutorial/versions/1",
             environment_variables={
                 "MY_ENV_VAR1": "string",

@@ -209,7 +209,7 @@ func main() {
 			},
 			Location:          pulumi.String("eastus"),
 			ResourceGroupName: pulumi.String("rg1"),
-			Subnets: network.SubnetArray{
+			Subnets: []network.SubnetArgs{
 				&network.SubnetArgs{
 					AddressPrefix: pulumi.String("10.0.0.0/24"),
 					Name:          pulumi.String("test-1"),
@@ -362,7 +362,7 @@ func main() {
 			},
 			Location:          pulumi.String("westcentralus"),
 			ResourceGroupName: pulumi.String("rg1"),
-			Subnets: network.SubnetArray{
+			Subnets: []network.SubnetArgs{
 				&network.SubnetArgs{
 					AddressPrefix: pulumi.String("10.0.0.0/24"),
 					Delegations: network.DelegationArray{
@@ -522,7 +522,7 @@ func main() {
 			},
 			Location:          pulumi.String("eastus"),
 			ResourceGroupName: pulumi.String("vnetTest"),
-			Subnets: network.SubnetArray{
+			Subnets: []network.SubnetArgs{
 				&network.SubnetArgs{
 					AddressPrefix: pulumi.String("10.0.0.0/16"),
 					Name:          pulumi.String("test-1"),
@@ -686,7 +686,7 @@ func main() {
 			},
 			Location:          pulumi.String("eastus2euap"),
 			ResourceGroupName: pulumi.String("vnetTest"),
-			Subnets: network.SubnetArray{
+			Subnets: []network.SubnetArgs{
 				&network.SubnetArgs{
 					AddressPrefix: pulumi.String("10.0.0.0/16"),
 					Name:          pulumi.String("test-1"),
@@ -847,7 +847,7 @@ func main() {
 			},
 			Location:          pulumi.String("eastus"),
 			ResourceGroupName: pulumi.String("rg1"),
-			Subnets: network.SubnetArray{
+			Subnets: []network.SubnetArgs{
 				&network.SubnetArgs{
 					AddressPrefix: pulumi.String("10.0.0.0/24"),
 					Name:          pulumi.String("test-1"),
@@ -990,7 +990,7 @@ func main() {
 			},
 			Location:          pulumi.String("eastus"),
 			ResourceGroupName: pulumi.String("rg1"),
-			Subnets: network.SubnetArray{
+			Subnets: []network.SubnetArgs{
 				&network.SubnetArgs{
 					AddressPrefixes: pulumi.StringArray{
 						pulumi.String("10.0.0.0/28"),

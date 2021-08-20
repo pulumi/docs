@@ -176,7 +176,7 @@ func main() {
 			Location:                   pulumi.String("westus"),
 			ResourceGroupName:          pulumi.String("rg1"),
 			RouteTableName:             pulumi.String("testrt"),
-			Routes: network.RouteArray{
+			Routes: []network.RouteArgs{
 				&network.RouteArgs{
 					AddressPrefix: pulumi.String("10.0.3.0/24"),
 					Name:          pulumi.String("route1"),

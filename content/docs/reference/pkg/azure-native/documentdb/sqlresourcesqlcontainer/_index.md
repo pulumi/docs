@@ -147,12 +147,12 @@ func main() {
 								&documentdb.IndexesArgs{
 									DataType:  pulumi.String("String"),
 									Kind:      pulumi.String("Range"),
-									Precision: pulumi.Int(-1),
+									Precision: -1,
 								},
 								&documentdb.IndexesArgs{
 									DataType:  pulumi.String("Number"),
 									Kind:      pulumi.String("Range"),
-									Precision: pulumi.Int(-1),
+									Precision: -1,
 								},
 							},
 							Path: pulumi.String("/*"),

@@ -372,7 +372,7 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := network.NewApplicationGateway(ctx, "applicationGateway", &network.ApplicationGatewayArgs{
 			ApplicationGatewayName: pulumi.String("appgw"),
-			BackendAddressPools: network.ApplicationGatewayBackendAddressPoolArray{
+			BackendAddressPools: []network.ApplicationGatewayBackendAddressPoolArgs{
 				&network.ApplicationGatewayBackendAddressPoolArgs{
 					BackendAddresses: network.ApplicationGatewayBackendAddressArray{
 						&network.ApplicationGatewayBackendAddressArgs{
@@ -385,7 +385,7 @@ func main() {
 					Name: pulumi.String("appgwpool"),
 				},
 			},
-			BackendHttpSettingsCollection: network.ApplicationGatewayBackendHttpSettingsArray{
+			BackendHttpSettingsCollection: []network.ApplicationGatewayBackendHttpSettingsArgs{
 				&network.ApplicationGatewayBackendHttpSettingsArgs{
 					CookieBasedAffinity: pulumi.String("Disabled"),
 					Name:                pulumi.String("appgwbhs"),
@@ -394,7 +394,7 @@ func main() {
 					RequestTimeout:      pulumi.Int(30),
 				},
 			},
-			FrontendIPConfigurations: network.ApplicationGatewayFrontendIPConfigurationArray{
+			FrontendIPConfigurations: []network.ApplicationGatewayFrontendIPConfigurationArgs{
 				&network.ApplicationGatewayFrontendIPConfigurationArgs{
 					Name: pulumi.String("appgwfip"),
 					PublicIPAddress: &network.SubResourceArgs{
@@ -402,7 +402,7 @@ func main() {
 					},
 				},
 			},
-			FrontendPorts: network.ApplicationGatewayFrontendPortArray{
+			FrontendPorts: []network.ApplicationGatewayFrontendPortArgs{
 				&network.ApplicationGatewayFrontendPortArgs{
 					Name: pulumi.String("appgwfp"),
 					Port: pulumi.Int(443),
@@ -412,7 +412,7 @@ func main() {
 					Port: pulumi.Int(80),
 				},
 			},
-			GatewayIPConfigurations: network.ApplicationGatewayIPConfigurationArray{
+			GatewayIPConfigurations: []network.ApplicationGatewayIPConfigurationArgs{
 				&network.ApplicationGatewayIPConfigurationArgs{
 					Name: pulumi.String("appgwipc"),
 					Subnet: &network.SubResourceArgs{
@@ -420,7 +420,7 @@ func main() {
 					},
 				},
 			},
-			HttpListeners: network.ApplicationGatewayHttpListenerArray{
+			HttpListeners: []network.ApplicationGatewayHttpListenerArgs{
 				&network.ApplicationGatewayHttpListenerArgs{
 					FrontendIPConfiguration: &network.SubResourceArgs{
 						Id: pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/frontendIPConfigurations/appgwfip"),
@@ -451,12 +451,12 @@ func main() {
 			},
 			Identity: &network.ManagedServiceIdentityArgs{
 				Type: "UserAssigned",
-				UserAssignedIdentities: pulumi.MapMap{
+				UserAssignedIdentities: pulumi.AnyMap{
 					"/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity1": nil,
 				},
 			},
 			Location: pulumi.String("eastus"),
-			RequestRoutingRules: network.ApplicationGatewayRequestRoutingRuleArray{
+			RequestRoutingRules: []network.ApplicationGatewayRequestRoutingRuleArgs{
 				&network.ApplicationGatewayRequestRoutingRuleArgs{
 					BackendAddressPool: &network.SubResourceArgs{
 						Id: pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/backendAddressPools/appgwpool"),
@@ -487,7 +487,7 @@ func main() {
 				},
 			},
 			ResourceGroupName: pulumi.String("rg1"),
-			RewriteRuleSets: network.ApplicationGatewayRewriteRuleSetArray{
+			RewriteRuleSets: []network.ApplicationGatewayRewriteRuleSetArgs{
 				&network.ApplicationGatewayRewriteRuleSetArgs{
 					Name: pulumi.String("rewriteRuleSet1"),
 					RewriteRules: network.ApplicationGatewayRewriteRuleArray{
@@ -528,7 +528,7 @@ func main() {
 				Name:     pulumi.String("Standard_v2"),
 				Tier:     pulumi.String("Standard_v2"),
 			},
-			SslCertificates: network.ApplicationGatewaySslCertificateArray{
+			SslCertificates: []network.ApplicationGatewaySslCertificateArgs{
 				&network.ApplicationGatewaySslCertificateArgs{
 					Data:     pulumi.String("****"),
 					Name:     pulumi.String("sslcert"),
@@ -539,7 +539,7 @@ func main() {
 					Name:             pulumi.String("sslcert2"),
 				},
 			},
-			SslProfiles: network.ApplicationGatewaySslProfileArray{
+			SslProfiles: []network.ApplicationGatewaySslProfileArgs{
 				&network.ApplicationGatewaySslProfileArgs{
 					ClientAuthConfiguration: &network.ApplicationGatewayClientAuthConfigurationArgs{
 						VerifyClientCertIssuerDN: pulumi.Bool(true),
@@ -559,13 +559,13 @@ func main() {
 					},
 				},
 			},
-			TrustedClientCertificates: network.ApplicationGatewayTrustedClientCertificateArray{
+			TrustedClientCertificates: []network.ApplicationGatewayTrustedClientCertificateArgs{
 				&network.ApplicationGatewayTrustedClientCertificateArgs{
 					Data: pulumi.String("****"),
 					Name: pulumi.String("clientcert"),
 				},
 			},
-			TrustedRootCertificates: network.ApplicationGatewayTrustedRootCertificateArray{
+			TrustedRootCertificates: []network.ApplicationGatewayTrustedRootCertificateArgs{
 				&network.ApplicationGatewayTrustedRootCertificateArgs{
 					Data: pulumi.String("****"),
 					Name: pulumi.String("rootcert"),
@@ -575,7 +575,7 @@ func main() {
 					Name:             pulumi.String("rootcert1"),
 				},
 			},
-			UrlPathMaps: network.ApplicationGatewayUrlPathMapArray{
+			UrlPathMaps: []network.ApplicationGatewayUrlPathMapArgs{
 				&network.ApplicationGatewayUrlPathMapArgs{
 					DefaultBackendAddressPool: &network.SubResourceArgs{
 						Id: pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/applicationGateways/appgw/backendAddressPools/appgwpool"),

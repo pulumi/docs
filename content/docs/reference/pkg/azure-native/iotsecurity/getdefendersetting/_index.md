@@ -102,6 +102,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="mdeintegration_csharp">
+<a href="#mdeintegration_csharp" style="color: inherit; text-decoration: inherit;">Mde<wbr>Integration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#defendersettingspropertiesresponsemdeintegration">Pulumi.<wbr>Azure<wbr>Native.<wbr>Io<wbr>TSecurity.<wbr>Outputs.<wbr>Defender<wbr>Settings<wbr>Properties<wbr>Response<wbr>Mde<wbr>Integration</a></span>
+    </dt>
+    <dd>{{% md %}}MDE integration configuration{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
@@ -161,6 +169,14 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="mdeintegration_go">
+<a href="#mdeintegration_go" style="color: inherit; text-decoration: inherit;">Mde<wbr>Integration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#defendersettingspropertiesresponsemdeintegration">Defender<wbr>Settings<wbr>Properties<wbr>Response<wbr>Mde<wbr>Integration</a></span>
+    </dt>
+    <dd>{{% md %}}MDE integration configuration{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -222,6 +238,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="mdeintegration_nodejs">
+<a href="#mdeintegration_nodejs" style="color: inherit; text-decoration: inherit;">mde<wbr>Integration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#defendersettingspropertiesresponsemdeintegration">Defender<wbr>Settings<wbr>Properties<wbr>Response<wbr>Mde<wbr>Integration</a></span>
+    </dt>
+    <dd>{{% md %}}MDE integration configuration{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
@@ -282,6 +306,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="mde_integration_python">
+<a href="#mde_integration_python" style="color: inherit; text-decoration: inherit;">mde_<wbr>integration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#defendersettingspropertiesresponsemdeintegration">Defender<wbr>Settings<wbr>Properties<wbr>Response<wbr>Mde<wbr>Integration</a></span>
+    </dt>
+    <dd>{{% md %}}MDE integration configuration{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
@@ -313,6 +345,64 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+
+
+
+## Supporting Types
+
+
+<h4 id="defendersettingspropertiesresponsemdeintegration">Defender<wbr>Settings<wbr>Properties<wbr>Response<wbr>Mde<wbr>Integration</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="status_csharp">
+<a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Integration status{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="status_go">
+<a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Integration status{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="status_nodejs">
+<a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Integration status{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="status_python">
+<a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Integration status{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

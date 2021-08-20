@@ -95,14 +95,14 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := security.NewIotSecuritySolution(ctx, "iotSecuritySolution", &security.IotSecuritySolutionArgs{
-			DisabledDataSources: []interface{}{},
+			DisabledDataSources: pulumi.StringArray{},
 			DisplayName:         pulumi.String("Solution Default"),
-			Export:              []interface{}{},
+			Export:              pulumi.StringArray{},
 			IotHubs: pulumi.StringArray{
 				pulumi.String("/subscriptions/075423e9-7d33-4166-8bdf-3920b04e3735/resourceGroups/myRg/providers/Microsoft.Devices/IotHubs/FirstIotHub"),
 			},
 			Location: pulumi.String("East Us"),
-			RecommendationsConfiguration: security.RecommendationConfigurationPropertiesArray{
+			RecommendationsConfiguration: []security.RecommendationConfigurationPropertiesArgs{
 				&security.RecommendationConfigurationPropertiesArgs{
 					RecommendationType: pulumi.String("IoT_OpenPorts"),
 					Status:             pulumi.String("Disabled"),

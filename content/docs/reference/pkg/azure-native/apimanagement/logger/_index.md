@@ -70,7 +70,7 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := apimanagement.NewLogger(ctx, "logger", &apimanagement.LoggerArgs{
 			Credentials: pulumi.StringMap{
-				"instrumentation_key": pulumi.String("11................a1"),
+				"instrumentationKey": pulumi.String("11................a1"),
 			},
 			Description:       pulumi.String("adding a new logger"),
 			LoggerId:          pulumi.String("loggerId"),
@@ -100,7 +100,7 @@ import pulumi_azure_native as azure_native
 
 logger = azure_native.apimanagement.Logger("logger",
     credentials={
-        "instrumentation_key": "11................a1",
+        "instrumentationKey": "11................a1",
     },
     description="adding a new logger",
     logger_id="loggerId",
@@ -191,8 +191,8 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := apimanagement.NewLogger(ctx, "logger", &apimanagement.LoggerArgs{
 			Credentials: pulumi.StringMap{
-				"connection_string": pulumi.String("Endpoint=sb://hydraeventhub-ns.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=********="),
-				"name":              pulumi.String("hydraeventhub"),
+				"connectionString": pulumi.String("Endpoint=sb://hydraeventhub-ns.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=********="),
+				"name":             pulumi.String("hydraeventhub"),
 			},
 			Description:       pulumi.String("adding a new logger"),
 			LoggerId:          pulumi.String("eh1"),
@@ -222,7 +222,7 @@ import pulumi_azure_native as azure_native
 
 logger = azure_native.apimanagement.Logger("logger",
     credentials={
-        "connection_string": "Endpoint=sb://hydraeventhub-ns.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=********=",
+        "connectionString": "Endpoint=sb://hydraeventhub-ns.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=********=",
         "name": "hydraeventhub",
     },
     description="adding a new logger",

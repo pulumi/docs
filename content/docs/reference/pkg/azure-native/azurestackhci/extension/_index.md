@@ -78,13 +78,13 @@ func main() {
 			ArcSettingName: pulumi.String("default"),
 			ClusterName:    pulumi.String("myCluster"),
 			ExtensionName:  pulumi.String("MicrosoftMonitoringAgent"),
-			ProtectedSettings: pulumi.StringMap{
-				"workspace_key": pulumi.String("xx"),
+			ProtectedSettings: pulumi.Any{
+				WorkspaceKey: "xx",
 			},
 			Publisher:         pulumi.String("Microsoft.Compute"),
 			ResourceGroupName: pulumi.String("test-rg"),
-			Settings: pulumi.StringMap{
-				"workspace_id": pulumi.String("xx"),
+			Settings: pulumi.Any{
+				WorkspaceId: "xx",
 			},
 			Type:               pulumi.String("MicrosoftMonitoringAgent"),
 			TypeHandlerVersion: pulumi.String("1.10"),
@@ -114,12 +114,12 @@ extension = azure_native.azurestackhci.Extension("extension",
     cluster_name="myCluster",
     extension_name="MicrosoftMonitoringAgent",
     protected_settings={
-        "workspace_key": "xx",
+        "workspaceKey": "xx",
     },
     publisher="Microsoft.Compute",
     resource_group_name="test-rg",
     settings={
-        "workspace_id": "xx",
+        "workspaceId": "xx",
     },
     type="MicrosoftMonitoringAgent",
     type_handler_version="1.10")

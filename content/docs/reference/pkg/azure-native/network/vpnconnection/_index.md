@@ -91,7 +91,7 @@ func main() {
 			},
 			ResourceGroupName:       pulumi.String("rg1"),
 			TrafficSelectorPolicies: network.TrafficSelectorPolicyArray{},
-			VpnLinkConnections: network.VpnSiteLinkConnectionArray{
+			VpnLinkConnections: []network.VpnSiteLinkConnectionArgs{
 				&network.VpnSiteLinkConnectionArgs{
 					ConnectionBandwidth:            pulumi.Int(200),
 					Name:                           pulumi.String("Connection-Link1"),

@@ -77,8 +77,8 @@ func main() {
 			Description:       pulumi.String("Exempt demo cluster from limit sku"),
 			DisplayName:       pulumi.String("Exempt demo cluster"),
 			ExemptionCategory: pulumi.String("Waiver"),
-			Metadata: pulumi.StringMap{
-				"reason": pulumi.String("Temporary exemption for a expensive VM demo"),
+			Metadata: pulumi.Any{
+				Reason: "Temporary exemption for a expensive VM demo",
 			},
 			PolicyAssignmentId: pulumi.String("/subscriptions/ae640e6b-ba3e-4256-9d62-2993eecfa6f2/providers/Microsoft.Authorization/policyAssignments/CostManagement"),
 			PolicyDefinitionReferenceIds: pulumi.StringArray{

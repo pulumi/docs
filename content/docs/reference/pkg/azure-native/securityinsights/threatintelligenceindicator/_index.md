@@ -96,7 +96,7 @@ func main() {
 			GranularMarkings:                    securityinsights.ThreatIntelligenceGranularMarkingModelArray{},
 			KillChainPhases:                     securityinsights.ThreatIntelligenceKillChainPhaseArray{},
 			Kind:                                pulumi.String("indicator"),
-			Labels:                              []interface{}{},
+			Labels:                              pulumi.StringArray{},
 			Modified:                            pulumi.String(""),
 			Name:                                pulumi.String("d9cd6f0b-96b9-3984-17cd-a779d1e15a93"),
 			OperationalInsightsResourceProvider: pulumi.String("Microsoft.OperationalInsights"),

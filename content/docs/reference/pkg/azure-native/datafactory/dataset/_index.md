@@ -49,9 +49,9 @@ class MyStack : Stack
                     { "type", "Expression" },
                     { "value", "@dataset().MyFolderPath" },
                 },
-                Format = 
+                Format = new AzureNative.DataFactory.Inputs.TextFormatArgs
                 {
-                    { "type", "TextFormat" },
+                    Type = "TextFormat",
                 },
                 LinkedServiceName = new AzureNative.DataFactory.Inputs.LinkedServiceReferenceArgs
                 {
@@ -109,9 +109,9 @@ dataset = azure_native.datafactory.Dataset("dataset",
             "type": "Expression",
             "value": "@dataset().MyFolderPath",
         },
-        format={
-            "type": "TextFormat",
-        },
+        format=azure_native.datafactory.TextFormatArgs(
+            type="TextFormat",
+        ),
         linked_service_name=azure_native.datafactory.LinkedServiceReferenceArgs(
             reference_name="exampleLinkedService",
             type="LinkedServiceReference",
@@ -211,9 +211,9 @@ class MyStack : Stack
                     { "type", "Expression" },
                     { "value", "@dataset().MyFolderPath" },
                 },
-                Format = 
+                Format = new AzureNative.DataFactory.Inputs.TextFormatArgs
                 {
-                    { "type", "TextFormat" },
+                    Type = "TextFormat",
                 },
                 LinkedServiceName = new AzureNative.DataFactory.Inputs.LinkedServiceReferenceArgs
                 {
@@ -272,9 +272,9 @@ dataset = azure_native.datafactory.Dataset("dataset",
             "type": "Expression",
             "value": "@dataset().MyFolderPath",
         },
-        format={
-            "type": "TextFormat",
-        },
+        format=azure_native.datafactory.TextFormatArgs(
+            type="TextFormat",
+        ),
         linked_service_name=azure_native.datafactory.LinkedServiceReferenceArgs(
             reference_name="exampleLinkedService",
             type="LinkedServiceReference",

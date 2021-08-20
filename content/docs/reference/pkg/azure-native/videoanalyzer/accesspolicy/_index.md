@@ -112,9 +112,9 @@ import pulumi_azure_native as azure_native
 access_policy = azure_native.videoanalyzer.AccessPolicy("accessPolicy",
     access_policy_name="accessPolicyName1",
     account_name="testaccount2",
-    authentication=azure_native.videoanalyzer.JwtAuthenticationArgs(
-        audiences=["audience1"],
-        claims=[
+    authentication={
+        "audiences": ["audience1"],
+        "claims": [
             azure_native.videoanalyzer.TokenClaimArgs(
                 name="claimname1",
                 value="claimvalue1",
@@ -124,11 +124,11 @@ access_policy = azure_native.videoanalyzer.AccessPolicy("accessPolicy",
                 value="claimvalue2",
             ),
         ],
-        issuers=[
+        "issuers": [
             "issuer1",
             "issuer2",
         ],
-        keys=[
+        "keys": [
             azure_native.videoanalyzer.RsaTokenKeyArgs(
                 alg="RS256",
                 e="ZLFzZTY0IQ==",
@@ -144,8 +144,8 @@ access_policy = azure_native.videoanalyzer.AccessPolicy("accessPolicy",
                 y="YY==",
             ),
         ],
-        type="#Microsoft.VideoAnalyzer.JwtAuthentication",
-    ),
+        "type": "#Microsoft.VideoAnalyzer.JwtAuthentication",
+    },
     resource_group_name="testrg",
     role="Reader")
 

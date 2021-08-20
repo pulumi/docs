@@ -125,7 +125,7 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := healthcareapis.NewFhirService(ctx, "fhirService", &healthcareapis.FhirServiceArgs{
-			AccessPolicies: healthcareapis.FhirServiceAccessPolicyEntryArray{
+			AccessPolicies: []healthcareapis.FhirServiceAccessPolicyEntryArgs{
 				&healthcareapis.FhirServiceAccessPolicyEntryArgs{
 					ObjectId: pulumi.String("c487e7d1-3210-41a3-8ccc-e9372b78da47"),
 				},

@@ -90,7 +90,7 @@ func main() {
 			CleanupPreference:   pulumi.String("Always"),
 			Identity: &resources.ManagedServiceIdentityArgs{
 				Type: pulumi.String("UserAssigned"),
-				UserAssignedIdentities: pulumi.MapMap{
+				UserAssignedIdentities: pulumi.AnyMap{
 					"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/scriptRG/providers/Microsoft.ManagedIdentity/userAssignedIdentities/uai": nil,
 				},
 			},
@@ -400,7 +400,7 @@ func main() {
 			AzPowerShellVersion: pulumi.String("1.7.0"),
 			Identity: &resources.ManagedServiceIdentityArgs{
 				Type: pulumi.String("UserAssigned"),
-				UserAssignedIdentities: pulumi.MapMap{
+				UserAssignedIdentities: pulumi.AnyMap{
 					"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/scriptRG/providers/Microsoft.ManagedIdentity/userAssignedIdentities/uai": nil,
 				},
 			},
@@ -562,7 +562,7 @@ func main() {
 			},
 			Identity: &resources.ManagedServiceIdentityArgs{
 				Type: pulumi.String("UserAssigned"),
-				UserAssignedIdentities: pulumi.MapMap{
+				UserAssignedIdentities: pulumi.AnyMap{
 					"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/scriptRG/providers/Microsoft.ManagedIdentity/userAssignedIdentities/uai": nil,
 				},
 			},
@@ -745,7 +745,7 @@ func main() {
 			CleanupPreference:   pulumi.String("Always"),
 			Identity: &resources.ManagedServiceIdentityArgs{
 				Type: pulumi.String("UserAssigned"),
-				UserAssignedIdentities: pulumi.MapMap{
+				UserAssignedIdentities: pulumi.AnyMap{
 					"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/scriptRG/providers/Microsoft.ManagedIdentity/userAssignedIdentities/uai": nil,
 				},
 			},

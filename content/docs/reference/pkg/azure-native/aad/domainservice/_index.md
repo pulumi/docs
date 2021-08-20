@@ -117,7 +117,7 @@ func main() {
 				NotifyDcAdmins:     pulumi.String("Enabled"),
 				NotifyGlobalAdmins: pulumi.String("Enabled"),
 			},
-			ReplicaSets: aad.ReplicaSetArray{
+			ReplicaSets: []aad.ReplicaSetArgs{
 				&aad.ReplicaSetArgs{
 					Location: pulumi.String("West US"),
 					SubnetId: pulumi.String("/subscriptions/1639790a-76a2-4ac4-98d9-8562f5dfcb4d/resourceGroups/TestNetworkResourceGroup/providers/Microsoft.Network/virtualNetworks/TestVnetWUS/subnets/TestSubnetWUS"),

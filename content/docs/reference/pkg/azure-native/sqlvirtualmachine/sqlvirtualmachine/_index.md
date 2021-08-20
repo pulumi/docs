@@ -191,7 +191,40 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	sqlvirtualmachine "github.com/pulumi/pulumi-azure-native/sdk/go/azure/sqlvirtualmachine"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := sqlvirtualmachine.NewSqlVirtualMachine(ctx, "sqlVirtualMachine", &sqlvirtualmachine.SqlVirtualMachineArgs{
+			Location:              pulumi.String("northeurope"),
+			ResourceGroupName:     pulumi.String("testrg"),
+			SqlVirtualMachineName: pulumi.String("testvm"),
+			StorageConfigurationSettings: &sqlvirtualmachine.StorageConfigurationSettingsArgs{
+				DiskConfigurationType: pulumi.String("EXTEND"),
+				SqlDataSettings: &sqlvirtualmachine.SQLStorageSettingsArgs{
+					Luns: pulumi.IntArray{
+						pulumi.Int(2),
+					},
+				},
+			},
+			VirtualMachineResourceId: pulumi.String("/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg/providers/Microsoft.Compute/virtualMachines/testvm"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
@@ -306,7 +339,51 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	sqlvirtualmachine "github.com/pulumi/pulumi-azure-native/sdk/go/azure/sqlvirtualmachine"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := sqlvirtualmachine.NewSqlVirtualMachine(ctx, "sqlVirtualMachine", &sqlvirtualmachine.SqlVirtualMachineArgs{
+			Location:              pulumi.String("northeurope"),
+			ResourceGroupName:     pulumi.String("testrg"),
+			SqlVirtualMachineName: pulumi.String("testvm"),
+			StorageConfigurationSettings: &sqlvirtualmachine.StorageConfigurationSettingsArgs{
+				DiskConfigurationType: pulumi.String("NEW"),
+				SqlDataSettings: &sqlvirtualmachine.SQLStorageSettingsArgs{
+					DefaultFilePath: pulumi.String("F:\\folderpath\\"),
+					Luns: pulumi.IntArray{
+						pulumi.Int(0),
+					},
+				},
+				SqlLogSettings: &sqlvirtualmachine.SQLStorageSettingsArgs{
+					DefaultFilePath: pulumi.String("G:\\folderpath\\"),
+					Luns: pulumi.IntArray{
+						pulumi.Int(1),
+					},
+				},
+				SqlTempDbSettings: &sqlvirtualmachine.SQLStorageSettingsArgs{
+					DefaultFilePath: pulumi.String("D:\\TEMP"),
+				},
+				StorageWorkloadType: pulumi.String("OLTP"),
+			},
+			VirtualMachineResourceId: pulumi.String("/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg/providers/Microsoft.Compute/virtualMachines/testvm"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 

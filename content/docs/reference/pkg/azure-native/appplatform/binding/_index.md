@@ -77,9 +77,9 @@ func main() {
 			AppName:     pulumi.String("myapp"),
 			BindingName: pulumi.String("mybinding"),
 			Properties: &appplatform.BindingResourcePropertiesArgs{
-				BindingParameters: pulumi.StringMap{
-					"apiType":      pulumi.String("SQL"),
-					"databaseName": pulumi.String("db1"),
+				BindingParameters: pulumi.AnyMap{
+					"apiType":      pulumi.Any("SQL"),
+					"databaseName": pulumi.Any("db1"),
 				},
 				Key:        pulumi.String("xxxx"),
 				ResourceId: pulumi.String("/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.DocumentDB/databaseAccounts/my-cosmosdb-1"),

@@ -11,11 +11,14 @@ Explore the resources and functions of the azure-native.powerbi module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
+    <li><a href="powerbiresource" title="PowerBIResource"><span class="symbol resource"></span>PowerBIResource</a></li>
+    <li><a href="privateendpointconnection" title="PrivateEndpointConnection"><span class="symbol resource"></span>PrivateEndpointConnection</a></li>
     <li><a href="workspacecollection" title="WorkspaceCollection"><span class="symbol resource"></span>WorkspaceCollection</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
+    <li><a href="getprivateendpointconnection" title="GetPrivateEndpointConnection"><span class="symbol function"></span>GetPrivateEndpointConnection</a></li>
     <li><a href="getworkspacecollection" title="GetWorkspaceCollection"><span class="symbol function"></span>GetWorkspaceCollection</a></li>
     <li><a href="listworkspacecollectionaccesskeys" title="ListWorkspaceCollectionAccessKeys"><span class="symbol function"></span>ListWorkspaceCollectionAccessKeys</a></li>
 </ul>
@@ -27,6 +30,6 @@ Explore the resources and functions of the azure-native.powerbi module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>1.22.0</dd>
+	<dd>1.23.0</dd>
 </dl>
 

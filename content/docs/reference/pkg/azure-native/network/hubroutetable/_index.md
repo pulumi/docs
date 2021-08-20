@@ -90,7 +90,7 @@ func main() {
 			},
 			ResourceGroupName: pulumi.String("rg1"),
 			RouteTableName:    pulumi.String("hubRouteTable1"),
-			Routes: network.HubRouteArray{
+			Routes: []network.HubRouteArgs{
 				&network.HubRouteArgs{
 					DestinationType: pulumi.String("CIDR"),
 					Destinations: pulumi.StringArray{

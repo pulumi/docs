@@ -83,7 +83,7 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := quantum.NewWorkspace(ctx, "workspace", &quantum.WorkspaceArgs{
 			Location: pulumi.String("West US"),
-			Providers: quantum.ProviderArray{
+			Providers: []quantum.ProviderArgs{
 				&quantum.ProviderArgs{
 					ProviderId:  pulumi.String("Honeywell"),
 					ProviderSku: pulumi.String("Basic"),

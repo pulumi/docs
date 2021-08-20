@@ -88,7 +88,7 @@ func main() {
 			Etag:     pulumi.String("etag1"),
 			Location: pulumi.String("West US"),
 			Properties: &botservice.EnterpriseChannelPropertiesArgs{
-				Nodes: botservice.EnterpriseChannelNodeArray{
+				Nodes: []botservice.EnterpriseChannelNodeArgs{
 					&botservice.EnterpriseChannelNodeArgs{
 						AzureLocation: pulumi.String("WestUs"),
 						AzureSku:      pulumi.String("Int1"),

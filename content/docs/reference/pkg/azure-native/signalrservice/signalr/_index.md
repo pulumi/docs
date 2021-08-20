@@ -144,7 +144,7 @@ func main() {
 					pulumi.String("https://bar.com"),
 				},
 			},
-			Features: signalrservice.SignalRFeatureArray{
+			Features: []signalrservice.SignalRFeatureArgs{
 				&signalrservice.SignalRFeatureArgs{
 					Flag:       pulumi.String("ServiceMode"),
 					Properties: nil,

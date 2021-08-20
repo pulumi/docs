@@ -85,7 +85,7 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := network.NewLoadBalancerBackendAddressPool(ctx, "loadBalancerBackendAddressPool", &network.LoadBalancerBackendAddressPoolArgs{
 			BackendAddressPoolName: pulumi.String("backend"),
-			LoadBalancerBackendAddresses: network.LoadBalancerBackendAddressArray{
+			LoadBalancerBackendAddresses: []network.LoadBalancerBackendAddressArgs{
 				&network.LoadBalancerBackendAddressArgs{
 					IpAddress: pulumi.String("10.0.0.4"),
 					Name:      pulumi.String("address1"),

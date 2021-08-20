@@ -204,7 +204,7 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := network.NewFrontDoor(ctx, "frontDoor", &network.FrontDoorArgs{
-			BackendPools: network.BackendPoolArray{
+			BackendPools: []network.BackendPoolArgs{
 				&network.BackendPoolArgs{
 					Backends: network.BackendArray{
 						&network.BackendArgs{
@@ -249,7 +249,7 @@ func main() {
 			},
 			EnabledState:  pulumi.String("Enabled"),
 			FrontDoorName: pulumi.String("frontDoor1"),
-			FrontendEndpoints: network.FrontendEndpointArray{
+			FrontendEndpoints: []network.FrontendEndpointArgs{
 				&network.FrontendEndpointArgs{
 					HostName:                    pulumi.String("www.contoso.com"),
 					Name:                        pulumi.String("frontendEndpoint1"),
@@ -264,7 +264,7 @@ func main() {
 					Name:     pulumi.String("default"),
 				},
 			},
-			HealthProbeSettings: network.HealthProbeSettingsModelArray{
+			HealthProbeSettings: []network.HealthProbeSettingsModelArgs{
 				&network.HealthProbeSettingsModelArgs{
 					EnabledState:      pulumi.String("Enabled"),
 					HealthProbeMethod: pulumi.String("HEAD"),
@@ -274,7 +274,7 @@ func main() {
 					Protocol:          pulumi.String("Http"),
 				},
 			},
-			LoadBalancingSettings: network.LoadBalancingSettingsModelArray{
+			LoadBalancingSettings: []network.LoadBalancingSettingsModelArgs{
 				&network.LoadBalancingSettingsModelArgs{
 					Name:                      pulumi.String("loadBalancingSettings1"),
 					SampleSize:                pulumi.Int(4),
@@ -283,7 +283,7 @@ func main() {
 			},
 			Location:          pulumi.String("westus"),
 			ResourceGroupName: pulumi.String("rg1"),
-			RoutingRules: network.RoutingRuleArray{
+			RoutingRules: []network.RoutingRuleArgs{
 				&network.RoutingRuleArgs{
 					AcceptedProtocols: pulumi.StringArray{
 						pulumi.String("Http"),

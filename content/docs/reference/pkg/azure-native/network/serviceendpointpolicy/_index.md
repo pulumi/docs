@@ -179,7 +179,7 @@ func main() {
 		_, err := network.NewServiceEndpointPolicy(ctx, "serviceEndpointPolicy", &network.ServiceEndpointPolicyArgs{
 			Location:          pulumi.String("westus"),
 			ResourceGroupName: pulumi.String("rg1"),
-			ServiceEndpointPolicyDefinitions: network.ServiceEndpointPolicyDefinitionArray{
+			ServiceEndpointPolicyDefinitions: []network.ServiceEndpointPolicyDefinitionArgs{
 				&network.ServiceEndpointPolicyDefinitionArgs{
 					Description: pulumi.String("Storage Service EndpointPolicy Definition"),
 					Name:        pulumi.String("StorageServiceEndpointPolicyDefinition"),

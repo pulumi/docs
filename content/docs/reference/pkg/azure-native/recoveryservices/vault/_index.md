@@ -221,7 +221,7 @@ func main() {
 		_, err := recoveryservices.NewVault(ctx, "vault", &recoveryservices.VaultArgs{
 			Identity: &recoveryservices.IdentityDataArgs{
 				Type: pulumi.String("UserAssigned"),
-				UserAssignedIdentities: pulumi.MapMap{
+				UserAssignedIdentities: pulumi.AnyMap{
 					"/subscriptions/85bf5e8c-3084-4f42-add2-746ebb7e97b2/resourcegroups/defaultrg/providers/Microsoft.ManagedIdentity/userAssignedIdentities/examplemsi": nil,
 				},
 			},
@@ -393,7 +393,7 @@ func main() {
 		_, err := recoveryservices.NewVault(ctx, "vault", &recoveryservices.VaultArgs{
 			Identity: &recoveryservices.IdentityDataArgs{
 				Type: pulumi.String("UserAssigned"),
-				UserAssignedIdentities: pulumi.MapMap{
+				UserAssignedIdentities: pulumi.AnyMap{
 					"/subscriptions/85bf5e8c-3084-4f42-add2-746ebb7e97b2/resourcegroups/defaultrg/providers/Microsoft.ManagedIdentity/userAssignedIdentities/examplemsi": nil,
 				},
 			},

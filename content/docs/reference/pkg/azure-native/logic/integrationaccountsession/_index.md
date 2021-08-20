@@ -68,9 +68,9 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := logic.NewIntegrationAccountSession(ctx, "integrationAccountSession", &logic.IntegrationAccountSessionArgs{
-			Content: pulumi.StringMap{
-				"controlNumber":            pulumi.String("1234"),
-				"controlNumberChangedTime": pulumi.String("2017-02-21T22:30:11.9923759Z"),
+			Content: pulumi.Any{
+				ControlNumber:            "1234",
+				ControlNumberChangedTime: "2017-02-21T22:30:11.9923759Z",
 			},
 			IntegrationAccountName: pulumi.String("testia123"),
 			ResourceGroupName:      pulumi.String("testrg123"),

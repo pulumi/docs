@@ -118,7 +118,7 @@ func main() {
 				pulumi.String("fqdn2"),
 				pulumi.String("fqdn3"),
 			},
-			IpConfigurations: network.PrivateLinkServiceIpConfigurationArray{
+			IpConfigurations: []network.PrivateLinkServiceIpConfigurationArgs{
 				&network.PrivateLinkServiceIpConfigurationArgs{
 					Name:                      pulumi.String("fe-lb"),
 					PrivateIPAddress:          pulumi.String("10.0.1.4"),
@@ -129,7 +129,7 @@ func main() {
 					},
 				},
 			},
-			LoadBalancerFrontendIpConfigurations: network.FrontendIPConfigurationArray{
+			LoadBalancerFrontendIpConfigurations: []network.FrontendIPConfigurationArgs{
 				&network.FrontendIPConfigurationArgs{
 					Id: pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/frontendIPConfigurations/fe-lb"),
 				},
