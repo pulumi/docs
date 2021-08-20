@@ -46,11 +46,11 @@ class MyStack : Stack
         var myCryptoKey = myKeyRing.Apply(myKeyRing => Output.Create(Gcp.Kms.GetKMSCryptoKey.InvokeAsync(new Gcp.Kms.GetKMSCryptoKeyArgs
         {
             Name = "my-crypto-key",
-            KeyRing = myKeyRing.SelfLink,
+            KeyRing = myKeyRing.Id,
         })));
         var myCryptoKeyVersion = Output.Create(Gcp.Kms.GetKMSCryptoKeyVersion.InvokeAsync(new Gcp.Kms.GetKMSCryptoKeyVersionArgs
         {
-            CryptoKey = data.Google_kms_key.My_key.Self_link,
+            CryptoKey = data.Google_kms_key.My_key.Id,
         }));
     }
 
@@ -82,13 +82,13 @@ func main() {
 		}
 		_, err = kms.GetKMSCryptoKey(ctx, &kms.GetKMSCryptoKeyArgs{
 			Name:    "my-crypto-key",
-			KeyRing: myKeyRing.SelfLink,
+			KeyRing: myKeyRing.Id,
 		}, nil)
 		if err != nil {
 			return err
 		}
 		_, err = kms.GetKMSCryptoKeyVersion(ctx, &kms.GetKMSCryptoKeyVersionArgs{
-			CryptoKey: data.Google_kms_key.My_key.Self_link,
+			CryptoKey: data.Google_kms_key.My_key.Id,
 		}, nil)
 		if err != nil {
 			return err
@@ -111,8 +111,8 @@ import pulumi_gcp as gcp
 my_key_ring = gcp.kms.get_kms_key_ring(name="my-key-ring",
     location="us-central1")
 my_crypto_key = gcp.kms.get_kms_crypto_key(name="my-crypto-key",
-    key_ring=my_key_ring.self_link)
-my_crypto_key_version = gcp.kms.get_kms_crypto_key_version(crypto_key=data["google_kms_key"]["my_key"]["self_link"])
+    key_ring=my_key_ring.id)
+my_crypto_key_version = gcp.kms.get_kms_crypto_key_version(crypto_key=data["google_kms_key"]["my_key"]["id"])
 ```
 
 
@@ -132,10 +132,10 @@ const myKeyRing = gcp.kms.getKMSKeyRing({
 });
 const myCryptoKey = myKeyRing.then(myKeyRing => gcp.kms.getKMSCryptoKey({
     name: "my-crypto-key",
-    keyRing: myKeyRing.selfLink,
+    keyRing: myKeyRing.id,
 }));
 const myCryptoKeyVersion = gcp.kms.getKMSCryptoKeyVersion({
-    cryptoKey: data.google_kms_key.my_key.self_link,
+    cryptoKey: data.google_kms_key.my_key.id,
 });
 ```
 
@@ -196,7 +196,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The `self_link` of the Google Cloud Platform CryptoKey to which the key version belongs.
+    <dd>{{% md %}}The `self_link` of the Google Cloud Platform CryptoKey to which the key version belongs. This is also the `id` field of the 
+`gcp.kms.CryptoKey` resource/datasource.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="version_csharp">
@@ -218,7 +219,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The `self_link` of the Google Cloud Platform CryptoKey to which the key version belongs.
+    <dd>{{% md %}}The `self_link` of the Google Cloud Platform CryptoKey to which the key version belongs. This is also the `id` field of the 
+`gcp.kms.CryptoKey` resource/datasource.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="version_go">
@@ -240,7 +242,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The `self_link` of the Google Cloud Platform CryptoKey to which the key version belongs.
+    <dd>{{% md %}}The `self_link` of the Google Cloud Platform CryptoKey to which the key version belongs. This is also the `id` field of the 
+`gcp.kms.CryptoKey` resource/datasource.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="version_nodejs">
@@ -262,7 +265,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The `self_link` of the Google Cloud Platform CryptoKey to which the key version belongs.
+    <dd>{{% md %}}The `self_link` of the Google Cloud Platform CryptoKey to which the key version belongs. This is also the `id` field of the 
+`gcp.kms.CryptoKey` resource/datasource.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="version_python">
@@ -311,6 +315,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The resource name for this CryptoKeyVersion in the format `projects/*/locations/*/keyRings/*/cryptoKeys/*/cryptoKeyVersions/*`
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="protectionlevel_csharp">
@@ -378,6 +391,15 @@ The following output properties are available:
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The resource name for this CryptoKeyVersion in the format `projects/*/locations/*/keyRings/*/cryptoKeys/*/cryptoKeyVersions/*`
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="protectionlevel_go">
 <a href="#protectionlevel_go" style="color: inherit; text-decoration: inherit;">Protection<wbr>Level</a>
 </span>
@@ -443,6 +465,15 @@ The following output properties are available:
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The resource name for this CryptoKeyVersion in the format `projects/*/locations/*/keyRings/*/cryptoKeys/*/cryptoKeyVersions/*`
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="protectionlevel_nodejs">
 <a href="#protectionlevel_nodejs" style="color: inherit; text-decoration: inherit;">protection<wbr>Level</a>
 </span>
@@ -506,6 +537,15 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The resource name for this CryptoKeyVersion in the format `projects/*/locations/*/keyRings/*/cryptoKeys/*/cryptoKeyVersions/*`
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="protection_level_python">

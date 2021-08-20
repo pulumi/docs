@@ -14,6 +14,7 @@ Explore the resources and functions of the gcp.diagflow module.
     <li><a href="agent" title="Agent"><span class="symbol resource"></span>Agent</a></li>
     <li><a href="cxagent" title="CxAgent"><span class="symbol resource"></span>CxAgent</a></li>
     <li><a href="cxentitytype" title="CxEntityType"><span class="symbol resource"></span>CxEntityType</a></li>
+    <li><a href="cxenvironment" title="CxEnvironment"><span class="symbol resource"></span>CxEnvironment</a></li>
     <li><a href="cxflow" title="CxFlow"><span class="symbol resource"></span>CxFlow</a></li>
     <li><a href="cxintent" title="CxIntent"><span class="symbol resource"></span>CxIntent</a></li>
     <li><a href="cxpage" title="CxPage"><span class="symbol resource"></span>CxPage</a></li>
@@ -32,6 +33,6 @@ Explore the resources and functions of the gcp.diagflow module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>5.15.0</dd>
+	<dd>5.16.0</dd>
 </dl>
 
