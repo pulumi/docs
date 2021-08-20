@@ -124,7 +124,7 @@ func main() {
 				"SomeProperty": pulumi.String("5"),
 			},
 			ResourceGroupName: pulumi.String("resRg"),
-			VmExtensions: servicefabric.VMSSExtensionArray{
+			VmExtensions: []servicefabric.VMSSExtensionArgs{
 				&servicefabric.VMSSExtensionArgs{
 					AutoUpgradeMinorVersion: pulumi.Bool(true),
 					Name:                    pulumi.String("Microsoft.Azure.Geneva.GenevaMonitoring"),
@@ -139,12 +139,12 @@ func main() {
 			VmImageSku:       pulumi.String("2016-Datacenter-Server-Core"),
 			VmImageVersion:   pulumi.String("latest"),
 			VmInstanceCount:  pulumi.Int(10),
-			VmSecrets: servicefabric.VaultSecretGroupArray{
+			VmSecrets: []servicefabric.VaultSecretGroupArgs{
 				&servicefabric.VaultSecretGroupArgs{
 					SourceVault: &servicefabric.SubResourceArgs{
 						Id: pulumi.String("/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/resRg/providers/Microsoft.KeyVault/vaults/myVault"),
 					},
-					VaultCertificates: servicefabric.VaultCertificateArray{
+					VaultCertificates: []servicefabric.VaultCertificateArgs{
 						&servicefabric.VaultCertificateArgs{
 							CertificateStore: pulumi.String("My"),
 							CertificateUrl:   pulumi.String("https://myVault.vault.azure.net:443/secrets/myCert/ef1a31d39e1f46bca33def54b6cda54c"),

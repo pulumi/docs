@@ -78,7 +78,52 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	machinelearningservices "github.com/pulumi/pulumi-azure-native/sdk/go/azure/machinelearningservices"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := machinelearningservices.NewModelVersion(ctx, "modelVersion", &machinelearningservices.ModelVersionArgs{
+			Name: pulumi.String("testContainer"),
+			Properties: &machinelearningservices.ModelVersionArgs{
+				DatastoreId: pulumi.String("/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg123/providers/Microsoft.MachineLearningServices/workspaces/workspace123/datastores/datastore123"),
+				Description: pulumi.String("Model version description"),
+				Flavors: machinelearningservices.FlavorDataMap{
+					"python_function": &machinelearningservices.FlavorDataArgs{
+						Data: pulumi.StringMap{
+							"loader_module": pulumi.String("myLoaderModule"),
+						},
+					},
+				},
+				Path: pulumi.String("path/in/datastore"),
+				Properties: pulumi.StringMap{
+					"prop1": pulumi.String("value1"),
+					"prop2": pulumi.String("value2"),
+				},
+				Tags: pulumi.StringMap{
+					"tag1": pulumi.String("value1"),
+					"tag2": pulumi.String("value2"),
+				},
+			},
+			ResourceGroupName: pulumi.String("testrg123"),
+			Version:           pulumi.String("1"),
+			WorkspaceName:     pulumi.String("workspace123"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 

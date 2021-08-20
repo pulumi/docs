@@ -81,7 +81,7 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := customproviders.NewCustomResourceProvider(ctx, "customResourceProvider", &customproviders.CustomResourceProviderArgs{
-			Actions: customproviders.CustomRPActionRouteDefinitionArray{
+			Actions: []customproviders.CustomRPActionRouteDefinitionArgs{
 				&customproviders.CustomRPActionRouteDefinitionArgs{
 					Endpoint:    pulumi.String("https://mytestendpoint/"),
 					Name:        pulumi.String("TestAction"),
@@ -91,7 +91,7 @@ func main() {
 			Location:             pulumi.String("eastus"),
 			ResourceGroupName:    pulumi.String("testRG"),
 			ResourceProviderName: pulumi.String("newrp"),
-			ResourceTypes: customproviders.CustomRPResourceTypeRouteDefinitionArray{
+			ResourceTypes: []customproviders.CustomRPResourceTypeRouteDefinitionArgs{
 				&customproviders.CustomRPResourceTypeRouteDefinitionArgs{
 					Endpoint:    pulumi.String("https://mytestendpoint2/"),
 					Name:        pulumi.String("TestResource"),

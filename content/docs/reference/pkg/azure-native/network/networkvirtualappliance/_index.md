@@ -102,7 +102,7 @@ func main() {
 			},
 			Identity: &network.ManagedServiceIdentityArgs{
 				Type: "UserAssigned",
-				UserAssignedIdentities: pulumi.MapMap{
+				UserAssignedIdentities: pulumi.AnyMap{
 					"/subscriptions/subid/resourcegroups/rg1/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity1": nil,
 				},
 			},

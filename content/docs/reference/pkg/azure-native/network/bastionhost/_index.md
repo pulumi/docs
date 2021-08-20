@@ -78,7 +78,7 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := network.NewBastionHost(ctx, "bastionHost", &network.BastionHostArgs{
 			BastionHostName: pulumi.String("bastionhosttenant'"),
-			IpConfigurations: network.BastionHostIPConfigurationArray{
+			IpConfigurations: []network.BastionHostIPConfigurationArgs{
 				&network.BastionHostIPConfigurationArgs{
 					Name: pulumi.String("bastionHostIpConfiguration"),
 					PublicIPAddress: &network.SubResourceArgs{

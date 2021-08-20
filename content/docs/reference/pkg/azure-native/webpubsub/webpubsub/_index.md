@@ -145,7 +145,103 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	webpubsub "github.com/pulumi/pulumi-azure-native/sdk/go/azure/webpubsub"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := webpubsub.NewWebPubSub(ctx, "webPubSub", &webpubsub.WebPubSubArgs{
+			EventHandler: &webpubsub.EventHandlerSettingsArgs{
+				Items: webpubsub.EventHandlerTemplateArrayMap{
+					"hub1": webpubsub.EventHandlerTemplateArray{
+						&webpubsub.EventHandlerTemplateArgs{
+							UrlTemplate:      pulumi.String("https://example.com/chat/api/hub1"),
+							UserEventPattern: pulumi.String("*"),
+						},
+					},
+					"hub2": webpubsub.EventHandlerTemplateArray{
+						&webpubsub.EventHandlerTemplateArgs{
+							UrlTemplate:      pulumi.String("https://example.com/chat/api/hub2/example1"),
+							UserEventPattern: pulumi.String("example1"),
+						},
+						&webpubsub.EventHandlerTemplateArgs{
+							UrlTemplate:      pulumi.String("https://example.com/chat/api/hub2/example2"),
+							UserEventPattern: pulumi.String("example2"),
+						},
+					},
+				},
+			},
+			Features: []webpubsub.WebPubSubFeatureArgs{
+				&webpubsub.WebPubSubFeatureArgs{
+					Flag:       pulumi.String("ServiceMode"),
+					Properties: nil,
+					Value:      pulumi.String("Serverless"),
+				},
+				&webpubsub.WebPubSubFeatureArgs{
+					Flag:       pulumi.String("EnableConnectivityLogs"),
+					Properties: nil,
+					Value:      pulumi.String("True"),
+				},
+				&webpubsub.WebPubSubFeatureArgs{
+					Flag:       pulumi.String("EnableMessagingLogs"),
+					Properties: nil,
+					Value:      pulumi.String("False"),
+				},
+				&webpubsub.WebPubSubFeatureArgs{
+					Flag:       pulumi.String("EnableLiveTrace"),
+					Properties: nil,
+					Value:      pulumi.String("False"),
+				},
+			},
+			Identity: &webpubsub.ManagedIdentityArgs{
+				Type: pulumi.String("SystemAssigned"),
+			},
+			Location: pulumi.String("eastus"),
+			NetworkACLs: &webpubsub.WebPubSubNetworkACLsArgs{
+				DefaultAction: pulumi.String("Deny"),
+				PrivateEndpoints: webpubsub.PrivateEndpointACLArray{
+					&webpubsub.PrivateEndpointACLArgs{
+						Allow: pulumi.StringArray{
+							pulumi.String("ServerConnection"),
+						},
+						Name: pulumi.String("mywebpubsubservice.1fa229cd-bf3f-47f0-8c49-afb36723997e"),
+					},
+				},
+				PublicNetwork: &webpubsub.NetworkACLArgs{
+					Allow: pulumi.StringArray{
+						pulumi.String("ClientConnection"),
+					},
+				},
+			},
+			ResourceGroupName: pulumi.String("myResourceGroup"),
+			ResourceName:      pulumi.String("myWebPubSubService"),
+			Sku: &webpubsub.ResourceSkuArgs{
+				Capacity: pulumi.Int(1),
+				Name:     pulumi.String("Standard_S1"),
+				Tier:     pulumi.String("Standard"),
+			},
+			Tags: pulumi.StringMap{
+				"key1": pulumi.String("value1"),
+			},
+			Tls: &webpubsub.WebPubSubTlsSettingsArgs{
+				ClientCertEnabled: pulumi.Bool(false),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 

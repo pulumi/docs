@@ -76,10 +76,10 @@ class MyStack : Stack
                     SuccessThreshold = 50,
                     Timeout = "PT1M",
                 },
-                Model = 
+                Model = new AzureNative.MachineLearningServices.Inputs.IdAssetReferenceArgs
                 {
-                    { "assetId", "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1234/providers/Microsoft.MachineLearningServices/workspaces/testworkspace/models/model123" },
-                    { "referenceType", "Id" },
+                    AssetId = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1234/providers/Microsoft.MachineLearningServices/workspaces/testworkspace/models/model123",
+                    ReferenceType = "Id",
                 },
                 Properties = 
                 {
@@ -93,11 +93,11 @@ class MyStack : Stack
                     MaxQueueWait = "PT1M",
                     RequestTimeout = "PT1M",
                 },
-                ScaleSettings = 
+                ScaleSettings = new AzureNative.MachineLearningServices.Inputs.AutoScaleSettingsArgs
                 {
-                    { "pollingInterval", "PT1M" },
-                    { "scaleType", "Auto" },
-                    { "targetUtilizationPercentage", 50 },
+                    PollingInterval = "PT1M",
+                    ScaleType = "Auto",
+                    TargetUtilizationPercentage = 50,
                 },
             },
             ResourceGroupName = "testrg123",
@@ -121,7 +121,90 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	machinelearningservices "github.com/pulumi/pulumi-azure-native/sdk/go/azure/machinelearningservices"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := machinelearningservices.NewOnlineDeployment(ctx, "onlineDeployment", &machinelearningservices.OnlineDeploymentArgs{
+			DeploymentName: pulumi.String("testDeployment"),
+			EndpointName:   pulumi.String("testEndpoint"),
+			Identity: &machinelearningservices.ResourceIdentityArgs{
+				Type: pulumi.String("UserAssigned"),
+				UserAssignedIdentities: machinelearningservices.UserAssignedIdentityMetaMap{
+					"/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1234/providers/Microsoft.ManagedIdentity/userAssignedIdentities/myuseridentity": &machinelearningservices.UserAssignedIdentityMetaArgs{
+						ClientId:    pulumi.String("string"),
+						PrincipalId: pulumi.String("string"),
+					},
+				},
+			},
+			Kind:     pulumi.String("string"),
+			Location: pulumi.String("string"),
+			Properties: machinelearningservices.K8sOnlineDeployment{
+				AppInsightsEnabled: true,
+				CodeConfiguration: machinelearningservices.CodeConfiguration{
+					CodeId:        "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1234/providers/Microsoft.MachineLearningServices/workspaces/testworkspace/codes/code123/versions/1",
+					ScoringScript: "string",
+				},
+				ContainerResourceRequirements: machinelearningservices.ContainerResourceRequirements{
+					Cpu:             4,
+					CpuLimit:        4,
+					MemoryInGB:      64,
+					MemoryInGBLimit: 64,
+				},
+				Description:         "string",
+				EndpointComputeType: "K8S",
+				EnvironmentId:       "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1234/providers/Microsoft.MachineLearningServices/workspaces/testworkspace/environments/env123",
+				LivenessProbe: machinelearningservices.ProbeSettings{
+					FailureThreshold: 50,
+					InitialDelay:     "PT1M",
+					Period:           "PT1M",
+					SuccessThreshold: 50,
+					Timeout:          "PT1M",
+				},
+				Model: machinelearningservices.IdAssetReference{
+					AssetId:       "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1234/providers/Microsoft.MachineLearningServices/workspaces/testworkspace/models/model123",
+					ReferenceType: "Id",
+				},
+				Properties: map[string]interface{}{
+					"additionalProp1": "string",
+					"additionalProp2": "string",
+					"additionalProp3": "string",
+				},
+				RequestSettings: machinelearningservices.OnlineRequestSettings{
+					MaxConcurrentRequestsPerInstance: 5,
+					MaxQueueWait:                     "PT1M",
+					RequestTimeout:                   "PT1M",
+				},
+				ScaleSettings: machinelearningservices.AutoScaleSettings{
+					PollingInterval:             "PT1M",
+					ScaleType:                   "Auto",
+					TargetUtilizationPercentage: 50,
+				},
+			},
+			ResourceGroupName: pulumi.String("testrg123"),
+			Tags: pulumi.StringMap{
+				"additionalProp1": pulumi.String("string"),
+				"additionalProp2": pulumi.String("string"),
+				"additionalProp3": pulumi.String("string"),
+			},
+			WorkspaceName: pulumi.String("workspace123"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
@@ -169,10 +252,10 @@ online_deployment = azure_native.machinelearningservices.OnlineDeployment("onlin
             success_threshold=50,
             timeout="PT1M",
         ),
-        model={
-            "assetId": "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1234/providers/Microsoft.MachineLearningServices/workspaces/testworkspace/models/model123",
-            "referenceType": "Id",
-        },
+        model=azure_native.machinelearningservices.IdAssetReferenceArgs(
+            asset_id="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1234/providers/Microsoft.MachineLearningServices/workspaces/testworkspace/models/model123",
+            reference_type="Id",
+        ),
         properties={
             "additionalProp1": "string",
             "additionalProp2": "string",
@@ -183,11 +266,11 @@ online_deployment = azure_native.machinelearningservices.OnlineDeployment("onlin
             max_queue_wait="PT1M",
             request_timeout="PT1M",
         ),
-        scale_settings={
-            "pollingInterval": "PT1M",
-            "scaleType": "Auto",
-            "targetUtilizationPercentage": 50,
-        },
+        scale_settings=azure_native.machinelearningservices.AutoScaleSettingsArgs(
+            polling_interval="PT1M",
+            scale_type="Auto",
+            target_utilization_percentage=50,
+        ),
     ),
     resource_group_name="testrg123",
     tags={
@@ -333,10 +416,10 @@ class MyStack : Stack
                     SuccessThreshold = 50,
                     Timeout = "PT1M",
                 },
-                Model = 
+                Model = new AzureNative.MachineLearningServices.Inputs.IdAssetReferenceArgs
                 {
-                    { "assetId", "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1234/providers/Microsoft.MachineLearningServices/workspaces/testworkspace/models/model123" },
-                    { "referenceType", "Id" },
+                    AssetId = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1234/providers/Microsoft.MachineLearningServices/workspaces/testworkspace/models/model123",
+                    ReferenceType = "Id",
                 },
                 Properties = 
                 {
@@ -350,11 +433,11 @@ class MyStack : Stack
                     MaxQueueWait = "PT1M",
                     RequestTimeout = "PT1M",
                 },
-                ScaleSettings = 
+                ScaleSettings = new AzureNative.MachineLearningServices.Inputs.AutoScaleSettingsArgs
                 {
-                    { "pollingInterval", "PT1M" },
-                    { "scaleType", "Auto" },
-                    { "targetUtilizationPercentage", 50 },
+                    PollingInterval = "PT1M",
+                    ScaleType = "Auto",
+                    TargetUtilizationPercentage = 50,
                 },
             },
             ResourceGroupName = "testrg123",
@@ -378,7 +461,84 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	machinelearningservices "github.com/pulumi/pulumi-azure-native/sdk/go/azure/machinelearningservices"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := machinelearningservices.NewOnlineDeployment(ctx, "onlineDeployment", &machinelearningservices.OnlineDeploymentArgs{
+			DeploymentName: pulumi.String("testDeployment"),
+			EndpointName:   pulumi.String("testEndpoint"),
+			Identity: &machinelearningservices.ResourceIdentityArgs{
+				Type: pulumi.String("UserAssigned"),
+				UserAssignedIdentities: machinelearningservices.UserAssignedIdentityMetaMap{
+					"/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1234/providers/Microsoft.ManagedIdentity/userAssignedIdentities/myuseridentity": &machinelearningservices.UserAssignedIdentityMetaArgs{
+						ClientId:    pulumi.String("string"),
+						PrincipalId: pulumi.String("string"),
+					},
+				},
+			},
+			Kind:     pulumi.String("string"),
+			Location: pulumi.String("string"),
+			Properties: machinelearningservices.ManagedOnlineDeployment{
+				AppInsightsEnabled: true,
+				CodeConfiguration: machinelearningservices.CodeConfiguration{
+					CodeId:        "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1234/providers/Microsoft.MachineLearningServices/workspaces/testworkspace/codes/code123/versions/1",
+					ScoringScript: "string",
+				},
+				Description:         "string",
+				EndpointComputeType: "Managed",
+				EnvironmentId:       "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1234/providers/Microsoft.MachineLearningServices/workspaces/testworkspace/environments/env123",
+				LivenessProbe: machinelearningservices.ProbeSettings{
+					FailureThreshold: 50,
+					InitialDelay:     "PT1M",
+					Period:           "PT1M",
+					SuccessThreshold: 50,
+					Timeout:          "PT1M",
+				},
+				Model: machinelearningservices.IdAssetReference{
+					AssetId:       "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1234/providers/Microsoft.MachineLearningServices/workspaces/testworkspace/models/model123",
+					ReferenceType: "Id",
+				},
+				Properties: map[string]interface{}{
+					"additionalProp1": "string",
+					"additionalProp2": "string",
+					"additionalProp3": "string",
+				},
+				RequestSettings: machinelearningservices.OnlineRequestSettings{
+					MaxConcurrentRequestsPerInstance: 5,
+					MaxQueueWait:                     "PT1M",
+					RequestTimeout:                   "PT1M",
+				},
+				ScaleSettings: machinelearningservices.AutoScaleSettings{
+					PollingInterval:             "PT1M",
+					ScaleType:                   "Auto",
+					TargetUtilizationPercentage: 50,
+				},
+			},
+			ResourceGroupName: pulumi.String("testrg123"),
+			Tags: pulumi.StringMap{
+				"additionalProp1": pulumi.String("string"),
+				"additionalProp2": pulumi.String("string"),
+				"additionalProp3": pulumi.String("string"),
+			},
+			WorkspaceName: pulumi.String("workspace123"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
@@ -420,10 +580,10 @@ online_deployment = azure_native.machinelearningservices.OnlineDeployment("onlin
             success_threshold=50,
             timeout="PT1M",
         ),
-        model={
-            "assetId": "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1234/providers/Microsoft.MachineLearningServices/workspaces/testworkspace/models/model123",
-            "referenceType": "Id",
-        },
+        model=azure_native.machinelearningservices.IdAssetReferenceArgs(
+            asset_id="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1234/providers/Microsoft.MachineLearningServices/workspaces/testworkspace/models/model123",
+            reference_type="Id",
+        ),
         properties={
             "additionalProp1": "string",
             "additionalProp2": "string",
@@ -434,11 +594,11 @@ online_deployment = azure_native.machinelearningservices.OnlineDeployment("onlin
             max_queue_wait="PT1M",
             request_timeout="PT1M",
         ),
-        scale_settings={
-            "pollingInterval": "PT1M",
-            "scaleType": "Auto",
-            "targetUtilizationPercentage": 50,
-        },
+        scale_settings=azure_native.machinelearningservices.AutoScaleSettingsArgs(
+            polling_interval="PT1M",
+            scale_type="Auto",
+            target_utilization_percentage=50,
+        ),
     ),
     resource_group_name="testrg123",
     tags={

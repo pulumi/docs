@@ -78,8 +78,8 @@ func main() {
 			Name:              pulumi.String("myMachine"),
 			Publisher:         pulumi.String("Microsoft.Compute"),
 			ResourceGroupName: pulumi.String("myResourceGroup"),
-			Settings: pulumi.StringMap{
-				"commandToExecute": pulumi.String(fmt.Sprintf("%v%v%v", "powershell.exe -c \"Get-Process | Where-Object { ", "$", "_.CPU -gt 10000 }\"")),
+			Settings: pulumi.Any{
+				CommandToExecute: fmt.Sprintf("%v%v%v", "powershell.exe -c \"Get-Process | Where-Object { ", "$", "_.CPU -gt 10000 }\""),
 			},
 			Type:               pulumi.String("CustomScriptExtension"),
 			TypeHandlerVersion: pulumi.String("1.10"),

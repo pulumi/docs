@@ -80,7 +80,7 @@ func main() {
 					OriginalSwaggerUrl: pulumi.String("https://tempuri.org/swagger.json"),
 				},
 				ApiType:      pulumi.String("Rest"),
-				Capabilities: []interface{}{},
+				Capabilities: pulumi.StringArray{},
 				Description:  pulumi.String(""),
 				DisplayName:  pulumi.String("testCustomApi"),
 				IconUri:      pulumi.String("/testIcon.svg"),

@@ -311,7 +311,7 @@ func main() {
 		_, err := media.NewStreamingLocator(ctx, "streamingLocator", &media.StreamingLocatorArgs{
 			AccountName: pulumi.String("contosomedia"),
 			AssetName:   pulumi.String("ClimbingMountRainier"),
-			ContentKeys: media.StreamingLocatorContentKeyArray{
+			ContentKeys: []media.StreamingLocatorContentKeyArgs{
 				&media.StreamingLocatorContentKeyArgs{
 					Id:                              pulumi.String("60000000-0000-0000-0000-000000000001"),
 					LabelReferenceInStreamingPolicy: pulumi.String("aesDefaultKey"),

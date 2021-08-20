@@ -88,7 +88,7 @@ func main() {
 				},
 				DisplayName: pulumi.String("test123"),
 				MachineName: pulumi.String("TEST123"),
-				Status:      pulumi.String("Installed"),
+				Status:      pulumi.Any("Installed"),
 			},
 			ResourceGroupName: pulumi.String("testResourceGroup"),
 		})

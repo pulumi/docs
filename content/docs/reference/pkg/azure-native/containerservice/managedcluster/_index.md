@@ -131,7 +131,96 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	"fmt"
+
+	containerservice "github.com/pulumi/pulumi-azure-native/sdk/go/azure/containerservice"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := containerservice.NewManagedCluster(ctx, "managedCluster", &containerservice.ManagedClusterArgs{
+			AddonProfiles: containerservice.ManagedClusterAddonProfileMap{
+				"azureKeyvaultSecretsProvider": &containerservice.ManagedClusterAddonProfileArgs{
+					Config: pulumi.StringMap{
+						"enableSecretRotation": pulumi.String("true"),
+					},
+					Enabled: pulumi.Bool(true),
+				},
+			},
+			AgentPoolProfiles: []containerservice.ManagedClusterAgentPoolProfileArgs{
+				&containerservice.ManagedClusterAgentPoolProfileArgs{
+					Count:              pulumi.Int(3),
+					EnableNodePublicIP: pulumi.Bool(true),
+					Mode:               pulumi.String("System"),
+					Name:               pulumi.String("nodepool1"),
+					OsType:             pulumi.String("Linux"),
+					Type:               pulumi.String("VirtualMachineScaleSets"),
+					VmSize:             pulumi.String("Standard_DS2_v2"),
+				},
+			},
+			AutoScalerProfile: &containerservice.ManagedClusterPropertiesAutoScalerProfileArgs{
+				ScaleDownDelayAfterAdd: pulumi.String("15m"),
+				ScanInterval:           pulumi.String("20s"),
+			},
+			DiskEncryptionSetID:     pulumi.String("/subscriptions/subid1/resourceGroups/rg1/providers/Microsoft.Compute/diskEncryptionSets/des"),
+			DnsPrefix:               pulumi.String("dnsprefix1"),
+			EnablePodSecurityPolicy: pulumi.Bool(true),
+			EnableRBAC:              pulumi.Bool(true),
+			KubernetesVersion:       pulumi.String(""),
+			LinuxProfile: &containerservice.ContainerServiceLinuxProfileArgs{
+				AdminUsername: pulumi.String("azureuser"),
+				Ssh: &containerservice.ContainerServiceSshConfigurationArgs{
+					PublicKeys: []containerservice.ContainerServiceSshPublicKeyArgs{
+						&containerservice.ContainerServiceSshPublicKeyArgs{
+							KeyData: pulumi.String("keydata"),
+						},
+					},
+				},
+			},
+			Location: pulumi.String("location1"),
+			NetworkProfile: &containerservice.ContainerServiceNetworkProfileArgs{
+				LoadBalancerProfile: &containerservice.ManagedClusterLoadBalancerProfileArgs{
+					ManagedOutboundIPs: &containerservice.ManagedClusterLoadBalancerProfileManagedOutboundIPsArgs{
+						Count: pulumi.Int(2),
+					},
+				},
+				LoadBalancerSku: pulumi.String("standard"),
+				OutboundType:    pulumi.String("loadBalancer"),
+			},
+			ResourceGroupName: pulumi.String("rg1"),
+			ResourceName:      pulumi.String("clustername1"),
+			ServicePrincipalProfile: &containerservice.ManagedClusterServicePrincipalProfileArgs{
+				ClientId: pulumi.String("clientid"),
+				Secret:   pulumi.String("secret"),
+			},
+			Sku: &containerservice.ManagedClusterSKUArgs{
+				Name: pulumi.String("Basic"),
+				Tier: pulumi.String("Free"),
+			},
+			Tags: pulumi.StringMap{
+				"archv2": pulumi.String(""),
+				"tier":   pulumi.String("production"),
+			},
+			WindowsProfile: &containerservice.ManagedClusterWindowsProfileArgs{
+				AdminPassword: pulumi.String(fmt.Sprintf("%v%v", "replacePassword1234", "$")),
+				AdminUsername: pulumi.String("azureuser"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
@@ -410,7 +499,7 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := containerservice.NewManagedCluster(ctx, "managedCluster", &containerservice.ManagedClusterArgs{
 			AddonProfiles: nil,
-			AgentPoolProfiles: containerservice.ManagedClusterAgentPoolProfileArray{
+			AgentPoolProfiles: []containerservice.ManagedClusterAgentPoolProfileArgs{
 				&containerservice.ManagedClusterAgentPoolProfileArgs{
 					Count:                  pulumi.Int(3),
 					EnableEncryptionAtHost: pulumi.Bool(true),
@@ -434,7 +523,7 @@ func main() {
 			LinuxProfile: &containerservice.ContainerServiceLinuxProfileArgs{
 				AdminUsername: pulumi.String("azureuser"),
 				Ssh: &containerservice.ContainerServiceSshConfigurationArgs{
-					PublicKeys: containerservice.ContainerServiceSshPublicKeyArray{
+					PublicKeys: []containerservice.ContainerServiceSshPublicKeyArgs{
 						&containerservice.ContainerServiceSshPublicKeyArgs{
 							KeyData: pulumi.String("keydata"),
 						},
@@ -745,7 +834,7 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := containerservice.NewManagedCluster(ctx, "managedCluster", &containerservice.ManagedClusterArgs{
 			AddonProfiles: nil,
-			AgentPoolProfiles: containerservice.ManagedClusterAgentPoolProfileArray{
+			AgentPoolProfiles: []containerservice.ManagedClusterAgentPoolProfileArgs{
 				&containerservice.ManagedClusterAgentPoolProfileArgs{
 					Count:              pulumi.Int(3),
 					EnableFIPS:         pulumi.Bool(true),
@@ -769,7 +858,7 @@ func main() {
 			LinuxProfile: &containerservice.ContainerServiceLinuxProfileArgs{
 				AdminUsername: pulumi.String("azureuser"),
 				Ssh: &containerservice.ContainerServiceSshConfigurationArgs{
-					PublicKeys: containerservice.ContainerServiceSshPublicKeyArray{
+					PublicKeys: []containerservice.ContainerServiceSshPublicKeyArgs{
 						&containerservice.ContainerServiceSshPublicKeyArgs{
 							KeyData: pulumi.String("keydata"),
 						},
@@ -1091,7 +1180,7 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := containerservice.NewManagedCluster(ctx, "managedCluster", &containerservice.ManagedClusterArgs{
 			AddonProfiles: nil,
-			AgentPoolProfiles: containerservice.ManagedClusterAgentPoolProfileArray{
+			AgentPoolProfiles: []containerservice.ManagedClusterAgentPoolProfileArgs{
 				&containerservice.ManagedClusterAgentPoolProfileArgs{
 					Count:              pulumi.Int(3),
 					EnableNodePublicIP: pulumi.Bool(true),
@@ -1124,7 +1213,7 @@ func main() {
 			LinuxProfile: &containerservice.ContainerServiceLinuxProfileArgs{
 				AdminUsername: pulumi.String("azureuser"),
 				Ssh: &containerservice.ContainerServiceSshConfigurationArgs{
-					PublicKeys: containerservice.ContainerServiceSshPublicKeyArray{
+					PublicKeys: []containerservice.ContainerServiceSshPublicKeyArgs{
 						&containerservice.ContainerServiceSshPublicKeyArgs{
 							KeyData: pulumi.String("keydata"),
 						},
@@ -1463,7 +1552,7 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := containerservice.NewManagedCluster(ctx, "managedCluster", &containerservice.ManagedClusterArgs{
 			AddonProfiles: nil,
-			AgentPoolProfiles: containerservice.ManagedClusterAgentPoolProfileArray{
+			AgentPoolProfiles: []containerservice.ManagedClusterAgentPoolProfileArgs{
 				&containerservice.ManagedClusterAgentPoolProfileArgs{
 					Count:              pulumi.Int(3),
 					EnableNodePublicIP: pulumi.Bool(true),
@@ -1495,7 +1584,7 @@ func main() {
 			LinuxProfile: &containerservice.ContainerServiceLinuxProfileArgs{
 				AdminUsername: pulumi.String("azureuser"),
 				Ssh: &containerservice.ContainerServiceSshConfigurationArgs{
-					PublicKeys: containerservice.ContainerServiceSshPublicKeyArray{
+					PublicKeys: []containerservice.ContainerServiceSshPublicKeyArgs{
 						&containerservice.ContainerServiceSshPublicKeyArgs{
 							KeyData: pulumi.String("keydata"),
 						},
@@ -1822,7 +1911,7 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := containerservice.NewManagedCluster(ctx, "managedCluster", &containerservice.ManagedClusterArgs{
 			AddonProfiles: nil,
-			AgentPoolProfiles: containerservice.ManagedClusterAgentPoolProfileArray{
+			AgentPoolProfiles: []containerservice.ManagedClusterAgentPoolProfileArgs{
 				&containerservice.ManagedClusterAgentPoolProfileArgs{
 					Count:                pulumi.Int(3),
 					EnableNodePublicIP:   pulumi.Bool(true),
@@ -1846,7 +1935,7 @@ func main() {
 			LinuxProfile: &containerservice.ContainerServiceLinuxProfileArgs{
 				AdminUsername: pulumi.String("azureuser"),
 				Ssh: &containerservice.ContainerServiceSshConfigurationArgs{
-					PublicKeys: containerservice.ContainerServiceSshPublicKeyArray{
+					PublicKeys: []containerservice.ContainerServiceSshPublicKeyArgs{
 						&containerservice.ContainerServiceSshPublicKeyArgs{
 							KeyData: pulumi.String("keydata"),
 						},
@@ -2168,7 +2257,7 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := containerservice.NewManagedCluster(ctx, "managedCluster", &containerservice.ManagedClusterArgs{
 			AddonProfiles: nil,
-			AgentPoolProfiles: containerservice.ManagedClusterAgentPoolProfileArray{
+			AgentPoolProfiles: []containerservice.ManagedClusterAgentPoolProfileArgs{
 				&containerservice.ManagedClusterAgentPoolProfileArgs{
 					Count:              pulumi.Int(3),
 					EnableNodePublicIP: pulumi.Bool(true),
@@ -2201,7 +2290,7 @@ func main() {
 			LinuxProfile: &containerservice.ContainerServiceLinuxProfileArgs{
 				AdminUsername: pulumi.String("azureuser"),
 				Ssh: &containerservice.ContainerServiceSshConfigurationArgs{
-					PublicKeys: containerservice.ContainerServiceSshPublicKeyArray{
+					PublicKeys: []containerservice.ContainerServiceSshPublicKeyArgs{
 						&containerservice.ContainerServiceSshPublicKeyArgs{
 							KeyData: pulumi.String("keydata"),
 						},
@@ -2530,7 +2619,7 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := containerservice.NewManagedCluster(ctx, "managedCluster", &containerservice.ManagedClusterArgs{
 			AddonProfiles: nil,
-			AgentPoolProfiles: containerservice.ManagedClusterAgentPoolProfileArray{
+			AgentPoolProfiles: []containerservice.ManagedClusterAgentPoolProfileArgs{
 				&containerservice.ManagedClusterAgentPoolProfileArgs{
 					Count:                     pulumi.Int(3),
 					EnableNodePublicIP:        pulumi.Bool(true),
@@ -2554,7 +2643,7 @@ func main() {
 			LinuxProfile: &containerservice.ContainerServiceLinuxProfileArgs{
 				AdminUsername: pulumi.String("azureuser"),
 				Ssh: &containerservice.ContainerServiceSshConfigurationArgs{
-					PublicKeys: containerservice.ContainerServiceSshPublicKeyArray{
+					PublicKeys: []containerservice.ContainerServiceSshPublicKeyArgs{
 						&containerservice.ContainerServiceSshPublicKeyArgs{
 							KeyData: pulumi.String("keydata"),
 						},
@@ -2869,7 +2958,7 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := containerservice.NewManagedCluster(ctx, "managedCluster", &containerservice.ManagedClusterArgs{
 			AddonProfiles: nil,
-			AgentPoolProfiles: containerservice.ManagedClusterAgentPoolProfileArray{
+			AgentPoolProfiles: []containerservice.ManagedClusterAgentPoolProfileArgs{
 				&containerservice.ManagedClusterAgentPoolProfileArgs{
 					Count:              pulumi.Int(3),
 					EnableNodePublicIP: pulumi.Bool(true),
@@ -2892,7 +2981,7 @@ func main() {
 			LinuxProfile: &containerservice.ContainerServiceLinuxProfileArgs{
 				AdminUsername: pulumi.String("azureuser"),
 				Ssh: &containerservice.ContainerServiceSshConfigurationArgs{
-					PublicKeys: containerservice.ContainerServiceSshPublicKeyArray{
+					PublicKeys: []containerservice.ContainerServiceSshPublicKeyArgs{
 						&containerservice.ContainerServiceSshPublicKeyArgs{
 							KeyData: pulumi.String("keydata"),
 						},
@@ -3217,7 +3306,7 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := containerservice.NewManagedCluster(ctx, "managedCluster", &containerservice.ManagedClusterArgs{
 			AddonProfiles: nil,
-			AgentPoolProfiles: containerservice.ManagedClusterAgentPoolProfileArray{
+			AgentPoolProfiles: []containerservice.ManagedClusterAgentPoolProfileArgs{
 				&containerservice.ManagedClusterAgentPoolProfileArgs{
 					Count:                  pulumi.Int(3),
 					EnableEncryptionAtHost: pulumi.Bool(true),
@@ -3244,7 +3333,7 @@ func main() {
 			LinuxProfile: &containerservice.ContainerServiceLinuxProfileArgs{
 				AdminUsername: pulumi.String("azureuser"),
 				Ssh: &containerservice.ContainerServiceSshConfigurationArgs{
-					PublicKeys: containerservice.ContainerServiceSshPublicKeyArray{
+					PublicKeys: []containerservice.ContainerServiceSshPublicKeyArgs{
 						&containerservice.ContainerServiceSshPublicKeyArgs{
 							KeyData: pulumi.String("keydata"),
 						},
@@ -3575,7 +3664,7 @@ func main() {
 				Managed:         pulumi.Bool(true),
 			},
 			AddonProfiles: nil,
-			AgentPoolProfiles: containerservice.ManagedClusterAgentPoolProfileArray{
+			AgentPoolProfiles: []containerservice.ManagedClusterAgentPoolProfileArgs{
 				&containerservice.ManagedClusterAgentPoolProfileArgs{
 					AvailabilityZones: pulumi.StringArray{
 						pulumi.String("1"),
@@ -3603,7 +3692,7 @@ func main() {
 			LinuxProfile: &containerservice.ContainerServiceLinuxProfileArgs{
 				AdminUsername: pulumi.String("azureuser"),
 				Ssh: &containerservice.ContainerServiceSshConfigurationArgs{
-					PublicKeys: containerservice.ContainerServiceSshPublicKeyArray{
+					PublicKeys: []containerservice.ContainerServiceSshPublicKeyArgs{
 						&containerservice.ContainerServiceSshPublicKeyArgs{
 							KeyData: pulumi.String("keydata"),
 						},
@@ -3948,7 +4037,7 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := containerservice.NewManagedCluster(ctx, "managedCluster", &containerservice.ManagedClusterArgs{
 			AddonProfiles: nil,
-			AgentPoolProfiles: containerservice.ManagedClusterAgentPoolProfileArray{
+			AgentPoolProfiles: []containerservice.ManagedClusterAgentPoolProfileArgs{
 				&containerservice.ManagedClusterAgentPoolProfileArgs{
 					AvailabilityZones: pulumi.StringArray{
 						pulumi.String("1"),
@@ -3979,7 +4068,7 @@ func main() {
 			EnableRBAC:              pulumi.Bool(true),
 			Identity: &containerservice.ManagedClusterIdentityArgs{
 				Type: "UserAssigned",
-				UserAssignedIdentities: pulumi.MapMap{
+				UserAssignedIdentities: pulumi.AnyMap{
 					"/subscriptions/subid1/resourceGroups/rgName1/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity1": nil,
 				},
 			},
@@ -3987,7 +4076,7 @@ func main() {
 			LinuxProfile: &containerservice.ContainerServiceLinuxProfileArgs{
 				AdminUsername: pulumi.String("azureuser"),
 				Ssh: &containerservice.ContainerServiceSshConfigurationArgs{
-					PublicKeys: containerservice.ContainerServiceSshPublicKeyArray{
+					PublicKeys: []containerservice.ContainerServiceSshPublicKeyArgs{
 						&containerservice.ContainerServiceSshPublicKeyArgs{
 							KeyData: pulumi.String("keydata"),
 						},
@@ -4342,7 +4431,7 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := containerservice.NewManagedCluster(ctx, "managedCluster", &containerservice.ManagedClusterArgs{
 			AddonProfiles: nil,
-			AgentPoolProfiles: containerservice.ManagedClusterAgentPoolProfileArray{
+			AgentPoolProfiles: []containerservice.ManagedClusterAgentPoolProfileArgs{
 				&containerservice.ManagedClusterAgentPoolProfileArgs{
 					AvailabilityZones: pulumi.StringArray{
 						pulumi.String("1"),
@@ -4368,7 +4457,7 @@ func main() {
 			EnableRBAC:              pulumi.Bool(true),
 			Identity: &containerservice.ManagedClusterIdentityArgs{
 				Type: "UserAssigned",
-				UserAssignedIdentities: pulumi.MapMap{
+				UserAssignedIdentities: pulumi.AnyMap{
 					"/subscriptions/subid1/resourceGroups/rgName1/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity1": nil,
 				},
 			},
@@ -4376,7 +4465,7 @@ func main() {
 			LinuxProfile: &containerservice.ContainerServiceLinuxProfileArgs{
 				AdminUsername: pulumi.String("azureuser"),
 				Ssh: &containerservice.ContainerServiceSshConfigurationArgs{
-					PublicKeys: containerservice.ContainerServiceSshPublicKeyArray{
+					PublicKeys: []containerservice.ContainerServiceSshPublicKeyArgs{
 						&containerservice.ContainerServiceSshPublicKeyArgs{
 							KeyData: pulumi.String("keydata"),
 						},

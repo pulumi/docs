@@ -138,7 +138,7 @@ func main() {
 			GatewayName:                 pulumi.String("p2sVpnGateway1"),
 			IsRoutingPreferenceInternet: pulumi.Bool(false),
 			Location:                    pulumi.String("West US"),
-			P2SConnectionConfigurations: network.P2SConnectionConfigurationArray{
+			P2SConnectionConfigurations: []network.P2SConnectionConfigurationArgs{
 				&network.P2SConnectionConfigurationArgs{
 					Id:   pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/p2sVpnGateways/p2sVpnGateway1/p2sConnectionConfigurations/P2SConnectionConfig1"),
 					Name: pulumi.String("P2SConnectionConfig1"),

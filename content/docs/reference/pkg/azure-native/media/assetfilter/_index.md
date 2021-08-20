@@ -137,9 +137,9 @@ func main() {
 				Timescale:                  pulumi.Float64(10000000),
 			},
 			ResourceGroupName: pulumi.String("contoso"),
-			Tracks: media.FilterTrackSelectionArray{
+			Tracks: []media.FilterTrackSelectionArgs{
 				&media.FilterTrackSelectionArgs{
-					TrackSelections: media.FilterTrackPropertyConditionArray{
+					TrackSelections: []media.FilterTrackPropertyConditionArgs{
 						&media.FilterTrackPropertyConditionArgs{
 							Operation: pulumi.String("Equal"),
 							Property:  pulumi.String("Type"),
@@ -158,7 +158,7 @@ func main() {
 					},
 				},
 				&media.FilterTrackSelectionArgs{
-					TrackSelections: media.FilterTrackPropertyConditionArray{
+					TrackSelections: []media.FilterTrackPropertyConditionArgs{
 						&media.FilterTrackPropertyConditionArgs{
 							Operation: pulumi.String("Equal"),
 							Property:  pulumi.String("Type"),

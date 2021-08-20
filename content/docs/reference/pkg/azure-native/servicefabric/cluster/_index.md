@@ -217,7 +217,161 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	servicefabric "github.com/pulumi/pulumi-azure-native/sdk/go/azure/servicefabric"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := servicefabric.NewCluster(ctx, "cluster", &servicefabric.ClusterArgs{
+			AddOnFeatures: pulumi.StringArray{
+				pulumi.String("RepairManager"),
+				pulumi.String("DnsService"),
+				pulumi.String("BackupRestoreService"),
+				pulumi.String("ResourceMonitorService"),
+			},
+			ApplicationTypeVersionsCleanupPolicy: &servicefabric.ApplicationTypeVersionsCleanupPolicyArgs{
+				MaxUnusedVersionsToKeep: pulumi.Float64(2),
+			},
+			AzureActiveDirectory: &servicefabric.AzureActiveDirectoryArgs{
+				ClientApplication:  pulumi.String("d151ad89-4bce-4ae8-b3d1-1dc79679fa75"),
+				ClusterApplication: pulumi.String("5886372e-7bf4-4878-a497-8098aba608ae"),
+				TenantId:           pulumi.String("6abcc6a0-8666-43f1-87b8-172cf86a9f9c"),
+			},
+			CertificateCommonNames: &servicefabric.ServerCertificateCommonNamesArgs{
+				CommonNames: servicefabric.ServerCertificateCommonNameArray{
+					&servicefabric.ServerCertificateCommonNameArgs{
+						CertificateCommonName:       pulumi.String("abc.com"),
+						CertificateIssuerThumbprint: pulumi.String("12599211F8F14C90AFA9532AD79A6F2CA1C00622"),
+					},
+				},
+				X509StoreName: pulumi.String("My"),
+			},
+			ClientCertificateCommonNames: []servicefabric.ClientCertificateCommonNameArgs{
+				&servicefabric.ClientCertificateCommonNameArgs{
+					CertificateCommonName:       pulumi.String("abc.com"),
+					CertificateIssuerThumbprint: pulumi.String("5F3660C715EBBDA31DB1FFDCF508302348DE8E7A"),
+					IsAdmin:                     pulumi.Bool(true),
+				},
+			},
+			ClientCertificateThumbprints: []servicefabric.ClientCertificateThumbprintArgs{
+				&servicefabric.ClientCertificateThumbprintArgs{
+					CertificateThumbprint: pulumi.String("5F3660C715EBBDA31DB1FFDCF508302348DE8E7A"),
+					IsAdmin:               pulumi.Bool(true),
+				},
+			},
+			ClusterCodeVersion: pulumi.String("7.0.470.9590"),
+			ClusterName:        pulumi.String("myCluster"),
+			DiagnosticsStorageAccountConfig: &servicefabric.DiagnosticsStorageAccountConfigArgs{
+				BlobEndpoint:            pulumi.String("https://diag.blob.core.windows.net/"),
+				ProtectedAccountKeyName: pulumi.String("StorageAccountKey1"),
+				QueueEndpoint:           pulumi.String("https://diag.queue.core.windows.net/"),
+				StorageAccountName:      pulumi.String("diag"),
+				TableEndpoint:           pulumi.String("https://diag.table.core.windows.net/"),
+			},
+			EventStoreServiceEnabled: pulumi.Bool(true),
+			FabricSettings: []servicefabric.SettingsSectionDescriptionArgs{
+				&servicefabric.SettingsSectionDescriptionArgs{
+					Name: pulumi.String("UpgradeService"),
+					Parameters: []servicefabric.SettingsParameterDescriptionArgs{
+						&servicefabric.SettingsParameterDescriptionArgs{
+							Name:  pulumi.String("AppPollIntervalInSeconds"),
+							Value: pulumi.String("60"),
+						},
+					},
+				},
+			},
+			Location:           pulumi.String("eastus"),
+			ManagementEndpoint: pulumi.String("https://myCluster.eastus.cloudapp.azure.com:19080"),
+			NodeTypes: servicefabric.NodeTypeDescriptionArray{
+				&servicefabric.NodeTypeDescriptionArgs{
+					ApplicationPorts: &servicefabric.EndpointRangeDescriptionArgs{
+						EndPort:   pulumi.Int(30000),
+						StartPort: pulumi.Int(20000),
+					},
+					ClientConnectionEndpointPort: pulumi.Int(19000),
+					DurabilityLevel:              pulumi.String("Bronze"),
+					EphemeralPorts: &servicefabric.EndpointRangeDescriptionArgs{
+						EndPort:   pulumi.Int(64000),
+						StartPort: pulumi.Int(49000),
+					},
+					HttpGatewayEndpointPort: pulumi.Int(19007),
+					IsPrimary:               pulumi.Bool(true),
+					Name:                    pulumi.String("nt1vm"),
+					VmInstanceCount:         pulumi.Int(5),
+				},
+			},
+			ReliabilityLevel:  pulumi.String("Silver"),
+			ResourceGroupName: pulumi.String("resRg"),
+			ReverseProxyCertificateCommonNames: &servicefabric.ServerCertificateCommonNamesArgs{
+				CommonNames: servicefabric.ServerCertificateCommonNameArray{
+					&servicefabric.ServerCertificateCommonNameArgs{
+						CertificateCommonName:       pulumi.String("abc.com"),
+						CertificateIssuerThumbprint: pulumi.String("12599211F8F14C90AFA9532AD79A6F2CA1C00622"),
+					},
+				},
+				X509StoreName: pulumi.String("My"),
+			},
+			Tags: nil,
+			UpgradeDescription: &servicefabric.ClusterUpgradePolicyArgs{
+				DeltaHealthPolicy: &servicefabric.ClusterUpgradeDeltaHealthPolicyArgs{
+					ApplicationDeltaHealthPolicies: servicefabric.ApplicationDeltaHealthPolicyMap{
+						"fabric:/myApp1": &servicefabric.ApplicationDeltaHealthPolicyArgs{
+							DefaultServiceTypeDeltaHealthPolicy: &servicefabric.ServiceTypeDeltaHealthPolicyArgs{
+								MaxPercentDeltaUnhealthyServices: pulumi.Int(0),
+							},
+							ServiceTypeDeltaHealthPolicies: servicefabric.ServiceTypeDeltaHealthPolicyMap{
+								"myServiceType1": &servicefabric.ServiceTypeDeltaHealthPolicyArgs{
+									MaxPercentDeltaUnhealthyServices: pulumi.Int(0),
+								},
+							},
+						},
+					},
+					MaxPercentDeltaUnhealthyApplications:       pulumi.Int(0),
+					MaxPercentDeltaUnhealthyNodes:              pulumi.Int(0),
+					MaxPercentUpgradeDomainDeltaUnhealthyNodes: pulumi.Int(0),
+				},
+				ForceRestart:              pulumi.Bool(false),
+				HealthCheckRetryTimeout:   pulumi.String("00:05:00"),
+				HealthCheckStableDuration: pulumi.String("00:00:30"),
+				HealthCheckWaitDuration:   pulumi.String("00:00:30"),
+				HealthPolicy: &servicefabric.ClusterHealthPolicyArgs{
+					ApplicationHealthPolicies: servicefabric.ApplicationHealthPolicyMap{
+						"fabric:/myApp1": &servicefabric.ApplicationHealthPolicyArgs{
+							DefaultServiceTypeHealthPolicy: &servicefabric.ServiceTypeHealthPolicyArgs{
+								MaxPercentUnhealthyServices: pulumi.Int(0),
+							},
+							ServiceTypeHealthPolicies: servicefabric.ServiceTypeHealthPolicyMap{
+								"myServiceType1": &servicefabric.ServiceTypeHealthPolicyArgs{
+									MaxPercentUnhealthyServices: pulumi.Int(100),
+								},
+							},
+						},
+					},
+					MaxPercentUnhealthyApplications: pulumi.Int(0),
+					MaxPercentUnhealthyNodes:        pulumi.Int(0),
+				},
+				UpgradeDomainTimeout:          pulumi.String("00:15:00"),
+				UpgradeReplicaSetCheckTimeout: pulumi.String("00:10:00"),
+				UpgradeTimeout:                pulumi.String("01:00:00"),
+			},
+			UpgradeMode: pulumi.String("Manual"),
+			VmImage:     pulumi.String("Windows"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
@@ -593,10 +747,10 @@ func main() {
 				StorageAccountName:      pulumi.String("diag"),
 				TableEndpoint:           pulumi.String("https://diag.table.core.windows.net/"),
 			},
-			FabricSettings: servicefabric.SettingsSectionDescriptionArray{
+			FabricSettings: []servicefabric.SettingsSectionDescriptionArgs{
 				&servicefabric.SettingsSectionDescriptionArgs{
 					Name: pulumi.String("UpgradeService"),
-					Parameters: servicefabric.SettingsParameterDescriptionArray{
+					Parameters: []servicefabric.SettingsParameterDescriptionArgs{
 						&servicefabric.SettingsParameterDescriptionArgs{
 							Name:  pulumi.String("AppPollIntervalInSeconds"),
 							Value: pulumi.String("60"),

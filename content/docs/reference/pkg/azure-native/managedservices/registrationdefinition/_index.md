@@ -101,7 +101,7 @@ func main() {
 				Version:   pulumi.String("1.0.0"),
 			},
 			Properties: &managedservices.RegistrationDefinitionPropertiesArgs{
-				Authorizations: managedservices.AuthorizationArray{
+				Authorizations: []managedservices.AuthorizationArgs{
 					&managedservices.AuthorizationArgs{
 						PrincipalId:            pulumi.String("f98d86a2-4cc4-4e9d-ad47-b3e80a1bcdfc"),
 						PrincipalIdDisplayName: pulumi.String("Support User"),

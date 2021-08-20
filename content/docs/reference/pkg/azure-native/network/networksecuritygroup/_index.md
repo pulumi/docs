@@ -180,7 +180,7 @@ func main() {
 			Location:                 pulumi.String("eastus"),
 			NetworkSecurityGroupName: pulumi.String("testnsg"),
 			ResourceGroupName:        pulumi.String("rg1"),
-			SecurityRules: network.SecurityRuleArray{
+			SecurityRules: []network.SecurityRuleArgs{
 				&network.SecurityRuleArgs{
 					Access:                   pulumi.String("Allow"),
 					DestinationAddressPrefix: pulumi.String("*"),

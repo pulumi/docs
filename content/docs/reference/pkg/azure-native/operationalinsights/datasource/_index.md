@@ -70,8 +70,8 @@ func main() {
 		_, err := operationalinsights.NewDataSource(ctx, "dataSource", &operationalinsights.DataSourceArgs{
 			DataSourceName: pulumi.String("AzTestDS774"),
 			Kind:           pulumi.String("AzureActivityLog"),
-			Properties: pulumi.StringMap{
-				"LinkedResourceId": pulumi.String("/subscriptions/00000000-0000-0000-0000-00000000000/providers/microsoft.insights/eventtypes/management"),
+			Properties: pulumi.Any{
+				LinkedResourceId: "/subscriptions/00000000-0000-0000-0000-00000000000/providers/microsoft.insights/eventtypes/management",
 			},
 			ResourceGroupName: pulumi.String("OIAutoRest5123"),
 			WorkspaceName:     pulumi.String("AzTest9724"),

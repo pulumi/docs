@@ -76,52 +76,7 @@ class MyStack : Stack
 
 {{< example go >}}
 
-
-```go
-package main
-
-import (
-	recoveryservices "github.com/pulumi/pulumi-azure-native/sdk/go/azure/recoveryservices"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := recoveryservices.NewReplicationMigrationItem(ctx, "replicationMigrationItem", &recoveryservices.ReplicationMigrationItemArgs{
-			FabricName:        pulumi.String("vmwarefabric1"),
-			MigrationItemName: pulumi.String("virtualmachine1"),
-			Properties: &recoveryservices.EnableMigrationInputPropertiesArgs{
-				PolicyId: pulumi.String("/Subscriptions/cb53d0c3-bd59-4721-89bc-06916a9147ef/resourceGroups/resourcegroup1/providers/Microsoft.RecoveryServices/vaults/migrationvault/replicationPolicies/vmwarepolicy1"),
-				ProviderSpecificDetails: &recoveryservices.VMwareCbtEnableMigrationInputArgs{
-					DataMoverRunAsAccountId: pulumi.String("/Subscriptions/cb53d0c3-bd59-4721-89bc-06916a9147ef/resourceGroups/resourcegroup1/providers/Microsoft.OffAzure/VMwareSites/vmwaresite1/runasaccounts/dataMoverRunAsAccount1"),
-					DisksToInclude: recoveryservices.VMwareCbtDiskInputArray{
-						&recoveryservices.VMwareCbtDiskInputArgs{
-							DiskId:                         pulumi.String("disk1"),
-							IsOSDisk:                       pulumi.String("true"),
-							LogStorageAccountId:            pulumi.String("/Subscriptions/cb53d0c3-bd59-4721-89bc-06916a9147ef/resourceGroups/resourcegroup1/providers/Microsoft.Storage/storageAccounts/logStorageAccount1"),
-							LogStorageAccountSasSecretName: pulumi.String("logStorageSas"),
-						},
-					},
-					InstanceType:           pulumi.String("VMwareCbt"),
-					SnapshotRunAsAccountId: pulumi.String("/Subscriptions/cb53d0c3-bd59-4721-89bc-06916a9147ef/resourceGroups/resourcegroup1/providers/Microsoft.OffAzure/VMwareSites/vmwaresite1/runasaccounts/snapshotRunAsAccount1"),
-					TargetNetworkId:        pulumi.String("/Subscriptions/cb53d0c3-bd59-4721-89bc-06916a9147ef/resourceGroups/resourcegroup1/providers/Microsoft.Network/virtualNetworks/virtualNetwork1"),
-					TargetResourceGroupId:  pulumi.String("/Subscriptions/cb53d0c3-bd59-4721-89bc-06916a9147ef/resourceGroups/resourcegroup1"),
-					VmwareMachineId:        pulumi.String("/Subscriptions/cb53d0c3-bd59-4721-89bc-06916a9147ef/resourceGroups/resourcegroup1/providers/Microsoft.OffAzure/VMwareSites/vmwaresite1/machines/virtualmachine1"),
-				},
-			},
-			ProtectionContainerName: pulumi.String("vmwareContainer1"),
-			ResourceGroupName:       pulumi.String("resourcegroup1"),
-			ResourceName:            pulumi.String("migrationvault"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
+Coming soon!
 
 {{< /example >}}
 
@@ -138,20 +93,20 @@ replication_migration_item = azure_native.recoveryservices.ReplicationMigrationI
     migration_item_name="virtualmachine1",
     properties=azure_native.recoveryservices.EnableMigrationInputPropertiesArgs(
         policy_id="/Subscriptions/cb53d0c3-bd59-4721-89bc-06916a9147ef/resourceGroups/resourcegroup1/providers/Microsoft.RecoveryServices/vaults/migrationvault/replicationPolicies/vmwarepolicy1",
-        provider_specific_details=azure_native.recoveryservices.VMwareCbtEnableMigrationInputArgs(
-            data_mover_run_as_account_id="/Subscriptions/cb53d0c3-bd59-4721-89bc-06916a9147ef/resourceGroups/resourcegroup1/providers/Microsoft.OffAzure/VMwareSites/vmwaresite1/runasaccounts/dataMoverRunAsAccount1",
-            disks_to_include=[azure_native.recoveryservices.VMwareCbtDiskInputArgs(
+        provider_specific_details={
+            "dataMoverRunAsAccountId": "/Subscriptions/cb53d0c3-bd59-4721-89bc-06916a9147ef/resourceGroups/resourcegroup1/providers/Microsoft.OffAzure/VMwareSites/vmwaresite1/runasaccounts/dataMoverRunAsAccount1",
+            "disksToInclude": [azure_native.recoveryservices.VMwareCbtDiskInputArgs(
                 disk_id="disk1",
                 is_os_disk="true",
                 log_storage_account_id="/Subscriptions/cb53d0c3-bd59-4721-89bc-06916a9147ef/resourceGroups/resourcegroup1/providers/Microsoft.Storage/storageAccounts/logStorageAccount1",
                 log_storage_account_sas_secret_name="logStorageSas",
             )],
-            instance_type="VMwareCbt",
-            snapshot_run_as_account_id="/Subscriptions/cb53d0c3-bd59-4721-89bc-06916a9147ef/resourceGroups/resourcegroup1/providers/Microsoft.OffAzure/VMwareSites/vmwaresite1/runasaccounts/snapshotRunAsAccount1",
-            target_network_id="/Subscriptions/cb53d0c3-bd59-4721-89bc-06916a9147ef/resourceGroups/resourcegroup1/providers/Microsoft.Network/virtualNetworks/virtualNetwork1",
-            target_resource_group_id="/Subscriptions/cb53d0c3-bd59-4721-89bc-06916a9147ef/resourceGroups/resourcegroup1",
-            vmware_machine_id="/Subscriptions/cb53d0c3-bd59-4721-89bc-06916a9147ef/resourceGroups/resourcegroup1/providers/Microsoft.OffAzure/VMwareSites/vmwaresite1/machines/virtualmachine1",
-        ),
+            "instanceType": "VMwareCbt",
+            "snapshotRunAsAccountId": "/Subscriptions/cb53d0c3-bd59-4721-89bc-06916a9147ef/resourceGroups/resourcegroup1/providers/Microsoft.OffAzure/VMwareSites/vmwaresite1/runasaccounts/snapshotRunAsAccount1",
+            "targetNetworkId": "/Subscriptions/cb53d0c3-bd59-4721-89bc-06916a9147ef/resourceGroups/resourcegroup1/providers/Microsoft.Network/virtualNetworks/virtualNetwork1",
+            "targetResourceGroupId": "/Subscriptions/cb53d0c3-bd59-4721-89bc-06916a9147ef/resourceGroups/resourcegroup1",
+            "vmwareMachineId": "/Subscriptions/cb53d0c3-bd59-4721-89bc-06916a9147ef/resourceGroups/resourcegroup1/providers/Microsoft.OffAzure/VMwareSites/vmwaresite1/machines/virtualmachine1",
+        },
     ),
     protection_container_name="vmwareContainer1",
     resource_group_name="resourcegroup1",

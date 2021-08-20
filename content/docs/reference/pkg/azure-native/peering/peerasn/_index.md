@@ -86,7 +86,7 @@ func main() {
 		_, err := peering.NewPeerAsn(ctx, "peerAsn", &peering.PeerAsnArgs{
 			PeerAsn:     pulumi.Int(65000),
 			PeerAsnName: pulumi.String("peerAsnName"),
-			PeerContactDetail: peering.ContactDetailArray{
+			PeerContactDetail: []peering.ContactDetailArgs{
 				&peering.ContactDetailArgs{
 					Email: pulumi.String("noc@contoso.com"),
 					Phone: pulumi.String("+1 (234) 567-8999"),

@@ -96,9 +96,9 @@ func main() {
 			},
 			Grades:                   customerinsights.PredictionGradesArray{},
 			HubName:                  pulumi.String("sdkTestHub"),
-			InvolvedInteractionTypes: []interface{}{},
-			InvolvedKpiTypes:         []interface{}{},
-			InvolvedRelationships:    []interface{}{},
+			InvolvedInteractionTypes: pulumi.StringArray{},
+			InvolvedKpiTypes:         pulumi.StringArray{},
+			InvolvedRelationships:    pulumi.StringArray{},
 			Mappings: &customerinsights.PredictionMappingsArgs{
 				Grade:  pulumi.String("sdktest_Grade"),
 				Reason: pulumi.String("sdktest_Reason"),

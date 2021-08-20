@@ -126,14 +126,14 @@ func main() {
 			HbiWorkspace: pulumi.Bool(false),
 			Identity: &machinelearningservices.IdentityArgs{
 				Type: "SystemAssigned,UserAssigned",
-				UserAssignedIdentities: pulumi.MapMap{
+				UserAssignedIdentities: pulumi.AnyMap{
 					"/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/workspace-1234/providers/Microsoft.ManagedIdentity/userAssignedIdentities/testuai": nil,
 				},
 			},
 			KeyVault:          pulumi.String("/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/workspace-1234/providers/Microsoft.KeyVault/vaults/testkv"),
 			Location:          pulumi.String("eastus2euap"),
 			ResourceGroupName: pulumi.String("workspace-1234"),
-			SharedPrivateLinkResources: machinelearningservices.SharedPrivateLinkResourceArray{
+			SharedPrivateLinkResources: []machinelearningservices.SharedPrivateLinkResourceArgs{
 				&machinelearningservices.SharedPrivateLinkResourceArgs{
 					GroupId:               pulumi.String("Sql"),
 					Name:                  pulumi.String("testdbresource"),

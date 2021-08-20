@@ -87,7 +87,7 @@ func main() {
 		_, err := compute.NewVirtualMachineRunCommandByVirtualMachine(ctx, "virtualMachineRunCommandByVirtualMachine", &compute.VirtualMachineRunCommandByVirtualMachineArgs{
 			AsyncExecution: pulumi.Bool(false),
 			Location:       pulumi.String("West US"),
-			Parameters: compute.RunCommandInputParameterArray{
+			Parameters: []compute.RunCommandInputParameterArgs{
 				&compute.RunCommandInputParameterArgs{
 					Name:  pulumi.String("param1"),
 					Value: pulumi.String("value1"),

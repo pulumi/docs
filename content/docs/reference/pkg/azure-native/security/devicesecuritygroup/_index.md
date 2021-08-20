@@ -68,7 +68,7 @@ func main() {
 		_, err := security.NewDeviceSecurityGroup(ctx, "deviceSecurityGroup", &security.DeviceSecurityGroupArgs{
 			DeviceSecurityGroupName: pulumi.String("samplesecuritygroup"),
 			ResourceId:              pulumi.String("subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23/resourceGroups/SampleRG/providers/Microsoft.Devices/iotHubs/sampleiothub"),
-			TimeWindowRules: security.TimeWindowCustomAlertRuleArray{
+			TimeWindowRules: []security.TimeWindowCustomAlertRuleArgs{
 				nil,
 			},
 		})

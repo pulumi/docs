@@ -399,7 +399,7 @@ func main() {
 				RelativeName: pulumi.String("azuresdkfornetautoresttrafficmanager6192"),
 				Ttl:          pulumi.Float64(35),
 			},
-			Endpoints: network.EndpointArray{
+			Endpoints: []network.EndpointArgs{
 				&network.EndpointArgs{
 					EndpointLocation: pulumi.String("North Europe"),
 					EndpointStatus:   pulumi.String("Enabled"),
@@ -627,7 +627,7 @@ func main() {
 				RelativeName: pulumi.String("azuresdkfornetautoresttrafficmanager6192"),
 				Ttl:          pulumi.Float64(35),
 			},
-			Endpoints: network.EndpointArray{
+			Endpoints: []network.EndpointArgs{
 				&network.EndpointArgs{
 					CustomHeaders: network.EndpointPropertiesCustomHeadersArray{
 						&network.EndpointPropertiesCustomHeadersArgs{
@@ -895,7 +895,7 @@ func main() {
 				RelativeName: pulumi.String("azuresdkfornetautoresttrafficmanager6192"),
 				Ttl:          pulumi.Float64(35),
 			},
-			Endpoints: network.EndpointArray{
+			Endpoints: []network.EndpointArgs{
 				&network.EndpointArgs{
 					EndpointLocation: pulumi.String("North Europe"),
 					EndpointStatus:   pulumi.String("Enabled"),
@@ -1102,7 +1102,7 @@ func main() {
 				RelativeName: pulumi.String("parentprofile"),
 				Ttl:          pulumi.Float64(35),
 			},
-			Endpoints: network.EndpointArray{
+			Endpoints: []network.EndpointArgs{
 				&network.EndpointArgs{
 					EndpointStatus:        pulumi.String("Enabled"),
 					MinChildEndpoints:     pulumi.Float64(2),

@@ -172,27 +172,27 @@ func main() {
 					},
 					Name: pulumi.String("AzureML-Scikit-learn-0.20.3"),
 					Python: &machinelearningservices.ModelEnvironmentDefinitionPythonArgs{
-						CondaDependencies: pulumi.Map{
-							"channels": pulumi.StringArray{
-								pulumi.String("conda-forge"),
+						CondaDependencies: pulumi.Any{
+							Channels: []string{
+								"conda-forge",
 							},
-							"dependencies": pulumi.Array{
-								pulumi.String("python=3.6.2"),
-								pulumi.StringArrayMap{
-									"pip": pulumi.StringArray{
-										pulumi.String("azureml-core==1.0.69"),
-										pulumi.String("azureml-defaults==1.0.69"),
-										pulumi.String("azureml-telemetry==1.0.69"),
-										pulumi.String("azureml-train-restclients-hyperdrive==1.0.69"),
-										pulumi.String("azureml-train-core==1.0.69"),
-										pulumi.String("scikit-learn==0.20.3"),
-										pulumi.String("scipy==1.2.1"),
-										pulumi.String("numpy==1.16.2"),
-										pulumi.String("joblib==0.13.2"),
+							Dependencies: []interface{}{
+								"python=3.6.2",
+								map[string]interface{}{
+									"pip": []string{
+										"azureml-core==1.0.69",
+										"azureml-defaults==1.0.69",
+										"azureml-telemetry==1.0.69",
+										"azureml-train-restclients-hyperdrive==1.0.69",
+										"azureml-train-core==1.0.69",
+										"scikit-learn==0.20.3",
+										"scipy==1.2.1",
+										"numpy==1.16.2",
+										"joblib==0.13.2",
 									},
 								},
 							},
-							"name": pulumi.String("azureml_ae1acbe6e1e6aabbad900b53c491a17c"),
+							Name: "azureml_ae1acbe6e1e6aabbad900b53c491a17c",
 						},
 						InterpreterPath:         pulumi.String("python"),
 						UserManagedDependencies: pulumi.Bool(false),
@@ -200,7 +200,7 @@ func main() {
 					Spark: &machinelearningservices.ModelEnvironmentDefinitionSparkArgs{
 						Packages:         machinelearningservices.SparkMavenPackageArray{},
 						PrecachePackages: pulumi.Bool(true),
-						Repositories:     []interface{}{},
+						Repositories:     pulumi.StringArray{},
 					},
 					Version: pulumi.String("3"),
 				},

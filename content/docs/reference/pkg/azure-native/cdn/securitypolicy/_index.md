@@ -81,53 +81,7 @@ class MyStack : Stack
 
 {{< example go >}}
 
-
-```go
-package main
-
-import (
-	cdn "github.com/pulumi/pulumi-azure-native/sdk/go/azure/cdn"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := cdn.NewSecurityPolicy(ctx, "securityPolicy", &cdn.SecurityPolicyArgs{
-			Parameters: &cdn.SecurityPolicyWebApplicationFirewallParametersArgs{
-				Associations: cdn.SecurityPolicyWebApplicationFirewallAssociationArray{
-					&cdn.SecurityPolicyWebApplicationFirewallAssociationArgs{
-						Domains: cdn.ResourceReferenceArray{
-							&cdn.ResourceReferenceArgs{
-								Id: pulumi.String("/subscriptions/subid/resourcegroups/RG/providers/Microsoft.Cdn/profiles/profile1/afddomains/testdomain1"),
-							},
-							&cdn.ResourceReferenceArgs{
-								Id: pulumi.String("/subscriptions/subid/resourcegroups/RG/providers/Microsoft.Cdn/profiles/profile1/afddomains/testdomain2"),
-							},
-						},
-						PatternsToMatch: pulumi.StringArray{
-							pulumi.String("/images"),
-							pulumi.String("/videos"),
-						},
-					},
-				},
-				Type: pulumi.String("WebApplicationFirewall"),
-				WafPolicy: &cdn.ResourceReferenceArgs{
-					Id: pulumi.String("/subscriptions/subid/resourcegroups/RG/providers/Microsoft.Network/frontdoorwebapplicationfirewallpolicies/wafTest"),
-				},
-			},
-			ProfileName:        pulumi.String("profile1"),
-			ResourceGroupName:  pulumi.String("RG"),
-			SecurityPolicyName: pulumi.String("securityPolicy1"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
+Coming soon!
 
 {{< /example >}}
 
@@ -140,8 +94,8 @@ import pulumi
 import pulumi_azure_native as azure_native
 
 security_policy = azure_native.cdn.SecurityPolicy("securityPolicy",
-    parameters=azure_native.cdn.SecurityPolicyWebApplicationFirewallParametersArgs(
-        associations=[azure_native.cdn.SecurityPolicyWebApplicationFirewallAssociationArgs(
+    parameters={
+        "associations": [azure_native.cdn.SecurityPolicyWebApplicationFirewallAssociationArgs(
             domains=[
                 azure_native.cdn.ResourceReferenceArgs(
                     id="/subscriptions/subid/resourcegroups/RG/providers/Microsoft.Cdn/profiles/profile1/afddomains/testdomain1",
@@ -155,11 +109,11 @@ security_policy = azure_native.cdn.SecurityPolicy("securityPolicy",
                 "/videos",
             ],
         )],
-        type="WebApplicationFirewall",
-        waf_policy=azure_native.cdn.ResourceReferenceArgs(
+        "type": "WebApplicationFirewall",
+        "wafPolicy": azure_native.cdn.ResourceReferenceArgs(
             id="/subscriptions/subid/resourcegroups/RG/providers/Microsoft.Network/frontdoorwebapplicationfirewallpolicies/wafTest",
         ),
-    ),
+    },
     profile_name="profile1",
     resource_group_name="RG",
     security_policy_name="securityPolicy1")

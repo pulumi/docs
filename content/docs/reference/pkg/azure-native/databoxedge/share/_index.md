@@ -95,7 +95,7 @@ func main() {
 			Name:              pulumi.String("smbshare"),
 			ResourceGroupName: pulumi.String("GroupForEdgeAutomation"),
 			ShareStatus:       pulumi.String("Online"),
-			UserAccessRights: databoxedge.UserAccessRightArray{
+			UserAccessRights: []databoxedge.UserAccessRightArgs{
 				&databoxedge.UserAccessRightArgs{
 					AccessType: pulumi.String("Change"),
 					UserId:     pulumi.String("/subscriptions/4385cf00-2d3a-425a-832f-f4285b1c9dce/resourceGroups/GroupForEdgeAutomation/providers/Microsoft.DataBoxEdge/dataBoxEdgeDevices/testedgedevice/users/user2"),

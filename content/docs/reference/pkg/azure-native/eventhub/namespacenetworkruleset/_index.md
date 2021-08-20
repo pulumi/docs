@@ -119,7 +119,7 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := eventhub.NewNamespaceNetworkRuleSet(ctx, "namespaceNetworkRuleSet", &eventhub.NamespaceNetworkRuleSetArgs{
 			DefaultAction: pulumi.String("Deny"),
-			IpRules: eventhub.NWRuleSetIpRulesArray{
+			IpRules: []eventhub.NWRuleSetIpRulesArgs{
 				&eventhub.NWRuleSetIpRulesArgs{
 					Action: pulumi.String("Allow"),
 					IpMask: pulumi.String("1.1.1.1"),
@@ -143,7 +143,7 @@ func main() {
 			},
 			NamespaceName:     pulumi.String("sdk-Namespace-6019"),
 			ResourceGroupName: pulumi.String("ResourceGroup"),
-			VirtualNetworkRules: eventhub.NWRuleSetVirtualNetworkRulesArray{
+			VirtualNetworkRules: []eventhub.NWRuleSetVirtualNetworkRulesArgs{
 				&eventhub.NWRuleSetVirtualNetworkRulesArgs{
 					IgnoreMissingVnetServiceEndpoint: pulumi.Bool(true),
 					Subnet: &eventhub.SubnetArgs{

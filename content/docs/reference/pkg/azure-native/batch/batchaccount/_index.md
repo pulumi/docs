@@ -451,7 +451,7 @@ func main() {
 			},
 			Identity: &batch.BatchAccountIdentityArgs{
 				Type: "UserAssigned",
-				UserAssignedIdentities: pulumi.MapMap{
+				UserAssignedIdentities: pulumi.AnyMap{
 					"/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.ManagedIdentity/userAssignedIdentities/id1": nil,
 				},
 			},

@@ -88,7 +88,7 @@ func main() {
 		_, err := automation.NewConnectionType(ctx, "connectionType", &automation.ConnectionTypeArgs{
 			AutomationAccountName: pulumi.String("myAutomationAccount22"),
 			ConnectionTypeName:    pulumi.String("myCT"),
-			FieldDefinitions: automation.FieldDefinitionArgsMap{
+			FieldDefinitions: automation.FieldDefinitionMap{
 				"myBoolField": &automation.FieldDefinitionArgs{
 					IsEncrypted: pulumi.Bool(false),
 					IsOptional:  pulumi.Bool(false),

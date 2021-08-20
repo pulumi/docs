@@ -80,7 +80,7 @@ func main() {
 		_, err := aadiam.NewDiagnosticSetting(ctx, "diagnosticSetting", &aadiam.DiagnosticSettingArgs{
 			EventHubAuthorizationRuleId: pulumi.String("/subscriptions/1a66ce04-b633-4a0b-b2bc-a912ec8986a6/resourceGroups/montest/providers/microsoft.eventhub/namespaces/mynamespace/eventhubs/myeventhub/authorizationrules/myrule"),
 			EventHubName:                pulumi.String("myeventhub"),
-			Logs: aadiam.LogSettingsArray{
+			Logs: []aadiam.LogSettingsArgs{
 				&aadiam.LogSettingsArgs{
 					Category: pulumi.String("AuditLogs"),
 					Enabled:  pulumi.Bool(true),

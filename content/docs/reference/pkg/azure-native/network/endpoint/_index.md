@@ -82,7 +82,7 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := network.NewEndpoint(ctx, "endpoint", &network.EndpointArgs{
-			CustomHeaders: network.EndpointPropertiesCustomHeadersArray{
+			CustomHeaders: []network.EndpointPropertiesCustomHeadersArgs{
 				&network.EndpointPropertiesCustomHeadersArgs{
 					Name:  pulumi.String("header-1"),
 					Value: pulumi.String("value-1"),
@@ -516,7 +516,7 @@ func main() {
 			Name:              pulumi.String("My external endpoint"),
 			ProfileName:       pulumi.String("azuresdkfornetautoresttrafficmanager8224"),
 			ResourceGroupName: pulumi.String("azuresdkfornetautoresttrafficmanager2191"),
-			Subnets: network.EndpointPropertiesSubnetsArray{
+			Subnets: []network.EndpointPropertiesSubnetsArgs{
 				&network.EndpointPropertiesSubnetsArgs{
 					First: pulumi.String("1.2.3.0"),
 					Scope: pulumi.Int(24),

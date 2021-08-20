@@ -111,7 +111,7 @@ func main() {
 			ApplicationName: pulumi.String("myApp"),
 			ClusterName:     pulumi.String("myCluster"),
 			MaximumNodes:    pulumi.Float64(3),
-			Metrics: servicefabric.ApplicationMetricDescriptionArray{
+			Metrics: []servicefabric.ApplicationMetricDescriptionArgs{
 				&servicefabric.ApplicationMetricDescriptionArgs{
 					MaximumCapacity:          pulumi.Float64(3),
 					Name:                     pulumi.String("metric1"),

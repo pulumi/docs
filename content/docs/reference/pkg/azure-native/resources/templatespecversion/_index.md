@@ -60,7 +60,41 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	"fmt"
+
+	resources "github.com/pulumi/pulumi-azure-native/sdk/go/azure/resources"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := resources.NewTemplateSpecVersion(ctx, "templateSpecVersion", &resources.TemplateSpecVersionArgs{
+			Description: pulumi.String("This is version v1.0 of our template content"),
+			Location:    pulumi.String("eastus"),
+			MainTemplate: pulumi.Any{
+				Fmt.Sprintf("%v%v", "$", "schema"): "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+				ContentVersion:                     "1.0.0.0",
+				Parameters:                         nil,
+				Resources:                          []interface{}{},
+			},
+			ResourceGroupName:   pulumi.String("templateSpecRG"),
+			TemplateSpecName:    pulumi.String("simpleTemplateSpec"),
+			TemplateSpecVersion: pulumi.String("v1.0"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
@@ -77,7 +111,7 @@ template_spec_version = azure_native.resources.TemplateSpecVersion("templateSpec
     location="eastus",
     main_template={
         "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
-        "content_version": "1.0.0.0",
+        "contentVersion": "1.0.0.0",
         "parameters": {},
         "resources": [],
     },

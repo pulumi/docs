@@ -115,7 +115,7 @@ func main() {
 			Description:  pulumi.String("des1"),
 			ExclusionTag: pulumi.String("value"),
 			FriendlyName: pulumi.String("friendly"),
-			HostPoolReferences: desktopvirtualization.ScalingHostPoolReferenceArray{
+			HostPoolReferences: []desktopvirtualization.ScalingHostPoolReferenceArgs{
 				&desktopvirtualization.ScalingHostPoolReferenceArgs{
 					HostPoolArmPath:    pulumi.String("/subscriptions/daefabc0-95b4-48b3-b645-8a753a63c4fa/resourceGroups/resourceGroup1/providers/Microsoft.DesktopVirtualization/hostPools/hostPool1"),
 					ScalingPlanEnabled: pulumi.Bool(true),
@@ -126,7 +126,7 @@ func main() {
 			ResourceGroupName: pulumi.String("resourceGroup1"),
 			Ring:              pulumi.Int(1),
 			ScalingPlanName:   pulumi.String("scalingPlan1"),
-			Schedules: desktopvirtualization.ScalingScheduleArray{
+			Schedules: []desktopvirtualization.ScalingScheduleArgs{
 				&desktopvirtualization.ScalingScheduleArgs{
 					DaysOfWeek: pulumi.StringArray{
 						pulumi.String("Monday"),

@@ -90,7 +90,7 @@ func main() {
 		_, err := providerhub.NewSkusNestedResourceTypeFirst(ctx, "skusNestedResourceTypeFirst", &providerhub.SkusNestedResourceTypeFirstArgs{
 			NestedResourceTypeFirst: pulumi.String("nestedResourceTypeFirst"),
 			Properties: &providerhub.SkuResourcePropertiesArgs{
-				SkuSettings: providerhub.SkuSettingArray{
+				SkuSettings: []providerhub.SkuSettingArgs{
 					&providerhub.SkuSettingArgs{
 						Kind: pulumi.String("Standard"),
 						Name: pulumi.String("freeSku"),

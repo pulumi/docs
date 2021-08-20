@@ -195,7 +195,7 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := insights.NewDataCollectionRule(ctx, "dataCollectionRule", &insights.DataCollectionRuleArgs{
 			DataCollectionRuleName: pulumi.String("myCollectionRule"),
-			DataFlows: insights.DataFlowArray{
+			DataFlows: []insights.DataFlowArgs{
 				&insights.DataFlowArgs{
 					Destinations: pulumi.StringArray{
 						pulumi.String("centralWorkspace"),

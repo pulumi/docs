@@ -193,7 +193,7 @@ func main() {
 			ContainerGroupName: pulumi.String("demo1"),
 			Containers: containerinstance.ContainerArray{
 				&containerinstance.ContainerArgs{
-					Command:              []interface{}{},
+					Command:              pulumi.StringArray{},
 					EnvironmentVariables: containerinstance.EnvironmentVariableArray{},
 					Image:                pulumi.String("nginx"),
 					Name:                 pulumi.String("demo1"),
@@ -250,14 +250,14 @@ func main() {
 			},
 			Identity: &containerinstance.ContainerGroupIdentityArgs{
 				Type: "SystemAssigned, UserAssigned",
-				UserAssignedIdentities: pulumi.MapMap{
+				UserAssignedIdentities: pulumi.AnyMap{
 					"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity-name": nil,
 				},
 			},
 			ImageRegistryCredentials: containerinstance.ImageRegistryCredentialArray{},
 			IpAddress: &containerinstance.IpAddressArgs{
 				DnsNameLabel: pulumi.String("dnsnamelabel1"),
-				Ports: containerinstance.PortArray{
+				Ports: []containerinstance.PortArgs{
 					&containerinstance.PortArgs{
 						Port:     pulumi.Int(80),
 						Protocol: pulumi.String("TCP"),
@@ -271,7 +271,7 @@ func main() {
 			},
 			OsType:            pulumi.String("Linux"),
 			ResourceGroupName: pulumi.String("demo"),
-			Volumes: containerinstance.VolumeArray{
+			Volumes: []containerinstance.VolumeArgs{
 				&containerinstance.VolumeArgs{
 					AzureFile: &containerinstance.AzureFileVolumeArgs{
 						ShareName:          pulumi.String("shareName"),

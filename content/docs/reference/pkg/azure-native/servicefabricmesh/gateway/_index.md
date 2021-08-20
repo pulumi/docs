@@ -138,12 +138,12 @@ func main() {
 				Name: pulumi.String("helloWorldNetwork"),
 			},
 			GatewayResourceName: pulumi.String("sampleGateway"),
-			Http: servicefabricmesh.HttpConfigArray{
+			Http: []servicefabricmesh.HttpConfigArgs{
 				&servicefabricmesh.HttpConfigArgs{
-					Hosts: servicefabricmesh.HttpHostConfigArray{
+					Hosts: []servicefabricmesh.HttpHostConfigArgs{
 						&servicefabricmesh.HttpHostConfigArgs{
 							Name: pulumi.String("contoso.com"),
-							Routes: servicefabricmesh.HttpRouteConfigArray{
+							Routes: []servicefabricmesh.HttpRouteConfigArgs{
 								&servicefabricmesh.HttpRouteConfigArgs{
 									Destination: &servicefabricmesh.GatewayDestinationArgs{
 										ApplicationName: pulumi.String("httpHelloWorldApp"),
@@ -179,7 +179,7 @@ func main() {
 				Name: pulumi.String("Open"),
 			},
 			Tags: nil,
-			Tcp: servicefabricmesh.TcpConfigArray{
+			Tcp: []servicefabricmesh.TcpConfigArgs{
 				&servicefabricmesh.TcpConfigArgs{
 					Destination: &servicefabricmesh.GatewayDestinationArgs{
 						ApplicationName: pulumi.String("helloWorldApp"),

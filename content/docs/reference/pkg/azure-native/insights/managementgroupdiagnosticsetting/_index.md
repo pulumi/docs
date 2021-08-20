@@ -81,7 +81,7 @@ func main() {
 		_, err := insights.NewManagementGroupDiagnosticSetting(ctx, "managementGroupDiagnosticSetting", &insights.ManagementGroupDiagnosticSettingArgs{
 			EventHubAuthorizationRuleId: pulumi.String("/subscriptions/fb9f25f9-5785-4510-a38f-a62f188eb9f8/resourceGroups/montest/providers/microsoft.eventhub/namespaces/mynamespace/eventhubs/myeventhub/authorizationrules/myrule"),
 			EventHubName:                pulumi.String("myeventhub"),
-			Logs: insights.ManagementGroupLogSettingsArray{
+			Logs: []insights.ManagementGroupLogSettingsArgs{
 				&insights.ManagementGroupLogSettingsArgs{
 					Category: pulumi.String("Administrative"),
 					Enabled:  pulumi.Bool(true),

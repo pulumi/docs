@@ -94,7 +94,7 @@ func main() {
 			ClusteringPolicy: pulumi.String("EnterpriseCluster"),
 			DatabaseName:     pulumi.String("default"),
 			EvictionPolicy:   pulumi.String("AllKeysLRU"),
-			Modules: cache.ModuleArray{
+			Modules: []cache.ModuleArgs{
 				&cache.ModuleArgs{
 					Args: pulumi.String("ERROR_RATE 0.00 INITIAL_SIZE 400"),
 					Name: pulumi.String("RedisBloom"),
@@ -1509,7 +1509,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-native:cache:Database cache1/default /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Cache/redisEnterprise/cache1/databases/default 
+$ pulumi import azure-native:cache:Database cache1/db1 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Cache/redisEnterprise/cache1/databases/db1 
 ```
 
 

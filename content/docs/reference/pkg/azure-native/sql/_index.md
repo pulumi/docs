@@ -14,6 +14,7 @@ Explore the resources and functions of the azure-native.sql module.
     <li><a href="backupshorttermretentionpolicy" title="BackupShortTermRetentionPolicy"><span class="symbol resource"></span>BackupShortTermRetentionPolicy</a></li>
     <li><a href="datamaskingpolicy" title="DataMaskingPolicy"><span class="symbol resource"></span>DataMaskingPolicy</a></li>
     <li><a href="database" title="Database"><span class="symbol resource"></span>Database</a></li>
+    <li><a href="databaseadvisor" title="DatabaseAdvisor"><span class="symbol resource"></span>DatabaseAdvisor</a></li>
     <li><a href="databaseblobauditingpolicy" title="DatabaseBlobAuditingPolicy"><span class="symbol resource"></span>DatabaseBlobAuditingPolicy</a></li>
     <li><a href="databasesecurityalertpolicy" title="DatabaseSecurityAlertPolicy"><span class="symbol resource"></span>DatabaseSecurityAlertPolicy</a></li>
     <li><a href="databasevulnerabilityassessment" title="DatabaseVulnerabilityAssessment"><span class="symbol resource"></span>DatabaseVulnerabilityAssessment</a></li>
@@ -47,6 +48,7 @@ Explore the resources and functions of the azure-native.sql module.
     <li><a href="privateendpointconnection" title="PrivateEndpointConnection"><span class="symbol resource"></span>PrivateEndpointConnection</a></li>
     <li><a href="sensitivitylabel" title="SensitivityLabel"><span class="symbol resource"></span>SensitivityLabel</a></li>
     <li><a href="server" title="Server"><span class="symbol resource"></span>Server</a></li>
+    <li><a href="serveradvisor" title="ServerAdvisor"><span class="symbol resource"></span>ServerAdvisor</a></li>
     <li><a href="serverazureadadministrator" title="ServerAzureADAdministrator"><span class="symbol resource"></span>ServerAzureADAdministrator</a></li>
     <li><a href="serverazureadonlyauthentication" title="ServerAzureADOnlyAuthentication"><span class="symbol resource"></span>ServerAzureADOnlyAuthentication</a></li>
     <li><a href="serverblobauditingpolicy" title="ServerBlobAuditingPolicy"><span class="symbol resource"></span>ServerBlobAuditingPolicy</a></li>
@@ -70,6 +72,7 @@ Explore the resources and functions of the azure-native.sql module.
     <li><a href="getbackupshorttermretentionpolicy" title="GetBackupShortTermRetentionPolicy"><span class="symbol function"></span>GetBackupShortTermRetentionPolicy</a></li>
     <li><a href="getdatamaskingpolicy" title="GetDataMaskingPolicy"><span class="symbol function"></span>GetDataMaskingPolicy</a></li>
     <li><a href="getdatabase" title="GetDatabase"><span class="symbol function"></span>GetDatabase</a></li>
+    <li><a href="getdatabaseadvisor" title="GetDatabaseAdvisor"><span class="symbol function"></span>GetDatabaseAdvisor</a></li>
     <li><a href="getdatabaseblobauditingpolicy" title="GetDatabaseBlobAuditingPolicy"><span class="symbol function"></span>GetDatabaseBlobAuditingPolicy</a></li>
     <li><a href="getdatabasesecurityalertpolicy" title="GetDatabaseSecurityAlertPolicy"><span class="symbol function"></span>GetDatabaseSecurityAlertPolicy</a></li>
     <li><a href="getdatabasevulnerabilityassessment" title="GetDatabaseVulnerabilityAssessment"><span class="symbol function"></span>GetDatabaseVulnerabilityAssessment</a></li>
@@ -103,6 +106,7 @@ Explore the resources and functions of the azure-native.sql module.
     <li><a href="getprivateendpointconnection" title="GetPrivateEndpointConnection"><span class="symbol function"></span>GetPrivateEndpointConnection</a></li>
     <li><a href="getsensitivitylabel" title="GetSensitivityLabel"><span class="symbol function"></span>GetSensitivityLabel</a></li>
     <li><a href="getserver" title="GetServer"><span class="symbol function"></span>GetServer</a></li>
+    <li><a href="getserveradvisor" title="GetServerAdvisor"><span class="symbol function"></span>GetServerAdvisor</a></li>
     <li><a href="getserverazureadadministrator" title="GetServerAzureADAdministrator"><span class="symbol function"></span>GetServerAzureADAdministrator</a></li>
     <li><a href="getserverazureadonlyauthentication" title="GetServerAzureADOnlyAuthentication"><span class="symbol function"></span>GetServerAzureADOnlyAuthentication</a></li>
     <li><a href="getserverblobauditingpolicy" title="GetServerBlobAuditingPolicy"><span class="symbol function"></span>GetServerBlobAuditingPolicy</a></li>
@@ -128,6 +132,6 @@ Explore the resources and functions of the azure-native.sql module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>1.22.0</dd>
+	<dd>1.23.0</dd>
 </dl>
 

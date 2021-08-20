@@ -84,7 +84,7 @@ func main() {
 			Query:              pulumi.String("Heartbeat | summarize Count() by Computer | take a"),
 			ResourceGroupName:  pulumi.String("TestRG"),
 			SavedSearchId:      pulumi.String("00000000-0000-0000-0000-00000000000"),
-			Tags: operationalinsights.TagArray{
+			Tags: []operationalinsights.TagArgs{
 				&operationalinsights.TagArgs{
 					Name:  pulumi.String("Group"),
 					Value: pulumi.String("Computer"),

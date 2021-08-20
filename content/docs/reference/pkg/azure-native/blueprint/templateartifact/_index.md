@@ -126,51 +126,51 @@ func main() {
 			ArtifactName:  pulumi.String("storageTemplate"),
 			BlueprintName: pulumi.String("simpleBlueprint"),
 			Kind:          pulumi.String("template"),
-			Parameters: blueprint.ParameterValueArgsMap{
-				"storage_account_type": &blueprint.ParameterValueArgs{
-					Value: pulumi.String("[parameters('storageAccountType')]"),
+			Parameters: blueprint.ParameterValueMap{
+				"storageAccountType": &blueprint.ParameterValueArgs{
+					Value: pulumi.Any("[parameters('storageAccountType')]"),
 				},
 			},
 			ResourceGroup: pulumi.String("storageRG"),
 			ResourceScope: pulumi.String("providers/Microsoft.Management/managementGroups/ContosoOnlineGroup"),
-			Template: pulumi.Map{
-				"content_version": pulumi.String("1.0.0.0"),
-				"outputs": pulumi.StringMapMap{
-					"storage_account_name": pulumi.StringMap{
-						"type":  pulumi.String("string"),
-						"value": pulumi.String("[variables('storageAccountName')]"),
+			Template: pulumi.Any{
+				ContentVersion: "1.0.0.0",
+				Outputs: map[string]interface{}{
+					"storageAccountName": map[string]interface{}{
+						"type":  "string",
+						"value": "[variables('storageAccountName')]",
 					},
 				},
-				"parameters": pulumi.MapMap{
-					"storage_account_type": pulumi.Map{
-						"allowed_values": pulumi.StringArray{
-							pulumi.String("Standard_LRS"),
-							pulumi.String("Standard_GRS"),
-							pulumi.String("Standard_ZRS"),
-							pulumi.String("Premium_LRS"),
+				Parameters: map[string]interface{}{
+					"storageAccountType": map[string]interface{}{
+						"allowedValues": []string{
+							"Standard_LRS",
+							"Standard_GRS",
+							"Standard_ZRS",
+							"Premium_LRS",
 						},
-						"default_value": pulumi.String("Standard_LRS"),
-						"metadata": pulumi.StringMap{
-							"description": pulumi.String("Storage Account type"),
+						"defaultValue": "Standard_LRS",
+						"metadata": map[string]interface{}{
+							"description": "Storage Account type",
 						},
-						"type": pulumi.String("string"),
+						"type": "string",
 					},
 				},
-				"resources": pulumi.MapArray{
-					pulumi.Map{
-						"api_version": pulumi.String("2016-01-01"),
-						"kind":        pulumi.String("Storage"),
-						"location":    pulumi.String("[resourceGroup().location]"),
-						"name":        pulumi.String("[variables('storageAccountName')]"),
-						"properties":  nil,
-						"sku": pulumi.StringMap{
-							"name": pulumi.String("[parameters('storageAccountType')]"),
+				Resources: []map[string]interface{}{
+					map[string]interface{}{
+						"apiVersion": "2016-01-01",
+						"kind":       "Storage",
+						"location":   "[resourceGroup().location]",
+						"name":       "[variables('storageAccountName')]",
+						"properties": nil,
+						"sku": map[string]interface{}{
+							"name": "[parameters('storageAccountType')]",
 						},
-						"type": pulumi.String("Microsoft.Storage/storageAccounts"),
+						"type": "Microsoft.Storage/storageAccounts",
 					},
 				},
-				"variables": pulumi.StringMap{
-					"storage_account_name": pulumi.String("[concat(uniquestring(resourceGroup().id), 'standardsa')]"),
+				Variables: map[string]interface{}{
+					"storageAccountName": "[concat(uniquestring(resourceGroup().id), 'standardsa')]",
 				},
 			},
 		})
@@ -199,29 +199,29 @@ template_artifact = azure_native.blueprint.TemplateArtifact("templateArtifact",
     blueprint_name="simpleBlueprint",
     kind="template",
     parameters={
-        "storage_account_type": azure_native.blueprint.ParameterValueArgs(
+        "storageAccountType": azure_native.blueprint.ParameterValueArgs(
             value="[parameters('storageAccountType')]",
         ),
     },
     resource_group="storageRG",
     resource_scope="providers/Microsoft.Management/managementGroups/ContosoOnlineGroup",
     template={
-        "content_version": "1.0.0.0",
+        "contentVersion": "1.0.0.0",
         "outputs": {
-            "storage_account_name": {
+            "storageAccountName": {
                 "type": "string",
                 "value": "[variables('storageAccountName')]",
             },
         },
         "parameters": {
-            "storage_account_type": {
-                "allowed_values": [
+            "storageAccountType": {
+                "allowedValues": [
                     "Standard_LRS",
                     "Standard_GRS",
                     "Standard_ZRS",
                     "Premium_LRS",
                 ],
-                "default_value": "Standard_LRS",
+                "defaultValue": "Standard_LRS",
                 "metadata": {
                     "description": "Storage Account type",
                 },
@@ -229,7 +229,7 @@ template_artifact = azure_native.blueprint.TemplateArtifact("templateArtifact",
             },
         },
         "resources": [{
-            "api_version": "2016-01-01",
+            "apiVersion": "2016-01-01",
             "kind": "Storage",
             "location": "[resourceGroup().location]",
             "name": "[variables('storageAccountName')]",
@@ -240,7 +240,7 @@ template_artifact = azure_native.blueprint.TemplateArtifact("templateArtifact",
             "type": "Microsoft.Storage/storageAccounts",
         }],
         "variables": {
-            "storage_account_name": "[concat(uniquestring(resourceGroup().id), 'standardsa')]",
+            "storageAccountName": "[concat(uniquestring(resourceGroup().id), 'standardsa')]",
         },
     })
 
@@ -620,51 +620,51 @@ func main() {
 			ArtifactName:  pulumi.String("storageTemplate"),
 			BlueprintName: pulumi.String("simpleBlueprint"),
 			Kind:          pulumi.String("template"),
-			Parameters: blueprint.ParameterValueArgsMap{
-				"storage_account_type": &blueprint.ParameterValueArgs{
-					Value: pulumi.String("[parameters('storageAccountType')]"),
+			Parameters: blueprint.ParameterValueMap{
+				"storageAccountType": &blueprint.ParameterValueArgs{
+					Value: pulumi.Any("[parameters('storageAccountType')]"),
 				},
 			},
 			ResourceGroup: pulumi.String("storageRG"),
 			ResourceScope: pulumi.String("subscriptions/00000000-0000-0000-0000-000000000000"),
-			Template: pulumi.Map{
-				"content_version": pulumi.String("1.0.0.0"),
-				"outputs": pulumi.StringMapMap{
-					"storage_account_name": pulumi.StringMap{
-						"type":  pulumi.String("string"),
-						"value": pulumi.String("[variables('storageAccountName')]"),
+			Template: pulumi.Any{
+				ContentVersion: "1.0.0.0",
+				Outputs: map[string]interface{}{
+					"storageAccountName": map[string]interface{}{
+						"type":  "string",
+						"value": "[variables('storageAccountName')]",
 					},
 				},
-				"parameters": pulumi.MapMap{
-					"storage_account_type": pulumi.Map{
-						"allowed_values": pulumi.StringArray{
-							pulumi.String("Standard_LRS"),
-							pulumi.String("Standard_GRS"),
-							pulumi.String("Standard_ZRS"),
-							pulumi.String("Premium_LRS"),
+				Parameters: map[string]interface{}{
+					"storageAccountType": map[string]interface{}{
+						"allowedValues": []string{
+							"Standard_LRS",
+							"Standard_GRS",
+							"Standard_ZRS",
+							"Premium_LRS",
 						},
-						"default_value": pulumi.String("Standard_LRS"),
-						"metadata": pulumi.StringMap{
-							"description": pulumi.String("Storage Account type"),
+						"defaultValue": "Standard_LRS",
+						"metadata": map[string]interface{}{
+							"description": "Storage Account type",
 						},
-						"type": pulumi.String("string"),
+						"type": "string",
 					},
 				},
-				"resources": pulumi.MapArray{
-					pulumi.Map{
-						"api_version": pulumi.String("2016-01-01"),
-						"kind":        pulumi.String("Storage"),
-						"location":    pulumi.String("[resourceGroup().location]"),
-						"name":        pulumi.String("[variables('storageAccountName')]"),
-						"properties":  nil,
-						"sku": pulumi.StringMap{
-							"name": pulumi.String("[parameters('storageAccountType')]"),
+				Resources: []map[string]interface{}{
+					map[string]interface{}{
+						"apiVersion": "2016-01-01",
+						"kind":       "Storage",
+						"location":   "[resourceGroup().location]",
+						"name":       "[variables('storageAccountName')]",
+						"properties": nil,
+						"sku": map[string]interface{}{
+							"name": "[parameters('storageAccountType')]",
 						},
-						"type": pulumi.String("Microsoft.Storage/storageAccounts"),
+						"type": "Microsoft.Storage/storageAccounts",
 					},
 				},
-				"variables": pulumi.StringMap{
-					"storage_account_name": pulumi.String("[concat(uniquestring(resourceGroup().id), 'standardsa')]"),
+				Variables: map[string]interface{}{
+					"storageAccountName": "[concat(uniquestring(resourceGroup().id), 'standardsa')]",
 				},
 			},
 		})
@@ -693,29 +693,29 @@ template_artifact = azure_native.blueprint.TemplateArtifact("templateArtifact",
     blueprint_name="simpleBlueprint",
     kind="template",
     parameters={
-        "storage_account_type": azure_native.blueprint.ParameterValueArgs(
+        "storageAccountType": azure_native.blueprint.ParameterValueArgs(
             value="[parameters('storageAccountType')]",
         ),
     },
     resource_group="storageRG",
     resource_scope="subscriptions/00000000-0000-0000-0000-000000000000",
     template={
-        "content_version": "1.0.0.0",
+        "contentVersion": "1.0.0.0",
         "outputs": {
-            "storage_account_name": {
+            "storageAccountName": {
                 "type": "string",
                 "value": "[variables('storageAccountName')]",
             },
         },
         "parameters": {
-            "storage_account_type": {
-                "allowed_values": [
+            "storageAccountType": {
+                "allowedValues": [
                     "Standard_LRS",
                     "Standard_GRS",
                     "Standard_ZRS",
                     "Premium_LRS",
                 ],
-                "default_value": "Standard_LRS",
+                "defaultValue": "Standard_LRS",
                 "metadata": {
                     "description": "Storage Account type",
                 },
@@ -723,7 +723,7 @@ template_artifact = azure_native.blueprint.TemplateArtifact("templateArtifact",
             },
         },
         "resources": [{
-            "api_version": "2016-01-01",
+            "apiVersion": "2016-01-01",
             "kind": "Storage",
             "location": "[resourceGroup().location]",
             "name": "[variables('storageAccountName')]",
@@ -734,7 +734,7 @@ template_artifact = azure_native.blueprint.TemplateArtifact("templateArtifact",
             "type": "Microsoft.Storage/storageAccounts",
         }],
         "variables": {
-            "storage_account_name": "[concat(uniquestring(resourceGroup().id), 'standardsa')]",
+            "storageAccountName": "[concat(uniquestring(resourceGroup().id), 'standardsa')]",
         },
     })
 

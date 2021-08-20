@@ -87,18 +87,18 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := hybriddata.NewJobDefinition(ctx, "jobDefinition", &hybriddata.JobDefinitionArgs{
 			DataManagerName: pulumi.String("TestAzureSDKOperations"),
-			DataServiceInput: pulumi.Map{
-				"AzureStorageType": pulumi.String("Blob"),
-				"BackupChoice":     pulumi.String("UseExistingLatest"),
-				"ContainerName":    pulumi.String("containerfromtest"),
-				"DeviceName":       pulumi.String("8600-SHG0997877L71FC"),
-				"FileNameFilter":   pulumi.String("*"),
-				"IsDirectoryMode":  pulumi.Bool(false),
-				"RootDirectories": pulumi.StringArray{
-					pulumi.String("\\"),
+			DataServiceInput: pulumi.Any{
+				AzureStorageType: "Blob",
+				BackupChoice:     "UseExistingLatest",
+				ContainerName:    "containerfromtest",
+				DeviceName:       "8600-SHG0997877L71FC",
+				FileNameFilter:   "*",
+				IsDirectoryMode:  false,
+				RootDirectories: []string{
+					"\\",
 				},
-				"VolumeNames": pulumi.StringArray{
-					pulumi.String("TestAutomation"),
+				VolumeNames: []string{
+					"TestAutomation",
 				},
 			},
 			DataServiceName:   pulumi.String("DataTransformation"),

@@ -87,7 +87,7 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := storagecache.NewStorageTarget(ctx, "storageTarget", &storagecache.StorageTargetArgs{
 			CacheName: pulumi.String("sc1"),
-			Junctions: storagecache.NamespaceJunctionArray{
+			Junctions: []storagecache.NamespaceJunctionArgs{
 				&storagecache.NamespaceJunctionArgs{
 					NamespacePath:   pulumi.String("/path/on/cache"),
 					NfsAccessPolicy: pulumi.String("default"),
@@ -260,7 +260,7 @@ func main() {
 				UsageModel: pulumi.String("WRITE_WORKLOAD_15"),
 			},
 			CacheName: pulumi.String("sc1"),
-			Junctions: storagecache.NamespaceJunctionArray{
+			Junctions: []storagecache.NamespaceJunctionArgs{
 				&storagecache.NamespaceJunctionArgs{
 					NamespacePath: pulumi.String("/blobnfs"),
 				},

@@ -114,10 +114,10 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := portal.NewDashboard(ctx, "dashboard", &portal.DashboardArgs{
 			DashboardName: pulumi.String("testDashboard"),
-			Lenses: portal.DashboardLensArray{
+			Lenses: []portal.DashboardLensArgs{
 				&portal.DashboardLensArgs{
 					Order: pulumi.Int(1),
-					Parts: portal.DashboardPartsArray{
+					Parts: []portal.DashboardPartsArgs{
 						&portal.DashboardPartsArgs{
 							Position: &portal.DashboardPartsPositionArgs{
 								ColSpan: pulumi.Int(3),
@@ -142,12 +142,12 @@ func main() {
 				},
 			},
 			Location: pulumi.String("eastus"),
-			Metadata: pulumi.Float64MapMap{
-				"metadata": pulumi.Float64Map{
-					"ColSpan": pulumi.Float64(2),
-					"RowSpan": pulumi.Float64(1),
-					"X":       pulumi.Float64(4),
-					"Y":       pulumi.Float64(3),
+			Metadata: pulumi.AnyMap{
+				"metadata": pulumi.Any{
+					ColSpan: 2,
+					RowSpan: 1,
+					X:       4,
+					Y:       3,
 				},
 			},
 			ResourceGroupName: pulumi.String("testRG"),

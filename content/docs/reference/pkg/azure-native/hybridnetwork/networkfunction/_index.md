@@ -121,7 +121,7 @@ func main() {
 			Location:                     pulumi.String("eastus"),
 			ManagedApplicationParameters: nil,
 			NetworkFunctionName:          pulumi.String("testNf"),
-			NetworkFunctionUserConfigurations: hybridnetwork.NetworkFunctionUserConfigurationArray{
+			NetworkFunctionUserConfigurations: []hybridnetwork.NetworkFunctionUserConfigurationArgs{
 				&hybridnetwork.NetworkFunctionUserConfigurationArgs{
 					NetworkInterfaces: hybridnetwork.NetworkInterfaceArray{
 						&hybridnetwork.NetworkInterfaceArgs{

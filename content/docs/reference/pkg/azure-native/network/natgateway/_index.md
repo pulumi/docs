@@ -83,12 +83,12 @@ func main() {
 		_, err := network.NewNatGateway(ctx, "natGateway", &network.NatGatewayArgs{
 			Location:       pulumi.String("westus"),
 			NatGatewayName: pulumi.String("test-natgateway"),
-			PublicIpAddresses: network.SubResourceArray{
+			PublicIpAddresses: []network.SubResourceArgs{
 				&network.SubResourceArgs{
 					Id: pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/publicIPAddresses/PublicIpAddress1"),
 				},
 			},
-			PublicIpPrefixes: network.SubResourceArray{
+			PublicIpPrefixes: []network.SubResourceArgs{
 				&network.SubResourceArgs{
 					Id: pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/publicIPPrefixes/PublicIpPrefix1"),
 				},

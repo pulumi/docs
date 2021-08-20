@@ -184,7 +184,7 @@ func main() {
 			AscLocation:     pulumi.String("centralus"),
 			EnforcementMode: pulumi.String("Audit"),
 			GroupName:       pulumi.String("ERELGROUP1"),
-			PathRecommendations: security.PathRecommendationArray{
+			PathRecommendations: []security.PathRecommendationArgs{
 				&security.PathRecommendationArgs{
 					Action:              pulumi.String("Recommended"),
 					Common:              pulumi.Bool(true),
@@ -266,7 +266,7 @@ func main() {
 				Msi:    pulumi.String("None"),
 				Script: pulumi.String("None"),
 			},
-			VmRecommendations: security.VmRecommendationArray{
+			VmRecommendations: []security.VmRecommendationArgs{
 				&security.VmRecommendationArgs{
 					ConfigurationStatus:  pulumi.String("Configured"),
 					EnforcementSupport:   pulumi.String("Supported"),

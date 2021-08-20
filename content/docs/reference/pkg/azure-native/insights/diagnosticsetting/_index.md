@@ -96,7 +96,7 @@ func main() {
 			EventHubAuthorizationRuleId: pulumi.String("/subscriptions/1a66ce04-b633-4a0b-b2bc-a912ec8986a6/resourceGroups/montest/providers/microsoft.eventhub/namespaces/mynamespace/eventhubs/myeventhub/authorizationrules/myrule"),
 			EventHubName:                pulumi.String("myeventhub"),
 			LogAnalyticsDestinationType: pulumi.String("Dedicated"),
-			Logs: insights.LogSettingsArray{
+			Logs: []insights.LogSettingsArgs{
 				&insights.LogSettingsArgs{
 					Category: pulumi.String("WorkflowRuntime"),
 					Enabled:  pulumi.Bool(true),
@@ -106,7 +106,7 @@ func main() {
 					},
 				},
 			},
-			Metrics: insights.MetricSettingsArray{
+			Metrics: []insights.MetricSettingsArgs{
 				&insights.MetricSettingsArgs{
 					Category: pulumi.String("WorkflowMetrics"),
 					Enabled:  pulumi.Bool(true),

@@ -110,7 +110,7 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := network.NewConnectionMonitor(ctx, "connectionMonitor", &network.ConnectionMonitorArgs{
 			ConnectionMonitorName: pulumi.String("cm1"),
-			Endpoints: network.ConnectionMonitorEndpointArray{
+			Endpoints: []network.ConnectionMonitorEndpointArgs{
 				&network.ConnectionMonitorEndpointArgs{
 					Name:       pulumi.String("source"),
 					ResourceId: pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Compute/virtualMachines/ct1"),
@@ -123,7 +123,7 @@ func main() {
 			Location:           pulumi.String("eastus"),
 			NetworkWatcherName: pulumi.String("nw1"),
 			ResourceGroupName:  pulumi.String("rg1"),
-			TestConfigurations: network.ConnectionMonitorTestConfigurationArray{
+			TestConfigurations: []network.ConnectionMonitorTestConfigurationArgs{
 				&network.ConnectionMonitorTestConfigurationArgs{
 					Name:     pulumi.String("tcp"),
 					Protocol: pulumi.String("Tcp"),
@@ -133,7 +133,7 @@ func main() {
 					TestFrequencySec: pulumi.Int(60),
 				},
 			},
-			TestGroups: network.ConnectionMonitorTestGroupArray{
+			TestGroups: []network.ConnectionMonitorTestGroupArgs{
 				&network.ConnectionMonitorTestGroupArgs{
 					Destinations: pulumi.StringArray{
 						pulumi.String("destination"),
@@ -366,7 +366,7 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := network.NewConnectionMonitor(ctx, "connectionMonitor", &network.ConnectionMonitorArgs{
 			ConnectionMonitorName: pulumi.String("cm1"),
-			Endpoints: network.ConnectionMonitorEndpointArray{
+			Endpoints: []network.ConnectionMonitorEndpointArgs{
 				&network.ConnectionMonitorEndpointArgs{
 					Name:       pulumi.String("vm1"),
 					ResourceId: pulumi.String("/subscriptions/96e68903-0a56-4819-9987-8d08ad6a1f99/resourceGroups/NwRgIrinaCentralUSEUAP/providers/Microsoft.Compute/virtualMachines/vm1"),
@@ -396,7 +396,7 @@ func main() {
 			NetworkWatcherName: pulumi.String("nw1"),
 			Outputs:            network.ConnectionMonitorOutputArray{},
 			ResourceGroupName:  pulumi.String("rg1"),
-			TestConfigurations: network.ConnectionMonitorTestConfigurationArray{
+			TestConfigurations: []network.ConnectionMonitorTestConfigurationArgs{
 				&network.ConnectionMonitorTestConfigurationArgs{
 					Name:     pulumi.String("testConfig1"),
 					Protocol: pulumi.String("Tcp"),
@@ -407,7 +407,7 @@ func main() {
 					TestFrequencySec: pulumi.Int(60),
 				},
 			},
-			TestGroups: network.ConnectionMonitorTestGroupArray{
+			TestGroups: []network.ConnectionMonitorTestGroupArgs{
 				&network.ConnectionMonitorTestGroupArgs{
 					Destinations: pulumi.StringArray{
 						pulumi.String("bing"),

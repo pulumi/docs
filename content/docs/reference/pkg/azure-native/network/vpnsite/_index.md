@@ -128,7 +128,7 @@ func main() {
 			VirtualWan: &network.SubResourceArgs{
 				Id: pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualWANs/wan1"),
 			},
-			VpnSiteLinks: network.VpnSiteLinkArray{
+			VpnSiteLinks: []network.VpnSiteLinkArgs{
 				&network.VpnSiteLinkArgs{
 					BgpProperties: &network.VpnLinkBgpSettingsArgs{
 						Asn:               pulumi.Float64(1234),

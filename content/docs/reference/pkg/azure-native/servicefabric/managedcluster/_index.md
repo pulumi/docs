@@ -120,10 +120,10 @@ func main() {
 			ClusterCodeVersion:   pulumi.String("7.1.168.9494"),
 			ClusterName:          pulumi.String("myCluster"),
 			DnsName:              pulumi.String("myCluster"),
-			FabricSettings: servicefabric.SettingsSectionDescriptionArray{
+			FabricSettings: []servicefabric.SettingsSectionDescriptionArgs{
 				&servicefabric.SettingsSectionDescriptionArgs{
 					Name: pulumi.String("ManagedIdentityTokenService"),
-					Parameters: servicefabric.SettingsParameterDescriptionArray{
+					Parameters: []servicefabric.SettingsParameterDescriptionArgs{
 						&servicefabric.SettingsParameterDescriptionArgs{
 							Name:  pulumi.String("IsEnabled"),
 							Value: pulumi.String("true"),
@@ -132,7 +132,7 @@ func main() {
 				},
 			},
 			HttpGatewayConnectionPort: pulumi.Int(19080),
-			LoadBalancingRules: servicefabric.LoadBalancingRuleArray{
+			LoadBalancingRules: []servicefabric.LoadBalancingRuleArgs{
 				&servicefabric.LoadBalancingRuleArgs{
 					BackendPort:   pulumi.Int(80),
 					FrontendPort:  pulumi.Int(80),
@@ -352,10 +352,10 @@ func main() {
 			ClusterCodeVersion: pulumi.String("7.1.168.9494"),
 			ClusterName:        pulumi.String("myCluster"),
 			DnsName:            pulumi.String("myCluster"),
-			FabricSettings: servicefabric.SettingsSectionDescriptionArray{
+			FabricSettings: []servicefabric.SettingsSectionDescriptionArgs{
 				&servicefabric.SettingsSectionDescriptionArgs{
 					Name: pulumi.String("ManagedIdentityTokenService"),
-					Parameters: servicefabric.SettingsParameterDescriptionArray{
+					Parameters: []servicefabric.SettingsParameterDescriptionArgs{
 						&servicefabric.SettingsParameterDescriptionArgs{
 							Name:  pulumi.String("IsEnabled"),
 							Value: pulumi.String("true"),

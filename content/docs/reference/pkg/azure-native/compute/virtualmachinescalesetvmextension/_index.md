@@ -76,8 +76,8 @@ func main() {
 			InstanceId:              pulumi.String("0"),
 			Publisher:               pulumi.String("extPublisher"),
 			ResourceGroupName:       pulumi.String("myResourceGroup"),
-			Settings: pulumi.StringMap{
-				"UserName": pulumi.String("xyz@microsoft.com"),
+			Settings: pulumi.Any{
+				UserName: "xyz@microsoft.com",
 			},
 			Type:               pulumi.String("extType"),
 			TypeHandlerVersion: pulumi.String("1.2"),

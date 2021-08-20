@@ -72,7 +72,7 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := network.NewAdminRuleCollection(ctx, "adminRuleCollection", &network.AdminRuleCollectionArgs{
-			AppliesToGroups: network.NetworkManagerSecurityGroupItemArray{
+			AppliesToGroups: []network.NetworkManagerSecurityGroupItemArgs{
 				&network.NetworkManagerSecurityGroupItemArgs{
 					NetworkGroupId: pulumi.String("/subscriptions/subId/resourceGroups/rg1/providers/Microsoft.Network/networkManagers/testNetworkManager/networkGroups/testGroup"),
 				},

@@ -87,13 +87,13 @@ func main() {
 				pulumi.String("/subscriptions/mySubscriptionId/resourceGroups/myResourceGroupName/providers/Microsoft.DocumentDB/databaseAccounts/myAccountName/dbs/sales"),
 				pulumi.String("/subscriptions/mySubscriptionId/resourceGroups/myResourceGroupName/providers/Microsoft.DocumentDB/databaseAccounts/myAccountName/dbs/purchases"),
 			},
-			Permissions: documentdb.PermissionArray{
+			Permissions: []documentdb.PermissionArgs{
 				&documentdb.PermissionArgs{
 					DataActions: pulumi.StringArray{
 						pulumi.String("Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers/items/create"),
 						pulumi.String("Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers/items/read"),
 					},
-					NotDataActions: []interface{}{},
+					NotDataActions: pulumi.StringArray{},
 				},
 			},
 			ResourceGroupName: pulumi.String("myResourceGroupName"),

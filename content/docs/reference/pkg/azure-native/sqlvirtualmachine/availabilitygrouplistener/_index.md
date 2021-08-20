@@ -85,7 +85,7 @@ func main() {
 		_, err := sqlvirtualmachine.NewAvailabilityGroupListener(ctx, "availabilityGroupListener", &sqlvirtualmachine.AvailabilityGroupListenerArgs{
 			AvailabilityGroupListenerName: pulumi.String("agl-test"),
 			AvailabilityGroupName:         pulumi.String("ag-test"),
-			LoadBalancerConfigurations: sqlvirtualmachine.LoadBalancerConfigurationArray{
+			LoadBalancerConfigurations: []sqlvirtualmachine.LoadBalancerConfigurationArgs{
 				&sqlvirtualmachine.LoadBalancerConfigurationArgs{
 					LoadBalancerResourceId: pulumi.String("/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg/providers/Microsoft.Network/loadBalancers/lb-test"),
 					PrivateIpAddress: &sqlvirtualmachine.PrivateIPAddressArgs{

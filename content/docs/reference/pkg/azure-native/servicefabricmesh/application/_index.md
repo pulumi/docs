@@ -117,9 +117,9 @@ func main() {
 			Description:             pulumi.String("Service Fabric Mesh sample application."),
 			Location:                pulumi.String("EastUS"),
 			ResourceGroupName:       pulumi.String("sbz_demo"),
-			Services: servicefabricmesh.ServiceResourceDescriptionArray{
+			Services: []servicefabricmesh.ServiceResourceDescriptionArgs{
 				&servicefabricmesh.ServiceResourceDescriptionArgs{
-					CodePackages: servicefabricmesh.ContainerCodePackagePropertiesArray{
+					CodePackages: []servicefabricmesh.ContainerCodePackagePropertiesArgs{
 						&servicefabricmesh.ContainerCodePackagePropertiesArgs{
 							Endpoints: servicefabricmesh.EndpointPropertiesArray{
 								&servicefabricmesh.EndpointPropertiesArgs{

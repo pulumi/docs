@@ -92,7 +92,62 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	authorization "github.com/pulumi/pulumi-azure-native/sdk/go/azure/authorization"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := authorization.NewPolicyDefinition(ctx, "policyDefinition", &authorization.PolicyDefinitionArgs{
+			Description: pulumi.String("Force resource names to begin with given 'prefix' and/or end with given 'suffix'"),
+			DisplayName: pulumi.String("Enforce resource naming convention"),
+			Metadata: pulumi.Any{
+				Category: "Naming",
+			},
+			Mode: pulumi.String("All"),
+			Parameters: authorization.ParameterDefinitionsValueMap{
+				"prefix": &authorization.ParameterDefinitionsValueArgs{
+					Metadata: &authorization.ParameterDefinitionsValueMetadataArgs{
+						Description: pulumi.String("Resource name prefix"),
+						DisplayName: pulumi.String("Prefix"),
+					},
+					Type: pulumi.String("String"),
+				},
+				"suffix": &authorization.ParameterDefinitionsValueArgs{
+					Metadata: &authorization.ParameterDefinitionsValueMetadataArgs{
+						Description: pulumi.String("Resource name suffix"),
+						DisplayName: pulumi.String("Suffix"),
+					},
+					Type: pulumi.String("String"),
+				},
+			},
+			PolicyDefinitionName: pulumi.String("ResourceNaming"),
+			PolicyRule: pulumi.Any{
+				If: map[string]interface{}{
+					"not": map[string]interface{}{
+						"field": "name",
+						"like":  "[concat(parameters('prefix'), '*', parameters('suffix'))]",
+					},
+				},
+				Then: map[string]interface{}{
+					"effect": "deny",
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
@@ -130,7 +185,7 @@ policy_definition = azure_native.authorization.PolicyDefinition("policyDefinitio
     policy_definition_name="ResourceNaming",
     policy_rule={
         "if": {
-            "not_": {
+            "not": {
                 "field": "name",
                 "like": "[concat(parameters('prefix'), '*', parameters('suffix'))]",
             },
@@ -287,7 +342,76 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	authorization "github.com/pulumi/pulumi-azure-native/sdk/go/azure/authorization"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := authorization.NewPolicyDefinition(ctx, "policyDefinition", &authorization.PolicyDefinitionArgs{
+			Description: pulumi.String("Audit enabling of logs and retain them up to a year. This enables recreation of activity trails for investigation purposes when a security incident occurs or your network is compromised"),
+			DisplayName: pulumi.String("Event Hubs should have diagnostic logging enabled"),
+			Metadata: pulumi.Any{
+				Category: "Event Hub",
+			},
+			Mode: pulumi.String("Indexed"),
+			Parameters: authorization.ParameterDefinitionsValueMap{
+				"requiredRetentionDays": &authorization.ParameterDefinitionsValueArgs{
+					AllowedValues: pulumi.AnyArray{
+						pulumi.Any(0),
+						pulumi.Any(30),
+						pulumi.Any(90),
+						pulumi.Any(180),
+						pulumi.Any(365),
+					},
+					DefaultValue: pulumi.Any(365),
+					Metadata: &authorization.ParameterDefinitionsValueMetadataArgs{
+						Description: pulumi.String("The required diagnostic logs retention in days"),
+						DisplayName: pulumi.String("Required retention (days)"),
+					},
+					Type: pulumi.String("Integer"),
+				},
+			},
+			PolicyDefinitionName: pulumi.String("EventHubDiagnosticLogs"),
+			PolicyRule: pulumi.Any{
+				If: map[string]interface{}{
+					"equals": "Microsoft.EventHub/namespaces",
+					"field":  "type",
+				},
+				Then: map[string]interface{}{
+					"details": map[string]interface{}{
+						"existenceCondition": map[string]interface{}{
+							"allOf": []map[string]interface{}{
+								map[string]interface{}{
+									"equals": "true",
+									"field":  "Microsoft.Insights/diagnosticSettings/logs[*].retentionPolicy.enabled",
+								},
+								map[string]interface{}{
+									"equals": "[parameters('requiredRetentionDays')]",
+									"field":  "Microsoft.Insights/diagnosticSettings/logs[*].retentionPolicy.days",
+								},
+							},
+						},
+						"type": "Microsoft.Insights/diagnosticSettings",
+					},
+					"effect": "AuditIfNotExists",
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
@@ -332,7 +456,7 @@ policy_definition = azure_native.authorization.PolicyDefinition("policyDefinitio
         "then": {
             "details": {
                 "existenceCondition": {
-                    "all_of": [
+                    "allOf": [
                         {
                             "equals": "true",
                             "field": "Microsoft.Insights/diagnosticSettings/logs[*].retentionPolicy.enabled",

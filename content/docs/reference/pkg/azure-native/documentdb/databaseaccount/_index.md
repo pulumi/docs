@@ -161,7 +161,7 @@ func main() {
 				MaxIntervalInSeconds:    pulumi.Int(10),
 				MaxStalenessPrefix:      pulumi.Float64(200),
 			},
-			Cors: documentdb.CorsPolicyArray{
+			Cors: []documentdb.CorsPolicyArgs{
 				&documentdb.CorsPolicyArgs{
 					AllowedOrigins: pulumi.String("https://test"),
 				},
@@ -172,11 +172,11 @@ func main() {
 			EnableFreeTier:           pulumi.Bool(false),
 			Identity: &documentdb.ManagedServiceIdentityArgs{
 				Type: "SystemAssigned,UserAssigned",
-				UserAssignedIdentities: pulumi.MapMap{
+				UserAssignedIdentities: pulumi.AnyMap{
 					"/subscriptions/fa5fc227-a624-475e-b696-cdd604c735bc/resourceGroups/eu2cgroup/providers/Microsoft.ManagedIdentity/userAssignedIdentities/id1": nil,
 				},
 			},
-			IpRules: documentdb.IpAddressOrRangeArray{
+			IpRules: []documentdb.IpAddressOrRangeArgs{
 				&documentdb.IpAddressOrRangeArgs{
 					IpAddressOrRange: pulumi.String("23.43.230.120"),
 				},
@@ -207,7 +207,7 @@ func main() {
 			PublicNetworkAccess: pulumi.String("Enabled"),
 			ResourceGroupName:   pulumi.String("rg1"),
 			Tags:                nil,
-			VirtualNetworkRules: documentdb.VirtualNetworkRuleArray{
+			VirtualNetworkRules: []documentdb.VirtualNetworkRuleArgs{
 				&documentdb.VirtualNetworkRuleArgs{
 					Id:                               pulumi.String("/subscriptions/subId/resourceGroups/rg/providers/Microsoft.Network/virtualNetworks/vnet1/subnets/subnet1"),
 					IgnoreMissingVNetServiceEndpoint: pulumi.Bool(false),

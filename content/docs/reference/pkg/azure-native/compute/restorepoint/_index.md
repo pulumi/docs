@@ -70,7 +70,7 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := compute.NewRestorePoint(ctx, "restorePoint", &compute.RestorePointArgs{
-			ExcludeDisks: compute.ApiEntityReferenceArray{
+			ExcludeDisks: []compute.ApiEntityReferenceArgs{
 				&compute.ApiEntityReferenceArgs{
 					Id: pulumi.String("/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/disks/disk123"),
 				},

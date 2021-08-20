@@ -74,7 +74,7 @@ func main() {
 			ManagedPrivateEndpointName: pulumi.String("exampleManagedPrivateEndpointName"),
 			ManagedVirtualNetworkName:  pulumi.String("exampleManagedVirtualNetworkName"),
 			Properties: &datafactory.ManagedPrivateEndpointArgs{
-				Fqdns:                 []interface{}{},
+				Fqdns:                 pulumi.StringArray{},
 				GroupId:               pulumi.String("blob"),
 				PrivateLinkResourceId: pulumi.String("/subscriptions/12345678-1234-1234-1234-12345678abc/resourceGroups/exampleResourceGroup/providers/Microsoft.Storage/storageAccounts/exampleBlobStorage"),
 			},

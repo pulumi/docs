@@ -75,10 +75,10 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := customerinsights.NewConnector(ctx, "connector", &customerinsights.ConnectorArgs{
 			ConnectorName: pulumi.String("testConnector"),
-			ConnectorProperties: pulumi.StringMapMap{
-				"connectionKeyVaultUrl": pulumi.StringMap{
-					"organization_id": pulumi.String("XXX"),
-					"organizationUrl": pulumi.String("https://XXX.crmlivetie.com/"),
+			ConnectorProperties: pulumi.AnyMap{
+				"connectionKeyVaultUrl": pulumi.Any{
+					OrganizationId:  "XXX",
+					OrganizationUrl: "https://XXX.crmlivetie.com/",
 				},
 			},
 			ConnectorType:     pulumi.String("AzureBlob"),
@@ -111,7 +111,7 @@ connector = azure_native.customerinsights.Connector("connector",
     connector_name="testConnector",
     connector_properties={
         "connectionKeyVaultUrl": {
-            "organization_id": "XXX",
+            "organizationId": "XXX",
             "organizationUrl": "https://XXX.crmlivetie.com/",
         },
     },

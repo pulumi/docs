@@ -88,7 +88,7 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := providerhub.NewSkus(ctx, "skus", &providerhub.SkusArgs{
 			Properties: &providerhub.SkuResourcePropertiesArgs{
-				SkuSettings: providerhub.SkuSettingArray{
+				SkuSettings: []providerhub.SkuSettingArgs{
 					&providerhub.SkuSettingArgs{
 						Kind: pulumi.String("Standard"),
 						Name: pulumi.String("freeSku"),

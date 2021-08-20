@@ -128,7 +128,7 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := customerinsights.NewProfile(ctx, "profile", &customerinsights.ProfileArgs{
 			ApiEntitySetName: pulumi.String("TestProfileType396"),
-			Fields: customerinsights.PropertyDefinitionArray{
+			Fields: []customerinsights.PropertyDefinitionArgs{
 				&customerinsights.PropertyDefinitionArgs{
 					FieldName:  pulumi.String("Id"),
 					FieldType:  pulumi.String("Edm.String"),
@@ -167,7 +167,7 @@ func main() {
 			ResourceGroupName:  pulumi.String("TestHubRG"),
 			SchemaItemTypeLink: pulumi.String("SchemaItemTypeLink"),
 			SmallImage:         pulumi.String("\\\\Images\\\\smallImage"),
-			StrongIds: customerinsights.StrongIdArray{
+			StrongIds: []customerinsights.StrongIdArgs{
 				&customerinsights.StrongIdArgs{
 					KeyPropertyNames: pulumi.StringArray{
 						pulumi.String("Id"),

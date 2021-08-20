@@ -149,7 +149,7 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := insights.NewguestDiagnosticsSetting(ctx, "guestDiagnosticsSetting", &insights.guestDiagnosticsSettingArgs{
-			DataSources: insights.DataSourceArray{
+			DataSources: []insights.DataSourceArgs{
 				&insights.DataSourceArgs{
 					Configuration: &insights.DataSourceConfigurationArgs{
 						PerfCounters: insights.PerformanceCounterConfigurationArray{
@@ -164,7 +164,7 @@ func main() {
 						},
 					},
 					Kind: pulumi.String("PerformanceCounter"),
-					Sinks: insights.SinkConfigurationArray{
+					Sinks: []insights.SinkConfigurationArgs{
 						&insights.SinkConfigurationArgs{
 							Kind: pulumi.String("LogAnalytics"),
 						},
@@ -182,7 +182,7 @@ func main() {
 						},
 					},
 					Kind: pulumi.String("ETWProviders"),
-					Sinks: insights.SinkConfigurationArray{
+					Sinks: []insights.SinkConfigurationArgs{
 						&insights.SinkConfigurationArgs{
 							Kind: pulumi.String("LogAnalytics"),
 						},
@@ -202,7 +202,7 @@ func main() {
 						},
 					},
 					Kind: pulumi.String("WindowsEventLogs"),
-					Sinks: insights.SinkConfigurationArray{
+					Sinks: []insights.SinkConfigurationArgs{
 						&insights.SinkConfigurationArgs{
 							Kind: pulumi.String("LogAnalytics"),
 						},

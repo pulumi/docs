@@ -313,7 +313,128 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	batch "github.com/pulumi/pulumi-azure-native/sdk/go/azure/batch"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := batch.NewPool(ctx, "pool", &batch.PoolArgs{
+			AccountName: pulumi.String("sampleacct"),
+			ApplicationLicenses: pulumi.StringArray{
+				pulumi.String("app-license0"),
+				pulumi.String("app-license1"),
+			},
+			ApplicationPackages: []batch.ApplicationPackageReferenceArgs{
+				&batch.ApplicationPackageReferenceArgs{
+					Id:      pulumi.String("/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.Batch/batchAccounts/sampleacct/pools/testpool/applications/app_1234"),
+					Version: pulumi.String("asdf"),
+				},
+			},
+			Certificates: []batch.CertificateReferenceArgs{
+				&batch.CertificateReferenceArgs{
+					Id:            pulumi.String("/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.Batch/batchAccounts/sampleacct/pools/testpool/certificates/sha1-1234567"),
+					StoreLocation: "LocalMachine",
+					StoreName:     pulumi.String("MY"),
+					Visibility: batch.CertificateVisibilityArray{
+						"RemoteUser",
+					},
+				},
+			},
+			DeploymentConfiguration: &batch.DeploymentConfigurationArgs{
+				CloudServiceConfiguration: &batch.CloudServiceConfigurationArgs{
+					OsFamily:  pulumi.String("4"),
+					OsVersion: pulumi.String("WA-GUEST-OS-4.45_201708-01"),
+				},
+			},
+			DisplayName:            pulumi.String("my-pool-name"),
+			InterNodeCommunication: "Enabled",
+			Metadata: []batch.MetadataItemArgs{
+				&batch.MetadataItemArgs{
+					Name:  pulumi.String("metadata-1"),
+					Value: pulumi.String("value-1"),
+				},
+				&batch.MetadataItemArgs{
+					Name:  pulumi.String("metadata-2"),
+					Value: pulumi.String("value-2"),
+				},
+			},
+			NetworkConfiguration: &batch.NetworkConfigurationArgs{
+				PublicIPAddressConfiguration: &batch.PublicIPAddressConfigurationArgs{
+					IpAddressIds: pulumi.StringArray{
+						pulumi.String("/subscriptions/subid1/resourceGroups/rg13/providers/Microsoft.Network/publicIPAddresses/ip135"),
+						pulumi.String("/subscriptions/subid2/resourceGroups/rg24/providers/Microsoft.Network/publicIPAddresses/ip268"),
+					},
+					Provision: "UserManaged",
+				},
+				SubnetId: pulumi.String("/subscriptions/subid/resourceGroups/rg1234/providers/Microsoft.Network/virtualNetworks/network1234/subnets/subnet123"),
+			},
+			PoolName:          pulumi.String("testpool"),
+			ResourceGroupName: pulumi.String("default-azurebatch-japaneast"),
+			ScaleSettings: &batch.ScaleSettingsArgs{
+				FixedScale: &batch.FixedScaleSettingsArgs{
+					NodeDeallocationOption: "TaskCompletion",
+					ResizeTimeout:          pulumi.String("PT8M"),
+					TargetDedicatedNodes:   pulumi.Int(6),
+					TargetLowPriorityNodes: pulumi.Int(28),
+				},
+			},
+			StartTask: &batch.StartTaskArgs{
+				CommandLine: pulumi.String("cmd /c SET"),
+				EnvironmentSettings: batch.EnvironmentSettingArray{
+					&batch.EnvironmentSettingArgs{
+						Name:  pulumi.String("MYSET"),
+						Value: pulumi.String("1234"),
+					},
+				},
+				MaxTaskRetryCount: pulumi.Int(6),
+				ResourceFiles: batch.ResourceFileArray{
+					&batch.ResourceFileArgs{
+						FileMode: pulumi.String("777"),
+						FilePath: pulumi.String("c:\\temp\\gohere"),
+						HttpUrl:  pulumi.String("https://testaccount.blob.core.windows.net/example-blob-file"),
+					},
+				},
+				UserIdentity: &batch.UserIdentityArgs{
+					AutoUser: &batch.AutoUserSpecificationArgs{
+						ElevationLevel: "Admin",
+						Scope:          "Pool",
+					},
+				},
+				WaitForSuccess: pulumi.Bool(true),
+			},
+			TaskSchedulingPolicy: &batch.TaskSchedulingPolicyArgs{
+				NodeFillType: "Pack",
+			},
+			TaskSlotsPerNode: pulumi.Int(13),
+			UserAccounts: []batch.UserAccountArgs{
+				&batch.UserAccountArgs{
+					ElevationLevel: "Admin",
+					LinuxUserConfiguration: &batch.LinuxUserConfigurationArgs{
+						Gid:           pulumi.Int(4567),
+						SshPrivateKey: pulumi.String("sshprivatekeyvalue"),
+						Uid:           pulumi.Int(1234),
+					},
+					Name:     pulumi.String("username1"),
+					Password: pulumi.String("<ExamplePassword>"),
+				},
+			},
+			VmSize: pulumi.String("STANDARD_D4"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
@@ -656,7 +777,110 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	"fmt"
+
+	batch "github.com/pulumi/pulumi-azure-native/sdk/go/azure/batch"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := batch.NewPool(ctx, "pool", &batch.PoolArgs{
+			AccountName: pulumi.String("sampleacct"),
+			DeploymentConfiguration: &batch.DeploymentConfigurationArgs{
+				VirtualMachineConfiguration: &batch.VirtualMachineConfigurationArgs{
+					DataDisks: batch.DataDiskArray{
+						&batch.DataDiskArgs{
+							Caching:            "ReadWrite",
+							DiskSizeGB:         pulumi.Int(30),
+							Lun:                pulumi.Int(0),
+							StorageAccountType: "Premium_LRS",
+						},
+						&batch.DataDiskArgs{
+							Caching:            "None",
+							DiskSizeGB:         pulumi.Int(200),
+							Lun:                pulumi.Int(1),
+							StorageAccountType: "Standard_LRS",
+						},
+					},
+					DiskEncryptionConfiguration: &batch.DiskEncryptionConfigurationArgs{
+						Targets: batch.DiskEncryptionTargetArray{
+							"OsDisk",
+							"TemporaryDisk",
+						},
+					},
+					ImageReference: &batch.ImageReferenceArgs{
+						Offer:     pulumi.String("WindowsServer"),
+						Publisher: pulumi.String("MicrosoftWindowsServer"),
+						Sku:       pulumi.String("2016-Datacenter-SmallDisk"),
+						Version:   pulumi.String("latest"),
+					},
+					LicenseType:    pulumi.String("Windows_Server"),
+					NodeAgentSkuId: pulumi.String("batch.node.windows amd64"),
+					NodePlacementConfiguration: &batch.NodePlacementConfigurationArgs{
+						Policy: "Zonal",
+					},
+					WindowsConfiguration: &batch.WindowsConfigurationArgs{
+						EnableAutomaticUpdates: pulumi.Bool(false),
+					},
+				},
+			},
+			NetworkConfiguration: &batch.NetworkConfigurationArgs{
+				EndpointConfiguration: &batch.PoolEndpointConfigurationArgs{
+					InboundNatPools: batch.InboundNatPoolArray{
+						&batch.InboundNatPoolArgs{
+							BackendPort:            pulumi.Int(12001),
+							FrontendPortRangeEnd:   pulumi.Int(15100),
+							FrontendPortRangeStart: pulumi.Int(15000),
+							Name:                   pulumi.String("testnat"),
+							NetworkSecurityGroupRules: batch.NetworkSecurityGroupRuleArray{
+								&batch.NetworkSecurityGroupRuleArgs{
+									Access:              "Allow",
+									Priority:            pulumi.Int(150),
+									SourceAddressPrefix: pulumi.String("192.100.12.45"),
+									SourcePortRanges: pulumi.StringArray{
+										pulumi.String("1"),
+										pulumi.String("2"),
+									},
+								},
+								&batch.NetworkSecurityGroupRuleArgs{
+									Access:              "Deny",
+									Priority:            pulumi.Int(3500),
+									SourceAddressPrefix: pulumi.String("*"),
+									SourcePortRanges: pulumi.StringArray{
+										pulumi.String("*"),
+									},
+								},
+							},
+							Protocol: "TCP",
+						},
+					},
+				},
+			},
+			PoolName:          pulumi.String("testpool"),
+			ResourceGroupName: pulumi.String("default-azurebatch-japaneast"),
+			ScaleSettings: &batch.ScaleSettingsArgs{
+				AutoScale: &batch.AutoScaleSettingsArgs{
+					EvaluationInterval: pulumi.String("PT5M"),
+					Formula:            pulumi.String(fmt.Sprintf("%v%v", "$", "TargetDedicatedNodes=1")),
+				},
+			},
+			VmSize: pulumi.String("STANDARD_D4"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
@@ -1599,7 +1823,7 @@ func main() {
 			},
 			Identity: &batch.BatchPoolIdentityArgs{
 				Type: "UserAssigned",
-				UserAssignedIdentities: pulumi.MapMap{
+				UserAssignedIdentities: pulumi.AnyMap{
 					"/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.ManagedIdentity/userAssignedIdentities/id1": nil,
 					"/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.ManagedIdentity/userAssignedIdentities/id2": nil,
 				},
@@ -1809,12 +2033,12 @@ func main() {
 						&batch.VMExtensionArgs{
 							AutoUpgradeMinorVersion: pulumi.Bool(true),
 							Name:                    pulumi.String("batchextension1"),
-							ProtectedSettings: pulumi.StringMap{
-								"protectedSettingsKey": pulumi.String("protectedSettingsValue"),
+							ProtectedSettings: pulumi.Any{
+								ProtectedSettingsKey: "protectedSettingsValue",
 							},
 							Publisher: pulumi.String("Microsoft.Azure.Security.Monitoring"),
-							Settings: pulumi.StringMap{
-								"settingsKey": pulumi.String("settingsValue"),
+							Settings: pulumi.Any{
+								SettingsKey: "settingsValue",
 							},
 							Type:               pulumi.String("SecurityMonitoringForLinux"),
 							TypeHandlerVersion: pulumi.String("1.0"),
