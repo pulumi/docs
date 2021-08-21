@@ -15,7 +15,7 @@ The Pulumi Automation API is a programmatic interface for running Pulumi program
 Automation API allows you to embed Pulumi within your application code, making it easy to create custom experiences on top of Pulumi that are tailored to your use-case, domain, and team.
 
 {{% notes type="info" %}}
-Automation API requires the Pulumi CLI to be installed and available on your `PATH` environment variable.
+Automation API requires the Pulumi CLI to be installed and available in your `PATH` environment variable.
 {{% /notes %}}
 
 ## Getting started
