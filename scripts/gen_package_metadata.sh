@@ -10,11 +10,8 @@ METADATA_OUT_DIR=${1:-}
 # The second argument is the override for the package for which this script will generate the metadata.
 # Must not be passed without the "pulumi-" prefix.
 REPO_OVERRIDE=${2:-}
-# Pass a 3nd argument (value does not matter) to indicate that the resource plugin must be installed.
-# The latest release tag (not beta or dev) is used as the version to install the plugin.
-INSTALL_RESOURCE_PLUGIN=${3:-}
-# Pass a 4th argument to override the resource plugin version installed by this script.
-INSTALL_RESOURCE_PLUGIN_VERSION=${4:-}
+# Pass a 3rd argument to override the package version used by this script.
+VERSION=${3:-}
 
 TOOL_RESDOCGEN="./tools/resourcedocsgen/"
 
@@ -29,6 +26,13 @@ DEFAULT_PKGS=(
     "google-native"
 )
 
+featured_packages=(
+  "aws"
+  "azure-native"
+  "google-native"
+  "kubernetes"
+)
+
 generate_metadata() {
     provider=$1
     repository="pulumi-${provider}"
@@ -40,8 +44,8 @@ generate_metadata() {
     plugin_version=$(git describe --tags "$(git rev-list --max-count=1 --tags --not --tags='*-dev')")
     # If a plugin version was passed, then use that.
     # The provider repo will also be checked out at that version below.
-    if [ -n "${INSTALL_RESOURCE_PLUGIN_VERSION:-}" ]; then
-        plugin_version=${INSTALL_RESOURCE_PLUGIN_VERSION}
+    if [ -n "${VERSION:-}" ]; then
+        plugin_version=${VERSION}
     elif [[ ${plugin_version} = sdk* ]]; then
         plugin_version=${plugin_version:4}
     elif [[ ${plugin_version} = provider* ]]; then
@@ -62,10 +66,8 @@ generate_metadata() {
     else
         echo "Could not find a previously generated schema.json file. Will generate schema..."
 
-        if [ -n "${INSTALL_RESOURCE_PLUGIN:-}" ]; then
-            echo "Installing resource plugin for ${provider}. Version: ${plugin_version}"
-            pulumi plugin install resource "${provider}" "${plugin_version}"
-        fi
+        echo "Installing resource plugin for ${provider}. Version: ${plugin_version}"
+        pulumi plugin install resource "${provider}" "${plugin_version}"
 
         pushd "../${repository}"
         make generate_schema
@@ -81,8 +83,8 @@ generate_metadata() {
     go build -o "${HOME}/go/bin/resourcedocsgen" .
 
     featured=""
-    if [[ "${provider}" == "aws" ]] || [[ "${provider}" == "azure-native" ]] || [[ "${provider}" == "google-native" ]] || [[ "${provider}" == "kubernetes" ]]; then
-      featured="--featured"
+    if [[ "${featured_packages[*]}" =~ ${provider} ]]; then
+        featured="--featured"
     fi
 
     resourcedocsgen metadata \

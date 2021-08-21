@@ -7,12 +7,65 @@
 # also this script to commit each provider's docs changes automatically.
 GIT_COMMIT=${1:-}
 
-source ./scripts/packages.sh
-
-if [ -z "${PKGS:-}" ]; then
-  echo "PKGS is not set. Exiting..."
-  exit 1
-fi
+# Adding a new repo to this list? Ensure that the repo's `Makefile` has a target called
+# `generate_schema`.
+REPOS=(
+    "aiven"
+    "akamai"
+    "alicloud"
+    "auth0"
+    "aws"
+    "azure"
+    "azure-native"
+    "azuread"
+    "azuredevops"
+    "civo"
+    "cloudamqp"
+    "cloudflare"
+    "cloudinit"
+    "consul"
+    "datadog"
+    "digitalocean"
+    "dnsimple"
+    "docker"
+    "equinix-metal"
+    "eks"
+    "fastly"
+    "f5bigip"
+    "gcp"
+    "google-native"
+    "github"
+    "gitlab"
+    "hcloud"
+    "kafka"
+    "kubernetes"
+    "keycloak"
+    "kong"
+    "linode"
+    "mailgun"
+    "mongodbatlas"
+    "mysql"
+    "newrelic"
+    "ns1"
+    "okta"
+    "openstack"
+    "opsgenie"
+    "packet"
+    "pagerduty"
+    "postgresql"
+    "rabbitmq"
+    "rancher2"
+    "random"
+    "signalfx"
+    "spotinst"
+    "splunk"
+    "vsphere"
+    "wavefront"
+    "tls"
+    "vault"
+    "venafi"
+    "yandex"
+)
 
 branch=$(git rev-parse --abbrev-ref HEAD)
 if [ "$branch" = "master" ]; then
@@ -20,13 +73,13 @@ if [ "$branch" = "master" ]; then
     exit 1
 fi
 
-for PKG in "${PKGS[@]}" ; do \
-    ./scripts/gen_resource_docs.sh "${PKG}" true
+for REPO in "${REPOS[@]}" ; do \
+    ./scripts/gen_resource_docs.sh "$REPO" true
 
     if [ -n "${GIT_COMMIT:-}" ]; then
-      git add "./content/docs/reference/pkg/${PKG}/*"
-      git add "./content/docs/reference/pkg/${PKG}/**/*"
-      git commit -am "Generate resource docs for pulumi-${PKG}"
+      git add "./content/docs/reference/pkg/${REPO}/*"
+      git add "./content/docs/reference/pkg/${REPO}/**/*"
+      git commit -am "Generate resource docs for pulumi-${REPO}"
     fi
 done
 
