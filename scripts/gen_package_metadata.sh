@@ -76,6 +76,7 @@ generate_metadata() {
 
     echo "Running package metadata generator from schema for ${provider}..."
     pushd ${TOOL_RESDOCGEN}
+
     go mod tidy
     go build -o "${HOME}/go/bin/resourcedocsgen" .
 
@@ -83,11 +84,13 @@ generate_metadata() {
     if [[ "${provider}" == "aws" ]] || [[ "${provider}" == "azure-native" ]] || [[ "${provider}" == "google-native" ]] || [[ "${provider}" == "kubernetes" ]]; then
       featured="--featured"
     fi
+
     resourcedocsgen metadata \
       --metadataOutDir "${METADATA_OUT_DIR}" \
-      -s "${SCHEMA_FILE}" \
+      --schemaFile "${SCHEMA_FILE}" \
       --version "${plugin_version}" \
       --logtostderr ${featured} || exit 3
+
     popd
 
     echo "Done generating package metadata for ${provider}"
