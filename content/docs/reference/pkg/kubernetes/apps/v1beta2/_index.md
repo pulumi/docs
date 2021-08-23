@@ -30,6 +30,6 @@ Explore the resources and functions of the kubernetes.apps/v1beta2 module.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>3.6.2</dd>
+	<dd>3.6.3</dd>
 </dl>
 
