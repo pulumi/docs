@@ -1,0 +1,10 @@
+id = "cam-jung"
+name = "Cam Jung"
+title = "Enterprise Account Executive"
+weight = 1
+
+status = "active"
+
+[social]
+twitter = "Killa___Cam"
+linkedin = "cameronjung"

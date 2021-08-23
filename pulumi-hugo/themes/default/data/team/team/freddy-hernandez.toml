@@ -3,7 +3,7 @@ name = "Freddy Hernandez"
 title = "Director of Operations"
 weight = 1
 
-status = "active"
+status = "inactive"
 
 [social]
 linkedin = "hernandezfreddy"
