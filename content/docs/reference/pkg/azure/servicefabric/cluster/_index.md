@@ -529,7 +529,8 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterupgradepolicy">Cluster<wbr>Upgrade<wbr>Policy<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}A `upgrade_policy` block as defined below.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -721,7 +722,8 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterupgradepolicy">Cluster<wbr>Upgrade<wbr>Policy<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}A `upgrade_policy` block as defined below.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -913,7 +915,8 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterupgradepolicy">Cluster<wbr>Upgrade<wbr>Policy<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}A `upgrade_policy` block as defined below.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1105,7 +1108,8 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterupgradepolicy">Cluster<wbr>Upgrade<wbr>Policy<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}A `upgrade_policy` block as defined below.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1535,7 +1539,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterupgradepolicy">Cluster<wbr>Upgrade<wbr>Policy<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}A `upgrade_policy` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vmimage_csharp">
 <a href="#state_vmimage_csharp" style="color: inherit; text-decoration: inherit;">Vm<wbr>Image</a>
@@ -1736,7 +1741,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterupgradepolicy">Cluster<wbr>Upgrade<wbr>Policy<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}A `upgrade_policy` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vmimage_go">
 <a href="#state_vmimage_go" style="color: inherit; text-decoration: inherit;">Vm<wbr>Image</a>
@@ -1937,7 +1943,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterupgradepolicy">Cluster<wbr>Upgrade<wbr>Policy<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}A `upgrade_policy` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vmimage_nodejs">
 <a href="#state_vmimage_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Image</a>
@@ -2138,7 +2145,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterupgradepolicy">Cluster<wbr>Upgrade<wbr>Policy<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}A `upgrade_policy` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vm_image_python">
 <a href="#state_vm_image_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>image</a>

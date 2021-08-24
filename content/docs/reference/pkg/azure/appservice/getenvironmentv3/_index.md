@@ -256,6 +256,15 @@ The following output properties are available:
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-"
             title="">
+        <span id="allownewprivateendpointconnections_csharp">
+<a href="#allownewprivateendpointconnections_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>New<wbr>Private<wbr>Endpoint<wbr>Connections</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Are new Private Endpoint Connections allowed.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="clustersettings_csharp">
 <a href="#clustersettings_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Settings</a>
 </span>
@@ -265,6 +274,33 @@ The following output properties are available:
     <dd>{{% md %}}A `cluster_setting` block as defined below.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="dedicatedhostcount_csharp">
+<a href="#dedicatedhostcount_csharp" style="color: inherit; text-decoration: inherit;">Dedicated<wbr>Host<wbr>Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of Dedicated Hosts used by this ASEv3.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="dnssuffix_csharp">
+<a href="#dnssuffix_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Suffix</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}the DNS suffix for this App Service Environment V3.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="externalinboundipaddresses_csharp">
+<a href="#externalinboundipaddresses_csharp" style="color: inherit; text-decoration: inherit;">External<wbr>Inbound<wbr>Ip<wbr>Addresses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}The external outbound IP addresses of the App Service Environment V3.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
 </span>
@@ -272,6 +308,51 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="inboundnetworkdependencies_csharp">
+<a href="#inboundnetworkdependencies_csharp" style="color: inherit; text-decoration: inherit;">Inbound<wbr>Network<wbr>Dependencies</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getenvironmentv3inboundnetworkdependency">List&lt;Get<wbr>Environment<wbr>V3Inbound<wbr>Network<wbr>Dependency&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}An Inbound Network Dependencies block as defined below.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="internalinboundipaddresses_csharp">
+<a href="#internalinboundipaddresses_csharp" style="color: inherit; text-decoration: inherit;">Internal<wbr>Inbound<wbr>Ip<wbr>Addresses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}The internal outbound IP addresses of the App Service Environment V3.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="internalloadbalancingmode_csharp">
+<a href="#internalloadbalancingmode_csharp" style="color: inherit; text-decoration: inherit;">Internal<wbr>Load<wbr>Balancing<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Internal Load Balancing Mode of this ASEv3.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="ipssladdresscount_csharp">
+<a href="#ipssladdresscount_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Ssl<wbr>Address<wbr>Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of IP SSL addresses reserved for the App Service Environment V3.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="linuxoutboundipaddresses_csharp">
+<a href="#linuxoutboundipaddresses_csharp" style="color: inherit; text-decoration: inherit;">Linux<wbr>Outbound<wbr>Ip<wbr>Addresses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}The list of Outbound IP Addresses of Linux based Apps in this App Service Environment V3.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_csharp">
@@ -325,11 +406,37 @@ The following output properties are available:
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags assigned to the v3 App Service Environment.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="windowsoutboundipaddresses_csharp">
+<a href="#windowsoutboundipaddresses_csharp" style="color: inherit; text-decoration: inherit;">Windows<wbr>Outbound<wbr>Ip<wbr>Addresses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}Outbound addresses of Windows based Apps in this App Service Environment V3.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="zoneredundant_csharp">
+<a href="#zoneredundant_csharp" style="color: inherit; text-decoration: inherit;">Zone<wbr>Redundant</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-"
+            title="">
+        <span id="allownewprivateendpointconnections_go">
+<a href="#allownewprivateendpointconnections_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>New<wbr>Private<wbr>Endpoint<wbr>Connections</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Are new Private Endpoint Connections allowed.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="clustersettings_go">
 <a href="#clustersettings_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Settings</a>
@@ -340,6 +447,33 @@ The following output properties are available:
     <dd>{{% md %}}A `cluster_setting` block as defined below.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="dedicatedhostcount_go">
+<a href="#dedicatedhostcount_go" style="color: inherit; text-decoration: inherit;">Dedicated<wbr>Host<wbr>Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of Dedicated Hosts used by this ASEv3.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="dnssuffix_go">
+<a href="#dnssuffix_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Suffix</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}the DNS suffix for this App Service Environment V3.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="externalinboundipaddresses_go">
+<a href="#externalinboundipaddresses_go" style="color: inherit; text-decoration: inherit;">External<wbr>Inbound<wbr>Ip<wbr>Addresses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}The external outbound IP addresses of the App Service Environment V3.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
 </span>
@@ -347,6 +481,51 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="inboundnetworkdependencies_go">
+<a href="#inboundnetworkdependencies_go" style="color: inherit; text-decoration: inherit;">Inbound<wbr>Network<wbr>Dependencies</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getenvironmentv3inboundnetworkdependency">[]Get<wbr>Environment<wbr>V3Inbound<wbr>Network<wbr>Dependency</a></span>
+    </dt>
+    <dd>{{% md %}}An Inbound Network Dependencies block as defined below.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="internalinboundipaddresses_go">
+<a href="#internalinboundipaddresses_go" style="color: inherit; text-decoration: inherit;">Internal<wbr>Inbound<wbr>Ip<wbr>Addresses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}The internal outbound IP addresses of the App Service Environment V3.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="internalloadbalancingmode_go">
+<a href="#internalloadbalancingmode_go" style="color: inherit; text-decoration: inherit;">Internal<wbr>Load<wbr>Balancing<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Internal Load Balancing Mode of this ASEv3.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="ipssladdresscount_go">
+<a href="#ipssladdresscount_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Ssl<wbr>Address<wbr>Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of IP SSL addresses reserved for the App Service Environment V3.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="linuxoutboundipaddresses_go">
+<a href="#linuxoutboundipaddresses_go" style="color: inherit; text-decoration: inherit;">Linux<wbr>Outbound<wbr>Ip<wbr>Addresses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}The list of Outbound IP Addresses of Linux based Apps in this App Service Environment V3.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_go">
@@ -400,11 +579,37 @@ The following output properties are available:
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A mapping of tags assigned to the v3 App Service Environment.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="windowsoutboundipaddresses_go">
+<a href="#windowsoutboundipaddresses_go" style="color: inherit; text-decoration: inherit;">Windows<wbr>Outbound<wbr>Ip<wbr>Addresses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}Outbound addresses of Windows based Apps in this App Service Environment V3.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="zoneredundant_go">
+<a href="#zoneredundant_go" style="color: inherit; text-decoration: inherit;">Zone<wbr>Redundant</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-"
+            title="">
+        <span id="allownewprivateendpointconnections_nodejs">
+<a href="#allownewprivateendpointconnections_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>New<wbr>Private<wbr>Endpoint<wbr>Connections</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Are new Private Endpoint Connections allowed.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="clustersettings_nodejs">
 <a href="#clustersettings_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Settings</a>
@@ -415,6 +620,33 @@ The following output properties are available:
     <dd>{{% md %}}A `cluster_setting` block as defined below.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="dedicatedhostcount_nodejs">
+<a href="#dedicatedhostcount_nodejs" style="color: inherit; text-decoration: inherit;">dedicated<wbr>Host<wbr>Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The number of Dedicated Hosts used by this ASEv3.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="dnssuffix_nodejs">
+<a href="#dnssuffix_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Suffix</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}the DNS suffix for this App Service Environment V3.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="externalinboundipaddresses_nodejs">
+<a href="#externalinboundipaddresses_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Inbound<wbr>Ip<wbr>Addresses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}The external outbound IP addresses of the App Service Environment V3.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
@@ -422,6 +654,51 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="inboundnetworkdependencies_nodejs">
+<a href="#inboundnetworkdependencies_nodejs" style="color: inherit; text-decoration: inherit;">inbound<wbr>Network<wbr>Dependencies</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getenvironmentv3inboundnetworkdependency">Get<wbr>Environment<wbr>V3Inbound<wbr>Network<wbr>Dependency[]</a></span>
+    </dt>
+    <dd>{{% md %}}An Inbound Network Dependencies block as defined below.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="internalinboundipaddresses_nodejs">
+<a href="#internalinboundipaddresses_nodejs" style="color: inherit; text-decoration: inherit;">internal<wbr>Inbound<wbr>Ip<wbr>Addresses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}The internal outbound IP addresses of the App Service Environment V3.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="internalloadbalancingmode_nodejs">
+<a href="#internalloadbalancingmode_nodejs" style="color: inherit; text-decoration: inherit;">internal<wbr>Load<wbr>Balancing<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Internal Load Balancing Mode of this ASEv3.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="ipssladdresscount_nodejs">
+<a href="#ipssladdresscount_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Ssl<wbr>Address<wbr>Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The number of IP SSL addresses reserved for the App Service Environment V3.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="linuxoutboundipaddresses_nodejs">
+<a href="#linuxoutboundipaddresses_nodejs" style="color: inherit; text-decoration: inherit;">linux<wbr>Outbound<wbr>Ip<wbr>Addresses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}The list of Outbound IP Addresses of Linux based Apps in this App Service Environment V3.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_nodejs">
@@ -475,11 +752,37 @@ The following output properties are available:
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags assigned to the v3 App Service Environment.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="windowsoutboundipaddresses_nodejs">
+<a href="#windowsoutboundipaddresses_nodejs" style="color: inherit; text-decoration: inherit;">windows<wbr>Outbound<wbr>Ip<wbr>Addresses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}Outbound addresses of Windows based Apps in this App Service Environment V3.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="zoneredundant_nodejs">
+<a href="#zoneredundant_nodejs" style="color: inherit; text-decoration: inherit;">zone<wbr>Redundant</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-"
+            title="">
+        <span id="allow_new_private_endpoint_connections_python">
+<a href="#allow_new_private_endpoint_connections_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>new_<wbr>private_<wbr>endpoint_<wbr>connections</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Are new Private Endpoint Connections allowed.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="cluster_settings_python">
 <a href="#cluster_settings_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>settings</a>
@@ -490,6 +793,33 @@ The following output properties are available:
     <dd>{{% md %}}A `cluster_setting` block as defined below.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="dedicated_host_count_python">
+<a href="#dedicated_host_count_python" style="color: inherit; text-decoration: inherit;">dedicated_<wbr>host_<wbr>count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of Dedicated Hosts used by this ASEv3.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="dns_suffix_python">
+<a href="#dns_suffix_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>suffix</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}the DNS suffix for this App Service Environment V3.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="external_inbound_ip_addresses_python">
+<a href="#external_inbound_ip_addresses_python" style="color: inherit; text-decoration: inherit;">external_<wbr>inbound_<wbr>ip_<wbr>addresses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}The external outbound IP addresses of the App Service Environment V3.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
@@ -497,6 +827,51 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="inbound_network_dependencies_python">
+<a href="#inbound_network_dependencies_python" style="color: inherit; text-decoration: inherit;">inbound_<wbr>network_<wbr>dependencies</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getenvironmentv3inboundnetworkdependency">Sequence[Get<wbr>Environment<wbr>V3Inbound<wbr>Network<wbr>Dependency]</a></span>
+    </dt>
+    <dd>{{% md %}}An Inbound Network Dependencies block as defined below.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="internal_inbound_ip_addresses_python">
+<a href="#internal_inbound_ip_addresses_python" style="color: inherit; text-decoration: inherit;">internal_<wbr>inbound_<wbr>ip_<wbr>addresses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}The internal outbound IP addresses of the App Service Environment V3.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="internal_load_balancing_mode_python">
+<a href="#internal_load_balancing_mode_python" style="color: inherit; text-decoration: inherit;">internal_<wbr>load_<wbr>balancing_<wbr>mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Internal Load Balancing Mode of this ASEv3.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="ip_ssl_address_count_python">
+<a href="#ip_ssl_address_count_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>ssl_<wbr>address_<wbr>count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of IP SSL addresses reserved for the App Service Environment V3.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="linux_outbound_ip_addresses_python">
+<a href="#linux_outbound_ip_addresses_python" style="color: inherit; text-decoration: inherit;">linux_<wbr>outbound_<wbr>ip_<wbr>addresses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}The list of Outbound IP Addresses of Linux based Apps in this App Service Environment V3.
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_python">
@@ -550,7 +925,24 @@ The following output properties are available:
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags assigned to the v3 App Service Environment.
-{{% /md %}}</dd></dl>
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="windows_outbound_ip_addresses_python">
+<a href="#windows_outbound_ip_addresses_python" style="color: inherit; text-decoration: inherit;">windows_<wbr>outbound_<wbr>ip_<wbr>addresses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}Outbound addresses of Windows based Apps in this App Service Environment V3.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="zone_redundant_python">
+<a href="#zone_redundant_python" style="color: inherit; text-decoration: inherit;">zone_<wbr>redundant</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -648,6 +1040,134 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The value for the Cluster Setting.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="getenvironmentv3inboundnetworkdependency">Get<wbr>Environment<wbr>V3Inbound<wbr>Network<wbr>Dependency</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="description_csharp">
+<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A short description of the purpose of the network traffic.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="ipaddresses_csharp">
+<a href="#ipaddresses_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Addresses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A list of IP addresses that network traffic will originate from in CIDR notation.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="ports_csharp">
+<a href="#ports_csharp" style="color: inherit; text-decoration: inherit;">Ports</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}The ports that network traffic will arrive to the App Service Environment V3 on.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="description_go">
+<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A short description of the purpose of the network traffic.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="ipaddresses_go">
+<a href="#ipaddresses_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Addresses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}A list of IP addresses that network traffic will originate from in CIDR notation.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="ports_go">
+<a href="#ports_go" style="color: inherit; text-decoration: inherit;">Ports</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}The ports that network traffic will arrive to the App Service Environment V3 on.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="description_nodejs">
+<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A short description of the purpose of the network traffic.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="ipaddresses_nodejs">
+<a href="#ipaddresses_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Addresses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}A list of IP addresses that network traffic will originate from in CIDR notation.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="ports_nodejs">
+<a href="#ports_nodejs" style="color: inherit; text-decoration: inherit;">ports</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}The ports that network traffic will arrive to the App Service Environment V3 on.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="description_python">
+<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}A short description of the purpose of the network traffic.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="ip_addresses_python">
+<a href="#ip_addresses_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>addresses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}A list of IP addresses that network traffic will originate from in CIDR notation.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="ports_python">
+<a href="#ports_python" style="color: inherit; text-decoration: inherit;">ports</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}The ports that network traffic will arrive to the App Service Environment V3 on.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

@@ -32,7 +32,7 @@ const exampleRegistryScopeMap = new azure.containerservice.RegistryScopeMap("exa
     resourceGroupName: azurerm_resource_group.rg.name,
     actions: [
         "repositories/repo1/content/read",
-        "repositories/repo1/content/create",
+        "repositories/repo1/content/write",
     ],
 });
 const exampleRegistryToken = new azure.containerservice.RegistryToken("exampleRegistryToken", {
@@ -60,7 +60,7 @@ example_registry_scope_map = azure.containerservice.RegistryScopeMap("exampleReg
     resource_group_name=azurerm_resource_group["rg"]["name"],
     actions=[
         "repositories/repo1/content/read",
-        "repositories/repo1/content/create",
+        "repositories/repo1/content/write",
     ])
 example_registry_token = azure.containerservice.RegistryToken("exampleRegistryToken",
     container_registry_name=azurerm_container_registry["acr"]["name"],
@@ -98,7 +98,7 @@ class MyStack : Stack
             Actions = 
             {
                 "repositories/repo1/content/read",
-                "repositories/repo1/content/create",
+                "repositories/repo1/content/write",
             },
         });
         var exampleRegistryToken = new Azure.ContainerService.RegistryToken("exampleRegistryToken", new Azure.ContainerService.RegistryTokenArgs
@@ -146,7 +146,7 @@ func main() {
 			ResourceGroupName:     pulumi.Any(azurerm_resource_group.Rg.Name),
 			Actions: pulumi.StringArray{
 				pulumi.String("repositories/repo1/content/read"),
-				pulumi.String("repositories/repo1/content/create"),
+				pulumi.String("repositories/repo1/content/write"),
 			},
 		})
 		if err != nil {

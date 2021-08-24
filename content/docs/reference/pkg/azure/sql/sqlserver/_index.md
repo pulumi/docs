@@ -228,6 +228,7 @@ const exampleSqlServer = new azure.sql.SqlServer("exampleSqlServer", {
               <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
               <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
               <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+              <span class="nx">threat_detection_policy</span><span class="p">:</span> <span class="nx">Optional[SqlServerThreatDetectionPolicyArgs]</span> = None<span class="p">,</span>
               <span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">SqlServer</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
@@ -446,6 +447,15 @@ The SqlServer resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="threatdetectionpolicy_csharp">
+<a href="#threatdetectionpolicy_csharp" style="color: inherit; text-decoration: inherit;">Threat<wbr>Detection<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sqlserverthreatdetectionpolicy">Sql<wbr>Server<wbr>Threat<wbr>Detection<wbr>Policy<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Threat detection policy configuration. The `threat_detection_policy` block supports fields documented below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -540,6 +550,15 @@ The SqlServer resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="threatdetectionpolicy_go">
+<a href="#threatdetectionpolicy_go" style="color: inherit; text-decoration: inherit;">Threat<wbr>Detection<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sqlserverthreatdetectionpolicy">Sql<wbr>Server<wbr>Threat<wbr>Detection<wbr>Policy<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Threat detection policy configuration. The `threat_detection_policy` block supports fields documented below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -634,6 +653,15 @@ The SqlServer resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="threatdetectionpolicy_nodejs">
+<a href="#threatdetectionpolicy_nodejs" style="color: inherit; text-decoration: inherit;">threat<wbr>Detection<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sqlserverthreatdetectionpolicy">Sql<wbr>Server<wbr>Threat<wbr>Detection<wbr>Policy<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Threat detection policy configuration. The `threat_detection_policy` block supports fields documented below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -728,6 +756,15 @@ The SqlServer resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="threat_detection_policy_python">
+<a href="#threat_detection_policy_python" style="color: inherit; text-decoration: inherit;">threat_<wbr>detection_<wbr>policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sqlserverthreatdetectionpolicy">Sql<wbr>Server<wbr>Threat<wbr>Detection<wbr>Policy<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Threat detection policy configuration. The `threat_detection_policy` block supports fields documented below.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -848,6 +885,7 @@ Get an existing SqlServer resource's state with the given name, ID, and optional
         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
+        <span class="nx">threat_detection_policy</span><span class="p">:</span> <span class="nx">Optional[SqlServerThreatDetectionPolicyArgs]</span> = None<span class="p">,</span>
         <span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> SqlServer</code></pre></div>
 {{% /choosable %}}
 
@@ -1051,6 +1089,15 @@ The following state arguments are supported:
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_threatdetectionpolicy_csharp">
+<a href="#state_threatdetectionpolicy_csharp" style="color: inherit; text-decoration: inherit;">Threat<wbr>Detection<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sqlserverthreatdetectionpolicy">Sql<wbr>Server<wbr>Threat<wbr>Detection<wbr>Policy<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Threat detection policy configuration. The `threat_detection_policy` block supports fields documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_version_csharp">
 <a href="#state_version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
 </span>
@@ -1152,6 +1199,15 @@ The following state arguments are supported:
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_threatdetectionpolicy_go">
+<a href="#state_threatdetectionpolicy_go" style="color: inherit; text-decoration: inherit;">Threat<wbr>Detection<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sqlserverthreatdetectionpolicy">Sql<wbr>Server<wbr>Threat<wbr>Detection<wbr>Policy<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Threat detection policy configuration. The `threat_detection_policy` block supports fields documented below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_version_go">
@@ -1257,6 +1313,15 @@ The following state arguments are supported:
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_threatdetectionpolicy_nodejs">
+<a href="#state_threatdetectionpolicy_nodejs" style="color: inherit; text-decoration: inherit;">threat<wbr>Detection<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sqlserverthreatdetectionpolicy">Sql<wbr>Server<wbr>Threat<wbr>Detection<wbr>Policy<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Threat detection policy configuration. The `threat_detection_policy` block supports fields documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_version_nodejs">
 <a href="#state_version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
@@ -1360,6 +1425,15 @@ The following state arguments are supported:
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_threat_detection_policy_python">
+<a href="#state_threat_detection_policy_python" style="color: inherit; text-decoration: inherit;">threat_<wbr>detection_<wbr>policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sqlserverthreatdetectionpolicy">Sql<wbr>Server<wbr>Threat<wbr>Detection<wbr>Policy<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Threat detection policy configuration. The `threat_detection_policy` block supports fields documented below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_version_python">
 <a href="#state_version_python" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
@@ -1408,7 +1482,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}(Optional)  Specifies the access key to use for the auditing storage account.
+    <dd>{{% md %}}Specifies the identifier key of the Threat Detection audit storage account. Required if `state` is `Enabled`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageaccountaccesskeyissecondary_csharp">
@@ -1426,7 +1500,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}(Optional) Specifies the blob storage endpoint (e.g. https://MyAccount.blob.core.windows.net).
+    <dd>{{% md %}}Specifies the blob storage endpoint (e.g. `https://MyAccount.blob.core.windows.net`). This blob storage will hold all Threat Detection audit logs. Required if `state` is `Enabled`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1457,7 +1531,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}(Optional)  Specifies the access key to use for the auditing storage account.
+    <dd>{{% md %}}Specifies the identifier key of the Threat Detection audit storage account. Required if `state` is `Enabled`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageaccountaccesskeyissecondary_go">
@@ -1475,7 +1549,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}(Optional) Specifies the blob storage endpoint (e.g. https://MyAccount.blob.core.windows.net).
+    <dd>{{% md %}}Specifies the blob storage endpoint (e.g. `https://MyAccount.blob.core.windows.net`). This blob storage will hold all Threat Detection audit logs. Required if `state` is `Enabled`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1506,7 +1580,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}(Optional)  Specifies the access key to use for the auditing storage account.
+    <dd>{{% md %}}Specifies the identifier key of the Threat Detection audit storage account. Required if `state` is `Enabled`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageaccountaccesskeyissecondary_nodejs">
@@ -1524,7 +1598,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}(Optional) Specifies the blob storage endpoint (e.g. https://MyAccount.blob.core.windows.net).
+    <dd>{{% md %}}Specifies the blob storage endpoint (e.g. `https://MyAccount.blob.core.windows.net`). This blob storage will hold all Threat Detection audit logs. Required if `state` is `Enabled`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1555,7 +1629,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}(Optional)  Specifies the access key to use for the auditing storage account.
+    <dd>{{% md %}}Specifies the identifier key of the Threat Detection audit storage account. Required if `state` is `Enabled`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storage_account_access_key_is_secondary_python">
@@ -1573,7 +1647,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}(Optional) Specifies the blob storage endpoint (e.g. https://MyAccount.blob.core.windows.net).
+    <dd>{{% md %}}Specifies the blob storage endpoint (e.g. `https://MyAccount.blob.core.windows.net`). This blob storage will hold all Threat Detection audit logs. Required if `state` is `Enabled`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -1700,6 +1774,276 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Tenant ID for the Service Principal associated with the Identity of this SQL Server.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="sqlserverthreatdetectionpolicy">Sql<wbr>Server<wbr>Threat<wbr>Detection<wbr>Policy</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="disabledalerts_csharp">
+<a href="#disabledalerts_csharp" style="color: inherit; text-decoration: inherit;">Disabled<wbr>Alerts</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}Specifies a list of alerts which should be disabled. Possible values include `Access_Anomaly`, `Data_Exfiltration`, `Sql_Injection`, `Sql_Injection_Vulnerability` and `Unsafe_Action"`,.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="emailaccountadmins_csharp">
+<a href="#emailaccountadmins_csharp" style="color: inherit; text-decoration: inherit;">Email<wbr>Account<wbr>Admins</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Should the account administrators be emailed when this alert is triggered?
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="emailaddresses_csharp">
+<a href="#emailaddresses_csharp" style="color: inherit; text-decoration: inherit;">Email<wbr>Addresses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A list of email addresses which alerts should be sent to.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="retentiondays_csharp">
+<a href="#retentiondays_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Days</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Specifies the number of days to keep in the Threat Detection audit logs.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_csharp">
+<a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The State of the Policy. Possible values are `Enabled`, `Disabled` or `New`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="storageaccountaccesskey_csharp">
+<a href="#storageaccountaccesskey_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Access<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the identifier key of the Threat Detection audit storage account. Required if `state` is `Enabled`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="storageendpoint_csharp">
+<a href="#storageendpoint_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Endpoint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the blob storage endpoint (e.g. `https://MyAccount.blob.core.windows.net`). This blob storage will hold all Threat Detection audit logs. Required if `state` is `Enabled`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="disabledalerts_go">
+<a href="#disabledalerts_go" style="color: inherit; text-decoration: inherit;">Disabled<wbr>Alerts</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}Specifies a list of alerts which should be disabled. Possible values include `Access_Anomaly`, `Data_Exfiltration`, `Sql_Injection`, `Sql_Injection_Vulnerability` and `Unsafe_Action"`,.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="emailaccountadmins_go">
+<a href="#emailaccountadmins_go" style="color: inherit; text-decoration: inherit;">Email<wbr>Account<wbr>Admins</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Should the account administrators be emailed when this alert is triggered?
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="emailaddresses_go">
+<a href="#emailaddresses_go" style="color: inherit; text-decoration: inherit;">Email<wbr>Addresses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}A list of email addresses which alerts should be sent to.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="retentiondays_go">
+<a href="#retentiondays_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>Days</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Specifies the number of days to keep in the Threat Detection audit logs.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_go">
+<a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The State of the Policy. Possible values are `Enabled`, `Disabled` or `New`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="storageaccountaccesskey_go">
+<a href="#storageaccountaccesskey_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Access<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the identifier key of the Threat Detection audit storage account. Required if `state` is `Enabled`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="storageendpoint_go">
+<a href="#storageendpoint_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Endpoint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the blob storage endpoint (e.g. `https://MyAccount.blob.core.windows.net`). This blob storage will hold all Threat Detection audit logs. Required if `state` is `Enabled`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="disabledalerts_nodejs">
+<a href="#disabledalerts_nodejs" style="color: inherit; text-decoration: inherit;">disabled<wbr>Alerts</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}Specifies a list of alerts which should be disabled. Possible values include `Access_Anomaly`, `Data_Exfiltration`, `Sql_Injection`, `Sql_Injection_Vulnerability` and `Unsafe_Action"`,.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="emailaccountadmins_nodejs">
+<a href="#emailaccountadmins_nodejs" style="color: inherit; text-decoration: inherit;">email<wbr>Account<wbr>Admins</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Should the account administrators be emailed when this alert is triggered?
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="emailaddresses_nodejs">
+<a href="#emailaddresses_nodejs" style="color: inherit; text-decoration: inherit;">email<wbr>Addresses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}A list of email addresses which alerts should be sent to.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="retentiondays_nodejs">
+<a href="#retentiondays_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Days</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Specifies the number of days to keep in the Threat Detection audit logs.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_nodejs">
+<a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The State of the Policy. Possible values are `Enabled`, `Disabled` or `New`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="storageaccountaccesskey_nodejs">
+<a href="#storageaccountaccesskey_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Access<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the identifier key of the Threat Detection audit storage account. Required if `state` is `Enabled`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="storageendpoint_nodejs">
+<a href="#storageendpoint_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Endpoint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the blob storage endpoint (e.g. `https://MyAccount.blob.core.windows.net`). This blob storage will hold all Threat Detection audit logs. Required if `state` is `Enabled`.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="disabled_alerts_python">
+<a href="#disabled_alerts_python" style="color: inherit; text-decoration: inherit;">disabled_<wbr>alerts</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}Specifies a list of alerts which should be disabled. Possible values include `Access_Anomaly`, `Data_Exfiltration`, `Sql_Injection`, `Sql_Injection_Vulnerability` and `Unsafe_Action"`,.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="email_account_admins_python">
+<a href="#email_account_admins_python" style="color: inherit; text-decoration: inherit;">email_<wbr>account_<wbr>admins</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Should the account administrators be emailed when this alert is triggered?
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="email_addresses_python">
+<a href="#email_addresses_python" style="color: inherit; text-decoration: inherit;">email_<wbr>addresses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}A list of email addresses which alerts should be sent to.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="retention_days_python">
+<a href="#retention_days_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>days</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Specifies the number of days to keep in the Threat Detection audit logs.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_python">
+<a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The State of the Policy. Possible values are `Enabled`, `Disabled` or `New`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="storage_account_access_key_python">
+<a href="#storage_account_access_key_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>access_<wbr>key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specifies the identifier key of the Threat Detection audit storage account. Required if `state` is `Enabled`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="storage_endpoint_python">
+<a href="#storage_endpoint_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>endpoint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specifies the blob storage endpoint (e.g. `https://MyAccount.blob.core.windows.net`). This blob storage will hold all Threat Detection audit logs. Required if `state` is `Enabled`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import

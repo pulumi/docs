@@ -61,6 +61,7 @@ const exampleVolume = new azure.netapp.Volume("exampleVolume", {
     protocols: ["NFSv4.1"],
     securityStyle: "Unix",
     storageQuotaInGb: 100,
+    snapshotDirectoryVisible: false,
     createFromSnapshotResourceId: "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/group1/providers/Microsoft.NetApp/netAppAccounts/account1/capacityPools/pool1/volumes/volume1/snapshots/snapshot1",
     dataProtectionReplication: {
         endpointType: "dst",
@@ -113,6 +114,7 @@ example_volume = azure.netapp.Volume("exampleVolume",
     protocols=["NFSv4.1"],
     security_style="Unix",
     storage_quota_in_gb=100,
+    snapshot_directory_visible=False,
     create_from_snapshot_resource_id="/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/group1/providers/Microsoft.NetApp/netAppAccounts/account1/capacityPools/pool1/volumes/volume1/snapshots/snapshot1",
     data_protection_replication=azure.netapp.VolumeDataProtectionReplicationArgs(
         endpoint_type="dst",
@@ -195,6 +197,7 @@ class MyStack : Stack
             },
             SecurityStyle = "Unix",
             StorageQuotaInGb = 100,
+            SnapshotDirectoryVisible = false,
             CreateFromSnapshotResourceId = "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/group1/providers/Microsoft.NetApp/netAppAccounts/account1/capacityPools/pool1/volumes/volume1/snapshots/snapshot1",
             DataProtectionReplication = new Azure.NetApp.Inputs.VolumeDataProtectionReplicationArgs
             {
@@ -288,6 +291,7 @@ func main() {
 			},
 			SecurityStyle:                pulumi.String("Unix"),
 			StorageQuotaInGb:             pulumi.Int(100),
+			SnapshotDirectoryVisible:     pulumi.Bool(false),
 			CreateFromSnapshotResourceId: pulumi.String("/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/group1/providers/Microsoft.NetApp/netAppAccounts/account1/capacityPools/pool1/volumes/volume1/snapshots/snapshot1"),
 			DataProtectionReplication: &netapp.VolumeDataProtectionReplicationArgs{
 				EndpointType:           pulumi.String("dst"),
@@ -329,6 +333,7 @@ func main() {
            <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
            <span class="nx">security_style</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
            <span class="nx">service_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+           <span class="nx">snapshot_directory_visible</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
            <span class="nx">storage_quota_in_gb</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
            <span class="nx">subnet_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
            <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
@@ -588,6 +593,15 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
     <dd>{{% md %}}Volume security style, accepted values are `Unix` or `Ntfs`. If not provided, single-protocol volume is created defaulting to `Unix` if it is `NFSv3` or `NFSv4.1` volume, if `CIFS`, it will default to `Ntfs`. In a dual-protocol volume, if not provided, its value will be `Ntfs`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="snapshotdirectoryvisible_csharp">
+<a href="#snapshotdirectoryvisible_csharp" style="color: inherit; text-decoration: inherit;">Snapshot<wbr>Directory<wbr>Visible</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether the .snapshot (NFS clients) or ~snapshot (SMB clients) path of a volume is visible, default value is true.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span>
@@ -725,6 +739,15 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Volume security style, accepted values are `Unix` or `Ntfs`. If not provided, single-protocol volume is created defaulting to `Unix` if it is `NFSv3` or `NFSv4.1` volume, if `CIFS`, it will default to `Ntfs`. In a dual-protocol volume, if not provided, its value will be `Ntfs`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="snapshotdirectoryvisible_go">
+<a href="#snapshotdirectoryvisible_go" style="color: inherit; text-decoration: inherit;">Snapshot<wbr>Directory<wbr>Visible</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether the .snapshot (NFS clients) or ~snapshot (SMB clients) path of a volume is visible, default value is true.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
@@ -866,6 +889,15 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
     <dd>{{% md %}}Volume security style, accepted values are `Unix` or `Ntfs`. If not provided, single-protocol volume is created defaulting to `Unix` if it is `NFSv3` or `NFSv4.1` volume, if `CIFS`, it will default to `Ntfs`. In a dual-protocol volume, if not provided, its value will be `Ntfs`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="snapshotdirectoryvisible_nodejs">
+<a href="#snapshotdirectoryvisible_nodejs" style="color: inherit; text-decoration: inherit;">snapshot<wbr>Directory<wbr>Visible</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether the .snapshot (NFS clients) or ~snapshot (SMB clients) path of a volume is visible, default value is true.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
@@ -1005,6 +1037,15 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
     <dd>{{% md %}}Volume security style, accepted values are `Unix` or `Ntfs`. If not provided, single-protocol volume is created defaulting to `Unix` if it is `NFSv3` or `NFSv4.1` volume, if `CIFS`, it will default to `Ntfs`. In a dual-protocol volume, if not provided, its value will be `Ntfs`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="snapshot_directory_visible_python">
+<a href="#snapshot_directory_visible_python" style="color: inherit; text-decoration: inherit;">snapshot_<wbr>directory_<wbr>visible</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether the .snapshot (NFS clients) or ~snapshot (SMB clients) path of a volume is visible, default value is true.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
@@ -1134,6 +1175,7 @@ Get an existing Volume resource's state with the given name, ID, and optional ex
         <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">security_style</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">service_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">snapshot_directory_visible</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">storage_quota_in_gb</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
         <span class="nx">subnet_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
@@ -1358,6 +1400,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The target performance of the file system. Valid values include `Premium`, `Standard`, or `Ultra`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_snapshotdirectoryvisible_csharp">
+<a href="#state_snapshotdirectoryvisible_csharp" style="color: inherit; text-decoration: inherit;">Snapshot<wbr>Directory<wbr>Visible</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether the .snapshot (NFS clients) or ~snapshot (SMB clients) path of a volume is visible, default value is true.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_storagequotaingb_csharp">
 <a href="#state_storagequotaingb_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Quota<wbr>In<wbr>Gb</a>
 </span>
@@ -1504,6 +1555,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The target performance of the file system. Valid values include `Premium`, `Standard`, or `Ultra`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_snapshotdirectoryvisible_go">
+<a href="#state_snapshotdirectoryvisible_go" style="color: inherit; text-decoration: inherit;">Snapshot<wbr>Directory<wbr>Visible</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether the .snapshot (NFS clients) or ~snapshot (SMB clients) path of a volume is visible, default value is true.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_storagequotaingb_go">
@@ -1654,6 +1714,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The target performance of the file system. Valid values include `Premium`, `Standard`, or `Ultra`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_snapshotdirectoryvisible_nodejs">
+<a href="#state_snapshotdirectoryvisible_nodejs" style="color: inherit; text-decoration: inherit;">snapshot<wbr>Directory<wbr>Visible</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether the .snapshot (NFS clients) or ~snapshot (SMB clients) path of a volume is visible, default value is true.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_storagequotaingb_nodejs">
 <a href="#state_storagequotaingb_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Quota<wbr>In<wbr>Gb</a>
 </span>
@@ -1800,6 +1869,15 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The target performance of the file system. Valid values include `Premium`, `Standard`, or `Ultra`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_snapshot_directory_visible_python">
+<a href="#state_snapshot_directory_visible_python" style="color: inherit; text-decoration: inherit;">snapshot_<wbr>directory_<wbr>visible</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether the .snapshot (NFS clients) or ~snapshot (SMB clients) path of a volume is visible, default value is true.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_storage_quota_in_gb_python">

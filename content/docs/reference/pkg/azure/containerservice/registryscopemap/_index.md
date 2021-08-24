@@ -32,7 +32,7 @@ const exampleRegistryScopeMap = new azure.containerservice.RegistryScopeMap("exa
     resourceGroupName: azurerm_resource_group.rg.name,
     actions: [
         "repositories/repo1/content/read",
-        "repositories/repo1/content/create",
+        "repositories/repo1/content/write",
     ],
 });
 ```
@@ -55,7 +55,7 @@ example_registry_scope_map = azure.containerservice.RegistryScopeMap("exampleReg
     resource_group_name=azurerm_resource_group["rg"]["name"],
     actions=[
         "repositories/repo1/content/read",
-        "repositories/repo1/content/create",
+        "repositories/repo1/content/write",
     ])
 ```
 ```csharp
@@ -89,7 +89,7 @@ class MyStack : Stack
             Actions = 
             {
                 "repositories/repo1/content/read",
-                "repositories/repo1/content/create",
+                "repositories/repo1/content/write",
             },
         });
     }
@@ -131,7 +131,7 @@ func main() {
 			ResourceGroupName:     pulumi.Any(azurerm_resource_group.Rg.Name),
 			Actions: pulumi.StringArray{
 				pulumi.String("repositories/repo1/content/read"),
-				pulumi.String("repositories/repo1/content/create"),
+				pulumi.String("repositories/repo1/content/write"),
 			},
 		})
 		if err != nil {
