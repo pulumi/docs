@@ -10,8 +10,8 @@ describe("www.pulumi.com", () => {
             // Checking the computed background-color value validates that the CSS bundle
             // was properly loaded and applied.
             cy.get(".header-container")
-                .invoke("css", "position")
-                .should("equal", "sticky");
+                .invoke("css", "background-color")
+                .should("equal", "rgb(255, 255, 255)");
         });
 
         it("loads and applies JavaScript", () => {
