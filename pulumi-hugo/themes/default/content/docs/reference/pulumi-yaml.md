@@ -5,7 +5,7 @@ meta_desc: A list of configuration settings for the Pulumi project file.
 menu:
   reference:
     name: Project Configuration
-    weight: 4
+    weight: 5
 ---
 
 The `Pulumi.yaml` project file specifies metadata about your project, such as the project name, applicable runtime for your program, and other higher-level information.

@@ -280,6 +280,7 @@ any announcements or changes.
 }
 ```
 
-## Related Blogs
+## Additional Resources
 
 * [Managing Github Webhooks with Pulumi]({{< ref "/blog/managing-github-webhooks-with-pulumi" >}})
+* [Pulumi Service REST API]({{< relref "/docs/reference/service-rest-api" >}})

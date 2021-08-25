@@ -59,5 +59,6 @@ Integrate Pulumi with your current continuous delivery pipeline. Build your own 
 
 * [CI/CD Integration Assistant]({{< relref "/docs/intro/console/ci-cd-integration-assistant" >}})
 * [Continuous Delivery]({{< relref "/docs/guides/continuous-delivery" >}})
+* [Pulumi Service REST API]({{< relref "/docs/reference/service-rest-api" >}})
 * [Webhooks]({{< relref "/docs/intro/console/webhooks" >}})
 * ["Deploy with Pulumi" Button]({{< relref "/docs/intro/console/pulumi-button" >}})

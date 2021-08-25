@@ -5,7 +5,7 @@ meta_desc: Documentation and examples for working with cloud providers and other
 menu:
   reference:
     name: API Reference
-    weight: 2
+    weight: 1
 ---
 
 Pulumi offers APIs for working with a wide variety of cloud platforms, as well as
