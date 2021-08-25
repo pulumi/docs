@@ -43,7 +43,7 @@
 }
 
 .header-container {
-    @apply z-50 bg-white py-6;
+    @apply sticky z-50 bg-white py-6;
     top: -1px;
 
     @screen lg {
@@ -51,7 +51,7 @@
     }
 
     &.is-pinned {
-        @apply sticky shadow;
+        @apply shadow;
     }
 
     .logo-container {
