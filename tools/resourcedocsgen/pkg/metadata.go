@@ -14,11 +14,13 @@ const (
 	// pre-release and can undergo changes before it goes GA.
 	PackageStatusPublicPreview PackageStatus = "public_preview"
 
-	PackageCategoryCloud    PackageCategory = "Cloud"
-	PackageCategoryDatabase PackageCategory = "Database"
-	PackageCategoryNetwork  PackageCategory = "Network"
-	PackageCategoryUtility  PackageCategory = "Utility"
-	PackageCategoryVCS      PackageCategory = "Version Control System"
+	PackageCategoryCloud          PackageCategory = "Cloud"
+	PackageCategoryDatabase       PackageCategory = "Database"
+	PackageCategoryInfrastructure PackageCategory = "Infrastructure"
+	PackageCategoryMonitoring     PackageCategory = "Monitoring"
+	PackageCategoryNetwork        PackageCategory = "Network"
+	PackageCategoryUtility        PackageCategory = "Utility"
+	PackageCategoryVCS            PackageCategory = "Version Control System"
 )
 
 // PackageMeta represents the metadata of a package to be published
