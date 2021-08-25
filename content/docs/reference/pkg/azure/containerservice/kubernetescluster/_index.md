@@ -224,6 +224,7 @@ export const kubeConfig = exampleKubernetesCluster.kubeConfigRaw;
                       <span class="nx">network_profile</span><span class="p">:</span> <span class="nx">Optional[KubernetesClusterNetworkProfileArgs]</span> = None<span class="p">,</span>
                       <span class="nx">node_resource_group</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                       <span class="nx">private_cluster_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+                      <span class="nx">private_cluster_public_fqdn_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
                       <span class="nx">private_dns_zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                       <span class="nx">private_link_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
                       <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -549,6 +550,15 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
     <dd>{{% md %}}Should this Kubernetes Cluster have its API server only exposed on internal IP addresses? This provides a Private IP Address for the Kubernetes API on the Virtual Network where the Kubernetes Cluster is located. Defaults to `false`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="privateclusterpublicfqdnenabled_csharp">
+<a href="#privateclusterpublicfqdnenabled_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Cluster<wbr>Public<wbr>Fqdn<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether a Public FQDN for this Private Cluster should be added. Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="privatednszoneid_csharp">
 <a href="#privatednszoneid_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Dns<wbr>Zone<wbr>Id</a>
 </span>
@@ -801,6 +811,15 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should this Kubernetes Cluster have its API server only exposed on internal IP addresses? This provides a Private IP Address for the Kubernetes API on the Virtual Network where the Kubernetes Cluster is located. Defaults to `false`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="privateclusterpublicfqdnenabled_go">
+<a href="#privateclusterpublicfqdnenabled_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Cluster<wbr>Public<wbr>Fqdn<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether a Public FQDN for this Private Cluster should be added. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privatednszoneid_go">
@@ -1057,6 +1076,15 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
     <dd>{{% md %}}Should this Kubernetes Cluster have its API server only exposed on internal IP addresses? This provides a Private IP Address for the Kubernetes API on the Virtual Network where the Kubernetes Cluster is located. Defaults to `false`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="privateclusterpublicfqdnenabled_nodejs">
+<a href="#privateclusterpublicfqdnenabled_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Cluster<wbr>Public<wbr>Fqdn<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether a Public FQDN for this Private Cluster should be added. Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="privatednszoneid_nodejs">
 <a href="#privatednszoneid_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Dns<wbr>Zone<wbr>Id</a>
 </span>
@@ -1309,6 +1337,15 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should this Kubernetes Cluster have its API server only exposed on internal IP addresses? This provides a Private IP Address for the Kubernetes API on the Virtual Network where the Kubernetes Cluster is located. Defaults to `false`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="private_cluster_public_fqdn_enabled_python">
+<a href="#private_cluster_public_fqdn_enabled_python" style="color: inherit; text-decoration: inherit;">private_<wbr>cluster_<wbr>public_<wbr>fqdn_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether a Public FQDN for this Private Cluster should be added. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="private_dns_zone_id_python">
@@ -1686,6 +1723,7 @@ Get an existing KubernetesCluster resource's state with the given name, ID, and 
         <span class="nx">network_profile</span><span class="p">:</span> <span class="nx">Optional[KubernetesClusterNetworkProfileArgs]</span> = None<span class="p">,</span>
         <span class="nx">node_resource_group</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">private_cluster_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
+        <span class="nx">private_cluster_public_fqdn_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">private_dns_zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">private_fqdn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">private_link_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
@@ -2031,6 +2069,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Should this Kubernetes Cluster have its API server only exposed on internal IP addresses? This provides a Private IP Address for the Kubernetes API on the Virtual Network where the Kubernetes Cluster is located. Defaults to `false`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_privateclusterpublicfqdnenabled_csharp">
+<a href="#state_privateclusterpublicfqdnenabled_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Cluster<wbr>Public<wbr>Fqdn<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether a Public FQDN for this Private Cluster should be added. Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_privatednszoneid_csharp">
 <a href="#state_privatednszoneid_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Dns<wbr>Zone<wbr>Id</a>
 </span>
@@ -2337,6 +2384,15 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should this Kubernetes Cluster have its API server only exposed on internal IP addresses? This provides a Private IP Address for the Kubernetes API on the Virtual Network where the Kubernetes Cluster is located. Defaults to `false`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_privateclusterpublicfqdnenabled_go">
+<a href="#state_privateclusterpublicfqdnenabled_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Cluster<wbr>Public<wbr>Fqdn<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether a Public FQDN for this Private Cluster should be added. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_privatednszoneid_go">
@@ -2647,6 +2703,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Should this Kubernetes Cluster have its API server only exposed on internal IP addresses? This provides a Private IP Address for the Kubernetes API on the Virtual Network where the Kubernetes Cluster is located. Defaults to `false`. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_privateclusterpublicfqdnenabled_nodejs">
+<a href="#state_privateclusterpublicfqdnenabled_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Cluster<wbr>Public<wbr>Fqdn<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether a Public FQDN for this Private Cluster should be added. Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_privatednszoneid_nodejs">
 <a href="#state_privatednszoneid_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Dns<wbr>Zone<wbr>Id</a>
 </span>
@@ -2953,6 +3018,15 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should this Kubernetes Cluster have its API server only exposed on internal IP addresses? This provides a Private IP Address for the Kubernetes API on the Virtual Network where the Kubernetes Cluster is located. Defaults to `false`. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_private_cluster_public_fqdn_enabled_python">
+<a href="#state_private_cluster_public_fqdn_enabled_python" style="color: inherit; text-decoration: inherit;">private_<wbr>cluster_<wbr>public_<wbr>fqdn_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether a Public FQDN for this Private Cluster should be added. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_private_dns_zone_id_python">
@@ -5064,6 +5138,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The type of Node Pool which should be created. Possible values are `AvailabilitySet` and `VirtualMachineScaleSets`. Defaults to `VirtualMachineScaleSets`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="ultrassdenabled_csharp">
+<a href="#ultrassdenabled_csharp" style="color: inherit; text-decoration: inherit;">Ultra<wbr>Ssd<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Used to specify whether the UltraSSD is enabled in the Default Node Pool. Defaults to `false`. See [the documentation](https://docs.microsoft.com/en-us/azure/aks/use-ultra-disks) for more information.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="upgradesettings_csharp">
 <a href="#upgradesettings_csharp" style="color: inherit; text-decoration: inherit;">Upgrade<wbr>Settings</a>
 </span>
@@ -5298,6 +5381,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of Node Pool which should be created. Possible values are `AvailabilitySet` and `VirtualMachineScaleSets`. Defaults to `VirtualMachineScaleSets`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ultrassdenabled_go">
+<a href="#ultrassdenabled_go" style="color: inherit; text-decoration: inherit;">Ultra<wbr>Ssd<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Used to specify whether the UltraSSD is enabled in the Default Node Pool. Defaults to `false`. See [the documentation](https://docs.microsoft.com/en-us/azure/aks/use-ultra-disks) for more information.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="upgradesettings_go">
@@ -5536,6 +5628,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The type of Node Pool which should be created. Possible values are `AvailabilitySet` and `VirtualMachineScaleSets`. Defaults to `VirtualMachineScaleSets`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="ultrassdenabled_nodejs">
+<a href="#ultrassdenabled_nodejs" style="color: inherit; text-decoration: inherit;">ultra<wbr>Ssd<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Used to specify whether the UltraSSD is enabled in the Default Node Pool. Defaults to `false`. See [the documentation](https://docs.microsoft.com/en-us/azure/aks/use-ultra-disks) for more information.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="upgradesettings_nodejs">
 <a href="#upgradesettings_nodejs" style="color: inherit; text-decoration: inherit;">upgrade<wbr>Settings</a>
 </span>
@@ -5770,6 +5871,15 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of Node Pool which should be created. Possible values are `AvailabilitySet` and `VirtualMachineScaleSets`. Defaults to `VirtualMachineScaleSets`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="ultra_ssd_enabled_python">
+<a href="#ultra_ssd_enabled_python" style="color: inherit; text-decoration: inherit;">ultra_<wbr>ssd_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Used to specify whether the UltraSSD is enabled in the Default Node Pool. Defaults to `false`. See [the documentation](https://docs.microsoft.com/en-us/azure/aks/use-ultra-disks) for more information.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="upgrade_settings_python">

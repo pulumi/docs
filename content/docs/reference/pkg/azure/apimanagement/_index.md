@@ -38,6 +38,7 @@ Explore the resources and functions of the azure.apimanagement module.
     <li><a href="identityprovidertwitter" title="IdentityProviderTwitter"><span class="symbol resource"></span>IdentityProviderTwitter</a></li>
     <li><a href="logger" title="Logger"><span class="symbol resource"></span>Logger</a></li>
     <li><a href="namedvalue" title="NamedValue"><span class="symbol resource"></span>NamedValue</a></li>
+    <li><a href="notificationrecipientemail" title="NotificationRecipientEmail"><span class="symbol resource"></span>NotificationRecipientEmail</a></li>
     <li><a href="openidconnectprovider" title="OpenIdConnectProvider"><span class="symbol resource"></span>OpenIdConnectProvider</a></li>
     <li><a href="policy" title="Policy"><span class="symbol resource"></span>Policy</a></li>
     <li><a href="product" title="Product"><span class="symbol resource"></span>Product</a></li>
@@ -72,6 +73,6 @@ Explore the resources and functions of the azure.apimanagement module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/hashicorp/terraform-provider-azurerm).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.14.0</dd>
+	<dd>4.15.0</dd>
 </dl>
 

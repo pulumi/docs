@@ -45,7 +45,6 @@ class MyStack : Stack
         });
         var exampleFrontdoor = new Azure.FrontDoor.Frontdoor("exampleFrontdoor", new Azure.FrontDoor.FrontdoorArgs
         {
-            Location = "EastUS2",
             ResourceGroupName = exampleResourceGroup.Name,
             EnforceBackendPoolsCertificateNameCheck = false,
             RoutingRules = 
@@ -144,7 +143,6 @@ func main() {
 			return err
 		}
 		_, err = frontdoor.NewFrontdoor(ctx, "exampleFrontdoor", &frontdoor.FrontdoorArgs{
-			Location:                                pulumi.String("EastUS2"),
 			ResourceGroupName:                       exampleResourceGroup.Name,
 			EnforceBackendPoolsCertificateNameCheck: pulumi.Bool(false),
 			RoutingRules: frontdoor.FrontdoorRoutingRuleArray{
@@ -218,7 +216,6 @@ import pulumi_azure as azure
 
 example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
 example_frontdoor = azure.frontdoor.Frontdoor("exampleFrontdoor",
-    location="EastUS2",
     resource_group_name=example_resource_group.name,
     enforce_backend_pools_certificate_name_check=False,
     routing_rules=[azure.frontdoor.FrontdoorRoutingRuleArgs(
@@ -270,7 +267,6 @@ import * as azure from "@pulumi/azure";
 
 const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
 const exampleFrontdoor = new azure.frontdoor.Frontdoor("exampleFrontdoor", {
-    location: "EastUS2",
     resourceGroupName: exampleResourceGroup.name,
     enforceBackendPoolsCertificateNameCheck: false,
     routingRules: [{
@@ -572,7 +568,7 @@ The Frontdoor resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created
+    <dd>{{% md %}}The `location` argument is deprecated and is now always set to `global`.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Due to the service&#39;s API changing &#39;location&#39; must now always be set to &#39;Global&#39; for new resources, however if the Front Door service was created prior 2020/03/10 it may continue to exist in a specific current location{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
@@ -693,7 +689,7 @@ The Frontdoor resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created
+    <dd>{{% md %}}The `location` argument is deprecated and is now always set to `global`.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Due to the service&#39;s API changing &#39;location&#39; must now always be set to &#39;Global&#39; for new resources, however if the Front Door service was created prior 2020/03/10 it may continue to exist in a specific current location{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
@@ -814,7 +810,7 @@ The Frontdoor resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created
+    <dd>{{% md %}}The `location` argument is deprecated and is now always set to `global`.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Due to the service&#39;s API changing &#39;location&#39; must now always be set to &#39;Global&#39; for new resources, however if the Front Door service was created prior 2020/03/10 it may continue to exist in a specific current location{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
@@ -935,7 +931,7 @@ The Frontdoor resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created
+    <dd>{{% md %}}The `location` argument is deprecated and is now always set to `global`.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Due to the service&#39;s API changing &#39;location&#39; must now always be set to &#39;Global&#39; for new resources, however if the Front Door service was created prior 2020/03/10 it may continue to exist in a specific current location{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
@@ -1585,7 +1581,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created
+    <dd>{{% md %}}The `location` argument is deprecated and is now always set to `global`.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Due to the service&#39;s API changing &#39;location&#39; must now always be set to &#39;Global&#39; for new resources, however if the Front Door service was created prior 2020/03/10 it may continue to exist in a specific current location{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
@@ -1777,7 +1773,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created
+    <dd>{{% md %}}The `location` argument is deprecated and is now always set to `global`.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Due to the service&#39;s API changing &#39;location&#39; must now always be set to &#39;Global&#39; for new resources, however if the Front Door service was created prior 2020/03/10 it may continue to exist in a specific current location{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
@@ -1969,7 +1965,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created
+    <dd>{{% md %}}The `location` argument is deprecated and is now always set to `global`.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Due to the service&#39;s API changing &#39;location&#39; must now always be set to &#39;Global&#39; for new resources, however if the Front Door service was created prior 2020/03/10 it may continue to exist in a specific current location{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
@@ -2161,7 +2157,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created
+    <dd>{{% md %}}The `location` argument is deprecated and is now always set to `global`.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Due to the service&#39;s API changing &#39;location&#39; must now always be set to &#39;Global&#39; for new resources, however if the Front Door service was created prior 2020/03/10 it may continue to exist in a specific current location{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
@@ -3887,6 +3883,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Specifies the name of the Backend Pool to forward the incoming traffic to.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="cacheduration_csharp">
+<a href="#cacheduration_csharp" style="color: inherit; text-decoration: inherit;">Cache<wbr>Duration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specify the caching duration (in ISO8601 notation e.g. `P1DT2H` for 1 day and 2 hours). Needs to be greater than 0 and smaller than 365 days. `cache_duration` works only in combination with `cache_enabled` set to `true`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="cacheenabled_csharp">
 <a href="#cacheenabled_csharp" style="color: inherit; text-decoration: inherit;">Cache<wbr>Enabled</a>
 </span>
@@ -3902,7 +3907,16 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Defines cache behaviour in relation to query string parameters. Valid options are `StripAll` or `StripNone`. Defaults to `StripAll`.
+    <dd>{{% md %}}Defines cache behaviour in relation to query string parameters. Valid options are `StripAll`, `StripAllExcept`, `StripOnly` or `StripNone`. Defaults to `StripAll`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="cachequeryparameters_csharp">
+<a href="#cachequeryparameters_csharp" style="color: inherit; text-decoration: inherit;">Cache<wbr>Query<wbr>Parameters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}Specify query parameters (array). Works only in combination with `cache_query_parameter_strip_directive` set to `StripAllExcept` or `StripOnly`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cacheusedynamiccompression_csharp">
@@ -3945,6 +3959,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Specifies the name of the Backend Pool to forward the incoming traffic to.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="cacheduration_go">
+<a href="#cacheduration_go" style="color: inherit; text-decoration: inherit;">Cache<wbr>Duration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specify the caching duration (in ISO8601 notation e.g. `P1DT2H` for 1 day and 2 hours). Needs to be greater than 0 and smaller than 365 days. `cache_duration` works only in combination with `cache_enabled` set to `true`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="cacheenabled_go">
 <a href="#cacheenabled_go" style="color: inherit; text-decoration: inherit;">Cache<wbr>Enabled</a>
 </span>
@@ -3960,7 +3983,16 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Defines cache behaviour in relation to query string parameters. Valid options are `StripAll` or `StripNone`. Defaults to `StripAll`.
+    <dd>{{% md %}}Defines cache behaviour in relation to query string parameters. Valid options are `StripAll`, `StripAllExcept`, `StripOnly` or `StripNone`. Defaults to `StripAll`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="cachequeryparameters_go">
+<a href="#cachequeryparameters_go" style="color: inherit; text-decoration: inherit;">Cache<wbr>Query<wbr>Parameters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}Specify query parameters (array). Works only in combination with `cache_query_parameter_strip_directive` set to `StripAllExcept` or `StripOnly`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cacheusedynamiccompression_go">
@@ -4003,6 +4035,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Specifies the name of the Backend Pool to forward the incoming traffic to.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="cacheduration_nodejs">
+<a href="#cacheduration_nodejs" style="color: inherit; text-decoration: inherit;">cache<wbr>Duration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specify the caching duration (in ISO8601 notation e.g. `P1DT2H` for 1 day and 2 hours). Needs to be greater than 0 and smaller than 365 days. `cache_duration` works only in combination with `cache_enabled` set to `true`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="cacheenabled_nodejs">
 <a href="#cacheenabled_nodejs" style="color: inherit; text-decoration: inherit;">cache<wbr>Enabled</a>
 </span>
@@ -4018,7 +4059,16 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Defines cache behaviour in relation to query string parameters. Valid options are `StripAll` or `StripNone`. Defaults to `StripAll`.
+    <dd>{{% md %}}Defines cache behaviour in relation to query string parameters. Valid options are `StripAll`, `StripAllExcept`, `StripOnly` or `StripNone`. Defaults to `StripAll`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="cachequeryparameters_nodejs">
+<a href="#cachequeryparameters_nodejs" style="color: inherit; text-decoration: inherit;">cache<wbr>Query<wbr>Parameters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}Specify query parameters (array). Works only in combination with `cache_query_parameter_strip_directive` set to `StripAllExcept` or `StripOnly`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cacheusedynamiccompression_nodejs">
@@ -4061,6 +4111,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Specifies the name of the Backend Pool to forward the incoming traffic to.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="cache_duration_python">
+<a href="#cache_duration_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>duration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specify the caching duration (in ISO8601 notation e.g. `P1DT2H` for 1 day and 2 hours). Needs to be greater than 0 and smaller than 365 days. `cache_duration` works only in combination with `cache_enabled` set to `true`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="cache_enabled_python">
 <a href="#cache_enabled_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>enabled</a>
 </span>
@@ -4076,7 +4135,16 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Defines cache behaviour in relation to query string parameters. Valid options are `StripAll` or `StripNone`. Defaults to `StripAll`.
+    <dd>{{% md %}}Defines cache behaviour in relation to query string parameters. Valid options are `StripAll`, `StripAllExcept`, `StripOnly` or `StripNone`. Defaults to `StripAll`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="cache_query_parameters_python">
+<a href="#cache_query_parameters_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>query_<wbr>parameters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}Specify query parameters (array). Works only in combination with `cache_query_parameter_strip_directive` set to `StripAllExcept` or `StripOnly`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cache_use_dynamic_compression_python">

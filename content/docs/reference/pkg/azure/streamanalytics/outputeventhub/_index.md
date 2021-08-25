@@ -245,6 +245,7 @@ const exampleOutputEventHub = new azure.streamanalytics.OutputEventHub("exampleO
                    <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
                    <span class="nx">eventhub_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                    <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                   <span class="nx">property_columns</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
                    <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                    <span class="nx">serialization</span><span class="p">:</span> <span class="nx">Optional[OutputEventHubSerializationArgs]</span> = None<span class="p">,</span>
                    <span class="nx">servicebus_namespace</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -450,6 +451,15 @@ The OutputEventHub resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Stream Output. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="propertycolumns_csharp">
+<a href="#propertycolumns_csharp" style="color: inherit; text-decoration: inherit;">Property<wbr>Columns</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A list of property columns to add to the Event Hub output.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -526,6 +536,15 @@ The OutputEventHub resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Stream Output. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="propertycolumns_go">
+<a href="#propertycolumns_go" style="color: inherit; text-decoration: inherit;">Property<wbr>Columns</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}A list of property columns to add to the Event Hub output.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -602,6 +621,15 @@ The OutputEventHub resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Stream Output. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="propertycolumns_nodejs">
+<a href="#propertycolumns_nodejs" style="color: inherit; text-decoration: inherit;">property<wbr>Columns</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}A list of property columns to add to the Event Hub output.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -678,6 +706,15 @@ The OutputEventHub resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Stream Output. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="property_columns_python">
+<a href="#property_columns_python" style="color: inherit; text-decoration: inherit;">property_<wbr>columns</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}A list of property columns to add to the Event Hub output.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -754,6 +791,7 @@ Get an existing OutputEventHub resource's state with the given name, ID, and opt
         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
         <span class="nx">eventhub_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">property_columns</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
         <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">serialization</span><span class="p">:</span> <span class="nx">Optional[OutputEventHubSerializationArgs]</span> = None<span class="p">,</span>
         <span class="nx">servicebus_namespace</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -890,6 +928,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The name of the Stream Output. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_propertycolumns_csharp">
+<a href="#state_propertycolumns_csharp" style="color: inherit; text-decoration: inherit;">Property<wbr>Columns</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A list of property columns to add to the Event Hub output.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_resourcegroupname_csharp">
 <a href="#state_resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
 </span>
@@ -964,6 +1011,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Stream Output. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_propertycolumns_go">
+<a href="#state_propertycolumns_go" style="color: inherit; text-decoration: inherit;">Property<wbr>Columns</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}A list of property columns to add to the Event Hub output.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_go">
@@ -1042,6 +1098,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The name of the Stream Output. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_propertycolumns_nodejs">
+<a href="#state_propertycolumns_nodejs" style="color: inherit; text-decoration: inherit;">property<wbr>Columns</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}A list of property columns to add to the Event Hub output.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_resourcegroupname_nodejs">
 <a href="#state_resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
@@ -1116,6 +1181,15 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Stream Output. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_property_columns_python">
+<a href="#state_property_columns_python" style="color: inherit; text-decoration: inherit;">property_<wbr>columns</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}A list of property columns to add to the Event Hub output.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resource_group_name_python">

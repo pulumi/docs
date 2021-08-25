@@ -521,6 +521,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-"
             title="">
+        <span id="callbackurl_csharp">
+<a href="#callbackurl_csharp" style="color: inherit; text-decoration: inherit;">Callback<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The URL for the workflow trigger
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
 </span>
@@ -532,6 +541,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-"
+            title="">
+        <span id="callbackurl_go">
+<a href="#callbackurl_go" style="color: inherit; text-decoration: inherit;">Callback<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The URL for the workflow trigger
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -545,6 +563,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-"
             title="">
+        <span id="callbackurl_nodejs">
+<a href="#callbackurl_nodejs" style="color: inherit; text-decoration: inherit;">callback<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The URL for the workflow trigger
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
@@ -556,6 +583,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-"
+            title="">
+        <span id="callback_url_python">
+<a href="#callback_url_python" style="color: inherit; text-decoration: inherit;">callback_<wbr>url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The URL for the workflow trigger
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -582,6 +618,7 @@ Get an existing TriggerHttpRequest resource's state with the given name, ID, and
 <span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
         <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">callback_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">logic_app_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">method</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -699,6 +736,15 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="state_callbackurl_csharp">
+<a href="#state_callbackurl_csharp" style="color: inherit; text-decoration: inherit;">Callback<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The URL for the workflow trigger
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_logicappid_csharp">
 <a href="#state_logicappid_csharp" style="color: inherit; text-decoration: inherit;">Logic<wbr>App<wbr>Id</a>
 </span>
@@ -747,6 +793,15 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="state_callbackurl_go">
+<a href="#state_callbackurl_go" style="color: inherit; text-decoration: inherit;">Callback<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The URL for the workflow trigger
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_logicappid_go">
 <a href="#state_logicappid_go" style="color: inherit; text-decoration: inherit;">Logic<wbr>App<wbr>Id</a>
@@ -797,6 +852,15 @@ The following state arguments are supported:
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="state_callbackurl_nodejs">
+<a href="#state_callbackurl_nodejs" style="color: inherit; text-decoration: inherit;">callback<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The URL for the workflow trigger
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_logicappid_nodejs">
 <a href="#state_logicappid_nodejs" style="color: inherit; text-decoration: inherit;">logic<wbr>App<wbr>Id</a>
 </span>
@@ -845,6 +909,15 @@ The following state arguments are supported:
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="state_callback_url_python">
+<a href="#state_callback_url_python" style="color: inherit; text-decoration: inherit;">callback_<wbr>url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The URL for the workflow trigger
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_logic_app_id_python">
 <a href="#state_logic_app_id_python" style="color: inherit; text-decoration: inherit;">logic_<wbr>app_<wbr>id</a>

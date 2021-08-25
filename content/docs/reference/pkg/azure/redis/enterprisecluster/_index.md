@@ -330,7 +330,7 @@ The EnterpriseCluster resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags which should be assigned to the Redis Enterprise Cluster. Changing this forces a new Redis Enterprise Cluster to be created.
+    <dd>{{% md %}}A mapping of tags which should be assigned to the Redis Enterprise Cluster.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zones_csharp">
@@ -397,7 +397,7 @@ The EnterpriseCluster resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags which should be assigned to the Redis Enterprise Cluster. Changing this forces a new Redis Enterprise Cluster to be created.
+    <dd>{{% md %}}A mapping of tags which should be assigned to the Redis Enterprise Cluster.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zones_go">
@@ -464,7 +464,7 @@ The EnterpriseCluster resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags which should be assigned to the Redis Enterprise Cluster. Changing this forces a new Redis Enterprise Cluster to be created.
+    <dd>{{% md %}}A mapping of tags which should be assigned to the Redis Enterprise Cluster.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zones_nodejs">
@@ -531,7 +531,7 @@ The EnterpriseCluster resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags which should be assigned to the Redis Enterprise Cluster. Changing this forces a new Redis Enterprise Cluster to be created.
+    <dd>{{% md %}}A mapping of tags which should be assigned to the Redis Enterprise Cluster.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zones_python">
@@ -868,7 +868,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags which should be assigned to the Redis Enterprise Cluster. Changing this forces a new Redis Enterprise Cluster to be created.
+    <dd>{{% md %}}A mapping of tags which should be assigned to the Redis Enterprise Cluster.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_version_csharp">
@@ -953,7 +953,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags which should be assigned to the Redis Enterprise Cluster. Changing this forces a new Redis Enterprise Cluster to be created.
+    <dd>{{% md %}}A mapping of tags which should be assigned to the Redis Enterprise Cluster.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_version_go">
@@ -1038,7 +1038,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags which should be assigned to the Redis Enterprise Cluster. Changing this forces a new Redis Enterprise Cluster to be created.
+    <dd>{{% md %}}A mapping of tags which should be assigned to the Redis Enterprise Cluster.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_version_nodejs">
@@ -1123,7 +1123,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags which should be assigned to the Redis Enterprise Cluster. Changing this forces a new Redis Enterprise Cluster to be created.
+    <dd>{{% md %}}A mapping of tags which should be assigned to the Redis Enterprise Cluster.
 {{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_version_python">

@@ -609,6 +609,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="resourceid_csharp">
+<a href="#resourceid_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Azure resource ID for the domain service.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="syncowner_csharp">
 <a href="#syncowner_csharp" style="color: inherit; text-decoration: inherit;">Sync<wbr>Owner</a>
 </span>
@@ -653,6 +662,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="resourceid_go">
+<a href="#resourceid_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Azure resource ID for the domain service.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="syncowner_go">
 <a href="#syncowner_go" style="color: inherit; text-decoration: inherit;">Sync<wbr>Owner</a>
@@ -699,6 +717,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="resourceid_nodejs">
+<a href="#resourceid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Azure resource ID for the domain service.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="syncowner_nodejs">
 <a href="#syncowner_nodejs" style="color: inherit; text-decoration: inherit;">sync<wbr>Owner</a>
 </span>
@@ -743,6 +770,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="resource_id_python">
+<a href="#resource_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Azure resource ID for the domain service.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sync_owner_python">
 <a href="#sync_owner_python" style="color: inherit; text-decoration: inherit;">sync_<wbr>owner</a>
@@ -793,6 +829,7 @@ Get an existing Service resource's state with the given name, ID, and optional e
         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">notifications</span><span class="p">:</span> <span class="nx">Optional[ServiceNotificationsArgs]</span> = None<span class="p">,</span>
         <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">resource_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">secure_ldap</span><span class="p">:</span> <span class="nx">Optional[ServiceSecureLdapArgs]</span> = None<span class="p">,</span>
         <span class="nx">security</span><span class="p">:</span> <span class="nx">Optional[ServiceSecurityArgs]</span> = None<span class="p">,</span>
         <span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -984,6 +1021,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The name of the Resource Group in which the Domain Service should exist. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_resourceid_csharp">
+<a href="#state_resourceid_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Azure resource ID for the domain service.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_secureldap_csharp">
 <a href="#state_secureldap_csharp" style="color: inherit; text-decoration: inherit;">Secure<wbr>Ldap</a>
 </span>
@@ -1118,6 +1164,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group in which the Domain Service should exist. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_resourceid_go">
+<a href="#state_resourceid_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Azure resource ID for the domain service.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_secureldap_go">
@@ -1256,6 +1311,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The name of the Resource Group in which the Domain Service should exist. Changing this forces a new resource to be created.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_resourceid_nodejs">
+<a href="#state_resourceid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Azure resource ID for the domain service.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_secureldap_nodejs">
 <a href="#state_secureldap_nodejs" style="color: inherit; text-decoration: inherit;">secure<wbr>Ldap</a>
 </span>
@@ -1390,6 +1454,15 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group in which the Domain Service should exist. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_resource_id_python">
+<a href="#state_resource_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Azure resource ID for the domain service.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_secure_ldap_python">
