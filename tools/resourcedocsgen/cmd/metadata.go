@@ -101,6 +101,7 @@ func packageMetadataCmd() *cobra.Command {
 				PackageStatus: status,
 				Featured:      featured,
 				Native:        mainSpec.Attribution == "",
+				Version:       version,
 			}
 			b, err := yaml.Marshal(pm)
 			if err != nil {
