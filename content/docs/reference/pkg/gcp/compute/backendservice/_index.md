@@ -983,6 +983,7 @@ const _default = new gcp.compute.BackendService("default", {
                    <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                    <span class="nx">protocol</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                    <span class="nx">security_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                   <span class="nx">security_settings</span><span class="p">:</span> <span class="nx">Optional[BackendServiceSecuritySettingsArgs]</span> = None<span class="p">,</span>
                    <span class="nx">session_affinity</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                    <span class="nx">timeout_sec</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
@@ -1366,6 +1367,17 @@ Possible values are `HTTP`, `HTTPS`, `HTTP2`, `TCP`, `SSL`, and `GRPC`.
     <dd>{{% md %}}The security policy associated with this backend service.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="securitysettings_csharp">
+<a href="#securitysettings_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#backendservicesecuritysettings">Backend<wbr>Service<wbr>Security<wbr>Settings<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The security settings that apply to this backend service. This field is applicable to either a regional backend service
+with the service_protocol set to HTTP, HTTPS, or HTTP2, and load_balancing_scheme set to INTERNAL_MANAGED; or a global
+backend service with the load_balancing_scheme set to INTERNAL_SELF_MANAGED.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="sessionaffinity_csharp">
 <a href="#sessionaffinity_csharp" style="color: inherit; text-decoration: inherit;">Session<wbr>Affinity</a>
 </span>
@@ -1641,6 +1653,17 @@ Possible values are `HTTP`, `HTTPS`, `HTTP2`, `TCP`, `SSL`, and `GRPC`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The security policy associated with this backend service.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="securitysettings_go">
+<a href="#securitysettings_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#backendservicesecuritysettings">Backend<wbr>Service<wbr>Security<wbr>Settings<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The security settings that apply to this backend service. This field is applicable to either a regional backend service
+with the service_protocol set to HTTP, HTTPS, or HTTP2, and load_balancing_scheme set to INTERNAL_MANAGED; or a global
+backend service with the load_balancing_scheme set to INTERNAL_SELF_MANAGED.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sessionaffinity_go">
@@ -1920,6 +1943,17 @@ Possible values are `HTTP`, `HTTPS`, `HTTP2`, `TCP`, `SSL`, and `GRPC`.
     <dd>{{% md %}}The security policy associated with this backend service.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="securitysettings_nodejs">
+<a href="#securitysettings_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#backendservicesecuritysettings">Backend<wbr>Service<wbr>Security<wbr>Settings<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The security settings that apply to this backend service. This field is applicable to either a regional backend service
+with the service_protocol set to HTTP, HTTPS, or HTTP2, and load_balancing_scheme set to INTERNAL_MANAGED; or a global
+backend service with the load_balancing_scheme set to INTERNAL_SELF_MANAGED.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="sessionaffinity_nodejs">
 <a href="#sessionaffinity_nodejs" style="color: inherit; text-decoration: inherit;">session<wbr>Affinity</a>
 </span>
@@ -2197,6 +2231,17 @@ Possible values are `HTTP`, `HTTPS`, `HTTP2`, `TCP`, `SSL`, and `GRPC`.
     <dd>{{% md %}}The security policy associated with this backend service.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="security_settings_python">
+<a href="#security_settings_python" style="color: inherit; text-decoration: inherit;">security_<wbr>settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#backendservicesecuritysettings">Backend<wbr>Service<wbr>Security<wbr>Settings<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The security settings that apply to this backend service. This field is applicable to either a regional backend service
+with the service_protocol set to HTTP, HTTPS, or HTTP2, and load_balancing_scheme set to INTERNAL_MANAGED; or a global
+backend service with the load_balancing_scheme set to INTERNAL_SELF_MANAGED.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="session_affinity_python">
 <a href="#session_affinity_python" style="color: inherit; text-decoration: inherit;">session_<wbr>affinity</a>
 </span>
@@ -2421,6 +2466,7 @@ Get an existing BackendService resource's state with the given name, ID, and opt
         <span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">protocol</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">security_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">security_settings</span><span class="p">:</span> <span class="nx">Optional[BackendServiceSecuritySettingsArgs]</span> = None<span class="p">,</span>
         <span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">session_affinity</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">timeout_sec</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">) -&gt;</span> BackendService</code></pre></div>
@@ -2806,6 +2852,17 @@ Possible values are `HTTP`, `HTTPS`, `HTTP2`, `TCP`, `SSL`, and `GRPC`.
     <dd>{{% md %}}The security policy associated with this backend service.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_securitysettings_csharp">
+<a href="#state_securitysettings_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#backendservicesecuritysettings">Backend<wbr>Service<wbr>Security<wbr>Settings<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The security settings that apply to this backend service. This field is applicable to either a regional backend service
+with the service_protocol set to HTTP, HTTPS, or HTTP2, and load_balancing_scheme set to INTERNAL_MANAGED; or a global
+backend service with the load_balancing_scheme set to INTERNAL_SELF_MANAGED.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_selflink_csharp">
 <a href="#state_selflink_csharp" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
 </span>
@@ -3108,6 +3165,17 @@ Possible values are `HTTP`, `HTTPS`, `HTTP2`, `TCP`, `SSL`, and `GRPC`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The security policy associated with this backend service.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_securitysettings_go">
+<a href="#state_securitysettings_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#backendservicesecuritysettings">Backend<wbr>Service<wbr>Security<wbr>Settings<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The security settings that apply to this backend service. This field is applicable to either a regional backend service
+with the service_protocol set to HTTP, HTTPS, or HTTP2, and load_balancing_scheme set to INTERNAL_MANAGED; or a global
+backend service with the load_balancing_scheme set to INTERNAL_SELF_MANAGED.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_selflink_go">
@@ -3414,6 +3482,17 @@ Possible values are `HTTP`, `HTTPS`, `HTTP2`, `TCP`, `SSL`, and `GRPC`.
     <dd>{{% md %}}The security policy associated with this backend service.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_securitysettings_nodejs">
+<a href="#state_securitysettings_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#backendservicesecuritysettings">Backend<wbr>Service<wbr>Security<wbr>Settings<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The security settings that apply to this backend service. This field is applicable to either a regional backend service
+with the service_protocol set to HTTP, HTTPS, or HTTP2, and load_balancing_scheme set to INTERNAL_MANAGED; or a global
+backend service with the load_balancing_scheme set to INTERNAL_SELF_MANAGED.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_selflink_nodejs">
 <a href="#state_selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
 </span>
@@ -3716,6 +3795,17 @@ Possible values are `HTTP`, `HTTPS`, `HTTP2`, `TCP`, `SSL`, and `GRPC`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The security policy associated with this backend service.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_security_settings_python">
+<a href="#state_security_settings_python" style="color: inherit; text-decoration: inherit;">security_<wbr>settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#backendservicesecuritysettings">Backend<wbr>Service<wbr>Security<wbr>Settings<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The security settings that apply to this backend service. This field is applicable to either a regional backend service
+with the service_protocol set to HTTP, HTTPS, or HTTP2, and load_balancing_scheme set to INTERNAL_MANAGED; or a global
+backend service with the load_balancing_scheme set to INTERNAL_SELF_MANAGED.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_self_link_python">
@@ -6832,6 +6922,88 @@ inclusive.
 less than one second are represented with a 0 `seconds` field and a positive
 `nanos` field. Must be from 0 to 999,999,999 inclusive.
 {{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="backendservicesecuritysettings">Backend<wbr>Service<wbr>Security<wbr>Settings</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="clienttlspolicy_csharp">
+<a href="#clienttlspolicy_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Tls<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="subjectaltnames_csharp">
+<a href="#subjectaltnames_csharp" style="color: inherit; text-decoration: inherit;">Subject<wbr>Alt<wbr>Names</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="clienttlspolicy_go">
+<a href="#clienttlspolicy_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Tls<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="subjectaltnames_go">
+<a href="#subjectaltnames_go" style="color: inherit; text-decoration: inherit;">Subject<wbr>Alt<wbr>Names</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="clienttlspolicy_nodejs">
+<a href="#clienttlspolicy_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Tls<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="subjectaltnames_nodejs">
+<a href="#subjectaltnames_nodejs" style="color: inherit; text-decoration: inherit;">subject<wbr>Alt<wbr>Names</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="client_tls_policy_python">
+<a href="#client_tls_policy_python" style="color: inherit; text-decoration: inherit;">client_<wbr>tls_<wbr>policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="subject_alt_names_python">
+<a href="#subject_alt_names_python" style="color: inherit; text-decoration: inherit;">subject_<wbr>alt_<wbr>names</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

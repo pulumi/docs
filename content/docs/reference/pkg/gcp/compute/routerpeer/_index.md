@@ -133,6 +133,115 @@ const peer = new gcp.compute.RouterPeer("peer", {
 
 
 
+### Router Peer Disabled
+
+
+{{< example csharp >}}
+
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var peer = new Gcp.Compute.RouterPeer("peer", new Gcp.Compute.RouterPeerArgs
+        {
+            AdvertisedRoutePriority = 100,
+            Enable = false,
+            Interface = "interface-1",
+            PeerAsn = 65513,
+            PeerIpAddress = "169.254.1.2",
+            Region = "us-central1",
+            Router = "my-router",
+        });
+    }
+
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := compute.NewRouterPeer(ctx, "peer", &compute.RouterPeerArgs{
+			AdvertisedRoutePriority: pulumi.Int(100),
+			Enable:                  pulumi.Bool(false),
+			Interface:               pulumi.String("interface-1"),
+			PeerAsn:                 pulumi.Int(65513),
+			PeerIpAddress:           pulumi.String("169.254.1.2"),
+			Region:                  pulumi.String("us-central1"),
+			Router:                  pulumi.String("my-router"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+peer = gcp.compute.RouterPeer("peer",
+    advertised_route_priority=100,
+    enable=False,
+    interface="interface-1",
+    peer_asn=65513,
+    peer_ip_address="169.254.1.2",
+    region="us-central1",
+    router="my-router")
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const peer = new gcp.compute.RouterPeer("peer", {
+    advertisedRoutePriority: 100,
+    enable: false,
+    interface: "interface-1",
+    peerAsn: 65513,
+    peerIpAddress: "169.254.1.2",
+    region: "us-central1",
+    router: "my-router",
+});
+```
+
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
 
@@ -155,6 +264,7 @@ const peer = new gcp.compute.RouterPeer("peer", {
                <span class="nx">advertised_groups</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
                <span class="nx">advertised_ip_ranges</span><span class="p">:</span> <span class="nx">Optional[Sequence[RouterPeerAdvertisedIpRangeArgs]]</span> = None<span class="p">,</span>
                <span class="nx">advertised_route_priority</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+               <span class="nx">enable</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
                <span class="nx">interface</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                <span class="nx">peer_asn</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
@@ -379,6 +489,18 @@ Where there is more than one matching route of maximum
 length, the routes with the lowest priority value win.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="enable_csharp">
+<a href="#enable_csharp" style="color: inherit; text-decoration: inherit;">Enable</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}The status of the BGP peer connection. If set to false, any active session
+with the peer is terminated and all associated routing information is removed.
+If set to true, the peer connection can be established with routing information.
+The default is true.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
@@ -503,6 +625,18 @@ Structure is documented below.
     <dd>{{% md %}}The priority of routes advertised to this BGP peer.
 Where there is more than one matching route of maximum
 length, the routes with the lowest priority value win.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enable_go">
+<a href="#enable_go" style="color: inherit; text-decoration: inherit;">Enable</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}The status of the BGP peer connection. If set to false, any active session
+with the peer is terminated and all associated routing information is removed.
+If set to true, the peer connection can be established with routing information.
+The default is true.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
@@ -631,6 +765,18 @@ Where there is more than one matching route of maximum
 length, the routes with the lowest priority value win.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="enable_nodejs">
+<a href="#enable_nodejs" style="color: inherit; text-decoration: inherit;">enable</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}The status of the BGP peer connection. If set to false, any active session
+with the peer is terminated and all associated routing information is removed.
+If set to true, the peer connection can be established with routing information.
+The default is true.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
@@ -755,6 +901,18 @@ Structure is documented below.
     <dd>{{% md %}}The priority of routes advertised to this BGP peer.
 Where there is more than one matching route of maximum
 length, the routes with the lowest priority value win.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="enable_python">
+<a href="#enable_python" style="color: inherit; text-decoration: inherit;">enable</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}The status of the BGP peer connection. If set to false, any active session
+with the peer is terminated and all associated routing information is removed.
+If set to true, the peer connection can be established with routing information.
+The default is true.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
@@ -951,6 +1109,7 @@ Get an existing RouterPeer resource's state with the given name, ID, and optiona
         <span class="nx">advertised_groups</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
         <span class="nx">advertised_ip_ranges</span><span class="p">:</span> <span class="nx">Optional[Sequence[RouterPeerAdvertisedIpRangeArgs]]</span> = None<span class="p">,</span>
         <span class="nx">advertised_route_priority</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+        <span class="nx">enable</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">interface</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">ip_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">management_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -1122,6 +1281,18 @@ Where there is more than one matching route of maximum
 length, the routes with the lowest priority value win.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_enable_csharp">
+<a href="#state_enable_csharp" style="color: inherit; text-decoration: inherit;">Enable</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}The status of the BGP peer connection. If set to false, any active session
+with the peer is terminated and all associated routing information is removed.
+If set to true, the peer connection can be established with routing information.
+The default is true.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_interface_csharp">
 <a href="#state_interface_csharp" style="color: inherit; text-decoration: inherit;">Interface</a>
 </span>
@@ -1267,6 +1438,18 @@ Structure is documented below.
     <dd>{{% md %}}The priority of routes advertised to this BGP peer.
 Where there is more than one matching route of maximum
 length, the routes with the lowest priority value win.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_enable_go">
+<a href="#state_enable_go" style="color: inherit; text-decoration: inherit;">Enable</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}The status of the BGP peer connection. If set to false, any active session
+with the peer is terminated and all associated routing information is removed.
+If set to true, the peer connection can be established with routing information.
+The default is true.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_interface_go">
@@ -1416,6 +1599,18 @@ Where there is more than one matching route of maximum
 length, the routes with the lowest priority value win.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_enable_nodejs">
+<a href="#state_enable_nodejs" style="color: inherit; text-decoration: inherit;">enable</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}The status of the BGP peer connection. If set to false, any active session
+with the peer is terminated and all associated routing information is removed.
+If set to true, the peer connection can be established with routing information.
+The default is true.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_interface_nodejs">
 <a href="#state_interface_nodejs" style="color: inherit; text-decoration: inherit;">interface</a>
 </span>
@@ -1561,6 +1756,18 @@ Structure is documented below.
     <dd>{{% md %}}The priority of routes advertised to this BGP peer.
 Where there is more than one matching route of maximum
 length, the routes with the lowest priority value win.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_enable_python">
+<a href="#state_enable_python" style="color: inherit; text-decoration: inherit;">enable</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}The status of the BGP peer connection. If set to false, any active session
+with the peer is terminated and all associated routing information is removed.
+If set to true, the peer connection can be established with routing information.
+The default is true.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_interface_python">

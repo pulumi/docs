@@ -27,6 +27,833 @@ To get more information about ForwardingRule, see:
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
+### Internal Http Lb With Mig Backend
+
+
+{{< example csharp >}}
+
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        // Internal HTTP load balancer with a managed instance group backend
+        // VPC
+        var ilbNetwork = new Gcp.Compute.Network("ilbNetwork", new Gcp.Compute.NetworkArgs
+        {
+            AutoCreateSubnetworks = false,
+        }, new CustomResourceOptions
+        {
+            Provider = google_beta,
+        });
+        // proxy-only subnet
+        var proxySubnet = new Gcp.Compute.Subnetwork("proxySubnet", new Gcp.Compute.SubnetworkArgs
+        {
+            IpCidrRange = "10.0.0.0/24",
+            Region = "europe-west1",
+            Purpose = "INTERNAL_HTTPS_LOAD_BALANCER",
+            Role = "ACTIVE",
+            Network = ilbNetwork.Id,
+        }, new CustomResourceOptions
+        {
+            Provider = google_beta,
+        });
+        // backed subnet
+        var ilbSubnet = new Gcp.Compute.Subnetwork("ilbSubnet", new Gcp.Compute.SubnetworkArgs
+        {
+            IpCidrRange = "10.0.1.0/24",
+            Region = "europe-west1",
+            Network = ilbNetwork.Id,
+        }, new CustomResourceOptions
+        {
+            Provider = google_beta,
+        });
+        // health check
+        var defaultRegionHealthCheck = new Gcp.Compute.RegionHealthCheck("defaultRegionHealthCheck", new Gcp.Compute.RegionHealthCheckArgs
+        {
+            Region = "europe-west1",
+            HttpHealthCheck = new Gcp.Compute.Inputs.RegionHealthCheckHttpHealthCheckArgs
+            {
+                PortSpecification = "USE_SERVING_PORT",
+            },
+        }, new CustomResourceOptions
+        {
+            Provider = google_beta,
+        });
+        // instance template
+        var instanceTemplate = new Gcp.Compute.InstanceTemplate("instanceTemplate", new Gcp.Compute.InstanceTemplateArgs
+        {
+            MachineType = "e2-small",
+            Tags = 
+            {
+                "http-server",
+            },
+            NetworkInterfaces = 
+            {
+                new Gcp.Compute.Inputs.InstanceTemplateNetworkInterfaceArgs
+                {
+                    Network = ilbNetwork.Id,
+                    Subnetwork = ilbSubnet.Id,
+                    AccessConfigs = 
+                    {
+                        ,
+                    },
+                },
+            },
+            Disks = 
+            {
+                new Gcp.Compute.Inputs.InstanceTemplateDiskArgs
+                {
+                    SourceImage = "debian-cloud/debian-10",
+                    AutoDelete = true,
+                    Boot = true,
+                },
+            },
+            Metadata = 
+            {
+                { "startup-script", @"#! /bin/bash
+set -euo pipefail
+
+export DEBIAN_FRONTEND=noninteractive
+apt-get update
+apt-get install -y nginx-light jq
+
+NAME=$(curl -H ""Metadata-Flavor: Google"" ""http://metadata.google.internal/computeMetadata/v1/instance/hostname"")
+IP=$(curl -H ""Metadata-Flavor: Google"" ""http://metadata.google.internal/computeMetadata/v1/instance/network-interfaces/0/ip"")
+METADATA=$(curl -f -H ""Metadata-Flavor: Google"" ""http://metadata.google.internal/computeMetadata/v1/instance/attributes/?recursive=True"" | jq 'del(.[""startup-script""])')
+
+cat <<EOF > /var/www/html/index.html
+<pre>
+Name: $NAME
+IP: $IP
+Metadata: $METADATA
+</pre>
+EOF
+" },
+            },
+        }, new CustomResourceOptions
+        {
+            Provider = google_beta,
+        });
+        // MIG
+        var mig = new Gcp.Compute.RegionInstanceGroupManager("mig", new Gcp.Compute.RegionInstanceGroupManagerArgs
+        {
+            Region = "europe-west1",
+            Versions = 
+            {
+                new Gcp.Compute.Inputs.RegionInstanceGroupManagerVersionArgs
+                {
+                    InstanceTemplate = instanceTemplate.Id,
+                    Name = "primary",
+                },
+            },
+            BaseInstanceName = "vm",
+            TargetSize = 2,
+        }, new CustomResourceOptions
+        {
+            Provider = google_beta,
+        });
+        // backend service
+        var defaultRegionBackendService = new Gcp.Compute.RegionBackendService("defaultRegionBackendService", new Gcp.Compute.RegionBackendServiceArgs
+        {
+            Region = "europe-west1",
+            Protocol = "HTTP",
+            LoadBalancingScheme = "INTERNAL_MANAGED",
+            TimeoutSec = 10,
+            HealthChecks = 
+            {
+                defaultRegionHealthCheck.Id,
+            },
+            Backends = 
+            {
+                new Gcp.Compute.Inputs.RegionBackendServiceBackendArgs
+                {
+                    Group = mig.InstanceGroup,
+                    BalancingMode = "UTILIZATION",
+                    CapacityScaler = 1,
+                },
+            },
+        }, new CustomResourceOptions
+        {
+            Provider = google_beta,
+        });
+        // url map
+        var defaultRegionUrlMap = new Gcp.Compute.RegionUrlMap("defaultRegionUrlMap", new Gcp.Compute.RegionUrlMapArgs
+        {
+            Region = "europe-west1",
+            DefaultService = defaultRegionBackendService.Id,
+        }, new CustomResourceOptions
+        {
+            Provider = google_beta,
+        });
+        // http proxy
+        var defaultRegionTargetHttpProxy = new Gcp.Compute.RegionTargetHttpProxy("defaultRegionTargetHttpProxy", new Gcp.Compute.RegionTargetHttpProxyArgs
+        {
+            Region = "europe-west1",
+            UrlMap = defaultRegionUrlMap.Id,
+        }, new CustomResourceOptions
+        {
+            Provider = google_beta,
+        });
+        // forwarding rule
+        var googleComputeForwardingRule = new Gcp.Compute.ForwardingRule("googleComputeForwardingRule", new Gcp.Compute.ForwardingRuleArgs
+        {
+            Region = "europe-west1",
+            IpProtocol = "TCP",
+            LoadBalancingScheme = "INTERNAL_MANAGED",
+            PortRange = "80",
+            Target = defaultRegionTargetHttpProxy.Id,
+            Network = ilbNetwork.Id,
+            Subnetwork = ilbSubnet.Id,
+            NetworkTier = "PREMIUM",
+        }, new CustomResourceOptions
+        {
+            Provider = google_beta,
+            DependsOn = 
+            {
+                proxySubnet,
+            },
+        });
+        // allow all access from IAP and health check ranges
+        var fw_iap = new Gcp.Compute.Firewall("fw-iap", new Gcp.Compute.FirewallArgs
+        {
+            Direction = "INGRESS",
+            Network = ilbNetwork.Id,
+            SourceRanges = 
+            {
+                "130.211.0.0/22",
+                "35.191.0.0/16",
+                "35.235.240.0/20",
+            },
+            Allows = 
+            {
+                new Gcp.Compute.Inputs.FirewallAllowArgs
+                {
+                    Protocol = "tcp",
+                },
+            },
+        }, new CustomResourceOptions
+        {
+            Provider = google_beta,
+        });
+        // allow http from proxy subnet to backends
+        var fw_ilb_to_backends = new Gcp.Compute.Firewall("fw-ilb-to-backends", new Gcp.Compute.FirewallArgs
+        {
+            Direction = "INGRESS",
+            Network = ilbNetwork.Id,
+            SourceRanges = 
+            {
+                "10.0.0.0/24",
+            },
+            TargetTags = 
+            {
+                "http-server",
+            },
+            Allows = 
+            {
+                new Gcp.Compute.Inputs.FirewallAllowArgs
+                {
+                    Protocol = "tcp",
+                    Ports = 
+                    {
+                        "80",
+                        "443",
+                        "8080",
+                    },
+                },
+            },
+        }, new CustomResourceOptions
+        {
+            Provider = google_beta,
+        });
+        // test instance
+        var vm_test = new Gcp.Compute.Instance("vm-test", new Gcp.Compute.InstanceArgs
+        {
+            Zone = "europe-west1-b",
+            MachineType = "e2-small",
+            NetworkInterfaces = 
+            {
+                new Gcp.Compute.Inputs.InstanceNetworkInterfaceArgs
+                {
+                    Network = ilbNetwork.Id,
+                    Subnetwork = ilbSubnet.Id,
+                },
+            },
+            BootDisk = new Gcp.Compute.Inputs.InstanceBootDiskArgs
+            {
+                InitializeParams = new Gcp.Compute.Inputs.InstanceBootDiskInitializeParamsArgs
+                {
+                    Image = "debian-cloud/debian-10",
+                },
+            },
+        }, new CustomResourceOptions
+        {
+            Provider = google_beta,
+        });
+    }
+
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		ilbNetwork, err := compute.NewNetwork(ctx, "ilbNetwork", &compute.NetworkArgs{
+			AutoCreateSubnetworks: pulumi.Bool(false),
+		}, pulumi.Provider(google_beta))
+		if err != nil {
+			return err
+		}
+		proxySubnet, err := compute.NewSubnetwork(ctx, "proxySubnet", &compute.SubnetworkArgs{
+			IpCidrRange: pulumi.String("10.0.0.0/24"),
+			Region:      pulumi.String("europe-west1"),
+			Purpose:     pulumi.String("INTERNAL_HTTPS_LOAD_BALANCER"),
+			Role:        pulumi.String("ACTIVE"),
+			Network:     ilbNetwork.ID(),
+		}, pulumi.Provider(google_beta))
+		if err != nil {
+			return err
+		}
+		ilbSubnet, err := compute.NewSubnetwork(ctx, "ilbSubnet", &compute.SubnetworkArgs{
+			IpCidrRange: pulumi.String("10.0.1.0/24"),
+			Region:      pulumi.String("europe-west1"),
+			Network:     ilbNetwork.ID(),
+		}, pulumi.Provider(google_beta))
+		if err != nil {
+			return err
+		}
+		defaultRegionHealthCheck, err := compute.NewRegionHealthCheck(ctx, "defaultRegionHealthCheck", &compute.RegionHealthCheckArgs{
+			Region: pulumi.String("europe-west1"),
+			HttpHealthCheck: &compute.RegionHealthCheckHttpHealthCheckArgs{
+				PortSpecification: pulumi.String("USE_SERVING_PORT"),
+			},
+		}, pulumi.Provider(google_beta))
+		if err != nil {
+			return err
+		}
+		instanceTemplate, err := compute.NewInstanceTemplate(ctx, "instanceTemplate", &compute.InstanceTemplateArgs{
+			MachineType: pulumi.String("e2-small"),
+			Tags: pulumi.StringArray{
+				pulumi.String("http-server"),
+			},
+			NetworkInterfaces: compute.InstanceTemplateNetworkInterfaceArray{
+				&compute.InstanceTemplateNetworkInterfaceArgs{
+					Network:    ilbNetwork.ID(),
+					Subnetwork: ilbSubnet.ID(),
+					AccessConfigs: compute.InstanceTemplateNetworkInterfaceAccessConfigArray{
+						nil,
+					},
+				},
+			},
+			Disks: compute.InstanceTemplateDiskArray{
+				&compute.InstanceTemplateDiskArgs{
+					SourceImage: pulumi.String("debian-cloud/debian-10"),
+					AutoDelete:  pulumi.Bool(true),
+					Boot:        pulumi.Bool(true),
+				},
+			},
+			Metadata: pulumi.AnyMap{
+				"startup-script": pulumi.Any(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "#! /bin/bash\n", "set -euo pipefail\n", "\n", "export DEBIAN_FRONTEND=noninteractive\n", "apt-get update\n", "apt-get install -y nginx-light jq\n", "\n", "NAME=", "$", "(curl -H \"Metadata-Flavor: Google\" \"http://metadata.google.internal/computeMetadata/v1/instance/hostname\")\n", "IP=", "$", "(curl -H \"Metadata-Flavor: Google\" \"http://metadata.google.internal/computeMetadata/v1/instance/network-interfaces/0/ip\")\n", "METADATA=", "$", "(curl -f -H \"Metadata-Flavor: Google\" \"http://metadata.google.internal/computeMetadata/v1/instance/attributes/?recursive=True\" | jq 'del(.[\"startup-script\"])')\n", "\n", "cat <<EOF > /var/www/html/index.html\n", "<pre>\n", "Name: ", "$", "NAME\n", "IP: ", "$", "IP\n", "Metadata: ", "$", "METADATA\n", "</pre>\n", "EOF\n")),
+			},
+		}, pulumi.Provider(google_beta))
+		if err != nil {
+			return err
+		}
+		mig, err := compute.NewRegionInstanceGroupManager(ctx, "mig", &compute.RegionInstanceGroupManagerArgs{
+			Region: pulumi.String("europe-west1"),
+			Versions: compute.RegionInstanceGroupManagerVersionArray{
+				&compute.RegionInstanceGroupManagerVersionArgs{
+					InstanceTemplate: instanceTemplate.ID(),
+					Name:             pulumi.String("primary"),
+				},
+			},
+			BaseInstanceName: pulumi.String("vm"),
+			TargetSize:       pulumi.Int(2),
+		}, pulumi.Provider(google_beta))
+		if err != nil {
+			return err
+		}
+		defaultRegionBackendService, err := compute.NewRegionBackendService(ctx, "defaultRegionBackendService", &compute.RegionBackendServiceArgs{
+			Region:              pulumi.String("europe-west1"),
+			Protocol:            pulumi.String("HTTP"),
+			LoadBalancingScheme: pulumi.String("INTERNAL_MANAGED"),
+			TimeoutSec:          pulumi.Int(10),
+			HealthChecks: pulumi.String{
+				defaultRegionHealthCheck.ID(),
+			},
+			Backends: compute.RegionBackendServiceBackendArray{
+				&compute.RegionBackendServiceBackendArgs{
+					Group:          mig.InstanceGroup,
+					BalancingMode:  pulumi.String("UTILIZATION"),
+					CapacityScaler: pulumi.Float64(1),
+				},
+			},
+		}, pulumi.Provider(google_beta))
+		if err != nil {
+			return err
+		}
+		defaultRegionUrlMap, err := compute.NewRegionUrlMap(ctx, "defaultRegionUrlMap", &compute.RegionUrlMapArgs{
+			Region:         pulumi.String("europe-west1"),
+			DefaultService: defaultRegionBackendService.ID(),
+		}, pulumi.Provider(google_beta))
+		if err != nil {
+			return err
+		}
+		defaultRegionTargetHttpProxy, err := compute.NewRegionTargetHttpProxy(ctx, "defaultRegionTargetHttpProxy", &compute.RegionTargetHttpProxyArgs{
+			Region: pulumi.String("europe-west1"),
+			UrlMap: defaultRegionUrlMap.ID(),
+		}, pulumi.Provider(google_beta))
+		if err != nil {
+			return err
+		}
+		_, err = compute.NewForwardingRule(ctx, "googleComputeForwardingRule", &compute.ForwardingRuleArgs{
+			Region:              pulumi.String("europe-west1"),
+			IpProtocol:          pulumi.String("TCP"),
+			LoadBalancingScheme: pulumi.String("INTERNAL_MANAGED"),
+			PortRange:           pulumi.String("80"),
+			Target:              defaultRegionTargetHttpProxy.ID(),
+			Network:             ilbNetwork.ID(),
+			Subnetwork:          ilbSubnet.ID(),
+			NetworkTier:         pulumi.String("PREMIUM"),
+		}, pulumi.Provider(google_beta), pulumi.DependsOn([]pulumi.Resource{
+			proxySubnet,
+		}))
+		if err != nil {
+			return err
+		}
+		_, err = compute.NewFirewall(ctx, "fw_iap", &compute.FirewallArgs{
+			Direction: pulumi.String("INGRESS"),
+			Network:   ilbNetwork.ID(),
+			SourceRanges: pulumi.StringArray{
+				pulumi.String("130.211.0.0/22"),
+				pulumi.String("35.191.0.0/16"),
+				pulumi.String("35.235.240.0/20"),
+			},
+			Allows: compute.FirewallAllowArray{
+				&compute.FirewallAllowArgs{
+					Protocol: pulumi.String("tcp"),
+				},
+			},
+		}, pulumi.Provider(google_beta))
+		if err != nil {
+			return err
+		}
+		_, err = compute.NewFirewall(ctx, "fw_ilb_to_backends", &compute.FirewallArgs{
+			Direction: pulumi.String("INGRESS"),
+			Network:   ilbNetwork.ID(),
+			SourceRanges: pulumi.StringArray{
+				pulumi.String("10.0.0.0/24"),
+			},
+			TargetTags: pulumi.StringArray{
+				pulumi.String("http-server"),
+			},
+			Allows: compute.FirewallAllowArray{
+				&compute.FirewallAllowArgs{
+					Protocol: pulumi.String("tcp"),
+					Ports: pulumi.StringArray{
+						pulumi.String("80"),
+						pulumi.String("443"),
+						pulumi.String("8080"),
+					},
+				},
+			},
+		}, pulumi.Provider(google_beta))
+		if err != nil {
+			return err
+		}
+		_, err = compute.NewInstance(ctx, "vm_test", &compute.InstanceArgs{
+			Zone:        pulumi.String("europe-west1-b"),
+			MachineType: pulumi.String("e2-small"),
+			NetworkInterfaces: compute.InstanceNetworkInterfaceArray{
+				&compute.InstanceNetworkInterfaceArgs{
+					Network:    ilbNetwork.ID(),
+					Subnetwork: ilbSubnet.ID(),
+				},
+			},
+			BootDisk: &compute.InstanceBootDiskArgs{
+				InitializeParams: &compute.InstanceBootDiskInitializeParamsArgs{
+					Image: pulumi.String("debian-cloud/debian-10"),
+				},
+			},
+		}, pulumi.Provider(google_beta))
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+# Internal HTTP load balancer with a managed instance group backend
+# VPC
+ilb_network = gcp.compute.Network("ilbNetwork", auto_create_subnetworks=False,
+opts=pulumi.ResourceOptions(provider=google_beta))
+# proxy-only subnet
+proxy_subnet = gcp.compute.Subnetwork("proxySubnet",
+    ip_cidr_range="10.0.0.0/24",
+    region="europe-west1",
+    purpose="INTERNAL_HTTPS_LOAD_BALANCER",
+    role="ACTIVE",
+    network=ilb_network.id,
+    opts=pulumi.ResourceOptions(provider=google_beta))
+# backed subnet
+ilb_subnet = gcp.compute.Subnetwork("ilbSubnet",
+    ip_cidr_range="10.0.1.0/24",
+    region="europe-west1",
+    network=ilb_network.id,
+    opts=pulumi.ResourceOptions(provider=google_beta))
+# health check
+default_region_health_check = gcp.compute.RegionHealthCheck("defaultRegionHealthCheck",
+    region="europe-west1",
+    http_health_check=gcp.compute.RegionHealthCheckHttpHealthCheckArgs(
+        port_specification="USE_SERVING_PORT",
+    ),
+    opts=pulumi.ResourceOptions(provider=google_beta))
+# instance template
+instance_template = gcp.compute.InstanceTemplate("instanceTemplate",
+    machine_type="e2-small",
+    tags=["http-server"],
+    network_interfaces=[gcp.compute.InstanceTemplateNetworkInterfaceArgs(
+        network=ilb_network.id,
+        subnetwork=ilb_subnet.id,
+        access_configs=[gcp.compute.InstanceTemplateNetworkInterfaceAccessConfigArgs()],
+    )],
+    disks=[gcp.compute.InstanceTemplateDiskArgs(
+        source_image="debian-cloud/debian-10",
+        auto_delete=True,
+        boot=True,
+    )],
+    metadata={
+        "startup-script": """#! /bin/bash
+set -euo pipefail
+
+export DEBIAN_FRONTEND=noninteractive
+apt-get update
+apt-get install -y nginx-light jq
+
+NAME=$(curl -H "Metadata-Flavor: Google" "http://metadata.google.internal/computeMetadata/v1/instance/hostname")
+IP=$(curl -H "Metadata-Flavor: Google" "http://metadata.google.internal/computeMetadata/v1/instance/network-interfaces/0/ip")
+METADATA=$(curl -f -H "Metadata-Flavor: Google" "http://metadata.google.internal/computeMetadata/v1/instance/attributes/?recursive=True" | jq 'del(.["startup-script"])')
+
+cat <<EOF > /var/www/html/index.html
+<pre>
+Name: $NAME
+IP: $IP
+Metadata: $METADATA
+</pre>
+EOF
+""",
+    },
+    opts=pulumi.ResourceOptions(provider=google_beta))
+# MIG
+mig = gcp.compute.RegionInstanceGroupManager("mig",
+    region="europe-west1",
+    versions=[gcp.compute.RegionInstanceGroupManagerVersionArgs(
+        instance_template=instance_template.id,
+        name="primary",
+    )],
+    base_instance_name="vm",
+    target_size=2,
+    opts=pulumi.ResourceOptions(provider=google_beta))
+# backend service
+default_region_backend_service = gcp.compute.RegionBackendService("defaultRegionBackendService",
+    region="europe-west1",
+    protocol="HTTP",
+    load_balancing_scheme="INTERNAL_MANAGED",
+    timeout_sec=10,
+    health_checks=[default_region_health_check.id],
+    backends=[gcp.compute.RegionBackendServiceBackendArgs(
+        group=mig.instance_group,
+        balancing_mode="UTILIZATION",
+        capacity_scaler=1,
+    )],
+    opts=pulumi.ResourceOptions(provider=google_beta))
+# url map
+default_region_url_map = gcp.compute.RegionUrlMap("defaultRegionUrlMap",
+    region="europe-west1",
+    default_service=default_region_backend_service.id,
+    opts=pulumi.ResourceOptions(provider=google_beta))
+# http proxy
+default_region_target_http_proxy = gcp.compute.RegionTargetHttpProxy("defaultRegionTargetHttpProxy",
+    region="europe-west1",
+    url_map=default_region_url_map.id,
+    opts=pulumi.ResourceOptions(provider=google_beta))
+# forwarding rule
+google_compute_forwarding_rule = gcp.compute.ForwardingRule("googleComputeForwardingRule",
+    region="europe-west1",
+    ip_protocol="TCP",
+    load_balancing_scheme="INTERNAL_MANAGED",
+    port_range="80",
+    target=default_region_target_http_proxy.id,
+    network=ilb_network.id,
+    subnetwork=ilb_subnet.id,
+    network_tier="PREMIUM",
+    opts=pulumi.ResourceOptions(provider=google_beta,
+        depends_on=[proxy_subnet]))
+# allow all access from IAP and health check ranges
+fw_iap = gcp.compute.Firewall("fw-iap",
+    direction="INGRESS",
+    network=ilb_network.id,
+    source_ranges=[
+        "130.211.0.0/22",
+        "35.191.0.0/16",
+        "35.235.240.0/20",
+    ],
+    allows=[gcp.compute.FirewallAllowArgs(
+        protocol="tcp",
+    )],
+    opts=pulumi.ResourceOptions(provider=google_beta))
+# allow http from proxy subnet to backends
+fw_ilb_to_backends = gcp.compute.Firewall("fw-ilb-to-backends",
+    direction="INGRESS",
+    network=ilb_network.id,
+    source_ranges=["10.0.0.0/24"],
+    target_tags=["http-server"],
+    allows=[gcp.compute.FirewallAllowArgs(
+        protocol="tcp",
+        ports=[
+            "80",
+            "443",
+            "8080",
+        ],
+    )],
+    opts=pulumi.ResourceOptions(provider=google_beta))
+# test instance
+vm_test = gcp.compute.Instance("vm-test",
+    zone="europe-west1-b",
+    machine_type="e2-small",
+    network_interfaces=[gcp.compute.InstanceNetworkInterfaceArgs(
+        network=ilb_network.id,
+        subnetwork=ilb_subnet.id,
+    )],
+    boot_disk=gcp.compute.InstanceBootDiskArgs(
+        initialize_params=gcp.compute.InstanceBootDiskInitializeParamsArgs(
+            image="debian-cloud/debian-10",
+        ),
+    ),
+    opts=pulumi.ResourceOptions(provider=google_beta))
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+// Internal HTTP load balancer with a managed instance group backend
+// VPC
+const ilbNetwork = new gcp.compute.Network("ilbNetwork", {autoCreateSubnetworks: false}, {
+    provider: google_beta,
+});
+// proxy-only subnet
+const proxySubnet = new gcp.compute.Subnetwork("proxySubnet", {
+    ipCidrRange: "10.0.0.0/24",
+    region: "europe-west1",
+    purpose: "INTERNAL_HTTPS_LOAD_BALANCER",
+    role: "ACTIVE",
+    network: ilbNetwork.id,
+}, {
+    provider: google_beta,
+});
+// backed subnet
+const ilbSubnet = new gcp.compute.Subnetwork("ilbSubnet", {
+    ipCidrRange: "10.0.1.0/24",
+    region: "europe-west1",
+    network: ilbNetwork.id,
+}, {
+    provider: google_beta,
+});
+// health check
+const defaultRegionHealthCheck = new gcp.compute.RegionHealthCheck("defaultRegionHealthCheck", {
+    region: "europe-west1",
+    httpHealthCheck: {
+        portSpecification: "USE_SERVING_PORT",
+    },
+}, {
+    provider: google_beta,
+});
+// instance template
+const instanceTemplate = new gcp.compute.InstanceTemplate("instanceTemplate", {
+    machineType: "e2-small",
+    tags: ["http-server"],
+    networkInterfaces: [{
+        network: ilbNetwork.id,
+        subnetwork: ilbSubnet.id,
+        accessConfigs: [{}],
+    }],
+    disks: [{
+        sourceImage: "debian-cloud/debian-10",
+        autoDelete: true,
+        boot: true,
+    }],
+    metadata: {
+        "startup-script": `#! /bin/bash
+set -euo pipefail
+
+export DEBIAN_FRONTEND=noninteractive
+apt-get update
+apt-get install -y nginx-light jq
+
+NAME=$(curl -H "Metadata-Flavor: Google" "http://metadata.google.internal/computeMetadata/v1/instance/hostname")
+IP=$(curl -H "Metadata-Flavor: Google" "http://metadata.google.internal/computeMetadata/v1/instance/network-interfaces/0/ip")
+METADATA=$(curl -f -H "Metadata-Flavor: Google" "http://metadata.google.internal/computeMetadata/v1/instance/attributes/?recursive=True" | jq 'del(.["startup-script"])')
+
+cat <<EOF > /var/www/html/index.html
+<pre>
+Name: $NAME
+IP: $IP
+Metadata: $METADATA
+</pre>
+EOF
+`,
+    },
+}, {
+    provider: google_beta,
+});
+// MIG
+const mig = new gcp.compute.RegionInstanceGroupManager("mig", {
+    region: "europe-west1",
+    versions: [{
+        instanceTemplate: instanceTemplate.id,
+        name: "primary",
+    }],
+    baseInstanceName: "vm",
+    targetSize: 2,
+}, {
+    provider: google_beta,
+});
+// backend service
+const defaultRegionBackendService = new gcp.compute.RegionBackendService("defaultRegionBackendService", {
+    region: "europe-west1",
+    protocol: "HTTP",
+    loadBalancingScheme: "INTERNAL_MANAGED",
+    timeoutSec: 10,
+    healthChecks: [defaultRegionHealthCheck.id],
+    backends: [{
+        group: mig.instanceGroup,
+        balancingMode: "UTILIZATION",
+        capacityScaler: 1,
+    }],
+}, {
+    provider: google_beta,
+});
+// url map
+const defaultRegionUrlMap = new gcp.compute.RegionUrlMap("defaultRegionUrlMap", {
+    region: "europe-west1",
+    defaultService: defaultRegionBackendService.id,
+}, {
+    provider: google_beta,
+});
+// http proxy
+const defaultRegionTargetHttpProxy = new gcp.compute.RegionTargetHttpProxy("defaultRegionTargetHttpProxy", {
+    region: "europe-west1",
+    urlMap: defaultRegionUrlMap.id,
+}, {
+    provider: google_beta,
+});
+// forwarding rule
+const googleComputeForwardingRule = new gcp.compute.ForwardingRule("googleComputeForwardingRule", {
+    region: "europe-west1",
+    ipProtocol: "TCP",
+    loadBalancingScheme: "INTERNAL_MANAGED",
+    portRange: "80",
+    target: defaultRegionTargetHttpProxy.id,
+    network: ilbNetwork.id,
+    subnetwork: ilbSubnet.id,
+    networkTier: "PREMIUM",
+}, {
+    provider: google_beta,
+    dependsOn: [proxySubnet],
+});
+// allow all access from IAP and health check ranges
+const fw_iap = new gcp.compute.Firewall("fw-iap", {
+    direction: "INGRESS",
+    network: ilbNetwork.id,
+    sourceRanges: [
+        "130.211.0.0/22",
+        "35.191.0.0/16",
+        "35.235.240.0/20",
+    ],
+    allows: [{
+        protocol: "tcp",
+    }],
+}, {
+    provider: google_beta,
+});
+// allow http from proxy subnet to backends
+const fw_ilb_to_backends = new gcp.compute.Firewall("fw-ilb-to-backends", {
+    direction: "INGRESS",
+    network: ilbNetwork.id,
+    sourceRanges: ["10.0.0.0/24"],
+    targetTags: ["http-server"],
+    allows: [{
+        protocol: "tcp",
+        ports: [
+            "80",
+            "443",
+            "8080",
+        ],
+    }],
+}, {
+    provider: google_beta,
+});
+// test instance
+const vm_test = new gcp.compute.Instance("vm-test", {
+    zone: "europe-west1-b",
+    machineType: "e2-small",
+    networkInterfaces: [{
+        network: ilbNetwork.id,
+        subnetwork: ilbSubnet.id,
+    }],
+    bootDisk: {
+        initializeParams: {
+            image: "debian-cloud/debian-10",
+        },
+    },
+}, {
+    provider: google_beta,
+});
+```
+
+
+{{< /example >}}
+
+
+
+
 ### Forwarding Rule Externallb
 
 
@@ -497,6 +1324,177 @@ const defaultTargetPool = new gcp.compute.TargetPool("defaultTargetPool", {});
 const defaultForwardingRule = new gcp.compute.ForwardingRule("defaultForwardingRule", {
     target: defaultTargetPool.id,
     portRange: "80",
+});
+```
+
+
+{{< /example >}}
+
+
+
+
+### Forwarding Rule L3 Default
+
+
+{{< example csharp >}}
+
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var healthCheck = new Gcp.Compute.RegionHealthCheck("healthCheck", new Gcp.Compute.RegionHealthCheckArgs
+        {
+            Region = "us-central1",
+            TcpHealthCheck = new Gcp.Compute.Inputs.RegionHealthCheckTcpHealthCheckArgs
+            {
+                Port = 80,
+            },
+        }, new CustomResourceOptions
+        {
+            Provider = google_beta,
+        });
+        var service = new Gcp.Compute.RegionBackendService("service", new Gcp.Compute.RegionBackendServiceArgs
+        {
+            Region = "us-central1",
+            HealthChecks = 
+            {
+                healthCheck.Id,
+            },
+            Protocol = "UNSPECIFIED",
+            LoadBalancingScheme = "EXTERNAL",
+        }, new CustomResourceOptions
+        {
+            Provider = google_beta,
+        });
+        var fwdRule = new Gcp.Compute.ForwardingRule("fwdRule", new Gcp.Compute.ForwardingRuleArgs
+        {
+            BackendService = service.Id,
+            IpProtocol = "L3_DEFAULT",
+            AllPorts = true,
+        }, new CustomResourceOptions
+        {
+            Provider = google_beta,
+        });
+    }
+
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		healthCheck, err := compute.NewRegionHealthCheck(ctx, "healthCheck", &compute.RegionHealthCheckArgs{
+			Region: pulumi.String("us-central1"),
+			TcpHealthCheck: &compute.RegionHealthCheckTcpHealthCheckArgs{
+				Port: pulumi.Int(80),
+			},
+		}, pulumi.Provider(google_beta))
+		if err != nil {
+			return err
+		}
+		service, err := compute.NewRegionBackendService(ctx, "service", &compute.RegionBackendServiceArgs{
+			Region: pulumi.String("us-central1"),
+			HealthChecks: pulumi.String{
+				healthCheck.ID(),
+			},
+			Protocol:            pulumi.String("UNSPECIFIED"),
+			LoadBalancingScheme: pulumi.String("EXTERNAL"),
+		}, pulumi.Provider(google_beta))
+		if err != nil {
+			return err
+		}
+		_, err = compute.NewForwardingRule(ctx, "fwdRule", &compute.ForwardingRuleArgs{
+			BackendService: service.ID(),
+			IpProtocol:     pulumi.String("L3_DEFAULT"),
+			AllPorts:       pulumi.Bool(true),
+		}, pulumi.Provider(google_beta))
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+health_check = gcp.compute.RegionHealthCheck("healthCheck",
+    region="us-central1",
+    tcp_health_check=gcp.compute.RegionHealthCheckTcpHealthCheckArgs(
+        port=80,
+    ),
+    opts=pulumi.ResourceOptions(provider=google_beta))
+service = gcp.compute.RegionBackendService("service",
+    region="us-central1",
+    health_checks=[health_check.id],
+    protocol="UNSPECIFIED",
+    load_balancing_scheme="EXTERNAL",
+    opts=pulumi.ResourceOptions(provider=google_beta))
+fwd_rule = gcp.compute.ForwardingRule("fwdRule",
+    backend_service=service.id,
+    ip_protocol="L3_DEFAULT",
+    all_ports=True,
+    opts=pulumi.ResourceOptions(provider=google_beta))
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const healthCheck = new gcp.compute.RegionHealthCheck("healthCheck", {
+    region: "us-central1",
+    tcpHealthCheck: {
+        port: 80,
+    },
+}, {
+    provider: google_beta,
+});
+const service = new gcp.compute.RegionBackendService("service", {
+    region: "us-central1",
+    healthChecks: [healthCheck.id],
+    protocol: "UNSPECIFIED",
+    loadBalancingScheme: "EXTERNAL",
+}, {
+    provider: google_beta,
+});
+const fwdRule = new gcp.compute.ForwardingRule("fwdRule", {
+    backendService: service.id,
+    ipProtocol: "L3_DEFAULT",
+    allPorts: true,
+}, {
+    provider: google_beta,
 });
 ```
 
@@ -1778,11 +2776,13 @@ The ForwardingRule resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}For internal TCP/UDP load balancing (i.e. load balancing scheme is
-INTERNAL and protocol is TCP/UDP), set this to true to allow packets
-addressed to any ports to be forwarded to the backends configured
-with this forwarding rule. Used with backend service. Cannot be set
-if port or portRange are set.
+    <dd>{{% md %}}This field can be used with internal load balancer or network load balancer
+when the forwarding rule references a backend service, or with the target
+field when it references a TargetInstance. Set this to true to
+allow packets addressed to any ports to be forwarded to the backends configured
+with this forwarding rule. This can be used when the protocol is TCP/UDP, and it
+must be set to true when the protocol is set to L3_DEFAULT.
+Cannot be set if port or portRange are set.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowglobalaccess_csharp">
@@ -1845,7 +2845,7 @@ Google APIs, IP address must be provided.
     <dd>{{% md %}}The IP protocol to which this rule applies.
 When the load balancing scheme is INTERNAL, only TCP and UDP are
 valid.
-Possible values are `TCP`, `UDP`, `ESP`, `AH`, `SCTP`, and `ICMP`.
+Possible values are `TCP`, `UDP`, `ESP`, `AH`, `SCTP`, `ICMP`, and `L3_DEFAULT`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ismirroringcollector_csharp">
@@ -1956,13 +2956,15 @@ ports:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}This field is used along with the backend_service field for internal
-load balancing.
-When the load balancing scheme is INTERNAL, a single port or a comma
-separated list of ports can be configured. Only packets addressed to
-these ports will be forwarded to the backends configured with this
-forwarding rule.
-You may specify a maximum of up to 5 ports.
+    <dd>{{% md %}}This field is used along with internal load balancing and network
+load balancer when the forwarding rule references a backend service
+and when protocol is not L3_DEFAULT.
+A single port or a comma separated list of ports can be configured.
+Only packets addressed to these ports will be forwarded to the backends
+configured with this forwarding rule.
+You can only use one of ports and portRange, or allPorts.
+The three are mutually exclusive.
+You may specify a maximum of up to 5 ports, which can be non-contiguous.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_csharp">
@@ -2038,11 +3040,13 @@ object.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}For internal TCP/UDP load balancing (i.e. load balancing scheme is
-INTERNAL and protocol is TCP/UDP), set this to true to allow packets
-addressed to any ports to be forwarded to the backends configured
-with this forwarding rule. Used with backend service. Cannot be set
-if port or portRange are set.
+    <dd>{{% md %}}This field can be used with internal load balancer or network load balancer
+when the forwarding rule references a backend service, or with the target
+field when it references a TargetInstance. Set this to true to
+allow packets addressed to any ports to be forwarded to the backends configured
+with this forwarding rule. This can be used when the protocol is TCP/UDP, and it
+must be set to true when the protocol is set to L3_DEFAULT.
+Cannot be set if port or portRange are set.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowglobalaccess_go">
@@ -2105,7 +3109,7 @@ Google APIs, IP address must be provided.
     <dd>{{% md %}}The IP protocol to which this rule applies.
 When the load balancing scheme is INTERNAL, only TCP and UDP are
 valid.
-Possible values are `TCP`, `UDP`, `ESP`, `AH`, `SCTP`, and `ICMP`.
+Possible values are `TCP`, `UDP`, `ESP`, `AH`, `SCTP`, `ICMP`, and `L3_DEFAULT`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ismirroringcollector_go">
@@ -2216,13 +3220,15 @@ ports:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}This field is used along with the backend_service field for internal
-load balancing.
-When the load balancing scheme is INTERNAL, a single port or a comma
-separated list of ports can be configured. Only packets addressed to
-these ports will be forwarded to the backends configured with this
-forwarding rule.
-You may specify a maximum of up to 5 ports.
+    <dd>{{% md %}}This field is used along with internal load balancing and network
+load balancer when the forwarding rule references a backend service
+and when protocol is not L3_DEFAULT.
+A single port or a comma separated list of ports can be configured.
+Only packets addressed to these ports will be forwarded to the backends
+configured with this forwarding rule.
+You can only use one of ports and portRange, or allPorts.
+The three are mutually exclusive.
+You may specify a maximum of up to 5 ports, which can be non-contiguous.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_go">
@@ -2298,11 +3304,13 @@ object.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}For internal TCP/UDP load balancing (i.e. load balancing scheme is
-INTERNAL and protocol is TCP/UDP), set this to true to allow packets
-addressed to any ports to be forwarded to the backends configured
-with this forwarding rule. Used with backend service. Cannot be set
-if port or portRange are set.
+    <dd>{{% md %}}This field can be used with internal load balancer or network load balancer
+when the forwarding rule references a backend service, or with the target
+field when it references a TargetInstance. Set this to true to
+allow packets addressed to any ports to be forwarded to the backends configured
+with this forwarding rule. This can be used when the protocol is TCP/UDP, and it
+must be set to true when the protocol is set to L3_DEFAULT.
+Cannot be set if port or portRange are set.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowglobalaccess_nodejs">
@@ -2365,7 +3373,7 @@ Google APIs, IP address must be provided.
     <dd>{{% md %}}The IP protocol to which this rule applies.
 When the load balancing scheme is INTERNAL, only TCP and UDP are
 valid.
-Possible values are `TCP`, `UDP`, `ESP`, `AH`, `SCTP`, and `ICMP`.
+Possible values are `TCP`, `UDP`, `ESP`, `AH`, `SCTP`, `ICMP`, and `L3_DEFAULT`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ismirroringcollector_nodejs">
@@ -2476,13 +3484,15 @@ ports:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}This field is used along with the backend_service field for internal
-load balancing.
-When the load balancing scheme is INTERNAL, a single port or a comma
-separated list of ports can be configured. Only packets addressed to
-these ports will be forwarded to the backends configured with this
-forwarding rule.
-You may specify a maximum of up to 5 ports.
+    <dd>{{% md %}}This field is used along with internal load balancing and network
+load balancer when the forwarding rule references a backend service
+and when protocol is not L3_DEFAULT.
+A single port or a comma separated list of ports can be configured.
+Only packets addressed to these ports will be forwarded to the backends
+configured with this forwarding rule.
+You can only use one of ports and portRange, or allPorts.
+The three are mutually exclusive.
+You may specify a maximum of up to 5 ports, which can be non-contiguous.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_nodejs">
@@ -2558,11 +3568,13 @@ object.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}For internal TCP/UDP load balancing (i.e. load balancing scheme is
-INTERNAL and protocol is TCP/UDP), set this to true to allow packets
-addressed to any ports to be forwarded to the backends configured
-with this forwarding rule. Used with backend service. Cannot be set
-if port or portRange are set.
+    <dd>{{% md %}}This field can be used with internal load balancer or network load balancer
+when the forwarding rule references a backend service, or with the target
+field when it references a TargetInstance. Set this to true to
+allow packets addressed to any ports to be forwarded to the backends configured
+with this forwarding rule. This can be used when the protocol is TCP/UDP, and it
+must be set to true when the protocol is set to L3_DEFAULT.
+Cannot be set if port or portRange are set.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allow_global_access_python">
@@ -2625,7 +3637,7 @@ Google APIs, IP address must be provided.
     <dd>{{% md %}}The IP protocol to which this rule applies.
 When the load balancing scheme is INTERNAL, only TCP and UDP are
 valid.
-Possible values are `TCP`, `UDP`, `ESP`, `AH`, `SCTP`, and `ICMP`.
+Possible values are `TCP`, `UDP`, `ESP`, `AH`, `SCTP`, `ICMP`, and `L3_DEFAULT`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="is_mirroring_collector_python">
@@ -2736,13 +3748,15 @@ ports:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}This field is used along with the backend_service field for internal
-load balancing.
-When the load balancing scheme is INTERNAL, a single port or a comma
-separated list of ports can be configured. Only packets addressed to
-these ports will be forwarded to the backends configured with this
-forwarding rule.
-You may specify a maximum of up to 5 ports.
+    <dd>{{% md %}}This field is used along with internal load balancing and network
+load balancer when the forwarding rule references a backend service
+and when protocol is not L3_DEFAULT.
+A single port or a comma separated list of ports can be configured.
+Only packets addressed to these ports will be forwarded to the backends
+configured with this forwarding rule.
+You can only use one of ports and portRange, or allPorts.
+The three are mutually exclusive.
+You may specify a maximum of up to 5 ports, which can be non-contiguous.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_python">
@@ -3165,11 +4179,13 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}For internal TCP/UDP load balancing (i.e. load balancing scheme is
-INTERNAL and protocol is TCP/UDP), set this to true to allow packets
-addressed to any ports to be forwarded to the backends configured
-with this forwarding rule. Used with backend service. Cannot be set
-if port or portRange are set.
+    <dd>{{% md %}}This field can be used with internal load balancer or network load balancer
+when the forwarding rule references a backend service, or with the target
+field when it references a TargetInstance. Set this to true to
+allow packets addressed to any ports to be forwarded to the backends configured
+with this forwarding rule. This can be used when the protocol is TCP/UDP, and it
+must be set to true when the protocol is set to L3_DEFAULT.
+Cannot be set if port or portRange are set.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_allowglobalaccess_csharp">
@@ -3241,7 +4257,7 @@ Google APIs, IP address must be provided.
     <dd>{{% md %}}The IP protocol to which this rule applies.
 When the load balancing scheme is INTERNAL, only TCP and UDP are
 valid.
-Possible values are `TCP`, `UDP`, `ESP`, `AH`, `SCTP`, and `ICMP`.
+Possible values are `TCP`, `UDP`, `ESP`, `AH`, `SCTP`, `ICMP`, and `L3_DEFAULT`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ismirroringcollector_csharp">
@@ -3361,13 +4377,15 @@ ports:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}This field is used along with the backend_service field for internal
-load balancing.
-When the load balancing scheme is INTERNAL, a single port or a comma
-separated list of ports can be configured. Only packets addressed to
-these ports will be forwarded to the backends configured with this
-forwarding rule.
-You may specify a maximum of up to 5 ports.
+    <dd>{{% md %}}This field is used along with internal load balancing and network
+load balancer when the forwarding rule references a backend service
+and when protocol is not L3_DEFAULT.
+A single port or a comma separated list of ports can be configured.
+Only packets addressed to these ports will be forwarded to the backends
+configured with this forwarding rule.
+You can only use one of ports and portRange, or allPorts.
+The three are mutually exclusive.
+You may specify a maximum of up to 5 ports, which can be non-contiguous.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_csharp">
@@ -3461,11 +4479,13 @@ object.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}For internal TCP/UDP load balancing (i.e. load balancing scheme is
-INTERNAL and protocol is TCP/UDP), set this to true to allow packets
-addressed to any ports to be forwarded to the backends configured
-with this forwarding rule. Used with backend service. Cannot be set
-if port or portRange are set.
+    <dd>{{% md %}}This field can be used with internal load balancer or network load balancer
+when the forwarding rule references a backend service, or with the target
+field when it references a TargetInstance. Set this to true to
+allow packets addressed to any ports to be forwarded to the backends configured
+with this forwarding rule. This can be used when the protocol is TCP/UDP, and it
+must be set to true when the protocol is set to L3_DEFAULT.
+Cannot be set if port or portRange are set.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_allowglobalaccess_go">
@@ -3537,7 +4557,7 @@ Google APIs, IP address must be provided.
     <dd>{{% md %}}The IP protocol to which this rule applies.
 When the load balancing scheme is INTERNAL, only TCP and UDP are
 valid.
-Possible values are `TCP`, `UDP`, `ESP`, `AH`, `SCTP`, and `ICMP`.
+Possible values are `TCP`, `UDP`, `ESP`, `AH`, `SCTP`, `ICMP`, and `L3_DEFAULT`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ismirroringcollector_go">
@@ -3657,13 +4677,15 @@ ports:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}This field is used along with the backend_service field for internal
-load balancing.
-When the load balancing scheme is INTERNAL, a single port or a comma
-separated list of ports can be configured. Only packets addressed to
-these ports will be forwarded to the backends configured with this
-forwarding rule.
-You may specify a maximum of up to 5 ports.
+    <dd>{{% md %}}This field is used along with internal load balancing and network
+load balancer when the forwarding rule references a backend service
+and when protocol is not L3_DEFAULT.
+A single port or a comma separated list of ports can be configured.
+Only packets addressed to these ports will be forwarded to the backends
+configured with this forwarding rule.
+You can only use one of ports and portRange, or allPorts.
+The three are mutually exclusive.
+You may specify a maximum of up to 5 ports, which can be non-contiguous.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_go">
@@ -3757,11 +4779,13 @@ object.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}For internal TCP/UDP load balancing (i.e. load balancing scheme is
-INTERNAL and protocol is TCP/UDP), set this to true to allow packets
-addressed to any ports to be forwarded to the backends configured
-with this forwarding rule. Used with backend service. Cannot be set
-if port or portRange are set.
+    <dd>{{% md %}}This field can be used with internal load balancer or network load balancer
+when the forwarding rule references a backend service, or with the target
+field when it references a TargetInstance. Set this to true to
+allow packets addressed to any ports to be forwarded to the backends configured
+with this forwarding rule. This can be used when the protocol is TCP/UDP, and it
+must be set to true when the protocol is set to L3_DEFAULT.
+Cannot be set if port or portRange are set.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_allowglobalaccess_nodejs">
@@ -3833,7 +4857,7 @@ Google APIs, IP address must be provided.
     <dd>{{% md %}}The IP protocol to which this rule applies.
 When the load balancing scheme is INTERNAL, only TCP and UDP are
 valid.
-Possible values are `TCP`, `UDP`, `ESP`, `AH`, `SCTP`, and `ICMP`.
+Possible values are `TCP`, `UDP`, `ESP`, `AH`, `SCTP`, `ICMP`, and `L3_DEFAULT`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ismirroringcollector_nodejs">
@@ -3953,13 +4977,15 @@ ports:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}This field is used along with the backend_service field for internal
-load balancing.
-When the load balancing scheme is INTERNAL, a single port or a comma
-separated list of ports can be configured. Only packets addressed to
-these ports will be forwarded to the backends configured with this
-forwarding rule.
-You may specify a maximum of up to 5 ports.
+    <dd>{{% md %}}This field is used along with internal load balancing and network
+load balancer when the forwarding rule references a backend service
+and when protocol is not L3_DEFAULT.
+A single port or a comma separated list of ports can be configured.
+Only packets addressed to these ports will be forwarded to the backends
+configured with this forwarding rule.
+You can only use one of ports and portRange, or allPorts.
+The three are mutually exclusive.
+You may specify a maximum of up to 5 ports, which can be non-contiguous.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_nodejs">
@@ -4053,11 +5079,13 @@ object.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}For internal TCP/UDP load balancing (i.e. load balancing scheme is
-INTERNAL and protocol is TCP/UDP), set this to true to allow packets
-addressed to any ports to be forwarded to the backends configured
-with this forwarding rule. Used with backend service. Cannot be set
-if port or portRange are set.
+    <dd>{{% md %}}This field can be used with internal load balancer or network load balancer
+when the forwarding rule references a backend service, or with the target
+field when it references a TargetInstance. Set this to true to
+allow packets addressed to any ports to be forwarded to the backends configured
+with this forwarding rule. This can be used when the protocol is TCP/UDP, and it
+must be set to true when the protocol is set to L3_DEFAULT.
+Cannot be set if port or portRange are set.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_allow_global_access_python">
@@ -4129,7 +5157,7 @@ Google APIs, IP address must be provided.
     <dd>{{% md %}}The IP protocol to which this rule applies.
 When the load balancing scheme is INTERNAL, only TCP and UDP are
 valid.
-Possible values are `TCP`, `UDP`, `ESP`, `AH`, `SCTP`, and `ICMP`.
+Possible values are `TCP`, `UDP`, `ESP`, `AH`, `SCTP`, `ICMP`, and `L3_DEFAULT`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_is_mirroring_collector_python">
@@ -4249,13 +5277,15 @@ ports:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}This field is used along with the backend_service field for internal
-load balancing.
-When the load balancing scheme is INTERNAL, a single port or a comma
-separated list of ports can be configured. Only packets addressed to
-these ports will be forwarded to the backends configured with this
-forwarding rule.
-You may specify a maximum of up to 5 ports.
+    <dd>{{% md %}}This field is used along with internal load balancing and network
+load balancer when the forwarding rule references a backend service
+and when protocol is not L3_DEFAULT.
+A single port or a comma separated list of ports can be configured.
+Only packets addressed to these ports will be forwarded to the backends
+configured with this forwarding rule.
+You can only use one of ports and portRange, or allPorts.
+The three are mutually exclusive.
+You may specify a maximum of up to 5 ports, which can be non-contiguous.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_python">

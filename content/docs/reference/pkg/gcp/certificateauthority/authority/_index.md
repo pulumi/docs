@@ -334,7 +334,7 @@ class MyStack : Stack
                     CaOptions = new Gcp.CertificateAuthority.Inputs.AuthorityConfigX509ConfigCaOptionsArgs
                     {
                         IsCa = true,
-                        MaxIssuerPathLength = 10,
+                        MaxIssuerPathLength = 0,
                     },
                     KeyUsage = new Gcp.CertificateAuthority.Inputs.AuthorityConfigX509ConfigKeyUsageArgs
                     {
@@ -407,7 +407,7 @@ func main() {
 				X509Config: &certificateauthority.AuthorityConfigX509ConfigArgs{
 					CaOptions: &certificateauthority.AuthorityConfigX509ConfigCaOptionsArgs{
 						IsCa:                pulumi.Bool(true),
-						MaxIssuerPathLength: pulumi.Int(10),
+						MaxIssuerPathLength: pulumi.Int(0),
 					},
 					KeyUsage: &certificateauthority.AuthorityConfigX509ConfigKeyUsageArgs{
 						BaseKeyUsage: &certificateauthority.AuthorityConfigX509ConfigKeyUsageBaseKeyUsageArgs{
@@ -471,7 +471,7 @@ default = gcp.certificateauthority.Authority("default",
         x509_config=gcp.certificateauthority.AuthorityConfigX509ConfigArgs(
             ca_options=gcp.certificateauthority.AuthorityConfigX509ConfigCaOptionsArgs(
                 is_ca=True,
-                max_issuer_path_length=10,
+                max_issuer_path_length=0,
             ),
             key_usage=gcp.certificateauthority.AuthorityConfigX509ConfigKeyUsageArgs(
                 base_key_usage=gcp.certificateauthority.AuthorityConfigX509ConfigKeyUsageBaseKeyUsageArgs(
@@ -529,7 +529,8 @@ const defaultAuthority = new gcp.certificateauthority.Authority("default", {
         x509Config: {
             caOptions: {
                 isCa: true,
-                maxIssuerPathLength: 10,
+                // Force the sub CA to only issue leaf certs
+                maxIssuerPathLength: 0,
             },
             keyUsage: {
                 baseKeyUsage: {

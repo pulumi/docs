@@ -184,7 +184,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
-If `project` is not provideded, the provider project is used.
+If `project` is not provided, the provider project is used.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filter_csharp">
@@ -227,7 +227,7 @@ If multiple instance templates match, either adjust the filter or specify `most_
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
-If `project` is not provideded, the provider project is used.
+If `project` is not provided, the provider project is used.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filter_go">
@@ -270,7 +270,7 @@ If multiple instance templates match, either adjust the filter or specify `most_
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
-If `project` is not provideded, the provider project is used.
+If `project` is not provided, the provider project is used.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filter_nodejs">
@@ -313,7 +313,7 @@ If multiple instance templates match, either adjust the filter or specify `most_
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
-If `project` is not provideded, the provider project is used.
+If `project` is not provided, the provider project is used.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filter_python">

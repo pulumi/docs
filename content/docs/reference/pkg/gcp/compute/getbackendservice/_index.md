@@ -346,6 +346,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="securitysettings_csharp">
+<a href="#securitysettings_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getbackendservicesecuritysetting">List&lt;Get<wbr>Backend<wbr>Service<wbr>Security<wbr>Setting&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="selflink_csharp">
 <a href="#selflink_csharp" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
 </span>
@@ -575,6 +583,14 @@ The following output properties are available:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="securitysettings_go">
+<a href="#securitysettings_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getbackendservicesecuritysetting">[]Get<wbr>Backend<wbr>Service<wbr>Security<wbr>Setting</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
@@ -810,6 +826,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="securitysettings_nodejs">
+<a href="#securitysettings_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getbackendservicesecuritysetting">Get<wbr>Backend<wbr>Service<wbr>Security<wbr>Setting[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="selflink_nodejs">
 <a href="#selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
 </span>
@@ -1039,6 +1063,14 @@ The following output properties are available:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="security_settings_python">
+<a href="#security_settings_python" style="color: inherit; text-decoration: inherit;">security_<wbr>settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getbackendservicesecuritysetting">Sequence[Get<wbr>Backend<wbr>Service<wbr>Security<wbr>Setting]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
@@ -3384,6 +3416,90 @@ The following output properties are available:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="getbackendservicesecuritysetting">Get<wbr>Backend<wbr>Service<wbr>Security<wbr>Setting</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="clienttlspolicy_csharp">
+<a href="#clienttlspolicy_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Tls<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="subjectaltnames_csharp">
+<a href="#subjectaltnames_csharp" style="color: inherit; text-decoration: inherit;">Subject<wbr>Alt<wbr>Names</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="clienttlspolicy_go">
+<a href="#clienttlspolicy_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Tls<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="subjectaltnames_go">
+<a href="#subjectaltnames_go" style="color: inherit; text-decoration: inherit;">Subject<wbr>Alt<wbr>Names</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="clienttlspolicy_nodejs">
+<a href="#clienttlspolicy_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Tls<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="subjectaltnames_nodejs">
+<a href="#subjectaltnames_nodejs" style="color: inherit; text-decoration: inherit;">subject<wbr>Alt<wbr>Names</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="client_tls_policy_python">
+<a href="#client_tls_policy_python" style="color: inherit; text-decoration: inherit;">client_<wbr>tls_<wbr>policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="subject_alt_names_python">
+<a href="#subject_alt_names_python" style="color: inherit; text-decoration: inherit;">subject_<wbr>alt_<wbr>names</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}

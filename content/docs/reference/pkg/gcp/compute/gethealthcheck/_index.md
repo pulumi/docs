@@ -33,7 +33,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var healthChceck = Output.Create(Gcp.Compute.GetHealthCheck.InvokeAsync(new Gcp.Compute.GetHealthCheckArgs
+        var healthCheck = Output.Create(Gcp.Compute.GetHealthCheck.InvokeAsync(new Gcp.Compute.GetHealthCheckArgs
         {
             Name = "my-hc",
         }));
@@ -79,7 +79,7 @@ func main() {
 import pulumi
 import pulumi_gcp as gcp
 
-health_chceck = gcp.compute.get_health_check(name="my-hc")
+health_check = gcp.compute.get_health_check(name="my-hc")
 ```
 
 
@@ -93,7 +93,7 @@ health_chceck = gcp.compute.get_health_check(name="my-hc")
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const healthChceck = pulumi.output(gcp.compute.getHealthCheck({
+const healthCheck = pulumi.output(gcp.compute.getHealthCheck({
     name: "my-hc",
 }));
 ```
