@@ -61,11 +61,6 @@ class MyStack : Stack
                     FieldPath = "description",
                     Order = "DESCENDING",
                 },
-                new Gcp.Firestore.Inputs.IndexFieldArgs
-                {
-                    FieldPath = "__name__",
-                    Order = "DESCENDING",
-                },
             },
             Project = "my-project-name",
         });
@@ -101,10 +96,6 @@ func main() {
 					FieldPath: pulumi.String("description"),
 					Order:     pulumi.String("DESCENDING"),
 				},
-				&firestore.IndexFieldArgs{
-					FieldPath: pulumi.String("__name__"),
-					Order:     pulumi.String("DESCENDING"),
-				},
 			},
 			Project: pulumi.String("my-project-name"),
 		})
@@ -137,10 +128,6 @@ my_index = gcp.firestore.Index("my-index",
             field_path="description",
             order="DESCENDING",
         ),
-        gcp.firestore.IndexFieldArgs(
-            field_path="__name__",
-            order="DESCENDING",
-        ),
     ],
     project="my-project-name")
 ```
@@ -165,10 +152,6 @@ const my_index = new gcp.firestore.Index("my-index", {
         },
         {
             fieldPath: "description",
-            order: "DESCENDING",
-        },
-        {
-            fieldPath: "__name__",
             order: "DESCENDING",
         },
     ],

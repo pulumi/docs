@@ -40,7 +40,7 @@ class MyStack : Stack
         });
         var my_sink = new Gcp.Logging.OrganizationSink("my-sink", new Gcp.Logging.OrganizationSinkArgs
         {
-            Description = "some explaination on what this is",
+            Description = "some explanation on what this is",
             OrgId = "123456789",
             Destination = log_bucket.Name.Apply(name => $"storage.googleapis.com/{name}"),
             Filter = "resource.type = gce_instance AND severity >= WARNING",
@@ -80,7 +80,7 @@ func main() {
 			return err
 		}
 		_, err = logging.NewOrganizationSink(ctx, "my_sink", &logging.OrganizationSinkArgs{
-			Description: pulumi.String("some explaination on what this is"),
+			Description: pulumi.String("some explanation on what this is"),
 			OrgId:       pulumi.String("123456789"),
 			Destination: log_bucket.Name.ApplyT(func(name string) (string, error) {
 				return fmt.Sprintf("%v%v", "storage.googleapis.com/", name), nil
@@ -114,7 +114,7 @@ import pulumi_gcp as gcp
 
 log_bucket = gcp.storage.Bucket("log-bucket")
 my_sink = gcp.logging.OrganizationSink("my-sink",
-    description="some explaination on what this is",
+    description="some explanation on what this is",
     org_id="123456789",
     destination=log_bucket.name.apply(lambda name: f"storage.googleapis.com/{name}"),
     filter="resource.type = gce_instance AND severity >= WARNING")
@@ -136,7 +136,7 @@ import * as gcp from "@pulumi/gcp";
 
 const log_bucket = new gcp.storage.Bucket("log-bucket", {});
 const my_sink = new gcp.logging.OrganizationSink("my-sink", {
-    description: "some explaination on what this is",
+    description: "some explanation on what this is",
     orgId: "123456789",
     destination: pulumi.interpolate`storage.googleapis.com/${log_bucket.name}`,
     filter: "resource.type = gce_instance AND severity >= WARNING",

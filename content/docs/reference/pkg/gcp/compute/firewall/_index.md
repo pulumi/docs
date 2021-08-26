@@ -195,6 +195,147 @@ const defaultFirewall = new gcp.compute.Firewall("defaultFirewall", {
 
 
 
+### Firewall With Target Tags
+
+
+{{< example csharp >}}
+
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var rules = new Gcp.Compute.Firewall("rules", new Gcp.Compute.FirewallArgs
+        {
+            Allows = 
+            {
+                new Gcp.Compute.Inputs.FirewallAllowArgs
+                {
+                    Ports = 
+                    {
+                        "80",
+                        "8080",
+                        "1000-2000",
+                    },
+                    Protocol = "tcp",
+                },
+            },
+            Description = "Creates firewall rule targeting tagged instances",
+            Network = "default",
+            Project = "my-project-name",
+            TargetTags = 
+            {
+                "web",
+            },
+        });
+    }
+
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v5/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := compute.NewFirewall(ctx, "rules", &compute.FirewallArgs{
+			Allows: compute.FirewallAllowArray{
+				&compute.FirewallAllowArgs{
+					Ports: pulumi.StringArray{
+						pulumi.String("80"),
+						pulumi.String("8080"),
+						pulumi.String("1000-2000"),
+					},
+					Protocol: pulumi.String("tcp"),
+				},
+			},
+			Description: pulumi.String("Creates firewall rule targeting tagged instances"),
+			Network:     pulumi.String("default"),
+			Project:     pulumi.String("my-project-name"),
+			TargetTags: pulumi.StringArray{
+				pulumi.String("web"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+rules = gcp.compute.Firewall("rules",
+    allows=[gcp.compute.FirewallAllowArgs(
+        ports=[
+            "80",
+            "8080",
+            "1000-2000",
+        ],
+        protocol="tcp",
+    )],
+    description="Creates firewall rule targeting tagged instances",
+    network="default",
+    project="my-project-name",
+    target_tags=["web"])
+```
+
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const rules = new gcp.compute.Firewall("rules", {
+    allows: [{
+        ports: [
+            "80",
+            "8080",
+            "1000-2000",
+        ],
+        protocol: "tcp",
+    }],
+    description: "Creates firewall rule targeting tagged instances",
+    network: "default",
+    project: "my-project-name",
+    targetTags: ["web"],
+});
+```
+
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
 

@@ -110,6 +110,7 @@ construction to achieve fine-grained programmatic control over provider settings
              <span class="nx">pubsub_lite_custom_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">redis_custom_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">request_reason</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">request_timeout</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">resource_manager_custom_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">resource_manager_v2_custom_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -903,6 +904,14 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}} It can also be sourced from the following environment variables: `GOOGLE_REGION`, `GCLOUD_REGION`, `CLOUDSDK_COMPUTE_REGION`{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="requestreason_csharp">
+<a href="#requestreason_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Reason</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requesttimeout_csharp">
 <a href="#requesttimeout_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Timeout</a>
@@ -1748,6 +1757,14 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
     </dt>
     <dd>{{% md %}} It can also be sourced from the following environment variables: `GOOGLE_REGION`, `GCLOUD_REGION`, `CLOUDSDK_COMPUTE_REGION`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="requestreason_go">
+<a href="#requestreason_go" style="color: inherit; text-decoration: inherit;">Request<wbr>Reason</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="requesttimeout_go">
 <a href="#requesttimeout_go" style="color: inherit; text-decoration: inherit;">Request<wbr>Timeout</a>
 </span>
@@ -2592,6 +2609,14 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
     </dt>
     <dd>{{% md %}} It can also be sourced from the following environment variables: `GOOGLE_REGION`, `GCLOUD_REGION`, `CLOUDSDK_COMPUTE_REGION`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="requestreason_nodejs">
+<a href="#requestreason_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Reason</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="requesttimeout_nodejs">
 <a href="#requesttimeout_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Timeout</a>
 </span>
@@ -3435,6 +3460,14 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}} It can also be sourced from the following environment variables: `GOOGLE_REGION`, `GCLOUD_REGION`, `CLOUDSDK_COMPUTE_REGION`{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="request_reason_python">
+<a href="#request_reason_python" style="color: inherit; text-decoration: inherit;">request_<wbr>reason</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="request_timeout_python">
 <a href="#request_timeout_python" style="color: inherit; text-decoration: inherit;">request_<wbr>timeout</a>

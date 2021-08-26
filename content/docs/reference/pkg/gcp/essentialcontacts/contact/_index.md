@@ -54,9 +54,6 @@ class MyStack : Stack
             {
                 "ALL",
             },
-        }, new CustomResourceOptions
-        {
-            Provider = google_beta,
         });
     }
 
@@ -91,7 +88,7 @@ func main() {
 			NotificationCategorySubscriptions: pulumi.StringArray{
 				pulumi.String("ALL"),
 			},
-		}, pulumi.Provider(google_beta))
+		})
 		if err != nil {
 			return err
 		}
@@ -115,8 +112,7 @@ contact = gcp.essentialcontacts.Contact("contact",
     parent=project.id,
     email="foo@bar.com",
     language_tag="en-GB",
-    notification_category_subscriptions=["ALL"],
-    opts=pulumi.ResourceOptions(provider=google_beta))
+    notification_category_subscriptions=["ALL"])
 ```
 
 
@@ -136,8 +132,6 @@ const contact = new gcp.essentialcontacts.Contact("contact", {
     email: "foo@bar.com",
     languageTag: "en-GB",
     notificationCategorySubscriptions: ["ALL"],
-}, {
-    provider: google_beta,
 });
 ```
 

@@ -2782,7 +2782,7 @@ is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}If `include_refixes` is specified, objects that satisfy the object conditions must have names that start with one of the `include_prefixes` and that do not start with any of the `exclude_prefixes`. If `include_prefixes` is not specified, all objects except those that have names starting with one of the `exclude_prefixes` must satisfy the object conditions. See [Requirements](https://cloud.google.com/storage-transfer/docs/reference/rest/v1/TransferSpec#ObjectConditions).
+    <dd>{{% md %}}If `include_prefixes` is specified, objects that satisfy the object conditions must have names that start with one of the `include_prefixes` and that do not start with any of the `exclude_prefixes`. If `include_prefixes` is not specified, all objects except those that have names starting with one of the `exclude_prefixes` must satisfy the object conditions. See [Requirements](https://cloud.google.com/storage-transfer/docs/reference/rest/v1/TransferSpec#ObjectConditions).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxtimeelapsedsincelastmodification_csharp">
@@ -2822,7 +2822,7 @@ is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}If `include_refixes` is specified, objects that satisfy the object conditions must have names that start with one of the `include_prefixes` and that do not start with any of the `exclude_prefixes`. If `include_prefixes` is not specified, all objects except those that have names starting with one of the `exclude_prefixes` must satisfy the object conditions. See [Requirements](https://cloud.google.com/storage-transfer/docs/reference/rest/v1/TransferSpec#ObjectConditions).
+    <dd>{{% md %}}If `include_prefixes` is specified, objects that satisfy the object conditions must have names that start with one of the `include_prefixes` and that do not start with any of the `exclude_prefixes`. If `include_prefixes` is not specified, all objects except those that have names starting with one of the `exclude_prefixes` must satisfy the object conditions. See [Requirements](https://cloud.google.com/storage-transfer/docs/reference/rest/v1/TransferSpec#ObjectConditions).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxtimeelapsedsincelastmodification_go">
@@ -2862,7 +2862,7 @@ is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}If `include_refixes` is specified, objects that satisfy the object conditions must have names that start with one of the `include_prefixes` and that do not start with any of the `exclude_prefixes`. If `include_prefixes` is not specified, all objects except those that have names starting with one of the `exclude_prefixes` must satisfy the object conditions. See [Requirements](https://cloud.google.com/storage-transfer/docs/reference/rest/v1/TransferSpec#ObjectConditions).
+    <dd>{{% md %}}If `include_prefixes` is specified, objects that satisfy the object conditions must have names that start with one of the `include_prefixes` and that do not start with any of the `exclude_prefixes`. If `include_prefixes` is not specified, all objects except those that have names starting with one of the `exclude_prefixes` must satisfy the object conditions. See [Requirements](https://cloud.google.com/storage-transfer/docs/reference/rest/v1/TransferSpec#ObjectConditions).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxtimeelapsedsincelastmodification_nodejs">
@@ -2902,7 +2902,7 @@ is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}If `include_refixes` is specified, objects that satisfy the object conditions must have names that start with one of the `include_prefixes` and that do not start with any of the `exclude_prefixes`. If `include_prefixes` is not specified, all objects except those that have names starting with one of the `exclude_prefixes` must satisfy the object conditions. See [Requirements](https://cloud.google.com/storage-transfer/docs/reference/rest/v1/TransferSpec#ObjectConditions).
+    <dd>{{% md %}}If `include_prefixes` is specified, objects that satisfy the object conditions must have names that start with one of the `include_prefixes` and that do not start with any of the `exclude_prefixes`. If `include_prefixes` is not specified, all objects except those that have names starting with one of the `exclude_prefixes` must satisfy the object conditions. See [Requirements](https://cloud.google.com/storage-transfer/docs/reference/rest/v1/TransferSpec#ObjectConditions).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_time_elapsed_since_last_modification_python">

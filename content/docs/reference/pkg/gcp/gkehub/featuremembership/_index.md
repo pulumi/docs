@@ -769,7 +769,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#featuremembershipconfigmanagementbinauthz">Feature<wbr>Membership<wbr>Configmanagement<wbr>Binauthz</a></span>
     </dt>
-    <dd>{{% md %}}Binauthz conifguration for the cluster.
+    <dd>{{% md %}}Binauthz configuration for the cluster.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="configsync_csharp">
@@ -818,7 +818,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#featuremembershipconfigmanagementbinauthz">Feature<wbr>Membership<wbr>Configmanagement<wbr>Binauthz</a></span>
     </dt>
-    <dd>{{% md %}}Binauthz conifguration for the cluster.
+    <dd>{{% md %}}Binauthz configuration for the cluster.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="configsync_go">
@@ -867,7 +867,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#featuremembershipconfigmanagementbinauthz">Feature<wbr>Membership<wbr>Configmanagement<wbr>Binauthz</a></span>
     </dt>
-    <dd>{{% md %}}Binauthz conifguration for the cluster.
+    <dd>{{% md %}}Binauthz configuration for the cluster.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="configsync_nodejs">
@@ -916,7 +916,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#featuremembershipconfigmanagementbinauthz">Feature<wbr>Membership<wbr>Configmanagement<wbr>Binauthz</a></span>
     </dt>
-    <dd>{{% md %}}Binauthz conifguration for the cluster.
+    <dd>{{% md %}}Binauthz configuration for the cluster.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="config_sync_python">
