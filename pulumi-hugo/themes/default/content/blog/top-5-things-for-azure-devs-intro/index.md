@@ -15,7 +15,7 @@ tags:
 
 The Azure cloud platform includes over 200 products and cloud services. Wherever you are in your Microsoft cloud engineering journey, you should be familiar with these top 5 cloud tasks that are essential building blocks commonly used to deploy applications and infrastructure to the Azure cloud.
 
-In this series of articles, we'll go in-depth on virtual machines, Azure Functions, building an Azure Kubernetes Service cluster and deploying applications on AKS, and DevOps with Azure App Service.
+In this series of articles, we'll go in-depth on [virtual machines]({{< relref "/blog/top-5-things-for-azure-devs-vm">}}), [Azure Functions]({{< relref "/blog/top-5-things-for-azure-devs-serverless">}}), [static websites]({{< relref "/blog/top-5-things-for-azure-devs-static-websites">}}), [building an Azure Kubernetes Service cluster]({{< relref "/blog/top-5-things-for-azure-devs-kubernetes-infrastructure">}}) and [deploying applications on AKS]({{< relref "/blog/top-5-things-for-azure-devs-kubernetes-apps">}}), and [DevOps with Azure App Service]({{< relref "/blog/top-5-things-for-azure-devs-devops">}}).
 
 <!--more-->
 
