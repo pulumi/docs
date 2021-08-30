@@ -1,8 +1,8 @@
 
 ---
-title: "MaterializedViewGrant"
-title_tag: "snowflake.MaterializedViewGrant"
-meta_desc: "Documentation for the snowflake.MaterializedViewGrant resource with examples, input properties, output properties, lookup functions, and supporting types."
+title: "RowAccessPolicyGrant"
+title_tag: "snowflake.RowAccessPolicyGrant"
+meta_desc: "Documentation for the snowflake.RowAccessPolicyGrant resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -12,10 +12,10 @@ meta_desc: "Documentation for the snowflake.MaterializedViewGrant resource with 
 
 ## Import
 
-# format is database name | schema name | materialized view name | privilege | true/false for with_grant_option
+# format is database name | schema name | row access policy name | privilege | true/false for with_grant_option
 
 ```sh
- $ pulumi import snowflake:index/materializedViewGrant:MaterializedViewGrant example 'dbName|schemaName|materializedViewName|SELECT|false'
+ $ pulumi import snowflake:index/rowAccessPolicyGrant:RowAccessPolicyGrant example 'dbName|schemaName|rowAccessPolicyName|SELECT|false'
 ```
 
 
@@ -39,23 +39,17 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var grant = new Snowflake.MaterializedViewGrant("grant", new Snowflake.MaterializedViewGrantArgs
+        var grant = new Snowflake.RowAccessPolicyGrant("grant", new Snowflake.RowAccessPolicyGrantArgs
         {
             DatabaseName = "db",
-            MaterializedViewName = "materialized_view",
-            OnFuture = false,
-            Privilege = "select",
+            Privilege = "APPLY",
             Roles = 
             {
                 "role1",
                 "role2",
             },
+            RowAccessPolicyName = "row_access_policy",
             SchemaName = "schema",
-            Shares = 
-            {
-                "share1",
-                "share2",
-            },
             WithGrantOption = false,
         });
     }
@@ -79,21 +73,16 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := snowflake.NewMaterializedViewGrant(ctx, "grant", &snowflake.MaterializedViewGrantArgs{
-			DatabaseName:         pulumi.String("db"),
-			MaterializedViewName: pulumi.String("materialized_view"),
-			OnFuture:             pulumi.Bool(false),
-			Privilege:            pulumi.String("select"),
+		_, err := snowflake.NewRowAccessPolicyGrant(ctx, "grant", &snowflake.RowAccessPolicyGrantArgs{
+			DatabaseName: pulumi.String("db"),
+			Privilege:    pulumi.String("APPLY"),
 			Roles: pulumi.StringArray{
 				pulumi.String("role1"),
 				pulumi.String("role2"),
 			},
-			SchemaName: pulumi.String("schema"),
-			Shares: pulumi.StringArray{
-				pulumi.String("share1"),
-				pulumi.String("share2"),
-			},
-			WithGrantOption: pulumi.Bool(false),
+			RowAccessPolicyName: pulumi.String("row_access_policy"),
+			SchemaName:          pulumi.String("schema"),
+			WithGrantOption:     pulumi.Bool(false),
 		})
 		if err != nil {
 			return err
@@ -113,20 +102,15 @@ func main() {
 import pulumi
 import pulumi_snowflake as snowflake
 
-grant = snowflake.MaterializedViewGrant("grant",
+grant = snowflake.RowAccessPolicyGrant("grant",
     database_name="db",
-    materialized_view_name="materialized_view",
-    on_future=False,
-    privilege="select",
+    privilege="APPLY",
     roles=[
         "role1",
         "role2",
     ],
+    row_access_policy_name="row_access_policy",
     schema_name="schema",
-    shares=[
-        "share1",
-        "share2",
-    ],
     with_grant_option=False)
 ```
 
@@ -141,20 +125,15 @@ grant = snowflake.MaterializedViewGrant("grant",
 import * as pulumi from "@pulumi/pulumi";
 import * as snowflake from "@pulumi/snowflake";
 
-const grant = new snowflake.MaterializedViewGrant("grant", {
+const grant = new snowflake.RowAccessPolicyGrant("grant", {
     databaseName: "db",
-    materializedViewName: "materialized_view",
-    onFuture: false,
-    privilege: "select",
+    privilege: "APPLY",
     roles: [
         "role1",
         "role2",
     ],
+    rowAccessPolicyName: "row_access_policy",
     schemaName: "schema",
-    shares: [
-        "share1",
-        "share2",
-    ],
     withGrantOption: false,
 });
 ```
@@ -171,38 +150,36 @@ const grant = new snowflake.MaterializedViewGrant("grant", {
 
 
 
-## Create a MaterializedViewGrant Resource {#create}
+## Create a RowAccessPolicyGrant Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">MaterializedViewGrant</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">MaterializedViewGrantArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">RowAccessPolicyGrant</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">RowAccessPolicyGrantArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">MaterializedViewGrant</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                          <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-                          <span class="nx">database_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                          <span class="nx">materialized_view_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                          <span class="nx">on_future</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
-                          <span class="nx">privilege</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                          <span class="nx">roles</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
-                          <span class="nx">schema_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-                          <span class="nx">shares</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
-                          <span class="nx">with_grant_option</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span>
+<span class="k">def </span><span class="nx">RowAccessPolicyGrant</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+                         <span class="nx">database_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                         <span class="nx">privilege</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                         <span class="nx">roles</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+                         <span class="nx">row_access_policy_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                         <span class="nx">schema_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                         <span class="nx">with_grant_option</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
-<span class="k">def </span><span class="nx">MaterializedViewGrant</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
-                          <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">MaterializedViewGrantArgs</a></span><span class="p">,</span>
-                          <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
+<span class="k">def </span><span class="nx">RowAccessPolicyGrant</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
+                         <span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">RowAccessPolicyGrantArgs</a></span><span class="p">,</span>
+                         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewMaterializedViewGrant</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">MaterializedViewGrantArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">MaterializedViewGrant</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewRowAccessPolicyGrant</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">RowAccessPolicyGrantArgs</a></span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">RowAccessPolicyGrant</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">MaterializedViewGrant</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">MaterializedViewGrantArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">RowAccessPolicyGrant</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="#inputs">RowAccessPolicyGrantArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -217,7 +194,7 @@ const grant = new snowflake.MaterializedViewGrant("grant", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">MaterializedViewGrantArgs</a></span>
+        <span class="property-type"><a href="#inputs">RowAccessPolicyGrantArgs</a></span>
     </dt>
     <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
@@ -241,7 +218,7 @@ const grant = new snowflake.MaterializedViewGrant("grant", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">MaterializedViewGrantArgs</a></span>
+        <span class="property-type"><a href="#inputs">RowAccessPolicyGrantArgs</a></span>
     </dt>
     <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
@@ -271,7 +248,7 @@ const grant = new snowflake.MaterializedViewGrant("grant", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">MaterializedViewGrantArgs</a></span>
+        <span class="property-type"><a href="#inputs">RowAccessPolicyGrantArgs</a></span>
     </dt>
     <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
@@ -295,7 +272,7 @@ const grant = new snowflake.MaterializedViewGrant("grant", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#inputs">MaterializedViewGrantArgs</a></span>
+        <span class="property-type"><a href="#inputs">RowAccessPolicyGrantArgs</a></span>
     </dt>
     <dd>The arguments to resource properties.</dd><dt
         class="property-optional" title="Optional">
@@ -307,13 +284,13 @@ const grant = new snowflake.MaterializedViewGrant("grant", {
 
 {{% /choosable %}}
 
-## MaterializedViewGrant Resource Properties {#properties}
+## RowAccessPolicyGrant Resource Properties {#properties}
 
 To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Architecture and Concepts docs.
 
 ### Inputs
 
-The MaterializedViewGrant resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
+The RowAccessPolicyGrant resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -326,25 +303,25 @@ The MaterializedViewGrant resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the database containing the current or future materialized views on which to grant privileges.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="materializedviewname_csharp">
-<a href="#materializedviewname_csharp" style="color: inherit; text-decoration: inherit;">Materialized<wbr>View<wbr>Name</a>
+    <dd>{{% md %}}The name of the database containing the row access policy on which to grant privileges.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="rowaccesspolicyname_csharp">
+<a href="#rowaccesspolicyname_csharp" style="color: inherit; text-decoration: inherit;">Row<wbr>Access<wbr>Policy<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the materialized view on which to grant privileges immediately (only valid if on_future is false).
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="onfuture_csharp">
-<a href="#onfuture_csharp" style="color: inherit; text-decoration: inherit;">On<wbr>Future</a>
+    <dd>{{% md %}}The name of the row access policy on which to grant privileges immediately.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="schemaname_csharp">
+<a href="#schemaname_csharp" style="color: inherit; text-decoration: inherit;">Schema<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}When this is set to true and a schema*name is provided, apply this grant on all future materialized views in the given schema. When this is true and no schema*name is provided apply this grant on all future materialized views in the given database. The materialized*view*name and shares fields must be unset in order to use on_future.
+    <dd>{{% md %}}The name of the schema containing the row access policy on which to grant privileges.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privilege_csharp">
@@ -353,7 +330,7 @@ The MaterializedViewGrant resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The privilege to grant on the current or future materialized view view.
+    <dd>{{% md %}}The privilege to grant on the row access policy.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="roles_csharp">
@@ -363,24 +340,6 @@ The MaterializedViewGrant resource accepts the following [input]({{< relref "/do
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Grants privilege to these roles.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="schemaname_csharp">
-<a href="#schemaname_csharp" style="color: inherit; text-decoration: inherit;">Schema<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the schema containing the current or future materialized views on which to grant privileges.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="shares_csharp">
-<a href="#shares_csharp" style="color: inherit; text-decoration: inherit;">Shares</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
-    </dt>
-    <dd>{{% md %}}Grants privilege to these shares (only valid if on_future is false).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="withgrantoption_csharp">
@@ -402,25 +361,25 @@ The MaterializedViewGrant resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the database containing the current or future materialized views on which to grant privileges.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="materializedviewname_go">
-<a href="#materializedviewname_go" style="color: inherit; text-decoration: inherit;">Materialized<wbr>View<wbr>Name</a>
+    <dd>{{% md %}}The name of the database containing the row access policy on which to grant privileges.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="rowaccesspolicyname_go">
+<a href="#rowaccesspolicyname_go" style="color: inherit; text-decoration: inherit;">Row<wbr>Access<wbr>Policy<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the materialized view on which to grant privileges immediately (only valid if on_future is false).
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="onfuture_go">
-<a href="#onfuture_go" style="color: inherit; text-decoration: inherit;">On<wbr>Future</a>
+    <dd>{{% md %}}The name of the row access policy on which to grant privileges immediately.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="schemaname_go">
+<a href="#schemaname_go" style="color: inherit; text-decoration: inherit;">Schema<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}When this is set to true and a schema*name is provided, apply this grant on all future materialized views in the given schema. When this is true and no schema*name is provided apply this grant on all future materialized views in the given database. The materialized*view*name and shares fields must be unset in order to use on_future.
+    <dd>{{% md %}}The name of the schema containing the row access policy on which to grant privileges.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privilege_go">
@@ -429,7 +388,7 @@ The MaterializedViewGrant resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The privilege to grant on the current or future materialized view view.
+    <dd>{{% md %}}The privilege to grant on the row access policy.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="roles_go">
@@ -439,24 +398,6 @@ The MaterializedViewGrant resource accepts the following [input]({{< relref "/do
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Grants privilege to these roles.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="schemaname_go">
-<a href="#schemaname_go" style="color: inherit; text-decoration: inherit;">Schema<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the schema containing the current or future materialized views on which to grant privileges.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="shares_go">
-<a href="#shares_go" style="color: inherit; text-decoration: inherit;">Shares</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}Grants privilege to these shares (only valid if on_future is false).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="withgrantoption_go">
@@ -478,25 +419,25 @@ The MaterializedViewGrant resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the database containing the current or future materialized views on which to grant privileges.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="materializedviewname_nodejs">
-<a href="#materializedviewname_nodejs" style="color: inherit; text-decoration: inherit;">materialized<wbr>View<wbr>Name</a>
+    <dd>{{% md %}}The name of the database containing the row access policy on which to grant privileges.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="rowaccesspolicyname_nodejs">
+<a href="#rowaccesspolicyname_nodejs" style="color: inherit; text-decoration: inherit;">row<wbr>Access<wbr>Policy<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the materialized view on which to grant privileges immediately (only valid if on_future is false).
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="onfuture_nodejs">
-<a href="#onfuture_nodejs" style="color: inherit; text-decoration: inherit;">on<wbr>Future</a>
+    <dd>{{% md %}}The name of the row access policy on which to grant privileges immediately.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="schemaname_nodejs">
+<a href="#schemaname_nodejs" style="color: inherit; text-decoration: inherit;">schema<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}When this is set to true and a schema*name is provided, apply this grant on all future materialized views in the given schema. When this is true and no schema*name is provided apply this grant on all future materialized views in the given database. The materialized*view*name and shares fields must be unset in order to use on_future.
+    <dd>{{% md %}}The name of the schema containing the row access policy on which to grant privileges.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privilege_nodejs">
@@ -505,7 +446,7 @@ The MaterializedViewGrant resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The privilege to grant on the current or future materialized view view.
+    <dd>{{% md %}}The privilege to grant on the row access policy.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="roles_nodejs">
@@ -515,24 +456,6 @@ The MaterializedViewGrant resource accepts the following [input]({{< relref "/do
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Grants privilege to these roles.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="schemaname_nodejs">
-<a href="#schemaname_nodejs" style="color: inherit; text-decoration: inherit;">schema<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the schema containing the current or future materialized views on which to grant privileges.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="shares_nodejs">
-<a href="#shares_nodejs" style="color: inherit; text-decoration: inherit;">shares</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
-    </dt>
-    <dd>{{% md %}}Grants privilege to these shares (only valid if on_future is false).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="withgrantoption_nodejs">
@@ -554,25 +477,25 @@ The MaterializedViewGrant resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the database containing the current or future materialized views on which to grant privileges.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="materialized_view_name_python">
-<a href="#materialized_view_name_python" style="color: inherit; text-decoration: inherit;">materialized_<wbr>view_<wbr>name</a>
+    <dd>{{% md %}}The name of the database containing the row access policy on which to grant privileges.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="row_access_policy_name_python">
+<a href="#row_access_policy_name_python" style="color: inherit; text-decoration: inherit;">row_<wbr>access_<wbr>policy_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the materialized view on which to grant privileges immediately (only valid if on_future is false).
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="on_future_python">
-<a href="#on_future_python" style="color: inherit; text-decoration: inherit;">on_<wbr>future</a>
+    <dd>{{% md %}}The name of the row access policy on which to grant privileges immediately.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="schema_name_python">
+<a href="#schema_name_python" style="color: inherit; text-decoration: inherit;">schema_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}When this is set to true and a schema*name is provided, apply this grant on all future materialized views in the given schema. When this is true and no schema*name is provided apply this grant on all future materialized views in the given database. The materialized*view*name and shares fields must be unset in order to use on_future.
+    <dd>{{% md %}}The name of the schema containing the row access policy on which to grant privileges.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privilege_python">
@@ -581,7 +504,7 @@ The MaterializedViewGrant resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The privilege to grant on the current or future materialized view view.
+    <dd>{{% md %}}The privilege to grant on the row access policy.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="roles_python">
@@ -591,24 +514,6 @@ The MaterializedViewGrant resource accepts the following [input]({{< relref "/do
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Grants privilege to these roles.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="schema_name_python">
-<a href="#schema_name_python" style="color: inherit; text-decoration: inherit;">schema_<wbr>name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the schema containing the current or future materialized views on which to grant privileges.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="shares_python">
-<a href="#shares_python" style="color: inherit; text-decoration: inherit;">shares</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
-    </dt>
-    <dd>{{% md %}}Grants privilege to these shares (only valid if on_future is false).
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="with_grant_option_python">
@@ -624,7 +529,7 @@ The MaterializedViewGrant resource accepts the following [input]({{< relref "/do
 
 ### Outputs
 
-All [input](#inputs) properties are implicitly available as output properties. Additionally, the MaterializedViewGrant resource produces the following output properties:
+All [input](#inputs) properties are implicitly available as output properties. Additionally, the RowAccessPolicyGrant resource produces the following output properties:
 
 
 
@@ -678,13 +583,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
-## Look up an Existing MaterializedViewGrant Resource {#look-up}
+## Look up an Existing RowAccessPolicyGrant Resource {#look-up}
 
-Get an existing MaterializedViewGrant resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
+Get an existing RowAccessPolicyGrant resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">MaterializedViewGrantState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">MaterializedViewGrant</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">,</span> <span class="nx">state</span><span class="p">?:</span> <span class="nx">RowAccessPolicyGrantState</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">RowAccessPolicyGrant</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -693,21 +598,19 @@ Get an existing MaterializedViewGrant resource's state with the given name, ID, 
         <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
         <span class="nx">database_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-        <span class="nx">materialized_view_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-        <span class="nx">on_future</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">privilege</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">roles</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+        <span class="nx">row_access_policy_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">schema_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-        <span class="nx">shares</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
-        <span class="nx">with_grant_option</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">) -&gt;</span> MaterializedViewGrant</code></pre></div>
+        <span class="nx">with_grant_option</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">) -&gt;</span> RowAccessPolicyGrant</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetMaterializedViewGrant<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">MaterializedViewGrantState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">MaterializedViewGrant</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetRowAccessPolicyGrant<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">,</span> <span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">,</span> <span class="nx">state</span><span class="p"> *</span><span class="nx">RowAccessPolicyGrantState</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">RowAccessPolicyGrant</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">MaterializedViewGrant</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">MaterializedViewGrantState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">RowAccessPolicyGrant</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">,</span> <span class="nx">RowAccessPolicyGrantState</span><span class="p">? </span><span class="nx">state<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -818,25 +721,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the database containing the current or future materialized views on which to grant privileges.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="state_materializedviewname_csharp">
-<a href="#state_materializedviewname_csharp" style="color: inherit; text-decoration: inherit;">Materialized<wbr>View<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the materialized view on which to grant privileges immediately (only valid if on_future is false).
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="state_onfuture_csharp">
-<a href="#state_onfuture_csharp" style="color: inherit; text-decoration: inherit;">On<wbr>Future</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}When this is set to true and a schema*name is provided, apply this grant on all future materialized views in the given schema. When this is true and no schema*name is provided apply this grant on all future materialized views in the given database. The materialized*view*name and shares fields must be unset in order to use on_future.
+    <dd>{{% md %}}The name of the database containing the row access policy on which to grant privileges.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_privilege_csharp">
@@ -845,7 +730,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The privilege to grant on the current or future materialized view view.
+    <dd>{{% md %}}The privilege to grant on the row access policy.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_roles_csharp">
@@ -857,22 +742,22 @@ The following state arguments are supported:
     <dd>{{% md %}}Grants privilege to these roles.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_rowaccesspolicyname_csharp">
+<a href="#state_rowaccesspolicyname_csharp" style="color: inherit; text-decoration: inherit;">Row<wbr>Access<wbr>Policy<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the row access policy on which to grant privileges immediately.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_schemaname_csharp">
 <a href="#state_schemaname_csharp" style="color: inherit; text-decoration: inherit;">Schema<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the schema containing the current or future materialized views on which to grant privileges.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="state_shares_csharp">
-<a href="#state_shares_csharp" style="color: inherit; text-decoration: inherit;">Shares</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
-    </dt>
-    <dd>{{% md %}}Grants privilege to these shares (only valid if on_future is false).
+    <dd>{{% md %}}The name of the schema containing the row access policy on which to grant privileges.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_withgrantoption_csharp">
@@ -894,25 +779,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the database containing the current or future materialized views on which to grant privileges.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="state_materializedviewname_go">
-<a href="#state_materializedviewname_go" style="color: inherit; text-decoration: inherit;">Materialized<wbr>View<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the materialized view on which to grant privileges immediately (only valid if on_future is false).
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="state_onfuture_go">
-<a href="#state_onfuture_go" style="color: inherit; text-decoration: inherit;">On<wbr>Future</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}When this is set to true and a schema*name is provided, apply this grant on all future materialized views in the given schema. When this is true and no schema*name is provided apply this grant on all future materialized views in the given database. The materialized*view*name and shares fields must be unset in order to use on_future.
+    <dd>{{% md %}}The name of the database containing the row access policy on which to grant privileges.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_privilege_go">
@@ -921,7 +788,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The privilege to grant on the current or future materialized view view.
+    <dd>{{% md %}}The privilege to grant on the row access policy.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_roles_go">
@@ -933,22 +800,22 @@ The following state arguments are supported:
     <dd>{{% md %}}Grants privilege to these roles.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_rowaccesspolicyname_go">
+<a href="#state_rowaccesspolicyname_go" style="color: inherit; text-decoration: inherit;">Row<wbr>Access<wbr>Policy<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the row access policy on which to grant privileges immediately.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_schemaname_go">
 <a href="#state_schemaname_go" style="color: inherit; text-decoration: inherit;">Schema<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the schema containing the current or future materialized views on which to grant privileges.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="state_shares_go">
-<a href="#state_shares_go" style="color: inherit; text-decoration: inherit;">Shares</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}Grants privilege to these shares (only valid if on_future is false).
+    <dd>{{% md %}}The name of the schema containing the row access policy on which to grant privileges.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_withgrantoption_go">
@@ -970,25 +837,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the database containing the current or future materialized views on which to grant privileges.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="state_materializedviewname_nodejs">
-<a href="#state_materializedviewname_nodejs" style="color: inherit; text-decoration: inherit;">materialized<wbr>View<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the materialized view on which to grant privileges immediately (only valid if on_future is false).
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="state_onfuture_nodejs">
-<a href="#state_onfuture_nodejs" style="color: inherit; text-decoration: inherit;">on<wbr>Future</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
-    </dt>
-    <dd>{{% md %}}When this is set to true and a schema*name is provided, apply this grant on all future materialized views in the given schema. When this is true and no schema*name is provided apply this grant on all future materialized views in the given database. The materialized*view*name and shares fields must be unset in order to use on_future.
+    <dd>{{% md %}}The name of the database containing the row access policy on which to grant privileges.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_privilege_nodejs">
@@ -997,7 +846,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The privilege to grant on the current or future materialized view view.
+    <dd>{{% md %}}The privilege to grant on the row access policy.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_roles_nodejs">
@@ -1009,22 +858,22 @@ The following state arguments are supported:
     <dd>{{% md %}}Grants privilege to these roles.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_rowaccesspolicyname_nodejs">
+<a href="#state_rowaccesspolicyname_nodejs" style="color: inherit; text-decoration: inherit;">row<wbr>Access<wbr>Policy<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the row access policy on which to grant privileges immediately.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_schemaname_nodejs">
 <a href="#state_schemaname_nodejs" style="color: inherit; text-decoration: inherit;">schema<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the schema containing the current or future materialized views on which to grant privileges.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="state_shares_nodejs">
-<a href="#state_shares_nodejs" style="color: inherit; text-decoration: inherit;">shares</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
-    </dt>
-    <dd>{{% md %}}Grants privilege to these shares (only valid if on_future is false).
+    <dd>{{% md %}}The name of the schema containing the row access policy on which to grant privileges.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_withgrantoption_nodejs">
@@ -1046,25 +895,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the database containing the current or future materialized views on which to grant privileges.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="state_materialized_view_name_python">
-<a href="#state_materialized_view_name_python" style="color: inherit; text-decoration: inherit;">materialized_<wbr>view_<wbr>name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the materialized view on which to grant privileges immediately (only valid if on_future is false).
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="state_on_future_python">
-<a href="#state_on_future_python" style="color: inherit; text-decoration: inherit;">on_<wbr>future</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}When this is set to true and a schema*name is provided, apply this grant on all future materialized views in the given schema. When this is true and no schema*name is provided apply this grant on all future materialized views in the given database. The materialized*view*name and shares fields must be unset in order to use on_future.
+    <dd>{{% md %}}The name of the database containing the row access policy on which to grant privileges.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_privilege_python">
@@ -1073,7 +904,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The privilege to grant on the current or future materialized view view.
+    <dd>{{% md %}}The privilege to grant on the row access policy.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_roles_python">
@@ -1085,22 +916,22 @@ The following state arguments are supported:
     <dd>{{% md %}}Grants privilege to these roles.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_row_access_policy_name_python">
+<a href="#state_row_access_policy_name_python" style="color: inherit; text-decoration: inherit;">row_<wbr>access_<wbr>policy_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the row access policy on which to grant privileges immediately.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_schema_name_python">
 <a href="#state_schema_name_python" style="color: inherit; text-decoration: inherit;">schema_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the schema containing the current or future materialized views on which to grant privileges.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="state_shares_python">
-<a href="#state_shares_python" style="color: inherit; text-decoration: inherit;">shares</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
-    </dt>
-    <dd>{{% md %}}Grants privilege to these shares (only valid if on_future is false).
+    <dd>{{% md %}}The name of the schema containing the row access policy on which to grant privileges.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_with_grant_option_python">

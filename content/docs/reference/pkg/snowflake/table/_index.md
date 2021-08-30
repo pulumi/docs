@@ -39,43 +39,65 @@ class MyStack : Stack
 {
     public MyStack()
     {
+        var schema = new Snowflake.Schema("schema", new Snowflake.SchemaArgs
+        {
+            Database = "database",
+            DataRetentionDays = 1,
+        });
+        var sequence = new Snowflake.Sequence("sequence", new Snowflake.SequenceArgs
+        {
+            Database = schema.Database,
+            Schema = schema.Name,
+        });
         var table = new Snowflake.Table("table", new Snowflake.TableArgs
         {
+            Database = schema.Database,
+            Schema = schema.Name,
+            Comment = "A table.",
             ClusterBies = 
             {
                 "to_date(DATE)",
             },
+            DataRetentionDays = schema.DataRetentionDays,
+            ChangeTracking = false,
             Columns = 
             {
                 new Snowflake.Inputs.TableColumnArgs
                 {
                     Name = "id",
-                    Nullable = true,
                     Type = "int",
+                    Nullable = true,
+                    Default = new Snowflake.Inputs.TableColumnDefaultArgs
+                    {
+                        Sequence = sequence.FullyQualifiedName,
+                    },
                 },
                 new Snowflake.Inputs.TableColumnArgs
                 {
                     Name = "data",
-                    Nullable = false,
                     Type = "text",
+                    Nullable = false,
                 },
                 new Snowflake.Inputs.TableColumnArgs
                 {
                     Name = "DATE",
                     Type = "TIMESTAMP_NTZ(9)",
                 },
+                new Snowflake.Inputs.TableColumnArgs
+                {
+                    Name = "extra",
+                    Type = "VARIANT",
+                    Comment = "extra data",
+                },
             },
-            Comment = "A table.",
-            Database = "database",
             PrimaryKey = new Snowflake.Inputs.TablePrimaryKeyArgs
             {
+                Name = "my_key",
                 Keys = 
                 {
                     "data",
                 },
-                Name = "my_key",
             },
-            Schema = "schmea",
         });
     }
 
@@ -98,35 +120,59 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := snowflake.NewTable(ctx, "table", &snowflake.TableArgs{
+		schema, err := snowflake.NewSchema(ctx, "schema", &snowflake.SchemaArgs{
+			Database:          pulumi.String("database"),
+			DataRetentionDays: pulumi.Int(1),
+		})
+		if err != nil {
+			return err
+		}
+		sequence, err := snowflake.NewSequence(ctx, "sequence", &snowflake.SequenceArgs{
+			Database: schema.Database,
+			Schema:   schema.Name,
+		})
+		if err != nil {
+			return err
+		}
+		_, err = snowflake.NewTable(ctx, "table", &snowflake.TableArgs{
+			Database: schema.Database,
+			Schema:   schema.Name,
+			Comment:  pulumi.String("A table."),
 			ClusterBies: pulumi.StringArray{
 				pulumi.String("to_date(DATE)"),
 			},
+			DataRetentionDays: schema.DataRetentionDays,
+			ChangeTracking:    pulumi.Bool(false),
 			Columns: TableColumnArray{
 				&TableColumnArgs{
 					Name:     pulumi.String("id"),
-					Nullable: pulumi.Bool(true),
 					Type:     pulumi.String("int"),
+					Nullable: pulumi.Bool(true),
+					Default: &TableColumnDefaultArgs{
+						Sequence: sequence.FullyQualifiedName,
+					},
 				},
 				&TableColumnArgs{
 					Name:     pulumi.String("data"),
-					Nullable: pulumi.Bool(false),
 					Type:     pulumi.String("text"),
+					Nullable: pulumi.Bool(false),
 				},
 				&TableColumnArgs{
 					Name: pulumi.String("DATE"),
 					Type: pulumi.String("TIMESTAMP_NTZ(9)"),
 				},
+				&TableColumnArgs{
+					Name:    pulumi.String("extra"),
+					Type:    pulumi.String("VARIANT"),
+					Comment: pulumi.String("extra data"),
+				},
 			},
-			Comment:  pulumi.String("A table."),
-			Database: pulumi.String("database"),
 			PrimaryKey: &TablePrimaryKeyArgs{
+				Name: pulumi.String("my_key"),
 				Keys: pulumi.StringArray{
 					pulumi.String("data"),
 				},
-				Name: pulumi.String("my_key"),
 			},
-			Schema: pulumi.String("schmea"),
 		})
 		if err != nil {
 			return err
@@ -146,31 +192,47 @@ func main() {
 import pulumi
 import pulumi_snowflake as snowflake
 
+schema = snowflake.Schema("schema",
+    database="database",
+    data_retention_days=1)
+sequence = snowflake.Sequence("sequence",
+    database=schema.database,
+    schema=schema.name)
 table = snowflake.Table("table",
+    database=schema.database,
+    schema=schema.name,
+    comment="A table.",
     cluster_bies=["to_date(DATE)"],
+    data_retention_days=schema.data_retention_days,
+    change_tracking=False,
     columns=[
         snowflake.TableColumnArgs(
             name="id",
-            nullable=True,
             type="int",
+            nullable=True,
+            default=snowflake.TableColumnDefaultArgs(
+                sequence=sequence.fully_qualified_name,
+            ),
         ),
         snowflake.TableColumnArgs(
             name="data",
-            nullable=False,
             type="text",
+            nullable=False,
         ),
         snowflake.TableColumnArgs(
             name="DATE",
             type="TIMESTAMP_NTZ(9)",
         ),
+        snowflake.TableColumnArgs(
+            name="extra",
+            type="VARIANT",
+            comment="extra data",
+        ),
     ],
-    comment="A table.",
-    database="database",
     primary_key=snowflake.TablePrimaryKeyArgs(
-        keys=["data"],
         name="my_key",
-    ),
-    schema="schmea")
+        keys=["data"],
+    ))
 ```
 
 
@@ -184,31 +246,49 @@ table = snowflake.Table("table",
 import * as pulumi from "@pulumi/pulumi";
 import * as snowflake from "@pulumi/snowflake";
 
+const schema = new snowflake.Schema("schema", {
+    database: "database",
+    dataRetentionDays: 1,
+});
+const sequence = new snowflake.Sequence("sequence", {
+    database: schema.database,
+    schema: schema.name,
+});
 const table = new snowflake.Table("table", {
+    database: schema.database,
+    schema: schema.name,
+    comment: "A table.",
     clusterBies: ["to_date(DATE)"],
+    dataRetentionDays: schema.dataRetentionDays,
+    changeTracking: false,
     columns: [
         {
             name: "id",
-            nullable: true,
             type: "int",
+            nullable: true,
+            "default": {
+                sequence: sequence.fullyQualifiedName,
+            },
         },
         {
             name: "data",
-            nullable: false,
             type: "text",
+            nullable: false,
         },
         {
             name: "DATE",
             type: "TIMESTAMP_NTZ(9)",
         },
+        {
+            name: "extra",
+            type: "VARIANT",
+            comment: "extra data",
+        },
     ],
-    comment: "A table.",
-    database: "database",
     primaryKey: {
-        keys: ["data"],
         name: "my_key",
+        keys: ["data"],
     },
-    schema: "schmea",
 });
 ```
 
@@ -236,9 +316,11 @@ const table = new snowflake.Table("table", {
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">Table</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
           <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+          <span class="nx">change_tracking</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
           <span class="nx">cluster_bies</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
           <span class="nx">columns</span><span class="p">:</span> <span class="nx">Optional[Sequence[TableColumnArgs]]</span> = None<span class="p">,</span>
           <span class="nx">comment</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+          <span class="nx">data_retention_days</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
           <span class="nx">database</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
           <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
           <span class="nx">primary_key</span><span class="p">:</span> <span class="nx">Optional[TablePrimaryKeyArgs]</span> = None<span class="p">,</span>
@@ -399,6 +481,15 @@ The Table resource accepts the following [input]({{< relref "/docs/intro/concept
     <dd>{{% md %}}The schema in which to create the table.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="changetracking_csharp">
+<a href="#changetracking_csharp" style="color: inherit; text-decoration: inherit;">Change<wbr>Tracking</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether to enable change tracking on the table. Default false.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="clusterbies_csharp">
 <a href="#clusterbies_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Bies</a>
 </span>
@@ -415,6 +506,15 @@ The Table resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies a comment for the table.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dataretentiondays_csharp">
+<a href="#dataretentiondays_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Retention<wbr>Days</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Specifies the retention period for the table so that Time Travel actions (SELECT, CLONE, UNDROP) can be performed on historical data in the table. Default value is 1, if you wish to inherit the parent schema setting then pass in the schema attribute to this argument.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
@@ -466,6 +566,15 @@ The Table resource accepts the following [input]({{< relref "/docs/intro/concept
     <dd>{{% md %}}The schema in which to create the table.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="changetracking_go">
+<a href="#changetracking_go" style="color: inherit; text-decoration: inherit;">Change<wbr>Tracking</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether to enable change tracking on the table. Default false.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="clusterbies_go">
 <a href="#clusterbies_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Bies</a>
 </span>
@@ -482,6 +591,15 @@ The Table resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies a comment for the table.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dataretentiondays_go">
+<a href="#dataretentiondays_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Retention<wbr>Days</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Specifies the retention period for the table so that Time Travel actions (SELECT, CLONE, UNDROP) can be performed on historical data in the table. Default value is 1, if you wish to inherit the parent schema setting then pass in the schema attribute to this argument.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
@@ -533,6 +651,15 @@ The Table resource accepts the following [input]({{< relref "/docs/intro/concept
     <dd>{{% md %}}The schema in which to create the table.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="changetracking_nodejs">
+<a href="#changetracking_nodejs" style="color: inherit; text-decoration: inherit;">change<wbr>Tracking</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether to enable change tracking on the table. Default false.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="clusterbies_nodejs">
 <a href="#clusterbies_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Bies</a>
 </span>
@@ -549,6 +676,15 @@ The Table resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies a comment for the table.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dataretentiondays_nodejs">
+<a href="#dataretentiondays_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Retention<wbr>Days</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Specifies the retention period for the table so that Time Travel actions (SELECT, CLONE, UNDROP) can be performed on historical data in the table. Default value is 1, if you wish to inherit the parent schema setting then pass in the schema attribute to this argument.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
@@ -600,6 +736,15 @@ The Table resource accepts the following [input]({{< relref "/docs/intro/concept
     <dd>{{% md %}}The schema in which to create the table.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="change_tracking_python">
+<a href="#change_tracking_python" style="color: inherit; text-decoration: inherit;">change_<wbr>tracking</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether to enable change tracking on the table. Default false.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="cluster_bies_python">
 <a href="#cluster_bies_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>bies</a>
 </span>
@@ -616,6 +761,15 @@ The Table resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies a comment for the table.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="data_retention_days_python">
+<a href="#data_retention_days_python" style="color: inherit; text-decoration: inherit;">data_<wbr>retention_<wbr>days</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Specifies the retention period for the table so that Time Travel actions (SELECT, CLONE, UNDROP) can be performed on historical data in the table. Default value is 1, if you wish to inherit the parent schema setting then pass in the schema attribute to this argument.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
@@ -744,9 +898,11 @@ Get an existing Table resource's state with the given name, ID, and optional ext
 <span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
         <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
+        <span class="nx">change_tracking</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">cluster_bies</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
         <span class="nx">columns</span><span class="p">:</span> <span class="nx">Optional[Sequence[TableColumnArgs]]</span> = None<span class="p">,</span>
         <span class="nx">comment</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">data_retention_days</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
         <span class="nx">database</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">owner</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -864,6 +1020,15 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="state_changetracking_csharp">
+<a href="#state_changetracking_csharp" style="color: inherit; text-decoration: inherit;">Change<wbr>Tracking</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether to enable change tracking on the table. Default false.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_clusterbies_csharp">
 <a href="#state_clusterbies_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Bies</a>
 </span>
@@ -889,6 +1054,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies a comment for the table.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_dataretentiondays_csharp">
+<a href="#state_dataretentiondays_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Retention<wbr>Days</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Specifies the retention period for the table so that Time Travel actions (SELECT, CLONE, UNDROP) can be performed on historical data in the table. Default value is 1, if you wish to inherit the parent schema setting then pass in the schema attribute to this argument.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_database_csharp">
@@ -940,6 +1114,15 @@ The following state arguments are supported:
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="state_changetracking_go">
+<a href="#state_changetracking_go" style="color: inherit; text-decoration: inherit;">Change<wbr>Tracking</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether to enable change tracking on the table. Default false.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_clusterbies_go">
 <a href="#state_clusterbies_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Bies</a>
 </span>
@@ -965,6 +1148,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies a comment for the table.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_dataretentiondays_go">
+<a href="#state_dataretentiondays_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Retention<wbr>Days</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Specifies the retention period for the table so that Time Travel actions (SELECT, CLONE, UNDROP) can be performed on historical data in the table. Default value is 1, if you wish to inherit the parent schema setting then pass in the schema attribute to this argument.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_database_go">
@@ -1016,6 +1208,15 @@ The following state arguments are supported:
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="state_changetracking_nodejs">
+<a href="#state_changetracking_nodejs" style="color: inherit; text-decoration: inherit;">change<wbr>Tracking</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether to enable change tracking on the table. Default false.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_clusterbies_nodejs">
 <a href="#state_clusterbies_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Bies</a>
 </span>
@@ -1041,6 +1242,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies a comment for the table.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_dataretentiondays_nodejs">
+<a href="#state_dataretentiondays_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Retention<wbr>Days</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Specifies the retention period for the table so that Time Travel actions (SELECT, CLONE, UNDROP) can be performed on historical data in the table. Default value is 1, if you wish to inherit the parent schema setting then pass in the schema attribute to this argument.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_database_nodejs">
@@ -1092,6 +1302,15 @@ The following state arguments are supported:
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
+        <span id="state_change_tracking_python">
+<a href="#state_change_tracking_python" style="color: inherit; text-decoration: inherit;">change_<wbr>tracking</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether to enable change tracking on the table. Default false.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_cluster_bies_python">
 <a href="#state_cluster_bies_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>bies</a>
 </span>
@@ -1117,6 +1336,15 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies a comment for the table.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_data_retention_days_python">
+<a href="#state_data_retention_days_python" style="color: inherit; text-decoration: inherit;">data_<wbr>retention_<wbr>days</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Specifies the retention period for the table so that Time Travel actions (SELECT, CLONE, UNDROP) can be performed on historical data in the table. Default value is 1, if you wish to inherit the parent schema setting then pass in the schema attribute to this argument.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_database_python">
@@ -1197,6 +1425,24 @@ The following state arguments are supported:
     <dd>{{% md %}}Column type, e.g. VARIANT
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="comment_csharp">
+<a href="#comment_csharp" style="color: inherit; text-decoration: inherit;">Comment</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Column comment
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="default_csharp">
+<a href="#default_csharp" style="color: inherit; text-decoration: inherit;">Default</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#tablecolumndefault">Table<wbr>Column<wbr>Default</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the column default value; note due to limitations of Snowflake's ALTER TABLE ADD/MODIFY COLUMN updates to default will not be applied
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="nullable_csharp">
 <a href="#nullable_csharp" style="color: inherit; text-decoration: inherit;">Nullable</a>
 </span>
@@ -1226,6 +1472,24 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Column type, e.g. VARIANT
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="comment_go">
+<a href="#comment_go" style="color: inherit; text-decoration: inherit;">Comment</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Column comment
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="default_go">
+<a href="#default_go" style="color: inherit; text-decoration: inherit;">Default</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#tablecolumndefault">Table<wbr>Column<wbr>Default</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the column default value; note due to limitations of Snowflake's ALTER TABLE ADD/MODIFY COLUMN updates to default will not be applied
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nullable_go">
@@ -1259,6 +1523,24 @@ The following state arguments are supported:
     <dd>{{% md %}}Column type, e.g. VARIANT
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="comment_nodejs">
+<a href="#comment_nodejs" style="color: inherit; text-decoration: inherit;">comment</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Column comment
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="default_nodejs">
+<a href="#default_nodejs" style="color: inherit; text-decoration: inherit;">default</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#tablecolumndefault">Table<wbr>Column<wbr>Default</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the column default value; note due to limitations of Snowflake's ALTER TABLE ADD/MODIFY COLUMN updates to default will not be applied
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="nullable_nodejs">
 <a href="#nullable_nodejs" style="color: inherit; text-decoration: inherit;">nullable</a>
 </span>
@@ -1290,6 +1572,24 @@ The following state arguments are supported:
     <dd>{{% md %}}Column type, e.g. VARIANT
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="comment_python">
+<a href="#comment_python" style="color: inherit; text-decoration: inherit;">comment</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Column comment
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="default_python">
+<a href="#default_python" style="color: inherit; text-decoration: inherit;">default</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#tablecolumndefault">Table<wbr>Column<wbr>Default</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the column default value; note due to limitations of Snowflake's ALTER TABLE ADD/MODIFY COLUMN updates to default will not be applied
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="nullable_python">
 <a href="#nullable_python" style="color: inherit; text-decoration: inherit;">nullable</a>
 </span>
@@ -1298,6 +1598,120 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Whether this column can contain null values. **Note**: Depending on your Snowflake version, the default value will not suffice if this column is used in a primary key constraint.
 {{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="tablecolumndefault">Table<wbr>Column<wbr>Default</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="constant_csharp">
+<a href="#constant_csharp" style="color: inherit; text-decoration: inherit;">Constant</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="expression_csharp">
+<a href="#expression_csharp" style="color: inherit; text-decoration: inherit;">Expression</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sequence_csharp">
+<a href="#sequence_csharp" style="color: inherit; text-decoration: inherit;">Sequence</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="constant_go">
+<a href="#constant_go" style="color: inherit; text-decoration: inherit;">Constant</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="expression_go">
+<a href="#expression_go" style="color: inherit; text-decoration: inherit;">Expression</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sequence_go">
+<a href="#sequence_go" style="color: inherit; text-decoration: inherit;">Sequence</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="constant_nodejs">
+<a href="#constant_nodejs" style="color: inherit; text-decoration: inherit;">constant</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="expression_nodejs">
+<a href="#expression_nodejs" style="color: inherit; text-decoration: inherit;">expression</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sequence_nodejs">
+<a href="#sequence_nodejs" style="color: inherit; text-decoration: inherit;">sequence</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="constant_python">
+<a href="#constant_python" style="color: inherit; text-decoration: inherit;">constant</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="expression_python">
+<a href="#expression_python" style="color: inherit; text-decoration: inherit;">expression</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sequence_python">
+<a href="#sequence_python" style="color: inherit; text-decoration: inherit;">sequence</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="tableprimarykey">Table<wbr>Primary<wbr>Key</h4>

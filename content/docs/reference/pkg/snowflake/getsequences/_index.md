@@ -1,8 +1,8 @@
 
 ---
-title: "getTables"
-title_tag: "snowflake.getTables"
-meta_desc: "Documentation for the snowflake.getTables function with examples, input properties, output properties, and supporting types."
+title: "getSequences"
+title_tag: "snowflake.getSequences"
+meta_desc: "Documentation for the snowflake.getSequences function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -32,7 +32,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var current = Output.Create(Snowflake.GetTables.InvokeAsync(new Snowflake.GetTablesArgs
+        var current = Output.Create(Snowflake.GetSequences.InvokeAsync(new Snowflake.GetSequencesArgs
         {
             Database = "MYDB",
             Schema = "MYSCHEMA",
@@ -58,7 +58,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := snowflake.GetTables(ctx, &GetTablesArgs{
+		_, err := snowflake.GetSequences(ctx, &GetSequencesArgs{
 			Database: "MYDB",
 			Schema:   "MYSCHEMA",
 		}, nil)
@@ -80,7 +80,7 @@ func main() {
 import pulumi
 import pulumi_snowflake as snowflake
 
-current = snowflake.get_tables(database="MYDB",
+current = snowflake.get_sequences(database="MYDB",
     schema="MYSCHEMA")
 ```
 
@@ -95,7 +95,7 @@ current = snowflake.get_tables(database="MYDB",
 import * as pulumi from "@pulumi/pulumi";
 import * as snowflake from "@pulumi/snowflake";
 
-const current = pulumi.output(snowflake.getTables({
+const current = pulumi.output(snowflake.getSequences({
     database: "MYDB",
     schema: "MYSCHEMA",
 }));
@@ -113,34 +113,34 @@ const current = pulumi.output(snowflake.getTables({
 
 
 
-## Using getTables {#using}
+## Using getSequences {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getTables<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetTablesArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetTablesResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getSequences<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetSequencesArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetSequencesResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_tables(</span><span class="nx">database</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-               <span class="nx">schema</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-               <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetTablesResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_sequences(</span><span class="nx">database</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                  <span class="nx">schema</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                  <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetSequencesResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetTables<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">GetTablesArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetTablesResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSequences<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">GetSequencesArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetSequencesResult</a></span>, error)</span></code></pre></div>
 
-> Note: This function is named `GetTables` in the Go SDK.
+> Note: This function is named `GetSequences` in the Go SDK.
 
 {{% /choosable %}}
 
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetTables </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetTablesResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetTablesArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetSequences </span><span class="p">{</span><span class="k">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetSequencesResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetSequencesArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -167,7 +167,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The schema from which to return the tables from.
+    <dd>{{% md %}}The schema from which to return the sequences from.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -189,7 +189,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The schema from which to return the tables from.
+    <dd>{{% md %}}The schema from which to return the sequences from.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -211,7 +211,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The schema from which to return the tables from.
+    <dd>{{% md %}}The schema from which to return the sequences from.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -233,14 +233,14 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The schema from which to return the tables from.
+    <dd>{{% md %}}The schema from which to return the sequences from.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
 
 
-## getTables Result {#result}
+## getSequences Result {#result}
 
 The following output properties are available:
 
@@ -273,16 +273,16 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The schema from which to return the tables from.
+    <dd>{{% md %}}The schema from which to return the sequences from.
 {{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="tables_csharp">
-<a href="#tables_csharp" style="color: inherit; text-decoration: inherit;">Tables</a>
+        <span id="sequences_csharp">
+<a href="#sequences_csharp" style="color: inherit; text-decoration: inherit;">Sequences</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gettablestable">List&lt;Get<wbr>Tables<wbr>Table&gt;</a></span>
+        <span class="property-type"><a href="#getsequencessequence">List&lt;Get<wbr>Sequences<wbr>Sequence&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The tables in the schema
+    <dd>{{% md %}}The sequences in the schema
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -313,16 +313,16 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The schema from which to return the tables from.
+    <dd>{{% md %}}The schema from which to return the sequences from.
 {{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="tables_go">
-<a href="#tables_go" style="color: inherit; text-decoration: inherit;">Tables</a>
+        <span id="sequences_go">
+<a href="#sequences_go" style="color: inherit; text-decoration: inherit;">Sequences</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gettablestable">[]Get<wbr>Tables<wbr>Table</a></span>
+        <span class="property-type"><a href="#getsequencessequence">[]Get<wbr>Sequences<wbr>Sequence</a></span>
     </dt>
-    <dd>{{% md %}}The tables in the schema
+    <dd>{{% md %}}The sequences in the schema
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -353,16 +353,16 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The schema from which to return the tables from.
+    <dd>{{% md %}}The schema from which to return the sequences from.
 {{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="tables_nodejs">
-<a href="#tables_nodejs" style="color: inherit; text-decoration: inherit;">tables</a>
+        <span id="sequences_nodejs">
+<a href="#sequences_nodejs" style="color: inherit; text-decoration: inherit;">sequences</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gettablestable">Get<wbr>Tables<wbr>Table[]</a></span>
+        <span class="property-type"><a href="#getsequencessequence">Get<wbr>Sequences<wbr>Sequence[]</a></span>
     </dt>
-    <dd>{{% md %}}The tables in the schema
+    <dd>{{% md %}}The sequences in the schema
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -393,16 +393,16 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The schema from which to return the tables from.
+    <dd>{{% md %}}The schema from which to return the sequences from.
 {{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="tables_python">
-<a href="#tables_python" style="color: inherit; text-decoration: inherit;">tables</a>
+        <span id="sequences_python">
+<a href="#sequences_python" style="color: inherit; text-decoration: inherit;">sequences</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gettablestable">Sequence[Get<wbr>Tables<wbr>Table]</a></span>
+        <span class="property-type"><a href="#getsequencessequence">Sequence[Get<wbr>Sequences<wbr>Sequence]</a></span>
     </dt>
-    <dd>{{% md %}}The tables in the schema
+    <dd>{{% md %}}The sequences in the schema
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -412,7 +412,7 @@ The following output properties are available:
 ## Supporting Types
 
 
-<h4 id="gettablestable">Get<wbr>Tables<wbr>Table</h4>
+<h4 id="getsequencessequence">Get<wbr>Sequences<wbr>Sequence</h4>
 
 
 
@@ -450,7 +450,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The schema from which to return the tables from.
+    <dd>{{% md %}}The schema from which to return the sequences from.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -488,7 +488,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The schema from which to return the tables from.
+    <dd>{{% md %}}The schema from which to return the sequences from.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -526,7 +526,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The schema from which to return the tables from.
+    <dd>{{% md %}}The schema from which to return the sequences from.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -564,7 +564,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The schema from which to return the tables from.
+    <dd>{{% md %}}The schema from which to return the sequences from.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

@@ -190,6 +190,7 @@ const externalTable = new snowflake.ExternalTable("external_table", {
                   <span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                   <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                   <span class="nx">partition_bies</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+                  <span class="nx">pattern</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                   <span class="nx">refresh_on_create</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
                   <span class="nx">schema</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
@@ -420,6 +421,15 @@ The ExternalTable resource accepts the following [input]({{< relref "/docs/intro
     <dd>{{% md %}}Specifies any partition columns to evaluate for the external table.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="pattern_csharp">
+<a href="#pattern_csharp" style="color: inherit; text-decoration: inherit;">Pattern</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the file names and/or paths on the external stage to match.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="refreshoncreate_csharp">
 <a href="#refreshoncreate_csharp" style="color: inherit; text-decoration: inherit;">Refresh<wbr>On<wbr>Create</a>
 </span>
@@ -530,6 +540,15 @@ The ExternalTable resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Specifies any partition columns to evaluate for the external table.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="pattern_go">
+<a href="#pattern_go" style="color: inherit; text-decoration: inherit;">Pattern</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the file names and/or paths on the external stage to match.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="refreshoncreate_go">
@@ -644,6 +663,15 @@ The ExternalTable resource accepts the following [input]({{< relref "/docs/intro
     <dd>{{% md %}}Specifies any partition columns to evaluate for the external table.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="pattern_nodejs">
+<a href="#pattern_nodejs" style="color: inherit; text-decoration: inherit;">pattern</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the file names and/or paths on the external stage to match.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="refreshoncreate_nodejs">
 <a href="#refreshoncreate_nodejs" style="color: inherit; text-decoration: inherit;">refresh<wbr>On<wbr>Create</a>
 </span>
@@ -754,6 +782,15 @@ The ExternalTable resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specifies any partition columns to evaluate for the external table.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="pattern_python">
+<a href="#pattern_python" style="color: inherit; text-decoration: inherit;">pattern</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specifies the file names and/or paths on the external stage to match.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="refresh_on_create_python">
@@ -884,6 +921,7 @@ Get an existing ExternalTable resource's state with the given name, ID, and opti
         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">owner</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">partition_bies</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
+        <span class="nx">pattern</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">refresh_on_create</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">schema</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> ExternalTable</code></pre></div>
 {{% /choosable %}}
@@ -1097,6 +1135,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Specifies any partition columns to evaluate for the external table.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_pattern_csharp">
+<a href="#state_pattern_csharp" style="color: inherit; text-decoration: inherit;">Pattern</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the file names and/or paths on the external stage to match.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_refreshoncreate_csharp">
 <a href="#state_refreshoncreate_csharp" style="color: inherit; text-decoration: inherit;">Refresh<wbr>On<wbr>Create</a>
 </span>
@@ -1216,6 +1263,15 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Specifies any partition columns to evaluate for the external table.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_pattern_go">
+<a href="#state_pattern_go" style="color: inherit; text-decoration: inherit;">Pattern</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the file names and/or paths on the external stage to match.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_refreshoncreate_go">
@@ -1339,6 +1395,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Specifies any partition columns to evaluate for the external table.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_pattern_nodejs">
+<a href="#state_pattern_nodejs" style="color: inherit; text-decoration: inherit;">pattern</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the file names and/or paths on the external stage to match.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_refreshoncreate_nodejs">
 <a href="#state_refreshoncreate_nodejs" style="color: inherit; text-decoration: inherit;">refresh<wbr>On<wbr>Create</a>
 </span>
@@ -1458,6 +1523,15 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specifies any partition columns to evaluate for the external table.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_pattern_python">
+<a href="#state_pattern_python" style="color: inherit; text-decoration: inherit;">pattern</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specifies the file names and/or paths on the external stage to match.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_refresh_on_create_python">

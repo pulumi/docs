@@ -385,7 +385,7 @@ The FunctionGrant resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#functiongrantargument">List&lt;Function<wbr>Grant<wbr>Argument<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}List of the arguments for the function (must be present if function_name is present)
+    <dd>{{% md %}}List of the arguments for the function (must be present if function has arguments and function_name is present)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="functionname_csharp">
@@ -479,7 +479,7 @@ The FunctionGrant resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#functiongrantargument">[]Function<wbr>Grant<wbr>Argument<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}List of the arguments for the function (must be present if function_name is present)
+    <dd>{{% md %}}List of the arguments for the function (must be present if function has arguments and function_name is present)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="functionname_go">
@@ -573,7 +573,7 @@ The FunctionGrant resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#functiongrantargument">Function<wbr>Grant<wbr>Argument<wbr>Args[]</a></span>
     </dt>
-    <dd>{{% md %}}List of the arguments for the function (must be present if function_name is present)
+    <dd>{{% md %}}List of the arguments for the function (must be present if function has arguments and function_name is present)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="functionname_nodejs">
@@ -667,7 +667,7 @@ The FunctionGrant resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#functiongrantargument">Sequence[Function<wbr>Grant<wbr>Argument<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}List of the arguments for the function (must be present if function_name is present)
+    <dd>{{% md %}}List of the arguments for the function (must be present if function has arguments and function_name is present)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="function_name_python">
@@ -933,7 +933,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#functiongrantargument">List&lt;Function<wbr>Grant<wbr>Argument<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}List of the arguments for the function (must be present if function_name is present)
+    <dd>{{% md %}}List of the arguments for the function (must be present if function has arguments and function_name is present)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_databasename_csharp">
@@ -1027,7 +1027,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#functiongrantargument">[]Function<wbr>Grant<wbr>Argument<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}List of the arguments for the function (must be present if function_name is present)
+    <dd>{{% md %}}List of the arguments for the function (must be present if function has arguments and function_name is present)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_databasename_go">
@@ -1121,7 +1121,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#functiongrantargument">Function<wbr>Grant<wbr>Argument<wbr>Args[]</a></span>
     </dt>
-    <dd>{{% md %}}List of the arguments for the function (must be present if function_name is present)
+    <dd>{{% md %}}List of the arguments for the function (must be present if function has arguments and function_name is present)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_databasename_nodejs">
@@ -1215,7 +1215,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#functiongrantargument">Sequence[Function<wbr>Grant<wbr>Argument<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}List of the arguments for the function (must be present if function_name is present)
+    <dd>{{% md %}}List of the arguments for the function (must be present if function has arguments and function_name is present)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_database_name_python">

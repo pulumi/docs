@@ -61,6 +61,7 @@ const stream = new snowflake.Stream("stream", {
     appendOnly: false,
     comment: "A stream.",
     database: "db",
+    insertOnly: false,
     onTable: "table",
     owner: "role1",
     schema: "schema",
@@ -94,6 +95,7 @@ const stream = new snowflake.Stream("stream", {
            <span class="nx">append_only</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
            <span class="nx">comment</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
            <span class="nx">database</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+           <span class="nx">insert_only</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
            <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
            <span class="nx">on_table</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
            <span class="nx">schema</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -263,6 +265,15 @@ The Stream resource accepts the following [input]({{< relref "/docs/intro/concep
     <dd>{{% md %}}Specifies a comment for the stream.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="insertonly_csharp">
+<a href="#insertonly_csharp" style="color: inherit; text-decoration: inherit;">Insert<wbr>Only</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Create an insert only stream type.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
@@ -328,6 +339,15 @@ The Stream resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies a comment for the stream.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="insertonly_go">
+<a href="#insertonly_go" style="color: inherit; text-decoration: inherit;">Insert<wbr>Only</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Create an insert only stream type.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
@@ -397,6 +417,15 @@ The Stream resource accepts the following [input]({{< relref "/docs/intro/concep
     <dd>{{% md %}}Specifies a comment for the stream.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="insertonly_nodejs">
+<a href="#insertonly_nodejs" style="color: inherit; text-decoration: inherit;">insert<wbr>Only</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Create an insert only stream type.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
@@ -462,6 +491,15 @@ The Stream resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies a comment for the stream.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="insert_only_python">
+<a href="#insert_only_python" style="color: inherit; text-decoration: inherit;">insert_<wbr>only</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Create an insert only stream type.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
@@ -602,6 +640,7 @@ Get an existing Stream resource's state with the given name, ID, and optional ex
         <span class="nx">append_only</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">comment</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">database</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">insert_only</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">on_table</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">owner</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -746,6 +785,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The database in which to create the stream.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_insertonly_csharp">
+<a href="#state_insertonly_csharp" style="color: inherit; text-decoration: inherit;">Insert<wbr>Only</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Create an insert only stream type.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
@@ -820,6 +868,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The database in which to create the stream.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_insertonly_go">
+<a href="#state_insertonly_go" style="color: inherit; text-decoration: inherit;">Insert<wbr>Only</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Create an insert only stream type.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
@@ -898,6 +955,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The database in which to create the stream.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_insertonly_nodejs">
+<a href="#state_insertonly_nodejs" style="color: inherit; text-decoration: inherit;">insert<wbr>Only</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Create an insert only stream type.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
@@ -972,6 +1038,15 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The database in which to create the stream.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_insert_only_python">
+<a href="#state_insert_only_python" style="color: inherit; text-decoration: inherit;">insert_<wbr>only</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Create an insert only stream type.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
