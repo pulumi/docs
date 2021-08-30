@@ -1,8 +1,8 @@
 
 ---
-title: "getTables"
-title_tag: "snowflake.getTables"
-meta_desc: "Documentation for the snowflake.getTables function with examples, input properties, output properties, and supporting types."
+title: "getFunctions"
+title_tag: "snowflake.getFunctions"
+meta_desc: "Documentation for the snowflake.getFunctions function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -32,7 +32,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var current = Output.Create(Snowflake.GetTables.InvokeAsync(new Snowflake.GetTablesArgs
+        var current = Output.Create(Snowflake.GetFunctions.InvokeAsync(new Snowflake.GetFunctionsArgs
         {
             Database = "MYDB",
             Schema = "MYSCHEMA",
@@ -58,7 +58,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := snowflake.GetTables(ctx, &GetTablesArgs{
+		_, err := snowflake.GetFunctions(ctx, &GetFunctionsArgs{
 			Database: "MYDB",
 			Schema:   "MYSCHEMA",
 		}, nil)
@@ -80,7 +80,7 @@ func main() {
 import pulumi
 import pulumi_snowflake as snowflake
 
-current = snowflake.get_tables(database="MYDB",
+current = snowflake.get_functions(database="MYDB",
     schema="MYSCHEMA")
 ```
 
@@ -95,7 +95,7 @@ current = snowflake.get_tables(database="MYDB",
 import * as pulumi from "@pulumi/pulumi";
 import * as snowflake from "@pulumi/snowflake";
 
-const current = pulumi.output(snowflake.getTables({
+const current = pulumi.output(snowflake.getFunctions({
     database: "MYDB",
     schema: "MYSCHEMA",
 }));
@@ -113,34 +113,34 @@ const current = pulumi.output(snowflake.getTables({
 
 
 
-## Using getTables {#using}
+## Using getFunctions {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getTables<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetTablesArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetTablesResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getFunctions<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetFunctionsArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetFunctionsResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_tables(</span><span class="nx">database</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-               <span class="nx">schema</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-               <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetTablesResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_functions(</span><span class="nx">database</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                  <span class="nx">schema</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                  <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetFunctionsResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetTables<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">GetTablesArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetTablesResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetFunctions<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">GetFunctionsArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetFunctionsResult</a></span>, error)</span></code></pre></div>
 
-> Note: This function is named `GetTables` in the Go SDK.
+> Note: This function is named `GetFunctions` in the Go SDK.
 
 {{% /choosable %}}
 
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetTables </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetTablesResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetTablesArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetFunctions </span><span class="p">{</span><span class="k">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetFunctionsResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetFunctionsArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -167,7 +167,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The schema from which to return the tables from.
+    <dd>{{% md %}}The schema from which to return the functions from.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -189,7 +189,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The schema from which to return the tables from.
+    <dd>{{% md %}}The schema from which to return the functions from.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -211,7 +211,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The schema from which to return the tables from.
+    <dd>{{% md %}}The schema from which to return the functions from.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -233,14 +233,14 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The schema from which to return the tables from.
+    <dd>{{% md %}}The schema from which to return the functions from.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
 
 
-## getTables Result {#result}
+## getFunctions Result {#result}
 
 The following output properties are available:
 
@@ -258,6 +258,15 @@ The following output properties are available:
     <dd>{{% md %}}The database from which to return the schemas from.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="functions_csharp">
+<a href="#functions_csharp" style="color: inherit; text-decoration: inherit;">Functions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getfunctionsfunction">List&lt;Get<wbr>Functions<wbr>Function&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The functions in the schema
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
 </span>
@@ -273,16 +282,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The schema from which to return the tables from.
-{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="tables_csharp">
-<a href="#tables_csharp" style="color: inherit; text-decoration: inherit;">Tables</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gettablestable">List&lt;Get<wbr>Tables<wbr>Table&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}The tables in the schema
+    <dd>{{% md %}}The schema from which to return the functions from.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -296,6 +296,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The database from which to return the schemas from.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="functions_go">
+<a href="#functions_go" style="color: inherit; text-decoration: inherit;">Functions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getfunctionsfunction">[]Get<wbr>Functions<wbr>Function</a></span>
+    </dt>
+    <dd>{{% md %}}The functions in the schema
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
@@ -313,16 +322,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The schema from which to return the tables from.
-{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="tables_go">
-<a href="#tables_go" style="color: inherit; text-decoration: inherit;">Tables</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gettablestable">[]Get<wbr>Tables<wbr>Table</a></span>
-    </dt>
-    <dd>{{% md %}}The tables in the schema
+    <dd>{{% md %}}The schema from which to return the functions from.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -336,6 +336,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The database from which to return the schemas from.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="functions_nodejs">
+<a href="#functions_nodejs" style="color: inherit; text-decoration: inherit;">functions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getfunctionsfunction">Get<wbr>Functions<wbr>Function[]</a></span>
+    </dt>
+    <dd>{{% md %}}The functions in the schema
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
@@ -353,16 +362,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The schema from which to return the tables from.
-{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="tables_nodejs">
-<a href="#tables_nodejs" style="color: inherit; text-decoration: inherit;">tables</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gettablestable">Get<wbr>Tables<wbr>Table[]</a></span>
-    </dt>
-    <dd>{{% md %}}The tables in the schema
+    <dd>{{% md %}}The schema from which to return the functions from.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -376,6 +376,15 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The database from which to return the schemas from.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="functions_python">
+<a href="#functions_python" style="color: inherit; text-decoration: inherit;">functions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getfunctionsfunction">Sequence[Get<wbr>Functions<wbr>Function]</a></span>
+    </dt>
+    <dd>{{% md %}}The functions in the schema
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
@@ -393,16 +402,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The schema from which to return the tables from.
-{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="tables_python">
-<a href="#tables_python" style="color: inherit; text-decoration: inherit;">tables</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gettablestable">Sequence[Get<wbr>Tables<wbr>Table]</a></span>
-    </dt>
-    <dd>{{% md %}}The tables in the schema
+    <dd>{{% md %}}The schema from which to return the functions from.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -412,12 +412,20 @@ The following output properties are available:
 ## Supporting Types
 
 
-<h4 id="gettablestable">Get<wbr>Tables<wbr>Table</h4>
+<h4 id="getfunctionsfunction">Get<wbr>Functions<wbr>Function</h4>
 
 
 
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="argumenttypes_csharp">
+<a href="#argumenttypes_csharp" style="color: inherit; text-decoration: inherit;">Argument<wbr>Types</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="comment_csharp">
 <a href="#comment_csharp" style="color: inherit; text-decoration: inherit;">Comment</a>
@@ -444,18 +452,34 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="returntype_csharp">
+<a href="#returntype_csharp" style="color: inherit; text-decoration: inherit;">Return<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="schema_csharp">
 <a href="#schema_csharp" style="color: inherit; text-decoration: inherit;">Schema</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The schema from which to return the tables from.
+    <dd>{{% md %}}The schema from which to return the functions from.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="argumenttypes_go">
+<a href="#argumenttypes_go" style="color: inherit; text-decoration: inherit;">Argument<wbr>Types</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="comment_go">
 <a href="#comment_go" style="color: inherit; text-decoration: inherit;">Comment</a>
@@ -482,18 +506,34 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="returntype_go">
+<a href="#returntype_go" style="color: inherit; text-decoration: inherit;">Return<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="schema_go">
 <a href="#schema_go" style="color: inherit; text-decoration: inherit;">Schema</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The schema from which to return the tables from.
+    <dd>{{% md %}}The schema from which to return the functions from.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="argumenttypes_nodejs">
+<a href="#argumenttypes_nodejs" style="color: inherit; text-decoration: inherit;">argument<wbr>Types</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="comment_nodejs">
 <a href="#comment_nodejs" style="color: inherit; text-decoration: inherit;">comment</a>
@@ -520,18 +560,34 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="returntype_nodejs">
+<a href="#returntype_nodejs" style="color: inherit; text-decoration: inherit;">return<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="schema_nodejs">
 <a href="#schema_nodejs" style="color: inherit; text-decoration: inherit;">schema</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The schema from which to return the tables from.
+    <dd>{{% md %}}The schema from which to return the functions from.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
+            title="Required">
+        <span id="argument_types_python">
+<a href="#argument_types_python" style="color: inherit; text-decoration: inherit;">argument_<wbr>types</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="comment_python">
 <a href="#comment_python" style="color: inherit; text-decoration: inherit;">comment</a>
@@ -558,13 +614,21 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="return_type_python">
+<a href="#return_type_python" style="color: inherit; text-decoration: inherit;">return_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="schema_python">
 <a href="#schema_python" style="color: inherit; text-decoration: inherit;">schema</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The schema from which to return the tables from.
+    <dd>{{% md %}}The schema from which to return the functions from.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

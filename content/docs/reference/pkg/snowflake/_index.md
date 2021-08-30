@@ -23,6 +23,7 @@ A Pulumi package for creating and managing snowflake cloud resources.
     <li><a href="externaltablegrant" title="ExternalTableGrant"><span class="symbol resource"></span>ExternalTableGrant</a></li>
     <li><a href="fileformat" title="FileFormat"><span class="symbol resource"></span>FileFormat</a></li>
     <li><a href="fileformatgrant" title="FileFormatGrant"><span class="symbol resource"></span>FileFormatGrant</a></li>
+    <li><a href="function" title="Function"><span class="symbol resource"></span>Function</a></li>
     <li><a href="functiongrant" title="FunctionGrant"><span class="symbol resource"></span>FunctionGrant</a></li>
     <li><a href="integrationgrant" title="IntegrationGrant"><span class="symbol resource"></span>IntegrationGrant</a></li>
     <li><a href="managedaccount" title="ManagedAccount"><span class="symbol resource"></span>ManagedAccount</a></li>
@@ -35,12 +36,15 @@ A Pulumi package for creating and managing snowflake cloud resources.
     <li><a href="notificationintegration" title="NotificationIntegration"><span class="symbol resource"></span>NotificationIntegration</a></li>
     <li><a href="pipe" title="Pipe"><span class="symbol resource"></span>Pipe</a></li>
     <li><a href="pipegrant" title="PipeGrant"><span class="symbol resource"></span>PipeGrant</a></li>
+    <li><a href="procedure" title="Procedure"><span class="symbol resource"></span>Procedure</a></li>
     <li><a href="proceduregrant" title="ProcedureGrant"><span class="symbol resource"></span>ProcedureGrant</a></li>
     <li><a href="provider" title="Provider"><span class="symbol resource"></span>Provider</a></li>
     <li><a href="resourcemonitor" title="ResourceMonitor"><span class="symbol resource"></span>ResourceMonitor</a></li>
     <li><a href="resourcemonitorgrant" title="ResourceMonitorGrant"><span class="symbol resource"></span>ResourceMonitorGrant</a></li>
     <li><a href="role" title="Role"><span class="symbol resource"></span>Role</a></li>
     <li><a href="rolegrants" title="RoleGrants"><span class="symbol resource"></span>RoleGrants</a></li>
+    <li><a href="rowaccesspolicy" title="RowAccessPolicy"><span class="symbol resource"></span>RowAccessPolicy</a></li>
+    <li><a href="rowaccesspolicygrant" title="RowAccessPolicyGrant"><span class="symbol resource"></span>RowAccessPolicyGrant</a></li>
     <li><a href="schema" title="Schema"><span class="symbol resource"></span>Schema</a></li>
     <li><a href="schemagrant" title="SchemaGrant"><span class="symbol resource"></span>SchemaGrant</a></li>
     <li><a href="scimintegration" title="ScimIntegration"><span class="symbol resource"></span>ScimIntegration</a></li>
@@ -67,14 +71,29 @@ A Pulumi package for creating and managing snowflake cloud resources.
 <h2 id="functions">Functions</h2>
 <ul class="api">
     <li><a href="getcurrentaccount" title="GetCurrentAccount"><span class="symbol function"></span>GetCurrentAccount</a></li>
+    <li><a href="getexternalfunctions" title="GetExternalFunctions"><span class="symbol function"></span>GetExternalFunctions</a></li>
+    <li><a href="getexternaltables" title="GetExternalTables"><span class="symbol function"></span>GetExternalTables</a></li>
+    <li><a href="getfileformats" title="GetFileFormats"><span class="symbol function"></span>GetFileFormats</a></li>
+    <li><a href="getfunctions" title="GetFunctions"><span class="symbol function"></span>GetFunctions</a></li>
+    <li><a href="getmaskingpolicies" title="GetMaskingPolicies"><span class="symbol function"></span>GetMaskingPolicies</a></li>
     <li><a href="getmaterializedviews" title="GetMaterializedViews"><span class="symbol function"></span>GetMaterializedViews</a></li>
+    <li><a href="getpipes" title="GetPipes"><span class="symbol function"></span>GetPipes</a></li>
+    <li><a href="getprocedures" title="GetProcedures"><span class="symbol function"></span>GetProcedures</a></li>
+    <li><a href="getresourcemonitors" title="GetResourceMonitors"><span class="symbol function"></span>GetResourceMonitors</a></li>
+    <li><a href="getrowaccesspolicies" title="GetRowAccessPolicies"><span class="symbol function"></span>GetRowAccessPolicies</a></li>
     <li><a href="getschemas" title="GetSchemas"><span class="symbol function"></span>GetSchemas</a></li>
+    <li><a href="getsequences" title="GetSequences"><span class="symbol function"></span>GetSequences</a></li>
+    <li><a href="getstages" title="GetStages"><span class="symbol function"></span>GetStages</a></li>
+    <li><a href="getstorageintegrations" title="GetStorageIntegrations"><span class="symbol function"></span>GetStorageIntegrations</a></li>
+    <li><a href="getstreams" title="GetStreams"><span class="symbol function"></span>GetStreams</a></li>
     <li><a href="getsystemgeneratescimaccesstoken" title="GetSystemGenerateScimAccessToken"><span class="symbol function"></span>GetSystemGenerateScimAccessToken</a></li>
     <li><a href="getsystemgetawssnsiampolicy" title="GetSystemGetAwsSnsIamPolicy"><span class="symbol function"></span>GetSystemGetAwsSnsIamPolicy</a></li>
     <li><a href="getsystemgetprivatelinkconfig" title="GetSystemGetPrivateLinkConfig"><span class="symbol function"></span>GetSystemGetPrivateLinkConfig</a></li>
     <li><a href="getsystemgetsnowflakeplatforminfo" title="GetSystemGetSnowflakePlatformInfo"><span class="symbol function"></span>GetSystemGetSnowflakePlatformInfo</a></li>
     <li><a href="gettables" title="GetTables"><span class="symbol function"></span>GetTables</a></li>
+    <li><a href="gettasks" title="GetTasks"><span class="symbol function"></span>GetTasks</a></li>
     <li><a href="getviews" title="GetViews"><span class="symbol function"></span>GetViews</a></li>
+    <li><a href="getwarehouses" title="GetWarehouses"><span class="symbol function"></span>GetWarehouses</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -86,6 +105,6 @@ A Pulumi package for creating and managing snowflake cloud resources.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`snowflake` Terraform Provider](https://github.com/chanzuckerberg/terraform-provider-snowflake).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>0.1.2</dd>
+	<dd>0.1.3</dd>
 </dl>
 

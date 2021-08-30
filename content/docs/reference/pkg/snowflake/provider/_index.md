@@ -40,6 +40,7 @@ construction to achieve fine-grained programmatic control over provider settings
              <span class="nx">oauth_refresh_token</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">private_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+             <span class="nx">private_key_passphrase</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">private_key_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
              <span class="nx">role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -269,6 +270,16 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="privatekeypassphrase_csharp">
+<a href="#privatekeypassphrase_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Key<wbr>Passphrase</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Supports the encryption ciphers aes-128-cbc, aes-128-gcm, aes-192-cbc, aes-192-gcm, aes-256-cbc, aes-256-gcm, and
+des-ede3-cbc
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="privatekeypath_csharp">
 <a href="#privatekeypath_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Key<wbr>Path</a>
 </span>
@@ -384,6 +395,16 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="privatekeypassphrase_go">
+<a href="#privatekeypassphrase_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Key<wbr>Passphrase</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Supports the encryption ciphers aes-128-cbc, aes-128-gcm, aes-192-cbc, aes-192-gcm, aes-256-cbc, aes-256-gcm, and
+des-ede3-cbc
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privatekeypath_go">
 <a href="#privatekeypath_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Key<wbr>Path</a>
@@ -501,6 +522,16 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="privatekeypassphrase_nodejs">
+<a href="#privatekeypassphrase_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Key<wbr>Passphrase</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Supports the encryption ciphers aes-128-cbc, aes-128-gcm, aes-192-cbc, aes-192-gcm, aes-256-cbc, aes-256-gcm, and
+des-ede3-cbc
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="privatekeypath_nodejs">
 <a href="#privatekeypath_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Key<wbr>Path</a>
 </span>
@@ -616,6 +647,16 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="private_key_passphrase_python">
+<a href="#private_key_passphrase_python" style="color: inherit; text-decoration: inherit;">private_<wbr>key_<wbr>passphrase</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Supports the encryption ciphers aes-128-cbc, aes-128-gcm, aes-192-cbc, aes-192-gcm, aes-256-cbc, aes-256-gcm, and
+des-ede3-cbc
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="private_key_path_python">
 <a href="#private_key_path_python" style="color: inherit; text-decoration: inherit;">private_<wbr>key_<wbr>path</a>

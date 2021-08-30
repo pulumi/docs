@@ -385,7 +385,7 @@ The ProcedureGrant resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#proceduregrantargument">List&lt;Procedure<wbr>Grant<wbr>Argument<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}List of the arguments for the procedure (must be present if procedure_name is present)
+    <dd>{{% md %}}List of the arguments for the procedure (must be present if procedure has arguments and procedure_name is present)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="onfuture_csharp">
@@ -479,7 +479,7 @@ The ProcedureGrant resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#proceduregrantargument">[]Procedure<wbr>Grant<wbr>Argument<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}List of the arguments for the procedure (must be present if procedure_name is present)
+    <dd>{{% md %}}List of the arguments for the procedure (must be present if procedure has arguments and procedure_name is present)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="onfuture_go">
@@ -573,7 +573,7 @@ The ProcedureGrant resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#proceduregrantargument">Procedure<wbr>Grant<wbr>Argument<wbr>Args[]</a></span>
     </dt>
-    <dd>{{% md %}}List of the arguments for the procedure (must be present if procedure_name is present)
+    <dd>{{% md %}}List of the arguments for the procedure (must be present if procedure has arguments and procedure_name is present)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="onfuture_nodejs">
@@ -667,7 +667,7 @@ The ProcedureGrant resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#proceduregrantargument">Sequence[Procedure<wbr>Grant<wbr>Argument<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}List of the arguments for the procedure (must be present if procedure_name is present)
+    <dd>{{% md %}}List of the arguments for the procedure (must be present if procedure has arguments and procedure_name is present)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="on_future_python">
@@ -933,7 +933,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#proceduregrantargument">List&lt;Procedure<wbr>Grant<wbr>Argument<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}List of the arguments for the procedure (must be present if procedure_name is present)
+    <dd>{{% md %}}List of the arguments for the procedure (must be present if procedure has arguments and procedure_name is present)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_databasename_csharp">
@@ -1027,7 +1027,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#proceduregrantargument">[]Procedure<wbr>Grant<wbr>Argument<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}List of the arguments for the procedure (must be present if procedure_name is present)
+    <dd>{{% md %}}List of the arguments for the procedure (must be present if procedure has arguments and procedure_name is present)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_databasename_go">
@@ -1121,7 +1121,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#proceduregrantargument">Procedure<wbr>Grant<wbr>Argument<wbr>Args[]</a></span>
     </dt>
-    <dd>{{% md %}}List of the arguments for the procedure (must be present if procedure_name is present)
+    <dd>{{% md %}}List of the arguments for the procedure (must be present if procedure has arguments and procedure_name is present)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_databasename_nodejs">
@@ -1215,7 +1215,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#proceduregrantargument">Sequence[Procedure<wbr>Grant<wbr>Argument<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}List of the arguments for the procedure (must be present if procedure_name is present)
+    <dd>{{% md %}}List of the arguments for the procedure (must be present if procedure has arguments and procedure_name is present)
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_database_name_python">

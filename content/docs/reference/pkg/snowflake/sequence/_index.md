@@ -484,6 +484,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-"
             title="">
+        <span id="fullyqualifiedname_csharp">
+<a href="#fullyqualifiedname_csharp" style="color: inherit; text-decoration: inherit;">Fully<wbr>Qualified<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The fully qualified name of the sequence.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
 </span>
@@ -504,6 +513,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-"
+            title="">
+        <span id="fullyqualifiedname_go">
+<a href="#fullyqualifiedname_go" style="color: inherit; text-decoration: inherit;">Fully<wbr>Qualified<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The fully qualified name of the sequence.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -526,6 +544,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-"
             title="">
+        <span id="fullyqualifiedname_nodejs">
+<a href="#fullyqualifiedname_nodejs" style="color: inherit; text-decoration: inherit;">fully<wbr>Qualified<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The fully qualified name of the sequence.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
@@ -546,6 +573,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-"
+            title="">
+        <span id="fully_qualified_name_python">
+<a href="#fully_qualified_name_python" style="color: inherit; text-decoration: inherit;">fully_<wbr>qualified_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The fully qualified name of the sequence.
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -583,6 +619,7 @@ Get an existing Sequence resource's state with the given name, ID, and optional 
         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
         <span class="nx">comment</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">database</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">fully_qualified_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">increment</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">next_value</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
@@ -717,6 +754,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The database in which to create the sequence. Don't use the | character.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_fullyqualifiedname_csharp">
+<a href="#state_fullyqualifiedname_csharp" style="color: inherit; text-decoration: inherit;">Fully<wbr>Qualified<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The fully qualified name of the sequence.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_increment_csharp">
 <a href="#state_increment_csharp" style="color: inherit; text-decoration: inherit;">Increment</a>
 </span>
@@ -773,6 +819,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The database in which to create the sequence. Don't use the | character.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_fullyqualifiedname_go">
+<a href="#state_fullyqualifiedname_go" style="color: inherit; text-decoration: inherit;">Fully<wbr>Qualified<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The fully qualified name of the sequence.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_increment_go">
@@ -833,6 +888,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The database in which to create the sequence. Don't use the | character.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_fullyqualifiedname_nodejs">
+<a href="#state_fullyqualifiedname_nodejs" style="color: inherit; text-decoration: inherit;">fully<wbr>Qualified<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The fully qualified name of the sequence.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_increment_nodejs">
 <a href="#state_increment_nodejs" style="color: inherit; text-decoration: inherit;">increment</a>
 </span>
@@ -889,6 +953,15 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The database in which to create the sequence. Don't use the | character.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_fully_qualified_name_python">
+<a href="#state_fully_qualified_name_python" style="color: inherit; text-decoration: inherit;">fully_<wbr>qualified_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The fully qualified name of the sequence.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_increment_python">

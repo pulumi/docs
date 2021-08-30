@@ -1,8 +1,8 @@
 
 ---
-title: "getTables"
-title_tag: "snowflake.getTables"
-meta_desc: "Documentation for the snowflake.getTables function with examples, input properties, output properties, and supporting types."
+title: "getExternalTables"
+title_tag: "snowflake.getExternalTables"
+meta_desc: "Documentation for the snowflake.getExternalTables function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -32,7 +32,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var current = Output.Create(Snowflake.GetTables.InvokeAsync(new Snowflake.GetTablesArgs
+        var current = Output.Create(Snowflake.GetExternalTables.InvokeAsync(new Snowflake.GetExternalTablesArgs
         {
             Database = "MYDB",
             Schema = "MYSCHEMA",
@@ -58,7 +58,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := snowflake.GetTables(ctx, &GetTablesArgs{
+		_, err := snowflake.GetExternalTables(ctx, &GetExternalTablesArgs{
 			Database: "MYDB",
 			Schema:   "MYSCHEMA",
 		}, nil)
@@ -80,7 +80,7 @@ func main() {
 import pulumi
 import pulumi_snowflake as snowflake
 
-current = snowflake.get_tables(database="MYDB",
+current = snowflake.get_external_tables(database="MYDB",
     schema="MYSCHEMA")
 ```
 
@@ -95,7 +95,7 @@ current = snowflake.get_tables(database="MYDB",
 import * as pulumi from "@pulumi/pulumi";
 import * as snowflake from "@pulumi/snowflake";
 
-const current = pulumi.output(snowflake.getTables({
+const current = pulumi.output(snowflake.getExternalTables({
     database: "MYDB",
     schema: "MYSCHEMA",
 }));
@@ -113,34 +113,34 @@ const current = pulumi.output(snowflake.getTables({
 
 
 
-## Using getTables {#using}
+## Using getExternalTables {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getTables<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetTablesArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetTablesResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getExternalTables<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetExternalTablesArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetExternalTablesResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_tables(</span><span class="nx">database</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-               <span class="nx">schema</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-               <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetTablesResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_external_tables(</span><span class="nx">database</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                        <span class="nx">schema</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                        <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetExternalTablesResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetTables<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">GetTablesArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetTablesResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetExternalTables<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">GetExternalTablesArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetExternalTablesResult</a></span>, error)</span></code></pre></div>
 
-> Note: This function is named `GetTables` in the Go SDK.
+> Note: This function is named `GetExternalTables` in the Go SDK.
 
 {{% /choosable %}}
 
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetTables </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetTablesResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetTablesArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetExternalTables </span><span class="p">{</span><span class="k">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetExternalTablesResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetExternalTablesArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -167,7 +167,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The schema from which to return the tables from.
+    <dd>{{% md %}}The schema from which to return the external tables from.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -189,7 +189,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The schema from which to return the tables from.
+    <dd>{{% md %}}The schema from which to return the external tables from.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -211,7 +211,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The schema from which to return the tables from.
+    <dd>{{% md %}}The schema from which to return the external tables from.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -233,14 +233,14 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The schema from which to return the tables from.
+    <dd>{{% md %}}The schema from which to return the external tables from.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
 
 
-## getTables Result {#result}
+## getExternalTables Result {#result}
 
 The following output properties are available:
 
@@ -258,6 +258,15 @@ The following output properties are available:
     <dd>{{% md %}}The database from which to return the schemas from.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="externaltables_csharp">
+<a href="#externaltables_csharp" style="color: inherit; text-decoration: inherit;">External<wbr>Tables</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getexternaltablesexternaltable">List&lt;Get<wbr>External<wbr>Tables<wbr>External<wbr>Table&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The external tables in the schema
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
 </span>
@@ -273,16 +282,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The schema from which to return the tables from.
-{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="tables_csharp">
-<a href="#tables_csharp" style="color: inherit; text-decoration: inherit;">Tables</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gettablestable">List&lt;Get<wbr>Tables<wbr>Table&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}The tables in the schema
+    <dd>{{% md %}}The schema from which to return the external tables from.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -296,6 +296,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The database from which to return the schemas from.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="externaltables_go">
+<a href="#externaltables_go" style="color: inherit; text-decoration: inherit;">External<wbr>Tables</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getexternaltablesexternaltable">[]Get<wbr>External<wbr>Tables<wbr>External<wbr>Table</a></span>
+    </dt>
+    <dd>{{% md %}}The external tables in the schema
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
@@ -313,16 +322,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The schema from which to return the tables from.
-{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="tables_go">
-<a href="#tables_go" style="color: inherit; text-decoration: inherit;">Tables</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gettablestable">[]Get<wbr>Tables<wbr>Table</a></span>
-    </dt>
-    <dd>{{% md %}}The tables in the schema
+    <dd>{{% md %}}The schema from which to return the external tables from.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -336,6 +336,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The database from which to return the schemas from.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="externaltables_nodejs">
+<a href="#externaltables_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Tables</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getexternaltablesexternaltable">Get<wbr>External<wbr>Tables<wbr>External<wbr>Table[]</a></span>
+    </dt>
+    <dd>{{% md %}}The external tables in the schema
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
@@ -353,16 +362,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The schema from which to return the tables from.
-{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="tables_nodejs">
-<a href="#tables_nodejs" style="color: inherit; text-decoration: inherit;">tables</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gettablestable">Get<wbr>Tables<wbr>Table[]</a></span>
-    </dt>
-    <dd>{{% md %}}The tables in the schema
+    <dd>{{% md %}}The schema from which to return the external tables from.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -376,6 +376,15 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The database from which to return the schemas from.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="external_tables_python">
+<a href="#external_tables_python" style="color: inherit; text-decoration: inherit;">external_<wbr>tables</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getexternaltablesexternaltable">Sequence[Get<wbr>External<wbr>Tables<wbr>External<wbr>Table]</a></span>
+    </dt>
+    <dd>{{% md %}}The external tables in the schema
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
@@ -393,16 +402,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The schema from which to return the tables from.
-{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="tables_python">
-<a href="#tables_python" style="color: inherit; text-decoration: inherit;">tables</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gettablestable">Sequence[Get<wbr>Tables<wbr>Table]</a></span>
-    </dt>
-    <dd>{{% md %}}The tables in the schema
+    <dd>{{% md %}}The schema from which to return the external tables from.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -412,7 +412,7 @@ The following output properties are available:
 ## Supporting Types
 
 
-<h4 id="gettablestable">Get<wbr>Tables<wbr>Table</h4>
+<h4 id="getexternaltablesexternaltable">Get<wbr>External<wbr>Tables<wbr>External<wbr>Table</h4>
 
 
 
@@ -450,7 +450,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The schema from which to return the tables from.
+    <dd>{{% md %}}The schema from which to return the external tables from.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -488,7 +488,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The schema from which to return the tables from.
+    <dd>{{% md %}}The schema from which to return the external tables from.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -526,7 +526,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The schema from which to return the tables from.
+    <dd>{{% md %}}The schema from which to return the external tables from.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -564,7 +564,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The schema from which to return the tables from.
+    <dd>{{% md %}}The schema from which to return the external tables from.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

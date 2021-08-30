@@ -1,8 +1,8 @@
 
 ---
-title: "getTables"
-title_tag: "snowflake.getTables"
-meta_desc: "Documentation for the snowflake.getTables function with examples, input properties, output properties, and supporting types."
+title: "getFileFormats"
+title_tag: "snowflake.getFileFormats"
+meta_desc: "Documentation for the snowflake.getFileFormats function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -32,7 +32,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var current = Output.Create(Snowflake.GetTables.InvokeAsync(new Snowflake.GetTablesArgs
+        var current = Output.Create(Snowflake.GetFileFormats.InvokeAsync(new Snowflake.GetFileFormatsArgs
         {
             Database = "MYDB",
             Schema = "MYSCHEMA",
@@ -58,7 +58,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := snowflake.GetTables(ctx, &GetTablesArgs{
+		_, err := snowflake.GetFileFormats(ctx, &GetFileFormatsArgs{
 			Database: "MYDB",
 			Schema:   "MYSCHEMA",
 		}, nil)
@@ -80,7 +80,7 @@ func main() {
 import pulumi
 import pulumi_snowflake as snowflake
 
-current = snowflake.get_tables(database="MYDB",
+current = snowflake.get_file_formats(database="MYDB",
     schema="MYSCHEMA")
 ```
 
@@ -95,7 +95,7 @@ current = snowflake.get_tables(database="MYDB",
 import * as pulumi from "@pulumi/pulumi";
 import * as snowflake from "@pulumi/snowflake";
 
-const current = pulumi.output(snowflake.getTables({
+const current = pulumi.output(snowflake.getFileFormats({
     database: "MYDB",
     schema: "MYSCHEMA",
 }));
@@ -113,34 +113,34 @@ const current = pulumi.output(snowflake.getTables({
 
 
 
-## Using getTables {#using}
+## Using getFileFormats {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getTables<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetTablesArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetTablesResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getFileFormats<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetFileFormatsArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetFileFormatsResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_tables(</span><span class="nx">database</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-               <span class="nx">schema</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-               <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetTablesResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_file_formats(</span><span class="nx">database</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                     <span class="nx">schema</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+                     <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetFileFormatsResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetTables<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">GetTablesArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetTablesResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetFileFormats<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">,</span> <span class="nx">args</span><span class="p"> *</span><span class="nx">GetFileFormatsArgs</span><span class="p">,</span> <span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetFileFormatsResult</a></span>, error)</span></code></pre></div>
 
-> Note: This function is named `GetTables` in the Go SDK.
+> Note: This function is named `GetFileFormats` in the Go SDK.
 
 {{% /choosable %}}
 
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetTables </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="#result">GetTablesResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetTablesArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetFileFormats </span><span class="p">{</span><span class="k">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetFileFormatsResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetFileFormatsArgs</span><span class="p"> </span><span class="nx">args<span class="p">,</span> <span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -167,7 +167,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The schema from which to return the tables from.
+    <dd>{{% md %}}The schema from which to return the file formats from.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -189,7 +189,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The schema from which to return the tables from.
+    <dd>{{% md %}}The schema from which to return the file formats from.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -211,7 +211,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The schema from which to return the tables from.
+    <dd>{{% md %}}The schema from which to return the file formats from.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -233,14 +233,14 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The schema from which to return the tables from.
+    <dd>{{% md %}}The schema from which to return the file formats from.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
 
 
-## getTables Result {#result}
+## getFileFormats Result {#result}
 
 The following output properties are available:
 
@@ -258,6 +258,15 @@ The following output properties are available:
     <dd>{{% md %}}The database from which to return the schemas from.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="fileformats_csharp">
+<a href="#fileformats_csharp" style="color: inherit; text-decoration: inherit;">File<wbr>Formats</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getfileformatsfileformat">List&lt;Get<wbr>File<wbr>Formats<wbr>File<wbr>Format&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The file formats in the schema
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
 </span>
@@ -273,16 +282,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The schema from which to return the tables from.
-{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="tables_csharp">
-<a href="#tables_csharp" style="color: inherit; text-decoration: inherit;">Tables</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gettablestable">List&lt;Get<wbr>Tables<wbr>Table&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}The tables in the schema
+    <dd>{{% md %}}The schema from which to return the file formats from.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -296,6 +296,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The database from which to return the schemas from.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="fileformats_go">
+<a href="#fileformats_go" style="color: inherit; text-decoration: inherit;">File<wbr>Formats</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getfileformatsfileformat">[]Get<wbr>File<wbr>Formats<wbr>File<wbr>Format</a></span>
+    </dt>
+    <dd>{{% md %}}The file formats in the schema
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
@@ -313,16 +322,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The schema from which to return the tables from.
-{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="tables_go">
-<a href="#tables_go" style="color: inherit; text-decoration: inherit;">Tables</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gettablestable">[]Get<wbr>Tables<wbr>Table</a></span>
-    </dt>
-    <dd>{{% md %}}The tables in the schema
+    <dd>{{% md %}}The schema from which to return the file formats from.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -336,6 +336,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The database from which to return the schemas from.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="fileformats_nodejs">
+<a href="#fileformats_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Formats</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getfileformatsfileformat">Get<wbr>File<wbr>Formats<wbr>File<wbr>Format[]</a></span>
+    </dt>
+    <dd>{{% md %}}The file formats in the schema
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
@@ -353,16 +362,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The schema from which to return the tables from.
-{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="tables_nodejs">
-<a href="#tables_nodejs" style="color: inherit; text-decoration: inherit;">tables</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gettablestable">Get<wbr>Tables<wbr>Table[]</a></span>
-    </dt>
-    <dd>{{% md %}}The tables in the schema
+    <dd>{{% md %}}The schema from which to return the file formats from.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -376,6 +376,15 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The database from which to return the schemas from.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="file_formats_python">
+<a href="#file_formats_python" style="color: inherit; text-decoration: inherit;">file_<wbr>formats</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getfileformatsfileformat">Sequence[Get<wbr>File<wbr>Formats<wbr>File<wbr>Format]</a></span>
+    </dt>
+    <dd>{{% md %}}The file formats in the schema
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
@@ -393,16 +402,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The schema from which to return the tables from.
-{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="tables_python">
-<a href="#tables_python" style="color: inherit; text-decoration: inherit;">tables</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gettablestable">Sequence[Get<wbr>Tables<wbr>Table]</a></span>
-    </dt>
-    <dd>{{% md %}}The tables in the schema
+    <dd>{{% md %}}The schema from which to return the file formats from.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -412,7 +412,7 @@ The following output properties are available:
 ## Supporting Types
 
 
-<h4 id="gettablestable">Get<wbr>Tables<wbr>Table</h4>
+<h4 id="getfileformatsfileformat">Get<wbr>File<wbr>Formats<wbr>File<wbr>Format</h4>
 
 
 
@@ -436,6 +436,14 @@ The following output properties are available:
     <dd>{{% md %}}The database from which to return the schemas from.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="formattype_csharp">
+<a href="#formattype_csharp" style="color: inherit; text-decoration: inherit;">Format<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
@@ -450,7 +458,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The schema from which to return the tables from.
+    <dd>{{% md %}}The schema from which to return the file formats from.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -474,6 +482,14 @@ The following output properties are available:
     <dd>{{% md %}}The database from which to return the schemas from.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="formattype_go">
+<a href="#formattype_go" style="color: inherit; text-decoration: inherit;">Format<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
@@ -488,7 +504,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The schema from which to return the tables from.
+    <dd>{{% md %}}The schema from which to return the file formats from.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -512,6 +528,14 @@ The following output properties are available:
     <dd>{{% md %}}The database from which to return the schemas from.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="formattype_nodejs">
+<a href="#formattype_nodejs" style="color: inherit; text-decoration: inherit;">format<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
@@ -526,7 +550,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The schema from which to return the tables from.
+    <dd>{{% md %}}The schema from which to return the file formats from.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -550,6 +574,14 @@ The following output properties are available:
     <dd>{{% md %}}The database from which to return the schemas from.
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="format_type_python">
+<a href="#format_type_python" style="color: inherit; text-decoration: inherit;">format_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
@@ -564,7 +596,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The schema from which to return the tables from.
+    <dd>{{% md %}}The schema from which to return the file formats from.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

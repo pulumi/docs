@@ -342,7 +342,8 @@ The Warehouse resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Identifier for the virtual warehouse; must be unique for your account.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcemonitor_csharp">
 <a href="#resourcemonitor_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Monitor</a>
@@ -395,7 +396,8 @@ The Warehouse resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Specifies the size of the virtual warehouse. Larger warehouse sizes 5X-Large and 6X-Large are currently in preview and only available on Amazon Web Services (AWS).
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -469,7 +471,8 @@ The Warehouse resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Identifier for the virtual warehouse; must be unique for your account.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcemonitor_go">
 <a href="#resourcemonitor_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Monitor</a>
@@ -522,7 +525,8 @@ The Warehouse resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Specifies the size of the virtual warehouse. Larger warehouse sizes 5X-Large and 6X-Large are currently in preview and only available on Amazon Web Services (AWS).
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -596,7 +600,8 @@ The Warehouse resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Identifier for the virtual warehouse; must be unique for your account.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcemonitor_nodejs">
 <a href="#resourcemonitor_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Monitor</a>
@@ -649,7 +654,8 @@ The Warehouse resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Specifies the size of the virtual warehouse. Larger warehouse sizes 5X-Large and 6X-Large are currently in preview and only available on Amazon Web Services (AWS).
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -723,7 +729,8 @@ The Warehouse resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Identifier for the virtual warehouse; must be unique for your account.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resource_monitor_python">
 <a href="#resource_monitor_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>monitor</a>
@@ -776,7 +783,8 @@ The Warehouse resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Specifies the size of the virtual warehouse. Larger warehouse sizes 5X-Large and 6X-Large are currently in preview and only available on Amazon Web Services (AWS).
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1044,7 +1052,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Identifier for the virtual warehouse; must be unique for your account.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcemonitor_csharp">
 <a href="#state_resourcemonitor_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Monitor</a>
@@ -1097,7 +1106,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Specifies the size of the virtual warehouse. Larger warehouse sizes 5X-Large and 6X-Large are currently in preview and only available on Amazon Web Services (AWS).
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1171,7 +1181,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Identifier for the virtual warehouse; must be unique for your account.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcemonitor_go">
 <a href="#state_resourcemonitor_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Monitor</a>
@@ -1224,7 +1235,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Specifies the size of the virtual warehouse. Larger warehouse sizes 5X-Large and 6X-Large are currently in preview and only available on Amazon Web Services (AWS).
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1298,7 +1310,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Identifier for the virtual warehouse; must be unique for your account.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcemonitor_nodejs">
 <a href="#state_resourcemonitor_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Monitor</a>
@@ -1351,7 +1364,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Specifies the size of the virtual warehouse. Larger warehouse sizes 5X-Large and 6X-Large are currently in preview and only available on Amazon Web Services (AWS).
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1425,7 +1439,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}Identifier for the virtual warehouse; must be unique for your account.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resource_monitor_python">
 <a href="#state_resource_monitor_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>monitor</a>
@@ -1478,7 +1493,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Specifies the size of the virtual warehouse. Larger warehouse sizes 5X-Large and 6X-Large are currently in preview and only available on Amazon Web Services (AWS).
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
