@@ -31,7 +31,7 @@ customer_logos:
       - ro
 ---
 
-Even those who are unfamiliar with coding have likely heard of Python. What began as a hobby project named after a British surreal comedy troupe, Python has grown across three decades to become one of the world’s foremost coding languages. According to the [2021 Stack Overflow Developer Survey](https://insights.stackoverflow.com/survey/2021#most-loved-dreaded-and-wanted-language-love-dread), approximately 68% of software developers have expressed interest in continuing to develop with Python. The same survey also identified Python as the number-one most-wanted coding language among developers who are not currently using it.
+Even those who are unfamiliar with coding have likely heard of Python. What began as a hobby project named after a British surreal comedy troupe, Python has grown across three decades to become one of the world’s foremost coding languages. According to the [2021 Stack Overflow Developer Survey](https://insights.stackoverflow.com/survey/2021#most-loved-dreaded-and-wanted-language-love-dread), approximately 68% of software developers who have worked extensively with Python have expressed interest in continuing to develop with Python. The same survey also identified Python as the number-one most-wanted coding language among developers who are not currently using it.
 There’s no denying Python’s popularity. And, if current trends are any indication, it will likely remain in high demand for years to come.
 
 ## 9 Factors of Python Popularity
