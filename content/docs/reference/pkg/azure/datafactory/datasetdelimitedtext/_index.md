@@ -2353,6 +2353,24 @@ The following state arguments are supported:
     <dd>{{% md %}}The container on the Azure Blob Storage Account hosting the file.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="dynamicfilenameenabled_csharp">
+<a href="#dynamicfilenameenabled_csharp" style="color: inherit; text-decoration: inherit;">Dynamic<wbr>Filename<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Is the `filename` using dynamic expression, function or system variables? Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dynamicpathenabled_csharp">
+<a href="#dynamicpathenabled_csharp" style="color: inherit; text-decoration: inherit;">Dynamic<wbr>Path<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Is the `path` using dynamic expression, function or system variables? Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="filename_csharp">
 <a href="#filename_csharp" style="color: inherit; text-decoration: inherit;">Filename</a>
 </span>
@@ -2382,6 +2400,24 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The container on the Azure Blob Storage Account hosting the file.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dynamicfilenameenabled_go">
+<a href="#dynamicfilenameenabled_go" style="color: inherit; text-decoration: inherit;">Dynamic<wbr>Filename<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Is the `filename` using dynamic expression, function or system variables? Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dynamicpathenabled_go">
+<a href="#dynamicpathenabled_go" style="color: inherit; text-decoration: inherit;">Dynamic<wbr>Path<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Is the `path` using dynamic expression, function or system variables? Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filename_go">
@@ -2415,6 +2451,24 @@ The following state arguments are supported:
     <dd>{{% md %}}The container on the Azure Blob Storage Account hosting the file.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="dynamicfilenameenabled_nodejs">
+<a href="#dynamicfilenameenabled_nodejs" style="color: inherit; text-decoration: inherit;">dynamic<wbr>Filename<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Is the `filename` using dynamic expression, function or system variables? Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dynamicpathenabled_nodejs">
+<a href="#dynamicpathenabled_nodejs" style="color: inherit; text-decoration: inherit;">dynamic<wbr>Path<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Is the `path` using dynamic expression, function or system variables? Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="filename_nodejs">
 <a href="#filename_nodejs" style="color: inherit; text-decoration: inherit;">filename</a>
 </span>
@@ -2444,6 +2498,24 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The container on the Azure Blob Storage Account hosting the file.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dynamic_filename_enabled_python">
+<a href="#dynamic_filename_enabled_python" style="color: inherit; text-decoration: inherit;">dynamic_<wbr>filename_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Is the `filename` using dynamic expression, function or system variables? Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dynamic_path_enabled_python">
+<a href="#dynamic_path_enabled_python" style="color: inherit; text-decoration: inherit;">dynamic_<wbr>path_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Is the `path` using dynamic expression, function or system variables? Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filename_python">
@@ -2495,6 +2567,24 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The base URL to the web server hosting the file.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dynamicfilenameenabled_csharp">
+<a href="#dynamicfilenameenabled_csharp" style="color: inherit; text-decoration: inherit;">Dynamic<wbr>Filename<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Is the `filename` using dynamic expression, function or system variables? Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dynamicpathenabled_csharp">
+<a href="#dynamicpathenabled_csharp" style="color: inherit; text-decoration: inherit;">Dynamic<wbr>Path<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Is the `path` using dynamic expression, function or system variables? Defaults to `false`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2526,6 +2616,24 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The base URL to the web server hosting the file.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dynamicfilenameenabled_go">
+<a href="#dynamicfilenameenabled_go" style="color: inherit; text-decoration: inherit;">Dynamic<wbr>Filename<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Is the `filename` using dynamic expression, function or system variables? Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dynamicpathenabled_go">
+<a href="#dynamicpathenabled_go" style="color: inherit; text-decoration: inherit;">Dynamic<wbr>Path<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Is the `path` using dynamic expression, function or system variables? Defaults to `false`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2557,6 +2665,24 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The base URL to the web server hosting the file.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dynamicfilenameenabled_nodejs">
+<a href="#dynamicfilenameenabled_nodejs" style="color: inherit; text-decoration: inherit;">dynamic<wbr>Filename<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Is the `filename` using dynamic expression, function or system variables? Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dynamicpathenabled_nodejs">
+<a href="#dynamicpathenabled_nodejs" style="color: inherit; text-decoration: inherit;">dynamic<wbr>Path<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Is the `path` using dynamic expression, function or system variables? Defaults to `false`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
@@ -2588,6 +2714,24 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The base URL to the web server hosting the file.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dynamic_filename_enabled_python">
+<a href="#dynamic_filename_enabled_python" style="color: inherit; text-decoration: inherit;">dynamic_<wbr>filename_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Is the `filename` using dynamic expression, function or system variables? Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dynamic_path_enabled_python">
+<a href="#dynamic_path_enabled_python" style="color: inherit; text-decoration: inherit;">dynamic_<wbr>path_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Is the `path` using dynamic expression, function or system variables? Defaults to `false`.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

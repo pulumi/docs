@@ -409,6 +409,7 @@ const exampleAccount = new azure.storage.Account("exampleAccount", {
             <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
             <span class="nx">routing</span><span class="p">:</span> <span class="nx">Optional[AccountRoutingArgs]</span> = None<span class="p">,</span>
             <span class="nx">share_properties</span><span class="p">:</span> <span class="nx">Optional[AccountSharePropertiesArgs]</span> = None<span class="p">,</span>
+            <span class="nx">shared_access_key_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
             <span class="nx">static_website</span><span class="p">:</span> <span class="nx">Optional[AccountStaticWebsiteArgs]</span> = None<span class="p">,</span>
             <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
@@ -729,6 +730,15 @@ for more information. Defaults to `true`.
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="sharedaccesskeyenabled_csharp">
+<a href="#sharedaccesskeyenabled_csharp" style="color: inherit; text-decoration: inherit;">Shared<wbr>Access<wbr>Key<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether the storage account permits requests to be authorized with the account access key via Shared Key. If false, then all requests, including shared access signatures, must be authorized with Azure Active Directory (Azure AD). The default value is `true`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="staticwebsite_csharp">
 <a href="#staticwebsite_csharp" style="color: inherit; text-decoration: inherit;">Static<wbr>Website</a>
 </span>
@@ -939,6 +949,15 @@ for more information. Defaults to `true`.
         <span class="property-type"><a href="#accountshareproperties">Account<wbr>Share<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="sharedaccesskeyenabled_go">
+<a href="#sharedaccesskeyenabled_go" style="color: inherit; text-decoration: inherit;">Shared<wbr>Access<wbr>Key<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether the storage account permits requests to be authorized with the account access key via Shared Key. If false, then all requests, including shared access signatures, must be authorized with Azure Active Directory (Azure AD). The default value is `true`.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="staticwebsite_go">
 <a href="#staticwebsite_go" style="color: inherit; text-decoration: inherit;">Static<wbr>Website</a>
@@ -1151,6 +1170,15 @@ for more information. Defaults to `true`.
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="sharedaccesskeyenabled_nodejs">
+<a href="#sharedaccesskeyenabled_nodejs" style="color: inherit; text-decoration: inherit;">shared<wbr>Access<wbr>Key<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether the storage account permits requests to be authorized with the account access key via Shared Key. If false, then all requests, including shared access signatures, must be authorized with Azure Active Directory (Azure AD). The default value is `true`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="staticwebsite_nodejs">
 <a href="#staticwebsite_nodejs" style="color: inherit; text-decoration: inherit;">static<wbr>Website</a>
 </span>
@@ -1361,6 +1389,15 @@ for more information. Defaults to `true`.
         <span class="property-type"><a href="#accountshareproperties">Account<wbr>Share<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="shared_access_key_enabled_python">
+<a href="#shared_access_key_enabled_python" style="color: inherit; text-decoration: inherit;">shared_<wbr>access_<wbr>key_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether the storage account permits requests to be authorized with the account access key via Shared Key. If false, then all requests, including shared access signatures, must be authorized with Azure Active Directory (Azure AD). The default value is `true`.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="static_website_python">
 <a href="#static_website_python" style="color: inherit; text-decoration: inherit;">static_<wbr>website</a>
@@ -2657,6 +2694,7 @@ Get an existing Account resource's state with the given name, ID, and optional e
         <span class="nx">secondary_web_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">secondary_web_host</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">share_properties</span><span class="p">:</span> <span class="nx">Optional[AccountSharePropertiesArgs]</span> = None<span class="p">,</span>
+        <span class="nx">shared_access_key_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">static_website</span><span class="p">:</span> <span class="nx">Optional[AccountStaticWebsiteArgs]</span> = None<span class="p">,</span>
         <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">) -&gt;</span> Account</code></pre></div>
 {{% /choosable %}}
@@ -3248,6 +3286,15 @@ for more information. Defaults to `true`.
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_sharedaccesskeyenabled_csharp">
+<a href="#state_sharedaccesskeyenabled_csharp" style="color: inherit; text-decoration: inherit;">Shared<wbr>Access<wbr>Key<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether the storage account permits requests to be authorized with the account access key via Shared Key. If false, then all requests, including shared access signatures, must be authorized with Azure Active Directory (Azure AD). The default value is `true`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_staticwebsite_csharp">
 <a href="#state_staticwebsite_csharp" style="color: inherit; text-decoration: inherit;">Static<wbr>Website</a>
 </span>
@@ -3746,6 +3793,15 @@ for more information. Defaults to `true`.
         <span class="property-type"><a href="#accountshareproperties">Account<wbr>Share<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_sharedaccesskeyenabled_go">
+<a href="#state_sharedaccesskeyenabled_go" style="color: inherit; text-decoration: inherit;">Shared<wbr>Access<wbr>Key<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether the storage account permits requests to be authorized with the account access key via Shared Key. If false, then all requests, including shared access signatures, must be authorized with Azure Active Directory (Azure AD). The default value is `true`.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_staticwebsite_go">
 <a href="#state_staticwebsite_go" style="color: inherit; text-decoration: inherit;">Static<wbr>Website</a>
@@ -4246,6 +4302,15 @@ for more information. Defaults to `true`.
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_sharedaccesskeyenabled_nodejs">
+<a href="#state_sharedaccesskeyenabled_nodejs" style="color: inherit; text-decoration: inherit;">shared<wbr>Access<wbr>Key<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether the storage account permits requests to be authorized with the account access key via Shared Key. If false, then all requests, including shared access signatures, must be authorized with Azure Active Directory (Azure AD). The default value is `true`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_staticwebsite_nodejs">
 <a href="#state_staticwebsite_nodejs" style="color: inherit; text-decoration: inherit;">static<wbr>Website</a>
 </span>
@@ -4744,6 +4809,15 @@ for more information. Defaults to `true`.
         <span class="property-type"><a href="#accountshareproperties">Account<wbr>Share<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_shared_access_key_enabled_python">
+<a href="#state_shared_access_key_enabled_python" style="color: inherit; text-decoration: inherit;">shared_<wbr>access_<wbr>key_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether the storage account permits requests to be authorized with the account access key via Shared Key. If false, then all requests, including shared access signatures, must be authorized with Azure Active Directory (Azure AD). The default value is `true`.
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_static_website_python">
 <a href="#state_static_website_python" style="color: inherit; text-decoration: inherit;">static_<wbr>website</a>

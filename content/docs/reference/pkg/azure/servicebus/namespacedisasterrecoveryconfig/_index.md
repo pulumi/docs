@@ -458,24 +458,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-"
             title="">
-        <span id="aliasprimaryconnectionstring_csharp">
-<a href="#aliasprimaryconnectionstring_csharp" style="color: inherit; text-decoration: inherit;">Alias<wbr>Primary<wbr>Connection<wbr>String</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The alias Primary Connection String for the ServiceBus Namespace.
-{{% /md %}}</dd><dt class="property-"
-            title="">
-        <span id="aliassecondaryconnectionstring_csharp">
-<a href="#aliassecondaryconnectionstring_csharp" style="color: inherit; text-decoration: inherit;">Alias<wbr>Secondary<wbr>Connection<wbr>String</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The alias Secondary Connection String for the ServiceBus Namespace
-{{% /md %}}</dd><dt class="property-"
-            title="">
         <span id="defaultprimarykey_csharp">
 <a href="#defaultprimarykey_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Primary<wbr>Key</a>
 </span>
@@ -500,14 +482,10 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="aliasprimaryconnectionstring_go">
-<a href="#aliasprimaryconnectionstring_go" style="color: inherit; text-decoration: inherit;">Alias<wbr>Primary<wbr>Connection<wbr>String</a>
+        <span id="primaryconnectionstringalias_csharp">
+<a href="#primaryconnectionstringalias_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Connection<wbr>String<wbr>Alias</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -515,14 +493,18 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The alias Primary Connection String for the ServiceBus Namespace.
 {{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="aliassecondaryconnectionstring_go">
-<a href="#aliassecondaryconnectionstring_go" style="color: inherit; text-decoration: inherit;">Alias<wbr>Secondary<wbr>Connection<wbr>String</a>
+        <span id="secondaryconnectionstringalias_csharp">
+<a href="#secondaryconnectionstringalias_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Connection<wbr>String<wbr>Alias</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The alias Secondary Connection String for the ServiceBus Namespace
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="defaultprimarykey_go">
 <a href="#defaultprimarykey_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Primary<wbr>Key</a>
@@ -548,14 +530,10 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="aliasprimaryconnectionstring_nodejs">
-<a href="#aliasprimaryconnectionstring_nodejs" style="color: inherit; text-decoration: inherit;">alias<wbr>Primary<wbr>Connection<wbr>String</a>
+        <span id="primaryconnectionstringalias_go">
+<a href="#primaryconnectionstringalias_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Connection<wbr>String<wbr>Alias</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -563,14 +541,18 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The alias Primary Connection String for the ServiceBus Namespace.
 {{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="aliassecondaryconnectionstring_nodejs">
-<a href="#aliassecondaryconnectionstring_nodejs" style="color: inherit; text-decoration: inherit;">alias<wbr>Secondary<wbr>Connection<wbr>String</a>
+        <span id="secondaryconnectionstringalias_go">
+<a href="#secondaryconnectionstringalias_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Connection<wbr>String<wbr>Alias</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The alias Secondary Connection String for the ServiceBus Namespace
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="defaultprimarykey_nodejs">
 <a href="#defaultprimarykey_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Primary<wbr>Key</a>
@@ -596,29 +578,29 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties"><dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="alias_primary_connection_string_python">
-<a href="#alias_primary_connection_string_python" style="color: inherit; text-decoration: inherit;">alias_<wbr>primary_<wbr>connection_<wbr>string</a>
+        <span id="primaryconnectionstringalias_nodejs">
+<a href="#primaryconnectionstringalias_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Connection<wbr>String<wbr>Alias</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The alias Primary Connection String for the ServiceBus Namespace.
 {{% /md %}}</dd><dt class="property-"
             title="">
-        <span id="alias_secondary_connection_string_python">
-<a href="#alias_secondary_connection_string_python" style="color: inherit; text-decoration: inherit;">alias_<wbr>secondary_<wbr>connection_<wbr>string</a>
+        <span id="secondaryconnectionstringalias_nodejs">
+<a href="#secondaryconnectionstringalias_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Connection<wbr>String<wbr>Alias</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The alias Secondary Connection String for the ServiceBus Namespace
-{{% /md %}}</dd><dt class="property-"
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="default_primary_key_python">
 <a href="#default_primary_key_python" style="color: inherit; text-decoration: inherit;">default_<wbr>primary_<wbr>key</a>
@@ -644,7 +626,25 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="primary_connection_string_alias_python">
+<a href="#primary_connection_string_alias_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>connection_<wbr>string_<wbr>alias</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The alias Primary Connection String for the ServiceBus Namespace.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="secondary_connection_string_alias_python">
+<a href="#secondary_connection_string_alias_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>connection_<wbr>string_<wbr>alias</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The alias Secondary Connection String for the ServiceBus Namespace
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -663,13 +663,13 @@ Get an existing NamespaceDisasterRecoveryConfig resource's state with the given 
 <span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
         <span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
         <span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">,</span>
-        <span class="nx">alias_primary_connection_string</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-        <span class="nx">alias_secondary_connection_string</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">default_primary_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">default_secondary_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">partner_namespace_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
-        <span class="nx">primary_namespace_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> NamespaceDisasterRecoveryConfig</code></pre></div>
+        <span class="nx">primary_connection_string_alias</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">primary_namespace_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">secondary_connection_string_alias</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> NamespaceDisasterRecoveryConfig</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -782,24 +782,6 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-optional"
             title="Optional">
-        <span id="state_aliasprimaryconnectionstring_csharp">
-<a href="#state_aliasprimaryconnectionstring_csharp" style="color: inherit; text-decoration: inherit;">Alias<wbr>Primary<wbr>Connection<wbr>String</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The alias Primary Connection String for the ServiceBus Namespace.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="state_aliassecondaryconnectionstring_csharp">
-<a href="#state_aliassecondaryconnectionstring_csharp" style="color: inherit; text-decoration: inherit;">Alias<wbr>Secondary<wbr>Connection<wbr>String</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The alias Secondary Connection String for the ServiceBus Namespace
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
         <span id="state_defaultprimarykey_csharp">
 <a href="#state_defaultprimarykey_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Primary<wbr>Key</a>
 </span>
@@ -836,21 +818,8 @@ The following state arguments are supported:
     <dd>{{% md %}}The ID of the Service Bus Namespace to replicate to.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="state_primarynamespaceid_csharp">
-<a href="#state_primarynamespaceid_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Namespace<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the primary Service Bus Namespace to replicate. Changing this forces a new resource to be created.
-{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="state_aliasprimaryconnectionstring_go">
-<a href="#state_aliasprimaryconnectionstring_go" style="color: inherit; text-decoration: inherit;">Alias<wbr>Primary<wbr>Connection<wbr>String</a>
+        <span id="state_primaryconnectionstringalias_csharp">
+<a href="#state_primaryconnectionstringalias_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Connection<wbr>String<wbr>Alias</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -858,14 +827,27 @@ The following state arguments are supported:
     <dd>{{% md %}}The alias Primary Connection String for the ServiceBus Namespace.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="state_aliassecondaryconnectionstring_go">
-<a href="#state_aliassecondaryconnectionstring_go" style="color: inherit; text-decoration: inherit;">Alias<wbr>Secondary<wbr>Connection<wbr>String</a>
+        <span id="state_primarynamespaceid_csharp">
+<a href="#state_primarynamespaceid_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Namespace<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the primary Service Bus Namespace to replicate. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_secondaryconnectionstringalias_csharp">
+<a href="#state_secondaryconnectionstringalias_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Connection<wbr>String<wbr>Alias</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The alias Secondary Connection String for the ServiceBus Namespace
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_defaultprimarykey_go">
 <a href="#state_defaultprimarykey_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Primary<wbr>Key</a>
@@ -903,21 +885,8 @@ The following state arguments are supported:
     <dd>{{% md %}}The ID of the Service Bus Namespace to replicate to.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="state_primarynamespaceid_go">
-<a href="#state_primarynamespaceid_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Namespace<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the primary Service Bus Namespace to replicate. Changing this forces a new resource to be created.
-{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="state_aliasprimaryconnectionstring_nodejs">
-<a href="#state_aliasprimaryconnectionstring_nodejs" style="color: inherit; text-decoration: inherit;">alias<wbr>Primary<wbr>Connection<wbr>String</a>
+        <span id="state_primaryconnectionstringalias_go">
+<a href="#state_primaryconnectionstringalias_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Connection<wbr>String<wbr>Alias</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -925,14 +894,27 @@ The following state arguments are supported:
     <dd>{{% md %}}The alias Primary Connection String for the ServiceBus Namespace.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
-        <span id="state_aliassecondaryconnectionstring_nodejs">
-<a href="#state_aliassecondaryconnectionstring_nodejs" style="color: inherit; text-decoration: inherit;">alias<wbr>Secondary<wbr>Connection<wbr>String</a>
+        <span id="state_primarynamespaceid_go">
+<a href="#state_primarynamespaceid_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Namespace<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the primary Service Bus Namespace to replicate. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_secondaryconnectionstringalias_go">
+<a href="#state_secondaryconnectionstringalias_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Connection<wbr>String<wbr>Alias</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The alias Secondary Connection String for the ServiceBus Namespace
-{{% /md %}}</dd><dt class="property-optional"
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_defaultprimarykey_nodejs">
 <a href="#state_defaultprimarykey_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Primary<wbr>Key</a>
@@ -970,6 +952,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The ID of the Service Bus Namespace to replicate to.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_primaryconnectionstringalias_nodejs">
+<a href="#state_primaryconnectionstringalias_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Connection<wbr>String<wbr>Alias</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The alias Primary Connection String for the ServiceBus Namespace.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_primarynamespaceid_nodejs">
 <a href="#state_primarynamespaceid_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Namespace<wbr>Id</a>
 </span>
@@ -977,29 +968,20 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the primary Service Bus Namespace to replicate. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_secondaryconnectionstringalias_nodejs">
+<a href="#state_secondaryconnectionstringalias_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Connection<wbr>String<wbr>Alias</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The alias Secondary Connection String for the ServiceBus Namespace
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-optional"
-            title="Optional">
-        <span id="state_alias_primary_connection_string_python">
-<a href="#state_alias_primary_connection_string_python" style="color: inherit; text-decoration: inherit;">alias_<wbr>primary_<wbr>connection_<wbr>string</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The alias Primary Connection String for the ServiceBus Namespace.
-{{% /md %}}</dd><dt class="property-optional"
-            title="Optional">
-        <span id="state_alias_secondary_connection_string_python">
-<a href="#state_alias_secondary_connection_string_python" style="color: inherit; text-decoration: inherit;">alias_<wbr>secondary_<wbr>connection_<wbr>string</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The alias Secondary Connection String for the ServiceBus Namespace
-{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_default_primary_key_python">
 <a href="#state_default_primary_key_python" style="color: inherit; text-decoration: inherit;">default_<wbr>primary_<wbr>key</a>
@@ -1037,6 +1019,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The ID of the Service Bus Namespace to replicate to.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_primary_connection_string_alias_python">
+<a href="#state_primary_connection_string_alias_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>connection_<wbr>string_<wbr>alias</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The alias Primary Connection String for the ServiceBus Namespace.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_primary_namespace_id_python">
 <a href="#state_primary_namespace_id_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>namespace_<wbr>id</a>
 </span>
@@ -1044,6 +1035,15 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the primary Service Bus Namespace to replicate. Changing this forces a new resource to be created.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_secondary_connection_string_alias_python">
+<a href="#state_secondary_connection_string_alias_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>connection_<wbr>string_<wbr>alias</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The alias Secondary Connection String for the ServiceBus Namespace
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 

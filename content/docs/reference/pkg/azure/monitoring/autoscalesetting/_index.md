@@ -3238,6 +3238,15 @@ The following state arguments are supported:
     <dd>{{% md %}}One or more `dimensions` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="dividebyinstancecount_csharp">
+<a href="#dividebyinstancecount_csharp" style="color: inherit; text-decoration: inherit;">Divide<wbr>By<wbr>Instance<wbr>Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether to enable metric divide by instance count.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="metricnamespace_csharp">
 <a href="#metricnamespace_csharp" style="color: inherit; text-decoration: inherit;">Metric<wbr>Namespace</a>
 </span>
@@ -3330,6 +3339,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="#autoscalesettingprofilerulemetrictriggerdimension">[]Autoscale<wbr>Setting<wbr>Profile<wbr>Rule<wbr>Metric<wbr>Trigger<wbr>Dimension</a></span>
     </dt>
     <dd>{{% md %}}One or more `dimensions` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="dividebyinstancecount_go">
+<a href="#dividebyinstancecount_go" style="color: inherit; text-decoration: inherit;">Divide<wbr>By<wbr>Instance<wbr>Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether to enable metric divide by instance count.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metricnamespace_go">
@@ -3426,6 +3444,15 @@ The following state arguments are supported:
     <dd>{{% md %}}One or more `dimensions` block as defined below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="dividebyinstancecount_nodejs">
+<a href="#dividebyinstancecount_nodejs" style="color: inherit; text-decoration: inherit;">divide<wbr>By<wbr>Instance<wbr>Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether to enable metric divide by instance count.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="metricnamespace_nodejs">
 <a href="#metricnamespace_nodejs" style="color: inherit; text-decoration: inherit;">metric<wbr>Namespace</a>
 </span>
@@ -3518,6 +3545,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="#autoscalesettingprofilerulemetrictriggerdimension">Sequence[Autoscale<wbr>Setting<wbr>Profile<wbr>Rule<wbr>Metric<wbr>Trigger<wbr>Dimension]</a></span>
     </dt>
     <dd>{{% md %}}One or more `dimensions` block as defined below.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="divide_by_instance_count_python">
+<a href="#divide_by_instance_count_python" style="color: inherit; text-decoration: inherit;">divide_<wbr>by_<wbr>instance_<wbr>count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether to enable metric divide by instance count.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metric_namespace_python">

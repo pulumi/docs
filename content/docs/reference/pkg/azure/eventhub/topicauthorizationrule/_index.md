@@ -639,6 +639,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The Primary Connection String for the ServiceBus Topic authorization Rule.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="primaryconnectionstringalias_csharp">
+<a href="#primaryconnectionstringalias_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Connection<wbr>String<wbr>Alias</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The alias Primary Connection String for the ServiceBus Namespace, if the namespace is Geo DR paired.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="primarykey_csharp">
 <a href="#primarykey_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Key</a>
 </span>
@@ -655,6 +664,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Secondary Connection String for the ServiceBus Topic authorization Rule.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="secondaryconnectionstringalias_csharp">
+<a href="#secondaryconnectionstringalias_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Connection<wbr>String<wbr>Alias</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The alias Secondary Connection String for the ServiceBus Namespace
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondarykey_csharp">
@@ -687,6 +705,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The Primary Connection String for the ServiceBus Topic authorization Rule.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="primaryconnectionstringalias_go">
+<a href="#primaryconnectionstringalias_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Connection<wbr>String<wbr>Alias</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The alias Primary Connection String for the ServiceBus Namespace, if the namespace is Geo DR paired.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="primarykey_go">
 <a href="#primarykey_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Key</a>
 </span>
@@ -703,6 +730,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Secondary Connection String for the ServiceBus Topic authorization Rule.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="secondaryconnectionstringalias_go">
+<a href="#secondaryconnectionstringalias_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Connection<wbr>String<wbr>Alias</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The alias Secondary Connection String for the ServiceBus Namespace
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondarykey_go">
@@ -735,6 +771,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The Primary Connection String for the ServiceBus Topic authorization Rule.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="primaryconnectionstringalias_nodejs">
+<a href="#primaryconnectionstringalias_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Connection<wbr>String<wbr>Alias</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The alias Primary Connection String for the ServiceBus Namespace, if the namespace is Geo DR paired.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="primarykey_nodejs">
 <a href="#primarykey_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Key</a>
 </span>
@@ -751,6 +796,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Secondary Connection String for the ServiceBus Topic authorization Rule.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="secondaryconnectionstringalias_nodejs">
+<a href="#secondaryconnectionstringalias_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Connection<wbr>String<wbr>Alias</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The alias Secondary Connection String for the ServiceBus Namespace
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondarykey_nodejs">
@@ -783,6 +837,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The Primary Connection String for the ServiceBus Topic authorization Rule.
 {{% /md %}}</dd><dt class="property-"
             title="">
+        <span id="primary_connection_string_alias_python">
+<a href="#primary_connection_string_alias_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>connection_<wbr>string_<wbr>alias</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The alias Primary Connection String for the ServiceBus Namespace, if the namespace is Geo DR paired.
+{{% /md %}}</dd><dt class="property-"
+            title="">
         <span id="primary_key_python">
 <a href="#primary_key_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>key</a>
 </span>
@@ -799,6 +862,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Secondary Connection String for the ServiceBus Topic authorization Rule.
+{{% /md %}}</dd><dt class="property-"
+            title="">
+        <span id="secondary_connection_string_alias_python">
+<a href="#secondary_connection_string_alias_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>connection_<wbr>string_<wbr>alias</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The alias Secondary Connection String for the ServiceBus Namespace
 {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondary_key_python">
@@ -832,9 +904,11 @@ Get an existing TopicAuthorizationRule resource's state with the given name, ID,
         <span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">namespace_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">primary_connection_string</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">primary_connection_string_alias</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">primary_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">secondary_connection_string</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
+        <span class="nx">secondary_connection_string_alias</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">secondary_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">send</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">topic_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> TopicAuthorizationRule</code></pre></div>
@@ -995,6 +1069,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The Primary Connection String for the ServiceBus Topic authorization Rule.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_primaryconnectionstringalias_csharp">
+<a href="#state_primaryconnectionstringalias_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Connection<wbr>String<wbr>Alias</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The alias Primary Connection String for the ServiceBus Namespace, if the namespace is Geo DR paired.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_primarykey_csharp">
 <a href="#state_primarykey_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Key</a>
 </span>
@@ -1020,6 +1103,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Secondary Connection String for the ServiceBus Topic authorization Rule.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_secondaryconnectionstringalias_csharp">
+<a href="#state_secondaryconnectionstringalias_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Connection<wbr>String<wbr>Alias</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The alias Secondary Connection String for the ServiceBus Namespace
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_secondarykey_csharp">
@@ -1098,6 +1190,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The Primary Connection String for the ServiceBus Topic authorization Rule.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_primaryconnectionstringalias_go">
+<a href="#state_primaryconnectionstringalias_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Connection<wbr>String<wbr>Alias</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The alias Primary Connection String for the ServiceBus Namespace, if the namespace is Geo DR paired.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_primarykey_go">
 <a href="#state_primarykey_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Key</a>
 </span>
@@ -1123,6 +1224,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Secondary Connection String for the ServiceBus Topic authorization Rule.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_secondaryconnectionstringalias_go">
+<a href="#state_secondaryconnectionstringalias_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Connection<wbr>String<wbr>Alias</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The alias Secondary Connection String for the ServiceBus Namespace
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_secondarykey_go">
@@ -1201,6 +1311,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The Primary Connection String for the ServiceBus Topic authorization Rule.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_primaryconnectionstringalias_nodejs">
+<a href="#state_primaryconnectionstringalias_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Connection<wbr>String<wbr>Alias</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The alias Primary Connection String for the ServiceBus Namespace, if the namespace is Geo DR paired.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_primarykey_nodejs">
 <a href="#state_primarykey_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Key</a>
 </span>
@@ -1226,6 +1345,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Secondary Connection String for the ServiceBus Topic authorization Rule.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_secondaryconnectionstringalias_nodejs">
+<a href="#state_secondaryconnectionstringalias_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Connection<wbr>String<wbr>Alias</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The alias Secondary Connection String for the ServiceBus Namespace
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_secondarykey_nodejs">
@@ -1304,6 +1432,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The Primary Connection String for the ServiceBus Topic authorization Rule.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_primary_connection_string_alias_python">
+<a href="#state_primary_connection_string_alias_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>connection_<wbr>string_<wbr>alias</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The alias Primary Connection String for the ServiceBus Namespace, if the namespace is Geo DR paired.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_primary_key_python">
 <a href="#state_primary_key_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>key</a>
 </span>
@@ -1329,6 +1466,15 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Secondary Connection String for the ServiceBus Topic authorization Rule.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_secondary_connection_string_alias_python">
+<a href="#state_secondary_connection_string_alias_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>connection_<wbr>string_<wbr>alias</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The alias Secondary Connection String for the ServiceBus Namespace
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_secondary_key_python">

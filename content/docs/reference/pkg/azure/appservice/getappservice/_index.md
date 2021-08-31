@@ -1401,6 +1401,14 @@ The following output properties are available:
     <dd>{{% md %}}Does the App Service run in 32 bit mode, rather than 64 bit mode?
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="vnetrouteallenabled_csharp">
+<a href="#vnetrouteallenabled_csharp" style="color: inherit; text-decoration: inherit;">Vnet<wbr>Route<wbr>All<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="websocketsenabled_csharp">
 <a href="#websocketsenabled_csharp" style="color: inherit; text-decoration: inherit;">Websockets<wbr>Enabled</a>
 </span>
@@ -1665,6 +1673,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Does the App Service run in 32 bit mode, rather than 64 bit mode?
 {{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="vnetrouteallenabled_go">
+<a href="#vnetrouteallenabled_go" style="color: inherit; text-decoration: inherit;">Vnet<wbr>Route<wbr>All<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="websocketsenabled_go">
 <a href="#websocketsenabled_go" style="color: inherit; text-decoration: inherit;">Websockets<wbr>Enabled</a>
@@ -1931,6 +1947,14 @@ The following output properties are available:
     <dd>{{% md %}}Does the App Service run in 32 bit mode, rather than 64 bit mode?
 {{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="vnetrouteallenabled_nodejs">
+<a href="#vnetrouteallenabled_nodejs" style="color: inherit; text-decoration: inherit;">vnet<wbr>Route<wbr>All<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="websocketsenabled_nodejs">
 <a href="#websocketsenabled_nodejs" style="color: inherit; text-decoration: inherit;">websockets<wbr>Enabled</a>
 </span>
@@ -2195,6 +2219,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Does the App Service run in 32 bit mode, rather than 64 bit mode?
 {{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="vnet_route_all_enabled_python">
+<a href="#vnet_route_all_enabled_python" style="color: inherit; text-decoration: inherit;">vnet_<wbr>route_<wbr>all_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="websockets_enabled_python">
 <a href="#websockets_enabled_python" style="color: inherit; text-decoration: inherit;">websockets_<wbr>enabled</a>
