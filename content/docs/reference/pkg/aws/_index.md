@@ -27,6 +27,7 @@ A Pulumi package for creating and managing Amazon Web Services (AWS) cloud resou
     <li><a href="applicationloadbalancing/" title="applicationloadbalancing"><span class="symbol module"></span>applicationloadbalancing</a></li>
     <li><a href="appmesh/" title="appmesh"><span class="symbol module"></span>appmesh</a></li>
     <li><a href="apprunner/" title="apprunner"><span class="symbol module"></span>apprunner</a></li>
+    <li><a href="appstream/" title="appstream"><span class="symbol module"></span>appstream</a></li>
     <li><a href="appsync/" title="appsync"><span class="symbol module"></span>appsync</a></li>
     <li><a href="athena/" title="athena"><span class="symbol module"></span>athena</a></li>
     <li><a href="autoscaling/" title="autoscaling"><span class="symbol module"></span>autoscaling</a></li>
@@ -122,6 +123,8 @@ A Pulumi package for creating and managing Amazon Web Services (AWS) cloud resou
     <li><a href="resourcegroups/" title="resourcegroups"><span class="symbol module"></span>resourcegroups</a></li>
     <li><a href="resourcegroupstaggingapi/" title="resourcegroupstaggingapi"><span class="symbol module"></span>resourcegroupstaggingapi</a></li>
     <li><a href="route53/" title="route53"><span class="symbol module"></span>route53</a></li>
+    <li><a href="route53recoverycontrol/" title="route53recoverycontrol"><span class="symbol module"></span>route53recoverycontrol</a></li>
+    <li><a href="route53recoveryreadiness/" title="route53recoveryreadiness"><span class="symbol module"></span>route53recoveryreadiness</a></li>
     <li><a href="s3/" title="s3"><span class="symbol module"></span>s3</a></li>
     <li><a href="s3control/" title="s3control"><span class="symbol module"></span>s3control</a></li>
     <li><a href="s3outposts/" title="s3outposts"><span class="symbol module"></span>s3outposts</a></li>
@@ -189,6 +192,6 @@ A Pulumi package for creating and managing Amazon Web Services (AWS) cloud resou
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.17.0</dd>
+	<dd>4.18.0</dd>
 </dl>
 
