@@ -1040,44 +1040,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
-<h4 id="caseseverity">Case<wbr>Severity</h4>
-
-{{% choosable language csharp %}}
-<dl class="tabular"><dt>Critical</dt>
-    <dd>Critical{{% md %}}Critical severity{{% /md %}}</dd><dt>High</dt>
-    <dd>High{{% md %}}High severity{{% /md %}}</dd><dt>Medium</dt>
-    <dd>Medium{{% md %}}Medium severity{{% /md %}}</dd><dt>Low</dt>
-    <dd>Low{{% md %}}Low severity{{% /md %}}</dd><dt>Informational</dt>
-    <dd>Informational{{% md %}}Informational severity{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="tabular"><dt>Case<wbr>Severity<wbr>Critical</dt>
-    <dd>Critical{{% md %}}Critical severity{{% /md %}}</dd><dt>Case<wbr>Severity<wbr>High</dt>
-    <dd>High{{% md %}}High severity{{% /md %}}</dd><dt>Case<wbr>Severity<wbr>Medium</dt>
-    <dd>Medium{{% md %}}Medium severity{{% /md %}}</dd><dt>Case<wbr>Severity<wbr>Low</dt>
-    <dd>Low{{% md %}}Low severity{{% /md %}}</dd><dt>Case<wbr>Severity<wbr>Informational</dt>
-    <dd>Informational{{% md %}}Informational severity{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="tabular"><dt>Critical</dt>
-    <dd>Critical{{% md %}}Critical severity{{% /md %}}</dd><dt>High</dt>
-    <dd>High{{% md %}}High severity{{% /md %}}</dd><dt>Medium</dt>
-    <dd>Medium{{% md %}}Medium severity{{% /md %}}</dd><dt>Low</dt>
-    <dd>Low{{% md %}}Low severity{{% /md %}}</dd><dt>Informational</dt>
-    <dd>Informational{{% md %}}Informational severity{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="tabular"><dt>CRITICAL</dt>
-    <dd>Critical{{% md %}}Critical severity{{% /md %}}</dd><dt>HIGH</dt>
-    <dd>High{{% md %}}High severity{{% /md %}}</dd><dt>MEDIUM</dt>
-    <dd>Medium{{% md %}}Medium severity{{% /md %}}</dd><dt>LOW</dt>
-    <dd>Low{{% md %}}Low severity{{% /md %}}</dd><dt>INFORMATIONAL</dt>
-    <dd>Informational{{% md %}}Informational severity{{% /md %}}</dd></dl>
-{{% /choosable %}}
-
 <h4 id="incidentinfo">Incident<wbr>Info</h4>
 
 {{% choosable language csharp %}}
@@ -1103,7 +1065,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#severity_csharp" style="color: inherit; text-decoration: inherit;">Severity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#caseseverity">Pulumi.<wbr>Azure<wbr>Native.<wbr>Security<wbr>Insights.<wbr>Case<wbr>Severity</a></span>
+        <span class="property-type">string | <a href="#incidentseverity">Pulumi.<wbr>Azure<wbr>Native.<wbr>Security<wbr>Insights.<wbr>Incident<wbr>Severity</a></span>
     </dt>
     <dd>{{% md %}}The severity of the incident{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1139,7 +1101,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#severity_go" style="color: inherit; text-decoration: inherit;">Severity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#caseseverity">Case<wbr>Severity</a></span>
+        <span class="property-type">string | <a href="#incidentseverity">Incident<wbr>Severity</a></span>
     </dt>
     <dd>{{% md %}}The severity of the incident{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1175,7 +1137,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#severity_nodejs" style="color: inherit; text-decoration: inherit;">severity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#caseseverity">Case<wbr>Severity</a></span>
+        <span class="property-type">string | <a href="#incidentseverity">Incident<wbr>Severity</a></span>
     </dt>
     <dd>{{% md %}}The severity of the incident{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1211,7 +1173,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#severity_python" style="color: inherit; text-decoration: inherit;">severity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#caseseverity">Case<wbr>Severity</a></span>
+        <span class="property-type">str | <a href="#incidentseverity">Incident<wbr>Severity</a></span>
     </dt>
     <dd>{{% md %}}The severity of the incident{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
@@ -1368,6 +1330,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The title of the incident{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="incidentseverity">Incident<wbr>Severity</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular"><dt>High</dt>
+    <dd>High{{% md %}}High severity{{% /md %}}</dd><dt>Medium</dt>
+    <dd>Medium{{% md %}}Medium severity{{% /md %}}</dd><dt>Low</dt>
+    <dd>Low{{% md %}}Low severity{{% /md %}}</dd><dt>Informational</dt>
+    <dd>Informational{{% md %}}Informational severity{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular"><dt>Incident<wbr>Severity<wbr>High</dt>
+    <dd>High{{% md %}}High severity{{% /md %}}</dd><dt>Incident<wbr>Severity<wbr>Medium</dt>
+    <dd>Medium{{% md %}}Medium severity{{% /md %}}</dd><dt>Incident<wbr>Severity<wbr>Low</dt>
+    <dd>Low{{% md %}}Low severity{{% /md %}}</dd><dt>Incident<wbr>Severity<wbr>Informational</dt>
+    <dd>Informational{{% md %}}Informational severity{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular"><dt>High</dt>
+    <dd>High{{% md %}}High severity{{% /md %}}</dd><dt>Medium</dt>
+    <dd>Medium{{% md %}}Medium severity{{% /md %}}</dd><dt>Low</dt>
+    <dd>Low{{% md %}}Low severity{{% /md %}}</dd><dt>Informational</dt>
+    <dd>Informational{{% md %}}Informational severity{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular"><dt>HIGH</dt>
+    <dd>High{{% md %}}High severity{{% /md %}}</dd><dt>MEDIUM</dt>
+    <dd>Medium{{% md %}}Medium severity{{% /md %}}</dd><dt>LOW</dt>
+    <dd>Low{{% md %}}Low severity{{% /md %}}</dd><dt>INFORMATIONAL</dt>
+    <dd>Informational{{% md %}}Informational severity{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="userinfo">User<wbr>Info</h4>

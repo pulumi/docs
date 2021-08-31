@@ -67,7 +67,43 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	network "github.com/pulumi/pulumi-azure-native/sdk/go/azure/network"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := network.NewNetworkInterface(ctx, "networkInterface", &network.NetworkInterfaceArgs{
+			EnableAcceleratedNetworking: pulumi.Bool(true),
+			IpConfigurations: []network.NetworkInterfaceIPConfigurationArgs{
+				&network.NetworkInterfaceIPConfigurationArgs{
+					Name: pulumi.String("ipconfig1"),
+					PublicIPAddress: &network.PublicIPAddressArgs{
+						Id: pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/publicIPAddresses/test-ip"),
+					},
+					Subnet: &network.SubnetArgs{
+						Id: pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/rg1-vnet/subnets/default"),
+					},
+				},
+			},
+			Location:             pulumi.String("eastus"),
+			NetworkInterfaceName: pulumi.String("test-nic"),
+			ResourceGroupName:    pulumi.String("rg1"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
@@ -81,15 +117,15 @@ import pulumi_azure_native as azure_native
 
 network_interface = azure_native.network.NetworkInterface("networkInterface",
     enable_accelerated_networking=True,
-    ip_configurations=[{
-        "name": "ipconfig1",
-        "publicIPAddress": azure_native.network.PublicIPAddressArgs(
+    ip_configurations=[azure_native.network.NetworkInterfaceIPConfigurationArgs(
+        name="ipconfig1",
+        public_ip_address=azure_native.network.PublicIPAddressArgs(
             id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/publicIPAddresses/test-ip",
         ),
-        "subnet": azure_native.network.SubnetArgs(
+        subnet=azure_native.network.SubnetArgs(
             id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/rg1-vnet/subnets/default",
         ),
-    }],
+    )],
     location="eastus",
     network_interface_name="test-nic",
     resource_group_name="rg1")

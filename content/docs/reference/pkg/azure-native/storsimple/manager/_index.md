@@ -59,37 +59,7 @@ class MyStack : Stack
 
 {{< example go >}}
 
-
-```go
-package main
-
-import (
-	storsimple "github.com/pulumi/pulumi-azure-native/sdk/go/azure/storsimple"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := storsimple.NewManager(ctx, "manager", &storsimple.ManagerArgs{
-			CisIntrinsicSettings: &storsimple.ManagerIntrinsicSettingsArgs{
-				Type: "GardaV1",
-			},
-			Location:          pulumi.String("westus"),
-			ManagerName:       pulumi.String("ManagerForSDKTest2"),
-			ResourceGroupName: pulumi.String("ResourceGroupForSDKTest"),
-			Sku: &storsimple.ManagerSkuArgs{
-				Name: "Standard",
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
+Coming soon!
 
 {{< /example >}}
 

@@ -59,17 +59,17 @@ class MyStack : Stack
                         },
                         Name = "BackupWeekly",
                         ObjectType = "AzureBackupRule",
-                        Trigger = new AzureNative.DataProtection.Inputs.ScheduleBasedTriggerContextArgs
+                        Trigger = 
                         {
-                            ObjectType = "ScheduleBasedTriggerContext",
-                            Schedule = new AzureNative.DataProtection.Inputs.BackupScheduleArgs
+                            { "objectType", "ScheduleBasedTriggerContext" },
+                            { "schedule", new AzureNative.DataProtection.Inputs.BackupScheduleArgs
                             {
                                 RepeatingTimeIntervals = 
                                 {
                                     "R/2019-11-20T08:00:00-08:00/P1W",
                                 },
-                            },
-                            TaggingCriteria = 
+                            } },
+                            { "taggingCriteria", 
                             {
                                 new AzureNative.DataProtection.Inputs.TaggingCriteriaArgs
                                 {
@@ -104,7 +104,7 @@ class MyStack : Stack
                                     },
                                     TaggingPriority = 20,
                                 },
-                            },
+                            } },
                         },
                     },
                     new AzureNative.DataProtection.Inputs.AzureRetentionRuleArgs
@@ -182,10 +182,10 @@ import pulumi_azure_native as azure_native
 
 backup_policy = azure_native.dataprotection.BackupPolicy("backupPolicy",
     backup_policy_name="OSSDBPolicy",
-    properties={
-        "datasourceTypes": ["OssDB"],
-        "objectType": "BackupPolicy",
-        "policyRules": [
+    properties=azure_native.dataprotection.BackupPolicyArgs(
+        datasource_types=["OssDB"],
+        object_type="BackupPolicy",
+        policy_rules=[
             azure_native.dataprotection.AzureBackupRuleArgs(
                 backup_parameters=azure_native.dataprotection.AzureBackupParamsArgs(
                     backup_type="Full",
@@ -197,12 +197,12 @@ backup_policy = azure_native.dataprotection.BackupPolicy("backupPolicy",
                 ),
                 name="BackupWeekly",
                 object_type="AzureBackupRule",
-                trigger=azure_native.dataprotection.ScheduleBasedTriggerContextArgs(
-                    object_type="ScheduleBasedTriggerContext",
-                    schedule=azure_native.dataprotection.BackupScheduleArgs(
+                trigger={
+                    "objectType": "ScheduleBasedTriggerContext",
+                    "schedule": azure_native.dataprotection.BackupScheduleArgs(
                         repeating_time_intervals=["R/2019-11-20T08:00:00-08:00/P1W"],
                     ),
-                    tagging_criteria=[
+                    "taggingCriteria": [
                         azure_native.dataprotection.TaggingCriteriaArgs(
                             is_default=True,
                             tag_info=azure_native.dataprotection.RetentionTagArgs(
@@ -223,7 +223,7 @@ backup_policy = azure_native.dataprotection.BackupPolicy("backupPolicy",
                             tagging_priority=20,
                         ),
                     ],
-                ),
+                },
             ),
             azure_native.dataprotection.AzureRetentionRuleArgs(
                 is_default=True,
@@ -256,7 +256,7 @@ backup_policy = azure_native.dataprotection.BackupPolicy("backupPolicy",
                 object_type="AzureRetentionRule",
             ),
         ],
-    },
+    ),
     resource_group_name="000pikumar",
     vault_name="PrivatePreviewVault")
 

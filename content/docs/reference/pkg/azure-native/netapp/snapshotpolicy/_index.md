@@ -430,7 +430,7 @@ The SnapshotPolicy resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the snapshot policy target{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The name of the snapshot policy{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -514,7 +514,7 @@ The SnapshotPolicy resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the snapshot policy target{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The name of the snapshot policy{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -598,7 +598,7 @@ The SnapshotPolicy resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the snapshot policy target{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The name of the snapshot policy{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -682,7 +682,7 @@ The SnapshotPolicy resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the snapshot policy target{{% /md %}}</dd><dt class="property-optional"
+    <dd>{{% md %}}The name of the snapshot policy{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>

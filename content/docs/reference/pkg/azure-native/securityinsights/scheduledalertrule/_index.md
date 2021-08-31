@@ -267,48 +267,7 @@ class MyStack : Stack
 
 {{< example go >}}
 
-
-```go
-package main
-
-import (
-	securityinsights "github.com/pulumi/pulumi-azure-native/sdk/go/azure/securityinsights"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := securityinsights.NewScheduledAlertRule(ctx, "scheduledAlertRule", &securityinsights.ScheduledAlertRuleArgs{
-			Description:         pulumi.String(""),
-			DisplayName:         pulumi.String("Rule2"),
-			Enabled:             pulumi.Bool(true),
-			Etag:                pulumi.String("\"0300bf09-0000-0000-0000-5c37296e0000\""),
-			Kind:                pulumi.String("Scheduled"),
-			Query:               pulumi.String("ProtectionStatus | extend HostCustomEntity = Computer | extend IPCustomEntity = ComputerIP_Hidden"),
-			QueryFrequency:      pulumi.String("PT1H"),
-			QueryPeriod:         pulumi.String("P2DT1H30M"),
-			ResourceGroupName:   pulumi.String("myRg"),
-			RuleId:              pulumi.String("73e01a99-5cd7-4139-a149-9f2736ff2ab5"),
-			Severity:            pulumi.String("High"),
-			SuppressionDuration: pulumi.String("PT1H"),
-			SuppressionEnabled:  pulumi.Bool(false),
-			Tactics: pulumi.StringArray{
-				pulumi.String("Persistence"),
-				pulumi.String("LateralMovement"),
-			},
-			TriggerOperator:  "GreaterThan",
-			TriggerThreshold: pulumi.Int(0),
-			WorkspaceName:    pulumi.String("myWorkspace"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
+Coming soon!
 
 {{< /example >}}
 

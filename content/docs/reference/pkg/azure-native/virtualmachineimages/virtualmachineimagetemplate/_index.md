@@ -101,70 +101,7 @@ class MyStack : Stack
 
 {{< example go >}}
 
-
-```go
-package main
-
-import (
-	virtualmachineimages "github.com/pulumi/pulumi-azure-native/sdk/go/azure/virtualmachineimages"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := virtualmachineimages.NewVirtualMachineImageTemplate(ctx, "virtualMachineImageTemplate", &virtualmachineimages.VirtualMachineImageTemplateArgs{
-			Customize: pulumi.AnyArray{
-				virtualmachineimages.ImageTemplateShellCustomizer{
-					Name:      "Shell Customizer Example",
-					ScriptUri: "https://example.com/path/to/script.sh",
-					Type:      "Shell",
-				},
-			},
-			Distribute: pulumi.AnyArray{
-				virtualmachineimages.ImageTemplateManagedImageDistributor{
-					ArtifactTags: map[string]interface{}{
-						"tagName": "value",
-					},
-					ImageId:       "/subscriptions/{subscription-id}/resourceGroups/rg1/providers/Microsoft.Compute/images/image_it_1",
-					Location:      "1_location",
-					RunOutputName: "image_it_pir_1",
-					Type:          "ManagedImage",
-				},
-			},
-			Identity: &virtualmachineimages.ImageTemplateIdentityArgs{
-				Type: "UserAssigned",
-				UserAssignedIdentities: pulumi.AnyMap{
-					"/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/rg1/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity_1": nil,
-				},
-			},
-			ImageTemplateName: pulumi.String("myImageTemplate"),
-			Location:          pulumi.String("westus"),
-			ResourceGroupName: pulumi.String("myResourceGroup"),
-			Source: virtualmachineimages.ImageTemplateManagedImageSource{
-				ImageId: "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Compute/images/source_image",
-				Type:    "ManagedImage",
-			},
-			Tags: pulumi.StringMap{
-				"imagetemplate_tag1": pulumi.String("IT_T1"),
-				"imagetemplate_tag2": pulumi.String("IT_T2"),
-			},
-			VmProfile: &virtualmachineimages.ImageTemplateVmProfileArgs{
-				OsDiskSizeGB: pulumi.Int(64),
-				VmSize:       pulumi.String("Standard_D2s_v3"),
-				VnetConfig: &virtualmachineimages.VirtualNetworkConfigArgs{
-					SubnetId: pulumi.String("/subscriptions/{subscription-id}/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnet_name/subnets/subnet_name"),
-				},
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
+Coming soon!
 
 {{< /example >}}
 

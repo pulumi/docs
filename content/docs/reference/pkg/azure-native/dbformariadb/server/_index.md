@@ -81,8 +81,8 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := dbformariadb.NewServer(ctx, "server", &dbformariadb.ServerArgs{
 			Location: pulumi.String("brazilsouth"),
-			Properties: dbformariadb.ServerPropertiesForRestore{
-				CreateMode:         "PointInTimeRestore",
+			Properties: &dbformariadb.ServerPropertiesForRestoreArgs{
+				CreateMode:         pulumi.String("PointInTimeRestore"),
 				RestorePointInTime: "2017-12-14T00:00:37.467Z",
 				SourceServerId:     "/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/SourceResourceGroup/providers/Microsoft.DBforMariaDB/servers/sourceserver",
 			},
@@ -247,13 +247,13 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := dbformariadb.NewServer(ctx, "server", &dbformariadb.ServerArgs{
 			Location: pulumi.String("westus"),
-			Properties: dbformariadb.ServerPropertiesForDefaultCreate{
+			Properties: &dbformariadb.ServerPropertiesForDefaultCreateArgs{
 				AdministratorLogin:         "cloudsa",
 				AdministratorLoginPassword: "<administratorLoginPassword>",
-				CreateMode:                 "Default",
+				CreateMode:                 pulumi.String("Default"),
 				MinimalTlsVersion:          "TLS1_2",
 				SslEnforcement:             "Enabled",
-				StorageProfile: dbformariadb.StorageProfile{
+				StorageProfile: &dbformariadb.StorageProfileArgs{
 					BackupRetentionDays: 7,
 					GeoRedundantBackup:  "Enabled",
 					StorageMB:           128000,
@@ -414,8 +414,8 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := dbformariadb.NewServer(ctx, "server", &dbformariadb.ServerArgs{
 			Location: pulumi.String("westus"),
-			Properties: dbformariadb.ServerPropertiesForReplica{
-				CreateMode:     "Replica",
+			Properties: &dbformariadb.ServerPropertiesForReplicaArgs{
+				CreateMode:     pulumi.String("Replica"),
 				SourceServerId: "/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/MasterResourceGroup/providers/Microsoft.DBforMariaDB/servers/masterserver",
 			},
 			ResourceGroupName: pulumi.String("TargetResourceGroup"),
@@ -541,8 +541,8 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := dbformariadb.NewServer(ctx, "server", &dbformariadb.ServerArgs{
 			Location: pulumi.String("westus"),
-			Properties: dbformariadb.ServerPropertiesForGeoRestore{
-				CreateMode:     "GeoRestore",
+			Properties: &dbformariadb.ServerPropertiesForGeoRestoreArgs{
+				CreateMode:     pulumi.String("GeoRestore"),
 				SourceServerId: "/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/SourceResourceGroup/providers/Microsoft.DBforMariaDB/servers/sourceserver",
 			},
 			ResourceGroupName: pulumi.String("TargetResourceGroup"),

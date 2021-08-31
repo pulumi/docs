@@ -71,8 +71,8 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := security.NewAssessment(ctx, "assessment", &security.AssessmentArgs{
 			AssessmentName: pulumi.String("8bb8be0a-6010-4789-812f-e4d661c4ed0e"),
-			ResourceDetails: security.AzureResourceDetails{
-				Source: "Azure",
+			ResourceDetails: &security.AzureResourceDetailsArgs{
+				Source: pulumi.String("Azure"),
 			},
 			ResourceId: pulumi.String("subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23/resourceGroups/myRg/providers/Microsoft.Compute/virtualMachineScaleSets/vmss2"),
 			Status: &security.AssessmentStatusArgs{

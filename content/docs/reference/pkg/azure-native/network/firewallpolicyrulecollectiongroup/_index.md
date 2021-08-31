@@ -52,30 +52,30 @@ class MyStack : Stack
                     RuleCollectionType = "FirewallPolicyNatRuleCollection",
                     Rules = 
                     {
-                        new AzureNative.Network.Inputs.NatRuleArgs
+                        
                         {
-                            DestinationAddresses = 
+                            { "destinationAddresses", 
                             {
                                 "152.23.32.23",
-                            },
-                            DestinationPorts = 
+                            } },
+                            { "destinationPorts", 
                             {
                                 "8080",
-                            },
-                            IpProtocols = 
+                            } },
+                            { "ipProtocols", 
                             {
                                 "TCP",
                                 "UDP",
-                            },
-                            Name = "nat-rule1",
-                            RuleType = "NatRule",
-                            SourceAddresses = 
+                            } },
+                            { "name", "nat-rule1" },
+                            { "ruleType", "NatRule" },
+                            { "sourceAddresses", 
                             {
                                 "2.2.2.2",
-                            },
-                            SourceIpGroups = {},
-                            TranslatedFqdn = "internalhttp.server.net",
-                            TranslatedPort = "8080",
+                            } },
+                            { "sourceIpGroups", {} },
+                            { "translatedFqdn", "internalhttp.server.net" },
+                            { "translatedPort", "8080" },
                         },
                     },
                 },
@@ -93,64 +93,7 @@ class MyStack : Stack
 
 {{< example go >}}
 
-
-```go
-package main
-
-import (
-	network "github.com/pulumi/pulumi-azure-native/sdk/go/azure/network"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := network.NewFirewallPolicyRuleCollectionGroup(ctx, "firewallPolicyRuleCollectionGroup", &network.FirewallPolicyRuleCollectionGroupArgs{
-			FirewallPolicyName:      pulumi.String("firewallPolicy"),
-			Priority:                pulumi.Int(100),
-			ResourceGroupName:       pulumi.String("rg1"),
-			RuleCollectionGroupName: pulumi.String("ruleCollectionGroup1"),
-			RuleCollections: pulumi.AnyArray{
-				network.FirewallPolicyNatRuleCollection{
-					Action: network.FirewallPolicyNatRuleCollectionAction{
-						Type: "DNAT",
-					},
-					Name:               "Example-Nat-Rule-Collection",
-					Priority:           100,
-					RuleCollectionType: "FirewallPolicyNatRuleCollection",
-					Rules: []interface{}{
-						network.NatRule{
-							DestinationAddresses: []string{
-								"152.23.32.23",
-							},
-							DestinationPorts: []string{
-								"8080",
-							},
-							IpProtocols: []string{
-								"TCP",
-								"UDP",
-							},
-							Name:     "nat-rule1",
-							RuleType: "NatRule",
-							SourceAddresses: []string{
-								"2.2.2.2",
-							},
-							SourceIpGroups: []interface{}{},
-							TranslatedFqdn: "internalhttp.server.net",
-							TranslatedPort: "8080",
-						},
-					},
-				},
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
+Coming soon!
 
 {{< /example >}}
 
@@ -174,20 +117,20 @@ firewall_policy_rule_collection_group = azure_native.network.FirewallPolicyRuleC
         name="Example-Nat-Rule-Collection",
         priority=100,
         rule_collection_type="FirewallPolicyNatRuleCollection",
-        rules=[azure_native.network.NatRuleArgs(
-            destination_addresses=["152.23.32.23"],
-            destination_ports=["8080"],
-            ip_protocols=[
+        rules=[{
+            "destinationAddresses": ["152.23.32.23"],
+            "destinationPorts": ["8080"],
+            "ipProtocols": [
                 "TCP",
                 "UDP",
             ],
-            name="nat-rule1",
-            rule_type="NatRule",
-            source_addresses=["2.2.2.2"],
-            source_ip_groups=[],
-            translated_fqdn="internalhttp.server.net",
-            translated_port="8080",
-        )],
+            "name": "nat-rule1",
+            "ruleType": "NatRule",
+            "sourceAddresses": ["2.2.2.2"],
+            "sourceIpGroups": [],
+            "translatedFqdn": "internalhttp.server.net",
+            "translatedPort": "8080",
+        }],
     )])
 
 ```
@@ -272,26 +215,26 @@ class MyStack : Stack
                     RuleCollectionType = "FirewallPolicyFilterRuleCollection",
                     Rules = 
                     {
-                        new AzureNative.Network.Inputs.NetworkRuleArgs
+                        
                         {
-                            DestinationAddresses = 
+                            { "destinationAddresses", 
                             {
                                 "*",
-                            },
-                            DestinationPorts = 
+                            } },
+                            { "destinationPorts", 
                             {
                                 "*",
-                            },
-                            IpProtocols = 
+                            } },
+                            { "ipProtocols", 
                             {
                                 "TCP",
-                            },
-                            Name = "network-rule1",
-                            RuleType = "NetworkRule",
-                            SourceAddresses = 
+                            } },
+                            { "name", "network-rule1" },
+                            { "ruleType", "NetworkRule" },
+                            { "sourceAddresses", 
                             {
                                 "10.1.25.0/24",
-                            },
+                            } },
                         },
                     },
                 },
@@ -309,60 +252,7 @@ class MyStack : Stack
 
 {{< example go >}}
 
-
-```go
-package main
-
-import (
-	network "github.com/pulumi/pulumi-azure-native/sdk/go/azure/network"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := network.NewFirewallPolicyRuleCollectionGroup(ctx, "firewallPolicyRuleCollectionGroup", &network.FirewallPolicyRuleCollectionGroupArgs{
-			FirewallPolicyName:      pulumi.String("firewallPolicy"),
-			Priority:                pulumi.Int(100),
-			ResourceGroupName:       pulumi.String("rg1"),
-			RuleCollectionGroupName: pulumi.String("ruleCollectionGroup1"),
-			RuleCollections: pulumi.AnyArray{
-				network.FirewallPolicyFilterRuleCollection{
-					Action: network.FirewallPolicyFilterRuleCollectionAction{
-						Type: "Deny",
-					},
-					Name:               "Example-Filter-Rule-Collection",
-					Priority:           100,
-					RuleCollectionType: "FirewallPolicyFilterRuleCollection",
-					Rules: []interface{}{
-						network.NetworkRule{
-							DestinationAddresses: []string{
-								"*",
-							},
-							DestinationPorts: []string{
-								"*",
-							},
-							IpProtocols: []string{
-								"TCP",
-							},
-							Name:     "network-rule1",
-							RuleType: "NetworkRule",
-							SourceAddresses: []string{
-								"10.1.25.0/24",
-							},
-						},
-					},
-				},
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
+Coming soon!
 
 {{< /example >}}
 
@@ -386,14 +276,14 @@ firewall_policy_rule_collection_group = azure_native.network.FirewallPolicyRuleC
         name="Example-Filter-Rule-Collection",
         priority=100,
         rule_collection_type="FirewallPolicyFilterRuleCollection",
-        rules=[azure_native.network.NetworkRuleArgs(
-            destination_addresses=["*"],
-            destination_ports=["*"],
-            ip_protocols=["TCP"],
-            name="network-rule1",
-            rule_type="NetworkRule",
-            source_addresses=["10.1.25.0/24"],
-        )],
+        rules=[{
+            "destinationAddresses": ["*"],
+            "destinationPorts": ["*"],
+            "ipProtocols": ["TCP"],
+            "name": "network-rule1",
+            "ruleType": "NetworkRule",
+            "sourceAddresses": ["10.1.25.0/24"],
+        }],
     )])
 
 ```
@@ -471,26 +361,26 @@ class MyStack : Stack
                     RuleCollectionType = "FirewallPolicyFilterRuleCollection",
                     Rules = 
                     {
-                        new AzureNative.Network.Inputs.NetworkRuleArgs
+                        
                         {
-                            DestinationIpGroups = 
+                            { "destinationIpGroups", 
                             {
                                 "/subscriptions/subid/providers/Microsoft.Network/resourceGroup/rg1/ipGroups/ipGroups2",
-                            },
-                            DestinationPorts = 
+                            } },
+                            { "destinationPorts", 
                             {
                                 "*",
-                            },
-                            IpProtocols = 
+                            } },
+                            { "ipProtocols", 
                             {
                                 "TCP",
-                            },
-                            Name = "network-1",
-                            RuleType = "NetworkRule",
-                            SourceIpGroups = 
+                            } },
+                            { "name", "network-1" },
+                            { "ruleType", "NetworkRule" },
+                            { "sourceIpGroups", 
                             {
                                 "/subscriptions/subid/providers/Microsoft.Network/resourceGroup/rg1/ipGroups/ipGroups1",
-                            },
+                            } },
                         },
                     },
                 },
@@ -508,59 +398,7 @@ class MyStack : Stack
 
 {{< example go >}}
 
-
-```go
-package main
-
-import (
-	network "github.com/pulumi/pulumi-azure-native/sdk/go/azure/network"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := network.NewFirewallPolicyRuleCollectionGroup(ctx, "firewallPolicyRuleCollectionGroup", &network.FirewallPolicyRuleCollectionGroupArgs{
-			FirewallPolicyName:      pulumi.String("firewallPolicy"),
-			Priority:                pulumi.Int(110),
-			ResourceGroupName:       pulumi.String("rg1"),
-			RuleCollectionGroupName: pulumi.String("ruleCollectionGroup1"),
-			RuleCollections: pulumi.AnyArray{
-				network.FirewallPolicyFilterRuleCollection{
-					Action: network.FirewallPolicyFilterRuleCollectionAction{
-						Type: "Deny",
-					},
-					Name:               "Example-Filter-Rule-Collection",
-					RuleCollectionType: "FirewallPolicyFilterRuleCollection",
-					Rules: []interface{}{
-						network.NetworkRule{
-							DestinationIpGroups: []string{
-								"/subscriptions/subid/providers/Microsoft.Network/resourceGroup/rg1/ipGroups/ipGroups2",
-							},
-							DestinationPorts: []string{
-								"*",
-							},
-							IpProtocols: []string{
-								"TCP",
-							},
-							Name:     "network-1",
-							RuleType: "NetworkRule",
-							SourceIpGroups: []string{
-								"/subscriptions/subid/providers/Microsoft.Network/resourceGroup/rg1/ipGroups/ipGroups1",
-							},
-						},
-					},
-				},
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
+Coming soon!
 
 {{< /example >}}
 
@@ -583,14 +421,14 @@ firewall_policy_rule_collection_group = azure_native.network.FirewallPolicyRuleC
         ),
         name="Example-Filter-Rule-Collection",
         rule_collection_type="FirewallPolicyFilterRuleCollection",
-        rules=[azure_native.network.NetworkRuleArgs(
-            destination_ip_groups=["/subscriptions/subid/providers/Microsoft.Network/resourceGroup/rg1/ipGroups/ipGroups2"],
-            destination_ports=["*"],
-            ip_protocols=["TCP"],
-            name="network-1",
-            rule_type="NetworkRule",
-            source_ip_groups=["/subscriptions/subid/providers/Microsoft.Network/resourceGroup/rg1/ipGroups/ipGroups1"],
-        )],
+        rules=[{
+            "destinationIpGroups": ["/subscriptions/subid/providers/Microsoft.Network/resourceGroup/rg1/ipGroups/ipGroups2"],
+            "destinationPorts": ["*"],
+            "ipProtocols": ["TCP"],
+            "name": "network-1",
+            "ruleType": "NetworkRule",
+            "sourceIpGroups": ["/subscriptions/subid/providers/Microsoft.Network/resourceGroup/rg1/ipGroups/ipGroups1"],
+        }],
     )])
 
 ```
@@ -667,28 +505,28 @@ class MyStack : Stack
                     RuleCollectionType = "FirewallPolicyFilterRuleCollection",
                     Rules = 
                     {
-                        new AzureNative.Network.Inputs.ApplicationRuleArgs
+                        
                         {
-                            Description = "Deny inbound rule",
-                            Name = "rule1",
-                            Protocols = 
+                            { "description", "Deny inbound rule" },
+                            { "name", "rule1" },
+                            { "protocols", 
                             {
                                 new AzureNative.Network.Inputs.FirewallPolicyRuleApplicationProtocolArgs
                                 {
                                     Port = 443,
                                     ProtocolType = "Https",
                                 },
-                            },
-                            RuleType = "ApplicationRule",
-                            SourceAddresses = 
+                            } },
+                            { "ruleType", "ApplicationRule" },
+                            { "sourceAddresses", 
                             {
                                 "216.58.216.164",
                                 "10.0.0.0/24",
-                            },
-                            WebCategories = 
+                            } },
+                            { "webCategories", 
                             {
                                 "Hacking",
-                            },
+                            } },
                         },
                     },
                 },
@@ -706,61 +544,7 @@ class MyStack : Stack
 
 {{< example go >}}
 
-
-```go
-package main
-
-import (
-	network "github.com/pulumi/pulumi-azure-native/sdk/go/azure/network"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := network.NewFirewallPolicyRuleCollectionGroup(ctx, "firewallPolicyRuleCollectionGroup", &network.FirewallPolicyRuleCollectionGroupArgs{
-			FirewallPolicyName:      pulumi.String("firewallPolicy"),
-			Priority:                pulumi.Int(110),
-			ResourceGroupName:       pulumi.String("rg1"),
-			RuleCollectionGroupName: pulumi.String("ruleCollectionGroup1"),
-			RuleCollections: pulumi.AnyArray{
-				network.FirewallPolicyFilterRuleCollection{
-					Action: network.FirewallPolicyFilterRuleCollectionAction{
-						Type: "Deny",
-					},
-					Name:               "Example-Filter-Rule-Collection",
-					RuleCollectionType: "FirewallPolicyFilterRuleCollection",
-					Rules: []interface{}{
-						network.ApplicationRule{
-							Description: "Deny inbound rule",
-							Name:        "rule1",
-							Protocols: []network.FirewallPolicyRuleApplicationProtocol{
-								network.FirewallPolicyRuleApplicationProtocol{
-									Port:         443,
-									ProtocolType: "Https",
-								},
-							},
-							RuleType: "ApplicationRule",
-							SourceAddresses: []string{
-								"216.58.216.164",
-								"10.0.0.0/24",
-							},
-							WebCategories: []string{
-								"Hacking",
-							},
-						},
-					},
-				},
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
+Coming soon!
 
 {{< /example >}}
 
@@ -783,20 +567,20 @@ firewall_policy_rule_collection_group = azure_native.network.FirewallPolicyRuleC
         ),
         name="Example-Filter-Rule-Collection",
         rule_collection_type="FirewallPolicyFilterRuleCollection",
-        rules=[azure_native.network.ApplicationRuleArgs(
-            description="Deny inbound rule",
-            name="rule1",
-            protocols=[azure_native.network.FirewallPolicyRuleApplicationProtocolArgs(
+        rules=[{
+            "description": "Deny inbound rule",
+            "name": "rule1",
+            "protocols": [azure_native.network.FirewallPolicyRuleApplicationProtocolArgs(
                 port=443,
                 protocol_type="Https",
             )],
-            rule_type="ApplicationRule",
-            source_addresses=[
+            "ruleType": "ApplicationRule",
+            "sourceAddresses": [
                 "216.58.216.164",
                 "10.0.0.0/24",
             ],
-            web_categories=["Hacking"],
-        )],
+            "webCategories": ["Hacking"],
+        }],
     )])
 
 ```

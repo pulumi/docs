@@ -47,12 +47,12 @@ class MyStack : Stack
                             Name = "appHealth",
                             Request = new AzureNative.DeploymentManager.Inputs.RestRequestArgs
                             {
-                                Authentication = new AzureNative.DeploymentManager.Inputs.ApiKeyAuthenticationArgs
+                                Authentication = 
                                 {
-                                    In = "Query",
-                                    Name = "Code",
-                                    Type = "ApiKey",
-                                    Value = "NBCapiMOBQyAAbCkeytoPadnvO0eGHmidwFz5rXpappznKp3Jt7LLg==",
+                                    { "in", "Query" },
+                                    { "name", "Code" },
+                                    { "type", "ApiKey" },
+                                    { "value", "NBCapiMOBQyAAbCkeytoPadnvO0eGHmidwFz5rXpappznKp3Jt7LLg==" },
                                 },
                                 Method = "GET",
                                 Uri = "https://resthealth.healthservice.com/api/applications/contosoApp/healthStatus",
@@ -81,12 +81,12 @@ class MyStack : Stack
                             Name = "serviceHealth",
                             Request = new AzureNative.DeploymentManager.Inputs.RestRequestArgs
                             {
-                                Authentication = new AzureNative.DeploymentManager.Inputs.ApiKeyAuthenticationArgs
+                                Authentication = 
                                 {
-                                    In = "Header",
-                                    Name = "code",
-                                    Type = "ApiKey",
-                                    Value = "NBCapiMOBQyAAbCkeytoPadnvO0eGHmidwFz5rXpappznKp3Jt7LLg==",
+                                    { "in", "Header" },
+                                    { "name", "code" },
+                                    { "type", "ApiKey" },
+                                    { "value", "NBCapiMOBQyAAbCkeytoPadnvO0eGHmidwFz5rXpappznKp3Jt7LLg==" },
                                 },
                                 Method = "GET",
                                 Uri = "https://resthealth.healthservice.com/api/services/contosoService/healthStatus",
@@ -133,96 +133,7 @@ class MyStack : Stack
 
 {{< example go >}}
 
-
-```go
-package main
-
-import (
-	"fmt"
-
-	deploymentmanager "github.com/pulumi/pulumi-azure-native/sdk/go/azure/deploymentmanager"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := deploymentmanager.NewStep(ctx, "step", &deploymentmanager.StepArgs{
-			Location: pulumi.String("centralus"),
-			Properties: deploymentmanager.HealthCheckStepProperties{
-				Attributes: deploymentmanager.RestHealthCheckStepAttributes{
-					HealthChecks: []deploymentmanager.RestHealthCheck{
-						deploymentmanager.RestHealthCheck{
-							Name: "appHealth",
-							Request: deploymentmanager.RestRequest{
-								Authentication: deploymentmanager.ApiKeyAuthentication{
-									In:    "Query",
-									Name:  "Code",
-									Type:  "ApiKey",
-									Value: "NBCapiMOBQyAAbCkeytoPadnvO0eGHmidwFz5rXpappznKp3Jt7LLg==",
-								},
-								Method: "GET",
-								Uri:    "https://resthealth.healthservice.com/api/applications/contosoApp/healthStatus",
-							},
-							Response: deploymentmanager.RestResponse{
-								Regex: deploymentmanager.RestResponseRegex{
-									MatchQuantifier: "All",
-									Matches: []string{
-										"(?i)Contoso-App",
-										"(?i)\"health_status\":((.|\n)*)\"(green|yellow)\"",
-										fmt.Sprintf("%v%v", "(?mi)^(\"application_host\": 94781052)", "$"),
-									},
-								},
-								SuccessStatusCodes: []string{
-									"OK",
-								},
-							},
-						},
-						deploymentmanager.RestHealthCheck{
-							Name: "serviceHealth",
-							Request: deploymentmanager.RestRequest{
-								Authentication: deploymentmanager.ApiKeyAuthentication{
-									In:    "Header",
-									Name:  "code",
-									Type:  "ApiKey",
-									Value: "NBCapiMOBQyAAbCkeytoPadnvO0eGHmidwFz5rXpappznKp3Jt7LLg==",
-								},
-								Method: "GET",
-								Uri:    "https://resthealth.healthservice.com/api/services/contosoService/healthStatus",
-							},
-							Response: deploymentmanager.RestResponse{
-								Regex: deploymentmanager.RestResponseRegex{
-									MatchQuantifier: "All",
-									Matches: []string{
-										"(?i)Contoso-Service-EndToEnd",
-										"(?i)\"health_status\":((.|\n)*)\"(green)\"",
-									},
-								},
-								SuccessStatusCodes: []string{
-									"OK",
-								},
-							},
-						},
-					},
-					HealthyStateDuration: "PT2H",
-					MaxElasticDuration:   "PT30M",
-					Type:                 "REST",
-					WaitDuration:         "PT15M",
-				},
-				StepType: "HealthCheck",
-			},
-			ResourceGroupName: pulumi.String("myResourceGroup"),
-			StepName:          pulumi.String("healthCheckStep"),
-			Tags:              nil,
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
+Coming soon!
 
 {{< /example >}}
 
@@ -242,12 +153,12 @@ step = azure_native.deploymentmanager.Step("step",
                 azure_native.deploymentmanager.RestHealthCheckArgs(
                     name="appHealth",
                     request=azure_native.deploymentmanager.RestRequestArgs(
-                        authentication=azure_native.deploymentmanager.ApiKeyAuthenticationArgs(
-                            in_="Query",
-                            name="Code",
-                            type="ApiKey",
-                            value="NBCapiMOBQyAAbCkeytoPadnvO0eGHmidwFz5rXpappznKp3Jt7LLg==",
-                        ),
+                        authentication={
+                            "in": "Query",
+                            "name": "Code",
+                            "type": "ApiKey",
+                            "value": "NBCapiMOBQyAAbCkeytoPadnvO0eGHmidwFz5rXpappznKp3Jt7LLg==",
+                        },
                         method="GET",
                         uri="https://resthealth.healthservice.com/api/applications/contosoApp/healthStatus",
                     ),
@@ -267,12 +178,12 @@ step = azure_native.deploymentmanager.Step("step",
                 azure_native.deploymentmanager.RestHealthCheckArgs(
                     name="serviceHealth",
                     request=azure_native.deploymentmanager.RestRequestArgs(
-                        authentication=azure_native.deploymentmanager.ApiKeyAuthenticationArgs(
-                            in_="Header",
-                            name="code",
-                            type="ApiKey",
-                            value="NBCapiMOBQyAAbCkeytoPadnvO0eGHmidwFz5rXpappznKp3Jt7LLg==",
-                        ),
+                        authentication={
+                            "in": "Header",
+                            "name": "code",
+                            "type": "ApiKey",
+                            "value": "NBCapiMOBQyAAbCkeytoPadnvO0eGHmidwFz5rXpappznKp3Jt7LLg==",
+                        },
                         method="GET",
                         uri="https://resthealth.healthservice.com/api/services/contosoService/healthStatus",
                     ),
@@ -441,11 +352,11 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := deploymentmanager.NewStep(ctx, "step", &deploymentmanager.StepArgs{
 			Location: pulumi.String("centralus"),
-			Properties: deploymentmanager.WaitStepProperties{
-				Attributes: deploymentmanager.WaitStepAttributes{
+			Properties: &deploymentmanager.WaitStepPropertiesArgs{
+				Attributes: &deploymentmanager.WaitStepAttributesArgs{
 					Duration: "PT20M",
 				},
-				StepType: "Wait",
+				StepType: pulumi.String("Wait"),
 			},
 			ResourceGroupName: pulumi.String("myResourceGroup"),
 			StepName:          pulumi.String("waitStep"),

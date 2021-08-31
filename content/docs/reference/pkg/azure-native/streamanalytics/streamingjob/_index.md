@@ -48,24 +48,24 @@ class MyStack : Stack
                     Name = "inputtest",
                     Properties = new AzureNative.StreamAnalytics.Inputs.StreamInputPropertiesArgs
                     {
-                        Datasource = new AzureNative.StreamAnalytics.Inputs.BlobStreamInputDataSourceArgs
+                        Datasource = 
                         {
-                            Container = "containerName",
-                            PathPattern = "",
-                            StorageAccounts = 
+                            { "container", "containerName" },
+                            { "pathPattern", "" },
+                            { "storageAccounts", 
                             {
                                 new AzureNative.StreamAnalytics.Inputs.StorageAccountArgs
                                 {
                                     AccountKey = "yourAccountKey==",
                                     AccountName = "yourAccountName",
                                 },
-                            },
-                            Type = "Microsoft.Storage/Blob",
+                            } },
+                            { "type", "Microsoft.Storage/Blob" },
                         },
-                        Serialization = new AzureNative.StreamAnalytics.Inputs.JsonSerializationArgs
+                        Serialization = 
                         {
-                            Encoding = "UTF8",
-                            Type = "Json",
+                            { "encoding", "UTF8" },
+                            { "type", "Json" },
                         },
                         Type = "Stream",
                     },
@@ -120,87 +120,7 @@ class MyStack : Stack
 
 {{< example go >}}
 
-
-```go
-package main
-
-import (
-	streamanalytics "github.com/pulumi/pulumi-azure-native/sdk/go/azure/streamanalytics"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := streamanalytics.NewStreamingJob(ctx, "streamingJob", &streamanalytics.StreamingJobArgs{
-			CompatibilityLevel:                 pulumi.String("1.0"),
-			DataLocale:                         pulumi.String("en-US"),
-			EventsLateArrivalMaxDelayInSeconds: pulumi.Int(5),
-			EventsOutOfOrderMaxDelayInSeconds:  pulumi.Int(0),
-			EventsOutOfOrderPolicy:             pulumi.String("Drop"),
-			Functions:                          streamanalytics.FunctionArray{},
-			Inputs: []streamanalytics.InputArgs{
-				&streamanalytics.InputArgs{
-					Name: pulumi.String("inputtest"),
-					Properties: streamanalytics.StreamInputProperties{
-						Datasource: streamanalytics.BlobStreamInputDataSource{
-							Container:   "containerName",
-							PathPattern: "",
-							StorageAccounts: []streamanalytics.StorageAccount{
-								streamanalytics.StorageAccount{
-									AccountKey:  "yourAccountKey==",
-									AccountName: "yourAccountName",
-								},
-							},
-							Type: "Microsoft.Storage/Blob",
-						},
-						Serialization: streamanalytics.JsonSerialization{
-							Encoding: "UTF8",
-							Type:     "Json",
-						},
-						Type: "Stream",
-					},
-				},
-			},
-			JobName:           pulumi.String("sj7804"),
-			Location:          pulumi.String("West US"),
-			OutputErrorPolicy: pulumi.String("Drop"),
-			Outputs: []streamanalytics.OutputArgs{
-				&streamanalytics.OutputArgs{
-					Datasource: streamanalytics.AzureSqlDatabaseOutputDataSource{
-						Database: "databaseName",
-						Password: "userPassword",
-						Server:   "serverName",
-						Table:    "tableName",
-						Type:     "Microsoft.Sql/Server/Database",
-						User:     "<user>",
-					},
-					Name: pulumi.String("outputtest"),
-				},
-			},
-			ResourceGroupName: pulumi.String("sjrg3276"),
-			Sku: &streamanalytics.SkuArgs{
-				Name: pulumi.String("Standard"),
-			},
-			Tags: pulumi.StringMap{
-				"key1":      pulumi.String("value1"),
-				"key3":      pulumi.String("value3"),
-				"randomKey": pulumi.String("randomValue"),
-			},
-			Transformation: &streamanalytics.TransformationArgs{
-				Name:           pulumi.String("transformationtest"),
-				Query:          pulumi.String("Select Id, Name from inputtest"),
-				StreamingUnits: pulumi.Int(1),
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
+Coming soon!
 
 {{< /example >}}
 
@@ -222,19 +142,19 @@ streaming_job = azure_native.streamanalytics.StreamingJob("streamingJob",
     inputs=[azure_native.streamanalytics.InputArgs(
         name="inputtest",
         properties=azure_native.streamanalytics.StreamInputPropertiesArgs(
-            datasource=azure_native.streamanalytics.BlobStreamInputDataSourceArgs(
-                container="containerName",
-                path_pattern="",
-                storage_accounts=[azure_native.streamanalytics.StorageAccountArgs(
+            datasource={
+                "container": "containerName",
+                "pathPattern": "",
+                "storageAccounts": [azure_native.streamanalytics.StorageAccountArgs(
                     account_key="yourAccountKey==",
                     account_name="yourAccountName",
                 )],
-                type="Microsoft.Storage/Blob",
-            ),
-            serialization=azure_native.streamanalytics.JsonSerializationArgs(
-                encoding="UTF8",
-                type="Json",
-            ),
+                "type": "Microsoft.Storage/Blob",
+            },
+            serialization={
+                "encoding": "UTF8",
+                "type": "Json",
+            },
             type="Stream",
         ),
     )],

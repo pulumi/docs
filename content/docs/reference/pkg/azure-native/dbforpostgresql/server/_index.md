@@ -81,8 +81,8 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := dbforpostgresql.NewServer(ctx, "server", &dbforpostgresql.ServerArgs{
 			Location: pulumi.String("brazilsouth"),
-			Properties: dbforpostgresql.ServerPropertiesForRestore{
-				CreateMode:         "PointInTimeRestore",
+			Properties: &dbforpostgresql.ServerPropertiesForRestoreArgs{
+				CreateMode:         pulumi.String("PointInTimeRestore"),
 				RestorePointInTime: "2017-12-14T00:00:37.467Z",
 				SourceServerId:     "/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/SourceResourceGroup/providers/Microsoft.DBforPostgreSQL/servers/sourceserver",
 			},
@@ -247,13 +247,13 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := dbforpostgresql.NewServer(ctx, "server", &dbforpostgresql.ServerArgs{
 			Location: pulumi.String("westus"),
-			Properties: dbforpostgresql.ServerPropertiesForDefaultCreate{
+			Properties: &dbforpostgresql.ServerPropertiesForDefaultCreateArgs{
 				AdministratorLogin:         "cloudsa",
 				AdministratorLoginPassword: "<administratorLoginPassword>",
-				CreateMode:                 "Default",
+				CreateMode:                 pulumi.String("Default"),
 				MinimalTlsVersion:          "TLS1_2",
 				SslEnforcement:             "Enabled",
-				StorageProfile: dbforpostgresql.StorageProfile{
+				StorageProfile: &dbforpostgresql.StorageProfileArgs{
 					BackupRetentionDays: 7,
 					GeoRedundantBackup:  "Disabled",
 					StorageMB:           128000,
@@ -421,8 +421,8 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := dbforpostgresql.NewServer(ctx, "server", &dbforpostgresql.ServerArgs{
 			Location: pulumi.String("westcentralus"),
-			Properties: dbforpostgresql.ServerPropertiesForReplica{
-				CreateMode:     "Replica",
+			Properties: &dbforpostgresql.ServerPropertiesForReplicaArgs{
+				CreateMode:     pulumi.String("Replica"),
 				SourceServerId: "/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/TestGroup_WestCentralUS/providers/Microsoft.DBforPostgreSQL/servers/testserver-master",
 			},
 			ResourceGroupName: pulumi.String("TestGroup_WestCentralUS"),
@@ -566,8 +566,8 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := dbforpostgresql.NewServer(ctx, "server", &dbforpostgresql.ServerArgs{
 			Location: pulumi.String("westus"),
-			Properties: dbforpostgresql.ServerPropertiesForGeoRestore{
-				CreateMode:     "GeoRestore",
+			Properties: &dbforpostgresql.ServerPropertiesForGeoRestoreArgs{
+				CreateMode:     pulumi.String("GeoRestore"),
 				SourceServerId: "/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/SourceResourceGroup/providers/Microsoft.DBforPostgreSQL/servers/sourceserver",
 			},
 			ResourceGroupName: pulumi.String("TargetResourceGroup"),

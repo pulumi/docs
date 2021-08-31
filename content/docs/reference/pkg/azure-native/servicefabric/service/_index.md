@@ -100,8 +100,8 @@ func main() {
 				},
 			},
 			DefaultMoveCost: pulumi.String("Medium"),
-			PartitionDescription: servicefabric.SingletonPartitionSchemeDescription{
-				PartitionScheme: "Singleton",
+			PartitionDescription: &servicefabric.SingletonPartitionSchemeDescriptionArgs{
+				PartitionScheme: pulumi.String("Singleton"),
 			},
 			PlacementConstraints: pulumi.String("NodeType==frontend"),
 			ResourceGroupName:    pulumi.String("resRg"),
@@ -260,8 +260,8 @@ func main() {
 		_, err := servicefabric.NewService(ctx, "service", &servicefabric.ServiceArgs{
 			ApplicationName: pulumi.String("myApp"),
 			ClusterName:     pulumi.String("myCluster"),
-			PartitionDescription: servicefabric.SingletonPartitionSchemeDescription{
-				PartitionScheme: "Singleton",
+			PartitionDescription: &servicefabric.SingletonPartitionSchemeDescriptionArgs{
+				PartitionScheme: pulumi.String("Singleton"),
 			},
 			ResourceGroupName: pulumi.String("resRg"),
 			ServiceKind:       pulumi.String("Stateless"),

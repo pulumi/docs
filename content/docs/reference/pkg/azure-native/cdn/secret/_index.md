@@ -79,9 +79,9 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := cdn.NewSecret(ctx, "secret", &cdn.SecretArgs{
-			Parameters: cdn.CustomerCertificateParameters{
+			Parameters: &cdn.CustomerCertificateParametersArgs{
 				CertificateAuthority: "Symantec",
-				SecretSource: cdn.ResourceReference{
+				SecretSource: &cdn.ResourceReferenceArgs{
 					Id: "/subscriptions/subid/resourcegroups/RG/providers/Microsoft.KeyVault/vault/kvName/certificate/certName",
 				},
 				SecretVersion: "67c452f83c804aed80aa3a21e523c226",
@@ -89,7 +89,7 @@ func main() {
 					"foo.contoso.com",
 					"www3.foo.contoso.com",
 				},
-				Type:             "CustomerCertificate",
+				Type:             pulumi.String("CustomerCertificate"),
 				UseLatestVersion: false,
 			},
 			ProfileName:       pulumi.String("profile1"),

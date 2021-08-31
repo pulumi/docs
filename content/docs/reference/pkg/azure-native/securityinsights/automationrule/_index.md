@@ -100,7 +100,70 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	securityinsights "github.com/pulumi/pulumi-azure-native/sdk/go/azure/securityinsights"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := securityinsights.NewAutomationRule(ctx, "automationRule", &securityinsights.AutomationRuleArgs{
+			Actions: pulumi.AnyArray{
+				&securityinsights.AutomationRuleModifyPropertiesActionArgs{
+					ActionConfiguration: &securityinsights.AutomationRuleModifyPropertiesActionActionConfigurationArgs{
+						Severity: "High",
+					},
+					ActionType: pulumi.String("ModifyProperties"),
+					Order:      1,
+				},
+				&securityinsights.AutomationRuleRunPlaybookActionArgs{
+					ActionConfiguration: &securityinsights.AutomationRuleRunPlaybookActionActionConfigurationArgs{
+						LogicAppResourceId: "/subscriptions/d0cfe6b2-9ac0-4464-9919-dccaee2e48c0/resourceGroups/myRg/providers/Microsoft.Logic/workflows/IncidentPlaybook",
+						TenantId:           "ee48efaf-50c6-411b-9345-b2bdc3eb4abc",
+					},
+					ActionType: pulumi.String("RunPlaybook"),
+					Order:      2,
+				},
+			},
+			AutomationRuleId:                    pulumi.String("73e01a99-5cd7-4139-a149-9f2736ff2ab5"),
+			DisplayName:                         pulumi.String("High severity incidents escalation"),
+			Etag:                                pulumi.String("\"0300bf09-0000-0000-0000-5c37296e0000\""),
+			OperationalInsightsResourceProvider: pulumi.String("Microsoft.OperationalInsights"),
+			Order:                               pulumi.Int(1),
+			ResourceGroupName:                   pulumi.String("myRg"),
+			TriggeringLogic: &securityinsights.AutomationRuleTriggeringLogicArgs{
+				Conditions: securityinsights.AutomationRulePropertyValuesConditionArray{
+					&securityinsights.AutomationRulePropertyValuesConditionArgs{
+						ConditionProperties: &securityinsights.AutomationRulePropertyValuesConditionConditionPropertiesArgs{
+							Operator:     pulumi.String("Contains"),
+							PropertyName: pulumi.String("IncidentRelatedAnalyticRuleIds"),
+							PropertyValues: pulumi.StringArray{
+								pulumi.String("/subscriptions/d0cfe6b2-9ac0-4464-9919-dccaee2e48c0/resourceGroups/myRg/providers/Microsoft.OperationalInsights/workspaces/myWorkspace/providers/Microsoft.SecurityInsights/alertRules/fab3d2d4-747f-46a7-8ef0-9c0be8112bf7"),
+								pulumi.String("/subscriptions/d0cfe6b2-9ac0-4464-9919-dccaee2e48c0/resourceGroups/myRg/providers/Microsoft.OperationalInsights/workspaces/myWorkspace/providers/Microsoft.SecurityInsights/alertRules/8deb8303-e94d-46ff-96e0-5fd94b33df1a"),
+							},
+						},
+						ConditionType: pulumi.String("Property"),
+					},
+				},
+				IsEnabled:    pulumi.Bool(true),
+				TriggersOn:   pulumi.String("Incidents"),
+				TriggersWhen: pulumi.String("Created"),
+			},
+			WorkspaceName: pulumi.String("myWorkspace"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
@@ -137,8 +200,8 @@ automation_rule = azure_native.securityinsights.AutomationRule("automationRule",
     order=1,
     resource_group_name="myRg",
     triggering_logic=azure_native.securityinsights.AutomationRuleTriggeringLogicArgs(
-        conditions=[{
-            "conditionProperties": azure_native.securityinsights.AutomationRulePropertyValuesConditionConditionPropertiesArgs(
+        conditions=[azure_native.securityinsights.AutomationRulePropertyValuesConditionArgs(
+            condition_properties=azure_native.securityinsights.AutomationRulePropertyValuesConditionConditionPropertiesArgs(
                 operator="Contains",
                 property_name="IncidentRelatedAnalyticRuleIds",
                 property_values=[
@@ -146,8 +209,8 @@ automation_rule = azure_native.securityinsights.AutomationRule("automationRule",
                     "/subscriptions/d0cfe6b2-9ac0-4464-9919-dccaee2e48c0/resourceGroups/myRg/providers/Microsoft.OperationalInsights/workspaces/myWorkspace/providers/Microsoft.SecurityInsights/alertRules/8deb8303-e94d-46ff-96e0-5fd94b33df1a",
                 ],
             ),
-            "conditionType": "Property",
-        }],
+            condition_type="Property",
+        )],
         is_enabled=True,
         triggers_on="Incidents",
         triggers_when="Created",

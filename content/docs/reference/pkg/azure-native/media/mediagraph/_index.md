@@ -85,7 +85,58 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	media "github.com/pulumi/pulumi-azure-native/sdk/go/azure/media"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := media.NewMediaGraph(ctx, "mediaGraph", &media.MediaGraphArgs{
+			AccountName:       pulumi.String("contosomedia"),
+			Description:       pulumi.String("updated description"),
+			MediaGraphName:    pulumi.String("SampleMediaGraph"),
+			ResourceGroupName: pulumi.String("contoso"),
+			Sinks: media.MediaGraphAssetSinkArray{
+				&media.MediaGraphAssetSinkArgs{
+					AssetName: pulumi.String("SampleAsset"),
+					Inputs: pulumi.StringArray{
+						pulumi.String("rtspSource"),
+					},
+					Name:      pulumi.String("AssetSink"),
+					OdataType: pulumi.String("#Microsoft.Media.MediaGraphAssetSink"),
+				},
+			},
+			Sources: []media.MediaGraphRtspSourceArgs{
+				&media.MediaGraphRtspSourceArgs{
+					Endpoint: &media.MediaGraphClearEndpointArgs{
+						Credentials: &media.MediaGraphUsernamePasswordCredentialsArgs{
+							OdataType: pulumi.String("#Microsoft.Media.MediaGraphUsernamePasswordCredentials"),
+							Password:  "examplepassword",
+							Username:  "exampleusername",
+						},
+						OdataType: pulumi.String("#Microsoft.Media.MediaGraphClearEndpoint"),
+						Url:       "rtsp://contoso.com:554/stream1",
+					},
+					Name:      pulumi.String("rtspSource"),
+					OdataType: pulumi.String("#Microsoft.Media.MediaGraphRtspSource"),
+					Transport: pulumi.String("Http"),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
@@ -102,14 +153,14 @@ media_graph = azure_native.media.MediaGraph("mediaGraph",
     description="updated description",
     media_graph_name="SampleMediaGraph",
     resource_group_name="contoso",
-    sinks=[{
-        "assetName": "SampleAsset",
-        "inputs": ["rtspSource"],
-        "name": "AssetSink",
-        "odataType": "#Microsoft.Media.MediaGraphAssetSink",
-    }],
-    sources=[{
-        "endpoint": azure_native.media.MediaGraphClearEndpointArgs(
+    sinks=[azure_native.media.MediaGraphAssetSinkArgs(
+        asset_name="SampleAsset",
+        inputs=["rtspSource"],
+        name="AssetSink",
+        odata_type="#Microsoft.Media.MediaGraphAssetSink",
+    )],
+    sources=[azure_native.media.MediaGraphRtspSourceArgs(
+        endpoint=azure_native.media.MediaGraphClearEndpointArgs(
             credentials=azure_native.media.MediaGraphUsernamePasswordCredentialsArgs(
                 odata_type="#Microsoft.Media.MediaGraphUsernamePasswordCredentials",
                 password="examplepassword",
@@ -118,10 +169,10 @@ media_graph = azure_native.media.MediaGraph("mediaGraph",
             odata_type="#Microsoft.Media.MediaGraphClearEndpoint",
             url="rtsp://contoso.com:554/stream1",
         ),
-        "name": "rtspSource",
-        "odataType": "#Microsoft.Media.MediaGraphRtspSource",
-        "transport": "Http",
-    }])
+        name="rtspSource",
+        odata_type="#Microsoft.Media.MediaGraphRtspSource",
+        transport="Http",
+    )])
 
 ```
 
@@ -269,7 +320,68 @@ nECzd3TuyFKYeGssSni/QQ1e7yZcLapQqz66g5otdriw0IRdOfDxm5M=
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	media "github.com/pulumi/pulumi-azure-native/sdk/go/azure/media"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := media.NewMediaGraph(ctx, "mediaGraph", &media.MediaGraphArgs{
+			AccountName:       pulumi.String("contosomedia"),
+			Description:       pulumi.String("updated description"),
+			MediaGraphName:    pulumi.String("SampleMediaGraph"),
+			ResourceGroupName: pulumi.String("contoso"),
+			Sinks: media.MediaGraphAssetSinkArray{
+				&media.MediaGraphAssetSinkArgs{
+					AssetName: pulumi.String("SampleAsset"),
+					Inputs: pulumi.StringArray{
+						pulumi.String("rtspSource"),
+					},
+					Name:      pulumi.String("AssetSink"),
+					OdataType: pulumi.String("#Microsoft.Media.MediaGraphAssetSink"),
+				},
+			},
+			Sources: media.MediaGraphRtspSourceArray{
+				&media.MediaGraphRtspSourceArgs{
+					Endpoint: &media.MediaGraphTlsEndpointArgs{
+						Credentials: &media.MediaGraphUsernamePasswordCredentialsArgs{
+							OdataType: pulumi.String("#Microsoft.Media.MediaGraphUsernamePasswordCredentials"),
+							Password:  "examplepassword",
+							Username:  "exampleusername",
+						},
+						OdataType: pulumi.String("#Microsoft.Media.MediaGraphTlsEndpoint"),
+						TrustedCertificates: &media.MediaGraphPemCertificateListArgs{
+							Certificates: []string{
+								"-----BEGIN CERTIFICATE-----\nMIIDhTCCAm2gAwIBAgIUajvPKmoO+8qaO89/ZGATl7ZYnTswDQYJKoZIhvcNAQEL\nBQAwUTESMBAGA1UECgwJTWljcm9zb2Z0MRQwEgYDVQQLDAtBenVyZSBNZWRpYTEl\nMCMGA1UEAwwcKFVudHJ1c3RlZCkgVGVzdCBDZXJ0aWZpY2F0ZTAgFw0yMDAyMDYy\nMTI5MTlaGA8zMDE5MDYwOTIxMjkxOVowUTESMBAGA1UECgwJTWljcm9zb2Z0MRQw\nEgYDVQQLDAtBenVyZSBNZWRpYTElMCMGA1UEAwwcKFVudHJ1c3RlZCkgVGVzdCBD\nZXJ0aWZpY2F0ZTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAK2lg5ff\n7xXPaBZXHl/zrTukdiBtu7BNIOchHba51eloruPRzpvQx7Pedk3CVTut7LYinijf\nuol0EwkQ2FLt2i2jOqiva9nXR95ujIZHcKsEeMC4RSNSP4++k6SpP8FgyYVdv5ru\nf8GC+HyYQ4j0TqpR/cJs53l/LGRSldaFZ6fcDde1jeyca4VivAbAH1/WDIOvmjzo\n9XIGxZ10VSS5l5+DIgdkJZ+mDMLJIuVZ0YVF16ZGEB3beq1trk5lItvmSjQLTllH\nqMFm9UGY8jKZSo/BY8ewHEtnGSAFQK0TVuRx1HhUWwu6C9jk+2zmRS2090BNpQWa\nJMKFJrSPzFDPRX8CAwEAAaNTMFEwHQYDVR0OBBYEFIumbhu0lYk0EFDThEg0yyIn\n/wZZMB8GA1UdIwQYMBaAFIumbhu0lYk0EFDThEg0yyIn/wZZMA8GA1UdEwEB/wQF\nMAMBAf8wDQYJKoZIhvcNAQELBQADggEBADUNw+/NGNVtigq9tMJKqlk39MTpDn1s\nZ1BVIAuAWSQjlevYZJeDIPUiWNWFhRe+xN7oOLnn2+NIXEKKeMSyuPoZYbN0mBkB\n99oS3XVipSANpmDvIepNdCrOnjfqDFIifRF1Dqjtb6i1hb6v/qYKVPLQvcrgGur7\nPKKkAu9p4YRZ3RBdwwaUuMgojrj/l6DGbeJY6IRVnVMY39rryMnZjA5xUlhCu55n\noB3t/jsJLwnQN+JbAjLAeuqgOWtgARsEFzvpt+VvDsaj0YLOJPhyJwTvHgaa/slB\nnECzd3TuyFKYeGssSni/QQ1e7yZcLapQqz66g5otdriw0IRdOfDxm5M=\n-----END CERTIFICATE-----",
+							},
+							OdataType: pulumi.String("#Microsoft.Media.MediaGraphPemCertificateList"),
+						},
+						Url: "rtsps://contoso.com:443/stream1",
+						ValidationOptions: &media.MediaGraphTlsValidationOptionsArgs{
+							IgnoreHostname:  true,
+							IgnoreSignature: false,
+						},
+					},
+					Name:      pulumi.String("rtspSource"),
+					OdataType: pulumi.String("#Microsoft.Media.MediaGraphRtspSource"),
+					Transport: pulumi.String("Http"),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
@@ -286,14 +398,14 @@ media_graph = azure_native.media.MediaGraph("mediaGraph",
     description="updated description",
     media_graph_name="SampleMediaGraph",
     resource_group_name="contoso",
-    sinks=[{
-        "assetName": "SampleAsset",
-        "inputs": ["rtspSource"],
-        "name": "AssetSink",
-        "odataType": "#Microsoft.Media.MediaGraphAssetSink",
-    }],
-    sources=[{
-        "endpoint": azure_native.media.MediaGraphTlsEndpointArgs(
+    sinks=[azure_native.media.MediaGraphAssetSinkArgs(
+        asset_name="SampleAsset",
+        inputs=["rtspSource"],
+        name="AssetSink",
+        odata_type="#Microsoft.Media.MediaGraphAssetSink",
+    )],
+    sources=[azure_native.media.MediaGraphRtspSourceArgs(
+        endpoint=azure_native.media.MediaGraphTlsEndpointArgs(
             credentials=azure_native.media.MediaGraphUsernamePasswordCredentialsArgs(
                 odata_type="#Microsoft.Media.MediaGraphUsernamePasswordCredentials",
                 password="examplepassword",
@@ -330,10 +442,10 @@ nECzd3TuyFKYeGssSni/QQ1e7yZcLapQqz66g5otdriw0IRdOfDxm5M=
                 ignore_signature=False,
             ),
         ),
-        "name": "rtspSource",
-        "odataType": "#Microsoft.Media.MediaGraphRtspSource",
-        "transport": "Http",
-    }])
+        name="rtspSource",
+        odata_type="#Microsoft.Media.MediaGraphRtspSource",
+        transport="Http",
+    )])
 
 ```
 

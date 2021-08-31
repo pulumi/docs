@@ -61,39 +61,7 @@ class MyStack : Stack
 
 {{< example go >}}
 
-
-```go
-package main
-
-import (
-	servicebus "github.com/pulumi/pulumi-azure-native/sdk/go/azure/servicebus"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := servicebus.NewNamespace(ctx, "namespace", &servicebus.NamespaceArgs{
-			Location:          pulumi.String("South Central US"),
-			NamespaceName:     pulumi.String("sdk-Namespace2924"),
-			ResourceGroupName: pulumi.String("ArunMonocle"),
-			Sku: &servicebus.SBSkuArgs{
-				Name: "Standard",
-				Tier: "Standard",
-			},
-			Tags: pulumi.StringMap{
-				"tag1": pulumi.String("value1"),
-				"tag2": pulumi.String("value2"),
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
+Coming soon!
 
 {{< /example >}}
 

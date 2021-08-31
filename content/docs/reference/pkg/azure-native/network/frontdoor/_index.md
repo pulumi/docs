@@ -301,11 +301,11 @@ func main() {
 					PatternsToMatch: pulumi.StringArray{
 						pulumi.String("/*"),
 					},
-					RouteConfiguration: network.ForwardingConfiguration{
-						BackendPool: network.SubResource{
+					RouteConfiguration: &network.ForwardingConfigurationArgs{
+						BackendPool: &network.SubResourceArgs{
 							Id: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/frontDoors/frontDoor1/backendPools/backendPool1",
 						},
-						OdataType: "#Microsoft.Azure.FrontDoor.Models.FrontdoorForwardingConfiguration",
+						OdataType: pulumi.String("#Microsoft.Azure.FrontDoor.Models.FrontdoorForwardingConfiguration"),
 					},
 					RulesEngine: &network.SubResourceArgs{
 						Id: pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/frontDoors/frontDoor1/rulesEngines/rulesEngine1"),

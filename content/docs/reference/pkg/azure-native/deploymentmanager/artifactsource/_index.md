@@ -58,7 +58,39 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	"fmt"
+
+	deploymentmanager "github.com/pulumi/pulumi-azure-native/sdk/go/azure/deploymentmanager"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := deploymentmanager.NewArtifactSource(ctx, "artifactSource", &deploymentmanager.ArtifactSourceArgs{
+			ArtifactSourceName: pulumi.String("myArtifactSource"),
+			Authentication: &deploymentmanager.SasAuthenticationArgs{
+				SasUri: pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v", "https://mystorageaccount.blob.core.windows.net/myartifactsource?st=2018-07-07T14", "%", "3A10", "%", "3A00Z&se=2019-12-31T15", "%", "3A10", "%", "3A00Z&sp=rl&sv=2017-04-17&sr=c&sig=Yh2SoJ1NhhLRwCLln7de", "%", "2Fkabcdefghijklmno5sWEIk", "%", "3D")),
+				Type:   pulumi.String("Sas"),
+			},
+			Location:          pulumi.String("centralus"),
+			ResourceGroupName: pulumi.String("myResourceGroup"),
+			SourceType:        pulumi.String("AzureStorage"),
+			Tags:              nil,
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
@@ -72,10 +104,10 @@ import pulumi_azure_native as azure_native
 
 artifact_source = azure_native.deploymentmanager.ArtifactSource("artifactSource",
     artifact_source_name="myArtifactSource",
-    authentication={
-        "sasUri": "https://mystorageaccount.blob.core.windows.net/myartifactsource?st=2018-07-07T14%3A10%3A00Z&se=2019-12-31T15%3A10%3A00Z&sp=rl&sv=2017-04-17&sr=c&sig=Yh2SoJ1NhhLRwCLln7de%2Fkabcdefghijklmno5sWEIk%3D",
-        "type": "Sas",
-    },
+    authentication=azure_native.deploymentmanager.SasAuthenticationArgs(
+        sas_uri="https://mystorageaccount.blob.core.windows.net/myartifactsource?st=2018-07-07T14%3A10%3A00Z&se=2019-12-31T15%3A10%3A00Z&sp=rl&sv=2017-04-17&sr=c&sig=Yh2SoJ1NhhLRwCLln7de%2Fkabcdefghijklmno5sWEIk%3D",
+        type="Sas",
+    ),
     location="centralus",
     resource_group_name="myResourceGroup",
     source_type="AzureStorage",
@@ -153,7 +185,40 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	"fmt"
+
+	deploymentmanager "github.com/pulumi/pulumi-azure-native/sdk/go/azure/deploymentmanager"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := deploymentmanager.NewArtifactSource(ctx, "artifactSource", &deploymentmanager.ArtifactSourceArgs{
+			ArtifactRoot:       pulumi.String("1.0.0.0"),
+			ArtifactSourceName: pulumi.String("myArtifactSource"),
+			Authentication: &deploymentmanager.SasAuthenticationArgs{
+				SasUri: pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v", "https://mystorageaccount.blob.core.windows.net/myartifactsource?st=2018-07-07T14", "%", "3A10", "%", "3A00Z&se=2019-12-31T15", "%", "3A10", "%", "3A00Z&sp=rl&sv=2017-04-17&sr=c&sig=Yh2SoJ1NhhLRwCLln7de", "%", "2Fkabcdefghijklmno5sWEIk", "%", "3D")),
+				Type:   pulumi.String("Sas"),
+			},
+			Location:          pulumi.String("centralus"),
+			ResourceGroupName: pulumi.String("myResourceGroup"),
+			SourceType:        pulumi.String("AzureStorage"),
+			Tags:              nil,
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
@@ -168,10 +233,10 @@ import pulumi_azure_native as azure_native
 artifact_source = azure_native.deploymentmanager.ArtifactSource("artifactSource",
     artifact_root="1.0.0.0",
     artifact_source_name="myArtifactSource",
-    authentication={
-        "sasUri": "https://mystorageaccount.blob.core.windows.net/myartifactsource?st=2018-07-07T14%3A10%3A00Z&se=2019-12-31T15%3A10%3A00Z&sp=rl&sv=2017-04-17&sr=c&sig=Yh2SoJ1NhhLRwCLln7de%2Fkabcdefghijklmno5sWEIk%3D",
-        "type": "Sas",
-    },
+    authentication=azure_native.deploymentmanager.SasAuthenticationArgs(
+        sas_uri="https://mystorageaccount.blob.core.windows.net/myartifactsource?st=2018-07-07T14%3A10%3A00Z&se=2019-12-31T15%3A10%3A00Z&sp=rl&sv=2017-04-17&sr=c&sig=Yh2SoJ1NhhLRwCLln7de%2Fkabcdefghijklmno5sWEIk%3D",
+        type="Sas",
+    ),
     location="centralus",
     resource_group_name="myResourceGroup",
     source_type="AzureStorage",

@@ -121,7 +121,85 @@ class MyStack : Stack
 
 {{< example go >}}
 
-Coming soon!
+
+```go
+package main
+
+import (
+	machinelearningservices "github.com/pulumi/pulumi-azure-native/sdk/go/azure/machinelearningservices"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := machinelearningservices.NewLabelingJob(ctx, "labelingJob", &machinelearningservices.LabelingJobArgs{
+			LabelingJobId: pulumi.String("testLabelingJob"),
+			Properties: &machinelearningservices.LabelingJobPropertiesArgs{
+				DatasetConfiguration: &machinelearningservices.LabelingDatasetConfigurationArgs{
+					AssetName:                       pulumi.String("testdataasset"),
+					DatasetVersion:                  pulumi.String("1"),
+					EnableIncrementalDatasetRefresh: pulumi.Bool(true),
+				},
+				JobInstructions: &machinelearningservices.LabelingJobInstructionsArgs{
+					Uri: pulumi.String("https://www.testjobInstructions.com/labeling1.txt"),
+				},
+				LabelCategories: machinelearningservices.LabelCategoryMap{
+					"testCategory": &machinelearningservices.LabelCategoryArgs{
+						AllowMultiSelect: pulumi.Bool(false),
+						Classes: machinelearningservices.LabelClassMap{
+							"testClass1": &machinelearningservices.LabelClassArgs{
+								DisplayName: pulumi.String("testClass1"),
+								Subclasses: machinelearningservices.LabelClassMap{
+									"testclass1-1": &machinelearningservices.LabelClassArgs{
+										DisplayName: pulumi.String("testClass1-1"),
+									},
+								},
+							},
+							"testClass2": &machinelearningservices.LabelClassArgs{
+								DisplayName: pulumi.String("testClass2"),
+							},
+						},
+						DisplayName: pulumi.String("testCategory"),
+					},
+				},
+				LabelingJobMediaProperties: &machinelearningservices.LabelingJobImagePropertiesArgs{
+					AnnotationType: pulumi.String("BoundingBox"),
+					MediaType:      pulumi.String("Image"),
+				},
+				MlAssistConfiguration: &machinelearningservices.MLAssistConfigurationArgs{
+					InferencingComputeBinding: &machinelearningservices.ComputeBindingArgs{
+						ComputeId: pulumi.String("inferencingcompute"),
+					},
+					MlAssistEnabled:           pulumi.Bool(true),
+					ModelNamePrefix:           pulumi.String("testmodel_1"),
+					PrelabelAccuracyThreshold: pulumi.Float64(0.8),
+					TrainingComputeBinding: &machinelearningservices.ComputeBindingArgs{
+						ComputeId: pulumi.String("trainingcompute"),
+					},
+				},
+				Properties: pulumi.StringMap{
+					"additionalProp1": pulumi.String("string"),
+					"additionalProp2": pulumi.String("string"),
+					"additionalProp3": pulumi.String("string"),
+				},
+				Tags: pulumi.StringMap{
+					"additionalProp1": pulumi.String("string"),
+					"additionalProp2": pulumi.String("string"),
+					"additionalProp3": pulumi.String("string"),
+				},
+			},
+			ResourceGroupName: pulumi.String("workspace-1234"),
+			WorkspaceName:     pulumi.String("testworkspace"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 
 {{< /example >}}
 
@@ -135,16 +213,16 @@ import pulumi_azure_native as azure_native
 
 labeling_job = azure_native.machinelearningservices.LabelingJob("labelingJob",
     labeling_job_id="testLabelingJob",
-    properties={
-        "datasetConfiguration": azure_native.machinelearningservices.LabelingDatasetConfigurationArgs(
+    properties=azure_native.machinelearningservices.LabelingJobPropertiesArgs(
+        dataset_configuration=azure_native.machinelearningservices.LabelingDatasetConfigurationArgs(
             asset_name="testdataasset",
             dataset_version="1",
             enable_incremental_dataset_refresh=True,
         ),
-        "jobInstructions": azure_native.machinelearningservices.LabelingJobInstructionsArgs(
+        job_instructions=azure_native.machinelearningservices.LabelingJobInstructionsArgs(
             uri="https://www.testjobInstructions.com/labeling1.txt",
         ),
-        "labelCategories": {
+        label_categories={
             "testCategory": azure_native.machinelearningservices.LabelCategoryArgs(
                 allow_multi_select=False,
                 classes={
@@ -163,11 +241,11 @@ labeling_job = azure_native.machinelearningservices.LabelingJob("labelingJob",
                 display_name="testCategory",
             ),
         },
-        "labelingJobMediaProperties": azure_native.machinelearningservices.LabelingJobImagePropertiesArgs(
+        labeling_job_media_properties=azure_native.machinelearningservices.LabelingJobImagePropertiesArgs(
             annotation_type="BoundingBox",
             media_type="Image",
         ),
-        "mlAssistConfiguration": azure_native.machinelearningservices.MLAssistConfigurationArgs(
+        ml_assist_configuration=azure_native.machinelearningservices.MLAssistConfigurationArgs(
             inferencing_compute_binding=azure_native.machinelearningservices.ComputeBindingArgs(
                 compute_id="inferencingcompute",
             ),
@@ -178,17 +256,17 @@ labeling_job = azure_native.machinelearningservices.LabelingJob("labelingJob",
                 compute_id="trainingcompute",
             ),
         ),
-        "properties": {
+        properties={
             "additionalProp1": "string",
             "additionalProp2": "string",
             "additionalProp3": "string",
         },
-        "tags": {
+        tags={
             "additionalProp1": "string",
             "additionalProp2": "string",
             "additionalProp3": "string",
         },
-    },
+    ),
     resource_group_name="workspace-1234",
     workspace_name="testworkspace")
 

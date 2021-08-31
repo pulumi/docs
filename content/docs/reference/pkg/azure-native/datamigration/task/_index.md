@@ -83,19 +83,19 @@ func main() {
 		_, err := datamigration.NewTask(ctx, "task", &datamigration.TaskArgs{
 			GroupName:   pulumi.String("DmsSdkRg"),
 			ProjectName: pulumi.String("DmsSdkProject"),
-			Properties: datamigration.ConnectToTargetSqlDbTaskProperties{
-				Input: datamigration.ConnectToTargetSqlDbTaskInput{
-					TargetConnectionInfo: datamigration.SqlConnectionInfo{
+			Properties: &datamigration.ConnectToTargetSqlDbTaskPropertiesArgs{
+				Input: &datamigration.ConnectToTargetSqlDbTaskInputArgs{
+					TargetConnectionInfo: &datamigration.SqlConnectionInfoArgs{
 						Authentication:         "SqlAuthentication",
 						DataSource:             "ssma-test-server.database.windows.net",
 						EncryptConnection:      true,
 						Password:               "testpassword",
 						TrustServerCertificate: true,
-						Type:                   "SqlConnectionInfo",
+						Type:                   pulumi.String("SqlConnectionInfo"),
 						UserName:               "testuser",
 					},
 				},
-				TaskType: "ConnectToTarget.SqlDb",
+				TaskType: pulumi.String("ConnectToTarget.SqlDb"),
 			},
 			ServiceName: pulumi.String("DmsSdkService"),
 			TaskName:    pulumi.String("DmsSdkTask"),

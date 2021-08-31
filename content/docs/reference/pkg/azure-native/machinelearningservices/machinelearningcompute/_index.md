@@ -70,8 +70,8 @@ func main() {
 		_, err := machinelearningservices.NewMachineLearningCompute(ctx, "machineLearningCompute", &machinelearningservices.MachineLearningComputeArgs{
 			ComputeName: pulumi.String("compute123"),
 			Location:    pulumi.String("eastus"),
-			Properties: machinelearningservices.AKS{
-				ComputeType: "AKS",
+			Properties: &machinelearningservices.AKSArgs{
+				ComputeType: pulumi.String("AKS"),
 			},
 			ResourceGroupName: pulumi.String("testrg123"),
 			WorkspaceName:     pulumi.String("workspaces123"),
@@ -205,19 +205,19 @@ func main() {
 		_, err := machinelearningservices.NewMachineLearningCompute(ctx, "machineLearningCompute", &machinelearningservices.MachineLearningComputeArgs{
 			ComputeName: pulumi.String("compute123"),
 			Location:    pulumi.String("eastus"),
-			Properties: machinelearningservices.AmlCompute{
-				ComputeType: "AmlCompute",
-				Properties: machinelearningservices.AmlComputeProperties{
+			Properties: &machinelearningservices.AmlComputeArgs{
+				ComputeType: pulumi.String("AmlCompute"),
+				Properties: &machinelearningservices.AmlComputePropertiesArgs{
 					EnableNodePublicIp:          true,
 					IsolatedNetwork:             false,
 					OsType:                      "Windows",
 					RemoteLoginPortPublicAccess: "NotSpecified",
-					ScaleSettings: machinelearningservices.ScaleSettings{
+					ScaleSettings: &machinelearningservices.ScaleSettingsArgs{
 						MaxNodeCount:                1,
 						MinNodeCount:                0,
 						NodeIdleTimeBeforeScaleDown: "PT5M",
 					},
-					VirtualMachineImage: machinelearningservices.VirtualMachineImage{
+					VirtualMachineImage: &machinelearningservices.VirtualMachineImageArgs{
 						Id: "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.Compute/galleries/myImageGallery/images/myImageDefinition/versions/0.0.1",
 					},
 					VmPriority: "Dedicated",
@@ -369,8 +369,8 @@ func main() {
 		_, err := machinelearningservices.NewMachineLearningCompute(ctx, "machineLearningCompute", &machinelearningservices.MachineLearningComputeArgs{
 			ComputeName: pulumi.String("compute123"),
 			Location:    pulumi.String("eastus"),
-			Properties: machinelearningservices.DataFactory{
-				ComputeType: "DataFactory",
+			Properties: &machinelearningservices.DataFactoryArgs{
+				ComputeType: pulumi.String("DataFactory"),
 			},
 			ResourceGroupName: pulumi.String("testrg123"),
 			WorkspaceName:     pulumi.String("workspaces123"),
@@ -504,18 +504,18 @@ func main() {
 		_, err := machinelearningservices.NewMachineLearningCompute(ctx, "machineLearningCompute", &machinelearningservices.MachineLearningComputeArgs{
 			ComputeName: pulumi.String("compute123"),
 			Location:    pulumi.String("eastus"),
-			Properties: machinelearningservices.ComputeInstance{
-				ComputeType: "ComputeInstance",
-				Properties: machinelearningservices.ComputeInstanceProperties{
+			Properties: &machinelearningservices.ComputeInstanceArgs{
+				ComputeType: pulumi.String("ComputeInstance"),
+				Properties: &machinelearningservices.ComputeInstancePropertiesArgs{
 					ApplicationSharingPolicy:         "Personal",
 					ComputeInstanceAuthorizationType: "personal",
-					PersonalComputeInstanceSettings: machinelearningservices.PersonalComputeInstanceSettings{
-						AssignedUser: machinelearningservices.AssignedUser{
+					PersonalComputeInstanceSettings: &machinelearningservices.PersonalComputeInstanceSettingsArgs{
+						AssignedUser: &machinelearningservices.AssignedUserArgs{
 							ObjectId: "00000000-0000-0000-0000-000000000000",
 							TenantId: "00000000-0000-0000-0000-000000000000",
 						},
 					},
-					SshSettings: machinelearningservices.ComputeInstanceSshSettings{
+					SshSettings: &machinelearningservices.ComputeInstanceSshSettingsArgs{
 						SshPublicAccess: "Disabled",
 					},
 					Subnet: "test-subnet-resource-id",
@@ -669,9 +669,9 @@ func main() {
 		_, err := machinelearningservices.NewMachineLearningCompute(ctx, "machineLearningCompute", &machinelearningservices.MachineLearningComputeArgs{
 			ComputeName: pulumi.String("compute123"),
 			Location:    pulumi.String("eastus"),
-			Properties: machinelearningservices.ComputeInstance{
-				ComputeType: "ComputeInstance",
-				Properties: machinelearningservices.ComputeInstanceProperties{
+			Properties: &machinelearningservices.ComputeInstanceArgs{
+				ComputeType: pulumi.String("ComputeInstance"),
+				Properties: &machinelearningservices.ComputeInstancePropertiesArgs{
 					VmSize: "STANDARD_NC6",
 				},
 			},
@@ -800,10 +800,10 @@ func main() {
 		_, err := machinelearningservices.NewMachineLearningCompute(ctx, "machineLearningCompute", &machinelearningservices.MachineLearningComputeArgs{
 			ComputeName: pulumi.String("compute123"),
 			Location:    pulumi.String("eastus"),
-			Properties: machinelearningservices.AKS{
-				ComputeType: "AKS",
+			Properties: &machinelearningservices.AKSArgs{
+				ComputeType: pulumi.String("AKS"),
 				Description: "some compute",
-				Properties: machinelearningservices.AKSProperties{
+				Properties: &machinelearningservices.AKSPropertiesArgs{
 					AgentCount: 4,
 				},
 				ResourceId: "/subscriptions/34adfa4f-cedf-4dc0-ba29-b6d1a69ab345/resourcegroups/testrg123/providers/Microsoft.ContainerService/managedClusters/compute123-56826-c9b00420020b2",
@@ -941,11 +941,11 @@ func main() {
 		_, err := machinelearningservices.NewMachineLearningCompute(ctx, "machineLearningCompute", &machinelearningservices.MachineLearningComputeArgs{
 			ComputeName: pulumi.String("compute123"),
 			Location:    pulumi.String("eastus"),
-			Properties: machinelearningservices.AmlCompute{
-				ComputeType: "AmlCompute",
+			Properties: &machinelearningservices.AmlComputeArgs{
+				ComputeType: pulumi.String("AmlCompute"),
 				Description: "some compute",
-				Properties: machinelearningservices.AmlComputeProperties{
-					ScaleSettings: machinelearningservices.ScaleSettings{
+				Properties: &machinelearningservices.AmlComputePropertiesArgs{
+					ScaleSettings: &machinelearningservices.ScaleSettingsArgs{
 						MaxNodeCount:                4,
 						MinNodeCount:                4,
 						NodeIdleTimeBeforeScaleDown: "PT5M",

@@ -61,42 +61,7 @@ class MyStack : Stack
 
 {{< example go >}}
 
-
-```go
-package main
-
-import (
-	"fmt"
-
-	deploymentmanager "github.com/pulumi/pulumi-azure-native/sdk/go/azure/deploymentmanager"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := deploymentmanager.NewServiceUnit(ctx, "serviceUnit", &deploymentmanager.ServiceUnitArgs{
-			Artifacts: &deploymentmanager.ServiceUnitArtifactsArgs{
-				ParametersUri: pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v", "https://mystorageaccount.blob.core.windows.net/myartifactsource/parameter/myTopologyUnit.parameters.json?st=2018-07-07T14", "%", "3A10", "%", "3A00Z&se=2019-12-31T15", "%", "3A10", "%", "3A00Z&sp=rl&sv=2017-04-17&sr=c&sig=Yh2SoJ1NhhLRwCLln7de", "%", "2Fkabcdefghijklmno5sWEIk", "%", "3D")),
-				TemplateUri:   pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v", "https://mystorageaccount.blob.core.windows.net/myartifactsource/templates/myTopologyUnit.template.json?st=2018-07-07T14", "%", "3A10", "%", "3A00Z&se=2019-12-31T15", "%", "3A10", "%", "3A00Z&sp=rl&sv=2017-04-17&sr=c&sig=Yh2SoJ1NhhLRwCLln7de", "%", "2Fkabcdefghijklmno5sWEIk", "%", "3D")),
-			},
-			DeploymentMode:      "Incremental",
-			Location:            pulumi.String("centralus"),
-			ResourceGroupName:   pulumi.String("myResourceGroup"),
-			ServiceName:         pulumi.String("myService"),
-			ServiceTopologyName: pulumi.String("myTopology"),
-			ServiceUnitName:     pulumi.String("myServiceUnit"),
-			Tags:                nil,
-			TargetResourceGroup: pulumi.String("myDeploymentResourceGroup"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
+Coming soon!
 
 {{< /example >}}
 
@@ -199,40 +164,7 @@ class MyStack : Stack
 
 {{< example go >}}
 
-
-```go
-package main
-
-import (
-	deploymentmanager "github.com/pulumi/pulumi-azure-native/sdk/go/azure/deploymentmanager"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := deploymentmanager.NewServiceUnit(ctx, "serviceUnit", &deploymentmanager.ServiceUnitArgs{
-			Artifacts: &deploymentmanager.ServiceUnitArtifactsArgs{
-				ParametersArtifactSourceRelativePath: pulumi.String("parameter/myTopologyUnit.parameters.json"),
-				TemplateArtifactSourceRelativePath:   pulumi.String("templates/myTopologyUnit.template.json"),
-			},
-			DeploymentMode:      "Incremental",
-			Location:            pulumi.String("centralus"),
-			ResourceGroupName:   pulumi.String("myResourceGroup"),
-			ServiceName:         pulumi.String("myService"),
-			ServiceTopologyName: pulumi.String("myTopology"),
-			ServiceUnitName:     pulumi.String("myServiceUnit"),
-			Tags:                nil,
-			TargetResourceGroup: pulumi.String("myDeploymentResourceGroup"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
+Coming soon!
 
 {{< /example >}}
 

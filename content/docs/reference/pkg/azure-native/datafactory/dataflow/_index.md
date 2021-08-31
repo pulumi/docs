@@ -119,42 +119,42 @@ func main() {
 		_, err := datafactory.NewDataFlow(ctx, "dataFlow", &datafactory.DataFlowArgs{
 			DataFlowName: pulumi.String("exampleDataFlow"),
 			FactoryName:  pulumi.String("exampleFactoryName"),
-			Properties: datafactory.MappingDataFlow{
+			Properties: &datafactory.MappingDataFlowArgs{
 				Description: "Sample demo data flow to convert currencies showing usage of union, derive and conditional split transformation.",
 				Script:      "source(output(PreviousConversionRate as double,Country as string,DateTime1 as string,CurrentConversionRate as double),allowSchemaDrift: false,validateSchema: false) ~> USDCurrency\nsource(output(PreviousConversionRate as double,Country as string,DateTime1 as string,CurrentConversionRate as double),allowSchemaDrift: true,validateSchema: false) ~> CADSource\nUSDCurrency, CADSource union(byName: true)~> Union\nUnion derive(NewCurrencyRate = round(CurrentConversionRate*1.25)) ~> NewCurrencyColumn\nNewCurrencyColumn split(Country == 'USD',Country == 'CAD',disjoint: false) ~> ConditionalSplit1@(USD, CAD)\nConditionalSplit1@USD sink(saveMode:'overwrite' ) ~> USDSink\nConditionalSplit1@CAD sink(saveMode:'overwrite' ) ~> CADSink",
-				Sinks: []datafactory.DataFlowSink{
-					datafactory.DataFlowSink{
-						Dataset: datafactory.DatasetReference{
+				Sinks: []datafactory.DataFlowSinkArgs{
+					&datafactory.DataFlowSinkArgs{
+						Dataset: &datafactory.DatasetReferenceArgs{
 							ReferenceName: "USDOutput",
 							Type:          "DatasetReference",
 						},
 						Name: "USDSink",
 					},
-					datafactory.DataFlowSink{
-						Dataset: datafactory.DatasetReference{
+					&datafactory.DataFlowSinkArgs{
+						Dataset: &datafactory.DatasetReferenceArgs{
 							ReferenceName: "CADOutput",
 							Type:          "DatasetReference",
 						},
 						Name: "CADSink",
 					},
 				},
-				Sources: []datafactory.DataFlowSource{
-					datafactory.DataFlowSource{
-						Dataset: datafactory.DatasetReference{
+				Sources: []datafactory.DataFlowSourceArgs{
+					&datafactory.DataFlowSourceArgs{
+						Dataset: &datafactory.DatasetReferenceArgs{
 							ReferenceName: "CurrencyDatasetUSD",
 							Type:          "DatasetReference",
 						},
 						Name: "USDCurrency",
 					},
-					datafactory.DataFlowSource{
-						Dataset: datafactory.DatasetReference{
+					&datafactory.DataFlowSourceArgs{
+						Dataset: &datafactory.DatasetReferenceArgs{
 							ReferenceName: "CurrencyDatasetCAD",
 							Type:          "DatasetReference",
 						},
 						Name: "CADSource",
 					},
 				},
-				Type: "MappingDataFlow",
+				Type: pulumi.String("MappingDataFlow"),
 			},
 			ResourceGroupName: pulumi.String("exampleResourceGroup"),
 		})
@@ -395,42 +395,42 @@ func main() {
 		_, err := datafactory.NewDataFlow(ctx, "dataFlow", &datafactory.DataFlowArgs{
 			DataFlowName: pulumi.String("exampleDataFlow"),
 			FactoryName:  pulumi.String("exampleFactoryName"),
-			Properties: datafactory.MappingDataFlow{
+			Properties: &datafactory.MappingDataFlowArgs{
 				Description: "Sample demo data flow to convert currencies showing usage of union, derive and conditional split transformation.",
 				Script:      "source(output(PreviousConversionRate as double,Country as string,DateTime1 as string,CurrentConversionRate as double),allowSchemaDrift: false,validateSchema: false) ~> USDCurrency\nsource(output(PreviousConversionRate as double,Country as string,DateTime1 as string,CurrentConversionRate as double),allowSchemaDrift: true,validateSchema: false) ~> CADSource\nUSDCurrency, CADSource union(byName: true)~> Union\nUnion derive(NewCurrencyRate = round(CurrentConversionRate*1.25)) ~> NewCurrencyColumn\nNewCurrencyColumn split(Country == 'USD',Country == 'CAD',disjoint: false) ~> ConditionalSplit1@(USD, CAD)\nConditionalSplit1@USD sink(saveMode:'overwrite' ) ~> USDSink\nConditionalSplit1@CAD sink(saveMode:'overwrite' ) ~> CADSink",
-				Sinks: []datafactory.DataFlowSink{
-					datafactory.DataFlowSink{
-						Dataset: datafactory.DatasetReference{
+				Sinks: []datafactory.DataFlowSinkArgs{
+					&datafactory.DataFlowSinkArgs{
+						Dataset: &datafactory.DatasetReferenceArgs{
 							ReferenceName: "USDOutput",
 							Type:          "DatasetReference",
 						},
 						Name: "USDSink",
 					},
-					datafactory.DataFlowSink{
-						Dataset: datafactory.DatasetReference{
+					&datafactory.DataFlowSinkArgs{
+						Dataset: &datafactory.DatasetReferenceArgs{
 							ReferenceName: "CADOutput",
 							Type:          "DatasetReference",
 						},
 						Name: "CADSink",
 					},
 				},
-				Sources: []datafactory.DataFlowSource{
-					datafactory.DataFlowSource{
-						Dataset: datafactory.DatasetReference{
+				Sources: []datafactory.DataFlowSourceArgs{
+					&datafactory.DataFlowSourceArgs{
+						Dataset: &datafactory.DatasetReferenceArgs{
 							ReferenceName: "CurrencyDatasetUSD",
 							Type:          "DatasetReference",
 						},
 						Name: "USDCurrency",
 					},
-					datafactory.DataFlowSource{
-						Dataset: datafactory.DatasetReference{
+					&datafactory.DataFlowSourceArgs{
+						Dataset: &datafactory.DatasetReferenceArgs{
 							ReferenceName: "CurrencyDatasetCAD",
 							Type:          "DatasetReference",
 						},
 						Name: "CADSource",
 					},
 				},
-				Type: "MappingDataFlow",
+				Type: pulumi.String("MappingDataFlow"),
 			},
 			ResourceGroupName: pulumi.String("exampleResourceGroup"),
 		})
