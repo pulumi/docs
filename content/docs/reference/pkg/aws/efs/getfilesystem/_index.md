@@ -39,6 +39,13 @@ class MyStack : Stack
         {
             FileSystemId = fileSystemId,
         }));
+        var byTag = Output.Create(Aws.Efs.GetFileSystem.InvokeAsync(new Aws.Efs.GetFileSystemArgs
+        {
+            Tags = 
+            {
+                { "Environment", "dev" },
+            },
+        }));
     }
 
 }
@@ -73,6 +80,14 @@ func main() {
 		if err != nil {
 			return err
 		}
+		_, err = efs.LookupFileSystem(ctx, &efs.LookupFileSystemArgs{
+			Tags: map[string]interface{}{
+				"Environment": "dev",
+			},
+		}, nil)
+		if err != nil {
+			return err
+		}
 		return nil
 	})
 }
@@ -93,6 +108,9 @@ file_system_id = config.get("fileSystemId")
 if file_system_id is None:
     file_system_id = ""
 by_id = aws.efs.get_file_system(file_system_id=file_system_id)
+by_tag = aws.efs.get_file_system(tags={
+    "Environment": "dev",
+})
 ```
 
 
@@ -110,6 +128,11 @@ const config = new pulumi.Config();
 const fileSystemId = config.get("fileSystemId") || "";
 const byId = aws.efs.getFileSystem({
     fileSystemId: fileSystemId,
+});
+const byTag = aws.efs.getFileSystem({
+    tags: {
+        Environment: "dev",
+    },
 });
 ```
 
@@ -189,7 +212,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Restricts the list to the file system with these tags.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -219,7 +243,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Restricts the list to the file system with these tags.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -249,7 +274,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Restricts the list to the file system with these tags.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -279,7 +305,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd></dl>
+    <dd>{{% md %}}Restricts the list to the file system with these tags.
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

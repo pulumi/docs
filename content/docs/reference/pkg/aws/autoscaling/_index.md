@@ -17,6 +17,7 @@ Explore the resources and functions of the aws.autoscaling module.
     <li><a href="notification" title="Notification"><span class="symbol resource"></span>Notification</a></li>
     <li><a href="policy" title="Policy"><span class="symbol resource"></span>Policy</a></li>
     <li><a href="schedule" title="Schedule"><span class="symbol resource"></span>Schedule</a></li>
+    <li><a href="tag" title="Tag"><span class="symbol resource"></span>Tag</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
@@ -34,6 +35,6 @@ Explore the resources and functions of the aws.autoscaling module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.17.0</dd>
+	<dd>4.18.0</dd>
 </dl>
 

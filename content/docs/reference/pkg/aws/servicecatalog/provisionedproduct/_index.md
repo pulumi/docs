@@ -32,21 +32,95 @@ Like this resource, the `aws_servicecatalog_record` data source also provides in
 
 {{< example csharp >}}
 
-Coming soon!
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Aws.ServiceCatalog.ProvisionedProduct("example", new Aws.ServiceCatalog.ProvisionedProductArgs
+        {
+            ProductName = "Example product",
+            ProvisioningArtifactName = "Example version",
+            ProvisioningParameters = 
+            {
+                new Aws.ServiceCatalog.Inputs.ProvisionedProductProvisioningParameterArgs
+                {
+                    Key = "foo",
+                    Value = "bar",
+                },
+            },
+            Tags = 
+            {
+                { "foo", "bar" },
+            },
+        });
+    }
+
+}
+```
+
 
 {{< /example >}}
 
 
 {{< example go >}}
 
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v4/go/aws/servicecatalog"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := servicecatalog.NewProvisionedProduct(ctx, "example", &servicecatalog.ProvisionedProductArgs{
+			ProductName:              pulumi.String("Example product"),
+			ProvisioningArtifactName: pulumi.String("Example version"),
+			ProvisioningParameters: servicecatalog.ProvisionedProductProvisioningParameterArray{
+				&servicecatalog.ProvisionedProductProvisioningParameterArgs{
+					Key:   pulumi.String("foo"),
+					Value: pulumi.String("bar"),
+				},
+			},
+			Tags: pulumi.StringMap{
+				"foo": pulumi.String("bar"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 
 {{< /example >}}
 
 
 {{< example python >}}
 
-Coming soon!
+```python
+import pulumi
+import pulumi_aws as aws
+
+example = aws.servicecatalog.ProvisionedProduct("example",
+    product_name="Example product",
+    provisioning_artifact_name="Example version",
+    provisioning_parameters=[aws.servicecatalog.ProvisionedProductProvisioningParameterArgs(
+        key="foo",
+        value="bar",
+    )],
+    tags={
+        "foo": "bar",
+    })
+```
+
 
 {{< /example >}}
 
@@ -59,10 +133,11 @@ import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
 const example = new aws.servicecatalog.ProvisionedProduct("example", {
-    owner: [aws_security_group.example.id],
-    type: aws_subnet.main.id,
-    provisioningArtifactParameters: [{
-        templateUrl: "https://s3.amazonaws.com/cf-templates-ozkq9d3hgiq2-us-east-1/temp1.json",
+    productName: "Example product",
+    provisioningArtifactName: "Example version",
+    provisioningParameters: [{
+        key: "foo",
+        value: "bar",
     }],
     tags: {
         foo: "bar",

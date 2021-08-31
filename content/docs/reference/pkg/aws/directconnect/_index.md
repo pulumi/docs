@@ -31,7 +31,10 @@ Explore the resources and functions of the aws.directconnect module.
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
+    <li><a href="getconnection" title="GetConnection"><span class="symbol function"></span>GetConnection</a></li>
     <li><a href="getgateway" title="GetGateway"><span class="symbol function"></span>GetGateway</a></li>
+    <li><a href="getlocation" title="GetLocation"><span class="symbol function"></span>GetLocation</a></li>
+    <li><a href="getlocations" title="GetLocations"><span class="symbol function"></span>GetLocations</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -43,6 +46,6 @@ Explore the resources and functions of the aws.directconnect module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>4.17.0</dd>
+	<dd>4.18.0</dd>
 </dl>
 

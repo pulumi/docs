@@ -289,6 +289,7 @@ const example = new aws.fsx.WindowsFileSystem("example", {
                       <span class="nx">aliases</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
                       <span class="nx">audit_log_configuration</span><span class="p">:</span> <span class="nx">Optional[WindowsFileSystemAuditLogConfigurationArgs]</span> = None<span class="p">,</span>
                       <span class="nx">automatic_backup_retention_days</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+                      <span class="nx">backup_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                       <span class="nx">copy_tags_to_backups</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
                       <span class="nx">daily_automatic_backup_start_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
                       <span class="nx">deployment_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -432,15 +433,6 @@ The WindowsFileSystem resource accepts the following [input]({{< relref "/docs/i
 {{% choosable language csharp %}}
 <dl class="resources-properties"><dt class="property-required"
             title="Required">
-        <span id="storagecapacity_csharp">
-<a href="#storagecapacity_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Capacity</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Storage capacity (GiB) of the file system. Minimum of 32 and maximum of 65536. If the storage type is set to `HDD` the minimum value is 2000.
-{{% /md %}}</dd><dt class="property-required"
-            title="Required">
         <span id="subnetids_csharp">
 <a href="#subnetids_csharp" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Ids</a>
 </span>
@@ -493,6 +485,15 @@ The WindowsFileSystem resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of days to retain automatic backups. Minimum of `0` and maximum of `90`. Defaults to `7`. Set to `0` to disable.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="backupid_csharp">
+<a href="#backupid_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the source backup to create the filesystem from.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="copytagstobackups_csharp">
@@ -567,6 +568,15 @@ The WindowsFileSystem resource accepts the following [input]({{< relref "/docs/i
     <dd>{{% md %}}When enabled, will skip the default final backup taken when the file system is deleted. This configuration must be applied separately before attempting to delete the resource to have the desired behavior. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="storagecapacity_csharp">
+<a href="#storagecapacity_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Capacity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Storage capacity (GiB) of the file system. Minimum of 32 and maximum of 65536. If the storage type is set to `HDD` the minimum value is 2000. Required when not creating filesystem for a backup.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="storagetype_csharp">
 <a href="#storagetype_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Type</a>
 </span>
@@ -597,15 +607,6 @@ The WindowsFileSystem resource accepts the following [input]({{< relref "/docs/i
 
 {{% choosable language go %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="storagecapacity_go">
-<a href="#storagecapacity_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Capacity</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Storage capacity (GiB) of the file system. Minimum of 32 and maximum of 65536. If the storage type is set to `HDD` the minimum value is 2000.
-{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="subnetids_go">
 <a href="#subnetids_go" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Ids</a>
@@ -659,6 +660,15 @@ The WindowsFileSystem resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of days to retain automatic backups. Minimum of `0` and maximum of `90`. Defaults to `7`. Set to `0` to disable.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="backupid_go">
+<a href="#backupid_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the source backup to create the filesystem from.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="copytagstobackups_go">
@@ -733,6 +743,15 @@ The WindowsFileSystem resource accepts the following [input]({{< relref "/docs/i
     <dd>{{% md %}}When enabled, will skip the default final backup taken when the file system is deleted. This configuration must be applied separately before attempting to delete the resource to have the desired behavior. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="storagecapacity_go">
+<a href="#storagecapacity_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Capacity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Storage capacity (GiB) of the file system. Minimum of 32 and maximum of 65536. If the storage type is set to `HDD` the minimum value is 2000. Required when not creating filesystem for a backup.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="storagetype_go">
 <a href="#storagetype_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Type</a>
 </span>
@@ -763,15 +782,6 @@ The WindowsFileSystem resource accepts the following [input]({{< relref "/docs/i
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="storagecapacity_nodejs">
-<a href="#storagecapacity_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Capacity</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}Storage capacity (GiB) of the file system. Minimum of 32 and maximum of 65536. If the storage type is set to `HDD` the minimum value is 2000.
-{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="subnetids_nodejs">
 <a href="#subnetids_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Ids</a>
@@ -825,6 +835,15 @@ The WindowsFileSystem resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of days to retain automatic backups. Minimum of `0` and maximum of `90`. Defaults to `7`. Set to `0` to disable.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="backupid_nodejs">
+<a href="#backupid_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the source backup to create the filesystem from.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="copytagstobackups_nodejs">
@@ -899,6 +918,15 @@ The WindowsFileSystem resource accepts the following [input]({{< relref "/docs/i
     <dd>{{% md %}}When enabled, will skip the default final backup taken when the file system is deleted. This configuration must be applied separately before attempting to delete the resource to have the desired behavior. Defaults to `false`.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="storagecapacity_nodejs">
+<a href="#storagecapacity_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Capacity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Storage capacity (GiB) of the file system. Minimum of 32 and maximum of 65536. If the storage type is set to `HDD` the minimum value is 2000. Required when not creating filesystem for a backup.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="storagetype_nodejs">
 <a href="#storagetype_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Type</a>
 </span>
@@ -929,15 +957,6 @@ The WindowsFileSystem resource accepts the following [input]({{< relref "/docs/i
 
 {{% choosable language python %}}
 <dl class="resources-properties"><dt class="property-required"
-            title="Required">
-        <span id="storage_capacity_python">
-<a href="#storage_capacity_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>capacity</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Storage capacity (GiB) of the file system. Minimum of 32 and maximum of 65536. If the storage type is set to `HDD` the minimum value is 2000.
-{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="subnet_ids_python">
 <a href="#subnet_ids_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>ids</a>
@@ -991,6 +1010,15 @@ The WindowsFileSystem resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of days to retain automatic backups. Minimum of `0` and maximum of `90`. Defaults to `7`. Set to `0` to disable.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="backup_id_python">
+<a href="#backup_id_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ID of the source backup to create the filesystem from.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="copy_tags_to_backups_python">
@@ -1063,6 +1091,15 @@ The WindowsFileSystem resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When enabled, will skip the default final backup taken when the file system is deleted. This configuration must be applied separately before attempting to delete the resource to have the desired behavior. Defaults to `false`.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="storage_capacity_python">
+<a href="#storage_capacity_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>capacity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Storage capacity (GiB) of the file system. Minimum of 32 and maximum of 65536. If the storage type is set to `HDD` the minimum value is 2000. Required when not creating filesystem for a backup.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storage_type_python">
@@ -1457,6 +1494,7 @@ Get an existing WindowsFileSystem resource's state with the given name, ID, and 
         <span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">audit_log_configuration</span><span class="p">:</span> <span class="nx">Optional[WindowsFileSystemAuditLogConfigurationArgs]</span> = None<span class="p">,</span>
         <span class="nx">automatic_backup_retention_days</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">,</span>
+        <span class="nx">backup_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">copy_tags_to_backups</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">,</span>
         <span class="nx">daily_automatic_backup_start_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
         <span class="nx">deployment_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">,</span>
@@ -1635,6 +1673,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The number of days to retain automatic backups. Minimum of `0` and maximum of `90`. Defaults to `7`. Set to `0` to disable.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_backupid_csharp">
+<a href="#state_backupid_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the source backup to create the filesystem from.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_copytagstobackups_csharp">
 <a href="#state_copytagstobackups_csharp" style="color: inherit; text-decoration: inherit;">Copy<wbr>Tags<wbr>To<wbr>Backups</a>
 </span>
@@ -1758,7 +1805,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Storage capacity (GiB) of the file system. Minimum of 32 and maximum of 65536. If the storage type is set to `HDD` the minimum value is 2000.
+    <dd>{{% md %}}Storage capacity (GiB) of the file system. Minimum of 32 and maximum of 65536. If the storage type is set to `HDD` the minimum value is 2000. Required when not creating filesystem for a backup.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_storagetype_csharp">
@@ -1871,6 +1918,15 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of days to retain automatic backups. Minimum of `0` and maximum of `90`. Defaults to `7`. Set to `0` to disable.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_backupid_go">
+<a href="#state_backupid_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the source backup to create the filesystem from.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_copytagstobackups_go">
@@ -1996,7 +2052,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Storage capacity (GiB) of the file system. Minimum of 32 and maximum of 65536. If the storage type is set to `HDD` the minimum value is 2000.
+    <dd>{{% md %}}Storage capacity (GiB) of the file system. Minimum of 32 and maximum of 65536. If the storage type is set to `HDD` the minimum value is 2000. Required when not creating filesystem for a backup.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_storagetype_go">
@@ -2109,6 +2165,15 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of days to retain automatic backups. Minimum of `0` and maximum of `90`. Defaults to `7`. Set to `0` to disable.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_backupid_nodejs">
+<a href="#state_backupid_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the source backup to create the filesystem from.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_copytagstobackups_nodejs">
@@ -2234,7 +2299,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Storage capacity (GiB) of the file system. Minimum of 32 and maximum of 65536. If the storage type is set to `HDD` the minimum value is 2000.
+    <dd>{{% md %}}Storage capacity (GiB) of the file system. Minimum of 32 and maximum of 65536. If the storage type is set to `HDD` the minimum value is 2000. Required when not creating filesystem for a backup.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_storagetype_nodejs">
@@ -2347,6 +2412,15 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of days to retain automatic backups. Minimum of `0` and maximum of `90`. Defaults to `7`. Set to `0` to disable.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_backup_id_python">
+<a href="#state_backup_id_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ID of the source backup to create the filesystem from.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_copy_tags_to_backups_python">
@@ -2472,7 +2546,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Storage capacity (GiB) of the file system. Minimum of 32 and maximum of 65536. If the storage type is set to `HDD` the minimum value is 2000.
+    <dd>{{% md %}}Storage capacity (GiB) of the file system. Minimum of 32 and maximum of 65536. If the storage type is set to `HDD` the minimum value is 2000. Required when not creating filesystem for a backup.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_storage_type_python">

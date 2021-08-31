@@ -343,6 +343,7 @@ const example_AmazonEC2ContainerRegistryReadOnly = new aws.iam.RolePolicyAttachm
               <span class="nx">subnet_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">,</span>
               <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
               <span class="nx">taints</span><span class="p">:</span> <span class="nx">Optional[Sequence[NodeGroupTaintArgs]]</span> = None<span class="p">,</span>
+              <span class="nx">update_config</span><span class="p">:</span> <span class="nx">Optional[NodeGroupUpdateConfigArgs]</span> = None<span class="p">,</span>
               <span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span>
 <span class=nd>@overload</span>
 <span class="k">def </span><span class="nx">NodeGroup</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span>
@@ -626,6 +627,14 @@ The NodeGroup resource accepts the following [input]({{< relref "/docs/intro/con
     <dd>{{% md %}}The Kubernetes taints to be applied to the nodes in the node group. Maximum of 50 taints per node group. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="updateconfig_csharp">
+<a href="#updateconfig_csharp" style="color: inherit; text-decoration: inherit;">Update<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#nodegroupupdateconfig">Node<wbr>Group<wbr>Update<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="version_csharp">
 <a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
 </span>
@@ -791,6 +800,14 @@ The NodeGroup resource accepts the following [input]({{< relref "/docs/intro/con
     </dt>
     <dd>{{% md %}}The Kubernetes taints to be applied to the nodes in the node group. Maximum of 50 taints per node group. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="updateconfig_go">
+<a href="#updateconfig_go" style="color: inherit; text-decoration: inherit;">Update<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#nodegroupupdateconfig">Node<wbr>Group<wbr>Update<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="version_go">
 <a href="#version_go" style="color: inherit; text-decoration: inherit;">Version</a>
@@ -958,6 +975,14 @@ The NodeGroup resource accepts the following [input]({{< relref "/docs/intro/con
     <dd>{{% md %}}The Kubernetes taints to be applied to the nodes in the node group. Maximum of 50 taints per node group. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="updateconfig_nodejs">
+<a href="#updateconfig_nodejs" style="color: inherit; text-decoration: inherit;">update<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#nodegroupupdateconfig">Node<wbr>Group<wbr>Update<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="version_nodejs">
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
@@ -1123,6 +1148,14 @@ The NodeGroup resource accepts the following [input]({{< relref "/docs/intro/con
     </dt>
     <dd>{{% md %}}The Kubernetes taints to be applied to the nodes in the node group. Maximum of 50 taints per node group. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="update_config_python">
+<a href="#update_config_python" style="color: inherit; text-decoration: inherit;">update_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#nodegroupupdateconfig">Node<wbr>Group<wbr>Update<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="version_python">
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
@@ -1370,6 +1403,7 @@ Get an existing NodeGroup resource's state with the given name, ID, and optional
         <span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
         <span class="nx">tags_all</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">,</span>
         <span class="nx">taints</span><span class="p">:</span> <span class="nx">Optional[Sequence[NodeGroupTaintArgs]]</span> = None<span class="p">,</span>
+        <span class="nx">update_config</span><span class="p">:</span> <span class="nx">Optional[NodeGroupUpdateConfigArgs]</span> = None<span class="p">,</span>
         <span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> NodeGroup</code></pre></div>
 {{% /choosable %}}
 
@@ -1672,6 +1706,14 @@ The following state arguments are supported:
     <dd>{{% md %}}The Kubernetes taints to be applied to the nodes in the node group. Maximum of 50 taints per node group. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_updateconfig_csharp">
+<a href="#state_updateconfig_csharp" style="color: inherit; text-decoration: inherit;">Update<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#nodegroupupdateconfig">Node<wbr>Group<wbr>Update<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_version_csharp">
 <a href="#state_version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
 </span>
@@ -1873,6 +1915,14 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The Kubernetes taints to be applied to the nodes in the node group. Maximum of 50 taints per node group. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_updateconfig_go">
+<a href="#state_updateconfig_go" style="color: inherit; text-decoration: inherit;">Update<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#nodegroupupdateconfig">Node<wbr>Group<wbr>Update<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_version_go">
 <a href="#state_version_go" style="color: inherit; text-decoration: inherit;">Version</a>
@@ -2076,6 +2126,14 @@ The following state arguments are supported:
     <dd>{{% md %}}The Kubernetes taints to be applied to the nodes in the node group. Maximum of 50 taints per node group. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
+        <span id="state_updateconfig_nodejs">
+<a href="#state_updateconfig_nodejs" style="color: inherit; text-decoration: inherit;">update<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#nodegroupupdateconfig">Node<wbr>Group<wbr>Update<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
         <span id="state_version_nodejs">
 <a href="#state_version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
@@ -2277,6 +2335,14 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The Kubernetes taints to be applied to the nodes in the node group. Maximum of 50 taints per node group. Detailed below.
 {{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="state_update_config_python">
+<a href="#state_update_config_python" style="color: inherit; text-decoration: inherit;">update_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#nodegroupupdateconfig">Node<wbr>Group<wbr>Update<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_version_python">
 <a href="#state_version_python" style="color: inherit; text-decoration: inherit;">version</a>
@@ -2906,6 +2972,96 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The value of the taint. Maximum length of 63.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+<h4 id="nodegroupupdateconfig">Node<wbr>Group<wbr>Update<wbr>Config</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="maxunavailable_csharp">
+<a href="#maxunavailable_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Unavailable</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Desired max number of unavailable worker nodes during node group update.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="maxunavailablepercentage_csharp">
+<a href="#maxunavailablepercentage_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Unavailable<wbr>Percentage</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Desired max percentage of unavailable worker nodes during node group update.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="maxunavailable_go">
+<a href="#maxunavailable_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Unavailable</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Desired max number of unavailable worker nodes during node group update.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="maxunavailablepercentage_go">
+<a href="#maxunavailablepercentage_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Unavailable<wbr>Percentage</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Desired max percentage of unavailable worker nodes during node group update.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="maxunavailable_nodejs">
+<a href="#maxunavailable_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Unavailable</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Desired max number of unavailable worker nodes during node group update.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="maxunavailablepercentage_nodejs">
+<a href="#maxunavailablepercentage_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Unavailable<wbr>Percentage</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Desired max percentage of unavailable worker nodes during node group update.
+{{% /md %}}</dd></dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties"><dt class="property-optional"
+            title="Optional">
+        <span id="max_unavailable_python">
+<a href="#max_unavailable_python" style="color: inherit; text-decoration: inherit;">max_<wbr>unavailable</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Desired max number of unavailable worker nodes during node group update.
+{{% /md %}}</dd><dt class="property-optional"
+            title="Optional">
+        <span id="max_unavailable_percentage_python">
+<a href="#max_unavailable_percentage_python" style="color: inherit; text-decoration: inherit;">max_<wbr>unavailable_<wbr>percentage</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Desired max percentage of unavailable worker nodes during node group update.
 {{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
