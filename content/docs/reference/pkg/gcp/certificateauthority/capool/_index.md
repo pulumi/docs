@@ -191,8 +191,8 @@ class MyStack : Stack
                             {
                                 ObjectIdPath = 
                                 {
-                                    123,
-                                    899,
+                                    1,
+                                    7,
                                 },
                             },
                             Value = "asdf",
@@ -235,16 +235,17 @@ class MyStack : Stack
                         {
                             ObjectIdPath = 
                             {
-                                123,
-                                888,
+                                1,
+                                5,
                             },
                         },
                         new Gcp.CertificateAuthority.Inputs.CaPoolIssuancePolicyBaselineValuesPolicyIdArgs
                         {
                             ObjectIdPath = 
                             {
-                                456,
-                                120,
+                                1,
+                                5,
+                                7,
                             },
                         },
                     },
@@ -319,8 +320,8 @@ func main() {
 							Critical: pulumi.Bool(true),
 							ObjectId: &certificateauthority.CaPoolIssuancePolicyBaselineValuesAdditionalExtensionObjectIdArgs{
 								ObjectIdPath: []float64{
-									123,
-									899,
+									1,
+									7,
 								},
 							},
 							Value: pulumi.String("asdf"),
@@ -355,14 +356,15 @@ func main() {
 					PolicyIds: certificateauthority.CaPoolIssuancePolicyBaselineValuesPolicyIdArray{
 						&certificateauthority.CaPoolIssuancePolicyBaselineValuesPolicyIdArgs{
 							ObjectIdPath: []float64{
-								123,
-								888,
+								1,
+								5,
 							},
 						},
 						&certificateauthority.CaPoolIssuancePolicyBaselineValuesPolicyIdArgs{
 							ObjectIdPath: []float64{
-								456,
-								120,
+								1,
+								5,
+								7,
 							},
 						},
 					},
@@ -429,8 +431,8 @@ default = gcp.certificateauthority.CaPool("default",
                 critical=True,
                 object_id=gcp.certificateauthority.CaPoolIssuancePolicyBaselineValuesAdditionalExtensionObjectIdArgs(
                     object_id_path=[
-                        123,
-                        899,
+                        1,
+                        7,
                     ],
                 ),
                 value="asdf",
@@ -462,26 +464,27 @@ default = gcp.certificateauthority.CaPool("default",
             policy_ids=[
                 gcp.certificateauthority.CaPoolIssuancePolicyBaselineValuesPolicyIdArgs(
                     object_id_path=[
-                        123,
-                        888,
+                        1,
+                        5,
                     ],
                 ),
                 gcp.certificateauthority.CaPoolIssuancePolicyBaselineValuesPolicyIdArgs(
                     object_id_path=[
-                        456,
-                        120,
+                        1,
+                        5,
+                        7,
                     ],
                 ),
             ],
         ),
-        identity_constraints=gcp.certificateauthority.CaPoolIssuancePolicyIdentityConstraintsArgs(
-            allow_subject_alt_names_passthrough=True,
-            allow_subject_passthrough=True,
-            cel_expression=gcp.certificateauthority.CaPoolIssuancePolicyIdentityConstraintsCelExpressionArgs(
-                expression="subject_alt_names.all(san, san.type == DNS || san.type == EMAIL )",
-                title="My title",
-            ),
-        ),
+        identity_constraints={
+            "allowSubjectAltNamesPassthrough": True,
+            "allowSubjectPassthrough": True,
+            "celExpression": {
+                "expression": "subject_alt_names.all(san, san.type == DNS || san.type == EMAIL )",
+                "title": "My title",
+            },
+        },
         maximum_lifetime="50000s",
     ),
     labels={
@@ -530,8 +533,8 @@ const defaultCaPool = new gcp.certificateauthority.CaPool("default", {
                 critical: true,
                 objectId: {
                     objectIdPaths: [
-                        123,
-                        899,
+                        1,
+                        7,
                     ],
                 },
                 value: "asdf",
@@ -563,14 +566,15 @@ const defaultCaPool = new gcp.certificateauthority.CaPool("default", {
             policyIds: [
                 {
                     objectIdPaths: [
-                        123,
-                        888,
+                        1,
+                        5,
                     ],
                 },
                 {
                     objectIdPaths: [
-                        456,
-                        120,
+                        1,
+                        5,
+                        7,
                     ],
                 },
             ],

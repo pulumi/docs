@@ -1972,6 +1972,15 @@ instance, high availability (`REGIONAL`) or single zone (`ZONAL`).
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="collation_csharp">
+<a href="#collation_csharp" style="color: inherit; text-decoration: inherit;">Collation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of server instance collation.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="crashsafereplication_csharp">
 <a href="#crashsafereplication_csharp" style="color: inherit; text-decoration: inherit;">Crash<wbr>Safe<wbr>Replication</a>
 </span>
@@ -2146,6 +2155,15 @@ instance, high availability (`REGIONAL`) or single zone (`ZONAL`).
         <span class="property-type"><a href="#getdatabaseinstancesettingbackupconfiguration">[]Get<wbr>Database<wbr>Instance<wbr>Setting<wbr>Backup<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="collation_go">
+<a href="#collation_go" style="color: inherit; text-decoration: inherit;">Collation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of server instance collation.
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="crashsafereplication_go">
 <a href="#crashsafereplication_go" style="color: inherit; text-decoration: inherit;">Crash<wbr>Safe<wbr>Replication</a>
@@ -2322,6 +2340,15 @@ instance, high availability (`REGIONAL`) or single zone (`ZONAL`).
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
+        <span id="collation_nodejs">
+<a href="#collation_nodejs" style="color: inherit; text-decoration: inherit;">collation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of server instance collation.
+{{% /md %}}</dd><dt class="property-required"
+            title="Required">
         <span id="crashsafereplication_nodejs">
 <a href="#crashsafereplication_nodejs" style="color: inherit; text-decoration: inherit;">crash<wbr>Safe<wbr>Replication</a>
 </span>
@@ -2496,6 +2523,15 @@ instance, high availability (`REGIONAL`) or single zone (`ZONAL`).
         <span class="property-type"><a href="#getdatabaseinstancesettingbackupconfiguration">Sequence[Get<wbr>Database<wbr>Instance<wbr>Setting<wbr>Backup<wbr>Configuration]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
+            title="Required">
+        <span id="collation_python">
+<a href="#collation_python" style="color: inherit; text-decoration: inherit;">collation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of server instance collation.
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="crash_safe_replication_python">
 <a href="#crash_safe_replication_python" style="color: inherit; text-decoration: inherit;">crash_<wbr>safe_<wbr>replication</a>

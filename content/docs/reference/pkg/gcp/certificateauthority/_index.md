@@ -17,6 +17,7 @@ Explore the resources and functions of the gcp.certificateauthority module.
     <li><a href="capooliammember" title="CaPoolIamMember"><span class="symbol resource"></span>CaPoolIamMember</a></li>
     <li><a href="capooliampolicy" title="CaPoolIamPolicy"><span class="symbol resource"></span>CaPoolIamPolicy</a></li>
     <li><a href="certificate" title="Certificate"><span class="symbol resource"></span>Certificate</a></li>
+    <li><a href="certificatetemplate" title="CertificateTemplate"><span class="symbol resource"></span>CertificateTemplate</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -28,6 +29,6 @@ Explore the resources and functions of the gcp.certificateauthority module.
 	<dt>Notes</dt>
 	<dd>{{% md %}}This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).{{% /md %}}</dd>
 	<dt>Version</dt>
-	<dd>5.17.0</dd>
+	<dd>5.18.0</dd>
 </dl>
 

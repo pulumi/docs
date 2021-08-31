@@ -986,19 +986,19 @@ If it is not provided, the provider project is used.
 Gateway can be imported using any of these accepted formats
 
 ```sh
- $ pulumi import gcp:apigateway/gateway:Gateway default projects/{{project}}/locations/{{region}}/gateways/{{name}}
+ $ pulumi import gcp:apigateway/gateway:Gateway default projects/{{project}}/locations/{{region}}/gateways/{{gateway_id}}
 ```
 
 ```sh
- $ pulumi import gcp:apigateway/gateway:Gateway default {{project}}/{{region}}/{{name}}
+ $ pulumi import gcp:apigateway/gateway:Gateway default {{project}}/{{region}}/{{gateway_id}}
 ```
 
 ```sh
- $ pulumi import gcp:apigateway/gateway:Gateway default {{region}}/{{name}}
+ $ pulumi import gcp:apigateway/gateway:Gateway default {{region}}/{{gateway_id}}
 ```
 
 ```sh
- $ pulumi import gcp:apigateway/gateway:Gateway default {{name}}
+ $ pulumi import gcp:apigateway/gateway:Gateway default {{gateway_id}}
 ```
 
 

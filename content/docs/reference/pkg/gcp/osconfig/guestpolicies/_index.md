@@ -6598,15 +6598,15 @@ Possible values are `SHELL` and `POWERSHELL`.
 GuestPolicies can be imported using any of these accepted formats
 
 ```sh
- $ pulumi import gcp:osconfig/guestPolicies:GuestPolicies default projects/{{project}}/guestPolicies/{{name}}
+ $ pulumi import gcp:osconfig/guestPolicies:GuestPolicies default projects/{{project}}/guestPolicies/{{guest_policy_id}}
 ```
 
 ```sh
- $ pulumi import gcp:osconfig/guestPolicies:GuestPolicies default {{project}}/{{name}}
+ $ pulumi import gcp:osconfig/guestPolicies:GuestPolicies default {{project}}/{{guest_policy_id}}
 ```
 
 ```sh
- $ pulumi import gcp:osconfig/guestPolicies:GuestPolicies default {{name}}
+ $ pulumi import gcp:osconfig/guestPolicies:GuestPolicies default {{guest_policy_id}}
 ```
 
 
